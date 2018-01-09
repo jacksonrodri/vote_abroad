@@ -15,7 +15,7 @@ module.exports = {
   ],
   api: function(isStatic) {
     return {
-      browserBaseURL: isStatic ? process.env.DEPLOY_URL : ''
+      browserBaseURL: isStatic ? process.env.URL : ''
     }
   }
 }
