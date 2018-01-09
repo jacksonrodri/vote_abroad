@@ -66,6 +66,9 @@
       </b-field>
       <p>You have entered: {{validPhone}}</p>
     </div>
+    <nuxt-link
+      to="/hello">Hello
+    </nuxt-link>
     {{ $t('home') }}
     <nuxt-link
       v-for="(locale, index) in $i18n.locales"
