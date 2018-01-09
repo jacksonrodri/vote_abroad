@@ -13,9 +13,9 @@ module.exports = {
     //   isPost: false
     // }]
   ],
-  api: {
-    baseURL: process.env.NODE_ENV === 'production'
-      ? 'https://http://focused-lamport-4651cf.netlify.com/'
-      : 'http://localhost:3000'
+  api: function(isStatic) {
+    return {
+      browserBaseURL: isStatic ? process.env.DEPLOY_URL : ''
+    }
   }
 }
