@@ -1,0 +1,41 @@
+
+- name: Nuxtent
+  pitch: seamlessly use content files in your Nuxt.js sites
+  created: 2017-06-21
+  link: https://nuxtent.now.sh/
+  weight: 6
+
+- name: Ency.js
+  pitch: enchanced concurrency primitives for Javascript
+  created: 2017-04-17
+  link: https://ency.now.sh/
+  weight: 6
+
+- name: Vuency
+  pitch: concurrency management for Vue.js
+  created: 2017-04-01
+  link: https://ency.now.sh/vuency
+  weight: 5
+
+- name: Vue Mobiledoc Editor
+  pitch: create rich content using Vue.js components
+  created: 2016-12-16
+  link: https://github.com/alidcastano/vue-mobiledoc-editor
+  weight: 4
+
+- name: Sass-chunks
+  pitch: deliver semantic and concise sass stylesheets
+  created: 2016-11-2016
+  link: https://github.com/alidcastano/sass-chunks
+
+- name: Lazyset
+  pitch: automate the creation of images for the srcset attribute
+  created: 2016-08-16
+  link: https://github.com/alidcastano/lazyset
+  weight: 1
+
+- name: Utterson
+  pitch: an unassuming, trustworthy theme for Jekyll blogs
+  created: 2016-03-15
+  link: https://github.com/alidcastano/utterson
+  weight: 2
