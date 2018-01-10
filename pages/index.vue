@@ -105,6 +105,11 @@ export default {
     Logo,
     ValidationCheck
   },
+  async asyncData () {
+    let { data } = await axios.get('http://country.io/names.json', {headers: {'Access-Control-Allow-Origin': '*'}})
+    let countries = {countries: Object.keys(data).sort().map(x => ({name: data[x], code: x}))}
+    return countries
+  },
   data () {
     return {
       telOrEmail: null,
@@ -120,16 +125,17 @@ export default {
       showCountryAutocomplete: false,
       location: '',
       selected: null,
-      countries: [
-        {
-          name: 'United States',
-          code: 'US'
-        },
-        {
-          name: 'Hong Kong',
-          code: 'HK'
-        }
-      ]
+      countries: []
+      // countries: [
+      //   {
+      //     name: 'United States',
+      //     code: 'US'
+      //   },
+      //   {
+      //     name: 'Hong Kong',
+      //     code: 'HK'
+      //   }
+      // ]
     }
   },
   async mounted () {
@@ -186,6 +192,9 @@ export default {
   },
   methods: {
     getPhoneCode (code) {
+      if (code === 'GS') {
+        return '500'
+      }
       return getPhoneCode(code)
     },
     selectCountryAutocomplete () {

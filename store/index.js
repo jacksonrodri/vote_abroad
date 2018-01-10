@@ -1,8 +1,5 @@
 export const state = () => ({
   upcomingElections: [],
-  userId: '',
-  idToken: '',
-  user: {},
-  currentRequestId: '',
-  requests: []
+  currentRequestId: null,
+  language: null
 })
