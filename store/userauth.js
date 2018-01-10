@@ -19,6 +19,7 @@ export const state = () => ({
     lastName: null,
     emailAddress: null,
     mobilePhone: null,
+    mobileIntFormat: null,
     country: 'US'
   },
   session: {

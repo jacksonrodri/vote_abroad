@@ -1,34 +1,37 @@
 <template>
-  <section class="container">
-    <div>
+  <!-- Hero content: will be in the middle -->
+  <div class="hero-body">
+    <div class="container has-text-centered">
       <h1 class="title">
         Vote from Abroad
       </h1>
       <h2 class="subtitle">
-        Enter your email address or phone number to get a code start a secure session.
+        Enter your email address or mobile phone number to start.
       </h2>
+      <h2 class="subtitle is-6">We'll send you a code to start a secure session</h2>
       <b-field class="is-grouped  is-grouped-multiline">
         <b-field class="control is-expanded" label="Email">
           <b-field class="is-expanded">
             <b-field class="is-expanded">
               <b-input
               expanded
+              size="is-medium"
               placeholder="e.g. somebody@gmail.com"
               v-model="email">
               </b-input>
             </b-field>
             <b-field class="control">
               <p>
-                <span class="subtitle"> Or </span>
+                <span class="subtitle is-3"> Or </span>
               </p>
             </b-field>
           </b-field>
         </b-field>
-        <b-field class="is-expanded" label="Phone number">
+        <b-field class="is-expanded" label="Phone number" label-for="phone">
           <b-field class="is-expanded">
             <b-field class="is-expanded">
               <p class="control" v-show="!showCountryAutocomplete">
-                <span :class="`flag-icon flag-icon-${this.userCountry.toLowerCase()}`" @click="selectCountryAutocomplete()"></span>
+                <span :class="`flag-icon flag-icon-${this.userCountry ? this.userCountry.toLowerCase() : 'un'}`" @click="selectCountryAutocomplete()"></span>
               </p>
               <b-autocomplete
                 v-show="showCountryAutocomplete"
@@ -39,7 +42,9 @@
                 :keep-first="true"
                 :data="filteredDataObj"
                 field="code"
-                :icon="`icon flag-icon-${userCountry.toLowerCase()}`"
+                max-results=10
+                size="is-medium"
+                :icon="`icon flag-icon-${userCountry ? userCountry.toLowerCase() : 'un'}`"
                 icon-pack="flag"
                 @blur="()=> showCountryAutocomplete = false"
                 @keyup.enter.native="setPhoneFocus()"
@@ -49,16 +54,18 @@
                 </template>
               </b-autocomplete>
               <b-input
+                id="phone"
                 ref="phone"
                 expanded
-                placeholder="+852 9669 9279"
-                v-model="phone"
-                @input="formatPhone()">
+                size="is-medium"
+                :placeholder="phonePlaceholder"
+                v-model="userPhone"
+                @input="updatePhoneCountry()">
               </b-input>
             </b-field>
             <b-field>
               <p class="control">
-                <button class="button is-primary">Start</button>
+                <button class="button is-medium is-primary">Start</button>
               </p>
             </b-field>
           </b-field>
@@ -66,17 +73,7 @@
       </b-field>
       <p>You have entered: {{validPhone}}</p>
     </div>
-    <nuxt-link
-      to="/hello">Hello
-    </nuxt-link>
-    {{ $t('home') }}
-    <nuxt-link
-      v-for="(locale, index) in $i18n.locales"
-      v-if="locale.code !== $i18n.locale"
-      :key="index"
-      :exact="true"
-      :to="switchLocalePath(locale.code)">{{ locale.name }}</nuxt-link>
-  </section>
+  </div>
 </template>
 
 <script>
@@ -85,7 +82,8 @@ import ValidationCheck from '~/components/ValidationCheck.vue'
 import { required, minLength, maxLength } from 'vuelidate/lib/validators'
 import axios from 'axios'
 import debounce from 'lodash/debounce'
-import { getPhoneCode, asYouType as AsYouType } from 'libphonenumber-js'
+import { format, parse, getPhoneCode, asYouType as AsYouType } from 'libphonenumber-js'
+import * as phoneExamples from 'libphonenumber-js/examples.mobile.json'
 import { mapState } from 'vuex'
 
 let twilio = axios.create({
@@ -120,7 +118,6 @@ export default {
         countryCode: null,
         nationalFormat: null
       },
-      email: null,
       phone: null,
       phoneFormatted: null,
       ip: null,
@@ -132,7 +129,7 @@ export default {
   },
   computed: {
     filteredDataObj () {
-      if (this.userCountry) {
+      if (this.userCountry && this.userCountry.length > 1) {
         return this.countries.filter((option) => {
           return option.name
             .toString()
@@ -157,6 +154,31 @@ export default {
       set (value) {
         this.$store.commit('userauth/updateUser', {country: value})
       }
+    },
+    email: {
+      get () {
+        return this.$store.state.userauth.user.emailAddress
+      },
+      set (value) {
+        this.$store.commit('userauth/updateUser', {emailAddress: value})
+      }
+    },
+    userPhone: {
+      get () {
+        const formatter = new AsYouType((this.userCountry) ? this.userCountry : this.session.country)
+        return formatter.input(this.$store.state.userauth.user.mobilePhone)
+      },
+      set (value) {
+        this.$store.commit('userauth/updateUser', {mobilePhone: value})
+      }
+    },
+    phonePlaceholder () {
+      return `e.g. ${format(phoneExamples[this.userCountry], this.userCountry, 'International')}`
+      // if (this.userCountry === 'US') {
+      //   return '+1(919)755-155'
+      // } else {
+      //   return '+852 9669 9279'
+      // }
     },
     ...mapState('userauth', [
       'session',
@@ -197,7 +219,12 @@ export default {
       if (code === 'GS') {
         return '500'
       }
-      return getPhoneCode(code)
+      try {
+        return getPhoneCode(code)
+      } catch (error) {
+        // console.error(error)
+        return ''
+      }
     },
     selectCountryAutocomplete () {
       this.showCountryAutocomplete = true
@@ -219,18 +246,17 @@ export default {
     checkPhone: debounce(function () {
       twilio.get(`${this.telOrEmail}?CountryCode=HK`).then(res => console.log('received', res.status))
     }, 1000),
-    formatPhone () {
+    updatePhoneCountry () {
       const formatter = new AsYouType((this.userCountry) ? this.userCountry : this.session.country)
-      let temp = formatter.input(this.phone)
-      // const formatter = new AsYouType((this.location && this.location.country) ? this.location.country : '')
-      this.phoneFormatted = temp
-      this.phone = temp
-      let tempCountry = formatter.country
-      if (tempCountry) {
-        this.userCountry = tempCountry
+      formatter.input(this.userPhone)
+      if (formatter.country) {
+        this.userCountry = formatter.country
       }
-      console.log(tempCountry)
-      // return `${formatter.input(this.phone)} - country: ${formatter.country} - code: ${formatter.country_phone_code} - template: ${formatter.template}`
+      let num = formatter.country ? parse(this.userPhone, formatter.country) : parse(this.userPhone)
+      let intFormat = format(num, 'International_plaintext')
+      let domesticFormat = format(num, 'National')
+      this.$store.commit('userauth/updateUser', {mobileIntFormat: intFormat})
+      console.log('int', intFormat, 'domestic', domesticFormat)
     }
   }
 }
@@ -241,7 +267,7 @@ $flag-icon-css-path: '../node_modules/flag-icon-css/flags'
 @import '../node_modules/flag-icon-css/sass/flag-icon.scss'
 
 .flag-icon
-  width: 3em;
+  width: 3.8em;
   height: 100%;
   line-height: inherit;
 </style>
