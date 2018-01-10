@@ -109,6 +109,6 @@ export const actions = {
   },
   async getUser ({commit, state, dispatch}) {
     await dispatch('getSessionGeo')
-    commit('updateUser', {country: state.session.country})
+    commit('updateUser', {country: state.user.country ? state.user.country : state.session.country})
   }
 }

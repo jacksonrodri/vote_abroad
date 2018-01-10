@@ -1,0 +1,5 @@
+[[redirects]]
+from = "/api/countries/"
+to = "http://country.io/names.json"
+status = 200
+force = false
