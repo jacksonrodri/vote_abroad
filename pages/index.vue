@@ -9,69 +9,73 @@
         Enter your email address or mobile phone number to start.
       </h2>
       <h2 class="subtitle is-6">We'll send you a code to start a secure session</h2>
-      <b-field class="is-grouped  is-grouped-multiline">
-        <b-field class="control is-expanded" label="Email">
-          <b-field class="is-expanded">
-            <b-field class="is-expanded">
-              <b-input
-              expanded
-              size="is-medium"
-              placeholder="e.g. somebody@gmail.com"
-              v-model="email">
-              </b-input>
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <b-field class="is-grouped has-text-left is-grouped-multiline">
+            <b-field class="control is-expanded" label="Email">
+              <b-field class="is-expanded">
+                <b-field class="is-expanded">
+                  <b-input
+                  expanded
+                  size="is-medium"
+                  placeholder="e.g. somebody@gmail.com"
+                  v-model="email">
+                  </b-input>
+                </b-field>
+              </b-field>
             </b-field>
-            <b-field class="control">
-              <p>
-                <span class="subtitle is-3"> Or </span>
-              </p>
-            </b-field>
-          </b-field>
-        </b-field>
-        <b-field class="is-expanded" label="Phone number" label-for="phone">
-          <b-field class="is-expanded">
-            <b-field class="is-expanded">
-              <p class="control" v-show="!showCountryAutocomplete">
-                <span :class="`flag-icon flag-icon-${this.userCountry ? this.userCountry.toLowerCase() : 'un'}`" @click="selectCountryAutocomplete()"></span>
-              </p>
-              <b-autocomplete
-                v-show="showCountryAutocomplete"
-                ref="countryAutocomplete"
-                class="autocountry"
-                v-model="userCountry"
-                placeholder="Country"
-                :keep-first="true"
-                :data="filteredDataObj"
-                field="code"
-                max-results=10
-                size="is-medium"
-                :icon="`icon flag-icon-${userCountry ? userCountry.toLowerCase() : 'un'}`"
-                icon-pack="flag"
-                @blur="()=> showCountryAutocomplete = false"
-                @keyup.enter.native="setPhoneFocus()"
-                @select="option => select(option)">
-                <template slot-scope="props">
-                  <span :class="`flag-icon flag-icon-${props.option.code.toLowerCase()}`"></span>{{ props.option.name }} (+{{getPhoneCode(props.option.code)}})
-                </template>
-              </b-autocomplete>
-              <b-input
-                id="phone"
-                ref="phone"
-                expanded
-                size="is-medium"
-                :placeholder="phonePlaceholder"
-                v-model="userPhone"
-                @input="updatePhoneCountry()">
-              </b-input>
-            </b-field>
-            <b-field>
-              <p class="control">
-                <button class="button is-medium is-primary">Start</button>
-              </p>
+            <b-field class="is-expanded" label="Phone number" label-for="phone">
+              <b-field class="is-expanded">
+                <b-field class="is-expanded">
+                  <p class="control" v-show="!showCountryAutocomplete">
+                    <span :class="`flag-icon flag-icon-${this.userCountry ? this.userCountry.toLowerCase() : 'un'}`" @click="selectCountryAutocomplete()"></span>
+                  </p>
+                  <b-autocomplete
+                    v-show="showCountryAutocomplete"
+                    ref="countryAutocomplete"
+                    class="autocountry"
+                    v-model="userCountry"
+                    placeholder="Country"
+                    :keep-first="true"
+                    :data="filteredDataObj"
+                    field="code"
+                    max-results=10
+                    size="is-medium"
+                    :icon="`icon flag-icon-${userCountry ? userCountry.toLowerCase() : 'un'}`"
+                    icon-pack="flag"
+                    @blur="()=> showCountryAutocomplete = false"
+                    @keyup.enter.native="setPhoneFocus()"
+                    @select="option => select(option)">
+                    <template slot-scope="props">
+                      <span :class="`flag-icon flag-icon-${props.option.code.toLowerCase()}`"></span>{{ props.option.name }} (+{{getPhoneCode(props.option.code)}})
+                    </template>
+                  </b-autocomplete>
+                  <b-input
+                    id="phone"
+                    ref="phone"
+                    expanded
+                    size="is-medium"
+                    :placeholder="phonePlaceholder"
+                    v-model="userPhone"
+                    @input="updatePhoneCountry()">
+                  </b-input>
+                </b-field>
+              </b-field>
             </b-field>
           </b-field>
-        </b-field>
-      </b-field>
-      <p>You have entered: {{validPhone}}</p>
+
+          <b-field grouped position="is-right">
+            <p class="control">
+              <button class="button is-large is-info">Start</button>
+            </p>
+          </b-field>
+          <b-field grouped position="is-right">
+            <p class="control">
+              <button class="button is-small is-text has-text-grey">or start an anonymous session</button>
+            </p>
+          </b-field>
+        </div>
+      </div>
     </div>
   </div>
 </template>
