@@ -107,7 +107,8 @@ export default {
     ValidationCheck
   },
   async asyncData () {
-    let { data } = await axios.get('//votefromabroad.netlify.com/api/countries/', {headers: {'Access-Control-Allow-Origin': '*'}})
+    let countriesUrl = process.env.NODE_ENV === 'production' && process.browser ? '//votefromabroad.netlify.com/api/countries/' : 'http://country.io/names.json'
+    let { data } = await axios.get(countriesUrl, {headers: {'Access-Control-Allow-Origin': '*'}})
     let countries = {countries: Object.keys(data).sort().map(x => ({name: data[x], code: x}))}
     return countries
   },
