@@ -28,18 +28,18 @@
           <b-field class="is-expanded">
             <b-field class="is-expanded">
               <p class="control" v-show="!showCountryAutocomplete">
-                <span :class="`flag-icon flag-icon-${this.location.toLowerCase()}`" @click="selectCountryAutocomplete()"></span>
+                <span :class="`flag-icon flag-icon-${this.userCountry.toLowerCase()}`" @click="selectCountryAutocomplete()"></span>
               </p>
               <b-autocomplete
                 v-show="showCountryAutocomplete"
                 ref="countryAutocomplete"
                 class="autocountry"
-                v-model="location"
+                v-model="userCountry"
                 placeholder="Country"
                 :keep-first="true"
                 :data="filteredDataObj"
                 field="code"
-                :icon="`icon flag-icon-${location.toLowerCase()}`"
+                :icon="`icon flag-icon-${userCountry.toLowerCase()}`"
                 icon-pack="flag"
                 @blur="()=> showCountryAutocomplete = false"
                 @keyup.enter.native="setPhoneFocus()"
@@ -86,6 +86,7 @@ import { required, minLength, maxLength } from 'vuelidate/lib/validators'
 import axios from 'axios'
 import debounce from 'lodash/debounce'
 import { getPhoneCode, asYouType as AsYouType } from 'libphonenumber-js'
+import { mapState } from 'vuex'
 
 let twilio = axios.create({
   baseURL: 'https://lookups.twilio.com/v1/PhoneNumbers/',
@@ -126,49 +127,49 @@ export default {
       location: '',
       selected: null,
       countries: []
-      // countries: [
-      //   {
-      //     name: 'United States',
-      //     code: 'US'
-      //   },
-      //   {
-      //     name: 'Hong Kong',
-      //     code: 'HK'
-      //   }
-      // ]
-    }
-  },
-  async mounted () {
-    if (!this.location) {
-      let res = await axios.get('https://ipinfo.io/geo')
-      console.log(res.data)
-      this.ip = res.data
-      this.location = this.ip.country
-      // if (this.ip && this.ip.country) {
-      //   this.phone = `+${new AsYouType((this.location) ? this.location : this.ip.country).country_phone_code}`
-      // }
     }
   },
   computed: {
     filteredDataObj () {
-      if (this.location) {
+      if (this.userCountry) {
         return this.countries.filter((option) => {
           return option.name
             .toString()
             .toLowerCase()
-            .indexOf(this.location.toLowerCase()) >= 0 || option.code
+            .indexOf(this.userCountry.toLowerCase()) >= 0 || option.code
             .toString()
             .toLowerCase()
-            .indexOf(this.location.toLowerCase()) >= 0
+            .indexOf(this.userCountry.toLowerCase()) >= 0
         })
       } else {
         return this.countries
       }
     },
     validPhone () {
-      const formatter = new AsYouType(this.location || '')
+      const formatter = new AsYouType(this.userCountry || '')
       return `${formatter.input(this.phone)} - country: ${formatter.country} - code: ${formatter.country_phone_code} - template: ${formatter.template}`
-    }
+    },
+    userCountry: {
+      get () {
+        return this.$store.state.userauth.user.country
+      },
+      set (value) {
+        this.$store.commit('userauth/updateUser', {country: value})
+      }
+    },
+    ...mapState('userauth', [
+      'session',
+      'user'
+    ]),
+    ...mapState('requests', [
+      'requests'
+    ])
+    // session () {
+    //   if (this.$store.state.userauth.session.country) {
+    //     return this.$store.state.userauth.session
+    //   }
+    //   return {city: null, country: 'US', ip: null, loc: null, region: null}
+    // }
   },
   validations: {
     telOrEmail: {
@@ -218,14 +219,14 @@ export default {
       twilio.get(`${this.telOrEmail}?CountryCode=HK`).then(res => console.log('received', res.status))
     }, 1000),
     formatPhone () {
-      const formatter = new AsYouType((this.location) ? this.location : this.ip.country)
+      const formatter = new AsYouType((this.userCountry) ? this.userCountry : this.session.country)
       let temp = formatter.input(this.phone)
       // const formatter = new AsYouType((this.location && this.location.country) ? this.location.country : '')
       this.phoneFormatted = temp
       this.phone = temp
       let tempCountry = formatter.country
       if (tempCountry) {
-        this.location = tempCountry
+        this.userCountry = tempCountry
       }
       console.log(tempCountry)
       // return `${formatter.input(this.phone)} - country: ${formatter.country} - code: ${formatter.country_phone_code} - template: ${formatter.template}`

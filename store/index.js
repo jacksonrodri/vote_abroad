@@ -16,6 +16,7 @@ const vuexLocalPlugin = store => {
   store.subscribe((mutation, state) => {
     if (mutation.type === 'RESTORE_MUTATION') {
       console.log('Restoring State')
+      store.dispatch('userauth/getUser')
     }
   })
 }

@@ -1,4 +1,5 @@
 import { WebAuth } from 'auth0-js'
+import axios from 'axios'
 
 const webAuth = new WebAuth({
   domain: 'montg.auth0.com',
@@ -17,7 +18,8 @@ export const state = () => ({
     middleName: null,
     lastName: null,
     emailAddress: null,
-    mobilePhone: null
+    mobilePhone: null,
+    country: 'US'
   },
   session: {
     ip: null,
@@ -43,6 +45,12 @@ export const mutations = {
   },
   updateGcToken (state, gcToken) {
     state.gcToken = gcToken
+  },
+  updateSessionGeo (state, geo) {
+    state.session = geo
+  },
+  updateUser (state, userObj) {
+    state.user = Object.assign({}, state.user, userObj)
   }
 }
 
@@ -91,5 +99,16 @@ export const actions = {
         resolve()
       })
     })
+  },
+  async getSessionGeo ({commit, state}) {
+    if (!state.session.country) {
+      let res = await axios.get('https://ipinfo.io/geo')
+      commit('updateSessionGeo', res.data)
+      console.log(res.data)
+    }
+  },
+  async getUser ({commit, state, dispatch}) {
+    await dispatch('getSessionGeo')
+    commit('updateUser', {country: state.session.country})
   }
 }
