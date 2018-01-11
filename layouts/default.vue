@@ -6,7 +6,7 @@
         <div class="container">
           <div class="navbar-brand">
             <a class="navbar-item">
-              <img src="/icon.png" alt="Logo"> <h2 class="subtitle is-4">&nbsp;&nbsp;&nbsp;VoteFromAbroad</h2>
+              <img src="/icon.svg" alt="Logo"> <h2 class="subtitle is-4">&nbsp;&nbsp;&nbsp;VoteFromAbroad</h2>
             </a>
             <div class="navbar-item is-expanded has-text-right is-hidden-desktop is-block-touch" >
               <!-- <a class="button is-info is-outlined is-small" v-show="$i18n.locale === 'en'" href="https://bulma.io">Español
