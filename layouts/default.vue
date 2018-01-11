@@ -55,6 +55,9 @@
                   </a>
                 </div>
               </div>
+              <div class="navbar-item">
+                <button class="button" @click="logout">Logout</button>
+              </div>
               <div class="navbar-item is-hidden-touch">
                 <nuxt-link :to="switchLocalePath('es')" class="button is-small is-info is-outlined" v-show="$i18n.locale === 'en'">Español</nuxt-link>
                 <nuxt-link :to="switchLocalePath('en')" class="button is-small is-info is-outlined" v-show="$i18n.locale === 'es'">English</nuxt-link>
@@ -110,6 +113,9 @@ export default {
     navOpened () { return this.$store.state.isMenuOpen }
   },
   methods: {
+    logout () {
+      this.$store.dispatch('userauth/logout')
+    },
     ...mapMutations([
       'toggleNav'
     ])

@@ -18,9 +18,11 @@ const vuexLocalPlugin = store => {
   store.subscribe((mutation, state) => {
     if (mutation.type === 'RESTORE_MUTATION') {
       console.log('Restoring State')
-      store.dispatch('userauth/getUser')
-      store.dispatch('userauth/parseHash')
-      console.log(location.hash)
+      if (store.state.userauth.user.idToken || window.location.hash) {
+        store.dispatch('userauth/setSession')
+      } else {
+        store.dispatch('userauth/getUser')
+      }
     }
   })
 }

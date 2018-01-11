@@ -1,6 +1,6 @@
 import { WebAuth } from 'auth0-js'
 import axios from 'axios'
-import { Dialog, Snackbar } from 'buefy'
+import { Dialog, Snackbar, LoadingProgrammatic } from 'buefy'
 const jwtDecode = require('jwt-decode')
 
 const webAuth = new WebAuth({
@@ -35,7 +35,7 @@ export const state = () => ({
 
 export const getters = {
   isExpired: state => {
-    return state.expirationDate ? state.expirationDate < new Date() : null
+    return state.expirationDate ? state.expirationDate < new Date().getTime() : null
   }
 }
 
@@ -112,7 +112,7 @@ export const actions = {
   },
   async getUser ({commit, state, dispatch}) {
     await dispatch('getSessionGeo')
-    commit('updateUser', {country: state.user.country !== 'US' ? state.user.country : state.session.country})
+    commit('updateUser', {country: state.user.country !== 'US' && state.user.country ? state.user.country : state.session.country})
   },
   async authStart ({commit, state, dispatch}) {
     await dispatch('sendEmailCode')
@@ -136,7 +136,8 @@ export const actions = {
       onConfirm: (value) => dispatch('loginEmailVerify', value)
     })
   },
-  loginEmailVerify ({commit, state}, code) {
+  loginEmailVerify ({commit, dispatch, state}, code) {
+    const loadingComponent = LoadingProgrammatic.open()
     return new Promise((resolve, reject) => {
       webAuth.passwordlessVerify({
         // realm: 'Username-Password-Authentication', // connection name or HRD domain
@@ -147,8 +148,26 @@ export const actions = {
         // audience: this.options.audience
       }, (err, authResult) => {
         if (err) {
+          loadingComponent.close()
+          Dialog.prompt({
+            title: 'Authentication',
+            message: `That code is incorrect, please try again. Enter the code we sent to ${state.user.emailAddress}`,
+            inputAttrs: {
+              type: 'number',
+              placeholder: 'Type the code.',
+              minlength: 6,
+              maxlength: 6,
+              autocomplete: 'off',
+              size: 6,
+              max: 999999,
+              pattern: '[0-9]{6}',
+              title: 'enter a 6 digit code'
+            },
+            onConfirm: (value) => dispatch('loginEmailVerify', value)
+          })
           reject(err)
         }
+        loadingComponent.close()
         Snackbar.open({
           message: `${authResult}`,
           type: 'is-info',
@@ -162,21 +181,84 @@ export const actions = {
       })
     })
   },
-  parseHash ({ commit }) {
-    function getHashValue (key) {
-      var matches = location.hash.match(new RegExp(key + '=([^&]*)'))
-      return matches ? matches[1] : null
+  async setSession ({ commit, dispatch }) {
+    function parseHash () {
+      return new Promise((resolve, reject) => {
+        webAuth.parseHash({ hash: window.location.hash }, function (err, authResult) {
+          window.location.hash = ''
+          if (err) {
+            reject(err)
+          }
+          resolve(authResult)
+        })
+      })
     }
-    let idToken = getHashValue('id_token')
-    console.log('id_token', jwtDecode(idToken))
+    function checkSession () {
+      return new Promise((resolve, reject) => {
+        webAuth.checkSession({
+          scope: 'openid profile email offline_access'
+        }, function (err, authResult) {
+          if (err) {
+            console.log(err)
+            dispatch('clearData')
+            return
+          }
+          resolve(authResult)
+        })
+      })
+    }
+    function renewAuth () {
+      return new Promise((resolve, reject) => {
+        webAuth.renewAuth({
+          usePostMessage: true
+        }, (error, authResult) => {
+          if (error) {
+            console.log(error)
+          }
+          resolve(authResult)
+        })
+      })
+    }
+    let hasHash = window.location.hash && window.location.hash.indexOf('access_token') > -1
+    let authResult = hasHash ? await parseHash() : await checkSession()
+    if (authResult.expiresIn * 1000 > Date.now()) {
+      authResult = await renewAuth()
+      console.log('renewing auth', authResult.expiresIn * 1000, Date.now())
+    }
+    let idToken = authResult.idToken
     commit('updateIdToken', idToken)
+    commit('updateExpirationDate', new Date(authResult.expiresIn * 1000).getTime())
     commit('updateGcToken', jwtDecode(idToken)['https://graph.cool/token'])
     Snackbar.open({
-      message: `Your graphcool token is: ${jwtDecode(getHashValue('id_token'))['https://graph.cool/token']}`,
+      message: `Your graphcool token is: ${jwtDecode(idToken)['https://graph.cool/token']}`,
       type: 'is-info',
       position: 'is-top',
       actionText: 'Retry',
       duration: 8000
     })
+  },
+  clearData ({ commit, dispatch }) {
+    commit('updateGcToken', null)
+    commit('updateIdToken', null)
+    commit('updateExpirationDate', null)
+    commit('updateUser', {
+      country: null,
+      emailAddress: null
+    })
+    commit('updateSessionGeo', {
+      city: null,
+      country: null,
+      ip: null,
+      loc: null,
+      region: null
+    })
+    dispatch('getUser')
+  },
+  async logout ({ dispatch }) {
+    await webAuth.logout({
+      returnTo: 'http://localhost:3000',
+      clientID: '0Wy4khZcuXefSfrUuYDUP0Udag4FqL2u'
+    })
+    dispatch('clearData')
   }
 }
