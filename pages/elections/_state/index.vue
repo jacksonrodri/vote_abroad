@@ -19,12 +19,9 @@
 <script>
 
 export default {
-  async asyncData ({ app, route, payload }) {
-    if (payload) return { elections: payload }
-    else {
-      return {
-        elections: (await app.$content('/elections').get('elections')).body.filter(election => election.state === route.params.state)
-      }
+  async asyncData ({ app, route }) {
+    return {
+      elections: (await app.$content('/elections').get('elections')).body.filter(election => election.state === route.params.state)
     }
   },
   head: {

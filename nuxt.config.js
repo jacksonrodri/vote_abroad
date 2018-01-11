@@ -37,14 +37,11 @@ module.exports = {
     minify: {
       collapseWhitespace: false
     },
-    routes () {
+    routes: function () {
       return axios.get('http://localhost:3000/content-api/elections/elections')
       .then(({data}) => {
         return data.body.map((election) => {
-          return {
-            route: `/elections/${election.state}`,
-            payload: election
-          }
+          return `/elections/${election.state}`
         })
       })
     }
