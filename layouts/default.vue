@@ -1,6 +1,6 @@
 <template>
 <div>
-  <section class="hero is-primary is-large is-bold">
+  <section class="hero is-white is-bold is-fullheight">
     <!-- Hero head: will stick at the top -->
     <div class="hero-head">
       <header class="navbar">
@@ -89,9 +89,13 @@
       </nav>
     </div>
   </section>
-<footer class="footer is-paddingless">
-  <div class="container has-text-centered">
-    <p class="is-size-7">Public Service provided by Democratic Party Committee Abroad (DemocratsAbroad.org). This communication is not authorized by any candidate or candidate's committee.</p>
+<footer class="footer level navbar is-grey">
+  <div class="level-item container">
+    <div class="content has-text-centered">
+      <p>
+        Public Service provided by <strong> Democratic Party Committee Abroad</strong> <a href="https://democratsabroad.org">(DemocratsAbroad.org) </a><br/>This communication is not authorized by any candidate or candidate's committee.
+      </p>
+    </div>
   </div>
 </footer>
 </div>

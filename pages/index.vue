@@ -1,80 +1,94 @@
 <template>
   <!-- Hero content: will be in the middle -->
   <div class="hero-body">
-    <div class="container has-text-centered">
-      <h1 class="title">
-        Vote from Abroad
-      </h1>
-      <h2 class="subtitle">
-        Enter your email address or mobile phone number to start.
-      </h2>
-      <h2 class="subtitle is-6">We'll send you a code to start a secure session</h2>
-      <div class="columns is-centered">
+    <div class="container is-light has-text-left">
+      <div class="columns is-centered is-light">
         <div class="column is-three-quarters">
-          <b-field class="is-grouped has-text-left is-grouped-multiline">
-            <b-field class="control is-expanded" label="Email" label-for="email">
-              <b-field class="is-expanded">
+          <section class="section">
+            <h1 class="title">
+              Vote from Abroad
+            </h1>
+            <h1 class="title">
+              Register to vote now!
+            </h1>
+          </section>
+          <section class="section">
+            <h2 class="subtitle">
+              Enter your email address or mobile phone number to start.
+            </h2>
+            <h2 class="subtitle is-6">We'll send you a code to start a secure session</h2>
+            <b-field class="is-grouped is-grouped-multiline">
+              <b-field class="control is-expanded" label="Email" label-for="email">
                 <b-field class="is-expanded">
-                  <b-input
-                  id="email"
-                  expanded
-                  size="is-medium"
-                  placeholder="e.g. somebody@gmail.com"
-                  v-model="email">
-                  </b-input>
-                </b-field>
-              </b-field>
-            </b-field>
-            <b-field class="is-expanded" label="Phone number" label-for="phone">
-              <b-field class="is-expanded">
-                <b-field class="is-expanded">
-                  <p class="control" v-show="!showCountryAutocomplete">
-                    <span :class="`flag-icon flag-icon-${this.userCountry ? this.userCountry.toLowerCase() : 'un'}`" @click="selectCountryAutocomplete()"></span>
-                  </p>
-                  <b-autocomplete
-                    v-show="showCountryAutocomplete"
-                    ref="countryAutocomplete"
-                    class="autocountry"
-                    v-model="userCountry"
-                    placeholder="Country"
-                    :keep-first="true"
-                    :data="filteredDataObj"
-                    field="code"
-                    max-results=10
-                    size="is-medium"
-                    :icon="`icon flag-icon-${userCountry ? userCountry.toLowerCase() : 'un'}`"
-                    icon-pack="flag"
-                    @blur="()=> showCountryAutocomplete = false"
-                    @keyup.enter.native="setPhoneFocus()"
-                    @select="option => select(option)">
-                    <template slot-scope="props">
-                      <span :class="`flag-icon flag-icon-${props.option.code.toLowerCase()}`"></span>{{ props.option.name }} (+{{getPhoneCode(props.option.code)}})
-                    </template>
-                  </b-autocomplete>
-                  <b-input
-                    id="phone"
-                    ref="phone"
+                  <b-field class="is-expanded">
+                    <b-input
+                    id="email"
                     expanded
                     size="is-medium"
-                    :placeholder="phonePlaceholder"
-                    v-model="userPhone"
-                    @input="updatePhoneCountry()">
-                  </b-input>
+                    placeholder="e.g. somebody@gmail.com"
+                    v-model="email">
+                    </b-input>
+                  </b-field>
+                </b-field>
+              </b-field>
+              <b-field class="is-expanded" label="Phone number" label-for="phone">
+                <b-field class="is-expanded">
+                  <b-field class="is-expanded">
+                    <p class="control" v-show="!showCountryAutocomplete">
+                      <span :class="`flag-icon flag-icon-${this.userCountry ? this.userCountry.toLowerCase() : 'un'}`" @click="selectCountryAutocomplete()"></span>
+                    </p>
+                    <b-autocomplete
+                      v-show="showCountryAutocomplete"
+                      ref="countryAutocomplete"
+                      class="autocountry"
+                      v-model="userCountry"
+                      placeholder="Country"
+                      :keep-first="true"
+                      :data="filteredDataObj"
+                      field="code"
+                      max-results=10
+                      size="is-medium"
+                      :icon="`icon flag-icon-${userCountry ? userCountry.toLowerCase() : 'un'}`"
+                      icon-pack="flag"
+                      @blur="()=> showCountryAutocomplete = false"
+                      @keyup.enter.native="setPhoneFocus()"
+                      @select="option => select(option)">
+                      <template slot-scope="props">
+                        <span :class="`flag-icon flag-icon-${props.option.code.toLowerCase()}`"></span>{{ props.option.name }} (+{{getPhoneCode(props.option.code)}})
+                      </template>
+                    </b-autocomplete>
+                    <b-input
+                      id="phone"
+                      ref="phone"
+                      expanded
+                      size="is-medium"
+                      :placeholder="phonePlaceholder"
+                      v-model="userPhone"
+                      @input="updatePhoneCountry()">
+                    </b-input>
+                  </b-field>
                 </b-field>
               </b-field>
             </b-field>
-          </b-field>
-
-          <b-field grouped position="is-right">
-            <p class="control">
-              <button class="button is-large is-info">Start</button>
-            </p>
-          </b-field>
-          <b-field grouped position="is-right">
-            <p class="control">
-              <button class="button is-small is-text has-text-grey">or start an anonymous session</button>
-            </p>
-          </b-field>
+            <div class="level is-mobile">
+              <div class="level-left">
+                <div class="level-item has-text-left-touch is-hidden-desktop">
+                  <div>
+                    <p><button class="button is-large is-info" @click="promptCode">Start</button></p>
+                    <p><button class="button is-text is-paddingless has-text-grey">or start an anonymous session</button></p>
+                  </div>
+                </div>
+              </div>
+              <div class="level-right">
+                <div class="level-item has-text-right is-hidden-touch">
+                  <div>
+                    <p><button class="button is-large is-info" @click="promptCode">Start</button></p>
+                    <p><button class="button is-text is-paddingless has-text-grey">or start an anonymous session</button></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </div>
@@ -262,6 +276,20 @@ export default {
       let domesticFormat = format(num, 'National')
       this.$store.commit('userauth/updateUser', {mobileIntFormat: intFormat})
       console.log('int', intFormat, 'domestic', domesticFormat)
+    },
+    promptCode () {
+      this.$dialog.prompt({
+        title: 'Authentication',
+        message: `Enter the code we sent to ${this.email}`,
+        inputAttrs: {
+          type: 'number',
+          placeholder: 'Type the code.',
+          value: '18',
+          maxlength: 2,
+          min: 18
+        },
+        onConfirm: (value) => this.$toast.open(`Your age is: ${value}`)
+      })
     }
   }
 }
