@@ -7,7 +7,15 @@ module.exports = {
       generate: [
         'get'
       ]
-    }]
+    }],
+    [
+      'elections',
+      {
+        page: 'elections/_state',
+        isPost: false,
+        generate: ['get', 'getAll']
+      }
+    ]
     // ['projects', {
     //   page: '/projects/_project',
     //   isPost: false

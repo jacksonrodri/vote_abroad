@@ -10,7 +10,7 @@
       </h2>
       <h2 class="subtitle is-6">We'll send you a code to start a secure session</h2>
       <div class="columns is-centered">
-        <div class="column is-four-fifths">
+        <div class="column is-three-quarters">
           <b-field class="is-grouped has-text-left is-grouped-multiline">
             <b-field class="control is-expanded" label="Email">
               <b-field class="is-expanded">

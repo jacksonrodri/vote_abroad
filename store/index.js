@@ -32,5 +32,22 @@ export const state = () => ({
 export const mutations = {
   RESTORE_MUTATION (state, payload) {
     vuexLocal.RESTORE_MUTATION(state, payload)
+  },
+  addUpcomingElections (state, data) {
+    state.upcomingElections = data
+    // state.upcomingElections.push(data)
+  }
+}
+
+export const actions = {
+  async nuxtServerInit ({ commit, app }) {
+    let sortedElections = (await this.app.$content('/elections').get('elections')).body
+      .filter(x => new Date(x.date).getTime() > Date.now())
+      .sort(function (a, b) {
+        var dateA = new Date(a.date).getTime()
+        var dateB = new Date(b.date).getTime()
+        return dateA - dateB
+      })
+    commit('addUpcomingElections', sortedElections.slice(0, 9))
   }
 }

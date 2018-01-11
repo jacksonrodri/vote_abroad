@@ -14,20 +14,44 @@
               <nuxt-link :to="switchLocalePath('es')" class="button is-info is-outlined is-small" v-show="$i18n.locale === 'en'">Español</nuxt-link>
               <nuxt-link :to="switchLocalePath('en')" class="button is-info is-outlined is-small" v-show="$i18n.locale === 'es'">English</nuxt-link>
             </div>
-            <span class="navbar-burger burger" data-target="navbarMenuHeroC">
+            <span :class="`navbar-burger burger ${navOpened ? is-active : ''}`" @click="navOpened = !navOpened" data-target="navbarMenuHeroC">
               <span></span>
               <span></span>
               <span></span>
             </span>
           </div>
-          <div id="navbarMenuHeroC" class="navbar-menu">
+          <div id="navbarMenuHeroC" :class="`navbar-menu ${navOpened ? is-active : ''}`">
             <div class="navbar-end">
-              <a class="navbar-item is-active">
-                Upcoming Elections
-              </a>
-              <a class="navbar-item">
-                FAQs
-              </a>
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link" href="#">
+                  Upcoming Elections
+                </a>
+                <div class="navbar-dropdown is-boxed">
+                  <nuxt-link v-for="election in upcomingElections" :key="`${election.state} ${election.electionType}`" :to="localePath({ name: 'elections-state', params: { state: election.state } })" class="navbar-item">{{ new Date(election.date).toLocaleDateString('en-US', {year: 'numeric', month: 'short', day: 'numeric'}) }} - {{ election.state }} {{ $t(`elections.electionTypes['${election.electionType}']`) }}</nuxt-link>
+                </div>
+              </div>
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link" href="#">
+                  FAQ's
+                </a>
+                <div class="navbar-dropdown is-boxed">
+                  <a class="navbar-item" href="#">
+                    Can I choose the state where I vote?
+                  </a>
+                  <a class="navbar-item" href="#">
+                    I can't remember or find my exact street address - what do I do?
+                  </a>
+                  <a class="navbar-item" href="#">
+                    Why do I need an exact address?
+                  </a>
+                  <a class="navbar-item" href="#">
+                    How do I request my ballot?
+                  </a>
+                  <a class="navbar-item" href="#">
+                    When will you send my ballot?
+                  </a>
+                </div>
+              </div>
               <nuxt-link :to="switchLocalePath('es')" class="navbar-item is-tab" v-show="$i18n.locale === 'en'">Español</nuxt-link>
               <nuxt-link :to="switchLocalePath('en')" class="navbar-item is-tab" v-show="$i18n.locale === 'es'">English</nuxt-link>
               <!-- <div class="navbar-item">
@@ -61,3 +85,17 @@
     </div>
   </section>
 </template>
+
+<script>
+export default {
+  data () {
+    return {
+      navOpened: false
+    }
+  },
+  computed: {
+    upcomingElections () { return this.$store.state.upcomingElections }
+  }
+}
+</script>
+
