@@ -1,4 +1,6 @@
 import VuexPersistence from 'vuex-persist'
+import { Dialog, Snackbar, Toast } from 'buefy'
+// LoadingProgrammatic, ModalProgrammatic, also available from buefy
 
 let vuexLocal
 
@@ -56,5 +58,26 @@ export const actions = {
         return dateA - dateB
       })
     commit('addUpcomingElections', sortedElections.slice(0, 9))
+  },
+  toasty () {
+    Snackbar.open(`Your age is: toast`)
+  },
+  promptCode ({ rootState }) {
+    Dialog.prompt({
+      title: 'Authentication',
+      message: `Enter the code we sent to ${rootState.userauth.user.emailAddress}`,
+      inputAttrs: {
+        type: 'text',
+        placeholder: 'Type the code.',
+        minlength: 6,
+        maxlength: 6
+      },
+      onConfirm: (value) => Toast.open({
+        message: `Your age is: ${value}`,
+        type: 'is-warning',
+        position: 'is-top',
+        actionText: 'Retry'
+      })
+    })
   }
 }

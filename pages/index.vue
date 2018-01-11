@@ -83,7 +83,7 @@
                 <div class="level-item has-text-right is-hidden-touch">
                   <div>
                     <p><button class="button is-large is-info" @click="promptCode">Start</button></p>
-                    <p><button class="button is-text is-paddingless has-text-grey">or start an anonymous session</button></p>
+                    <p><button class="button is-text is-paddingless has-text-grey" @click="toasty">or start an anonymous session</button></p>
                   </div>
                 </div>
               </div>
@@ -278,18 +278,10 @@ export default {
       console.log('int', intFormat, 'domestic', domesticFormat)
     },
     promptCode () {
-      this.$dialog.prompt({
-        title: 'Authentication',
-        message: `Enter the code we sent to ${this.email}`,
-        inputAttrs: {
-          type: 'number',
-          placeholder: 'Type the code.',
-          value: '18',
-          maxlength: 2,
-          min: 18
-        },
-        onConfirm: (value) => this.$toast.open(`Your age is: ${value}`)
-      })
+      this.$store.dispatch('promptCode')
+    },
+    toasty () {
+      this.$store.dispatch('toasty')
     }
   }
 }
