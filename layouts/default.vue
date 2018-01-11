@@ -1,5 +1,6 @@
 <template>
-  <section class="hero is-light is-fullheight">
+<div>
+  <section class="hero is-primary is-large is-bold">
     <!-- Hero head: will stick at the top -->
     <div class="hero-head">
       <header class="navbar">
@@ -14,20 +15,22 @@
               <nuxt-link :to="switchLocalePath('es')" class="button is-info is-outlined is-small" v-show="$i18n.locale === 'en'">Español</nuxt-link>
               <nuxt-link :to="switchLocalePath('en')" class="button is-info is-outlined is-small" v-show="$i18n.locale === 'es'">English</nuxt-link>
             </div>
-            <span :class="`navbar-burger burger ${navOpened ? is-active : ''}`" @click="navOpened = !navOpened" data-target="navbarMenuHeroC">
+            <span :class="`navbar-burger burger ${navOpened ? 'is-active' : ''}`" @click="toggleNav()" data-target="navbarMenuHeroC">
               <span></span>
               <span></span>
               <span></span>
             </span>
           </div>
-          <div id="navbarMenuHeroC" :class="`navbar-menu ${navOpened ? is-active : ''}`">
+          <div id="navbarMenuHeroC" :class="`navbar-menu ${navOpened ? 'is-active' : ''}`">
             <div class="navbar-end">
               <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link" href="#">
+                <nuxt-link :to="localePath({ name: 'elections-state'})" class="navbar-link">Upcoming Elections</nuxt-link>
+                <!-- <a class="navbar-link" href="#">
                   Upcoming Elections
-                </a>
+                </a> -->
                 <div class="navbar-dropdown is-boxed">
-                  <nuxt-link v-for="election in upcomingElections" :key="`${election.state} ${election.electionType}`" :to="localePath({ name: 'elections-state', params: { state: election.state } })" class="navbar-item">{{ new Date(election.date).toLocaleDateString('en-US', {year: 'numeric', month: 'short', day: 'numeric'}) }} - {{ election.state }} {{ $t(`elections.electionTypes['${election.electionType}']`) }}</nuxt-link>
+                  <nuxt-link v-for="(election, index) in upcomingElections" :key="`${election.state} ${election.electionType}`" :to="localePath({ name: 'elections-state', params: { state: election.state } })" :class="`navbar-item ${index > 3 ? 'is-hidden-touch' : ''}`">{{ new Date(election.date).toLocaleDateString('en-US', {year: 'numeric', month: 'short', day: 'numeric'}) }} - {{ election.state }} {{ $t(`elections.electionTypes['${election.electionType}']`) }}</nuxt-link>
+                  <nuxt-link :to="localePath({ name: 'elections-state' })" class="navbar-item" exact >... All upcoming elections</nuxt-link>
                 </div>
               </div>
               <div class="navbar-item has-dropdown is-hoverable">
@@ -52,8 +55,10 @@
                   </a>
                 </div>
               </div>
-              <nuxt-link :to="switchLocalePath('es')" class="navbar-item is-tab" v-show="$i18n.locale === 'en'">Español</nuxt-link>
-              <nuxt-link :to="switchLocalePath('en')" class="navbar-item is-tab" v-show="$i18n.locale === 'es'">English</nuxt-link>
+              <div class="navbar-item is-hidden-touch">
+                <nuxt-link :to="switchLocalePath('es')" class="button is-small is-info is-outlined" v-show="$i18n.locale === 'en'">Español</nuxt-link>
+                <nuxt-link :to="switchLocalePath('en')" class="button is-small is-info is-outlined" v-show="$i18n.locale === 'es'">English</nuxt-link>
+              </div>
               <!-- <div class="navbar-item">
                 <div class="field is-grouped">
                   <nuxt-link :to="switchLocalePath('en')" class="navbar-item is-tab" :class="$i18n.locale=='en'?'is-active':''" exact>EN</nuxt-link>
@@ -73,28 +78,37 @@
       <nav class="tabs is-boxed is-fullwidth">
         <div class="container">
           <ul>
-            <li class="is-active"><a>Overview</a></li>
-            <li><a>Modifiers</a></li>
-            <li><a>Grid</a></li>
-            <li><a>Elements</a></li>
-            <li><a>Components</a></li>
-            <li><a>Layout</a></li>
+            <li><a>How to Vote From Abroad</a></li>
+            <li><a>Voter Help Desk/FAQ</a></li>
+            <li><a>About Us</a></li>
+            <li><a>Privacy</a></li>
+            <li><a>Contact</a></li>
+            <li><a>Terms of Use</a></li>
           </ul>
         </div>
       </nav>
     </div>
   </section>
+<footer class="footer is-paddingless">
+  <div class="container has-text-centered">
+    <p class="is-size-7">Public Service provided by Democratic Party Committee Abroad (DemocratsAbroad.org). This communication is not authorized by any candidate or candidate's committee.</p>
+  </div>
+</footer>
+</div>
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
+
 export default {
-  data () {
-    return {
-      navOpened: false
-    }
-  },
   computed: {
-    upcomingElections () { return this.$store.state.upcomingElections }
+    upcomingElections () { return this.$store.state.upcomingElections },
+    navOpened () { return this.$store.state.isMenuOpen }
+  },
+  methods: {
+    ...mapMutations([
+      'toggleNav'
+    ])
   }
 }
 </script>

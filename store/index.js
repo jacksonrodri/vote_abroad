@@ -26,7 +26,8 @@ export const plugins = [vuexLocalPlugin]
 export const state = () => ({
   upcomingElections: [],
   currentRequestId: null,
-  language: null
+  language: null,
+  isMenuOpen: false
 })
 
 export const mutations = {
@@ -36,6 +37,12 @@ export const mutations = {
   addUpcomingElections (state, data) {
     state.upcomingElections = data
     // state.upcomingElections.push(data)
+  },
+  closeMenu (state) {
+    state.isMenuOpen = false
+  },
+  toggleNav (state) {
+    state.isMenuOpen = !state.isMenuOpen
   }
 }
 
