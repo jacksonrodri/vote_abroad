@@ -12,10 +12,11 @@
       <div class="columns is-centered">
         <div class="column is-three-quarters">
           <b-field class="is-grouped has-text-left is-grouped-multiline">
-            <b-field class="control is-expanded" label="Email">
+            <b-field class="control is-expanded" label="Email" label-for="email">
               <b-field class="is-expanded">
                 <b-field class="is-expanded">
                   <b-input
+                  id="email"
                   expanded
                   size="is-medium"
                   placeholder="e.g. somebody@gmail.com"
