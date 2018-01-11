@@ -5,7 +5,8 @@ module.exports = {
       permalink: ':slug',
       isPost: false,
       generate: [
-        'get'
+        'get',
+        'getAll'
       ]
     }],
     [
