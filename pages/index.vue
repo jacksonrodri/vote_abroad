@@ -74,7 +74,7 @@
               <div class="level-left">
                 <div class="level-item has-text-left-touch is-hidden-desktop">
                   <div>
-                    <p><button class="button is-large is-info" @click="promptCode">Start</button></p>
+                    <p><button class="button is-large is-info" @click="authStart">Start</button></p>
                     <p><button class="button is-text is-paddingless has-text-grey">or start an anonymous session</button></p>
                   </div>
                 </div>
@@ -82,7 +82,7 @@
               <div class="level-right">
                 <div class="level-item has-text-right is-hidden-touch">
                   <div>
-                    <p><button class="button is-large is-info" @click="promptCode">Start</button></p>
+                    <p><button class="button is-large is-info" @click="authStart">Start</button></p>
                     <p><button class="button is-text is-paddingless has-text-grey" @click="toasty">or start an anonymous session</button></p>
                   </div>
                 </div>
@@ -282,6 +282,9 @@ export default {
     },
     toasty () {
       this.$store.dispatch('toasty')
+    },
+    authStart () {
+      this.$store.dispatch('userauth/authStart')
     }
   }
 }

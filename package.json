@@ -18,6 +18,7 @@
     "auth0-js": "^9.0.2",
     "buefy": "^0.6.2",
     "flag-icon-css": "^2.9.0",
+    "jwt-decode": "^2.2.0",
     "libphonenumber-js": "^0.4.48",
     "nuxt": "^1.0.0-gh-b83d745",
     "nuxt-i18n": "^1.0.2",
