@@ -87,7 +87,7 @@
                   <div>
                     <p><button class="button is-large is-info" @click="authStart">Start</button></p>
                     <p>
-                      <nuxt-link :to="localePath({ path: 'request/your-information' })" class="button is-text is-paddingless has-text-grey" exact >or start an anonymous session</nuxt-link>
+                      <nuxt-link :to="localePath({ name: 'request-stage', params: {stage: 'your-information'} })" class="button is-text is-paddingless has-text-grey" exact >or start an anonymous session</nuxt-link>
                       <!-- <button class="button is-text is-paddingless has-text-grey" @click="toasty">or start an anonymous session</button> -->
                     </p>
                   </div>
