@@ -37,8 +37,8 @@ const I18N = {
       es: '/articulo/:id?'
     },
     'request-stage': {
-      en: 'request/:stage',
-      es: 'request/:stage'
+      en: '/request/:stage?',
+      es: '/request/:stage?'
     }
     // 'your-information': {
     //   en: '/request/your-information',
