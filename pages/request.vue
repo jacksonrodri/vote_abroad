@@ -1,26 +1,24 @@
 <template>
 <section class="section">
-  <no-ssr>
   <b-tabs type="is-boxed" v-model="currentRequest" @change="addRequest($event)">
-    <b-tab-item v-for="request in tabs" :key="request.id" :label="request.firstName || 'new request'">
-      <h1 class="title">Your request</h1>
+    <b-tab-item v-for="(request) in tabs" :key="request.id" :label="request.firstName || 'new request'">
+      <h1 class="title">{{ `${request.firstName ? request.firstName + '\'s' : 'New'} Request`}}</h1>
       <h2 class="subtitle">30% complete</h2>
       <progress class="progress is-link" value="30" max="100">30%</progress>
       <nuxt-child>
       </nuxt-child>
     </b-tab-item>
   </b-tabs>
-  </no-ssr>
+  <button @click="removeRequest" class="button is-danger">Delete this Request</button>
 </section>
 </template>
 
 <script>
 export default {
-  data () {
-    return {
-      activeTab: 0,
-      activeRequest: '123'
-    }
+  async mounted () {
+    var cur = this.$store.state.requests.currentRequest
+    await this.$store.commit('requests/changeCurrent', 0)
+    this.$store.commit('requests/changeCurrent', cur)
   },
   computed: {
     requests: function () {
@@ -49,6 +47,9 @@ export default {
         this.$store.commit('requests/add')
         // this.activeTab = event
       }
+    },
+    removeRequest: function () {
+      this.$store.commit('requests/removeCurrent')
     }
   }
 }

@@ -1,4 +1,6 @@
 <template>
+<section>
+  {{ stage }}
   <section class="section">
     <h3 class="subtitle is-5">Your Information</h3>
     <b-field label="Email">
@@ -12,12 +14,16 @@
       <b-input v-model="lastName"></b-input>
     </b-field>
   </section>
+</section>
 </template>
 
 <script>
 
 export default {
   computed: {
+    stage () {
+      return this.$route.params.stage
+    },
     currentRequest () {
       return this.$store.state.requests.currentRequest
     },
