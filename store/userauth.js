@@ -3,7 +3,7 @@ import axios from 'axios'
 import { Dialog, Snackbar, LoadingProgrammatic } from 'buefy'
 const jwtDecode = require('jwt-decode')
 
-const redirectUri = `https://votefromabroad.democratsabroad.org`
+const redirectUri = `https://votefromabroad.netlify.com`
 // `http://localhost:3000`
 
 const webAuth = new WebAuth({
