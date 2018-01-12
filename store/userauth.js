@@ -122,11 +122,11 @@ export const actions = {
     commit('updateUser', {country: state.user.country !== 'US' && state.user.country ? state.user.country : state.session.country})
   },
   async authStart ({commit, state, dispatch}, redirectPath) {
-    await dispatch('sendEmailCode')
-    await dispatch('promptCode', redirectPath)
-  },
-  promptCode ({ state, dispatch, commit }, redirectPath) {
     commit('updateRedirectPath', redirectPath)
+    await dispatch('sendEmailCode')
+    await dispatch('promptCode')
+  },
+  promptCode ({ state, dispatch, commit }) {
     Dialog.prompt({
       title: 'Authentication',
       message: `Enter the code we sent to ${state.user.emailAddress}`,
@@ -143,7 +143,7 @@ export const actions = {
       },
       confirmText: 'Submit',
       cancelText: 'cancel',
-      onCancel: () => commit('updateRedirectPath', null),
+      // onCancel: () => commit('updateRedirectPath', null),
       onConfirm: (value) => dispatch('loginEmailVerify', value)
     })
   },
@@ -240,7 +240,7 @@ export const actions = {
     commit('updateIdToken', idToken)
     commit('updateExpirationDate', jwtDecode(idToken).exp)
     commit('updateGcToken', jwtDecode(idToken)['https://graph.cool/token'])
-    console.log(this.$router.replace)
+    console.log(state.redirectPath)
     this.$router.replace({ path: state.redirectPath })
     commit('updateRedirectPath', null)
     Snackbar.open({
@@ -266,6 +266,7 @@ export const actions = {
       loc: null,
       region: null
     })
+    commit('requests/clearRequests', null, { root: true })
     dispatch('getUser')
   },
   async logout ({ dispatch }) {

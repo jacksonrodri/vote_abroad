@@ -284,7 +284,7 @@ export default {
       this.$store.dispatch('toasty')
     },
     authStart () {
-      this.$store.dispatch('userauth/authStart')
+      this.$store.dispatch('userauth/authStart', '/request/your-information')
     }
   }
 }

@@ -6,9 +6,9 @@
       <header class="navbar">
         <div class="container">
           <div class="navbar-brand">
-            <a class="navbar-item">
+            <nuxt-link :to="localePath('index')" class="navbar-item">
               <img src="/icon.svg" alt="Logo"> <h2 class="subtitle is-4">&nbsp;&nbsp;&nbsp;VoteFromAbroad</h2>
-            </a>
+            </nuxt-link>
             <div class="navbar-item is-expanded has-text-right is-hidden-desktop is-block-touch" >
               <!-- <a class="button is-info is-outlined is-small" v-show="$i18n.locale === 'en'" href="https://bulma.io">Español
               </a> -->

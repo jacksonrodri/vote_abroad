@@ -13,24 +13,27 @@ export const mutations = {
   changeCurrent (state, index) {
     state.currentRequest = index
   },
+  clearRequests (state) {
+    state.requests = []
+  },
   add (state) {
     state.requests.push({
       id: (function b (a) { return a ? (a ^ Math.random() * 16 >> a / 4).toString(16) : ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, b) })()
     })
   },
-  refresh (state, commit) {
-    state.requests.push({})
-    state.requests.splice(state.requests.length - 1, 1)
-    console.log(state.requests.length)
-    if (state.requests.length === 0) {
-      commit('add')
-    }
-  },
+  // refresh (state, commit) {
+  //   state.requests.push({})
+  //   state.requests.splice(state.requests.length - 1, 1)
+  //   console.log(state.requests.length)
+  //   if (state.requests.length === 0) {
+  //     commit('add')
+  //   }
+  // },
   remove (state, { todo }) {
     state.requests.splice(state.requests.indexOf(todo), 1)
   },
   removeLast (state) {
-    state.requests.splice(state.length - 1, 1)
+    state.requests.splice(state.requests.length - 1, 1)
   },
   removeCurrent (state) {
     let cur = state.currentRequest
@@ -58,17 +61,25 @@ export const actions = {
     }
     commit('update', ...args)
   },
-  refresh ({ commit, state }) {
+  refresh ({ commit, state, rootState }) {
     commit('add')
     commit('removeLast')
     if (state.requests.length === 0) {
       commit('add')
+      commit('update', {
+        email: rootState.userauth.user.emailAddress,
+        country: rootState.userauth.session.country
+      })
     }
   },
-  removeCurrent ({ commit, state }) {
+  removeCurrent ({ commit, state, rootState }) {
     commit('removeCurrent')
     if (state.requests.length === 0) {
       commit('add')
+      commit('update', {
+        email: rootState.userauth.user.emailAddress,
+        country: rootState.userauth.session.country
+      })
     }
   }
 }
