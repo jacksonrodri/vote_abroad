@@ -15,6 +15,7 @@ export const state = () => ({
   idToken: null,
   expirationDate: null,
   gcToken: null,
+  redirectPath: null,
   user: {
     firstName: null,
     middleName: null,
@@ -36,6 +37,9 @@ export const state = () => ({
 export const getters = {
   isExpired: state => {
     return state.expirationDate ? state.expirationDate < new Date().getTime() : null
+  },
+  isAuthenticated: state => {
+    return state.isExpired && state.idToken
   }
 }
 
@@ -54,6 +58,9 @@ export const mutations = {
   },
   updateUser (state, userObj) {
     state.user = Object.assign({}, state.user, userObj)
+  },
+  updateRedirectPath (state, path) {
+    state.redirectPath = path
   }
 }
 
@@ -114,11 +121,12 @@ export const actions = {
     await dispatch('getSessionGeo')
     commit('updateUser', {country: state.user.country !== 'US' && state.user.country ? state.user.country : state.session.country})
   },
-  async authStart ({commit, state, dispatch}) {
+  async authStart ({commit, state, dispatch}, redirectPath) {
     await dispatch('sendEmailCode')
-    await dispatch('promptCode')
+    await dispatch('promptCode', redirectPath)
   },
-  promptCode ({ state, dispatch }) {
+  promptCode ({ state, dispatch, commit }, redirectPath) {
+    commit('updateRedirectPath', redirectPath)
     Dialog.prompt({
       title: 'Authentication',
       message: `Enter the code we sent to ${state.user.emailAddress}`,
@@ -133,6 +141,9 @@ export const actions = {
         pattern: '[0-9]{6}',
         title: 'enter a 6 digit code'
       },
+      confirmText: 'Submit',
+      cancelText: 'cancel',
+      onCancel: () => commit('updateRedirectPath', null),
       onConfirm: (value) => dispatch('loginEmailVerify', value)
     })
   },
@@ -181,7 +192,7 @@ export const actions = {
       })
     })
   },
-  async setSession ({ commit, dispatch }) {
+  async setSession ({ state, commit, dispatch }) {
     function parseHash () {
       return new Promise((resolve, reject) => {
         webAuth.parseHash({ hash: window.location.hash }, function (err, authResult) {
@@ -227,8 +238,11 @@ export const actions = {
     }
     let idToken = authResult.idToken
     commit('updateIdToken', idToken)
-    commit('updateExpirationDate', new Date(authResult.expiresIn * 1000).getTime())
+    commit('updateExpirationDate', jwtDecode(idToken).exp)
     commit('updateGcToken', jwtDecode(idToken)['https://graph.cool/token'])
+    console.log(this.$router.replace)
+    this.$router.replace({ path: state.redirectPath })
+    commit('updateRedirectPath', null)
     Snackbar.open({
       message: `Your graphcool token is: ${jwtDecode(idToken)['https://graph.cool/token']}`,
       type: 'is-info',
