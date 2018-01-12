@@ -49,7 +49,7 @@ export default {
       }
     },
     removeRequest: function () {
-      this.$store.commit('requests/removeCurrent')
+      this.$store.dispatch('requests/removeCurrent')
     }
   }
 }

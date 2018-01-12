@@ -18,16 +18,23 @@ export const mutations = {
       id: (function b (a) { return a ? (a ^ Math.random() * 16 >> a / 4).toString(16) : ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, b) })()
     })
   },
-  refresh (state) {
+  refresh (state, commit) {
     state.requests.push({})
     state.requests.splice(state.requests.length - 1, 1)
+    console.log(state.requests.length)
+    if (state.requests.length === 0) {
+      commit('add')
+    }
   },
   remove (state, { todo }) {
     state.requests.splice(state.requests.indexOf(todo), 1)
   },
+  removeLast (state) {
+    state.requests.splice(state.length - 1, 1)
+  },
   removeCurrent (state) {
     let cur = state.currentRequest
-    state.currentRequest = cur - 1
+    state.currentRequest = cur ? cur - 1 : 0
     state.requests.splice(cur, 1)
   },
   update (state, {...args} = {}) {
@@ -50,5 +57,18 @@ export const actions = {
       id = state.requests[state.requests.length - 1].id
     }
     commit('update', ...args)
+  },
+  refresh ({ commit, state }) {
+    commit('add')
+    commit('removeLast')
+    if (state.requests.length === 0) {
+      commit('add')
+    }
+  },
+  removeCurrent ({ commit, state }) {
+    commit('removeCurrent')
+    if (state.requests.length === 0) {
+      commit('add')
+    }
   }
 }
