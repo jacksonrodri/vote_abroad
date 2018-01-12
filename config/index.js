@@ -35,6 +35,11 @@ const I18N = {
     'post-id': {
       fr: '/article/:id?',
       es: '/articulo/:id?'
+    },
+    'your-information': {
+      en: '/request/your-information',
+      es: '/request/your-information',
+      fr: '/request/your-information'
     }
   },
   vueI18n: {
