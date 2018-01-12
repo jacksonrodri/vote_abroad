@@ -36,15 +36,19 @@ const I18N = {
       fr: '/article/:id?',
       es: '/articulo/:id?'
     },
-    'your-information': {
-      en: '/request/your-information',
-      es: '/request/your-information',
-      fr: '/request/your-information'
-    },
-    'voting-information': {
-      en: '/request/voting-information',
-      es: '/request/voting-information',
-      fr: '/request/voting-information'
+    'request-stage': {
+      en: 'request/:stage',
+      es: 'request/:stage'
+    }
+    // 'your-information': {
+    //   en: '/request/your-information',
+    //   es: '/request/your-information',
+    //   fr: '/request/your-information'
+    // },
+    // 'voting-information': {
+    //   en: '/request/voting-information',
+    //   es: '/request/voting-information',
+    //   fr: '/request/voting-information'
     }
   },
   vueI18n: {
