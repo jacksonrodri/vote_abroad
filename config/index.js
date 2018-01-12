@@ -49,7 +49,7 @@ const I18N = {
     //   en: '/request/voting-information',
     //   es: '/request/voting-information',
     //   fr: '/request/voting-information'
-    }
+    // }
   },
   vueI18n: {
     fallbackLocale: 'en',
