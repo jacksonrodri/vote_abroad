@@ -3,9 +3,12 @@ import axios from 'axios'
 import { Dialog, Snackbar, LoadingProgrammatic } from 'buefy'
 const jwtDecode = require('jwt-decode')
 
+const redirectUri = `https://votefromabroad.democratsabroad.org`
+// `http://localhost:3000`
+
 const webAuth = new WebAuth({
   domain: 'montg.auth0.com',
-  redirectUri: `http://localhost:3000`,
+  redirectUri: redirectUri,
   clientID: '0Wy4khZcuXefSfrUuYDUP0Udag4FqL2u',
   responseType: 'token id_token'
   // audience: optons.audience || options.domain.concat('/userinfo')
@@ -271,7 +274,7 @@ export const actions = {
   },
   async logout ({ dispatch }) {
     await webAuth.logout({
-      returnTo: 'http://localhost:3000',
+      returnTo: redirectUri,
       clientID: '0Wy4khZcuXefSfrUuYDUP0Udag4FqL2u'
     })
     dispatch('clearData')
