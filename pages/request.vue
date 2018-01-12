@@ -1,16 +1,18 @@
 <template>
-<section class="section">
-  <b-tabs type="is-boxed" v-model="currentRequest" @change="addRequest($event)">
-    <b-tab-item v-for="(request) in tabs" :key="request.id" :label="request.firstName || 'new request'">
-      <h1 class="title">{{ `${request.firstName ? request.firstName + '\'s' : 'New'} Request`}}</h1>
-      <h2 class="subtitle">30% complete</h2>
-      <progress class="progress is-link" value="30" max="100">30%</progress>
-      <nuxt-child>
-      </nuxt-child>
-    </b-tab-item>
-  </b-tabs>
-  <button @click="removeRequest" class="button is-danger">Delete this Request</button>
-</section>
+  <section class="section columns is-centered">
+    <div class="column is-three-fifths">
+      <b-tabs type="is-boxed" v-model="currentRequest" @change="addRequest($event)">
+        <b-tab-item v-for="(request) in tabs" :key="request.id" :label="request.firstName || 'new request'">
+          <h1 class="title">{{ `${request.firstName ? request.firstName + '\'s' : 'New'} Request`}}</h1>
+          <h2 class="subtitle">30% complete</h2>
+          <progress class="progress is-link" value="30" max="100">30%</progress>
+          <nuxt-child>
+          </nuxt-child>
+        </b-tab-item>
+      </b-tabs>
+      <button @click="removeRequest" class="button is-danger">Delete this Request</button>
+    </div>
+  </section>
 </template>
 
 <script>
