@@ -83,6 +83,28 @@
             - {voterType: {}, rule: 'Received by', date: '2018-11-06T00:00:00'}
 -
     state: AZ
+    date: '2018-02-27T00:00:00'
+    electionType: 'CD 8 Special Primary'
+    rules:
+        Registration:
+            - {voterType: {}, rule: 'Received by', date: '2018-01-29T23:59:00'}
+        'Ballot Request':
+            - {voterType: {}, rule: 'Received by', date: '2018-02-16T00:00:00'}
+        'Ballot Return':
+            - {voterType: {}, rule: 'Received by', date: '2018-02-27T19:00:00'}
+-
+    state: AZ
+    date: '2018-04-24T00:00:00'
+    electionType: 'CD 8 Special General'
+    rules:
+        Registration:
+            - {voterType: {}, rule: 'Received by', date: '2018-03-26T23:59:00'}
+        'Ballot Request':
+            - {voterType: {}, rule: 'Received by', date: '2018-04-13T00:00:00'}
+        'Ballot Return':
+            - {voterType: {}, rule: 'Received by', date: '2018-04-24T19:00:00'}
+-
+    state: AZ
     date: '2018-08-28T00:00:00'
     electionType: 'State Primary'
     rules:
@@ -607,15 +629,15 @@
             - {voterType: {}, rule: 'Postmarked by*', date: '2018-11-06T20:00:00'}
 -
     state: MA
-    date: '2018-09-18T00:00:00'
+    date: '2018-09-04T00:00:00'
     electionType: 'State Primary**'
     rules:
         Registration:
             - {voterType: {}, rule: 'Not Required', date: {'xsi:nil': 'true', 'xmlns:xsi': 'http://www.w3.org/2001/XMLSchema-instance'}}
         'Ballot Request':
-            - {voterType: {}, rule: 'Received by**', date: '2018-09-17T12:00:00'}
+            - {voterType: {}, rule: 'Received by**', date: '2018-08-31T17:00:00'}
         'Ballot Return':
-            - {voterType: {}, rule: 'Received by**', date: '2018-09-18T20:00:00'}
+            - {voterType: {}, rule: 'Received by**', date: '2018-09-04T20:00:00'}
 -
     state: MA
     date: '2018-11-06T00:00:00'
@@ -1045,6 +1067,17 @@
             - {voterType: {}, rule: 'Request Email/Online or Fax Ballot: Received by', date: '2018-11-06T00:00:00'}
         'Ballot Return':
             - {voterType: {}, rule: 'Received by', date: '2018-11-06T20:00:00'}
+-
+    state: PA
+    date: '2018-03-13T00:00:00'
+    electionType: 'CD 18 Special General'
+    rules:
+        Registration:
+            - {voterType: {}, rule: 'Postmarked by', date: '2018-02-12T00:00:00'}
+        'Ballot Request':
+            - {voterType: {}, rule: 'Received by', date: '2018-03-12T00:00:00'}
+        'Ballot Return':
+            - {voterType: {}, rule: 'Sent by*', date: '2018-03-12T23:59:00'}
 -
     state: PA
     date: '2018-05-15T00:00:00'
