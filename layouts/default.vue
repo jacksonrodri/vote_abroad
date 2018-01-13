@@ -25,13 +25,13 @@
           <div id="navbarMenuHeroC" :class="`navbar-menu ${navOpened ? 'is-active' : ''}`">
             <div class="navbar-end">
               <div class="navbar-item has-dropdown is-hoverable">
-                <nuxt-link :to="localePath({ name: 'elections-state'})" class="navbar-link">Upcoming Elections</nuxt-link>
+                <nuxt-link :to="localePath({ name: 'elections'})" class="navbar-link">Upcoming Elections</nuxt-link>
                 <!-- <a class="navbar-link">
                   Upcoming Elections
                 </a> -->
                 <div class="navbar-dropdown is-boxed">
                   <nuxt-link v-for="(election, index) in upcomingElections" :key="`${election.state} ${election.electionType}`" :to="localePath({ name: 'elections-state', params: { state: election.state } })" :class="`navbar-item ${index > 3 ? 'is-hidden-touch' : ''}`">{{ new Date(election.date).toLocaleDateString('en-US', {year: 'numeric', month: 'short', day: 'numeric'}) }} - {{ election.state }} {{ $t(`elections.electionTypes['${election.electionType}']`) }}</nuxt-link>
-                  <nuxt-link :to="localePath({ name: 'elections-state' })" class="navbar-item" exact >... All upcoming elections</nuxt-link>
+                  <nuxt-link :to="localePath({ name: 'elections' })" class="navbar-item" exact >... All upcoming elections</nuxt-link>
                 </div>
               </div>
               <div class="navbar-item has-dropdown is-hoverable">

@@ -39,10 +39,13 @@ const I18N = {
     //   // fr: '/article/:id?',
     //   es: '/articulo/:id?'
     // },
-    'request': {
-      en: '/request',
-      es: '/requesto'
-    }
+    // 'elections-state': {
+    //   es: '/elecciones/:state'
+    // },
+    // 'request': {
+    //   en: '/request',
+    //   es: '/requesto'
+    // }
     // 'request-stage': {
     //   en: '/:stage',
     //   es: '/:stage'

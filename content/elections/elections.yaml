@@ -1100,7 +1100,6 @@
             - {voterType: {}, rule: 'Received by', date: '2018-11-05T00:00:00'}
         'Ballot Return':
             - {voterType: {}, rule: 'Sent by*', date: '2018-11-05T23:59:00'}
-- {}
 -
     state: RI
     date: '2018-09-12T00:00:00'

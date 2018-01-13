@@ -3,14 +3,12 @@
     <div class="columns is-centered">
       <div class="column is-8">
         <h1 class="title">
-          {{ $route.params.state }} Elections
+          {{ state.title }}
         </h1>
-        <ul>
           <ul v-for="election in elections" :key="`${election.state} ${election.electionType}`">
             <li>{{ election.state }} - {{election.electionType }}</li>
             <li>{{ election.date }}</li>
           </ul>
-        </ul>
       </div>
     </div>
   </section>
@@ -19,10 +17,10 @@
 <script>
 
 export default {
-  async asyncData ({ app, route }) {
+  async asyncData ({ app, params }) {
     return {
-      elections: (await app.$content('/elections').get('elections')).body.filter(election => election.state === route.params.state)
-      // states: (await app.$content('/state-rules').get(route.params.state))
+      elections: (await app.$content('/elections').get('elections')).body.filter(election => election.state.toLowerCase() === params.state.toLowerCase()),
+      state: (await app.$content('/state-rules').get(`states/${params.state}`)).body
     }
   },
   head: {
