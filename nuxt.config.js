@@ -45,6 +45,12 @@ module.exports = {
           return `/elections/${election.state}`
         })
       })
+      .then(list => {
+        var routes = list.filter((v,i,a)=>a.indexOf(v)==i)
+        var esRoutes = routes.map(x => '/es'+x)
+        console.log(routes.concat(esRoutes))
+        return routes.concat(esRoutes)
+      })
     }
   },
   router: {
