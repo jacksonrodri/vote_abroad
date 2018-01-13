@@ -76,7 +76,7 @@
                   <div>
                     <p><button class="button is-large is-info" @click="authStart">Start</button></p>
                     <p>
-                      <nuxt-link :to="localePath({ path: 'request/your-information' })" class="button is-text is-paddingless has-text-grey" exact >or start an anonymous session</nuxt-link>
+                      <nuxt-link :to="localePath({ name: 'request-stage', params: {stage: 'your-information'} })" class="button is-text is-paddingless has-text-grey" exact >or start an anonymous session</nuxt-link>
                       <!-- <button class="button is-text is-paddingless has-text-grey">or start an anonymous session</button> -->
                     </p>
                   </div>
@@ -110,6 +110,7 @@ import debounce from 'lodash/debounce'
 import { format, parse, getPhoneCode, asYouType as AsYouType } from 'libphonenumber-js'
 import * as phoneExamples from 'libphonenumber-js/examples.mobile.json'
 import { mapState } from 'vuex'
+import countryNames from '~/assets/country-names.json'
 
 let twilio = axios.create({
   baseURL: 'https://lookups.twilio.com/v1/PhoneNumbers/',
@@ -129,12 +130,12 @@ export default {
     Logo,
     ValidationCheck
   },
-  async asyncData () {
-    let countriesUrl = process.env.NODE_ENV === 'production' && process.browser ? '//votefromabroad.netlify.com/api/countries/' : 'http://country.io/names.json'
-    let { data } = await axios.get(countriesUrl, {headers: {'Access-Control-Allow-Origin': '*'}})
-    let countries = {countries: Object.keys(data).sort().map(x => ({name: data[x], code: x}))}
-    return countries
-  },
+  // async asyncData () {
+  //   let countriesUrl = process.env.NODE_ENV === 'production' && process.browser ? '//votefromabroad.netlify.com/api/countries/' : 'http://country.io/names.json'
+  //   let { data } = await axios.get(countriesUrl, {headers: {'Access-Control-Allow-Origin': '*'}})
+  //   let countries = {countries: Object.keys(data).sort().map(x => ({name: data[x], code: x}))}
+  //   return countries
+  // },
   data () {
     return {
       telOrEmail: null,
@@ -148,11 +149,13 @@ export default {
       ip: null,
       showCountryAutocomplete: false,
       location: '',
-      selected: null,
-      countries: []
+      selected: null
     }
   },
   computed: {
+    countries () {
+      return Object.keys(countryNames).sort().map(x => ({name: countryNames[x], code: x}))
+    },
     filteredDataObj () {
       if (this.userCountry && this.userCountry.length > 1) {
         return this.countries.filter((option) => {

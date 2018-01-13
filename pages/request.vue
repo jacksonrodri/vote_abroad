@@ -17,11 +17,11 @@
 
 <script>
 export default {
-  async mounted () {
-    var cur = this.$store.state.requests.currentRequest
-    await this.$store.commit('requests/changeCurrent', 0)
-    this.$store.commit('requests/changeCurrent', cur)
-  },
+  // async mounted () {
+  //   var cur = this.$store.state.requests.currentRequest
+  //   await this.$store.commit('requests/changeCurrent', 0)
+  //   this.$store.commit('requests/changeCurrent', cur)
+  // },
   computed: {
     requests: function () {
       return this.$store.state.requests.requests ? this.$store.state.requests.requests : []

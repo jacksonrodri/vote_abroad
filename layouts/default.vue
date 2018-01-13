@@ -6,7 +6,8 @@
       <header class="navbar">
         <div class="container">
           <div class="navbar-brand">
-            <nuxt-link :to="localePath('index')" class="navbar-item" exact>
+            <nuxt-link to="/" class="navbar-item" exact>
+            <!-- :to="localePath('index')" -->
               <img src="/icon.svg" alt="Logo"> <h2 class="subtitle is-4">&nbsp;&nbsp;&nbsp;VoteFromAbroad</h2>
             </nuxt-link>
             <div class="navbar-item is-expanded has-text-right is-hidden-desktop is-block-touch" >
@@ -25,7 +26,7 @@
             <div class="navbar-end">
               <div class="navbar-item has-dropdown is-hoverable">
                 <nuxt-link :to="localePath({ name: 'elections-state'})" class="navbar-link">Upcoming Elections</nuxt-link>
-                <!-- <a class="navbar-link" href="#">
+                <!-- <a class="navbar-link">
                   Upcoming Elections
                 </a> -->
                 <div class="navbar-dropdown is-boxed">
@@ -34,23 +35,23 @@
                 </div>
               </div>
               <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link" href="#">
+                <a class="navbar-link">
                   FAQ's
                 </a>
                 <div class="navbar-dropdown is-boxed">
-                  <a class="navbar-item" href="#">
+                  <a class="navbar-item">
                     Can I choose the state where I vote?
                   </a>
-                  <a class="navbar-item" href="#">
+                  <a class="navbar-item">
                     I can't remember or find my exact street address - what do I do?
                   </a>
-                  <a class="navbar-item" href="#">
+                  <a class="navbar-item">
                     Why do I need an exact address?
                   </a>
-                  <a class="navbar-item" href="#">
+                  <a class="navbar-item">
                     How do I request my ballot?
                   </a>
-                  <a class="navbar-item" href="#">
+                  <a class="navbar-item">
                     When will you send my ballot?
                   </a>
                 </div>
@@ -62,12 +63,6 @@
                 <nuxt-link :to="switchLocalePath('es')" class="button is-small is-info is-outlined" v-show="$i18n.locale === 'en'">Español</nuxt-link>
                 <nuxt-link :to="switchLocalePath('en')" class="button is-small is-info is-outlined" v-show="$i18n.locale === 'es'">English</nuxt-link>
               </div>
-              <!-- <div class="navbar-item">
-                <div class="field is-grouped">
-                  <nuxt-link :to="switchLocalePath('en')" class="navbar-item is-tab" :class="$i18n.locale=='en'?'is-active':''" exact>EN</nuxt-link>
-                  <nuxt-link :to="switchLocalePath('es')" class="navbar-item is-tab" :class="$i18n.locale=='es'?'is-active':''" exact>ES</nuxt-link>
-                </div>
-              </div> -->
             </div>
           </div>
         </div>

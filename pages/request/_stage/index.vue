@@ -13,12 +13,12 @@
     </b-field><b-field label="Last Name">
       <b-input v-model="lastName"></b-input>
     </b-field> -->
-    <h3 class="title is-4" v-if="!isAuthenticated">
+    <!-- <h3 class="title is-4" v-if="!isAuthenticated">
       Enter your email or mobile phone number to start your ballot request with a secure account.
-    </h3>
+    </h3> -->
 
       <!-- email -->
-      <b-field grouped v-if="!isAuthenticated" >
+      <!-- <b-field grouped v-if="!isAuthenticated" >
         <b-field label="Email or mobile phone number" expanded>
           <b-field :type="($v.email.$error ? 'is-danger': '')" :message="$v.email.$error ? Object.keys($v.email.$params).map(x => x) : '' ">
             <b-input size="is-large" expanded v-model="emailOrPhone" placeholder="email or phone number" @input="emailOrPhoneLink" @keyup.enter.native="sendCode()" :disabled="this.pendingVerification"></b-input>
@@ -30,7 +30,7 @@
       </b-field>
       <h3 v-else class="subtitle">You are logged in as {{user ? user.emailAddress : 'user'}} <button @click="logout()" class="button">Logout</button></h3>
       email: {{ email }}
-      tel: {{ tel }}
+      tel: {{ tel }} -->
 
       <!-- firstName -->
       <b-field :type="($v.firstName.$error ? 'is-danger': '')" :message="$v.firstName.$error ? Object.keys($v.firstName.$params).map(x => x) : '' " label="First Name">
@@ -105,8 +105,8 @@
         <b-switch v-model="abrAdr.usesAlternateFormat" >Use an Alternate format</b-switch>
       </b-field>
       <div class="control buttons">
-        <nuxt-link :to="localePath({ name: '/' })" class="button is-info is-large" exact >Cancel</nuxt-link>
-        <nuxt-link :to="localePath({ path: 'voting-information' })" class="button is-primary is-large" exact >Next</nuxt-link>
+        <nuxt-link :to="localePath({ name: 'index' })" class="button is-info is-large" exact >Cancel</nuxt-link>
+        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'voting-information'} })" class="button is-primary is-large" exact >Next</nuxt-link>
         <!-- <button class="button is-info is-large">Cancel</button>
         <button class="button is-primary is-large">Next</button> -->
       </div>

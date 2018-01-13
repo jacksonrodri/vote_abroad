@@ -25,6 +25,9 @@ const I18N = {
   ],
   defaultLocale: 'en',
   routes: {
+    // page: {
+    //   en: '/:page?'
+    // },
     // about: {
     //   // fr: '/a-propos',
     //   en: '/about-us'
@@ -36,10 +39,14 @@ const I18N = {
     //   // fr: '/article/:id?',
     //   es: '/articulo/:id?'
     // },
-    'request-stage': {
-      en: '/request/:stage?',
-      es: '/requesto/:stage?'
+    'request': {
+      en: '/request',
+      es: '/requesto'
     }
+    // 'request-stage': {
+    //   en: '/:stage',
+    //   es: '/:stage'
+    // }
     // 'your-information': {
     //   en: '/request/your-information',
     //   es: '/request/your-information',
