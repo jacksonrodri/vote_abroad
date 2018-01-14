@@ -16,6 +16,11 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  env: {
+    baseUrl: process.env.DEPLOY_PRIME_URL || 'http://localhost:3000',
+    autocompleteUrl: process.env.AUTOCOMPLETE_URL || 'http://localhost:3010',
+    placeDetailsUrl: process.env.PLACE_DETAILS_URL || 'http://localhost:3010/details'
+  },
   modules: [
     '@nuxtjs/pwa',
     ['nuxt-i18n', I18N],

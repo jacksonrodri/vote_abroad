@@ -3,6 +3,7 @@
   {{ stage }}
   <section v-if="stage === 'your-information'" class="section">
     <h3 class="subtitle is-5">Your Information</h3>
+    <h1 class="title">Step 1 of 3</h1>
     <!-- <b-field label="Email">
       <b-input v-model="email"></b-input>
     </b-field>
@@ -31,7 +32,7 @@
       <h3 v-else class="subtitle">You are logged in as {{user ? user.emailAddress : 'user'}} <button @click="logout()" class="button">Logout</button></h3>
       email: {{ email }}
       tel: {{ tel }} -->
-
+<!-- your information -->
       <!-- firstName -->
       <b-field :type="($v.firstName.$error ? 'is-danger': '')" :message="$v.firstName.$error ? Object.keys($v.firstName.$params).map(x => x) : '' " label="First Name">
         <b-input v-model="firstName" @input="$v.firstName.$touch()"></b-input>
@@ -61,44 +62,56 @@
         <b-input v-model="previousName" @input="$v.previousName.$touch()"></b-input>
       </b-field>
 
-      <!-- tel -->
-      <b-field :type="($v.tel.$error ? 'is-danger': '')" :message="$v.tel.$error ? Object.keys($v.tel.$params).map(x => x) : '' " label="tel">
-        <b-input v-model="tel" @input="$v.tel.$touch()"></b-input>
-      </b-field>
+      <!-- countryName -->
+      <address-input></address-input>
+      <!-- <b-field label="Country">
+            <b-autocomplete
+                v-model="abrAdr.countryName"
+                placeholder="e.g. Canada"
+                keep-first
+                :data="filteredCountries"
+                field="label"
+                icon-pack="flag"
+                size="is-medium"
+                :icon="`icon flag-icon-${countryCode ? countryCode.toLowerCase() : 'un'}`"
+                @select="option => selected = option">
+              <template slot-scope="props">
+                <span :class="`flag-icon flag-icon-${props.option.iso.toLowerCase()}`"></span>{{ props.option.label }}
+              </template>
+            </b-autocomplete>
+        </b-field> -->
+      <!-- <b-field :type="($v.abrAdr.countryName.$error ? 'is-danger': '')" :message="$v.abrAdr.countryName.$error ? Object.keys($v.abrAdr.countryName.$params).map(x => x) : '' " label="countryName">
+        <b-input v-model="abrAdr.countryName" @input="$v.abrAdr.countryName.$touch()"></b-input>
+      </b-field> -->
 
       <!-- extendedAddress -->
-      <b-field :type="($v.abrAdr.extendedAddress.$error ? 'is-danger': '')" :message="$v.abrAdr.extendedAddress.$error ? Object.keys($v.abrAdr.extendedAddress.$params).map(x => x) : '' " label="extendedAddress">
+      <!-- <b-field :type="($v.abrAdr.extendedAddress.$error ? 'is-danger': '')" :message="$v.abrAdr.extendedAddress.$error ? Object.keys($v.abrAdr.extendedAddress.$params).map(x => x) : '' " :label="countryList.filter(x => x.iso === countryCode).length === 1 ? countryList.filter(x => x.iso === countryCode)[0].fields[1].premise.label : 'Address 2'">
         <b-input v-model="abrAdr.extendedAddress" @input="$v.abrAdr.extendedAddress.$touch()"></b-input>
-      </b-field>
+      </b-field> -->
 
       <!-- streetAddress -->
-      <b-field :type="($v.abrAdr.streetAddress.$error ? 'is-danger': '')" :message="$v.abrAdr.streetAddress.$error ? Object.keys($v.abrAdr.streetAddress.$params).map(x => x) : '' " label="streetAddress">
+      <!-- <b-field :type="($v.abrAdr.streetAddress.$error ? 'is-danger': '')" :message="$v.abrAdr.streetAddress.$error ? Object.keys($v.abrAdr.streetAddress.$params).map(x => x) : '' " :label="countryList.filter(x => x.iso === countryCode).length === 1 ? countryList.filter(x => x.iso === countryCode)[0].fields[0].thoroughfare.label : 'Address 1'">
         <b-input v-model="abrAdr.streetAddress" @input="$v.abrAdr.streetAddress.$touch()"></b-input>
-      </b-field>
+      </b-field> -->
 
       <!-- locality -->
-      <b-field :type="($v.abrAdr.locality.$error ? 'is-danger': '')" :message="$v.abrAdr.locality.$error ? Object.keys($v.abrAdr.locality.$params).map(x => x) : '' " label="locality">
+      <!-- <b-field :type="($v.abrAdr.locality.$error ? 'is-danger': '')" :message="$v.abrAdr.locality.$error ? Object.keys($v.abrAdr.locality.$params).map(x => x) : '' " label="locality">
         <b-input v-model="abrAdr.locality" @input="$v.abrAdr.locality.$touch()"></b-input>
-      </b-field>
+      </b-field> -->
 
       <!-- region -->
-      <b-field :type="($v.abrAdr.region.$error ? 'is-danger': '')" :message="$v.abrAdr.region.$error ? Object.keys($v.abrAdr.region.$params).map(x => x) : '' " label="region">
+      <!-- <b-field :type="($v.abrAdr.region.$error ? 'is-danger': '')" :message="$v.abrAdr.region.$error ? Object.keys($v.abrAdr.region.$params).map(x => x) : '' " label="region">
         <b-input v-model="abrAdr.region" @input="$v.abrAdr.region.$touch()"></b-input>
-      </b-field>
+      </b-field> -->
 
       <!-- postalCode -->
-      <b-field :type="($v.abrAdr.postalCode.$error ? 'is-danger': '')" :message="$v.abrAdr.postalCode.$error ? Object.keys($v.abrAdr.postalCode.$params).map(x => x) : '' " label="postalCode">
+      <!-- <b-field :type="($v.abrAdr.postalCode.$error ? 'is-danger': '')" :message="$v.abrAdr.postalCode.$error ? Object.keys($v.abrAdr.postalCode.$params).map(x => x) : '' " label="postalCode">
         <b-input v-model="abrAdr.postalCode" @input="$v.abrAdr.postalCode.$touch()"></b-input>
-      </b-field>
-
-      <!-- countryName -->
-      <b-field :type="($v.abrAdr.countryName.$error ? 'is-danger': '')" :message="$v.abrAdr.countryName.$error ? Object.keys($v.abrAdr.countryName.$params).map(x => x) : '' " label="countryName">
-        <b-input v-model="abrAdr.countryName" @input="$v.abrAdr.countryName.$touch()"></b-input>
-      </b-field>
+      </b-field> -->
 
       <!-- alternateFormat -->
       <b-field :type="($v.abrAdr.alternateFormat.$error ? 'is-danger': '')" :message="$v.abrAdr.alternateFormat.$error ? Object.keys($v.abrAdr.alternateFormat.$params).map(x => x) : '' " label="alternateFormat">
-        <b-input v-model="abrAdr.alternateFormat" @input="$v.abrAdr.alternateFormat.$touch()"></b-input>
+        <b-input type="textarea" v-model="abrAdr.alternateFormat" @input="$v.abrAdr.alternateFormat.$touch()"></b-input>
       </b-field>
 
       <b-field class="field">
@@ -111,8 +124,10 @@
         <button class="button is-primary is-large">Next</button> -->
       </div>
 
+<!-- voting information -->
   </section>
   <section v-if="stage === 'voting-information'" class="section">
+    <h1 class="title">Step 2 of 3</h1>
 
       <h1 class="subtitle is-5">I am a U.S. citizen living outside the country, and: </h1>
 
@@ -207,7 +222,12 @@
           <span>Fax</span>
         </b-radio-button>
       </b-field>
+  </section>
 
+  <section v-if="stage === 'id-and-contact-information'" class="section">
+
+<!-- identity and Contact information -->
+<h1 class="title">Step 3 of 3</h1>
       <!-- dob -->
       <b-field :type="($v.dob.$error ? 'is-danger': '')" :message="$v.dob.$error ? Object.keys($v.dob.$params).map(x => x) : '' " label="dob">
         <b-input v-model="dob" @input="$v.dob.$touch()"></b-input>
@@ -216,6 +236,11 @@
       <!-- fax -->
       <b-field :type="($v.fax.$error ? 'is-danger': '')" :message="$v.fax.$error ? Object.keys($v.fax.$params).map(x => x) : '' " label="fax">
         <b-input v-model="fax" @input="$v.fax.$touch()" type="phone"></b-input>
+      </b-field>
+
+      <!-- tel -->
+      <b-field :type="($v.tel.$error ? 'is-danger': '')" :message="$v.tel.$error ? Object.keys($v.tel.$params).map(x => x) : '' " label="tel">
+        <b-input v-model="tel" @input="$v.tel.$touch()"></b-input>
       </b-field>
 
       <!-- altEmail -->
@@ -288,6 +313,8 @@
 <script>
 import { required, requiredIf, requiredUnless, numeric, alphaNum, email } from 'vuelidate/lib/validators'
 // minLength, maxLength,
+import countries from '~/assets/countryaddresses'
+import AddressInput from '~/components/AddressInput'
 
 export default {
   data () {
@@ -366,7 +393,32 @@ export default {
       ]
     }
   },
+  components: {
+    AddressInput
+  },
   computed: {
+    countryList () {
+      return countries()
+    },
+    countryCode () {
+      let country = this.countryList.filter(x => x.label === this.abrAdr.countryName)[0] || {iso: 'un'}
+      return country.iso
+    },
+    filteredCountries () {
+      if (this.abrAdr.countryName && this.abrAdr.countryName.length > 1) {
+        return this.countryList.filter((option) => {
+          return option.label
+            .toString()
+            .toLowerCase()
+            .indexOf(this.abrAdr.countryName.toLowerCase()) >= 0 || option.iso
+            .toString()
+            .toLowerCase()
+            .indexOf(this.abrAdr.countryName.toLowerCase()) >= 0
+        })
+      } else {
+        return this.countryList
+      }
+    },
     stage () {
       return this.$route.params.stage
     },
@@ -529,3 +581,13 @@ export default {
   }
 }
 </script>
+
+<style lang="sass" scoped>
+$flag-icon-css-path: '../../../node_modules/flag-icon-css/flags'
+@import '../../../node_modules/flag-icon-css/sass/flag-icon.scss'
+
+.flag-icon
+  width: 3.8em;
+  height: 100%;
+  line-height: inherit;
+</style>
