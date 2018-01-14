@@ -63,7 +63,14 @@
       </b-field>
 
       <!-- countryName -->
-      <address-input></address-input>
+      <address-input
+        label="Your address abroad"
+        v-model="abrAdr2">
+        <div slot="instructions">
+          <p>Please add your international Address</p>
+        </div>
+
+      </address-input>
       <!-- <b-field label="Country">
             <b-autocomplete
                 v-model="abrAdr.countryName"
@@ -168,30 +175,40 @@
       </b-field>
 
       <!-- votAdr.apt -->
-      <b-field :type="($v.votAdr.apt.$error ? 'is-danger': '')" :message="$v.votAdr.apt.$error ? Object.keys($v.votAdr.apt.$params).map(x => x) : '' " label="votAdr.apt">
+      <!-- <b-field :type="($v.votAdr.apt.$error ? 'is-danger': '')" :message="$v.votAdr.apt.$error ? Object.keys($v.votAdr.apt.$params).map(x => x) : '' " label="votAdr.apt">
         <b-input v-model="votAdr.apt" @input="$v.votAdr.apt.$touch()"></b-input>
-      </b-field>
+      </b-field> -->
 
       <!-- votAdr.street -->
-      <b-field :type="($v.votAdr.street.$error ? 'is-danger': '')" :message="$v.votAdr.street.$error ? Object.keys($v.votAdr.street.$params).map(x => x) : '' " label="votAdr.street">
+      <!-- <b-field :type="($v.votAdr.street.$error ? 'is-danger': '')" :message="$v.votAdr.street.$error ? Object.keys($v.votAdr.street.$params).map(x => x) : '' " label="votAdr.street">
         <b-input v-model="votAdr.street" @input="$v.votAdr.street.$touch()"></b-input>
-      </b-field>
+      </b-field> -->
 
       <!-- votAdr.city -->
-      <b-field :type="($v.votAdr.city.$error ? 'is-danger': '')" :message="$v.votAdr.city.$error ? Object.keys($v.votAdr.city.$params).map(x => x) : '' " label="votAdr.city">
+      <!-- <b-field :type="($v.votAdr.city.$error ? 'is-danger': '')" :message="$v.votAdr.city.$error ? Object.keys($v.votAdr.city.$params).map(x => x) : '' " label="votAdr.city">
         <b-input v-model="votAdr.city" @input="$v.votAdr.city.$touch()"></b-input>
-      </b-field>
+      </b-field> -->
 
       <!-- votAdr.state -->
-      <b-field :type="($v.votAdr.state.$error ? 'is-danger': '')" :message="$v.votAdr.state.$error ? Object.keys($v.votAdr.state.$params).map(x => x) : '' " label="votAdr.state">
+      <!-- <b-field :type="($v.votAdr.state.$error ? 'is-danger': '')" :message="$v.votAdr.state.$error ? Object.keys($v.votAdr.state.$params).map(x => x) : '' " label="votAdr.state">
         <b-input v-model="votAdr.state" @input="$v.votAdr.state.$touch()"></b-input>
-      </b-field>
+      </b-field> -->
 
       <!-- votAdr.zip -->
-      <b-field :type="($v.votAdr.zip.$error ? 'is-danger': '')" :message="$v.votAdr.zip.$error ? Object.keys($v.votAdr.zip.$params).map(x => x) : '' " label="votAdr.zip">
+      <!-- <b-field :type="($v.votAdr.zip.$error ? 'is-danger': '')" :message="$v.votAdr.zip.$error ? Object.keys($v.votAdr.zip.$params).map(x => x) : '' " label="votAdr.zip">
         <b-input v-model="votAdr.zip" @input="$v.votAdr.zip.$touch()"></b-input>
-      </b-field>
+      </b-field> -->
+      <address-input
+        label="Your US voting Address"
+        usOnly
+        v-model="abrAdr2">
+        <div slot="instructions">
+          <p>Please add your US Voting Address</p>
+        </div>
 
+      </address-input>
+
+      <!-- <jurisdiction></jurisdiction> -->
       <!-- votAdr.county -->
       <b-field :type="($v.votAdr.county.$error ? 'is-danger': '')" :message="$v.votAdr.county.$error ? Object.keys($v.votAdr.county.$params).map(x => x) : '' " label="votAdr.county">
         <b-input v-model="votAdr.county" @input="$v.votAdr.county.$touch()"></b-input>
@@ -315,6 +332,7 @@ import { required, requiredIf, requiredUnless, numeric, alphaNum, email } from '
 // minLength, maxLength,
 import countries from '~/assets/countryaddresses'
 import AddressInput from '~/components/AddressInput'
+// import Jurisdiction from '~/components/Jurisdiction'
 
 export default {
   data () {
@@ -336,6 +354,7 @@ export default {
       emailOrPhone: '',
       // email: '',
       // tel: '',
+      abrAdr2: {},
       abrAdr: {
         extendedAddress: '',
         streetAddress: '',

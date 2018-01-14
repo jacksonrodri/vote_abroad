@@ -1,12 +1,14 @@
 <template>
   <section>
-    <div class="field is-fullwidth">
-          <div class="field-label is-normal">
-          <label class="label">Your Address Abroad</label>
-          </div>
+    <!-- <h3 class="subtitle">{{ label }}</h3> -->
+    <div class="field-label has-text-left">
+      <label class="label">{{ label }}</label>
+    </div>
+    <slot name="instructions"></slot>
+    <div v-if="usOnly === undefined || usOnly === false" class="field is-fullwidth">
           <div class="field-body">
             <b-field class="grouped" >
-                <b-field label="Country" expanded>
+                <b-field expanded>
                   <b-field>
                     <p class="control flag-container">
                       <b-icon
@@ -17,14 +19,16 @@
                     </p>
                     <b-autocomplete
                         v-model="intlAddr['country-name']"
-                        placeholder="Your home abroad"
+                        placeholder="Country"
                         ref="country"
+                        :disabled="usOnly"
                         keep-first
                         expanded
                         :data="filteredCountries"
                         field="label"
+                        @input="updateAddress()"
                         @focus="$event.target.select()"
-                        @select="option => selected = option">
+                        @select="option => {selected = option; if (selected) {intlAddr['country-code'] = option.iso}}">
                       <template slot-scope="props">
                         <span :class="`flag-icon flag-icon-${props.option.iso.toLowerCase()}`"></span>{{ props.option.label }}
                       </template>
@@ -44,6 +48,7 @@
                 <b-autocomplete
                   v-model="intlAddr['street-address']"
                   :data="data"
+                  ref="premise"
                   keep-first
                   :placeholder="throroughfareLabel"
                   field="structured_formatting.main_text"
@@ -65,7 +70,7 @@
           <div class="field-body">
             <div class="field">
               <div class="control">
-                <input class="input" v-model="intlAddr['extended-address']" type="text" :placeholder="premiseLabel">
+                <input class="input" @input="updateAddress()" v-model="intlAddr['extended-address']" type="text" :placeholder="premiseLabel">
               </div>
             </div>
           </div>
@@ -74,7 +79,7 @@
           <div class="field-body">
             <div class="field" v-for="field in localityFields" :key="Object.keys(field)[0]">
               <p v-if="Object.keys(field)[0] === 'localityname'" class="control is-expanded">
-                <input class="input" type="text" v-model="intlAddr['locality']" :placeholder="field.localityname.label">
+                <input class="input" type="text" @input="updateAddress()" v-model="intlAddr['locality']" :placeholder="field.localityname.label">
               </p>
               <div v-if="Object.keys(field)[0] === 'administrativearea'">
                 <div v-if="field.administrativearea && field.administrativearea.options" >
@@ -84,6 +89,7 @@
                     :data="filteredRegions"
                     :keep-first="true"
                     field="name"
+                    @input="updateAddress()"
                     @select="option => selected = option"
                     >
                   </b-autocomplete>
@@ -92,13 +98,16 @@
                     <option v-for="state in field.administrativearea.options.slice(1)" :key="Object.keys(state)[0]" >{{state[Object.keys(state)[0]]}}</option>
                   </select> -->
                 </div>
-                <input v-if="field.administrativearea && !field.administrativearea.options" v-model="intlAddr['region']" class="input" type="text" :placeholder="field.administrativearea.label">
+                <input v-if="field.administrativearea && !field.administrativearea.options" v-model="intlAddr['region']" @input="updateAddress()" class="input" type="text" :placeholder="field.administrativearea.label">
               </div>
               <p v-if="Object.keys(field)[0] === 'postalcode'" class="control is-expanded">
-                <input class="input" v-model="intlAddr['postal-code']" type="text" :placeholder="field.postalcode.label">
+                <input class="input" v-model="intlAddr['postal-code']" type="text" @input="updateAddress()" :placeholder="field.postalcode.label">
               </p>
             </div>
           </div>
+        </div>
+        <div v-if="(usOnly !== undefined && usOnly !== false) || usOnly === true" class="field is-fullwidth">
+          county
         </div>
   </section>
 </template>
@@ -109,6 +118,19 @@ import axios from 'axios'
 import debounce from 'lodash/debounce'
 
 export default {
+  props: [
+    'value',
+    'usOnly',
+    'label'
+  ],
+  mounted () {
+    if (this.usOnly !== undefined) {
+      this.intlAddr['country-code'] = 'US'
+      this.intlAddr['country-name'] = 'United States'
+      // this.$refs.country.setSelected(0)
+      this.$refs.premise.focus()
+    }
+  },
   data () {
     return {
       data: [],
@@ -152,25 +174,36 @@ export default {
         return this.countryList
       }
     },
+    codeFilteredCountries () {
+      if (this.usOnly) {
+        return this.countryList.filter(country => country.iso === 'US')
+      }
+      if (this.intlAddr['country-code'].length === 2) {
+        return this.countryList.filter(country => country.iso.toLowerCase() === this.intlAddr['country-code'].toLowerCase())
+      } else {
+        return this.filteredCountries
+      }
+    },
     countryCode () {
-      let country = this.countryList.filter(x => x.label === this.intlAddr['country-name'])[0] || {iso: 'un'}
-      return country.iso
+      // let country = this.countryList.filter(x => x.label === this.intlAddr['country-name'])[0] || {iso: 'un'}
+      // return country.iso
+      return this.intlAddr['country-code'] || 'un'
     },
     throroughfareLabel () {
-      return this.filteredCountries.length === 0 || this.filteredCountries.length === this.countryList.length ? 'Address 1' : this.filteredCountries[0].fields[0].thoroughfare.label
+      return this.codeFilteredCountries.length === 0 || this.codeFilteredCountries.length === this.countryList.length ? 'Address 1' : this.codeFilteredCountries[0].fields[0].thoroughfare.label
     },
     premiseLabel () {
-      return this.filteredCountries.length === 0 || this.filteredCountries.length === this.countryList.length ? 'Address 2' : this.filteredCountries[0].fields[1].premise.label
+      return this.codeFilteredCountries.length === 0 || this.codeFilteredCountries.length === this.countryList.length ? 'Address 2' : this.codeFilteredCountries[0].fields[1].premise.label
     },
     localityFields () {
-      if (this.filteredCountries.length === 0 || this.filteredCountries.length === this.countryList.length) {
+      if (this.codeFilteredCountries.length === 0 || this.codeFilteredCountries.length === this.countryList.length) {
         return [{localityname: {label: 'City'}}, {administrativearea: {label: 'State', options: true}}, {postalcode: {label: 'Postal Code'}}]
       } else {
-        return this.filteredCountries[0].fields[2].locality
+        return this.codeFilteredCountries[0].fields[2].locality
       }
     },
     filteredRegions () {
-      return this.filteredCountries
+      return this.codeFilteredCountries
         .map(x => x.fields[2].locality)
         .map((x, i) => x.filter(x => x.administrativearea && x.administrativearea.options))
         .filter(x => x.length > 0)
@@ -203,7 +236,12 @@ export default {
                   this.intlAddr['extended-address'] = item
                   console.log(`extended-address = ${item}`)
                 } else if (item === 'country-name') {
-                  data.result['address_components'].forEach(x => { if (x.types[0] === 'country') { this.intlAddr['country-name'] = x['long_name'] } })
+                  data.result['address_components'].forEach(x => {
+                    if (x.types[0] === 'country') {
+                      this.intlAddr['country-name'] = x['long_name']
+                      this.intlAddr['country-code'] = x['short_name']
+                    }
+                  })
                 } else if (myRe.test(item)) {
                   this.intlAddr[item] = arr[index + 1]
                   console.log(`${item} = ${arr[index + 1]}`)
@@ -216,6 +254,7 @@ export default {
     // it's not mandatory though.
     getAsyncData: debounce(function () {
       this.data = []
+      this.updateAddress()
       console.log(this.intlAddr['street-address'])
       this.isFetching = true
       // axios.get(`${process.env.autocompleteUrl}?input=${this.intlAddr['street-address']}&types=geocode&language=en${this.countryCode && this.countryCode !== 'un' ? '&components=country:' + this.countryCode : ''}&key=AIzaSyDK4AprF-iXbiX2-eU3SAQVyovB_8kIg20`)
@@ -226,7 +265,19 @@ export default {
         }, response => {
           this.isFetching = false
         })
-    }, 500)
+    }, 500),
+    updateAddress () {
+      this.$emit('input', {
+        poBox: this.intlAddr['post-office-box'],
+        premise: this.intlAddr['extended-address'],
+        thoroughfare: this.intlAddr['street-address'],
+        locality: this.intlAddr['locality'],
+        administrativearea: this.intlAddr['region'],
+        postalcode: this.intlAddr['postal-code'],
+        country: this.intlAddr['country-name'],
+        countryiso: this.countryCode !== 'un' && this.countryCode ? this.countryCode : ''
+      })
+    }
   }
 }
 </script>
