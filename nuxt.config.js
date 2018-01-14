@@ -19,7 +19,11 @@ module.exports = {
   env: {
     baseUrl: process.env.DEPLOY_PRIME_URL || 'http://localhost:3000',
     autocompleteUrl: process.env.AUTOCOMPLETE_URL || 'http://localhost:3010',
-    placeDetailsUrl: process.env.PLACE_DETAILS_URL || 'http://localhost:3010/details'
+    placeDetailsUrl: process.env.PLACE_DETAILS_URL || 'http://localhost:3010/details',
+    placesUrl: process.env.PLACES_URL || 'http://localhost:3010',
+    autocompleteEndpoint: process.env.AUTOCOMPLETE_ENDPOINT || '/',
+    detailsEndpoint: process.env.PLACES_ENDPOINT || '/details/',
+    placesKey: process.env.PLACES_KEY || 'AIzaSyDK4AprF-iXbiX2-eU3SAQVyovB_8kIg20'
   },
   modules: [
     '@nuxtjs/pwa',

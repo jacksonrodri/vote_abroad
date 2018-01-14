@@ -191,7 +191,7 @@ export default {
       console.log('selected:', this.selected)
       console.log('option', option)
       if (option && option.place_id) {
-        axios.get(`${process.env.placeDetailsUrl}?placeid=${option.place_id}&key=AIzaSyDK4AprF-iXbiX2-eU3SAQVyovB_8kIg20`)
+        axios.get(`${process.env.placesUrl + process.env.detailsEndpoint}?placeid=${option.place_id}&key=${process.env.placesKey}`)
           .then(({ data }) => {
             data.result.adr_address
               .split(/<span class="|">|<\/span>,?\s?/)
@@ -218,9 +218,8 @@ export default {
       this.data = []
       console.log(this.intlAddr['street-address'])
       this.isFetching = true
-      // axios.get(`https://feat-autocomplete--vfa.netlify.com/locate/autocomplete/json?input=${this.intlAddr['street-address']}&types=geocode&language=en&key=AIzaSyDK4AprF-iXbiX2-eU3SAQVyovB_8kIg20`)
-      axios.get(`${process.env.autocompleteUrl}?input=${this.intlAddr['street-address']}&types=geocode&language=en${this.countryCode && this.countryCode !== 'un' ? '&components=country:' + this.countryCode : ''}&key=AIzaSyDK4AprF-iXbiX2-eU3SAQVyovB_8kIg20`)
-      // axios.get(`http://localhost:3010/?input=${this.intlAddr['street-address']}&types=geocode&language=en`)
+      // axios.get(`${process.env.autocompleteUrl}?input=${this.intlAddr['street-address']}&types=geocode&language=en${this.countryCode && this.countryCode !== 'un' ? '&components=country:' + this.countryCode : ''}&key=AIzaSyDK4AprF-iXbiX2-eU3SAQVyovB_8kIg20`)
+      axios.get(`${process.env.placesUrl + process.env.autocompleteEndpoint}?input=${this.intlAddr['street-address']}&types=geocode&language=en${this.countryCode && this.countryCode !== 'un' ? '&components=country:' + this.countryCode : ''}&key=${process.env.placesKey}`)
         .then(({ data }) => {
           data.predictions.forEach((item) => this.data.push(item))
           this.isFetching = false
