@@ -1,19 +1,21 @@
 <template>
 <div>
-  <section class="hero is-transparent is-fullheight">
+  <section class="hero is-white is-bold is-fullheight">
     <!-- Hero head: will stick at the top -->
-    <div class="hero-head vfa">
-      <nav class="navbar is-transparent">
+    <div class="hero-head">
+      <header class="navbar">
         <div class="container">
           <div class="navbar-brand">
             <nuxt-link to="/" class="navbar-item" exact>
             <!-- :to="localePath('index')" -->
-              <img class="nav-logo" src="/vfa-white.svg" alt="VoteFromAbroad.org Absentee Ballots for US Citizens Abroad">
+              <img src="/icon.svg" alt="Logo"> <h2 class="subtitle is-4">&nbsp;&nbsp;&nbsp;VoteFromAbroad</h2>
             </nuxt-link>
-            <!-- <div class="navbar-item is-expanded has-text-right is-hidden-desktop is-block-touch" >
-              <nuxt-link :to="switchLocalePath('es')" class="button is-danger is-outlined is-small" v-show="$i18n.locale === 'en'">Español</nuxt-link>
-              <nuxt-link :to="switchLocalePath('en')" class="button is-danger is-outlined is-small" v-show="$i18n.locale === 'es'">English</nuxt-link>
-            </div> -->
+            <div class="navbar-item is-expanded has-text-right is-hidden-desktop is-block-touch" >
+              <!-- <a class="button is-info is-outlined is-small" v-show="$i18n.locale === 'en'" href="https://bulma.io">Español
+              </a> -->
+              <nuxt-link :to="switchLocalePath('es')" class="button is-info is-outlined is-small" v-show="$i18n.locale === 'en'">Español</nuxt-link>
+              <nuxt-link :to="switchLocalePath('en')" class="button is-info is-outlined is-small" v-show="$i18n.locale === 'es'">English</nuxt-link>
+            </div>
             <span :class="`navbar-burger burger ${navOpened ? 'is-active' : ''}`" @click="toggleNav()" data-target="navbarMenuHeroC">
               <span></span>
               <span></span>
@@ -22,23 +24,8 @@
           </div>
           <div id="navbarMenuHeroC" :class="`navbar-menu ${navOpened ? 'is-active' : ''}`">
             <div class="navbar-end">
-              <div class="navbar-item">
-                <button class="button" @click="logout">Logout</button>
-              </div>
-              <!-- <div class="navbar-item is-hidden-touch">
-                <nuxt-link :to="switchLocalePath('es')" class="button is-small is-danger is-outlined" v-show="$i18n.locale === 'en'">Español</nuxt-link>
-                <nuxt-link :to="switchLocalePath('en')" class="button is-small is-danger is-outlined" v-show="$i18n.locale === 'es'">English</nuxt-link>
-              </div> -->
-            </div>
-          </div>
-        </div>
-      </nav>
-      <nav class="navbar is-transparent">
-        <div class="container">
-          <div id="navbarMenuHeroC" :class="`navbar-menu ${navOpened ? 'is-active' : ''}`">
-            <div class="navbar-end">
               <div class="navbar-item has-dropdown is-hoverable">
-                <nuxt-link :to="localePath({ name: 'elections'})" class="navbar-link has-text-white">Upcoming Elections</nuxt-link>
+                <nuxt-link :to="localePath({ name: 'elections'})" class="navbar-link">Upcoming Elections</nuxt-link>
                 <!-- <a class="navbar-link">
                   Upcoming Elections
                 </a> -->
@@ -47,8 +34,8 @@
                   <nuxt-link :to="localePath({ name: 'elections' })" class="navbar-item" exact >... All upcoming elections</nuxt-link>
                 </div>
               </div>
-              <div class="navbar-item is-vfa has-dropdown is-hoverable">
-                <a class="navbar-link has-text-white">
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
                   FAQ's
                 </a>
                 <div class="navbar-dropdown is-boxed">
@@ -70,40 +57,41 @@
                 </div>
               </div>
               <div class="navbar-item">
-                <div class="field is-grouped">
-                  <nuxt-link :to="switchLocalePath('en')" class="navbar-item is-tab has-text-white" :class="$i18n.locale=='en'?'is-active':''" exact>EN</nuxt-link>
-                  <nuxt-link :to="switchLocalePath('es')" class="navbar-item is-tab has-text-white" :class="$i18n.locale=='es'?'is-active':''" exact>ES</nuxt-link>
-                </div>
+                <button class="button" @click="logout">Logout</button>
+              </div>
+              <div class="navbar-item is-hidden-touch">
+                <nuxt-link :to="switchLocalePath('es')" class="button is-small is-info is-outlined" v-show="$i18n.locale === 'en'">Español</nuxt-link>
+                <nuxt-link :to="switchLocalePath('en')" class="button is-small is-info is-outlined" v-show="$i18n.locale === 'es'">English</nuxt-link>
               </div>
             </div>
           </div>
         </div>
-      </nav>
+      </header>
     </div>
-    <div class="bg">
+
     <nuxt/>
-    </div>
+
     <!-- Hero footer: will stick at the bottom -->
     <div class="hero-foot">
       <nav class="tabs is-boxed is-fullwidth">
         <div class="container">
           <ul>
-            <li><a class="has-text-grey">How to Vote From Abroad</a></li>
-            <li><a class="has-text-grey">Voter Help Desk/FAQ</a></li>
-            <li><a class="has-text-grey">About Us</a></li>
-            <li><a class="has-text-grey">Privacy</a></li>
-            <li><a class="has-text-grey">Contact</a></li>
-            <li><a class="has-text-grey">Terms of Use</a></li>
+            <li><a>How to Vote From Abroad</a></li>
+            <li><a>Voter Help Desk/FAQ</a></li>
+            <li><a>About Us</a></li>
+            <li><a>Privacy</a></li>
+            <li><a>Contact</a></li>
+            <li><a>Terms of Use</a></li>
           </ul>
         </div>
       </nav>
     </div>
   </section>
-<footer class="footer level navbar is-vfa">
+<footer class="footer level navbar is-grey">
   <div class="level-item container">
     <div class="content has-text-centered">
-      <p class="has-text-grey">
-        Public Service provided by <strong class="has-text-grey"> Democratic Party Committee Abroad</strong> <a href="https://democratsabroad.org" class="has-text-grey">(DemocratsAbroad.org) </a><br/>This communication is not authorized by any candidate or candidate's committee.
+      <p>
+        Public Service provided by <strong> Democratic Party Committee Abroad</strong> <a href="https://democratsabroad.org">(DemocratsAbroad.org) </a><br/>This communication is not authorized by any candidate or candidate's committee.
       </p>
     </div>
   </div>
@@ -130,22 +118,3 @@ export default {
 }
 </script>
 
-<style>
-.hero-foot {
-  background-color: #243a89;
-}
-.nav-logo {
-  max-height: 5rem!important;
-}
-.vfa {
-  background-color: #243a89;
-}
-.bg {
-  background: #fff url(/votefromabroad-bg.jpg) no-repeat center top;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-</style>

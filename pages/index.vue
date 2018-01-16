@@ -130,12 +130,6 @@ export default {
     Logo,
     ValidationCheck
   },
-  // async asyncData () {
-  //   let countriesUrl = process.env.NODE_ENV === 'production' && process.browser ? '//votefromabroad.netlify.com/api/countries/' : 'http://country.io/names.json'
-  //   let { data } = await axios.get(countriesUrl, {headers: {'Access-Control-Allow-Origin': '*'}})
-  //   let countries = {countries: Object.keys(data).sort().map(x => ({name: data[x], code: x}))}
-  //   return countries
-  // },
   data () {
     return {
       telOrEmail: null,
@@ -202,11 +196,6 @@ export default {
     },
     phonePlaceholder () {
       return `e.g. ${format(phoneExamples[this.userCountry], this.userCountry, 'International')}`
-      // if (this.userCountry === 'US') {
-      //   return '+1(919)755-155'
-      // } else {
-      //   return '+852 9669 9279'
-      // }
     },
     ...mapState('userauth', [
       'session',
@@ -215,31 +204,12 @@ export default {
     ...mapState('requests', [
       'requests'
     ])
-    // session () {
-    //   if (this.$store.state.userauth.session.country) {
-    //     return this.$store.state.userauth.session
-    //   }
-    //   return {city: null, country: 'US', ip: null, loc: null, region: null}
-    // }
   },
   validations: {
     telOrEmail: {
       required,
       minLength: minLength(4),
       maxLength: maxLength(15)
-      // async isPhoneNumber (value) {
-      //   if (value === '') return true
-      //   // const response = await fetch(`/api/unique/${value}`)
-      //   const response = await twilio.get(value)
-      //   console.log('tel', response.data.phone_number)
-      //   // let internationalNumber = await response.data.phone_number
-      //   return Boolean(response.data.phone_number)
-      // }
-      // async isValidEmail (value) {
-      //   if (value === '') return true
-      //   const response = await fetch(`/api/unique/${value}`)
-      //   return Boolean(await response.json())
-      // }
     }
   },
   methods: {
