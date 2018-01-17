@@ -74,8 +74,18 @@
         </div>
       </div>
     <nuxt/>
-    <nav class="navbar is-fixed-bottom is-vfa">
+    <!-- <nav class="navbar is-transparent is-fixed-bottom"> -->
+    <nav class="tabs is-boxed is-fullwidth">
+      <ul>
+        <li class="is-active"><a>Overview</a></li>
+        <li><a>Modifiers</a></li>
+        <li><a>Grid</a></li>
+        <li><a>Elements</a></li>
+        <li><a>Components</a></li>
+        <li><a>Layout</a></li>
+      </ul>
     </nav>
+    <!-- </nav> -->
   </section>
 </template>
 
