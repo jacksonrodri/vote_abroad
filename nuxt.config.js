@@ -36,7 +36,7 @@ module.exports = {
     lang: 'en'
   },
   css: [
-    {src: '@/assets/css/main.scss',
+    {src: '@/assets/css/style.scss',
     lang: 'sass'}
   ],
   /*

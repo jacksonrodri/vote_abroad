@@ -10,9 +10,9 @@
       <div class="columns is-mobile">
         <div class="column is-hidden-touch"></div>
         <div class="columns column is-5-desktop is-mobile">
-          <div class="column is-one-third-desktop navbar is-vfa has-text-centered is-paddingless">
+          <div class="column is-one-third-desktop navbar is-vfalight has-text-centered is-paddingless">
             <b-dropdown hoverable class="navbar-item">
-              <button class="button is-radiusless is-vfa" slot="trigger">
+              <button class="button is-radiusless is-vfalight" slot="trigger">
                 <span>Elections</span>
                 <b-icon icon="menu-down"></b-icon>
               </button>
@@ -22,9 +22,9 @@
               <b-dropdown-item>Something else</b-dropdown-item>
             </b-dropdown>
           </div>
-          <div class="column is-one-third-desktop navbar is-vfa has-text-centered is-paddingless">
+          <div class="column is-one-third-desktop navbar is-vfalight has-text-centered is-paddingless">
             <b-dropdown hoverable class="navbar-item">
-              <button class="button is-radiusless is-vfa" slot="trigger">
+              <button class="button is-radiusless is-vfalight" slot="trigger">
                 <span>FAQs</span>
                 <b-icon icon="menu-down"></b-icon>
               </button>
@@ -34,9 +34,9 @@
               <b-dropdown-item>Something else</b-dropdown-item>
             </b-dropdown>
           </div>
-          <div class="column is-one-third-desktop navbar is-vfa has-text-centered is-paddingless">
+          <div class="column is-one-third-desktop navbar is-vfalight has-text-centered is-paddingless">
             <b-dropdown hoverable position="is-bottom-left" class="navbar-item ">
-              <a class="is-radiusless button is-vfa" slot="trigger">
+              <a class="is-radiusless button is-vfalight" slot="trigger">
                 <span>Login</span>
                 <b-icon icon="menu-down"></b-icon>
               </a>

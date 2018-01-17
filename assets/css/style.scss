@@ -1,0 +1,55 @@
+@import "~bulma/sass/utilities/_all.sass";
+// Set your colors
+$vfa: hsl(227, 59%, 22%);
+$twitter: hsl(212, 99%, 63%);
+$secondary: hsl(7, 76%, 43%);
+$red: #bf2e1a;
+
+$vfa-invert: findColorInvert($vfa);
+$twitter-invert: findColorInvert($twitter);
+$secondary-invert: findColorInvert($secondary);
+$red-invert: findColorInvert($red);
+$vfalight: hsl(227, 58%, 34%);
+$vfalight-invert: findColorInvert($vfalight);
+
+// Setup $colors to use as bulma classes (e.g. 'is-twitter')
+$colors: (
+  "white": ($white, $black),
+  "black": ($black, $white),
+  "light": ($light, $light-invert),
+  "dark": ($dark, $dark-invert),
+  "primary": ($primary, $primary-invert),
+  "link": ($link, $link-invert),
+  "info": ($info, $info-invert),
+  "success": ($success, $success-invert),
+  "warning": ($warning, $warning-invert),
+  "danger": ($red, $red-invert),
+  "vfa": ($vfa, $vfa-invert),
+  "vfalight": ($vfalight, $vfalight-invert),
+  "secondary":($secondary, $secondary-invert)
+);
+
+// Links
+$link: $vfa;
+$link-invert: $white;
+$link-visited: $grey;
+$link-focus-border: $vfa;
+$tabs-link-color: $white;
+
+// Tabs
+
+$tabs-link-color: $vfa;
+$tabs-link-active-color: $white;
+$tabs-boxed-link-radius: $radius;
+$tabs-boxed-link-hover-background-color: $background;
+$tabs-boxed-link-hover-border-bottom-color: $vfa;
+
+$tabs-boxed-link-active-background-color: $vfa;
+$tabs-boxed-link-active-border-color: $vfa;
+$tabs-boxed-link-active-border-bottom-color: transparent;
+
+$speed-slow: 150ms;
+$speed-slower: 250ms;
+
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
