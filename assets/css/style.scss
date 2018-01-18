@@ -52,12 +52,28 @@ $tabs-boxed-link-active-border-color: $vfa;
 $tabs-boxed-link-active-border-bottom-color: transparent;
 
 // navbar item
-$navbar-item-color: $white;
-$navbar-item-hover-color: $white;
-$navbar-item-hover-background-color: $vfa;
+// $navbar-item-color: $white;
+// $navbar-item-hover-color: $white;
+// $navbar-item-hover-background-color: $vfa;
+
+// .navbar
+// +touch
+//   .navbar-menu
+//     background-color: $vfa;
 
 $speed-slow: 150ms;
 $speed-slower: 250ms;
 
 @import "~bulma";
 @import "~buefy/src/scss/buefy";
+
+.navbar-item {
+  flex-grow: 1;
+}
+
+.navbar-end
++touch {
+  flex-grow: 1;
+  flex-shrink: 1;
+  display: flex;
+}

@@ -13,19 +13,30 @@
               <span></span>
             </span>
           </div>
-          <div id="navbarMenuHeroC" class="navbar-menu">
+          <div id="navbarMenuHeroC" class="navbar-menu is-flex-touch is-active is-paddingless">
             <div class="navbar-end">
-              <a class="navbar-item is-active">
-                Home
-              </a>
-              <a class="navbar-item">
-                Examples
-              </a>
-              <a class="navbar-item">
-                Documentation
-              </a>
-              <b-dropdown hoverable position="is-bottom-left">
-                <a class="navbar-item" slot="trigger">
+              <b-dropdown hoverable class="navbar-item is-inline-flex-touch has-dropdown">
+                <a class="navbar-item navbar-link" slot="trigger">
+                  <span>FAQs</span>
+                  <b-icon icon="menu-down"></b-icon>
+                </a>
+
+                <b-dropdown-item>Action</b-dropdown-item>
+                <b-dropdown-item>Another action</b-dropdown-item>
+                <b-dropdown-item>Something else</b-dropdown-item>
+              </b-dropdown>
+              <b-dropdown hoverable class="navbar-item is-inline-flex-touch has-dropdown">
+                <a class="navbar-item navbar-link" slot="trigger">
+                  <span>Upcoming Elections</span>
+                  <b-icon icon="menu-down"></b-icon>
+                </a>
+
+                <b-dropdown-item>Action</b-dropdown-item>
+                <b-dropdown-item>Another action</b-dropdown-item>
+                <b-dropdown-item>Something else</b-dropdown-item>
+              </b-dropdown>
+              <b-dropdown hoverable position="is-bottom-left" class="navbar-item has-dropdown  is-inline-flex-touch">
+                <a class="navbar-item navbar-link" slot="trigger">
                   <span>Login</span>
                   <b-icon icon="menu-down"></b-icon>
                 </a>
@@ -140,34 +151,16 @@
       <nav class="tabs is-boxed is-fullwidth">
         <div class="container">
           <ul>
-            <li class="is-active"><a>Overview</a></li>
-            <li><a>Modifiers</a></li>
-            <li><a>Grid</a></li>
-            <li><a>Elements</a></li>
-            <li><a>Components</a></li>
-            <li><a>Layout</a></li>
+            <li class="is-active"><a>How to Vote From Abroad</a></li>
+            <li><a>Voter Help Desk/FAQ</a></li>
+            <li><a>About Us</a></li>
+            <li><a>Privacy</a></li>
+            <li><a>Contact</a></li>
+            <li><a>Terms of Use</a></li>
           </ul>
         </div>
       </nav>
     </div>
-    <!-- <nav class="navbar is-transparent is-fixed-bottom"> -->
-
-    <!-- <footer class="footer">
-      <nav class="tabs is-boxed is-fullwidth">
-      <ul>
-        <li class="is-active"><a>Overview</a></li>
-        <li><a>Modifiers</a></li>
-        <li><a>Grid</a></li>
-        <li><a>Elements</a></li>
-        <li><a>Components</a></li>
-        <li><a>Layout</a></li>
-      </ul>
-    </nav>
-      <nav class="navbar is-vfa is-fullwidth">
-        Democrats Abroad
-      </nav>
-    </footer> -->
-    <!-- </nav> -->
 </div>
 </template>
 
@@ -190,18 +183,27 @@ export default {
 //     max-height: 6rem;
 //     margin: 1rem;
 //     max-width: 90vw;
+.navbar
+    background-color: hsl(227, 59%, 22%);
+
+.navbar-end
+  flex-grow: 1;
+  flex-shrink: 1;
+  display: flex;
 
 .navbar-item.logo
-  background-image: url(/vfa_blue.svg);
+  background-image: url(/vfa_white.svg);
+  background-color: hsl(227, 59%, 22%);
   background-size: contain;
   background-position: 50%;
   background-repeat: no-repeat;
   width: 40vw;
   height: 5rem;
-  margin: 0 10px;
+  margin: 10px;
   padding: 0 20px;
   &:hover
     background-image: url(/vfa_white.svg);
+    background-color: hsl(227, 59%, 22%);
 
 .bg
   background: #fff url(/votefromabroad-bg.jpg) no-repeat center top;

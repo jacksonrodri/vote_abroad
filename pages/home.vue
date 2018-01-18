@@ -8,12 +8,12 @@
             <b-notification
               type="is-semitransparent"
               :closable="false">
-              <h1 class="title is-1 has-text-danger">
+              <h1 class="title is-1 is-size-3-mobile is-spaced has-text-danger">
                 <span class="has-text-weight-semibold">Vote from abroad</span>
               </h1>
-              <h1 class="title is-1 has-text-danger has-text-weight-normal">
+              <h2 class="subtitle is-1 is-size-3-mobile has-text-danger">
                 Request a ballot <span class="has-text-weight-semibold">now!</span>
-              </h1>
+              </h2>
               <phone-email></phone-email>
               <div class="buttons is-right is-marginless">
                   <button class="button is-large is-danger">Start</button>
