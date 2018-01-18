@@ -3,12 +3,13 @@
     <b-field
       label="Type your email address or phone number to start a secure session."
       message="hello world"
-      type="is-danger"
+      type="is-vfalight"
       label-for="emailOrPhone">
       <b-field>
         <p class="control">
           <b-icon
             icon="us"
+            class="flag-container"
             pack="flag-icon"
             @click.native="$refs.country.focus()">
           </b-icon>
@@ -38,10 +39,13 @@ $flag-icon-css-path: '../node_modules/flag-icon-css/flags'
   height: 100%;
   line-height: inherit;
 
-.icon
+// .icon
+//   height: 2.2rem
+//   width: 3rem
+
+.flag-container
   height: 2.2rem
   width: 3rem
-
 // .flag-container
 //   width: 3em;
 
