@@ -1,4 +1,5 @@
 <template>
+<div>
 <div class="hero is-fullheight bg">
     <div class="hero-head">
       <header class="navbar is-vfa">
@@ -7,15 +8,18 @@
             <a class="navbar-item logo">
               <!-- <img src="/vfa_blue.svg" alt="VoteFromAbroad.org -- Absentee ballots for US Citizens Abroad"> -->
             </a>
-            <span class="navbar-burger burger" data-target="navbarMenuHeroC">
+            <!-- <span class="navbar-burger burger" data-target="navbarMenuHeroC">
               <span></span>
               <span></span>
               <span></span>
-            </span>
+            </span> -->
           </div>
-          <div id="navbarMenuHeroC" class="navbar-menu is-flex-touch is-active is-paddingless">
+          <div id="navbarMenuHeroC" class="navbar-menu is-active is-paddingless">
             <div class="navbar-end">
-              <b-dropdown hoverable class="navbar-item is-inline-flex-touch has-dropdown">
+              <div class="navbar-item lang">
+                <button class="button is-outlined is-danger is-small">En Español</button>
+              </div>
+              <b-dropdown hoverable class="navbar-item has-dropdown is-hidden-mobile">
                 <a class="navbar-item navbar-link" slot="trigger">
                   <span>FAQs</span>
                   <b-icon icon="menu-down"></b-icon>
@@ -25,9 +29,9 @@
                 <b-dropdown-item>Another action</b-dropdown-item>
                 <b-dropdown-item>Something else</b-dropdown-item>
               </b-dropdown>
-              <b-dropdown hoverable class="navbar-item is-inline-flex-touch has-dropdown">
+              <b-dropdown hoverable class="navbar-item has-dropdown">
                 <a class="navbar-item navbar-link" slot="trigger">
-                  <span>Upcoming Elections</span>
+                  <span><span class="is-hidden-mobile">Upcoming </span>Elections</span>
                   <b-icon icon="menu-down"></b-icon>
                 </a>
 
@@ -35,7 +39,7 @@
                 <b-dropdown-item>Another action</b-dropdown-item>
                 <b-dropdown-item>Something else</b-dropdown-item>
               </b-dropdown>
-              <b-dropdown hoverable position="is-bottom-left" class="navbar-item has-dropdown  is-inline-flex-touch">
+              <b-dropdown hoverable position="is-bottom-left" class="navbar-item has-dropdown">
                 <a class="navbar-item navbar-link" slot="trigger">
                   <span>Login</span>
                   <b-icon icon="menu-down"></b-icon>
@@ -44,7 +48,8 @@
                   <form action="">
                     <div class="modal-card" style="width:300px;">
                       <section class="modal-card-body">
-                        <b-field label="Email">
+                        <phone-email></phone-email>
+                        <!-- <b-field label="Email">
                           <b-input
                             type="email"
                             placeholder="Your email"
@@ -59,7 +64,7 @@
                             placeholder="Your password"
                             required>
                           </b-input>
-                        </b-field>
+                        </b-field> -->
 
                         <b-checkbox>Remember me</b-checkbox>
                       </section>
@@ -151,25 +156,47 @@
       <nav class="tabs is-boxed is-fullwidth">
         <div class="container">
           <ul>
-            <li class="is-active"><a>How to Vote From Abroad</a></li>
-            <li><a>Voter Help Desk/FAQ</a></li>
+            <li class="is-active"><a>How to<span class="is-hidden-touch">&nbsp;Vote From Abroad</span></a></li>
+            <li><a><span class="is-hidden-touch">Voter Help Desk/</span>FAQ</a></li>
             <li><a>About Us</a></li>
-            <li><a>Privacy</a></li>
-            <li><a>Contact</a></li>
-            <li><a>Terms of Use</a></li>
+            <li><a>Election Official Directory</a></li>
           </ul>
         </div>
       </nav>
     </div>
 </div>
+<section class="hero is-vfa">
+  <div class="hero-body">
+    <div class="container">
+      <nav class="level">
+        <p class="level-item has-text-centered">
+          <a class="link is-info">Privacy</a>
+        </p>
+        <p class="level-item has-text-centered is-size-7">
+          Public Service provided by Democratic Party Committee Abroad (DemocratsAbroad.org).<br/>
+This communication is not authorized by any candidate or candidate's committee.
+        </p>
+        <p class="level-item has-text-centered">
+          <a class="link is-info">Terms of Use</a>
+        </p>
+      </nav>
+    </div>
+  </div>
+</section>
+</div>
 </template>
 
 <script>
+import PhoneEmail from '~/components/PhoneEmail.vue'
+
 export default {
   data () {
     return {
       something: null
     }
+  },
+  components: {
+    PhoneEmail
   }
 }
 </script>
@@ -186,10 +213,18 @@ export default {
 .navbar
     background-color: hsl(227, 59%, 22%);
 
-.navbar-end
+.navbar-item
+  display: inline-flex;
   flex-grow: 1;
   flex-shrink: 1;
+
+.navbar-end
+  flex-grow: 0;
+  flex-shrink: 1;
   display: flex;
+
+.navbar-link
+  padding-right: 1em;
 
 .navbar-item.logo
   background-image: url(/vfa_white.svg);
@@ -204,6 +239,9 @@ export default {
   &:hover
     background-image: url(/vfa_white.svg);
     background-color: hsl(227, 59%, 22%);
+
+.tabs:not(:last-child)
+  margin-bottom: 0;
 
 .bg
   background: #fff url(/votefromabroad-bg.jpg) no-repeat center top;

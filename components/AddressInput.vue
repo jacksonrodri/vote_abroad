@@ -7,7 +7,7 @@
     <slot name="instructions"></slot>
     <div v-if="usOnly === undefined || usOnly === false" class="field is-fullwidth">
           <div class="field-body">
-            <b-field grouped>
+            <b-field class="grouped" >
               <b-field expanded>
                 <b-field>
                   <p class="control flag-container">

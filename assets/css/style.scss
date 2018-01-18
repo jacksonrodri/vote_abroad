@@ -66,14 +66,3 @@ $speed-slower: 250ms;
 
 @import "~bulma";
 @import "~buefy/src/scss/buefy";
-
-.navbar-item {
-  flex-grow: 1;
-}
-
-.navbar-end
-+touch {
-  flex-grow: 1;
-  flex-shrink: 1;
-  display: flex;
-}
