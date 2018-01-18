@@ -11,6 +11,8 @@ $secondary-invert: findColorInvert($secondary);
 $red-invert: findColorInvert($red);
 $vfalight: hsl(227, 58%, 34%);
 $vfalight-invert: findColorInvert($vfalight);
+$semitransparent: hsla(0, 0%, 96%, 0.37);
+$semitransparent-invert: $black;
 
 // Setup $colors to use as bulma classes (e.g. 'is-twitter')
 $colors: (
@@ -26,7 +28,8 @@ $colors: (
   "danger": ($red, $red-invert),
   "vfa": ($vfa, $vfa-invert),
   "vfalight": ($vfalight, $vfalight-invert),
-  "secondary":($secondary, $secondary-invert)
+  "secondary":($secondary, $secondary-invert),
+  "semitransparent": ($semitransparent, $semitransparent-invert)
 );
 
 // Links

@@ -7,35 +7,35 @@
     <slot name="instructions"></slot>
     <div v-if="usOnly === undefined || usOnly === false" class="field is-fullwidth">
           <div class="field-body">
-            <b-field class="grouped" >
-                <b-field expanded>
-                  <b-field>
-                    <p class="control flag-container">
-                      <b-icon
-                        :icon="countryCode.toLowerCase()"
-                        pack="flag-icon"
-                        @click.native="$refs.country.focus()">
-                      </b-icon>
-                    </p>
-                    <b-autocomplete
-                        v-model="intlAddr['country-name']"
-                        placeholder="Country"
-                        ref="country"
-                        :disabled="usOnly"
-                        keep-first
-                        expanded
-                        :data="filteredCountries"
-                        field="label"
-                        @input="updateAddress()"
-                        @focus="$event.target.select()"
-                        @select="option => {selected = option; if (selected) {intlAddr['country-code'] = option.iso}}">
-                      <template slot-scope="props">
-                        <span :class="`flag-icon flag-icon-${props.option.iso.toLowerCase()}`"></span>{{ props.option.label }}
-                      </template>
-                    </b-autocomplete>
-                  </b-field>
-                  </b-field>
+            <b-field grouped>
+              <b-field expanded>
+                <b-field>
+                  <p class="control flag-container">
+                    <b-icon
+                      :icon="countryCode.toLowerCase()"
+                      pack="flag-icon"
+                      @click.native="$refs.country.focus()">
+                    </b-icon>
+                  </p>
+                  <b-autocomplete
+                      v-model="intlAddr['country-name']"
+                      placeholder="Country"
+                      ref="country"
+                      :disabled="usOnly"
+                      keep-first
+                      expanded
+                      :data="filteredCountries"
+                      field="label"
+                      @input="updateAddress()"
+                      @focus="$event.target.select()"
+                      @select="option => {selected = option; if (selected) {intlAddr['country-code'] = option.iso}}">
+                    <template slot-scope="props">
+                      <span :class="`flag-icon flag-icon-${props.option.iso.toLowerCase()}`"></span>{{ props.option.label }}
+                    </template>
+                  </b-autocomplete>
                 </b-field>
+              </b-field>
+            </b-field>
           </div>
         </div>
         <div class="field">

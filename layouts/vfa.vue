@@ -75,7 +75,9 @@
       </div>
     <nuxt/>
     <!-- <nav class="navbar is-transparent is-fixed-bottom"> -->
-    <nav class="tabs is-boxed is-fullwidth">
+
+    <footer class="footer">
+      <nav class="tabs is-boxed is-fullwidth">
       <ul>
         <li class="is-active"><a>Overview</a></li>
         <li><a>Modifiers</a></li>
@@ -85,6 +87,10 @@
         <li><a>Layout</a></li>
       </ul>
     </nav>
+      <nav class="navbar is-vfa is-fullwidth">
+        Democrats Abroad
+      </nav>
+    </footer>
     <!-- </nav> -->
   </section>
 </template>
