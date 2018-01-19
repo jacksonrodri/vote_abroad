@@ -11,6 +11,7 @@
             :icon="countryCode.toLowerCase()"
             class="flag-container"
             pack="flag-icon"
+            :size="size"
             @click.native="focusCountry">
           </b-icon>
         </p>
@@ -23,6 +24,7 @@
             :icon="countryCode.toLowerCase()"
             icon-pack="flag-icon"
             expanded
+            :size="size"
             :data="filteredCountries"
             field="iso"
             @blur="focusField"
@@ -37,6 +39,7 @@
           id="emailOrPhone"
           ref="emailOrPhone"
           v-model="typed"
+          :size="size"
           @blur="parseNumber"
           @input="debounceParse"
           :placeholder="phonePlaceholder"
@@ -55,6 +58,14 @@ import * as phoneExamples from 'libphonenumber-js/examples.mobile.json'
 
 export default {
   name: 'phone-email',
+  props: [
+    'size',
+    'userCountry',
+    'value'
+  ],
+  mounted () {
+    this.phoneCountry = this.userCountry
+  },
   data () {
     return {
       data: [],
@@ -84,16 +95,6 @@ export default {
         this.phoneCountry = formatter.country
       }
     }
-    // countryCode: function (newVal, oldVal) {
-    //   console.log(newVal, oldVal, this.selected)
-    //   if (this.selected && oldVal && oldVal.toLowerCase() !== 'un') {
-    //     let oldPhoneCode = getPhoneCode(oldVal.toUpperCase())
-    //     // let newPhoneCode = getPhoneCode(newVal)
-    //     if (this.typed.indexOf(oldPhoneCode === 0)) {
-    //       console.log('switch codes')
-    //     }
-    //   }
-    // }
   },
   computed: {
     countryList () {
@@ -139,13 +140,20 @@ export default {
   methods: {
     parseNumber () {
       let parsed = this.countryCode.toLowerCase() === 'un' ? parse(this.typed) : parse(this.typed, {country: {default: this.countryCode}})
-      if (!(Object.keys(parsed).length === 0 && parsed.constructor === Object)) {
+      if (this.typed.indexOf('@') === -1 && !(Object.keys(parsed).length === 0 && parsed.constructor === Object)) {
         this.phoneCountry = parsed.country
+        this.phone = format(parsed, 'International_plaintext')
         this.typed = format(parsed, 'International')
+        this.email = null
+      } else {
+        this.email = this.typed
+        this.phone = null
       }
+      this.updateInput()
     },
     debounceParse: debounce(function () {
-      if (this.typed.indexOf('@') === -1) { this.parseNumber() }
+      // if (this.typed.indexOf('@') === -1) { this.parseNumber() }
+      this.parseNumber()
     }, 1500),
     getPhoneCode (code) {
       if (code === 'GS') {
@@ -176,6 +184,12 @@ export default {
     focusField () {
       this.showFlag = true
       this.$refs.emailOrPhone.focus()
+    },
+    updateInput () {
+      this.$emit('input', {
+        phoneNumber: this.phone,
+        email: this.email
+      })
     }
   }
 }
@@ -190,17 +204,14 @@ $flag-icon-css-path: '../node_modules/flag-icon-css/flags'
   height: 100%;
   line-height: inherit;
 
-// .icon
-//   height: 2.2rem
-//   width: 3rem
+.flag-icon.fa-3x
+  width: 4.3rem;
 
 .flag-container
   height: 2.2rem
   width: 3rem
-// .flag-container
-//   width: 3em;
 
-// .flag-container > span
-//   width: 100%;
-//   height: 100%;
+.flag-container.is-large
+  height: 3.4rem;
+  width: 4.3rem;
 </style>

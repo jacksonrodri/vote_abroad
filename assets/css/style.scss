@@ -66,3 +66,23 @@ $speed-slower: 250ms;
 
 @import "~bulma";
 @import "~buefy/src/scss/buefy";
+
+.flag-icon {
+  width: 3rem;
+  height: 100%;
+  line-height: inherit;
+}
+
+.flag-icon.fa-3x {
+  width: 4.3rem;
+}
+
+.flag-container {
+  height: 2.2rem;
+  width: 3rem;
+}
+
+.flag-container.is-large {
+  height: 3.4rem;
+  width: 4.3rem;
+}

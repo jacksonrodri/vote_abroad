@@ -14,7 +14,10 @@
               <h2 class="subtitle is-1 is-size-3-mobile has-text-danger">
                 Request a ballot <span class="has-text-weight-semibold">now!</span>
               </h2>
-              <phone-email></phone-email>
+              <phone-email
+                size="is-large"
+                userCountry="HK">
+              </phone-email>
               <div class="buttons is-right is-marginless">
                   <button class="button is-large is-danger">Start</button>
               </div>
