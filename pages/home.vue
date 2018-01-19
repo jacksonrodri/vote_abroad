@@ -19,7 +19,7 @@
                   <button class="button is-large is-danger">Start</button>
               </div>
               <div class="buttons is-right">
-                  <button class="button is-text is-paddingless">or start an anonymous session</button>
+                  <button class="button is-text has-text-black is-paddingless">or start an anonymous session</button>
               </div>
             </b-notification>
           </div>

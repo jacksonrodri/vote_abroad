@@ -8,23 +8,64 @@
             <a class="navbar-item logo">
               <!-- <img src="/vfa_blue.svg" alt="VoteFromAbroad.org -- Absentee ballots for US Citizens Abroad"> -->
             </a>
-            <!-- <span class="navbar-burger burger" data-target="navbarMenuHeroC">
+            <div class="navbar-item is-hidden-desktop">
+              <nuxt-link :to="switchLocalePath('es')" class="button is-info is-outlined is-small" v-show="$i18n.locale === 'en'">Español</nuxt-link>
+              <nuxt-link :to="switchLocalePath('en')" class="button is-info is-outlined is-small" v-show="$i18n.locale === 'es'">English</nuxt-link>
+            </div>
+            <span :class="[{'is-active': isActive}, 'navbar-burger', 'burger']" @click="isActive = !isActive">
               <span></span>
               <span></span>
               <span></span>
-            </span> -->
+            </span>
           </div>
-          <div id="navbarMenuHeroC" class="navbar-menu is-active is-paddingless">
+          <div id="navbarMenuHeroC" :class="[{'is-active': isActive}, 'navbar-menu', 'is-paddingless']">
             <div class="navbar-end">
-              <div class="navbar-item lang">
-                <button class="button is-outlined is-danger is-small">En Español</button>
+              <a class="navbar-item">Login</a>
+              <div class="navbar-item has-dropdown is-hoverable" style="order:-1;">
+                <a class="navbar-link">
+                  Upcoming Elections
+                </a>
+
+                <div class="navbar-dropdown">
+                  <nuxt-link v-for="(election, index) in upcomingElections" :key="`${election.state} ${election.electionType}`" :to="localePath({ name: 'elections-state', params: { state: election.state } })" :class="`navbar-item ${index > 3 ? 'is-hidden-touch' : ''}`">{{ new Date(election.date).toLocaleDateString('en-US', {year: 'numeric', month: 'short', day: 'numeric'}) }} - {{ election.state }} {{ $t(`elections.electionTypes['${election.electionType}']`) }}</nuxt-link>
+                  <hr class="navbar-divider">
+                  <nuxt-link :to="localePath({ name: 'elections' })" class="navbar-item" exact >... All upcoming elections</nuxt-link>
+                </div>
               </div>
-              <b-dropdown hoverable class="navbar-item has-dropdown is-hidden-mobile">
+              <div class="navbar-item has-dropdown is-hoverable" style="order:-1;">
+                <a class="navbar-link">
+                  Help
+                </a>
+
+                <div class="navbar-dropdown">
+                  <a class="navbar-item">
+                    Can I choose the state where I vote?
+                  </a>
+                  <a class="navbar-item">
+                    I can't remember or find my exact street address - what do I do?
+                  </a>
+                  <a class="navbar-item">
+                    Why do I need an exact address?
+                  </a>
+                  <a class="navbar-item">
+                    How do I request my ballot?
+                  </a>
+                  <a class="navbar-item">
+                    When will you send my ballot?
+                  </a>
+                  <hr class="navbar-divider">
+                  <a class="navbar-item">
+                    More FAQ's
+                  </a>
+                  <hr class="navbar-divider">
+                  <a class="navbar-item">Contact the helpdesk</a>
+                </div>
+              </div>
+              <!-- <b-dropdown hoverable class="navbar-item has-dropdown is-hidden-mobile">
                 <a class="navbar-item navbar-link" slot="trigger">
                   <span>FAQs</span>
                   <b-icon icon="menu-down"></b-icon>
                 </a>
-
                 <b-dropdown-item>Action</b-dropdown-item>
                 <b-dropdown-item>Another action</b-dropdown-item>
                 <b-dropdown-item>Something else</b-dropdown-item>
@@ -49,23 +90,6 @@
                     <div class="modal-card" style="width:300px;">
                       <section class="modal-card-body">
                         <phone-email></phone-email>
-                        <!-- <b-field label="Email">
-                          <b-input
-                            type="email"
-                            placeholder="Your email"
-                            required>
-                          </b-input>
-                        </b-field>
-
-                        <b-field label="Password">
-                          <b-input
-                            type="password"
-                            password-reveal
-                            placeholder="Your password"
-                            required>
-                          </b-input>
-                        </b-field> -->
-
                         <b-checkbox>Remember me</b-checkbox>
                       </section>
                       <footer class="modal-card-foot">
@@ -74,82 +98,15 @@
                     </div>
                   </form>
                 </b-dropdown-item>
-              </b-dropdown>
+              </b-dropdown> -->
+              <div class="navbar-item is-hidden-touch">
+                <nuxt-link :to="switchLocalePath('es')" class="button is-info is-outlined is-small" v-show="$i18n.locale === 'en'">Español</nuxt-link>
+                <nuxt-link :to="switchLocalePath('en')" class="button is-info is-outlined is-small" v-show="$i18n.locale === 'es'">English</nuxt-link>
+              </div>
             </div>
           </div>
         </div>
       </header>
-      <!-- <div class="navbar is-vfa">
-        <a class="logo" href="https://bulma.io">
-          <img src="/vfa-white.svg" alt="VoteFromAbroad.org -- Absentee ballots for US Citizens Abroad">
-        </a>
-      </div>
-      <div class="columns is-mobile">
-        <div class="column is-hidden-touch"></div>
-        <div class="columns column is-5-desktop is-mobile">
-          <div class="column is-one-third-desktop navbar is-vfalight has-text-centered is-paddingless">
-            <b-dropdown hoverable class="navbar-item">
-              <button class="button is-radiusless is-vfalight" slot="trigger">
-                <span>Elections</span>
-                <b-icon icon="menu-down"></b-icon>
-              </button>
-
-              <b-dropdown-item>Action</b-dropdown-item>
-              <b-dropdown-item>Another action</b-dropdown-item>
-              <b-dropdown-item>Something else</b-dropdown-item>
-            </b-dropdown>
-          </div>
-          <div class="column is-one-third-desktop navbar is-vfalight has-text-centered is-paddingless">
-            <b-dropdown hoverable class="navbar-item">
-              <button class="button is-radiusless is-vfalight" slot="trigger">
-                <span>FAQs</span>
-                <b-icon icon="menu-down"></b-icon>
-              </button>
-
-              <b-dropdown-item>Action</b-dropdown-item>
-              <b-dropdown-item>Another action</b-dropdown-item>
-              <b-dropdown-item>Something else</b-dropdown-item>
-            </b-dropdown>
-          </div>
-          <div class="column is-one-third-desktop navbar is-vfalight has-text-centered is-paddingless">
-            <b-dropdown hoverable position="is-bottom-left" class="navbar-item ">
-              <a class="is-radiusless button is-vfalight" slot="trigger">
-                <span>Login</span>
-                <b-icon icon="menu-down"></b-icon>
-              </a>
-              <b-dropdown-item custom paddingless>
-                <form action="">
-                  <div class="modal-card" style="width:300px;">
-                    <section class="modal-card-body">
-                      <b-field label="Email">
-                        <b-input
-                          type="email"
-                          placeholder="Your email"
-                          required>
-                        </b-input>
-                      </b-field>
-
-                      <b-field label="Password">
-                        <b-input
-                          type="password"
-                          password-reveal
-                          placeholder="Your password"
-                          required>
-                        </b-input>
-                      </b-field>
-
-                      <b-checkbox>Remember me</b-checkbox>
-                    </section>
-                    <footer class="modal-card-foot">
-                      <button class="button is-vfa">Login</button>
-                    </footer>
-                  </div>
-                </form>
-              </b-dropdown-item>
-            </b-dropdown>
-          </div>
-        </div>
-      </div> -->
       </div>
     <nuxt/>
     <div class="hero-foot">
@@ -192,11 +149,14 @@ import PhoneEmail from '~/components/PhoneEmail.vue'
 export default {
   data () {
     return {
-      something: null
+      isActive: false
     }
   },
   components: {
     PhoneEmail
+  },
+  computed: {
+    upcomingElections () { return this.$store.state.upcomingElections }
   }
 }
 </script>
@@ -210,25 +170,25 @@ export default {
 //     max-height: 6rem;
 //     margin: 1rem;
 //     max-width: 90vw;
-.navbar
-    background-color: hsl(227, 59%, 22%);
+// .navbar
+//     background-color: hsl(227, 59%, 22%);
 
-.navbar-item
-  display: inline-flex;
-  flex-grow: 1;
-  flex-shrink: 1;
+// .navbar-item
+//   display: inline-flex;
+//   flex-grow: 1;
+//   flex-shrink: 1;
 
-.navbar-end
-  flex-grow: 0;
-  flex-shrink: 1;
-  display: flex;
+// .navbar-end
+//   flex-grow: 0;
+//   flex-shrink: 1;
+//   display: flex;
 
-.navbar-link
-  padding-right: 1em;
+// .navbar-link
+//   padding-right: 1em;
 
 .navbar-item.logo
-  background-image: url(/vfa_white.svg);
-  background-color: hsl(227, 59%, 22%);
+  background-image: url(/vfa_blue.svg);
+  // background-color: hsl(227, 59%, 22%);
   background-size: contain;
   background-position: 50%;
   background-repeat: no-repeat;
@@ -236,6 +196,7 @@ export default {
   height: 5rem;
   margin: 10px;
   padding: 0 20px;
+  flex-grow: 1;
   &:hover
     background-image: url(/vfa_white.svg);
     background-color: hsl(227, 59%, 22%);
