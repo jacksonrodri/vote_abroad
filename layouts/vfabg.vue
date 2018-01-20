@@ -20,14 +20,25 @@
           </div>
           <div id="navbarMenuHeroC" :class="[{'is-active': isActive}, 'navbar-menu', 'is-paddingless']">
             <div class="navbar-end">
-              <a class="navbar-item">Login</a>
+              <a class="navbar-item"
+                  @click="isComponentModalActive = true">
+                  Login
+              </a>
               <div class="navbar-item has-dropdown is-hoverable" style="order:-1;">
                 <a class="navbar-link">
                   Upcoming Elections
                 </a>
 
                 <div class="navbar-dropdown">
-                  <nuxt-link v-for="(election, index) in upcomingElections" :key="`${election.state} ${election.electionType}`" :to="localePath({ name: 'elections-state', params: { state: election.state } })" :class="`navbar-item ${index > 3 ? 'is-hidden-touch' : ''}`">{{ new Date(election.date).toLocaleDateString('en-US', {year: 'numeric', month: 'short', day: 'numeric'}) }} - {{ election.state }} {{ $t(`elections.electionTypes['${election.electionType}']`) }}</nuxt-link>
+                  <nuxt-link v-for="(election, index) in upcomingElections" :key="`${election.state} ${election.electionType}`" :to="localePath({ name: 'elections-state', params: { state: election.state } })" :class="`navbar-item ${index > 3 ? 'is-hidden-touch' : ''}`">
+                    <div class="calendar">
+                      <header class="calendar-month">{{new Date(election.date).toLocaleDateString('en-US', {month: 'short'}) }}</header>
+                      <div class="calendar-date">
+                        {{ new Date(election.date).toLocaleDateString('en-US', {day: 'numeric'}) }}
+                      </div>
+                    </div>
+                     <span class="is-size-5"><span class="has-text-weight-semibold">{{ election.state }}</span> - {{ $t(`elections.electionTypes['${election.electionType}']`) }}</span>
+                  </nuxt-link>
                   <hr class="navbar-divider">
                   <nuxt-link :to="localePath({ name: 'elections' })" class="navbar-item" exact >... All upcoming elections</nuxt-link>
                 </div>
@@ -140,6 +151,9 @@ This communication is not authorized by any candidate or candidate's committee.
     </div>
   </div>
 </section>
+<b-modal :active.sync="isComponentModalActive" has-modal-card>
+  <phone-email></phone-email>
+</b-modal>
 </div>
 </template>
 
@@ -149,7 +163,8 @@ import PhoneEmail from '~/components/PhoneEmail.vue'
 export default {
   data () {
     return {
-      isActive: false
+      isActive: false,
+      isComponentModalActive: false
     }
   },
   components: {
@@ -209,5 +224,29 @@ export default {
   // min-height: 611px;
   // height: 970px;
   background-size: cover;
+
+// .calendar
+//   border-width: .5px;
+//   border-color: grey;
+//   display: inline-block;
+//   border-style: outset;
+//   margin: 1px 8px -6px -10px;
+//   box-shadow: 2px 2px #888888;
+
+// .calendar-month
+//   background-color: red;
+//   color: white;
+//   font-weight: bold;
+//   font-size: .75rem;
+//   line-height: .7rem;
+//   padding: .1rem .2rem;
+//   text-align: center;
+
+// .calendar-date
+//   font-weight: bold;
+//   font-size: 1.8rem;
+//   text-align: center;
+//   line-height: 1.5em;
+//   padding: 3px;
 </style>
 

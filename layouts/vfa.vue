@@ -20,7 +20,10 @@
           </div>
           <div id="navbarMenuHeroC" :class="[{'is-active': isActive}, 'navbar-menu', 'is-paddingless']">
             <div class="navbar-end">
-              <a class="navbar-item">Login</a>
+              <a class="navbar-item"
+                @click="isComponentModalActive = true">
+                Login
+              </a>
               <div class="navbar-item has-dropdown is-hoverable" style="order:-1;">
                 <a class="navbar-link">
                   Upcoming Elections
@@ -148,6 +151,9 @@ This communication is not authorized by any candidate or candidate's committee.
     </div>
   </div>
 </section>
+<b-modal :active.sync="isComponentModalActive" has-modal-card>
+  <phone-email></phone-email>
+</b-modal>
 </div>
 </template>
 
@@ -157,7 +163,8 @@ import PhoneEmail from '~/components/PhoneEmail.vue'
 export default {
   data () {
     return {
-      isActive: false
+      isActive: false,
+      isComponentModalActive: false
     }
   },
   components: {

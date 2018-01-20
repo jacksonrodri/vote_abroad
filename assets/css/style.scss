@@ -100,3 +100,30 @@ $speed-slower: 250ms;
   height: 1.5rem;
   width: 2rem;
 }
+
+.calendar {
+  border-width: .5px;
+  border-color: $light;
+  display: inline-block;
+  border-style: outset;
+  margin: 1px 8px -6px -10px;
+  box-shadow: 2px 2px $light;
+  min-width: 3rem;
+}
+
+.calendar-month {
+  background-color: $red;
+  color: $white;
+  font-weight: bold;
+  font-size: .75rem;
+  line-height: .7rem;
+  padding: .1rem .2rem;
+  text-align: center;
+}
+
+.calendar-date {
+  font-weight: bold;
+  font-size: 1.7rem;
+  text-align: center;
+  line-height: 1.8rem;
+}
