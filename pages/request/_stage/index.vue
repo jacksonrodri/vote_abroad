@@ -195,7 +195,7 @@
       <!-- <b-field :type="($v.votAdr.zip.$error ? 'is-danger': '')" :message="$v.votAdr.zip.$error ? Object.keys($v.votAdr.zip.$params).map(x => x) : '' " label="votAdr.zip">
         <b-input v-model="votAdr.zip" @input="$v.votAdr.zip.$touch()"></b-input>
       </b-field> -->
-      <address-input
+      <us-address-input
         label="Your US voting Address"
         usOnly
         v-model="votAdr2">
@@ -203,13 +203,9 @@
           <p>Please add your US Voting Address</p>
         </div>
 
-      </address-input>
+      </us-address-input>
 
       <!-- <jurisdiction></jurisdiction> -->
-      <!-- votAdr.county -->
-      <b-field :type="($v.votAdr.county.$error ? 'is-danger': '')" :message="$v.votAdr.county.$error ? Object.keys($v.votAdr.county.$params).map(x => x) : '' " label="votAdr.county">
-        <b-input v-model="votAdr.county" @input="$v.votAdr.county.$touch()"></b-input>
-      </b-field>
 
       <!-- leoAdr -->
       <b-field label="Jurisdiction">
@@ -348,6 +344,7 @@ import { required, requiredIf, requiredUnless, numeric, alphaNum, email } from '
 // minLength, maxLength,
 import countries from '~/assets/countryaddresses'
 import AddressInput from '~/components/AddressInput'
+import UsAddressInput from '~/components/UsAddressInput'
 // import Jurisdiction from '~/components/Jurisdiction'
 
 export default {
@@ -371,8 +368,8 @@ export default {
       emailOrPhone: '',
       // email: '',
       // tel: '',
-      abrAdr2: {},
-      votAdr2: {},
+      // abrAdr2: {},
+      // votAdr2: {},
       abrAdr: {
         extendedAddress: '',
         streetAddress: '',
@@ -431,7 +428,8 @@ export default {
     }
   },
   components: {
-    AddressInput
+    AddressInput,
+    UsAddressInput
   },
   computed: {
     countryList () {
@@ -511,6 +509,14 @@ export default {
     tel: {
       get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].tel : null },
       set (value) { this.$store.commit('requests/update', { tel: value }) }
+    },
+    votAdr2: {
+      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].votAdr2 : null },
+      set (value) { this.$store.commit('requests/update', {votAdr2: value}) }
+    },
+    abrAdr2: {
+      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].abrAdr2 : null },
+      set (value) { this.$store.commit('requests/update', {abrAdr2: value}) }
     }
   },
   validations () {
@@ -573,9 +579,6 @@ export default {
           required
         },
         city: {
-          required
-        },
-        county: {
           required
         },
         state: {

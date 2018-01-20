@@ -101,7 +101,16 @@
           </div>
         </div>
         <div v-if="(usOnly !== undefined && usOnly !== false) || usOnly === true" class="field is-fullwidth">
-          county
+          <!-- votAdr.county -->
+          <b-field label="County">
+            <b-input v-model="county"></b-input>
+          </b-field>
+        </div>
+        <div v-if="(usOnly !== undefined && usOnly !== false) || usOnly === true" class="field is-fullwidth">
+          <!-- votAdr.county -->
+          <b-field label="Jurisdiction">
+            <b-autocomplete></b-autocomplete>
+          </b-field>
         </div>
   </section>
 </template>
@@ -112,7 +121,7 @@ import axios from 'axios'
 import debounce from 'lodash/debounce'
 
 export default {
-  name: 'AddressInput',
+  name: 'UsAddressInput',
   props: [
     'value',
     'usOnly',
@@ -133,6 +142,7 @@ export default {
       streetAddress: '',
       locality: '',
       region: '',
+      regionCode: '',
       postalCode: '',
       countryName: '',
       countryCode: '',
@@ -143,7 +153,10 @@ export default {
       thoroughfare: '',
       premise: '',
       administrativearea: '',
-      postalcode: ''
+      postalcode: '',
+      county: '',
+      jurisdictionChoices: [],
+      jurisdiction: {}
     }
   },
   computed: {
@@ -208,6 +221,14 @@ export default {
         })
     }
   },
+  watch: {
+    regionCode: function (newVal, oldVal) {
+      console.log(`finding ${newVal}`)
+      if (newVal !== oldVal && newVal !== 'WI') {
+        this.jurisdictionChoices = this.app.$content('/leos').getAll()[0].body[newVal.toUpperCase()]
+      }
+    }
+  },
   methods: {
     fillData (option) {
       console.log('selected:', this.selected)
@@ -215,6 +236,8 @@ export default {
       if (option && option.place_id) {
         axios.get(`${process.env.placesUrl + process.env.detailsEndpoint}?placeid=${option.place_id}&key=${process.env.placesKey}`)
           .then(({ data }) => {
+            this.county = data.result.address_components.filter(y => y.types.indexOf('administrative_area_level_2') > -1)[0].long_name
+            this.regionCode = data.result.address_components.filter(n => n.types.indexOf('administrative_area_level_1') > -1)[0].short_name
             data.result.adr_address
               .split(/<span class="|">|<\/span>,?\s?/)
               .filter(e => e)

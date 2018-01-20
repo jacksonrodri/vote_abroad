@@ -26,7 +26,18 @@ module.exports = {
         'get',
         'getAll'
       ]
-    }]
+    }],
+    [
+      'leos',
+      {
+        page: 'leos/_state',
+        isPost: false,
+        generate: [
+          'get',
+          'getAll'
+        ]
+      }
+    ]
     // ['state-rules', {
     //   page: 'elections/_state',
     //   isPost: false,
