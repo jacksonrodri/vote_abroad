@@ -108,15 +108,7 @@
         </div>
       </header>
       </div>
-      <div class="columns is-centered">
-        <div class="column is-11">
-          <div class="hero-body">
-            <div class="box">
-              <nuxt/>
-            </div>
-          </div>
-        </div>
-      </div>
+    <nuxt/>
     <div class="hero-foot">
       <nav class="tabs is-boxed is-fullwidth">
         <div class="container">
@@ -215,7 +207,6 @@ export default {
 .bg
   background: #fff url(/votefromabroad-bg.jpg) no-repeat center top;
   // min-height: 611px;
-  // background-color: #7694C6;
   // height: 970px;
   background-size: cover;
 </style>

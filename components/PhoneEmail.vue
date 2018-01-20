@@ -41,7 +41,7 @@
           v-model="typed"
           :size="size"
           @blur="parseNumber"
-          @input="debounceParse"
+          @input="$v.typed.$touch(); debounceParse"
           :placeholder="phonePlaceholder"
           expanded>
         </b-input>
@@ -55,6 +55,7 @@ import countries from '~/assets/countryaddresses'
 import { getPhoneCode, format, parse, asYouType as AsYouType } from 'libphonenumber-js'
 import debounce from 'lodash/debounce'
 import * as phoneExamples from 'libphonenumber-js/examples.mobile.json'
+import { email } from 'vuelidate/lib/validators'
 
 export default {
   name: 'phone-email',
@@ -144,10 +145,10 @@ export default {
         this.phoneCountry = parsed.country
         this.phone = format(parsed, 'International_plaintext')
         this.typed = format(parsed, 'International')
-        this.email = null
+        // this.email = null
       } else {
         this.email = this.typed
-        this.phone = null
+        // this.phone = null
       }
       this.updateInput()
     },
@@ -190,6 +191,15 @@ export default {
         phoneNumber: this.phone,
         email: this.email
       })
+    }
+  },
+  validations: {
+    typed: {
+      email,
+      phone (value) {
+        let isEmptyObj = (Object.keys(parse(value)).length === 0 && parse(value).constructor === Object)
+        return !(isEmptyObj)
+      }
     }
   }
 }

@@ -15,7 +15,7 @@
                 Request a ballot <span class="has-text-weight-semibold">now!</span>
               </h2>
               <phone-email
-                size="is-large"
+                size="is-medium"
                 userCountry="HK">
               </phone-email>
               <div class="buttons is-right is-marginless">
@@ -36,7 +36,7 @@
 import PhoneEmail from '~/components/PhoneEmail.vue'
 
 export default {
-  layout: 'vfa',
+  layout: 'vfabg',
   components: {
     PhoneEmail
   }
