@@ -127,12 +127,15 @@ export default {
     'usOnly',
     'label'
   ],
-  mounted () {
+  async mounted () {
     if (this.usOnly !== undefined) {
       this.countryCode = 'US'
       this.countryName = 'United States'
       this.$refs.premise.focus()
     }
+    // console.log(process)
+    // this.leos = await axios.get('/_nuxt/content/leos/_all.json')[0].body
+    await axios.get('/content-api/leos/').then(({data}) => { this.leos = data[0].body })
   },
   data: function () {
     return {
@@ -156,7 +159,8 @@ export default {
       postalcode: '',
       county: '',
       jurisdictionChoices: [],
-      jurisdiction: {}
+      jurisdiction: {},
+      leos: []
     }
   },
   computed: {
@@ -225,7 +229,8 @@ export default {
     regionCode: function (newVal, oldVal) {
       console.log(`finding ${newVal}`)
       if (newVal !== oldVal && newVal !== 'WI') {
-        this.jurisdictionChoices = this.app.$content('/leos').getAll()[0].body[newVal.toUpperCase()]
+        console.log(this)
+        this.jurisdictionChoices = Object.keys(this.leos[newVal]).map(x => ({[x]: this.leos[newVal][x]}))
       }
     }
   },
