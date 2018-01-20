@@ -1,24 +1,27 @@
 <template>
-  <section class="section columns is-centered">
+<div class="container is-widescreen ">
+  <section class="columns is-centered">
     <div class="column is-three-fifths">
-      <!-- <div class="box"> -->
+      <!-- <div class="container"> -->
         <b-tabs type="is-boxed" v-model="currentRequest" @change="addRequest($event)">
           <b-tab-item v-for="(request) in tabs" :key="request.id" :label="request.firstName || 'new request'">
-            <h1 class="title">{{ `${request.firstName ? request.firstName + '\'s' : 'New'} Request`}}</h1>
+            <!-- <h1 class="title">{{ `${request.firstName ? request.firstName + '\'s' : 'New'} Request`}}</h1>
             <h2 class="subtitle">30% complete</h2>
-            <progress class="progress is-link" value="30" max="100">30%</progress>
+            <progress class="progress is-link" value="30" max="100">30%</progress> -->
             <nuxt-child>
             </nuxt-child>
           </b-tab-item>
         </b-tabs>
         <button @click="removeRequest" class="button is-danger">Delete this Request</button>
-      <!-- </div> -->
-    </div>
+      </div>
+    <!-- </div> -->
   </section>
+  </div>
 </template>
 
 <script>
 export default {
+  transition: 'test',
   // async mounted () {
   //   var cur = this.$store.state.requests.currentRequest
   //   await this.$store.commit('requests/changeCurrent', 0)

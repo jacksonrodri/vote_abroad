@@ -21,7 +21,12 @@
             <div class="navbar-end">
               <a class="navbar-item"
                   @click="isComponentModalActive = true">
-                  Login
+                  <b-icon
+                    pack="fas"
+                    icon="user"
+                    size="is-small">
+                  </b-icon>
+                  &nbsp;Login
               </a>
               <div class="navbar-item has-dropdown is-hoverable" style="order:-1;">
                 <a class="navbar-link">
@@ -118,7 +123,11 @@
         </div>
       </header>
       </div>
-    <nuxt/>
+      <div class="hero-body">
+        <div class="container is-widescreen">
+          <nuxt/>
+        </div>
+      </div>
     <div class="hero-foot">
       <nav class="tabs is-boxed is-fullwidth">
         <div class="container">
@@ -173,8 +182,7 @@ export default {
     upcomingElections () { return this.$store.state.upcomingElections },
     isBgImage () {
       return Boolean(this.$route.name.indexOf('index') > -1 || this.$route.name.indexOf('home') > -1)
-    },
-    transition: 'test'
+    }
   }
 }
 </script>

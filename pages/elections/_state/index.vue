@@ -27,7 +27,8 @@ export default {
   },
   head: {
     title: 'Vote From Abroad - Absentee ballots for Americans Abroad.'
-  }
+  },
+  transition: 'test'
 }
 </script>
 

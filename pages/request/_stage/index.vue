@@ -1,9 +1,8 @@
 <template>
-<section class="box">
-  {{ stage }}
-  <section v-if="stage === 'your-information'" class="section">
-    <h3 class="subtitle is-5">Your Information</h3>
-    <h1 class="title">Step 1 of 3</h1>
+<section class="section">
+    <h1 class="has-text-centered title is-3">Step {{ stage.order }} of 3</h1>
+    <h3 class="has-text-centered subtitle is-4">{{ stage.name }}</h3>
+  <section v-if="stage.slug === 'your-information'">
     <!-- <b-field label="Email">
       <b-input v-model="email"></b-input>
     </b-field>
@@ -124,18 +123,16 @@
       <b-field class="field">
         <b-switch v-model="abrAdr.usesAlternateFormat" >Use an Alternate format</b-switch>
       </b-field>
-      <div class="control buttons">
-        <nuxt-link :to="localePath({ name: 'index' })" class="button is-info is-large" exact >Cancel</nuxt-link>
-        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'voting-information'} })" class="button is-primary is-large" exact >Next</nuxt-link>
+      <div class="control buttons is-right">
+        <nuxt-link :to="localePath({ name: 'index' })" class="button is-light is-medium" exact >Cancel</nuxt-link>
+        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'voting-information'} })" class="button is-success is-medium" exact ><b-icon pack="fa" icon="check"></b-icon> <span> Next </span></nuxt-link>
         <!-- <button class="button is-info is-large">Cancel</button>
-        <button class="button is-primary is-large">Next</button> -->
+        <button class="button is-danger is-medium"><span> Next </span></button> -->
       </div>
 
 <!-- voting information -->
   </section>
-  <section v-if="stage === 'voting-information'" class="section">
-    <h1 class="title">Step 2 of 3</h1>
-
+  <section v-if="stage.slug === 'voting-information'">
       <h1 class="subtitle is-5">I am a U.S. citizen living outside the country, and: </h1>
 
       <b-field>
@@ -201,7 +198,7 @@
       <address-input
         label="Your US voting Address"
         usOnly
-        v-model="abrAdr2">
+        v-model="votAdr2">
         <div slot="instructions">
           <p>Please add your US Voting Address</p>
         </div>
@@ -239,15 +236,27 @@
           <span>Fax</span>
         </b-radio-button>
       </b-field>
+      <div class="control buttons is-right">
+        <!-- <nuxt-link :to="localePath({ name: 'index' })" class="button is-info is-large" exact >Cancel</nuxt-link> -->
+        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" class="button is-light is-medium" exact >Back</nuxt-link>
+        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'id-and-contact-information'} })" class="button is-success is-medium" exact ><b-icon pack="fa" icon="check"></b-icon> <span> Next </span></nuxt-link>
+        <!-- <button class="button is-info is-large">Cancel</button>id-and-contact-information
+        <button class="button is-danger is-medium"><span> Next </span></button> -->
+      </div>
   </section>
 
-  <section v-if="stage === 'id-and-contact-information'" class="section">
-
+  <section v-if="stage.slug === 'id-and-contact-information'">
 <!-- identity and Contact information -->
-<h1 class="title">Step 3 of 3</h1>
       <!-- dob -->
-      <b-field :type="($v.dob.$error ? 'is-danger': '')" :message="$v.dob.$error ? Object.keys($v.dob.$params).map(x => x) : '' " label="dob">
-        <b-input v-model="dob" @input="$v.dob.$touch()"></b-input>
+      <b-field label="Date of Birth" :message="$v.dob.$error ? Object.keys($v.dob.$params).map(x => x) : '' ">
+        <b-datepicker
+          v-model="dob"
+          @input="$v.dob.$touch()"
+          placeholder="Type or select your birth date"
+          icon="calendar"
+          icon-pack="fa"
+          :readonly="false">
+      </b-datepicker>
       </b-field>
 
       <!-- fax -->
@@ -315,13 +324,20 @@
 
       <!-- date -->
       <b-field label="Date">
-        <b-datepicker placeholder="Type or select a date..." icon="calendar-today" :readonly="false">
+        <b-datepicker placeholder="Type or select a date..." position="is-top-right" icon="calendar-today" :readonly="false">
         </b-datepicker>
       </b-field>
 
-      <div class="control buttons">
-        <button class="button is-primary is-large">Request a ballot now!</button>
+      <!-- <div class="control buttons">
+        <button class="button is-danger is-medium">Request a ballot now!</button>
         <button class="button is-info is-large">or start without an account</button>
+      </div> -->
+      <div class="control buttons is-right">
+        <!-- <nuxt-link :to="localePath({ name: 'index' })" class="button is-info is-large" exact >Cancel</nuxt-link> -->
+        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'voting-information'} })" class="button is-light is-medium" exact >Back</nuxt-link>
+        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'id-and-contact-information'} })" class="button is-success is-medium" exact ><b-icon pack="fa" icon="check"></b-icon><span> Next </span></nuxt-link>
+        <!-- <button class="button is-info is-large">Cancel</button>id-and-contact-information
+        <button class="button is-danger is-medium"><span> Next </span></button> -->
       </div>
   </section>
 </section>
@@ -335,6 +351,7 @@ import AddressInput from '~/components/AddressInput'
 // import Jurisdiction from '~/components/Jurisdiction'
 
 export default {
+  transition: 'test',
   data () {
     return {
       code: null,
@@ -348,17 +365,18 @@ export default {
       // firstName: '',
       // middleName: '',
       // lastName: '',
-      usesPreviousName: false,
+      // usesPreviousName: false,
       // previousName: '',
       // suffix: '',
       emailOrPhone: '',
       // email: '',
       // tel: '',
       abrAdr2: {},
+      votAdr2: {},
       abrAdr: {
         extendedAddress: '',
         streetAddress: '',
-        locality: '',
+        localiy: '',
         region: '',
         postalCode: '',
         countryName: '',
@@ -382,7 +400,7 @@ export default {
       },
       leoAdr: {},
       recBallot: '',
-      dob: '',
+      dob: new Date(),
       fax: '',
       altEmail: '',
       fwabRequest: '',
@@ -439,7 +457,16 @@ export default {
       }
     },
     stage () {
-      return this.$route.params.stage
+      switch (this.$route.params.stage) {
+        case 'your-information':
+          return {order: 1, name: 'Your Information', slug: this.$route.params.stage}
+        case 'voting-information':
+          return {order: 2, name: 'Voting Information', slug: this.$route.params.stage}
+        case 'id-and-contact-information':
+          return {order: 3, name: 'ID & Contact Information', slug: this.$route.params.stage}
+        default:
+          return {order: 4, name: 'unknown stage', slug: this.$route.params.stage}
+      }
     },
     currentRequest () {
       return this.$store.state.requests.currentRequest
@@ -472,6 +499,10 @@ export default {
     previousName: {
       get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].previousName : null },
       set (value) { this.$store.commit('requests/update', { previousName: value }) }
+    },
+    usesPreviousName: {
+      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].usesPreviousName : false },
+      set (value) { this.$store.commit('requests/update', { usesPreviousName: value }) }
     },
     suffix: {
       get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].suffix : null },

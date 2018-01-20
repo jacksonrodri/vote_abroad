@@ -64,8 +64,13 @@ $tabs-boxed-link-active-border-bottom-color: transparent;
 $speed-slow: 150ms;
 $speed-slower: 250ms;
 
+$fa-font-path: "./webfonts";
+
 @import "~bulma";
 @import "~buefy/src/scss/buefy";
+// @import "~@fortawesome/fontawesome/styles.css";
+@import "./fa/fontawesome.scss";
+@import "./fa/fa-solid.scss";
 
 .flag-icon {
   width: 3rem;
@@ -129,7 +134,7 @@ $speed-slower: 250ms;
 }
 
 .test-enter-active, .test-leave-active {
-  transition: opacity 5s;
+  transition: opacity .4s;
 }
 .test-enter, .test-leave-active {
   opacity: 0;

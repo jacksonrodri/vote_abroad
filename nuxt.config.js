@@ -36,6 +36,7 @@ module.exports = {
     lang: 'en'
   },
   css: [
+    // '@fortawesome/fontawesome/styles.css',
     {src: '@/assets/css/style.scss',
     lang: 'sass'}
   ],
