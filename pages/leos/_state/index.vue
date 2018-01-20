@@ -4,7 +4,7 @@
       <div class="column is-8">
         <h1>Leos</h1>
         <ul>
-          <ul v-for="(leo, jurisdiction) in leos" :key="jurisdiction">
+          <ul v-for="(leo, jurisdiction) in stateLeos" :key="jurisdiction">
             <li>{{ jurisdiction }}</li>
             <li>{{ leo.emailAddress }}</li>
           </ul>
@@ -24,12 +24,12 @@
 export default {
   async asyncData ({ app, route }) {
     return {
-      leos: (await app.$content('/leos').getAll())[0].body[route.params.state.toUpperCase()]
+      leos: (await app.$content('/leos').getAll())[0].body
     }
   },
   computed: {
     stateLeos () {
-      return this.leos[0]
+      return this.leos[this.$route.params.state.toUpperCase()]
     }
   },
   head: {
