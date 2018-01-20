@@ -26,7 +26,7 @@ export default {
   head: {
     title: 'Vote From Abroad - Absentee ballots for Americans Abroad.'
   },
-  layout: 'default'
+  layout: 'vfabg'
 }
 </script>
 

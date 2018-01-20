@@ -127,3 +127,10 @@ $speed-slower: 250ms;
   text-align: center;
   line-height: 1.8rem;
 }
+
+.test-enter-active, .test-leave-active {
+  transition: opacity 5s;
+}
+.test-enter, .test-leave-active {
+  opacity: 0;
+}

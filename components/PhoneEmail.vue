@@ -91,6 +91,8 @@ export default {
           cleanNumber = `+${newVal.substr(3)}`
         } else if (newVal.indexOf('00') === 0 && newVal.length > 2) {
           cleanNumber = `+${newVal.substr(2)}`
+        } else if (newVal.indexOf(formatter.country_phone_code) === 0) {
+          cleanNumber = `+${newVal}`
         }
         this.typed = formatter.input(cleanNumber)
         this.phoneCountry = formatter.country

@@ -1,5 +1,5 @@
 <template>
-<section>
+<section class="box">
   {{ stage }}
   <section v-if="stage === 'your-information'" class="section">
     <h3 class="subtitle is-5">Your Information</h3>
