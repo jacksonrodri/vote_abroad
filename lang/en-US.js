@@ -21,5 +21,20 @@ module.exports = {
       'Federal Primary Runoff': 'Federal Primary Runoff',
       'CD 18 Special General': 'CD 18 Special General'
     }
+  },
+  request: {
+    yourInformation: 'Your Information',
+    firstName: "First Name",
+    middleName: 'Middle Name',
+    lastName: 'Last Name',
+    suffix: 'Suffix',
+    previousName: 'Previous Name',
+    previousNameInstructions: 'I have previously voted under a different name',
+    addressAbroad: 'Your Address Abroad',
+    addressAbroadInstructions: 'Please add your international Address',
+    addressAbroadAlternate: 'I need to use a different format for my address.',
+    country: 'Country',
+    address1: 'Address1',
+    address2: 'Address2',
   }
 }

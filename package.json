@@ -23,6 +23,7 @@
     "flag-icon-css": "^2.9.0",
     "jwt-decode": "^2.2.0",
     "libphonenumber-js": "^0.4.48",
+    "luxon": "^0.3.1",
     "nuxt": "^1.0.0-gh-b83d745",
     "nuxt-i18n": "^1.0.2",
     "nuxtent": "https://github.com/apmontgomery/nuxtent-module.git#next",

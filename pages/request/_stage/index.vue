@@ -33,27 +33,39 @@
       tel: {{ tel }} -->
 <!-- your information -->
       <!-- firstName -->
-      <b-field :type="($v.firstName.$error ? 'is-danger': '')" :message="$v.firstName.$error ? Object.keys($v.firstName.$params).map(x => x) : '' " label="First Name">
+      <b-field :type="($v.firstName.$error ? 'is-danger': '')" :message="$v.firstName.$error ? Object.keys($v.firstName.$params).map(x => x) : '' " :label="$t('request.firstName')">
         <b-input v-model="firstName" @input="$v.firstName.$touch()"></b-input>
       </b-field>
 
       <!-- middleName -->
-      <b-field :type="($v.middleName.$error ? 'is-danger': '')" :message="$v.middleName.$error ? Object.keys($v.middleName.$params).map(x => x) : '' " label="middleName">
+      <b-field :type="($v.middleName.$error ? 'is-danger': '')" :message="$v.middleName.$error ? Object.keys($v.middleName.$params).map(x => x) : '' " :label="$t('request.middleName')">
         <b-input v-model="middleName" @input="$v.middleName.$touch()"></b-input>
       </b-field>
 
       <!-- lastName -->
-      <b-field :type="($v.lastName.$error ? 'is-danger': '')" :message="$v.lastName.$error ? Object.keys($v.lastName.$params).map(x => x) : '' " label="lastName">
+      <b-field :type="($v.lastName.$error ? 'is-danger': '')" :message="$v.lastName.$error ? Object.keys($v.lastName.$params).map(x => x) : '' " :label="$t('request.lastName')">
         <b-input v-model="lastName" @input="$v.lastName.$touch()"></b-input>
       </b-field>
 
       <!-- suffix -->
-      <b-field :type="($v.suffix.$error ? 'is-danger': '')" :message="$v.suffix.$error ? Object.keys($v.suffix.$params).map(x => x) : '' " label="suffix">
+      <b-field :type="($v.suffix.$error ? 'is-danger': '')" :message="$v.suffix.$error ? Object.keys($v.suffix.$params).map(x => x) : '' " :label="$t('request.suffix')">
         <b-input v-model="suffix" @input="$v.suffix.$touch()"></b-input>
       </b-field>
 
-      <b-field class="field">
+      <!-- <b-field class="field">
         <b-switch v-model="usesPreviousName" >Have you previously registered to vote using a different name?</b-switch>
+      </b-field> -->
+
+      <b-field>
+        <b-field
+          :label="$t('request.previousNameInstructions')">
+          <b-radio-button v-model="usesPreviousName"
+            :native-value="!usesPreviousName"
+            :type="usesPreviousName ? 'is-danger' : 'is-success'">
+            <b-icon :icon="!usesPreviousName ? 'check' : 'times'"></b-icon>
+            <span>{{ !usesPreviousName ? 'Yes' : 'No'}}</span>
+          </b-radio-button>
+        </b-field>
       </b-field>
 
       <!-- previousName -->
@@ -64,6 +76,8 @@
       <!-- countryName -->
       <address-input
         label="Your address abroad"
+        key="overseas"
+        v-show="!abrAdr.usesAlternateFormat"
         v-model="abrAdr2">
         <div slot="instructions">
           <p>Please add your international Address</p>
@@ -116,13 +130,28 @@
       </b-field> -->
 
       <!-- alternateFormat -->
-      <b-field :type="($v.abrAdr.alternateFormat.$error ? 'is-danger': '')" :message="$v.abrAdr.alternateFormat.$error ? Object.keys($v.abrAdr.alternateFormat.$params).map(x => x) : '' " label="alternateFormat">
+      <b-field
+          v-show="abrAdr.usesAlternateFormat"
+          :type="($v.abrAdr.alternateFormat.$error ? 'is-danger': '')"
+          :message="$v.abrAdr.alternateFormat.$error ? Object.keys($v.abrAdr.alternateFormat.$params).map(x => x) : '' "
+          label="alternateFormat">
         <b-input type="textarea" v-model="abrAdr.alternateFormat" @input="$v.abrAdr.alternateFormat.$touch()"></b-input>
       </b-field>
 
-      <b-field class="field">
-        <b-switch v-model="abrAdr.usesAlternateFormat" >Use an Alternate format</b-switch>
+      <b-field :label="abrAdr.usesAlternateFormat ? 'Use the standard international format for my address' : 'I need to use a different format for my address.'">
+        <b-field>
+          <b-radio-button v-model="abrAdr.usesAlternateFormat"
+            :native-value="!abrAdr.usesAlternateFormat"
+            :type="abrAdr.usesAlternateFormat ? 'is-success' : 'is-danger'">
+            <b-icon :icon="!abrAdr.usesAlternateFormat ? 'edit' : 'align-justify'"></b-icon>
+            <span>Change format</span>
+          </b-radio-button>
+        </b-field>
       </b-field>
+
+      <!-- <b-field class="field">
+        <b-switch v-model="abrAdr.usesAlternateFormat" >Use an Alternate format</b-switch>
+      </b-field> -->
       <div class="control buttons is-right">
         <nuxt-link :to="localePath({ name: 'index' })" class="button is-light is-medium" exact >Cancel</nuxt-link>
         <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'voting-information'} })" class="button is-success is-medium" exact ><b-icon pack="fa" icon="check"></b-icon> <span> Next </span></nuxt-link>
@@ -133,27 +162,31 @@
 <!-- voting information -->
   </section>
   <section v-if="stage.slug === 'voting-information'">
-      <h1 class="subtitle is-5">I am a U.S. citizen living outside the country, and: </h1>
+      <h1 class="subtitle is-5">Are you on active duty in the military (including all uniformed services or eligible family members)?</h1>
 
       <b-field>
         <b-radio-button v-model="voterClass.militaryOrCivilian" native-value="military" type="is-primary" size="is-medium">
-          <span>I am in the military. (or other uniformed services)</span>
+          <span>Yes</span>
         </b-radio-button>
         <b-radio-button v-model="voterClass.militaryOrCivilian" native-value="civilian" type="is-primary" size="is-medium">
-          <span>I am a civilian (non military)</span>
+          <span>No.</span>
         </b-radio-button>
       </b-field>
 
       <h1 v-show="voterClass.militaryOrCivilian !== 'military'" class="subtitle is-5">and I: </h1>
-      <h1 v-show="voterClass.militaryOrCivilian === 'military'" class="subtitle is-5">and I am: </h1>
+      <h1 v-show="voterClass.militaryOrCivilian === 'military'" class="subtitle is-5">and I am abroad: </h1>
 
       <b-field v-show="voterClass.militaryOrCivilian === 'military'">
         <b-radio-button v-model="voterClass.militaryType" native-value="military" type="is-primary" size="is-medium" :disabled="voterClass.militaryOrCivilian !== 'military'">
-          <span>in the Uniformed Services or Merchant Marine</span>
+          <span>on Active Duty</span>
         </b-radio-button>
+      </b-field>
+      <b-field v-show="voterClass.militaryOrCivilian === 'military'">
         <b-radio-button v-model="voterClass.militaryType" native-value="milSpouse" type="is-primary" size="is-medium" :disabled="voterClass.militaryOrCivilian !== 'military'">
           <span>an eligible spouse or dependent</span>
         </b-radio-button>
+      </b-field>
+      <b-field v-show="voterClass.militaryOrCivilian === 'military'">
         <b-radio-button v-model="voterClass.militaryType" native-value="natGuard" type="is-primary" size="is-medium" :disabled="voterClass.militaryOrCivilian !== 'military'">
           <span>an activated National Guard member</span>
         </b-radio-button>
@@ -163,9 +196,13 @@
         <b-radio-button v-model="voterClass.overseasStatus" native-value="intendToReturn" type="is-primary" size="is-medium" :disabled="voterClass.militaryOrCivilian !== 'civilian'">
           <span>I intend to return</span>
         </b-radio-button>
+      </b-field>
+      <b-field v-show="voterClass.militaryOrCivilian !== 'military'">
         <b-radio-button v-model="voterClass.overseasStatus" native-value="uncertainReturn" type="is-primary" size="is-medium" :disabled="voterClass.militaryOrCivilian !== 'civilian'">
           <span>my return is uncertain</span>
         </b-radio-button>
+      </b-field>
+      <b-field v-show="voterClass.militaryOrCivilian !== 'military'">
         <b-radio-button v-model="voterClass.overseasStatus" native-value="neverResided" type="is-primary" size="is-medium" :disabled="voterClass.militaryOrCivilian !== 'civilian'">
           <span>I have never lived in the United States</span>
         </b-radio-button>
@@ -205,23 +242,24 @@
 
       </us-address-input>
 
-      <!-- <jurisdiction></jurisdiction> -->
-
-      <!-- leoAdr -->
-      <b-field label="Jurisdiction">
-        <b-select placeholder="choose your jurisdiction" v-model="leoAdr">
-          <option v-for="option in jurisdictions" :value="option.leo.adr" :key="option.id">
-            {{ option.jurisdictionName }}
-          </option>
-        </b-select>
+      <h3 class="subtitle is-5">Are you already registered to vote in Wake County?</h3>
+      <!-- isRegistered -->
+      <b-field>
+        <b-radio-button v-model="isRegistered" native-value="registered" type="is-primary" size="is-medium">
+          <span>Yes</span>
+        </b-radio-button>
+        <b-radio-button v-model="isRegistered" native-value="notRegistered" type="is-primary" size="is-medium">
+          <span>No</span>
+        </b-radio-button>
+        <b-radio-button v-model="isRegistered" native-value="unsure" type="is-primary" size="is-medium">
+          <span>Not Sure</span>
+        </b-radio-button>
       </b-field>
-
-      <p>Local Election Official Address: {{leoAdr}}</p>
 
       <h3 class="subtitle is-5">How would you like to receieve your ballot?</h3>
 
       <!-- recBallot -->
-      <b-field>
+      <b-field v-if="votAdr2 && votAdr2.regionCode">
         <b-radio-button v-model="recBallot" native-value="email" type="is-primary" size="is-medium">
           <span>Email or online</span>
         </b-radio-button>
@@ -233,11 +271,8 @@
         </b-radio-button>
       </b-field>
       <div class="control buttons is-right">
-        <!-- <nuxt-link :to="localePath({ name: 'index' })" class="button is-info is-large" exact >Cancel</nuxt-link> -->
         <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" class="button is-light is-medium" exact >Back</nuxt-link>
         <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'id-and-contact-information'} })" class="button is-success is-medium" exact ><b-icon pack="fa" icon="check"></b-icon> <span> Next </span></nuxt-link>
-        <!-- <button class="button is-info is-large">Cancel</button>id-and-contact-information
-        <button class="button is-danger is-medium"><span> Next </span></button> -->
       </div>
   </section>
 
@@ -253,6 +288,27 @@
           icon-pack="fa"
           :readonly="false">
       </b-datepicker>
+      </b-field>
+
+      <!-- sex -->
+      <b-field label="Sex"></b-field>
+      <b-field>
+        <b-radio-button v-model="sex" native-value="male" type="is-primary" size="is-medium">
+          <span>Male</span>
+        </b-radio-button>
+        <b-radio-button v-model="sex" native-value="female" type="is-primary" size="is-medium">
+          <span>Female</span>
+        </b-radio-button>
+      </b-field>
+
+      <!-- ssn -->
+      <b-field :type="($v.ssn.$error ? 'is-danger': '')" :message="$v.ssn.$error ? Object.keys($v.ssn.$params).map(x => x) : '' " label="ssn">
+        <b-input v-model="ssn" @input="$v.ssn.$touch()"></b-input>
+      </b-field>
+
+      <!-- stateId -->
+      <b-field :type="($v.stateId.$error ? 'is-danger': '')" :message="$v.stateId.$error ? Object.keys($v.stateId.$params).map(x => x) : '' " label="stateId">
+        <b-input v-model="stateId" @input="$v.stateId.$touch()"></b-input>
       </b-field>
 
       <!-- fax -->
@@ -280,27 +336,6 @@
         <b-input v-model="party" @input="$v.party.$touch()"></b-input>
       </b-field>
 
-      <!-- sex -->
-      <b-field label="Sex"></b-field>
-      <b-field>
-        <b-radio-button v-model="sex" native-value="male" type="is-primary" size="is-medium">
-          <span>Male</span>
-        </b-radio-button>
-        <b-radio-button v-model="sex" native-value="female" type="is-primary" size="is-medium">
-          <span>Female</span>
-        </b-radio-button>
-      </b-field>
-
-      <!-- ssn -->
-      <b-field :type="($v.ssn.$error ? 'is-danger': '')" :message="$v.ssn.$error ? Object.keys($v.ssn.$params).map(x => x) : '' " label="ssn">
-        <b-input v-model="ssn" @input="$v.ssn.$touch()"></b-input>
-      </b-field>
-
-      <!-- stateId -->
-      <b-field :type="($v.stateId.$error ? 'is-danger': '')" :message="$v.stateId.$error ? Object.keys($v.stateId.$params).map(x => x) : '' " label="stateId">
-        <b-input v-model="stateId" @input="$v.stateId.$touch()"></b-input>
-      </b-field>
-
       <!-- fwdAdr -->
       <b-field :type="($v.fwdAdr.$error ? 'is-danger': '')" :message="$v.fwdAdr.$error ? Object.keys($v.fwdAdr.$params).map(x => x) : '' " label="fwdAdr">
         <b-input v-model="fwdAdr" @input="$v.fwdAdr.$touch()"></b-input>
@@ -311,29 +346,15 @@
         <b-input maxlength="200" type="textarea" v-model="adlInfo" @input="$v.adlInfo.$touch()"></b-input>
       </b-field>
 
-      <b-field>
-        <b-input
-          placeholder="Last 4 digits of your Social Security Number"
-          size="is-large">
-        </b-input>
-      </b-field>
-
       <!-- date -->
       <b-field label="Date">
         <b-datepicker placeholder="Type or select a date..." position="is-top-right" icon="calendar-today" :readonly="false">
         </b-datepicker>
       </b-field>
 
-      <!-- <div class="control buttons">
-        <button class="button is-danger is-medium">Request a ballot now!</button>
-        <button class="button is-info is-large">or start without an account</button>
-      </div> -->
       <div class="control buttons is-right">
-        <!-- <nuxt-link :to="localePath({ name: 'index' })" class="button is-info is-large" exact >Cancel</nuxt-link> -->
         <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'voting-information'} })" class="button is-light is-medium" exact >Back</nuxt-link>
         <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'id-and-contact-information'} })" class="button is-success is-medium" exact ><b-icon pack="fa" icon="check"></b-icon><span> Next </span></nuxt-link>
-        <!-- <button class="button is-info is-large">Cancel</button>id-and-contact-information
-        <button class="button is-danger is-medium"><span> Next </span></button> -->
       </div>
   </section>
 </section>
@@ -397,6 +418,7 @@ export default {
       },
       leoAdr: {},
       recBallot: '',
+      isRegistered: '',
       dob: new Date(),
       fax: '',
       altEmail: '',

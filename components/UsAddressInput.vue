@@ -88,7 +88,7 @@
                     :keep-first="true"
                     field="name"
                     @input="updateAddress()"
-                    @select="option => selected = option"
+                    @select="option => {selected = option; if (selected) {regionCode = selected.abbr}}"
                     >
                   </b-autocomplete>
                 </div>
@@ -109,8 +109,25 @@
         <div v-if="(usOnly !== undefined && usOnly !== false) || usOnly === true" class="field is-fullwidth">
           <!-- votAdr.county -->
           <b-field label="Jurisdiction">
-            <b-autocomplete></b-autocomplete>
+            <b-autocomplete
+                v-model="jurisdiction"
+                placeholder="type to find your jurisdiction"
+                :keep-first="true"
+                :data="filteredLeos"
+                field="jurisdiction"
+                @select="option => selected = option">
+            </b-autocomplete>
           </b-field>
+
+          <b-field label="Jurisdiction">
+            <b-select placeholder="choose your jurisdiction" v-model="leo">
+              <option v-for="leo in filteredLeos" :value="leo" :key="leo.jurisdiction">
+                {{ leo.jurisdiction }}
+              </option>
+            </b-select>
+          </b-field>
+
+          <p>Local Election Official Address: {{leo}}</p>
         </div>
   </section>
 </template>
@@ -135,7 +152,14 @@ export default {
     }
     // console.log(process)
     // this.leos = await axios.get('/_nuxt/content/leos/_all.json')[0].body
-    await axios.get('/content-api/leos/').then(({data}) => { this.leos = data[0].body })
+    // await axios.get('/_nuxt/content/leos/_all.json')
+    await axios.get('/content-api/leos/')
+      .then(({data}) => {
+        const templeos = data[0].body
+        const tempstates = Object.keys(templeos)
+        let leomap = tempstates.map(state => Object.keys(templeos[state]).map(leo => Object.assign({jurisdiction: leo, state: state}, templeos[state][leo])))
+        this.leos = [].concat(...leomap)
+      })
   },
   data: function () {
     return {
@@ -143,6 +167,7 @@ export default {
       postOfficeBox: '',
       extendedAddress: '',
       streetAddress: '',
+      leo: {},
       locality: '',
       region: '',
       regionCode: '',
@@ -159,7 +184,7 @@ export default {
       postalcode: '',
       county: '',
       jurisdictionChoices: [],
-      jurisdiction: {},
+      jurisdiction: '',
       leos: []
     }
   },
@@ -223,16 +248,30 @@ export default {
             return x.abbr.toString().toLowerCase().indexOf(this.region.toString().toLowerCase()) > -1 || x.name.toString().toLowerCase().indexOf(this.region.toString().toLowerCase()) > -1
           }
         })
+    },
+    filteredLeos () {
+      return this.leos
+        .filter(x => x.state === this.regionCode)
+        .filter(x => x.jurisdiction.toString().toLowerCase().indexOf(this.jurisdiction.toLowerCase()) >= 0)
     }
   },
   watch: {
     regionCode: function (newVal, oldVal) {
       console.log(`finding ${newVal}`)
-      if (newVal !== oldVal && newVal !== 'WI') {
-        console.log(this)
-        this.jurisdictionChoices = Object.keys(this.leos[newVal]).map(x => ({[x]: this.leos[newVal][x]}))
+      let statesWithoutLeos = ['AA', 'AE', 'AP', 'AS', 'FM', 'GU', 'MH', 'MP', 'PW', 'PR', 'VI', 'WI']
+      if (newVal !== oldVal && statesWithoutLeos.indexOf(newVal) === -1) {
+        // console.log(this)
+        // this.jurisdictionChoices = Object.keys(this.leos[newVal]).map(x => Object.assign({jurisdiction: x}, this.leos[newVal][x]))
       }
     }
+    // region: function (newVal, oldVal) {
+    //   const states = this.countryList[234].fields[2].locality[1].administrativearea.options
+    //   states.forEach(x => {
+    //     if (x[Object.keys(x)[0]].toLowerCase() === newVal.toLowerCase) {
+    //       this.regionCode = x[Object.keys(x)[0]]
+    //     }
+    //   })
+    // }
   },
   methods: {
     fillData (option) {
@@ -303,6 +342,7 @@ export default {
         thoroughfare: this.streetAddress,
         locality: this.locality,
         administrativearea: this.region,
+        regionCode: this.regionCode,
         postalcode: this.postalCode,
         country: this.countryName,
         countryiso: this.cCountryCode !== 'un' && this.countryCode ? this.cCountryCode : ''

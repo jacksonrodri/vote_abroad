@@ -12,11 +12,6 @@ const I18N = {
       iso: 'en-US',
       name: 'English'
     },
-    // {
-    //   code: 'fr',
-    //   iso: 'fr-FR',
-    //   name: 'Français'
-    // },
     {
       code: 'es',
       iso: 'es-ES',
