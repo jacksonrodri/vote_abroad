@@ -246,7 +246,7 @@
 
       </us-address-input>
 
-      <h3 class="subtitle is-5">Are you already registered to vote in {{ `${votAdr2.leo.jurisdiction} ${votAdr2.leo.jurisdictionType}` }}?</h3>
+      <h3 v-if="votAdr2 && votAdr2.leo && votAdr2.leo.jurisdiction && votAdr2.leo.jurisdictionType" class="subtitle is-5">Are you already registered to vote in {{ `${votAdr2.leo.jurisdiction } ${votAdr2.leo.jurisdictionType}` }}?</h3>
       <!-- isRegistered -->
       <b-field>
         <b-radio-button v-model="isRegistered" native-value="registered" type="is-primary" size="is-medium">
@@ -311,7 +311,7 @@
       </b-field>
 
       <!-- stateId -->
-      <b-field :type="($v.stateId.$error ? 'is-danger': '')" :message="$v.stateId.$error ? Object.keys($v.stateId.$params).map(x => x) : '' " label="Driver's license or state ID #">
+      <b-field :type="($v.stateId.$error ? 'is-danger': '')" :message="$v.stateId.$error ? Object.keys($v.stateId.$params).map(x => x) : '' " label="Driver's license or   state ID #">
         <b-input v-model="stateId" @input="$v.stateId.$touch()"></b-input>
       </b-field>
 
