@@ -31,7 +31,7 @@ module.exports = {
     previousName: 'Previous Name',
     previousNameInstructions: 'I have previously voted under a different name',
     addressAbroad: 'Your Address Abroad',
-    addressAbroadInstructions: 'Please add your international Address',
+    addressAbroadInstructions: 'Please add your international address',
     addressAbroadAlternate: 'I need to use a different format for my address.',
     country: 'Country',
     address1: 'Address1',

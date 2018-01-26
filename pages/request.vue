@@ -12,7 +12,7 @@
             </nuxt-child>
           </b-tab-item>
         </b-tabs>
-        <button @click="removeRequest" class="button is-danger">Delete this Request</button>
+        <button @click="removeRequest" class="button is-text is-small">Delete this Request</button>
       </div>
     <!-- </div> -->
   </section>

@@ -83,10 +83,11 @@
                 <div v-if="field.administrativearea && field.administrativearea.options" >
                   <b-autocomplete
                     v-model="region"
+                    ref="region"
                     :placeholder="field.administrativearea.label"
                     :data="filteredRegions"
                     :keep-first="true"
-                    field="name"
+                    field="abbr"
                     @input="updateAddress()"
                     @select="option => {selected = option; if (selected) {regionCode = selected.abbr}}"
                     >
@@ -111,6 +112,7 @@
           <b-field label="Jurisdiction">
             <b-autocomplete
                 v-model="jurisdiction"
+                ref="jurisdiction"
                 placeholder="type to find your jurisdiction"
                 :keep-first="true"
                 :data="filteredLeos"
@@ -119,13 +121,13 @@
             </b-autocomplete>
           </b-field>
 
-          <b-field label="Jurisdiction">
+          <!-- <b-field label="Jurisdiction">
             <b-select placeholder="choose your jurisdiction" v-model="leo">
-              <option v-for="leo in filteredLeos" :value="leo" :key="leo.jurisdiction">
+              <option v-for="leo in filteredLeos" :selected="jurisdiction === leo.jurisdiction" :value="leo" :key="leo.jurisdiction">
                 {{ leo.jurisdiction }}
               </option>
             </b-select>
-          </b-field>
+          </b-field> -->
 
           <p>Local Election Official Address: {{leo}}</p>
         </div>
@@ -252,7 +254,7 @@ export default {
     filteredLeos () {
       return this.leos
         .filter(x => x.state === this.regionCode)
-        .filter(x => x.jurisdiction.toString().toLowerCase().indexOf(this.jurisdiction.toLowerCase()) >= 0)
+        .filter(x => x.jurisdiction.toString().toLowerCase().indexOf(this.county.toLowerCase()) >= 0 || this.county.toString().toLowerCase().indexOf(x.jurisdiction.toLowerCase()) >= 0)
     }
   },
   watch: {
@@ -262,6 +264,13 @@ export default {
       if (newVal !== oldVal && statesWithoutLeos.indexOf(newVal) === -1) {
         // console.log(this)
         // this.jurisdictionChoices = Object.keys(this.leos[newVal]).map(x => Object.assign({jurisdiction: x}, this.leos[newVal][x]))
+      }
+    },
+    filteredLeos: function (newVal, oldVal) {
+      console.log(newVal.length)
+      if (newVal.length === 1) {
+        this.$refs.jurisdiction.setSelected(newVal[0])
+        this.leo = newVal[0]
       }
     }
     // region: function (newVal, oldVal) {
@@ -282,6 +291,7 @@ export default {
           .then(({ data }) => {
             this.county = data.result.address_components.filter(y => y.types.indexOf('administrative_area_level_2') > -1)[0].long_name
             this.regionCode = data.result.address_components.filter(n => n.types.indexOf('administrative_area_level_1') > -1)[0].short_name
+            // this.$refs.region.setSelected(this.filteredRegions.find(x => x.abbr.toLowerCase() === this.regionCode.toLowerCase()))
             data.result.adr_address
               .split(/<span class="|">|<\/span>,?\s?/)
               .filter(e => e)
@@ -311,6 +321,8 @@ export default {
                       break
                     case 'region':
                       this.region = arr[index + 1]
+                      // console.log(arr[index + 1])
+                      // this.$refs.state.setSelected(arr[index + 1])
                       break
                     case 'postal-code':
                       this.postalCode = arr[index + 1]
@@ -344,6 +356,8 @@ export default {
         administrativearea: this.region,
         regionCode: this.regionCode,
         postalcode: this.postalCode,
+        county: this.county,
+        leo: this.leo,
         country: this.countryName,
         countryiso: this.cCountryCode !== 'un' && this.countryCode ? this.cCountryCode : ''
       })

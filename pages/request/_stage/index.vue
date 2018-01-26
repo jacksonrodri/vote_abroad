@@ -69,13 +69,14 @@
       </b-field>
 
       <!-- previousName -->
-      <b-field v-show="usesPreviousName" :type="($v.previousName.$error ? 'is-danger': '')" :message="$v.previousName.$error ? Object.keys($v.previousName.$params).map(x => x) : '' " label="previousName">
+      <b-field v-show="usesPreviousName" :type="($v.previousName.$error ? 'is-danger': '')" :message="$v.previousName.$error ? Object.keys($v.previousName.$params).map(x => x) : '' " :label="$t('request.previousName')">
         <b-input v-model="previousName" @input="$v.previousName.$touch()"></b-input>
       </b-field>
 
       <!-- countryName -->
+
       <address-input
-        label="Your address abroad"
+        :label="$t('request.addressAbroad')"
         key="overseas"
         v-show="!abrAdr.usesAlternateFormat"
         v-model="abrAdr2">
@@ -134,8 +135,11 @@
           v-show="abrAdr.usesAlternateFormat"
           :type="($v.abrAdr.alternateFormat.$error ? 'is-danger': '')"
           :message="$v.abrAdr.alternateFormat.$error ? Object.keys($v.abrAdr.alternateFormat.$params).map(x => x) : '' "
-          label="alternateFormat">
-        <b-input type="textarea" v-model="abrAdr.alternateFormat" @input="$v.abrAdr.alternateFormat.$touch()"></b-input>
+          :label="$t('request.addressAbroad')">
+        <transition name="fade">
+          {{ $t('request.addressAbroadInstructions')}}
+          <b-input type="textarea" rows="5" v-model="abrAdr.alternateFormat" @input="$v.abrAdr.alternateFormat.$touch()"></b-input>
+        </transition>
       </b-field>
 
       <b-field :label="abrAdr.usesAlternateFormat ? 'Use the standard international format for my address' : 'I need to use a different format for my address.'">
@@ -242,7 +246,7 @@
 
       </us-address-input>
 
-      <h3 class="subtitle is-5">Are you already registered to vote in Wake County?</h3>
+      <h3 class="subtitle is-5">Are you already registered to vote in {{ `${votAdr2.leo.jurisdiction} ${votAdr2.leo.jurisdictionType}` }}?</h3>
       <!-- isRegistered -->
       <b-field>
         <b-radio-button v-model="isRegistered" native-value="registered" type="is-primary" size="is-medium">
@@ -302,47 +306,55 @@
       </b-field>
 
       <!-- ssn -->
-      <b-field :type="($v.ssn.$error ? 'is-danger': '')" :message="$v.ssn.$error ? Object.keys($v.ssn.$params).map(x => x) : '' " label="ssn">
+      <b-field :type="($v.ssn.$error ? 'is-danger': '')" :message="$v.ssn.$error ? Object.keys($v.ssn.$params).map(x => x) : '' " label="The last 4 digits of your Social Security Number">
         <b-input v-model="ssn" @input="$v.ssn.$touch()"></b-input>
       </b-field>
 
       <!-- stateId -->
-      <b-field :type="($v.stateId.$error ? 'is-danger': '')" :message="$v.stateId.$error ? Object.keys($v.stateId.$params).map(x => x) : '' " label="stateId">
+      <b-field :type="($v.stateId.$error ? 'is-danger': '')" :message="$v.stateId.$error ? Object.keys($v.stateId.$params).map(x => x) : '' " label="Driver's license or state ID #">
         <b-input v-model="stateId" @input="$v.stateId.$touch()"></b-input>
       </b-field>
 
       <!-- fax -->
-      <b-field :type="($v.fax.$error ? 'is-danger': '')" :message="$v.fax.$error ? Object.keys($v.fax.$params).map(x => x) : '' " label="fax">
+      <b-field
+        :type="($v.fax.$error ? 'is-danger': '')"
+        :message="$v.fax.$error ? Object.keys($v.fax.$params).map(x => x) : '' "
+        v-if="recBallot === 'fax'"
+        label="Fax Number">
         <b-input v-model="fax" @input="$v.fax.$touch()" type="phone"></b-input>
       </b-field>
 
       <!-- tel -->
-      <b-field :type="($v.tel.$error ? 'is-danger': '')" :message="$v.tel.$error ? Object.keys($v.tel.$params).map(x => x) : '' " label="tel">
+      <b-field :type="($v.tel.$error ? 'is-danger': '')" :message="$v.tel.$error ? Object.keys($v.tel.$params).map(x => x) : '' " label="Telephone number">
         <b-input v-model="tel" @input="$v.tel.$touch()"></b-input>
       </b-field>
 
       <!-- altEmail -->
-      <b-field :type="($v.altEmail.$error ? 'is-danger': '')" :message="$v.altEmail.$error ? Object.keys($v.altEmail.$params).map(x => x) : '' " label="altEmail">
+      <b-field
+        :type="($v.altEmail.$error ? 'is-danger': '')"
+        :message="$v.altEmail.$error ? Object.keys($v.altEmail.$params).map(x => x) : '' "
+        v-if="recBallot === 'email'"
+        label="Alternate Email">
         <b-input v-model="altEmail" @input="$v.altEmail.$touch()"></b-input>
       </b-field>
 
       <!-- fwabRequest -->
-      <b-field :type="($v.fwabRequest.$error ? 'is-danger': '')" :message="$v.fwabRequest.$error ? Object.keys($v.fwabRequest.$params).map(x => x) : '' " label="fwabRequest">
+      <b-field :type="($v.fwabRequest.$error ? 'is-danger': '')" :message="$v.fwabRequest.$error ? Object.keys($v.fwabRequest.$params).map(x => x) : '' " label="Do you want to register and request a ballot for all elections you are eligile to vote in?">
         <b-input v-model="fwabRequest" @input="$v.fwabRequest.$touch()"></b-input>
       </b-field>
 
       <!-- party -->
-      <b-field :type="($v.party.$error ? 'is-danger': '')" :message="$v.party.$error ? Object.keys($v.party.$params).map(x => x) : '' " label="party">
+      <b-field :type="($v.party.$error ? 'is-danger': '')" :message="$v.party.$error ? Object.keys($v.party.$params).map(x => x) : '' " label="What is your political party?">
         <b-input v-model="party" @input="$v.party.$touch()"></b-input>
       </b-field>
 
       <!-- fwdAdr -->
-      <b-field :type="($v.fwdAdr.$error ? 'is-danger': '')" :message="$v.fwdAdr.$error ? Object.keys($v.fwdAdr.$params).map(x => x) : '' " label="fwdAdr">
+      <b-field :type="($v.fwdAdr.$error ? 'is-danger': '')" :message="$v.fwdAdr.$error ? Object.keys($v.fwdAdr.$params).map(x => x) : '' " label="If you receive mail at a different address enter it here.">
         <b-input v-model="fwdAdr" @input="$v.fwdAdr.$touch()"></b-input>
       </b-field>
 
       <!-- adlInfo -->
-      <b-field :type="($v.adlInfo.$error ? 'is-danger': '')" :message="$v.adlInfo.$error ? Object.keys($v.adlInfo.$params).map(x => x) : '' " label="adlInfo">
+      <b-field :type="($v.adlInfo.$error ? 'is-danger': '')" :message="$v.adlInfo.$error ? Object.keys($v.adlInfo.$params).map(x => x) : '' " label="Add any additional information here to help your election official find your records.">
         <b-input maxlength="200" type="textarea" v-model="adlInfo" @input="$v.adlInfo.$touch()"></b-input>
       </b-field>
 
