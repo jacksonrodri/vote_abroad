@@ -154,8 +154,8 @@ export default {
     }
     // console.log(process)
     // this.leos = await axios.get('/_nuxt/content/leos/_all.json')[0].body
-    // await axios.get('/_nuxt/content/leos/_all.json')
-    await axios.get('/content-api/leos/')
+    await axios.get('/_nuxt/content/leos/_all.json')
+    // await axios.get('/content-api/leos/')
       .then(({data}) => {
         const templeos = data[0].body
         const tempstates = Object.keys(templeos)
