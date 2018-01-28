@@ -29,7 +29,7 @@ export default {
   },
   computed: {
     stateLeos () {
-      return !process.browser ? this.leos[this.$route.params.state.toUpperCase()] : this.leos.NC
+      return process.browser ? this.leos.NC : this.leos[this.$route.params.state.toUpperCase()]
     }
   },
   head: {
