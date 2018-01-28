@@ -5,9 +5,12 @@
       <!-- <div class="container"> -->
         <b-tabs type="is-boxed" v-model="currentRequest" @change="addRequest($event)">
           <b-tab-item v-for="(request) in tabs" :key="request.id" :label="request.firstName || 'new request'">
+            <!-- <h1 class="title">{{ `${request.firstName ? request.firstName + '\'s' : 'New'} Request`}}</h1>
+            <h2 class="subtitle">30% complete</h2>
+            <progress class="progress is-link" value="30" max="100">30%</progress> -->
+            <nuxt-child>
+            </nuxt-child>
           </b-tab-item>
-          <nuxt-child>
-          </nuxt-child>
         </b-tabs>
         <button @click="removeRequest" class="button is-text is-small">Delete this Request</button>
       </div>

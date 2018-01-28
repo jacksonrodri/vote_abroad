@@ -160,13 +160,14 @@ This communication is not authorized by any candidate or candidate's committee.
   </div>
 </section>
 <b-modal :active.sync="isComponentModalActive" has-modal-card>
-  <phone-email></phone-email>
+  <login></login>
 </b-modal>
 </div>
 </template>
 
 <script>
 import PhoneEmail from '~/components/PhoneEmail.vue'
+import Login from '~/components/Login.vue'
 
 export default {
   data () {
@@ -176,7 +177,8 @@ export default {
     }
   },
   components: {
-    PhoneEmail
+    PhoneEmail,
+    Login
   },
   computed: {
     upcomingElections () { return this.$store.state.upcomingElections },

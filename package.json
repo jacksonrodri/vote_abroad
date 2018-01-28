@@ -20,6 +20,7 @@
     "@nuxtjs/pwa": "^2.0.5",
     "auth0-js": "^9.0.2",
     "buefy": "^0.6.2",
+    "bulma-slider": "^0.1.1",
     "flag-icon-css": "^2.9.0",
     "jwt-decode": "^2.2.0",
     "libphonenumber-js": "^0.4.48",
