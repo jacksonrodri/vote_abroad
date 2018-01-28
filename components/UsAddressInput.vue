@@ -152,7 +152,7 @@ export default {
       this.countryName = 'United States'
       this.$refs.premise.focus()
     }
-    // console.log(process)
+    console.log('process', process)
     // this.leos = await axios.get('/_nuxt/content/leos/_all.json')[0].body
     await axios.get('/_nuxt/content/leos/_all.json')
     // await axios.get('/content-api/leos/')
