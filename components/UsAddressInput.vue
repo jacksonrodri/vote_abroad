@@ -152,10 +152,11 @@ export default {
       this.countryName = 'United States'
       this.$refs.premise.focus()
     }
-    // console.log('process', process)
+    console.log('axios', this.$axios.defaults.baseURL)
     // this.leos = await axios.get('/_nuxt/content/leos/_all.json')[0].body
-    await axios.get('/_nuxt/content/leos/_all.json')
+    // await axios.get('/_nuxt/content/leos/_all.json')
     // await axios.get('/content-api/leos/')
+    await axios.get(this.$axios.defaults.baseURL + '/leos/')
       .then(({data}) => {
         const templeos = data[0].body
         const tempstates = Object.keys(templeos)

@@ -67,6 +67,7 @@ $speed-slower: 250ms;
 $fa-font-path: "./webfonts";
 
 @import "~bulma";
+@import "~bulma-slider/slider.sass";
 @import "~buefy/src/scss/buefy";
 // @import "~@fortawesome/fontawesome/styles.css";
 @import "./fa/fontawesome.scss";

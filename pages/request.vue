@@ -1,17 +1,19 @@
 <template>
-<div class="container is-widescreen ">
-  <section class="columns is-centered">
+<div class="container is-widescreen">
+  <!-- :style="$route.fullPath === '/request/canvas' ? 'overflow-x: scroll;' : ''" -->
+  <section class="columns is-centered is-multiline">
     <div class="column is-three-fifths">
-      <!-- <div class="container"> -->
-        <b-tabs type="is-boxed" v-model="currentRequest" @change="addRequest($event)">
-          <b-tab-item v-for="(request) in tabs" :key="request.id" :label="request.firstName || 'new request'">
-          </b-tab-item>
-          <nuxt-child>
-          </nuxt-child>
-        </b-tabs>
-        <button @click="removeRequest" class="button is-text is-small">Delete this Request</button>
-      </div>
-    <!-- </div> -->
+      <b-tabs type="is-boxed" v-model="currentRequest" @change="addRequest($event)">
+        <b-tab-item v-for="(request) in tabs" :key="request.id" :label="request.firstName || 'new request'">
+        </b-tab-item>
+        <nuxt-child v-if="$route.fullPath !== '/request/canvas'">
+        </nuxt-child>
+      </b-tabs>
+      <!-- <button @click="removeRequest" class="button is-text is-small">Delete this Request</button> -->
+    </div>
+    <div class="column is-10-desktop" v-if="$route.fullPath === '/request/canvas'">
+      <nuxt-child></nuxt-child>
+    </div>
   </section>
   </div>
 </template>

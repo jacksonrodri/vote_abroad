@@ -124,9 +124,9 @@
       </header>
       </div>
       <div class="hero-body">
-        <div class="container is-widescreen">
+        <!-- <div class="container is-widescreen"> -->
           <nuxt/>
-        </div>
+        <!-- </div> -->
       </div>
     <div class="hero-foot">
       <nav class="tabs is-boxed is-fullwidth">
