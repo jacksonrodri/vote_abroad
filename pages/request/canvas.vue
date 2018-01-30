@@ -34,17 +34,6 @@
         classification="uncertainReturn"
         sex="male"
         recBallot="email"></my-box>
-      <!-- <my-box
-        v-for="obj, index of chartValues"
-        :x1="((index / chartValues.length) * 100)"
-        :x2="((index / chartValues.length) * 100) + (100 / chartValues.length)"
-        :y1="100"
-        :y2="100 - obj.val"
-        :color="obj.color"
-        :value="obj.val"
-        :key="index"
-      >
-      </my-box> -->
     </my-canvas>
     <b-modal :active.sync="isSignatureModalActive" has-modal-card>
       <signature/>
@@ -65,8 +54,7 @@ export default {
   },
   data () {
     return {
-      isSignatureModalActive: false,
-      dpi: 360
+      isSignatureModalActive: false
     }
   }
 }

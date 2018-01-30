@@ -49,8 +49,7 @@ export default {
   },
   data () {
     return {
-      isSignatureModalActive: false,
-      dpi: 360
+      isSignatureModalActive: false
     }
   }
 }
