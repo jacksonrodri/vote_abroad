@@ -1,10 +1,16 @@
 <template>
   <div class="card">
     <div class="card-content">
-      <p class="title">Signature Capture</p>
-      <video v-show="isCapture" v-bind:width="width" v-bind:height="height" :autoplay="autoplay" :playsinline="playsinline" :controls="controls" ref="video"></video>
-      <img v-show="!isCapture" v-bind:src="optimizedPhoto" alt="" v-bind:width="width" v-bind:height="height"/>
-      <img v-bind:src="photo" v-show="false" alt="" v-bind:width="width" v-bind:height="height" ref="pic"/>
+      <p class="title is-5">Signature Capture</p>
+      <ol class="is-size-6">
+        <li>Sign your name on white paper with a dark pen.  </li>
+        <li>Hold it in front of your camera and align it in the box.</li>
+        <li>Click capture and adjust it.</li>
+      </ol>
+      <video v-show="isCapture" v-bind:width="width / 3" v-bind:height="height / 3" :autoplay="autoplay" :playsinline="playsinline" :controls="controls" ref="video"></video>
+      <canvas ref="sigCanvas"></canvas>
+      <img v-show="!isCapture" v-bind:src="optimizedPhoto" alt="" v-bind:width="width / 3" v-bind:height="height / 3"/>
+      <img v-bind:src="photo" v-show="false" alt="" v-bind:width="width / 3" v-bind:height="height / 3" ref="pic"/>
       <b-collapse v-show="!isCapture" class="card is-shadowless" :open.sync="isEditing">
         <div class="card-header" slot="trigger">
           <p class="card-header-title">Adjust photo</p>
@@ -47,11 +53,11 @@ export default {
   data () {
     return {
       src: '',
-      width: '400',
-      height: '300',
+      width: '1280',
+      height: '720',
       autoplay: true,
       playsinline: true,
-      controls: true,
+      controls: false,
       photo: '',
       optimizedPhoto: '',
       screenshotFormat: 'image/png',
@@ -110,6 +116,24 @@ export default {
           .brightnessContrast(this.brightness ? this.brightness / 100 : 0.2, this.saturation ? this.saturation / 100 : 0.7)
           .update()
         this.optimizedPhoto = canvas2.toDataURL(this.screenshotFormat)
+        var sigCanvas = this.$refs.sigCanvas
+        var sigCtx = sigCanvas.getContext('2d')
+        sigCanvas.width = this._video.clientWidth
+        sigCanvas.height = this._video.clientHeight
+        var sig = new Image()
+        sig.src = canvas2.toDataURL(this.screenshotFormat)
+        sig.onload = () => sigCtx.drawImage(sig, 0, 0)
+        let sigImg = sigCtx.getImageData(0, 0, 1280, 720)
+        var imageData = sigImg.data
+        console.log(imageData)
+        var dataLength = imageData.length
+        for (var i = 3; i < dataLength; i += 4) {
+          imageData[i] = 50
+        }
+        console.log(imageData)
+        // putImageData(sigCtx, imageData, 0, 0)
+        // console.log(dataLength)
+        this.$emit('sigcap', this.optimizedPhoto)
 
         return
 
@@ -156,7 +180,9 @@ export default {
       audio: false,
       video: {
         frameRate: 10,
-        facingMode: 'environment'
+        facingMode: 'environment',
+        width: 1280,
+        height: 720
       }
     })
       .then((stream) => {

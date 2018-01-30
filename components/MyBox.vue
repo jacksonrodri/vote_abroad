@@ -113,6 +113,9 @@ export default {
     recBallot: {
       type: String,
       default: ''
+    },
+    signature: {
+      type: String
     }
   },
 
@@ -294,6 +297,10 @@ export default {
           x: percentWidthToPix(87, ctx),
           y: percentWidthToPix(119.5, ctx)
         },
+        signature: {
+          x: percentWidthToPix(20.2, ctx),
+          y: percentWidthToPix(110, ctx)
+        },
         classification: {
           x: percentWidthToPix(60.3, ctx),
           y: percentWidthToPix(90.3, ctx)
@@ -352,12 +359,23 @@ export default {
     if (!this.provider.context) return
     const ctx = this.provider.context
 
+    let sign = () => {
+      let signature = new Image()
+      signature.src = this.signature
+      signature.onload = () => {
+        ctx.drawImage(signature, this.calculated.signature.x, this.calculated.signature.y, 1152, 648)
+      }
+    }
+
     let drawing = new Image()
     drawing.src = '/fpca.png'
     drawing.onload = () => {
       ctx.drawImage(drawing, 0, 0, ctx.canvas.width, ctx.canvas.height)
       fillText()
+      sign()
     }
+
+    sign()
 
     let fillText = () => {
       ctx.fillStyle = '#000000'

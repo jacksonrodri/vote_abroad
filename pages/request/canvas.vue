@@ -29,11 +29,12 @@
         :date="new Date()"
         classification="uncertainReturn"
         sex="male"
-        recBallot="email"></my-box>
+        recBallot="email"
+        :signature="signature"></my-box>
     </my-canvas>
     <!-- </no-ssr> -->
     <b-modal :active.sync="isSignatureModalActive" has-modal-card>
-      <signature/>
+      <signature @sigcap="addSig" />
     </b-modal>
   </div>
 </template>
@@ -51,7 +52,14 @@ export default {
   },
   data () {
     return {
-      isSignatureModalActive: false
+      isSignatureModalActive: false,
+      signature: ''
+    }
+  },
+  methods: {
+    addSig (val) {
+      this.signature = val
+      // console.log(val)
     }
   }
 }
