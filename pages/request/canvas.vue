@@ -1,12 +1,7 @@
 <template>
   <div class="is-fullhd">
-    <!-- <h2>Bar Chart Example</h2> -->
-    <!-- These are the custom components we'll create -->
-    <!-- Values for `my-box` are percentages of the width of the canvas. -->
-    <!-- Each bar will take up an equal space of the canvas. -->
     <button class="button is-primary" @click="isSignatureModalActive = true">Add your signature</button>
     <my-canvas class="canvas">
-    <!-- <my-canvas style="width: 2550px; height: 3300px;"> -->
       <my-box
         lastName="Montgomery"
         firstName="Alexander"
@@ -26,7 +21,7 @@
         :fwd="['Flat 9, 29/f BLock C,','Greenwood Garden,','Shatin, NT,','HONG KONG']"
         email="somebody@gmail.com"
         altEmail="nobody@gmail.com"
-        tel="+852 9669 9279"
+        tel="+852 9669 9279 123"
         fax="+852 1234 5678"
         party="Democrat"
         :addlInfo="['I like this stuff','line 2','line 3']"
@@ -59,12 +54,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.canvas {
-  width: 100vw;
-  min-width: 1200px;
-  height: 130vw;
-  min-height: 1560px;
-}
-</style>
