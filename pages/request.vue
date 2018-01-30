@@ -1,20 +1,15 @@
 <template>
-<div class="container is-widescreen">
-  <!-- :style="$route.fullPath === '/request/canvas' ? 'overflow-x: scroll;' : ''" -->
-  <section class="columns is-centered is-multiline">
-    <div class="column is-three-fifths">
-      <b-tabs type="is-boxed" v-model="currentRequest" @change="addRequest($event)">
-        <b-tab-item v-for="(request) in tabs" :key="request.id" :label="request.firstName || 'new request'">
-        </b-tab-item>
-        <nuxt-child v-if="$route.fullPath !== '/request/canvas/' || $route.fullPath !== '/request/canvas'">
-        </nuxt-child>
-      </b-tabs>
-      <!-- <button @click="removeRequest" class="button is-text is-small">Delete this Request</button> -->
-    </div>
-    <div class="column is-10" v-if="$route.fullPath === '/request/canvas/' || $route.fullPath === '/request/canvas'">
-      <nuxt-child></nuxt-child>
-    </div>
-  </section>
+  <div class="container is-widescreen">
+    <section class="columns is-centered">
+      <div :class="columnClass">
+        <b-tabs type="is-boxed" v-model="currentRequest" @change="addRequest($event)">
+          <b-tab-item v-for="(request) in tabs" :key="request.id" :label="request.firstName || 'new request'">
+          </b-tab-item>
+          <nuxt-child></nuxt-child>
+        </b-tabs>
+        <!-- <button @click="removeRequest" class="button is-text is-small">Delete this Request</button> -->
+      </div>
+    </section>
   </div>
 </template>
 
@@ -29,6 +24,16 @@ export default {
   computed: {
     requests: function () {
       return this.$store.state.requests.requests ? this.$store.state.requests.requests : []
+    },
+    columnClass: function () {
+      return {
+        column: true,
+        'is-three-fifths': this.$route.path !== '/request/canvas' || this.$route.path !== '/request/canvas/',
+        'is-10': this.$route.path === '/request/canvas' || this.$route.path === '/request/canvas/'
+      }
+    },
+    rte: function () {
+      return this.$route.path === '/request/canvas' || this.$route.path === '/request/canvas/'
     },
     currentRequest: {
       get () {

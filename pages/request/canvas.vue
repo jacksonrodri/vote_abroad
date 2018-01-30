@@ -1,6 +1,6 @@
 <template>
   <div class="is-fullhd">
-    <no-ssr>
+    <!-- <no-ssr> -->
     <button class="button is-primary" @click="isSignatureModalActive = true">Add your signature</button>
     <my-canvas class="canvas">
       <my-box
@@ -31,7 +31,7 @@
         sex="male"
         recBallot="email"></my-box>
     </my-canvas>
-    </no-ssr>
+    <!-- </no-ssr> -->
     <b-modal :active.sync="isSignatureModalActive" has-modal-card>
       <signature/>
     </b-modal>
