@@ -299,7 +299,7 @@ export default {
         },
         signature: {
           x: percentWidthToPix(20.2, ctx),
-          y: percentWidthToPix(110, ctx)
+          y: percentWidthToPix(105, ctx)
         },
         classification: {
           x: percentWidthToPix(60.3, ctx),

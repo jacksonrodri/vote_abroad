@@ -7,9 +7,14 @@
         <li>Hold it in front of your camera and align it in the box.</li>
         <li>Click capture and adjust it.</li>
       </ol>
-      <video v-show="isCapture" v-bind:width="width / 3" v-bind:height="height / 3" :autoplay="autoplay" :playsinline="playsinline" :controls="controls" ref="video"></video>
-      <canvas ref="sigCanvas"></canvas>
-      <img v-show="!isCapture" v-bind:src="optimizedPhoto" alt="" v-bind:width="width / 3" v-bind:height="height / 3"/>
+      <div class="signature">
+        <div class="signatureline"></div>
+        <div>
+          <video v-show="isCapture" v-bind:width="width / 3" v-bind:height="height / 3" :autoplay="autoplay" :playsinline="playsinline" :controls="controls" ref="video"></video>
+          <canvas ref="sigCanvas" v-show="!isCapture" style="width:427px;"></canvas>
+        </div>
+      </div>
+      <img v-show="false" v-bind:src="optimizedPhoto" alt="" v-bind:width="width / 3" v-bind:height="height / 3"/>
       <img v-bind:src="photo" v-show="false" alt="" v-bind:width="width / 3" v-bind:height="height / 3" ref="pic"/>
       <b-collapse v-show="!isCapture" class="card is-shadowless" :open.sync="isEditing">
         <div class="card-header" slot="trigger">
@@ -122,18 +127,21 @@ export default {
         sigCanvas.height = this._video.clientHeight
         var sig = new Image()
         sig.src = canvas2.toDataURL(this.screenshotFormat)
-        sig.onload = () => sigCtx.drawImage(sig, 0, 0)
-        let sigImg = sigCtx.getImageData(0, 0, 1280, 720)
-        var imageData = sigImg.data
-        console.log(imageData)
-        var dataLength = imageData.length
-        for (var i = 3; i < dataLength; i += 4) {
-          imageData[i] = 50
+        sig.onload = () => {
+          sigCtx.drawImage(sig, 0, 0)
+          let sigImg = sigCtx.getImageData(0, 0, 1280, 720)
+          var imageData = sigImg.data
+          console.log(imageData)
+          var dataLength = imageData.length
+          for (var i = 3; i < dataLength; i += 4) {
+            imageData[i] = 255 - imageData[i - 1]
+          }
+          console.log(imageData)
+          sigCtx.putImageData(sigImg, 0, 0)
+          this.optimizedPhoto = sigCanvas.toDataURL()
+          this.$emit('sigcap', this.optimizedPhoto)
         }
-        console.log(imageData)
-        // putImageData(sigCtx, imageData, 0, 0)
         // console.log(dataLength)
-        this.$emit('sigcap', this.optimizedPhoto)
 
         return
 
@@ -209,3 +217,19 @@ export default {
   }
 }
 </script>
+
+<style>
+.signatureline {
+  position: absolute;
+  float: left;
+  box-sizing: border-box;
+  width: 427px;
+  height: 240px;
+  min-height: 205px;
+  border-top: 35px solid rgba(0,0,0,0.4);
+  border-bottom: 65px solid rgba(0,0,0,0.4);
+  border-left: 8px solid rgba(0,0,0,0.4);
+  border-right: 8px solid rgba(0,0,0,0.4);
+  z-index: 300000;
+}
+</style>
