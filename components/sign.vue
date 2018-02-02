@@ -138,7 +138,7 @@ export default {
     md.getUserMedia({
       audio: false,
       video: {
-        frameRate: 10,
+        frameRate: 5,
         facingMode: 'environment',
         width: 1280,
         height: 720
