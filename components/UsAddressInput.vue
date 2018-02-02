@@ -156,7 +156,8 @@ export default {
     // this.leos = await axios.get('/_nuxt/content/leos/_all.json')[0].body
     // await axios.get('/_nuxt/content/leos/_all.json')
     // await axios.get('/content-api/leos/')
-    await axios.get(this.$axios.defaults.baseURL + '/leos/_all.json')
+    await axios.get(this.$axios.defaults.baseURL + '/leos/')
+    // await axios.get(this.$axios.defaults.baseURL + '/leos/_all.json')
       .then(({data}) => {
         const templeos = data[0].body
         const tempstates = Object.keys(templeos)

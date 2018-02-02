@@ -368,7 +368,7 @@ export default {
     }
 
     let drawing = new Image()
-    drawing.src = '/fpca.png'
+    drawing.src = '/fpca-min.png'
     drawing.onload = () => {
       ctx.drawImage(drawing, 0, 0, ctx.canvas.width, ctx.canvas.height)
       fillText()

@@ -103,6 +103,26 @@
         <div v-if="(usOnly !== undefined && usOnly !== false) || usOnly === true" class="field is-fullwidth">
           county
         </div>
+        <!-- alternateFormat -->
+      <b-field
+          v-show="usesAlternateFormat"
+          :label="$t('request.addressAbroad')">
+        <transition name="fade">
+          {{ $t('request.addressAbroadInstructions')}}
+          <b-input type="textarea" rows="5" v-model="alternateFormat" @input="updateAddress()"></b-input>
+        </transition>
+      </b-field>
+
+      <b-field :label="usesAlternateFormat ? 'Use the standard international format for my address' : 'I need to use a different format for my address.'">
+        <b-field>
+          <b-radio-button v-model="usesAlternateFormat"
+            :native-value="!usesAlternateFormat"
+            :type="usesAlternateFormat ? 'is-success' : 'is-danger'">
+            <b-icon :icon="!usesAlternateFormat ? 'edit' : 'align-justify'"></b-icon>
+            <span>Change format</span>
+          </b-radio-button>
+        </b-field>
+      </b-field>
   </section>
 </template>
 
@@ -143,7 +163,9 @@ export default {
       thoroughfare: '',
       premise: '',
       administrativearea: '',
-      postalcode: ''
+      postalcode: '',
+      usesAlternateFormat: false,
+      alternateFormat: ''
     }
   },
   computed: {
@@ -277,7 +299,8 @@ export default {
         administrativearea: this.region,
         postalcode: this.postalCode,
         country: this.countryName,
-        countryiso: this.cCountryCode !== 'un' && this.countryCode ? this.cCountryCode : ''
+        countryiso: this.cCountryCode !== 'un' && this.countryCode ? this.cCountryCode : '',
+        alternateFormat: this.alternateFormat
       })
     }
   }

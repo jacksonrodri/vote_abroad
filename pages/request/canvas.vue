@@ -4,12 +4,12 @@
     <button class="button is-primary" @click="isSignatureModalActive = true">Add your signature</button>
     <my-canvas class="canvas">
       <my-box
-        lastName="Montgomery"
-        firstName="Alexander"
-        middleName="Parry"
-        suffix="Jr."
-        previousName="Nobody"
-        :dob="new Date('06/26/1982')"
+        :lastName="lastName"
+        :firstName="firstName"
+        :middleName="middleName"
+        :suffix="suffix"
+        :previousName="previousName"
+        :dob="dob"
         ssn="123456789"
         stateId="NC123"
         votStreet="711 McCulloch St"
@@ -43,6 +43,7 @@
 import MyCanvas from '~/components/MyCanvas.vue'
 import MyBox from '~/components/MyBox.vue'
 import Signature from '~/components/signature.vue'
+import { mapState } from 'vuex'
 
 export default {
   components: {
@@ -61,6 +62,19 @@ export default {
       this.signature = val
       // console.log(val)
     }
+  },
+  computed: {
+    currentRequest () { return this.requests[this.currentRequestIndex] },
+    firstName () { return this.currentRequest && this.currentRequest.firstName ? this.currentRequest.firstName : ' ' },
+    lastName () { return this.currentRequest && this.currentRequest.lastName ? this.currentRequest.lastName : ' ' },
+    middleName () { return this.currentRequest && this.currentRequest.middleName ? this.currentRequest.middleName : ' ' },
+    suffix () { return this.currentRequest && this.currentRequest.suffix ? this.currentRequest.suffix : ' ' },
+    previousName () { return this.currentRequest && this.currentRequest.previousName ? this.currentRequest.previousName : ' ' },
+    dob () { return this.currentRequest && this.currentRequest.dob ? this.currentRequest.dob : ' ' },
+    ...mapState({
+      currentRequestIndex: state => state.requests.currentRequest,
+      requests: state => state.requests.requests
+    })
   }
 }
 </script>

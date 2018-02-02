@@ -85,53 +85,9 @@
         </div>
 
       </address-input>
-      <!-- <b-field label="Country">
-            <b-autocomplete
-                v-model="abrAdr.countryName"
-                placeholder="e.g. Canada"
-                keep-first
-                :data="filteredCountries"
-                field="label"
-                icon-pack="flag"
-                size="is-medium"
-                :icon="`icon flag-icon-${countryCode ? countryCode.toLowerCase() : 'un'}`"
-                @select="option => selected = option">
-              <template slot-scope="props">
-                <span :class="`flag-icon flag-icon-${props.option.iso.toLowerCase()}`"></span>{{ props.option.label }}
-              </template>
-            </b-autocomplete>
-        </b-field> -->
-      <!-- <b-field :type="($v.abrAdr.countryName.$error ? 'is-danger': '')" :message="$v.abrAdr.countryName.$error ? Object.keys($v.abrAdr.countryName.$params).map(x => x) : '' " label="countryName">
-        <b-input v-model="abrAdr.countryName" @input="$v.abrAdr.countryName.$touch()"></b-input>
-      </b-field> -->
-
-      <!-- extendedAddress -->
-      <!-- <b-field :type="($v.abrAdr.extendedAddress.$error ? 'is-danger': '')" :message="$v.abrAdr.extendedAddress.$error ? Object.keys($v.abrAdr.extendedAddress.$params).map(x => x) : '' " :label="countryList.filter(x => x.iso === countryCode).length === 1 ? countryList.filter(x => x.iso === countryCode)[0].fields[1].premise.label : 'Address 2'">
-        <b-input v-model="abrAdr.extendedAddress" @input="$v.abrAdr.extendedAddress.$touch()"></b-input>
-      </b-field> -->
-
-      <!-- streetAddress -->
-      <!-- <b-field :type="($v.abrAdr.streetAddress.$error ? 'is-danger': '')" :message="$v.abrAdr.streetAddress.$error ? Object.keys($v.abrAdr.streetAddress.$params).map(x => x) : '' " :label="countryList.filter(x => x.iso === countryCode).length === 1 ? countryList.filter(x => x.iso === countryCode)[0].fields[0].thoroughfare.label : 'Address 1'">
-        <b-input v-model="abrAdr.streetAddress" @input="$v.abrAdr.streetAddress.$touch()"></b-input>
-      </b-field> -->
-
-      <!-- locality -->
-      <!-- <b-field :type="($v.abrAdr.locality.$error ? 'is-danger': '')" :message="$v.abrAdr.locality.$error ? Object.keys($v.abrAdr.locality.$params).map(x => x) : '' " label="locality">
-        <b-input v-model="abrAdr.locality" @input="$v.abrAdr.locality.$touch()"></b-input>
-      </b-field> -->
-
-      <!-- region -->
-      <!-- <b-field :type="($v.abrAdr.region.$error ? 'is-danger': '')" :message="$v.abrAdr.region.$error ? Object.keys($v.abrAdr.region.$params).map(x => x) : '' " label="region">
-        <b-input v-model="abrAdr.region" @input="$v.abrAdr.region.$touch()"></b-input>
-      </b-field> -->
-
-      <!-- postalCode -->
-      <!-- <b-field :type="($v.abrAdr.postalCode.$error ? 'is-danger': '')" :message="$v.abrAdr.postalCode.$error ? Object.keys($v.abrAdr.postalCode.$params).map(x => x) : '' " label="postalCode">
-        <b-input v-model="abrAdr.postalCode" @input="$v.abrAdr.postalCode.$touch()"></b-input>
-      </b-field> -->
 
       <!-- alternateFormat -->
-      <b-field
+      <!-- <b-field
           v-show="abrAdr.usesAlternateFormat"
           :type="($v.abrAdr.alternateFormat.$error ? 'is-danger': '')"
           :message="$v.abrAdr.alternateFormat.$error ? Object.keys($v.abrAdr.alternateFormat.$params).map(x => x) : '' "
@@ -151,7 +107,7 @@
             <span>Change format</span>
           </b-radio-button>
         </b-field>
-      </b-field>
+      </b-field> -->
 
       <!-- <b-field class="field">
         <b-switch v-model="abrAdr.usesAlternateFormat" >Use an Alternate format</b-switch>
@@ -285,8 +241,8 @@
       <!-- dob -->
       <b-field label="Date of Birth" :message="$v.dob.$error ? Object.keys($v.dob.$params).map(x => x) : '' ">
         <b-datepicker
-          v-model="dob"
-          @input="$v.dob.$touch()"
+          :value="localDob"
+          @input="value =>{ localDob = value, this.updateDob(value) }"
           placeholder="Type or select your birth date"
           icon="calendar"
           icon-pack="fa"
@@ -379,6 +335,7 @@ import countries from '~/assets/countryaddresses'
 import AddressInput from '~/components/AddressInput'
 import UsAddressInput from '~/components/UsAddressInput'
 // import Jurisdiction from '~/components/Jurisdiction'
+import { DateTime } from 'luxon'
 
 export default {
   transition: 'test',
@@ -392,17 +349,7 @@ export default {
       createdAt: '',
       updatedAt: '',
       createdBy: '',
-      // firstName: '',
-      // middleName: '',
-      // lastName: '',
-      // usesPreviousName: false,
-      // previousName: '',
-      // suffix: '',
       emailOrPhone: '',
-      // email: '',
-      // tel: '',
-      // abrAdr2: {},
-      // votAdr2: {},
       abrAdr: {
         extendedAddress: '',
         streetAddress: '',
@@ -431,7 +378,7 @@ export default {
       leoAdr: {},
       recBallot: '',
       isRegistered: '',
-      dob: new Date(),
+      localDob: null,
       fax: '',
       altEmail: '',
       fwabRequest: '',
@@ -464,6 +411,23 @@ export default {
   components: {
     AddressInput,
     UsAddressInput
+  },
+  watch: {
+    dob: function (newVal, oldVal) {
+      if (!this.localDob && newVal) {
+        // .plus({minutes: DateTime.local().offset})
+        console.log(new Date(newVal))
+        // console.log(DateTime.fromJSDate(new Date(newVal), {zone: 'UTC'}).toLocal())
+        let dt = DateTime.local()
+        console.log(dt.offset)
+        this.localDob = new Date(newVal)
+      }
+    }
+    // date: function (newVal, oldVal) {
+    //   if (!this.signedDate && newVal) {
+    //     this.signedDate = new Date(DateTime.fromISO(newVal).toISODate())
+    //   }
+    // }
   },
   computed: {
     countryList () {
@@ -540,6 +504,10 @@ export default {
       get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].suffix : null },
       set (value) { this.$store.commit('requests/update', { suffix: value }) }
     },
+    dob: {
+      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].dob : null },
+      set (value) { this.$store.commit('requests/update', { dob: value }) }
+    },
     tel: {
       get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].tel : null },
       set (value) { this.$store.commit('requests/update', { tel: value }) }
@@ -551,6 +519,14 @@ export default {
     abrAdr2: {
       get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].abrAdr2 : null },
       set (value) { this.$store.commit('requests/update', {abrAdr2: value}) }
+    }
+  },
+  methods: {
+    // dateFormatter (date) { DateTime.local(date).toLocaleString() },
+    // dateParser (date) { DateTime.fromISO('date') },
+    updateDob (value) {
+      // let intlDate = DateTime.fromJSDate(value).setZone('UTC', { keepLocalTime: true }).toISODate()
+      this.$store.commit('requests/update', { dob: value })
     }
   },
   validations () {
