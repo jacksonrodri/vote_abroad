@@ -125,7 +125,7 @@ export default {
       this.computeFrame()
       setTimeout(function () {
         timerCallback()
-      }, 100)
+      }, 200)
     }
     this._video.addEventListener('play', function () {
       // self.width = self.video.videoWidth / 2
