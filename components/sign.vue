@@ -18,7 +18,7 @@
             :playsinline="playsinline"
             :controls="controls"
             ref="video"
-            style="width: 1px; position: absolute; filter: grayscale(100%) brightness(200%) contrast(100%)"></video>
+            style="width: 1px; height: 1px;"></video>
           <canvas ref="sigCanvas" v-show="!isCapture" style="width:427px;"></canvas>
           <canvas ref="edited" v-show="isCapture" style="width:427px; background-image:url('fpca_sign.png')"></canvas>
         </div>
