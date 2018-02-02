@@ -10,7 +10,7 @@
       <div class="signature">
         <div class="signatureline"></div>
         <div>
-          <video v-show="!isCapture" @play.native="timerCallback()" v-bind:width="width / 3" v-bind:height="height / 3" :autoplay="autoplay" :playsinline="playsinline" :controls="controls" ref="video"></video>
+          <video v-show="isCapture" @play.native="timerCallback()" v-bind:width="width / 3" v-bind:height="height / 3" :autoplay="autoplay" :playsinline="playsinline" :controls="controls" ref="video"></video>
           <canvas ref="sigCanvas" v-show="isCapture" style="width:427px;"></canvas>
           <canvas ref="edited" v-show="isCapture" style="width:427px; background-image:url('fpca_sign.png')"></canvas>
         </div>
