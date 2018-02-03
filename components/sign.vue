@@ -6,7 +6,7 @@
         <li>Sign your name on white paper with a dark pen.  </li>
         <li>Hold it in front of your camera and align it in the box.</li>
         <li>Click capture and adjust it.</li>
-        Width: {{ width }}, Height: {{ height }} <br/> {{ details }}
+        {{ details }}
       </ol>
       <div class="signature">
         <div class="signatureline"></div>
@@ -19,7 +19,7 @@
             :playsinline="playsinline"
             :controls="controls"
             ref="video"
-            style="width: 1px; height: 1px;  margin: -1px;"></video>
+            style="filter: grayscale(100%) brightness(200%) contrast(100%)"></video>
           <canvas ref="sigCanvas" v-show="!isCapture" style="width:427px;"></canvas>
           <canvas ref="edited" v-show="isCapture" style="width:427px; background-image:url('fpca_sign.png')"></canvas>
         </div>
@@ -125,57 +125,58 @@ export default {
     }
   },
   mounted () {
-    this._refs = this.$refs
-    this._video = this._refs.video
-    this.ctx1 = this._refs.sigCanvas.getContext('2d')
-    this.ctx2 = this._refs.edited.getContext('2d')
-    let timerCallback = () => {
-      if (this._video.paused || this._video.ended) {
-      }
-      this.computeFrame()
-      setTimeout(function () {
-        timerCallback()
-      }, 200)
-    }
-    this._video.addEventListener('play', function () {
-      // self.width = self.video.videoWidth / 2
-      // self.height = self.video.videoHeight / 2
-      timerCallback()
-    }, false)
-    console.log('video: ', this._video)
+    if (process.browser) {
+      window.onNuxtReady((app) => {
+        this._refs = this.$refs
+        this._video = this._refs.video
+        this.ctx1 = this._refs.sigCanvas.getContext('2d')
+        this.ctx2 = this._refs.edited.getContext('2d')
+        let timerCallback = () => {
+          if (!this._video.paused || !this._video.ended) {
+            this.computeFrame()
+            setTimeout(function () {
+              timerCallback()
+            }, 200)
+          }
+        }
+        // this._video.addEventListener('play', function () {
+        //   // self.width = self.video.videoWidth / 2
+        //   // self.height = self.video.videoHeight / 2
+        //   timerCallback()
+        // }, false)
+        // console.log('video: ', this._video)
 
-    var md = this.getMediaDevices()
-    md.getUserMedia({
-      audio: false,
-      video: {
-        frameRate: 5,
-        facingMode: 'environment',
-        width: 1280,
-        height: 720
-      }
-    })
-      .then((stream) => {
-        // this.src = window.URL.createObjectURL(stream)
-        this.src = stream
-        this.details = stream.getVideoTracks()[0].getSettings()
-        this.height = stream.getVideoTracks()[0].getSettings().height
-        this.width = stream.getVideoTracks()[0].getSettings().width
-        this._video.srcObject = stream
-        this._stream = stream
-        this._hasUserMedia = true
-      }, (err) => {
-        console.log(err)
+        var md = this.getMediaDevices()
+        md.getUserMedia({
+          audio: false,
+          video: {
+            frameRate: 5,
+            facingMode: 'environment',
+            width: 1280,
+            height: 720
+          }
+        })
+          .then((stream) => {
+            // this.src = window.URL.createObjectURL(stream)
+            this.src = stream
+            this._video.srcObject = stream
+            this._stream = stream
+            this._hasUserMedia = true
+          }, (err) => {
+            console.log(err)
+          })
+        // .then(() => this.computeFrame())
+        // .then((stream) => {
+        //   // console.log(stream)
+        //   this.optimizedPhoto = this._stream.captureStream(25)
+        // })
       })
-      .then(() => this.computeFrame())
-      // .then((stream) => {
-      //   // console.log(stream)
-      //   this.optimizedPhoto = this._stream.captureStream(25)
-      // })
+    }
   },
   beforeDestroy () {
     this._video.pause()
     this.src = null
-    this._stream.getTracks()[0].stop()
+    // this._stream.getTracks()[0].stop()
   },
   destroyed () {
     console.log('Destroyed')
