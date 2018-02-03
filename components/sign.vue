@@ -6,7 +6,7 @@
         <li>Sign your name on white paper with a dark pen.  </li>
         <li>Hold it in front of your camera and align it in the box.</li>
         <li>Click capture and adjust it.</li>
-        Width: {{ width }}, Height: {{ height }}
+        Width: {{ width }}, Height: {{ height }} <br/> {{ details }}
       </ol>
       <div class="signature">
         <div class="signatureline"></div>
@@ -82,7 +82,8 @@ export default {
       _ctx: null,
       ctx1: null,
       isCapture: true,
-      isEditing: false
+      isEditing: false,
+      details: 'nothing yet'
     }
   },
   methods: {
@@ -148,13 +149,15 @@ export default {
       audio: false,
       video: {
         frameRate: 5,
-        facingMode: 'environment'
+        facingMode: 'environment',
+        width: 1280,
+        height: 720
       }
     })
       .then((stream) => {
         // this.src = window.URL.createObjectURL(stream)
         this.src = stream
-        console.log(stream.getVideoTracks()[0].getSettings())
+        this.details = stream.getVideoTracks()[0].getSettings()
         this.height = stream.getVideoTracks()[0].getSettings().height
         this.width = stream.getVideoTracks()[0].getSettings().width
         this._video.srcObject = stream
