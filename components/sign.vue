@@ -6,6 +6,7 @@
         <li>Sign your name on white paper with a dark pen.  </li>
         <li>Hold it in front of your camera and align it in the box.</li>
         <li>Click capture and adjust it.</li>
+        Width: {{ width }}, Height: {{ height }}
       </ol>
       <div class="signature">
         <div class="signatureline"></div>
@@ -18,7 +19,7 @@
             :playsinline="playsinline"
             :controls="controls"
             ref="video"
-            style="width: 1px; height: 1px;"></video>
+            style="width: 1px; height: 1px;  margin: -1px;"></video>
           <canvas ref="sigCanvas" v-show="!isCapture" style="width:427px;"></canvas>
           <canvas ref="edited" v-show="isCapture" style="width:427px; background-image:url('fpca_sign.png')"></canvas>
         </div>
@@ -147,14 +148,15 @@ export default {
       audio: false,
       video: {
         frameRate: 5,
-        facingMode: 'environment',
-        width: 1280,
-        height: 720
+        facingMode: 'environment'
       }
     })
       .then((stream) => {
         // this.src = window.URL.createObjectURL(stream)
         this.src = stream
+        console.log(stream.getVideoTracks()[0].getSettings())
+        this.height = stream.getVideoTracks()[0].getSettings().height
+        this.width = stream.getVideoTracks()[0].getSettings().width
         this._video.srcObject = stream
         this._stream = stream
         this._hasUserMedia = true
