@@ -7065,9 +7065,9 @@ vuelidate@^0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/vuelidate/-/vuelidate-0.6.1.tgz#c52c9fd2b48f974613485e2cf51c182e84bcf747"
 
-vuex-persist@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/vuex-persist/-/vuex-persist-1.1.0.tgz#25d76e723aae707cf127706dd51e70e93371147a"
+vuex-persist@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/vuex-persist/-/vuex-persist-1.1.1.tgz#dc3875fa17d5a5881a526276608bdfc8001ed0c1"
   dependencies:
     lodash.merge "^4.6.0"
 

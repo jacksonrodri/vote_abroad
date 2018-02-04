@@ -29,7 +29,7 @@
     "nuxt-i18n": "^1.0.2",
     "nuxtent": "https://github.com/apmontgomery/nuxtent-module.git#next",
     "vuelidate": "^0.6.1",
-    "vuex-persist": "^1.1.0"
+    "vuex-persist": "^1.1.1"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
