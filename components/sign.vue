@@ -13,15 +13,22 @@
         <div>
           <video v-show="isCapture"
             @play.native="timerCallback()"
-            v-bind:width="width / 3"
-            v-bind:height="height / 3"
+            v-bind:width="width"
+            v-bind:height="height"
             :autoplay="autoplay"
             :playsinline="playsinline"
             :controls="controls"
             ref="video"
-            style="filter: grayscale(100%) brightness(200%) contrast(100%)"></video>
-          <canvas ref="sigCanvas" v-show="!isCapture" style="width:427px;"></canvas>
-          <canvas ref="edited" v-show="isCapture" style="width:427px; background-image:url('fpca_sign.png')"></canvas>
+            style="width: 1px; height: 1px; margin -1px; filter: grayscale(100%) brightness(200%) contrast(100%)"></video>
+          <canvas ref="sigCanvas"
+            v-bind:width="width / 2"
+            v-bind:height="height / 2"
+            v-show="!isCapture"></canvas>
+          <canvas ref="edited"
+            v-show="isCapture"
+            v-bind:width="width / 2"
+            v-bind:height="height / 2"
+            style="background-image:url('fpca_sign.png')"></canvas>
         </div>
       </div>
       <b-collapse v-show="!isCapture" class="card is-shadowless" :open.sync="isEditing">
@@ -65,8 +72,8 @@ export default {
   data () {
     return {
       src: '',
-      width: '1280',
-      height: '720',
+      width: 1280,
+      height: 720,
       autoplay: true,
       playsinline: true,
       controls: false,
@@ -102,9 +109,27 @@ export default {
         return md
       }
     },
+    timerCallback () {
+      if (!this._video.paused || !this._video.ended) {
+        setTimeout(() => {
+          this.computeFrame()
+          this.timerCallback()
+        }, 200)
+      }
+    },
     computeFrame () {
-      this.ctx1.drawImage(this._video, 0, 0, this.width / 3, this.height / 3)
-      let frame = this.ctx1.getImageData(0, 0, this.width / 3, this.height / 3)
+      let videoWidth = this.width
+      let videoHeight = this.height
+      let sourceX = 0
+      let sourceY = 0
+      let sourceW = videoWidth
+      let sourceH = videoHeight
+      let destX = 0
+      let destY = 0
+      let destW = videoWidth / 2
+      let destH = videoHeight / 2
+      this.ctx1.drawImage(this._video, sourceX, sourceY, sourceW, sourceH, destX, destY, destW, destH)
+      let frame = this.ctx1.getImageData(0, 0, this.width, this.height)
       let l = frame.data.length / 4
 
       for (let i = 0; i < l; i++) {
@@ -122,64 +147,68 @@ export default {
         frame.data[i * 4 + 3] = 255 - avg
       }
       this.ctx2.putImageData(frame, 0, 0)
+      // this.timerCallback()
     }
   },
   mounted () {
-    if (process.browser) {
-      window.onNuxtReady((app) => {
-        this._refs = this.$refs
-        this._video = this._refs.video
-        this.ctx1 = this._refs.sigCanvas.getContext('2d')
-        this.ctx2 = this._refs.edited.getContext('2d')
-        let timerCallback = () => {
-          if (!this._video.paused || !this._video.ended) {
-            this.computeFrame()
-            setTimeout(function () {
-              timerCallback()
-            }, 200)
-          }
-        }
-        // this._video.addEventListener('play', function () {
-        //   // self.width = self.video.videoWidth / 2
-        //   // self.height = self.video.videoHeight / 2
-        //   timerCallback()
-        // }, false)
-        // console.log('video: ', this._video)
+    this._refs = this.$refs
+    this._video = this._refs.video
+    this.ctx1 = this._refs.sigCanvas.getContext('2d')
+    this.ctx2 = this._refs.edited.getContext('2d')
+    // let timerCallback = () => {
+    //   if (!this._video.paused || !this._video.ended) {
+    //     this.computeFrame()
+    //     setTimeout(function () {
+    //       timerCallback()
+    //     }, 200)
+    //   }
+    // }
+    // this._video.addEventListener('canplay', function () {
+    //   // self.width = self.video.videoWidth / 2
+    //   // self.height = self.video.videoHeight / 2
+    //   timerCallback()
+    // }, false)
+    console.log('video: ', this._video)
 
-        var md = this.getMediaDevices()
-        md.getUserMedia({
-          audio: false,
-          video: {
-            frameRate: 5,
-            facingMode: 'environment',
-            width: 1280,
-            height: 720
-          }
+    var md = this.getMediaDevices()
+    md.getUserMedia({
+      audio: false,
+      video: {
+        frameRate: 5,
+        facingMode: 'environment',
+        width: 1280,
+        height: 720
+      }
+    })
+      .then((stream) => {
+        // this.src = window.URL.createObjectURL(stream)
+        this.src = stream
+        this._video.srcObject = stream
+        this._stream = stream
+        this._hasUserMedia = true
+        this._video.addEventListener('loadeddata', () => {
+          console.log('canplay', this._video)
+          this.width = this._video.videoWidth
+          this.height = this._video.videoHeight
+          this.timerCallback()
         })
-          .then((stream) => {
-            // this.src = window.URL.createObjectURL(stream)
-            this.src = stream
-            this._video.srcObject = stream
-            this._stream = stream
-            this._hasUserMedia = true
-          }, (err) => {
-            console.log(err)
-          })
-        // .then(() => this.computeFrame())
-        // .then((stream) => {
-        //   // console.log(stream)
-        //   this.optimizedPhoto = this._stream.captureStream(25)
-        // })
+      }, (err) => {
+        console.log(err)
       })
-    }
   },
   beforeDestroy () {
     this._video.pause()
     this.src = null
-    // this._stream.getTracks()[0].stop()
+    this._stream.getTracks()[0].stop()
   },
   destroyed () {
     console.log('Destroyed')
   }
 }
 </script>
+
+<style>
+canvas {
+  max-width: 100%;
+}
+</style>
