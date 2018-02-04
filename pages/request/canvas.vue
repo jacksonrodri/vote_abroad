@@ -34,7 +34,7 @@
     </my-canvas>
     <!-- </no-ssr> -->
     <b-modal :active.sync="isSignatureModalActive" has-modal-card>
-      <signature @sigcap="addSig" />
+      <sign @sigcap="addSig" />
     </b-modal>
   </div>
 </template>
@@ -42,14 +42,14 @@
 <script>
 import MyCanvas from '~/components/MyCanvas.vue'
 import MyBox from '~/components/MyBox.vue'
-import Signature from '~/components/signature.vue'
+import Sign from '~/components/sign.vue'
 import { mapState } from 'vuex'
 
 export default {
   components: {
     MyCanvas,
     MyBox,
-    Signature
+    Sign
   },
   data () {
     return {

@@ -1,5 +1,5 @@
 <template>
-  <div class="container is-widescreen">
+  <div class="section is-widescreen">
     <section class="columns is-centered">
       <div :class="columnClass">
         <!-- <b-tabs type="is-boxed" v-model="currentRequest" @change="addRequest($event)">
