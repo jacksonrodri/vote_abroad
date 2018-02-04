@@ -164,7 +164,7 @@
       </b-field>
       <b-field v-show="voterClass.militaryOrCivilian !== 'military'">
         <b-radio-button v-model="voterClass.overseasStatus" native-value="neverResided" type="is-primary" size="is-medium" :disabled="voterClass.militaryOrCivilian !== 'civilian'">
-          <span>I have never lived in the United States</span>
+          <span>I have never lived in the US</span>
         </b-radio-button>
       </b-field>
 
@@ -335,7 +335,7 @@ import countries from '~/assets/countryaddresses'
 import AddressInput from '~/components/AddressInput'
 import UsAddressInput from '~/components/UsAddressInput'
 // import Jurisdiction from '~/components/Jurisdiction'
-import { DateTime } from 'luxon'
+// import { DateTime } from 'luxon'
 
 export default {
   transition: 'test',
@@ -418,8 +418,7 @@ export default {
         // .plus({minutes: DateTime.local().offset})
         console.log(new Date(newVal))
         // console.log(DateTime.fromJSDate(new Date(newVal), {zone: 'UTC'}).toLocal())
-        let dt = DateTime.local()
-        console.log(dt.offset)
+        console.log()
         this.localDob = new Date(newVal)
       }
     }

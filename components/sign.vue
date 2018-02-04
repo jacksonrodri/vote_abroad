@@ -177,7 +177,8 @@ export default {
         frameRate: 5,
         facingMode: 'environment',
         width: 1280,
-        height: 720
+        height: 720,
+        aspectRatio: 1.7777777778
       }
     })
       .then((stream) => {
