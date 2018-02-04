@@ -2,11 +2,12 @@
   <div class="container is-widescreen">
     <section class="columns is-centered">
       <div :class="columnClass">
-        <b-tabs type="is-boxed" v-model="currentRequest" @change="addRequest($event)">
+        <!-- <b-tabs type="is-boxed" v-model="currentRequest" @change="addRequest($event)">
           <b-tab-item v-for="(request) in tabs" :key="request.id" :label="request.firstName || 'new request'">
           </b-tab-item>
           <nuxt-child></nuxt-child>
-        </b-tabs>
+        </b-tabs> -->
+        <nuxt-child></nuxt-child>
         <!-- <button @click="removeRequest" class="button is-text is-small">Delete this Request</button> -->
       </div>
     </section>

@@ -1,5 +1,5 @@
 <template>
-<section class="section">
+<section class="container">
     <h1 class="has-text-centered title is-3">Step {{ stage.order }} of 3</h1>
     <h3 class="has-text-centered subtitle is-4">{{ stage.name }}</h3>
   <section v-if="stage.slug === 'your-information'">
