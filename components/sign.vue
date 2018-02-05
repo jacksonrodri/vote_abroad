@@ -21,17 +21,17 @@
             ref="video"
             style="width: 1px; height: 1px; margin -1px; filter: grayscale(100%) brightness(200%) contrast(100%)"></video>
           <canvas ref="sigCanvas"
-            v-bind:width="width / 2"
-            v-bind:height="height / 2"
-            v-show="!isCapture"></canvas>
+            v-bind:width="width / 3"
+            v-bind:height="height / 3"
+            v-show="false"></canvas>
           <canvas ref="edited"
-            v-show="isCapture"
-            v-bind:width="width / 2"
-            v-bind:height="height / 2"
-            style="background-image:url('fpca_sign.png')"></canvas>
+            v-bind:width="width / 3"
+            v-bind:height="height / 3"
+            v-on:click="takePhoto"
+            style="background-image:url('fpca_sign.png'); background-size: cover;"></canvas>
         </div>
       </div>
-      <b-collapse v-show="!isCapture" class="card is-shadowless" :open.sync="isEditing">
+      <b-collapse class="card is-shadowless" :open.sync="isEditing">
         <div class="card-header" slot="trigger">
           <p class="card-header-title">Adjust photo</p>
           <a class="card-header-icon">
@@ -41,11 +41,11 @@
         <div class="card-content">
           <div class="content">
             <h2 class="subtitle is-6">Brightness (increase until background is white)</h2>
-            <input id="brightnessSlider" class="slider has-output is-fullwidth" min="0" max="100" v-model="brightness" step="1" type="range" @change="updatePhoto($event)">
-            <output for="brightnessSlider">{{ brightness }}</output>
+            <input id="brightnessSlider" class="slider has-output is-fullwidth" min="0" max="300" v-model="brightness" step="1" @input="computeFrame" type="range">
+            <!-- <output for="brightnessSlider">{{ brightness }}</output> -->
             <h2 class="subtitle is-6">Contrast (decrease until signature is clearly visible)</h2>
-            <input id="contrastSlider" class="slider has-output is-fullwidth" min="0" max="100" v-model="contrast" step="1" type="range" @change="updatePhoto($event)">
-            <output for="contrastSlider">{{ contrast }}</output>
+            <input id="contrastSlider" class="slider has-output is-fullwidth" min="0" max="300" v-model="contrast" step="1" @input="computeFrame" type="range">
+            <!-- <output for="contrastSlider">{{ contrast }}</output> -->
           </div>
         </div>
       </b-collapse>
@@ -74,14 +74,14 @@ export default {
       src: '',
       width: 1280,
       height: 720,
-      autoplay: true,
+      autoplay: false,
       playsinline: true,
       controls: false,
       photo: '',
       optimizedPhoto: '',
       screenshotFormat: 'image/png',
-      brightness: '20',
-      contrast: '70',
+      brightness: 100,
+      contrast: 100,
       _refs: null,
       _video: null,
       _stream: null,
@@ -90,17 +90,33 @@ export default {
       ctx1: null,
       isCapture: true,
       isEditing: false,
-      details: 'nothing yet'
+      details: 'nothing yet',
+      paused: true
+    }
+  },
+  computed: {
+    cont () { return Math.exp(parseInt(this.contrast) / 100) },
+    br () { return parseInt(this.brightness) }
+  },
+  watch: {
+    paused (newVal, oldVal) {
+      if (newVal === false) {
+        this.timerCallback()
+      }
     }
   },
   methods: {
     reset () {
       this.isCapture = true
+      this.$refs.video.play()
+      this.paused = false
     },
     takePhoto () {
       if (!this._hasUserMedia) {
         return
       }
+      this.$refs.video.pause()
+      this.paused = true
       this.isCapture = false
     },
     getMediaDevices () {
@@ -110,12 +126,13 @@ export default {
       }
     },
     timerCallback () {
-      if (!this._video.paused || !this._video.ended) {
-        setTimeout(() => {
+      if (!this.$refs.video.paused) {
+        window.requestAnimationFrame(() => {
+          if (this.$refs.video.paused) { return }
           this.computeFrame()
           this.timerCallback()
-        }, 200)
-      }
+        })
+      } else { console.log('video ended') }
     },
     computeFrame () {
       let videoWidth = this.width
@@ -126,28 +143,24 @@ export default {
       let sourceH = videoHeight
       let destX = 0
       let destY = 0
-      let destW = videoWidth / 2
-      let destH = videoHeight / 2
-      this.ctx1.drawImage(this._video, sourceX, sourceY, sourceW, sourceH, destX, destY, destW, destH)
-      let frame = this.ctx1.getImageData(0, 0, this.width, this.height)
+      let destW = videoWidth / 3
+      let destH = videoHeight / 3
+      if (this.isCapture) { this.ctx1.drawImage(this.$refs.video, sourceX, sourceY, sourceW, sourceH, destX, destY, destW, destH) }
+      let frame = this.ctx1.getImageData(0, 0, destW, destH)
       let l = frame.data.length / 4
 
       for (let i = 0; i < l; i++) {
-        let r = frame.data[i * 4 + 0]
-        let g = frame.data[i * 4 + 1]
-        let b = frame.data[i * 4 + 2]
-        let avg = (r + g + b) / 3
-        // 'a' a > 1 means more contrast and 0< a <1 means less contrast
-        let a = 3
-        let br = 100
-        avg = a * (avg - 128) + 128 + br
+        // let r = frame.data[i * 4 + 0]
+        // let g = frame.data[i * 4 + 1]
+        // let b = frame.data[i * 4 + 2]
+        let avg = (frame.data[i * 4 + 0] + frame.data[i * 4 + 1] + frame.data[i * 4 + 2]) / 3
+        avg = Math.floor(this.cont * (avg - 128) + 128 + this.br)
         frame.data[i * 4 + 0] = avg
         frame.data[i * 4 + 1] = avg
         frame.data[i * 4 + 2] = avg
         frame.data[i * 4 + 3] = 255 - avg
       }
       this.ctx2.putImageData(frame, 0, 0)
-      // this.timerCallback()
     }
   },
   mounted () {
@@ -155,26 +168,12 @@ export default {
     this._video = this._refs.video
     this.ctx1 = this._refs.sigCanvas.getContext('2d')
     this.ctx2 = this._refs.edited.getContext('2d')
-    // let timerCallback = () => {
-    //   if (!this._video.paused || !this._video.ended) {
-    //     this.computeFrame()
-    //     setTimeout(function () {
-    //       timerCallback()
-    //     }, 200)
-    //   }
-    // }
-    // this._video.addEventListener('canplay', function () {
-    //   // self.width = self.video.videoWidth / 2
-    //   // self.height = self.video.videoHeight / 2
-    //   timerCallback()
-    // }, false)
     console.log('video: ', this._video)
 
     var md = this.getMediaDevices()
     md.getUserMedia({
       audio: false,
       video: {
-        frameRate: 5,
         facingMode: 'environment',
         width: 1280,
         height: 720,
@@ -182,23 +181,25 @@ export default {
       }
     })
       .then((stream) => {
-        // this.src = window.URL.createObjectURL(stream)
         this.src = stream
         this._video.srcObject = stream
         this._stream = stream
         this._hasUserMedia = true
-        this._video.addEventListener('loadeddata', () => {
+        console.log(this.paused)
+        this._video.addEventListener('canplay', () => {
           console.log('canplay', this._video)
           this.width = this._video.videoWidth
           this.height = this._video.videoHeight
-          this.timerCallback()
+          // this.timerCallback()
+          this.paused = false
+          this._video.play()
         })
       }, (err) => {
         console.log(err)
       })
   },
   beforeDestroy () {
-    this._video.pause()
+    this.$refs.video.pause()
     this.src = null
     this._stream.getTracks()[0].stop()
   },

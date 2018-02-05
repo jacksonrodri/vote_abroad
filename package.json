@@ -17,6 +17,7 @@
     "@fortawesome/fontawesome-free-solid": "^5.0.4",
     "@fortawesome/vue-fontawesome": "0.0.21",
     "@nuxtjs/axios": "^4.5.2",
+    "@nuxtjs/localtunnel": "^1.0.1",
     "@nuxtjs/pwa": "^2.0.5",
     "auth0-js": "^9.0.2",
     "buefy": "^0.6.3",

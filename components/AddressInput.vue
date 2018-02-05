@@ -11,8 +11,8 @@
                 <b-field>
                   <p class="control flag-container">
                     <b-icon
-                      :icon="cCountryCode.toLowerCase()"
                       pack="flag-icon"
+                      :custom-class="'flag-icon-' + cCountryCode.toLowerCase()"
                       @click.native="$refs.country.focus()">
                     </b-icon>
                   </p>
@@ -22,6 +22,7 @@
                       ref="country"
                       :disabled="usOnly"
                       keep-first
+                      open-on-focus
                       expanded
                       :data="filteredCountries"
                       field="label"
@@ -84,6 +85,7 @@
                   <b-autocomplete
                     v-model="region"
                     :placeholder="field.administrativearea.label"
+                    open-on-focus
                     :data="filteredRegions"
                     :keep-first="true"
                     field="name"

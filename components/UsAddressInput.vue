@@ -23,6 +23,7 @@
                       :disabled="usOnly"
                       keep-first
                       expanded
+                      open-on-focus
                       :data="filteredCountries"
                       field="label"
                       @input="updateAddress()"
@@ -86,6 +87,7 @@
                     ref="region"
                     :placeholder="field.administrativearea.label"
                     :data="filteredRegions"
+                    open-on-focus
                     :keep-first="true"
                     field="abbr"
                     @input="updateAddress()"
@@ -109,15 +111,17 @@
         </div>
         <div v-if="(usOnly !== undefined && usOnly !== false) || usOnly === true" class="field is-fullwidth">
           <!-- votAdr.county -->
-          <b-field label="Jurisdiction">
+          <b-field :label="`Jurisdiction (${regionCode && jurisdictionTypes[regionCode] ? jurisdictionTypes[regionCode].join(', ') : 'County, City or Town'})`">
             <b-autocomplete
                 v-model="jurisdiction"
                 ref="jurisdiction"
-                placeholder="type to find your jurisdiction"
+                :placeholder="`type to find your ${regionCode && jurisdictionTypes[regionCode] ? jurisdictionTypes[regionCode].join('/') : 'County/City/Town'} Local Election Official`"
                 :keep-first="true"
                 :data="filteredLeos"
+                open-on-focus
                 field="jurisdiction"
                 @select="option => selected = option">
+                <template slot-scope="props">{{ props.option.jurisdiction }} ({{ props.option.jurisdictionType }}) {{ props.option.state }}</template>
             </b-autocomplete>
           </b-field>
 
@@ -163,6 +167,7 @@ export default {
         const tempstates = Object.keys(templeos)
         let leomap = tempstates.map(state => Object.keys(templeos[state]).map(leo => Object.assign({jurisdiction: leo, state: state}, templeos[state][leo])))
         this.leos = [].concat(...leomap)
+        this.jurisdictionTypes = Object.entries(templeos).map(([state, value]) => ({ state: state, jurisdictionTypes: [...new Set(Object.entries(value).map(([state, value]) => value.jurisdictionType))] })).reduce(function (acc, cur) { acc[cur.state] = cur.jurisdictionTypes; return acc }, {})
       })
   },
   data: function () {
@@ -189,7 +194,8 @@ export default {
       county: '',
       jurisdictionChoices: [],
       jurisdiction: '',
-      leos: []
+      leos: [],
+      jurisdictionTypes: {}
     }
   },
   computed: {
@@ -255,8 +261,13 @@ export default {
     },
     filteredLeos () {
       return this.leos
-        .filter(x => x.state === this.regionCode)
-        .filter(x => x.jurisdiction.toString().toLowerCase().indexOf(this.county.toLowerCase()) >= 0 || this.county.toString().toLowerCase().indexOf(x.jurisdiction.toLowerCase()) >= 0)
+        .filter(x => this.regionCode ? x.state === this.regionCode : true)
+        .filter(x => {
+          return x.jurisdiction.toString().toLowerCase().indexOf(this.county.toLowerCase()) >= 0 ||
+            this.county.toString().toLowerCase().indexOf(x.jurisdiction.toLowerCase()) >= 0 ||
+            this.city.toString().toLowerCase().indexOf(x.jurisdiction.toLowerCase()) >= 0
+        })
+        .filter(x => x.jurisdiction.toString().toLowerCase().indexOf(this.jurisdiction.toLowerCase()) >= 0)
     }
   },
   watch: {
