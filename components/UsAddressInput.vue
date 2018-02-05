@@ -156,13 +156,16 @@ export default {
       this.countryName = 'United States'
       this.$refs.premise.focus()
     }
-    console.log('axios', this.$axios.defaults.baseURL)
+    // console.log('axios', this.$axios.defaults.baseURL)
+    // let lolo = await (this.$store.app.$content('/leos').getAll())
+    // console.log('>> ', lolo)
     // this.leos = await axios.get('/_nuxt/content/leos/_all.json')[0].body
     // await axios.get('/_nuxt/content/leos/_all.json')
     // await axios.get('/content-api/leos/')
     // await axios.get(this.$axios.defaults.baseURL + '/leos/')
-    await axios.get(this.$axios.defaults.baseURL + '/leos/_all.json')
-      .then(({data}) => {
+    // await axios.get(this.$axios.defaults.baseURL + '/leos/_all.json')
+    await this.$store.app.$content('/leos').getAll()
+      .then((data) => {
         const templeos = data[0].body
         const tempstates = Object.keys(templeos)
         let leomap = tempstates.map(state => Object.keys(templeos[state]).map(leo => Object.assign({jurisdiction: leo, state: state}, templeos[state][leo])))
@@ -280,7 +283,7 @@ export default {
       }
     },
     filteredLeos: function (newVal, oldVal) {
-      console.log(newVal.length)
+      // console.log(newVal.length)
       if (newVal.length === 1) {
         this.$refs.jurisdiction.setSelected(newVal[0])
         this.leo = newVal[0]
