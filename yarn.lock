@@ -4575,6 +4575,21 @@ nuxt@^1.3.0:
     path-to-regexp "^2.0.0"
     uppercamelcase "^3.0.0"
 
+"nuxtent@https://github.com/apmontgomery/nuxtent-module.git#yo":
+  version "1.2.2"
+  resolved "https://github.com/apmontgomery/nuxtent-module.git#a269519a45f5e52f9022feafb9b249cf3cd5b5a1"
+  dependencies:
+    chalk "^2.1.0"
+    date-fns "^1.28.5"
+    front-matter "^2.2.0"
+    js-yaml "^3.10.0"
+    loader-utils "^1.1.0"
+    markdown-it "^8.4.0"
+    markdown-it-anchor "^4.0.0"
+    param-case "^2.1.1"
+    path-to-regexp "^2.0.0"
+    uppercamelcase "^3.0.0"
+
 oauth-sign@~0.8.1, oauth-sign@~0.8.2:
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/oauth-sign/-/oauth-sign-0.8.2.tgz#46a6ab7f0aead8deae9ec0565780b7d4efeb9d43"
