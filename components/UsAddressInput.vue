@@ -154,7 +154,6 @@ export default {
     if (this.usOnly !== undefined) {
       this.countryCode = 'US'
       this.countryName = 'United States'
-      this.$refs.premise.focus()
     }
     // console.log('axios', this.$axios.defaults.baseURL)
     // let lolo = await (this.$store.app.$content('/leos').getAll())
@@ -172,6 +171,19 @@ export default {
         this.leos = [].concat(...leomap)
         this.jurisdictionTypes = Object.entries(templeos).map(([state, value]) => ({ state: state, jurisdictionTypes: [...new Set(Object.entries(value).map(([state, value]) => value.jurisdictionType))] })).reduce(function (acc, cur) { acc[cur.state] = cur.jurisdictionTypes; return acc }, {})
       })
+    if (this.value) {
+      this.postOfficeBox = this.value.poBox || ''
+      this.extendedAddress = this.value.premise || ''
+      this.streetAddress = this.value.thoroughfare || ''
+      this.locality = this.value.locality || ''
+      this.region = this.value.administrativearea || ''
+      this.regionCode = this.value.regionCode || ''
+      this.postalCode = this.value.postalcode || ''
+      this.county = this.value.county || ''
+      this.leo = this.value.leo || ''
+      this.countryName = this.value.country || ''
+      this.countryCode = this.value.countryiso || ''
+    }
   },
   data: function () {
     return {
@@ -266,9 +278,16 @@ export default {
       return this.leos
         .filter(x => this.regionCode ? x.state === this.regionCode : true)
         .filter(x => {
-          return x.jurisdiction.toString().toLowerCase().indexOf(this.county.toLowerCase()) >= 0 ||
-            this.county.toString().toLowerCase().indexOf(x.jurisdiction.toLowerCase()) >= 0 ||
-            this.city.toString().toLowerCase().indexOf(x.jurisdiction.toLowerCase()) >= 0
+          if (x.jurisdictionType.toLowerCase() === 'county' || x.jurisdictionType.toLowerCase() === 'island') {
+            return x.jurisdiction.toString().toLowerCase().indexOf(this.county.toLowerCase()) >= 0 ||
+              this.county.toString().toLowerCase().indexOf(x.jurisdiction.toLowerCase()) >= 0
+          } else if (x.jurisdictionType.toLowerCase() === 'all') {
+            return true
+          } else {
+            return this.locality.toString().toLowerCase().indexOf(x.jurisdiction.toLowerCase()) >= 0 ||
+              x.jurisdiction.toString().toLowerCase().indexOf(this.locality.toLowerCase()) >= 0 ||
+              (x.jurisdiction.toString().toLowerCase() === 'ny manhattan' && this.locality.toLowerCase().indexOf('new york') >= 0)
+          }
         })
         .filter(x => x.jurisdiction.toString().toLowerCase().indexOf(this.jurisdiction.toLowerCase()) >= 0)
     }
@@ -284,11 +303,24 @@ export default {
     },
     filteredLeos: function (newVal, oldVal) {
       // console.log(newVal.length)
-      if (newVal.length === 1) {
+      if (newVal && newVal.length === 1) {
         this.$refs.jurisdiction.setSelected(newVal[0])
         this.leo = newVal[0]
       }
     }
+    // value: function (newVal, oldVal) {
+    //   this.postOfficeBox = newVal.poBox || ''
+    //   this.extendedAddress = newVal.premise || ''
+    //   this.streetAddress = newVal.thoroughfare || ''
+    //   this.locality = newVal.locality || ''
+    //   this.region = newVal.administrativearea || ''
+    //   this.regionCode = newVal.regionCode || ''
+    //   this.postalCode = newVal.postalcode || ''
+    //   this.county = newVal.county || ''
+    //   this.leo = newVal.leo || ''
+    //   this.countryName = newVal.country || ''
+    //   this.cCountryCode = newVal.countryiso || ''
+    // }
     // region: function (newVal, oldVal) {
     //   const states = this.countryList[234].fields[2].locality[1].administrativearea.options
     //   states.forEach(x => {

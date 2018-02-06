@@ -28,7 +28,7 @@
             v-bind:width="width / 3"
             v-bind:height="height / 3"
             v-on:click="takePhoto"
-            style="background-image:url('fpca_sign.png'); background-size: cover;"></canvas>
+            style="background-image:url('/fpca_sign.png'); background-size: cover;"></canvas>
         </div>
       </div>
       <b-collapse class="card is-shadowless" :open.sync="isEditing">
@@ -56,7 +56,7 @@
         <a v-if="isCapture" class="is-primary" v-on:click="takePhoto">Take Photo</a>
       </p>
       <p  v-if="!isCapture" class="card-footer-item">
-        <a class="is-primary" v-on:click="reset">Save</a>
+        <a class="is-primary" v-on:click="save">Save</a>
       </p>
     </footer>
   </div>
@@ -106,6 +106,11 @@ export default {
     }
   },
   methods: {
+    save () {
+      this.optimizedPhoto = this.$refs.edited.toDataURL()
+      this.$emit('sigcap', this.optimizedPhoto)
+      this.$parent.close()
+    },
     reset () {
       this.isCapture = true
       this.$refs.video.play()
@@ -137,10 +142,10 @@ export default {
     computeFrame () {
       let videoWidth = this.width
       let videoHeight = this.height
-      let sourceX = 0
-      let sourceY = 0
-      let sourceW = videoWidth
-      let sourceH = videoHeight
+      let sourceX = 240
+      let sourceY = 480
+      let sourceW = videoWidth / 3
+      let sourceH = videoHeight / 3
       let destX = 0
       let destY = 0
       let destW = videoWidth / 3
@@ -158,7 +163,7 @@ export default {
         frame.data[i * 4 + 0] = avg
         frame.data[i * 4 + 1] = avg
         frame.data[i * 4 + 2] = avg
-        frame.data[i * 4 + 3] = 255 - avg
+        frame.data[i * 4 + 3] = 256 - avg
       }
       this.ctx2.putImageData(frame, 0, 0)
     }

@@ -4,7 +4,7 @@
       <label class="label">{{ label }}</label>
     </div>
     <slot name="instructions"></slot>
-    <div v-if="usOnly === undefined || usOnly === false" class="field is-fullwidth">
+    <div v-if="usOnly === undefined || usOnly === false" class="field is-fullwidth" v-show="!usesAlternateFormat">
           <div class="field-body">
             <b-field class="grouped" >
               <b-field expanded>
@@ -38,7 +38,7 @@
             </b-field>
           </div>
         </div>
-        <div class="field">
+        <div class="field" v-show="!usesAlternateFormat">
           <div class="field-label is-normal">
             <label class="label"></label>
           </div>
@@ -62,7 +62,7 @@
             </div>
           </div>
         </div>
-        <div class="field">
+        <div class="field" v-show="!usesAlternateFormat">
           <div class="field-label is-normal">
             <label class="label"></label>
           </div>
@@ -74,7 +74,7 @@
             </div>
           </div>
         </div>
-        <div class="field is-horizontal">
+        <div class="field is-horizontal" v-show="!usesAlternateFormat">
           <div class="field-body">
             <div class="field" v-for="field in localityFields" :key="Object.keys(field)[0]">
               <p v-if="Object.keys(field)[0] === 'localityname'" class="control is-expanded">
@@ -90,8 +90,7 @@
                     :keep-first="true"
                     field="name"
                     @input="updateAddress()"
-                    @select="option => selected = option"
-                    >
+                    @select="option => selected = option">
                   </b-autocomplete>
                 </div>
                 <input v-if="field.administrativearea && !field.administrativearea.options" v-model="region" @input="updateAddress()" class="input" type="text" :placeholder="field.administrativearea.label">
@@ -107,11 +106,38 @@
         </div>
         <!-- alternateFormat -->
       <b-field
-          v-show="usesAlternateFormat"
-          :label="$t('request.addressAbroad')">
+          v-show="usesAlternateFormat">
         <transition name="fade">
           {{ $t('request.addressAbroadInstructions')}}
-          <b-input type="textarea" rows="5" v-model="alternateFormat" @input="updateAddress()"></b-input>
+          <b-input type="text" v-model="alt1" @input="updateAddress()"></b-input>
+        </transition>
+      </b-field>
+      <b-field
+          v-show="usesAlternateFormat">
+        <transition name="fade">
+          {{ $t('request.addressAbroadInstructions')}}
+          <b-input type="text" v-model="alt2" @input="updateAddress()"></b-input>
+        </transition>
+      </b-field>
+      <b-field
+          v-show="usesAlternateFormat">
+        <transition name="fade">
+          {{ $t('request.addressAbroadInstructions')}}
+          <b-input type="text" v-model="alt3" @input="updateAddress()"></b-input>
+        </transition>
+      </b-field>
+      <b-field
+          v-show="usesAlternateFormat">
+        <transition name="fade">
+          {{ $t('request.addressAbroadInstructions')}}
+          <b-input type="text" v-model="alt4" @input="updateAddress()"></b-input>
+        </transition>
+      </b-field>
+      <b-field
+          v-show="usesAlternateFormat">
+        <transition name="fade">
+          {{ $t('request.addressAbroadInstructions')}}
+          <b-input type="text" v-model="alt5" @input="updateAddress()"></b-input>
         </transition>
       </b-field>
 
@@ -146,6 +172,22 @@ export default {
       this.countryName = 'United States'
       this.$refs.premise.focus()
     }
+    if (this.value) {
+      this.postOfficeBox = this.value.poBox || ''
+      this.extendedAddress = this.value.premise || ''
+      this.streetAddress = this.value.thoroughfare || ''
+      this.locality = this.value.locality || ''
+      this.region = this.value.administrativearea || ''
+      this.postalCode = this.value.postalcode || ''
+      this.countryName = this.value.country || ''
+      this.countryCode = this.value.countryiso || ''
+      this.usesAlternateFormat = this.value.usesAlternateFormat || false
+      this.alt1 = this.value.alt1 || ''
+      this.alt2 = this.value.alt2 || ''
+      this.alt3 = this.value.alt3 || ''
+      this.alt4 = this.value.alt4 || ''
+      this.alt5 = this.value.alt5 || ''
+    }
   },
   data: function () {
     return {
@@ -167,7 +209,11 @@ export default {
       administrativearea: '',
       postalcode: '',
       usesAlternateFormat: false,
-      alternateFormat: ''
+      alt1: '',
+      alt2: '',
+      alt3: '',
+      alt4: '',
+      alt5: ''
     }
   },
   computed: {
@@ -230,9 +276,45 @@ export default {
             return x.abbr.toString().toLowerCase().indexOf(this.region.toString().toLowerCase()) > -1 || x.name.toString().toLowerCase().indexOf(this.region.toString().toLowerCase()) > -1
           }
         })
+    },
+    formattedLocality () {
+      let formatted = []
+      if (this.localityFields) {
+        this.localityFields.forEach(x => {
+          if (x.localityname && this.locality) {
+            formatted.push(this.locality + ',')
+          } else if (x.administrativearea && this.region) {
+            formatted.push(this.region)
+          } else if (x.postalcode && this.postalCode) {
+            formatted.push(this.postalcode)
+          }
+        })
+      }
+      return formatted.join(' ')
+    }
+  },
+  watch: {
+    formattedLocality: function () {
+      this.updateAlt()
+    },
+    extendedAddress: function () {
+      this.updateAlt()
+    },
+    streetAddress: function () {
+      this.updateAlt()
+    },
+    countryCode: function () {
+      this.updateAlt()
     }
   },
   methods: {
+    updateAlt () {
+      this.alt1 = this.extendedAddress || this.streetAddress
+      this.alt2 = this.extendedAddress ? this.streetAddress : this.formattedLocality
+      this.alt3 = this.extendedAddress ? this.formattedLocality : this.countryCode
+      this.alt4 = this.extendedAddress ? this.countryName || this.countryCode : ''
+      this.alt5 = ''
+    },
     fillData (option) {
       console.log('selected:', this.selected)
       console.log('option', option)
@@ -302,7 +384,12 @@ export default {
         postalcode: this.postalCode,
         country: this.countryName,
         countryiso: this.cCountryCode !== 'un' && this.countryCode ? this.cCountryCode : '',
-        alternateFormat: this.alternateFormat
+        usesAlternateFormat: this.usesAlternateFormat,
+        alt1: this.alt1,
+        alt2: this.alt2,
+        alt3: this.alt3,
+        alt4: this.alt4,
+        alt5: this.alt5
       })
     }
   }

@@ -8,6 +8,7 @@ const vuexLocalPlugin = store => {
   // called when the store is initialized
   if (process.browser) {
     window.onNuxtReady(nuxt => {
+      console.log(nuxt)
       vuexLocal = new VuexPersistence({
         strictMode: true,
         storage: window.localStorage
@@ -37,13 +38,15 @@ export const state = () => ({
   isMenuOpen: false
 })
 
+export const strict = false
+
 export const mutations = {
   RESTORE_MUTATION (state, payload) {
+    console.log('vuexLocal', vuexLocal)
     vuexLocal.RESTORE_MUTATION(state, payload)
   },
   addUpcomingElections (state, data) {
     state.upcomingElections = data
-    // state.upcomingElections.push(data)
   },
   closeMenu (state) {
     state.isMenuOpen = false
@@ -54,8 +57,8 @@ export const mutations = {
 }
 
 export const actions = {
-  async nuxtServerInit ({ commit, app }) {
-    let sortedElections = (await this.app.$content('/elections').get('elections')).body
+  async nuxtServerInit ({ commit }, { app }) {
+    let sortedElections = (await app.$content('/elections').get('elections')).body
       .filter(x => new Date(x.date).getTime() > Date.now())
       .sort(function (a, b) {
         var dateA = new Date(a.date).getTime()

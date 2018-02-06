@@ -78,158 +78,42 @@
       <address-input
         :label="$t('request.addressAbroad')"
         key="overseas"
-        v-show="!abrAdr.usesAlternateFormat"
-        v-model="abrAdr2">
+        v-model="abrAdr">
         <div slot="instructions">
           <p>Please add your international Address</p>
         </div>
 
       </address-input>
 
-      <!-- alternateFormat -->
-      <!-- <b-field
-          v-show="abrAdr.usesAlternateFormat"
-          :type="($v.abrAdr.alternateFormat.$error ? 'is-danger': '')"
-          :message="$v.abrAdr.alternateFormat.$error ? Object.keys($v.abrAdr.alternateFormat.$params).map(x => x) : '' "
-          :label="$t('request.addressAbroad')">
-        <transition name="fade">
-          {{ $t('request.addressAbroadInstructions')}}
-          <b-input type="textarea" rows="5" v-model="abrAdr.alternateFormat" @input="$v.abrAdr.alternateFormat.$touch()"></b-input>
-        </transition>
-      </b-field>
-
-      <b-field :label="abrAdr.usesAlternateFormat ? 'Use the standard international format for my address' : 'I need to use a different format for my address.'">
-        <b-field>
-          <b-radio-button v-model="abrAdr.usesAlternateFormat"
-            :native-value="!abrAdr.usesAlternateFormat"
-            :type="abrAdr.usesAlternateFormat ? 'is-success' : 'is-danger'">
-            <b-icon :icon="!abrAdr.usesAlternateFormat ? 'edit' : 'align-justify'"></b-icon>
-            <span>Change format</span>
-          </b-radio-button>
-        </b-field>
-      </b-field> -->
-
-      <!-- <b-field class="field">
-        <b-switch v-model="abrAdr.usesAlternateFormat" >Use an Alternate format</b-switch>
-      </b-field> -->
       <div class="control buttons is-right">
         <nuxt-link :to="localePath({ name: 'index' })" class="button is-light is-medium" exact >Cancel</nuxt-link>
         <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'voting-information'} })" class="button is-success is-medium" exact ><b-icon pack="fa" icon="check"></b-icon> <span> Next </span></nuxt-link>
-        <!-- <button class="button is-info is-large">Cancel</button>
-        <button class="button is-danger is-medium"><span> Next </span></button> -->
       </div>
 
 <!-- voting information -->
   </section>
   <section v-if="stage.slug === 'voting-information'">
-      <h1 class="subtitle is-5">Are you on active duty in the military (including all uniformed services or eligible family members)?</h1>
 
-      <b-field>
-        <b-radio-button v-model="voterClass.militaryOrCivilian" native-value="military" type="is-primary" size="is-medium">
-          <span>Yes</span>
-        </b-radio-button>
-        <b-radio-button v-model="voterClass.militaryOrCivilian" native-value="civilian" type="is-primary" size="is-medium">
-          <span>No.</span>
-        </b-radio-button>
-      </b-field>
+    <voter-class v-model="voterClass"></voter-class>
 
-      <h1 v-show="voterClass.militaryOrCivilian !== 'military'" class="subtitle is-5">and I: </h1>
-      <h1 v-show="voterClass.militaryOrCivilian === 'military'" class="subtitle is-5">and I am abroad: </h1>
+    <us-address-input
+      label="Your US voting Address"
+      usOnly
+      v-model="votAdr">
+      <div slot="instructions">
+        <p>Please add your US Voting Address</p>
+      </div>
 
-      <b-field v-show="voterClass.militaryOrCivilian === 'military'">
-        <b-radio-button v-model="voterClass.militaryType" native-value="military" type="is-primary" size="is-medium" :disabled="voterClass.militaryOrCivilian !== 'military'">
-          <span>on Active Duty</span>
-        </b-radio-button>
-      </b-field>
-      <b-field v-show="voterClass.militaryOrCivilian === 'military'">
-        <b-radio-button v-model="voterClass.militaryType" native-value="milSpouse" type="is-primary" size="is-medium" :disabled="voterClass.militaryOrCivilian !== 'military'">
-          <span>an eligible spouse or dependent</span>
-        </b-radio-button>
-      </b-field>
-      <b-field v-show="voterClass.militaryOrCivilian === 'military'">
-        <b-radio-button v-model="voterClass.militaryType" native-value="natGuard" type="is-primary" size="is-medium" :disabled="voterClass.militaryOrCivilian !== 'military'">
-          <span>an activated National Guard member</span>
-        </b-radio-button>
-      </b-field>
+    </us-address-input>
 
-      <b-field v-show="voterClass.militaryOrCivilian !== 'military'">
-        <b-radio-button v-model="voterClass.overseasStatus" native-value="intendToReturn" type="is-primary" size="is-medium" :disabled="voterClass.militaryOrCivilian !== 'civilian'">
-          <span>I intend to return</span>
-        </b-radio-button>
-      </b-field>
-      <b-field v-show="voterClass.militaryOrCivilian !== 'military'">
-        <b-radio-button v-model="voterClass.overseasStatus" native-value="uncertainReturn" type="is-primary" size="is-medium" :disabled="voterClass.militaryOrCivilian !== 'civilian'">
-          <span>my return is uncertain</span>
-        </b-radio-button>
-      </b-field>
-      <b-field v-show="voterClass.militaryOrCivilian !== 'military'">
-        <b-radio-button v-model="voterClass.overseasStatus" native-value="neverResided" type="is-primary" size="is-medium" :disabled="voterClass.militaryOrCivilian !== 'civilian'">
-          <span>I have never lived in the US</span>
-        </b-radio-button>
-      </b-field>
-
-      <!-- votAdr.apt -->
-      <!-- <b-field :type="($v.votAdr.apt.$error ? 'is-danger': '')" :message="$v.votAdr.apt.$error ? Object.keys($v.votAdr.apt.$params).map(x => x) : '' " label="votAdr.apt">
-        <b-input v-model="votAdr.apt" @input="$v.votAdr.apt.$touch()"></b-input>
-      </b-field> -->
-
-      <!-- votAdr.street -->
-      <!-- <b-field :type="($v.votAdr.street.$error ? 'is-danger': '')" :message="$v.votAdr.street.$error ? Object.keys($v.votAdr.street.$params).map(x => x) : '' " label="votAdr.street">
-        <b-input v-model="votAdr.street" @input="$v.votAdr.street.$touch()"></b-input>
-      </b-field> -->
-
-      <!-- votAdr.city -->
-      <!-- <b-field :type="($v.votAdr.city.$error ? 'is-danger': '')" :message="$v.votAdr.city.$error ? Object.keys($v.votAdr.city.$params).map(x => x) : '' " label="votAdr.city">
-        <b-input v-model="votAdr.city" @input="$v.votAdr.city.$touch()"></b-input>
-      </b-field> -->
-
-      <!-- votAdr.state -->
-      <!-- <b-field :type="($v.votAdr.state.$error ? 'is-danger': '')" :message="$v.votAdr.state.$error ? Object.keys($v.votAdr.state.$params).map(x => x) : '' " label="votAdr.state">
-        <b-input v-model="votAdr.state" @input="$v.votAdr.state.$touch()"></b-input>
-      </b-field> -->
-
-      <!-- votAdr.zip -->
-      <!-- <b-field :type="($v.votAdr.zip.$error ? 'is-danger': '')" :message="$v.votAdr.zip.$error ? Object.keys($v.votAdr.zip.$params).map(x => x) : '' " label="votAdr.zip">
-        <b-input v-model="votAdr.zip" @input="$v.votAdr.zip.$touch()"></b-input>
-      </b-field> -->
-      <us-address-input
-        label="Your US voting Address"
-        usOnly
-        v-model="votAdr2">
-        <div slot="instructions">
-          <p>Please add your US Voting Address</p>
-        </div>
-
-      </us-address-input>
-
-      <h3 v-if="votAdr2 && votAdr2.leo && votAdr2.leo.jurisdiction && votAdr2.leo.jurisdictionType" class="subtitle is-5">Are you already registered to vote in {{ `${votAdr2.leo.jurisdiction } ${votAdr2.leo.jurisdictionType}` }}?</h3>
+      <h3 v-if="votAdr && votAdr.leo && votAdr.leo.jurisdiction && votAdr.leo.jurisdictionType" class="subtitle is-5">Are you already registered to vote in {{ `${votAdr.leo.jurisdiction } ${votAdr.leo.jurisdictionType}` }}?</h3>
       <!-- isRegistered -->
-      <b-field>
-        <b-radio-button v-model="isRegistered" native-value="registered" type="is-primary" size="is-medium">
-          <span>Yes</span>
-        </b-radio-button>
-        <b-radio-button v-model="isRegistered" native-value="notRegistered" type="is-primary" size="is-medium">
-          <span>No</span>
-        </b-radio-button>
-        <b-radio-button v-model="isRegistered" native-value="unsure" type="is-primary" size="is-medium">
-          <span>Not Sure</span>
-        </b-radio-button>
-      </b-field>
+      <is-registered v-model="isRegistered"></is-registered>
 
       <h3 class="subtitle is-5">How would you like to receieve your ballot?</h3>
 
       <!-- recBallot -->
-      <b-field v-if="votAdr2 && votAdr2.regionCode">
-        <b-radio-button v-model="recBallot" native-value="email" type="is-primary" size="is-medium">
-          <span>Email or online</span>
-        </b-radio-button>
-        <b-radio-button v-model="recBallot" native-value="mail" type="is-primary" size="is-medium">
-          <span>Mail</span>
-        </b-radio-button>
-        <b-radio-button v-model="recBallot" native-value="fax" type="is-primary" size="is-medium">
-          <span>Fax</span>
-        </b-radio-button>
-      </b-field>
+      <receive-ballot v-model="recBallot" v-if="votAdr && votAdr.regionCode"></receive-ballot>
       <div class="control buttons is-right">
         <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" class="button is-light is-medium" exact >Back</nuxt-link>
         <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'id-and-contact-information'} })" class="button is-success is-medium" exact ><b-icon pack="fa" icon="check"></b-icon> <span> Next </span></nuxt-link>
@@ -247,7 +131,7 @@
           icon="calendar"
           icon-pack="fa"
           :readonly="false">
-      </b-datepicker>
+        </b-datepicker>
       </b-field>
 
       <!-- sex -->
@@ -305,18 +189,34 @@
       </b-field>
 
       <!-- fwdAdr -->
-      <b-field :type="($v.fwdAdr.$error ? 'is-danger': '')" :message="$v.fwdAdr.$error ? Object.keys($v.fwdAdr.$params).map(x => x) : '' " label="If you receive mail at a different address enter it here.">
+      <!-- <b-field :type="($v.fwdAdr.$error ? 'is-danger': '')" :message="$v.fwdAdr.$error ? Object.keys($v.fwdAdr.$params).map(x => x) : '' " label="If you receive mail at a different address enter it here.">
         <b-input v-model="fwdAdr" @input="$v.fwdAdr.$touch()"></b-input>
-      </b-field>
+      </b-field> -->
+      <address-input
+        :label="$t('request.addressAbroad')"
+        key="forwardingAddress"
+        v-model="fwdAdr">
+        <div slot="instructions">
+          <p>If you would like your ballot sent to a different address, input it here.</p>
+        </div>
 
-      <!-- adlInfo -->
-      <b-field :type="($v.adlInfo.$error ? 'is-danger': '')" :message="$v.adlInfo.$error ? Object.keys($v.adlInfo.$params).map(x => x) : '' " label="Add any additional information here to help your election official find your records.">
-        <b-input maxlength="200" type="textarea" v-model="adlInfo" @input="$v.adlInfo.$touch()"></b-input>
+      </address-input>
+
+      <!-- addlInfo -->
+      <b-field :type="($v.addlInfo.$error ? 'is-danger': '')" :message="$v.addlInfo.$error ? Object.keys($v.addlInfo.$params).map(x => x) : '' " label="Add any additional information here to help your election official find your records.">
+        <b-input maxlength="258" type="textarea" v-model="addlInfo" @input="$v.addlInfo.$touch()"></b-input>
       </b-field>
 
       <!-- date -->
-      <b-field label="Date">
-        <b-datepicker placeholder="Type or select a date..." position="is-top-right" icon="calendar-today" :readonly="false">
+      <b-field label="Date" :message="$v.dob.$error ? Object.keys($v.dob.$params).map(x => x) : '' ">
+        <b-datepicker
+          :value="localDate"
+          @input="value =>{ localDate = value, this.updateDate(value) }"
+          placeholder="Type or select today's date"
+          icon="calendar"
+          icon-pack="fa"
+          position="is-top-right"
+          :readonly="false">
         </b-datepicker>
       </b-field>
 
@@ -329,13 +229,12 @@
 </template>
 
 <script>
-import { required, requiredIf, requiredUnless, numeric, alphaNum, email } from 'vuelidate/lib/validators'
-// minLength, maxLength,
-import countries from '~/assets/countryaddresses'
+import { required, requiredIf, numeric, email } from 'vuelidate/lib/validators'
 import AddressInput from '~/components/AddressInput'
 import UsAddressInput from '~/components/UsAddressInput'
-// import Jurisdiction from '~/components/Jurisdiction'
-// import { DateTime } from 'luxon'
+import VoterClass from '~/components/VoterClass'
+import IsRegistered from '~/components/IsRegistered'
+import ReceiveBallot from '~/components/ReceiveBallot'
 
 export default {
   transition: 'test',
@@ -350,107 +249,29 @@ export default {
       updatedAt: '',
       createdBy: '',
       emailOrPhone: '',
-      abrAdr: {
-        extendedAddress: '',
-        streetAddress: '',
-        localiy: '',
-        region: '',
-        postalCode: '',
-        countryName: '',
-        alternateFormat: '',
-        usesAlternateFormat: false
-      },
-      voterClass: {
-        militaryOrCivilian: '',
-        militaryType: '', // Active Duty in Uniformed Services, Eligible Spouse or Nat Guard on state orders
-        overseasStatus: '' // IntendToReturn, ReturnUncertain, NeverResided
-      },
-      votAdr: {
-        apt: '',
-        street: '',
-        city: '',
-        county: '',
-        state: '',
-        zip: '',
-        alternateFormat: '',
-        useAlternateFormat: false
-      },
       leoAdr: {},
-      recBallot: '',
-      isRegistered: '',
       localDob: null,
-      fax: '',
-      altEmail: '',
+      localDate: null,
       fwabRequest: '',
-      party: '',
-      sex: '',
-      ssn: '',
-      stateId: '',
-      fwdAdr: '',
-      adlInfo: '',
-      date: '',
-      jurisdictions: [
-        { id: 'NC-Wake',
-          jurisdictionName: 'Wake',
-          jurisdictionType: 'County',
-          leo: {
-            name: 'someone nice',
-            tel: '(919)975-5155',
-            email: 'email@address.com',
-            adr: {
-              street: '711 something street',
-              city: 'Raleigh',
-              state: 'NC',
-              zip: '27603'
-            }
-          }
-        }
-      ]
+      date: ''
     }
   },
   components: {
     AddressInput,
-    UsAddressInput
+    UsAddressInput,
+    VoterClass,
+    IsRegistered,
+    ReceiveBallot
   },
   watch: {
     dob: function (newVal, oldVal) {
       if (!this.localDob && newVal) {
-        // .plus({minutes: DateTime.local().offset})
-        console.log(new Date(newVal))
-        // console.log(DateTime.fromJSDate(new Date(newVal), {zone: 'UTC'}).toLocal())
-        console.log()
+        console.log('date from vuex-persist', new Date(newVal))
         this.localDob = new Date(newVal)
       }
     }
-    // date: function (newVal, oldVal) {
-    //   if (!this.signedDate && newVal) {
-    //     this.signedDate = new Date(DateTime.fromISO(newVal).toISODate())
-    //   }
-    // }
   },
   computed: {
-    countryList () {
-      return countries()
-    },
-    countryCode () {
-      let country = this.countryList.filter(x => x.label === this.abrAdr.countryName)[0] || {iso: 'un'}
-      return country.iso
-    },
-    filteredCountries () {
-      if (this.abrAdr.countryName && this.abrAdr.countryName.length > 1) {
-        return this.countryList.filter((option) => {
-          return option.label
-            .toString()
-            .toLowerCase()
-            .indexOf(this.abrAdr.countryName.toLowerCase()) >= 0 || option.iso
-            .toString()
-            .toLowerCase()
-            .indexOf(this.abrAdr.countryName.toLowerCase()) >= 0
-        })
-      } else {
-        return this.countryList
-      }
-    },
     stage () {
       switch (this.$route.params.stage) {
         case 'your-information':
@@ -511,21 +332,67 @@ export default {
       get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].tel : null },
       set (value) { this.$store.commit('requests/update', { tel: value }) }
     },
-    votAdr2: {
-      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].votAdr2 : null },
-      set (value) { this.$store.commit('requests/update', {votAdr2: value}) }
+    votAdr: {
+      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].votAdr : null },
+      set (value) { this.$store.commit('requests/update', {votAdr: value}) }
     },
-    abrAdr2: {
-      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].abrAdr2 : null },
-      set (value) { this.$store.commit('requests/update', {abrAdr2: value}) }
+    abrAdr: {
+      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].abrAdr : null },
+      set (value) { this.$store.commit('requests/update', {abrAdr: value}) }
+    },
+    voterClass: {
+      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].voterClass : null },
+      set (value) { this.$store.commit('requests/update', {voterClass: value}) }
+    },
+    ssn: {
+      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].ssn : null },
+      set (value) { this.$store.commit('requests/update', {ssn: value}) }
+    },
+    sex: {
+      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].sex : null },
+      set (value) { this.$store.commit('requests/update', {sex: value}) }
+    },
+    party: {
+      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].party : null },
+      set (value) { this.$store.commit('requests/update', {party: value}) }
+    },
+    fax: {
+      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].fax : null },
+      set (value) { this.$store.commit('requests/update', {fax: value}) }
+    },
+    altEmail: {
+      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].altEmail : null },
+      set (value) { this.$store.commit('requests/update', {altEmail: value}) }
+    },
+    isRegistered: {
+      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].isRegistered : null },
+      set (value) { this.$store.commit('requests/update', {isRegistered: value}) }
+    },
+    recBallot: {
+      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].recBallot : null },
+      set (value) { this.$store.commit('requests/update', {recBallot: value}) }
+    },
+    stateId: {
+      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].stateId : null },
+      set (value) { this.$store.commit('requests/update', {stateId: value}) }
+    },
+    fwdAdr: {
+      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].fwdAdr : null },
+      set (value) { this.$store.commit('requests/update', {fwdAdr: value}) }
+    },
+    addlInfo: {
+      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].addlInfo : null },
+      set (value) { this.$store.commit('requests/update', {addlInfo: value}) }
     }
   },
   methods: {
-    // dateFormatter (date) { DateTime.local(date).toLocaleString() },
-    // dateParser (date) { DateTime.fromISO('date') },
     updateDob (value) {
-      // let intlDate = DateTime.fromJSDate(value).setZone('UTC', { keepLocalTime: true }).toISODate()
-      this.$store.commit('requests/update', { dob: value })
+      let bday = new Date(Date.UTC(new Date(value).getFullYear(), new Date(value).getMonth(), new Date(value).getDate())).toISOString().substr(0, 10)
+      this.$store.commit('requests/update', { dob: bday })
+    },
+    updateDate (value) {
+      let signDate = new Date(Date.UTC(new Date(value).getFullYear(), new Date(value).getMonth(), new Date(value).getDate())).toISOString().substr(0, 10)
+      this.$store.commit('requests/update', { date: signDate })
     }
   },
   validations () {
@@ -551,32 +418,6 @@ export default {
       tel: {
         numeric
       },
-      abrAdr: {
-        extendedAddress: {
-          alphaNum
-        },
-        streetAddress: {
-          required: requiredUnless(function () { return this.$data.abrAdr.usesAlternateFormat })
-        },
-        locality: {
-          required: requiredUnless(function () { return this.$data.abrAdr.usesAlternateFormat })
-        },
-        region: {
-          required: requiredUnless(function () { return this.$data.abrAdr.usesAlternateFormat })
-        },
-        postalCode: {
-          required: requiredUnless(function () { return this.$data.abrAdr.usesAlternateFormat })
-        },
-        countryName: {
-          required
-        },
-        alternateFormat: {
-          required: requiredIf(function () { return this.$data.abrAdr.usesAlternateFormat })
-        },
-        usesAlternateFormat: {
-          required
-        }
-      },
       voterClass: {
         required
       },
@@ -595,12 +436,6 @@ export default {
         },
         zip: {
           required
-        },
-        useAlternateFormat: {
-          required
-        },
-        alternateFormat: {
-          required: requiredIf(function () { return this.$data.votAdr.useAlternateFormat })
         }
       },
       leoAdr: {
@@ -635,7 +470,7 @@ export default {
       fwdAdr: {
         required
       },
-      adlInfo: {
+      addlInfo: {
         required
       },
       date: ''

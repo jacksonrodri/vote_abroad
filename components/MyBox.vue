@@ -31,7 +31,7 @@ export default {
       default: ''
     },
     dob: {
-      type: Date,
+      type: String,
       default: null
     },
     ssn: {
@@ -66,13 +66,13 @@ export default {
       type: String,
       default: ''
     },
-    abr: {
-      type: Array,
-      default: ['', '', '', '', '']
+    abrAdr: {
+      type: Object,
+      default: () => ({ alt1: '', alt2: '', alt3: '', alt4: '', alt5: '' })
     },
-    fwd: {
-      type: Array,
-      default: ['', '', '', '', '']
+    fwdAdr: {
+      type: Object,
+      default: () => ({ alt1: '', alt2: '', alt3: '', alt4: '', alt5: '' })
     },
     email: {
       type: String,
@@ -95,12 +95,12 @@ export default {
       default: ''
     },
     addlInfo: {
-      type: Array,
-      default: ['', '', '']
+      type: String,
+      default: ''
     },
     date: {
-      type: Date,
-      default: new Date()
+      type: String,
+      default: ''
     },
     classification: {
       type: String,
@@ -120,23 +120,33 @@ export default {
   },
 
   computed: {
+    addlComputed () {
+      let split = ['', '', '']
+      let infoLength = this.addlInfo.length
+      let len2 = infoLength - 86
+      let len3 = infoLength - 172
+      split[0] = infoLength > 0 ? this.addlInfo.substr(0, len2 > 0 ? 86 : infoLength) : ''
+      split[1] = len2 > 0 ? this.addlInfo.substr(86, len3 > 0 ? 86 : len2) : ''
+      split[2] = len3 > 0 ? this.addlInfo.substr(172, len3) : ''
+      return split
+    },
     birthMon () {
-      return this.dob.toISOString().substr(5, 2)
+      return this.dob.substr(5, 2)
     },
     birthDay () {
-      return this.dob.toISOString().substr(8, 2)
+      return this.dob.substr(8, 2)
     },
     birthYr () {
-      return this.dob.toISOString().substr(0, 4)
+      return this.dob.substr(0, 4)
     },
     dateMon () {
-      return this.date.toISOString().substr(5, 2)
+      return this.date.substr(5, 2)
     },
     dateDay () {
-      return this.date.toISOString().substr(8, 2)
+      return this.date.substr(8, 2)
     },
     dateYr () {
-      return this.date.toISOString().substr(0, 4)
+      return this.date.substr(0, 4)
     },
     isMale () {
       return this.sex.toLowerCase() === 'male' ? 'X' : ''
@@ -174,7 +184,7 @@ export default {
     calculated () {
       const ctx = this.provider.context
       return {
-        fontSize: Math.floor(ctx.canvas.width / 51),
+        fontSize: Math.floor(ctx.canvas.width / 60),
         lastName: {
           x: percentWidthToPix(22.3, ctx),
           y: percentHeightToPix(31.6, ctx)
@@ -246,13 +256,11 @@ export default {
           x: percentWidthToPix(70.6, ctx),
           y: percentWidthToPix(52.1, ctx)
         },
-        abr: [
-          {x: percentWidthToPix(6.4, ctx), y: percentWidthToPix(59.5, ctx)},
-          {x: percentWidthToPix(6.4, ctx), y: percentWidthToPix(62, ctx)},
-          {x: percentWidthToPix(6.4, ctx), y: percentWidthToPix(64.5, ctx)},
-          {x: percentWidthToPix(6.4, ctx), y: percentWidthToPix(67, ctx)},
-          {x: percentWidthToPix(6.4, ctx), y: percentWidthToPix(69.5, ctx)}
-        ],
+        abr1: {x: percentWidthToPix(6.4, ctx), y: percentWidthToPix(59.5, ctx)},
+        abr2: {x: percentWidthToPix(6.4, ctx), y: percentWidthToPix(62, ctx)},
+        abr3: {x: percentWidthToPix(6.4, ctx), y: percentWidthToPix(64.5, ctx)},
+        abr4: {x: percentWidthToPix(6.4, ctx), y: percentWidthToPix(67, ctx)},
+        abr5: {x: percentWidthToPix(6.4, ctx), y: percentWidthToPix(69.5, ctx)},
         fwd: [
           {x: percentWidthToPix(51, ctx), y: percentWidthToPix(59.5, ctx)},
           {x: percentWidthToPix(51, ctx), y: percentWidthToPix(62, ctx)},
@@ -363,7 +371,7 @@ export default {
       let signature = new Image()
       signature.src = this.signature
       signature.onload = () => {
-        ctx.drawImage(signature, this.calculated.signature.x, this.calculated.signature.y, 1152, 648)
+        ctx.drawImage(signature, 43, 12, 427, 240, this.calculated.signature.x, this.calculated.signature.y, 1152, 648)
       }
     }
 
@@ -379,7 +387,7 @@ export default {
 
     let fillText = () => {
       ctx.fillStyle = '#000000'
-      ctx.font = this.calculated.fontSize + 'px  serif'
+      ctx.font = this.calculated.fontSize + 'px  monospace'
       ctx.textAlign = 'center'
       ctx.fillText(this.ssn[this.ssn.length - 9] || '', this.calculated.ssn[0].x, this.calculated.ssn[0].y)
       ctx.fillText(this.ssn[this.ssn.length - 8] || '', this.calculated.ssn[1].x, this.calculated.ssn[1].y)
@@ -410,22 +418,22 @@ export default {
       ctx.fillText(this.votState || '', this.calculated.votState.x, this.calculated.votState.y)
       ctx.fillText(this.votCounty || '', this.calculated.votCounty.x, this.calculated.votCounty.y)
       ctx.fillText(this.votZip || '', this.calculated.votZip.x, this.calculated.votZip.y)
-      ctx.fillText(this.abr[0] || '', this.calculated.abr[0].x, this.calculated.abr[0].y)
-      ctx.fillText(this.abr[1] || '', this.calculated.abr[1].x, this.calculated.abr[1].y)
-      ctx.fillText(this.abr[2] || '', this.calculated.abr[2].x, this.calculated.abr[2].y)
-      ctx.fillText(this.abr[3] || '', this.calculated.abr[3].x, this.calculated.abr[3].y)
-      ctx.fillText(this.abr[4] || '', this.calculated.abr[4].x, this.calculated.abr[4].y)
-      ctx.fillText(this.fwd[0] || '', this.calculated.fwd[0].x, this.calculated.fwd[0].y)
-      ctx.fillText(this.fwd[1] || '', this.calculated.fwd[1].x, this.calculated.fwd[1].y)
-      ctx.fillText(this.fwd[2] || '', this.calculated.fwd[2].x, this.calculated.fwd[2].y)
-      ctx.fillText(this.fwd[3] || '', this.calculated.fwd[3].x, this.calculated.fwd[3].y)
-      ctx.fillText(this.fwd[4] || '', this.calculated.fwd[4].x, this.calculated.fwd[4].y)
+      ctx.fillText(this.abrAdr.alt1 || '', this.calculated.abr1.x, this.calculated.abr1.y)
+      ctx.fillText(this.abrAdr.alt2 || '', this.calculated.abr2.x, this.calculated.abr2.y)
+      ctx.fillText(this.abrAdr.alt3 || '', this.calculated.abr3.x, this.calculated.abr3.y)
+      ctx.fillText(this.abrAdr.alt4 || '', this.calculated.abr4.x, this.calculated.abr4.y)
+      ctx.fillText(this.abrAdr.alt5 || '', this.calculated.abr5.x, this.calculated.abr5.y)
+      ctx.fillText(this.fwdAdr.alt1 || '', this.calculated.fwd[0].x, this.calculated.fwd[0].y)
+      ctx.fillText(this.fwdAdr.alt2 || '', this.calculated.fwd[1].x, this.calculated.fwd[1].y)
+      ctx.fillText(this.fwdAdr.alt3 || '', this.calculated.fwd[2].x, this.calculated.fwd[2].y)
+      ctx.fillText(this.fwdAdr.alt4 || '', this.calculated.fwd[3].x, this.calculated.fwd[3].y)
+      ctx.fillText(this.fwdAdr.alt5 || '', this.calculated.fwd[4].x, this.calculated.fwd[4].y)
       ctx.fillText(this.email || '', this.calculated.email.x, this.calculated.email.y)
       ctx.fillText(this.altEmail || '', this.calculated.altEmail.x, this.calculated.altEmail.y)
       ctx.fillText(this.party || '', this.calculated.party.x, this.calculated.party.y)
-      ctx.fillText(this.addlInfo[0] || '', this.calculated.addlInfo[0].x, this.calculated.addlInfo[0].y)
-      ctx.fillText(this.addlInfo[1] || '', this.calculated.addlInfo[1].x, this.calculated.addlInfo[1].y)
-      ctx.fillText(this.addlInfo[2] || '', this.calculated.addlInfo[2].x, this.calculated.addlInfo[2].y)
+      ctx.fillText(this.addlComputed[0] || '', this.calculated.addlInfo[0].x, this.calculated.addlInfo[0].y)
+      ctx.fillText(this.addlComputed[1] || '', this.calculated.addlInfo[1].x, this.calculated.addlInfo[1].y)
+      ctx.fillText(this.addlComputed[2] || '', this.calculated.addlInfo[2].x, this.calculated.addlInfo[2].y)
       ctx.fillText(this.dateDay || '', this.calculated.dateDay.x, this.calculated.dateDay.y)
       ctx.fillText(this.dateMon || '', this.calculated.dateMon.x, this.calculated.dateMon.y)
       ctx.fillText(this.dateYr || '', this.calculated.dateYr.x, this.calculated.dateYr.y)

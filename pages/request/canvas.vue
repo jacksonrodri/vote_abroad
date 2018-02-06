@@ -10,26 +10,26 @@
         :suffix="suffix"
         :previousName="previousName"
         :dob="dob"
-        ssn="123456789"
-        stateId="NC123"
-        votStreet="711 McCulloch St"
-        votApt="apartment block"
-        votCity="Raleigh"
-        votState="NC"
-        votCounty="Wake"
-        votZip="27603-1939"
-        :abr="['Flat 7, 27/f BLock C,','Greenwood Garden,','Shatin, NT,','HONG KONG']"
-        :fwd="['Flat 9, 29/f BLock C,','Greenwood Garden,','Shatin, NT,','HONG KONG']"
-        email="somebody@gmail.com"
-        altEmail="nobody@gmail.com"
-        tel="+852 9669 9279 123"
-        fax="+852 1234 5678"
-        party="Democrat"
-        :addlInfo="['I like this stuff','line 2','line 3']"
-        :date="new Date()"
-        classification="uncertainReturn"
-        sex="male"
-        recBallot="email"
+        :ssn="ssn"
+        :stateId="stateId"
+        :votStreet="votStreet"
+        :votApt="votApt"
+        :votCity="votCity"
+        :votState="votState"
+        :votCounty="votCounty"
+        :votZip="votZip"
+        :abrAdr="abrAdr"
+        :fwdAdr="fwdAdr"
+        :email="email"
+        :altEmail="altEmail"
+        :tel="tel"
+        :fax="fax"
+        :party="party"
+        :addlInfo="addlInfo"
+        :date="date"
+        :classification="voterClass"
+        :sex="sex"
+        :recBallot="recBallot"
         :signature="signature"></my-box>
     </my-canvas>
     <!-- </no-ssr> -->
@@ -70,7 +70,27 @@ export default {
     middleName () { return this.currentRequest && this.currentRequest.middleName ? this.currentRequest.middleName : ' ' },
     suffix () { return this.currentRequest && this.currentRequest.suffix ? this.currentRequest.suffix : ' ' },
     previousName () { return this.currentRequest && this.currentRequest.previousName ? this.currentRequest.previousName : ' ' },
-    dob () { return this.currentRequest && this.currentRequest.dob ? this.currentRequest.dob : ' ' },
+    dob () { return this.currentRequest && this.currentRequest.dob ? this.currentRequest.dob.toString() : ' ' },
+    ssn () { return this.currentRequest && this.currentRequest.ssn ? this.currentRequest.ssn.toString() : ' ' },
+    stateId () { return this.currentRequest && this.currentRequest.stateId ? this.currentRequest.stateId.toString() : ' ' },
+    votStreet () { return this.currentRequest && this.currentRequest.votAdr && this.currentRequest.votAdr.thoroughfare ? this.currentRequest.votAdr.thoroughfare.toString() : ' ' },
+    votApt () { return this.currentRequest && this.currentRequest.votAdr && this.currentRequest.votAdr.premise ? this.currentRequest.votAdr.premise.toString() : ' ' },
+    votCity () { return this.currentRequest && this.currentRequest.votAdr && this.currentRequest.votAdr.locality ? this.currentRequest.votAdr.locality.toString() : ' ' },
+    votState () { return this.currentRequest && this.currentRequest.votAdr && this.currentRequest.votAdr.regionCode ? this.currentRequest.votAdr.regionCode.toString() : ' ' },
+    votCounty () { return this.currentRequest && this.currentRequest.votAdr && this.currentRequest.votAdr.county ? this.currentRequest.votAdr.county.toString() : ' ' },
+    votZip () { return this.currentRequest && this.currentRequest.votAdr && this.currentRequest.votAdr.postalcode ? this.currentRequest.votAdr.postalcode.toString() : ' ' },
+    abrAdr () { return this.currentRequest && this.currentRequest.abrAdr ? this.currentRequest.abrAdr : null },
+    fwdAdr () { return this.currentRequest && this.currentRequest.fwdAdr ? this.currentRequest.fwdAdr : null },
+    email () { return this.currentRequest && this.currentRequest.email ? this.currentRequest.email.toString() : ' ' },
+    altEmail () { return this.currentRequest && this.currentRequest.altEmail ? this.currentRequest.altEmail.toString() : ' ' },
+    tel () { return this.currentRequest && this.currentRequest.tel ? this.currentRequest.tel.toString() : ' ' },
+    fax () { return this.currentRequest && this.currentRequest.fax ? this.currentRequest.fax.toString() : ' ' },
+    party () { return this.currentRequest && this.currentRequest.party ? this.currentRequest.party.toString() : ' ' },
+    addlInfo () { return this.currentRequest && this.currentRequest.addlInfo ? this.currentRequest.addlInfo.toString() : ' ' },
+    date () { return this.currentRequest && this.currentRequest.date ? this.currentRequest.date.toString() : ' ' },
+    voterClass () { return this.currentRequest && this.currentRequest.voterClass ? this.currentRequest.voterClass.toString() : ' ' },
+    sex () { return this.currentRequest && this.currentRequest.sex ? this.currentRequest.sex.toString() : ' ' },
+    recBallot () { return this.currentRequest && this.currentRequest.recBallot ? this.currentRequest.recBallot.toString() : ' ' },
     ...mapState({
       currentRequestIndex: state => state.requests.currentRequest,
       requests: state => state.requests.requests
