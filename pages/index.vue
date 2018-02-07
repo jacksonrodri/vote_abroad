@@ -15,6 +15,7 @@
               </h2>
               <phone-email
                 size="is-medium"
+                v-model="phoneOrEmail"
                 userCountry="HK">
               </phone-email>
               <div class="buttons is-right is-marginless">
@@ -39,6 +40,11 @@ export default {
   layout: 'vfabg',
   components: {
     PhoneEmail
+  },
+  data () {
+    return {
+      phoneOrEmail: {}
+    }
   },
   transition: 'test'
 }

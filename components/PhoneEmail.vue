@@ -2,7 +2,6 @@
   <section>
     <b-field
       label="Type your email address or phone number to start a secure session."
-      message="hello world"
       type="is-vfalight"
       label-for="emailOrPhone">
       <b-field>
@@ -22,14 +21,14 @@
             placeholder="Country"
             ref="country"
             keep-first
-            :icon="countryCode.toLowerCase()"
+            open-on-focus
+            :icon="' ' + 'flag-icon-' + countryCode.toLowerCase()"
             icon-pack="flag-icon"
             expanded
             :size="size"
             :data="filteredCountries"
             field="iso"
             @blur="focusField"
-            @input="updatePhoneCountry()"
             @focus="$event.target.select()"
             @select="option => select(option)">
           <template slot-scope="props">
@@ -41,32 +40,37 @@
           ref="emailOrPhone"
           v-model="typed"
           :size="size"
-          @blur="parseNumber"
-          @input="$v.typed.$touch(); debounceParse"
+          @blur="verifyEmail"
           :placeholder="phonePlaceholder"
           expanded>
         </b-input>
       </b-field>
     </b-field>
+    <p v-if="mailCheckedEmail" class="help is-danger">Did you mean <a @click="setEmail">{{ mailCheckedEmail }}</a>?</p>
   </section>
 </template>
 
 <script>
 import countries from '~/assets/countryaddresses'
-import { getPhoneCode, format, parse, asYouType as AsYouType } from 'libphonenumber-js'
-import debounce from 'lodash/debounce'
+import { getPhoneCode, parse, format, isValidNumber, asYouType as AsYouType } from 'libphonenumber-js'
 import * as phoneExamples from 'libphonenumber-js/examples.mobile.json'
-import { email } from 'vuelidate/lib/validators'
+import Mailcheck from 'mailcheck'
 
 export default {
   name: 'phone-email',
-  props: [
-    'size',
-    'userCountry',
-    'value'
-  ],
+  props: {
+    size: {
+      type: String,
+      default: ''
+    },
+    value: {
+      type: Object,
+      default: () => ({typed: '', country: '', isValidEmail: '', isValidPhone: '', intNumber: ''})
+    }
+  },
   mounted () {
-    this.phoneCountry = this.userCountry
+    this.phoneCountry = this.value.country || this.userCountry || 'US'
+    this.typed = this.value.typed || ''
   },
   data () {
     return {
@@ -75,19 +79,23 @@ export default {
       showFlag: true,
       selected: null,
       typed: '',
-      email: '',
-      phone: '',
-      eorp: null
+      mailCheckedEmail: undefined
     }
   },
   watch: {
     typed: function (newVal, oldVal) {
+      this.mailCheckedEmail = undefined
+      let validEmail = false
+      let validPhone = false
+      let intNumber = ''
+      let cleanNumber = ''
       const formatter = new AsYouType(this.countryCode)
       let regex = RegExp('[^0-9 +]+')
       if (/@/.test(newVal)) {
         this.typed = newVal.replace(/[ ]/gi, '')
+        validEmail = true
       } else if (!regex.test(newVal)) {
-        let cleanNumber = newVal
+        cleanNumber = newVal
         if (newVal.indexOf('001') === 0 || newVal.indexOf('011') === 0) {
           cleanNumber = `+${newVal.substr(3)}`
         } else if (newVal.indexOf('00') === 0 && newVal.length > 2) {
@@ -96,11 +104,21 @@ export default {
           cleanNumber = `+${newVal}`
         }
         this.typed = formatter.input(cleanNumber)
-        this.phoneCountry = formatter.country
+        if (formatter.country) { this.phoneCountry = formatter.country }
+        validPhone = isValidNumber(this.typed, this.phoneCountry)
+        if (validPhone) { intNumber = format(parse(this.typed, this.phoneCountry), 'E.164') }
       }
+      this.$emit('input', {typed: this.typed, country: this.phoneCountry, isValidEmail: validEmail, isValidPhone: validPhone, intNumber: intNumber})
+    },
+    value: function (newVal, oldVal) {
+      this.typed = newVal.typed
+    },
+    userCountry: function (newVal, oldVal) {
+      if (!this.phoneCountry || this.phoneCountry === 'US') { this.phoneCountry = newVal }
     }
   },
   computed: {
+    userCountry () { return this.$store.state.userauth.user.country },
     countryList () {
       return countries()
     },
@@ -133,7 +151,7 @@ export default {
       if (this.phoneCountry && this.phoneCountry.length === 2) {
         return this.phoneCountry
       } else {
-        return 'un'
+        return 'US'
       }
     },
     phonePlaceholder () {
@@ -142,23 +160,6 @@ export default {
     }
   },
   methods: {
-    parseNumber () {
-      let parsed = this.countryCode.toLowerCase() === 'un' ? parse(this.typed) : parse(this.typed, {country: {default: this.countryCode}})
-      if (this.typed.indexOf('@') === -1 && !(Object.keys(parsed).length === 0 && parsed.constructor === Object)) {
-        this.phoneCountry = parsed.country
-        this.phone = format(parsed, 'International_plaintext')
-        this.typed = format(parsed, 'International')
-        // this.email = null
-      } else {
-        this.email = this.typed
-        // this.phone = null
-      }
-      this.updateInput()
-    },
-    debounceParse: debounce(function () {
-      // if (this.typed.indexOf('@') === -1) { this.parseNumber() }
-      this.parseNumber()
-    }, 1500),
     getPhoneCode (code) {
       if (code === 'GS') {
         return '500'
@@ -166,7 +167,6 @@ export default {
       try {
         return getPhoneCode(code)
       } catch (error) {
-        // console.error(error)
         return ''
       }
     },
@@ -176,11 +176,6 @@ export default {
         this.focusField()
       }
     },
-    updatePhoneCountry () {
-      this.$emit('input', {
-        country: this.phoneCountry
-      })
-    },
     focusCountry () {
       this.showFlag = false
       this.$refs.country.focus()
@@ -189,20 +184,24 @@ export default {
       this.showFlag = true
       this.$refs.emailOrPhone.focus()
     },
-    updateInput () {
-      this.$emit('input', {
-        phoneNumber: this.phone,
-        email: this.email
-      })
-    }
-  },
-  validations: {
-    typed: {
-      email,
-      phone (value) {
-        let isEmptyObj = (Object.keys(parse(value)).length === 0 && parse(value).constructor === Object)
-        return !(isEmptyObj)
+    verifyEmail: function () {
+      if (this.value.isValidEmail) {
+        let self = this
+        Mailcheck.run({
+          email: self.typed,
+          suggested: function (suggestion) {
+            self.mailCheckedEmail = suggestion.full
+            self.value.isValidEmail = false
+          },
+          empty: function () {
+            // nothing wrong with the email
+          }
+        })
       }
+    },
+    setEmail: function () {
+      this.typed = this.mailCheckedEmail
+      this.mailCheckedEmail = undefined
     }
   }
 }

@@ -8,6 +8,7 @@
     </h1>
     <phone-email
       size="is-medium"
+      v-model="phoneOrEmail"
       userCountry="HK">
     </phone-email>
     <div class="buttons is-right is-marginless">
@@ -27,6 +28,11 @@ import PhoneEmail from '~/components/PhoneEmail.vue'
 export default {
   components: {
     PhoneEmail
+  },
+  data () {
+    return {
+      phoneOrEmail: {}
+    }
   }
 }
 </script>
