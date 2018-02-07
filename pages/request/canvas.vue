@@ -97,7 +97,7 @@ export default {
       data.append('text', 'Your FPCA application')
       data.append('attachment', blob, '@file/fpca.png')
       data.append('inline', blob, 'file/fpca.png')
-      data.append('html', '<html>HTML version of the body<img src="cid:fpca.png" width="120" alt="FPCA"><br/> <img src="cid:file/fpca.png" width="120" alt="FPCA2"></html>')
+      data.append('html', '<html>HTML version of the body<img src="cid:fpca.png" width="120" alt="FPCA"><br/></html>')
       let url = 'https://votefromabroad.netlify.com/api/mail'
       // let url = 'https://api.mailgun.net/v3/mon.tg/messages'
       let config = { url: url, method: 'post', headers: { 'Content-Type': 'multipart/form-data' }, auth: { username: 'api', password: 'key-44903961cb823b645750fe64358dfc40' } }
