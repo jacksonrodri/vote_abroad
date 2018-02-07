@@ -86,18 +86,20 @@ export default {
         for (var i = 0; i < byteString.length; i++) {
           ia[i] = byteString.charCodeAt(i)
         }
-        return new Blob([ab], { type: 'image/jpeg' })
+        return new Blob([ab], { type: 'image/png' })
       }
       var blob = dataURItoBlob(fpca)
+      console.log(blob)
       let data = new FormData()
       data.append('from', 'Excited User <me@samples.mailgun.org>')
       data.append('to', 'alexpm@gmail.com')
       data.append('subject', 'Hello')
       data.append('text', 'Testing mailgun from axios')
-      data.append('attachment', blob, 'fpca.png')
+      data.append('attachment', blob, '@file/fpca.png')
+      data.append('html', '<html>HTML version of the body</html>')
       let url = 'https://votefromabroad.netlify.com/api/mail'
       // let url = 'https://api.mailgun.net/v3/mon.tg/messages'
-      let config = { headers: { 'Content-Type': 'multipart/form-data' }, auth: { username: 'api', password: 'key-44903961cb823b645750fe64358dfc40' } }
+      let config = { url: url, method: 'post', headers: { 'Content-Type': 'multipart/form-data' }, auth: { username: 'api', password: 'key-44903961cb823b645750fe64358dfc40' } }
       this.$axios.post(url, data, config)
         .then(response => console.log(response))
         .catch(errors => console.log(errors))
