@@ -47,17 +47,17 @@ import MyBox from '~/components/MyBox.vue'
 import Sign from '~/components/sign.vue'
 import { mapState } from 'vuex'
 
-var mailgun = require('mailgun.js')
-var apiKey = 'key-44903961cb823b645750fe64358dfc40'
-var DOMAIN = 'mon.tg'
-var mg = mailgun.client({key: apiKey, username: 'api'})
+// var mailgun = require('mailgun.js')
+// var apiKey = 'key-44903961cb823b645750fe64358dfc40'
+// var DOMAIN = 'mon.tg'
+// var mg = mailgun.client({key: apiKey, username: 'api'})
 
-var data = {
-  from: 'Excited User <me@samples.mailgun.org>',
-  to: 'alexpm@gmail.com',
-  subject: 'Hello',
-  text: 'Testing some Mailgun awesomness!'
-}
+// var data = {
+//   from: 'Excited User <me@samples.mailgun.org>',
+//   to: 'alexpm@gmail.com',
+//   subject: 'Hello',
+//   text: 'Testing some Mailgun awesomness!'
+// }
 
 export default {
   components: {
@@ -79,9 +79,20 @@ export default {
     sendEmail () {
       let fpca = this.$refs.fpca.$refs['my-canvas'].toDataURL()
       console.log(fpca)
-      mg.messages.create(DOMAIN, data)
-        .then(msg => console.log(msg)) // logs response data
-        .catch(err => console.log(err))
+      // mg.messages.create(DOMAIN, data)
+      //   .then(msg => console.log(msg)) // logs response data
+      //   .catch(err => console.log(err))
+      let data = new FormData()
+      data.append('from', 'Excited User <me@samples.mailgun.org>')
+      data.append('to', 'alexpm@gmail.com')
+      data.append('subject', 'Hello')
+      data.append('text', 'Testing mailgun from axios')
+      // let url = '/api/mail'
+      let url = 'https://api.mailgun.net/v3/mon.tg/messages'
+      let config = { headers: { 'Content-Type': 'multipart/form-data' }, auth: { username: 'api', password: 'key-44903961cb823b645750fe64358dfc40' } }
+      this.$axios.post(url, data, config)
+        .then(response => console.log(response))
+        .catch(errors => console.log(errors))
     }
   },
   computed: {
