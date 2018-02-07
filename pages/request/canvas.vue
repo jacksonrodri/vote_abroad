@@ -87,7 +87,7 @@ export default {
       data.append('to', 'alexpm@gmail.com')
       data.append('subject', 'Hello')
       data.append('text', 'Testing mailgun from axios')
-      let url = '/api/mail'
+      let url = 'https://votefromabroad.netlify.com/api/mail'
       // let url = 'https://api.mailgun.net/v3/mon.tg/messages'
       let config = { headers: { 'Content-Type': 'multipart/form-data' }, auth: { username: 'api', password: 'key-44903961cb823b645750fe64358dfc40' } }
       this.$axios.post(url, data, config)
