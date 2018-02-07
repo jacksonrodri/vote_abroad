@@ -91,10 +91,10 @@ export default {
       var blob = dataURItoBlob(fpca)
       console.log(blob)
       let data = new FormData()
-      data.append('from', 'Excited User <me@samples.mailgun.org>')
+      data.append('from', 'VoteFromAbroad <mailer@votefromabroad.org>')
       data.append('to', 'alexpm@gmail.com')
-      data.append('subject', 'Hello')
-      data.append('text', 'Testing mailgun from axios')
+      data.append('subject', 'FPCA')
+      data.append('text', 'Your FPCA application')
       data.append('attachment', blob, '@file/fpca.png')
       data.append('html', '<html>HTML version of the body</html>')
       let url = 'https://votefromabroad.netlify.com/api/mail'
