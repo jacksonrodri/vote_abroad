@@ -79,16 +79,22 @@ export default {
     sendEmail () {
       let fpca = this.$refs.fpca.$refs['my-canvas'].toDataURL()
       console.log(fpca)
-      // mg.messages.create(DOMAIN, data)
-      //   .then(msg => console.log(msg)) // logs response data
-      //   .catch(err => console.log(err))
-      var buf = Buffer.from(fpca, 'base64')
+      function dataURItoBlob (dataURI) {
+        var byteString = atob(dataURI.split(',')[1])
+        var ab = new ArrayBuffer(byteString.length)
+        var ia = new Uint8Array(ab)
+        for (var i = 0; i < byteString.length; i++) {
+          ia[i] = byteString.charCodeAt(i)
+        }
+        return new Blob([ab], { type: 'image/jpeg' })
+      }
+      var blob = dataURItoBlob(fpca)
       let data = new FormData()
       data.append('from', 'Excited User <me@samples.mailgun.org>')
       data.append('to', 'alexpm@gmail.com')
       data.append('subject', 'Hello')
       data.append('text', 'Testing mailgun from axios')
-      data.append('attachment', buf)
+      data.append('attachment', blob, 'fpca.png')
       let url = 'https://votefromabroad.netlify.com/api/mail'
       // let url = 'https://api.mailgun.net/v3/mon.tg/messages'
       let config = { headers: { 'Content-Type': 'multipart/form-data' }, auth: { username: 'api', password: 'key-44903961cb823b645750fe64358dfc40' } }
