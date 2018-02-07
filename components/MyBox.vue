@@ -170,7 +170,7 @@ export default {
       return this.classification.toLowerCase() === 'uncertainreturn' ? 'X' : ''
     },
     isNeverResided () {
-      return this.classification.toLowerCase() === 'neverResided' ? 'X' : ''
+      return this.classification.toLowerCase() === 'neverresided' ? 'X' : ''
     },
     isReceiveBallotMail () {
       return this.recBallot.toLowerCase() === 'mail' ? 'X' : ''
@@ -418,16 +418,16 @@ export default {
       ctx.fillText(this.votState || '', this.calculated.votState.x, this.calculated.votState.y)
       ctx.fillText(this.votCounty || '', this.calculated.votCounty.x, this.calculated.votCounty.y)
       ctx.fillText(this.votZip || '', this.calculated.votZip.x, this.calculated.votZip.y)
-      ctx.fillText(this.abrAdr.alt1 || '', this.calculated.abr1.x, this.calculated.abr1.y)
-      ctx.fillText(this.abrAdr.alt2 || '', this.calculated.abr2.x, this.calculated.abr2.y)
-      ctx.fillText(this.abrAdr.alt3 || '', this.calculated.abr3.x, this.calculated.abr3.y)
-      ctx.fillText(this.abrAdr.alt4 || '', this.calculated.abr4.x, this.calculated.abr4.y)
-      ctx.fillText(this.abrAdr.alt5 || '', this.calculated.abr5.x, this.calculated.abr5.y)
-      ctx.fillText(this.fwdAdr.alt1 || '', this.calculated.fwd[0].x, this.calculated.fwd[0].y)
-      ctx.fillText(this.fwdAdr.alt2 || '', this.calculated.fwd[1].x, this.calculated.fwd[1].y)
-      ctx.fillText(this.fwdAdr.alt3 || '', this.calculated.fwd[2].x, this.calculated.fwd[2].y)
-      ctx.fillText(this.fwdAdr.alt4 || '', this.calculated.fwd[3].x, this.calculated.fwd[3].y)
-      ctx.fillText(this.fwdAdr.alt5 || '', this.calculated.fwd[4].x, this.calculated.fwd[4].y)
+      ctx.fillText(this.abrAdr && this.abrAdr.alt1 ? this.abrAdr.alt1 : '', this.calculated.abr1.x, this.calculated.abr1.y)
+      ctx.fillText(this.abrAdr && this.abrAdr.alt2 ? this.abrAdr.alt2 : '', this.calculated.abr2.x, this.calculated.abr2.y)
+      ctx.fillText(this.abrAdr && this.abrAdr.alt3 ? this.abrAdr.alt3 : '', this.calculated.abr3.x, this.calculated.abr3.y)
+      ctx.fillText(this.abrAdr && this.abrAdr.alt4 ? this.abrAdr.alt4 : '', this.calculated.abr4.x, this.calculated.abr4.y)
+      ctx.fillText(this.abrAdr && this.abrAdr.alt5 ? this.abrAdr.alt5 : '', this.calculated.abr5.x, this.calculated.abr5.y)
+      ctx.fillText(this.fwdAdr && this.fwdAdr.alt1 ? this.fwdAdr.alt1 : '', this.calculated.fwd[0].x, this.calculated.fwd[0].y)
+      ctx.fillText(this.fwdAdr && this.fwdAdr.alt2 ? this.fwdAdr.alt2 : '', this.calculated.fwd[1].x, this.calculated.fwd[1].y)
+      ctx.fillText(this.fwdAdr && this.fwdAdr.alt3 ? this.fwdAdr.alt3 : '', this.calculated.fwd[2].x, this.calculated.fwd[2].y)
+      ctx.fillText(this.fwdAdr && this.fwdAdr.alt4 ? this.fwdAdr.alt4 : '', this.calculated.fwd[3].x, this.calculated.fwd[3].y)
+      ctx.fillText(this.fwdAdr && this.fwdAdr.alt5 ? this.fwdAdr.alt5 : '', this.calculated.fwd[4].x, this.calculated.fwd[4].y)
       ctx.fillText(this.email || '', this.calculated.email.x, this.calculated.email.y)
       ctx.fillText(this.altEmail || '', this.calculated.altEmail.x, this.calculated.altEmail.y)
       ctx.fillText(this.party || '', this.calculated.party.x, this.calculated.party.y)
