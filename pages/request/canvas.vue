@@ -2,7 +2,7 @@
   <div class="is-fullhd">
     <!-- <no-ssr> -->
     <button class="button is-primary" @click="isSignatureModalActive = true">Add your signature</button>
-    <my-canvas class="canvas">
+    <my-canvas class="canvas" ref="fpca">
       <my-box
         :lastName="lastName"
         :firstName="firstName"
@@ -33,6 +33,8 @@
         :signature="signature"></my-box>
     </my-canvas>
     <!-- </no-ssr> -->
+
+    <button @click="sendEmail" class="button is-primary is-large">Send it by email</button>
     <b-modal :active.sync="isSignatureModalActive" has-modal-card>
       <sign @sigcap="addSig" />
     </b-modal>
@@ -44,6 +46,18 @@ import MyCanvas from '~/components/MyCanvas.vue'
 import MyBox from '~/components/MyBox.vue'
 import Sign from '~/components/sign.vue'
 import { mapState } from 'vuex'
+
+var mailgun = require('mailgun.js')
+var apiKey = 'key-44903961cb823b645750fe64358dfc40'
+var DOMAIN = 'mon.tg'
+var mg = mailgun.client({key: apiKey, username: 'api'})
+
+var data = {
+  from: 'Excited User <me@samples.mailgun.org>',
+  to: 'alexpm@gmail.com',
+  subject: 'Hello',
+  text: 'Testing some Mailgun awesomness!'
+}
 
 export default {
   components: {
@@ -61,6 +75,13 @@ export default {
     addSig (val) {
       this.signature = val
       // console.log(val)
+    },
+    sendEmail () {
+      let fpca = this.$refs.fpca.$refs['my-canvas'].toDataURL()
+      console.log(fpca)
+      mg.messages.create(DOMAIN, data)
+        .then(msg => console.log(msg)) // logs response data
+        .catch(err => console.log(err))
     }
   },
   computed: {

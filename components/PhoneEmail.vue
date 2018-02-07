@@ -11,6 +11,7 @@
             :icon="countryCode.toLowerCase()"
             class="flag-container"
             pack="flag-icon"
+            :custom-class="'flag-icon-' + countryCode.toLowerCase()"
             :size="size"
             @click.native="focusCountry">
           </b-icon>

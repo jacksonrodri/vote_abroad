@@ -193,8 +193,10 @@ export default {
         console.log(this.paused)
         this._video.addEventListener('canplay', () => {
           console.log('canplay', this._video)
-          this.width = this._video.videoWidth
-          this.height = this._video.videoHeight
+          // this.width = this._video.videoWidth
+          // this.height = this._video.videoHeight
+          this.width = 1280
+          this.height = 720
           // this.timerCallback()
           this.paused = false
           this._video.play()
