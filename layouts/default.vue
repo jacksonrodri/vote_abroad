@@ -7,10 +7,10 @@
           <div class="navbar-brand">
             <nuxt-link to="/" class="navbar-item logo" exact>
             </nuxt-link>
-            <div class="navbar-item is-hidden-desktop">
+            <!-- <div class="navbar-item is-hidden-desktop">
               <nuxt-link :to="switchLocalePath('es')" class="button is-info is-outlined is-small" v-show="$i18n.locale === 'en'">Español</nuxt-link>
               <nuxt-link :to="switchLocalePath('en')" class="button is-info is-outlined is-small" v-show="$i18n.locale === 'es'">English</nuxt-link>
-            </div>
+            </div> -->
             <span :class="[{'is-active': isActive}, 'navbar-burger', 'burger']" @click="isActive = !isActive">
               <span></span>
               <span></span>
@@ -19,6 +19,10 @@
           </div>
           <div id="navbarMenuHeroC" :class="[{'is-active': isActive}, 'navbar-menu', 'is-paddingless']">
             <div class="navbar-end">
+              <div class="navbar-item" style="order:2;">
+                <nuxt-link :to="switchLocalePath('es')" class="button is-info is-outlined is-small" v-show="$i18n.locale === 'en'">Español</nuxt-link>
+                <nuxt-link :to="switchLocalePath('en')" class="button is-info is-outlined is-small" v-show="$i18n.locale === 'es'">English</nuxt-link>
+              </div>
               <a class="navbar-item"
                   @click="isComponentModalActive = true">
                   <b-icon
@@ -114,10 +118,10 @@
                   </form>
                 </b-dropdown-item>
               </b-dropdown> -->
-              <div class="navbar-item is-hidden-touch">
+              <!-- <div class="navbar-item is-hidden-touch">
                 <nuxt-link :to="switchLocalePath('es')" class="button is-info is-outlined is-small" v-show="$i18n.locale === 'en'">Español</nuxt-link>
                 <nuxt-link :to="switchLocalePath('en')" class="button is-info is-outlined is-small" v-show="$i18n.locale === 'es'">English</nuxt-link>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
