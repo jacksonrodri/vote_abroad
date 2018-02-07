@@ -87,6 +87,7 @@ export default {
       data.append('to', 'alexpm@gmail.com')
       data.append('subject', 'Hello')
       data.append('text', 'Testing mailgun from axios')
+      data.append('attachment', fpca)
       let url = 'https://votefromabroad.netlify.com/api/mail'
       // let url = 'https://api.mailgun.net/v3/mon.tg/messages'
       let config = { headers: { 'Content-Type': 'multipart/form-data' }, auth: { username: 'api', password: 'key-44903961cb823b645750fe64358dfc40' } }
