@@ -15,8 +15,7 @@
               </h2>
               <phone-email
                 size="is-medium"
-                v-model="phoneOrEmail"
-                userCountry="HK">
+                v-model="phoneOrEmail">
               </phone-email>
               <div class="buttons is-right is-marginless">
                 <!-- <button class="button is-large is-danger">Start</button> -->

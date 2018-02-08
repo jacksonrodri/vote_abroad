@@ -46,7 +46,7 @@
         </b-input>
       </b-field>
     </b-field>
-    <p v-if="mailCheckedEmail" class="help is-danger">Did you mean <a @click="setEmail">{{ mailCheckedEmail }}</a>?</p>
+    <p v-if="mailCheckedEmail" class="help is-vfa">Did you mean <a @click="setEmail">{{ mailCheckedEmail }}</a>?</p>
   </section>
 </template>
 
