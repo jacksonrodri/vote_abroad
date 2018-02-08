@@ -124,16 +124,7 @@
                 <template slot-scope="props">{{ props.option.jurisdiction }} ({{ props.option.jurisdictionType }}) {{ props.option.state }}</template>
             </b-autocomplete>
           </b-field>
-
-          <!-- <b-field label="Jurisdiction">
-            <b-select placeholder="choose your jurisdiction" v-model="leo">
-              <option v-for="leo in filteredLeos" :selected="jurisdiction === leo.jurisdiction" :value="leo" :key="leo.jurisdiction">
-                {{ leo.jurisdiction }}
-              </option>
-            </b-select>
-          </b-field> -->
-
-          <p>Local Election Official Address: {{leo}}</p>
+          <pre><strong>Local Election Official Address (to be hidden/reformatted later):</strong><br/> {{leo}}</pre>
         </div>
   </section>
 </template>

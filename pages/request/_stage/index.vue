@@ -97,20 +97,22 @@
     <voter-class v-model="voterClass"></voter-class>
 
     <us-address-input
-      label="Your US voting Address"
+      label="Your US Voting Address"
       usOnly
       v-model="votAdr">
       <div slot="instructions">
-        <p>Please add your US Voting Address</p>
+        <p>Input the last address you lived in in the US.  If you have never lived in the US use your parents' last US address.</p>
       </div>
 
     </us-address-input>
 
-      <h3 v-if="votAdr && votAdr.leo && votAdr.leo.jurisdiction && votAdr.leo.jurisdictionType" class="subtitle is-5">Are you already registered to vote in {{ `${votAdr.leo.jurisdiction } ${votAdr.leo.jurisdictionType}` }}?</h3>
+      <h3 v-if="votAdr && votAdr.leo && votAdr.leo.jurisdiction && votAdr.leo.jurisdictionType"
+        class="subtitle is-5">Are you already registered to vote in {{ `${votAdr.leo.jurisdiction } ${votAdr.leo.jurisdictionType}` }}?</h3>
       <!-- isRegistered -->
-      <is-registered v-model="isRegistered"></is-registered>
+      <is-registered v-if="votAdr && votAdr.leo && votAdr.leo.jurisdiction && votAdr.leo.jurisdictionType"
+        v-model="isRegistered"></is-registered>
 
-      <h3 class="subtitle is-5">How would you like to receieve your ballot?</h3>
+      <h3 class="subtitle is-5" v-if="votAdr && votAdr.regionCode">How would you like to receieve your ballot?</h3>
 
       <!-- recBallot -->
       <receive-ballot v-model="recBallot" v-if="votAdr && votAdr.regionCode"></receive-ballot>
@@ -165,9 +167,10 @@
       </b-field>
 
       <!-- tel -->
-      <b-field :type="($v.tel.$error ? 'is-danger': '')" :message="$v.tel.$error ? Object.keys($v.tel.$params).map(x => x) : '' " label="Telephone number">
+      <!-- <b-field :type="($v.tel.$error ? 'is-danger': '')" :message="$v.tel.$error ? Object.keys($v.tel.$params).map(x => x) : '' " label="Telephone number">
         <b-input v-model="tel" @input="$v.tel.$touch()"></b-input>
-      </b-field>
+      </b-field> -->
+      <tel-input v-model="tel"></tel-input>
 
       <!-- altEmail -->
       <b-field
@@ -179,7 +182,10 @@
       </b-field>
 
       <!-- fwabRequest -->
-      <b-field :type="($v.fwabRequest.$error ? 'is-danger': '')" :message="$v.fwabRequest.$error ? Object.keys($v.fwabRequest.$params).map(x => x) : '' " label="Do you want to register and request a ballot for all elections you are eligile to vote in?">
+      <b-field :type="($v.fwabRequest.$error ? 'is-danger': '')"
+        :message="$v.fwabRequest.$error ? Object.keys($v.fwabRequest.$params).map(x => x) : '' "
+        label="Do you want to register and request a ballot for all elections you are eligile to vote in?"
+        v-if="isFwab">
         <b-input v-model="fwabRequest" @input="$v.fwabRequest.$touch()"></b-input>
       </b-field>
 
@@ -192,15 +198,7 @@
       <!-- <b-field :type="($v.fwdAdr.$error ? 'is-danger': '')" :message="$v.fwdAdr.$error ? Object.keys($v.fwdAdr.$params).map(x => x) : '' " label="If you receive mail at a different address enter it here.">
         <b-input v-model="fwdAdr" @input="$v.fwdAdr.$touch()"></b-input>
       </b-field> -->
-      <address-input
-        :label="$t('request.addressAbroad')"
-        key="forwardingAddress"
-        v-model="fwdAdr">
-        <div slot="instructions">
-          <p>If you would like your ballot sent to a different address, input it here.</p>
-        </div>
-
-      </address-input>
+      <forwarding-address v-model="fwdAdr"></forwarding-address>
 
       <!-- addlInfo -->
       <b-field :type="($v.addlInfo.$error ? 'is-danger': '')" :message="$v.addlInfo.$error ? Object.keys($v.addlInfo.$params).map(x => x) : '' " label="Add any additional information here to help your election official find your records.">
@@ -229,12 +227,14 @@
 </template>
 
 <script>
-import { required, requiredIf, numeric, email } from 'vuelidate/lib/validators'
+import { required, requiredIf, email } from 'vuelidate/lib/validators'
 import AddressInput from '~/components/AddressInput'
 import UsAddressInput from '~/components/UsAddressInput'
 import VoterClass from '~/components/VoterClass'
 import IsRegistered from '~/components/IsRegistered'
 import ReceiveBallot from '~/components/ReceiveBallot'
+import TelInput from '~/components/TelInput'
+import ForwardingAddress from '~/components/ForwardingAddress'
 
 export default {
   transition: 'test',
@@ -253,6 +253,7 @@ export default {
       localDob: null,
       localDate: null,
       fwabRequest: '',
+      isFwab: false,
       date: ''
     }
   },
@@ -261,7 +262,9 @@ export default {
     UsAddressInput,
     VoterClass,
     IsRegistered,
-    ReceiveBallot
+    ReceiveBallot,
+    TelInput,
+    ForwardingAddress
   },
   watch: {
     dob: function (newVal, oldVal) {
@@ -329,7 +332,7 @@ export default {
       set (value) { this.$store.commit('requests/update', { dob: value }) }
     },
     tel: {
-      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].tel : null },
+      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].tel : {} },
       set (value) { this.$store.commit('requests/update', { tel: value }) }
     },
     votAdr: {
@@ -414,9 +417,6 @@ export default {
       previousName: {
       },
       suffix: {
-      },
-      tel: {
-        numeric
       },
       voterClass: {
         required
