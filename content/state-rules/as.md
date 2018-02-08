@@ -20,7 +20,7 @@ fpcaSubmitOptionsRequest:
   - Mail
 fpcaSpecialRules: false
 fpcaSpecialInstructions: ''
-fpcaFollowUp: ''
+fpcaFollowUp: null
 canRegisterWithFwab: true
 fwabSubmitOptions:
   - Email

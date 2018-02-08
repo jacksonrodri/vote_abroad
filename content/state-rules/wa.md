@@ -1,4 +1,4 @@
----
+—
 title: Washington Rules
 slug: washintgon
 code: WA
@@ -17,15 +17,15 @@ fpcaSubmitOptionsRequest:
   - Fax
   - Mail
 fpcaSpecialRules: false
-fpcaSpecialInstructions: ''
-fpcaFollowUp: ''
+fpcaSpecialInstructions: ‘’
+fpcaFollowUp: null
 canRegisterWithFwab: true
 fwabSubmitOptions:
   - Email
   - Fax
   - Mail
 fwabSpecialRules: false
-fwabSpecialInstructions: ''
----
+fwabSpecialInstructions: ‘’
+—
 
 text
