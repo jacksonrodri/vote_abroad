@@ -1,11 +1,10 @@
-—
-title: Alabama Rules
-slug: alabama
-code: AL
+—-
+title: Arizona Rules
+slug: arizona
+code: AZ
 id: 
-  - {type: SSN4, label: ‘Last 4 digits of your Social Security Number’}
-  - {type: StateID, label: ‘State ID’}
-partyPrimary: true
+  - SSN4
+  - StateID
 ballotReceiptOptions:
   - Email
   - Fax
@@ -19,7 +18,7 @@ fpcaSubmitOptionsRequest:
   - Fax
   - Mail
 fpcaSpecialRules: false
-fpcaSpecialInstructions: ‘’
+fpcaSpecialInstructions: null
 fpcaFollowUp: null
 canRegisterWithFwab: true
 fwabSubmitOptions:
@@ -27,7 +26,7 @@ fwabSubmitOptions:
   - Fax
   - Mail
 fwabSpecialRules: false
-fwabSpecialInstructions: ‘’
+fwabSpecialInstructions: null
 —
-
+—-
 text
