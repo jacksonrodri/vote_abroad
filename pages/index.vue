@@ -18,11 +18,10 @@
                 v-model="phoneOrEmail">
               </phone-email>
               <div class="buttons is-right is-marginless">
-                <!-- <button class="button is-large is-danger">Start</button> -->
-                <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" class="button is-large is-danger" exact >start</nuxt-link>
+                <button @click="authStart('/request/your-information')" class="button is-large is-danger">Start</button>
               </div>
               <div class="buttons is-right">
-                  <button class="button is-text has-text-black is-paddingless">or start an anonymous session</button>
+                <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" class="button is-text has-text-black is-paddingless" exact >or start an anonymous session</nuxt-link>
               </div>
             </b-notification>
           </div>
@@ -33,6 +32,7 @@
 
 <script>
 import PhoneEmail from '~/components/PhoneEmail.vue'
+import { mapActions } from 'vuex'
 // import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
 
 export default {
@@ -44,6 +44,15 @@ export default {
     return {
       phoneOrEmail: {}
     }
+  },
+  methods: {
+    ...mapActions('userauth', [
+      'sendEmailCode',
+      'sendEmailLink',
+      'sendEmailLink',
+      'promptCode',
+      'authStart'
+    ])
   },
   transition: 'test'
 }

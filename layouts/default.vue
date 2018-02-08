@@ -11,20 +11,32 @@
               <nuxt-link :to="switchLocalePath('es')" class="button is-info is-outlined is-small" v-show="$i18n.locale === 'en'">Español</nuxt-link>
               <nuxt-link :to="switchLocalePath('en')" class="button is-info is-outlined is-small" v-show="$i18n.locale === 'es'">English</nuxt-link>
             </div> -->
-            <span :class="[{'is-active': isActive}, 'navbar-burger', 'burger']" @click="isActive = !isActive">
+            <span :class="[{'is-active': isMobileMenuActive}, 'navbar-burger', 'burger']" @click="isMobileMenuActive = !isMobileMenuActive">
               <span></span>
               <span></span>
               <span></span>
             </span>
           </div>
-          <div id="navbarMenuHeroC" :class="[{'is-active': isActive}, 'navbar-menu', 'is-paddingless']">
+          <div id="navbarMenuHeroC" :class="[{'is-active': isMobileMenuActive}, 'navbar-menu', 'is-paddingless']">
             <div class="navbar-end">
               <div class="navbar-item" style="order:2;">
                 <nuxt-link :to="switchLocalePath('es')" class="button is-info is-outlined is-small" v-show="$i18n.locale === 'en'">Español</nuxt-link>
                 <nuxt-link :to="switchLocalePath('en')" class="button is-info is-outlined is-small" v-show="$i18n.locale === 'es'">English</nuxt-link>
               </div>
+              <!-- <button v-if="isAuthenticated" @click="logout()" class="navbar-item">Log out</button> -->
               <a class="navbar-item"
-                  @click="isComponentModalActive = true">
+                  v-if="isAuthenticated"
+                  @click="$store.dispatch('userauth/logout')">
+                  <b-icon
+                    pack="fas"
+                    icon="sign-out-alt"
+                    size="is-small">
+                  </b-icon>
+                  &nbsp;Logout
+              </a>
+              <a class="navbar-item"
+                  v-else
+                  @click="isLoginModalActive = true">
                   <b-icon
                     pack="fas"
                     icon="user"
@@ -159,7 +171,7 @@ This communication is not authorized by any candidate or candidate's committee.
     </div>
   </div>
 </section>
-<b-modal :active.sync="isComponentModalActive" has-modal-card>
+<b-modal :active.sync="isLoginModalActive" has-modal-card>
   <login></login>
 </b-modal>
 </div>
@@ -172,8 +184,8 @@ import Login from '~/components/Login.vue'
 export default {
   data () {
     return {
-      isActive: false,
-      isComponentModalActive: false
+      isMobileMenuActive: false,
+      isLoginModalActive: false
     }
   },
   components: {
@@ -184,7 +196,8 @@ export default {
     upcomingElections () { return this.$store.state.upcomingElections },
     isBgImage () {
       return Boolean(this.$route.name.indexOf('index') > -1 || this.$route.name.indexOf('home') > -1)
-    }
+    },
+    isAuthenticated () { return this.$store.getters['userauth/isAuthenticated'] }
   }
 }
 </script>

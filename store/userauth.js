@@ -103,7 +103,7 @@ export const actions = {
       webAuth.passwordlessStart({
         connection: 'sms',
         send: 'code',
-        email: state.user.mobilePhone
+        phoneNumber: state.user.mobileIntFormat
       }, function (err, res) {
         if (err) {
           reject(err)

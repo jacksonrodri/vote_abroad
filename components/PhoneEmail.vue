@@ -109,6 +109,7 @@ export default {
         if (validPhone) { intNumber = format(parse(this.typed, this.phoneCountry), 'E.164') }
       }
       this.$emit('input', {typed: this.typed, country: this.phoneCountry, isValidEmail: validEmail, isValidPhone: validPhone, intNumber: intNumber})
+      this.$store.commit('userauth/updateUser', {emailAddress: validEmail ? this.typed : '', mobileIntFormat: intNumber})
     },
     value: function (newVal, oldVal) {
       this.typed = newVal.typed

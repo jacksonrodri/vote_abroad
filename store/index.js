@@ -8,7 +8,6 @@ const vuexLocalPlugin = store => {
   // called when the store is initialized
   if (process.browser) {
     window.onNuxtReady(nuxt => {
-      console.log(nuxt)
       vuexLocal = new VuexPersistence({
         strictMode: true,
         storage: window.localStorage
@@ -18,7 +17,7 @@ const vuexLocalPlugin = store => {
   }
   store.subscribe((mutation, state) => {
     if (mutation.type === 'RESTORE_MUTATION') {
-      console.log('Restoring State')
+      // console.log('Restoring State')
       store.dispatch('requests/refresh')
       if (store.state.userauth.user.idToken || window.location.hash) {
         store.dispatch('userauth/setSession')
@@ -42,7 +41,7 @@ export const strict = false
 
 export const mutations = {
   RESTORE_MUTATION (state, payload) {
-    console.log('vuexLocal', vuexLocal)
+    // console.log('vuexLocal', vuexLocal)
     vuexLocal.RESTORE_MUTATION(state, payload)
   },
   addUpcomingElections (state, data) {
