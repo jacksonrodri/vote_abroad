@@ -1,10 +1,10 @@
 —
-title: Alabama Rules
-slug: alabama
-code: AL
+title: Deleware Rules
+slug: deleware
+code: DE
 id: 
-  - {type: SSN4, label: ‘Last 4 digits of your Social Security Number’}
-  - {type: StateID, label: ‘State ID’}
+  - SSN4
+  - StateID
 partyPrimary: true
 ballotReceiptOptions:
   - Email
@@ -19,7 +19,7 @@ fpcaSubmitOptionsRequest:
   - Fax
   - Mail
 fpcaSpecialRules: false
-fpcaSpecialInstructions: ‘’
+fpcaSpecialInstructions: null
 fpcaFollowUp: null
 canRegisterWithFwab: true
 fwabSubmitOptions:
@@ -27,7 +27,7 @@ fwabSubmitOptions:
   - Fax
   - Mail
 fwabSpecialRules: false
-fwabSpecialInstructions: ‘’
+fwabSpecialInstructions: null
 —
 
 text
