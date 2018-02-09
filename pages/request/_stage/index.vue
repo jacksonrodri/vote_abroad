@@ -157,20 +157,21 @@
         <b-input v-model="stateId" @input="$v.stateId.$touch()"></b-input>
       </b-field>
 
-      <!-- fax -->
-      <b-field
+      <tel-input
+        key="fax"
+        label="Your Fax Number"
         :type="($v.fax.$error ? 'is-danger': '')"
         :message="$v.fax.$error ? Object.keys($v.fax.$params).map(x => x) : '' "
         v-if="recBallot === 'fax'"
-        label="Fax Number">
-        <b-input v-model="fax" @input="$v.fax.$touch()" type="phone"></b-input>
-      </b-field>
+        @input="$v.fax.$touch()"
+        v-model="fax"></tel-input>
 
-      <!-- tel -->
-      <!-- <b-field :type="($v.tel.$error ? 'is-danger': '')" :message="$v.tel.$error ? Object.keys($v.tel.$params).map(x => x) : '' " label="Telephone number">
-        <b-input v-model="tel" @input="$v.tel.$touch()"></b-input>
-      </b-field> -->
-      <tel-input v-model="tel"></tel-input>
+      <tel-input
+        key="tel"
+        label="Your Phone Number"
+        :type="($v.tel.$error ? 'is-danger': '')"
+        :message="$v.tel.$error ? Object.keys($v.tel.$params).map(x => x) : '' "
+        v-model="tel"></tel-input>
 
       <!-- altEmail -->
       <b-field
@@ -190,9 +191,14 @@
       </b-field>
 
       <!-- party -->
-      <b-field :type="($v.party.$error ? 'is-danger': '')" :message="$v.party.$error ? Object.keys($v.party.$params).map(x => x) : '' " label="What is your political party?">
+      <!-- <b-field :type="($v.party.$error ? 'is-danger': '')" :message="$v.party.$error ? Object.keys($v.party.$params).map(x => x) : '' " label="What is your political party?">
         <b-input v-model="party" @input="$v.party.$touch()"></b-input>
-      </b-field>
+      </b-field> -->
+      <party-input
+        label="Your political party"
+        v-model="party"
+        :message="$v.party.$error ? Object.keys($v.party.$params).map(x => x) : '' "
+        :type="($v.party.$error ? 'is-danger': '')"></party-input>
 
       <!-- fwdAdr -->
       <!-- <b-field :type="($v.fwdAdr.$error ? 'is-danger': '')" :message="$v.fwdAdr.$error ? Object.keys($v.fwdAdr.$params).map(x => x) : '' " label="If you receive mail at a different address enter it here.">
@@ -235,6 +241,7 @@ import IsRegistered from '~/components/IsRegistered'
 import ReceiveBallot from '~/components/ReceiveBallot'
 import TelInput from '~/components/TelInput'
 import ForwardingAddress from '~/components/ForwardingAddress'
+import PartyInput from '~/components/PartyInput'
 
 export default {
   transition: 'test',
@@ -264,7 +271,8 @@ export default {
     IsRegistered,
     ReceiveBallot,
     TelInput,
-    ForwardingAddress
+    ForwardingAddress,
+    PartyInput
   },
   watch: {
     dob: function (newVal, oldVal) {
@@ -448,6 +456,9 @@ export default {
         required
       },
       fax: {
+        required
+      },
+      tel: {
         required
       },
       altEmail: {

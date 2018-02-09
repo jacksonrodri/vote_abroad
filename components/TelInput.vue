@@ -1,9 +1,10 @@
 <template>
   <b-field
-    label="Your Phone Number"
-    type="is-vfalight"
+    :label="label"
+    :message="message"
+    :type="type"
     label-for="tel">
-    <b-field>
+    <b-field :type="type">
       <p v-if="showFlag" class="control">
         <b-icon
           :icon="countryCode.toLowerCase()"
@@ -55,6 +56,18 @@ export default {
   name: 'tel-input',
   props: {
     size: {
+      type: String,
+      default: ''
+    },
+    label: {
+      type: String,
+      default: 'Your Phone Number'
+    },
+    message: {
+      type: String,
+      default: ''
+    },
+    type: {
       type: String,
       default: ''
     },
