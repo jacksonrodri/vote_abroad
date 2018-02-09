@@ -20,7 +20,7 @@ export default {
   async asyncData ({ app, params }) {
     return {
       elections: (await app.$content('/elections').get('elections')).body.filter(election => election.state.toLowerCase() === params.state.toLowerCase()),
-      state: (await app.$content('/state-rules').get(`states/${params.state}`)).body
+      state: (await app.$content('/rls').get(`states/${params.state}`)).body
     }
   },
   head: {

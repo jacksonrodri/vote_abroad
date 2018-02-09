@@ -65,7 +65,7 @@ export default {
     }
   },
   computed: {
-    hasForwardingAddress: function () { return Boolean(this.value.alt1 || this.value.alt2 || this.value.alt3 || this.value.alt4 || this.usesForwardingAddress) }
+    hasForwardingAddress: function () { return Boolean(this.value ? this.value.alt1 || this.value.alt2 || this.value.alt3 || this.value.alt4 || this.usesForwardingAddress : this.usesForwardingAddress) }
   }
 }
 </script>

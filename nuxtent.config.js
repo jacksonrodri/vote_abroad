@@ -2,7 +2,7 @@ module.exports = {
   content: [
     ['rls', {
       page: 'states/_state',
-      permalink: ':slug',
+      permalink: 'states/:slug',
       isPost:false,
       generate: [
         'get',
