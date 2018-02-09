@@ -1,8 +1,6 @@
 ---
-title: Nebraska Rules
-slug: nebraska
-code: NE
-id: 
+title: Alaska
+id:
   - SSN4
   - StateID
 partyPrimary: true
@@ -18,16 +16,10 @@ fpcaSubmitOptionsRequest:
   - Email
   - Fax
   - Mail
-fpcaSpecialRules: false
-fpcaSpecialInstructions: false
-fpcaFollowUp: false
 canRegisterWithFwab: true
 fwabSubmitOptions:
-  - Email
   - Fax
   - Mail
-fwabSpecialRules: true
-fwabSpecialInstructions: Email and fax with prior approval of local election office
 ---
 
-# Nebraska
+#Hi

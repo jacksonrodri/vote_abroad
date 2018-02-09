@@ -29,7 +29,8 @@ module.exports = {
     // '@nuxtjs/localtunnel',
     '@nuxtjs/pwa',
     ['nuxt-i18n', I18N],
-    'nuxtent'
+    'nuxtent',
+    '@nuxtjs/axios'
   ],
   manifest: {
     name: 'Vote From Abroad',

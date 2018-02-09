@@ -1,8 +1,6 @@
 ---
-title: Hawaii Rules
-slug: hawaii
-code: HI
-id: 
+title: Arizona
+id:
   - SSN4
   - StateID
 partyPrimary: true
@@ -18,16 +16,10 @@ fpcaSubmitOptionsRequest:
   - Email
   - Fax
   - Mail
-fpcaSpecialRules: false
-fpcaSpecialInstructions: false
-fpcaFollowUp: false
-canRegisterWithFwab: false
+canRegisterWithFwab: true
 fwabSubmitOptions:
-  - Email
   - Fax
   - Mail
-fwabSpecialRules: false
-fwabSpecialInstructions: false
 ---
 
-# Hawaii
+# Arizona Rules

@@ -1,10 +1,9 @@
 module.exports = {
   content: [
-    ['state-rules', {
-      page: '/states/_state',
-      permalink: 'states/:slug',
-      anchorLevel: 2,
-      isPost: false,
+    ['rls', {
+      page: 'states/_state',
+      permalink: ':slug',
+      isPost:false,
       generate: [
         'get',
         'getAll'

@@ -1,8 +1,6 @@
 ---
-title: Ohio Rules
-slug: ohio
-code: OH
-id: 
+title: California
+id:
   - SSN4
   - StateID
 partyPrimary: true
@@ -18,14 +16,10 @@ fpcaSubmitOptionsRequest:
   - Email
   - Fax
   - Mail
-fpcaSpecialRules: false
-fpcaSpecialInstructions: false
-fpcaFollowUp: false
 canRegisterWithFwab: true
 fwabSubmitOptions:
+  - Fax
   - Mail
-fwabSpecialRules: false
-fwabSpecialInstructions: false
 ---
 
-# Ohio
+# California Rules

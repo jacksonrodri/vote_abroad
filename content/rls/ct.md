@@ -1,7 +1,5 @@
 ---
-title: Wyoming Rules
-slug: wyoming
-code: WY
+title: Connecticut
 id: false
 partyPrimary: true
 ballotReceiptOptions:
@@ -11,17 +9,10 @@ ballotReceiptOptions:
 fpcaSubmitOptionsRegister:
   - Mail
 fpcaSubmitOptionsRequest:
-  - Email
-  - Fax
   - Mail
-fpcaSpecialRules: false
-fpcaSpecialInstructions: false
-fpcaFollowUp: false
 canRegisterWithFwab: false
 fwabSubmitOptions:
   - Mail
-fwabSpecialRules: false
-fwabSpecialInstructions: false
 ---
 
-# Wyoming
+# Connecticut Rules

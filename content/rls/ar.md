@@ -1,8 +1,6 @@
 ---
-title: Alabama Rules
-slug: alabama
-code: AL
-id: 
+title: Arkansas
+id:
   - SSN4
   - StateID
 partyPrimary: true
@@ -13,14 +11,9 @@ fpcaSubmitOptionsRegister:
   - Mail
 fpcaSubmitOptionsRequest:
   - Mail
-fpcaSpecialRules: false
-fpcaSpecialInstructions: false
-fpcaFollowUp: false
 canRegisterWithFwab: false
 fwabSubmitOptions:
   - Mail
-fwabSpecialRules: false
-fwabSpecialInstructions: false
-—--
+---
 
-text
+# California Rules

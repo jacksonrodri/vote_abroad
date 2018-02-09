@@ -1,8 +1,6 @@
 ---
-title: Deleware Rules
-slug: deleware
-code: DE
-id: 
+title: District of Columbia
+id:
   - SSN4
   - StateID
 partyPrimary: true
@@ -18,16 +16,11 @@ fpcaSubmitOptionsRequest:
   - Email
   - Fax
   - Mail
-fpcaSpecialRules: false
-fpcaSpecialInstructions: false
-fpcaFollowUp: false
 canRegisterWithFwab: true
 fwabSubmitOptions:
   - Email
   - Fax
   - Mail
-fwabSpecialRules: false
-fwabSpecialInstructions: false
 ---
 
-text
+# District of Columbia Rules

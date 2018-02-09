@@ -1,10 +1,8 @@
 ---
-title: Virgin Islands Rules
-slug: virgin-islands
-code: VI
-id: 
+title: Colorado
+id:
   - SSN4
-  - TerritoryID
+  - StateID
 partyPrimary: true
 ballotReceiptOptions:
   - Email
@@ -18,16 +16,11 @@ fpcaSubmitOptionsRequest:
   - Email
   - Fax
   - Mail
-fpcaSpecialRules: false
-fpcaSpecialInstructions: false
-fpcaFollowUp: false
 canRegisterWithFwab: true
 fwabSubmitOptions:
   - Email
   - Fax
   - Mail
-fwabSpecialRules: false
-fwabSpecialInstructions: false
 ---
 
-# Virgin Islands
+# Colorado Rules

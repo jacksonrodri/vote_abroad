@@ -1,6 +1,5 @@
 ---
 title: Alaska
-slug: alaska
 state: Alaska
 ---
 
