@@ -37,17 +37,6 @@ module.exports = {
         ]
       }
     ]
-    // ['state-rules', {
-    //   page: 'elections/_state',
-    //   isPost: false,
-    //   generate: [
-    //     'get'
-    //   ]
-    // }]
-    // ['projects', {
-    //   page: '/projects/_project',
-    //   isPost: false
-    // }]
   ],
   api: function(isStatic) {
     return {
