@@ -2,7 +2,7 @@
 title: New Hampshire Rules
 slug: new-hampshire
 code: NH
-id: null
+id: false
 partyPrimary: true
 ballotReceiptOptions:
   - Email
@@ -17,13 +17,13 @@ fpcaSubmitOptionsRequest:
   - Fax
   - Mail
 fpcaSpecialRules: false
-fpcaSpecialInstructions: null
-fpcaFollowUp: null
+fpcaSpecialInstructions: false
+fpcaFollowUp: false
 canRegisterWithFwab: false
 fwabSubmitOptions:
   - Mail
 fwabSpecialRules: false
-fwabSpecialInstructions: null
+fwabSpecialInstructions: false
 ---
 
 # New Hampshire

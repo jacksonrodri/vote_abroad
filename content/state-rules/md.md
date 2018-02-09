@@ -17,13 +17,13 @@ fpcaSubmitOptionsRequest:
   - Fax
   - Mail
 fpcaSpecialRules: false
-fpcaSpecialInstructions: null
-fpcaFollowUp: null
+fpcaSpecialInstructions: false
+fpcaFollowUp: false
 canRegisterWithFwab: true
 fwabSubmitOptions:
   - Mail
 fwabSpecialRules: false
-fwabSpecialInstructions: null
+fwabSpecialInstructions: false
 ---
 
 # Maryland

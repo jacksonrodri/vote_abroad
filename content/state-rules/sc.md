@@ -19,14 +19,14 @@ fpcaSubmitOptionsRequest:
   - Mail
 fpcaSpecialRules: true
 fpcaSpecialInstructions: '**You must provide your race.** <br> **You must provide your previous location of registration, if in another state.** '
-fpcaFollowUp: null
+fpcaFollowUp: false
 canRegisterWithFwab: true
 fwabSubmitOptions:
   - Email
   - Fax
   - Mail
 fwabSpecialRules: false
-fwabSpecialInstructions: null
+fwabSpecialInstructions: false
 ---
 
 # South Carolina

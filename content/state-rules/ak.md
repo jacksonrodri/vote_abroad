@@ -20,7 +20,7 @@ fpcaSubmitOptionsRequest:
   - Mail
 fpcaSpecialRules: true
 fpcaSpecialInstructions: 'You must provide proof of residency in Alaska'
-fpcaFollowUp: null
+fpcaFollowUp: false
 canRegisterWithFwab: true
 fwabSubmitOptions:
   - Fax

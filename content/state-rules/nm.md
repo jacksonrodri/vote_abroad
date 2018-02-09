@@ -18,15 +18,15 @@ fpcaSubmitOptionsRequest:
   - Fax
   - Mail
 fpcaSpecialRules: false
-fpcaSpecialInstructions: null
-fpcaFollowUp: null
+fpcaSpecialInstructions: false
+fpcaFollowUp: false
 canRegisterWithFwab: false
 fwabSubmitOptions:
   - Email
   - Fax
   - Mail
 fwabSpecialRules: false
-fwabSpecialInstructions: null
+fwabSpecialInstructions: false
 ---
 
 # New Mexico

@@ -14,13 +14,13 @@ fpcaSubmitOptionsRegister:
 fpcaSubmitOptionsRequest:
   - Mail
 fpcaSpecialRules: false
-fpcaSpecialInstructions: null
-fpcaFollowUp: null
+fpcaSpecialInstructions: false
+fpcaFollowUp: false
 canRegisterWithFwab: false
 fwabSubmitOptions:
   - Mail
 fwabSpecialRules: false
-fwabSpecialInstructions: null
+fwabSpecialInstructions: false
 —--
 
 text

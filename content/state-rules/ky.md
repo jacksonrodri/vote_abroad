@@ -2,7 +2,7 @@
 title: Kentucky Rules
 slug: kentucky
 code: KY
-id: null
+id: false
 partyPrimary: true
 ballotReceiptOptions:
   - Email
@@ -17,13 +17,13 @@ fpcaSubmitOptionsRequest:
   - Fax
   - Mail
 fpcaSpecialRules: false
-fpcaSpecialInstructions: null
-fpcaFollowUp: null
+fpcaSpecialInstructions: false
+fpcaFollowUp: false
 canRegisterWithFwab: true
 fwabSubmitOptions:
   - Mail
 fwabSpecialRules: false
-fwabSpecialInstructions: null
+fwabSpecialInstructions: false
 ---
 
 # Kentucky

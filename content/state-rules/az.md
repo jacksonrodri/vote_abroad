@@ -19,7 +19,7 @@ fpcaSubmitOptionsRequest:
   - Mail
 fpcaSpecialRules: true
 fpcaSpecialInstructions: If you are using this form to register to vote, you must provide proof of citizenship. You must include a photocopy, do not send original documents.
-fpcaFollowUp: null
+fpcaFollowUp: false
 canRegisterWithFwab: true
 fwabSubmitOptions:
   - Fax

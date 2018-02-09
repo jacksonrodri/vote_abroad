@@ -20,13 +20,13 @@ fpcaSubmitOptionsRequest:
   - Mail
 fpcaSpecialRules: true
 fpcaSpecialInstructions: 'If your political party affiliation is listed as Independent/No Party, you may be able to request a ballot for a recognized political party's primary election. For specific information about recognized political parties in Oklahoma, please visit [http://www.elections.ok.gov](http://www.elections.ok.gov).'
-fpcaFollowUp: null
+fpcaFollowUp: false
 canRegisterWithFwab: true
 fwabSubmitOptions:
   - Fax
   - Mail
 fwabSpecialRules: false
-fwabSpecialInstructions: null
+fwabSpecialInstructions: false
 ---
 
 # Oklahoma
