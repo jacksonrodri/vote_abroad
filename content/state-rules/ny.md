@@ -1,10 +1,10 @@
-—
-title: Alabama Rules
-slug: alabama
-code: AL
+---
+title: New York Rules
+slug: new-york
+code: NY
 id: 
-  - {type: SSN4, label: ‘Last 4 digits of your Social Security Number’}
-  - {type: StateID, label: ‘State ID’}
+  - SSN4
+  - NYDMVID
 partyPrimary: true
 ballotReceiptOptions:
   - Email
@@ -19,15 +19,13 @@ fpcaSubmitOptionsRequest:
   - Fax
   - Mail
 fpcaSpecialRules: false
-fpcaSpecialInstructions: ‘’
+fpcaSpecialInstructions: null
 fpcaFollowUp: null
 canRegisterWithFwab: true
 fwabSubmitOptions:
-  - Email
-  - Fax
   - Mail
 fwabSpecialRules: false
-fwabSpecialInstructions: ‘’
-—
+fwabSpecialInstructions: null
+---
 
-text
+# New York

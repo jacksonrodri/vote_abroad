@@ -1,4 +1,4 @@
-—
+---
 title: Michigan Rules
 slug: michigan
 code: MI
@@ -23,11 +23,9 @@ fpcaSpecialInstructions: null
 fpcaFollowUp: null
 canRegisterWithFwab: true
 fwabSubmitOptions:
-  - Email
-  - Fax
   - Mail
 fwabSpecialRules: false
 fwabSpecialInstructions: null
-—
+---
 
-text
+# Michigan

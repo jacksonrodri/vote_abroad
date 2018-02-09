@@ -1,10 +1,8 @@
-—
+---
 title: Massachusetts Rules
 slug: massachusetts
 code: MA
-id: 
-  - SSN4
-  - StateID
+id: null
 partyPrimary: true
 ballotReceiptOptions:
   - Email
@@ -28,6 +26,6 @@ fwabSubmitOptions:
   - Mail
 fwabSpecialRules: false
 fwabSpecialInstructions: null
-—
+---
 
-text
+# Massachusetts

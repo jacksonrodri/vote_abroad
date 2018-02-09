@@ -1,4 +1,4 @@
-—
+---
 title: Wyoming Rules
 slug: wyoming
 code: WY
@@ -15,13 +15,13 @@ fpcaSubmitOptionsRequest:
   - Fax
   - Mail
 fpcaSpecialRules: false
-fpcaSpecialInstructions: ‘’
+fpcaSpecialInstructions: null
 fpcaFollowUp: null
 canRegisterWithFwab: false
 fwabSubmitOptions:
   - Mail
 fwabSpecialRules: false
-fwabSpecialInstructions: ‘’
-—
+fwabSpecialInstructions: null
+---
 
-text
+# Wyoming

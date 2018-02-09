@@ -1,10 +1,8 @@
-—
-title: Alabama Rules
-slug: alabama
-code: AL
-id: 
-  - {type: SSN4, label: ‘Last 4 digits of your Social Security Number’}
-  - {type: StateID, label: ‘State ID’}
+---
+title: New Hampshire Rules
+slug: new-hampshire
+code: NH
+id: null
 partyPrimary: true
 ballotReceiptOptions:
   - Email
@@ -19,15 +17,13 @@ fpcaSubmitOptionsRequest:
   - Fax
   - Mail
 fpcaSpecialRules: false
-fpcaSpecialInstructions: ‘’
+fpcaSpecialInstructions: null
 fpcaFollowUp: null
-canRegisterWithFwab: true
+canRegisterWithFwab: false
 fwabSubmitOptions:
-  - Email
-  - Fax
   - Mail
 fwabSpecialRules: false
-fwabSpecialInstructions: ‘’
-—
+fwabSpecialInstructions: null
+---
 
-text
+# New Hampshire

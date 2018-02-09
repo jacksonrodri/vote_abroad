@@ -1,4 +1,4 @@
-—
+---
 title: Maryland Rules
 slug: maryland
 code: MD
@@ -11,8 +11,6 @@ ballotReceiptOptions:
   - Fax
   - Mail
 fpcaSubmitOptionsRegister:
-  - Email
-  - Fax
   - Mail
 fpcaSubmitOptionsRequest:
   - Email
@@ -23,11 +21,9 @@ fpcaSpecialInstructions: null
 fpcaFollowUp: null
 canRegisterWithFwab: true
 fwabSubmitOptions:
-  - Email
-  - Fax
   - Mail
 fwabSpecialRules: false
 fwabSpecialInstructions: null
-—
+---
 
-text
+# Maryland

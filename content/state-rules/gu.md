@@ -1,11 +1,11 @@
-—
+---
 title: Guam Rules
 slug: guam
 code: GU
 id: 
   - SSN4
   - StateID
-partyPrimary: true
+partyPrimary: false
 ballotReceiptOptions:
   - Email
   - Fax
@@ -21,13 +21,11 @@ fpcaSubmitOptionsRequest:
 fpcaSpecialRules: false
 fpcaSpecialInstructions: null
 fpcaFollowUp: null
-canRegisterWithFwab: true
+canRegisterWithFwab: false
 fwabSubmitOptions:
-  - Email
-  - Fax
   - Mail
 fwabSpecialRules: false
 fwabSpecialInstructions: null
-—
+---
 
-text
+# Guam

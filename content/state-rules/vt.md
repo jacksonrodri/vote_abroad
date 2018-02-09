@@ -23,7 +23,7 @@ canRegisterWithFwab: false
 fwabSubmitOptions:
   - Mail
 fwabSpecialRules: false
-fwabSpecialInstructions: ''
+fwabSpecialInstructions: null
 ---
 
-text
+# Vermont

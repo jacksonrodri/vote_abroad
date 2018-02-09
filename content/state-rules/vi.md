@@ -1,4 +1,4 @@
-—
+---
 title: Virgin Islands Rules
 slug: virgin-islands
 code: VI
@@ -19,7 +19,7 @@ fpcaSubmitOptionsRequest:
   - Fax
   - Mail
 fpcaSpecialRules: false
-fpcaSpecialInstructions: ‘’
+fpcaSpecialInstructions: null
 fpcaFollowUp: null
 canRegisterWithFwab: true
 fwabSubmitOptions:
@@ -27,7 +27,7 @@ fwabSubmitOptions:
   - Fax
   - Mail
 fwabSpecialRules: false
-fwabSpecialInstructions: ‘’
-—
+fwabSpecialInstructions: null
+---
 
-text
+# Virgin Islands

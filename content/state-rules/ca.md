@@ -1,4 +1,4 @@
-—
+---
 title: California Rules
 slug: california
 code: CA
@@ -23,11 +23,10 @@ fpcaSpecialInstructions: null
 fpcaFollowUp: null
 canRegisterWithFwab: true
 fwabSubmitOptions:
-  - Email
   - Fax
   - Mail
 fwabSpecialRules: false
 fwabSpecialInstructions: null
-—
+---
 
 text

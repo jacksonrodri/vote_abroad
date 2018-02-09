@@ -1,4 +1,4 @@
-—
+---
 title: West Virginia Rules
 slug: west-virginia
 code: WV
@@ -19,7 +19,7 @@ fpcaSubmitOptionsRequest:
   - Fax
   - Mail
 fpcaSpecialRules: false
-fpcaSpecialInstructions: ‘’
+fpcaSpecialInstructions: null
 fpcaFollowUp: null
 canRegisterWithFwab: false
 fwabSubmitOptions:
@@ -27,7 +27,7 @@ fwabSubmitOptions:
   - Fax
   - Mail
 fwabSpecialRules: false
-fwabSpecialInstructions: ‘’
-—
+fwabSpecialInstructions: null
+---
 
-text
+# West Virginia

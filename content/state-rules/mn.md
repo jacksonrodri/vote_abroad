@@ -1,11 +1,11 @@
-—
-title: Alabama Rules
-slug: alabama
-code: AL
+---
+title: Minnesota
+slug: minnesota
+code: MN
 id: 
-  - {type: SSN4, label: ‘Last 4 digits of your Social Security Number’}
-  - {type: StateID, label: ‘State ID’}
-partyPrimary: true
+  - SSN4
+  - StateID
+partyPrimary: false
 ballotReceiptOptions:
   - Email
   - Fax
@@ -19,15 +19,13 @@ fpcaSubmitOptionsRequest:
   - Fax
   - Mail
 fpcaSpecialRules: false
-fpcaSpecialInstructions: ‘’
+fpcaSpecialInstructions: null
 fpcaFollowUp: null
 canRegisterWithFwab: true
 fwabSubmitOptions:
-  - Email
-  - Fax
   - Mail
 fwabSpecialRules: false
-fwabSpecialInstructions: ‘’
-—
+fwabSpecialInstructions: null
+---
 
-text
+# Minnesota

@@ -1,4 +1,4 @@
-—
+---
 title: American Samoa Rules
 slug: american-samoa
 code: AS
@@ -21,13 +21,11 @@ fpcaSubmitOptionsRequest:
 fpcaSpecialRules: false
 fpcaSpecialInstructions: null
 fpcaFollowUp: null
-canRegisterWithFwab: true
+canRegisterWithFwab: false
 fwabSubmitOptions:
-  - Email
-  - Fax
   - Mail
 fwabSpecialRules: false
 fwabSpecialInstructions: null
-—
+—--
 
 text

@@ -1,10 +1,10 @@
-—
-title: Alabama Rules
-slug: alabama
-code: AL
+---
+title: Mississippi Rules
+slug: mississippi
+code: MS
 id: 
-  - {type: SSN4, label: ‘Last 4 digits of your Social Security Number’}
-  - {type: StateID, label: ‘State ID’}
+  - SSN4
+  - StateID
 partyPrimary: true
 ballotReceiptOptions:
   - Email
@@ -28,6 +28,6 @@ fwabSubmitOptions:
   - Mail
 fwabSpecialRules: false
 fwabSpecialInstructions: ‘’
-—
+---
 
-text
+# Mississippi

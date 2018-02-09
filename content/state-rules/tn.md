@@ -1,14 +1,12 @@
-—
-title: Alabama Rules
-slug: alabama
-code: AL
+---
+title: Tennessee Rules
+slug: tennessee
+code: TN
 id: 
-  - {type: SSN4, label: ‘Last 4 digits of your Social Security Number’}
-  - {type: StateID, label: ‘State ID’}
+  - SSN
 partyPrimary: true
 ballotReceiptOptions:
   - Email
-  - Fax
   - Mail
 fpcaSubmitOptionsRegister:
   - Email
@@ -19,15 +17,13 @@ fpcaSubmitOptionsRequest:
   - Fax
   - Mail
 fpcaSpecialRules: false
-fpcaSpecialInstructions: ‘’
+fpcaSpecialInstructions: null
 fpcaFollowUp: null
 canRegisterWithFwab: true
 fwabSubmitOptions:
-  - Email
-  - Fax
   - Mail
 fwabSpecialRules: false
-fwabSpecialInstructions: ‘’
-—
+fwabSpecialInstructions: null
+---
 
-text
+# Tennessee

@@ -1,4 +1,4 @@
-—
+---
 title: Deleware Rules
 slug: deleware
 code: DE
@@ -28,6 +28,6 @@ fwabSubmitOptions:
   - Mail
 fwabSpecialRules: false
 fwabSpecialInstructions: null
-—
+---
 
 text

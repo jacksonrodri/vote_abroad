@@ -1,25 +1,23 @@
-—
-title: Alabama Rules
-slug: alabama
-code: AL
+---
+title: Oregon Rules
+slug: oregon
+code: OR
 id: 
-  - {type: SSN4, label: ‘Last 4 digits of your Social Security Number’}
-  - {type: StateID, label: ‘State ID’}
+  - SSN4
+  - StateID
 partyPrimary: true
 ballotReceiptOptions:
   - Email
   - Fax
   - Mail
 fpcaSubmitOptionsRegister:
-  - Email
-  - Fax
   - Mail
 fpcaSubmitOptionsRequest:
   - Email
   - Fax
   - Mail
 fpcaSpecialRules: false
-fpcaSpecialInstructions: ‘’
+fpcaSpecialInstructions: null
 fpcaFollowUp: null
 canRegisterWithFwab: true
 fwabSubmitOptions:
@@ -27,7 +25,7 @@ fwabSubmitOptions:
   - Fax
   - Mail
 fwabSpecialRules: false
-fwabSpecialInstructions: ‘’
-—
+fwabSpecialInstructions: null
+---
 
-text
+# Oregon

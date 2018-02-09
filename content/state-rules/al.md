@@ -1,33 +1,26 @@
-—
+---
 title: Alabama Rules
 slug: alabama
 code: AL
 id: 
-  - {type: SSN4, label: ‘Last 4 digits of your Social Security Number’}
-  - {type: StateID, label: ‘State ID’}
+  - SSN4
+  - StateID
 partyPrimary: true
 ballotReceiptOptions:
   - Email
-  - Fax
   - Mail
 fpcaSubmitOptionsRegister:
-  - Email
-  - Fax
   - Mail
 fpcaSubmitOptionsRequest:
-  - Email
-  - Fax
   - Mail
 fpcaSpecialRules: false
 fpcaSpecialInstructions: null
 fpcaFollowUp: null
-canRegisterWithFwab: true
+canRegisterWithFwab: false
 fwabSubmitOptions:
-  - Email
-  - Fax
   - Mail
 fwabSpecialRules: false
 fwabSpecialInstructions: null
-—
+—--
 
 text

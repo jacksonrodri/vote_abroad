@@ -1,4 +1,4 @@
-—
+---
 title: Hawaii Rules
 slug: hawaii
 code: HI
@@ -21,13 +21,13 @@ fpcaSubmitOptionsRequest:
 fpcaSpecialRules: false
 fpcaSpecialInstructions: null
 fpcaFollowUp: null
-canRegisterWithFwab: true
+canRegisterWithFwab: false
 fwabSubmitOptions:
   - Email
   - Fax
   - Mail
 fwabSpecialRules: false
 fwabSpecialInstructions: null
-—
+---
 
-text
+# Hawaii

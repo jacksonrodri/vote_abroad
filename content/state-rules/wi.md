@@ -1,4 +1,4 @@
-—
+---
 title: Wisconsin Rules
 slug: wisconsin
 code: WI
@@ -17,13 +17,13 @@ fpcaSubmitOptionsRequest:
   - Fax
   - Mail
 fpcaSpecialRules: false
-fpcaSpecialInstructions: ‘’
+fpcaSpecialInstructions: null
 fpcaFollowUp: null
 canRegisterWithFwab: false
 fwabSubmitOptions:
   - Mail
 fwabSpecialRules: true
 fwabSpecialInstructions: ‘**This form must have a witness signature.**’
-—
+---
 
 text

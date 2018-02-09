@@ -1,4 +1,4 @@
-—
+---
 title: District of Columbia Rules
 slug: district-of-columbia
 code: DC
@@ -28,6 +28,6 @@ fwabSubmitOptions:
   - Mail
 fwabSpecialRules: false
 fwabSpecialInstructions: null
-—
+—---
 
 text

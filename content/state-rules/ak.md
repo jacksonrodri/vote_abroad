@@ -3,8 +3,8 @@ title: Alaska Rules
 slug: alaska
 code: AK
 id: 
-  - {type: SSN4, label: 'Last 4 digits of your Social Security Number'}
-  - {type: StateID, label: 'State ID'}
+  - SSN4
+  - StateID
 partyPrimary: true
 ballotReceiptOptions:
   - Email
@@ -18,16 +18,15 @@ fpcaSubmitOptionsRequest:
   - Email
   - Fax
   - Mail
-fpcaSpecialRules: false
-fpcaSpecialInstructions: false
+fpcaSpecialRules: true
+fpcaSpecialInstructions: 'You must provide proof of residency in Alaska'
 fpcaFollowUp: null
 canRegisterWithFwab: true
 fwabSubmitOptions:
-  - Email
   - Fax
   - Mail
-fwabSpecialRules: false
-fwabSpecialInstructions: null
-—
+fwabSpecialRules: true
+fwabSpecialInstructions: 'You must provide proof of residency in Alaska'
+---
 
-text
+# Alaska

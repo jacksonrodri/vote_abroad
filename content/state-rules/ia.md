@@ -1,10 +1,8 @@
-—
+---
 title: Iowa Rules
 slug: iowa
 code: IA
-id: 
-  - SSN4
-  - StateID
+id: null
 partyPrimary: true
 ballotReceiptOptions:
   - Email
@@ -23,11 +21,9 @@ fpcaSpecialInstructions: null
 fpcaFollowUp: null
 canRegisterWithFwab: true
 fwabSubmitOptions:
-  - Email
-  - Fax
   - Mail
 fwabSpecialRules: false
 fwabSpecialInstructions: null
-—
+---
 
-text
+# Iowa

@@ -1,4 +1,4 @@
-—-
+---
 title: Arizona Rules
 slug: arizona
 code: AZ
@@ -17,16 +17,15 @@ fpcaSubmitOptionsRequest:
   - Email
   - Fax
   - Mail
-fpcaSpecialRules: false
-fpcaSpecialInstructions: null
+fpcaSpecialRules: true
+fpcaSpecialInstructions: If you are using this form to register to vote, you must provide proof of citizenship. You must include a photocopy, do not send original documents.
 fpcaFollowUp: null
 canRegisterWithFwab: true
 fwabSubmitOptions:
-  - Email
   - Fax
   - Mail
-fwabSpecialRules: false
-fwabSpecialInstructions: null
-—
-—-
+fwabSpecialRules: true
+fwabSpecialInstructions: If you are using this form to register to vote, you must provide proof of citizenship. You must include a photocopy, do not send original documents.
+—--
+
 text

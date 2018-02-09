@@ -1,4 +1,4 @@
-—
+---
 title: Florida Rules
 slug: florida
 code: FL
@@ -11,8 +11,6 @@ ballotReceiptOptions:
   - Fax
   - Mail
 fpcaSubmitOptionsRegister:
-  - Email
-  - Fax
   - Mail
 fpcaSubmitOptionsRequest:
   - Email
@@ -21,13 +19,12 @@ fpcaSubmitOptionsRequest:
 fpcaSpecialRules: false
 fpcaSpecialInstructions: null
 fpcaFollowUp: null
-canRegisterWithFwab: true
+canRegisterWithFwab: false
 fwabSubmitOptions:
-  - Email
   - Fax
   - Mail
 fwabSpecialRules: false
 fwabSpecialInstructions: null
-—
+---
 
-text
+# Florida Rules

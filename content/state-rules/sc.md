@@ -1,10 +1,9 @@
-—
-title: Alabama Rules
-slug: alabama
-code: AL
+---
+title: South Carolina Rules
+slug: south-carolina
+code: SC
 id: 
-  - {type: SSN4, label: ‘Last 4 digits of your Social Security Number’}
-  - {type: StateID, label: ‘State ID’}
+  - SSN
 partyPrimary: true
 ballotReceiptOptions:
   - Email
@@ -18,8 +17,8 @@ fpcaSubmitOptionsRequest:
   - Email
   - Fax
   - Mail
-fpcaSpecialRules: false
-fpcaSpecialInstructions: ‘’
+fpcaSpecialRules: true
+fpcaSpecialInstructions: '**You must provide your race.** <br> **You must provide your previous location of registration, if in another state.** '
 fpcaFollowUp: null
 canRegisterWithFwab: true
 fwabSubmitOptions:
@@ -27,7 +26,7 @@ fwabSubmitOptions:
   - Fax
   - Mail
 fwabSpecialRules: false
-fwabSpecialInstructions: ‘’
-—
+fwabSpecialInstructions: null
+---
 
-text
+# South Carolina

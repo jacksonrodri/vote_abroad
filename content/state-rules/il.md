@@ -1,4 +1,4 @@
-—
+---
 title: Illinois Rules
 slug: illinois
 code: IL
@@ -21,13 +21,11 @@ fpcaSubmitOptionsRequest:
 fpcaSpecialRules: false
 fpcaSpecialInstructions: null
 fpcaFollowUp: null
-canRegisterWithFwab: true
+canRegisterWithFwab: false
 fwabSubmitOptions:
-  - Email
-  - Fax
   - Mail
 fwabSpecialRules: false
 fwabSpecialInstructions: null
-—
+---
 
-text
+# Illinois
