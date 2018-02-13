@@ -97,11 +97,11 @@
     <voter-class v-model="voterClass"></voter-class>
 
     <us-address-input
-      label="Your US Voting Address"
+      :label="$t('request.votingAddress')"
       usOnly
       v-model="votAdr">
       <div slot="instructions">
-        <p>Input the last address you lived in in the US.  If you have never lived in the US use your parents' last US address.</p>
+        <p>{{ $t('request.votingAddressInstructions') }}</p>
       </div>
 
     </us-address-input>
@@ -168,7 +168,7 @@
 
       <tel-input
         key="tel"
-        label="Your Phone Number"
+        :label="$t('request.tel')"
         :type="($v.tel.$error ? 'is-danger': '')"
         :message="$v.tel.$error ? Object.keys($v.tel.$params).map(x => x) : '' "
         v-model="tel"></tel-input>

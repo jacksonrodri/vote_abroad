@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="subtitle is-4">Would you like your ballot sent to a different address than your current residential address?</h1>
+    <h1 class="subtitle is-4">{{ $t('request.forwardingAddressInstructions') }}</h1>
     <b-field grouped>
       <p class="control">
         <button @click="updateVal({}); usesForwardingAddress = true" :class="[baseClass, {'is-primary': hasForwardingAddress}]">
@@ -30,7 +30,7 @@
       v-show="hasForwardingAddress"
       @input="updateVal">
       <div slot="instructions">
-        <p>If you would like your ballot sent to a different address, input it here.</p>
+        <p>{{ $t('request.forwardingAddressInstructions') }}</p>
       </div>
 
     </address-input>
@@ -50,7 +50,7 @@ export default {
     return {
       usesForwardingAddress: false,
       baseClass: {
-        'is-medium': true,
+        'is-medium': false,
         button: true
       },
       adr: {}

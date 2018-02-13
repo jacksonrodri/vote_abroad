@@ -293,11 +293,11 @@ export default {
           {x: percentWidthToPix(6.4, ctx), y: percentWidthToPix(98.4, ctx)},
           {x: percentWidthToPix(6.4, ctx), y: percentWidthToPix(101.3, ctx)}
         ],
-        dateMon: {
+        dateDay: {
           x: percentWidthToPix(83, ctx),
           y: percentWidthToPix(119.5, ctx)
         },
-        dateDay: {
+        dateMon: {
           x: percentWidthToPix(79, ctx),
           y: percentWidthToPix(119.5, ctx)
         },

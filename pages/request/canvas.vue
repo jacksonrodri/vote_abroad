@@ -1,6 +1,7 @@
 <template>
   <div class="is-fullhd">
     <!-- <no-ssr> -->
+      <h3 class="title is-4">Review the form below then click 'add your signature' ..... click send email (this text to be updated with voter specific instructions based on state, registration status, ballot submission selection)"</h3>
     <button class="button is-primary" @click="isSignatureModalActive = true">Add your signature</button>
     <my-canvas class="canvas" ref="fpca">
       <my-box
@@ -22,8 +23,8 @@
         :fwdAdr="fwdAdr"
         :email="email"
         :altEmail="altEmail"
-        :tel="tel"
-        :fax="fax"
+        :tel="tel.intNumber"
+        :fax="fax.intNumber"
         :party="party"
         :addlInfo="addlInfo"
         :date="date"
@@ -126,8 +127,8 @@ export default {
     fwdAdr () { return this.currentRequest && this.currentRequest.fwdAdr ? this.currentRequest.fwdAdr : null },
     email () { return this.currentRequest && this.currentRequest.email ? this.currentRequest.email.toString() : ' ' },
     altEmail () { return this.currentRequest && this.currentRequest.altEmail ? this.currentRequest.altEmail.toString() : ' ' },
-    tel () { return this.currentRequest && this.currentRequest.tel ? this.currentRequest.tel.toString() : ' ' },
-    fax () { return this.currentRequest && this.currentRequest.fax ? this.currentRequest.fax.toString() : ' ' },
+    tel () { return this.currentRequest && this.currentRequest.tel ? this.currentRequest.tel : ' ' },
+    fax () { return this.currentRequest && this.currentRequest.fax ? this.currentRequest.fax : ' ' },
     party () { return this.currentRequest && this.currentRequest.party ? this.currentRequest.party.toString() : ' ' },
     addlInfo () { return this.currentRequest && this.currentRequest.addlInfo ? this.currentRequest.addlInfo.toString() : ' ' },
     date () { return this.currentRequest && this.currentRequest.date ? this.currentRequest.date.toString() : ' ' },
