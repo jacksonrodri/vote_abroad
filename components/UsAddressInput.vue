@@ -1,9 +1,13 @@
 <template>
   <section>
-    <div class="field-label has-text-left">
+    <span class="is-flex"><label @click="$refs.premise.focus()" class="label" style="cursor: pointer;">{{ label }} </label><span v-if="toolTipTitle" @click="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
+    <!-- <div class="field-label has-text-left">
       <label class="label">{{ label }}</label>
-    </div>
+    </div> -->
     <slot name="instructions"></slot>
+    <b-message v-if="toolTipTitle" :title="toolTipTitle" type="is-info" has-icon :active.sync="isOpen">
+      <slot name="tooltip"></slot>
+    </b-message>
     <div v-if="usOnly === undefined || usOnly === false" class="field is-fullwidth">
           <div class="field-body">
             <b-field class="grouped" >
@@ -111,7 +115,13 @@
         </div>
         <div v-if="(usOnly !== undefined && usOnly !== false) || usOnly === true" class="field is-fullwidth">
           <!-- votAdr.county -->
-          <b-field :label="`Jurisdiction (${regionCode && jurisdictionTypes[regionCode] ? jurisdictionTypes[regionCode].join(', ') : 'County, City or Town'})`">
+          <!-- <b-field :label="`Jurisdiction (${regionCode && jurisdictionTypes[regionCode] ? jurisdictionTypes[regionCode].join(', ') : 'County, City or Town'})`"> -->
+          <div class="field">
+            <span class="is-flex">
+              <label class="label">
+                {{ `Jurisdiction (${regionCode && jurisdictionTypes[regionCode] ? jurisdictionTypes[regionCode].join(', ') : 'County, City or Town'})` }}
+              </label>
+            <span @click="isJurisdictionOpen = !isJurisdictionOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-search"></i></span></span>
             <b-autocomplete
                 v-model="jurisdiction"
                 ref="jurisdiction"
@@ -120,11 +130,14 @@
                 :data="filteredLeos"
                 open-on-focus
                 field="jurisdiction"
+                @input="updateAddress()"
                 @select="option => selected = option">
                 <template slot-scope="props">{{ props.option.jurisdiction }} ({{ props.option.jurisdictionType }}) {{ props.option.state }}</template>
             </b-autocomplete>
-          </b-field>
-          <pre><strong>Local Election Official Address (to be hidden/reformatted later):</strong><br/> {{leo}}</pre>
+          </div>
+          <b-message v-if="Object.keys(leo).length > 0" title="Local Election Official Address (to be hidden/reformatted later):" type="is-info" has-icon :active.sync="isJurisdictionOpen">
+            <pre><strong>Local Election Official Address (to be hidden/reformatted later):</strong><br/> {{leo}}</pre>
+          </b-message>
         </div>
   </section>
 </template>
@@ -139,7 +152,8 @@ export default {
   props: [
     'value',
     'usOnly',
-    'label'
+    'label',
+    'toolTipTitle'
   ],
   async mounted () {
     if (this.usOnly !== undefined) {
@@ -201,7 +215,9 @@ export default {
       jurisdictionChoices: [],
       jurisdiction: '',
       leos: [],
-      jurisdictionTypes: {}
+      jurisdictionTypes: {},
+      isOpen: false,
+      isJurisdictionOpen: false
     }
   },
   computed: {

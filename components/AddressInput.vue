@@ -1,9 +1,10 @@
 <template>
   <section>
-    <div class="field-label has-text-left">
-      <label class="label">{{ label }}</label>
-    </div>
+    <span class="is-flex"><label @click="$refs.country.focus()" class="label" style="cursor: pointer;">{{ label }} </label><span v-if="toolTipTitle" @click="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
     <slot name="instructions"></slot>
+    <b-message v-if="toolTipTitle" title="Where are you now?" type="is-info" has-icon :active.sync="isOpen">
+      <slot name="tooltip"></slot>
+    </b-message>
     <div v-if="usOnly === undefined || usOnly === false" class="field is-fullwidth" v-show="!usesAlternateFormat">
           <div class="field-body">
             <b-field class="grouped" >
@@ -13,7 +14,8 @@
                     <b-icon
                       pack="flag-icon"
                       :custom-class="'flag-icon-' + cCountryCode.toLowerCase()"
-                      @click.native="$refs.country.focus()">
+                      @click.native="$refs.country.focus()"
+                      style="cursor: pointer;">
                     </b-icon>
                   </p>
                   <b-autocomplete
@@ -164,7 +166,8 @@ export default {
   props: [
     'value',
     'usOnly',
-    'label'
+    'label',
+    'toolTipTitle'
   ],
   mounted () {
     if (this.usOnly !== undefined) {
@@ -213,7 +216,8 @@ export default {
       alt2: '',
       alt3: '',
       alt4: '',
-      alt5: ''
+      alt5: '',
+      isOpen: false
     }
   },
   computed: {
@@ -308,6 +312,9 @@ export default {
     }
   },
   methods: {
+    setFocus () {
+      this.$refs.premise.focus()
+    },
     updateAlt () {
       this.alt1 = this.extendedAddress || this.streetAddress
       this.alt2 = this.extendedAddress ? this.streetAddress : this.formattedLocality

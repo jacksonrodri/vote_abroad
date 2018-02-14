@@ -1,6 +1,9 @@
 @import "~bulma/sass/utilities/_all.sass";
 // Set your colors
 $vfa: hsl(227, 59%, 22%);
+// $primary:$vfa;
+// $primary: hsl(229, 72%, 51%);
+$primary: #e94e3c;
 $twitter: hsl(212, 99%, 63%);
 $secondary: hsl(7, 76%, 43%);
 $red: #bf2e1a;
@@ -72,6 +75,7 @@ $fa-font-path: "./webfonts";
 // @import "~@fortawesome/fontawesome/styles.css";
 @import "./fa/fontawesome.scss";
 @import "./fa/fa-solid.scss";
+@import "./fa/fa-regular.scss";
 
 .flag-icon {
   width: 3rem;

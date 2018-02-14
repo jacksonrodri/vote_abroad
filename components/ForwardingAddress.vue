@@ -1,9 +1,13 @@
 <template>
   <div>
-    <h1 class="subtitle is-4">{{ $t('request.forwardingAddressInstructions') }}</h1>
+    <!-- <h1 class="subtitle is-4">{{ $t('request.forwardingAddressInstructions') }}</h1> -->
+    <span class="is-flex"><label class="label" style="cursor: pointer;">{{ label }} </label><span v-if="toolTipTitle" @click="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
+    <b-message v-if="toolTipTitle" :title="toolTipTitle" type="is-info" has-icon :active.sync="isOpen">
+      <slot name="tooltip"></slot>
+    </b-message>
     <b-field grouped>
       <p class="control">
-        <button @click="updateVal({}); usesForwardingAddress = true" :class="[baseClass, {'is-primary': hasForwardingAddress}]">
+        <button @click="updateVal({}); usesForwardingAddress = true" :class="[baseClass, {'is-success': hasForwardingAddress}]">
           <span v-show="hasForwardingAddress" class="icon is-small">
             <i class="fas fa-check"></i>
           </span>
@@ -13,9 +17,9 @@
         </button>
       </p>
       <p class="control">
-        <button @click="updateVal({}); usesForwardingAddress = false" :class="[baseClass, {'is-danger': !hasForwardingAddress}]">
+        <button @click="updateVal({}); usesForwardingAddress = false" :class="[baseClass, {'is-success': !hasForwardingAddress}]">
           <span v-show="!hasForwardingAddress" class="icon is-small">
-            <i class="fas fa-times"></i>
+            <i class="fas fa-check"></i>
           </span>
           <span>
             No
@@ -44,16 +48,18 @@ export default {
   name: 'Forwarding-Address',
   props: [
     'label',
-    'value'
+    'value',
+    'toolTipTitle'
   ],
   data () {
     return {
       usesForwardingAddress: false,
       baseClass: {
-        'is-medium': false,
+        'is-medium': true,
         button: true
       },
-      adr: {}
+      adr: {},
+      isOpen: false
     }
   },
   components: {

@@ -3,32 +3,22 @@
   <span class="is-flex"><label class="label">{{ label }}</label><span @click="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
   <b-field grouped group-multiline>
     <p class="control">
-      <button @click="setVal('email')" :class="[baseClass, {'is-success': email}]">
-        <span v-show="email" class="icon is-small">
+      <button @click="setVal('male')" :class="[baseClass, {'is-success': value === 'male'}]">
+        <span v-show="value === 'male'" class="icon is-small">
           <i class="fas fa-check"></i>
         </span>
         <span>
-          Email or online
+          Male
         </span>
       </button>
     </p>
     <p class="control">
-      <button @click="setVal('mail')" :class="[baseClass, {'is-success': mail}]">
-        <span v-show="mail" class="icon is-small">
+      <button @click="setVal('female')" :class="[baseClass, {'is-success': value === 'female'}]">
+        <span v-show="value === 'female'" class="icon is-small">
           <i class="fas fa-check"></i>
         </span>
         <span>
-          Mail
-        </span>
-      </button>
-    </p>
-    <p class="control">
-      <button @click="setVal('fax')" :class="[baseClass, {'is-success': fax}]">
-        <span v-show="fax" class="icon is-small">
-          <i class="fas fa-check"></i>
-        </span>
-        <span>
-          Fax
+          Female
         </span>
       </button>
     </p>
@@ -60,11 +50,6 @@ export default {
     setVal: function (val) {
       this.$emit('input', val)
     }
-  },
-  computed: {
-    email: function () { return this.value === 'email' },
-    mail: function () { return this.value === 'mail' },
-    fax: function () { return this.value === 'fax' }
   }
 }
 </script>

@@ -10,6 +10,7 @@
           :icon="countryCode.toLowerCase()"
           class="flag-container"
           pack="flag-icon"
+          style="cursor: pointer;"
           :custom-class="'flag-icon-' + countryCode.toLowerCase()"
           :size="size"
           @click.native="focusCountry">

@@ -37,7 +37,7 @@ module.exports = {
     votingAddressInstructions: 'Input the last address you lived in in the US. If you have never lived in the US, us the last US address of your US citizen parent(s)',
     votingAddressAlternateFormat: 'use Rural Route or Address Description',
     forwardingAddress: 'Your Forwarding Address',
-    forwardingAddressInstructions: 'Would you like your ballot sent to a different address than your current residential address? [Please respond even if you request your ballot be sent to you via email/online or fax]',
+    forwardingAddressInstructions: 'Would you like your ballot sent to a different address than your current residential address?',
     country: 'Country',
     address1: 'Address1',
     address2: 'Address2',

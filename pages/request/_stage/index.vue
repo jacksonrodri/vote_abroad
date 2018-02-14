@@ -2,36 +2,8 @@
 <section class="section">
     <h1 class="has-text-centered title is-3">Step {{ stage.order }} of 3</h1>
     <h3 class="has-text-centered subtitle is-4">{{ stage.name }}</h3>
-  <section v-if="stage.slug === 'your-information'">
-    <!-- <b-field label="Email">
-      <b-input v-model="email"></b-input>
-    </b-field>
-    <b-field label="First Name">
-      <b-input v-model="firstName"></b-input>
-    </b-field><b-field label="Middle Name">
-      <b-input v-model="middleName"></b-input>
-    </b-field><b-field label="Last Name">
-      <b-input v-model="lastName"></b-input>
-    </b-field> -->
-    <!-- <h3 class="title is-4" v-if="!isAuthenticated">
-      Enter your email or mobile phone number to start your ballot request with a secure account.
-    </h3> -->
-
-      <!-- email -->
-      <!-- <b-field grouped v-if="!isAuthenticated" >
-        <b-field label="Email or mobile phone number" expanded>
-          <b-field :type="($v.email.$error ? 'is-danger': '')" :message="$v.email.$error ? Object.keys($v.email.$params).map(x => x) : '' ">
-            <b-input size="is-large" expanded v-model="emailOrPhone" placeholder="email or phone number" @input="emailOrPhoneLink" @keyup.enter.native="sendCode()" :disabled="this.pendingVerification"></b-input>
-            <p class="control"><button @click="sendCode()" class="button is-info is-large" :disabled="this['pendingVerification']">Submit</button></p>
-            <b-input v-show="type === 'code'" v-model="code" size="is-large" placeholder="code" ></b-input>
-            <p v-show="type === 'code'" class="control"><button @click="passwordlessVerify({connection: 'email', email: email, verificationCode: code})" class="button is-info is-large" :disabled="!this.code" >Start</button></p>
-          </b-field>
-        </b-field>
-      </b-field>
-      <h3 v-else class="subtitle">You are logged in as {{user ? user.emailAddress : 'user'}} <button @click="logout()" class="button">Logout</button></h3>
-      email: {{ email }}
-      tel: {{ tel }} -->
 <!-- your information -->
+  <section v-if="stage.slug === 'your-information'">
       <!-- firstName -->
       <b-field :type="($v.firstName.$error ? 'is-danger': '')" :message="$v.firstName.$error ? Object.keys($v.firstName.$params).map(x => x) : '' " :label="$t('request.firstName')">
         <b-input v-model="firstName" @input="$v.firstName.$touch()"></b-input>
@@ -52,25 +24,28 @@
         <b-input v-model="suffix" @input="$v.suffix.$touch()"></b-input>
       </b-field>
 
-      <!-- <b-field class="field">
-        <b-switch v-model="usesPreviousName" >Have you previously registered to vote using a different name?</b-switch>
-      </b-field> -->
+      <previous-name v-model="previousName"
+        :type="($v.previousName.$error ? 'is-danger': '')"
+        :message="$v.previousName.$error ? Object.keys($v.previousName.$params).map(x => x) : '' "
+        :label="$t('request.previousName')"
+        :instructions="$t('request.previousNameInstructions')"
+        @input="$v.previousName.$touch()">
+      </previous-name>
 
-      <b-field>
-        <b-field
-          :label="$t('request.previousNameInstructions')">
-          <b-radio-button v-model="usesPreviousName"
-            :native-value="!usesPreviousName"
-            :type="usesPreviousName ? 'is-danger' : 'is-success'">
-            <b-icon :icon="!usesPreviousName ? 'check' : 'times'"></b-icon>
-            <span>{{ !usesPreviousName ? 'Yes' : 'No'}}</span>
-          </b-radio-button>
-        </b-field>
-      </b-field>
+      <!-- phone Number -->
+      <tel-input
+        key="tel"
+        :label="$t('request.tel')"
+        :type="($v.tel.$error ? 'is-danger': '')"
+        :message="$v.tel.$error ? Object.keys($v.tel.$params).map(x => x) : '' "
+        v-model="tel"></tel-input>
 
-      <!-- previousName -->
-      <b-field v-show="usesPreviousName" :type="($v.previousName.$error ? 'is-danger': '')" :message="$v.previousName.$error ? Object.keys($v.previousName.$params).map(x => x) : '' " :label="$t('request.previousName')">
-        <b-input v-model="previousName" @input="$v.previousName.$touch()"></b-input>
+        <!-- emailAddress -->
+      <b-field
+      :type="($v.email.$error ? 'is-danger': '')"
+      :message="$v.email.$error ? Object.keys($v.email.$params).map(x => x) : '' "
+      label="Your Current Email Address">
+        <b-input v-model="email" @input="$v.email.$touch()"></b-input>
       </b-field>
 
       <!-- countryName -->
@@ -78,48 +53,108 @@
       <address-input
         :label="$t('request.addressAbroad')"
         key="overseas"
-        v-model="abrAdr">
+        v-model="abrAdr"
+        toolTipTitle="Where are you now?">
         <div slot="instructions">
           <p>Please add your international Address</p>
         </div>
-
+        <div slot="tooltip">
+          You must provide your current residence address outside the US for informational purposes. Please provide your address outside the US  even if you request your blank ballot be sent to you by email/online or fax.
+        </div>
       </address-input>
-
+    <section >
       <div class="control buttons is-right">
-        <nuxt-link :to="localePath({ name: 'index' })" class="button is-light is-medium" exact >Cancel</nuxt-link>
-        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'voting-information'} })" class="button is-success is-medium" exact ><b-icon pack="fa" icon="check"></b-icon> <span> Next </span></nuxt-link>
+        <nuxt-link :to="localePath({ name: 'index' })" class="button is-light is-medium" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>Back</span></nuxt-link>
+        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'voting-information'} })" class="button is-primary is-medium" exact ><span> Next </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link>
       </div>
+    </section>
+  </section>
 
 <!-- voting information -->
-  </section>
   <section v-if="stage.slug === 'voting-information'">
-
-    <voter-class v-model="voterClass"></voter-class>
 
     <us-address-input
       :label="$t('request.votingAddress')"
       usOnly
+      toolTipTitle="Your last US Address"
       v-model="votAdr">
       <div slot="instructions">
         <p>{{ $t('request.votingAddressInstructions') }}</p>
       </div>
+      <div slot="tooltip">
+        <p>Use the residence address of the last place you lived in the US. If you have never resided in the US, use the residence address of the last place your US parent(s) lived in the US. If your US parents last lived in the US in different locations, you may choose which one to use as your voting address.</p>
+      </div>
 
     </us-address-input>
 
-      <h3 v-if="votAdr && votAdr.leo && votAdr.leo.jurisdiction && votAdr.leo.jurisdictionType"
-        class="subtitle is-5">Are you already registered to vote in {{ `${votAdr.leo.jurisdiction } ${votAdr.leo.jurisdictionType}` }}?</h3>
-      <!-- isRegistered -->
-      <is-registered v-if="votAdr && votAdr.leo && votAdr.leo.jurisdiction && votAdr.leo.jurisdictionType"
-        v-model="isRegistered"></is-registered>
+    <br/><br/>
 
-      <h3 class="subtitle is-5" v-if="votAdr && votAdr.regionCode">How would you like to receieve your ballot?</h3>
-
-      <!-- recBallot -->
-      <receive-ballot v-model="recBallot" v-if="votAdr && votAdr.regionCode"></receive-ballot>
-      <div class="control buttons is-right">
-        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" class="button is-light is-medium" exact >Back</nuxt-link>
-        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'id-and-contact-information'} })" class="button is-success is-medium" exact ><b-icon pack="fa" icon="check"></b-icon> <span> Next </span></nuxt-link>
+    <voter-class v-model="voterClass"
+      toolTipTitle="Intend to return vs. Return is uncertain">
+      <div slot="tooltip">
+        <p>Voters may choose ‘intend to return’ if they intend to return to the state in which they are registering to vote. An ‘intention’ is sufficient, you don’t need to have a fixed date of return or firm plans. Registering as “intend to return” should make you eligible to vote in State and Local races. However, it may also make you liable for state income taxes</p>
+        <p>Voters may choose ‘return is uncertain’ if they do not have a current intention to return to the state in which they are registering to vote. Voters are entitled to receive a ballot for Federal offices and may, depending on their state, also receive a ballot for State and Local offices.</p>
       </div>
+    </voter-class>
+
+    <br/><br/>
+
+      <!-- isRegistered -->
+    <is-registered
+      v-if="votAdr && votAdr.leo && votAdr.leo.jurisdiction && votAdr.leo.jurisdictionType"
+      :label="`Are you already registered to vote in ${votAdr.leo.jurisdiction } ${votAdr.leo.jurisdictionType}?`"
+      v-model="isRegistered">
+    </is-registered>
+
+    <br/>
+
+    <!-- recBallot -->
+    <receive-ballot v-model="recBallot"
+      v-if="votAdr && votAdr.regionCode"
+      label="How would you like to receieve your ballot?"
+      toolTipTitle="What is the best choice?">
+      <div slot="tooltip">
+        <p>You may request to receive your blank ballot by email/online, fax or mail. We encourage voters to request their blank ballot be sent by email/online or fax to avoid the delay associated with mail  and the possibility the ballot will be lost in transit.</p>
+      </div>
+    </receive-ballot>
+
+    <br/>
+
+    <tel-input
+      key="fax"
+      label="Enter the Fax Number you would like your ballot sent to."
+      :type="($v.fax.$error ? 'is-danger': '')"
+      :message="$v.fax.$error ? Object.keys($v.fax.$params).map(x => x) : '' "
+      v-if="recBallot === 'fax'"
+      @input="$v.fax.$touch()"
+      v-model="fax">
+    </tel-input>
+
+    <!-- altEmail -->
+    <b-field
+      :type="($v.altEmail.$error ? 'is-danger': '')"
+      :message="$v.altEmail.$error ? Object.keys($v.altEmail.$params).map(x => x) : '' "
+      v-if="recBallot === 'email'"
+      label="Add a second email here if you have one to ensure ballot delivery">
+      <b-input v-model="altEmail" @input="$v.altEmail.$touch()"></b-input>
+    </b-field>
+
+      <!-- fwdAdr -->
+      <forwarding-address v-model="fwdAdr"
+        :label="$t('request.forwardingAddressInstructions')"
+        toolTipTitle="Optional"
+        v-if="recBallot === 'mail'">
+        <div slot="tooltip">
+          <p>This is optional. Please provide a forwarding address only if you request your blank ballot be sent to you by mail and you do not want it mailed to your current residence address outside the US. If you are uncertain what your mailing address will be when ballots are due to be sent out, you may have your blank ballot sent to a reliable third-party, such as a University student office or postal box.</p>
+        </div>
+      </forwarding-address>
+
+    <section >
+      <div class="control buttons is-right">
+        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" class="button is-light is-medium" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>Back</span></nuxt-link>
+        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'id-and-contact-information'} })" class="button is-primary is-medium" exact ><span> Next </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link>
+      </div>
+    </section>
   </section>
 
   <section v-if="stage.slug === 'id-and-contact-information'">
@@ -136,16 +171,14 @@
         </b-datepicker>
       </b-field>
 
-      <!-- sex -->
-      <b-field label="Sex"></b-field>
-      <b-field>
-        <b-radio-button v-model="sex" native-value="male" type="is-primary" size="is-medium">
-          <span>Male</span>
-        </b-radio-button>
-        <b-radio-button v-model="sex" native-value="female" type="is-primary" size="is-medium">
-          <span>Female</span>
-        </b-radio-button>
-      </b-field>
+      <gender
+        label="Gender"
+        toolTipTitle="Why is this required?"
+        v-model="sex">
+        <div slot="tooltip">
+          <p>This is only required for Idaho voters.</p>
+        </div>
+      </gender>
 
       <!-- ssn -->
       <b-field :type="($v.ssn.$error ? 'is-danger': '')" :message="$v.ssn.$error ? Object.keys($v.ssn.$params).map(x => x) : '' " label="The last 4 digits of your Social Security Number">
@@ -157,31 +190,6 @@
         <b-input v-model="stateId" @input="$v.stateId.$touch()"></b-input>
       </b-field>
 
-      <tel-input
-        key="fax"
-        label="Your Fax Number"
-        :type="($v.fax.$error ? 'is-danger': '')"
-        :message="$v.fax.$error ? Object.keys($v.fax.$params).map(x => x) : '' "
-        v-if="recBallot === 'fax'"
-        @input="$v.fax.$touch()"
-        v-model="fax"></tel-input>
-
-      <tel-input
-        key="tel"
-        :label="$t('request.tel')"
-        :type="($v.tel.$error ? 'is-danger': '')"
-        :message="$v.tel.$error ? Object.keys($v.tel.$params).map(x => x) : '' "
-        v-model="tel"></tel-input>
-
-      <!-- altEmail -->
-      <b-field
-        :type="($v.altEmail.$error ? 'is-danger': '')"
-        :message="$v.altEmail.$error ? Object.keys($v.altEmail.$params).map(x => x) : '' "
-        v-if="recBallot === 'email'"
-        label="Alternate Email">
-        <b-input v-model="altEmail" @input="$v.altEmail.$touch()"></b-input>
-      </b-field>
-
       <!-- fwabRequest -->
       <b-field :type="($v.fwabRequest.$error ? 'is-danger': '')"
         :message="$v.fwabRequest.$error ? Object.keys($v.fwabRequest.$params).map(x => x) : '' "
@@ -190,21 +198,16 @@
         <b-input v-model="fwabRequest" @input="$v.fwabRequest.$touch()"></b-input>
       </b-field>
 
-      <!-- party -->
-      <!-- <b-field :type="($v.party.$error ? 'is-danger': '')" :message="$v.party.$error ? Object.keys($v.party.$params).map(x => x) : '' " label="What is your political party?">
-        <b-input v-model="party" @input="$v.party.$touch()"></b-input>
-      </b-field> -->
       <party-input
         label="Your political party"
         v-model="party"
+        toolTipTitle="What is this?"
         :message="$v.party.$error ? Object.keys($v.party.$params).map(x => x) : '' "
-        :type="($v.party.$error ? 'is-danger': '')"></party-input>
-
-      <!-- fwdAdr -->
-      <!-- <b-field :type="($v.fwdAdr.$error ? 'is-danger': '')" :message="$v.fwdAdr.$error ? Object.keys($v.fwdAdr.$params).map(x => x) : '' " label="If you receive mail at a different address enter it here.">
-        <b-input v-model="fwdAdr" @input="$v.fwdAdr.$touch()"></b-input>
-      </b-field> -->
-      <forwarding-address v-model="fwdAdr"></forwarding-address>
+        :type="($v.party.$error ? 'is-danger': '')">
+        <div slot="tooltip">
+          <p>Many states require voters to designate a political party to be eligible to vote in primary elections. Choosing a political party is optional.</p>
+        </div>
+      </party-input>
 
       <!-- addlInfo -->
       <b-field :type="($v.addlInfo.$error ? 'is-danger': '')" :message="$v.addlInfo.$error ? Object.keys($v.addlInfo.$params).map(x => x) : '' " label="Add any additional information here to help your election official find your records.">
@@ -223,11 +226,12 @@
           :readonly="false">
         </b-datepicker>
       </b-field>
-
+    <section >
       <div class="control buttons is-right">
-        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'voting-information'} })" class="button is-light is-medium" exact >Back</nuxt-link>
-        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'canvas'} })" class="button is-success is-medium" exact ><b-icon pack="fa" icon="check"></b-icon><span> Next </span></nuxt-link>
+        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'voting-information'} })" class="button is-light is-medium" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>Back</span></nuxt-link>
+        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'canvas'} })" class="button is-primary is-medium" exact ><span> Next </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link>
       </div>
+    </section>
   </section>
 </section>
 </template>
@@ -242,6 +246,8 @@ import ReceiveBallot from '~/components/ReceiveBallot'
 import TelInput from '~/components/TelInput'
 import ForwardingAddress from '~/components/ForwardingAddress'
 import PartyInput from '~/components/PartyInput'
+import PreviousName from '~/components/PreviousName'
+import Gender from '~/components/Gender'
 
 export default {
   transition: 'test',
@@ -261,7 +267,8 @@ export default {
       localDate: null,
       fwabRequest: '',
       isFwab: false,
-      date: ''
+      date: '',
+      isOpen: false
     }
   },
   components: {
@@ -272,7 +279,9 @@ export default {
     ReceiveBallot,
     TelInput,
     ForwardingAddress,
-    PartyInput
+    PartyInput,
+    PreviousName,
+    Gender
   },
   watch: {
     dob: function (newVal, oldVal) {
@@ -324,13 +333,13 @@ export default {
       set (value) { this.$store.commit('requests/update', { lastName: value }) }
     },
     previousName: {
-      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].previousName : null },
+      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].previousName : {usesPreviousName: false, previousName: ''} },
       set (value) { this.$store.commit('requests/update', { previousName: value }) }
     },
-    usesPreviousName: {
-      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].usesPreviousName : false },
-      set (value) { this.$store.commit('requests/update', { usesPreviousName: value }) }
-    },
+    // usesPreviousName: {
+    //   get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].usesPreviousName : false },
+    //   set (value) { this.$store.commit('requests/update', { usesPreviousName: value }) }
+    // },
     suffix: {
       get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].suffix : null },
       set (value) { this.$store.commit('requests/update', { suffix: value }) }
@@ -397,6 +406,9 @@ export default {
     }
   },
   methods: {
+    focusName () {
+      this.$refs.userinput.focus()
+    },
     updateDob (value) {
       let bday = new Date(Date.UTC(new Date(value).getFullYear(), new Date(value).getMonth(), new Date(value).getDate())).toISOString().substr(0, 10)
       this.$store.commit('requests/update', { dob: bday })
