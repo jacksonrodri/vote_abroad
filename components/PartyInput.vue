@@ -65,6 +65,7 @@ export default {
       other: '',
       baseClass: {
         'is-medium': true,
+        'is-outlined': true,
         button: true
       },
       isOpen: false

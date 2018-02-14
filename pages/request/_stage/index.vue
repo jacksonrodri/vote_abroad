@@ -166,6 +166,8 @@
           @input="value =>{ localDob = value, this.updateDob(value) }"
           placeholder="Type or select your birth date"
           icon="calendar"
+          :date-formatter="(date) => date.toLocaleDateString()"
+          :date-parser="(date) => new Date(parseInt(date.substr(0,4)), parseInt(date.substr(5,2)) - 1, parseInt(date.substr(8,2)))"
           icon-pack="fa"
           :readonly="false">
         </b-datepicker>
@@ -221,6 +223,8 @@
           @input="value =>{ localDate = value, this.updateDate(value) }"
           placeholder="Type or select today's date"
           icon="calendar"
+          :date-formatter="(date) => date.toLocaleDateString()"
+          :date-parser="(date) => new Date(parseInt(date.substr(0,4)), parseInt(date.substr(5,2)) - 1, parseInt(date.substr(8,2)))"
           icon-pack="fa"
           position="is-top-right"
           :readonly="false">

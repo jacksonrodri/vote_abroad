@@ -56,6 +56,7 @@ export default {
       usesForwardingAddress: false,
       baseClass: {
         'is-medium': true,
+        'is-outlined': true,
         button: true
       },
       adr: {},
