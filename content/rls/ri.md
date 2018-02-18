@@ -21,3 +21,5 @@ fwabSubmitOptions:
 ---
 
 # Rhode Island Rules
+
+You can only submit your FWAB by fax if you also requested your ballot by fax

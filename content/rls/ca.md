@@ -23,3 +23,5 @@ fwabSubmitOptions:
 ---
 
 # California Rules
+
+You may only submit a fwab by fax if you are overseas within 6 days of the election

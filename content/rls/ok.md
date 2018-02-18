@@ -24,3 +24,5 @@ fwabSubmitOptions:
 ---
 
 # Oklahoma Rules
+
+If you send your ballot by email you must include your full Social Security Number

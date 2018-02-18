@@ -26,7 +26,7 @@
       </b-field>
   </div>
   <b-field v-show="usesPreviousName" :type="type" :message="message" :label="label">
-    <b-input :value="value && value.previousName ? value.previousName : ''" @input="setName(val)"></b-input>
+    <b-input :value="value && value.previousName ? value.previousName : ''" @input="val => setName(val)"></b-input>
   </b-field>
   <b-message title="Why do you need my previous name?" type="is-info" has-icon :active.sync="isOpen">
     If you have previously voted with a different name, you election official may need to look you up using your previous name.
@@ -59,6 +59,7 @@ export default {
   },
   methods: {
     setName: function (val) {
+      console.log(val, this.value)
       this.$emit('input', {
         previousName: val,
         usesPreviousName: true

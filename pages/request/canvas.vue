@@ -9,7 +9,7 @@
         :firstName="firstName"
         :middleName="middleName"
         :suffix="suffix"
-        :previousName="previousName"
+        :previousName="previousName.previousName"
         :dob="dob"
         :ssn="ssn"
         :stateId="stateId"

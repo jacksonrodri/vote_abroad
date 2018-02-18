@@ -22,3 +22,5 @@ fwabSubmitOptions:
 ---
 
 # New Jersey Rules
+
+You may submit your FWAB by email or fax provided that you also send a copy by mail.

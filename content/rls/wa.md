@@ -1,7 +1,7 @@
 ---
 title: Washington
 id: false
-partyPrimary: true
+partyPrimary: false
 ballotReceiptOptions:
   - Email
   - Fax

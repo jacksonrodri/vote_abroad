@@ -1,3 +1,7 @@
+<style>
+
+</style>
+
 <script>
 // Note how there's no template or styles in this component.
 
@@ -358,8 +362,29 @@ export default {
           y: percentWidthToPix(29.2, ctx)
         }
       }
+    },
+    canvasRect () {
+      if (!this.provider.context) { return null }
+      return this.provider.context.canvas.getBoundingClientRect()
     }
   },
+
+  // created: function () {
+  //   if (process.browser) {
+  //     window.addEventListener('mousemove', this.move)
+  //   }
+  // },
+  // destroyed: function () {
+  //   window.removeEventListener('mousemove', this.move)
+  // },
+  // methods: {
+  //   move: function (val) {
+  //     console.log(this.provider.context)
+  //     if (val.clientX - this.canvasRect.left > -1 && val.clientY - this.canvasRect.top > -1) {
+  //       this.$emit('mouse', { x: val.clientX - this.canvasRect.left, y: val.clientY - this.canvasRect.top })
+  //     }
+  //   }
+  // },
 
   render () {
     // Since the parent canvas has to mount first, it's *possible* that the context may not be
@@ -378,6 +403,9 @@ export default {
     let drawing = new Image()
     drawing.src = '/fpca-min.png'
     drawing.onload = () => {
+      ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height)
+      ctx.fillStyle = 'white'
+      ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height)
       ctx.drawImage(drawing, 0, 0, ctx.canvas.width, ctx.canvas.height)
       fillText()
       sign()

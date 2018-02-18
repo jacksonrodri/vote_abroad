@@ -24,3 +24,5 @@ fwabSubmitOptions:
 ---
 
 # Nebraska Rules
+
+You may only send your FWAB by email or fax with prior approval of your local election official

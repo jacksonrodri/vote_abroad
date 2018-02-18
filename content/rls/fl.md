@@ -21,3 +21,5 @@ fwabSubmitOptions:
 ---
 
 # Florida Rules
+
+You may only fax your FWAB if you are outside of the US

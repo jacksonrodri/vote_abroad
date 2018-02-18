@@ -2,7 +2,7 @@
 title: District of Columbia
 id:
   - SSN4
-  - StateID
+  - DCID
 partyPrimary: true
 ballotReceiptOptions:
   - Email

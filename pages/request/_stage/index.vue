@@ -62,6 +62,7 @@
           You must provide your current residence address outside the US for informational purposes. Please provide your address outside the US  even if you request your blank ballot be sent to you by email/online or fax.
         </div>
       </address-input>
+      <scroll-up :key="$route.params.stage"></scroll-up>
     <section >
       <div class="control buttons is-right">
         <nuxt-link :to="localePath({ name: 'index' })" class="button is-light is-medium" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>Back</span></nuxt-link>
@@ -102,7 +103,7 @@
       <!-- isRegistered -->
     <is-registered
       v-if="votAdr && votAdr.leo && votAdr.leo.jurisdiction && votAdr.leo.jurisdictionType"
-      :label="`Are you already registered to vote in ${votAdr.leo.jurisdiction } ${votAdr.leo.jurisdictionType}?`"
+      :label="`Are you already registered to vote in ${votAdr.leo.jurisdictionType === 'All' ? votAdr.leo.state : votAdr.leo.jurisdiction + ' ' + votAdr.leo.jurisdictionType}?`"
       v-model="isRegistered">
     </is-registered>
 
@@ -149,6 +150,8 @@
         </div>
       </forwarding-address>
 
+    <scroll-up :key="$route.params.stage"></scroll-up>
+
     <section >
       <div class="control buttons is-right">
         <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" class="button is-light is-medium" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>Back</span></nuxt-link>
@@ -162,16 +165,19 @@
       <!-- dob -->
       <b-field label="Date of Birth" :message="$v.dob.$error ? Object.keys($v.dob.$params).map(x => x) : '' ">
         <b-datepicker
-          :value="localDob"
-          @input="value =>{ localDob = value, this.updateDob(value) }"
+          :value="localDob || lcldob"
+          @input="value =>{ this.updateDob(value) }"
           placeholder="Type or select your birth date"
-          icon="calendar"
           :date-formatter="(date) => date.toLocaleDateString()"
-          :date-parser="(date) => new Date(parseInt(date.substr(0,4)), parseInt(date.substr(5,2)) - 1, parseInt(date.substr(8,2)))"
+          icon="calendar"
           icon-pack="fa"
           :readonly="false">
         </b-datepicker>
       </b-field>
+
+      <!-- new Date(Date.UTC(new Date(value).getFullYear(), new Date(value).getMonth(), new Date(value).getDate())).toISOString().substr(0, 10)
+          :date-formatter="(date) => date.toLocaleDateString()"
+          :date-parser="(date) => new Date(parseInt(date.substr(0,4)), parseInt(date.substr(5,2)) - 1, parseInt(date.substr(8,2)))"-->
 
       <gender
         label="Gender"
@@ -211,6 +217,16 @@
         </div>
       </party-input>
 
+      <state-special
+        label="State Specific Rules"
+        v-model="stateSpecial"
+        :state="votAdr && votAdr.regionCode ? votAdr.regionCode : ''"
+        :isFWAB="isFWAB"
+        :isIndNoParty="party && (party.toLowerCase() === 'republican' || party.toLowerCase() === 'rep' || party.toLowerCase() === 'democrat' || party.toLowerCase() === 'dem') ? false : true"
+        :isReturnUncertain="Boolean(voterClass === 'uncertainReturn')"
+        :isRegistering="Boolean(isRegistered === 'notRegistered' || isRegistered === 'unsure')">
+      </state-special>
+
       <!-- addlInfo -->
       <b-field :type="($v.addlInfo.$error ? 'is-danger': '')" :message="$v.addlInfo.$error ? Object.keys($v.addlInfo.$params).map(x => x) : '' " label="Add any additional information here to help your election official find your records.">
         <b-input maxlength="258" type="textarea" v-model="addlInfo" @input="$v.addlInfo.$touch()"></b-input>
@@ -219,17 +235,21 @@
       <!-- date -->
       <b-field label="Date" :message="$v.dob.$error ? Object.keys($v.dob.$params).map(x => x) : '' ">
         <b-datepicker
-          :value="localDate"
-          @input="value =>{ localDate = value, this.updateDate(value) }"
+          :value="localDate || lcldate"
+          @input="value =>{ this.updateDate(value) }"
           placeholder="Type or select today's date"
           icon="calendar"
           :date-formatter="(date) => date.toLocaleDateString()"
-          :date-parser="(date) => new Date(parseInt(date.substr(0,4)), parseInt(date.substr(5,2)) - 1, parseInt(date.substr(8,2)))"
           icon-pack="fa"
           position="is-top-right"
           :readonly="false">
         </b-datepicker>
+
+
+          <!-- :date-parser="(date) => new Date(parseInt(date.substr(0,4)), parseInt(date.substr(5,2)) - 1, parseInt(date.substr(8,2)))" -->
+
       </b-field>
+      <scroll-up :key="$route.params.stage"></scroll-up>
     <section >
       <div class="control buttons is-right">
         <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'voting-information'} })" class="button is-light is-medium" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>Back</span></nuxt-link>
@@ -252,9 +272,12 @@ import ForwardingAddress from '~/components/ForwardingAddress'
 import PartyInput from '~/components/PartyInput'
 import PreviousName from '~/components/PreviousName'
 import Gender from '~/components/Gender'
+import StateSpecial from '~/components/StateSpecial'
+import ScrollUp from '~/components/ScrollUp'
 
 export default {
   transition: 'test',
+  scrollToTop: true,
   data () {
     return {
       code: null,
@@ -271,7 +294,6 @@ export default {
       localDate: null,
       fwabRequest: '',
       isFwab: false,
-      date: '',
       isOpen: false
     }
   },
@@ -285,17 +307,35 @@ export default {
     ForwardingAddress,
     PartyInput,
     PreviousName,
-    Gender
+    Gender,
+    StateSpecial,
+    ScrollUp
   },
   watch: {
     dob: function (newVal, oldVal) {
       if (!this.localDob && newVal) {
-        console.log('date from vuex-persist', new Date(newVal))
+        console.log('dob from vuex-persist', new Date(newVal))
         this.localDob = new Date(newVal)
+      } else if (newVal !== oldVal) {
+        this.localDob = new Date(newVal)
+      }
+    },
+    date: function (newVal, oldVal) {
+      if (!this.localDate && newVal) {
+        console.log('date from vuex-persist', new Date(newVal))
+        this.localDate = new Date(newVal)
+      } else if (newVal !== oldVal) {
+        this.localDate = new Date(newVal)
       }
     }
   },
   computed: {
+    lcldob () {
+      return this.dob ? new Date(parseInt(this.dob.substr(0, 4)), parseInt(this.dob.substr(5, 2)) - 1, parseInt(this.dob.substr(8, 2))) : null
+    },
+    lcldate () {
+      return this.date ? new Date(parseInt(this.date.substr(0, 4)), parseInt(this.date.substr(5, 2)) - 1, parseInt(this.date.substr(8, 2))) : null
+    },
     stage () {
       switch (this.$route.params.stage) {
         case 'your-information':
@@ -352,6 +392,10 @@ export default {
       get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].dob : null },
       set (value) { this.$store.commit('requests/update', { dob: value }) }
     },
+    date: {
+      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].date : null },
+      set (value) { this.$store.commit('requests/update', { date: value }) }
+    },
     tel: {
       get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].tel : {} },
       set (value) { this.$store.commit('requests/update', { tel: value }) }
@@ -407,6 +451,14 @@ export default {
     addlInfo: {
       get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].addlInfo : null },
       set (value) { this.$store.commit('requests/update', {addlInfo: value}) }
+    },
+    stateSpecial: {
+      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].stateSpecial : null },
+      set (value) { this.$store.commit('requests/update', {stateSpecial: value}) }
+    },
+    isFWAB: {
+      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].isFWAB : false },
+      set (value) { this.$store.commit('requests/update', {isFWAB: value}) }
     }
   },
   methods: {
@@ -418,9 +470,13 @@ export default {
       this.$store.commit('requests/update', { dob: bday })
     },
     updateDate (value) {
+      this.localDate = value
       let signDate = new Date(Date.UTC(new Date(value).getFullYear(), new Date(value).getMonth(), new Date(value).getDate())).toISOString().substr(0, 10)
       this.$store.commit('requests/update', { date: signDate })
     }
+  },
+  mounted () {
+    console.log('mounted')
   },
   validations () {
     return {

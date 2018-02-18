@@ -8,14 +8,15 @@ ballotReceiptOptions:
   - Email
   - Mail
 fpcaSubmitOptionsRegister:
+  - Email
   - Mail
+  - Fax
 fpcaSubmitOptionsRequest:
   - Email
   - Fax
   - Mail
 canRegisterWithFwab: false
 fwabSubmitOptions:
-  - Fax
   - Mail
 ---
 

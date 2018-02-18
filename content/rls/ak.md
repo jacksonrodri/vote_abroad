@@ -22,4 +22,6 @@ fwabSubmitOptions:
   - Mail
 ---
 
-#Hi
+# Alaska Rules
+
+alaska residency proof

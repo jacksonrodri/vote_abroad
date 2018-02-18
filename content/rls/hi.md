@@ -24,3 +24,5 @@ fwabSubmitOptions:
 ---
 
 # Hawaii Rules
+
+You may only fax your fwab if requesting a ballot within 5 days of the election

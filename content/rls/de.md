@@ -18,6 +18,7 @@ fpcaSubmitOptionsRequest:
   - Mail
 canRegisterWithFwab: true
 fwabSubmitOptions:
+  - Email
   - Fax
   - Mail
 ---

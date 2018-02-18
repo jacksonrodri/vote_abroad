@@ -22,3 +22,5 @@ fwabSubmitOptions:
 ---
 
 # Oregon Rules
+
+Oregon prefers that you use your state ID

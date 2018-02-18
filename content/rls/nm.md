@@ -1,8 +1,7 @@
 ---
 title: New Mexico
 id:
-  - SSN4
-  - StateID
+  - SSN
 partyPrimary: true
 ballotReceiptOptions:
   - Email

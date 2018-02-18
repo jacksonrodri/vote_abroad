@@ -1,7 +1,7 @@
 ---
 title: Virginia
 id:
-  - SSN4
+  - SSN
 partyPrimary: true
 ballotReceiptOptions:
   - Email
