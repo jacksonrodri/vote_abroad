@@ -20,7 +20,7 @@
                   field="structured_formatting.main_text"
                   :loading="isFetching"
                   @input="getAsyncData"
-                  @select="option => fillDataCity(option)">
+                  @select="option => fillData(option)">
                   <template slot-scope="props">{{ props.option.description }}</template>
                   <template slot="empty">No results found</template>
                 </b-autocomplete>
@@ -48,12 +48,13 @@
                 <b-autocomplete
                   v-model="locality"
                   :data="data"
-                  ref="premise"
+                  expanded
+                  ref="city"
                   placeholder="City"
                   field="structured_formatting.main_text"
                   :loading="isFetching"
-                  @input="skipCity ? flipSkipCity() : getCityAsync()"
-                  @select="option => fillData(option)">
+                  @change="getCityAsync"
+                  @select="option => fillDataCity(option)">
                   <template slot-scope="props">{{ `${streetAddress ? props.option.structured_formatting.secondary_text : ''}` }} {{ `${streetAddress ? props.option.structured_formatting.main_text : ''}` }} {{`${!streetAddress ? props.option.description : ''}` }} </template>
                   <template slot="empty">No results found</template>
                 </b-autocomplete>
@@ -65,7 +66,7 @@
               </p>
             </div> -->
             <!-- State -->
-            <div class="field">
+            <!-- <div class="field">
               <div>
                 <div>
                   <b-autocomplete
@@ -81,7 +82,17 @@
                   </b-autocomplete>
                 </div>
               </div>
-            </div>
+            </div> -->
+            <b-field>
+              <b-select v-model="regionCode" expanded placeholder="State">
+                <option
+                  v-for="state in filteredRegions"
+                  :value="state.abbr"
+                  :key="state.abbr">
+                  {{ state.name }}
+                </option>
+              </b-select>
+            </b-field>
             <!-- Zip -->
             <div class="field">
               <p class="control is-expanded">
@@ -190,8 +201,7 @@ export default {
       jurisdictionTypes: {},
       isOpen: false,
       isJurisdictionOpen: false,
-      skipCity: false,
-      skipState: false
+      suppressDropdown: true
     }
   },
   computed: {
@@ -268,7 +278,7 @@ export default {
   },
   watch: {
     regionCode: function (newVal, oldVal) {
-      console.log(`finding ${newVal}`)
+      // console.log(`finding ${newVal}`)
       let statesWithoutLeos = ['AA', 'AE', 'AP', 'AS', 'FM', 'GU', 'MH', 'MP', 'PW', 'PR', 'VI', 'WI']
       if (newVal !== oldVal && statesWithoutLeos.indexOf(newVal) === -1) {
       }
@@ -281,37 +291,25 @@ export default {
     }
   },
   methods: {
-    flipSkipCity () {
-      this.skipCity = false
-    },
-    flipSkipState () {
-      this.skipState = false
-    },
     fillData (option) {
-      console.log('selected:', this.selected)
-      console.log('option', option)
+      // console.log('selected:', this.selected)
+      // console.log('option', option)
       if (option && option.place_id) {
+        this.suppressDropdown = true
         axios.get(`${process.env.placesUrl + process.env.detailsEndpoint}?placeid=${option.place_id}&key=${process.env.placesKey}`)
           .then(({ data }) => {
             this.county = data.result.address_components.filter(y => y.types.indexOf('administrative_area_level_2') > -1)[0].long_name
             this.regionCode = data.result.address_components.filter(n => n.types.indexOf('administrative_area_level_1') > -1)[0].short_name
-            // this.$refs.region.setSelected(this.filteredRegions.find(x => x.abbr.toLowerCase() === this.regionCode.toLowerCase()))
+            // console.log(data.result.adr_address)
             data.result.adr_address
               .split(/<span class="|">|<\/span>,?\s?/)
               .filter(e => e)
               .forEach((item, index, arr) => {
-                console.log(index, item)
+                // console.log(index, item)
                 var myRe = /post-office-box|extended-address|street-address|locality|region|postal-code|country-name/g
                 if (index === 0 && !myRe.test(item)) {
                   this.extendedAddress = item
-                  console.log(`extended-address = ${item}`)
-                } else if (item === 'country-name') {
-                  data.result['address_components'].forEach(x => {
-                    if (x.types[0] === 'country') {
-                      this.countryName = x['long_name']
-                      this.countryCode = x['short_name']
-                    }
-                  })
+                  // console.log(`extended-address = ${item}`)
                 } else if (myRe.test(item)) {
                   switch (item) {
                     case 'post-office-box':
@@ -332,18 +330,17 @@ export default {
                       this.postalCode = arr[index + 1]
                       break
                   }
-                  console.log(`${item} = ${arr[index + 1]}`)
+                  // console.log(`${item} = ${arr[index + 1]}`)
                 }
               })
           })
       }
     },
     fillDataCity (option) {
-      console.log('selected:', this.selected)
-      this.skipCity = true
-      this.skipState = true
-      console.log('option', option)
+      // console.log('selected:', this.selected)
+      // console.log('option', option)
       if (option && option.place_id) {
+        this.suppressDropdown = true
         axios.get(`${process.env.placesUrl + process.env.detailsEndpoint}?placeid=${option.place_id}&key=${process.env.placesKey}`)
           .then(({ data }) => {
             this.county = data.result.address_components.filter(y => y.types.indexOf('administrative_area_level_2') > -1)[0].long_name
@@ -353,11 +350,16 @@ export default {
       }
     },
     getAsyncData: debounce(function () {
+      if (this.suppressDropdown) {
+        this.$refs.city.isActive = false
+        this.$refs.premise.isActive = false
+        this.suppressDropdown = false
+      }
       this.data = []
       this.updateAddress()
-      console.log(this.streetAddress)
+      // console.log(this.streetAddress)
       this.isFetching = true
-      axios.get(`${process.env.placesUrl + process.env.autocompleteEndpoint}?input=${this.streetAddress}&types=geocode&language=en${this.cCountryCode && this.cCountryCode !== 'un' ? '&components=country:' + this.cCountryCode : ''}&key=${process.env.placesKey}`)
+      axios.get(`${process.env.placesUrl + process.env.autocompleteEndpoint}?input=${this.streetAddress}&types=geocode&language=en&components=country:US&key=${process.env.placesKey}`)
         .then(({ data }) => {
           data.predictions.forEach((item) => this.data.push(item))
           this.isFetching = false
@@ -366,9 +368,14 @@ export default {
         })
     }, 500),
     getCityAsync: debounce(function () {
+      if (this.suppressDropdown) {
+        this.$refs.city.isActive = false
+        this.$refs.premise.isActive = false
+        this.suppressDropdown = false
+      }
       this.data = []
       this.updateAddress()
-      console.log(this.locality)
+      // console.log(this.locality)
       this.isFetching = true
       axios.get(`${process.env.placesUrl + process.env.autocompleteEndpoint}?input=${this.streetAddress ? this.streetAddress + ' ' + this.locality : this.locality}&types=geocode&language=en&components=country:US&key=${process.env.placesKey}`)
         .then(({ data }) => {

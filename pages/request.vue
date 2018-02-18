@@ -1,7 +1,8 @@
 <template>
   <div class="section is-widescreen">
     <section class="columns is-centered">
-      <div :class="columnClass">
+      <!-- <div @click="goBack" class="column button is-narrow is-hidden-touch is-flex" style="align-items:center;justify-content:center;"><b-icon icon="chevron-circle-left"></b-icon></div> -->
+      <div class="column is-three-quarters-desktop is-8-widescreen is-7-fullhd">
         <!-- <b-tabs type="is-boxed" v-model="currentRequest" @change="addRequest($event)">
           <b-tab-item v-for="(request) in tabs" :key="request.id" :label="request.firstName || 'new request'">
           </b-tab-item>
@@ -10,6 +11,7 @@
         <nuxt-child></nuxt-child>
         <!-- <button @click="removeRequest" class="button is-text is-small">Delete this Request</button> -->
       </div>
+      <!-- <div @click="goForward" class="column is-narrow is-hidden-touch is-flex" style="align-items:center;justify-content:center;"><b-icon icon="chevron-circle-right"></b-icon></div> -->
     </section>
   </div>
 </template>
@@ -62,6 +64,12 @@ export default {
     },
     removeRequest: function () {
       this.$store.dispatch('requests/removeCurrent')
+    },
+    goBack: function () {
+      console.log('back')
+    },
+    goForward: function () {
+      console.log('forward')
     }
   }
 }

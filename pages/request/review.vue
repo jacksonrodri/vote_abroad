@@ -1,8 +1,11 @@
 <template>
-  <div class="is-fullhd">
+  <section class="section">
     <!-- <no-ssr> -->
       <h3 class="title is-4">Review the form below then click 'add your signature' ..... click send email (this text to be updated with voter specific instructions based on state, registration status, ballot submission selection)"</h3>
-    <button class="button is-primary" @click="isSignatureModalActive = true">Add your signature</button>
+      <div class="control buttons">
+        <nuxt-link :to="localePath({ name: 'request-stage', params: {stage: 'id-and-contact-information'} })" class="button is-light is-medium" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>Back</span></nuxt-link>
+        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'sign-and-submit'} })" class="button is-primary is-medium" exact ><span> Sign &amp; submit </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link>
+      </div>
     <my-canvas class="canvas" ref="fpca">
       <my-box
         :lastName="lastName"
@@ -35,11 +38,15 @@
     </my-canvas>
     <!-- </no-ssr> -->
 
-    <button @click="sendEmail" class="button is-primary is-large">Send it by email</button>
+      <div class="control buttons is-right">
+        <nuxt-link :to="localePath({ name: 'request-stage', params: {stage: 'id-and-contact-information'} })" class="button is-light is-medium" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>Back</span></nuxt-link>
+        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'sign-and-submit'} })" class="button is-primary is-medium" exact ><span> Sign &amp; submit </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link>
+      </div>
+
     <b-modal :active.sync="isSignatureModalActive" has-modal-card>
       <sign @sigcap="addSig" />
     </b-modal>
-  </div>
+  </section>
 </template>
 
 <script>

@@ -1,7 +1,7 @@
 <template>
   <div class="modal-card" style="width: auto">
     <header class="modal-card-head">
-      <p class="modal-card-title">Name / Voter Type</p>
+      <p class="modal-card-title">1. Name &amp; ID</p>
     </header>
     <section class="modal-card-body">
         <b-radio v-model="voterClass"
@@ -69,7 +69,7 @@
     </section>
     <footer class="modal-card-foot">
       <button class="button" type="button" @click="$parent.close()">Close</button>
-      <button class="button is-primary">Login</button>
+      <button class="button is-primary">Save</button>
     </footer>
   </div>
 </template>

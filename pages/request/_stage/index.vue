@@ -74,7 +74,19 @@
 <!-- voting information -->
   <section v-if="stage.slug === 'voting-information'">
 
-    <us-address-input
+    <us-address
+        :label="$t('request.votingAddress')"
+        toolTipTitle="Your last US Address"
+        v-model="votAdr">
+        <div slot="instructions">
+          <p>{{ $t('request.votingAddressInstructions') }}</p>
+        </div>
+        <div slot="tooltip">
+          <p>Use the residence address of the last place you lived in the US. If you have never resided in the US, use the residence address of the last place your US parent(s) lived in the US. If your US parents last lived in the US in different locations, you may choose which one to use as your voting address.</p>
+        </div>
+      </us-address>
+
+    <!-- <us-address-input
       :label="$t('request.votingAddress')"
       usOnly
       toolTipTitle="Your last US Address"
@@ -86,7 +98,7 @@
         <p>Use the residence address of the last place you lived in the US. If you have never resided in the US, use the residence address of the last place your US parent(s) lived in the US. If your US parents last lived in the US in different locations, you may choose which one to use as your voting address.</p>
       </div>
 
-    </us-address-input>
+    </us-address-input> -->
 
     <br/><br/>
 
@@ -169,6 +181,8 @@
           @input="value =>{ this.updateDob(value) }"
           placeholder="Type or select your birth date"
           :date-formatter="(date) => date.toLocaleDateString()"
+          :min-date="minDate"
+          :max-date="maxDate"
           icon="calendar"
           icon-pack="fa"
           :readonly="false">
@@ -253,7 +267,7 @@
     <section >
       <div class="control buttons is-right">
         <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'voting-information'} })" class="button is-light is-medium" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>Back</span></nuxt-link>
-        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'canvas'} })" class="button is-primary is-medium" exact ><span> Next </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link>
+        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'review'} })" class="button is-primary is-medium" exact ><span> Generate &amp; review your form </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link>
       </div>
     </section>
   </section>
@@ -263,7 +277,8 @@
 <script>
 import { required, requiredIf, email } from 'vuelidate/lib/validators'
 import AddressInput from '~/components/AddressInput'
-import UsAddressInput from '~/components/UsAddressInput'
+// import UsAddressInput from '~/components/UsAddressInput'
+import UsAddress from '~/components/USAddress'
 import VoterClass from '~/components/VoterClass'
 import IsRegistered from '~/components/IsRegistered'
 import ReceiveBallot from '~/components/ReceiveBallot'
@@ -299,7 +314,7 @@ export default {
   },
   components: {
     AddressInput,
-    UsAddressInput,
+    UsAddress,
     VoterClass,
     IsRegistered,
     ReceiveBallot,
@@ -314,18 +329,18 @@ export default {
   watch: {
     dob: function (newVal, oldVal) {
       if (!this.localDob && newVal) {
-        console.log('dob from vuex-persist', new Date(newVal))
-        this.localDob = new Date(newVal)
+        console.log('dob from vuex-persist', new Date(new Date(newVal).getUTCFullYear(), new Date(newVal).getUTCMonth(), new Date(newVal).getUTCDate()))
+        this.localDob = new Date(new Date(newVal).getUTCFullYear(), new Date(newVal).getUTCMonth(), new Date(newVal).getUTCDate())
       } else if (newVal !== oldVal) {
-        this.localDob = new Date(newVal)
+        this.localDob = new Date(new Date(newVal).getUTCFullYear(), new Date(newVal).getUTCMonth(), new Date(newVal).getUTCDate())
       }
     },
     date: function (newVal, oldVal) {
       if (!this.localDate && newVal) {
-        console.log('date from vuex-persist', new Date(newVal))
-        this.localDate = new Date(newVal)
+        console.log('date from vuex-persist', new Date(new Date(newVal).getUTCFullYear(), new Date(newVal).getUTCMonth(), new Date(newVal).getUTCDate()))
+        this.localDate = new Date(new Date(newVal).getUTCFullYear(), new Date(newVal).getUTCMonth(), new Date(newVal).getUTCDate())
       } else if (newVal !== oldVal) {
-        this.localDate = new Date(newVal)
+        this.localDate = new Date(new Date(newVal).getUTCFullYear(), new Date(newVal).getUTCMonth(), new Date(newVal).getUTCDate())
       }
     }
   },
@@ -335,6 +350,12 @@ export default {
     },
     lcldate () {
       return this.date ? new Date(parseInt(this.date.substr(0, 4)), parseInt(this.date.substr(5, 2)) - 1, parseInt(this.date.substr(8, 2))) : null
+    },
+    maxDate () {
+      return new Date(2000, 10, 6)
+    },
+    minDate () {
+      return new Date(1870, 0, 1)
     },
     stage () {
       switch (this.$route.params.stage) {

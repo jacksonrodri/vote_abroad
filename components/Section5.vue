@@ -1,7 +1,7 @@
 <template>
   <div class="modal-card" style="width: auto">
     <header class="modal-card-head">
-      <p class="modal-card-title">Voting Preference</p>
+      <p class="modal-card-title">5. Voting Preference</p>
     </header>
     <section class="modal-card-body">
       <div class="block">
@@ -25,7 +25,7 @@
     </section>
     <footer class="modal-card-foot">
       <button class="button" type="button" @click="$parent.close()">Close</button>
-      <button class="button is-primary">Login</button>
+      <button class="button is-primary">Save</button>
     </footer>
   </div>
 </template>

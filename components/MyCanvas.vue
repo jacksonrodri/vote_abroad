@@ -11,7 +11,7 @@
     <div v-show="sectionEditor !== 6 && sectionEditor" id="section6"></div>
     <div v-show="sectionEditor !== 7 && sectionEditor" id="section7"></div>
     <!-- <div @mouseover="canvasClick" id="section8"></div> -->
-    <div @click="openSection" :style="[editButton]"><b-icon :style="iconStyle" icon="edit" custom-size="fa-5x" type="is-danger"></b-icon></div>
+    <div @click="openSection" :style="[editButton]"><b-icon :style="iconStyle" icon="edit" size="is-medium" type="is-black"></b-icon></div>
     <slot></slot>
     <b-modal :active.sync="isEditModalActive" has-modal-card>
       <component v-bind:is="currentModal">
@@ -103,7 +103,7 @@ export default {
         display: this.sectionEditor ? 'flex' : 'none',
         'align-items': 'center',
         'justify-content': 'center',
-        border: '2px dotted red'
+        border: '2px dotted grey'
       }
     },
     iconStyle () {
@@ -140,7 +140,7 @@ export default {
         // console.log({ x: val.clientX - cRect.left, y: val.clientY - cRect.top })
         let y = (100 * (val.clientY - cRect.top) / cRect.height * (cRect.height / cRect.width))
         // let y = (val.clientY - cRect.top)
-        console.log(val.clientY - cRect.top)
+        // console.log(val.clientY - cRect.top)
         this.sections.forEach((section) => {
           if (section.start < y && y < (section.start + section.end)) {
             this.sectionEditor = section.id
@@ -185,14 +185,20 @@ export default {
   top: 0;
   left: 0;
 }
-#section1 {
+#section0 {
   margin-top:18%;
   padding-bottom: 22.2%;
   position: absolute;
   width: 100%;
   background-color: rgba(0,0,0,0.1);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(0.5px);
+  -webkit-backdrop-filter: blur(0.5px);
+}
+#section1 {
+  margin-top:18%;
+  padding-bottom: 22.2%;
+  position: absolute;
+  width: 100%;
 }
 
 #section2 {
@@ -200,9 +206,6 @@ export default {
   padding-bottom: 12.5%;
   position: absolute;
   width: 100%;
-  background-color: rgba(0,0,0,0.1);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
 }
 
 #section3 {
@@ -210,9 +213,6 @@ export default {
   padding-bottom: 17.3%;
   position: absolute;
   width: 100%;
-  background-color: rgba(0,0,0,0.1);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
 }
 
 #section4 {
@@ -220,9 +220,6 @@ export default {
   padding-bottom: 10%;
   position: absolute;
   width: 100%;
-  background-color: rgba(0,0,0,0.1);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
 }
 
 #section5 {
@@ -230,9 +227,6 @@ export default {
   padding-bottom: 7.5%;
   position: absolute;
   width: 100%;
-  background-color: rgba(0,0,0,0.1);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
 }
 
 #section6 {
@@ -240,9 +234,6 @@ export default {
   padding-bottom: 14.6%;
   position: absolute;
   width: 100%;
-  background-color: rgba(0,0,0,0.1);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
 }
 
 #section7 {
@@ -250,9 +241,6 @@ export default {
   padding-bottom: 21.7%;
   position: absolute;
   width: 100%;
-  background-color: rgba(0,0,0,0.1);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
 }
 
 canvas {

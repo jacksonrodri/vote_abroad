@@ -30,7 +30,7 @@
                       field="label"
                       @input="updateAddress()"
                       @focus="$event.target.select()"
-                      @select="option => {selected = option; if (selected) {countryCode = option.iso}}">
+                      @select="option => {if (!option) {return}; selected = option; if (selected) {countryCode = option.iso}}">
                     <template slot-scope="props">
                       <span :class="`flag-icon flag-icon-${props.option.iso.toLowerCase()}`"></span>{{ props.option.label }}
                     </template>
@@ -89,10 +89,11 @@
                     :placeholder="field.administrativearea.label"
                     open-on-focus
                     :data="filteredRegions"
+                    ref="region"
                     :keep-first="true"
                     field="name"
                     @input="updateAddress()"
-                    @select="option => selected = option">
+                    @select="option => {if (!option) {return}; selected = option}">
                   </b-autocomplete>
                 </div>
                 <input v-if="field.administrativearea && !field.administrativearea.options" v-model="region" @input="updateAddress()" class="input" type="text" :placeholder="field.administrativearea.label">
@@ -217,7 +218,8 @@ export default {
       alt3: '',
       alt4: '',
       alt5: '',
-      isOpen: false
+      isOpen: false,
+      suppressDropdown: true
     }
   },
   computed: {
@@ -326,6 +328,7 @@ export default {
       console.log('selected:', this.selected)
       console.log('option', option)
       if (option && option.place_id) {
+        this.suppressDropdown = true
         axios.get(`${process.env.placesUrl + process.env.detailsEndpoint}?placeid=${option.place_id}&key=${process.env.placesKey}`)
           .then(({ data }) => {
             data.result.adr_address
@@ -369,6 +372,12 @@ export default {
       }
     },
     getAsyncData: debounce(function () {
+      if (this.suppressDropdown) {
+        this.$refs.region.isActive = false
+        this.$refs.premise.isActive = false
+        this.$refs.country.isActive = false
+        this.suppressDropdown = false
+      }
       this.data = []
       this.updateAddress()
       console.log(this.streetAddress)
