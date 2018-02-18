@@ -1,47 +1,10 @@
 <template>
   <section>
     <span class="is-flex"><label @click="$refs.premise.focus()" class="label" style="cursor: pointer;">{{ label }} </label><span v-if="toolTipTitle" @click="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
-    <!-- <div class="field-label has-text-left">
-      <label class="label">{{ label }}</label>
-    </div> -->
     <slot name="instructions"></slot>
     <b-message v-if="toolTipTitle" :title="toolTipTitle" type="is-info" has-icon :active.sync="isOpen">
       <slot name="tooltip"></slot>
     </b-message>
-    <div v-if="usOnly === undefined || usOnly === false" class="field is-fullwidth">
-          <div class="field-body">
-            <b-field class="grouped" >
-              <b-field expanded>
-                <b-field>
-                  <p class="control flag-container">
-                    <b-icon
-                      :icon="cCountryCode.toLowerCase()"
-                      pack="flag-icon"
-                      @click.native="$refs.country.focus()">
-                    </b-icon>
-                  </p>
-                  <b-autocomplete
-                      v-model="countryName"
-                      placeholder="Country"
-                      ref="country"
-                      :disabled="usOnly"
-                      keep-first
-                      expanded
-                      open-on-focus
-                      :data="filteredCountries"
-                      field="label"
-                      @input="updateAddress()"
-                      @focus="$event.target.select()"
-                      @select="option => {selected = option; if (selected) {countryCode = option.iso}}">
-                    <template slot-scope="props">
-                      <span :class="`flag-icon flag-icon-${props.option.iso.toLowerCase()}`"></span>{{ props.option.label }}
-                    </template>
-                  </b-autocomplete>
-                </b-field>
-              </b-field>
-            </b-field>
-          </div>
-        </div>
         <div class="field">
           <div class="field-label is-normal">
             <label class="label"></label>
@@ -57,7 +20,7 @@
                   field="structured_formatting.main_text"
                   :loading="isFetching"
                   @input="getAsyncData"
-                  @select="option => fillData(option)">
+                  @select="option => fillDataCity(option)">
                   <template slot-scope="props">{{ props.option.description }}</template>
                   <template slot="empty">No results found</template>
                 </b-autocomplete>
@@ -79,40 +42,61 @@
         </div>
         <div class="field is-horizontal">
           <div class="field-body">
-            <div class="field" v-for="field in localityFields" :key="Object.keys(field)[0]">
-              <p v-if="Object.keys(field)[0] === 'localityname'" class="control is-expanded">
-                <input class="input" type="text" @input="updateAddress()" v-model="locality" :placeholder="field.localityname.label">
+            <!-- City -->
+            <div class="field">
+              <div class="control">
+                <b-autocomplete
+                  v-model="locality"
+                  :data="data"
+                  ref="premise"
+                  placeholder="City"
+                  field="structured_formatting.main_text"
+                  :loading="isFetching"
+                  @input="skipCity ? flipSkipCity() : getCityAsync()"
+                  @select="option => fillData(option)">
+                  <template slot-scope="props">{{ `${streetAddress ? props.option.structured_formatting.secondary_text : ''}` }} {{ `${streetAddress ? props.option.structured_formatting.main_text : ''}` }} {{`${!streetAddress ? props.option.description : ''}` }} </template>
+                  <template slot="empty">No results found</template>
+                </b-autocomplete>
+              </div>
+            </div>
+            <!-- <div class="field">
+              <p class="control is-expanded">
+                <input class="input" type="text" @input="updateAddress()" v-model="locality" placeholder="City">
               </p>
-              <div v-if="Object.keys(field)[0] === 'administrativearea'">
-                <div v-if="field.administrativearea && field.administrativearea.options" >
+            </div> -->
+            <!-- State -->
+            <div class="field">
+              <div>
+                <div>
                   <b-autocomplete
                     v-model="region"
                     ref="region"
-                    :placeholder="field.administrativearea.label"
+                    placeholder="State"
                     :data="filteredRegions"
-                    open-on-focus
-                    :keep-first="true"
                     field="abbr"
-                    @input="updateAddress()"
-                    @select="option => {selected = option; if (selected) {regionCode = selected.abbr}}"
-                    >
+                    @change="skipState ? flipSkipState() : updateAddress()"
+                    @select="option => {selected = option; if (selected) {regionCode = selected.abbr}}">
+                    <template slot-scope="props">{{ props.option.name }} ({{ props.option.abbr }}) </template>
+                    <template slot="empty">No results found</template>
                   </b-autocomplete>
                 </div>
-                <input v-if="field.administrativearea && !field.administrativearea.options" v-model="region" @input="updateAddress()" class="input" type="text" :placeholder="field.administrativearea.label">
               </div>
-              <p v-if="Object.keys(field)[0] === 'postalcode'" class="control is-expanded">
-                <input class="input" v-model="postalCode" type="text" @input="updateAddress()" :placeholder="field.postalcode.label">
+            </div>
+            <!-- Zip -->
+            <div class="field">
+              <p class="control is-expanded">
+                <input class="input" v-model="postalCode" type="text" @input="updateAddress()" placeholder="Zip">
               </p>
             </div>
           </div>
         </div>
-        <div v-if="(usOnly !== undefined && usOnly !== false) || usOnly === true" class="field is-fullwidth">
+        <div class="field is-fullwidth">
           <!-- votAdr.county -->
           <b-field label="County">
             <b-input v-model="county"></b-input>
           </b-field>
         </div>
-        <div v-if="(usOnly !== undefined && usOnly !== false) || usOnly === true" class="field is-fullwidth">
+        <div class="field is-fullwidth">
           <!-- votAdr.county -->
           <!-- <b-field :label="`Jurisdiction (${regionCode && jurisdictionTypes[regionCode] ? jurisdictionTypes[regionCode].join(', ') : 'County, City or Town'})`"> -->
           <div class="field">
@@ -129,12 +113,12 @@
                 :data="filteredLeos"
                 open-on-focus
                 field="jurisdiction"
-                @input="updateAddress()"
+                @change="updateAddress()"
                 @select="option => selected = option">
                 <template slot-scope="props">{{ props.option.jurisdiction }} ({{ props.option.jurisdictionType }}) {{ props.option.state }}</template>
             </b-autocomplete>
           </div>
-          <b-message v-if="Object.keys(leo).length > 0" title="Local Election Official Address (to be hidden/reformatted later):" type="is-info" has-icon :active.sync="isJurisdictionOpen">
+          <b-message title="Local Election Official Address (to be hidden/reformatted later):" type="is-info" has-icon :active.sync="isJurisdictionOpen">
             <pre><strong>Local Election Official Address (to be hidden/reformatted later):</strong><br/> {{leo}}</pre>
           </b-message>
         </div>
@@ -150,23 +134,12 @@ export default {
   name: 'UsAddressInput',
   props: [
     'value',
-    'usOnly',
     'label',
     'toolTipTitle'
   ],
   async mounted () {
-    if (this.usOnly !== undefined) {
-      this.countryCode = 'US'
-      this.countryName = 'United States'
-    }
-    // console.log('axios', this.$axios.defaults.baseURL)
-    // let lolo = await (this.$store.app.$content('/leos').getAll())
-    // console.log('>> ', lolo)
-    // this.leos = await axios.get('/_nuxt/content/leos/_all.json')[0].body
-    // await axios.get('/_nuxt/content/leos/_all.json')
-    // await axios.get('/content-api/leos/')
-    // await axios.get(this.$axios.defaults.baseURL + '/leos/')
-    // await axios.get(this.$axios.defaults.baseURL + '/leos/_all.json')
+    this.countryCode = 'US'
+    this.countryName = 'United States'
     await this.$store.app.$content('/leos').getAll()
       .then((data) => {
         const templeos = data[0].body
@@ -216,7 +189,9 @@ export default {
       leos: [],
       jurisdictionTypes: {},
       isOpen: false,
-      isJurisdictionOpen: false
+      isJurisdictionOpen: false,
+      skipCity: false,
+      skipState: false
     }
   },
   computed: {
@@ -239,14 +214,7 @@ export default {
       }
     },
     codeFilteredCountries () {
-      if (this.usOnly) {
-        return this.countryList.filter(country => country.iso === 'US')
-      }
-      if (this.countryCode.length === 2) {
-        return this.countryList.filter(country => country.iso.toLowerCase() === this.countryCode.toLowerCase())
-      } else {
-        return this.filteredCountries
-      }
+      return this.countryList.filter(country => country.iso === 'US')
     },
     cCountryCode () {
       return this.countryCode || 'un'
@@ -303,40 +271,22 @@ export default {
       console.log(`finding ${newVal}`)
       let statesWithoutLeos = ['AA', 'AE', 'AP', 'AS', 'FM', 'GU', 'MH', 'MP', 'PW', 'PR', 'VI', 'WI']
       if (newVal !== oldVal && statesWithoutLeos.indexOf(newVal) === -1) {
-        // console.log(this)
-        // this.jurisdictionChoices = Object.keys(this.leos[newVal]).map(x => Object.assign({jurisdiction: x}, this.leos[newVal][x]))
       }
     },
     filteredLeos: function (newVal, oldVal) {
-      // console.log(newVal.length)
       if (newVal && newVal.length === 1) {
         this.$refs.jurisdiction.setSelected(newVal[0])
         this.leo = newVal[0]
       }
     }
-    // value: function (newVal, oldVal) {
-    //   this.postOfficeBox = newVal.poBox || ''
-    //   this.extendedAddress = newVal.premise || ''
-    //   this.streetAddress = newVal.thoroughfare || ''
-    //   this.locality = newVal.locality || ''
-    //   this.region = newVal.administrativearea || ''
-    //   this.regionCode = newVal.regionCode || ''
-    //   this.postalCode = newVal.postalcode || ''
-    //   this.county = newVal.county || ''
-    //   this.leo = newVal.leo || ''
-    //   this.countryName = newVal.country || ''
-    //   this.cCountryCode = newVal.countryiso || ''
-    // }
-    // region: function (newVal, oldVal) {
-    //   const states = this.countryList[234].fields[2].locality[1].administrativearea.options
-    //   states.forEach(x => {
-    //     if (x[Object.keys(x)[0]].toLowerCase() === newVal.toLowerCase) {
-    //       this.regionCode = x[Object.keys(x)[0]]
-    //     }
-    //   })
-    // }
   },
   methods: {
+    flipSkipCity () {
+      this.skipCity = false
+    },
+    flipSkipState () {
+      this.skipState = false
+    },
     fillData (option) {
       console.log('selected:', this.selected)
       console.log('option', option)
@@ -388,12 +338,39 @@ export default {
           })
       }
     },
+    fillDataCity (option) {
+      console.log('selected:', this.selected)
+      this.skipCity = true
+      this.skipState = true
+      console.log('option', option)
+      if (option && option.place_id) {
+        axios.get(`${process.env.placesUrl + process.env.detailsEndpoint}?placeid=${option.place_id}&key=${process.env.placesKey}`)
+          .then(({ data }) => {
+            this.county = data.result.address_components.filter(y => y.types.indexOf('administrative_area_level_2') > -1)[0].long_name
+            this.regionCode = data.result.address_components.filter(n => n.types.indexOf('administrative_area_level_1') > -1)[0].short_name
+            this.locality = data.result.address_components.filter(n => n.types.indexOf('locality') > -1)[0].short_name
+          })
+      }
+    },
     getAsyncData: debounce(function () {
       this.data = []
       this.updateAddress()
       console.log(this.streetAddress)
       this.isFetching = true
       axios.get(`${process.env.placesUrl + process.env.autocompleteEndpoint}?input=${this.streetAddress}&types=geocode&language=en${this.cCountryCode && this.cCountryCode !== 'un' ? '&components=country:' + this.cCountryCode : ''}&key=${process.env.placesKey}`)
+        .then(({ data }) => {
+          data.predictions.forEach((item) => this.data.push(item))
+          this.isFetching = false
+        }, response => {
+          this.isFetching = false
+        })
+    }, 500),
+    getCityAsync: debounce(function () {
+      this.data = []
+      this.updateAddress()
+      console.log(this.locality)
+      this.isFetching = true
+      axios.get(`${process.env.placesUrl + process.env.autocompleteEndpoint}?input=${this.streetAddress ? this.streetAddress + ' ' + this.locality : this.locality}&types=geocode&language=en&components=country:US&key=${process.env.placesKey}`)
         .then(({ data }) => {
           data.predictions.forEach((item) => this.data.push(item))
           this.isFetching = false
@@ -419,19 +396,3 @@ export default {
   }
 }
 </script>
-<style lang="sass">
-$flag-icon-css-path: '../node_modules/flag-icon-css/flags'
-@import '../node_modules/flag-icon-css/sass/flag-icon.scss'
-
-.flag-icon
-  width: 3.8em;
-  height: 100%;
-  line-height: inherit;
-
-.flag-container
-  width: 3em;
-
-.flag-container > span
-  width: 100%;
-  height: 100%;
-</style>

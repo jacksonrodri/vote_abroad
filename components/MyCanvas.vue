@@ -11,13 +11,33 @@
     <div v-show="sectionEditor !== 6 && sectionEditor" id="section6"></div>
     <div v-show="sectionEditor !== 7 && sectionEditor" id="section7"></div>
     <!-- <div @mouseover="canvasClick" id="section8"></div> -->
-    <div :style="[editButton]"><b-icon :style="iconStyle" icon="edit" custom-size="fa-5x" type="is-danger"></b-icon></div>
+    <div @click="openSection" :style="[editButton]"><b-icon :style="iconStyle" icon="edit" custom-size="fa-5x" type="is-danger"></b-icon></div>
     <slot></slot>
+    <b-modal :active.sync="isEditModalActive" has-modal-card>
+      <component v-bind:is="currentModal">
+        <!-- component changes when vm.currentView changes! -->
+      </component>
+    </b-modal>
   </div>
 </template>
 
 <script>
+import Section1 from '~/components/Section1.vue'
+import Section2 from '~/components/Section2.vue'
+import Section3 from '~/components/Section3.vue'
+import Section4 from '~/components/Section4.vue'
+import Section5 from '~/components/Section5.vue'
+import Section6 from '~/components/Section6.vue'
+
 export default {
+  components: {
+    Section1,
+    Section2,
+    Section3,
+    Section4,
+    Section5,
+    Section6
+  },
   data () {
     return {
       // By creating the provider in the data property, it becomes reactive,
@@ -27,6 +47,8 @@ export default {
         context: null
       },
       sectionEditor: null,
+      currentModal: '',
+      isEditModalActive: false,
       sections: [
         {
           id: 1,
@@ -129,6 +151,10 @@ export default {
     },
     canvasClick: function (val) {
       console.log(val)
+    },
+    openSection: function (val) {
+      this.currentModal = `section-${this.sectionEditor}`
+      this.isEditModalActive = true
     }
   },
 
