@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import UsAddress from '~/components/UsAddress.vue'
+import UsAddress from '~/components/USAddress.vue'
 export default {
   components: {
     UsAddress
