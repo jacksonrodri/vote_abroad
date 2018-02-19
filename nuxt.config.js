@@ -84,6 +84,11 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
+   vendor: [
+    '~/assets/countryaddresses.js',
+    'libphonenumber-js',
+    'mailcheck'
+   ],
     extend (config, ctx) {
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
