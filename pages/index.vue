@@ -36,7 +36,7 @@ import { mapActions } from 'vuex'
 // import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
 
 export default {
-  layout: 'vfabg',
+  layout: 'default',
   components: {
     PhoneEmail
   },

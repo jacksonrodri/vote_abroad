@@ -582,13 +582,3 @@ export default {
   }
 }
 </script>
-
-<style lang="sass" scoped>
-$flag-icon-css-path: '../../../node_modules/flag-icon-css/flags'
-@import '../../../node_modules/flag-icon-css/sass/flag-icon.scss'
-
-.flag-icon
-  width: 3.8em;
-  height: 100%;
-  line-height: inherit;
-</style>

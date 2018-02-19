@@ -76,7 +76,13 @@ $fa-font-path: "./webfonts";
 @import "./fa/fontawesome.scss";
 @import "./fa/fa-solid.scss";
 @import "./fa/fa-regular.scss";
+$flag-icon-css-path: '/flags';
+@import '../../node_modules/flag-icon-css/sass/flag-icon.scss';
 
+// .flag-icon
+//   width: 3.8em;
+//   height: 100%;
+//   line-height: inherit;
 .flag-icon {
   width: 3rem;
   height: 100%;

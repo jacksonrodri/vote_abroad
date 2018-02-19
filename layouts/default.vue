@@ -7,10 +7,6 @@
           <div class="navbar-brand">
             <nuxt-link to="/" class="navbar-item logo" exact>
             </nuxt-link>
-            <!-- <div class="navbar-item is-hidden-desktop">
-              <nuxt-link :to="switchLocalePath('es')" class="button is-info is-outlined is-small" v-show="$i18n.locale === 'en'">Español</nuxt-link>
-              <nuxt-link :to="switchLocalePath('en')" class="button is-info is-outlined is-small" v-show="$i18n.locale === 'es'">English</nuxt-link>
-            </div> -->
             <span :class="[{'is-active': isMobileMenuActive}, 'navbar-burger', 'burger']" @click="isMobileMenuActive = !isMobileMenuActive">
               <span></span>
               <span></span>
@@ -92,48 +88,6 @@
                   <a class="navbar-item">Contact the helpdesk</a>
                 </div>
               </div>
-              <!-- <b-dropdown hoverable class="navbar-item has-dropdown is-hidden-mobile">
-                <a class="navbar-item navbar-link" slot="trigger">
-                  <span>FAQs</span>
-                  <b-icon icon="menu-down"></b-icon>
-                </a>
-                <b-dropdown-item>Action</b-dropdown-item>
-                <b-dropdown-item>Another action</b-dropdown-item>
-                <b-dropdown-item>Something else</b-dropdown-item>
-              </b-dropdown>
-              <b-dropdown hoverable class="navbar-item has-dropdown">
-                <a class="navbar-item navbar-link" slot="trigger">
-                  <span><span class="is-hidden-mobile">Upcoming </span>Elections</span>
-                  <b-icon icon="menu-down"></b-icon>
-                </a>
-
-                <b-dropdown-item>Action</b-dropdown-item>
-                <b-dropdown-item>Another action</b-dropdown-item>
-                <b-dropdown-item>Something else</b-dropdown-item>
-              </b-dropdown>
-              <b-dropdown hoverable position="is-bottom-left" class="navbar-item has-dropdown">
-                <a class="navbar-item navbar-link" slot="trigger">
-                  <span>Login</span>
-                  <b-icon icon="menu-down"></b-icon>
-                </a>
-                <b-dropdown-item custom paddingless>
-                  <form action="">
-                    <div class="modal-card" style="width:300px;">
-                      <section class="modal-card-body">
-                        <phone-email></phone-email>
-                        <b-checkbox>Remember me</b-checkbox>
-                      </section>
-                      <footer class="modal-card-foot">
-                        <button class="button is-vfa">Login</button>
-                      </footer>
-                    </div>
-                  </form>
-                </b-dropdown-item>
-              </b-dropdown> -->
-              <!-- <div class="navbar-item is-hidden-touch">
-                <nuxt-link :to="switchLocalePath('es')" class="button is-info is-outlined is-small" v-show="$i18n.locale === 'en'">Español</nuxt-link>
-                <nuxt-link :to="switchLocalePath('en')" class="button is-info is-outlined is-small" v-show="$i18n.locale === 'es'">English</nuxt-link>
-              </div> -->
             </div>
           </div>
         </div>
@@ -193,11 +147,11 @@ export default {
     Login
   },
   computed: {
-    upcomingElections () { return this.$store.state.upcomingElections },
-    isBgImage () {
+    upcomingElections: function () { return this.$store.state.upcomingElections },
+    isBgImage: function () {
       return Boolean(this.$route.name.indexOf('index') > -1 || this.$route.name.indexOf('home') > -1)
     },
-    isAuthenticated () { return this.$store.getters['userauth/isAuthenticated'] }
+    isAuthenticated: function () { return this.$store.getters['userauth/isAuthenticated'] }
   }
 }
 </script>

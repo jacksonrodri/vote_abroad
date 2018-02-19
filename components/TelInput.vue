@@ -183,24 +183,3 @@ export default {
   }
 }
 </script>
-
-<style lang="sass">
-$flag-icon-css-path: '../node_modules/flag-icon-css/flags'
-@import '../node_modules/flag-icon-css/sass/flag-icon.scss'
-
-.flag-icon
-  width: 3rem;
-  height: 100%;
-  line-height: inherit;
-
-.flag-icon.fa-3x
-  width: 4.3rem;
-
-.flag-container
-  height: 2.2rem
-  width: 3rem
-
-.flag-container.is-large
-  height: 3.4rem;
-  width: 4.3rem;
-</style>
