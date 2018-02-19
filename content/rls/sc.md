@@ -1,5 +1,7 @@
 ---
-title: South Carolina
+state: South Carolina
+iso: SC
+allowsNeverResided: true
 id:
   - SSN
 partyPrimary: true

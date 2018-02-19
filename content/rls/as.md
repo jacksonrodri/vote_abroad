@@ -1,5 +1,7 @@
 ---
-title: American Samoa
+state: American Samoa
+iso: AS
+allowsNeverResided: true
 id:
   - SSN4
   - TerritoryID

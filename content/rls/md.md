@@ -1,5 +1,7 @@
 ---
-title: Maryland
+state: Maryland 
+iso: MD
+allowsNeverResided: false
 id:
   - SSN4
   - StateID

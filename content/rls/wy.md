@@ -1,5 +1,7 @@
 ---
-title: Wyoming
+state: Wyoming 
+iso: WY
+allowsNeverResided: true
 id: false
 partyPrimary: true
 ballotReceiptOptions:

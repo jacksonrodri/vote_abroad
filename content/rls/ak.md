@@ -1,5 +1,7 @@
 ---
-title: Alaska
+state: Alaska 
+iso: AK
+allowsNeverResided: true
 id:
   - SSN4
   - StateID

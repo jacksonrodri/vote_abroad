@@ -1,5 +1,7 @@
 ---
-title: Louisianna
+state: Louisianna 
+iso: LA
+allowsNeverResided: false
 id:
   - SSN4
   - StateID

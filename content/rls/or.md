@@ -1,5 +1,7 @@
 ---
-title: Oregon
+state: Oregon 
+iso: OR
+allowsNeverResided: true
 id:
   - SSN4
   - StateID

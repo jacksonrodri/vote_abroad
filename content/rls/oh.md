@@ -1,5 +1,7 @@
 ---
-title: Ohio
+state: Ohio 
+iso: OH
+allowsNeverResided: true
 id:
   - SSN4
   - StateID

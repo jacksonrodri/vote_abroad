@@ -1,5 +1,7 @@
 ---
-title: Idaho
+state: Idaho 
+iso: ID
+allowsNeverResided: false
 id:
   - SSN4
   - StateID

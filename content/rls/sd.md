@@ -1,5 +1,7 @@
 ---
-title: South Dakota
+state: South Dakota
+iso: SD
+allowsNeverResided: true
 id:
   - SSN4
   - StateID

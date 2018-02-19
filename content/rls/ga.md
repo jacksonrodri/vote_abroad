@@ -1,5 +1,7 @@
 ---
-title: Georgia
+state: Georgia 
+iso: GA
+allowsNeverResided: true
 id:
   - SSN4
   - StateID

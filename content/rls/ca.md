@@ -1,5 +1,7 @@
 ---
-title: California
+state: California 
+iso: CA
+allowsNeverResided: true
 id:
   - SSN4
   - StateID

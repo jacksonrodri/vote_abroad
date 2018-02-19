@@ -1,5 +1,7 @@
 ---
-title: North Dakota
+state: North Dakota
+iso: ND
+allowsNeverResided: true
 id:
   - SSN4
   - StateID

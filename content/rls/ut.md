@@ -1,5 +1,7 @@
 ---
-title: Utah
+state: Utah 
+iso: UT
+allowsNeverResided: false
 id:
   - SSN4
   - StateID

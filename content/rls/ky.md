@@ -1,5 +1,7 @@
 ---
-title: Kentucky
+state: Kentucky 
+iso: KY
+allowsNeverResided: true
 id: false
 partyPrimary: true
 ballotReceiptOptions:

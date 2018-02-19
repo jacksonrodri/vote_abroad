@@ -1,5 +1,7 @@
 ---
-title: New Jersey
+state: New Jersey
+iso: NJ
+allowsNeverResided: true
 id:
   - SSN4
   - StateID

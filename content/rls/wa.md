@@ -1,5 +1,7 @@
 ---
-title: Washington
+state: Washington 
+iso: WA
+allowsNeverResided: true
 id: false
 partyPrimary: false
 ballotReceiptOptions:

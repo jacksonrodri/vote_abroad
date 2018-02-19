@@ -1,5 +1,7 @@
 ---
-title: Virginia
+state: Virginia 
+iso: VA
+allowsNeverResided: true
 id:
   - SSN
 partyPrimary: true

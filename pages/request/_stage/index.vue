@@ -103,6 +103,7 @@
     <br/><br/>
 
     <voter-class v-model="voterClass"
+      :allowsNeverResided="stateRules ? stateRules.allowsNeverResided : false"
       toolTipTitle="Intend to return vs. Return is uncertain">
       <div slot="tooltip">
         <p>Voters may choose ‘intend to return’ if they intend to return to the state in which they are registering to vote. An ‘intention’ is sufficient, you don’t need to have a fixed date of return or firm plans. Registering as “intend to return” should make you eligible to vote in State and Local races. However, it may also make you liable for state income taxes</p>
@@ -124,7 +125,8 @@
     <!-- recBallot -->
     <receive-ballot v-model="recBallot"
       v-if="votAdr && votAdr.regionCode"
-      label="How would you like to receieve your ballot?"
+      label="How would you like to receive your ballot?"
+      :ballotReceiptOptions="stateRules ? stateRules.ballotReceiptOptions : ['Mail']"
       toolTipTitle="What is the best choice?">
       <div slot="tooltip">
         <p>You may request to receive your blank ballot by email/online, fax or mail. We encourage voters to request their blank ballot be sent by email/online or fax to avoid the delay associated with mail  and the possibility the ballot will be lost in transit.</p>
@@ -293,6 +295,13 @@ import ScrollUp from '~/components/ScrollUp'
 export default {
   transition: 'test',
   scrollToTop: true,
+  async asyncData ({app}) {
+    return {
+      allStateRules: await app.$content('rls')
+        .query({ exclude: ['anchors', 'body', 'meta', 'path', 'permalink'] })
+        .getAll()
+    }
+  },
   data () {
     return {
       code: null,
@@ -350,6 +359,13 @@ export default {
     },
     lcldate () {
       return this.date ? new Date(parseInt(this.date.substr(0, 4)), parseInt(this.date.substr(5, 2)) - 1, parseInt(this.date.substr(8, 2))) : null
+    },
+    stateRules () {
+      if (this.votAdr && this.votAdr.regionCode) {
+        return this.allStateRules.find(x => x.iso.toLowerCase() === this.votAdr.regionCode.toLowerCase())
+      } else {
+        return undefined
+      }
     },
     maxDate () {
       return new Date(2000, 10, 6)

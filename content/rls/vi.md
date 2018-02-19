@@ -1,5 +1,7 @@
 ---
-title: Virgin Islands
+state: Virgin Islands
+iso: VI
+allowsNeverResided: true
 id:
   - SSN4
   - TerritoryID

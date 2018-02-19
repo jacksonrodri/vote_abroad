@@ -1,5 +1,7 @@
 ---
-title: Michigan
+state: Michigan 
+iso: MI
+allowsNeverResided: true
 id:
   - SSN4
   - StateID

@@ -1,5 +1,7 @@
 ---
-title: New York
+state: New York
+iso: NY
+allowsNeverResided: true
 id:
   - SSN4
   - NYDMVID

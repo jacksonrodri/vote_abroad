@@ -1,5 +1,7 @@
 ---
-title: New Mexico
+state: New Mexico 
+iso: NM
+allowsNeverResided: true
 id:
   - SSN
 partyPrimary: true

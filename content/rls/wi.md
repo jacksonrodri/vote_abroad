@@ -1,5 +1,7 @@
 ---
-title: Wisconsin
+state: Wisconsin 
+iso: WI
+allowsNeverResided: true
 id:
   - SSN4
   - StateID

@@ -1,5 +1,7 @@
 ---
-title: Indiana
+state: Indiana 
+iso: IN
+allowsNeverResided: false
 id:
   - SSN4
   - StateID

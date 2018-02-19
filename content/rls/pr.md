@@ -1,5 +1,7 @@
 ---
-title: Puerto Rico
+state: Puerto Rico
+iso: PR
+allowsNeverResided: true
 id:
   - SSN4
   - StateID

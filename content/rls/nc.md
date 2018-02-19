@@ -1,5 +1,7 @@
 ---
-title: North Carolina
+state: North Carolina
+iso: NC
+allowsNeverResided: true
 id:
   - SSN4
   - StateID

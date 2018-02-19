@@ -16,7 +16,7 @@
                   v-model="streetAddress"
                   :data="data"
                   ref="premise"
-                  :placeholder="throroughfareLabel"
+                  placeholder="Street Address"
                   field="structured_formatting.main_text"
                   :loading="isFetching"
                   @input="getAsyncData"
@@ -35,7 +35,7 @@
           <div class="field-body">
             <div class="field">
               <div class="control">
-                <input class="input" @input="updateAddress()" v-model="extendedAddress" type="text" :placeholder="premiseLabel">
+                <input class="input" @input="updateAddress()" v-model="extendedAddress" type="text" placeholder="Apt#">
               </div>
             </div>
           </div>
@@ -60,35 +60,12 @@
                 </b-autocomplete>
               </div>
             </div>
-            <!-- <div class="field">
-              <p class="control is-expanded">
-                <input class="input" type="text" @input="updateAddress()" v-model="locality" placeholder="City">
-              </p>
-            </div> -->
-            <!-- State -->
-            <!-- <div class="field">
-              <div>
-                <div>
-                  <b-autocomplete
-                    v-model="region"
-                    ref="region"
-                    placeholder="State"
-                    :data="filteredRegions"
-                    field="abbr"
-                    @change="skipState ? flipSkipState() : updateAddress()"
-                    @select="option => {selected = option; if (selected) {regionCode = selected.abbr}}">
-                    <template slot-scope="props">{{ props.option.name }} ({{ props.option.abbr }}) </template>
-                    <template slot="empty">No results found</template>
-                  </b-autocomplete>
-                </div>
-              </div>
-            </div> -->
             <b-field>
-              <b-select v-model="regionCode" expanded placeholder="State">
+              <b-select v-model="regionCode" @input="updateAddress()" expanded placeholder="State">
                 <option
-                  v-for="state in filteredRegions"
-                  :value="state.abbr"
-                  :key="state.abbr">
+                  v-for="state in states"
+                  :value="state.iso"
+                  :key="state.iso">
                   {{ state.name }}
                 </option>
               </b-select>
@@ -137,20 +114,17 @@
 </template>
 
 <script>
-import countries from '~/assets/countryaddresses'
 import axios from 'axios'
 import debounce from 'lodash/debounce'
 
 export default {
-  name: 'UsAddressInput',
+  name: 'US-Address',
   props: [
     'value',
     'label',
     'toolTipTitle'
   ],
   async mounted () {
-    this.countryCode = 'US'
-    this.countryName = 'United States'
     await this.$store.app.$content('/leos').getAll()
       .then((data) => {
         const templeos = data[0].body
@@ -184,9 +158,8 @@ export default {
       region: '',
       regionCode: '',
       postalCode: '',
-      countryName: '',
-      countryCode: '',
-      name: '',
+      countryName: 'United States',
+      countryCode: 'US',
       selected: null,
       isFetching: false,
       country: '',
@@ -201,63 +174,71 @@ export default {
       jurisdictionTypes: {},
       isOpen: false,
       isJurisdictionOpen: false,
-      suppressDropdown: true
+      suppressDropdown: true,
+      states: [
+        {'name': 'Alabama', 'iso': 'AL'},
+        {'name': 'Alaska', 'iso': 'AK'},
+        {'name': 'American Samoa', 'iso': 'AS'},
+        {'name': 'Arizona', 'iso': 'AZ'},
+        {'name': 'Arkansas', 'iso': 'AR'},
+        {'name': 'California', 'iso': 'CA'},
+        {'name': 'Colorado', 'iso': 'CO'},
+        {'name': 'Connecticut', 'iso': 'CT'},
+        {'name': 'Delaware', 'iso': 'DE'},
+        {'name': 'District Of Columbia', 'iso': 'DC'},
+        {'name': 'Federated States Of Micronesia', 'iso': 'FM'},
+        {'name': 'Florida', 'iso': 'FL'},
+        {'name': 'Georgia', 'iso': 'GA'},
+        {'name': 'Guam', 'iso': 'GU'},
+        {'name': 'Hawaii', 'iso': 'HI'},
+        {'name': 'Idaho', 'iso': 'ID'},
+        {'name': 'Illinois', 'iso': 'IL'},
+        {'name': 'Indiana', 'iso': 'IN'},
+        {'name': 'Iowa', 'iso': 'IA'},
+        {'name': 'Kansas', 'iso': 'KS'},
+        {'name': 'Kentucky', 'iso': 'KY'},
+        {'name': 'Louisiana', 'iso': 'LA'},
+        {'name': 'Maine', 'iso': 'ME'},
+        {'name': 'Marshall Islands', 'iso': 'MH'},
+        {'name': 'Maryland', 'iso': 'MD'},
+        {'name': 'Massachusetts', 'iso': 'MA'},
+        {'name': 'Michigan', 'iso': 'MI'},
+        {'name': 'Minnesota', 'iso': 'MN'},
+        {'name': 'Mississippi', 'iso': 'MS'},
+        {'name': 'Missouri', 'iso': 'MO'},
+        {'name': 'Montana', 'iso': 'MT'},
+        {'name': 'Nebraska', 'iso': 'NE'},
+        {'name': 'Nevada', 'iso': 'NV'},
+        {'name': 'New Hampshire', 'iso': 'NH'},
+        {'name': 'New Jersey', 'iso': 'NJ'},
+        {'name': 'New Mexico', 'iso': 'NM'},
+        {'name': 'New York', 'iso': 'NY'},
+        {'name': 'North Carolina', 'iso': 'NC'},
+        {'name': 'North Dakota', 'iso': 'ND'},
+        {'name': 'Northern Mariana Islands', 'iso': 'MP'},
+        {'name': 'Ohio', 'iso': 'OH'},
+        {'name': 'Oklahoma', 'iso': 'OK'},
+        {'name': 'Oregon', 'iso': 'OR'},
+        {'name': 'Palau', 'iso': 'PW'},
+        {'name': 'Pennsylvania', 'iso': 'PA'},
+        {'name': 'Puerto Rico', 'iso': 'PR'},
+        {'name': 'Rhode Island', 'iso': 'RI'},
+        {'name': 'South Carolina', 'iso': 'SC'},
+        {'name': 'South Dakota', 'iso': 'SD'},
+        {'name': 'Tennessee', 'iso': 'TN'},
+        {'name': 'Texas', 'iso': 'TX'},
+        {'name': 'Utah', 'iso': 'UT'},
+        {'name': 'Vermont', 'iso': 'VT'},
+        {'name': 'Virgin Islands', 'iso': 'VI'},
+        {'name': 'Virginia', 'iso': 'VA'},
+        {'name': 'Washington', 'iso': 'WA'},
+        {'name': 'West Virginia', 'iso': 'WV'},
+        {'name': 'Wisconsin', 'iso': 'WI'},
+        {'name': 'Wyoming', 'iso': 'WY'}
+      ]
     }
   },
   computed: {
-    countryList () {
-      return countries()
-    },
-    filteredCountries () {
-      if (this.countryName && this.countryName.length > 1) {
-        return this.countryList.filter((option) => {
-          return option.label
-            .toString()
-            .toLowerCase()
-            .indexOf(this.countryName.toLowerCase()) >= 0 || option.iso
-            .toString()
-            .toLowerCase()
-            .indexOf(this.countryName.toLowerCase()) >= 0
-        })
-      } else {
-        return this.countryList
-      }
-    },
-    codeFilteredCountries () {
-      return this.countryList.filter(country => country.iso === 'US')
-    },
-    cCountryCode () {
-      return this.countryCode || 'un'
-    },
-    throroughfareLabel () {
-      return this.codeFilteredCountries.length === 0 || this.codeFilteredCountries.length === this.countryList.length ? 'Address 1' : this.codeFilteredCountries[0].fields[0].thoroughfare.label
-    },
-    premiseLabel () {
-      return this.codeFilteredCountries.length === 0 || this.codeFilteredCountries.length === this.countryList.length ? 'Address 2' : this.codeFilteredCountries[0].fields[1].premise.label
-    },
-    localityFields () {
-      if (this.codeFilteredCountries.length === 0 || this.codeFilteredCountries.length === this.countryList.length) {
-        return [{localityname: {label: 'City'}}, {administrativearea: {label: 'State', options: true}}, {postalcode: {label: 'Postal Code'}}]
-      } else {
-        return this.codeFilteredCountries[0].fields[2].locality
-      }
-    },
-    filteredRegions () {
-      return this.codeFilteredCountries
-        .map(x => x.fields[2].locality)
-        .map((x, i) => x.filter(x => x.administrativearea && x.administrativearea.options))
-        .filter(x => x.length > 0)
-        .map(x => x[0].administrativearea.options)
-        .reduce((prev, cur) => prev.concat(cur), [])
-        .map(x => ({abbr: Object.keys(x)[0], name: x[Object.keys(x)[0]]}))
-        .filter(x => {
-          if (!this.region) {
-            return x.abbr !== ''
-          } else {
-            return x.abbr.toString().toLowerCase().indexOf(this.region.toString().toLowerCase()) > -1 || x.name.toString().toLowerCase().indexOf(this.region.toString().toLowerCase()) > -1
-          }
-        })
-    },
     filteredLeos () {
       return this.leos
         .filter(x => this.regionCode ? x.state === this.regionCode : true)
@@ -397,7 +378,7 @@ export default {
         county: this.county,
         leo: this.leo,
         country: this.countryName,
-        countryiso: this.cCountryCode !== 'un' && this.countryCode ? this.cCountryCode : ''
+        countryiso: 'US'
       })
     }
   }

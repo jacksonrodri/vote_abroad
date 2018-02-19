@@ -1,5 +1,7 @@
 ---
-title: Nebraska
+state: Nebraska 
+iso: NE
+allowsNeverResided: true
 id:
   - SSN4
   - StateID

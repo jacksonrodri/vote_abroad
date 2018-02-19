@@ -1,5 +1,7 @@
 ---
-title: Oklahoma
+state: Oklahoma 
+iso: OK
+allowsNeverResided: true
 id:
   - SSN4
   - StateID

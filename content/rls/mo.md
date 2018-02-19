@@ -1,5 +1,7 @@
 ---
-title: Missouri
+state: Missouri 
+iso: MO
+allowsNeverResided: false
 id:
   - SSN4
   - StateID

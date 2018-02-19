@@ -1,5 +1,7 @@
 ---
-title: Nevada
+state: Nevada 
+iso: NV
+allowsNeverResided: true
 id:
   - SSN4
   - StateID

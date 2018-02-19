@@ -1,5 +1,7 @@
 ---
-title: Kansas
+state: Kansas 
+iso: KS
+allowsNeverResided: true
 id:
   - SSN4
   - StateID

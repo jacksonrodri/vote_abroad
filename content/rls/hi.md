@@ -1,5 +1,7 @@
 ---
-title: Hawaii
+state: Hawaii 
+iso: HI
+allowsNeverResided: true
 id:
   - SSN4
   - StateID

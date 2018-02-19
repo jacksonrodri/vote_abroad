@@ -1,5 +1,7 @@
 ---
-title: District of Columbia
+state: District of Columbia
+iso: DC
+allowsNeverResided: true
 id:
   - SSN4
   - DCID

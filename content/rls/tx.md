@@ -1,5 +1,7 @@
 ---
-title: Texas
+state: Texas 
+iso: TX
+allowsNeverResided: false
 id:
   - SSN4
   - StateID

@@ -1,5 +1,7 @@
 ---
-title: Guam
+state: Guam 
+iso: GU
+allowsNeverResided: true
 id:
   - SSN4
   - TerritoryID

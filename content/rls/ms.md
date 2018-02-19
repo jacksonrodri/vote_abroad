@@ -1,5 +1,7 @@
 ---
-title: Mississippi
+state: Mississippi 
+iso: MS
+allowsNeverResided: false
 id:
   - SSN4
   - StateID

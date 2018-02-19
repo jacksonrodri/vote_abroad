@@ -88,7 +88,7 @@
               </span>
             </button>
           </p>
-          <p class="control" v-show="!isMilitaryType">
+          <p class="control" v-show="!isMilitaryType" v-if="allowsNeverResided">
             <button @click="setVal('neverResided')" :class="[baseClass, {'is-success': isNeverResided}]">
               <span v-show="isNeverResided" class="icon is-small">
                 <i class="fas fa-check"></i>
@@ -113,7 +113,8 @@ export default {
   props: [
     'label',
     'value',
-    'toolTipTitle'
+    'toolTipTitle',
+    'allowsNeverResided'
   ],
   data () {
     return {
@@ -145,7 +146,9 @@ export default {
     isNatGuard: function () { return this.value === 'natGuard' },
     isUncertainReturn: function () { return this.value === 'uncertainReturn' },
     isIntendToReturn: function () { return this.value === 'intendToReturn' },
-    isNeverResided: function () { return this.value === 'neverResided' }
+    isNeverResided: function () {
+      return this.allowsNeverResided ? this.value === 'neverResided' : ''
+    }
   }
 }
 </script>

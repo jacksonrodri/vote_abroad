@@ -1,5 +1,7 @@
 ---
-title: Deleware
+state: Deleware 
+iso: DE
+allowsNeverResided: true
 id:
   - SSN4
   - StateID

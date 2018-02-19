@@ -1,5 +1,7 @@
 ---
-title: Pennsylvania
+state: Pennsylvania 
+iso: PA
+allowsNeverResided: false
 id:
   - SSN4
   - StateID

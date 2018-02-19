@@ -1,5 +1,7 @@
 ---
-title: Colorado
+state: Colorado 
+iso: CO
+allowsNeverResided: true
 id:
   - SSN4
   - StateID

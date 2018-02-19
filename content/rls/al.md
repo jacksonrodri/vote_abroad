@@ -1,5 +1,7 @@
 ---
-title: Alabama
+state: Alabama 
+iso: AL
+allowsNeverResided: false
 id:
   - SSN4
   - StateID

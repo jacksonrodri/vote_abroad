@@ -1,5 +1,7 @@
 ---
-title: West Virginia
+state: West Virginia 
+iso: WV
+allowsNeverResided: true
 id:
   - SSN4
   - StateID

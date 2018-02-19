@@ -1,5 +1,7 @@
 ---
-title: Montana
+state: Montana 
+iso: MT
+allowsNeverResided: false
 id:
   - SSN4
   - StateID

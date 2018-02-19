@@ -1,5 +1,7 @@
 ---
-title: Iowa
+state: Iowa 
+iso: IA
+allowsNeverResided: true
 id: false
 partyPrimary: true
 ballotReceiptOptions:

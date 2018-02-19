@@ -1,5 +1,7 @@
 ---
-title: Minnesota
+state: Minnesota 
+iso: MN
+allowsNeverResided: true
 id:
   - SSN4
   - StateID

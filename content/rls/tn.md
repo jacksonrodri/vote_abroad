@@ -1,5 +1,7 @@
 ---
-title: Tennessee
+state: Tennessee 
+iso: TN
+allowsNeverResided: true
 id:
   - SSN
 partyPrimary: true

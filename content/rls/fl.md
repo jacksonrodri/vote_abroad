@@ -1,5 +1,7 @@
 ---
-title: Florida
+state: Florida 
+iso: FL
+allowsNeverResided: false
 id:
   - SSN4
   - StateID

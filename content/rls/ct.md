@@ -1,5 +1,7 @@
 ---
-title: Connecticut
+state: Connecticut 
+iso: CT
+allowsNeverResided: true
 id: false
 partyPrimary: true
 ballotReceiptOptions:

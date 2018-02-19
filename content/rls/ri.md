@@ -1,5 +1,7 @@
 ---
-title: Rhode Island
+state: Rhode Island
+iso: RI
+allowsNeverResided: true
 id:
   - SSN4
   - StateID

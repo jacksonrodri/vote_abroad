@@ -1,5 +1,7 @@
 ---
-title: Massachusetts
+state: Massachusetts 
+iso: MA
+allowsNeverResided: true
 id: false
 partyPrimary: true
 ballotReceiptOptions:

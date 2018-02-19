@@ -1,5 +1,7 @@
 ---
-title: New Hampshire
+state: New Hampshire
+iso: NH
+allowsNeverResided: true
 id: false
 partyPrimary: true
 ballotReceiptOptions:

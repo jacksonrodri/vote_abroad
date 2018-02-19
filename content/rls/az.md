@@ -1,5 +1,7 @@
 ---
-title: Arizona
+state: Arizona 
+iso: AZ
+allowsNeverResided: true
 id:
   - SSN4
   - StateID

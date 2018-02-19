@@ -1,5 +1,7 @@
 ---
-title: Maine
+state: Maine 
+iso: ME
+allowsNeverResided: true
 id:
   - SSN4
   - StateID

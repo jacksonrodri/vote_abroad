@@ -1,5 +1,7 @@
 ---
-title: Vermont
+state: Vermont 
+iso: VT
+allowsNeverResided: true
 id:
   - SSN4
   - StateID
