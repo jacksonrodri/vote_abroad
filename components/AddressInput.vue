@@ -13,6 +13,7 @@
                   <p class="control flag-container">
                     <b-icon
                       pack="flag-icon"
+                      class="flag-container"
                       :custom-class="'flag-icon-' + cCountryCode.toLowerCase()"
                       @click.native="$refs.country.focus()"
                       style="cursor: pointer;">
@@ -411,19 +412,3 @@ export default {
   }
 }
 </script>
-<style lang="sass">
-$flag-icon-css-path: '../node_modules/flag-icon-css/flags'
-@import '../node_modules/flag-icon-css/sass/flag-icon.scss'
-
-.flag-icon
-  width: 3.8em;
-  height: 100%;
-  line-height: inherit;
-
-.flag-container
-  width: 3em;
-
-.flag-container > span
-  width: 100%;
-  height: 100%;
-</style>
