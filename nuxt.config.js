@@ -87,7 +87,8 @@ module.exports = {
    vendor: [
     '~/assets/countryaddresses.js',
     'libphonenumber-js',
-    'mailcheck'
+    'mailcheck',
+    'auth0-js'
    ],
     extend (config, ctx) {
       if (ctx.isDev && ctx.isClient) {
