@@ -3,7 +3,7 @@
     <!-- <div class="hero is-medium"> -->
       <div class="container">
         <div class="columns is-centered">
-          <div class="column is-9">
+          <div class="column is-9 is-12-touch">
             <div class="notification is-semitransparent">
               <h1 class="title is-1 is-hidden-mobile is-spaced has-text-danger">
                 <span class="has-text-weight-semibold">Vote from abroad</span>
