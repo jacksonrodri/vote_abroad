@@ -1,11 +1,14 @@
 <template>
-  <section class="section">
+<div class="columns is-centered is-multiline">
+  <div class="column is-10-touch is-8-desktop is-7-widescreen is-6-fullhd">
     <!-- <no-ssr> -->
       <h3 class="title is-4">Review the form below then click 'add your signature' ..... click send email (this text to be updated with voter specific instructions based on state, registration status, ballot submission selection)"</h3>
       <div class="control buttons">
         <nuxt-link :to="localePath({ name: 'request-stage', params: {stage: 'id-and-contact-information'} })" class="button is-light is-medium" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>Back</span></nuxt-link>
         <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'sign-and-submit'} })" class="button is-primary is-medium" exact ><span> Sign &amp; submit </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link>
       </div>
+  </div>
+  <div class="column is-12-touch is-10-desktop is-8-widescreen is-7-fullhd">
     <my-canvas class="canvas" ref="fpca">
       <my-box
         :lastName="lastName"
@@ -36,7 +39,8 @@
         :recBallot="recBallot"
         :signature="signature"></my-box>
     </my-canvas>
-    <!-- </no-ssr> -->
+  </div>
+  <div class="column is-10-touch is-8-desktop is-7-widescreen is-6-fullhd">
 
       <div class="control buttons is-right">
         <nuxt-link :to="localePath({ name: 'request-stage', params: {stage: 'id-and-contact-information'} })" class="button is-light is-medium" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>Back</span></nuxt-link>
@@ -46,7 +50,8 @@
     <b-modal :active.sync="isSignatureModalActive" has-modal-card>
       <sign @sigcap="addSig" />
     </b-modal>
-  </section>
+  </div>
+</div>
 </template>
 
 <script>

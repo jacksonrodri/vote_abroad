@@ -1,4 +1,5 @@
 <template>
+<div class="column is-10-touch is-8-desktop is-7-widescreen is-6-fullhd">
 <section class="section">
     <h1 class="has-text-centered title is-3">Step {{ stage.order }} of 3</h1>
     <h3 class="has-text-centered subtitle is-4">{{ stage.name }}</h3>
@@ -274,6 +275,7 @@
     </section>
   </section>
 </section>
+</div>
 </template>
 
 <script>

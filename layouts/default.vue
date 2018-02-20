@@ -7,11 +7,11 @@
           <div class="navbar-brand">
             <nuxt-link to="/" class="navbar-item logo" exact>
             </nuxt-link>
-            <span :class="[{'is-active': isMobileMenuActive}, 'navbar-burger', 'burger']" @click="isMobileMenuActive = !isMobileMenuActive">
+            <!-- <span :class="[{'is-active': isMobileMenuActive}, 'navbar-burger', 'burger']" @click="isMobileMenuActive = !isMobileMenuActive">
               <span></span>
               <span></span>
               <span></span>
-            </span>
+            </span> -->
           </div>
           <div id="navbarMenuHeroC" :class="[{'is-active': isMobileMenuActive}, 'navbar-menu', 'is-paddingless']">
             <div class="navbar-end">
@@ -91,6 +91,110 @@
             </div>
           </div>
         </div>
+      <nav class="navbar level is-mobile is-hidden-desktop is-vfa">
+        <div class="level-left">
+          <div class="level-item"><span>&nbsp;</span></div>
+          <div class="level-item">
+            <div class="dropdown is-hoverable">
+              <a class="dropdown-trigger has-text-white ">
+                <span>Upcoming Elections</span>
+                <span class="icon is-small">
+                  <i class="fas fa-angle-down" aria-hidden="true"></i>
+                </span>
+              </a>
+
+              <div class="dropdown-menu">
+                <div class="dropdown-content">
+                  <nuxt-link v-for="(election, index) in upcomingElections" :key="`${election.state} ${election.electionType}`" :to="localePath({ name: 'elections-state', params: { state: election.state } })" :class="`dropdown-item ${index > 3 ? 'is-hidden-touch' : ''}`">
+                    <div class="calendar">
+                      <header class="calendar-month">{{new Date(election.date).toLocaleDateString('en-US', {month: 'short'}) }}</header>
+                      <div class="calendar-date">
+                        {{ new Date(election.date).toLocaleDateString('en-US', {day: 'numeric'}) }}
+                      </div>
+                    </div>
+                     <span class="is-size-5"><span class="has-text-weight-semibold">{{ election.state }}</span> - {{ $t(`elections.electionTypes['${election.electionType}']`) }}</span>
+                  </nuxt-link>
+                  <hr class="dropdown-divider">
+                  <nuxt-link :to="localePath({ name: 'elections' })" class="dropdown-item" exact >... All upcoming elections</nuxt-link>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="level-item">
+            <div class="dropdown is-hoverable">
+              <a class="dropdown-trigger has-text-white ">
+                <span>Help</span>
+                <span class="icon is-small">
+                  <i class="fas fa-angle-down" aria-hidden="true"></i>
+                </span>
+              </a>
+
+              <div class="dropdown-menu">
+                <div class="dropdown-content">
+                  <a class="dropdown-item">
+                    Can I choose the state where I vote?
+                  </a>
+                  <a class="dropdown-item">
+                    I can't remember or find my exact street address - what do I do?
+                  </a>
+                  <a class="dropdown-item">
+                    Why do I need an exact address?
+                  </a>
+                  <a class="dropdown-item">
+                    How do I request my ballot?
+                  </a>
+                  <a class="dropdown-item">
+                    When will you send my ballot?
+                  </a>
+                  <hr class="dropdown-divider">
+                  <a class="dropdown-item">
+                    More FAQ's
+                  </a>
+                  <hr class="dropdown-divider">
+                  <a class="dropdown-item">Contact the helpdesk</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right side -->
+        <div class="level-right">
+          <div class="level-item">
+            <nuxt-link :to="switchLocalePath('es')" class="button is-info is-outlined is-small" v-show="$i18n.locale === 'en'">Español</nuxt-link>
+            <nuxt-link :to="switchLocalePath('en')" class="button is-info is-outlined is-small" v-show="$i18n.locale === 'es'">English</nuxt-link>
+          </div>
+          <a class="level-item has-text-white"
+            v-if="isAuthenticated"
+            @click="$store.dispatch('userauth/logout')">
+            <b-icon
+              pack="fas"
+              icon="sign-out-alt"
+              size="is-small">
+            </b-icon>
+            &nbsp;Logout
+          </a>
+          <a class="level-item has-text-white"
+            v-else
+            @click="isLoginModalActive = true">
+            <b-icon
+              pack="fas"
+              icon="user"
+              size="is-small">
+            </b-icon>
+            &nbsp;Login
+          </a>
+          <!-- <div class="level-item">
+            <span :class="[{'is-active': isMobileMenuActive}, 'navbar-burger', 'burger']" @click="isMobileMenuActive = !isMobileMenuActive">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div> -->
+          <div class="level-item"><span>&nbsp;</span></div>
+        </div>
+      </nav>
+
       </header>
       </div>
       <nuxt/>
@@ -187,10 +291,9 @@ export default {
   background-size: contain;
   background-position: 50%;
   background-repeat: no-repeat;
-  width: 40vw;
-  height: 5rem;
-  margin: 10px;
-  padding: 0 20px;
+  min-width: 40vw;
+  min-height: 3.25rem;
+  margin: 1.25rem auto 0;
   flex-grow: 1;
   &:hover
     background-image: url(/vfa_white.svg);
