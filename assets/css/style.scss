@@ -46,13 +46,14 @@ $tabs-link-color: $white;
 
 $tabs-link-color: $vfa;
 $tabs-link-active-color: $white;
+$tabs-border-bottom-width: 1px;
 $tabs-boxed-link-radius: $radius;
 $tabs-boxed-link-hover-background-color: $background;
 $tabs-boxed-link-hover-border-bottom-color: $vfa;
 
 $tabs-boxed-link-active-background-color: $vfa;
 $tabs-boxed-link-active-border-color: $vfa;
-$tabs-boxed-link-active-border-bottom-color: transparent;
+$tabs-boxed-link-active-border-bottom-color: $vfa;
 
 // navbar item
 // $navbar-item-color: $white;
@@ -78,6 +79,32 @@ $fa-font-path: "./webfonts";
 @import "./fa/fa-regular.scss";
 $flag-icon-css-path: '/flags';
 @import '../../node_modules/flag-icon-css/sass/flag-icon.scss';
+
+@media screen and (min-width: $desktop){
+  .navbar.is-vfa {
+    .navbar-item.has-dropdown .navbar-link,
+    .navbar-item.has-dropdown .navbar-link,
+    .navbar-tabs .navbar-item {
+      color: $white;
+      &:hover,
+      &.is-active {
+        background-color: $white;
+        color: $vfa;
+        &.is-tab {
+          background-color: transparent;
+          color: $white;
+          border-bottom-color: $white;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: $desktop - 1px){
+.navbar-item,
+.navbar-link {
+  color: $vfa;
+}
+}
 
 // .flag-icon
 //   width: 3.8em;
@@ -142,6 +169,10 @@ $flag-icon-css-path: '/flags';
   font-size: 1.7rem;
   text-align: center;
   line-height: 1.8rem;
+}
+
+.tabs a {
+  margin-bottom: 0;
 }
 
 .test-enter-active, .test-leave-active {

@@ -205,6 +205,16 @@
         </div>
       </gender>
 
+      <!-- identification -->
+      <identification
+        label="Identification"
+        :idOptions="stateRules ? stateRules.id : ['SSN', 'StateID']"
+        v-model="ssn">
+        <div slot="tooltip">
+          <p>This is only required for Idaho voters.</p>
+        </div>
+      </identification>
+
       <!-- ssn -->
       <b-field :type="($v.ssn.$error ? 'is-danger': '')" :message="$v.ssn.$error ? Object.keys($v.ssn.$params).map(x => x) : '' " label="The last 4 digits of your Social Security Number">
         <b-input v-model="ssn" @input="$v.ssn.$touch()"></b-input>
@@ -293,6 +303,7 @@ import PreviousName from '~/components/PreviousName'
 import Gender from '~/components/Gender'
 import StateSpecial from '~/components/StateSpecial'
 import ScrollUp from '~/components/ScrollUp'
+import Identification from '~/components/Identification'
 
 export default {
   transition: 'test',
@@ -335,7 +346,8 @@ export default {
     PreviousName,
     Gender,
     StateSpecial,
-    ScrollUp
+    ScrollUp,
+    Identification
   },
   watch: {
     dob: function (newVal, oldVal) {
