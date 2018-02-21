@@ -18,6 +18,7 @@ module.exports = {
   },
   env: {
     baseUrl: process.env.DEPLOY_PRIME_URL || 'http://localhost:3000',
+    url: process.env.URL || 'http://localhost:3000',
     autocompleteUrl: process.env.AUTOCOMPLETE_URL || 'http://localhost:3010',
     placeDetailsUrl: process.env.PLACE_DETAILS_URL || 'http://localhost:3010/details',
     placesUrl: process.env.PLACES_URL || 'http://localhost:3010',
