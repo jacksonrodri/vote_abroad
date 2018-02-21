@@ -23,6 +23,7 @@
     "auth0-js": "^9.0.2",
     "buefy": "^0.6.3",
     "bulma-slider": "^0.1.1",
+    "cleave.js": "^1.1.1",
     "flag-icon-css": "^2.9.0",
     "jwt-decode": "^2.2.0",
     "libphonenumber-js": "^0.4.48",

@@ -210,8 +210,19 @@
         label="Identification"
         :idOptions="stateRules ? stateRules.id : ['SSN', 'StateID']"
         v-model="ssn">
+        <div v-if="stateRules && stateRules.id" slot="instructions">
+          <p>{{ stateRules.state }} voters must provide one of the following forms of identification:
+            <span v-for="(idType, index) in stateRules.id" :key="idType">
+              <span><strong>{{idType}}</strong></span>
+              <span v-if="stateRules.id.length > 1 && index === stateRules.id.length - 2"> or </span>
+              <span v-else-if="index+1 < stateRules.id.length">, </span>
+              <span v-else>. </span>
+            </span>
+            If you don't have any of these, please select <strong>"I don't have the above identification"</strong>
+          </p>
+        </div>
         <div slot="tooltip">
-          <p>This is only required for Idaho voters.</p>
+          <p>Identification is required by some states.  </p>
         </div>
       </identification>
 
@@ -267,9 +278,24 @@
           placeholder="Type or select today's date"
           icon="calendar"
           :date-formatter="(date) => date.toLocaleDateString()"
+          :min-date="new Date(new Date().getFullYear(), 0, 1)"
+          :max-date="new Date(new Date().getFullYear(), 11, 31)"
           icon-pack="fa"
           position="is-top-right"
           :readonly="false">
+          <div class="buttons">
+            <button class="button is-primary"
+              @click="date = new Date()">
+              <b-icon icon="calendar"></b-icon>
+              <span>Today</span>
+            </button>
+
+            <button class="button is-danger"
+              @click="date = null">
+              <b-icon icon="times"></b-icon>
+              <span>Clear</span>
+            </button>
+          </div>
         </b-datepicker>
 
 
