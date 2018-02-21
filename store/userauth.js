@@ -79,7 +79,7 @@ export const actions = {
         if (err) {
           reject(err)
         }
-        console.log(`Sent code to ${state.user.emailAddress}`)
+        // console.log(`Sent code to ${state.user.emailAddress}`)
         resolve(`Sent code to ${state.user.emailAddress}`)
       })
     })
@@ -94,7 +94,7 @@ export const actions = {
         if (err) {
           reject(err)
         }
-        console.log(`Sent code to ${state.user.emailAddress}`)
+        // console.log(`Sent code to ${state.user.emailAddress}`)
         resolve()
       })
     })
@@ -109,7 +109,7 @@ export const actions = {
         if (err) {
           reject(err)
         }
-        console.log(`Sent code to ${state.user.mobilePhone}`)
+        // console.log(`Sent code to ${state.user.mobilePhone}`)
         resolve()
       })
     })
@@ -118,7 +118,7 @@ export const actions = {
     if (!state.session.country) {
       let res = await axios.get('https://ipinfo.io/geo')
       commit('updateSessionGeo', res.data)
-      console.log(res.data)
+      // console.log(res.data)
     }
   },
   async getUser ({commit, state, dispatch}) {
@@ -127,13 +127,20 @@ export const actions = {
   },
   async authStart ({commit, state, dispatch}, redirectPath) {
     commit('updateRedirectPath', redirectPath)
-    await dispatch('sendEmailCode')
-    await dispatch('promptCode')
+    let loginType
+    if (state.user.emailAddress) {
+      loginType = 'email'
+      await dispatch('sendEmailCode')
+    } else if (state.user.mobileIntFormat) {
+      loginType = 'sms'
+      await dispatch('sendSmsCode')
+    }
+    await dispatch('promptCode', loginType)
   },
-  promptCode ({ state, dispatch, commit }) {
+  promptCode ({ state, dispatch, commit }, loginType) {
     Dialog.prompt({
       title: 'Authentication',
-      message: `Enter the code we sent to ${state.user.emailAddress}`,
+      message: `Enter the code we sent to ${state.user.emailAddress || state.user.mobileIntFormat}`,
       inputAttrs: {
         type: 'number',
         placeholder: 'Type the code.',
@@ -148,7 +155,13 @@ export const actions = {
       confirmText: 'Submit',
       cancelText: 'cancel',
       // onCancel: () => commit('updateRedirectPath', null),
-      onConfirm: (value) => dispatch('loginEmailVerify', value)
+      onConfirm: (value) => {
+        if (state.user.emailAddress) {
+          dispatch('loginEmailVerify', value)
+        } else if (state.user.mobileIntFormat) {
+          dispatch('loginSmsVerify', value)
+        }
+      }
     })
   },
   loginEmailVerify ({commit, dispatch, state}, code) {
@@ -196,6 +209,51 @@ export const actions = {
       })
     })
   },
+  loginSmsVerify ({commit, dispatch, state}, code) {
+    const loadingComponent = LoadingProgrammatic.open()
+    return new Promise((resolve, reject) => {
+      webAuth.passwordlessVerify({
+        // realm: 'Username-Password-Authentication', // connection name or HRD domain
+        connection: 'sms',
+        phoneNumber: state.user.mobileIntFormat,
+        verificationCode: code,
+        scope: 'openid profile email offline_access'
+        // audience: this.options.audience
+      }, (err, authResult) => {
+        if (err) {
+          loadingComponent.close()
+          Dialog.prompt({
+            title: 'Authentication',
+            message: `That code is incorrect, please try again. Enter the code we sent to ${state.user.mobileIntFormat}`,
+            inputAttrs: {
+              type: 'number',
+              placeholder: 'Type the code.',
+              minlength: 6,
+              maxlength: 6,
+              autocomplete: 'off',
+              size: 6,
+              max: 999999,
+              pattern: '[0-9]{6}',
+              title: 'enter a 6 digit code'
+            },
+            onConfirm: (value) => dispatch('loginSmsVerify', value)
+          })
+          reject(err)
+        }
+        loadingComponent.close()
+        Snackbar.open({
+          message: `${authResult}`,
+          type: 'is-info',
+          position: 'is-top',
+          actionText: 'Retry',
+          duration: 8000
+        })
+        // this.setSession(authResult)
+        // Auth tokens in the result or an error
+        resolve()
+      })
+    })
+  },
   async setSession ({ state, commit, dispatch }) {
     function parseHash () {
       return new Promise((resolve, reject) => {
@@ -222,7 +280,7 @@ export const actions = {
         })
       })
     }
-    function renewAuth () {
+    async function renewAuth () {
       return new Promise((resolve, reject) => {
         webAuth.renewAuth({
           usePostMessage: true
@@ -238,15 +296,14 @@ export const actions = {
     let authResult = hasHash ? await parseHash() : await checkSession()
     if (authResult.expiresIn * 1000 > Date.now()) {
       authResult = await renewAuth()
-      console.log('renewing auth', authResult.expiresIn * 1000, Date.now())
+      // console.log('renewing auth', authResult.expiresIn * 1000, Date.now())
     }
     let idToken = authResult.idToken
     commit('updateIdToken', idToken)
     commit('updateExpirationDate', jwtDecode(idToken).exp)
     commit('updateGcToken', jwtDecode(idToken)['https://graph.cool/token'])
-    console.log(state.redirectPath)
-    this.$router.replace({ path: state.redirectPath })
-    commit('updateRedirectPath', null)
+    dispatch('redirect', state.redirectPath)
+    // console.log(state.redirectPath)
     Snackbar.open({
       message: `Your graphcool token is: ${jwtDecode(idToken)['https://graph.cool/token']}`,
       type: 'is-info',
@@ -254,6 +311,7 @@ export const actions = {
       actionText: 'Retry',
       duration: 8000
     })
+    // console.log('hi from after Snackbar.open')
   },
   clearData ({ commit, dispatch }) {
     commit('updateGcToken', null)
@@ -279,5 +337,8 @@ export const actions = {
       clientID: '0Wy4khZcuXefSfrUuYDUP0Udag4FqL2u'
     })
     dispatch('clearData')
+  },
+  redirect (ctx, path) {
+    this.$router.onReady(() => this.$router.push(path))
   }
 }
