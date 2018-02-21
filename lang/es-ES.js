@@ -41,6 +41,15 @@ module.exports = {
     country: 'Country',
     address1: 'Address1',
     address2: 'Address2',
-    tel: 'Your Current Phone Number'
+    tel: 'Your Current Phone Number',
+    idTypes: {
+      SSN: 'Social Security Number',
+      SSN4: 'the last 4 digits of your Social Security Number',
+      StateID: 'State ID',
+      TerritoryID: 'Territory ID',
+      TribalID: 'Tribal ID',
+      MilitaryID: 'Military ID',
+      PassportNumber: 'Passport Number'
+    }
   }
 }

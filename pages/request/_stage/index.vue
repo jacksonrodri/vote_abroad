@@ -65,10 +65,10 @@
       </address-input>
       <scroll-up :key="$route.params.stage"></scroll-up>
     <section >
-      <div class="control buttons is-right">
-        <nuxt-link :to="localePath({ name: 'index' })" class="button is-light is-medium" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>Back</span></nuxt-link>
-        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'voting-information'} })" class="button is-primary is-medium" exact ><span> Next </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link>
-      </div>
+      <!-- <div class="control buttons is-right"> -->
+        <nuxt-link :to="localePath({ name: 'index' })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>Back</span></nuxt-link>
+        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'voting-information'} })" class="button is-primary is-medium is-pulled-right" exact ><span> Next </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link>
+      <!-- </div> -->
     </section>
   </section>
 
@@ -168,10 +168,10 @@
     <scroll-up :key="$route.params.stage"></scroll-up>
 
     <section >
-      <div class="control buttons is-right">
-        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" class="button is-light is-medium" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>Back</span></nuxt-link>
-        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'id-and-contact-information'} })" class="button is-primary is-medium" exact ><span> Next </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link>
-      </div>
+      <!-- <div class="control buttons is-right"> -->
+        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>Back</span></nuxt-link>
+        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'id-and-contact-information'} })" class="button is-primary is-medium is-pulled-right" exact ><span> Next </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link>
+      <!-- </div> -->
     </section>
   </section>
 
@@ -181,11 +181,12 @@
       <b-field label="Date of Birth" :message="$v.dob.$error ? Object.keys($v.dob.$params).map(x => x) : '' ">
         <b-datepicker
           :value="localDob || lcldob"
-          @input="value =>{ this.updateDob(value) }"
+          @input="value =>{ this.printVal(value); this.updateDob(value) }"
           placeholder="Type or select your birth date"
           :date-formatter="(date) => date.toLocaleDateString()"
           :min-date="minDate"
           :max-date="maxDate"
+          :focused-date="new Date(new Date().getFullYear() - 18, 0, 1)"
           icon="calendar"
           icon-pack="fa"
           :readonly="false">
@@ -205,45 +206,6 @@
         </div>
       </gender>
 
-      <!-- identification -->
-      <identification
-        label="Identification"
-        :idOptions="stateRules ? stateRules.id : ['SSN', 'StateID']"
-        v-model="ssn">
-        <div v-if="stateRules && stateRules.id" slot="instructions">
-          <p>{{ stateRules.state }} voters must provide one of the following forms of identification:
-            <span v-for="(idType, index) in stateRules.id" :key="idType">
-              <span><strong>{{idType}}</strong></span>
-              <span v-if="stateRules.id.length > 1 && index === stateRules.id.length - 2"> or </span>
-              <span v-else-if="index+1 < stateRules.id.length">, </span>
-              <span v-else>. </span>
-            </span>
-            If you don't have any of these, please select <strong>"I don't have the above identification"</strong>
-          </p>
-        </div>
-        <div slot="tooltip">
-          <p>Identification is required by some states.  </p>
-        </div>
-      </identification>
-
-      <!-- ssn -->
-      <b-field :type="($v.ssn.$error ? 'is-danger': '')" :message="$v.ssn.$error ? Object.keys($v.ssn.$params).map(x => x) : '' " label="The last 4 digits of your Social Security Number">
-        <b-input v-model="ssn" @input="$v.ssn.$touch()"></b-input>
-      </b-field>
-
-      <!-- stateId -->
-      <b-field :type="($v.stateId.$error ? 'is-danger': '')" :message="$v.stateId.$error ? Object.keys($v.stateId.$params).map(x => x) : '' " label="Driver's license or   state ID #">
-        <b-input v-model="stateId" @input="$v.stateId.$touch()"></b-input>
-      </b-field>
-
-      <!-- fwabRequest -->
-      <b-field :type="($v.fwabRequest.$error ? 'is-danger': '')"
-        :message="$v.fwabRequest.$error ? Object.keys($v.fwabRequest.$params).map(x => x) : '' "
-        label="Do you want to register and request a ballot for all elections you are eligile to vote in?"
-        v-if="isFwab">
-        <b-input v-model="fwabRequest" @input="$v.fwabRequest.$touch()"></b-input>
-      </b-field>
-
       <party-input
         label="Your political party"
         v-model="party"
@@ -256,7 +218,7 @@
       </party-input>
 
       <state-special
-        label="State Specific Rules"
+        :label="`${stateRules && stateRules.state ? stateRules.state: 'State'} Specific Rules`"
         v-model="stateSpecial"
         :state="votAdr && votAdr.regionCode ? votAdr.regionCode : ''"
         :isFWAB="isFWAB"
@@ -265,13 +227,61 @@
         :isRegistering="Boolean(isRegistered === 'notRegistered' || isRegistered === 'unsure')">
       </state-special>
 
-      <!-- addlInfo -->
-      <b-field :type="($v.addlInfo.$error ? 'is-danger': '')" :message="$v.addlInfo.$error ? Object.keys($v.addlInfo.$params).map(x => x) : '' " label="Add any additional information here to help your election official find your records.">
-        <b-input maxlength="258" type="textarea" v-model="addlInfo" @input="$v.addlInfo.$touch()"></b-input>
+      <!-- identification -->
+      <identification
+        label="Identification"
+        :idOptions="stateRules && stateRules.id ? stateRules.id : null"
+        :toolTipTitle="`Why am I being asked this?`"
+        v-model="ssn">
+        <div slot="instructions">
+          <p>
+            <span v-if="!stateRules">You may provide the last 4 digits of your Social Security Number or state ID to help your voting official find your records.</span>
+            <span v-else-if="stateRules && stateRules.id.length === 1">{{ stateRules.state }} voters must provide a </span>
+            <span v-else>{{ stateRules.state }} voters must provide one of the following forms of identification: </span>
+            <span v-if="stateRules && stateRules.id">
+              <span v-for="(idType, index) in stateRules.id" :key="idType">
+                <span><strong>{{$t(`request.idTypes.${idType}`)}}</strong></span>
+                <span v-if="stateRules.id.length > 1 && index === stateRules.id.length - 2"> or </span>
+                <span v-else-if="index+1 < stateRules.id.length">, </span>
+                <span v-else>. </span>
+              </span>
+            </span>
+            <span v-if="stateRules && stateRules.id && stateRules.id.length > 1">If you don't have any of these, please select <strong>"I don't have the above identification"</strong></span>
+            <span v-else-if="stateRules && stateRules.id && stateRules.id.length === 1">If you don't have a {{$t(`request.idTypes.${stateRules.id[0]}`)}}, please select <strong>"I don't have a {{$t(`request.idTypes.${stateRules.id[0]}`)}}"</strong></span>
+          </p>
+        </div>
+        <div slot="tooltip">
+          <p>Identification is required by some states.  </p>
+        </div>
+      </identification>
+
+      <!-- ssn -->
+      <!-- <b-field :type="($v.ssn.$error ? 'is-danger': '')" :message="$v.ssn.$error ? Object.keys($v.ssn.$params).map(x => x) : '' " label="The last 4 digits of your Social Security Number">
+        <b-input v-model="ssn" @input="$v.ssn.$touch()"></b-input>
+      </b-field> -->
+
+      <!-- stateId -->
+      <!-- <b-field :type="($v.stateId.$error ? 'is-danger': '')" :message="$v.stateId.$error ? Object.keys($v.stateId.$params).map(x => x) : '' " label="Driver's license or   state ID #">
+        <b-input v-model="stateId" @input="$v.stateId.$touch()"></b-input>
+      </b-field> -->
+
+      <!-- fwabRequest -->
+      <b-field :type="($v.fwabRequest.$error ? 'is-danger': '')"
+        :message="$v.fwabRequest.$error ? Object.keys($v.fwabRequest.$params).map(x => x) : '' "
+        label="Do you want to register and request a ballot for all elections you are eligile to vote in?"
+        v-if="isFwab">
+        <b-input v-model="fwabRequest" @input="$v.fwabRequest.$touch()"></b-input>
       </b-field>
 
+      <!-- addlInfo -->
+      <!-- <b-field :type="($v.addlInfo.$error ? 'is-danger': '')" :message="$v.addlInfo.$error ? Object.keys($v.addlInfo.$params).map(x => x) : '' " label="Add any additional information here to help your election official find your records.">
+        <b-input maxlength="258" type="textarea" v-model="addlInfo" @input="$v.addlInfo.$touch()"></b-input>
+      </b-field> -->
+      <additional-info label="Add any additional information here to help your election official find your records."
+        v-model="addlInfo"></additional-info>
+
       <!-- date -->
-      <b-field label="Date" :message="$v.dob.$error ? Object.keys($v.dob.$params).map(x => x) : '' ">
+      <!-- <b-field label="Date" :message="$v.dob.$error ? Object.keys($v.dob.$params).map(x => x) : '' ">
         <b-datepicker
           :value="localDate || lcldate"
           @input="value =>{ this.updateDate(value) }"
@@ -296,18 +306,18 @@
               <span>Clear</span>
             </button>
           </div>
-        </b-datepicker>
+        </b-datepicker> -->
 
 
           <!-- :date-parser="(date) => new Date(parseInt(date.substr(0,4)), parseInt(date.substr(5,2)) - 1, parseInt(date.substr(8,2)))" -->
 
-      </b-field>
+      <!-- </b-field> -->
       <scroll-up :key="$route.params.stage"></scroll-up>
     <section >
-      <div class="control buttons is-right">
-        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'voting-information'} })" class="button is-light is-medium" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>Back</span></nuxt-link>
-        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'review'} })" class="button is-primary is-medium" exact ><span> Generate &amp; review your form </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link>
-      </div>
+      <!-- <div class="control buttons is-right"> -->
+        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'voting-information'} })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>Back</span></nuxt-link>
+        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'review'} })" class="button is-primary is-medium is-pulled-right" exact ><span> Generate &amp; review your form </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link>
+      <!-- </div> -->
     </section>
   </section>
 </section>
@@ -330,6 +340,7 @@ import Gender from '~/components/Gender'
 import StateSpecial from '~/components/StateSpecial'
 import ScrollUp from '~/components/ScrollUp'
 import Identification from '~/components/Identification'
+import AdditionalInfo from '~/components/AdditionalInfo'
 
 export default {
   transition: 'test',
@@ -373,7 +384,8 @@ export default {
     Gender,
     StateSpecial,
     ScrollUp,
-    Identification
+    Identification,
+    AdditionalInfo
   },
   watch: {
     dob: function (newVal, oldVal) {
@@ -466,7 +478,7 @@ export default {
       set (value) { this.$store.commit('requests/update', { suffix: value }) }
     },
     dob: {
-      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].dob : null },
+      get () { return this.requests[this.currentRequest] && this.requests[this.currentRequest].dob ? this.requests[this.currentRequest].dob : null },
       set (value) { this.$store.commit('requests/update', { dob: value }) }
     },
     date: {
@@ -542,15 +554,46 @@ export default {
     focusName () {
       this.$refs.userinput.focus()
     },
-    updateDob (value) {
-      let bday = new Date(Date.UTC(new Date(value).getFullYear(), new Date(value).getMonth(), new Date(value).getDate())).toISOString().substr(0, 10)
-      this.$store.commit('requests/update', { dob: bday })
+    updateDob (d) {
+      if (Object.prototype.toString.call(d) === '[object Date]') {
+        // it is a date
+        if (isNaN(d.getTime())) {
+          // date is not valid
+          console.log(d)
+        } else {
+          // date is valid
+          let bday = new Date(Date.UTC(new Date(d).getFullYear(), new Date(d).getMonth(), new Date(d).getDate())).toISOString().substr(0, 10)
+          this.$store.commit('requests/update', { dob: bday })
+        }
+      } else {
+        // not a date
+        console.log(d)
+      }
     },
-    updateDate (value) {
-      this.localDate = value
-      let signDate = new Date(Date.UTC(new Date(value).getFullYear(), new Date(value).getMonth(), new Date(value).getDate())).toISOString().substr(0, 10)
-      this.$store.commit('requests/update', { date: signDate })
+    updateDate (d) {
+      if (Object.prototype.toString.call(d) === '[object Date]') {
+        // it is a date
+        if (isNaN(d.getTime())) {
+          // date is not valid
+          console.log(d)
+        } else {
+          // date is valid
+          let signDate = new Date(Date.UTC(new Date(d).getFullYear(), new Date(d).getMonth(), new Date(d).getDate())).toISOString().substr(0, 10)
+          this.$store.commit('requests/update', { date: signDate })
+        }
+      } else {
+        // not a date
+        console.log(d)
+      }
+    },
+    printVal (val) {
+      console.log(val)
     }
+    // updateDate (value) {
+    //   this.localDate = value
+    //   let signDate = new Date(Date.UTC(new Date(value).getFullYear(), new Date(value).getMonth(), new Date(value).getDate())).toISOString().substr(0, 10)
+    //   this.$store.commit('requests/update', { date: signDate })
+    // }
   },
   mounted () {
     console.log('mounted')

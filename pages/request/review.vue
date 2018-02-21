@@ -1,14 +1,18 @@
 <template>
 <div class="columns is-centered is-multiline">
-  <div class="column is-10-touch is-8-desktop is-7-widescreen is-6-fullhd">
+  <div class="column is-10-touch is-8-desktop is-7-widescreen is-6-fullhd is-paddingless">
     <!-- <no-ssr> -->
-      <h3 class="title is-4">Review the form below then click 'add your signature' ..... click send email (this text to be updated with voter specific instructions based on state, registration status, ballot submission selection)"</h3>
-      <div class="control buttons">
-        <nuxt-link :to="localePath({ name: 'request-stage', params: {stage: 'id-and-contact-information'} })" class="button is-light is-medium" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>Back</span></nuxt-link>
-        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'sign-and-submit'} })" class="button is-primary is-medium" exact ><span> Sign &amp; submit </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link>
+      <div class="section">
+        <h3 class="has-text-centered title is-3">Review your form</h3>
+        <p class="is-size-5">Confirm that the following information is correct.  If you need to correct anything click 'back.' <strong>When everything is correct click 'Sign and submit'</strong> for instructions on how to send your form to your election official.</p>
       </div>
+      <!-- <div class="control buttons"> -->
+        <nuxt-link :to="localePath({ name: 'request-stage', params: {stage: 'id-and-contact-information'} })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>Back</span></nuxt-link>
+        <!-- <div class="button is-text is-expanded">&nbsp;</div> -->
+        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'sign-and-submit'} })" class="button is-primary is-medium is-pulled-right" exact ><span> Sign &amp; submit </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link>
+      <!-- </div> -->
   </div>
-  <div class="column is-12-touch is-10-desktop is-8-widescreen is-7-fullhd">
+  <div class="column is-12-touch is-10-desktop is-8-widescreen is-7-fullhd is-paddingless">
     <my-canvas class="canvas" ref="fpca">
       <my-box
         :lastName="lastName"
@@ -40,12 +44,12 @@
         :signature="signature"></my-box>
     </my-canvas>
   </div>
-  <div class="column is-10-touch is-8-desktop is-7-widescreen is-6-fullhd">
+  <div class="column is-10-touch is-8-desktop is-7-widescreen is-6-fullhd is-paddingless">
 
-      <div class="control buttons is-right">
-        <nuxt-link :to="localePath({ name: 'request-stage', params: {stage: 'id-and-contact-information'} })" class="button is-light is-medium" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>Back</span></nuxt-link>
-        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'sign-and-submit'} })" class="button is-primary is-medium" exact ><span> Sign &amp; submit </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link>
-      </div>
+      <!-- <div class="control buttons is-right"> -->
+        <nuxt-link :to="localePath({ name: 'request-stage', params: {stage: 'id-and-contact-information'} })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>Back</span></nuxt-link>
+        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'sign-and-submit'} })" class="button is-primary is-medium is-pulled-right" exact ><span> Sign &amp; submit </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link>
+      <!-- </div> -->
 
     <b-modal :active.sync="isSignatureModalActive" has-modal-card>
       <sign @sigcap="addSig" />
