@@ -46,7 +46,7 @@ export default {
   ],
   computed: {
     name () {
-      return this.value.previousName
+      return this.value && this.value.previousName ? this.value.previousName : ''
     },
     usesPreviousName () {
       return this.value && this.value.usesPreviousName ? this.value.usesPreviousName : false

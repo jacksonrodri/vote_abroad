@@ -1,6 +1,6 @@
 import { WebAuth } from 'auth0-js'
 import axios from 'axios'
-import { Dialog, Snackbar, LoadingProgrammatic } from 'buefy'
+import { Dialog, Toast, Snackbar, LoadingProgrammatic } from 'buefy'
 const jwtDecode = require('jwt-decode')
 
 // const redirectUri = `https://votefromabroad.netlify.com`
@@ -27,7 +27,9 @@ export const state = () => ({
     emailAddress: null,
     mobilePhone: null,
     mobileIntFormat: null,
-    country: 'US'
+    country: 'US',
+    isDA: false,
+    da: {}
   },
   session: {
     ip: null,
@@ -172,7 +174,7 @@ export const actions = {
         connection: 'email',
         email: state.user.emailAddress,
         verificationCode: code,
-        scope: 'openid profile email offline_access'
+        scope: 'openid profile email'
         // audience: this.options.audience
       }, (err, authResult) => {
         if (err) {
@@ -217,7 +219,7 @@ export const actions = {
         connection: 'sms',
         phoneNumber: state.user.mobileIntFormat,
         verificationCode: code,
-        scope: 'openid profile email offline_access'
+        scope: 'openid profile email'
         // audience: this.options.audience
       }, (err, authResult) => {
         if (err) {
@@ -269,7 +271,7 @@ export const actions = {
     function checkSession () {
       return new Promise((resolve, reject) => {
         webAuth.checkSession({
-          scope: 'openid profile email offline_access'
+          scope: 'openid profile email'
         }, function (err, authResult) {
           if (err) {
             console.log(err)
@@ -299,10 +301,31 @@ export const actions = {
       // console.log('renewing auth', authResult.expiresIn * 1000, Date.now())
     }
     let idToken = authResult.idToken
+    // console.log('authresult', authResult)
     commit('updateIdToken', idToken)
     commit('updateExpirationDate', jwtDecode(idToken).exp)
     commit('updateGcToken', jwtDecode(idToken)['https://graph.cool/token'])
     dispatch('redirect', state.redirectPath)
+    console.log('[https://demsabroad.org/user]', jwtDecode(idToken)['https://demsabroad.org/user'])
+    commit('updateUser', {isDA: jwtDecode(idToken)['https://demsabroad.org/isDA'], da: jwtDecode(idToken)['https://demsabroad.org/user']})
+    if (jwtDecode(idToken)['https://demsabroad.org/isDA']) {
+      Dialog.confirm({
+        title: 'Democrats Abroad Members',
+        message: `As a verified Democrats Abroad member you can prefill your form with your membership data. Would you like to?`,
+        cancelText: 'Start a new request',
+        confirmText: 'Prefill my data',
+        type: 'is-success',
+        onConfirm: () => {
+          commit('requests/update', jwtDecode(idToken)['https://demsabroad.org/user'], { root: true })
+          Toast.open({
+            message: `Your form has been pre-filled, please verify all information before submitting.`,
+            type: 'is-success',
+            position: 'is-top',
+            duration: 8000
+          })
+        }
+      })
+    }
     // console.log(state.redirectPath)
     Snackbar.open({
       message: `Your graphcool token is: ${jwtDecode(idToken)['https://graph.cool/token']}`,
@@ -319,7 +342,9 @@ export const actions = {
     commit('updateExpirationDate', null)
     commit('updateUser', {
       country: null,
-      emailAddress: null
+      emailAddress: null,
+      isDA: false,
+      da: {}
     })
     commit('updateSessionGeo', {
       city: null,
