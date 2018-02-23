@@ -2,7 +2,7 @@
 state: New Hampshire
 iso: NH
 allowsNeverResided: true
-id: false
+id: []
 partyPrimary: true
 ballotReceiptOptions:
   - Email

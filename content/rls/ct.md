@@ -2,7 +2,7 @@
 state: Connecticut 
 iso: CT
 allowsNeverResided: true
-id: false
+id: []
 partyPrimary: true
 ballotReceiptOptions:
   - Email

@@ -37,8 +37,28 @@ import { mapActions } from 'vuex'
 
 export default {
   layout: 'default',
+  head: {
+    script: [
+      { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }
+    ]
+  },
   components: {
     PhoneEmail
+  },
+  mounted () {
+    if (process.browser) {
+      window.onNuxtReady((app) => {
+        if (window.netlifyIdentity) {
+          window.netlifyIdentity.on('init', user => {
+            if (!user) {
+              window.netlifyIdentity.on('login', () => {
+                document.location.href = '/admin/'
+              })
+            }
+          })
+        }
+      })
+    }
   },
   data () {
     return {

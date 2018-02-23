@@ -3,7 +3,8 @@
   <div class="column is-10-touch is-8-desktop is-7-widescreen is-6-fullhd is-paddingless">
     <!-- <no-ssr> -->
       <div class="section">
-        <h3 class="has-text-centered title is-3">Review your form</h3>
+        <h1 class="has-text-centered title is-3">Step 4 of 5</h1>
+        <h3 class="has-text-centered subtitle is-4">Review your form</h3>
         <p class="is-size-5">Confirm that the following information is correct.  If you need to correct anything click 'back.' <strong>When everything is correct click 'Sign and submit'</strong> for instructions on how to send your form to your election official.</p>
       </div>
       <!-- <div class="control buttons"> -->

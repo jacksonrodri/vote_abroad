@@ -2,7 +2,7 @@
 state: Washington 
 iso: WA
 allowsNeverResided: true
-id: false
+id: []
 partyPrimary: false
 ballotReceiptOptions:
   - Email

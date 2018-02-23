@@ -2,7 +2,7 @@
 state: Kentucky 
 iso: KY
 allowsNeverResided: true
-id: false
+id: []
 partyPrimary: true
 ballotReceiptOptions:
   - Email

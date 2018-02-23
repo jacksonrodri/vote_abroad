@@ -1,9 +1,8 @@
 ---
-title: My first post 
+title: My first post
 slug: hello
 ---
-
-My first attempt at letting go of attachment was an expensive one. I had finished reading *Be Here Now*, a book on spirituality and meditation. After finishing, a feeling inside pressed upon me that need to be more conscious, less attached, more Zen.
+_This looks great!!!!!_
 
 I wanted my life to immediately reflect this new mode of being. I decided to start by analyzing the place where I spend most of my time: my room. There's so much stuff in here I don't need, I thought; I should get rid of it.
 
@@ -15,7 +14,7 @@ To fill my gap of disillusionment, I went on Amazon. I intended to buy a desk an
 
 My room, now, felt more Zen. Sure. But I felt like an impostor. By focusing all my effort on the external result (emptying out my room) rather than the internal process (letting go of attachment), I lost sight of what I set out to accomplish (overcoming my dependence on the material world).
 
-While reading *Be Here Now* there was a passage that particularly stuck out to me, I didn't realize why until now. It was about how all the people who travel to India in hopes of meeting Yogi who will change their life, often end up disappointed. They travel all that way only to learn, as the book says, "Where you are going is HERE and you will arrive NOW."
+While reading _Be Here Now_ there was a passage that particularly stuck out to me, I didn't realize why until now. It was about how all the people who travel to India in hopes of meeting Yogi who will change their life, often end up disappointed. They travel all that way only to learn, as the book says, "Where you are going is HERE and you will arrive NOW."
 
 Like the muddled travelers, I mistook my ideal surroundings for who I wanted to become. But no matter how much I try, I've realized, there's an internal aspect to change that can't be faked or rushed.
 

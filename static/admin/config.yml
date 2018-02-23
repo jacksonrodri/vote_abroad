@@ -1,0 +1,37 @@
+backend:
+  name: git-gateway
+  branch: master
+publish_mode: editorial_workflow
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+collections:
+  - name: "pages" # Used in routes, e.g., /admin/collections/blog
+    label: "Pages" # Used in the UI
+    folder: "/content/en/pages" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Slug", name: "slug", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "rls"
+    label: "State Ballot Rules"
+    folder: "/content/rls"
+    create: false
+    slug: "{{iso}}"
+    fields:
+      - {label: "State", name: "state", widget: "string"}
+      - {label: "ISO Code", name: "iso", widget: "string"}
+      - {label: "Never Resideds are allowed to register", name: "allowsNeverResided", widget: "boolean"}
+      - label: "Types of Identification required"
+        name: "id"
+        widget: "list"
+        required: false
+        pattern: ['^(?![\s\S])|SSN$|SSN4$|StateID$|TerritoryID$|DCID$|TribalID$|MilitaryID$|PassportNumber$|NYDMVID$', "Must be one of the following: SSN, SSN4, StateID, TerritoryID, DCID, TribalID, MilitaryID, PassportNumber, NYDMVID (Contact Alex to add something different)"]
+      - {label: "Has Party Primaries?", name: "partyPrimary", widget: "boolean"}
+      - {label: "Ballot Receipt Options", name: "ballotReceiptOptions", widget: "list"}
+      - {label: "FPCA Submit Options for NEW voters", name: "fpcaSubmitOptionsRegister", widget: "list"}
+      - {label: "FPCA Submit Options for REGISTERED voters", name: "fpcaSubmitOptionsRequest", widget: "list"}
+      - {label: "Voters Can use the FWAB to register/request a ballto?", name: "canRegisterWithFwab", widget: "boolean"}
+      - {label: "FWAB Submit Options", name: "fwabSubmitOptions", widget: "list"}
+      - {label: "State Introduction Text", name: "body", widget: "markdown"}

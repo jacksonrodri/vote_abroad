@@ -2,7 +2,7 @@
 state: Iowa 
 iso: IA
 allowsNeverResided: true
-id: false
+id: []
 partyPrimary: true
 ballotReceiptOptions:
   - Email
