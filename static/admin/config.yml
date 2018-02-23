@@ -17,8 +17,15 @@ collections:
     label: "Rules"
     folder: "/content/rls"
     create: false
-    slug: "{{iso}}.md"
+    slug: "{{iso}}"
     fields:
       - {label: "State", name: "state", widget: "string"}
       - {label: "ISO Code", name: "iso", widget: "string"}
       - {label: "Never Resideds are allowed to register", name: "allowsNeverResided", widget: "boolean"}
+      - {label: "Identification required", name: "id", widget: "list"}
+      - {label: "Has Party Primaries?", name: "partyPrimary", widget: "boolean"}
+      - {label: "Ballot Receipt Options", name: "ballotReceiptOptions", widget: "list"}
+      - {label: "FPCA Submit Options for NEW voters", name: "fpcaSubmitOptionsRegister", widget: "list"}
+      - {label: "FPCA Submit Options for REGISTERED voters", name: "fpcaSubmitOptionsRequest", widget: "list"}
+      - {label: "Voters Can use the FWAB to register/request a ballto?", name: "canRegisterWithFwab", widget: "boolean"}
+      - {label: "FWAB Submit Options", name: "fwabSubmitOptions", widget: "list"}
