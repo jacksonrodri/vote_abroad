@@ -13,3 +13,12 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Slug", name: "slug", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "rls"
+    label: "Rules"
+    folder: "/content/rls"
+    create: false
+    slug: "{{iso}}.md"
+    fields:
+      - {label: "State", name: "state", widget: "string"}
+      - {label: "ISO Code", name: "iso", widget: "string"}
+      - {label: "Never Resideds are allowed to register", name: "allowsNeverResided", widget: "boolean"}
