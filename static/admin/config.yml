@@ -23,7 +23,9 @@ collections:
       - {label: "State", name: "state", widget: "string"}
       - {label: "ISO Code", name: "iso", widget: "string"}
       - {label: "Never Resideds are allowed to register", name: "allowsNeverResided", widget: "boolean"}
-      - {label: "Identification required", name: "id", widget: "list"}
+      - label: "Types of Identification required"
+        name: "id"
+        widget: "list"
       - {label: "Has Party Primaries?", name: "partyPrimary", widget: "boolean"}
       - {label: "Ballot Receipt Options", name: "ballotReceiptOptions", widget: "list"}
       - {label: "FPCA Submit Options for NEW voters", name: "fpcaSubmitOptionsRegister", widget: "list"}
