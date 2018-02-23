@@ -15,7 +15,7 @@ collections:
       - {label: "Slug", name: "slug", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "rls"
-    label: "Rules"
+    label: "State Ballot Rules"
     folder: "/content/rls"
     create: false
     slug: "{{iso}}"
@@ -26,6 +26,8 @@ collections:
       - label: "Types of Identification required"
         name: "id"
         widget: "list"
+        required: false
+        pattern: ['^(?![\s\S])|SSN$|SSN4$|StateID$|TerritoryID$|DCID$|TribalID$|MilitaryID$|PassportNumber$|NYDMVID$', "Must be one of the following: SSN, SSN4, StateID, TerritoryID, DCID, TribalID, MilitaryID, PassportNumber, NYDMVID (Contact Alex to add something different)"]
       - {label: "Has Party Primaries?", name: "partyPrimary", widget: "boolean"}
       - {label: "Ballot Receipt Options", name: "ballotReceiptOptions", widget: "list"}
       - {label: "FPCA Submit Options for NEW voters", name: "fpcaSubmitOptionsRegister", widget: "list"}

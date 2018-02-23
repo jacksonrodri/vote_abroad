@@ -1,13 +1,94 @@
 <template>
-  <section class="section">
+  <div class="columns is-centered is-multiline">
+    <div class="column is-10-touch is-8-desktop is-7-widescreen is-6-fullhd is-paddingless">
     <!-- <no-ssr> -->
-      <h3 class="title is-4">Review the form below then click 'add your signature' ..... click send email (this text to be updated with voter specific instructions based on state, registration status, ballot submission selection)"</h3>
-      <div class="control buttons">
-        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'review'} })" class="button is-light is-medium" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>Back</span></nuxt-link>
-        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'voting-information'} })" class="button is-primary is-medium" exact ><span> Start another </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link>
-        <button class="button is-primary" @click="isSignatureModalActive = true">Add your signature</button>
+      <div class="section">
+        <h1 class="has-text-centered title is-3">Step 5 of 5</h1>
+        <h3 class="has-text-centered subtitle is-4">Sign and Submit</h3>
+        <p class="is-size-5">
+          You must send your <strong class="has-text-danger">signed</strong> ballot request to your {{ currentRequest.votAdr.leo.jurisdiction }} {{ currentRequest.votAdr.leo.jurisdictionType }} election official by <span v-for="(opt, index) in stateRules.fpcaSubmitOptionsRequest" :key="index">{{ opt.toLowerCase() }}<span v-if="index < stateRules.fpcaSubmitOptionsRequest.length - 2">, </span><span v-if="index === stateRules.fpcaSubmitOptionsRequest.length - 2"> or </span></span>.
+        </p>
+        <br/>
+        <h4 class="label">Choose how to send your Ballot request</h4>
+
+        <b-tabs type="is-toggle" expanded>
+          <b-tab-item label="Email"
+            v-if="stateRules.fpcaSubmitOptionsRequest.indexOf('Email') > -1"
+            icon="at">
+            <div class="section">
+              <h3 class="title is-5">Sign and send your form by Email</h3>
+              <div class="buttons">
+                <button class="button is-primary is-large">Add your signature</button>
+                <button @click="sendEmail" class="button is-primary is-large">Email your form</button>
+              </div>
+
+              <article class="media">
+                <figure class="media-left">
+                  <p class="image is-64x64">
+                    <b-icon icon="pencil-alt" size="is-large" type="is-primary"></b-icon>
+                  </p>
+                </figure>
+                <div class="media-content">
+                  <div class="content">
+                    <p>
+                      <strong>Sign Your Request. </strong> If you are on a device with a camera you can sign your name with a dark pen or
+                    </p>
+                  </div>
+                </div>
+              </article>
+              <article class="media">
+                <figure class="media-left">
+                  <p class="image is-64x64">
+                    <b-icon type="is-primary" size="is-large" icon="at"></b-icon>
+                  </p>
+                </figure>
+                <div class="media-content">
+                  <div class="content">
+                    <p>
+                      <strong>Email your request. </strong> Upload it here. We'll send a copy to your election official.
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </b-tab-item>
+          <b-tab-item label="Fax"
+            v-if="stateRules.fpcaSubmitOptionsRequest.indexOf('Fax') > -1"
+            icon="fax">
+            <div class="section">
+              <h3 class="title is-5">Sign and send your form by Fax</h3>
+              <div class="buttons">
+                <button class="button is-primary is-large">Add your signature</button>
+                <button class="button is-primary is-large">Fax your form</button>
+              </div>
+            </div>
+          </b-tab-item>
+          <b-tab-item label="Mail"
+            v-if="stateRules.fpcaSubmitOptionsRequest.indexOf('Mail') > -1"
+            icon="envelope-open">
+            <div class="section">
+              <h3 class="title is-5">Download, Print, Sign and Send your form by Postal</h3>
+              <ol>
+                <li>Download your form</li>
+                <li>Print it out</li>
+                <li>Sign and Date it</li>
+                <li>Mail your form to:</li>
+              </ol>
+              <div class="box">
+                <span v-if="currentRequest.votAdr.leo.officeAddress.line1"><strong>{{ currentRequest.votAdr.leo.officeAddress.line1 }}</strong><br/></span>
+                <span v-if="currentRequest.votAdr.leo.officeAddress.line2"><strong>{{ currentRequest.votAdr.leo.officeAddress.line2 }}</strong><br/></span>
+                <span><strong>{{ currentRequest.votAdr.leo.officeAddress.city }}, </strong>
+                <strong>{{ currentRequest.votAdr.leo.officeAddress.state }} </strong>
+                <strong>{{ currentRequest.votAdr.leo.officeAddress.zip }}</strong><br/></span>
+                <span class="has-text-right"><strong>USA</strong><br/></span>
+              </div>
+              <button class="button is-primary is-large">Download your completed form</button>
+            </div>
+          </b-tab-item>
+        </b-tabs>
       </div>
-    <my-canvas class="canvas" ref="fpca">
+    <my-canvas v-if="signature" class="canvas" ref="fpca">
       <my-box
         :lastName="lastName"
         :firstName="firstName"
@@ -42,14 +123,13 @@
       <div class="control buttons is-right">
         <nuxt-link :to="localePath({ name: 'index' })" class="button is-light is-medium" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>Back</span></nuxt-link>
         <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'voting-information'} })" class="button is-primary is-medium" exact ><span> Next </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link>
-        <button class="button is-primary" @click="isSignatureModalActive = true">Add your signature</button>
-        <button @click="sendEmail" class="button is-primary is-large">Send it by email</button>
       </div>
 
     <b-modal :active.sync="isSignatureModalActive" has-modal-card>
       <sign @sigcap="addSig" />
     </b-modal>
-  </section>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -75,6 +155,13 @@ export default {
     MyCanvas,
     MyBox,
     Sign
+  },
+  async asyncData ({app}) {
+    return {
+      allStateRules: await app.$content('rls')
+        .query({ exclude: ['anchors', 'body', 'meta', 'path', 'permalink'] })
+        .getAll()
+    }
   },
   data () {
     return {
@@ -145,6 +232,14 @@ export default {
     voterClass () { return this.currentRequest && this.currentRequest.voterClass ? this.currentRequest.voterClass.toString() : ' ' },
     sex () { return this.currentRequest && this.currentRequest.sex ? this.currentRequest.sex.toString() : ' ' },
     recBallot () { return this.currentRequest && this.currentRequest.recBallot ? this.currentRequest.recBallot.toString() : ' ' },
+    isRegistered () { return this.currentRequest ? this.currentRequest.isRegistered : null },
+    stateRules () {
+      if (this.votState) {
+        return this.allStateRules.find(x => x.iso.toLowerCase() === this.votState.toLowerCase())
+      } else {
+        return undefined
+      }
+    },
     ...mapState({
       currentRequestIndex: state => state.requests.currentRequest,
       requests: state => state.requests.requests

@@ -1,7 +1,7 @@
 <template>
 <div class="column is-12-touch is-8-desktop is-7-widescreen is-6-fullhd">
 <section class="section">
-    <h1 class="has-text-centered title is-3">Step {{ stage.order }} of 3</h1>
+    <h1 class="has-text-centered title is-3">Step {{ stage.order }} of 5</h1>
     <h3 class="has-text-centered subtitle is-4">{{ stage.name }}</h3>
 <!-- your information -->
   <section v-if="stage.slug === 'your-information'">
@@ -229,6 +229,7 @@
 
       <!-- identification -->
       <identification
+        v-if="stateRules"
         label="Identification"
         :idOptions="stateRules && stateRules.id && stateRules.id.length > 0 ? stateRules.id : null"
         :toolTipTitle="`Why am I being asked this?`"
