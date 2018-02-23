@@ -2,7 +2,7 @@
 state: Wyoming 
 iso: WY
 allowsNeverResided: true
-id: false
+id: []
 partyPrimary: true
 ballotReceiptOptions:
   - Email

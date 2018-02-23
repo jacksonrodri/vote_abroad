@@ -1,6 +1,6 @@
 <template>
   <div><br/>
-    <span class="is-flex"><label class="label">{{ label }}</label><span class="has-text-weight-light">&nbsp;(required)</span><span @click="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
+    <span class="is-flex"><label class="label">{{ label }}</label><span v-if="idOptions" class="has-text-weight-light">&nbsp;(required)</span><span v-else>&nbsp;(Optional)</span><span @click="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
     <slot name="instructions"></slot>
     <br/>
 
@@ -15,6 +15,8 @@
         @input.native="val => print(val.target._vCleave.getRawValue())">
       </b-input>
     </b-field>
+
+    <div class="has-text-centered"><strong> -- OR -- </strong></div>
 
     <b-field v-if="!idOptions || (idOptions && idOptions.filter(x => x!== 'SSN' && x !== 'SSN4').length > 0)"
       :label="stateIdLabel">

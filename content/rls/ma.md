@@ -2,7 +2,7 @@
 state: Massachusetts 
 iso: MA
 allowsNeverResided: true
-id: false
+id: []
 partyPrimary: true
 ballotReceiptOptions:
   - Email

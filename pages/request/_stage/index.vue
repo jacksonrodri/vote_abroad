@@ -230,15 +230,15 @@
       <!-- identification -->
       <identification
         label="Identification"
-        :idOptions="stateRules && stateRules.id ? stateRules.id : null"
+        :idOptions="stateRules && stateRules.id && stateRules.id.length > 0 ? stateRules.id : null"
         :toolTipTitle="`Why am I being asked this?`"
         v-model="ssn">
         <div slot="instructions">
           <p>
-            <span v-if="!stateRules">You may provide the last 4 digits of your Social Security Number or state ID to help your voting official find your records.</span>
+            <span v-if="stateRules && stateRules.id && stateRules.id.length === 0">Providing <strong>one</strong> of the following may help your election official find your voting record. </span>
             <span v-else-if="stateRules && stateRules.id.length === 1">{{ stateRules.state }} voters must provide a </span>
-            <span v-else>{{ stateRules.state }} voters must provide one of the following forms of identification: </span>
-            <span v-if="stateRules && stateRules.id">
+            <span v-else>{{ stateRules.state }} voters must provide <strong>ONE</strong> of the following forms of identification: </span>
+            <span v-if="stateRules && stateRules.id && stateRules.id.length > 0">
               <span v-for="(idType, index) in stateRules.id" :key="idType">
                 <span><strong>{{$t(`request.idTypes.${idType}`)}}</strong></span>
                 <span v-if="stateRules.id.length > 1 && index === stateRules.id.length - 2"> or </span>
@@ -251,7 +251,8 @@
           </p>
         </div>
         <div slot="tooltip">
-          <p>Identification is required by some states.  </p>
+          <p v-if="stateRules && stateRules.id && stateRules.id.length === 0">{{ stateRules.state }} does not require identification to register to vote.  You may provide the last 4 digits of your Social Security Number <strong>OR</strong> state ID to help your voting official find your records.</p>
+          <p v-else>Identification is required by some states including {{ stateRules.state }}.  </p>
         </div>
       </identification>
 
@@ -277,8 +278,6 @@
       <!-- <b-field :type="($v.addlInfo.$error ? 'is-danger': '')" :message="$v.addlInfo.$error ? Object.keys($v.addlInfo.$params).map(x => x) : '' " label="Add any additional information here to help your election official find your records.">
         <b-input maxlength="258" type="textarea" v-model="addlInfo" @input="$v.addlInfo.$touch()"></b-input>
       </b-field> -->
-      <additional-info label="Add any additional information here to help your election official find your records."
-        v-model="addlInfo"></additional-info>
 
       <!-- date -->
       <!-- <b-field label="Date" :message="$v.dob.$error ? Object.keys($v.dob.$params).map(x => x) : '' ">
