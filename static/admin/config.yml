@@ -29,3 +29,4 @@ collections:
       - {label: "FPCA Submit Options for REGISTERED voters", name: "fpcaSubmitOptionsRequest", widget: "list"}
       - {label: "Voters Can use the FWAB to register/request a ballto?", name: "canRegisterWithFwab", widget: "boolean"}
       - {label: "FWAB Submit Options", name: "fwabSubmitOptions", widget: "list"}
+      - {label: "State Introduction Text", name: "body", widget: "markdown"}
