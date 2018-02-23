@@ -6,7 +6,7 @@
         <h1 class="has-text-centered title is-3">Step 5 of 5</h1>
         <h3 class="has-text-centered subtitle is-4">Sign and Submit</h3>
         <p class="is-size-5">
-          You must send your <strong class="has-text-danger">signed</strong> ballot request to your {{ currentRequest.votAdr.leo.jurisdiction }} {{ currentRequest.votAdr.leo.jurisdictionType }} election official by <span v-for="(opt, index) in stateRules.fpcaSubmitOptionsRequest" :key="index">{{ opt.toLowerCase() }}<span v-if="index < stateRules.fpcaSubmitOptionsRequest.length - 2">, </span><span v-if="index === stateRules.fpcaSubmitOptionsRequest.length - 2"> or </span></span>.
+          You must send your <strong class="has-text-danger">signed</strong> ballot request to your {{ currentRequest ? currentRequest.votAdr.leo.jurisdiction : '' }} {{ currentRequest ? currentRequest.votAdr.leo.jurisdictionType : 'local' }} election official by <span v-for="(opt, index) in stateRules.fpcaSubmitOptionsRequest" :key="index">{{ opt.toLowerCase() }}<span v-if="index < stateRules.fpcaSubmitOptionsRequest.length - 2">, </span><span v-if="index === stateRules.fpcaSubmitOptionsRequest.length - 2"> or </span></span>.
         </p>
         <br/>
         <h4 class="label">Choose how to send your Ballot request</h4>
