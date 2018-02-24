@@ -5,7 +5,7 @@
       <div class="section">
         <h1 class="has-text-centered title is-3">Step 5 of 5</h1>
         <h3 class="has-text-centered subtitle is-4">Sign and Submit</h3>
-        <p class="is-size-5">
+        <p class="is-size-5" v-if="stateRules">
           You must send your <strong class="has-text-danger">signed</strong> ballot request to your {{ currentRequest ? currentRequest.votAdr.leo.jurisdiction : '' }} {{ currentRequest ? currentRequest.votAdr.leo.jurisdictionType : 'local' }} election official by <span v-for="(opt, index) in stateRules.fpcaSubmitOptionsRequest" :key="index">{{ opt.toLowerCase() }}<span v-if="index < stateRules.fpcaSubmitOptionsRequest.length - 2">, </span><span v-if="index === stateRules.fpcaSubmitOptionsRequest.length - 2"> or </span></span>.
         </p>
         <br/>
@@ -14,7 +14,7 @@
 
         <b-tabs type="is-toggle" expanded>
           <b-tab-item label="Email"
-            v-if="stateRules.fpcaSubmitOptionsRequest.indexOf('Email') > -1"
+            v-if="stateRules && stateRules.fpcaSubmitOptionsRequest.indexOf('Email') > -1"
             icon="at">
             <div class="section">
               <h3 class="title is-5">Sign and send your form by Email</h3>
@@ -55,7 +55,7 @@
             </div>
           </b-tab-item>
           <b-tab-item label="Fax"
-            v-if="stateRules.fpcaSubmitOptionsRequest.indexOf('Fax') > -1"
+            v-if="stateRules && stateRules.fpcaSubmitOptionsRequest.indexOf('Fax') > -1"
             icon="fax">
             <div class="section">
               <h3 class="title is-5">Sign and send your form by Fax</h3>
@@ -66,7 +66,7 @@
             </div>
           </b-tab-item>
           <b-tab-item label="Mail"
-            v-if="stateRules.fpcaSubmitOptionsRequest.indexOf('Mail') > -1"
+            v-if="stateRules && stateRules.fpcaSubmitOptionsRequest.indexOf('Mail') > -1"
             icon="envelope-open">
             <div class="section">
               <h3 class="title is-5">Download, Print, Sign and Send your form by Postal</h3>
