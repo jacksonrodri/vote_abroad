@@ -27,7 +27,7 @@
                   </b-icon>
                   &nbsp;Logout
                 </a>
-                <a v-else
+                <!-- <a v-else
                   class="navbar-item is-expanded has-text-centered"
                   @click="isLoginModalActive = true">
                   <b-icon
@@ -36,7 +36,7 @@
                     size="is-small">
                   </b-icon>
                   &nbsp;Login
-                </a>
+                </a> -->
                 <nuxt-link v-for="(locale, index) in $i18n.locales"
                   :key="index"
                   :exact="true"

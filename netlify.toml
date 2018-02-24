@@ -1,3 +1,8 @@
+[build]
+  Command = "yarn generate && yarn build:lambda"
+  Functions = "lambda"
+  Publish = "dist"
+
 [[redirects]]
 from = "/api/countries/"
 to = "http://country.io/names.json"
@@ -13,5 +18,17 @@ force = false
 [[redirects]]
 from = "/api/mail"
 to = "https://api.mailgun.net/v3/mon.tg/messages"
+status = 200
+force = false
+
+[[redirects]]
+from = "/functions/*"
+to = "https://feat-functions--votefromabroad.netlify.com/.netlify/functions/:splat"
+status = 200
+force = false
+
+[[redirects]]
+from = "/api/fpca"
+to = "https://svj2ivekgi.execute-api.us-east-1.amazonaws.com/dev/pdf/see"
 status = 200
 force = false

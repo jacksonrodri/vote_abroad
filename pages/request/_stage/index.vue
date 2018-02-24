@@ -1,5 +1,5 @@
 <template>
-<div class="column is-12-touch is-8-desktop is-7-widescreen is-6-fullhd">
+<div class="column is-12 is-8-desktop is-7-widescreen is-6-fullhd">
 <section class="section">
     <h1 class="has-text-centered title is-3">Step {{ stage.order }} of 5</h1>
     <h3 class="has-text-centered subtitle is-4">{{ stage.name }}</h3>
@@ -181,7 +181,7 @@
       <b-field label="Date of Birth" :message="$v.dob.$error ? Object.keys($v.dob.$params).map(x => x) : '' ">
         <b-datepicker
           :value="localDob || lcldob"
-          @input="value =>{ this.printVal(value); this.updateDob(value) }"
+          @input="value =>{ this.updateDob(value) }"
           placeholder="Type or select your birth date"
           :date-formatter="(date) => date.toLocaleDateString()"
           :min-date="minDate"

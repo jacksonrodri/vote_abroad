@@ -40,7 +40,7 @@ module.exports = {
   ],
   api: function(isStatic) {
     return {
-      browserBaseURL: isStatic ? process.env.URL : ''
+      browserBaseURL: isStatic ? process.env.DEPLOY_PRIME_URL : ''
     }
   }
 }

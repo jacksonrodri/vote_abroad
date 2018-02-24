@@ -30,8 +30,22 @@ module.exports = {
     // '@nuxtjs/localtunnel',
     '@nuxtjs/pwa',
     ['nuxt-i18n', I18N],
+    '@nuxtjs/proxy',
     'nuxtent'
   ],
+  proxy: {
+    '/api/fpca': {
+      target: 'https://svj2ivekgi.execute-api.us-east-1.amazonaws.com/dev/pdf/see',
+      pathRewrite: {
+        '^/api/fpca' : '/'
+      }
+    },
+    '/api/*': {
+      target: 'http://localhost:9000/',
+      pathRewrite: {
+        '^/api/' : '/'
+      }}
+  },
   manifest: {
     name: 'Vote From Abroad',
     short_name: 'Vote Abroad',
