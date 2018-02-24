@@ -1,46 +1,46 @@
 module.exports = {
   content: [
-    [‘rls’, {
-      page: ‘states/_state’,
-      permalink: ‘states/:slug’,
+    ['rls', {
+      page: 'states/_state',
+      permalink: 'states/:slug',
       isPost:false,
       generate: [
-        ‘get’,
-        ‘getAll’
+        'get',
+        'getAll'
       ]
     }],
-    [‘en/pages’, {
-      page: ‘/page’,
-      permalink: ‘:slug’,
+    ['en/pages', {
+      page: '/page',
+      permalink: ':slug',
       isPost: false,
       generate: [
-        ‘get’,
-        ‘getAll’
+        'get',
+        'getAll'
       ]
     }],
-    [‘elections’, {
-      page: ‘/elections/_state’,
+    ['elections', {
+      page: '/elections/_state',
       isPost: false,
       generate: [
-        ‘get’,
-        ‘getAll’
+        'get',
+        'getAll'
       ]
     }],
     [
-      ‘leos’,
+      'leos',
       {
-        page: ‘leos/_state’,
+        page: 'leos/_state',
         isPost: false,
         generate: [
-          ‘get’,
-          ‘getAll’
+          'get',
+          'getAll'
         ]
       }
     ]
   ],
   api: function(isStatic) {
     return {
-      browserBaseURL: isStatic ? process.env.URL : ‘’
+      browserBaseURL: isStatic ? process.env.URL : ''
     }
   }
 }
