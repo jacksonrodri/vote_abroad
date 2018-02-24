@@ -106,6 +106,16 @@ $flag-icon-css-path: '/flags';
 }
 }
 
+@include mobile() {
+  .media {
+    flex-direction: column;
+  }
+
+  .media-right {
+    margin: 0 0 0.5rem;
+  }
+}
+
 // .flag-icon
 //   width: 3.8em;
 //   height: 100%;
