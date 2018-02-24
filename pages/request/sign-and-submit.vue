@@ -1,6 +1,6 @@
 <template>
-  <div class="columns is-centered is-multiline">
-    <div class="column is-10-touch is-8-desktop is-7-widescreen is-6-fullhd is-paddingless">
+  <!-- <div class="columns is-centered is-multiline"> -->
+    <div class="column is-10 is-8-desktop is-7-widescreen is-6-fullhd is-paddingless">
     <!-- <no-ssr> -->
       <div class="section">
         <h1 class="has-text-centered title is-3">Step 5 of 5</h1>
@@ -16,59 +16,161 @@
           <b-tab-item label="Email"
             v-if="stateRules && stateRules.fpcaSubmitOptionsRequest.indexOf('Email') > -1"
             icon="at">
-            <div class="section">
-              <h3 class="title is-5">Sign and send your form by Email</h3>
-              <div class="buttons">
-                <button class="button is-primary is-large">Add your signature</button>
-                <button @click="sendEmail" class="button is-primary is-large">Email your form</button>
+            <section class="section">
+              <h3 class="subtitle is-4">Sign and send your form by Email</h3>
+              <div class="media">
+                <div class="media-content">
+                  <h3 class="title is-5">Instructions:</h3>
+                  <!-- <p>You must <strong class="has-text-danger">sign, date and email</strong> your completed form to your {{ currentRequest ? currentRequest.votAdr.leo.jurisdiction : 'local' }} election official at <a :href="`mailto:${leoEmail}`">{{ leoEmail }}.</a> </p> -->
+                  <article class="media">
+                    <figure class="media-left">
+                      <b-icon icon="pencil-alt" size="is-medium"></b-icon>
+                    </figure>
+                    <div class="media-content">
+                      <p class="is-size-5"><strong class="has-text-danger">Sign and Date</strong> your form</p>
+                      <article class="media">
+                        <div class="media-content">
+                          <article class="media">
+                            <div class="media-content">
+                              <p><strong>If you have a camera</strong> on this <span class="is-hidden-touch">computer</span><span class="is-hidden-desktop is-hidden-mobile">tablet</span><span class="is-hidden-tablet">phone</span>, you can capture your signature and email your form straight from this website.</p>
+                              <!-- <p class="has-text-centered"><button class="button is-primary" @click="isSignatureModalActive = true"><b-icon icon="camera"></b-icon><span> Capture my signature</span></button></p> -->
+                            </div>
+                            <div class="media-right">
+                              <button class="button is-primary" @click="isSignatureModalActive = true"><b-icon icon="camera" size="is-small"></b-icon><span>Capture signature</span></button>
+                            </div>
+                          </article>
+                          <article class="media">
+                            <div class="media-content">
+                              <p><strong>Otherwise,</strong> you will need to download your form, print, sign, date and scan it.</p>
+                              <!-- <p class="has-text-centered"><button class="button is-primary" @click="getFPCA"><b-icon icon="download"></b-icon><span>Download my form</span></button></p> -->
+                            </div>
+                            <div class="media-right">
+                              <button class="button is-primary" @click="getFPCA"><b-icon icon="download"></b-icon><span>Download</span></button>
+                            </div>
+                          </article>
+                        </div>
+                      </article>
+                    </div>
+                  </article>
+                  <article class="media">
+                    <figure class="media-left">
+                      <b-icon icon="at" size="is-medium"></b-icon>
+                    </figure>
+                    <div class="media-content">
+                      <p class="is-size-5"><strong class="has-text-danger">Email</strong> your form to <a :href="`mailto:${leoEmail}`">{{leoEmail}}</a></p>
+                    </div>
+                  </article>
+                </div>
               </div>
-
-              <article class="media">
-                <figure class="media-left">
-                  <p class="image is-64x64">
-                    <b-icon icon="pencil-alt" size="is-large" type="is-primary"></b-icon>
-                  </p>
-                </figure>
-                <div class="media-content">
-                  <div class="content">
-                    <p>
-                      <strong>Sign Your Request. </strong> If you are on a device with a camera you can sign your name with a dark pen or
-                    </p>
-                  </div>
-                </div>
-              </article>
-              <article class="media">
-                <figure class="media-left">
-                  <p class="image is-64x64">
-                    <b-icon type="is-primary" size="is-large" icon="at"></b-icon>
-                  </p>
-                </figure>
-                <div class="media-content">
-                  <div class="content">
-                    <p>
-                      <strong>Email your request. </strong> Upload it here. We'll send a copy to your election official.
-                    </p>
-                  </div>
-                </div>
-              </article>
-
-            </div>
+            </section>
           </b-tab-item>
           <b-tab-item label="Fax"
             v-if="stateRules && stateRules.fpcaSubmitOptionsRequest.indexOf('Fax') > -1"
             icon="fax">
-            <div class="section">
-              <h3 class="title is-5">Sign and send your form by Fax</h3>
-              <div class="buttons">
-                <button class="button is-primary is-large">Add your signature</button>
-                <button class="button is-primary is-large">Fax your form</button>
+            <section class="section">
+              <h3 class="subtitle is-4">Sign and send your form by Fax</h3>
+              <div class="media">
+                <div class="media-content">
+                  <h3 class="title is-5">Instructions:</h3>
+                  <!-- <p>You must <strong class="has-text-danger">sign, date and email</strong> your completed form to your {{ currentRequest ? currentRequest.votAdr.leo.jurisdiction : 'local' }} election official at <a :href="`mailto:${leoEmail}`">{{ leoEmail }}.</a> </p> -->
+                  <article class="media">
+                    <figure class="media-left">
+                      <b-icon icon="pencil-alt" size="is-medium"></b-icon>
+                    </figure>
+                    <div class="media-content">
+                      <p class="is-size-5"><strong class="has-text-danger">Sign and Date</strong> your form</p>
+                      <article class="media">
+                        <div class="media-content">
+                          <article class="media">
+                            <div class="media-content">
+                              <p><strong>If you have a camera</strong> on this <span class="is-hidden-touch">computer</span><span class="is-hidden-desktop is-hidden-mobile">tablet</span><span class="is-hidden-tablet">phone</span>, you can capture your signature and fax your form straight from this website.</p>
+                              <!-- <p class="has-text-centered"><button class="button is-primary" @click="isSignatureModalActive = true"><b-icon icon="camera"></b-icon><span> Capture my signature</span></button></p> -->
+                            </div>
+                            <div class="media-right">
+                              <button class="button is-primary" @click="isSignatureModalActive = true"><b-icon icon="camera" size="is-small"></b-icon><span>Capture signature</span></button>
+                            </div>
+                          </article>
+                          <article class="media">
+                            <div class="media-content">
+                              <p><strong>Otherwise,</strong> you will need to download your form, print, sign and date it before faxing.</p>
+                              <!-- <p class="has-text-centered"><button class="button is-primary" @click="getFPCA"><b-icon icon="download"></b-icon><span>Download my form</span></button></p> -->
+                            </div>
+                            <div class="media-right">
+                              <button class="button is-primary" @click="getFPCA"><b-icon icon="download"></b-icon><span>Download</span></button>
+                            </div>
+                          </article>
+                        </div>
+                      </article>
+                    </div>
+                  </article>
+                  <article class="media">
+                    <figure class="media-left">
+                      <b-icon icon="fax" size="is-medium"></b-icon>
+                    </figure>
+                    <div class="media-content">
+                      <p class="is-size-5"><strong class="has-text-danger">Fax</strong> your form to {{leoFax}}</p>
+                    </div>
+                  </article>
+                  <article class="media">
+                    <figure class="media-left">
+                      <b-icon icon="reply" size="is-medium"></b-icon>
+                    </figure>
+                    <div class="media-content">
+                      <p class="is-size-5"><strong class="has-text-danger">Confirm</strong> with your your local election official that they received it. </p>
+                    </div>
+                  </article>
+                </div>
               </div>
-            </div>
+            </section>
           </b-tab-item>
           <b-tab-item label="Mail"
             v-if="stateRules && stateRules.fpcaSubmitOptionsRequest.indexOf('Mail') > -1"
-            icon="envelope-open">
-            <div class="section">
+            icon="envelope-open"><section class="section">
+              <h3 class="subtitle is-4">Sign and Send your form by Postal Mail</h3>
+              <div class="media">
+                <div class="media-content">
+                  <h3 class="title is-5">Instructions:</h3>
+                  <!-- <p>You must <strong class="has-text-danger">sign, date and email</strong> your completed form to your {{ currentRequest ? currentRequest.votAdr.leo.jurisdiction : 'local' }} election official at <a :href="`mailto:${leoEmail}`">{{ leoEmail }}.</a> </p> -->
+                  <article class="media">
+                    <figure class="media-left">
+                      <b-icon icon="download" size="is-medium"></b-icon>
+                    </figure>
+                    <div class="media-content">
+                      <p class="is-size-5">Download your completed form.</p>
+                    </div>
+                    <div class="media-lef">
+                      <button @click="getFPCA" class="button is-primary"><span>Download now</span></button>
+                    </div>
+                  </article>
+                  <article class="media">
+                    <figure class="media-left">
+                      <b-icon icon="pencil-alt" size="is-medium"></b-icon>
+                    </figure>
+                    <div class="media-content">
+                      <p class="is-size-5">Print, <strong class="has-text-danger">sign and date</strong> your form.</p>
+                    </div>
+                  </article>
+
+                  <article class="media">
+                    <figure class="media-left">
+                      <b-icon icon="envelope" size="is-medium"></b-icon>
+                    </figure>
+                    <div class="media-content">
+                      <span class="is-size-5">Mail your form to: </span>
+                      <div class="box">
+                        <span v-if="currentRequest.votAdr.leo.officeAddress.line1"><strong>{{ currentRequest.votAdr.leo.officeAddress.line1 }}</strong><br/></span>
+                        <span v-if="currentRequest.votAdr.leo.officeAddress.line2"><strong>{{ currentRequest.votAdr.leo.officeAddress.line2 }}</strong><br/></span>
+                        <span><strong>{{ currentRequest.votAdr.leo.officeAddress.city }}, </strong>
+                        <strong>{{ currentRequest.votAdr.leo.officeAddress.state }} </strong>
+                        <strong>{{ currentRequest.votAdr.leo.officeAddress.zip }}</strong><br/></span>
+                        <span class="has-text-right"><strong>USA</strong><br/></span>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </section>
+            <!-- <div class="section">
               <h3 class="title is-5">Download, Print, Sign and Send your form by Postal</h3>
               <ol>
                 <li>Download your form</li>
@@ -84,8 +186,8 @@
                 <strong>{{ currentRequest.votAdr.leo.officeAddress.zip }}</strong><br/></span>
                 <span class="has-text-right"><strong>USA</strong><br/></span>
               </div>
-              <button @click="getFPCA" class="button is-primary is-large">Download your completed form</button>
-            </div>
+              <button @click="getFPCA" class="button is-primary is-large"><b-icon icon="download"></b-icon><span>Download your completed form</span></button>
+            </div> -->
           </b-tab-item>
         </b-tabs>
 
@@ -121,15 +223,21 @@
     </my-canvas>
     <!-- </no-ssr> -->
 
-      <div class="control buttons is-right">
+      <!-- <div class="control buttons is-right">
         <nuxt-link :to="localePath({ name: 'index' })" class="button is-light is-medium" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>Back</span></nuxt-link>
         <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'voting-information'} })" class="button is-primary is-medium" exact ><span> Next </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link>
-      </div>
+      </div> -->
+      <section >
+      <!-- <div class="control buttons is-right"> -->
+        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'review'} })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>Back</span></nuxt-link>
+        <!-- <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" class="button is-primary is-medium is-pulled-right" exact ><span> Start a New Request </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link> -->
+      <!-- </div> -->
+    </section>
 
     <b-modal :active.sync="isSignatureModalActive" has-modal-card>
       <sign @sigcap="addSig" />
     </b-modal>
-    </div>
+    <!-- </div> -->
   </div>
 </template>
 
@@ -168,7 +276,8 @@ export default {
   data () {
     return {
       isSignatureModalActive: false,
-      signature: ''
+      signature: '',
+      hasCamera: true
     }
   },
   methods: {
@@ -260,6 +369,12 @@ export default {
     leoAdr () {
       let leo = this.currentRequest.votAdr.leo.officeAddress
       return `${leo.line1 ? leo.line1 + '\n' : ''}${leo.line2 ? leo.line2 + '\n' : ''}${leo.line3 ? leo.line3 + '\n' : ''}${leo.city ? leo.city + ', ' : ''}${leo.state ? leo.state + ' ' : ''}${leo.zip ? leo.zip + '\n' : '\n'}USA`
+    },
+    leoEmail () {
+      return this.currentRequest.votAdr.leo.emailAddress || ''
+    },
+    leoFax () {
+      return '+1 ' + this.currentRequest.votAdr.leo.faxNumber || ''
     },
     ...mapState({
       currentRequestIndex: state => state.requests.currentRequest,
