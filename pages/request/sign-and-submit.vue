@@ -10,6 +10,7 @@
         </p>
         <br/>
         <h4 class="label">Choose how to send your Ballot request</h4>
+      </div>
 
         <b-tabs type="is-toggle" expanded>
           <b-tab-item label="Email"
@@ -87,7 +88,7 @@
             </div>
           </b-tab-item>
         </b-tabs>
-      </div>
+
     <my-canvas v-if="signature" class="canvas" ref="fpca">
       <my-box
         :lastName="lastName"
