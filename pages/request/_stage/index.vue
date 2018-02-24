@@ -181,7 +181,7 @@
       <b-field label="Date of Birth" :message="$v.dob.$error ? Object.keys($v.dob.$params).map(x => x) : '' ">
         <b-datepicker
           :value="localDob || lcldob"
-          @input="value =>{ this.printVal(value); this.updateDob(value) }"
+          @input="value =>{ this.updateDob(value) }"
           placeholder="Type or select your birth date"
           :date-formatter="(date) => date.toLocaleDateString()"
           :min-date="minDate"

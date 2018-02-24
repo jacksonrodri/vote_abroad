@@ -34,6 +34,12 @@ module.exports = {
     'nuxtent'
   ],
   proxy: {
+    '/api/fpca': {
+      target: 'https://svj2ivekgi.execute-api.us-east-1.amazonaws.com/dev/pdf/see',
+      pathRewrite: {
+        '^/api/fpca' : '/'
+      }
+    },
     '/api/*': {
       target: 'http://localhost:9000/',
       pathRewrite: {

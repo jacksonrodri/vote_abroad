@@ -84,7 +84,7 @@
                 <strong>{{ currentRequest.votAdr.leo.officeAddress.zip }}</strong><br/></span>
                 <span class="has-text-right"><strong>USA</strong><br/></span>
               </div>
-              <button class="button is-primary is-large">Download your completed form</button>
+              <button @click="getFPCA" class="button is-primary is-large">Download your completed form</button>
             </div>
           </b-tab-item>
         </b-tabs>
@@ -138,6 +138,7 @@ import MyCanvas from '~/components/MyCanvas.vue'
 import MyBox from '~/components/MyBox.vue'
 import Sign from '~/components/sign.vue'
 import { mapState } from 'vuex'
+import axios from 'axios'
 
 // var mailgun = require('mailgun.js')
 // var apiKey = 'key-44903961cb823b645750fe64358dfc40'
@@ -171,6 +172,21 @@ export default {
     }
   },
   methods: {
+    getFPCA () {
+      // axios.get('/api/fpca?firstName=Alex&lastName=Montgomery&middleName=Parry&suffix=&ssn=0116')
+      axios({
+        url: encodeURI(`/api/fpca?firstName=${this.firstName || ''}&lastName=${this.lastName || ''}&middleName=${this.middleName || ''}&suffix=${this.suffix || ''}&ssn=${this.ssn || ''}&previousName=${this.previousName.previousName || ''}&dob=${this.dob || ''}&stateId=${this.stateId || ''}&votStreet=${this.votStreet || ''}&votApt=${this.votApt || ''}&votCity=${this.votCity || ''}&votState=${this.votState || ''}&votCounty=${this.votCounty || ''}&votZip=${this.votZip || ''}&abrAdr=${this.abrAdr ? this.abrAdr.alt1 : ''}\n${this.abrAdr ? this.abrAdr.alt2 : ''}\n${this.abrAdr ? this.abrAdr.alt3 : ''}\n${this.abrAdr ? this.abrAdr.alt4 : ''}\n${this.abrAdr ? this.abrAdr.alt5 : ''}&fwdAdr=${this.fwdAdr ? this.fwdAdr.alt1 : ''}\n${this.fwdAdr ? this.fwdAdr.alt2 : ''}\n${this.fwdAdr ? this.fwdAdr.alt3 : ''}\n${this.fwdAdr ? this.fwdAdr.alt4 : ''}\n${this.fwdAdr ? this.fwdAdr.alt5 : ''}&email=${this.email || ''}&altEmail=${this.altEmail || ''}&tel=${this.tel && this.tel.intNumber ? this.tel.intNumber : ''}&fax=${this.fax || ''}&party=${this.party || ''}&addlInfo=${this.addlInfo || ''}&date=${this.date || ''}&leoAdr=${this.leoAdr}&class=${this.voterClass || ''}&sex=${this.sex || ''}&recBallot=${this.recBallot || ''}`),
+        method: 'GET',
+        responseType: 'blob' // important
+      }).then((response) => {
+        const url = window.URL.createObjectURL(new Blob([response.data]))
+        const link = document.createElement('a')
+        link.href = url
+        link.setAttribute('download', `${this.firstName}-${this.lastName}-fpca.pdf`)
+        document.body.appendChild(link)
+        link.click()
+      })
+    },
     addSig (val) {
       this.signature = val
       // console.log(val)
@@ -240,6 +256,10 @@ export default {
       } else {
         return undefined
       }
+    },
+    leoAdr () {
+      let leo = this.currentRequest.votAdr.leo.officeAddress
+      return `${leo.line1 ? leo.line1 + '\n' : ''}${leo.line2 ? leo.line2 + '\n' : ''}${leo.line3 ? leo.line3 + '\n' : ''}${leo.city ? leo.city + ', ' : ''}${leo.state ? leo.state + ' ' : ''}${leo.zip ? leo.zip + '\n' : '\n'}USA`
     },
     ...mapState({
       currentRequestIndex: state => state.requests.currentRequest,
