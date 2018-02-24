@@ -30,8 +30,16 @@ module.exports = {
     // '@nuxtjs/localtunnel',
     '@nuxtjs/pwa',
     ['nuxt-i18n', I18N],
+    '@nuxtjs/proxy',
     'nuxtent'
   ],
+  proxy: {
+    '/api/*': {
+      target: 'http://localhost:9000/',
+      pathRewrite: {
+        '^/api/' : '/'
+      }}
+  },
   manifest: {
     name: 'Vote From Abroad',
     short_name: 'Vote Abroad',

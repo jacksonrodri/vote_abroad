@@ -1,3 +1,8 @@
+[build]
+  Command = "yarn generate && yarn build:lambda"
+  Functions = "lambda"
+  Publish = "dist"
+
 [[redirects]]
 from = "/api/countries/"
 to = "http://country.io/names.json"
