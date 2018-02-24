@@ -68,12 +68,12 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__duration__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__duration__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__datetime__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__zone__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__zones_localZone__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__zones_IANAZone__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__zones_fixedOffsetZone__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__zones_IANAZone__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__zones_fixedOffsetZone__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__zones_invalidZone__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__settings__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__errors__ = __webpack_require__(4);
@@ -326,7 +326,7 @@ class Util {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__zones_localZone__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__impl_util__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__impl_locale__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__impl_locale__ = __webpack_require__(9);
 
 
 
@@ -549,14 +549,14 @@ class Zone {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__duration__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__duration__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__interval__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__settings__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__info__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__impl_formatter__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__zones_fixedOffsetZone__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__impl_formatter__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__zones_fixedOffsetZone__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__zones_localZone__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__impl_locale__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__impl_locale__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__impl_util__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__impl_regexParser__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__impl_tokenParser__ = __webpack_require__(26);
@@ -2497,12 +2497,18 @@ class ZoneIsAbstractError extends LuxonError {
 
 /***/ }),
 /* 5 */
+/***/ (function(module, exports) {
+
+module.exports = require("fs");
+
+/***/ }),
+/* 6 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__impl_util__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__impl_locale__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__impl_formatter__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__impl_locale__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__impl_formatter__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__impl_regexParser__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__settings__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__errors__ = __webpack_require__(4);
@@ -3156,7 +3162,7 @@ class Duration {
 
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3288,7 +3294,7 @@ class IANAZone extends __WEBPACK_IMPORTED_MODULE_1__zone__["a" /* Zone */] {
 
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3371,7 +3377,7 @@ class FixedOffsetZone extends __WEBPACK_IMPORTED_MODULE_1__zone__["a" /* Zone */
 
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3379,7 +3385,7 @@ class FixedOffsetZone extends __WEBPACK_IMPORTED_MODULE_1__zone__["a" /* Zone */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__english__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__settings__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__datetime__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__formatter__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__formatter__ = __webpack_require__(10);
 
 
 
@@ -3721,7 +3727,7 @@ class Locale {
 
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4103,12 +4109,6 @@ class Formatter {
 /* harmony export (immutable) */ __webpack_exports__["a"] = Formatter;
 
 
-
-/***/ }),
-/* 10 */
-/***/ (function(module, exports) {
-
-module.exports = require("fs");
 
 /***/ }),
 /* 11 */
@@ -4557,8 +4557,8 @@ Formats.DATETIME_HUGE_WITH_SECONDS = {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__english__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__zones_fixedOffsetZone__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__zones_IANAZone__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__zones_fixedOffsetZone__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__zones_IANAZone__ = __webpack_require__(7);
 
 
 
@@ -4845,7 +4845,7 @@ class RegexParser {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__impl_util__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__datetime__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__duration__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__duration__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__settings__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__errors__ = __webpack_require__(4);
 
@@ -5354,9 +5354,9 @@ class Interval {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__datetime__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__settings__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__impl_locale__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__impl_locale__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__impl_util__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__zones_IANAZone_js__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__zones_IANAZone_js__ = __webpack_require__(7);
 
 
 
@@ -22635,7 +22635,7 @@ module.exports = require("child_process");
   }
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(30)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(31)(module)))
 
 /***/ }),
 /* 19 */,
@@ -22650,6 +22650,46 @@ __webpack_require__(22);
 
 var _require = __webpack_require__(24),
     DateTime = _require.DateTime;
+// var http = require('http');
+// var fs = require('fs');
+
+// var file = fs.createWriteStream("fpca.pdf");
+// var request = http.get("http://feat-functions--votefromabroad.netlify.com/fpca.pdf", function(response) {
+//   response.pipe(file);
+// });
+
+
+var http = __webpack_require__(28);
+var fs = __webpack_require__(5);
+
+function pDownload(url, dest) {
+  var file = fs.createWriteStream(dest);
+  return new Promise(function (resolve, reject) {
+    var responseSent = false; // flag to make sure that response is sent only once.
+    http.get(url, function (response) {
+      response.pipe(file);
+      file.on('finish', function () {
+        file.close(function () {
+          if (responseSent) return;
+          responseSent = true;
+          resolve();
+        });
+      });
+    }).on('error', function (err) {
+      if (responseSent) return;
+      responseSent = true;
+      reject(err);
+    });
+  });
+}
+var url = "http://feat-functions--votefromabroad.netlify.com/fpca.pdf";
+var fileLocation = "fpca.pdf";
+//example
+pDownload(url, fileLocation).then(function () {
+  return console.log('downloaded file no issues...');
+}).catch(function (e) {
+  return console.error('error while downloading', e);
+});
 
 var exec = __webpack_require__(17).exec;
 
@@ -22657,7 +22697,7 @@ var exec = __webpack_require__(17).exec;
 process.env['PATH'] = process.env['PATH'] + ':' + process.env['LAMBDA_TASK_ROOT'] + '/bin';
 process.env['LD_LIBRARY_PATH'] = process.env['LAMBDA_TASK_ROOT'] + '/bin';
 
-var pdfFiller = __webpack_require__(28);
+var pdfFiller = __webpack_require__(29);
 
 var nameRegex = null;
 
@@ -22806,33 +22846,40 @@ exports.handler = function (event, context, callback) {
       }();
     }
   } else if (event.httpMethod === 'POST') {}
-  var sourcePDF = "fpca.pdf";
-  pdfFiller.fillFormWithFlatten(sourcePDF, rData, shouldFlatten).then(function (outputStream) {
-    return new Promise(function (resolve, reject) {
-      var chunks = [];
-      outputStream.on('data', function (chunk) {
-        // console.log(`Received ${chunk.length} bytes of data.`);
-        chunks.push(Buffer.from(chunk));
+
+  // const sourcePDF = "https://feat-functions--votefromabroad.netlify.com/fpca.pdf";
+  pDownload(url, fileLocation).then(function () {
+    console.log('downloaded file no issues...');
+    var sourcePDF = "fpca.pdf";
+    pdfFiller.fillFormWithFlatten(sourcePDF, rData, shouldFlatten).then(function (outputStream) {
+      return new Promise(function (resolve, reject) {
+        var chunks = [];
+        outputStream.on('data', function (chunk) {
+          // console.log(`Received ${chunk.length} bytes of data.`);
+          chunks.push(Buffer.from(chunk));
+        });
+        outputStream.on('end', function () {
+          // console.log(`Received ${chunks.length} chunks.  All finished!`)
+          resolve(Buffer.concat(chunks).toString('base64'));
+        });
+        outputStream.resume();
       });
-      outputStream.on('end', function () {
-        // console.log(`Received ${chunks.length} chunks.  All finished!`)
-        resolve(Buffer.concat(chunks).toString('base64'));
-      });
-      outputStream.resume();
+    }).then(function (pdf) {
+      var response = {
+        statusCode: 200,
+        headers: {
+          "Content-Type": "application/pdf",
+          "Content-Disposition": "inline; filename=\"fpca.pdf\""
+        },
+        isBase64Encoded: true,
+        body: pdf
+      };
+      callback(null, response);
+    }).catch(function (err) {
+      callback(null, { statusCode: 400, body: JSON.stringify(err) });
     });
-  }).then(function (pdf) {
-    var response = {
-      statusCode: 200,
-      headers: {
-        "Content-Type": "application/pdf",
-        "Content-Disposition": "inline; filename=\"fpca.pdf\""
-      },
-      isBase64Encoded: true,
-      body: pdf
-    };
-    callback(null, response);
-  }).catch(function (err) {
-    callback(null, { statusCode: 400, body: JSON.stringify(err) });
+  }).catch(function (e) {
+    return console.error('error while downloading', e);
   });
 };
 
@@ -22851,7 +22898,7 @@ module.exports = require("util");
 //var process = require('process');
 //console.dir(process.env);
 
-var fs = __webpack_require__(10);
+var fs = __webpack_require__(5);
 var path = __webpack_require__(23);
 
 if(!process || !process.versions || !process.versions.node) {
@@ -22954,7 +23001,7 @@ module.exports = require("path");
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__datetime__ = __webpack_require__(3);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "DateTime", function() { return __WEBPACK_IMPORTED_MODULE_0__datetime__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__duration__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__duration__ = __webpack_require__(6);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Duration", function() { return __WEBPACK_IMPORTED_MODULE_1__duration__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interval__ = __webpack_require__(15);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Interval", function() { return __WEBPACK_IMPORTED_MODULE_2__interval__["a"]; });
@@ -23028,9 +23075,9 @@ class InvalidZone extends __WEBPACK_IMPORTED_MODULE_0__zone__["a" /* Zone */] {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__formatter__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__zones_fixedOffsetZone__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__zones_IANAZone__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__formatter__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__zones_fixedOffsetZone__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__zones_IANAZone__ = __webpack_require__(7);
 
 
 
@@ -23495,12 +23542,18 @@ class Conversions {
 
 /***/ }),
 /* 28 */
+/***/ (function(module, exports) {
+
+module.exports = require("http");
+
+/***/ }),
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var spawn = __webpack_require__(17).spawn,
-    fdf = __webpack_require__(29),
+    fdf = __webpack_require__(30),
     _ = __webpack_require__(18),
-    fs = __webpack_require__(10);
+    fs = __webpack_require__(5);
 
 var pdffiller = {
 
@@ -23684,10 +23737,10 @@ module.exports = pdffiller;
 
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var fs = __webpack_require__(10);
+var fs = __webpack_require__(5);
 var _ = __webpack_require__(18);
 
 // only this sequence in FDF header requires char codes
@@ -23756,7 +23809,7 @@ exports.createFdf = function (data) {
 }
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {

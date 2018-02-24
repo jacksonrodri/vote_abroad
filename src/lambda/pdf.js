@@ -2,6 +2,42 @@
 const util = require('util')
 require('full-icu')
 const { DateTime } = require('luxon')
+// var http = require('http');
+// var fs = require('fs');
+
+// var file = fs.createWriteStream("fpca.pdf");
+// var request = http.get("http://feat-functions--votefromabroad.netlify.com/fpca.pdf", function(response) {
+//   response.pipe(file);
+// });
+var http = require('http');
+var fs = require('fs');
+
+function pDownload(url, dest){
+  var file = fs.createWriteStream(dest);
+  return new Promise((resolve, reject) => {
+    var responseSent = false; // flag to make sure that response is sent only once.
+    http.get(url, response => {
+      response.pipe(file);
+      file.on('finish', () =>{
+        file.close(() => {
+          if(responseSent)  return;
+          responseSent = true;
+          resolve();
+        });
+      });
+    }).on('error', err => {
+        if(responseSent)  return;
+        responseSent = true;
+        reject(err);
+    });
+  });
+}
+var url = "http://feat-functions--votefromabroad.netlify.com/fpca.pdf"
+var fileLocation = "fpca.pdf"
+//example
+pDownload(url, fileLocation)
+  .then( ()=> console.log('downloaded file no issues...'))
+  .catch( e => console.error('error while downloading', e));
 
 var exec = require('child_process').exec;
 
@@ -160,8 +196,16 @@ exports.handler = (event, context, callback) => {
   } else if(event.httpMethod === 'POST'){
 
   }
-  const sourcePDF = "fpca.pdf";
-  pdfFiller.fillFormWithFlatten( sourcePDF, rData, shouldFlatten)
+
+
+
+
+  // const sourcePDF = "https://feat-functions--votefromabroad.netlify.com/fpca.pdf";
+  pDownload(url, fileLocation)
+  .then( ()=> {
+    console.log('downloaded file no issues...')
+    const sourcePDF = "fpca.pdf";
+    pdfFiller.fillFormWithFlatten( sourcePDF, rData, shouldFlatten)
     .then((outputStream) => {
       return new Promise((resolve, reject) => {
         let chunks = []
@@ -191,4 +235,6 @@ exports.handler = (event, context, callback) => {
     .catch((err) => {
       callback(null, { statusCode: 400, body: JSON.stringify(err) });
     });
+  })
+  .catch( e => console.error('error while downloading', e))
 };
