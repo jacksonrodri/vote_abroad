@@ -60,6 +60,17 @@
                       <p class="is-size-5"><strong class="has-text-danger">Email</strong> your form to <a :href="`mailto:${leoEmail}`">{{leoEmail}}</a></p>
                     </div>
                   </article>
+                  <article class="media">
+                    <figure class="media-left">
+                      <b-icon icon="check" size="is-medium"></b-icon>
+                    </figure>
+                    <div class="media-content">
+                      <p class="is-size-5"><strong class="has-text-danger">Confirm</strong> with your your local election official that they received it. </p>
+                    </div>
+                    <div class="media-right">
+                      <button class="button is-primary"><b-icon icon="calendar"></b-icon><span>Remind Me</span></button>
+                    </div>
+                  </article>
                 </div>
               </div>
             </section>
@@ -113,10 +124,13 @@
                   </article>
                   <article class="media">
                     <figure class="media-left">
-                      <b-icon icon="reply" size="is-medium"></b-icon>
+                      <b-icon icon="check" size="is-medium"></b-icon>
                     </figure>
                     <div class="media-content">
                       <p class="is-size-5"><strong class="has-text-danger">Confirm</strong> with your your local election official that they received it. </p>
+                    </div>
+                    <div class="media-right">
+                      <button class="button is-primary"><b-icon icon="calendar"></b-icon><span>Remind Me</span></button>
                     </div>
                   </article>
                 </div>
@@ -165,6 +179,17 @@
                         <strong>{{ currentRequest.votAdr.leo.officeAddress.zip }}</strong><br/></span>
                         <span class="has-text-right"><strong>USA</strong><br/></span>
                       </div>
+                    </div>
+                  </article>
+                  <article class="media">
+                    <figure class="media-left">
+                      <b-icon icon="check" size="is-medium"></b-icon>
+                    </figure>
+                    <div class="media-content">
+                      <p class="is-size-5"><strong class="has-text-danger">Confirm</strong> with your your local election official that they received it. </p>
+                    </div>
+                    <div class="media-right">
+                      <button class="button is-primary"><b-icon icon="calendar"></b-icon><span>Remind Me</span></button>
                     </div>
                   </article>
                 </div>
