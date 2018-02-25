@@ -24,6 +24,47 @@
       "instructions": "",
       "tooltip": "If you have previously voted with a different name, you election official may need to look you up using your previous name."
     },
+    "sex": {
+      "label": "Sex",
+      "tooltip": "This is only required for Idaho voters."
+    },
+    "party": {
+      "label": "Your Political Party",
+      "placeholder": "Your Political Party",
+      "tooltip": "Many states require voters to designate a political party to be eligible to vote in primary elections. Choosing a political party is optional."
+    },
+    "scRules": {
+      "label": "Race",
+      "raceInstructions": "**You must provide your race.** <br> **You must provide your previous location of registration, if in another state.**",
+      "tooltip": "Only South Carolina voters need to answer this question as per state law."
+    },
+    "receiveBallot": {
+      "label": "How would you like to receive your ballot?",
+      "email": "Email or online",
+      "mail": "Mail",
+      "fax": "Fax",
+      "tooltip": "You may request to receive your blank ballot by email/online, fax or mail. We encourage voters to request their blank ballot be sent by email/online or fax to avoid the delay associated with mail  and the possibility the ballot will be lost in transit."
+    },
+    "stateSpecial": {
+      "label": "{state} Specific Rules"
+    },
+    "vaRules": {
+      "label": "the name of your employer or the name of your spouse's or parent/guardian's employer",
+      "oathInstructions": "**If you have never registered before in Vermont, you must take a self-administered oath or it may be administered by anyone over the age of 18. The Vermont voter's oath is:** <br> *\"You solemnly swear (or affirm) that whenever you give your vote or suffrage, touching any matter that concerns the State of Vermont, you will do it so as in your conscience you shall judge will most conduce to the best good of the same, as established by the Constitution, without fear or favor of any person.\"* <br> Once you have read the Voter's Oath, use the space provided in Section 6 to write the following: *",
+      "tooltip": "Only Vermont voters need to answer this question as per state law."
+    },
+    "isRegistered": {
+      "label": "Are you already registered to vote in {jurisdiction}?",
+      "yes": "Yes",
+      "no": "NO",
+      "unsure": "Not Sure"
+    },
+    "akRules": {
+      "label": "What proof will you provide? (You must also attach a photocopy with your submission)",
+      "resInstructions": "Alaska requires that you provide proof of Alaska residency.",
+      "fwabWitness": "one witness Signature",
+      "tooltip": "Only Alaska voters need to answer this question as per state law."
+    },
     "voterClass": {
       "tooltip": "Voters may choose ‘I Intend to Return’ if they intend to return to the state in which they are registering to vote. An ‘intention’ is sufficient, you don’t need to have a fixed date of return or firm plans. Registering as “intend to return” should make you eligible to vote in State and Local races. However, it may also make you liable for state income taxes\n\nVoters may choose ‘My Return is Uncertain’ if they do not have a current intention to return to the state in which they are registering to vote. Voters are entitled to receive a ballot for Federal offices and may, depending on their state, also receive a ballot for State and Local offices.",
       "natGuard": "National Guard",
@@ -41,6 +82,9 @@
     "suffix": {
       "label": "Suffix"
     },
+    "altEmail": {
+      "label": "Add a second email here if you have one to ensure ballot delivery"
+    },
     "votAdr": {
       "zip": "Zip",
       "street": "Street Address",
@@ -54,12 +98,25 @@
       "state": "State",
       "label": "Voting Address"
     },
+    "prRules": {
+      "label": "Father's and Mother's first names",
+      "parentsInstructions": "Puerto Rico requires that you provide your father's and mother's first names.",
+      "tooltip": "Only Puerto Rico voters need to answer this question as per territory law."
+    },
+    "dob": {
+      "label": "Date of Birth"
+    },
     "tel": {
       "label": "Your current phone number",
       "placeholder": "e.g. {example}",
       "messages": {
         "invalid": "The number you typed is not a valid phone number.  Please check it and try again."
       }
+    },
+    "okRules": {
+      "label": "Which Party Primary ballot are you requesting",
+      "primaryInstructions": "If your political party affiliation is listed as Independent/No Party, you may be able to request a ballot for a recognized political party's primary election. For specific information about recognized political parties in Oklahoma, please visit [http://www.elections.ok.gov](http://www.elections.ok.gov).",
+      "tooltip": "Only Oklahoma voters need to answer this question as per state law."
     },
     "firstName": {
       "label": "First Name",
@@ -70,8 +127,22 @@
         "required": "You must enter a first name."
       }
     },
+    "fwdAdr": {
+      "label": "What address would you like your ballot sent to?",
+      "tooltip": "This is optional. Please provide a forwarding address only if you request your blank ballot be sent to you by mail and you do not want it mailed to your current residence address outside the US. If you are uncertain what your mailing address will be when ballots are due to be sent out, you may have your blank ballot sent to a reliable third-party, such as a University student office or postal box.",
+      "yes": "Yes",
+      "no": "No"
+    },
     "email": {
       "label": "Your current email address"
+    },
+    "fax": {
+      "label": "Enter the Fax Number you would like your ballot sent to."
+    },
+    "azRules": {
+      "label": "What proof will you provide? (You must also attach a photocopy with your submission)",
+      "citInstructions": "If you are using this form to register to vote, you must provide proof of citizenship.",
+      "tooltip": "Only Arizona voters need to answer this question as per state law."
     },
     "abrAdr": {
       "label": "Your Current Address Abroad",
