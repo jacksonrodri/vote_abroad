@@ -1,5 +1,8 @@
 {
-  "home": "Homepage",
+  "home": {
+    "pageTitle": "Homepage",
+    "subtitle": "Absentee Ballots For Americans Abroad"
+  },
   "posts": "Posts",
   "about": "About us",
   "homepage": {
