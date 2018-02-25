@@ -47,6 +47,7 @@
     "nuxt-i18n": "^2.3.3",
     "nuxtent": "https://github.com/apmontgomery/nuxtent-module.git#yo",
     "pdffiller-stream": "^0.2.0",
+    "vue-markdown": "^2.2.4",
     "vuelidate": "^0.6.1",
     "vuex-persist": "1.1.0"
   },

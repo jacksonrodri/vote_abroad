@@ -21,7 +21,7 @@
                   </p>
                   <b-autocomplete
                       v-model="countryName"
-                      placeholder="Country"
+                      :placeholder="$t('request.abrAdr.placeholder')"
                       ref="country"
                       :disabled="usOnly"
                       keep-first
@@ -145,7 +145,7 @@
         </transition>
       </b-field>
 
-      <b-field :label="usesAlternateFormat ? 'Use the standard international format for my address' : 'I need to use a different format for my address.'">
+      <b-field :label="usesAlternateFormat ? $t('request.abrAdr.structured-label') : $t('request.abrAdr.unstructured-label')">
         <b-field>
           <b-radio-button v-model="usesAlternateFormat"
             :native-value="!usesAlternateFormat"

@@ -41,7 +41,7 @@
         ref="tel"
         v-model="typed"
         :size="size"
-        :placeholder="phonePlaceholder"
+        :placeholder="$t('request.tel.placeholder', { example: phonePlaceholder})"
         expanded>
       </b-input>
     </b-field>
@@ -152,7 +152,7 @@ export default {
     },
     phonePlaceholder () {
       let code = this.countryCode === 'un' ? 'US' : this.countryCode.toUpperCase()
-      return `e.g. ${format(phoneExamples[code], code, 'International')}`
+      return `${format(phoneExamples[code], code, 'International')}`
     }
   },
   methods: {

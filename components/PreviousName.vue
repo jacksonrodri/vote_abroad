@@ -9,7 +9,7 @@
               <i class="fas fa-check"></i>
             </span>
             <span>
-              Yes
+              {{ $t('request.previousName.yes')}}
             </span>
           </button>
         </p>
@@ -19,7 +19,7 @@
               <i class="fas fa-check"></i>
             </span>
             <span>
-              No
+              {{ $t('request.previousName.no')}}
             </span>
           </button>
         </p>
@@ -29,7 +29,7 @@
     <b-input :value="value && value.previousName ? value.previousName : ''" @input="val => setName(val)"></b-input>
   </b-field>
   <b-message title="Why do you need my previous name?" type="is-info" has-icon :active.sync="isOpen">
-    If you have previously voted with a different name, you election official may need to look you up using your previous name.
+    {{ $t('request.previousName.tooltip')}}
   </b-message>
 </div>
 </template>

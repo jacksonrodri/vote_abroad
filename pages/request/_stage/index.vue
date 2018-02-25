@@ -21,7 +21,7 @@
       </b-field>
 
       <!-- suffix -->
-      <b-field :type="($v.suffix.$error ? 'is-danger': '')" :message="$v.suffix.$error ? Object.keys($v.suffix.$params).map(x => x) : '' " :label="$t('request.suffix')">
+      <b-field :type="($v.suffix.$error ? 'is-danger': '')" :message="$v.suffix.$error ? Object.keys($v.suffix.$params).map(x => x) : '' " :label="$t('request.suffix.label')">
         <b-input v-model="suffix" @input="$v.suffix.$touch()"></b-input>
       </b-field>
 
@@ -29,14 +29,14 @@
         :type="($v.previousName.$error ? 'is-danger': '')"
         :message="$v.previousName.$error ? Object.keys($v.previousName.$params).map(x => x) : '' "
         :label="$t('request.previousName')"
-        :instructions="$t('request.previousNameInstructions')"
+        :instructions="$t('request.previousName.label')"
         @input="$v.previousName.$touch()">
       </previous-name>
 
       <!-- phone Number -->
       <tel-input
         key="tel"
-        :label="$t('request.tel')"
+        :label="$t('request.tel.label')"
         :type="($v.tel.$error ? 'is-danger': '')"
         :message="$v.tel.$error ? Object.keys($v.tel.$params).map(x => x) : '' "
         v-model="tel"></tel-input>
@@ -45,22 +45,22 @@
       <b-field
       :type="($v.email.$error ? 'is-danger': '')"
       :message="$v.email.$error ? Object.keys($v.email.$params).map(x => x) : '' "
-      label="Your Current Email Address">
+      :label="$t('request.email.label')">
         <b-input v-model="email" @input="$v.email.$touch()"></b-input>
       </b-field>
 
       <!-- countryName -->
 
       <address-input
-        :label="$t('request.addressAbroad')"
+        :label="$t('request.abrAdr.label')"
         key="overseas"
         v-model="abrAdr"
         toolTipTitle="Where are you now?">
         <div slot="instructions">
-          <p>Please add your international Address</p>
+          <p>{{$t('request.abrAdr.instructions')}}</p>
         </div>
         <div slot="tooltip">
-          You must provide your current residence address outside the US for informational purposes. Please provide your address outside the US  even if you request your blank ballot be sent to you by email/online or fax.
+          {{$t('request.abrAdr.tooltip')}}
         </div>
       </address-input>
       <scroll-up :key="$route.params.stage"></scroll-up>
@@ -76,14 +76,14 @@
   <section v-if="stage.slug === 'voting-information'">
 
     <us-address
-        :label="$t('request.votingAddress')"
+        :label="$t('request.votAdr.label')"
         toolTipTitle="Your last US Address"
         v-model="votAdr">
         <div slot="instructions">
-          <p>{{ $t('request.votingAddressInstructions') }}</p>
+          <p>{{ $t('request.votAdr.instructions') }}</p>
         </div>
         <div slot="tooltip">
-          <p>Use the residence address of the last place you lived in the US. If you have never resided in the US, use the residence address of the last place your US parent(s) lived in the US. If your US parents last lived in the US in different locations, you may choose which one to use as your voting address.</p>
+          <vue-markdown>{{$t('request.votAdr.tooltip')}}</vue-markdown>
         </div>
       </us-address>
 
@@ -341,6 +341,7 @@ import StateSpecial from '~/components/StateSpecial'
 import ScrollUp from '~/components/ScrollUp'
 import Identification from '~/components/Identification'
 import AdditionalInfo from '~/components/AdditionalInfo'
+import VueMarkdown from 'vue-markdown'
 
 export default {
   transition: 'test',
@@ -385,7 +386,8 @@ export default {
     StateSpecial,
     ScrollUp,
     Identification,
-    AdditionalInfo
+    AdditionalInfo,
+    VueMarkdown
   },
   watch: {
     dob: function (newVal, oldVal) {
