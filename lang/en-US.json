@@ -24,6 +24,20 @@
       "instructions": "",
       "tooltip": "If you have previously voted with a different name, you election official may need to look you up using your previous name."
     },
+    "voterClass": {
+      "tooltip": "Voters may choose ‘I Intend to Return’ if they intend to return to the state in which they are registering to vote. An ‘intention’ is sufficient, you don’t need to have a fixed date of return or firm plans. Registering as “intend to return” should make you eligible to vote in State and Local races. However, it may also make you liable for state income taxes\n\nVoters may choose ‘My Return is Uncertain’ if they do not have a current intention to return to the state in which they are registering to vote. Voters are entitled to receive a ballot for Federal offices and may, depending on their state, also receive a ballot for State and Local offices.",
+      "natGuard": "National Guard",
+      "milSpouse": "Eligible Military Spouse or Dependent",
+      "whatCivType": "Are you abroad temporarily or indefinitely?",
+      "whatMilType": "What type of military voter are you?",
+      "militaryType": "Military",
+      "military": "Active Duty Military",
+      "neverResided": "Never Resided",
+      "civilianOrMilitary": "Are you a civilian or military voter?",
+      "intendToReturn": "I Intend to Return",
+      "uncertainReturn": "My Return is Uncertain",
+      "civilianType": "Civilian"
+    },
     "suffix": {
       "label": "Suffix"
     },
