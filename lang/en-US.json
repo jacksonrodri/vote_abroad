@@ -30,6 +30,10 @@
     },
     "party": {
       "label": "Your Political Party",
+      "democratic": "Democratic",
+      "republican": "Republican",
+      "independent": "Independent",
+      "none": "No Party",
       "placeholder": "Your Political Party",
       "tooltip": "Many states require voters to designate a political party to be eligible to vote in primary elections. Choosing a political party is optional."
     },
@@ -104,7 +108,8 @@
       "tooltip": "Only Puerto Rico voters need to answer this question as per territory law."
     },
     "dob": {
-      "label": "Date of Birth"
+      "label": "Date of Birth",
+      "instructions": "e.g. 01/31/1970"
     },
     "tel": {
       "label": "Your current phone number",
