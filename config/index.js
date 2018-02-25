@@ -1,8 +1,6 @@
 const en = require('../lang/en-US.json')
-// const fr = require('../lang/fr-FR.js')
 const es = require('../lang/es-ES.json')
 
-// const API_ROOT = 'https://jsonplaceholder.typicode.com/';
 const API_ROOT = 'http://localhost:3000/content-api';
 
 const I18N = {

@@ -35,20 +35,12 @@ collections:
       - {label: "Voters Can use the FWAB to register/request a ballto?", name: "canRegisterWithFwab", widget: "boolean"}
       - {label: "FWAB Submit Options", name: "fwabSubmitOptions", widget: "list"}
       - {label: "State Introduction Text", name: "body", widget: "markdown"}
-  - label: "Translation Strings"
-    name: "translationstrings"
-    files:
-      - label: "English Strings"
-        file: "lang/en-US.json"
-        name: "en-US.json"
-        fields:
-          - label: "Pages"
-            widget: "object"
-            fields:
-              - label: "Home"
-                name: "home"
-                widget: "object"
-                fields:
-                  - { label: "Page Title", name: "pageTitle", widget: "string"}
-                  - { label: "Subtitle", name: "subtitle", widget: "string" }
-
+  - name: "lang"
+    label: "Translation Strings"
+    folder: "/lang"
+    create: false
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Home", name: "home", widget: "string"}
+      - {label: "Posts", name: "posts", widget: "string"}
