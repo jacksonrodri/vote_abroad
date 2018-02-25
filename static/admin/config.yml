@@ -35,3 +35,9 @@ collections:
       - {label: "Voters Can use the FWAB to register/request a ballto?", name: "canRegisterWithFwab", widget: "boolean"}
       - {label: "FWAB Submit Options", name: "fwabSubmitOptions", widget: "list"}
       - {label: "State Introduction Text", name: "body", widget: "markdown"}
+  - label: "Translation Strings"
+    name: "translationstrings"
+    files:
+      - label: "English Strings"
+        name: "englishStrings"
+        file: "lang/en-US.json"
