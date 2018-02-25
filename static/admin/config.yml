@@ -39,7 +39,6 @@ collections:
     label: "Translation Strings"
     folder: "/lang"
     create: false
-    slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Home", name: "home", widget: "string"}
