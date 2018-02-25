@@ -130,6 +130,11 @@
       "primaryInstructions": "If your political party affiliation is listed as Independent/No Party, you may be able to request a ballot for a recognized political party's primary election. For specific information about recognized political parties in Oklahoma, please visit [http://www.elections.ok.gov](http://www.elections.ok.gov).",
       "tooltip": "Only Oklahoma voters need to answer this question as per state law."
     },
+    "id": {
+      "label": "Identification",
+      "optInstructions": "Providing one of the following may help your election official find your voting record. ",
+      "reqInstructions": "{{ state }} voters must provide ONE of the following forms of identification: {types}If you don't have any of these, please select \"I don't have the above identification\""
+    },
     "firstName": {
       "label": "First Name",
       "instructions": "Please enter your first name.",
