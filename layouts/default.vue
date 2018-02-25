@@ -186,7 +186,10 @@ export default {
   computed: {
     upcomingElections: function () { return this.$store.state.upcomingElections },
     isBgImage: function () {
-      return Boolean(this.$route.name.indexOf('index') > -1 || this.$route.name.indexOf('home') > -1)
+      return this.$route.name && this.$route.name.indexOf('index') > -1
+    },
+    test: function () {
+      return this.$route.name
     },
     isAuthenticated: function () { return this.$store.getters['userauth/isAuthenticated'] }
   }
