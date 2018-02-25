@@ -221,12 +221,16 @@
       <!-- identification -->
       <identification
         v-if="stateRules"
-        label="Identification"
+        :label="$t('request.id.label')"
         :idOptions="stateRules && stateRules.id && stateRules.id.length > 0 ? stateRules.id : null"
         :toolTipTitle="`Why am I being asked this?`"
         v-model="ssn">
         <div slot="instructions">
           <p>
+            <i18n path="request.id.instructions" tag="p">
+              <span place="limit">{{ changeLimit }}</span>
+              <a place="action" :href="changeUrl">{{ $t('change') }}</a>
+            </i18n><br>
             <span v-if="stateRules && stateRules.id && stateRules.id.length === 0">Providing <strong>one</strong> of the following may help your election official find your voting record. </span>
             <span v-else-if="stateRules && stateRules.id.length === 1">{{ stateRules.state }} voters must provide a </span>
             <span v-else>{{ stateRules.state }} voters must provide <strong>ONE</strong> of the following forms of identification: </span>
