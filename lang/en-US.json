@@ -7,15 +7,6 @@
     "loginInstructions": "Type your email address or phone number to start a secure session."
   },
   "request": {
-    "firstName": {
-      "label": "First Name",
-      "instructions": "Please enter your first name.",
-      "placeholder": "e.g. 'George Washington'",
-      "tooltip": "This name is a name that most people call you.",
-      "messages": {
-        "required": "You must enter a first name."
-      }
-    },
     "middleName": {
       "label": "Middle name(s)",
       "instructions": ""
@@ -25,6 +16,55 @@
       "messages": {
         "required": "Your last name is required.  Please enter it here. "
       }
+    },
+    "previousName": {
+      "label": "Previous name(s)",
+      "yes": "Yes",
+      "no": "No",
+      "instructions": "If you have previously voted with a different name, you election official may need to look you up using your previous name."
+    },
+    "suffix": {
+      "label": "Suffix"
+    },
+    "votAdr": {
+      "zip": "Zip",
+      "street": "Street Address",
+      "tooltip": "Use the **residence address **of the last place you lived in the US. If you have never resided in the US, use the residence address of the last place your US parent(s) lived in the US. If your US parents last lived in the US in different locations, you may choose which one to use as your voting address.",
+      "instructions": "Input the last address you lived in in the US. If you have never lived in the US, us the last US address of your US citizen parent(s)",
+      "apt": "Apt #",
+      "city": "City",
+      "messages": {
+        "required": "This field is required so your election official can send you the correct ballot."
+      },
+      "state": "State",
+      "label": "Voting Address"
+    },
+    "tel": {
+      "label": "Your current phone number",
+      "messages": {
+        "invalid": "The number you typed is not a valid phone number.  Please check it and try again."
+      }
+    },
+    "firstName": {
+      "label": "First Name",
+      "instructions": "Please enter your first name.",
+      "placeholder": "e.g. 'George Washington'",
+      "tooltip": "This name is a name that most people call you.",
+      "messages": {
+        "required": "You must enter a first name."
+      }
+    },
+    "email": {
+      "label": "Your current email address"
+    },
+    "abrAdr": {
+      "label": "Your Current Address Abroad",
+      "instructions": "Please add your international address",
+      "placeholder": "Country",
+      "tooltip": "You must provide your current residence address outside the US for informational purposes. Please provide your address outside the US even if you request your blank ballot be sent to you by email/online or fax.",
+      "unstructured-label": "I need to use a different format for my address.",
+      "structured-label": "Use the standard international format for my address.",
+      "changeFormat": "Change Format"
     }
   }
 }
