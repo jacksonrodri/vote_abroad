@@ -1,6 +1,9 @@
 <template>
   <div>
-      <b-field label="Are you a civilian or military voter?">
+    civilianOrMilitary: Are you a civilian or military voter?
+    whatMilType: What type of military voter are you?
+    whatCivType: Are you abroad temporarily or indefinitely?
+      <b-field :label="$t('request.voterClass.civilianOrMilitary')">
         <b-field grouped group-multiline>
           <p class="control">
             <button @click="setVal('civilianType')" :class="[baseClass, {'is-success': isCivilianType}]">
@@ -8,7 +11,7 @@
                 <i class="fas fa-check"></i>
               </span>
               <span>
-                Civilian
+                {{$t('request.voterClass.civilianType')}}
               </span>
             </button>
           </p>
@@ -18,7 +21,7 @@
                 <i class="fas fa-check"></i>
               </span>
               <span>
-                Military
+                {{$t('request.voterClass.militaryType')}}
               </span>
             </button>
           </p>
@@ -30,7 +33,7 @@
       <div class="field">
         <span class="is-flex">
           <label class="label">
-            {{ isMilitaryType ? 'What type of military voter are you?' : 'Are you abroad temporarily or indefinitely?' }}
+            {{ isMilitaryType ? $t('request.voterClass.whatMilType') : $t('request.voterClass.whatCivType') }}
           </label>
           <span @click="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;">
             <i class="fas fa-info-circle"></i>
@@ -44,6 +47,7 @@
                 <i class="fas fa-check"></i>
               </span>
               <span>
+                {{$t('request.voterClass.military')}}
                 Active Duty Military
               </span>
             </button>
@@ -54,6 +58,7 @@
                 <i class="fas fa-check"></i>
               </span>
               <span>
+                {{$t('request.voterClass.milSpouse')}}
                 Eligible Military Spouse or Dependent
               </span>
             </button>
@@ -64,6 +69,7 @@
                 <i class="fas fa-check"></i>
               </span>
               <span>
+                {{$t('request.voterClass.natGuard')}}
                 National Guard
               </span>
             </button>
@@ -74,6 +80,7 @@
                 <i class="fas fa-check"></i>
               </span>
               <span>
+                {{$t('request.voterClass.uncertainReturn')}}
                 My Return is Uncertain
               </span>
             </button>
@@ -84,6 +91,7 @@
                 <i class="fas fa-check"></i>
               </span>
               <span>
+                {{$t('request.voterClass.intendToReturn')}}
                 I Intend to Return
               </span>
             </button>
@@ -94,6 +102,7 @@
                 <i class="fas fa-check"></i>
               </span>
               <span>
+                {{$t('request.voterClass.neverResided')}}
                 Never Resided
               </span>
             </button>

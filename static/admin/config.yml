@@ -63,7 +63,7 @@ collections:
               - {label: "Field Label", name: "label", widget: "string"}
               - {label: "Instructions", name: "instructions", widget: "string"}
               - {label: "Placeholder", name: "placeholder", widget: "string"}
-              - {label: "Tooltip", name: "tooltip", widget: "string"}
+              - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - label: "Messages"
                 name: "messages"
                 widget: "object"
@@ -76,7 +76,7 @@ collections:
               - {label: "Field Label", name: "label", widget: "string"}
               - {label: "Instructions", name: "instructions", widget: "string"}
               - {label: "Placeholder", name: "placeholder", widget: "string"}
-              - {label: "Tooltip", name: "tooltip", widget: "string"}
+              - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - label: "Messages"
                 name: "messages"
                 widget: "object"
@@ -89,7 +89,7 @@ collections:
               - {label: "Field Label", name: "label", widget: "string"}
               - {label: "Instructions", name: "instructions", widget: "string"}
               - {label: "Placeholder", name: "placeholder", widget: "string"}
-              - {label: "Tooltip", name: "tooltip", widget: "string"}
+              - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - label: "Messages"
                 name: "messages"
                 widget: "object"
@@ -102,7 +102,7 @@ collections:
               - {label: "Field Label", name: "label", widget: "string"}
               - {label: "Instructions", name: "instructions", widget: "string"}
               - {label: "Placeholder", name: "placeholder", widget: "string"}
-              - {label: "Tooltip", name: "tooltip", widget: "string"}
+              - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - label: "Messages"
                 name: "messages"
                 widget: "object"
@@ -117,7 +117,7 @@ collections:
               - {label: "No Answer", name: "no", widget: "string"}
               - {label: "Instructions", name: "instructions", widget: "string"}
               - {label: "Placeholder", name: "placeholder", widget: "string"}
-              - {label: "Tooltip", name: "tooltip", widget: "string"}
+              - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - label: "Messages"
                 name: "messages"
                 widget: "object"
@@ -130,7 +130,7 @@ collections:
               - {label: "Field Label", name: "label", widget: "string"}
               - {label: "Instructions", name: "instructions", widget: "string"}
               - {label: "Placeholder", name: "placeholder", widget: "string"}
-              - {label: "Tooltip", name: "tooltip", widget: "string"}
+              - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - label: "Messages"
                 name: "messages"
                 widget: "object"
@@ -144,7 +144,7 @@ collections:
               - {label: "Field Label", name: "label", widget: "string"}
               - {label: "Instructions", name: "instructions", widget: "string"}
               - {label: "Placeholder", name: "placeholder", widget: "string"}
-              - {label: "Tooltip", name: "tooltip", widget: "string"}
+              - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - label: "Messages"
                 name: "messages"
                 widget: "object"
@@ -158,7 +158,7 @@ collections:
               - {label: "Field Label", name: "label", widget: "string"}
               - {label: "Instructions", name: "instructions", widget: "string"}
               - {label: "Country Placeholder", name: "placeholder", widget: "string"}
-              - {label: "Tooltip", name: "tooltip", widget: "string"}
+              - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - {label: "Use unstructured input", name: "unstructured-label", widget: "string"}
               - {label: "Use structured Input label", name: "structured-label", widget: "string"}
               - {label: "Change format button", name: "changeFormat", widget: "string"}
@@ -178,6 +178,29 @@ collections:
               - {label: "City placeholder", name: "city", widget: "string"}
               - {label: "State placeholder", name: "state", widget: "string"}
               - {label: "Zip placeholder", name: "zip", widget: "string"}
+              - {label: "Tooltip", name: "tooltip", widget: "markdown"}
+              - label: "Messages"
+                name: "messages"
+                widget: "object"
+                fields:
+                  - {label: "Required", name: "required", widget: "string"}
+          - label: "Voter Classification"
+            name: "voterClass"
+            widget: "object"
+            fields:
+              - {label: "Is Civilian or Military", name: "civilianOrMilitary", widget: "string"}
+              - {label: "Military Type?", name: "whatMilType", widget: "string"}
+              - {label: "Civilian Type?", name: "whatCivType", widget: "string"}
+              - {label: "Civilian", name: "civilianType", widget: "string"}
+              - {label: "Military", name: "militaryType", widget: "string"}
+              - {label: "Active Duty", name: "military", widget: "string"}
+              - {label: "Military Dependent", name: "milSpouse", widget: "string"}
+              - {label: "Nat Guard", name: "natGuard", widget: "string"}
+              - {label: "Uncertain Return", name: "uncertainReturn", widget: "string"}
+              - {label: "Intend to Return", name: "intendToReturn", widget: "string"}
+              - {label: "Never Resided", name: "neverResided", widget: "string"}
+              - {label: "Instructions", name: "instructions", widget: "string"}
+              - {label: "Placeholder", name: "placeholder", widget: "string"}
               - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - label: "Messages"
                 name: "messages"

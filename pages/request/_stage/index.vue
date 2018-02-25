@@ -60,7 +60,7 @@
           <p>{{$t('request.abrAdr.instructions')}}</p>
         </div>
         <div slot="tooltip">
-          {{$t('request.abrAdr.tooltip')}}
+          <vue-markdown>{{$t('request.abrAdr.tooltip')}}</vue-markdown>
         </div>
       </address-input>
       <scroll-up :key="$route.params.stage"></scroll-up>
@@ -87,28 +87,15 @@
         </div>
       </us-address>
 
-    <!-- <us-address-input
-      :label="$t('request.votingAddress')"
-      usOnly
-      toolTipTitle="Your last US Address"
-      v-model="votAdr">
-      <div slot="instructions">
-        <p>{{ $t('request.votingAddressInstructions') }}</p>
-      </div>
-      <div slot="tooltip">
-        <p>Use the residence address of the last place you lived in the US. If you have never resided in the US, use the residence address of the last place your US parent(s) lived in the US. If your US parents last lived in the US in different locations, you may choose which one to use as your voting address.</p>
-      </div>
-
-    </us-address-input> -->
-
     <br/><br/>
 
     <voter-class v-model="voterClass"
       :allowsNeverResided="stateRules ? stateRules.allowsNeverResided : false"
       toolTipTitle="Intend to return vs. Return is uncertain">
       <div slot="tooltip">
-        <p>Voters may choose ‘intend to return’ if they intend to return to the state in which they are registering to vote. An ‘intention’ is sufficient, you don’t need to have a fixed date of return or firm plans. Registering as “intend to return” should make you eligible to vote in State and Local races. However, it may also make you liable for state income taxes</p>
-        <p>Voters may choose ‘return is uncertain’ if they do not have a current intention to return to the state in which they are registering to vote. Voters are entitled to receive a ballot for Federal offices and may, depending on their state, also receive a ballot for State and Local offices.</p>
+        <vue-markdown>{{$t('request.voterClass.tooltip')}}</vue-markdown>
+        <!-- <p>Voters may choose ‘intend to return’ if they intend to return to the state in which they are registering to vote. An ‘intention’ is sufficient, you don’t need to have a fixed date of return or firm plans. Registering as “intend to return” should make you eligible to vote in State and Local races. However, it may also make you liable for state income taxes</p>
+        <p>Voters may choose ‘return is uncertain’ if they do not have a current intention to return to the state in which they are registering to vote. Voters are entitled to receive a ballot for Federal offices and may, depending on their state, also receive a ballot for State and Local offices.</p> -->
       </div>
     </voter-class>
 
@@ -130,7 +117,8 @@
       :ballotReceiptOptions="stateRules ? stateRules.ballotReceiptOptions : ['Mail']"
       toolTipTitle="What is the best choice?">
       <div slot="tooltip">
-        <p>You may request to receive your blank ballot by email/online, fax or mail. We encourage voters to request their blank ballot be sent by email/online or fax to avoid the delay associated with mail  and the possibility the ballot will be lost in transit.</p>
+        <vue-markdown>{{$t('request.recBallot.tooltip')}}</vue-markdown>
+        <!-- <p>You may request to receive your blank ballot by email/online, fax or mail. We encourage voters to request their blank ballot be sent by email/online or fax to avoid the delay associated with mail  and the possibility the ballot will be lost in transit.</p> -->
       </div>
     </receive-ballot>
 
@@ -161,7 +149,8 @@
         toolTipTitle="Optional"
         v-if="recBallot === 'mail'">
         <div slot="tooltip">
-          <p>This is optional. Please provide a forwarding address only if you request your blank ballot be sent to you by mail and you do not want it mailed to your current residence address outside the US. If you are uncertain what your mailing address will be when ballots are due to be sent out, you may have your blank ballot sent to a reliable third-party, such as a University student office or postal box.</p>
+          <vue-markdown>{{$t('request.fwdAdr.tooltip')}}</vue-markdown>
+          <!-- <p>This is optional. Please provide a forwarding address only if you request your blank ballot be sent to you by mail and you do not want it mailed to your current residence address outside the US. If you are uncertain what your mailing address will be when ballots are due to be sent out, you may have your blank ballot sent to a reliable third-party, such as a University student office or postal box.</p> -->
         </div>
       </forwarding-address>
 
@@ -202,7 +191,8 @@
         toolTipTitle="Why is this required?"
         v-model="sex">
         <div slot="tooltip">
-          <p>This is only required for Idaho voters.</p>
+          <vue-markdown>{{$t('request.sex.tooltip')}}</vue-markdown>
+          <!-- <p>This is only required for Idaho voters.</p> -->
         </div>
       </gender>
 
@@ -213,7 +203,8 @@
         :message="$v.party.$error ? Object.keys($v.party.$params).map(x => x) : '' "
         :type="($v.party.$error ? 'is-danger': '')">
         <div slot="tooltip">
-          <p>Many states require voters to designate a political party to be eligible to vote in primary elections. Choosing a political party is optional.</p>
+          <vue-markdown>{{$t('request.party.tooltip')}}</vue-markdown>
+          <!-- <p>Many states require voters to designate a political party to be eligible to vote in primary elections. Choosing a political party is optional.</p> -->
         </div>
       </party-input>
 
@@ -252,8 +243,14 @@
           </p>
         </div>
         <div slot="tooltip">
-          <p v-if="stateRules && stateRules.id && stateRules.id.length === 0">{{ stateRules.state }} does not require identification to register to vote.  You may provide the last 4 digits of your Social Security Number <strong>OR</strong> state ID to help your voting official find your records.</p>
-          <p v-else>Identification is required by some states including {{ stateRules.state }}.  </p>
+          <vue-markdown v-if="stateRules && stateRules.id && stateRules.id.length === 0">
+            {{$t('request.id.notRequiredTooltip', {state: stateRules.state})}}
+          </vue-markdown>
+          <vue-markdown v-else>
+            {{$t('request.id.requiredTooltip', {state: stateRules.state})}}
+          </vue-markdown>
+          <!-- <p v-if="stateRules && stateRules.id && stateRules.id.length === 0">{{ stateRules.state }} does not require identification to register to vote.  You may provide the last 4 digits of your Social Security Number <strong>OR</strong> state ID to help your voting official find your records.</p>
+          <p v-else>Identification is required by some states including {{ stateRules.state }}.  </p> -->
         </div>
       </identification>
 
