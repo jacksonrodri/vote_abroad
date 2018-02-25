@@ -95,3 +95,92 @@ collections:
                 widget: "object"
                 fields:
                   - {label: "Required", name: "required", widget: "string"}
+          - label: "Suffix"
+            name: "suffix"
+            widget: "object"
+            fields:
+              - {label: "Field Label", name: "label", widget: "string"}
+              - {label: "Instructions", name: "instructions", widget: "string"}
+              - {label: "Placeholder", name: "placeholder", widget: "string"}
+              - {label: "Tooltip", name: "tooltip", widget: "string"}
+              - label: "Messages"
+                name: "messages"
+                widget: "object"
+                fields:
+                  - {label: "Required", name: "required", widget: "string"}
+          - label: "Previous Name"
+            name: "previousName"
+            widget: "object"
+            fields:
+              - {label: "Field Label", name: "label", widget: "string"}
+              - {label: "Yes Answer", name: "yes", widget: "string"}
+              - {label: "No Answer", name: "no", widget: "string"}
+              - {label: "Instructions", name: "instructions", widget: "string"}
+              - {label: "Placeholder", name: "placeholder", widget: "string"}
+              - {label: "Tooltip", name: "tooltip", widget: "string"}
+              - label: "Messages"
+                name: "messages"
+                widget: "object"
+                fields:
+                  - {label: "Required", name: "required", widget: "string"}
+          - label: "Telephone"
+            name: "tel"
+            widget: "object"
+            fields:
+              - {label: "Field Label", name: "label", widget: "string"}
+              - {label: "Instructions", name: "instructions", widget: "string"}
+              - {label: "Placeholder", name: "placeholder", widget: "string"}
+              - {label: "Tooltip", name: "tooltip", widget: "string"}
+              - label: "Messages"
+                name: "messages"
+                widget: "object"
+                fields:
+                  - {label: "Required", name: "required", widget: "string"}
+                  - {label: "Invalid Number", name: "invalid", widget: "string"}
+          - label: "Email"
+            name: "email"
+            widget: "object"
+            fields:
+              - {label: "Field Label", name: "label", widget: "string"}
+              - {label: "Instructions", name: "instructions", widget: "string"}
+              - {label: "Placeholder", name: "placeholder", widget: "string"}
+              - {label: "Tooltip", name: "tooltip", widget: "string"}
+              - label: "Messages"
+                name: "messages"
+                widget: "object"
+                fields:
+                  - {label: "Required", name: "required", widget: "string"}
+                  - {label: "Invalid Email", name: "email", widget: "string"}
+          - label: "Abroad Address"
+            name: "abrAdr"
+            widget: "object"
+            fields:
+              - {label: "Field Label", name: "label", widget: "string"}
+              - {label: "Instructions", name: "instructions", widget: "string"}
+              - {label: "Country Placeholder", name: "placeholder", widget: "string"}
+              - {label: "Tooltip", name: "tooltip", widget: "string"}
+              - {label: "Use unstructured input", name: "unstructured-label", widget: "string"}
+              - {label: "Use structured Input label", name: "structured-label", widget: "string"}
+              - {label: "Change format button", name: "changeFormat", widget: "string"}
+              - label: "Messages"
+                name: "messages"
+                widget: "object"
+                fields:
+                  - {label: "Required", name: "required", widget: "string"}
+          - label: "Voting Address"
+            name: "votAdr"
+            widget: "object"
+            fields:
+              - {label: "Field Label", name: "label", widget: "string"}
+              - {label: "Instructions", name: "instructions", widget: "string"}
+              - {label: "Street address placeholder", name: "street", widget: "string"}
+              - {label: "Apt # placeholder", name: "apt", widget: "string"}
+              - {label: "City placeholder", name: "city", widget: "string"}
+              - {label: "State placeholder", name: "state", widget: "string"}
+              - {label: "Zip placeholder", name: "zip", widget: "string"}
+              - {label: "Tooltip", name: "tooltip", widget: "markdown"}
+              - label: "Messages"
+                name: "messages"
+                widget: "object"
+                fields:
+                  - {label: "Required", name: "required", widget: "string"}

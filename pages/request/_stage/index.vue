@@ -6,17 +6,17 @@
 <!-- your information -->
   <section v-if="stage.slug === 'your-information'">
       <!-- firstName -->
-      <b-field :type="($v.firstName.$error ? 'is-danger': '')" :message="$v.firstName.$error ? Object.keys($v.firstName.$params).map(x => x) : '' " :label="$t('request.firstName')">
+      <b-field :type="($v.firstName.$error ? 'is-danger': '')" :message="$v.firstName.$error ? Object.keys($v.firstName.$params).map(x => x) : '' " :label="$t('request.firstName.label')">
         <b-input v-model="firstName" @input="$v.firstName.$touch()"></b-input>
       </b-field>
 
       <!-- middleName -->
-      <b-field :type="($v.middleName.$error ? 'is-danger': '')" :message="$v.middleName.$error ? Object.keys($v.middleName.$params).map(x => x) : '' " :label="$t('request.middleName')">
+      <b-field :type="($v.middleName.$error ? 'is-danger': '')" :message="$v.middleName.$error ? Object.keys($v.middleName.$params).map(x => x) : '' " :label="$t('request.middleName.label')">
         <b-input v-model="middleName" @input="$v.middleName.$touch()"></b-input>
       </b-field>
 
       <!-- lastName -->
-      <b-field :type="($v.lastName.$error ? 'is-danger': '')" :message="$v.lastName.$error ? Object.keys($v.lastName.$params).map(x => x) : '' " :label="$t('request.lastName')">
+      <b-field :type="($v.lastName.$error ? 'is-danger': '')" :message="$v.lastName.$error ? Object.keys($v.lastName.$params).map(x => x) : '' " :label="$t('request.lastName.label')">
         <b-input v-model="lastName" @input="$v.lastName.$touch()"></b-input>
       </b-field>
 
