@@ -10,15 +10,20 @@ const I18N = {
     {
       code: 'en',
       iso: 'en-US',
-      name: 'English'
+      name: 'English',
+      langFile: 'en-US.js'
     },
     {
       code: 'es',
       iso: 'es-ES',
-      name: 'Español'
+      name: 'Español',
+      langFile: 'es-ES.js'
     }
   ],
+  loadLanguagesAsync: true,
+  langDir: 'lang/',
   defaultLocale: 'en',
+  seo: true,
   routes: {
     // page: {
     //   en: '/:page?'
@@ -57,8 +62,7 @@ const I18N = {
     // }
   },
   vueI18n: {
-    fallbackLocale: 'en',
-    messages: { en, es }
+    fallbackLocale: 'en'
   }
 }
 

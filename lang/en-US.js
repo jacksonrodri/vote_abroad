@@ -7,10 +7,9 @@ module.exports = {
   },
   elections: {
     electionTypes: {
-      primary: "Primary",
+      primary: 'Primary',
       'Special Primary': 'Special Primary',
       'State Primary': 'State Primary',
-      'CD 8 Special Primary': 'CD 8 Special Primary',
       'General Election': 'General Election',
       'CD 8 Special Primary': 'CD 8 Special Primary',
       'CD 8 Special General': 'CD 8 Special General',
@@ -24,7 +23,7 @@ module.exports = {
   },
   request: {
     yourInformation: 'Your Information',
-    firstName: "First Name",
+    firstName: 'First Name',
     middleName: 'Middle Name',
     lastName: 'Last Name',
     suffix: 'Suffix',
