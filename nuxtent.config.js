@@ -39,8 +39,9 @@ module.exports = {
     ]
   ],
   api: function(isStatic) {
+    let url = process.env.baseUrl
     return {
-      browserBaseURL: isStatic ? process.env.URL : ''
+      browserBaseURL: isStatic ? url : ''
     }
   }
 }

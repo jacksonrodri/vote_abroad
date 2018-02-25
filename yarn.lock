@@ -4887,9 +4887,9 @@ number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
 
-nuxt-i18n@^1.0.2:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/nuxt-i18n/-/nuxt-i18n-1.1.0.tgz#a74d0bdfcaae0b19247fb8cf68d2bd499e0f9d5b"
+nuxt-i18n@^2.3.3:
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/nuxt-i18n/-/nuxt-i18n-2.3.3.tgz#9d7faeb090ffe2e207721120e241dedda9b41aef"
   dependencies:
     vue-i18n "^7.3.2"
     vue-i18n-extensions "^0.1.0"
