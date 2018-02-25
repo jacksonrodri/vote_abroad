@@ -138,6 +138,7 @@
     },
     "fwdAdr": {
       "label": "What address would you like your ballot sent to?",
+      "instructions": "Input your forwarding address",
       "tooltip": "This is optional. Please provide a forwarding address only if you request your blank ballot be sent to you by mail and you do not want it mailed to your current residence address outside the US. If you are uncertain what your mailing address will be when ballots are due to be sent out, you may have your blank ballot sent to a reliable third-party, such as a University student office or postal box.",
       "yes": "Yes",
       "no": "No"
