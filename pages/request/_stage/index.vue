@@ -113,11 +113,11 @@
     <!-- recBallot -->
     <receive-ballot v-model="recBallot"
       v-if="votAdr && votAdr.regionCode"
-      :label="$t('request.recBallot.label')"
+      :label="$t('request.receiveBallot.label')"
       :ballotReceiptOptions="stateRules ? stateRules.ballotReceiptOptions : ['Mail']"
       toolTipTitle="What is the best choice?">
       <div slot="tooltip">
-        <vue-markdown>{{$t('request.recBallot.tooltip')}}</vue-markdown>
+        <vue-markdown>{{$t('request.receiveBallot.tooltip')}}</vue-markdown>
         <!-- <p>You may request to receive your blank ballot by email/online, fax or mail. We encourage voters to request their blank ballot be sent by email/online or fax to avoid the delay associated with mail  and the possibility the ballot will be lost in transit.</p> -->
       </div>
     </receive-ballot>
@@ -145,7 +145,7 @@
 
       <!-- fwdAdr -->
       <forwarding-address v-model="fwdAdr"
-        :label="$t('request.forwardingAddressInstructions')"
+        :label="$t('request.fwdAdr.label')"
         toolTipTitle="Optional"
         v-if="recBallot === 'mail'">
         <div slot="tooltip">
