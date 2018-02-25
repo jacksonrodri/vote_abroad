@@ -178,6 +178,9 @@ collections:
               - {label: "City placeholder", name: "city", widget: "string"}
               - {label: "State placeholder", name: "state", widget: "string"}
               - {label: "Zip placeholder", name: "zip", widget: "string"}
+              - {label: "County", name: "county", widget: "string"}
+              - {label: "Jurisdiction", name: "jurisdiction", widget: "string"}
+              - {label: "Jurisdiction placeholder (include type with '{type}'", name: "jurisdictionPlaceholder", widget: "string"}
               - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - label: "Messages"
                 name: "messages"
@@ -200,6 +203,231 @@ collections:
               - {label: "Intend to Return", name: "intendToReturn", widget: "string"}
               - {label: "Never Resided", name: "neverResided", widget: "string"}
               - {label: "Instructions", name: "instructions", widget: "string"}
+              - {label: "Placeholder", name: "placeholder", widget: "string"}
+              - {label: "Tooltip", name: "tooltip", widget: "markdown"}
+              - label: "Messages"
+                name: "messages"
+                widget: "object"
+                fields:
+                  - {label: "Required", name: "required", widget: "string"}
+          - label: "Registration Status"
+            name: "isRegistered"
+            widget: "object"
+            fields:
+              - {label: "label", name: "label", widget: "string"}
+              - {label: "Yes Answer", name: "yes", widget: "string"}
+              - {label: "No Answer", name: "no", widget: "string"}
+              - {label: "Unsure Answer", name: "unsure", widget: "string"}
+              - {label: "Instructions", name: "instructions", widget: "string"}
+              - {label: "Placeholder", name: "placeholder", widget: "string"}
+              - {label: "Tooltip", name: "tooltip", widget: "markdown"}
+              - label: "Messages"
+                name: "messages"
+                widget: "object"
+                fields:
+                  - {label: "Required", name: "required", widget: "string"}
+          - label: "Ballot Receipt Preference"
+            name: "receiveBallot"
+            widget: "object"
+            fields:
+              - {label: "label", name: "label", widget: "string"}
+              - {label: "Email", name: "email", widget: "string"}
+              - {label: "Mail", name: "mail", widget: "string"}
+              - {label: "Fax", name: "fax", widget: "string"}
+              - {label: "Instructions", name: "instructions", widget: "string"}
+              - {label: "Placeholder", name: "placeholder", widget: "string"}
+              - {label: "Tooltip", name: "tooltip", widget: "markdown"}
+              - label: "Messages"
+                name: "messages"
+                widget: "object"
+                fields:
+                  - {label: "Required", name: "required", widget: "string"}
+          - label: "Fax Number"
+            name: "fax"
+            widget: "object"
+            fields:
+              - {label: "Field Label", name: "label", widget: "string"}
+              - {label: "Instructions", name: "instructions", widget: "string"}
+              - {label: "Placeholder", name: "placeholder", widget: "string"}
+              - {label: "Tooltip", name: "tooltip", widget: "markdown"}
+              - label: "Messages"
+                name: "messages"
+                widget: "object"
+                fields:
+                  - {label: "Required", name: "required", widget: "string"}
+                  - {label: "Invalid Number", name: "invalid", widget: "string"}
+          - label: "Alternate Email"
+            name: "altEmail"
+            widget: "object"
+            fields:
+              - {label: "Field Label", name: "label", widget: "string"}
+              - {label: "Instructions", name: "instructions", widget: "string"}
+              - {label: "Placeholder", name: "placeholder", widget: "string"}
+              - {label: "Tooltip", name: "tooltip", widget: "markdown"}
+              - label: "Messages"
+                name: "messages"
+                widget: "object"
+                fields:
+                  - {label: "Required", name: "required", widget: "string"}
+                  - {label: "Invalid Email", name: "email", widget: "string"}
+          - label: "Forwarding Address"
+            name: "fwdAdr"
+            widget: "object"
+            fields:
+              - {label: "Field Label", name: "label", widget: "string"}
+              - {label: "Instructions", name: "instructions", widget: "string"}
+              - {label: "Tooltip", name: "tooltip", widget: "markdown"}
+              - {label: "Yes Answer", name: "yes", widget: "string"}
+              - {label: "No Answer", name: "no", widget: "string"}
+              - label: "Messages"
+                name: "messages"
+                widget: "object"
+                fields:
+                  - {label: "Required", name: "required", widget: "string"}
+          - label: "Date of Birth"
+            name: "dob"
+            widget: "object"
+            fields:
+              - {label: "Field Label", name: "label", widget: "string"}
+              - {label: "Instructions", name: "instructions", widget: "string"}
+              - {label: "Placeholder", name: "placeholder", widget: "string"}
+              - {label: "Tooltip", name: "tooltip", widget: "markdown"}
+              - label: "Messages"
+                name: "messages"
+                widget: "object"
+                fields:
+                  - {label: "Required", name: "required", widget: "string"}
+                  - {label: "Invalid Number", name: "invalid", widget: "string"}
+          - label: "Sex"
+            name: "sex"
+            widget: "object"
+            fields:
+              - {label: "Field Label", name: "label", widget: "string"}
+              - {label: "Instructions", name: "instructions", widget: "string"}
+              - {label: "Placeholder", name: "placeholder", widget: "string"}
+              - {label: "Tooltip", name: "tooltip", widget: "markdown"}
+              - label: "Messages"
+                name: "messages"
+                widget: "object"
+                fields:
+                  - {label: "Required", name: "required", widget: "string"}
+          - label: "Party"
+            name: "party"
+            widget: "object"
+            fields:
+              - {label: "Field Label", name: "label", widget: "string"}
+              - {label: "Instructions", name: "instructions", widget: "string"}
+              - {label: "Democratic", name: "placeholder", widget: "string"}
+              - {label: "Republican", name: "placeholder", widget: "string"}
+              - {label: "Independent", name: "placeholder", widget: "string"}
+              - {label: "No Party", name: "placeholder", widget: "string"}
+              - {label: "Other", name: "placeholder", widget: "string"}
+              - {label: "Other Placeholder", name: "placeholder", widget: "string"}
+              - {label: "Tooltip", name: "tooltip", widget: "markdown"}
+              - label: "Messages"
+                name: "messages"
+                widget: "object"
+                fields:
+                  - {label: "Required", name: "required", widget: "string"}
+          - label: "Special State Rules"
+            name: "stateSpecial"
+            widget: "object"
+            fields:
+              - {label: "Field Label(use '{state} for the state's name')", name: "label", widget: "string"}
+              - {label: "Instructions", name: "instructions", widget: "string"}
+              - {label: "Other Placeholder", name: "placeholder", widget: "string"}
+              - {label: "Tooltip", name: "tooltip", widget: "markdown"}
+              - label: "Messages"
+                name: "messages"
+                widget: "object"
+                fields:
+                  - {label: "Required", name: "required", widget: "string"}
+          - label: "Alaska Rules"
+            name: "akRules"
+            widget: "object"
+            fields:
+              - {label: "Field Label", name: "label", widget: "string"}
+              - {label: "Proof of Residency Instructions", name: "resInstructions", widget: "string"}
+              - {label: "FWAB witness Instructions", name: "fwabWitness", widget: "string"}
+              - {label: "Other Placeholder", name: "placeholder", widget: "string"}
+              - {label: "Tooltip", name: "tooltip", widget: "markdown"}
+              - label: "Messages"
+                name: "messages"
+                widget: "object"
+                fields:
+                  - {label: "Required", name: "required", widget: "string"}
+          - label: "Arizona Rules"
+            name: "azRules"
+            widget: "object"
+            fields:
+              - {label: "Field Label", name: "label", widget: "string"}
+              - {label: "Proof of Citizenship Instructions", name: "citInstructions", widget: "string"}
+              - {label: "Placeholder", name: "placeholder", widget: "string"}
+              - {label: "Tooltip", name: "tooltip", widget: "markdown"}
+              - label: "Messages"
+                name: "messages"
+                widget: "object"
+                fields:
+                  - {label: "Required", name: "required", widget: "string"}
+          - label: "Oklahoma Rules"
+            name: "okRules"
+            widget: "object"
+            fields:
+              - {label: "Field Label", name: "label", widget: "string"}
+              - {label: "Independent Primary Instructions", name: "primaryInstructions", widget: "string"}
+              - {label: "Placeholder", name: "placeholder", widget: "string"}
+              - {label: "Tooltip", name: "tooltip", widget: "markdown"}
+              - label: "Messages"
+                name: "messages"
+                widget: "object"
+                fields:
+                  - {label: "Required", name: "required", widget: "string"}
+          - label: "Puerto Rico Rules"
+            name: "prRules"
+            widget: "object"
+            fields:
+              - {label: "Field Label", name: "label", widget: "string"}
+              - {label: "Parents' Names Instructions", name: "parentsInstructions", widget: "string"}
+              - {label: "Placeholder", name: "placeholder", widget: "string"}
+              - {label: "Tooltip", name: "tooltip", widget: "markdown"}
+              - label: "Messages"
+                name: "messages"
+                widget: "object"
+                fields:
+                  - {label: "Required", name: "required", widget: "string"}
+          - label: "South Carolina Rules"
+            name: "scRules"
+            widget: "object"
+            fields:
+              - {label: "Field Label", name: "label", widget: "string"}
+              - {label: "Race Instructions", name: "raceInstructions", widget: "string"}
+              - {label: "Previous Registration Instructions", name: "prevRegInstructions", widget: "string"}
+              - {label: "Placeholder", name: "placeholder", widget: "string"}
+              - {label: "Tooltip", name: "tooltip", widget: "markdown"}
+              - label: "Messages"
+                name: "messages"
+                widget: "object"
+                fields:
+                  - {label: "Required", name: "required", widget: "string"}
+          - label: "Virginia Rules"
+            name: "vaRules"
+            widget: "object"
+            fields:
+              - {label: "Field Label", name: "label", widget: "string"}
+              - {label: "Employer Instructions", name: "employerInstructions", widget: "string"}
+              - {label: "Placeholder", name: "placeholder", widget: "string"}
+              - {label: "Tooltip", name: "tooltip", widget: "markdown"}
+              - label: "Messages"
+                name: "messages"
+                widget: "object"
+                fields:
+                  - {label: "Required", name: "required", widget: "string"}
+          - label: "Vermont Rules"
+            name: "vaRules"
+            widget: "object"
+            fields:
+              - {label: "Field Label", name: "label", widget: "string"}
+              - {label: "Voter's Oath Instructions", name: "oathInstructions", widget: "string"}
               - {label: "Placeholder", name: "placeholder", widget: "string"}
               - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - label: "Messages"

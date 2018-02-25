@@ -167,11 +167,11 @@
   <section v-if="stage.slug === 'id-and-contact-information'">
 <!-- identity and Contact information -->
       <!-- dob -->
-      <b-field label="Date of Birth" :message="$v.dob.$error ? Object.keys($v.dob.$params).map(x => x) : '' ">
+      <b-field :label="$t('request.dob.label')" :message="$v.dob.$error ? Object.keys($v.dob.$params).map(x => x) : '' ">
         <b-datepicker
           :value="localDob || lcldob"
           @input="value =>{ this.updateDob(value) }"
-          placeholder="Type or select your birth date"
+          :placeholder="$t('request.dob.placeholder')"
           :date-formatter="(date) => date.toLocaleDateString()"
           :min-date="minDate"
           :max-date="maxDate"
@@ -187,7 +187,7 @@
           :date-parser="(date) => new Date(parseInt(date.substr(0,4)), parseInt(date.substr(5,2)) - 1, parseInt(date.substr(8,2)))"-->
 
       <gender
-        label="Gender"
+        :label="$t('request.sex.label')"
         toolTipTitle="Why is this required?"
         v-model="sex">
         <div slot="tooltip">
@@ -197,7 +197,7 @@
       </gender>
 
       <party-input
-        label="Your political party"
+        :label="$t('request.party.label')"
         v-model="party"
         toolTipTitle="What is this?"
         :message="$v.party.$error ? Object.keys($v.party.$params).map(x => x) : '' "

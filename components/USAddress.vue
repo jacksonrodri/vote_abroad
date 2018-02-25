@@ -16,7 +16,7 @@
                   v-model="streetAddress"
                   :data="data"
                   ref="premise"
-                  placeholder="Street Address"
+                  :placeholder="$t('request.votAdr.street')"
                   field="structured_formatting.main_text"
                   :loading="isFetching"
                   @input="getAsyncData"
@@ -35,7 +35,7 @@
           <div class="field-body">
             <div class="field">
               <div class="control">
-                <input class="input" @input="updateAddress()" v-model="extendedAddress" type="text" placeholder="Apt#">
+                <input class="input" @input="updateAddress()" v-model="extendedAddress" type="text" :placeholder="$t('request.votAdr.apt')">
               </div>
             </div>
           </div>
@@ -50,7 +50,7 @@
                   :data="data"
                   expanded
                   ref="city"
-                  placeholder="City"
+                  :placeholder="$t('request.votAdr.city')"
                   field="structured_formatting.main_text"
                   :loading="isFetching"
                   @change="getCityAsync"
@@ -61,7 +61,10 @@
               </div>
             </div>
             <b-field>
-              <b-select v-model="regionCode" @input="updateAddress()" expanded placeholder="State">
+              <b-select v-model="regionCode"
+                @input="updateAddress()"
+                expanded
+                :placeholder="$t('request.votAdr.street')">
                 <option
                   v-for="state in states"
                   :value="state.iso"
@@ -73,14 +76,14 @@
             <!-- Zip -->
             <div class="field">
               <p class="control is-expanded">
-                <input class="input" v-model="postalCode" type="text" @input="updateAddress()" placeholder="Zip">
+                <input class="input" v-model="postalCode" type="text" @input="updateAddress()" :placeholder="$t('request.votAdr.zip')">
               </p>
             </div>
           </div>
         </div>
         <div class="field is-fullwidth">
           <!-- votAdr.county -->
-          <b-field label="County">
+          <b-field :label="$t('request.votAdr.county')">
             <b-input v-model="county"></b-input>
           </b-field>
         </div>
@@ -90,13 +93,13 @@
           <div class="field">
             <span class="is-flex">
               <label class="label">
-                {{ `Jurisdiction (${regionCode && jurisdictionTypes[regionCode] ? jurisdictionTypes[regionCode].join(', ') : 'County, City or Town'})` }}
+                {{ `${$t('request.votAdr.jurisdiction')} (${regionCode && jurisdictionTypes[regionCode] ? jurisdictionTypes[regionCode].join(', ') : 'County, City or Town'})` }}
               </label>
             <span @click="isJurisdictionOpen = !isJurisdictionOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-search"></i></span></span>
             <b-autocomplete
                 v-model="jurisdiction"
                 ref="jurisdiction"
-                :placeholder="`type to find your ${regionCode && jurisdictionTypes[regionCode] ? jurisdictionTypes[regionCode].join('/') : 'County/City/Town'} Local Election Official`"
+                :placeholder="$t('request.votAdr.jurisdictionPlaceholder', {type: regionCode && jurisdictionTypes[regionCode] ? jurisdictionTypes[regionCode].join('/') : 'County/City/Town'})"
                 :keep-first="true"
                 :data="filteredLeos"
                 open-on-focus

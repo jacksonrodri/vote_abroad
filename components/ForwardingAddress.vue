@@ -12,7 +12,7 @@
             <i class="fas fa-check"></i>
           </span>
           <span>
-            Yes
+            {{$t('request.fwdAdr.yes')}}
           </span>
         </button>
       </p>
@@ -22,19 +22,19 @@
             <i class="fas fa-check"></i>
           </span>
           <span>
-            No
+            {{$t('request.fwdAdr.no')}}
           </span>
         </button>
       </p>
     </b-field>
     <address-input
-      :label="$t('request.forwardingAddress')"
+      :label="$t('request.fwdAdr.label')"
       key="forwardingAddress"
       :value="value"
       v-show="hasForwardingAddress"
       @input="updateVal">
       <div slot="instructions">
-        <p>{{ $t('request.forwardingAddressInstructions') }}</p>
+        <p>{{ $t('request.fwdAdr.instructions') }}</p>
       </div>
 
     </address-input>

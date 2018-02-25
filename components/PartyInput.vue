@@ -6,38 +6,38 @@
       <p class="control">
         <button @click="emitVal('Democrat')" :class="[baseClass, {'is-success': isDem}]">
           <b-icon v-if="isDem" icon="check"></b-icon>
-          <span>Democrat</span>
+          <span>{{$t('request.party.democratic')}}</span>
         </button>
       </p>
       <p class="control">
         <button @click="emitVal('Republican')" :class="[baseClass, {'is-success': isRep}]">
           <b-icon v-if="isRep" icon="check"></b-icon>
-          <span>Republican</span>
+          <span>{{$t('request.party.republican')}}</span>
         </button>
       </p>
       <p class="control">
         <button @click="emitVal('Independent')" :class="[baseClass, {'is-success': isInd}]">
           <b-icon v-if="isInd" icon="check"></b-icon>
-          <span>Independent</span>
+          <span>{{$t('request.party.independent')}}</span>
         </button>
       </p>
       <p class="control">
         <button @click="emitVal('none')" :class="[baseClass, {'is-success': isNone}]">
           <b-icon v-if="isNone" icon="check"></b-icon>
-          <span>None</span>
+          <span>{{$t('request.party.none')}}</span>
         </button>
       </p>
       <p class="control">
         <button @click="isOther = true" :class="[baseClass, {'is-success': isOther}]">
           <b-icon v-if="isOther" icon="check"></b-icon>
-          <span>Other</span>
+          <span>{{$t('request.party.other')}}</span>
         </button>
       </p>
     </b-field>
   </div>
   <b-field v-if="isOther">
     <b-input
-      placeholder="Other"
+      :placeholder="$t('request.party.placeholder')"
       type="text"
       :value="other"
       ref="party"

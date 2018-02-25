@@ -8,7 +8,7 @@
           <i class="fas fa-check"></i>
         </span>
         <span>
-          Male
+          {{$t('request.sex.male')}}
         </span>
       </button>
     </p>
@@ -18,7 +18,7 @@
           <i class="fas fa-check"></i>
         </span>
         <span>
-          Female
+          {{$t('request.sex.female')}}
         </span>
       </button>
     </p>

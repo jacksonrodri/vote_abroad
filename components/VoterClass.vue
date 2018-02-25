@@ -1,8 +1,5 @@
 <template>
   <div>
-    civilianOrMilitary: Are you a civilian or military voter?
-    whatMilType: What type of military voter are you?
-    whatCivType: Are you abroad temporarily or indefinitely?
       <b-field :label="$t('request.voterClass.civilianOrMilitary')">
         <b-field grouped group-multiline>
           <p class="control">
@@ -48,7 +45,6 @@
               </span>
               <span>
                 {{$t('request.voterClass.military')}}
-                Active Duty Military
               </span>
             </button>
           </p>
@@ -59,7 +55,6 @@
               </span>
               <span>
                 {{$t('request.voterClass.milSpouse')}}
-                Eligible Military Spouse or Dependent
               </span>
             </button>
           </p>
@@ -70,7 +65,6 @@
               </span>
               <span>
                 {{$t('request.voterClass.natGuard')}}
-                National Guard
               </span>
             </button>
           </p>
@@ -81,7 +75,6 @@
               </span>
               <span>
                 {{$t('request.voterClass.uncertainReturn')}}
-                My Return is Uncertain
               </span>
             </button>
           </p>
@@ -92,7 +85,6 @@
               </span>
               <span>
                 {{$t('request.voterClass.intendToReturn')}}
-                I Intend to Return
               </span>
             </button>
           </p>
@@ -103,7 +95,6 @@
               </span>
               <span>
                 {{$t('request.voterClass.neverResided')}}
-                Never Resided
               </span>
             </button>
           </p>
