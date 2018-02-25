@@ -37,9 +37,18 @@ collections:
       - {label: "State Introduction Text", name: "body", widget: "markdown"}
   - name: "lang"
     label: "Translation Strings"
-    folder: "/lang"
+    folder: "lang"
     create: false
+    extension: json
+    format: json
+    slug: "{{title}}.json"
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Home", name: "home", widget: "string"}
       - {label: "Posts", name: "posts", widget: "string"}
+      - label: "Home Page"
+        name: "homepage"
+        widget: "object"
+        fields:
+          - {label: "Subtitle", name: "subtitle", widget: "string"}
+          - {label: "Login Instructions", name: "loginInstructions", widget: "string"}
