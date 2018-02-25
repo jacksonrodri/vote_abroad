@@ -23,7 +23,7 @@ const I18N = {
   loadLanguagesAsync: true,
   langDir: 'lang/',
   defaultLocale: 'en',
-  seo: true,
+  seo: false,
   routes: {
     // page: {
     //   en: '/:page?'
