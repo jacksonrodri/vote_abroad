@@ -5,5 +5,26 @@
   "homepage": {
     "subtitle": "nuxt-i18n demo",
     "loginInstructions": "Type your email address or phone number to start a secure session."
+  },
+  "request": {
+    "firstName": {
+      "label": "First Name",
+      "instructions": "Please enter your first name.",
+      "placeholder": "e.g. 'George Washington'",
+      "tooltip": "This name is a name that most people call you.",
+      "messages": {
+        "required": "You must enter a first name."
+      }
+    },
+    "middleName": {
+      "label": "Middle name(s)",
+      "instructions": ""
+    },
+    "lastName": {
+      "label": "Last Name",
+      "messages": {
+        "required": "Your last name is required.  Please enter it here. "
+      }
+    }
   }
 }
