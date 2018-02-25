@@ -21,7 +21,8 @@
       "label": "Previous name(s)",
       "yes": "Yes",
       "no": "No",
-      "instructions": "If you have previously voted with a different name, you election official may need to look you up using your previous name."
+      "instructions": "",
+      "tooltip": "If you have previously voted with a different name, you election official may need to look you up using your previous name."
     },
     "suffix": {
       "label": "Suffix"
