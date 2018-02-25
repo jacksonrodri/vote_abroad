@@ -39,7 +39,6 @@ collections:
     name: "translationstrings"
     files:
       - label: "English Strings"
-        name: "englishStrings"
         file: "lang/en-US.json"
         fields:
           - label: "Pages"
