@@ -40,6 +40,7 @@ collections:
     files:
       - label: "English Strings"
         file: "lang/en-US.json"
+        name: "en-US.json"
         fields:
           - label: "Pages"
             widget: "object"
