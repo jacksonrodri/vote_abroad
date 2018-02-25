@@ -214,7 +214,7 @@ collections:
             name: "isRegistered"
             widget: "object"
             fields:
-              - {label: "label", name: "label", widget: "string"}
+              - {label: "label (include jurisdiction with '{jurisdiction}'", name: "label", widget: "string"}
               - {label: "Yes Answer", name: "yes", widget: "string"}
               - {label: "No Answer", name: "no", widget: "string"}
               - {label: "Unsure Answer", name: "unsure", widget: "string"}
@@ -317,10 +317,10 @@ collections:
             fields:
               - {label: "Field Label", name: "label", widget: "string"}
               - {label: "Instructions", name: "instructions", widget: "string"}
-              - {label: "Democratic", name: "placeholder", widget: "string"}
-              - {label: "Republican", name: "placeholder", widget: "string"}
-              - {label: "Independent", name: "placeholder", widget: "string"}
-              - {label: "No Party", name: "placeholder", widget: "string"}
+              - {label: "Democratic", name: "democratic", widget: "string"}
+              - {label: "Republican", name: "republican", widget: "string"}
+              - {label: "Independent", name: "independent", widget: "string"}
+              - {label: "No Party", name: "none", widget: "string"}
               - {label: "Other", name: "placeholder", widget: "string"}
               - {label: "Other Placeholder", name: "placeholder", widget: "string"}
               - {label: "Tooltip", name: "tooltip", widget: "markdown"}
@@ -346,7 +346,7 @@ collections:
             name: "akRules"
             widget: "object"
             fields:
-              - {label: "Field Label", name: "label", widget: "string"}
+              - {label: "Proof of Residency Label", name: "label", widget: "string"}
               - {label: "Proof of Residency Instructions", name: "resInstructions", widget: "string"}
               - {label: "FWAB witness Instructions", name: "fwabWitness", widget: "string"}
               - {label: "Other Placeholder", name: "placeholder", widget: "string"}
@@ -360,7 +360,7 @@ collections:
             name: "azRules"
             widget: "object"
             fields:
-              - {label: "Field Label", name: "label", widget: "string"}
+              - {label: "Proof of Citizenship Label", name: "label", widget: "string"}
               - {label: "Proof of Citizenship Instructions", name: "citInstructions", widget: "string"}
               - {label: "Placeholder", name: "placeholder", widget: "string"}
               - {label: "Tooltip", name: "tooltip", widget: "markdown"}
@@ -373,7 +373,7 @@ collections:
             name: "okRules"
             widget: "object"
             fields:
-              - {label: "Field Label", name: "label", widget: "string"}
+              - {label: "Independent Primary Label", name: "label", widget: "string"}
               - {label: "Independent Primary Instructions", name: "primaryInstructions", widget: "string"}
               - {label: "Placeholder", name: "placeholder", widget: "string"}
               - {label: "Tooltip", name: "tooltip", widget: "markdown"}
@@ -386,7 +386,7 @@ collections:
             name: "prRules"
             widget: "object"
             fields:
-              - {label: "Field Label", name: "label", widget: "string"}
+              - {label: "Parents' Names Label", name: "label", widget: "string"}
               - {label: "Parents' Names Instructions", name: "parentsInstructions", widget: "string"}
               - {label: "Placeholder", name: "placeholder", widget: "string"}
               - {label: "Tooltip", name: "tooltip", widget: "markdown"}
@@ -399,8 +399,9 @@ collections:
             name: "scRules"
             widget: "object"
             fields:
-              - {label: "Field Label", name: "label", widget: "string"}
+              - {label: "Race Label", name: "label", widget: "string"}
               - {label: "Race Instructions", name: "raceInstructions", widget: "string"}
+              - {label: "Previous Registration Label", name: "prevRegLabel", widget: "string"}
               - {label: "Previous Registration Instructions", name: "prevRegInstructions", widget: "string"}
               - {label: "Placeholder", name: "placeholder", widget: "string"}
               - {label: "Tooltip", name: "tooltip", widget: "markdown"}

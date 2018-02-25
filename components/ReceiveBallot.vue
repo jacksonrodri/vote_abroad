@@ -8,7 +8,7 @@
           <i class="fas fa-check"></i>
         </span>
         <span>
-          Email or online
+          {{$t('request.recBallot.email')}}
         </span>
       </button>
     </p>
@@ -18,7 +18,7 @@
           <i class="fas fa-check"></i>
         </span>
         <span>
-          Mail
+          {{$t('request.recBallot.mail')}}
         </span>
       </button>
     </p>
@@ -28,7 +28,7 @@
           <i class="fas fa-check"></i>
         </span>
         <span>
-          Fax
+          {{$t('request.recBallot.fax')}}
         </span>
       </button>
     </p>

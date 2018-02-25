@@ -104,7 +104,7 @@
       <!-- isRegistered -->
     <is-registered
       v-if="votAdr && votAdr.leo && votAdr.leo.jurisdiction && votAdr.leo.jurisdictionType"
-      :label="`Are you already registered to vote in ${votAdr.leo.jurisdictionType === 'All' ? votAdr.leo.state : votAdr.leo.jurisdiction + ' ' + votAdr.leo.jurisdictionType}?`"
+      :label="$t('request.isRegistered.label', {jurisdiction: votAdr.leo.jurisdictionType === 'All' ? votAdr.leo.state : votAdr.leo.jurisdiction + ' ' + votAdr.leo.jurisdictionType})"
       v-model="isRegistered">
     </is-registered>
 
@@ -113,7 +113,7 @@
     <!-- recBallot -->
     <receive-ballot v-model="recBallot"
       v-if="votAdr && votAdr.regionCode"
-      label="How would you like to receive your ballot?"
+      :label="$t('request.recBallot.label')"
       :ballotReceiptOptions="stateRules ? stateRules.ballotReceiptOptions : ['Mail']"
       toolTipTitle="What is the best choice?">
       <div slot="tooltip">
@@ -126,7 +126,7 @@
 
     <tel-input
       key="fax"
-      label="Enter the Fax Number you would like your ballot sent to."
+      :label="$t('request.fax.label')"
       :type="($v.fax.$error ? 'is-danger': '')"
       :message="$v.fax.$error ? Object.keys($v.fax.$params).map(x => x) : '' "
       v-if="recBallot === 'fax'"
@@ -209,7 +209,7 @@
       </party-input>
 
       <state-special
-        :label="`${stateRules && stateRules.state ? stateRules.state: 'State'} Specific Rules`"
+        :label="$t('request.stateSpecial.label', {state: stateRules && stateRules.state ? stateRules.state: 'State'})"
         v-model="stateSpecial"
         :state="votAdr && votAdr.regionCode ? votAdr.regionCode : ''"
         :isFWAB="isFWAB"

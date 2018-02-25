@@ -8,7 +8,7 @@
           <i class="fas fa-check"></i>
         </span>
         <span>
-          Yes
+          {{$t('request.isRegistered.yes')}}
         </span>
       </button>
     </p>
@@ -18,7 +18,7 @@
           <i class="fas fa-check"></i>
         </span>
         <span>
-          No
+          {{$t('request.isRegistered.no')}}
         </span>
       </button>
     </p>
@@ -28,7 +28,7 @@
           <i class="fas fa-check"></i>
         </span>
         <span>
-          Not Sure
+          {{$t('request.isRegistered.unsure')}}
         </span>
       </button>
     </p>
