@@ -305,6 +305,8 @@ collections:
               - {label: "Field Label", name: "label", widget: "string"}
               - {label: "Instructions", name: "instructions", widget: "string"}
               - {label: "Placeholder", name: "placeholder", widget: "string"}
+              - {label: "Male", name: "male", widget: "string"}
+              - {label: "Female", name: "female", widget: "string"}
               - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - label: "Messages"
                 name: "messages"
@@ -321,7 +323,7 @@ collections:
               - {label: "Republican", name: "republican", widget: "string"}
               - {label: "Independent", name: "independent", widget: "string"}
               - {label: "No Party", name: "none", widget: "string"}
-              - {label: "Other", name: "placeholder", widget: "string"}
+              - {label: "Other", name: "other", widget: "string"}
               - {label: "Other Placeholder", name: "placeholder", widget: "string"}
               - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - label: "Messages"
