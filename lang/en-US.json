@@ -131,7 +131,17 @@
       "tooltip": "Only Oklahoma voters need to answer this question as per state law."
     },
     "id": {
-      "label": "Identification"
+      "instructionsOptional": "Optional. Providing **either** the last 4 digits of your Social Security Number **OR** your State ID may help your election official find your voting record.",
+      "SSN4": "the last 4 digits of your Social Security Number",
+      "MilitaryID": "Military ID",
+      "StateID": "State ID",
+      "SSN": "your full Social Security Number",
+      "label": "Identification",
+      "TerritoryID": "Territory ID",
+      "instructionsReq1": "{state} voters must provide a {id}.  If you don't have {id}, please select **'I don't have a {id}.'**",
+      "instructionsReq2": "{state} voters must provide **ONE** of the following forms of identification: {allButLastTypes} or {lastType}. If you don't have any of these, please select **'I don't have the above identification.'**",
+      "PassportNumber": "Passport Number",
+      "TribalID": "Tribal ID"
     },
     "firstName": {
       "label": "First Name",
