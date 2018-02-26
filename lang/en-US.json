@@ -132,6 +132,7 @@
     },
     "id": {
       "tooltipOptional": "{state} does not require identification to request a ballot or register to vote. you may \\*\\*either\\*\\* the last 4 digits of your Social Security Number \\*\\*OR\\*\\* your State ID to help your election official find your voting record.",
+      "or": "-- OR --",
       "instructionsOptional": "Optional. Providing **either** the last 4 digits of your Social Security Number **OR** your State ID may help your election official find your voting record.",
       "SSN4": "the last 4 digits of your Social Security Number",
       "MilitaryID": "Military ID",
