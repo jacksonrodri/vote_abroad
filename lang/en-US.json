@@ -21,7 +21,7 @@
       "label": "Previous name(s)",
       "yes": "Yes",
       "no": "No",
-      "instructions": "",
+      "instructions": "Have you previously registered to vote under a different name?",
       "tooltip": "If you have previously voted with a different name, your election official may need to look you up using your previous name."
     },
     "sex": {
