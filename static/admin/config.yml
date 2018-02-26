@@ -56,6 +56,44 @@ collections:
         name: "request"
         widget: "object"
         fields:
+          - label: "Stages and Buttons"
+            name: "stages"
+            widget: "object"
+            fields:
+              - {label: "Stage1", name: "stage1", widget: "string"}
+              - {label: "Stage2", name: "stage2", widget: "string"}
+              - {label: "Stage3", name: "stage3", widget: "string"}
+              - {label: "Stage4", name: "stage4", widget: "string"}
+              - {label: "Stage5", name: "stage5", widget: "string"}
+              - {label: "Back Button", name: "back", widget: "string"}
+              - {label: "Next Button", name: "next", widget: "string"}
+              - {label: "Generate & Review Button", name: "generate", widget: "string"}
+              - {label: "Stage 4 Instructions", name: "instructions4", widget: "string"}
+              - {label: "Sign & Submit Button", name: "submit", widget: "string"}
+              - {label: "Stage 5 Instructions", name: "instructions5", widget: "string"}
+              - {label: "Email Tab", name: "email", widget: "string"}
+              - {label: "Email Instructions - Sign", name: "emailSign", widget: "markdown"}
+              - {label: "Email Instructions - Capture Signature", name: "emailDigiSign", widget: "markdown"}
+              - {label: "Email Instructions - Download & Sign", name: "emailDownload", widget: "markdown"}
+              - {label: "Email Instructions - Send Fax", name: "emailSend", widget: "markdown"}
+              - {label: "Email Instructions - Confirm", name: "emailConfirm", widget: "markdown"}
+              - {label: "Send Email Button", name: "sendEmail", widget: "string"}
+              - {label: "Fax Tab", name: "fax", widget: "string"}
+              - {label: "Fax Instructions - Sign", name: "faxSign", widget: "markdown"}
+              - {label: "Fax Instructions - Capture Signature", name: "faxDigiSign", widget: "markdown"}
+              - {label: "Fax Instructions - Download & Sign", name: "faxDownload", widget: "markdown"}
+              - {label: "Fax Instructions - Send Fax", name: "faxSend", widget: "markdown"}
+              - {label: "Fax Instructions - Confirm", name: "faxConfirm", widget: "markdown"}
+              - {label: "Send Fax Button", name: "sendFax", widget: "string"}
+              - {label: "Mail Tab", name: "mail", widget: "string"}
+              - {label: "Mail Instructions - Download", name: "mailDownload", widget: "markdown"}
+              - {label: "Mail Instructions - Sign", name: "mailSign", widget: "markdown"}
+              - {label: "Mail Instructions - Post", name: "mailPost", widget: "markdown"}
+              - {label: "Mail Instructions - Confirm", name: "mailConfirm", widget: "markdown"}
+              - {label: "Capture Signature Button", name: "sign", widget: "string"}
+              - {label: "Download Button", name: "download", widget: "string"}
+              - {label: "Remind Me Button", name: "remindMe", widget: "string"}
+              - {label: "Sign & Submit Button", name: "sign", widget: "string"}
           - label: "First Name"
             name: "firstName"
             widget: "object"
