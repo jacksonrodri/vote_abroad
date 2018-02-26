@@ -56,7 +56,7 @@
       "label": "{state} Specific Rules"
     },
     "vaRules": {
-      "label": "the name of your employer or the name of your spouse's or parent/guardian's employer",
+      "label": "The name of your employer or the name of your spouse's or parent/guardian's employer",
       "oathInstructions": "**If you have never registered before in Vermont, you must take a self-administered oath or it may be administered by anyone over the age of 18. The Vermont voter's oath is:** <br> *\"You solemnly swear (or affirm) that whenever you give your vote or suffrage, touching any matter that concerns the State of Vermont, you will do it so as in your conscience you shall judge will most conduce to the best good of the same, as established by the Constitution, without fear or favor of any person.\"* <br> Once you have read the Voter's Oath, use the space provided in Section 6 to write the following: *",
       "tooltip": "Only Vermont voters need to answer this question as per state law."
     },
@@ -69,7 +69,7 @@
     "akRules": {
       "label": "What proof will you provide? (You must also attach a photocopy with your submission)",
       "resInstructions": "Alaska requires that you provide proof of Alaska residency.",
-      "fwabWitness": "one witness Signature",
+      "fwabWitness": "One witness signature",
       "tooltip": "Only Alaska voters need to answer this question as per state law."
     },
     "voterClass": {
@@ -127,7 +127,7 @@
       "download": "Download Now",
       "mailConfirm": "**Confirm** with your local election official that they received it.",
       "instructions4": "Confirm that the following information is correct. If you need to correct anything click 'back.' When everything is correct click 'Sign and submit' for instructions on how to send your form to your election official.",
-      "instructions5": "You must send your signed ballot request to your Wake County election official by email, fax or mail.   Choose how to send your Ballot request",
+      "instructions5": "You must send your signed ballot request to your Wake County election official by email, fax or mail.   Choose how to send your ballot request",
       "stage1": "Your Information",
       "next": "Next",
       "mailSign": "Print, sign and date your form.",
