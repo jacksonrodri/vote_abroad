@@ -228,7 +228,7 @@
         <div slot="instructions">
           <i18n path=request.id.instructionsReq2 tag="vue-markdown" :places="{ state: stateRules.state, allButLastTypes: allButLastIdType, lastType: lastIdType }">
           </i18n>
-          <p>
+          <!-- <p>
             <i18n path="request.id.reqInstructions" tag="p">
               <span place="state">{{ stateRules.state }}</span>
               <span place="type">
@@ -256,17 +256,17 @@
             </span>
             <span v-if="stateRules && stateRules.id && stateRules.id.length > 1">If you don't have any of these, please select <strong>"I don't have the above identification"</strong></span>
             <span v-else-if="stateRules && stateRules.id && stateRules.id.length === 1">If you don't have a {{$t(`request.idTypes.${stateRules.id[0]}`)}}, please select <strong>"I don't have a {{$t(`request.idTypes.${stateRules.id[0]}`)}}"</strong></span>
-          </p>
+          </p> -->
         </div>
         <div slot="tooltip">
           <vue-markdown v-if="stateRules && stateRules.id && stateRules.id.length === 0">
-            {{$t('request.id.instructionsOptional', {state: stateRules.state})}}
+            {{$t('request.id.tooltipOptional', {state: stateRules.state})}}
           </vue-markdown>
           <vue-markdown v-else-if="stateRules && stateRules.id && stateRules.id.length === 1">
-            {{$t('request.id.instructionsReq1', {state: stateRules.state})}}
+            {{$t('request.id.tooltipReq1', {state: stateRules.state, id: $t(`request.id.${stateRules.id[0]}`) }) }}
           </vue-markdown>
           <vue-markdown v-else>
-            {{$t('request.id.instructionsReq1+', {state: stateRules.state, allButLastTypes: 'a, b, c', lastType: 'd'})}}
+            {{$t('request.id.tooltipReq2', {state: stateRules.state, allButLastTypes: allButLastIdType, lastType: lastIdType })}}
           </vue-markdown>
           <!-- <p v-if="stateRules && stateRules.id && stateRules.id.length === 0">{{ stateRules.state }} does not require identification to register to vote.  You may provide the last 4 digits of your Social Security Number <strong>OR</strong> state ID to help your voting official find your records.</p>
           <p v-else>Identification is required by some states including {{ stateRules.state }}.  </p> -->

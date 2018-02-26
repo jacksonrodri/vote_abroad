@@ -455,7 +455,9 @@ collections:
               - {label: "Military ID", name: "MilitaryID", widget: "string"}
               - {label: "Passport Number", name: "PassportNumber", widget: "string"}
               - {label: "Placeholder", name: "placeholder", widget: "string"}
-              - {label: "Tooltip", name: "tooltip", widget: "markdown"}
+              - {label: "Tooltip Optional ID", name: "tooltipOptional", widget: "markdown"}
+              - {label: "Tooltip 1 req ID", name: "tooltipReq1", widget: "markdown"}
+              - {label: "Tooltip multiple req ID", name: "tooltipReq2", widget: "markdown"}
               - label: "Messages"
                 name: "messages"
                 widget: "object"
