@@ -444,8 +444,16 @@ collections:
             widget: "object"
             fields:
               - {label: "Field Label", name: "label", widget: "string"}
-              - {label: "Optional ID Instructions", name: "optInstructions", widget: "string"}
-              - {label: "Required ID Instructions", name: "reqInstructions", widget: "string"}
+              - {label: "Optional ID Instructions", name: "instructionsOptional", widget: "string"}
+              - {label: "Required ID Instructions (only one option)", name: "instructionsReq1", widget: "string"}
+              - {label: "Required ID Instructions (multiple options)", name: "instructionsReq2", widget: "string"}
+              - {label: "SSN (last 4 digits)", name: "SSN4", widget: "string"}
+              - {label: "SSN (full)", name: "SSN", widget: "string"}
+              - {label: "State ID", name: "StateID", widget: "string"}
+              - {label: "Territory ID", name: "TerritoryID", widget: "string"}
+              - {label: "Tribal ID", name: "TribalID", widget: "string"}
+              - {label: "Military ID", name: "MilitaryID", widget: "string"}
+              - {label: "Passport Number", name: "PassportNumber", widget: "string"}
               - {label: "Placeholder", name: "placeholder", widget: "string"}
               - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - label: "Messages"
