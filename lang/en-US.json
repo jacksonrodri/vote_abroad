@@ -73,7 +73,7 @@
       "tooltip": "Only Alaska voters need to answer this question as per state law."
     },
     "voterClass": {
-      "tooltip": "Voters may choose **I Intend to Return** if they intend to return to the state in which they are registering to vote. An ‘intention’ is sufficient, you don’t need to have a fixed date of return or firm plans. Registering as **Intend to Return **should make you eligible to vote in state and local races. However, it may also make you liable for state income taxes\n\nVoters may choose **My Return is Uncertain** if they do not have a current intention to return to the state in which they are registering to vote. Voters are entitled to receive a ballot for federal offices and may, depending on their state, also receive a ballot for state and local offices.",
+      "tooltip": "Voters may choose **I Intend to Return** if they intend to return to the state in which they are registering to vote. An \"intention\" is sufficient, you don’t need to have a fixed date of return or firm plans. Registering as **Intend to Return **should make you eligible to vote in state and local races. However, it may also make you liable for state income taxes\n\nVoters may choose **My Return is Uncertain** if they do not have a current intention to return to the state in which they are registering to vote. Voters are entitled to receive a ballot for federal offices and may, depending on their state, also receive a ballot for state and local offices.",
       "natGuard": "National Guard",
       "milSpouse": "Eligible Military Spouse or Dependent",
       "whatCivType": "Are you abroad temporarily or indefinitely?",
