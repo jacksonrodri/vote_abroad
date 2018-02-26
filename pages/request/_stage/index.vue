@@ -226,50 +226,22 @@
         :toolTipTitle="`Why am I being asked this?`"
         v-model="ssn">
         <div slot="instructions">
-          <i18n path=request.id.instructionsReq2 tag="vue-markdown" :places="{ state: stateRules.state, allButLastTypes: allButLastIdType, lastType: lastIdType }">
+          <i18n v-if="stateRules && stateRules.id && stateRules.id.length === 0"
+            path=request.id.instructionsOptional tag="vue-markdown" :places="{ state: stateRules.state}">
           </i18n>
-          <!-- <p>
-            <i18n path="request.id.reqInstructions" tag="p">
-              <span place="state">{{ stateRules.state }}</span>
-              <span place="type">
-                <span v-if="stateRules && stateRules.id && stateRules.id.length > 0">
-                  <span v-for="(idType, index) in stateRules.id" :key="idType">
-                    <span><strong>{{$t(`request.idTypes.${idType}`)}}</strong></span>
-                    <span v-if="stateRules.id.length > 1 && index === stateRules.id.length - 2"> or </span>
-                    <span v-else-if="index+1 < stateRules.id.length">, </span>
-                    <span v-else>. </span>
-                  </span>
-                </span>
-              </span>
-              <a place="action" :href="changeUrl">{{ $t('change') }}</a>
-            </i18n><br>
-            <span v-if="stateRules && stateRules.id && stateRules.id.length === 0">Providing <strong>one</strong> of the following may help your election official find your voting record. </span>
-            <span v-else-if="stateRules && stateRules.id.length === 1">{{ stateRules.state }} voters must provide a </span>
-            <span v-else>{{ stateRules.state }} voters must provide <strong>ONE</strong> of the following forms of identification: </span>
-            <span v-if="stateRules && stateRules.id && stateRules.id.length > 0">
-              <span v-for="(idType, index) in stateRules.id" :key="idType">
-                <span><strong>{{$t(`request.idTypes.${idType}`)}}</strong></span>
-                <span v-if="stateRules.id.length > 1 && index === stateRules.id.length - 2"> or </span>
-                <span v-else-if="index+1 < stateRules.id.length">, </span>
-                <span v-else>. </span>
-              </span>
-            </span>
-            <span v-if="stateRules && stateRules.id && stateRules.id.length > 1">If you don't have any of these, please select <strong>"I don't have the above identification"</strong></span>
-            <span v-else-if="stateRules && stateRules.id && stateRules.id.length === 1">If you don't have a {{$t(`request.idTypes.${stateRules.id[0]}`)}}, please select <strong>"I don't have a {{$t(`request.idTypes.${stateRules.id[0]}`)}}"</strong></span>
-          </p> -->
+          <i18n v-else-if="stateRules && stateRules.id && stateRules.id.length === 1" path=request.id.instructionsReq1 tag="vue-markdown" :places="{ state: stateRules.state, id: $t(`request.id.${stateRules.id[0]}`)}">
+          </i18n>
+          <i18n v-else path=request.id.instructionsReq2 tag="vue-markdown" :places="{ state: stateRules.state, allButLastTypes: allButLastIdType, lastType: lastIdType }">
+          </i18n>
         </div>
         <div slot="tooltip">
-          <vue-markdown v-if="stateRules && stateRules.id && stateRules.id.length === 0">
-            {{$t('request.id.tooltipOptional', {state: stateRules.state})}}
-          </vue-markdown>
-          <vue-markdown v-else-if="stateRules && stateRules.id && stateRules.id.length === 1">
-            {{$t('request.id.tooltipReq1', {state: stateRules.state, id: $t(`request.id.${stateRules.id[0]}`) }) }}
-          </vue-markdown>
-          <vue-markdown v-else>
-            {{$t('request.id.tooltipReq2', {state: stateRules.state, allButLastTypes: allButLastIdType, lastType: lastIdType })}}
-          </vue-markdown>
-          <!-- <p v-if="stateRules && stateRules.id && stateRules.id.length === 0">{{ stateRules.state }} does not require identification to register to vote.  You may provide the last 4 digits of your Social Security Number <strong>OR</strong> state ID to help your voting official find your records.</p>
-          <p v-else>Identification is required by some states including {{ stateRules.state }}.  </p> -->
+          <i18n v-if="stateRules && stateRules.id && stateRules.id.length === 0"
+            path=request.id.tooltipOptional tag="vue-markdown" :places="{ state: stateRules.state}">
+          </i18n>
+          <i18n v-else-if="stateRules && stateRules.id && stateRules.id.length === 1" path=request.id.tooltipReq1 tag="vue-markdown" :places="{ state: stateRules.state, id: $t(`request.id.${stateRules.id[0]}`)}">
+          </i18n>
+          <i18n v-else path=request.id.tooltipReq2 tag="vue-markdown" :places="{ state: stateRules.state, allButLastTypes: allButLastIdType, lastType: lastIdType }">
+          </i18n>
         </div>
       </identification>
 

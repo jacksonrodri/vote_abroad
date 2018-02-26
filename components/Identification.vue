@@ -4,13 +4,13 @@
     <slot name="instructions"></slot>
     <br/>
 
-    <b-field v-if="idOptions && idOptions.indexOf('SSN') > -1" :label="$t('request.idTypes.SSN')">
+    <b-field v-if="idOptions && idOptions.indexOf('SSN') > -1" :label="$t('request.id.SSN')">
       <b-input v-cleave="masks.ssn"
         @input.native="val => print(val.target._vCleave.getRawValue())">
       </b-input>
     </b-field>
 
-    <b-field v-if="!idOptions || (idOptions && idOptions.indexOf('SSN4') > -1)" :label="$t('request.idTypes.SSN4')">
+    <b-field v-if="!idOptions || (idOptions && idOptions.indexOf('SSN4') > -1)" :label="$t('request.id.SSN4')">
       <b-input v-cleave="masks.ssn4"
         @input.native="val => print(val.target._vCleave.getRawValue())">
       </b-input>
@@ -26,10 +26,12 @@
 
     <div class="field">
       <b-checkbox v-model="checkbox">
-        <span v-if="idOptions && idOptions.length === 1">I don't have a {{$t(`request.idTypes.${idOptions[0]}`)}}"</span>
-        <span v-else>I don't have the above identification</span>
+        <span v-if="idOptions && idOptions.length === 1">{{$t('request.id.noid2', {id: $t(`request.idTypes.${idOptions[0]}`)})}}"</span>
+        <span v-else>{{$t('request.id.noid1')}}</span>
       </b-checkbox>
     </div>
+    <!-- I don't have a {id}
+    I don't have the above identification -->
 
     <b-message :title="toolTipTitle" type="is-info" has-icon :active.sync="isOpen">
       <slot name="tooltip"></slot>
@@ -106,14 +108,14 @@ export default {
     },
     stateIdLabel: function () {
       return !this.usesStateId
-        ? 'State ID'
+        ? this.$t('request.id.StateID')
         : this.stateIDTypes.reduce((label, cur, i, arr) => {
           if (i === 0) {
-            return label + this.$t(`request.idTypes.${cur}`)
+            return label + this.$t(`request.id.${cur}`)
           } else if (i === arr.length - 1) {
-            return `${label} or ${this.$t(`request.idTypes.${cur}`)}`
+            return `${label} or ${this.$t(`request.id.${cur}`)}`
           } else {
-            return `${label}, ${this.$t(`request.idTypes.${cur}`)}`
+            return `${label}, ${this.$t(`request.id.${cur}`)}`
           }
         }, '')
     }
