@@ -28,6 +28,18 @@ collections:
         field:
           - {label: "Category", name: "category", widget: "select", options: ["Addressing / Mailing Instructions", "Ballot Related Issues", "Dates and Deadlines", "Eligibility / First Time Voter", "FWAB - Emergency Write-in Ballot", "Form Related Issues", "Glossary - Terms", "Other Related Issues", "Party Affiliation Questions", "Primary Elections", "Registration Process", "Security and Privacy", "Technical Issues", "US Citizens without Residency", "Voter Account Issues", "Voter ID"]}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - label: "FAQ Categories"
+        name: "categories"
+        file: "/content/settings.yml"
+        fields:
+          - label: "Categories"
+            name: "categories"
+            widget: "list"
+            field:
+              - {label: Category, name: category, widget: string}
   - name: "rls"
     label: "State Ballot Rules"
     folder: "/content/rls"
