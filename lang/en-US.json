@@ -131,13 +131,7 @@
       "tooltip": "Only Oklahoma voters need to answer this question as per state law."
     },
     "id": {
-      "label": "Identification",
-      "instructionsOptional": "Providing one of the following may help your election official find your voting record. ",
-      "instructionsReq1": "{state voters must provide a {id}",
-      "instructionsReq2": "{state} voters must provide **ONE** of the following forms of identification: {allButLastTypes} or {lastType} If you don't have any of these, please select \"I don't have the above identification\"",
-      "SSN4": "the last 4 digits of your social security number",
-      "StateID": "State ID",
-      "PassportNumber": "Your passport number"
+      "label": "Identification"
     },
     "firstName": {
       "label": "First Name",
@@ -157,7 +151,11 @@
       "no": "No"
     },
     "email": {
-      "label": "Your current email address"
+      "label": "Your current email address",
+      "messages": {
+        "required": "Required.  You must add an email address.",
+        "email": "That email address is invalid.  Please try again."
+      }
     },
     "fax": {
       "label": "Enter the Fax Number you would like your ballot sent to."
