@@ -132,8 +132,12 @@
     },
     "id": {
       "label": "Identification",
-      "optInstructions": "Providing one of the following may help your election official find your voting record. ",
-      "reqInstructions": "{{ state }} voters must provide ONE of the following forms of identification: {types}If you don't have any of these, please select \"I don't have the above identification\""
+      "instructionsOptional": "Providing one of the following may help your election official find your voting record. ",
+      "instructionsReq1": "{state voters must provide a {id}",
+      "instructionsReq2": "{state} voters must provide **ONE** of the following forms of identification: {allButLastTypes} or {lastType} If you don't have any of these, please select \"I don't have the above identification\"",
+      "SSN4": "the last 4 digits of your social security number",
+      "StateID": "State ID",
+      "PassportNumber": "Your passport number"
     },
     "firstName": {
       "label": "First Name",
