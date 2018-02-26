@@ -28,8 +28,8 @@
       <previous-name v-model="previousName"
         :type="($v.previousName.$error ? 'is-danger': '')"
         :message="$v.previousName.$error ? Object.keys($v.previousName.$params).map(x => x) : '' "
-        :label="$t('request.previousName')"
-        :instructions="$t('request.previousName.label')"
+        :label="$t('request.previousName.label')"
+        :instructions="$t('request.previousName.instructions')"
         @input="$v.previousName.$touch()">
       </previous-name>
 
