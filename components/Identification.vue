@@ -30,8 +30,6 @@
         <span v-else>{{$t('request.id.noid2')}}</span>
       </b-checkbox>
     </div>
-    <!-- I don't have a {id}
-    I don't have the above identification -->
 
     <b-message :title="toolTipTitle" type="is-info" has-icon :active.sync="isOpen">
       <slot name="tooltip"></slot>
