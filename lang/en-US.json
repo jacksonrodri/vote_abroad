@@ -63,7 +63,7 @@
     "isRegistered": {
       "label": "Are you already registered to vote in {jurisdiction}?",
       "yes": "Yes",
-      "no": "NO",
+      "no": "No",
       "unsure": "Not Sure"
     },
     "akRules": {
@@ -97,7 +97,7 @@
       "jurisdiction": "Jurisdiction",
       "street": "Street Address",
       "tooltip": "Use the **residence address** of the last place you lived in the US. If you have never resided in the US, use the residence address of the last place your US parent(s) lived in the US. If your US parents last lived in the US in different locations, you may choose which one to use as your voting address.",
-      "instructions": "Input the last address you lived in in the US. If you have never lived in the US, us the last US address of your US citizen parent(s)",
+      "instructions": "Input the last address you lived in in the US. If you have never lived in the US, use the last US address of your US citizen parent(s).",
       "apt": "Apt #",
       "county": "County",
       "city": "City",
