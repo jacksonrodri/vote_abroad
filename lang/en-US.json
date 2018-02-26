@@ -22,7 +22,7 @@
       "yes": "Yes",
       "no": "No",
       "instructions": "",
-      "tooltip": "If you have previously voted with a different name, you election official may need to look you up using your previous name."
+      "tooltip": "If you have previously voted with a different name, your election official may need to look you up using your previous name."
     },
     "sex": {
       "label": "Sex",
