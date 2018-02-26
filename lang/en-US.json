@@ -73,7 +73,7 @@
       "tooltip": "Only Alaska voters need to answer this question as per state law."
     },
     "voterClass": {
-      "tooltip": "Voters may choose **I Intend to Return** if they intend to return to the state in which they are registering to vote. An ‘intention’ is sufficient, you don’t need to have a fixed date of return or firm plans. Registering as **I Intend to Return** should make you eligible to vote in state and local races. However, it may also make you liable for state income taxes\n\nVoters may choose **My Return is Uncertain** if they do not have a current intention to return to the state in which they are registering to vote. Voters are entitled to receive a ballot for federal offices and may, depending on their state, also receive a ballot for state and local offices.",
+      "tooltip": "Voters may choose **I Intend to Return** if they intend to return to the state in which they are registering to vote. An ‘intention’ is sufficient, you don’t need to have a fixed date of return or firm plans. Registering as **Intend to Return **should make you eligible to vote in state and local races. However, it may also make you liable for state income taxes\n\nVoters may choose **My Return is Uncertain** if they do not have a current intention to return to the state in which they are registering to vote. Voters are entitled to receive a ballot for federal offices and may, depending on their state, also receive a ballot for state and local offices.",
       "natGuard": "National Guard",
       "milSpouse": "Eligible Military Spouse or Dependent",
       "whatCivType": "Are you abroad temporarily or indefinitely?",
@@ -90,7 +90,8 @@
       "label": "Suffix"
     },
     "altEmail": {
-      "label": "Add a second email here if you have one to ensure ballot delivery"
+      "label": "If you have a second email address, add it here to ensure ballot delivery.",
+      "instructions": ""
     },
     "votAdr": {
       "zip": "Zip",
@@ -124,7 +125,7 @@
       "faxDownload": "**Otherwise**, you will need to download your form, print, sign and date it before faxing.",
       "back": "Back",
       "download": "Download Now",
-      "mailConfirm": "**Confirm** with your your local election official that they received it.",
+      "mailConfirm": "**Confirm** with your local election official that they received it.",
       "instructions4": "Confirm that the following information is correct. If you need to correct anything click 'back.' When everything is correct click 'Sign and submit' for instructions on how to send your form to your election official.",
       "instructions5": "You must send your signed ballot request to your Wake County election official by email, fax or mail.   Choose how to send your Ballot request",
       "stage1": "Your Information",
@@ -209,7 +210,7 @@
       }
     },
     "fax": {
-      "label": "Enter the Fax Number you would like your ballot sent to."
+      "label": "Enter the fax number you would like your ballot sent to."
     },
     "azRules": {
       "label": "What proof will you provide? (You must also attach a photocopy with your submission)",
