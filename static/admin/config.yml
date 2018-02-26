@@ -20,10 +20,11 @@ collections:
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
       - label: "Categories"
         name: "categories"
         widget: "list"
+        required: false
         field:
           - {label: "Category", name: "category", widget: "select", options: ["Addressing / Mailing Instructions", "Ballot Related Issues", "Dates and Deadlines", "Eligibility / First Time Voter", "FWAB - Emergency Write-in Ballot", "Form Related Issues", "Glossary - Terms", "Other Related Issues", "Party Affiliation Questions", "Primary Elections", "Registration Process", "Security and Privacy", "Technical Issues", "US Citizens without Residency", "Voter Account Issues", "Voter ID"]}
       - {label: "Body", name: "body", widget: "markdown"}
