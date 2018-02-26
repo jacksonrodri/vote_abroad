@@ -16,7 +16,7 @@
       </b-input>
     </b-field>
 
-    <div class="has-text-centered"><strong> -- OR -- </strong></div>
+    <div class="has-text-centered"><strong>{{ $t('request.id.or')}}</strong></div>
 
     <b-field v-if="!idOptions || (idOptions && idOptions.filter(x => x!== 'SSN' && x !== 'SSN4').length > 0)"
       :label="stateIdLabel">
@@ -26,8 +26,8 @@
 
     <div class="field">
       <b-checkbox v-model="checkbox">
-        <span v-if="idOptions && idOptions.length === 1">{{$t('request.id.noid2', {id: $t(`request.idTypes.${idOptions[0]}`)})}}"</span>
-        <span v-else>{{$t('request.id.noid1')}}</span>
+        <span v-if="idOptions && idOptions.length === 1">{{$t('request.id.noid1', {id: $t(`request.idTypes.${idOptions[0]}`)})}}"</span>
+        <span v-else>{{$t('request.id.noid2')}}</span>
       </b-checkbox>
     </div>
     <!-- I don't have a {id}
