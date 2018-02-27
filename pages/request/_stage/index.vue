@@ -1,8 +1,8 @@
 <template>
 <div class="column is-12 is-8-desktop is-7-widescreen is-6-fullhd">
 <section class="section">
-    <h1 class="has-text-centered title is-3">Step {{ stage.order }} of 5</h1>
-    <h3 class="has-text-centered subtitle is-4">{{ stage.name }}</h3>
+    <h1 class="has-text-centered title is-3">{{ $t('request.stages.step', {step: stage.order})}}</h1>
+    <h3 class="has-text-centered subtitle is-4">{{ $t(`request.stages.stage${stage.order}`)}}</h3>
 <!-- your information -->
   <section v-if="stage.slug === 'your-information'">
       <!-- firstName -->
@@ -139,7 +139,7 @@
       :type="($v.altEmail.$error ? 'is-danger': '')"
       :message="$v.altEmail.$error ? Object.keys($v.altEmail.$params).map(x => x) : '' "
       v-if="recBallot === 'email'"
-      label="Add a second email here if you have one to ensure ballot delivery">
+      :label="$t('request.altEmail.label')">
       <b-input v-model="altEmail" @input="$v.altEmail.$touch()"></b-input>
     </b-field>
 
@@ -224,7 +224,7 @@
         :label="$t('request.id.label')"
         :idOptions="stateRules && stateRules.id && stateRules.id.length > 0 ? stateRules.id : null"
         :toolTipTitle="`Why am I being asked this?`"
-        v-model="ssn">
+        v-model="identification">
         <div slot="instructions">
           <i18n v-if="stateRules && stateRules.id && stateRules.id.length === 0"
             path=request.id.instructionsOptional tag="vue-markdown" :places="{ state: stateRules.state}">
@@ -347,7 +347,6 @@ export default {
       pendingVerification: null,
       type: 'email',
       emailOrPhoneLink: null,
-      id: '',
       createdAt: '',
       updatedAt: '',
       createdBy: '',
@@ -512,6 +511,10 @@ export default {
     voterClass: {
       get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].voterClass : null },
       set (value) { this.$store.commit('requests/update', {voterClass: value}) }
+    },
+    identification: {
+      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].identification : {noId: false, ssn: '', ssnTyped: '', stateId: ''} },
+      set (value) { this.$store.commit('requests/update', {identification: value}) }
     },
     ssn: {
       get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].ssn : null },

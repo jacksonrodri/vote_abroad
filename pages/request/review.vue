@@ -3,8 +3,8 @@
   <div class="column is-10 is-8-desktop is-7-widescreen is-6-fullhd is-paddingless">
     <!-- <no-ssr> -->
       <div class="section">
-        <h1 class="has-text-centered title is-3">Step 4 of 5</h1>
-        <h3 class="has-text-centered subtitle is-4">Review your form</h3>
+        <h1 class="has-text-centered title is-3">{{ $t('request.stages.step', {step: 4})}}</h1>
+        <h3 class="has-text-centered subtitle is-4">{{ $t('request.stages.stage4')}}</h3>
         <p class="is-size-5">Confirm that the following information is correct.  If you need to correct anything click 'back.' <strong>When everything is correct click 'Sign and submit'</strong> for instructions on how to send your form to your election official.</p>
       </div>
       <!-- <div class="control buttons"> -->
@@ -132,8 +132,8 @@ export default {
     suffix () { return this.currentRequest && this.currentRequest.suffix ? this.currentRequest.suffix : ' ' },
     previousName () { return this.currentRequest && this.currentRequest.previousName ? this.currentRequest.previousName : ' ' },
     dob () { return this.currentRequest && this.currentRequest.dob ? this.currentRequest.dob.toString() : ' ' },
-    ssn () { return this.currentRequest && this.currentRequest.ssn ? this.currentRequest.ssn.toString() : ' ' },
-    stateId () { return this.currentRequest && this.currentRequest.stateId ? this.currentRequest.stateId.toString() : ' ' },
+    ssn () { return this.currentRequest && this.currentRequest.identification && this.currentRequest.identification.ssn ? this.currentRequest.identification.ssn.toString() : ' ' },
+    stateId () { return this.currentRequest && this.currentRequest.identification && this.currentRequest.identification.stateId ? this.currentRequest.identification.stateId.toString() : ' ' },
     votStreet () { return this.currentRequest && this.currentRequest.votAdr && this.currentRequest.votAdr.thoroughfare ? this.currentRequest.votAdr.thoroughfare.toString() : ' ' },
     votApt () { return this.currentRequest && this.currentRequest.votAdr && this.currentRequest.votAdr.premise ? this.currentRequest.votAdr.premise.toString() : ' ' },
     votCity () { return this.currentRequest && this.currentRequest.votAdr && this.currentRequest.votAdr.locality ? this.currentRequest.votAdr.locality.toString() : ' ' },

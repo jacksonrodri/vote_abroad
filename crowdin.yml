@@ -17,8 +17,8 @@
 #
 files: [
  {
-  "source" : "/content/en/*/*.md",
-  "translation" : "/content/%two_letters_code%/%file_name%.%file_extension%"
+  "source" : "/content/en/**/*.md",
+  "translation" : "/content/%two_letters_code%/**/%file_name%.%file_extension%"
  },
  {
    "source" : "/lang/en-US.json",

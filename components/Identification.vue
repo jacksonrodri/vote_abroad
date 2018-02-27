@@ -6,13 +6,19 @@
 
     <b-field v-if="idOptions && idOptions.indexOf('SSN') > -1" :label="$t('request.id.SSN')">
       <b-input v-cleave="masks.ssn"
-        @input.native="val => print(val.target._vCleave.getRawValue())">
+        :value="value.ssnTyped"
+        ref="ssn"
+        @input="setVal"
+        @input.native="val => setSSN(val.target._vCleave.getRawValue())">
       </b-input>
     </b-field>
 
     <b-field v-if="!idOptions || (idOptions && idOptions.indexOf('SSN4') > -1)" :label="$t('request.id.SSN4')">
       <b-input v-cleave="masks.ssn4"
-        @input.native="val => print(val.target._vCleave.getRawValue())">
+        :value="value.ssnTyped"
+        ref="ssn4"
+        @input="setVal"
+        @input.native="val => setSSN(val.target._vCleave.getRawValue())">
       </b-input>
     </b-field>
 
@@ -20,12 +26,14 @@
 
     <b-field v-if="!idOptions || (idOptions && idOptions.filter(x => x!== 'SSN' && x !== 'SSN4').length > 0)"
       :label="stateIdLabel">
-      <b-input>
+      <b-input :value="value.stateId"
+        ref="stateId"
+        @input="setVal">
       </b-input>
     </b-field>
 
     <div class="field">
-      <b-checkbox v-model="checkbox">
+      <b-checkbox :value="value.noId" @input="setVal" ref="noId">
         <span v-if="idOptions && idOptions.length === 1">{{$t('request.id.noid1', {id: $t(`request.idTypes.${idOptions[0]}`)})}}"</span>
         <span v-else>{{$t('request.id.noid2')}}</span>
       </b-checkbox>
@@ -73,6 +81,7 @@ export default {
         button: true
       },
       isOpen: false,
+      ssnclean: '',
       checkbox: false,
       masks: {
         creditCard: { creditCard: true },
@@ -104,6 +113,15 @@ export default {
       }
       return this.idOptions.filter(opt => opt !== 'SSN4' && opt !== 'SSN')
     },
+    ssn: function () {
+      if (this.$refs.ssn) {
+        return this.$refs.ssn.newValue
+      } else if (this.$refs.ssn4) {
+        return this.$refs.ssn4.newValue
+      } else {
+        return ''
+      }
+    },
     stateIdLabel: function () {
       return !this.usesStateId
         ? this.$t('request.id.StateID')
@@ -119,8 +137,15 @@ export default {
     }
   },
   methods: {
-    setVal: function (val) {
+    setVal: function () {
+      let val = this.$refs.noId.newValue ? {noId: true, ssn: '', ssnTyped: '', stateId: ''} : {noId: false, ssn: this.ssnclean, ssnTyped: this.ssn, stateId: this.$refs.stateId ? this.$refs.stateId.newValue || '' : ''}
+      if (this.$refs.noId.newValue) {
+        this.$refs.ssn4.value = ''
+      }
       this.$emit('input', val)
+    },
+    setSSN: function (val) {
+      this.ssnclean = val
     },
     getRawValue (val, event) {
       this.rawValue = event.target._vCleave.getRawValue()
