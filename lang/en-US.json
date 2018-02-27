@@ -73,7 +73,7 @@
       "tooltip": "Only Alaska voters need to answer this question as per state law."
     },
     "voterClass": {
-      "tooltip": "Voters may choose **I Intend to Return** if they intend to return to the state in which they are registering to vote. An \"intention\" is sufficient, you don’t need to have a fixed date of return or firm plans. Registering as **Intend to Return **should make you eligible to vote in state and local races. However, it may also make you liable for state income taxes\n\nVoters may choose **My Return is Uncertain** if they do not have a current intention to return to the state in which they are registering to vote. Voters are entitled to receive a ballot for federal offices and may, depending on their state, also receive a ballot for state and local offices.",
+      "tooltip": "Voters may choose **I Intend to Return** if they intend to return to the state in which they are registering to vote. An \"intention\" is sufficient, you don’t need to have a fixed date of return or firm plans. Registering as **Intend to Return **should make you eligible to vote in state and local races. However, it may also make you liable for state income taxes (if applicable in your state).\n\nVoters may choose **My Return is Uncertain** if they do not have a current intention to return to the state in which they are registering to vote. Voters are entitled to receive a ballot for federal offices and may, depending on their state, also receive a ballot for state and local offices.",
       "natGuard": "National Guard",
       "milSpouse": "Eligible Military Spouse or Dependent",
       "whatCivType": "Are you abroad temporarily or indefinitely?",
@@ -168,7 +168,7 @@
       "tooltip": "Only Oklahoma voters need to answer this question as per state law."
     },
     "id": {
-      "tooltipOptional": "{state} does not require identification to request a ballot or register to vote. you may \\*\\*either\\*\\* the last 4 digits of your Social Security Number \\*\\*OR\\*\\* your State ID to help your election official find your voting record.",
+      "tooltipOptional": "{state} does not require identification to request a ballot or register to vote. You may _either_ provide the last 4 digits of your Social Security Number _OR_ your State ID to help your election official find your voting record.",
       "or": "-- OR --",
       "instructionsOptional": "Optional. Providing **either** the last 4 digits of your Social Security Number **OR** your State ID may help your election official find your voting record.",
       "SSN4": "the last 4 digits of your Social Security Number",
