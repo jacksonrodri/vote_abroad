@@ -15,7 +15,7 @@
       </div>
 
         <b-tabs type="is-toggle" expanded>
-          <b-tab-item :label="$t('request.stagges.email')"
+          <b-tab-item :label="$t('request.stages.email')"
             v-if="stateRules && stateRules.fpcaSubmitOptionsRequest.indexOf('Email') > -1"
             icon="at">
             <section class="section">
