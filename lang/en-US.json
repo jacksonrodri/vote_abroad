@@ -168,7 +168,7 @@
       "tooltip": "Only Oklahoma voters need to answer this question as per state law."
     },
     "id": {
-      "tooltipOptional": "{state} does not require identification to request a ballot or register to vote. you may \\*\\*either\\*\\* the last 4 digits of your Social Security Number \\*\\*OR\\*\\* your State ID to help your election official find your voting record.",
+      "tooltipOptional": "{state} does not require identification to request a ballot or register to vote. You may _either_ provide the last 4 digits of your Social Security Number _OR_ your State ID to help your election official find your voting record.",
       "or": "-- OR --",
       "instructionsOptional": "Optional. Providing **either** the last 4 digits of your Social Security Number **OR** your State ID may help your election official find your voting record.",
       "SSN4": "the last 4 digits of your Social Security Number",
