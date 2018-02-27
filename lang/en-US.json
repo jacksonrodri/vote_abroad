@@ -143,7 +143,7 @@
       "mailPost": "Mail your form to:",
       "submit": "Sign & submit",
       "emailSign": "**Sign and Date** your form",
-      "faxSign": "Sign and Date your form",
+      "faxSign": "**Sign and Date** your form",
       "email": "Email",
       "remindMe": "Remind Me",
       "sign": "Capture Signature",
@@ -219,7 +219,7 @@
       "tooltip": "Only Arizona voters need to answer this question as per state law."
     },
     "abrAdr": {
-      "label": "Your Current Address Abroad",
+      "label": "Your current address abroad",
       "instructions": "Please add your international address",
       "placeholder": "Country",
       "tooltip": "You must provide your current residence address outside the US for informational purposes. Please provide your address outside the US even if you request your blank ballot be sent to you by email/online or fax.",
