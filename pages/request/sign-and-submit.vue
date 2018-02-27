@@ -6,46 +6,51 @@
         <h1 class="has-text-centered title is-3">{{ $t('request.stages.step', {step: 5})}}</h1>
         <h3 class="has-text-centered subtitle is-4">{{ $t('request.stages.stage5')}}</h3>
         <p class="is-size-5" v-if="stateRules">
-          You must send your <strong class="has-text-danger">signed</strong> ballot request to your {{ currentRequest ? currentRequest.votAdr.leo.jurisdiction : '' }} {{ currentRequest ? currentRequest.votAdr.leo.jurisdictionType : 'local' }} election official by <span v-for="(opt, index) in stateRules.fpcaSubmitOptionsRequest" :key="index">{{ opt.toLowerCase() }}<span v-if="index < stateRules.fpcaSubmitOptionsRequest.length - 2">, </span><span v-if="index === stateRules.fpcaSubmitOptionsRequest.length - 2"> or </span></span>.
+          {{$t('request.stages.instructions5', {leo: `${currentRequest ? currentRequest.votAdr.leo.jurisdiction : ''}${currentRequest ? currentRequest.votAdr.leo.jurisdictionType : 'local'}`, options: ballotReceiptOptionsString })}}
         </p>
+        <!-- You must send your <strong class="has-text-danger">signed</strong> ballot request to your {{ currentRequest ? currentRequest.votAdr.leo.jurisdiction : '' }} {{ currentRequest ? currentRequest.votAdr.leo.jurisdictionType : 'local' }} election official by <span v-for="(opt, index) in stateRules.fpcaSubmitOptionsRequest" :key="index">{{ opt.toLowerCase() }}<span v-if="index < stateRules.fpcaSubmitOptionsRequest.length - 2">, </span><span v-if="index === stateRules.fpcaSubmitOptionsRequest.length - 2"> or </span></span>. -->
         <br/>
-        <h4 class="label">Choose how to send your Ballot request</h4>
+        <!-- <h4 class="label">Choose how to send your Ballot request</h4> -->
       </div>
 
         <b-tabs type="is-toggle" expanded>
-          <b-tab-item label="Email"
+          <b-tab-item :label="$t('request.stagges.email')"
             v-if="stateRules && stateRules.fpcaSubmitOptionsRequest.indexOf('Email') > -1"
             icon="at">
             <section class="section">
-              <h3 class="subtitle is-4">Sign and send your form by Email</h3>
+              <h3 class="subtitle is-4">{{$t('request.stages.emailInstructions')}}</h3>
+              <!-- Sign and send your form by Email -->
               <div class="media">
                 <div class="media-content">
-                  <h3 class="title is-5">Instructions:</h3>
+                  <h3 class="title is-5">{{t$('request.stages.instructions')}}</h3>
                   <!-- <p>You must <strong class="has-text-danger">sign, date and email</strong> your completed form to your {{ currentRequest ? currentRequest.votAdr.leo.jurisdiction : 'local' }} election official at <a :href="`mailto:${leoEmail}`">{{ leoEmail }}.</a> </p> -->
                   <article class="media">
                     <figure class="media-left">
                       <b-icon icon="pencil-alt" size="is-medium"></b-icon>
                     </figure>
                     <div class="media-content">
-                      <p class="is-size-5"><strong class="has-text-danger">Sign and Date</strong> your form</p>
+                      {{$t('request.stages.emailSign')}}
+                      <!-- <p class="is-size-5"><strong class="has-text-danger">Sign and Date</strong> your form</p> -->
                       <article class="media">
                         <div class="media-content">
                           <article class="media">
                             <div class="media-content">
-                              <p><strong>If you have a camera</strong> on this <span class="is-hidden-touch">computer</span><span class="is-hidden-desktop is-hidden-mobile">tablet</span><span class="is-hidden-tablet">phone</span>, you can capture your signature and email your form straight from this website.</p>
+                              {{$t('request.stages.emailDigiSign')}}
+                              <!-- <p><strong>If you have a camera</strong> on this <span class="is-hidden-touch">computer</span><span class="is-hidden-desktop is-hidden-mobile">tablet</span><span class="is-hidden-tablet">phone</span>, you can capture your signature and email your form straight from this website.</p> -->
                               <!-- <p class="has-text-centered"><button class="button is-primary" @click="isSignatureModalActive = true"><b-icon icon="camera"></b-icon><span> Capture my signature</span></button></p> -->
                             </div>
                             <div class="media-right">
-                              <button class="button is-primary" @click="isSignatureModalActive = true"><b-icon icon="camera" size="is-small"></b-icon><span>Capture signature</span></button>
+                              <button class="button is-primary" @click="isSignatureModalActive = true"><b-icon icon="camera" size="is-small"></b-icon><span>{{$t('request.stages.sign')}}</span></button>
                             </div>
                           </article>
                           <article class="media">
                             <div class="media-content">
-                              <p><strong>Otherwise,</strong> you will need to download your form, print, sign, date and scan it.</p>
+                              {{$t('request.stages.emailDownload')}}
+                              <!-- <p><strong>Otherwise,</strong> you will need to download your form, print, sign, date and scan it.</p> -->
                               <!-- <p class="has-text-centered"><button class="button is-primary" @click="getFPCA"><b-icon icon="download"></b-icon><span>Download my form</span></button></p> -->
                             </div>
                             <div class="media-right">
-                              <button class="button is-primary" @click="getFPCA"><b-icon icon="download"></b-icon><span>Download</span></button>
+                              <button class="button is-primary" @click="getFPCA"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
                             </div>
                           </article>
                         </div>
@@ -57,7 +62,8 @@
                       <b-icon icon="at" size="is-medium"></b-icon>
                     </figure>
                     <div class="media-content">
-                      <p class="is-size-5"><strong class="has-text-danger">Email</strong> your form to <a :href="`mailto:${leoEmail}`">{{leoEmail}}</a></p>
+                      {{$t('request.stages.emailSend', {leo: leoEmail})}}
+                      <!-- <p class="is-size-5"><strong class="has-text-danger">Email</strong> your form to <a :href="`mailto:${leoEmail}`">{{leoEmail}}</a></p> -->
                     </div>
                   </article>
                   <article class="media">
@@ -65,11 +71,12 @@
                       <b-icon icon="check" size="is-medium"></b-icon>
                     </figure>
                     <div class="media-content">
-                      <p class="is-size-5"><strong class="has-text-danger">Confirm</strong> with your your local election official that they received it. </p>
+                      {{$t('request.stages.emailConfirm')}}
+                      <!-- <p class="is-size-5"><strong class="has-text-danger">Confirm</strong> with your your local election official that they received it. </p> -->
                     </div>
-                    <div class="media-right">
+                    <!-- <div class="media-right">
                       <button class="button is-primary"><b-icon icon="calendar"></b-icon><span>Remind Me</span></button>
-                    </div>
+                    </div> -->
                   </article>
                 </div>
               </div>
@@ -400,6 +407,15 @@ export default {
     },
     leoFax () {
       return '+1 ' + this.currentRequest.votAdr.leo.faxNumber || ''
+    },
+    ballotReceiptOptionsString () {
+      if (this.stateRules.fpcaSubmitOptionsRequest.length === 1) {
+        return this.$t(`this.request.stages.${this.fpcaSubmitOptionsRequest[0]}`)
+      } else if (this.stateRules.fpcaSubmitOptionsRequest.length === 2) {
+        return this.$t(`this.request.stages.${this.fpcaSubmitOptionsRequest[0]}`) + ' ' + this.$t('this.request.stages.or') + ' ' + this.$t(`this.request.stages.${this.fpcaSubmitOptionsRequest[1]}`)
+      } else {
+        return this.$t(`this.request.stages.${this.fpcaSubmitOptionsRequest[0]}`) + ', ' + this.$t(`this.request.stages.${this.fpcaSubmitOptionsRequest[1]}`) + ' ' + this.$t('this.request.stages.or') + ' ' + this.$t(`this.request.stages.${this.fpcaSubmitOptionsRequest[2]}`)
+      }
     },
     ...mapState({
       currentRequestIndex: state => state.requests.currentRequest,

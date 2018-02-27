@@ -5,12 +5,12 @@
       <div class="section">
         <h1 class="has-text-centered title is-3">{{ $t('request.stages.step', {step: 4})}}</h1>
         <h3 class="has-text-centered subtitle is-4">{{ $t('request.stages.stage4')}}</h3>
-        <p class="is-size-5">Confirm that the following information is correct.  If you need to correct anything click 'back.' <strong>When everything is correct click 'Sign and submit'</strong> for instructions on how to send your form to your election official.</p>
+        <p class="is-size-5">{{ $t('request.stages.instructions4')}}</p>
       </div>
       <!-- <div class="control buttons"> -->
-        <nuxt-link :to="localePath({ name: 'request-stage', params: {stage: 'id-and-contact-information'} })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>Back</span></nuxt-link>
+        <nuxt-link :to="localePath({ name: 'request-stage', params: {stage: 'id-and-contact-information'} })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>{{$t('request.stages.back')}}</span></nuxt-link>
         <!-- <div class="button is-text is-expanded">&nbsp;</div> -->
-        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'sign-and-submit'} })" class="button is-primary is-medium is-pulled-right" exact ><span> Sign &amp; submit </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link>
+        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'sign-and-submit'} })" class="button is-primary is-medium is-pulled-right" exact ><span>{{$t('request.stages.submit')}}</span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link>
       <!-- </div> -->
   </div>
   <div class="column is-12 is-10-desktop is-8-widescreen is-7-fullhd is-paddingless">
@@ -48,8 +48,8 @@
   <div class="column is-10 is-8-desktop is-7-widescreen is-6-fullhd is-paddingless">
 
       <!-- <div class="control buttons is-right"> -->
-        <nuxt-link :to="localePath({ name: 'request-stage', params: {stage: 'id-and-contact-information'} })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>Back</span></nuxt-link>
-        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'sign-and-submit'} })" class="button is-primary is-medium is-pulled-right" exact ><span> Sign &amp; submit </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link>
+        <nuxt-link :to="localePath({ name: 'request-stage', params: {stage: 'id-and-contact-information'} })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>{{$t('request.stages.back')}}</span></nuxt-link>
+        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'sign-and-submit'} })" class="button is-primary is-medium is-pulled-right" exact ><span>{{$t('request.stages.submit')}}</span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link>
       <!-- </div> -->
 
     <b-modal :active.sync="isSignatureModalActive" has-modal-card>
