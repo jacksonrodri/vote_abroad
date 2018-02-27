@@ -22,7 +22,7 @@
               <!-- Sign and send your form by Email -->
               <div class="media">
                 <div class="media-content">
-                  <h3 class="title is-5">{{t$('request.stages.instructions')}}</h3>
+                  <h3 class="title is-5">{{$t('request.stages.instructions')}}</h3>
                   <!-- <p>You must <strong class="has-text-danger">sign, date and email</strong> your completed form to your {{ currentRequest ? currentRequest.votAdr.leo.jurisdiction : 'local' }} election official at <a :href="`mailto:${leoEmail}`">{{ leoEmail }}.</a> </p> -->
                   <article class="media">
                     <figure class="media-left">
@@ -409,12 +409,14 @@ export default {
       return '+1 ' + this.currentRequest.votAdr.leo.faxNumber || ''
     },
     ballotReceiptOptionsString () {
-      if (this.stateRules.fpcaSubmitOptionsRequest.length === 1) {
-        return this.$t(`this.request.stages.${this.fpcaSubmitOptionsRequest[0]}`)
+      if (!this.stateRules || this.stateRules.fpcaSubmitOptionsRequest.length === 0) {
+        return ''
+      } else if (this.stateRules.fpcaSubmitOptionsRequest.length === 1) {
+        return this.$t(`this.request.stages.${this.stateRules.fpcaSubmitOptionsRequest[0]}`)
       } else if (this.stateRules.fpcaSubmitOptionsRequest.length === 2) {
-        return this.$t(`this.request.stages.${this.fpcaSubmitOptionsRequest[0]}`) + ' ' + this.$t('this.request.stages.or') + ' ' + this.$t(`this.request.stages.${this.fpcaSubmitOptionsRequest[1]}`)
+        return this.$t(`this.request.stages.${this.stateRules.fpcaSubmitOptionsRequest[0]}`) + ' ' + this.$t('this.request.stages.or') + ' ' + this.$t(`this.request.stages.${this.stateRules.fpcaSubmitOptionsRequest[1]}`)
       } else {
-        return this.$t(`this.request.stages.${this.fpcaSubmitOptionsRequest[0]}`) + ', ' + this.$t(`this.request.stages.${this.fpcaSubmitOptionsRequest[1]}`) + ' ' + this.$t('this.request.stages.or') + ' ' + this.$t(`this.request.stages.${this.fpcaSubmitOptionsRequest[2]}`)
+        return this.$t(`this.request.stages.${this.stateRules.fpcaSubmitOptionsRequest[0]}`) + ', ' + this.$t(`this.request.stages.${this.stateRules.fpcaSubmitOptionsRequest[1]}`) + ' ' + this.$t('this.request.stages.or') + ' ' + this.$t(`this.request.stages.${this.stateRules.fpcaSubmitOptionsRequest[2]}`)
       }
     },
     ...mapState({
