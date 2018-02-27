@@ -128,7 +128,7 @@
       "mailConfirm": "**Confirm** with your local election official that they received it.",
       "step": "Step {step} of 5",
       "instructions4": "Confirm that the following information is correct. If you need to correct anything click 'Back.' When everything is correct click 'Sign and submit' for instructions on how to send your form to your election official.",
-      "instructions5": "You must send your **signed** <strong class=\"has-text-danger\">signed</signed> ballot request to your Wake County election official by email, fax or mail.   Choose how to send your ballot request",
+      "instructions5": "You must send your **signed** ballot request to your Wake County election official by email, fax or mail.   Choose how to send your ballot request. <strong class=\"has-text-danger\">signed</strong>",
       "stage1": "Your Information",
       "next": "Next",
       "mailSign": "Print, sign and date your form.",
