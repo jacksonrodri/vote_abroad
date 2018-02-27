@@ -8,7 +8,12 @@
         <!-- <p class="is-size-5" v-if="stateRules">
           {{$t('request.stages.instructions5', {leo: `${currentRequest ? currentRequest.votAdr.leo.jurisdiction : ''}${currentRequest ? currentRequest.votAdr.leo.jurisdictionType : 'local'}`, options: ballotReceiptOptionsString })}}
         </p> -->
-        <i18n path="request.stages.instructions5" class="is-size-5" tag="vue-markdown" :places="{leo: `${currentRequest ? currentRequest.votAdr.leo.jurisdiction : ''}${currentRequest ? currentRequest.votAdr.leo.jurisdictionType : 'local'}`, options: ballotReceiptOptionsString}"></i18n>
+        <i18n path="request.stages.instructions5"
+          class="is-size-5"
+          tag="vue-markdown"
+          :html="true"
+          :places="{leo: `${currentRequest ? currentRequest.votAdr.leo.jurisdiction : ''}${currentRequest ? currentRequest.votAdr.leo.jurisdictionType : 'local'}`, options: ballotReceiptOptionsString}">
+        </i18n>
         <!-- You must send your <strong class="has-text-danger">signed</strong> ballot request to your {{ currentRequest ? currentRequest.votAdr.leo.jurisdiction : '' }} {{ currentRequest ? currentRequest.votAdr.leo.jurisdictionType : 'local' }} election official by <span v-for="(opt, index) in stateRules.fpcaSubmitOptionsRequest" :key="index">{{ opt.toLowerCase() }}<span v-if="index < stateRules.fpcaSubmitOptionsRequest.length - 2">, </span><span v-if="index === stateRules.fpcaSubmitOptionsRequest.length - 2"> or </span></span>. -->
         <br/>
         <!-- <h4 class="label">Choose how to send your Ballot request</h4> -->
@@ -280,6 +285,7 @@ import MyBox from '~/components/MyBox.vue'
 import Sign from '~/components/sign.vue'
 import { mapState } from 'vuex'
 import axios from 'axios'
+import VueMarkdown from 'vue-markdown'
 
 // var mailgun = require('mailgun.js')
 // var apiKey = 'key-44903961cb823b645750fe64358dfc40'
@@ -297,7 +303,8 @@ export default {
   components: {
     MyCanvas,
     MyBox,
-    Sign
+    Sign,
+    VueMarkdown
   },
   async asyncData ({app}) {
     return {
