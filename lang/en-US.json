@@ -8,7 +8,7 @@
   },
   "request": {
     "middleName": {
-      "label": "Middle name(s)",
+      "label": "Middle Name(s)",
       "instructions": ""
     },
     "lastName": {
