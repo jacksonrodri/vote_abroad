@@ -119,7 +119,7 @@
       "faxDigiSign": "**If you have a camera on this {device}**, you can capture your signature and fax your form straight from this website.",
       "faxConfirm": "Confirm with your local election official that they received it.",
       "emailDownload": "**Otherwise**, you will need to download your form, print, sign, date and scan it.",
-      "emailSend": "Email your form to",
+      "emailSend": "Email your form to <mailto:{leoEmail}>",
       "digiSign": "Capture Signature",
       "emailConfirm": "Confirm with your local election official that they received it.",
       "faxSend": "Fax your form to",
