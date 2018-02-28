@@ -26,14 +26,14 @@
 
     <b-field v-if="!idOptions || (idOptions && idOptions.filter(x => x!== 'SSN' && x !== 'SSN4').length > 0)"
       :label="stateIdLabel">
-      <b-input :value="value.stateId"
+      <b-input :value="value ? value.stateId : ''"
         ref="stateId"
         @input="setVal">
       </b-input>
     </b-field>
 
     <div class="field">
-      <b-checkbox :value="value.noId" @input="setVal" ref="noId">
+      <b-checkbox :value="value ? value.noId : false" @input="setVal" ref="noId">
         <span v-if="idOptions && idOptions.length === 1">{{$t('request.id.noid1', {id: $t(`request.idTypes.${idOptions[0]}`)})}}"</span>
         <span v-else>{{$t('request.id.noid2')}}</span>
       </b-checkbox>
