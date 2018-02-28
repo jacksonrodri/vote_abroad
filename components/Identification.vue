@@ -6,7 +6,7 @@
 
     <b-field v-if="idOptions && idOptions.indexOf('SSN') > -1" :label="$t('request.id.SSN')">
       <b-input v-cleave="masks.ssn"
-        :value="value.ssnTyped"
+        :value="value ? value.ssnTyped : ''"
         ref="ssn"
         @input="setVal"
         @input.native="val => setSSN(val.target._vCleave.getRawValue())">
@@ -15,7 +15,7 @@
 
     <b-field v-if="!idOptions || (idOptions && idOptions.indexOf('SSN4') > -1)" :label="$t('request.id.SSN4')">
       <b-input v-cleave="masks.ssn4"
-        :value="value.ssnTyped"
+        :value="value ? value.ssnTyped : ''"
         ref="ssn4"
         @input="setVal"
         @input.native="val => setSSN(val.target._vCleave.getRawValue())">

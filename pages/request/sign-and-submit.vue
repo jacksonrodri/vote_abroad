@@ -45,7 +45,7 @@
                       <b-icon icon="pencil-alt" size="is-medium"></b-icon>
                     </figure>
                     <div class="media-content">
-                      <i18n path="request.stages.emailSign"
+                      <i18n class="is-size-5" path="request.stages.emailSign"
                         tag="vue-markdown"
                         :html="true">
                       </i18n>
@@ -54,9 +54,10 @@
                         <div class="media-content">
                           <article class="media">
                             <div class="media-content">
-                              <i18n path="request.stages.emailDigiSign"
-                                tag="vue-markdown"
+                              <i18n tag="vue-markdown"
+                                path="request.stages.emailDigiSign"
                                 :html="true">
+                                <span place="device">Computer</span>
                               </i18n>
                               <!-- {{$t('request.stages.emailDigiSign')}} -->
                               <!-- <p><strong>If you have a camera</strong> on this <span class="is-hidden-touch">computer</span><span class="is-hidden-desktop is-hidden-mobile">tablet</span><span class="is-hidden-tablet">phone</span>, you can capture your signature and email your form straight from this website.</p> -->
@@ -89,10 +90,11 @@
                       <b-icon icon="at" size="is-medium"></b-icon>
                     </figure>
                     <div class="media-content">
-                      <i18n path="request.stages.emailSend"
+                      <i18n class="is-size-5" path="request.stages.emailSend"
                         tag="p"
                         :html="true"
                         :places="{leoEmail: leoEmail}">
+                        <a class="has-text-primary" :href="`mailto:${leoEmail}`" place="leoEmail">{{leoEmail}}</a>
                       </i18n>
                       <!-- {{$t('request.stages.emailSend', {leoEmail: leoEmail})}} -->
                       <!-- <p class="is-size-5"><strong class="has-text-danger">Email</strong> your form to <a :href="`mailto:${leoEmail}`">{{leoEmail}}</a></p> -->
@@ -103,7 +105,9 @@
                       <b-icon icon="check" size="is-medium"></b-icon>
                     </figure>
                     <div class="media-content">
-                      {{$t('request.stages.emailConfirm')}}
+                      <i18n class="is-size-5" path="request.stages.emailConfirm" tag="vue-markdown">
+                      </i18n>
+                      <!-- {{$t('request.stages.emailConfirm')}} -->
                       <!-- <p class="is-size-5"><strong class="has-text-danger">Confirm</strong> with your your local election official that they received it. </p> -->
                     </div>
                     <!-- <div class="media-right">
@@ -118,10 +122,15 @@
             v-if="stateRules && stateRules.fpcaSubmitOptionsRequest.indexOf('Fax') > -1"
             icon="fax">
             <section class="section">
-              <h3 class="subtitle is-4">Sign and send your form by Fax</h3>
+              <i18n path="request.stages.faxIntro"
+                class="is-size-4"
+                tag="vue-markdown"
+                :html="true">
+              </i18n>
+              <!-- <h3 class="subtitle is-4">Sign and send your form by Fax</h3> -->
               <div class="media">
                 <div class="media-content">
-                  <h3 class="title is-5">Instructions:</h3>
+                  <h3 class="title is-5">{{$t('request.stages.instructions')}}</h3>
                   <!-- <p>You must <strong class="has-text-danger">sign, date and email</strong> your completed form to your {{ currentRequest ? currentRequest.votAdr.leo.jurisdiction : 'local' }} election official at <a :href="`mailto:${leoEmail}`">{{ leoEmail }}.</a> </p> -->
                   <article class="media">
                     <figure class="media-left">
