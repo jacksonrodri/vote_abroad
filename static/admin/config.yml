@@ -28,7 +28,7 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "rls"
     label: "State Ballot Rules"
-    folder: "/content/rls"
+    folder: "content/rls"
     create: false
     slug: "{{iso}}"
     fields:
