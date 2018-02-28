@@ -207,6 +207,9 @@
           <!-- <p>Many states require voters to designate a political party to be eligible to vote in primary elections. Choosing a political party is optional.</p> -->
         </div>
       </party-input>
+      <transition name="fade">
+      <join-democratsabroad v-model="joinDa" v-if="party!=='Republican'"></join-democratsabroad>
+      </transition>
 
       <state-special
         :label="$t('request.stateSpecial.label', {state: stateRules && stateRules.state ? stateRules.state: 'State'})"
@@ -323,6 +326,7 @@ import ReceiveBallot from '~/components/ReceiveBallot'
 import TelInput from '~/components/TelInput'
 import ForwardingAddress from '~/components/ForwardingAddress'
 import PartyInput from '~/components/PartyInput'
+import JoinDemocratsabroad from '~/components/JoinDemocratsabroad'
 import PreviousName from '~/components/PreviousName'
 import Gender from '~/components/Gender'
 import StateSpecial from '~/components/StateSpecial'
@@ -356,7 +360,8 @@ export default {
       localDate: null,
       fwabRequest: '',
       isFwab: false,
-      isOpen: false
+      isOpen: false,
+      joinDa: false
     }
   },
   components: {
@@ -368,6 +373,7 @@ export default {
     TelInput,
     ForwardingAddress,
     PartyInput,
+    JoinDemocratsabroad,
     PreviousName,
     Gender,
     StateSpecial,
