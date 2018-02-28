@@ -24,24 +24,41 @@
             v-if="stateRules && stateRules.fpcaSubmitOptionsRequest.indexOf('Email') > -1"
             icon="at">
             <section class="section">
-              <h3 class="subtitle is-4">{{$t('request.stages.emailIntro')}}</h3>
+              <!-- <h3 class="subtitle is-4">{{$t('request.stages.emailIntro')}}</h3> -->
+              <i18n path="request.stages.emailIntro"
+                class="is-size-4"
+                tag="vue-markdown"
+                :html="true">
+              </i18n>
               <!-- Sign and send your form by Email -->
               <div class="media">
                 <div class="media-content">
-                  <h3 class="title is-5">{{$t('request.stages.instructions')}}</h3>
+                  <!-- <h3 class="title is-5">{{$t('request.stages.instructions')}}</h3> -->
+                  <i18n path="request.stages.instructions"
+                    class="title is-5"
+                    tag="vue-markdown"
+                    :html="true">
+                  </i18n>
                   <!-- <p>You must <strong class="has-text-danger">sign, date and email</strong> your completed form to your {{ currentRequest ? currentRequest.votAdr.leo.jurisdiction : 'local' }} election official at <a :href="`mailto:${leoEmail}`">{{ leoEmail }}.</a> </p> -->
                   <article class="media">
                     <figure class="media-left">
                       <b-icon icon="pencil-alt" size="is-medium"></b-icon>
                     </figure>
                     <div class="media-content">
-                      {{$t('request.stages.emailSign')}}
+                      <i18n path="request.stages.emailSign"
+                        tag="vue-markdown"
+                        :html="true">
+                      </i18n>
                       <!-- <p class="is-size-5"><strong class="has-text-danger">Sign and Date</strong> your form</p> -->
                       <article class="media">
                         <div class="media-content">
                           <article class="media">
                             <div class="media-content">
-                              {{$t('request.stages.emailDigiSign')}}
+                              <i18n path="request.stages.emailDigiSign"
+                                tag="vue-markdown"
+                                :html="true">
+                              </i18n>
+                              <!-- {{$t('request.stages.emailDigiSign')}} -->
                               <!-- <p><strong>If you have a camera</strong> on this <span class="is-hidden-touch">computer</span><span class="is-hidden-desktop is-hidden-mobile">tablet</span><span class="is-hidden-tablet">phone</span>, you can capture your signature and email your form straight from this website.</p> -->
                               <!-- <p class="has-text-centered"><button class="button is-primary" @click="isSignatureModalActive = true"><b-icon icon="camera"></b-icon><span> Capture my signature</span></button></p> -->
                             </div>
@@ -51,7 +68,11 @@
                           </article>
                           <article class="media">
                             <div class="media-content">
-                              {{$t('request.stages.emailDownload')}}
+                              <i18n path="request.stages.emailDownload"
+                                tag="vue-markdown"
+                                :html="true">
+                              </i18n>
+                              <!-- {{$t('request.stages.emailDownload')}} -->
                               <!-- <p><strong>Otherwise,</strong> you will need to download your form, print, sign, date and scan it.</p> -->
                               <!-- <p class="has-text-centered"><button class="button is-primary" @click="getFPCA"><b-icon icon="download"></b-icon><span>Download my form</span></button></p> -->
                             </div>
@@ -68,7 +89,12 @@
                       <b-icon icon="at" size="is-medium"></b-icon>
                     </figure>
                     <div class="media-content">
-                      {{$t('request.stages.emailSend', {leo: leoEmail})}}
+                      <i18n path="request.stages.emailSend"
+                        tag="p"
+                        :html="true"
+                        :places="{leoEmail: leoEmail}">
+                      </i18n>
+                      <!-- {{$t('request.stages.emailSend', {leoEmail: leoEmail})}} -->
                       <!-- <p class="is-size-5"><strong class="has-text-danger">Email</strong> your form to <a :href="`mailto:${leoEmail}`">{{leoEmail}}</a></p> -->
                     </div>
                   </article>
