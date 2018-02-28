@@ -24,7 +24,7 @@
             v-if="stateRules && stateRules.fpcaSubmitOptionsRequest.indexOf('Email') > -1"
             icon="at">
             <section class="section">
-              <h3 class="subtitle is-4">{{$t('request.stages.emailInstructions')}}</h3>
+              <h3 class="subtitle is-4">{{$t('request.stages.emailIntro')}}</h3>
               <!-- Sign and send your form by Email -->
               <div class="media">
                 <div class="media-content">

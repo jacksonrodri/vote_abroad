@@ -100,6 +100,7 @@ collections:
               - {label: "Stage 5 Choose Method", name: "choose5", widget: "string"}
               - {label: "Email Tab", name: "email", widget: "string"}
               - {label: "Email Intro", name: "emailIntro", widget: "string"}
+              - {label: "Email Instructions", name: "emailInstructions", widget: "string"}
               - {label: "Email Instructions - Sign", name: "emailSign", widget: "markdown"}
               - {label: "Email Instructions - Capture Signature", name: "emailDigiSign", widget: "markdown"}
               - {label: "Email Instructions - Download & Sign", name: "emailDownload", widget: "markdown"}
