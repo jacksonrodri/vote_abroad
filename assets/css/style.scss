@@ -198,3 +198,37 @@ $flag-icon-css-path: '/flags';
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
+
+.bg-image {
+  background: #23569D url('~/assets/votefromabroad-bg.jpg') no-repeat center top;
+  // min-height: 611px;
+  // height: 970px;
+  background-size: cover;
+}
+
+.navbar-item.logo {
+  background-image: url(/vfa_blue.svg);
+  // background-color: hsl(227, 59%, 22%);
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  min-width: 40vw;
+  min-height: 3.25rem;
+  margin: 1.25rem auto 0;
+  flex-grow: 1;
+  &:hover{
+    background-image: url(/vfa_white.svg);
+    background-color: hsl(227, 59%, 22%);
+  }
+}
+
+.navbar-item.logo.is-active {
+    background-color: transparent!important;
+}
+.tabs:not(:last-child){
+  margin-bottom: 0;
+}
+
+.bg {
+  background-color: #fff;
+}
