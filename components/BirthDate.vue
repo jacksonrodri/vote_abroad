@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="field">
     <b-field :label="$t('request.dob.label')" :message="message">
       <b-datepicker
         v-model="dobb"

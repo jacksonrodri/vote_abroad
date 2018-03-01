@@ -15,6 +15,14 @@
       </button>
     </p>
   </b-field>
+  <transition name="fade">
+    <b-field v-if="isOther">
+      <b-input
+        placeholder="Please enter your account email address if you remember it so we can update your record"
+        type="text"
+        v-model="daEmail"></b-input>
+    </b-field>
+  </transition>
   <div class="field">
     <b-checkbox v-model="isExistingDaMember">I am already a member of Democrats Abroad.</b-checkbox>
   </div>
@@ -41,7 +49,8 @@ export default {
         button: true
       },
       isOpen: false,
-      isExistingDaMember: false
+      isExistingDaMember: false,
+      daEmail: ''
     }
   },
   computed: {
