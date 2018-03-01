@@ -1,6 +1,6 @@
 <template>
   <div class="field">
-    Jurisdiction
+    Jurisdiction: {{leos.length}} leos found
   </div>
 </template>
 
