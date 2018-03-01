@@ -87,6 +87,10 @@
         </div>
       </us-address>
 
+      <jurisdiction v-if="votAdr && votAdr.regionCode"
+        :key="votAdr.regionCode"
+        :state="this.votAdr.regionCode"></jurisdiction>
+
     <br/><br/>
 
     <voter-class v-model="voterClass"
@@ -341,6 +345,7 @@ import { required, requiredIf, email } from 'vuelidate/lib/validators'
 import AddressInput from '~/components/AddressInput'
 // import UsAddressInput from '~/components/UsAddressInput'
 import UsAddress from '~/components/USAddress'
+import Jurisdiction from '~/components/Jurisdiction'
 import VoterClass from '~/components/VoterClass'
 import IsRegistered from '~/components/IsRegistered'
 import ReceiveBallot from '~/components/ReceiveBallot'
@@ -391,6 +396,7 @@ export default {
   components: {
     AddressInput,
     UsAddress,
+    Jurisdiction,
     VoterClass,
     IsRegistered,
     ReceiveBallot,

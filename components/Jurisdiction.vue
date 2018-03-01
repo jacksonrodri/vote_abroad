@@ -1,25 +1,24 @@
 <template>
-  <section>
-    <!-- county -->
-    <b-autocomplete
-      :data="data"
-      v-model="icounty">
-    </b-autocomplete>
-  </section>
+  <div class="field">
+    Jurisdiction
+  </div>
 </template>
 
 <script>
+const leos = (state) => import(
+  /* webpackChunkName: "leodata" */ `@/data/${state}-leos.json`
+)
+
 export default {
   props: [
-    'value',
-    'county',
-    'address'
+    'state'
   ],
+  async created () {
+    this.leos = await leos(this.state)
+  },
   data () {
     return {
-      data: [],
-      icounty: '',
-      idivisions: []
+      leos: []
     }
   }
 }
