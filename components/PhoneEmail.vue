@@ -51,9 +51,12 @@
 
 <script>
 import { getPhoneCode, parse, format, isValidNumber, asYouType as AsYouType } from 'libphonenumber-js'
-import * as phoneExamples from 'libphonenumber-js/examples.mobile.json'
+// import * as phoneExamples from 'libphonenumber-js/examples.mobile.json'
 import Mailcheck from 'mailcheck'
 const countries = require('~/assets/countries.json')
+const phoneExamples = () => import(
+  /* webpackChunkName: "phoneExamples" */ 'libphonenumber-js/examples.mobile.json'
+)
 
 export default {
   name: 'phone-email',
@@ -67,9 +70,10 @@ export default {
       default: () => ({typed: '', country: '', isValidEmail: '', isValidPhone: '', intNumber: ''})
     }
   },
-  mounted () {
+  async mounted () {
     this.phoneCountry = this.value.country || this.userCountry || 'US'
     this.typed = this.value.typed || ''
+    this.phoneExamples = await phoneExamples()
   },
   data () {
     return {
@@ -78,7 +82,8 @@ export default {
       showFlag: true,
       selected: null,
       typed: '',
-      mailCheckedEmail: undefined
+      mailCheckedEmail: undefined,
+      phoneExamples: {}
     }
   },
   watch: {
@@ -146,7 +151,9 @@ export default {
     },
     phonePlaceholder () {
       let code = this.countryCode === 'un' ? 'US' : this.countryCode.toUpperCase()
-      return `e.g. ${format(phoneExamples[code], code, 'International')} -or- somebody@email.com`
+      let pe = this.phoneExamples
+      if (code === 'US') { return `e.g. +1 201 555 0123 -or- somebody@email.com` }
+      return `e.g. ${format(pe[code], code, 'International')} -or- somebody@email.com`
     }
   },
   methods: {
