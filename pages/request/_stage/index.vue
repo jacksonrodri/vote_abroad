@@ -167,7 +167,7 @@
   <section v-if="stage.slug === 'id-and-contact-information'">
 <!-- identity and Contact information -->
       <!-- dob -->
-      <b-field :label="$t('request.dob.label')" :message="$v.dob.$error ? Object.keys($v.dob.$params).map(x => x) : '' ">
+      <!-- <b-field :label="$t('request.dob.label')" :message="$v.dob.$error ? Object.keys($v.dob.$params).map(x => x) : '' ">
         <b-datepicker
           :value="localDob || lcldob"
           @input="value =>{ this.updateDob(value) }"
@@ -180,7 +180,8 @@
           icon-pack="fa"
           :readonly="false">
         </b-datepicker>
-      </b-field>
+      </b-field> -->
+      <birth-date></birth-date>
 
       <!-- new Date(Date.UTC(new Date(value).getFullYear(), new Date(value).getMonth(), new Date(value).getDate())).toISOString().substr(0, 10)
           :date-formatter="(date) => date.toLocaleDateString()"
@@ -196,7 +197,18 @@
         </div>
       </gender>
 
-      <party-input
+      <!-- <party-input
+        :label="$t('request.party.label')"
+        v-model="prty"
+        toolTipTitle="What is this?"
+        :message="$v.party.$error ? Object.keys($v.party.$params).map(x => x) : '' "
+        :type="($v.party.$error ? 'is-danger': '')">
+        <div slot="tooltip">
+          <vue-markdown>{{$t('request.party.tooltip')}}</vue-markdown>
+        </div>
+      </party-input> -->
+
+      <party
         :label="$t('request.party.label')"
         v-model="party"
         toolTipTitle="What is this?"
@@ -206,9 +218,18 @@
           <vue-markdown>{{$t('request.party.tooltip')}}</vue-markdown>
           <!-- <p>Many states require voters to designate a political party to be eligible to vote in primary elections. Choosing a political party is optional.</p> -->
         </div>
-      </party-input>
+      </party>
+
       <transition name="fade">
-      <join-democratsabroad v-model="joinDa" v-if="party!=='Republican'"></join-democratsabroad>
+      <join-democratsabroad
+        v-model="joinDa"
+        v-if="party!=='Republican' && party && !$store.state.userauth.user.isDA"
+        label="Would you like to Join Democrats Abroad?">
+        <div slot="tooltip">
+          <!-- <vue-markdown>{{$t('request.party.tooltip')}}</vue-markdown> -->
+          <p>Many states require voters to designate a political party to be eligible to vote in primary elections. Choosing a political party is optional.</p>
+        </div>
+      </join-democratsabroad>
       </transition>
 
       <state-special
@@ -325,7 +346,9 @@ import IsRegistered from '~/components/IsRegistered'
 import ReceiveBallot from '~/components/ReceiveBallot'
 import TelInput from '~/components/TelInput'
 import ForwardingAddress from '~/components/ForwardingAddress'
+import BirthDate from '~/components/BirthDate'
 import PartyInput from '~/components/PartyInput'
+import Party from '~/components/Party'
 import JoinDemocratsabroad from '~/components/JoinDemocratsabroad'
 import PreviousName from '~/components/PreviousName'
 import Gender from '~/components/Gender'
@@ -361,7 +384,8 @@ export default {
       fwabRequest: '',
       isFwab: false,
       isOpen: false,
-      joinDa: false
+      joinDa: null,
+      prty: ''
     }
   },
   components: {
@@ -372,7 +396,9 @@ export default {
     ReceiveBallot,
     TelInput,
     ForwardingAddress,
+    BirthDate,
     PartyInput,
+    Party,
     JoinDemocratsabroad,
     PreviousName,
     Gender,
@@ -457,6 +483,9 @@ export default {
     currentRequest () {
       return this.$store.state.requests.currentRequest
     },
+    currentRequestObject () {
+      return this.$store.getters['requests/getCurrent']
+    },
     requests: function () {
       return this.$store.state.requests.requests
     },
@@ -531,7 +560,9 @@ export default {
       set (value) { this.$store.commit('requests/update', {sex: value}) }
     },
     party: {
-      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].party : null },
+      // get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].party : null },
+      get () { return this.currentRequestObject ? this.currentRequestObject.party || '' : '' },
+      // get () { return this.$store.getters['requests/getCurrent'].party },
       set (value) { this.$store.commit('requests/update', {party: value}) }
     },
     fax: {

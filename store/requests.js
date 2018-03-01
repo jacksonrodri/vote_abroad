@@ -6,6 +6,9 @@ export const state = () => ({
 export const getters = {
   getRequestById: (state) => (id) => {
     return state.requests.find(request => request.id === id)
+  },
+  getCurrent: (state) => {
+    return state.requests[state.currentRequest]
   }
 }
 
@@ -42,6 +45,7 @@ export const mutations = {
   },
   update (state, {...args} = {}) {
     state.requests.splice(state.currentRequest, 1, Object.assign({}, state.requests[state.currentRequest], args))
+    // Vue.set(state.requests, state.currentRequest, Object.assign({}, state.requests[state.currentRequest], args))
   },
   // update (state, {id, ...args} = {}) {
   //   let thisIndex = state.requests.findIndex(x => x.id === id)
