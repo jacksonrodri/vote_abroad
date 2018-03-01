@@ -1,5 +1,5 @@
 ---
-title: CAN I VOTE IN MIDTERM ELECTIONS?
+title: 2. CAN I VOTE IN MIDTERM ELECTIONS?
 categories:
   - category: Eligibility / First Time Voter
 relatedFaqs: []
