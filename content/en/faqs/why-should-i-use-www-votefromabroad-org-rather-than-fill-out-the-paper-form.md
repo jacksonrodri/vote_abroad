@@ -1,5 +1,7 @@
 ---
-title: WHY SHOULD I USE WWW.VOTEFROMABROAD.ORG RATHER THAN FILL OUT THE PAPER FORM?
+title: >-
+  9. WHY SHOULD I USE WWW.VOTEFROMABROAD.ORG RATHER THAN FILL OUT THE PAPER
+  FORM?
 categories:
   - category: Registration Process
 relatedFaqs:
