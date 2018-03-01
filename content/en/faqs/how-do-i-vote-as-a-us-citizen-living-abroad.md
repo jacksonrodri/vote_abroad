@@ -1,5 +1,5 @@
 ---
-title: HOW DO I VOTE AS A US CITIZEN LIVING ABROAD?
+title: 3. HOW DO I VOTE AS A US CITIZEN LIVING ABROAD?
 categories:
   - category: Eligibility / First Time Voter
 relatedFaqs:
