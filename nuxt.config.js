@@ -101,7 +101,6 @@ module.exports = {
     */
    vendor: [
     '~/assets/countryaddresses.js',
-    'libphonenumber-js',
     'mailcheck',
     'auth0-js'
    ],
