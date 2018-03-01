@@ -50,12 +50,16 @@
 </template>
 
 <script>
-import { getPhoneCode, parse, format, isValidNumber, asYouType as AsYouType } from 'libphonenumber-js'
+import { getPhoneCode, parse, format, isValidNumber, asYouType as AsYouType } from 'libphonenumber-js/custom'
 // import * as phoneExamples from 'libphonenumber-js/examples.mobile.json'
 import Mailcheck from 'mailcheck'
 const countries = require('~/assets/countries.json')
+const md = () => import(
+  /* webpackChunkName: "libphone" */ 'libphonenumber-js/metadata.min.json'
+)
+let metadata = null
 const phoneExamples = () => import(
-  /* webpackChunkName: "phoneExamples" */ 'libphonenumber-js/examples.mobile.json'
+  /* webpackChunkName: "libphone" */ 'libphonenumber-js/examples.mobile.json'
 )
 
 export default {
@@ -74,6 +78,7 @@ export default {
     this.phoneCountry = this.value.country || this.userCountry || 'US'
     this.typed = this.value.typed || ''
     this.phoneExamples = await phoneExamples()
+    metadata = await md()
   },
   data () {
     return {
@@ -83,7 +88,8 @@ export default {
       selected: null,
       typed: '',
       mailCheckedEmail: undefined,
-      phoneExamples: {}
+      phoneExamples: {},
+      metadata: null
     }
   },
   watch: {
@@ -93,7 +99,7 @@ export default {
       let validPhone = false
       let intNumber = ''
       let cleanNumber = ''
-      const formatter = new AsYouType(this.countryCode)
+      const formatter = new AsYouType(this.countryCode, metadata)
       let regex = RegExp('[^0-9 +]+')
       if (/@/.test(newVal)) {
         this.typed = newVal.replace(/[ ]/gi, '')
@@ -109,8 +115,8 @@ export default {
         }
         this.typed = formatter.input(cleanNumber)
         if (formatter.country) { this.phoneCountry = formatter.country }
-        validPhone = isValidNumber(this.typed, this.phoneCountry)
-        if (validPhone) { intNumber = format(parse(this.typed, this.phoneCountry), 'E.164') }
+        validPhone = isValidNumber(this.typed, this.phoneCountry, metadata)
+        if (validPhone) { intNumber = format(parse(this.typed, this.phoneCountry, metadata), 'E.164', metadata) }
       }
       this.$emit('input', {typed: this.typed, country: this.phoneCountry, isValidEmail: validEmail, isValidPhone: validPhone, intNumber: intNumber})
       this.$store.commit('userauth/updateUser', {emailAddress: validEmail ? this.typed : '', mobileIntFormat: intNumber})
@@ -152,8 +158,13 @@ export default {
     phonePlaceholder () {
       let code = this.countryCode === 'un' ? 'US' : this.countryCode.toUpperCase()
       let pe = this.phoneExamples
-      if (code === 'US') { return `e.g. +1 201 555 0123 -or- somebody@email.com` }
-      return `e.g. ${format(pe[code], code, 'International')} -or- somebody@email.com`
+      // let meta = await md()
+      // console.log(metadata)
+      if (!metadata) {
+        return `e.g. +1 201 555 0123 -or- somebody@email.com`
+      } else {
+        return `e.g. ${format(pe[code], code, 'International', metadata)} -or- somebody@email.com`
+      }
     }
   },
   methods: {
