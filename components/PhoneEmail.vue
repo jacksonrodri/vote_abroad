@@ -20,19 +20,18 @@
             v-model="phoneCountry"
             placeholder="Country"
             ref="country"
-            keep-first
             open-on-focus
             :icon="' ' + 'flag-icon-' + countryCode.toLowerCase()"
             icon-pack="flag-icon"
             expanded
             :size="size"
             :data="filteredCountries"
-            field="iso"
+            field="code"
             @blur="focusField"
             @focus="$event.target.select()"
             @select="option => select(option)">
           <template slot-scope="props">
-            <span :class="`flag-icon flag-icon-${props.option.iso.toLowerCase()}`"></span>{{ props.option.label }} (+{{getPhoneCode(props.option.iso)}})
+            <span :class="`flag-icon flag-icon-${props.option.code.toLowerCase()}`"></span>{{ props.option.name }} (+{{getPhoneCode(props.option.code)}})
           </template>
         </b-autocomplete>
         <b-input
@@ -51,10 +50,10 @@
 </template>
 
 <script>
-import countries from '~/assets/countryaddresses'
 import { getPhoneCode, parse, format, isValidNumber, asYouType as AsYouType } from 'libphonenumber-js'
 import * as phoneExamples from 'libphonenumber-js/examples.mobile.json'
 import Mailcheck from 'mailcheck'
+const countries = require('~/assets/countries.json')
 
 export default {
   name: 'phone-email',
@@ -121,31 +120,21 @@ export default {
   computed: {
     userCountry () { return this.$store.state.userauth.user.country },
     countryList () {
-      return countries()
+      return countries
     },
     filteredCountries () {
       if (this.phoneCountry && this.phoneCountry.length > 1) {
         return this.countryList.filter((option) => {
-          return option.label
+          return option.name
             .toString()
             .toLowerCase()
-            .indexOf(this.phoneCountry.toLowerCase()) >= 0 || option.iso
+            .indexOf(this.phoneCountry.toLowerCase()) >= 0 || option.code
             .toString()
             .toLowerCase()
             .indexOf(this.phoneCountry.toLowerCase()) >= 0
         })
       } else {
         return this.countryList
-      }
-    },
-    codeFilteredCountries () {
-      if (this.usOnly) {
-        return this.countryList.filter(country => country.iso === 'US')
-      }
-      if (this.phoneCountry.length === 2) {
-        return this.countryList.filter(country => country.iso.toLowerCase() === this.phoneCountry.toLowerCase())
-      } else {
-        return this.filteredCountries
       }
     },
     countryCode () {
