@@ -343,7 +343,6 @@
 <script>
 import { required, requiredIf, email } from 'vuelidate/lib/validators'
 import AddressInput from '~/components/AddressInput'
-// import UsAddressInput from '~/components/UsAddressInput'
 import UsAddress from '~/components/USAddress'
 import Jurisdiction from '~/components/Jurisdiction'
 import VoterClass from '~/components/VoterClass'
@@ -352,7 +351,7 @@ import ReceiveBallot from '~/components/ReceiveBallot'
 import TelInput from '~/components/TelInput'
 import ForwardingAddress from '~/components/ForwardingAddress'
 import BirthDate from '~/components/BirthDate'
-import PartyInput from '~/components/PartyInput'
+// import PartyInput from '~/components/PartyInput'
 import Party from '~/components/Party'
 import JoinDemocratsabroad from '~/components/JoinDemocratsabroad'
 import PreviousName from '~/components/PreviousName'
@@ -403,7 +402,7 @@ export default {
     TelInput,
     ForwardingAddress,
     BirthDate,
-    PartyInput,
+    // PartyInput,
     Party,
     JoinDemocratsabroad,
     PreviousName,
@@ -414,31 +413,31 @@ export default {
     AdditionalInfo,
     VueMarkdown
   },
-  watch: {
-    dob: function (newVal, oldVal) {
-      if (!this.localDob && newVal) {
-        console.log('dob from vuex-persist', new Date(new Date(newVal).getUTCFullYear(), new Date(newVal).getUTCMonth(), new Date(newVal).getUTCDate()))
-        this.localDob = new Date(new Date(newVal).getUTCFullYear(), new Date(newVal).getUTCMonth(), new Date(newVal).getUTCDate())
-      } else if (newVal !== oldVal) {
-        this.localDob = new Date(new Date(newVal).getUTCFullYear(), new Date(newVal).getUTCMonth(), new Date(newVal).getUTCDate())
-      }
-    },
-    date: function (newVal, oldVal) {
-      if (!this.localDate && newVal) {
-        console.log('date from vuex-persist', new Date(new Date(newVal).getUTCFullYear(), new Date(newVal).getUTCMonth(), new Date(newVal).getUTCDate()))
-        this.localDate = new Date(new Date(newVal).getUTCFullYear(), new Date(newVal).getUTCMonth(), new Date(newVal).getUTCDate())
-      } else if (newVal !== oldVal) {
-        this.localDate = new Date(new Date(newVal).getUTCFullYear(), new Date(newVal).getUTCMonth(), new Date(newVal).getUTCDate())
-      }
-    }
-  },
+  // watch: {
+  //   dob: function (newVal, oldVal) {
+  //     if (!this.localDob && newVal) {
+  //       console.log('dob from vuex-persist', new Date(new Date(newVal).getUTCFullYear(), new Date(newVal).getUTCMonth(), new Date(newVal).getUTCDate()))
+  //       this.localDob = new Date(new Date(newVal).getUTCFullYear(), new Date(newVal).getUTCMonth(), new Date(newVal).getUTCDate())
+  //     } else if (newVal !== oldVal) {
+  //       this.localDob = new Date(new Date(newVal).getUTCFullYear(), new Date(newVal).getUTCMonth(), new Date(newVal).getUTCDate())
+  //     }
+  //   },
+  //   date: function (newVal, oldVal) {
+  //     if (!this.localDate && newVal) {
+  //       console.log('date from vuex-persist', new Date(new Date(newVal).getUTCFullYear(), new Date(newVal).getUTCMonth(), new Date(newVal).getUTCDate()))
+  //       this.localDate = new Date(new Date(newVal).getUTCFullYear(), new Date(newVal).getUTCMonth(), new Date(newVal).getUTCDate())
+  //     } else if (newVal !== oldVal) {
+  //       this.localDate = new Date(new Date(newVal).getUTCFullYear(), new Date(newVal).getUTCMonth(), new Date(newVal).getUTCDate())
+  //     }
+  //   }
+  // },
   computed: {
-    lcldob () {
-      return this.dob ? new Date(parseInt(this.dob.substr(0, 4)), parseInt(this.dob.substr(5, 2)) - 1, parseInt(this.dob.substr(8, 2))) : null
-    },
-    lcldate () {
-      return this.date ? new Date(parseInt(this.date.substr(0, 4)), parseInt(this.date.substr(5, 2)) - 1, parseInt(this.date.substr(8, 2))) : null
-    },
+    // lcldob () {
+    //   return this.dob ? new Date(parseInt(this.dob.substr(0, 4)), parseInt(this.dob.substr(5, 2)) - 1, parseInt(this.dob.substr(8, 2))) : null
+    // },
+    // lcldate () {
+    //   return this.date ? new Date(parseInt(this.date.substr(0, 4)), parseInt(this.date.substr(5, 2)) - 1, parseInt(this.date.substr(8, 2))) : null
+    // },
     stateRules () {
       if (this.votAdr && this.votAdr.regionCode) {
         return this.allStateRules.find(x => x.iso.toLowerCase() === this.votAdr.regionCode.toLowerCase())
@@ -468,12 +467,12 @@ export default {
           }
         })
     },
-    maxDate () {
-      return new Date(2000, 10, 6)
-    },
-    minDate () {
-      return new Date(1870, 0, 1)
-    },
+    // maxDate () {
+    //   return new Date(2000, 10, 6)
+    // },
+    // minDate () {
+    //   return new Date(1870, 0, 1)
+    // },
     stage () {
       switch (this.$route.params.stage) {
         case 'your-information':
@@ -611,50 +610,47 @@ export default {
   methods: {
     focusName () {
       this.$refs.userinput.focus()
-    },
-    updateDob (d) {
-      if (Object.prototype.toString.call(d) === '[object Date]') {
-        // it is a date
-        if (isNaN(d.getTime())) {
-          // date is not valid
-          console.log(d)
-        } else {
-          // date is valid
-          let bday = new Date(Date.UTC(new Date(d).getFullYear(), new Date(d).getMonth(), new Date(d).getDate())).toISOString().substr(0, 10)
-          this.$store.commit('requests/update', { dob: bday })
-        }
-      } else {
-        // not a date
-        console.log(d)
-      }
-    },
-    updateDate (d) {
-      if (Object.prototype.toString.call(d) === '[object Date]') {
-        // it is a date
-        if (isNaN(d.getTime())) {
-          // date is not valid
-          console.log(d)
-        } else {
-          // date is valid
-          let signDate = new Date(Date.UTC(new Date(d).getFullYear(), new Date(d).getMonth(), new Date(d).getDate())).toISOString().substr(0, 10)
-          this.$store.commit('requests/update', { date: signDate })
-        }
-      } else {
-        // not a date
-        console.log(d)
-      }
-    },
-    printVal (val) {
-      console.log(val)
     }
+    // updateDob (d) {
+    //   if (Object.prototype.toString.call(d) === '[object Date]') {
+    //     // it is a date
+    //     if (isNaN(d.getTime())) {
+    //       // date is not valid
+    //       console.log(d)
+    //     } else {
+    //       // date is valid
+    //       let bday = new Date(Date.UTC(new Date(d).getFullYear(), new Date(d).getMonth(), new Date(d).getDate())).toISOString().substr(0, 10)
+    //       this.$store.commit('requests/update', { dob: bday })
+    //     }
+    //   } else {
+    //     // not a date
+    //     console.log(d)
+    //   }
+    // },
+    // updateDate (d) {
+    //   if (Object.prototype.toString.call(d) === '[object Date]') {
+    //     // it is a date
+    //     if (isNaN(d.getTime())) {
+    //       // date is not valid
+    //       console.log(d)
+    //     } else {
+    //       // date is valid
+    //       let signDate = new Date(Date.UTC(new Date(d).getFullYear(), new Date(d).getMonth(), new Date(d).getDate())).toISOString().substr(0, 10)
+    //       this.$store.commit('requests/update', { date: signDate })
+    //     }
+    //   } else {
+    //     // not a date
+    //     console.log(d)
+    //   }
+    // },
+    // printVal (val) {
+    //   console.log(val)
+    // }
     // updateDate (value) {
     //   this.localDate = value
     //   let signDate = new Date(Date.UTC(new Date(value).getFullYear(), new Date(value).getMonth(), new Date(value).getDate())).toISOString().substr(0, 10)
     //   this.$store.commit('requests/update', { date: signDate })
     // }
-  },
-  mounted () {
-    console.log('mounted')
   },
   validations () {
     return {
