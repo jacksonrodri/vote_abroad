@@ -12,7 +12,7 @@
         field="structured_formatting.main_text"
         v-model="street"
         :loading="isFetching"
-        @keyup.native="isFetching = true"
+        @keyup.native="suppressDropdown = false"
         @input="getAsyncData"
         @select="option => fillData(option)">
         <template slot-scope="props">{{ props.option.description }}</template>
@@ -29,9 +29,10 @@
         :placeholder="$t('request.votAdr.city')"
         :data="data"
         field="structured_formatting.main_text"
+        expanded
         v-model="city"
         :loading="isFetchingCity"
-        @keyup.native="isFetchingCity = true"
+        @keyup.native="suppressDropdown = false"
         @input="getAsyncDataCity"
         @select="option => fillDataCity(option)">
         <template slot-scope="props">{{ props.option.description.replace(', USA', '') }} </template>
@@ -50,7 +51,7 @@
         :placeholder="$t('request.votAdr.zip')"
         v-model="zip"></b-input>
     </b-field>
-    <b-field>
+    <b-field :label="$t('request.votAdr.county')">
       <b-input
         :placeholder="$t('request.votAdr.county')"
         v-model="county"></b-input>
@@ -181,10 +182,12 @@ export default {
       this.$store.commit('requests/update', {votAdr: Object.assign({}, this.votAdr, {[field]: value})})
     },
     getAsyncData: debounce(function () {
+      this.isFetching = true
       if (this.suppressDropdown) {
         this.$refs.street.isActive = false
-        console.log('done')
+        this.$refs.city.isActive = false
         this.suppressDropdown = false
+        this.isFetching = false
       }
       this.data = []
       axios.get(`${process.env.placesUrl + process.env.autocompleteEndpoint}?input=${this.street}&types=geocode&language=en&components=country:US&key=${process.env.placesKey}`)
@@ -232,6 +235,13 @@ export default {
       }
     },
     getAsyncDataCity: debounce(function () {
+      this.isFetchingCity = true
+      if (this.suppressDropdown) {
+        this.$refs.street.isActive = false
+        this.$refs.city.isActive = false
+        this.suppressDropdown = false
+        this.isFetchingCity = false
+      }
       this.data = []
       axios.get(`${process.env.placesUrl + process.env.autocompleteEndpoint}?input=${this.city}&types=(cities)&language=en&components=country:US&key=${process.env.placesKey}`)
         .then(({ data }) => {

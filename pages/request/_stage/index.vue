@@ -104,10 +104,10 @@
         :key="votAdr.regionCode"
         :state="this.votAdr.regionCode">
         <div slot="instructions">
-          <p>{{ $t('request.votAdr.instructions') }}</p>
+          <p>{{ $t('request.jurisdiction.instructions') }}</p>
         </div>
         <div slot="tooltip">
-          <vue-markdown>{{$t('request.votAdr.tooltip')}}</vue-markdown>
+          <vue-markdown>{{$t('request.jurisdiction.tooltip')}}</vue-markdown>
         </div>
       </jurisdiction>
 

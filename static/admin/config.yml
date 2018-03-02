@@ -257,6 +257,19 @@ collections:
                 widget: "object"
                 fields:
                   - {label: "Required", name: "required", widget: "string"}
+          - label: "Jurisdiction"
+            name: "votAdr"
+            widget: "object"
+            fields:
+              - {label: "Field Label", name: "label", widget: "string"}
+              - {label: "Instructions", name: "instructions", widget: "string"}
+              - {label: "Placeholder", name: "placeholder", widget: "string"}
+              - {label: "Tooltip", name: "tooltip", widget: "markdown"}
+              - label: "Messages"
+                name: "messages"
+                widget: "object"
+                fields:
+                  - {label: "Required", name: "required", widget: "string"}
           - label: "Voter Classification"
             name: "voterClass"
             widget: "object"
