@@ -57,7 +57,8 @@
                         {{ new Date(election.date).toLocaleDateString('en-US', {day: 'numeric'}) }}
                       </div>
                     </div>
-                     <span class="is-size-5"><span class="has-text-weight-semibold">{{ election.state }}</span> - {{ $t(`elections.electionTypes['${election.electionType}']`) }}</span>
+                     <span class="is-size-5"><span class="has-text-weight-semibold">{{ election.state }}</span> - {{ election.electionType}}</span>
+                     <!-- </span> - {{ $t(`elections.electionTypes['${election.electionType}']`) }}</span> -->
                   </nuxt-link>
                   <hr class="navbar-divider">
                   <nuxt-link :to="localePath({ name: 'elections' })" class="navbar-item" exact >... All upcoming elections</nuxt-link>

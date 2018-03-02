@@ -8,8 +8,8 @@ const workboxSW = new self.WorkboxSW({
 
 workboxSW.precache([
   {
-    "url": "/_nuxt/0.137666e52fd73d1eaf24.js",
-    "revision": "16c9fc4e9ebc33c23921bdc3185f650d"
+    "url": "/_nuxt/0.76cced029542d2cb11d7.js",
+    "revision": "aa17e399d63bd9abada54331debf71ec"
   },
   {
     "url": "/_nuxt/1.af8a91256ca784925f87.js",
@@ -56,12 +56,12 @@ workboxSW.precache([
     "revision": "a4d4495d81ebc859f3ddff09aac16dec"
   },
   {
-    "url": "/_nuxt/app.db01552e7e17a155cc56.js",
-    "revision": "b4666fddf6edd3104f98f77d44d66ef0"
+    "url": "/_nuxt/app.c7ec2c7fe1c77cce6912.js",
+    "revision": "d38822f2f1b6640ea10b8f65accbc90a"
   },
   {
-    "url": "/_nuxt/layouts/default.4d625d6f378a26f0a4c9.js",
-    "revision": "0fbd53b6f9e7e00ce0183ff0bea51dbd"
+    "url": "/_nuxt/layouts/default.f4cdd7ac98513b2e9f90.js",
+    "revision": "283723a840480bd84eb05f5c6f15c4f5"
   },
   {
     "url": "/_nuxt/leodata0.4030891bef2931ef16f6.js",
@@ -288,8 +288,8 @@ workboxSW.precache([
     "revision": "26b5a8f7fc1803af086e260cc9b32568"
   },
   {
-    "url": "/_nuxt/manifest.6e916000e244b745f4f1.js",
-    "revision": "7660cbdd963fe8e47eb1a7802cda5084"
+    "url": "/_nuxt/manifest.58d27b5688d146854708.js",
+    "revision": "89b44272071f22bae0c96f2937d897af"
   },
   {
     "url": "/_nuxt/vendor.502ed985f8462dad0070.js",
