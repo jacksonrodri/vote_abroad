@@ -44,7 +44,7 @@
         <!-- emailAddress -->
       <b-field
       :type="($v.email.$error ? 'is-danger': '')"
-      :message="$v.email.$error ? Object.keys($v.email.$params).map(x => x) : '' "
+      :message="$v.email.$error ? Object.keys($v.email.$params).map(x => $t(`request.email.messages.${x}`)) : '' "
       :label="$t('request.email.label')">
         <b-input v-model="email" @input="$v.email.$touch()"></b-input>
       </b-field>
@@ -348,7 +348,7 @@ import Jurisdiction from '~/components/Jurisdiction'
 import VoterClass from '~/components/VoterClass'
 import IsRegistered from '~/components/IsRegistered'
 import ReceiveBallot from '~/components/ReceiveBallot'
-// import TelInput from '~/components/TelInput'
+import TelInput from '~/components/TelInput'
 import ForwardingAddress from '~/components/ForwardingAddress'
 import BirthDate from '~/components/BirthDate'
 // import PartyInput from '~/components/PartyInput'
@@ -399,7 +399,7 @@ export default {
     VoterClass,
     IsRegistered,
     ReceiveBallot,
-    // TelInput,
+    TelInput,
     ForwardingAddress,
     BirthDate,
     // PartyInput,

@@ -146,7 +146,7 @@
       "stage5": "Sign and Submit",
       "mail": "Mail",
       "mailPost": "Mail your form to:",
-      "submit": "Sign & submit",
+      "submit": "Instructions for sending",
       "emailSign": "<strong class='has-text-danger'>Sign and Date</strong> your form",
       "faxSign": "<strong class='has-text-danger'>Sign and Date</strong> your form",
       "email": "Email",
