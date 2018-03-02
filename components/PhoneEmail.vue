@@ -58,7 +58,7 @@ const md = () => import(
   /* webpackChunkName: "libphone" */ 'libphonenumber-js/metadata.min.json'
 )
 let metadata = null
-const phoneExamples = () => import(
+const phoneExamples = async () => import(
   /* webpackChunkName: "libphone" */ 'libphonenumber-js/examples.mobile.json'
 )
 

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="field">
       <b-field :label="$t('request.voterClass.civilianOrMilitary')">
         <b-field grouped group-multiline>
           <p class="control">
@@ -24,8 +24,6 @@
           </p>
         </b-field>
       </b-field>
-
-      <br/>
 
       <div class="field">
         <span class="is-flex">

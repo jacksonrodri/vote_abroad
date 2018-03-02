@@ -72,7 +72,13 @@ export const actions = {
       commit('add')
       commit('update', {
         email: rootState.userauth.user.emailAddress,
-        country: rootState.userauth.session.country
+        tel: {
+          intNumber: rootState.userauth.user.mobileIntFormat || '',
+          country: rootState.userauth.session.country || ''
+        },
+        abrAdr: {
+          countryiso: rootState.userauth.session.country
+        }
       })
     }
   },

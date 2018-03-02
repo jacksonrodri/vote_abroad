@@ -75,7 +75,7 @@
 <!-- voting information -->
   <section v-if="stage.slug === 'voting-information'">
 
-    <us-address
+    <!-- <us-address
         :label="$t('request.votAdr.label')"
         toolTipTitle="Your last US Address"
         v-model="votAdr">
@@ -85,13 +85,31 @@
         <div slot="tooltip">
           <vue-markdown>{{$t('request.votAdr.tooltip')}}</vue-markdown>
         </div>
-      </us-address>
+      </us-address> -->
+
+      <voting-address
+        :label="$t('request.votAdr.label')"
+        toolTipTitle="Your last US Address">
+        <div slot="instructions">
+          <p>{{ $t('request.votAdr.instructions') }}</p>
+        </div>
+        <div slot="tooltip">
+          <vue-markdown>{{$t('request.votAdr.tooltip')}}</vue-markdown>
+        </div>
+      </voting-address>
 
       <jurisdiction v-if="votAdr && votAdr.regionCode"
+        :label="$t('request.votAdr.jurisdiction')"
+        toolTipTitle="Jurisdiction help"
         :key="votAdr.regionCode"
-        :state="this.votAdr.regionCode"></jurisdiction>
-
-    <br/><br/>
+        :state="this.votAdr.regionCode">
+        <div slot="instructions">
+          <p>{{ $t('request.votAdr.instructions') }}</p>
+        </div>
+        <div slot="tooltip">
+          <vue-markdown>{{$t('request.votAdr.tooltip')}}</vue-markdown>
+        </div>
+      </jurisdiction>
 
     <voter-class v-model="voterClass"
       :allowsNeverResided="stateRules ? stateRules.allowsNeverResided : false"
@@ -103,16 +121,12 @@
       </div>
     </voter-class>
 
-    <br/><br/>
-
       <!-- isRegistered -->
     <is-registered
       v-if="votAdr && votAdr.leo && votAdr.leo.jurisdiction && votAdr.leo.jurisdictionType"
       :label="$t('request.isRegistered.label', {jurisdiction: votAdr.leo.jurisdictionType === 'All' ? votAdr.leo.state : votAdr.leo.jurisdiction + ' ' + votAdr.leo.jurisdictionType})"
       v-model="isRegistered">
     </is-registered>
-
-    <br/>
 
     <!-- recBallot -->
     <receive-ballot v-model="recBallot"
@@ -125,8 +139,6 @@
         <!-- <p>You may request to receive your blank ballot by email/online, fax or mail. We encourage voters to request their blank ballot be sent by email/online or fax to avoid the delay associated with mail  and the possibility the ballot will be lost in transit.</p> -->
       </div>
     </receive-ballot>
-
-    <br/>
 
     <tel-input
       key="fax"
@@ -345,6 +357,7 @@ import { required, requiredIf, email } from 'vuelidate/lib/validators'
 import AddressInput from '~/components/AddressInput'
 import UsAddress from '~/components/USAddress'
 import Jurisdiction from '~/components/Jurisdiction'
+import VotingAddress from '~/components/VotingAddress'
 import VoterClass from '~/components/VoterClass'
 import IsRegistered from '~/components/IsRegistered'
 import ReceiveBallot from '~/components/ReceiveBallot'
@@ -395,6 +408,7 @@ export default {
   components: {
     AddressInput,
     UsAddress,
+    VotingAddress,
     Jurisdiction,
     VoterClass,
     IsRegistered,
