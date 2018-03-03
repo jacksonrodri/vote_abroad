@@ -5,6 +5,7 @@
         v-model="dobb"
         :readonly="false"
         :placeholder="$t('request.dob.placeholder')"
+        :date-formatter="(date) => {date.setHours(date.getHours() + 4); return date.toLocaleDateString()}"
         :min-date="minDate"
         :max-date="maxDate"
         :focused-date="new Date(new Date().getFullYear() - 18, 0, 1)"
