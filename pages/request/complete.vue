@@ -13,6 +13,8 @@
 import { mapState } from 'vuex'
 
 export default {
+  name: 'FPCAComplete',
+  middleware: 'verify-request',
   data () {
     return {}
   },

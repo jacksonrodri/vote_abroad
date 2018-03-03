@@ -92,6 +92,9 @@ export default {
   },
   watch: {
     typed: function (newVal, oldVal) {
+      if (!newVal) {
+        return null
+      }
       let validPhone = false
       let intNumber = ''
       let cleanNumber = newVal

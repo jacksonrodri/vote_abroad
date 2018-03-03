@@ -1,5 +1,5 @@
 <template>
-  <!-- <div class="columns is-centered is-multiline"> -->
+  <div class="columns is-centered is-multiline">
     <div class="column is-10 is-8-desktop is-7-widescreen is-6-fullhd is-paddingless">
     <!-- <no-ssr> -->
       <div class="section">
@@ -41,9 +41,9 @@
                   </i18n>
                   <!-- <p>You must <strong class="has-text-danger">sign, date and email</strong> your completed form to your {{ currentRequest ? currentRequest.votAdr.leo.jurisdiction : 'local' }} election official at <a :href="`mailto:${leoEmail}`">{{ leoEmail }}.</a> </p> -->
                   <article class="media">
-                    <figure class="media-left">
+                    <!-- <figure class="media-left">
                       <b-icon icon="pencil-alt" size="is-medium"></b-icon>
-                    </figure>
+                    </figure> -->
                     <div class="media-content">
                       <i18n class="is-size-5" path="request.stages.emailSign"
                         tag="vue-markdown"
@@ -53,6 +53,12 @@
                       <article class="media">
                         <div class="media-content">
                           <article class="media">
+                            <figure class="media-left is-marginless">
+                              <!-- <b-icon icon="camera" size="is-medium"></b-icon> -->
+                              <span class="icon is-large">
+                                <i class="fas fa-camera fa-2x"></i>
+                              </span>
+                            </figure>
                             <div class="media-content">
                               <i18n tag="vue-markdown"
                                 path="request.stages.emailDigiSign"
@@ -68,6 +74,14 @@
                             </div>
                           </article>
                           <article class="media">
+                            <figure class="media-left is-marginless">
+                              <span class="icon is-large">
+                                <span class="fa-stack fa-lg">
+                                  <i class="fas fa-camera fa-stack-1x"></i>
+                                  <i class="fas fa-ban fa-stack-2x"></i>
+                                </span>
+                              </span>
+                            </figure>
                             <div class="media-content">
                               <i18n path="request.stages.emailDownload"
                                 tag="vue-markdown"
@@ -85,7 +99,7 @@
                       </article>
                     </div>
                   </article>
-                  <article class="media">
+                  <!-- <article class="media">
                     <figure class="media-left">
                       <b-icon icon="at" size="is-medium"></b-icon>
                     </figure>
@@ -96,8 +110,6 @@
                         :places="{leoEmail: leoEmail}">
                         <a class="has-text-primary" :href="`mailto:${leoEmail}`" place="leoEmail">{{leoEmail}}</a>
                       </i18n>
-                      <!-- {{$t('request.stages.emailSend', {leoEmail: leoEmail})}} -->
-                      <!-- <p class="is-size-5"><strong class="has-text-danger">Email</strong> your form to <a :href="`mailto:${leoEmail}`">{{leoEmail}}</a></p> -->
                     </div>
                   </article>
                   <article class="media">
@@ -107,13 +119,8 @@
                     <div class="media-content">
                       <i18n class="is-size-5" path="request.stages.emailConfirm" tag="vue-markdown">
                       </i18n>
-                      <!-- {{$t('request.stages.emailConfirm')}} -->
-                      <!-- <p class="is-size-5"><strong class="has-text-danger">Confirm</strong> with your your local election official that they received it. </p> -->
                     </div>
-                    <!-- <div class="media-right">
-                      <button class="button is-primary"><b-icon icon="calendar"></b-icon><span>Remind Me</span></button>
-                    </div> -->
-                  </article>
+                  </article> -->
                 </div>
               </div>
             </section>
@@ -220,11 +227,13 @@
                     <div class="media-content">
                       <span class="is-size-5">Mail your form to: </span>
                       <div class="box">
-                        <span v-if="currentRequest.votAdr.leo.officeAddress.line1"><strong>{{ currentRequest.votAdr.leo.officeAddress.line1 }}</strong><br/></span>
-                        <span v-if="currentRequest.votAdr.leo.officeAddress.line2"><strong>{{ currentRequest.votAdr.leo.officeAddress.line2 }}</strong><br/></span>
-                        <span><strong>{{ currentRequest.votAdr.leo.officeAddress.city }}, </strong>
-                        <strong>{{ currentRequest.votAdr.leo.officeAddress.state }} </strong>
-                        <strong>{{ currentRequest.votAdr.leo.officeAddress.zip }}</strong><br/></span>
+                        <span v-if="currentRequest.votAdr.leo.n"><strong>{{ currentRequest.votAdr.leo.n }}</strong><br/></span>
+                        <span v-if="currentRequest.votAdr.leo.a1"><strong>{{ currentRequest.votAdr.leo.a1 }}</strong><br/></span>
+                        <span v-if="currentRequest.votAdr.leo.a2"><strong>{{ currentRequest.votAdr.leo.a2 }}</strong><br/></span>
+                        <span v-if="currentRequest.votAdr.leo.a3"><strong>{{ currentRequest.votAdr.leo.a3 }}</strong><br/></span>
+                        <span><strong>{{ currentRequest.votAdr.leo.c }}, </strong>
+                        <strong>{{ currentRequest.votAdr.leo.s }} </strong>
+                        <strong>{{ currentRequest.votAdr.leo.z }}</strong><br/></span>
                         <span class="has-text-right"><strong>USA</strong><br/></span>
                       </div>
                     </div>
@@ -252,11 +261,11 @@
                 <li>Mail your form to:</li>
               </ol>
               <div class="box">
-                <span v-if="currentRequest.votAdr.leo.officeAddress.line1"><strong>{{ currentRequest.votAdr.leo.officeAddress.line1 }}</strong><br/></span>
-                <span v-if="currentRequest.votAdr.leo.officeAddress.line2"><strong>{{ currentRequest.votAdr.leo.officeAddress.line2 }}</strong><br/></span>
-                <span><strong>{{ currentRequest.votAdr.leo.officeAddress.city }}, </strong>
-                <strong>{{ currentRequest.votAdr.leo.officeAddress.state }} </strong>
-                <strong>{{ currentRequest.votAdr.leo.officeAddress.zip }}</strong><br/></span>
+                <span v-if="currentRequest.votAdr.leo.line1"><strong>{{ currentRequest.votAdr.leo.line1 }}</strong><br/></span>
+                <span v-if="currentRequest.votAdr.leo.line2"><strong>{{ currentRequest.votAdr.leo.line2 }}</strong><br/></span>
+                <span><strong>{{ currentRequest.votAdr.leo.city }}, </strong>
+                <strong>{{ currentRequest.votAdr.leo.state }} </strong>
+                <strong>{{ currentRequest.votAdr.leo.zip }}</strong><br/></span>
                 <span class="has-text-right"><strong>USA</strong><br/></span>
               </div>
               <button @click="getFPCA" class="button is-primary is-large"><b-icon icon="download"></b-icon><span>Download your completed form</span></button>
@@ -310,7 +319,7 @@
     <b-modal :active.sync="isSignatureModalActive" has-modal-card>
       <sign @sigcap="addSig" />
     </b-modal>
-    <!-- </div> -->
+    </div>
   </div>
 </template>
 
@@ -335,6 +344,8 @@ import VueMarkdown from 'vue-markdown'
 // }
 
 export default {
+  name: 'SignAndSubmit',
+  middleware: 'verify-request',
   components: {
     MyCanvas,
     MyBox,
@@ -442,24 +453,24 @@ export default {
       }
     },
     leoAdr () {
-      let leo = this.currentRequest.votAdr.leo.officeAddress
-      return `${leo.line1 ? leo.line1 + '\n' : ''}${leo.line2 ? leo.line2 + '\n' : ''}${leo.line3 ? leo.line3 + '\n' : ''}${leo.city ? leo.city + ', ' : ''}${leo.state ? leo.state + ' ' : ''}${leo.zip ? leo.zip + '\n' : '\n'}USA`
+      let leo = this.currentRequest.votAdr.leo
+      return `${leo.n ? leo.n + '\n' : ''}${leo.a1 ? leo.a1 + '\n' : ''}${leo.a2 ? leo.a2 + '\n' : ''}${leo.a3 ? leo.a3 + '\n' : ''}${leo.c ? leo.c + ', ' : ''}${leo.s ? leo.s + ' ' : ''}${leo.z ? leo.z + '\n' : '\n'}USA`
     },
     leoEmail () {
-      return this.currentRequest.votAdr.leo.emailAddress || ''
+      return this.currentRequest.votAdr.leo.e || ''
     },
     leoFax () {
-      return '+1 ' + this.currentRequest.votAdr.leo.faxNumber || ''
+      return '+1 ' + this.currentRequest.votAdr.leo.f || ''
     },
     ballotReceiptOptionsString () {
       if (!this.stateRules || this.stateRules.fpcaSubmitOptionsRequest.length === 0) {
         return ''
       } else if (this.stateRules.fpcaSubmitOptionsRequest.length === 1) {
-        return this.$t(`this.request.stages.${this.stateRules.fpcaSubmitOptionsRequest[0]}`)
+        return this.$t(`request.stages.${this.stateRules.fpcaSubmitOptionsRequest[0].toLowerCase()}`)
       } else if (this.stateRules.fpcaSubmitOptionsRequest.length === 2) {
-        return this.$t(`this.request.stages.${this.stateRules.fpcaSubmitOptionsRequest[0]}`) + ' ' + this.$t('this.request.stages.or') + ' ' + this.$t(`this.request.stages.${this.stateRules.fpcaSubmitOptionsRequest[1]}`)
+        return this.$t(`request.stages.${this.stateRules.fpcaSubmitOptionsRequest[0].toLowerCase()}`) + ' ' + this.$t('request.id.or') + ' ' + this.$t(`request.stages.${this.stateRules.fpcaSubmitOptionsRequest[1].toLowerCase()}`)
       } else {
-        return this.$t(`this.request.stages.${this.stateRules.fpcaSubmitOptionsRequest[0]}`) + ', ' + this.$t(`this.request.stages.${this.stateRules.fpcaSubmitOptionsRequest[1]}`) + ' ' + this.$t('this.request.stages.or') + ' ' + this.$t(`this.request.stages.${this.stateRules.fpcaSubmitOptionsRequest[2]}`)
+        return this.$t(`request.stages.${this.stateRules.fpcaSubmitOptionsRequest[0].toLowerCase()}`) + ', ' + this.$t(`request.stages.${this.stateRules.fpcaSubmitOptionsRequest[1].toLowerCase()}`) + ' ' + this.$t('request.id.or') + ' ' + this.$t(`request.stages.${this.stateRules.fpcaSubmitOptionsRequest[2].toLowerCase()}`)
       }
     },
     ...mapState({

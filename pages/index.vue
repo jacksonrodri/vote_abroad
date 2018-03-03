@@ -74,6 +74,7 @@ export default {
       'authStart'
     ])
   },
-  transition: 'test'
+  transition: 'test',
+  middleware: 'account'
 }
 </script>

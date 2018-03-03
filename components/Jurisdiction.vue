@@ -6,7 +6,7 @@
     <!-- <button class="button">Wake County</button> -->
     <b-field>
       <b-autocomplete
-        v-model="typedJurisdiction"
+        :value="typedJurisdiction || jurisdiction || ''"
         open-on-focus
         keep-first
         expanded
@@ -58,6 +58,7 @@ export default {
   },
   computed: {
     votAdr () { return this.$store.getters['requests/getCurrent'].votAdr },
+    jurisdiction () { return this.votAdr.leo && this.votAdr.leo.n ? this.votAdr.leo.n : '' },
     street: {
       get () { return this.votAdr.thoroughfare || '' },
       set (value) { this.updateAddress('thoroughfare', value) }

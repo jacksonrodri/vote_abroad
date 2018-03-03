@@ -5,6 +5,7 @@
     <h3 class="has-text-centered subtitle is-4">{{ $t(`request.stages.stage${stage.order}`)}}</h3>
 <!-- your information -->
   <section v-if="stage.slug === 'your-information'">
+
       <!-- firstName -->
       <b-field :type="($v.firstName.$error ? 'is-danger': '')" :message="$v.firstName.$error ? Object.keys($v.firstName.$params).map(x => x) : '' " :label="$t('request.firstName.label')">
         <b-input v-model="firstName" @input="$v.firstName.$touch()"></b-input>
@@ -50,7 +51,6 @@
       </b-field>
 
       <!-- countryName -->
-
       <address-input
         :label="$t('request.abrAdr.label')"
         key="overseas"
@@ -65,27 +65,13 @@
       </address-input>
       <scroll-up :key="$route.params.stage"></scroll-up>
     <section >
-      <!-- <div class="control buttons is-right"> -->
         <nuxt-link :to="localePath({ name: 'index' })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>Back</span></nuxt-link>
         <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'voting-information'} })" class="button is-primary is-medium is-pulled-right" exact ><span> Next </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link>
-      <!-- </div> -->
     </section>
   </section>
 
 <!-- voting information -->
   <section v-if="stage.slug === 'voting-information'">
-
-    <!-- <us-address
-        :label="$t('request.votAdr.label')"
-        toolTipTitle="Your last US Address"
-        v-model="votAdr">
-        <div slot="instructions">
-          <p>{{ $t('request.votAdr.instructions') }}</p>
-        </div>
-        <div slot="tooltip">
-          <vue-markdown>{{$t('request.votAdr.tooltip')}}</vue-markdown>
-        </div>
-      </us-address> -->
 
       <voting-address
         :label="$t('request.votAdr.label')"
@@ -116,8 +102,6 @@
       toolTipTitle="Intend to return vs. Return is uncertain">
       <div slot="tooltip">
         <vue-markdown>{{$t('request.voterClass.tooltip')}}</vue-markdown>
-        <!-- <p>Voters may choose ‘intend to return’ if they intend to return to the state in which they are registering to vote. An ‘intention’ is sufficient, you don’t need to have a fixed date of return or firm plans. Registering as “intend to return” should make you eligible to vote in State and Local races. However, it may also make you liable for state income taxes</p>
-        <p>Voters may choose ‘return is uncertain’ if they do not have a current intention to return to the state in which they are registering to vote. Voters are entitled to receive a ballot for Federal offices and may, depending on their state, also receive a ballot for State and Local offices.</p> -->
       </div>
     </voter-class>
 
@@ -136,7 +120,6 @@
       toolTipTitle="What is the best choice?">
       <div slot="tooltip">
         <vue-markdown>{{$t('request.receiveBallot.tooltip')}}</vue-markdown>
-        <!-- <p>You may request to receive your blank ballot by email/online, fax or mail. We encourage voters to request their blank ballot be sent by email/online or fax to avoid the delay associated with mail  and the possibility the ballot will be lost in transit.</p> -->
       </div>
     </receive-ballot>
 
@@ -166,64 +149,33 @@
         v-if="recBallot === 'mail'">
         <div slot="tooltip">
           <vue-markdown>{{$t('request.fwdAdr.tooltip')}}</vue-markdown>
-          <!-- <p>This is optional. Please provide a forwarding address only if you request your blank ballot be sent to you by mail and you do not want it mailed to your current residence address outside the US. If you are uncertain what your mailing address will be when ballots are due to be sent out, you may have your blank ballot sent to a reliable third-party, such as a University student office or postal box.</p> -->
         </div>
       </forwarding-address>
 
     <scroll-up :key="$route.params.stage"></scroll-up>
 
     <section >
-      <!-- <div class="control buttons is-right"> -->
         <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>Back</span></nuxt-link>
         <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'id-and-contact-information'} })" class="button is-primary is-medium is-pulled-right" exact ><span> Next </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link>
-      <!-- </div> -->
     </section>
   </section>
 
   <section v-if="stage.slug === 'id-and-contact-information'">
 <!-- identity and Contact information -->
       <!-- dob -->
-      <!-- <b-field :label="$t('request.dob.label')" :message="$v.dob.$error ? Object.keys($v.dob.$params).map(x => x) : '' ">
-        <b-datepicker
-          :value="localDob || lcldob"
-          @input="value =>{ this.updateDob(value) }"
-          :placeholder="$t('request.dob.placeholder')"
-          :date-formatter="(date) => date.toLocaleDateString()"
-          :min-date="minDate"
-          :max-date="maxDate"
-          :focused-date="new Date(new Date().getFullYear() - 18, 0, 1)"
-          icon="calendar"
-          icon-pack="fa"
-          :readonly="false">
-        </b-datepicker>
-      </b-field> -->
       <birth-date></birth-date>
 
-      <!-- new Date(Date.UTC(new Date(value).getFullYear(), new Date(value).getMonth(), new Date(value).getDate())).toISOString().substr(0, 10)
-          :date-formatter="(date) => date.toLocaleDateString()"
-          :date-parser="(date) => new Date(parseInt(date.substr(0,4)), parseInt(date.substr(5,2)) - 1, parseInt(date.substr(8,2)))"-->
-
+      <!-- gender -->
       <gender
         :label="$t('request.sex.label')"
         toolTipTitle="Why is this required?"
         v-model="sex">
         <div slot="tooltip">
           <vue-markdown>{{$t('request.sex.tooltip')}}</vue-markdown>
-          <!-- <p>This is only required for Idaho voters.</p> -->
         </div>
       </gender>
 
-      <!-- <party-input
-        :label="$t('request.party.label')"
-        v-model="prty"
-        toolTipTitle="What is this?"
-        :message="$v.party.$error ? Object.keys($v.party.$params).map(x => x) : '' "
-        :type="($v.party.$error ? 'is-danger': '')">
-        <div slot="tooltip">
-          <vue-markdown>{{$t('request.party.tooltip')}}</vue-markdown>
-        </div>
-      </party-input> -->
-
+      <!-- party -->
       <party
         :label="$t('request.party.label')"
         v-model="party"
@@ -232,7 +184,6 @@
         :type="($v.party.$error ? 'is-danger': '')">
         <div slot="tooltip">
           <vue-markdown>{{$t('request.party.tooltip')}}</vue-markdown>
-          <!-- <p>Many states require voters to designate a political party to be eligible to vote in primary elections. Choosing a political party is optional.</p> -->
         </div>
       </party>
 
@@ -378,6 +329,10 @@ import VueMarkdown from 'vue-markdown'
 export default {
   transition: 'test',
   scrollToTop: true,
+  middleware: 'verify-request',
+  mounted () {
+    console.log(this.$v)
+  },
   async asyncData ({app}) {
     return {
       allStateRules: await app.$content('rls')
@@ -427,31 +382,7 @@ export default {
     AdditionalInfo,
     VueMarkdown
   },
-  // watch: {
-  //   dob: function (newVal, oldVal) {
-  //     if (!this.localDob && newVal) {
-  //       console.log('dob from vuex-persist', new Date(new Date(newVal).getUTCFullYear(), new Date(newVal).getUTCMonth(), new Date(newVal).getUTCDate()))
-  //       this.localDob = new Date(new Date(newVal).getUTCFullYear(), new Date(newVal).getUTCMonth(), new Date(newVal).getUTCDate())
-  //     } else if (newVal !== oldVal) {
-  //       this.localDob = new Date(new Date(newVal).getUTCFullYear(), new Date(newVal).getUTCMonth(), new Date(newVal).getUTCDate())
-  //     }
-  //   },
-  //   date: function (newVal, oldVal) {
-  //     if (!this.localDate && newVal) {
-  //       console.log('date from vuex-persist', new Date(new Date(newVal).getUTCFullYear(), new Date(newVal).getUTCMonth(), new Date(newVal).getUTCDate()))
-  //       this.localDate = new Date(new Date(newVal).getUTCFullYear(), new Date(newVal).getUTCMonth(), new Date(newVal).getUTCDate())
-  //     } else if (newVal !== oldVal) {
-  //       this.localDate = new Date(new Date(newVal).getUTCFullYear(), new Date(newVal).getUTCMonth(), new Date(newVal).getUTCDate())
-  //     }
-  //   }
-  // },
   computed: {
-    // lcldob () {
-    //   return this.dob ? new Date(parseInt(this.dob.substr(0, 4)), parseInt(this.dob.substr(5, 2)) - 1, parseInt(this.dob.substr(8, 2))) : null
-    // },
-    // lcldate () {
-    //   return this.date ? new Date(parseInt(this.date.substr(0, 4)), parseInt(this.date.substr(5, 2)) - 1, parseInt(this.date.substr(8, 2))) : null
-    // },
     stateRules () {
       if (this.votAdr && this.votAdr.regionCode) {
         return this.allStateRules.find(x => x.iso.toLowerCase() === this.votAdr.regionCode.toLowerCase())
@@ -468,8 +399,8 @@ export default {
       return this.$t(`request.id.${this.stateRules.id.slice(-1)[0]}`)
     },
     idTypesString () {
-      let arr = this.stateRules & this.stateRules.id.length > 0 ? this.stateRules.id : [this.$t('request.id.SSN4'), this.$t('request.id.StateID')]
-      return arr.map(x => this.$t(`request.id[${x}]`))
+      let arr = this.stateRules & this.stateRules.id.length > 0 ? this.stateRules.id : ['SSN4', 'StateID']
+      return arr.map(x => this.$t(`request.id['${x}']`))
         .map((x, i, a) => {
           switch (a.length - i) {
             case 1:
@@ -481,12 +412,6 @@ export default {
           }
         })
     },
-    // maxDate () {
-    //   return new Date(2000, 10, 6)
-    // },
-    // minDate () {
-    //   return new Date(1870, 0, 1)
-    // },
     stage () {
       switch (this.$route.params.stage) {
         case 'your-information':
@@ -534,10 +459,6 @@ export default {
       get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].previousName : {usesPreviousName: false, previousName: ''} },
       set (value) { this.$store.commit('requests/update', { previousName: value }) }
     },
-    // usesPreviousName: {
-    //   get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].usesPreviousName : false },
-    //   set (value) { this.$store.commit('requests/update', { usesPreviousName: value }) }
-    // },
     suffix: {
       get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].suffix : null },
       set (value) { this.$store.commit('requests/update', { suffix: value }) }
@@ -579,9 +500,7 @@ export default {
       set (value) { this.$store.commit('requests/update', {sex: value}) }
     },
     party: {
-      // get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].party : null },
       get () { return this.currentRequestObject ? this.currentRequestObject.party || '' : '' },
-      // get () { return this.$store.getters['requests/getCurrent'].party },
       set (value) { this.$store.commit('requests/update', {party: value}) }
     },
     fax: {
@@ -625,46 +544,6 @@ export default {
     focusName () {
       this.$refs.userinput.focus()
     }
-    // updateDob (d) {
-    //   if (Object.prototype.toString.call(d) === '[object Date]') {
-    //     // it is a date
-    //     if (isNaN(d.getTime())) {
-    //       // date is not valid
-    //       console.log(d)
-    //     } else {
-    //       // date is valid
-    //       let bday = new Date(Date.UTC(new Date(d).getFullYear(), new Date(d).getMonth(), new Date(d).getDate())).toISOString().substr(0, 10)
-    //       this.$store.commit('requests/update', { dob: bday })
-    //     }
-    //   } else {
-    //     // not a date
-    //     console.log(d)
-    //   }
-    // },
-    // updateDate (d) {
-    //   if (Object.prototype.toString.call(d) === '[object Date]') {
-    //     // it is a date
-    //     if (isNaN(d.getTime())) {
-    //       // date is not valid
-    //       console.log(d)
-    //     } else {
-    //       // date is valid
-    //       let signDate = new Date(Date.UTC(new Date(d).getFullYear(), new Date(d).getMonth(), new Date(d).getDate())).toISOString().substr(0, 10)
-    //       this.$store.commit('requests/update', { date: signDate })
-    //     }
-    //   } else {
-    //     // not a date
-    //     console.log(d)
-    //   }
-    // },
-    // printVal (val) {
-    //   console.log(val)
-    // }
-    // updateDate (value) {
-    //   this.localDate = value
-    //   let signDate = new Date(Date.UTC(new Date(value).getFullYear(), new Date(value).getMonth(), new Date(value).getDate())).toISOString().substr(0, 10)
-    //   this.$store.commit('requests/update', { date: signDate })
-    // }
   },
   validations () {
     return {

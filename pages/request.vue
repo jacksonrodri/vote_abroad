@@ -1,7 +1,7 @@
 <template>
   <div class="section">
     <div class="container is-widescreen">
-    <section class="columns is-centered is-multiline">
+    <!-- <section class="columns is-centered is-multiline"> -->
       <!-- <div @click="goBack" class="column button is-narrow is-hidden-touch is-flex" style="align-items:center;justify-content:center;"><b-icon icon="chevron-circle-left"></b-icon></div> -->
       <!-- <div class="column is-three-quarters-desktop is-8-widescreen is-7-fullhd"> -->
         <!-- <b-tabs type="is-boxed" v-model="currentRequest" @change="addRequest($event)">
@@ -13,7 +13,7 @@
         <!-- <button @click="removeRequest" class="button is-text is-small">Delete this Request</button> -->
       <!-- </div> -->
       <!-- <div @click="goForward" class="column is-narrow is-hidden-touch is-flex" style="align-items:center;justify-content:center;"><b-icon icon="chevron-circle-right"></b-icon></div> -->
-    </section>
+    <!-- </section> -->
     </div>
   </div>
 </template>

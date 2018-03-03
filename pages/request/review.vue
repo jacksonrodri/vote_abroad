@@ -1,7 +1,6 @@
 <template>
 <div class="columns is-centered is-multiline">
   <div class="column is-10 is-8-desktop is-7-widescreen is-6-fullhd is-paddingless">
-    <!-- <no-ssr> -->
       <div class="section">
         <h1 class="has-text-centered title is-3">{{ $t('request.stages.step', {step: 4})}}</h1>
         <h3 class="has-text-centered subtitle is-4">{{ $t('request.stages.stage4')}}</h3>
@@ -78,6 +77,8 @@ import { mapState } from 'vuex'
 // }
 
 export default {
+  name: 'FPCAreview',
+  middleware: 'verify-request',
   components: {
     MyCanvas,
     MyBox,
