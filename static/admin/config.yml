@@ -395,6 +395,22 @@ collections:
                 widget: "object"
                 fields:
                   - {label: "Required", name: "required", widget: "string"}
+          - label: "Join Democrats Abroad"
+            name: "joinDa"
+            widget: "object"
+            fields:
+              - {label: "Field Label", name: "label", widget: "string"}
+              - {label: "Instructions", name: "instructions", widget: "string"}
+              - {label: "Placeholder", name: "placeholder", widget: "string"}
+              - {label: "Yes", name: "male", widget: "string"}
+              - {label: "No", name: "female", widget: "string"}
+              - {label: "Already a Member", name: "alreadyMember", widget: "string"}
+              - {label: "Tooltip", name: "tooltip", widget: "markdown"}
+              - label: "Messages"
+                name: "messages"
+                widget: "object"
+                fields:
+                  - {label: "Required", name: "required", widget: "string"}
           - label: "Party"
             name: "party"
             widget: "object"
