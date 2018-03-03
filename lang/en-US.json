@@ -94,20 +94,13 @@
       "instructions": ""
     },
     "votAdr": {
-      "zip": "Zip",
-      "jurisdiction": "Jurisdiction",
-      "street": "Street Address",
-      "tooltip": "Use the **residence address** of the last place you lived in the US. If you have never resided in the US, use the residence address of the last place your US parent(s) lived in the US. If your US parents last lived in the US in different locations, you may choose which one to use as your voting address.",
-      "instructions": "Input the last address where you lived in the US. If you have never lived in the US, use the last US address of your US citizen parent(s).",
-      "apt": "Apt #",
-      "county": "County",
-      "city": "City",
+      "label": "Jurisdiction",
+      "instructions": "All ballots are sent by you state, county or city.  Please select your local election official.",
+      "placeholder": "Type to search for your town, city or county.",
+      "tooltip": "placeholder text.  to be replaced",
       "messages": {
         "required": "This field is required so your election official can send you the correct ballot."
-      },
-      "state": "State",
-      "jurisdictionPlaceholder": "Type to find your {type} local election official.",
-      "label": "Voting Address"
+      }
     },
     "prRules": {
       "label": "Father's and Mother's first names",
