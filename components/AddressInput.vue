@@ -185,7 +185,7 @@ export default {
       this.region = this.value.administrativearea || ''
       this.postalCode = this.value.postalcode || ''
       this.countryName = this.value.country || ''
-      this.countryCode = this.value.countryiso || ''
+      this.countryCode = this.value.countryiso || this.userCountry || ''
       this.usesAlternateFormat = this.value.usesAlternateFormat || false
       this.alt1 = this.value.alt1 || ''
       this.alt2 = this.value.alt2 || ''
@@ -224,6 +224,7 @@ export default {
     }
   },
   computed: {
+    userCountry () { return this.$store.state.userauth.user.country },
     countryList () {
       return countries()
     },
