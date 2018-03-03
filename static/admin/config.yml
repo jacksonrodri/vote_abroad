@@ -258,7 +258,7 @@ collections:
                 fields:
                   - {label: "Required", name: "required", widget: "string"}
           - label: "Jurisdiction"
-            name: "votAdr"
+            name: "jurisdiction"
             widget: "object"
             fields:
               - {label: "Field Label", name: "label", widget: "string"}
