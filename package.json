@@ -32,6 +32,7 @@
     "@nuxtjs/proxy": "^1.1.4",
     "@nuxtjs/pwa": "^2.0.5",
     "auth0-js": "^9.0.2",
+    "babel-polyfill": "^6.26.0",
     "buefy": "^0.6.3",
     "bulma-slider": "^0.1.1",
     "cleave.js": "^1.1.1",

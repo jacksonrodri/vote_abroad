@@ -100,10 +100,21 @@ module.exports = {
     ** Run ESLint on save
     */
    vendor: [
+     'babel-polyfill',
     '~/assets/countryaddresses.js',
     'mailcheck',
     'auth0-js'
    ],
+   babel: {
+     presets: [
+       ['vue-app', {
+         useBuiltIns: true,
+         targets: {
+           ie: 11, uglify: true
+         }
+       }]
+     ]
+   },
     extend (config, ctx) {
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({

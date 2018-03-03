@@ -13,7 +13,8 @@
         ref="jurisdiction"
         :data="filteredLeos"
         field="n"
-        placeholder="Start typing to find your jurisdiction">
+        placeholder="Start typing to find your jurisdiction"
+        @select="option => updateLeo(option)">
         <template slot-scope="props"><strong>{{props.option.j}} {{props.option.j.toLowerCase().indexOf(props.option.t.toLowerCase()) > -1 ? '' : props.option.t}}</strong> - <small>{{props.option.n}}</small></template>
         </b-autocomplete>
         <p class="control">
@@ -57,6 +58,10 @@ export default {
   },
   computed: {
     votAdr () { return this.$store.getters['requests/getCurrent'].votAdr },
+    street: {
+      get () { return this.votAdr.thoroughfare || '' },
+      set (value) { this.updateAddress('thoroughfare', value) }
+    },
     prioritizedLeos () {
       if (this.votAdr.county) {
         let county = this.votAdr.county.toLowerCase().replace('county', '').trim()
@@ -85,6 +90,11 @@ export default {
         return this.prioritizedLeos
       }
       return this.prioritizedLeos.filter(leo => leo.n.toLowerCase().indexOf(this.typedJurisdiction.toLowerCase()) > -1)
+    }
+  },
+  methods: {
+    updateLeo: function (value) {
+      this.$store.commit('requests/update', {votAdr: Object.assign({}, this.votAdr, {leo: value})})
     }
   }
 }
