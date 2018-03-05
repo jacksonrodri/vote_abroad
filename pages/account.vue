@@ -107,28 +107,48 @@
               2018 Ballot Requests
             </h2>
 
-            <div v-for="(request, index) in requests" :key="index" class="level">
-              <div class="level-left">
-                <div>
-                  <p class="title is-5 is-marginless">
-                    <a href="edit-order.html">{{ request.firstName }} {{ request.lastName }}</a>
-                  </p>
-                  <small>
-                    Nov 18, 17:38 by <a href="edit-customer.html">John Miller</a>
-                  </small>
+            <div v-for="(request, index) in requests" :key="index">
+              <hr>
+              <div class="level is-marginless">
+                <div class="level-left">
+                  <div>
+                    <p class="title is-5 is-marginless">
+                      <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" exact >{{ request.firstName }} {{ request.lastName }}</nuxt-link>
+                    </p>
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="has-text-right">
+                    <span class="tag is-warning">In progress</span>
+                  </div>
                 </div>
               </div>
-              <div class="level-right">
+              <div class="level is-marginless">
+                <div class="level-item">
+                  <nav class="breadcrumb is-small is-centered has-arrow-separator" aria-label="breadcrumbs">
+                    <ul>
+                      <li class="is-active"><a href="#"><strong class="has-text-info">Request a ballot</strong></a></li>
+                      <li><a href="#">Receive your ballot</a></li>
+                      <li><a href="#">Vote</a></li>
+                    </ul>
+                  </nav>
+                </div>
+                <div class="level-right">
+                </div>
+              </div>
+              <div class="level">
+                <div class="level-left">
+                </div>
+                <div class="level-right">
                 <div class="has-text-right">
-                  <p class="title is-5 is-marginless">
-                    $56.98
-                  </p>
-                  <span class="tag is-warning">In progress</span>
+                  <span class="button is-link is-outlined">Continue</span>
+                </div>
                 </div>
               </div>
+              <hr>
             </div>
 
-            <div class="level">
+            <!-- <div class="level">
               <div class="level-left">
                 <div>
                   <p class="title is-5 is-marginless">
@@ -147,9 +167,10 @@
                   <span class="tag is-danger">Failed</span>
                 </div>
               </div>
-            </div>
+            </div> -->
 
-            <a class="button is-link is-outlined" href="orders.html">View all orders</a>
+            <!-- <a class="button is-link is-outlined" href="orders.html">Add a family member</a> -->
+            <nuxt-link class="button is-link is-outlined" :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" exact >Add a family member</nuxt-link>
           </div>
         </div>
       </div>
