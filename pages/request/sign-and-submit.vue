@@ -1,22 +1,15 @@
 <template>
   <div class="columns is-centered is-multiline">
     <div class="column is-10 is-8-desktop is-7-widescreen is-6-fullhd is-paddingless">
-    <!-- <no-ssr> -->
-      <div class="section">
+      <div>
         <h1 class="has-text-centered title is-3">{{ $t('request.stages.step', {step: 5})}}</h1>
         <h3 class="has-text-centered subtitle is-4">{{ $t('request.stages.stage5')}}</h3>
-        <!-- <p class="is-size-5" v-if="stateRules">
-          {{$t('request.stages.instructions5', {leo: `${currentRequest ? currentRequest.votAdr.leo.jurisdiction : ''}${currentRequest ? currentRequest.votAdr.leo.jurisdictionType : 'local'}`, options: ballotReceiptOptionsString })}}
-        </p> -->
         <i18n path="request.stages.instructions5"
-          class="is-size-5"
+          class="is-size-4"
           tag="vue-markdown"
           :html="true"
           :places="{leo: `${currentRequest ? currentRequest.votAdr.leo.jurisdiction : ''}${currentRequest ? currentRequest.votAdr.leo.jurisdictionType : 'local'}`, options: ballotReceiptOptionsString}">
         </i18n>
-        <!-- You must send your <strong class="has-text-danger">signed</strong> ballot request to your {{ currentRequest ? currentRequest.votAdr.leo.jurisdiction : '' }} {{ currentRequest ? currentRequest.votAdr.leo.jurisdictionType : 'local' }} election official by <span v-for="(opt, index) in stateRules.fpcaSubmitOptionsRequest" :key="index">{{ opt.toLowerCase() }}<span v-if="index < stateRules.fpcaSubmitOptionsRequest.length - 2">, </span><span v-if="index === stateRules.fpcaSubmitOptionsRequest.length - 2"> or </span></span>. -->
-        <br/>
-        <!-- <h4 class="label">Choose how to send your Ballot request</h4> -->
       </div>
 
         <b-tabs type="is-toggle" expanded>
@@ -24,57 +17,145 @@
             v-if="stateRules && stateRules.fpcaSubmitOptionsRequest.indexOf('Email') > -1"
             icon="at">
             <section class="section">
-              <!-- <h3 class="subtitle is-4">{{$t('request.stages.emailIntro')}}</h3> -->
-              <i18n path="request.stages.emailIntro"
+              <article class="media">
+                <div class="media-content">
+                  <i18n path="request.stages.emailIntro"
+                    class="is-size-4"
+                    tag="vue-markdown"
+                    :html="true">
+                  </i18n>
+                  <i18n path="request.stages.instructions"
+                    class="subtitle is-5"
+                    tag="vue-markdown"
+                    :html="true">
+                  </i18n>
+                  <article class="media">
+                    <figure class="media-left">
+                      <span class="icon is-large">
+                        <i class="fas fa-camera fa-2x"></i>
+                      </span>
+                    </figure>
+                    <div class="media-content">
+                      <i18n tag="vue-markdown"
+                        class="is-size-6"
+                        path="request.stages.emailDigiSign"
+                        :html="true">
+                        <span place="device">Computer</span>
+                      </i18n>
+                      <br>
+                      <button class="button is-pulled-right is-primary" @click="isSignatureModalActive = true"><b-icon icon="camera" size="is-small"></b-icon><span>{{$t('request.stages.sign')}}</span></button>
+                    </div>
+                  </article>
+                  <article class="media">
+                    <figure class="media-left">
+                      <span class="icon is-large">
+                        <span class="fa-stack fa-lg">
+                          <i class="fas fa-camera fa-stack-1x"></i>
+                          <i class="fas fa-ban fa-stack-2x"></i>
+                        </span>
+                      </span>
+                    </figure>
+                    <div class="media-content">
+                      <i18n path="request.stages.emailDownload"
+                        class="is-size-6"
+                        tag="vue-markdown"
+                        :html="true">
+                      </i18n>
+                      <button class="button is-pulled-right is-primary" @click="getFPCA"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
+                    </div>
+                  </article>
+                </div>
+              </article>
+            </section>
+          </b-tab-item>
+          <b-tab-item label="Fax"
+            v-if="stateRules && stateRules.fpcaSubmitOptionsRequest.indexOf('Fax') > -1"
+            icon="fax">
+            <section class="section">
+              <article class="media">
+                <div class="media-content">
+                  <i18n path="request.stages.faxIntro"
+                    class="is-size-4"
+                    tag="vue-markdown"
+                    :html="true">
+                  </i18n>
+                  <i18n path="request.stages.instructions"
+                    class="subtitle is-5"
+                    tag="vue-markdown"
+                    :html="true">
+                  </i18n>
+                  <article class="media">
+                    <figure class="media-left">
+                      <span class="icon is-large">
+                        <i class="fas fa-camera fa-2x"></i>
+                      </span>
+                    </figure>
+                    <div class="media-content">
+                      <i18n tag="vue-markdown"
+                        class="is-size-6"
+                        path="request.stages.faxDigiSign"
+                        :html="true">
+                        <span place="device">Computer</span>
+                      </i18n>
+                      <button class="button is-pulled-right is-primary" @click="isSignatureModalActive = true"><b-icon icon="camera" size="is-small"></b-icon><span>{{$t('request.stages.sign')}}</span></button>
+                    </div>
+                  </article>
+                  <article class="media">
+                    <figure class="media-left">
+                      <span class="icon is-large">
+                        <span class="fa-stack fa-lg">
+                          <i class="fas fa-camera fa-stack-1x"></i>
+                          <i class="fas fa-ban fa-stack-2x"></i>
+                        </span>
+                      </span>
+                    </figure>
+                    <div class="media-content">
+                      <i18n path="request.stages.faxDownload"
+                        class="is-size-6"
+                        tag="vue-markdown"
+                        :html="true">
+                      </i18n>
+                      <button class="button is-pulled-right is-primary" @click="getFPCA"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
+                    </div>
+                  </article>
+                </div>
+              </article>
+            </section>
+            <!-- <section class="section">
+              <i18n path="request.stages.faxIntro"
                 class="is-size-4"
                 tag="vue-markdown"
                 :html="true">
               </i18n>
-              <!-- Sign and send your form by Email -->
               <div class="media">
                 <div class="media-content">
-                  <!-- <h3 class="title is-5">{{$t('request.stages.instructions')}}</h3> -->
-                  <i18n path="request.stages.instructions"
-                    class="title is-5"
-                    tag="vue-markdown"
-                    :html="true">
-                  </i18n>
-                  <!-- <p>You must <strong class="has-text-danger">sign, date and email</strong> your completed form to your {{ currentRequest ? currentRequest.votAdr.leo.jurisdiction : 'local' }} election official at <a :href="`mailto:${leoEmail}`">{{ leoEmail }}.</a> </p> -->
+                  <div class="content">
+                    <h3 class="title is-5">{{$t('request.stages.instructions')}}</h3>
+                  </div>
                   <article class="media">
-                    <!-- <figure class="media-left">
-                      <b-icon icon="pencil-alt" size="is-medium"></b-icon>
-                    </figure> -->
                     <div class="media-content">
-                      <i18n class="is-size-5" path="request.stages.emailSign"
+                      <i18n class="is-size-5" path="request.stages.faxSign"
                         tag="vue-markdown"
                         :html="true">
                       </i18n>
-                      <!-- <p class="is-size-5"><strong class="has-text-danger">Sign and Date</strong> your form</p> -->
-                      <article class="media">
-                        <div class="media-content">
                           <article class="media">
-                            <figure class="media-left is-marginless">
-                              <!-- <b-icon icon="camera" size="is-medium"></b-icon> -->
+                            <figure class="media-left">
                               <span class="icon is-large">
                                 <i class="fas fa-camera fa-2x"></i>
                               </span>
                             </figure>
                             <div class="media-content">
                               <i18n tag="vue-markdown"
-                                path="request.stages.emailDigiSign"
+                                class="is-size-5"
+                                path="request.stages.faxDigiSign"
                                 :html="true">
                                 <span place="device">Computer</span>
                               </i18n>
-                              <!-- {{$t('request.stages.emailDigiSign')}} -->
-                              <!-- <p><strong>If you have a camera</strong> on this <span class="is-hidden-touch">computer</span><span class="is-hidden-desktop is-hidden-mobile">tablet</span><span class="is-hidden-tablet">phone</span>, you can capture your signature and email your form straight from this website.</p> -->
-                              <!-- <p class="has-text-centered"><button class="button is-primary" @click="isSignatureModalActive = true"><b-icon icon="camera"></b-icon><span> Capture my signature</span></button></p> -->
-                            </div>
-                            <div class="media-right">
-                              <button class="button is-primary" @click="isSignatureModalActive = true"><b-icon icon="camera" size="is-small"></b-icon><span>{{$t('request.stages.sign')}}</span></button>
+                              <button class="button is-pulled-right is-medium is-primary" @click="isSignatureModalActive = true"><b-icon icon="camera" size="is-small"></b-icon><span>{{$t('request.stages.sign')}}</span></button>
                             </div>
                           </article>
                           <article class="media">
-                            <figure class="media-left is-marginless">
+                            <figure class="media-left">
                               <span class="icon is-large">
                                 <span class="fa-stack fa-lg">
                                   <i class="fas fa-camera fa-stack-1x"></i>
@@ -83,114 +164,18 @@
                               </span>
                             </figure>
                             <div class="media-content">
-                              <i18n path="request.stages.emailDownload"
+                              <i18n path="request.stages.faxDownload"
                                 tag="vue-markdown"
                                 :html="true">
                               </i18n>
-                              <!-- {{$t('request.stages.emailDownload')}} -->
-                              <!-- <p><strong>Otherwise,</strong> you will need to download your form, print, sign, date and scan it.</p> -->
-                              <!-- <p class="has-text-centered"><button class="button is-primary" @click="getFPCA"><b-icon icon="download"></b-icon><span>Download my form</span></button></p> -->
-                            </div>
-                            <div class="media-right">
-                              <button class="button is-primary" @click="getFPCA"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
+                              <button class="button is-pulled-right is-medium is-primary" @click="getFPCA"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
                             </div>
                           </article>
-                        </div>
-                      </article>
-                    </div>
-                  </article>
-                  <!-- <article class="media">
-                    <figure class="media-left">
-                      <b-icon icon="at" size="is-medium"></b-icon>
-                    </figure>
-                    <div class="media-content">
-                      <i18n class="is-size-5" path="request.stages.emailSend"
-                        tag="p"
-                        :html="true"
-                        :places="{leoEmail: leoEmail}">
-                        <a class="has-text-primary" :href="`mailto:${leoEmail}`" place="leoEmail">{{leoEmail}}</a>
-                      </i18n>
-                    </div>
-                  </article>
-                  <article class="media">
-                    <figure class="media-left">
-                      <b-icon icon="check" size="is-medium"></b-icon>
-                    </figure>
-                    <div class="media-content">
-                      <i18n class="is-size-5" path="request.stages.emailConfirm" tag="vue-markdown">
-                      </i18n>
-                    </div>
-                  </article> -->
-                </div>
-              </div>
-            </section>
-          </b-tab-item>
-          <b-tab-item label="Fax"
-            v-if="stateRules && stateRules.fpcaSubmitOptionsRequest.indexOf('Fax') > -1"
-            icon="fax">
-            <section class="section">
-              <i18n path="request.stages.faxIntro"
-                class="is-size-4"
-                tag="vue-markdown"
-                :html="true">
-              </i18n>
-              <!-- <h3 class="subtitle is-4">Sign and send your form by Fax</h3> -->
-              <div class="media">
-                <div class="media-content">
-                  <h3 class="title is-5">{{$t('request.stages.instructions')}}</h3>
-                  <!-- <p>You must <strong class="has-text-danger">sign, date and email</strong> your completed form to your {{ currentRequest ? currentRequest.votAdr.leo.jurisdiction : 'local' }} election official at <a :href="`mailto:${leoEmail}`">{{ leoEmail }}.</a> </p> -->
-                  <article class="media">
-                    <figure class="media-left">
-                      <b-icon icon="pencil-alt" size="is-medium"></b-icon>
-                    </figure>
-                    <div class="media-content">
-                      <p class="is-size-5"><strong class="has-text-danger">Sign and Date</strong> your form</p>
-                      <article class="media">
-                        <div class="media-content">
-                          <article class="media">
-                            <div class="media-content">
-                              <p><strong>If you have a camera</strong> on this <span class="is-hidden-touch">computer</span><span class="is-hidden-desktop is-hidden-mobile">tablet</span><span class="is-hidden-tablet">phone</span>, you can capture your signature and fax your form straight from this website.</p>
-                              <!-- <p class="has-text-centered"><button class="button is-primary" @click="isSignatureModalActive = true"><b-icon icon="camera"></b-icon><span> Capture my signature</span></button></p> -->
-                            </div>
-                            <div class="media-right">
-                              <button class="button is-primary" @click="isSignatureModalActive = true"><b-icon icon="camera" size="is-small"></b-icon><span>Capture signature</span></button>
-                            </div>
-                          </article>
-                          <article class="media">
-                            <div class="media-content">
-                              <p><strong>Otherwise,</strong> you will need to download your form, print, sign and date it before faxing.</p>
-                              <!-- <p class="has-text-centered"><button class="button is-primary" @click="getFPCA"><b-icon icon="download"></b-icon><span>Download my form</span></button></p> -->
-                            </div>
-                            <div class="media-right">
-                              <button class="button is-primary" @click="getFPCA"><b-icon icon="download"></b-icon><span>Download</span></button>
-                            </div>
-                          </article>
-                        </div>
-                      </article>
-                    </div>
-                  </article>
-                  <article class="media">
-                    <figure class="media-left">
-                      <b-icon icon="fax" size="is-medium"></b-icon>
-                    </figure>
-                    <div class="media-content">
-                      <p class="is-size-5"><strong class="has-text-danger">Fax</strong> your form to {{leoFax}}</p>
-                    </div>
-                  </article>
-                  <article class="media">
-                    <figure class="media-left">
-                      <b-icon icon="check" size="is-medium"></b-icon>
-                    </figure>
-                    <div class="media-content">
-                      <p class="is-size-5"><strong class="has-text-danger">Confirm</strong> with your your local election official that they received it. </p>
-                    </div>
-                    <div class="media-right">
-                      <button class="button is-primary"><b-icon icon="calendar"></b-icon><span>Remind Me</span></button>
                     </div>
                   </article>
                 </div>
               </div>
-            </section>
+            </section> -->
           </b-tab-item>
           <b-tab-item label="Mail"
             v-if="stateRules && stateRules.fpcaSubmitOptionsRequest.indexOf('Mail') > -1"
@@ -199,7 +184,6 @@
               <div class="media">
                 <div class="media-content">
                   <h3 class="title is-5">Instructions:</h3>
-                  <!-- <p>You must <strong class="has-text-danger">sign, date and email</strong> your completed form to your {{ currentRequest ? currentRequest.votAdr.leo.jurisdiction : 'local' }} election official at <a :href="`mailto:${leoEmail}`">{{ leoEmail }}.</a> </p> -->
                   <article class="media">
                     <figure class="media-left">
                       <b-icon icon="download" size="is-medium"></b-icon>
@@ -245,31 +229,10 @@
                     <div class="media-content">
                       <p class="is-size-5"><strong class="has-text-danger">Confirm</strong> with your your local election official that they received it. </p>
                     </div>
-                    <div class="media-right">
-                      <button class="button is-primary"><b-icon icon="calendar"></b-icon><span>Remind Me</span></button>
-                    </div>
                   </article>
                 </div>
               </div>
             </section>
-            <!-- <div class="section">
-              <h3 class="title is-5">Download, Print, Sign and Send your form by Postal</h3>
-              <ol>
-                <li>Download your form</li>
-                <li>Print it out</li>
-                <li>Sign and Date it</li>
-                <li>Mail your form to:</li>
-              </ol>
-              <div class="box">
-                <span v-if="currentRequest.votAdr.leo.line1"><strong>{{ currentRequest.votAdr.leo.line1 }}</strong><br/></span>
-                <span v-if="currentRequest.votAdr.leo.line2"><strong>{{ currentRequest.votAdr.leo.line2 }}</strong><br/></span>
-                <span><strong>{{ currentRequest.votAdr.leo.city }}, </strong>
-                <strong>{{ currentRequest.votAdr.leo.state }} </strong>
-                <strong>{{ currentRequest.votAdr.leo.zip }}</strong><br/></span>
-                <span class="has-text-right"><strong>USA</strong><br/></span>
-              </div>
-              <button @click="getFPCA" class="button is-primary is-large"><b-icon icon="download"></b-icon><span>Download your completed form</span></button>
-            </div> -->
           </b-tab-item>
         </b-tabs>
 
@@ -316,8 +279,9 @@
       <!-- </div> -->
     </section>
 
-    <b-modal :active.sync="isSignatureModalActive" has-modal-card>
-      <sign @sigcap="addSig" />
+    <b-modal :active.sync="isSignatureModalActive">
+      <div class="box">instructions</div>
+      <sign v-show="isSigning" @sigcap="addSig" />
     </b-modal>
     </div>
   </div>
@@ -363,7 +327,8 @@ export default {
     return {
       isSignatureModalActive: false,
       signature: '',
-      hasCamera: true
+      hasCamera: true,
+      isSigning: false
     }
   },
   methods: {

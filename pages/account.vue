@@ -113,22 +113,43 @@
                   <p class="title is-5 is-marginless">
                     <a href="edit-order.html">{{ request.firstName }} {{ request.lastName }}</a>
                   </p>
-                  <small class="tag is-warning">
-                    must be received by Nov 6
+                  <small>
+                    Nov 18, 17:38 by <a href="edit-customer.html">John Miller</a>
                   </small>
                 </div>
               </div>
               <div class="level-right">
                 <div class="has-text-right">
                   <p class="title is-5 is-marginless">
-                    {{request.votAdr.administrativearea}}
+                    $56.98
                   </p>
-                  <a class="button is-link is-outlined">Continue</a>
+                  <span class="tag is-warning">In progress</span>
                 </div>
               </div>
             </div>
 
-            <a class="button is-link is-outlined" href="orders.html">Add a family member</a>
+            <div class="level">
+              <div class="level-left">
+                <div>
+                  <p class="title is-5 is-marginless">
+                    <a href="edit-order.html">918478</a>
+                  </p>
+                  <small>
+                    Nov 12, 21:57 by <a href="edit-customer.html">Simon Jefferson</a>
+                  </small>
+                </div>
+              </div>
+              <div class="level-right">
+                <div class="has-text-right">
+                  <p class="title is-5 is-marginless">
+                    $22.99
+                  </p>
+                  <span class="tag is-danger">Failed</span>
+                </div>
+              </div>
+            </div>
+
+            <a class="button is-link is-outlined" href="orders.html">View all orders</a>
           </div>
         </div>
       </div>
