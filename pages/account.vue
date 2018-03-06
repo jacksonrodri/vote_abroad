@@ -4,9 +4,16 @@
       <!-- level menu -->
       <div class="level">
         <div class="level-left">
-          <h1 class="subtitle is-3">
-            <span class="has-text-grey-light">Hello </span><span><strong>{{ name }}</strong></span>
-          </h1>
+          <span class="level-item">
+            <h1 class="subtitle is-3">
+              <span class="has-text-grey-light">Hello </span><span><strong>{{ name }}</strong></span>
+            </h1>
+          </span>
+          <!-- <span class="level-item">
+            <h1 class="subtitle is-3">
+              <span class="has-text-primary"> Next Steps</span>
+            </h1>
+          </span> -->
         </div>
         <div v-if="isAdmin" class="level-right">
           <div class="select">
@@ -18,6 +25,13 @@
               <option>2019</option>
               <option>2020</option>
             </select>
+          </div>
+        </div>
+      </div>
+      <div class="level">
+        <div class="level-left">
+          <div class="level-item">
+            <h1 class="title is-3">Next Steps</h1>
           </div>
         </div>
       </div>
@@ -67,7 +81,7 @@
         </div>
         <div class="column">
           <!-- dashboard area -->
-        <div class="columns is-multiline">
+        <div class="columns is-multiline is-gapless">
           <div class="column is-12-tablet is-6-desktop is-3-widescreen">
             <div class="notification is-link has-text">
               <p class="title is-3">9,000,000</p>
@@ -82,19 +96,96 @@
             </div>
           </div>
 
-          <!-- <div class="column is-12-tablet is-6-desktop is-3-widescreen">
-            <div class="notification is-primary has-text">
-              <p class="title is-3">Mar 5</p>
-              <p class="subtitle is-6">Ballot Request Deadline</p>
-            </div>
-          </div> -->
-
           <div class="column is-12-tablet is-6-desktop is-3-widescreen">
             <div class="notification is-success has-text">
               <p class="title is-3">Invite</p>
               <p class="subtitle is-6">a friend</p>
             </div>
           </div>
+
+          <div class="column is-12-tablet is-6-desktop is-3-widescreen">
+            <div class="hero is-primary">
+              <div class="hero-body">
+                <div class="container">
+                  <h1 class="title">
+                    Hero title
+                  </h1>
+                  <h2 class="subtitle">
+                    Hero subtitle
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="column is-12-tablet is-6-desktop is-3-widescreen">
+            <div class="notification is-paddingless is-radiusless card is-success">
+              <div class="card-content">
+                <h2 class="title is-4">
+                  Most popular books
+                </h2>
+                <div class="media">
+                  <!-- <div class="media-left">
+                    <p>
+                      <span class="icon is-large has-text-success has-text-centered">
+                        <i class="fas fa-check fa-2x"></i>
+                      </span>
+                    </p>
+                    <p>
+                      <span class="has-text-centered">complete</span>
+                    </p>
+                  </div> -->
+                  <div class="media-content">
+                    <p class="title is-5 is-spaced is-marginless">
+                      <a href="edit-book.html">Learning Swift</a>
+                    </p>
+                  </div>
+                  <div class="media-right">
+                    <p>
+                      <span class="icon is-large has-text-white has-text-centered">
+                        <i class="fas fa-check fa-2x"></i>
+                      </span>
+                    </p>
+                    <p>
+                      <span class="has-text-centered">complete</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <footer class="card-footer">
+                <a href="#" class="card-footer-item">Save</a>
+                <a href="#" class="card-footer-item">Edit</a>
+                <a href="#" class="card-footer-item">Delete</a>
+              </footer>
+            </div>
+          </div>
+
+          <div class="column is-12-tablet is-6-desktop is-3-widescreen">
+            <div class="notification is-paddingless is-radiusless card is-danger">
+              <div class="card-content">
+                <h2 class="title is-4">
+                  Most popular books
+                </h2>
+                <div class="media">
+                  <div class="media-content">
+                    <p class="title is-5 is-spaced is-marginless">
+                      <a href="edit-book.html">Learning Swift</a>
+                    </p>
+                  </div>
+                  <div class="media-right">
+                    146 sold
+                  </div>
+                </div>
+              </div>
+              <footer class="card-footer">
+                <a href="#" class="card-footer-item">Save</a>
+                <a href="#" class="card-footer-item">Edit</a>
+                <a href="#" class="card-footer-item">Delete</a>
+              </footer>
+            </div>
+          </div>
+
         </div>
         </div>
       </div>
