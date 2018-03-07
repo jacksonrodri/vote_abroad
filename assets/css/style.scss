@@ -12,7 +12,7 @@ $vfa-invert: findColorInvert($vfa);
 $twitter-invert: findColorInvert($twitter);
 $secondary-invert: findColorInvert($secondary);
 $red-invert: findColorInvert($red);
-$vfalight: hsl(227, 58%, 34%);
+$vfalight: lighten($vfa, 65%);
 $vfalight-invert: findColorInvert($vfalight);
 $semitransparent: hsla(0, 0%, 96%, 0.45);
 $semitransparent-invert: $black;

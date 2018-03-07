@@ -2,7 +2,7 @@
   <div class="hero-body columns is-centered">
     <div class="column is-9 is-12-touch">
       <!-- level menu -->
-      <div class="level">
+      <div class="level is-mobile">
         <div class="level-left">
           <span class="level-item">
             <h1 class="subtitle is-3">
@@ -89,35 +89,37 @@
                   <div class="hero-head">
                     <div class="hero is-vfa">
                       <div class="hero-head">
-                        <div class="notification is-vfa">
-                          <h1 class="title is-4">Your Voting Progress</h1>
-                        </div>
+                        <nav class="navbar">
+                          <div class="navbar-brand">
+                            <h1 class="navbar-item title is-4 has-text-light">Your Voting Progress</h1>
+                          </div>
+                        </nav>
                       </div>
                       <div class="hero-foot">
                         <nav class="level">
-                          <nav class="level-item has-text-centered hero is-light has-text-secondary">
+                          <a class="level-item has-text-centered notification is-vfalight is-marginless is-radiusless">
                             <div>
                               <p class="title is-hidden-mobile">
-                                <span class="icon has-text-secondary">
+                                <span class="icon">
                                   <i class="fas fa-pencil-alt"></i>
                                 </span>
                               </p>
-                              <p class="heading is-size-5-mobile">
+                              <p class="heading is-size-6-mobile">
                                 <span class="icon is-hidden-tablet">
                                   <i class="fas fa-pencil-alt"></i>
                                 </span>
                                 Fill in Ballot Request
                               </p>
                             </div>
-                          </nav>
-                          <nav class="level-item has-text-centered hero is-vfa">
+                          </a>
+                          <nav class="level-item has-text-centered">
                             <div>
                               <p class="title is-hidden-mobile">
                                 <span class="icon">
                                   <i class="fas fa-paper-plane"></i>
                                 </span>
                               </p>
-                              <p class="heading is-size-5-mobile">
+                              <p class="heading is-size-6-mobile">
                                 <span class="icon is-hidden-tablet">
                                   <i class="fas fa-paper-plane"></i>
                                 </span>
@@ -125,14 +127,14 @@
                               </p>
                             </div>
                           </nav>
-                          <nav class="level-item has-text-centered hero is-vfa">
+                          <nav class="level-item has-text-centered">
                             <div>
                               <p class="title is-hidden-mobile">
                                 <span class="icon">
                                   <i class="fas fa-phone"></i>
                                 </span>
                               </p>
-                              <p class="heading is-size-5-mobile">
+                              <p class="heading is-size-6-mobile">
                                 <span class="icon is-hidden-tablet">
                                   <i class="fas fa-phone"></i>
                                 </span>
@@ -140,14 +142,14 @@
                               </p>
                             </div>
                           </nav>
-                          <nav class="level-item has-text-centered hero is-vfa">
+                          <nav class="level-item has-text-centered">
                             <div>
                               <p class="title is-hidden-mobile">
                                 <span class="icon">
                                   <i class="fas fa-inbox"></i>
                                 </span>
                               </p>
-                              <p class="heading is-size-5-mobile">
+                              <p class="heading is-size-6-mobile">
                                 <span class="icon is-hidden-tablet">
                                   <i class="fas fa-inbox"></i>
                                 </span>
@@ -155,14 +157,14 @@
                               </p>
                             </div>
                           </nav>
-                          <nav class="level-item has-text-centered hero is-vfa">
+                          <nav class="level-item has-text-centered">
                             <div>
                               <p class="title is-hidden-mobile">
                                 <span class="icon">
                                   <i class="fas fa-check"></i>
                                 </span>
                               </p>
-                              <p class="heading is-size-5-mobile">
+                              <p class="heading is-size-6-mobile">
                                 <span class="icon is-hidden-tablet">
                                   <i class="fas fa-check"></i>
                                 </span>
