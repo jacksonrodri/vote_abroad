@@ -204,7 +204,7 @@
                 <div class="level-left">
                   <div>
                     <p class="title is-5 is-marginless">
-                      <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" exact >{{ request.firstName || '' }} {{ request.lastName || ''}}</nuxt-link>
+                      <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" exact >{{ request && request.firstName ? request.firstName : '' }} {{ request && request.lastName ? request.lastName : ''}}</nuxt-link>
                     </p>
                   </div>
                 </div>
