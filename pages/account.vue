@@ -9,14 +9,9 @@
               <span class="has-text-grey-light">Hello </span><span><strong>{{ name }}</strong></span>
             </h1>
           </span>
-          <!-- <span class="level-item">
-            <h1 class="subtitle is-3">
-              <span class="has-text-primary"> Next Steps</span>
-            </h1>
-          </span> -->
         </div>
-        <div v-if="isAdmin" class="level-right">
-          <div class="select">
+        <div class="level-right">
+          <div v-if="isAdmin" class="select level-item">
             <select>
               <option>2018</option>
               <option>2016</option>
@@ -26,15 +21,17 @@
               <option>2020</option>
             </select>
           </div>
-        </div>
-      </div>
-      <div class="level">
-        <div class="level-left">
           <div class="level-item">
-            <h1 class="title is-3">Next Steps</h1>
+            <h1 class="subtitle is-5 has-text-grey">
+              <span class="icon">
+                <i class="fas fa-sign-out-alt"></i>
+              </span>
+              Logout
+            </h1>
           </div>
         </div>
       </div>
+
       <!-- main section -->
       <div class="columns">
         <div v-if="isAdmin" class="column is-4-tablet is-3-desktop is-2-widescreen">
@@ -79,194 +76,244 @@
             </ul>
           </nav>
         </div>
-        <div class="column">
-          <!-- dashboard area -->
-        <div class="columns is-multiline is-gapless">
-          <div class="column is-12-tablet is-6-desktop is-3-widescreen">
-            <div class="notification is-link has-text">
-              <p class="title is-3">9,000,000</p>
-              <p class="subtitle is-6">Eligible Voters Abroad</p>
-            </div>
-          </div>
+          <div class="column">
+            <b-message title="Success/warning message following request process" type="is-success" has-icon>
+              custom message here depending on the status of the voter's ballot request
+            </b-message>
+            <!-- ballot request status area -->
+            <div class="columns">
+              <div class="column">
 
-          <div class="column is-12-tablet is-6-desktop is-3-widescreen">
-            <div class="notification is-info has-text">
-              <p class="title is-3">Mar 6</p>
-              <p class="subtitle is-6">Next Election</p>
-            </div>
-          </div>
-
-          <div class="column is-12-tablet is-6-desktop is-3-widescreen">
-            <div class="notification is-success has-text">
-              <p class="title is-3">Invite</p>
-              <p class="subtitle is-6">a friend</p>
-            </div>
-          </div>
-
-          <div class="column is-12-tablet is-6-desktop is-3-widescreen">
-            <div class="hero is-primary">
-              <div class="hero-body">
-                <div class="container">
-                  <h1 class="title">
-                    Hero title
-                  </h1>
-                  <h2 class="subtitle">
-                    Hero subtitle
-                  </h2>
+                <!-- voter status -->
+                <div class="hero is-light">
+                  <div class="hero-head">
+                    <div class="hero is-vfa">
+                      <div class="hero-head">
+                        <div class="notification is-vfa">
+                          <h1 class="title is-4">Your Voting Progress</h1>
+                        </div>
+                      </div>
+                      <div class="hero-foot">
+                        <nav class="level">
+                          <nav class="level-item has-text-centered hero is-light has-text-secondary">
+                            <div>
+                              <p class="title is-hidden-mobile">
+                                <span class="icon has-text-secondary">
+                                  <i class="fas fa-pencil-alt"></i>
+                                </span>
+                              </p>
+                              <p class="heading is-size-5-mobile">
+                                <span class="icon is-hidden-tablet">
+                                  <i class="fas fa-pencil-alt"></i>
+                                </span>
+                                Fill in Ballot Request
+                              </p>
+                            </div>
+                          </nav>
+                          <nav class="level-item has-text-centered hero is-vfa">
+                            <div>
+                              <p class="title is-hidden-mobile">
+                                <span class="icon">
+                                  <i class="fas fa-paper-plane"></i>
+                                </span>
+                              </p>
+                              <p class="heading is-size-5-mobile">
+                                <span class="icon is-hidden-tablet">
+                                  <i class="fas fa-paper-plane"></i>
+                                </span>
+                                Send in Ballot Request
+                              </p>
+                            </div>
+                          </nav>
+                          <nav class="level-item has-text-centered hero is-vfa">
+                            <div>
+                              <p class="title is-hidden-mobile">
+                                <span class="icon">
+                                  <i class="fas fa-phone"></i>
+                                </span>
+                              </p>
+                              <p class="heading is-size-5-mobile">
+                                <span class="icon is-hidden-tablet">
+                                  <i class="fas fa-phone"></i>
+                                </span>
+                                Confirm Request received
+                              </p>
+                            </div>
+                          </nav>
+                          <nav class="level-item has-text-centered hero is-vfa">
+                            <div>
+                              <p class="title is-hidden-mobile">
+                                <span class="icon">
+                                  <i class="fas fa-inbox"></i>
+                                </span>
+                              </p>
+                              <p class="heading is-size-5-mobile">
+                                <span class="icon is-hidden-tablet">
+                                  <i class="fas fa-inbox"></i>
+                                </span>
+                                Receive ballot
+                              </p>
+                            </div>
+                          </nav>
+                          <nav class="level-item has-text-centered hero is-vfa">
+                            <div>
+                              <p class="title is-hidden-mobile">
+                                <span class="icon">
+                                  <i class="fas fa-check"></i>
+                                </span>
+                              </p>
+                              <p class="heading is-size-5-mobile">
+                                <span class="icon is-hidden-tablet">
+                                  <i class="fas fa-check"></i>
+                                </span>
+                                Vote your ballot
+                              </p>
+                            </div>
+                          </nav>
+                        </nav>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hero-body">Content</div>
+                  <div class="hero-foot">Foot</div>
                 </div>
+
               </div>
             </div>
-          </div>
-
-
-          <div class="column is-12-tablet is-6-desktop is-3-widescreen">
-            <div class="notification is-paddingless is-radiusless card is-success">
-              <div class="card-content">
-                <h2 class="title is-4">
-                  Most popular books
-                </h2>
-                <div class="media">
-                  <!-- <div class="media-left">
-                    <p>
-                      <span class="icon is-large has-text-success has-text-centered">
-                        <i class="fas fa-check fa-2x"></i>
+            <!-- dashboard area -->
+            <div class="columns is-multiline">
+              <div class="column is-12-tablet is-6-desktop">
+                <div class="card">
+                  <header class="card-header">
+                    <p class="card-header-title title is-5">
+                      Your upcoming elections
+                    </p>
+                    <div class="card-header-icon">
+                      <div class="select">
+                        <select>
+                          <option selected>2018</option>
+                          <option>2019</option>
+                          <option>2020</option>
+                        </select>
+                      </div>
+                    </div>
+                  </header>
+                  <div class="card-content">
+                    <div>Elections content</div>
+                  </div>
+                  <footer class="card-footer">
+                    <p class="card-footer-item">
+                    </p>
+                    <p class="card-footer-item">
+                      <span>
+                        Are we missing an election?
                       </span>
                     </p>
-                    <p>
-                      <span class="has-text-centered">complete</span>
-                    </p>
-                  </div> -->
-                  <div class="media-content">
-                    <p class="title is-5 is-spaced is-marginless">
-                      <a href="edit-book.html">Learning Swift</a>
-                    </p>
-                  </div>
-                  <div class="media-right">
-                    <p>
-                      <span class="icon is-large has-text-white has-text-centered">
-                        <i class="fas fa-check fa-2x"></i>
-                      </span>
-                    </p>
-                    <p>
-                      <span class="has-text-centered">complete</span>
-                    </p>
-                  </div>
+                  </footer>
                 </div>
               </div>
-              <footer class="card-footer">
-                <a href="#" class="card-footer-item">Save</a>
-                <a href="#" class="card-footer-item">Edit</a>
-                <a href="#" class="card-footer-item">Delete</a>
-              </footer>
-            </div>
-          </div>
 
-          <div class="column is-12-tablet is-6-desktop is-3-widescreen">
-            <div class="notification is-paddingless is-radiusless card is-danger">
-              <div class="card-content">
-                <h2 class="title is-4">
-                  Most popular books
-                </h2>
-                <div class="media">
-                  <div class="media-content">
-                    <p class="title is-5 is-spaced is-marginless">
-                      <a href="edit-book.html">Learning Swift</a>
+              <div class="column is-12-tablet is-6-desktop">
+                <div class="card">
+                  <header class="card-header">
+                    <p class="card-header-title title is-5">
+                      Your family's ballot requests
                     </p>
+                    <div class="card-header-icon">
+                      <div class="select">
+                        <select>
+                          <option selected>2018</option>
+                          <option>2019</option>
+                          <option>2020</option>
+                        </select>
+                      </div>
+                    </div>
+                  </header>
+                  <div class="card-content">
+                    <div v-for="(request, index) in requests" :key="index">
+                      <div class="level is-marginless">
+                        <div class="level-left">
+                          <div>
+                            <p class="title is-5 is-marginless">
+                              <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" exact >{{ request && request.firstName ? request.firstName : '' }} {{ request && request.lastName ? request.lastName : ''}}</nuxt-link>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="level-right">
+                          <div class="has-text-right">
+                            <span class="tag is-warning">In progress</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="level is-marginless">
+                        <div class="level-item">
+                          <nav class="breadcrumb is-small is-centered has-arrow-separator" aria-label="breadcrumbs">
+                            <ul>
+                              <li class="is-active"><a href="#"><strong class="has-text-info">Request a ballot</strong></a></li>
+                              <li><a href="#">Receive your ballot</a></li>
+                              <li><a href="#">Vote</a></li>
+                            </ul>
+                          </nav>
+                        </div>
+                        <div class="level-right">
+                        </div>
+                      </div>
+                      <div class="level">
+                        <div class="level-left">
+                        </div>
+                        <div class="level-right">
+                        <div class="has-text-right">
+                          <span class="button is-link is-outlined">Continue</span>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- <a class="button is-link is-outlined" href="orders.html">Add a family member</a> -->
+                    <!-- <nuxt-link class="button is-link is-outlined" :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" exact >Add a family member</nuxt-link> -->
                   </div>
-                  <div class="media-right">
-                    146 sold
-                  </div>
-                </div>
-              </div>
-              <footer class="card-footer">
-                <a href="#" class="card-footer-item">Save</a>
-                <a href="#" class="card-footer-item">Edit</a>
-                <a href="#" class="card-footer-item">Delete</a>
-              </footer>
-            </div>
-          </div>
-
-        </div>
-        </div>
-      </div>
-
-      <!-- details -->
-      <div class="column is-12-tablet is-6-desktop is-4-fullhd">
-        <div class="card">
-          <div class="card-content">
-            <h2 class="title is-4">
-              2018 Ballot Requests
-            </h2>
-
-            <div v-for="(request, index) in requests" :key="index">
-              <hr>
-              <div class="level is-marginless">
-                <div class="level-left">
-                  <div>
-                    <p class="title is-5 is-marginless">
-                      <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" exact >{{ request && request.firstName ? request.firstName : '' }} {{ request && request.lastName ? request.lastName : ''}}</nuxt-link>
+                  <footer class="card-footer">
+                    <p class="card-footer-item">
                     </p>
-                  </div>
-                </div>
-                <div class="level-right">
-                  <div class="has-text-right">
-                    <span class="tag is-warning">In progress</span>
-                  </div>
+                    <nuxt-link class="card-footer-item has-text-link" :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" exact >Add a family member</nuxt-link>
+                  </footer>
                 </div>
               </div>
-              <div class="level is-marginless">
-                <div class="level-item">
-                  <nav class="breadcrumb is-small is-centered has-arrow-separator" aria-label="breadcrumbs">
-                    <ul>
-                      <li class="is-active"><a href="#"><strong class="has-text-info">Request a ballot</strong></a></li>
-                      <li><a href="#">Receive your ballot</a></li>
-                      <li><a href="#">Vote</a></li>
-                    </ul>
-                  </nav>
-                </div>
-                <div class="level-right">
-                </div>
-              </div>
-              <div class="level">
-                <div class="level-left">
-                </div>
-                <div class="level-right">
-                <div class="has-text-right">
-                  <span class="button is-link is-outlined">Continue</span>
-                </div>
-                </div>
-              </div>
-              <hr>
             </div>
 
-            <!-- <div class="level">
-              <div class="level-left">
-                <div>
-                  <p class="title is-5 is-marginless">
-                    <a href="edit-order.html">918478</a>
-                  </p>
-                  <small>
-                    Nov 12, 21:57 by <a href="edit-customer.html">Simon Jefferson</a>
-                  </small>
-                </div>
+          <!-- stats and buttons -->
+          <div class="columns is-multiline">
+            <div class="column is-12-tablet is-6-desktop is-3-widescreen">
+              <div class="notification is-info has-text">
+                <p class="title is-3">Learn</p>
+                <p class="subtitle is-6">about your voting rights</p>
               </div>
-              <div class="level-right">
-                <div class="has-text-right">
-                  <p class="title is-5 is-marginless">
-                    $22.99
-                  </p>
-                  <span class="tag is-danger">Failed</span>
-                </div>
-              </div>
-            </div> -->
+            </div>
 
-            <!-- <a class="button is-link is-outlined" href="orders.html">Add a family member</a> -->
-            <nuxt-link class="button is-link is-outlined" :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" exact >Add a family member</nuxt-link>
+            <div class="column is-12-tablet is-6-desktop is-3-widescreen">
+              <div class="notification is-danger has-text">
+                <p class="title is-3">Share</p>
+                <p class="subtitle is-6">on social media</p>
+              </div>
+            </div>
+
+            <div class="column is-12-tablet is-6-desktop is-3-widescreen">
+              <div class="notification is-warning has-text">
+                <p class="title is-3">Ask</p>
+                <p class="subtitle is-6">a friend to vote from abroad</p>
+              </div>
+            </div>
+
+            <div class="column is-12-tablet is-6-desktop is-3-widescreen">
+              <div class="notification is-success has-text">
+                <p class="title is-3">Support</p>
+                <p class="subtitle is-6">votefromabroad.org</p>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
-      <!-- user dashboard -->
-      <!-- <user-dashboard></user-dashboard> -->
     </div>
   </div>
 </template>
@@ -289,7 +336,7 @@ export default {
     requests () { return this.$store.state.requests.requests },
     currentRequest () { return this.$store.state.requests.currentRequest },
     states () { return new Set(this.requests.map(x => x.votAdr.regionCode)) },
-    name () { return this.user && this.user.firstName ? this.user.firstName : this.requests[0].firstName || '' }
+    name () { return this.user && this.user.firstName ? this.user.firstName : this.requests && this.requests[0] && this.requests[0].firstName ? this.requests[0].firstName : '' }
   }
 }
 </script>
