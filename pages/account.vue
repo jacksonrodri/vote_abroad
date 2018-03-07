@@ -204,7 +204,7 @@
                 <div class="level-left">
                   <div>
                     <p class="title is-5 is-marginless">
-                      <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" exact >{{ request.firstName }} {{ request.lastName }}</nuxt-link>
+                      <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" exact >{{ request.firstName || '' }} {{ request.lastName || ''}}</nuxt-link>
                     </p>
                   </div>
                 </div>
@@ -289,7 +289,7 @@ export default {
     requests () { return this.$store.state.requests.requests },
     currentRequest () { return this.$store.state.requests.currentRequest },
     states () { return new Set(this.requests.map(x => x.votAdr.regionCode)) },
-    name () { return this.user.firstName ? this.user.firstName : this.requests[0].firstName || '' }
+    name () { return this.user && this.user.firstName ? this.user.firstName : this.requests[0].firstName || '' }
   }
 }
 </script>
