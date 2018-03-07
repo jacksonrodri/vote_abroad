@@ -21,9 +21,9 @@ module.exports = {
     url: process.env.URL || 'http://localhost:3000',
     autocompleteUrl: process.env.AUTOCOMPLETE_URL || 'http://localhost:3010',
     placeDetailsUrl: process.env.PLACE_DETAILS_URL || 'http://localhost:3010/details',
-    placesUrl: process.env.PLACES_URL || 'http://localhost:3010',
-    autocompleteEndpoint: process.env.AUTOCOMPLETE_ENDPOINT || '/',
-    detailsEndpoint: process.env.PLACES_ENDPOINT || '/details/',
+    placesUrl: process.env.PLACES_URL || '/',
+    autocompleteEndpoint: process.env.AUTOCOMPLETE_ENDPOINT || 'api/place/autocomplete/json',
+    detailsEndpoint: process.env.PLACES_ENDPOINT || 'api/place/details/json',
     placesKey: process.env.PLACES_KEY || 'AIzaSyDK4AprF-iXbiX2-eU3SAQVyovB_8kIg20'
   },
   modules: [
@@ -44,7 +44,14 @@ module.exports = {
       target: 'http://localhost:9000/',
       pathRewrite: {
         '^/api/' : '/'
-      }}
+      }
+    },
+    '/api/place/**': {
+      target: 'https://maps.googleapis.com/maps/api/place',
+      pathRewrite: {
+        '^/api/place/' : '/'
+      }
+    }
   },
   manifest: {
     name: 'Vote From Abroad',
