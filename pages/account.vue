@@ -97,7 +97,7 @@
                       </div>
                       <div class="hero-foot">
                         <div class="columns is-gapless">
-                          <a class="column has-text-centered hero is-vfalight">
+                          <a class="column has-text-centered button is-large is-primary is-radiusless">
                               <p class="title is-hidden-mobile">
                                 <span class="icon">
                                   <i class="fas fa-pencil-alt"></i>
