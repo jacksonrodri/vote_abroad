@@ -85,10 +85,10 @@
               <div class="column">
 
                 <!-- voter status -->
-                <div class="hero is-light">
+                <div class="hero is-vfa">
                   <div class="hero-head">
-                    <div class="hero is-vfa">
-                      <div class="hero-head">
+                    <!-- <div class="hero is-vfa">
+                      <div class="hero-head"> -->
                         <nav class="navbar">
                           <div class="navbar-brand">
                             <h1 class="navbar-item title is-4 has-text-light">Your Voting Progress</h1>
@@ -96,85 +96,60 @@
                         </nav>
                       </div>
                       <div class="hero-foot">
-                        <nav class="level">
-                          <a class="level-item has-text-centered notification is-vfalight is-marginless is-radiusless">
-                            <div>
+                        <div class="columns is-gapless">
+                          <a class="column has-text-centered hero is-vfalight">
                               <p class="title is-hidden-mobile">
                                 <span class="icon">
                                   <i class="fas fa-pencil-alt"></i>
                                 </span>
                               </p>
-                              <p class="heading is-size-6-mobile">
-                                <span class="icon is-hidden-tablet">
-                                  <i class="fas fa-pencil-alt"></i>
-                                </span>
-                                Fill in Ballot Request
+                              <p class="subtitle has-text-white">
+                                <span class="heading is-size-6-mobile"><i class="fas fa-pencil-alt is-hidden-tablet"></i>Fill in Ballot Request</span>
                               </p>
-                            </div>
                           </a>
-                          <nav class="level-item has-text-centered">
-                            <div>
+                          <a class="column has-text-centered">
                               <p class="title is-hidden-mobile">
                                 <span class="icon">
                                   <i class="fas fa-paper-plane"></i>
                                 </span>
                               </p>
-                              <p class="heading is-size-6-mobile">
-                                <span class="icon is-hidden-tablet">
-                                  <i class="fas fa-paper-plane"></i>
-                                </span>
-                                Send in Ballot Request
+                              <p class="subtitle has-text-white">
+                                <span class="heading is-size-6-mobile"><i class="fas fa-pencil-alt is-hidden-tablet"></i>Send in Ballot Request</span>
                               </p>
-                            </div>
-                          </nav>
-                          <nav class="level-item has-text-centered">
-                            <div>
+                          </a>
+                          <a class="column has-text-centered">
                               <p class="title is-hidden-mobile">
                                 <span class="icon">
                                   <i class="fas fa-phone"></i>
                                 </span>
                               </p>
-                              <p class="heading is-size-6-mobile">
-                                <span class="icon is-hidden-tablet">
-                                  <i class="fas fa-phone"></i>
-                                </span>
-                                Confirm Request received
+                              <p class="subtitle has-text-white">
+                                <span class="heading is-size-6-mobile"><i class="fas fa-pencil-alt is-hidden-tablet"></i>Confirm Request Received</span>
                               </p>
-                            </div>
-                          </nav>
-                          <nav class="level-item has-text-centered">
-                            <div>
+                          </a>
+                          <a class="column has-text-centered">
                               <p class="title is-hidden-mobile">
                                 <span class="icon">
                                   <i class="fas fa-inbox"></i>
                                 </span>
                               </p>
-                              <p class="heading is-size-6-mobile">
-                                <span class="icon is-hidden-tablet">
-                                  <i class="fas fa-inbox"></i>
-                                </span>
-                                Receive ballot
+                              <p class="subtitle has-text-white">
+                                <span class="heading is-size-6-mobile"><i class="fas fa-pencil-alt is-hidden-tablet"></i>Receive ballot</span>
                               </p>
-                            </div>
-                          </nav>
-                          <nav class="level-item has-text-centered">
-                            <div>
+                          </a>
+                          <a class="column has-text-centered">
                               <p class="title is-hidden-mobile">
                                 <span class="icon">
                                   <i class="fas fa-check"></i>
                                 </span>
                               </p>
-                              <p class="heading is-size-6-mobile">
-                                <span class="icon is-hidden-tablet">
-                                  <i class="fas fa-check"></i>
-                                </span>
-                                Vote your ballot
+                              <p class="subtitle has-text-white">
+                                <span class="heading is-size-6-mobile"><i class="fas fa-pencil-alt is-hidden-tablet"></i>Vote your ballot</span>
                               </p>
-                            </div>
-                          </nav>
-                        </nav>
-                      </div>
-                    </div>
+                          </a>
+                        </div>
+                      <!-- </div>
+                    </div> -->
                   </div>
                   <div class="hero-body">Content</div>
                   <div class="hero-foot">Foot</div>
