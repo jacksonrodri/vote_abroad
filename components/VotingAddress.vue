@@ -24,33 +24,43 @@
         :placeholder="$t('request.votAdr.apt')"
         v-model="apt"></b-input>
     </b-field>
-    <b-field grouped expanded>
-      <b-autocomplete ref="city"
-        :placeholder="$t('request.votAdr.city')"
-        :data="data"
-        field="structured_formatting.main_text"
-        expanded
-        v-model="city"
-        :loading="isFetchingCity"
-        @keyup.native="suppressDropdown = false"
-        @input="getAsyncDataCity"
-        @select="option => fillDataCity(option)">
-        <template slot-scope="props">{{ props.option.description.replace(', USA', '') }} </template>
-        <template slot="empty">No results found</template>
-      </b-autocomplete>
-      <b-select v-model="state"
-        :placeholder="$t('request.votAdr.state')">
-        <option
-          v-for="state in states"
-          :value="state.iso"
-          :key="state.iso">
-          {{ state.name }}
-        </option>
-      </b-select>
-      <b-input
-        :placeholder="$t('request.votAdr.zip')"
-        v-model="zip"></b-input>
-    </b-field>
+    <div class="field is-horizontal">
+      <div class="field-body">
+        <div class="field is-expanded">
+          <b-autocomplete ref="city"
+            :placeholder="$t('request.votAdr.city')"
+            :data="data"
+            expanded
+            field="structured_formatting.main_text"
+            v-model="city"
+            :loading="isFetchingCity"
+            @keyup.native="suppressDropdown = false"
+            @input="getAsyncDataCity"
+            @select="option => fillDataCity(option)">
+            <template slot-scope="props">{{ props.option.description.replace(', USA', '') }} </template>
+            <template slot="empty">No results found</template>
+          </b-autocomplete>
+        </div>
+        <div class="field">
+          <b-select v-model="state"
+            expanded
+            :placeholder="$t('request.votAdr.state')">
+            <option
+              v-for="state in states"
+              :value="state.iso"
+              :key="state.iso">
+              {{ state.name }}
+            </option>
+          </b-select>
+        </div>
+        <div class="field">
+          <b-input
+            :placeholder="$t('request.votAdr.zip')"
+            expanded
+            v-model="zip"></b-input>
+        </div>
+      </div>
+    </div>
     <b-field :label="$t('request.votAdr.county')">
       <b-input
         :placeholder="$t('request.votAdr.county')"

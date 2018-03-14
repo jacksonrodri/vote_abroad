@@ -44,6 +44,7 @@
                       </i18n>
                       <br>
                       <button class="button is-pulled-right is-primary" @click="isSignatureModalActive = true"><b-icon icon="camera" size="is-small"></b-icon><span>{{$t('request.stages.sign')}}</span></button>
+                      {{ hasCamera ? "you have a camera" : "you don't have a camera" }}
                     </div>
                   </article>
                   <article class="media">
@@ -327,8 +328,29 @@ export default {
     return {
       isSignatureModalActive: false,
       signature: '',
-      hasCamera: true,
+      hasCamera: false,
       isSigning: false
+    }
+  },
+  mounted () {
+    let that = this
+    function updateHasCamera (res) {
+      console.log(res)
+      that.hasCamera = res
+    }
+    if (process.browser) {
+      if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
+        this.hasCamera = false
+        return
+      }
+      navigator.mediaDevices.enumerateDevices()
+        .then(function (devices) {
+          updateHasCamera(devices.filter(x => x.kind === 'videoinput').length > 0)
+        })
+        .catch(function (err) {
+          this.hasCamera = false
+          console.log(err.name + ': ' + err.message)
+        })
     }
   },
   methods: {
