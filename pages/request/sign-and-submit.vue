@@ -346,6 +346,7 @@ export default {
         document.body.appendChild(link)
         link.click()
       })
+      this.$router.push('/account')
     },
     addSig (val) {
       this.signature = val
