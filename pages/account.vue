@@ -83,75 +83,59 @@
             <!-- ballot request status area -->
             <div class="columns">
               <div class="column">
-                <div class="hero is-white">
-                  <div class="hero-head">
-                    <div class="hero is-vfa">
-                      <div class="level">
-                        <h1 class="title level-item">Your Ballet Request Progress</h1>
-                      </div>
-                      <div class="tabs is-boxed is-fullwidth is-small">
-                        <ul>
-                          <li class="is-active">
-                            <a class="has-text-centered">
-                              <div>
-                                <p><span class="icon"><i class="fas fa-pencil-alt"></i></span></p>
-                                <p><span class="heading">Complete Ballot Request</span></p>
-                              </div>
-                            </a>
-                          </li>
-                          <li>
-                            <a class="has-text-centered">
-                              <div>
-                                <p><span class="icon"><i class="fas fa-paper-plane"></i></span></p>
-                                <p><span class="heading">Send in Ballot Request</span></p>
-                              </div>
-                            </a>
-                          </li>
-                          <li>
-                            <a class="has-text-centered">
-                              <div>
-                                <p><span class="icon"><i class="fas fa-phone"></i></span></p>
-                                <p><span class="heading">Confirm Request received</span></p>
-                              </div>
-                            </a>
-                          </li>
-                          <li>
-                            <a class="has-text-centered">
-                              <div>
-                                <p><span class="icon"><i class="fas fa-inbox"></i></span></p>
-                                <p><span class="heading">Receive Ballot</span></p>
-                              </div>
-                            </a>
-                          </li>
-                          <li>
-                            <a class="has-text-centered">
-                              <div>
-                                <p><span class="icon"><i class="fas fa-check"></i></span></p>
-                                <p><span class="heading">Vote Ballot</span></p>
-                              </div>
-                            </a>
-                          </li>
-                        </ul>
+                <div class="hero is-vfa">
+                  <div class="hero-head columns is-multiline is-gapless">
+                    <div class="column notification is-radiusless is-vfa is-12">
+                      <h1 class="title has-text-white has-text-centered">Your Ballot Request Status</h1>
+                    </div>
+                    <div class="column hero navbar is-vfa">
+                        <div class="level">
+                          <a v-for="stage in requestStages" :key="stage.title" :class="['navbar-item', 'is-tab', 'level-item', 'has-text-centered', 'is-marginless', {'is-active': currentRequestStage === stage.title}]">
+                            <div>
+                              <p class="is-hidden-mobile"><span class="icon"><i :class="['fas', `fa-${stage.icon}`]"></i></span></p>
+                              <p><span class="heading is-size-6-mobile"><span class="icon is-hidden-tablet"><i :class="['fas', `fa-${stage.icon}`]"></i></span>{{ stage.title }}</span></p>
+                            </div>
+                          </a>
                       </div>
                     </div>
                   </div>
-                  <div class="hero-body">
-                    <div class="notification is-white">Content here</div>
-                  </div>
-                  <div class="hero-foot">
-                    <div class="hero is-vfa">
-                      <div class="level">
-                        <div class="level-left">
-                          <a class="level-item">Relavent FAQ</a>
-                          <a class="level-item">Relavent FAQ</a>
-                          <a class="level-item">Relavent FAQ</a>
-                        </div>
-                        <div class="level-right">
-                          <a class="level-item">I need help</a>
-                        </div>
+                  <!-- <div class="hero-body"> -->
+                    <div class="card is-borderless is-shadowless hero is-vfa">
+                      <div class="card-content">
+                        <p class="title">
+                          {{ requestStages.find(stage => currentRequestStage === stage.title).content }}
+                        </p>
+                        <button class="button is-primary">{{ requestStages.find(stage => currentRequestStage === stage.title).completeActionText }}</button>
+                      </div>
+                      <footer class="card-footer">
+                        <a v-for="(faq, index) in requestStages.find(stage => currentRequestStage === stage.title).faqs" :key="index" class="card-footer-item has-text-white">
+                          <span>
+                            {{ faq }}
+                          </span>
+                        </a>
+                        <a class="card-footer-item">
+                          <span class="has-text-primary">
+                            Ask the help desk.
+                          </span>
+                        </a>
+                      </footer>
+                    </div>
+                  <!-- </div> -->
+                  <!-- <div class="hero-foot">
+                    <div class="hero navbar is-vfalight">
+                        <div class="level">
+                          <a class="navbar-item is-tab level-item has-text-centered has-text-vfa is-marginless">
+                            <span class="is-size-6-mobile">What state can I vote in?</span>
+                          </a>
+                          <a class="navbar-item is-tab level-item has-text-centered has-text-vfa is-marginless">
+                            <span class="is-size-6-mobile">Do I have to do this every year?</span>
+                          </a>
+                          <a class="navbar-item is-tab level-item has-text-centered has-text-primary is-marginless ">
+                            <span class="is-size-6-mobile">Contact the help desk.</span>
+                          </a>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
 
               </div>
@@ -304,7 +288,46 @@ export default {
   },
   data () {
     return {
-      isAdmin: false
+      isAdmin: false,
+      currentRequestStage: 'Fill out FPCA',
+      requestStages: [
+        {
+          title: 'Fill out FPCA',
+          icon: 'pencil-alt',
+          content: 'You must completely fill out your ballot request, sign and date it before sending it in.',
+          completeActionText: 'I already filled out my fpca this year.',
+          faqs: ['What state can I vote in?', 'Do I have to do this every year?']
+        },
+        {
+          title: 'Send in FPCA',
+          icon: 'paper-plane',
+          content: 'abcdef',
+          completeActionText: 'I\'ve sent in my request',
+          faqs: []
+        },
+        {
+          title: 'Confirm with your Election Official',
+          icon: 'phone',
+          content: 'abcdef',
+          completeActionText: 'I\'ve called my Local Election Official',
+          faqs: []
+        },
+        {
+          title: 'Receive Ballot',
+          icon: 'inbox',
+          content: 'abcdef',
+          completeActionText: 'I\'ve received my ballot',
+          faqs: []
+        },
+        {
+          title: 'Vote',
+          icon: 'check',
+          content: 'abcdef',
+          completeActionText: 'I\'ve already voted',
+          faqs: []
+        }
+
+      ]
     }
   },
   computed: {
