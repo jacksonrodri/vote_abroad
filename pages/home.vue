@@ -110,7 +110,7 @@ import debounce from 'lodash/debounce'
 import { format, parse, getPhoneCode, asYouType as AsYouType } from 'libphonenumber-js'
 import * as phoneExamples from 'libphonenumber-js/examples.mobile.json'
 import { mapState } from 'vuex'
-import countryNames from '~/assets/country-names.json'
+import countryNames from '~/assets/countries.json'
 
 let twilio = axios.create({
   baseURL: 'https://lookups.twilio.com/v1/PhoneNumbers/',
