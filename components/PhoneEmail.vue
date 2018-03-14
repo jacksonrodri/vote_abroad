@@ -79,6 +79,7 @@ export default {
     this.typed = this.value.typed || ''
     this.phoneExamples = await phoneExamples()
     metadata = await md()
+    console.log(metadata)
   },
   data () {
     return {
@@ -169,12 +170,16 @@ export default {
   },
   methods: {
     getPhoneCode (code) {
+      if (!metadata) {
+        return ''
+      }
       if (code === 'GS') {
         return '500'
       }
       try {
-        return getPhoneCode(code)
+        return getPhoneCode(code, metadata)
       } catch (error) {
+        console.log(error)
         return ''
       }
     },

@@ -142,7 +142,7 @@
 </template>
 
 <script>
-import countries from '~/assets/countryaddresses'
+// import countries from '~/assets/countryaddresses'
 import axios from 'axios'
 import debounce from 'lodash/debounce'
 
@@ -221,7 +221,8 @@ export default {
   },
   computed: {
     countryList () {
-      return countries()
+      // return countries()
+      return []
     },
     filteredCountries () {
       if (this.countryName && this.countryName.length > 1) {

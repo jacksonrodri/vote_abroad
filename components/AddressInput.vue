@@ -154,9 +154,17 @@
 </template>
 
 <script>
-import countries from '~/assets/countryaddresses'
+// import countries from '~/assets/countryaddresses'
 import axios from 'axios'
 import debounce from 'lodash/debounce'
+// let countries = async function () {
+//   let data = await
+//   this. = await (
+//       await import(
+//         /* webpackChunkName: "countrydata" */ `@/data/countries.json`
+//       )
+//     )
+// }
 
 export default {
   name: 'AddressInput',
@@ -166,6 +174,13 @@ export default {
     'label',
     'toolTipTitle'
   ],
+  async created () {
+    this.countryList = await (
+      await import(
+        /* webpackChunkName: "countrydata" */ `@/data/countries.json`
+      )
+    )
+  },
   mounted () {
     if (this.usOnly !== undefined) {
       this.countryCode = 'US'
@@ -215,14 +230,15 @@ export default {
       alt4: '',
       alt5: '',
       isOpen: false,
-      suppressDropdown: true
+      suppressDropdown: true,
+      countryList: []
     }
   },
   computed: {
     userCountry () { return this.$store.state.userauth.user.country },
-    countryList () {
-      return countries()
-    },
+    // countryList () {
+    //   return countries()
+    // },
     filteredCountries () {
       if (this.countryName && this.countryName.length > 1) {
         return this.countryList.filter((option) => {

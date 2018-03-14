@@ -66,7 +66,7 @@ module.exports = {
   /*
   ** Customize the progress bar color
   */
-  loading: { color: '#3B8070' },
+  loading: { color: '#e94e3c', height: '3px' },
   generate: {
     minify: {
       collapseWhitespace: false
@@ -98,6 +98,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    extractCSS: true,
     postcss: {
       plugins: {
         'postcss-custom-properties': false
@@ -108,7 +109,7 @@ module.exports = {
     */
    vendor: [
      'babel-polyfill',
-    '~/assets/countryaddresses.js',
+    // '~/assets/countryaddresses.js',
     'mailcheck',
     'auth0-js'
    ],
