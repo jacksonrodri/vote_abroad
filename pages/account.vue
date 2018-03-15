@@ -102,7 +102,7 @@
                       </figure>
                       <div class="media-content">
                         <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                           {{ requestStages.find(stage => currentRequestStage === stage.title).content }}
                         </p>
                         <nav class="level is-mobile">
                           <div class="level-left"></div>
@@ -365,33 +365,31 @@ export default {
   data () {
     return {
       isAdmin: false,
-      currentRequestStage: 'Fill out form',
+      currentRequestStage: 'Fill & Sign',
       requestStages: [
         {
-          title: 'Fill out form',
+          title: 'Fill & Sign',
           icon: 'edit',
           content: 'You must completely fill out your ballot request, sign and date it before sending it in.',
           completeActionText: 'I already filled out my fpca this year.',
           faqs: ['What state can I vote in?', 'Do I have to do this every year?']
         },
         {
-          title: 'Sign',
-          icon: 'pencil-alt',
-          content: 'abcdef',
-          completeActionText: 'I\'ve sent in my request',
-          faqs: []
-        },
-        {
           title: 'Send in Request',
           icon: 'paper-plane',
-          content: 'abcdef',
+          content: 'You must submit your request to your local election official in your town, county or state.  blah blah blah',
           completeActionText: 'I\'ve called my Local Election Official',
           faqs: []
         },
         {
+          title: 'Receive Ballot',
+          icon: 'inbox',
+          content: 'States must send out ballots at least 45 days prior to an election.  We recomend confirming with your local election official that they have accepted your request.'
+        },
+        {
           title: 'Vote',
           icon: 'check',
-          content: 'abcdef',
+          content: 'Be sure to send in your voted ballot by the deadline of.... ',
           completeActionText: 'I\'ve already voted',
           faqs: []
         }
