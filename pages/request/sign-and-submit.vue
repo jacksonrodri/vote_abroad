@@ -45,6 +45,7 @@
                       <br>
                       <button class="button is-pulled-right is-primary" @click="isSignatureModalActive = true"><b-icon icon="camera" size="is-small"></b-icon><span>{{$t('request.stages.sign')}}</span></button>
                       {{ hasCamera ? "you have a camera" : "you don't have a camera" }}
+                      {{ downloadAttrSupported ? "this browser supports the download attribute" : "this browser doesn't support the download attribute"}}
                     </div>
                   </article>
                   <article class="media">
@@ -296,7 +297,6 @@ import Sign from '~/components/sign.vue'
 import { mapState } from 'vuex'
 import axios from 'axios'
 import VueMarkdown from 'vue-markdown'
-import * as Modernizr from '~/plugins/modernizr'
 
 // var mailgun = require('mailgun.js')
 // var apiKey = 'key-44903961cb823b645750fe64358dfc40'
@@ -331,33 +331,28 @@ export default {
       isSignatureModalActive: false,
       signature: '',
       hasCamera: false,
+      downloadAttrSupported: false,
       isSigning: false
     }
   },
   mounted () {
-    if (Modernizr.adownload) {
-      // supported
-      console.log('download supportet')
-    } else {
-      // not-supported
-      console.log('download NOT supported')
-    }
-    let that = this
-    function updateHasCamera (res) {
-      console.log(res)
-      that.hasCamera = res
-    }
+    let feat = this
+    // function updateHasCamera (res) {
+    //   console.log(res)
+    //   that.hasCamera = res
+    // }
     if (process.browser) {
+      feat.downloadAttrSupported = ('download' in document.createElement('a'))
       if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
-        this.hasCamera = false
+        feat.hasCamera = false
         return
       }
       navigator.mediaDevices.enumerateDevices()
         .then(function (devices) {
-          updateHasCamera(devices.filter(x => x.kind === 'videoinput').length > 0)
+          feat.hasCamera = devices.filter(x => x.kind === 'videoinput').length > 0
         })
         .catch(function (err) {
-          this.hasCamera = false
+          feat.hasCamera = false
           console.log(err.name + ': ' + err.message)
         })
     }
