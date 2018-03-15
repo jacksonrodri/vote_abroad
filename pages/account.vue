@@ -1,8 +1,8 @@
 <template>
   <div class="hero-body columns is-centered">
-    <div class="column is-9 is-12-touch">
+    <div class="column is-12 is-8-desktop is-7-widescreen is-6-fullhd">
       <!-- level menu -->
-      <div class="level is-mobile">
+      <div v-if="isAuthenticated" class="level is-mobile">
         <div class="level-left">
           <span class="level-item">
             <h1 class="subtitle is-3">
@@ -30,6 +30,10 @@
             </h1>
           </div>
         </div>
+      </div>
+      <div v-else>
+        <h1 class="has-text-centered title is-3">Next Steps</h1>
+        <h3 class="has-text-centered subtitle is-4">&nbsp;</h3>
       </div>
 
       <!-- main section -->
@@ -83,6 +87,55 @@
             <!-- ballot request status area -->
             <div class="columns">
               <div class="column">
+                <div class="card">
+                  <header class="card-header">
+                    <h3 class="card-header-title title is-5 is-size-6-mobile has-text-vfa">
+                      <span class="has-text-grey">Your Ballot Request Status:&nbsp;</span> {{currentRequestStage}}
+                    </h3>
+                  </header>
+                  <div class="card-content">
+                    <article class="media">
+                      <figure class="media-left">
+                        <span class="icon is-medium has-text-vfa">
+                          <i class="fas fa-2x fa-pencil-alt"></i>
+                        </span>
+                      </figure>
+                      <div class="media-content">
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                        </p>
+                        <nav class="level is-mobile">
+                          <div class="level-left"></div>
+                          <div class="level-right">
+                            <a class="level-item">
+                              <span class="icon is-small"><i class="fas fa-pencil-alt"></i></span><span>&nbsp;Edit my form</span>
+                            </a>
+                            <a class="level-item">
+                              <span class="icon is-small"><i class="fas fa-check"></i></span><span>&nbsp;Mark as complete</span>
+                            </a>
+                          </div>
+                        </nav>
+                      </div>
+                      <div class="media-right">
+                        <!-- <a class="button is-outlined">
+                          <span class="icon is-small">
+                            <i class="fas fa-check"></i>
+                          </span>
+                          <span>I've done this</span>
+                        </a> -->
+                      </div>
+                    </article>
+                  </div>
+                  <!-- <footer class="card-footer">
+                    <a href="#" class="card-footer-item">I need help</a>
+                    <a href="#" class="card-footer-item">Edit my request</a>
+                    <a href="#" class="card-footer-item">I've done this</a>
+                  </footer> -->
+                </div>
+              </div>
+            </div>
+            <!-- <div class="columns">
+              <div class="column">
                 <div class="hero is-vfa">
                   <div class="hero-head columns is-multiline is-gapless">
                     <div class="column notification is-radiusless is-vfa is-12">
@@ -99,7 +152,7 @@
                       </div>
                     </div>
                   </div>
-                  <!-- <div class="hero-body"> -->
+
                     <div class="card is-borderless is-shadowless hero is-vfa">
                       <div class="card-content">
                         <p class="title">
@@ -120,28 +173,12 @@
                         </a>
                       </footer>
                     </div>
-                  <!-- </div> -->
-                  <!-- <div class="hero-foot">
-                    <div class="hero navbar is-vfalight">
-                        <div class="level">
-                          <a class="navbar-item is-tab level-item has-text-centered has-text-vfa is-marginless">
-                            <span class="is-size-6-mobile">What state can I vote in?</span>
-                          </a>
-                          <a class="navbar-item is-tab level-item has-text-centered has-text-vfa is-marginless">
-                            <span class="is-size-6-mobile">Do I have to do this every year?</span>
-                          </a>
-                          <a class="navbar-item is-tab level-item has-text-centered has-text-primary is-marginless ">
-                            <span class="is-size-6-mobile">Contact the help desk.</span>
-                          </a>
-                      </div>
-                    </div>
-                  </div> -->
                 </div>
 
               </div>
-            </div>
+            </div> -->
             <!-- dashboard area -->
-            <div class="columns is-multiline">
+            <!-- <div class="columns is-multiline">
               <div class="column is-12-tablet is-6-desktop">
                 <div class="card">
                   <header class="card-header">
@@ -228,9 +265,6 @@
                         </div>
                       </div>
                     </div>
-
-                    <!-- <a class="button is-link is-outlined" href="orders.html">Add a family member</a> -->
-                    <!-- <nuxt-link class="button is-link is-outlined" :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" exact >Add a family member</nuxt-link> -->
                   </div>
                   <footer class="card-footer">
                     <p class="card-footer-item">
@@ -239,37 +273,55 @@
                   </footer>
                 </div>
               </div>
-            </div>
+            </div> -->
 
           <!-- stats and buttons -->
-          <div class="columns is-multiline">
-            <div class="column is-12-tablet is-6-desktop is-3-widescreen">
+          <div class="columns is-multiline is-centered">
+            <div class="column">
               <div class="notification is-info has-text">
-                <p class="title is-3">Learn</p>
-                <p class="subtitle is-6">about your voting rights</p>
+                <div class="media">
+                  <div class="media-left">
+                    <span class="icon is-large">
+                      <i class="fas fa-3x fa-graduation-cap"></i>
+                    </span>
+                  </div>
+                  <div class="media-content">
+                    <p class="title is-3">Learn</p>
+                    <p class="subtitle is-6">about your voting rights</p>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="column is-12-tablet is-6-desktop is-3-widescreen">
+            <div class="column">
               <div class="notification is-danger has-text">
-                <p class="title is-3">Share</p>
-                <p class="subtitle is-6">on social media</p>
+                <div class="media">
+                  <div class="media-left">
+                    <span class="icon is-large">
+                      <i class="fas fa-3x fa-share"></i>
+                    </span>
+                  </div>
+                  <div class="media-content">
+                    <p class="title is-3">Share</p>
+                    <p class="subtitle is-6">on social media</p>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="column is-12-tablet is-6-desktop is-3-widescreen">
+            <!-- <div class="column is-12-tablet is-6-desktop is-3-widescreen">
               <div class="notification is-warning has-text">
                 <p class="title is-3">Ask</p>
                 <p class="subtitle is-6">a friend to vote from abroad</p>
               </div>
-            </div>
+            </div> -->
 
-            <div class="column is-12-tablet is-6-desktop is-3-widescreen">
+            <!-- <div class="column is-12-tablet is-6-desktop is-3-widescreen">
               <div class="notification is-success has-text">
                 <p class="title is-3">Support</p>
                 <p class="subtitle is-6">votefromabroad.org</p>
               </div>
-            </div>
+            </div> -->
 
           </div>
         </div>
@@ -335,7 +387,8 @@ export default {
     requests () { return this.$store.state.requests.requests },
     currentRequest () { return this.$store.state.requests.currentRequest },
     states () { return new Set(this.requests.map(x => x.votAdr.regionCode)) },
-    name () { return this.user && this.user.firstName ? this.user.firstName : this.requests && this.requests[0] && this.requests[0].firstName ? this.requests[0].firstName : '' }
+    name () { return this.user && this.user.firstName ? this.user.firstName : this.requests && this.requests[0] && this.requests[0].firstName ? this.requests[0].firstName : '' },
+    isAuthenticated: function () { return this.$store.getters['userauth/isAuthenticated'] }
   }
 }
 </script>
