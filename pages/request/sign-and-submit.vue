@@ -124,7 +124,10 @@
                         tag="vue-markdown"
                         :html="true">
                       </i18n>
-                      <button class="button is-pulled-right is-primary" @click="getFPCA"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
+                      <!-- <button class="button is-pulled-right is-primary" @click="getFPCA"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button> -->
+                      <a v-if="downloadAttrSupported" :href="pdf" :download="`${firstName}-${lastName}-2018-fpca.pdf`" :class="['button', 'is-pulled-right', 'is-primary', {'is-loading': !Boolean(pdf)}]" @click="finish"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></a>
+                      <button v-else class="button is-pulled-right is-primary" @click="openPdf"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
+                      <span v-if="!downloadAttrSupported">right click and select save to disk</span>
                     </div>
                   </article>
                 </div>
@@ -201,7 +204,10 @@
                       <p class="is-size-5">Download your completed form.</p>
                     </div>
                     <div class="media-lef">
-                      <button @click="getFPCA" class="button is-primary"><span>Download now</span></button>
+                      <!-- <button @click="getFPCA" class="button is-primary"><span>Download now</span></button> -->
+                      <a v-if="downloadAttrSupported" :href="pdf" :download="`${firstName}-${lastName}-2018-fpca.pdf`" :class="['button', 'is-pulled-right', 'is-primary', {'is-loading': !Boolean(pdf)}]" @click="finish"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></a>
+                      <button v-else class="button is-pulled-right is-primary" @click="openPdf"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
+                      <span v-if="!downloadAttrSupported">right click and select save to disk</span>
                     </div>
                   </article>
                   <article class="media">
@@ -375,10 +381,10 @@ export default {
   methods: {
     openPdf () {
       window.open(this.pdf, '_blank')
-      this.$router.push('/account')
+      this.$router.push('/dashboard')
     },
     finish () {
-      this.$router.push('/account')
+      this.$router.push('/dashboard')
     },
     // getFPCA () {
     //   // axios.get('/api/fpca?firstName=Alex&lastName=Montgomery&middleName=Parry&suffix=&ssn=0116')
@@ -394,7 +400,7 @@ export default {
     //     document.body.appendChild(link)
     //     link.click()
     //   })
-    //   this.$router.push('/account')
+    //   this.$router.push('/dashboard')
     // },
     getFPCA (method) {
       axios.get(encodeURI(`/api/fpca?firstName=${this.firstName || ''}&lastName=${this.lastName || ''}&middleName=${this.middleName || ''}&suffix=${this.suffix || ''}&ssn=${this.ssn || ''}&previousName=${this.previousName.previousName || ''}&dob=${this.dob || ''}&stateId=${this.stateId || ''}&votStreet=${this.votStreet || ''}&votApt=${this.votApt || ''}&votCity=${this.votCity || ''}&votState=${this.votState || ''}&votCounty=${this.votCounty || ''}&votZip=${this.votZip || ''}&abrAdr=${this.abrAdr ? this.abrAdr.alt1 : ''}\n${this.abrAdr ? this.abrAdr.alt2 : ''}\n${this.abrAdr ? this.abrAdr.alt3 : ''}\n${this.abrAdr ? this.abrAdr.alt4 : ''}\n${this.abrAdr ? this.abrAdr.alt5 : ''}&fwdAdr=${this.fwdAdr ? this.fwdAdr.alt1 : ''}\n${this.fwdAdr ? this.fwdAdr.alt2 : ''}\n${this.fwdAdr ? this.fwdAdr.alt3 : ''}\n${this.fwdAdr ? this.fwdAdr.alt4 : ''}\n${this.fwdAdr ? this.fwdAdr.alt5 : ''}&email=${this.email || ''}&altEmail=${this.altEmail || ''}&tel=${this.tel && this.tel.intNumber ? this.tel.intNumber : ''}&fax=${this.fax || ''}&party=${this.party || ''}&addlInfo=${this.addlInfo || ''}&date=${this.date || ''}&leoAdr=${this.leoAdr}&class=${this.voterClass || ''}&sex=${this.sex || ''}&recBallot=${this.recBallot || ''}&method=${method}`), {responseType: 'arraybuffer'})
