@@ -138,18 +138,18 @@
         <div class="container">
           <ul>
             <li class="is-active">
-              <nuxt-link to="how-to">How to<span class="is-hidden-touch">&nbsp;Vote From Abroad</span></nuxt-link>
+              <nuxt-link to="/how-to">How to<span class="is-hidden-touch">&nbsp;Vote From Abroad</span></nuxt-link>
               <!-- <a>How to<span class="is-hidden-touch">&nbsp;Vote From Abroad</span></a> -->
             </li>
             <li>
-              <nuxt-link to="FAQs"><span class="is-hidden-touch">Voter Help Desk/</span>FAQ</nuxt-link>
+              <nuxt-link to="/FAQs"><span class="is-hidden-touch">Voter Help Desk/</span>FAQ</nuxt-link>
             </li>
             <li>
-              <nuxt-link to="about-us">About Us</nuxt-link>
+              <nuxt-link to="/about-us">About Us</nuxt-link>
               <!-- <a>About Us</a> -->
             </li>
             <li>
-              <nuxt-link to="election-officials">Election Official Directory</nuxt-link>
+              <nuxt-link to="/election-officials">Election Official Directory</nuxt-link>
               <!-- <a>Election Official Directory</a> -->
             </li>
           </ul>
