@@ -2,6 +2,7 @@
 <div class="hero-body">
 <div class="columns is-centered">
   <div class="column is-8">
+    <h1 class="title">FAQs</h1>
     <div class="columns is-multiline">
       <div v-for="(category, index) in categories" :key="index" class="column is-6">
         <h2 class="title">{{category.category}}</h2>
