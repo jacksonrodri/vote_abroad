@@ -46,6 +46,7 @@
                       <button class="button is-pulled-right is-primary" @click="isSignatureModalActive = true"><b-icon icon="camera" size="is-small"></b-icon><span>{{$t('request.stages.sign')}}</span></button>
                       {{ hasCamera ? "you have a camera" : "you don't have a camera" }}
                       {{ downloadAttrSupported ? "this browser supports the download attribute" : "this browser doesn't support the download attribute"}}
+                      <embed type="application/pdf" :src="pdf" />
                     </div>
                   </article>
                   <article class="media">
@@ -63,8 +64,11 @@
                         tag="vue-markdown"
                         :html="true">
                       </i18n>
-                      <button class="button is-pulled-right is-primary" @click="getFPCA"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
-                      <a href="/images/myw3schoolsimage.jpg" download>Download</a>
+                      <a :href="pdf" :download="`${firstName}-${lastName}-2018-fpca.pdf`" class="button is-pulled-right is-primary" @click="getFPCA(download)"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></a>
+                      <span v-if="!downloadAttrSupported">right click and select save to disk</span>
+                      <!-- <button v-if="downloadAttrSupported" class="button is-pulled-right is-primary" @click="getFPCA(download)"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
+                      <button v-else class="button is-pulled-right is-primary" @click="getFPCA(blank)"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
+                      <a href="/images/myw3schoolsimage.jpg" download>Download</a> -->
                     </div>
                   </article>
                 </div>
@@ -332,7 +336,8 @@ export default {
       signature: '',
       hasCamera: false,
       downloadAttrSupported: false,
-      isSigning: false
+      isSigning: false,
+      pdf: ''
     }
   },
   mounted () {
@@ -356,6 +361,14 @@ export default {
           console.log(err.name + ': ' + err.message)
         })
     }
+    axios.get(encodeURI(`/api/fpca?firstName=${this.firstName || ''}&lastName=${this.lastName || ''}&middleName=${this.middleName || ''}&suffix=${this.suffix || ''}&ssn=${this.ssn || ''}&previousName=${this.previousName.previousName || ''}&dob=${this.dob || ''}&stateId=${this.stateId || ''}&votStreet=${this.votStreet || ''}&votApt=${this.votApt || ''}&votCity=${this.votCity || ''}&votState=${this.votState || ''}&votCounty=${this.votCounty || ''}&votZip=${this.votZip || ''}&abrAdr=${this.abrAdr ? this.abrAdr.alt1 : ''}\n${this.abrAdr ? this.abrAdr.alt2 : ''}\n${this.abrAdr ? this.abrAdr.alt3 : ''}\n${this.abrAdr ? this.abrAdr.alt4 : ''}\n${this.abrAdr ? this.abrAdr.alt5 : ''}&fwdAdr=${this.fwdAdr ? this.fwdAdr.alt1 : ''}\n${this.fwdAdr ? this.fwdAdr.alt2 : ''}\n${this.fwdAdr ? this.fwdAdr.alt3 : ''}\n${this.fwdAdr ? this.fwdAdr.alt4 : ''}\n${this.fwdAdr ? this.fwdAdr.alt5 : ''}&email=${this.email || ''}&altEmail=${this.altEmail || ''}&tel=${this.tel && this.tel.intNumber ? this.tel.intNumber : ''}&fax=${this.fax || ''}&party=${this.party || ''}&addlInfo=${this.addlInfo || ''}&date=${this.date || ''}&leoAdr=${this.leoAdr}&class=${this.voterClass || ''}&sex=${this.sex || ''}&recBallot=${this.recBallot || ''}&method=download`), {responseType: 'arraybuffer'})
+      .then((response) => {
+        // console.log(response)
+        // let blob = new Blob([response.data], {type: 'application/pdf'})
+        // this.pdf = window.URL.createObjectURL(blob)
+        let pdfile = new File([response.data], 'fpcafile.pdf', {type: 'application/pdf'})
+        this.pdf = pdfile
+      })
   },
   methods: {
     // getFPCA () {
@@ -374,14 +387,15 @@ export default {
     //   })
     //   this.$router.push('/account')
     // },
-    getFPCA () {
-      axios.get(encodeURI(`/api/fpca?firstName=${this.firstName || ''}&lastName=${this.lastName || ''}&middleName=${this.middleName || ''}&suffix=${this.suffix || ''}&ssn=${this.ssn || ''}&previousName=${this.previousName.previousName || ''}&dob=${this.dob || ''}&stateId=${this.stateId || ''}&votStreet=${this.votStreet || ''}&votApt=${this.votApt || ''}&votCity=${this.votCity || ''}&votState=${this.votState || ''}&votCounty=${this.votCounty || ''}&votZip=${this.votZip || ''}&abrAdr=${this.abrAdr ? this.abrAdr.alt1 : ''}\n${this.abrAdr ? this.abrAdr.alt2 : ''}\n${this.abrAdr ? this.abrAdr.alt3 : ''}\n${this.abrAdr ? this.abrAdr.alt4 : ''}\n${this.abrAdr ? this.abrAdr.alt5 : ''}&fwdAdr=${this.fwdAdr ? this.fwdAdr.alt1 : ''}\n${this.fwdAdr ? this.fwdAdr.alt2 : ''}\n${this.fwdAdr ? this.fwdAdr.alt3 : ''}\n${this.fwdAdr ? this.fwdAdr.alt4 : ''}\n${this.fwdAdr ? this.fwdAdr.alt5 : ''}&email=${this.email || ''}&altEmail=${this.altEmail || ''}&tel=${this.tel && this.tel.intNumber ? this.tel.intNumber : ''}&fax=${this.fax || ''}&party=${this.party || ''}&addlInfo=${this.addlInfo || ''}&date=${this.date || ''}&leoAdr=${this.leoAdr}&class=${this.voterClass || ''}&sex=${this.sex || ''}&recBallot=${this.recBallot || ''}`), {responseType: 'arraybuffer'})
+    getFPCA (method) {
+      axios.get(encodeURI(`/api/fpca?firstName=${this.firstName || ''}&lastName=${this.lastName || ''}&middleName=${this.middleName || ''}&suffix=${this.suffix || ''}&ssn=${this.ssn || ''}&previousName=${this.previousName.previousName || ''}&dob=${this.dob || ''}&stateId=${this.stateId || ''}&votStreet=${this.votStreet || ''}&votApt=${this.votApt || ''}&votCity=${this.votCity || ''}&votState=${this.votState || ''}&votCounty=${this.votCounty || ''}&votZip=${this.votZip || ''}&abrAdr=${this.abrAdr ? this.abrAdr.alt1 : ''}\n${this.abrAdr ? this.abrAdr.alt2 : ''}\n${this.abrAdr ? this.abrAdr.alt3 : ''}\n${this.abrAdr ? this.abrAdr.alt4 : ''}\n${this.abrAdr ? this.abrAdr.alt5 : ''}&fwdAdr=${this.fwdAdr ? this.fwdAdr.alt1 : ''}\n${this.fwdAdr ? this.fwdAdr.alt2 : ''}\n${this.fwdAdr ? this.fwdAdr.alt3 : ''}\n${this.fwdAdr ? this.fwdAdr.alt4 : ''}\n${this.fwdAdr ? this.fwdAdr.alt5 : ''}&email=${this.email || ''}&altEmail=${this.altEmail || ''}&tel=${this.tel && this.tel.intNumber ? this.tel.intNumber : ''}&fax=${this.fax || ''}&party=${this.party || ''}&addlInfo=${this.addlInfo || ''}&date=${this.date || ''}&leoAdr=${this.leoAdr}&class=${this.voterClass || ''}&sex=${this.sex || ''}&recBallot=${this.recBallot || ''}&method=${method}`), {responseType: 'arraybuffer'})
         .then((response) => {
           console.log(response)
           let blob = new Blob([response.data], {type: 'application/pdf'})
           let link = document.createElement('a')
           link.href = window.URL.createObjectURL(blob)
-          link.download = 'FPCA.pdf'
+          if (method === 'download') link.download = 'FPCA.pdf'
+          if (method === 'blank') link.target = '_blank'
           link.click()
         })
     },
