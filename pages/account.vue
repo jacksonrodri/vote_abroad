@@ -278,35 +278,39 @@
           <!-- stats and buttons -->
           <div class="columns is-multiline is-centered">
             <div class="column">
-              <div class="notification is-info has-text">
-                <div class="media">
-                  <div class="media-left">
-                    <span class="icon is-large">
-                      <i class="fas fa-3x fa-graduation-cap"></i>
-                    </span>
-                  </div>
-                  <div class="media-content">
-                    <p class="title is-3">Learn</p>
-                    <p class="subtitle is-6">about your voting rights</p>
+              <a href="">
+                <div class="notification is-info has-text">
+                  <div class="media">
+                    <div class="media-left">
+                      <span class="icon is-large">
+                        <i class="fas fa-3x fa-graduation-cap"></i>
+                      </span>
+                    </div>
+                    <div class="media-content">
+                      <p class="title is-3">Learn</p>
+                      <p class="subtitle is-6">about your rights as a voter abroad</p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
 
             <div class="column">
-              <div class="notification is-danger has-text">
-                <div class="media">
-                  <div class="media-left">
-                    <span class="icon is-large">
-                      <i class="fas fa-3x fa-share"></i>
-                    </span>
-                  </div>
-                  <div class="media-content">
-                    <p class="title is-3">Share</p>
-                    <p class="subtitle is-6">on social media</p>
+              <a href="">
+                <div class="notification is-danger has-text">
+                  <div class="media">
+                    <div class="media-left">
+                      <span class="icon is-large">
+                        <i class="fas fa-3x fa-share"></i>
+                      </span>
+                    </div>
+                    <div class="media-content">
+                      <p class="title is-3">Share</p>
+                      <p class="subtitle is-6">Ask your friends to vote from abroad</p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
 
             <!-- <div class="column is-12-tablet is-6-desktop is-3-widescreen">
