@@ -32,8 +32,8 @@
         </div>
       </div>
       <div v-else>
-        <h1 class="has-text-centered title is-3">Next Steps</h1>
-        <h3 class="has-text-centered subtitle is-4">&nbsp;</h3>
+        <h1 class="has-text-centered title is-3">Ballot Request Status</h1>
+        <h3 class="has-text-centered subtitle is-4">Next Steps...</h3>
       </div>
 
       <!-- main section -->
@@ -90,7 +90,7 @@
                 <div class="card">
                   <header class="card-header">
                     <h3 class="card-header-title title is-5 is-size-6-mobile has-text-vfa">
-                      <span class="has-text-grey">Your Ballot Request Status:&nbsp;</span> {{currentRequestStage}}
+                      Todo: {{currentRequestStage}}
                     </h3>
                   </header>
                   <div class="card-content">
