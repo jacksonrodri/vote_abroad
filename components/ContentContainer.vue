@@ -6,7 +6,7 @@
   </div>
   <slot name="closer"></slot>
   <div class="content-footer">
-    <nuxt-link to="/" class="back-home">Back Home</nuxt-link>
+    <nuxt-link to="/FAQs" class="back-home">Back Home</nuxt-link>
   </div>
 </div>
 </template>

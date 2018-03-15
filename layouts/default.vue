@@ -86,9 +86,10 @@
                     When will you send my ballot?
                   </a>
                   <hr class="navbar-divider">
-                  <a class="navbar-item">
+                  <nuxt-link to="/FAQs" class="navbar-item">More FAQ's</nuxt-link>
+                  <!-- <a class="navbar-item">
                     More FAQ's
-                  </a>
+                  </a> -->
                   <hr class="navbar-divider">
                   <a class="navbar-item">Contact the helpdesk</a>
                 </div>
@@ -137,7 +138,9 @@
         <div class="container">
           <ul>
             <li class="is-active"><a>How to<span class="is-hidden-touch">&nbsp;Vote From Abroad</span></a></li>
-            <li><a><span class="is-hidden-touch">Voter Help Desk/</span>FAQ</a></li>
+            <li>
+              <nuxt-link to="FAQs"><span class="is-hidden-touch">Voter Help Desk/</span>FAQ</nuxt-link>
+            </li>
             <li><a>About Us</a></li>
             <li><a>Election Official Directory</a></li>
           </ul>

@@ -1,4 +1,6 @@
 <template>
+<div class="columns is-centered">
+<div class="column is-8">
   <div class="columns is-centered is-multiline">
     <div class="column is-10 is-8-desktop is-7-widescreen is-6-fullhd is-paddingless">
       <div>
@@ -16,6 +18,8 @@
       </div>
     </div>
   </div>
+</div>
+</div>
 </template>
 
 <script>
