@@ -22,7 +22,7 @@
 import ContentContainer from '~/components/ContentContainer'
 export default {
   asyncData: async ({ app, route }) => ({
-    page: await app.$content('/en/faqs').get(route.params.slug)
+    page: await app.$content('/en/faqs/faqs').get(route.params.slug)
   }),
   components: {
     ContentContainer
