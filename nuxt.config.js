@@ -93,7 +93,7 @@ module.exports = {
     linkExactActiveClass: 'is-active',
     middleware: 'menu-helper'
   },
-  plugins: ['~/plugins/buefy', '~/plugins/vuelidate'],
+  plugins: ['~/plugins/buefy', '~/plugins/vuelidate', '~/plugins/modernizr'],
   /*
   ** Build configuration
   */
