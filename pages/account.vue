@@ -134,7 +134,16 @@
                   <footer class="card-footer">
                     <nav class="breadcrumb is-centered card-footer-item has-arrow-separator">
                       <ul>
-                        <li v-for="stage in requestStages" :key="stage.title" :class="[{'has-text-primary': currentRequestStage === stage.title}, {'has-text-grey': currentRequestStage !== stage.title}]">&nbsp;<span class="icon is-small"><i :class="['fas', `fa-${stage.icon}`]"></i></span><span :class="['is-size-7', {'is-hidden-touch': currentRequestStage !== stage.title}]">{{stage.title}}</span>&nbsp;</li>
+                        <li v-for="stage in requestStages" :key="stage.title" :class="[{'has-text-primary': currentRequestStage === stage.title}, {'has-text-grey': currentRequestStage !== stage.title}]">
+                          <!-- &nbsp;
+                          <span class="icon is-small">
+                            <i :class="['fas', `fa-${stage.icon}`]"></i>
+                          </span> -->
+                          <span :class="['is-size-7-mobile']">
+                            {{stage.title}}
+                          </span>
+                          &nbsp;
+                        </li>
                         <!-- <li><a href="#"><span class="icon is-small"><i class="fas fa-paper-plane"></i></span><span class="is-size-7-mobile">Send</span></a></li>
                         <li><a href="#"><span class="icon is-small"><i class="fas fa-phone"></i></span><span class="is-size-7-mobile">Confirm</span></a></li>
                         <li><a href="#"><span class="icon is-small"><i class="fas fa-thumbs-up"></i></span><span class="is-size-7-mobile">Receive</span></a></li>
@@ -356,34 +365,27 @@ export default {
   data () {
     return {
       isAdmin: false,
-      currentRequestStage: 'Fill out FPCA',
+      currentRequestStage: 'Fill out form',
       requestStages: [
         {
-          title: 'Fill out FPCA',
-          icon: 'pencil-alt',
+          title: 'Fill out form',
+          icon: 'edit',
           content: 'You must completely fill out your ballot request, sign and date it before sending it in.',
           completeActionText: 'I already filled out my fpca this year.',
           faqs: ['What state can I vote in?', 'Do I have to do this every year?']
         },
         {
-          title: 'Send in FPCA',
-          icon: 'paper-plane',
+          title: 'Sign',
+          icon: 'pencil-alt',
           content: 'abcdef',
           completeActionText: 'I\'ve sent in my request',
           faqs: []
         },
         {
-          title: 'Confirm with your Election Official',
-          icon: 'phone',
+          title: 'Send in Request',
+          icon: 'paper-plane',
           content: 'abcdef',
           completeActionText: 'I\'ve called my Local Election Official',
-          faqs: []
-        },
-        {
-          title: 'Receive Ballot',
-          icon: 'inbox',
-          content: 'abcdef',
-          completeActionText: 'I\'ve received my ballot',
           faqs: []
         },
         {
