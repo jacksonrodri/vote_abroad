@@ -375,6 +375,7 @@ export default {
   methods: {
     openPdf () {
       window.open(this.pdf, '_blank')
+      this.$router.push('/account')
     },
     // getFPCA () {
     //   // axios.get('/api/fpca?firstName=Alex&lastName=Montgomery&middleName=Parry&suffix=&ssn=0116')
