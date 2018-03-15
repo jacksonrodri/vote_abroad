@@ -44,9 +44,9 @@
                       </i18n>
                       <br>
                       <button class="button is-pulled-right is-primary" @click="isSignatureModalActive = true"><b-icon icon="camera" size="is-small"></b-icon><span>{{$t('request.stages.sign')}}</span></button>
-                      {{ hasCamera ? "you have a camera" : "you don't have a camera" }}
+                      <!-- {{ hasCamera ? "you have a camera" : "you don't have a camera" }}
                       {{ downloadAttrSupported ? "this browser supports the download attribute" : "this browser doesn't support the download attribute"}}
-                      <embed type="application/pdf" :src="pdf" />
+                      <embed type="application/pdf" :src="pdf" /> -->
                     </div>
                   </article>
                   <article class="media">
@@ -64,7 +64,7 @@
                         tag="vue-markdown"
                         :html="true">
                       </i18n>
-                      <a v-if="downloadAttrSupported" :href="pdf" :download="`${firstName}-${lastName}-2018-fpca.pdf`" class="button is-pulled-right is-primary" @click="finish"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></a>
+                      <a v-if="downloadAttrSupported" :href="pdf" :download="`${firstName}-${lastName}-2018-fpca.pdf`" :class="['button', 'is-pulled-right', 'is-primary', {'is-loading': !Boolean(pdf)}]" @click="finish"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></a>
                       <button v-else class="button is-pulled-right is-primary" @click="openPdf"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
                       <span v-if="!downloadAttrSupported">right click and select save to disk</span>
 
