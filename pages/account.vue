@@ -134,7 +134,7 @@
                   <footer class="card-footer">
                     <nav class="breadcrumb is-centered card-footer-item has-arrow-separator">
                       <ul>
-                        <li v-for="stage in requestStages" :key="stage.title" :class="{'has-text-primary': currentRequestStage === stage.title}"><a href="#"><span class="icon is-small"><i :class="['fas', `fa-${stage.icon}`, {'has-text-primary': currentRequestStage === stage.title}]"></i></span><span :class="['is-size-7', {'is-hidden-touch': currentRequestStage !== stage.title}, {'has-text-primary': currentRequestStage === stage.title}]">{{stage.title}}</span></a></li>
+                        <li v-for="stage in requestStages" :key="stage.title" :class="[{'has-text-primary': currentRequestStage === stage.title}, {'has-text-grey': currentRequestStage !== stage.title}]">&nbsp;<span class="icon is-small"><i :class="['fas', `fa-${stage.icon}`]"></i></span><span :class="['is-size-7', {'is-hidden-touch': currentRequestStage !== stage.title}]">{{stage.title}}</span>&nbsp;</li>
                         <!-- <li><a href="#"><span class="icon is-small"><i class="fas fa-paper-plane"></i></span><span class="is-size-7-mobile">Send</span></a></li>
                         <li><a href="#"><span class="icon is-small"><i class="fas fa-phone"></i></span><span class="is-size-7-mobile">Confirm</span></a></li>
                         <li><a href="#"><span class="icon is-small"><i class="fas fa-thumbs-up"></i></span><span class="is-size-7-mobile">Receive</span></a></li>
