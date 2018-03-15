@@ -81,8 +81,8 @@
           </nav>
         </div>
           <div class="column">
-            <b-message title="Success/warning message following request process" type="is-success" has-icon>
-              custom message here depending on the status of the voter's ballot request
+            <b-message title="Important! You must send your signed request to your election official" type="is-warning" has-icon>
+              You are not finished yet. You must send your <strong>signed and dated</strong> ballot request to your election official.
             </b-message>
             <!-- ballot request status area -->
             <div class="columns">
