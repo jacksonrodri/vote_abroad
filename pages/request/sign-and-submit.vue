@@ -64,7 +64,7 @@
                         tag="vue-markdown"
                         :html="true">
                       </i18n>
-                      <a v-if="downloadAttrSupported" :href="pdf" :download="`${firstName}-${lastName}-2018-fpca.pdf`" class="button is-pulled-right is-primary" @click="getFPCA(download)"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></a>
+                      <a v-if="downloadAttrSupported" :href="pdf" :download="`${firstName}-${lastName}-2018-fpca.pdf`" class="button is-pulled-right is-primary" @click="finish"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></a>
                       <button v-else class="button is-pulled-right is-primary" @click="openPdf"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
                       <span v-if="!downloadAttrSupported">right click and select save to disk</span>
 
@@ -375,6 +375,9 @@ export default {
   methods: {
     openPdf () {
       window.open(this.pdf, '_blank')
+      this.$router.push('/account')
+    },
+    finish () {
       this.$router.push('/account')
     },
     // getFPCA () {
