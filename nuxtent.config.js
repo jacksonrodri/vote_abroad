@@ -18,6 +18,14 @@ module.exports = {
         'getAll'
       ]
     }],
+    ['en/faqs', {
+      page: '/faqs/_slug',
+      isPost: false,
+      generate: [
+        'get',
+        'getAll'
+      ]
+    }],
     ['elections', {
       page: '/elections/_state',
       isPost: false,
