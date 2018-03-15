@@ -31,7 +31,7 @@
           </div>
         </div>
       </div>
-      <div v-else>
+      <div>
         <h1 class="has-text-centered title is-3">Ballot Request Status</h1>
         <h3 class="has-text-centered subtitle is-4">Next Steps...</h3>
       </div>
@@ -97,18 +97,24 @@
                     <article class="media">
                       <figure class="media-left">
                         <span class="icon is-medium has-text-vfa">
-                          <i class="fas fa-2x fa-pencil-alt"></i>
+                          <i :class="['fas', 'fa-2x', `fa-${requestStages.find(stage => currentRequestStage === stage.title).icon}`]"></i>
                         </span>
                       </figure>
                       <div class="media-content">
-                        <p>
-                           {{ requestStages.find(stage => currentRequestStage === stage.title).content }}
-                        </p>
+                        <div class="content">
+                          <p>
+                            {{ requestStages.find(stage => currentRequestStage === stage.title).content }}
+                          </p>
+                          <div v-if="currentRequestStage === 'fill-sign'">Fill and Sign</div>
+                          <div v-if="currentRequestStage === 'send'">Send</div>
+                          <div v-if="currentRequestStage === 'receive-ballot'">Receive Ballot</div>
+                          <div v-if="currentRequestStage === 'vote'">Vote</div>
+                        </div>
                         <nav class="level is-mobile">
                           <div class="level-left"></div>
                           <div class="level-right">
                             <a class="level-item">
-                              <span class="icon is-small"><i class="fas fa-pencil-alt"></i></span><span>&nbsp;Edit my form</span>
+                              <span class="icon is-small"><i class="fas fa-pencil-alt"></i></span><span>&nbsp;{{ requestStages.find(stage => currentRequestStage === stage.title).actionText }}</span>
                             </a>
                             <a class="level-item">
                               <span class="icon is-small"><i class="fas fa-check"></i></span><span>&nbsp;Mark as complete</span>
@@ -134,15 +140,16 @@
                   <footer class="card-footer">
                     <nav class="breadcrumb is-centered card-footer-item has-arrow-separator">
                       <ul>
-                        <li v-for="stage in requestStages" :key="stage.title" :class="[{'has-text-primary': currentRequestStage === stage.title}, {'has-text-grey': currentRequestStage !== stage.title}]">
+                        <li v-for="stage in requestStages" :key="stage.title">
                           <!-- &nbsp;
                           <span class="icon is-small">
                             <i :class="['fas', `fa-${stage.icon}`]"></i>
                           </span> -->
-                          <span :class="['is-size-7-mobile']">
-                            {{stage.title}}
-                          </span>
-                          &nbsp;
+                          <a @click="currentRequestStage = stage.title">
+                            <span :class="[{'has-text-primary': currentRequestStage === stage.title}, {'has-text-grey': currentRequestStage !== stage.title}, 'is-size-7-mobile']">
+                              {{stage.title}}
+                            </span>
+                          </a>
                         </li>
                         <!-- <li><a href="#"><span class="icon is-small"><i class="fas fa-paper-plane"></i></span><span class="is-size-7-mobile">Send</span></a></li>
                         <li><a href="#"><span class="icon is-small"><i class="fas fa-phone"></i></span><span class="is-size-7-mobile">Confirm</span></a></li>
@@ -371,27 +378,28 @@ export default {
           title: 'Fill & Sign',
           icon: 'edit',
           content: 'You must completely fill out your ballot request, sign and date it before sending it in.',
-          completeActionText: 'I already filled out my fpca this year.',
+          actionText: 'Edit my form',
           faqs: ['What state can I vote in?', 'Do I have to do this every year?']
         },
         {
           title: 'Send in Request',
           icon: 'paper-plane',
           content: 'You must submit your request to your local election official in your town, county or state.  blah blah blah',
-          completeActionText: 'I\'ve called my Local Election Official',
+          actionText: 'Send Request electronically',
           faqs: []
         },
         {
           title: 'Receive Ballot',
           icon: 'inbox',
-          content: 'States must send out ballots at least 45 days prior to an election.  We recomend confirming with your local election official that they have accepted your request.'
+          content: 'States must send out ballots at least 45 days prior to an election.  We recomend confirming with your local election official that they have accepted your request.',
+          actionText: 'Email my election official'
         },
         {
           title: 'Vote',
           icon: 'check',
           content: 'Be sure to send in your voted ballot by the deadline of.... ',
-          completeActionText: 'I\'ve already voted',
-          faqs: []
+          actionText: 'Check my deadlines',
+          completeText: 'I\'ve already voted'
         }
 
       ]
