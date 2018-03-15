@@ -20,6 +20,7 @@ module.exports = {
     }],
     ['en/faqs', {
       page: '/faqs/_slug',
+      permalink: 'faqs/:slug',
       isPost: false,
       generate: [
         'get',
