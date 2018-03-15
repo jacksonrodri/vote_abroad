@@ -66,6 +66,7 @@
                       </i18n>
                       <a :href="pdf" :target="downloadAttrSupported ? '_blank' : ''" :download="`${firstName}-${lastName}-2018-fpca.pdf`" class="button is-pulled-right is-primary" @click="getFPCA(download)"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></a>
                       <span v-if="!downloadAttrSupported">right click and select save to disk</span>
+                      <button class="button is-pulled-right is-primary" @click="openPdf">open pdf</button>
                       <!-- <button v-if="downloadAttrSupported" class="button is-pulled-right is-primary" @click="getFPCA(download)"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
                       <button v-else class="button is-pulled-right is-primary" @click="getFPCA(blank)"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
                       <a href="/images/myw3schoolsimage.jpg" download>Download</a> -->
@@ -371,6 +372,9 @@ export default {
       })
   },
   methods: {
+    openPdf () {
+      window.open(this.pdf, '_blank')
+    },
     // getFPCA () {
     //   // axios.get('/api/fpca?firstName=Alex&lastName=Montgomery&middleName=Parry&suffix=&ssn=0116')
     //   axios({
