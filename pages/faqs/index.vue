@@ -5,7 +5,7 @@
     <h1 class="title">FAQs</h1>
     <div class="columns is-multiline">
       <div v-for="(category, index) in categories" :key="index" class="column is-6">
-        <h2 class="title">{{category.category}}</h2>
+        <h2 class="title is-4">{{category.category}}</h2>
         <ul>
           <li v-for="faq in category.faqs" :key="faq.title">
             <nuxt-link :to="faq.permalink">{{faq.title}}</nuxt-link>

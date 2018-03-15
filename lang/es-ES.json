@@ -3,14 +3,243 @@
   "home": "Página de inicio",
   "posts": "Mensajes",
   "homepage": {
-    "subtitle": "demo de i18n nuxt"
+    "subtitle": "Absentee ballots for Americans abroad",
+    "loginInstructions": "Type your email address or phone number to start a secure session."
   },
   "request": {
-    "firstName": "Nombre",
-    "middleName": "Segundo nombre",
-    "lastName": "Apellido",
-    "suffix": "Sufijo",
-    "previousName": "Nombre anterior",
-    "tel": "Su número de teléfono actual"
+    "middleName": {
+      "label": "Middle Name(s)",
+      "instructions": ""
+    },
+    "lastName": {
+      "label": "Last Name",
+      "messages": {
+        "required": "Your last name is required.  Please enter it here. "
+      }
+    },
+    "jurisdiction": {
+      "label": "Jurisdiction",
+      "instructions": "Type to find your local election official (county, city, town...)",
+      "placeholder": "Type to search...",
+      "tooltip": "All ballots are sent from your local election official in your town, city or county.  You must select the correct election official to receive a ballot.  (to be updated)",
+      "messages": {
+        "required": "You must select your local election official. "
+      }
+    },
+    "previousName": {
+      "label": "Previous name(s)",
+      "yes": "Yes",
+      "no": "No",
+      "instructions": "Have you previously registered to vote under a different name?",
+      "tooltip": "If you have previously voted with a different name, your election official may need to look you up using your previous name."
+    },
+    "sex": {
+      "label": "Sex",
+      "male": "Male",
+      "female": "Female",
+      "tooltip": "This is only required for Idaho voters."
+    },
+    "party": {
+      "label": "Your Political Party",
+      "democratic": "Democratic",
+      "republican": "Republican",
+      "independent": "Independent",
+      "none": "No Party",
+      "other": "Other",
+      "placeholder": "Your Political Party",
+      "tooltip": "Many states require voters to designate a political party to be eligible to vote in primary elections. Choosing a political party is optional."
+    },
+    "scRules": {
+      "label": "Race",
+      "raceInstructions": "**You must provide your race.** <br> **You must provide your previous location of registration, if in another state.**",
+      "tooltip": "Only South Carolina voters need to answer this question as per state law."
+    },
+    "receiveBallot": {
+      "label": "How would you like to receive your ballot?",
+      "email": "Email or online",
+      "mail": "Mail",
+      "fax": "Fax",
+      "tooltip": "You may request to receive your blank ballot by email/online, fax or mail. We encourage voters to request their blank ballot be sent by email/online or fax to avoid the delay associated with mail  and the possibility the ballot will be lost in transit."
+    },
+    "stateSpecial": {
+      "label": "{state} Specific Rules"
+    },
+    "vaRules": {
+      "label": "The name of your employer or the name of your spouse's or parent/guardian's employer",
+      "oathInstructions": "**If you have never registered before in Vermont, you must take a self-administered oath or it may be administered by anyone over the age of 18. The Vermont voter's oath is:** <br> *\"You solemnly swear (or affirm) that whenever you give your vote or suffrage, touching any matter that concerns the State of Vermont, you will do it so as in your conscience you shall judge will most conduce to the best good of the same, as established by the Constitution, without fear or favor of any person.\"* <br> Once you have read the Voter's Oath, use the space provided in Section 6 to write the following: *",
+      "tooltip": "Only Vermont voters need to answer this question as per state law."
+    },
+    "isRegistered": {
+      "label": "Are you already registered to vote in {jurisdiction}?",
+      "yes": "Yes",
+      "no": "No",
+      "unsure": "Not Sure"
+    },
+    "akRules": {
+      "label": "What proof will you provide? (You must also attach a photocopy with your submission)",
+      "resInstructions": "Alaska requires that you provide proof of Alaska residency.",
+      "fwabWitness": "One witness signature",
+      "tooltip": "Only Alaska voters need to answer this question as per state law."
+    },
+    "voterClass": {
+      "tooltip": "Voters may choose **I Intend to Return** if they intend to return to the state in which they are registering to vote. An \"intention\" is sufficient, you don’t need to have a fixed date of return or firm plans. Registering as **Intend to Return **should make you eligible to vote in state and local races. However, it may also make you liable for state income taxes (if applicable in your state).\n\nVoters may choose **My Return is Uncertain** if they do not have a current intention to return to the state in which they are registering to vote. Voters are entitled to receive a ballot for federal offices and may, depending on their state, also receive a ballot for state and local offices.",
+      "natGuard": "National Guard",
+      "milSpouse": "Eligible Military Spouse or Dependent",
+      "whatCivType": "Are you abroad temporarily or indefinitely?",
+      "whatMilType": "What type of military voter are you?",
+      "militaryType": "Military",
+      "military": "Active Duty Military",
+      "neverResided": "Never Resided",
+      "civilianOrMilitary": "Are you a civilian or military voter?",
+      "intendToReturn": "I Intend to Return",
+      "uncertainReturn": "My Return is Uncertain",
+      "civilianType": "Civilian"
+    },
+    "suffix": {
+      "label": "Suffix"
+    },
+    "altEmail": {
+      "label": "If you have a second email address, add it here to ensure ballot delivery.",
+      "instructions": ""
+    },
+    "votAdr": {
+      "zip": "Zip",
+      "jurisdiction": "",
+      "street": "Street",
+      "tooltip": "Use the **residence address** of the last place you lived in the US. If you have never resided in the US, use the residence address of the last place your US parent(s) lived in the US. If your US parents last lived in the US in different locations, you may choose which one to use as your voting address.",
+      "instructions": "Input the last address where you lived in the US. If you have never lived in the US, use the last US address of your US citizen parent(s).",
+      "apt": "Apartment #",
+      "county": "County",
+      "city": "City",
+      "messages": {
+        "required": "This field is required so your election official can send you the correct ballot."
+      },
+      "state": "State",
+      "label": "Voting Address"
+    },
+    "prRules": {
+      "label": "Father's and Mother's first names",
+      "parentsInstructions": "Puerto Rico requires that you provide your father's and mother's first names.",
+      "tooltip": "Only Puerto Rico voters need to answer this question as per territory law."
+    },
+    "stages": {
+      "emailDigiSign": "**If you have a camera** on this <span class='is-hidden-touch'>computer</span><span class='is-hidden-desktop is-hidden-mobile'>tablet</span><span class='is-hidden-tablet'>phone</span>, you can capture your signature and email your form straight from this website.",
+      "faxDigiSign": "**If you have a camera** on this <span class='is-hidden-touch'>computer</span><span class='is-hidden-desktop is-hidden-mobile'>tablet</span><span class='is-hidden-tablet'>phone</span>, you can capture your signature and fax your form straight from this website.",
+      "faxConfirm": "Confirm with your local election official that they received it.",
+      "emailDownload": "**If you don't have a camera** on this <span class='is-hidden-touch'>computer</span><span class='is-hidden-desktop is-hidden-mobile'>tablet</span><span class='is-hidden-tablet'>phone</span>, you will need to download your form, print, sign, date and scan it.",
+      "emailSend": "Email your form to {leoEmail}",
+      "digiSign": "Capture Signature",
+      "emailConfirm": "<strong class='has-text-danger'>Confirm</strong> with your local election official that they received it.",
+      "faxSend": "Fax your form to",
+      "instructions": "Instructions:",
+      "faxDownload": "**If you don't have a camera** on this <span class='is-hidden-touch'>computer</span><span class='is-hidden-desktop is-hidden-mobile'>tablet</span><span class='is-hidden-tablet'>phone</span>, you will need to download your form, print, sign and date it before faxing.",
+      "back": "Back",
+      "download": "Download Now",
+      "mailConfirm": "<strong class='has-text-danger'>Confirm</strong> with your local election official that they received it.",
+      "step": "Step {step} of 5",
+      "faxIntro": "Sign and send your form by fax",
+      "instructions4": "Confirm that the following information is correct. If you need to correct anything click 'Back.' When everything is correct click 'Sign and submit' for instructions on how to send your form to your election official.",
+      "emailIntro": "Sign and send your form by email",
+      "instructions5": "You must send your <strong class=\"has-text-danger\">signed</strong> ballot request to your Wake County election official by email, fax or mail.   Choose how to send your ballot request.",
+      "stage1": "Your Information",
+      "next": "Next",
+      "mailSign": "Print, sign and date your form.",
+      "sendEmail": "Send Email",
+      "stage2": "Voting Information",
+      "stage3": "ID & Contact Information",
+      "generate": "Generate & Review your form",
+      "sendFax": "Send Fax electronically",
+      "mailIntro": "Download, print, sign and send your form by postal mail",
+      "stage4": "Review your form",
+      "stage5": "Sign and Submit",
+      "mail": "Mail",
+      "mailPost": "Mail your form to:",
+      "submit": "Instructions for sending",
+      "emailSign": "<strong class='has-text-danger'>Sign and Date</strong> your form",
+      "faxSign": "<strong class='has-text-danger'>Sign and Date</strong> your form",
+      "email": "Email",
+      "remindMe": "Remind Me",
+      "sign": "Capture Signature",
+      "fax": "Fax",
+      "choose5": "Choose how to send your Ballot request",
+      "mailDownload": "Download your completed form."
+    },
+    "dob": {
+      "label": "Date of Birth",
+      "instructions": "",
+      "placeholder": "e.g. 01/31/1970"
+    },
+    "tel": {
+      "label": "Your current phone number",
+      "placeholder": "e.g. {example}",
+      "messages": {
+        "invalid": "The number you typed is not a valid phone number.  Please check it and try again."
+      }
+    },
+    "okRules": {
+      "label": "Which Party Primary ballot are you requesting",
+      "primaryInstructions": "If your political party affiliation is listed as Independent/No Party, you may be able to request a ballot for a recognized political party's primary election. For specific information about recognized political parties in Oklahoma, please visit [http://www.elections.ok.gov](http://www.elections.ok.gov).",
+      "tooltip": "Only Oklahoma voters need to answer this question as per state law."
+    },
+    "id": {
+      "tooltipOptional": "{state} does not require identification to request a ballot or register to vote. You may _either_ provide the last 4 digits of your Social Security Number _OR_ your State ID to help your election official find your voting record.",
+      "or": "-- OR --",
+      "instructionsOptional": "Optional. Providing **either** the last 4 digits of your Social Security Number **OR** your State ID may help your election official find your voting record.",
+      "SSN4": "the last 4 digits of your Social Security Number",
+      "MilitaryID": "Military ID",
+      "StateID": "State ID",
+      "SSN": "your full Social Security Number",
+      "label": "Identification",
+      "noid1": "I don't have a {id}",
+      "TerritoryID": "Territory ID",
+      "noid2": "I don't have the above identification",
+      "tooltipReq1": "{state} voters must provide a {id}. \n\n\n\nIf you can't find your {id}, you can look (suggestions)\n\n \\*\\*'I don't have a {id}.'\\*\\*",
+      "tooltipReq2": "**_ONE_** of the following forms of identification is required for {state} voters:\n\n {allButLastTypes} or {lastType}. \n\n(todo: add suggestions on finding the number if forgotten) \n\nIf you don't have any of these, please select **'I don't have the above identification.'**",
+      "instructionsReq1": "{state} voters must provide a {id}.  If you don't have {id}, please select **I don't have a {id}.**",
+      "instructionsReq2": "{state} voters must provide **ONE** of the following forms of identification: {allButLastTypes} or {lastType}. If you don't have any of these, please select **'I don't have the above identification.'**",
+      "PassportNumber": "Passport Number",
+      "TribalID": "Tribal ID"
+    },
+    "firstName": {
+      "label": "First Name",
+      "instructions": "Please enter your first name.",
+      "placeholder": "e.g. 'George Washington'",
+      "tooltip": "This name is a name that most people call you.",
+      "messages": {
+        "required": "You must enter a first name."
+      }
+    },
+    "fwdAdr": {
+      "label": "What address would you like your ballot sent to?",
+      "instructions": "Input your forwarding address",
+      "tooltip": "This is optional. Please provide a forwarding address only if you request your blank ballot be sent to you by mail and you do not want it mailed to your current residence address outside the US. If you are uncertain what your mailing address will be when ballots are due to be sent out, you may have your blank ballot sent to a reliable third-party, such as a University student office or postal box.",
+      "question": "Would you like your ballot sent to a different address than your residential address?",
+      "yes": "Yes",
+      "no": "No"
+    },
+    "email": {
+      "label": "Your current email address",
+      "messages": {
+        "required": "Required.  You must add an email address.",
+        "email": "That email address is invalid.  Please try again."
+      }
+    },
+    "fax": {
+      "label": "Enter the fax number you would like your ballot sent to."
+    },
+    "azRules": {
+      "label": "What proof will you provide? (You must also attach a photocopy with your submission)",
+      "citInstructions": "If you are using this form to register to vote, you must provide proof of citizenship.",
+      "tooltip": "Only Arizona voters need to answer this question as per state law."
+    },
+    "abrAdr": {
+      "label": "Your current address abroad",
+      "instructions": "Please add your international address",
+      "placeholder": "Country",
+      "tooltip": "You must provide your current residence address outside the US for informational purposes. Please provide your address outside the US even if you request your blank ballot be sent to you by email/online or fax.",
+      "unstructured-label": "I need to use a different format for my address.",
+      "structured-label": "Use the standard international format for my address.",
+      "changeFormat": "Change Format"
+    }
   }
 }
