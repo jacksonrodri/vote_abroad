@@ -123,8 +123,8 @@
 
       <!-- isRegistered -->
     <is-registered
-      v-if="votAdr && votAdr.leo && votAdr.leo.jurisdiction && votAdr.leo.jurisdictionType"
-      :label="$t('request.isRegistered.label', {jurisdiction: votAdr.leo.jurisdictionType === 'All' ? votAdr.leo.state : votAdr.leo.jurisdiction + ' ' + votAdr.leo.jurisdictionType})"
+      v-if="votAdr && votAdr.leo && votAdr.leo.j && votAdr.leo.t"
+      :label="$t('request.isRegistered.label', {jurisdiction: votAdr.leo.t === 'All' ? votAdr.leo.s : votAdr.leo.j + ' ' + votAdr.leo.t})"
       :validations="($v.isRegistered)"
       @input="delayTouch($v.isRegistered)"
       v-model="isRegistered">
@@ -677,6 +677,9 @@ export default {
       party: {
       },
       sex: {
+      },
+      isRegistered: {
+        required
       },
       identification: {
         ssn: {
