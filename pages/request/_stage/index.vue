@@ -8,7 +8,7 @@
 
       <!-- firstName -->
       <b-field :type="($v.firstName.$error ? 'is-danger': '')" :message="$v.firstName.$error ? Object.keys($v.firstName.$params).map(x => x) : '' " :label="$t('request.firstName.label')">
-        <b-input v-model="firstName" @input="$v.firstName.$touch()"></b-input>
+        <b-input v-model="firstName" @input="delayTouch($v.firstName)"></b-input>
       </b-field>
 
       <!-- middleName -->
@@ -18,7 +18,7 @@
 
       <!-- lastName -->
       <b-field :type="($v.lastName.$error ? 'is-danger': '')" :message="$v.lastName.$error ? Object.keys($v.lastName.$params).map(x => x) : '' " :label="$t('request.lastName.label')">
-        <b-input v-model="lastName" @input="$v.lastName.$touch()"></b-input>
+        <b-input v-model="lastName" @input="delayTouch($v.lastName)"></b-input>
       </b-field>
 
       <!-- suffix -->
@@ -47,7 +47,7 @@
       :type="($v.email.$error ? 'is-danger': '')"
       :message="$v.email.$error ? Object.keys($v.email.$params).map(x => $t(`request.email.messages.${x}`)) : '' "
       :label="$t('request.email.label')">
-        <b-input v-model="email" @input="$v.email.$touch()"></b-input>
+        <b-input v-model="email" @input="delayTouch($v.email)"></b-input>
       </b-field>
 
       <!-- countryName -->
@@ -55,6 +55,8 @@
         :label="$t('request.abrAdr.label')"
         key="overseas"
         v-model="abrAdr"
+        @input="delayTouch($v.abrAdr)"
+        :validations=$v.abrAdr
         toolTipTitle="Where are you now?">
         <div slot="instructions">
           <p>{{$t('request.abrAdr.instructions')}}</p>
@@ -326,6 +328,8 @@ import Identification from '~/components/Identification'
 import AdditionalInfo from '~/components/AdditionalInfo'
 import VueMarkdown from 'vue-markdown'
 
+const touchMap = new WeakMap()
+
 export default {
   transition: 'test',
   scrollToTop: true,
@@ -538,11 +542,27 @@ export default {
     isFWAB: {
       get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].isFWAB : false },
       set (value) { this.$store.commit('requests/update', {isFWAB: value}) }
+    },
+    countryValidations: function () {
+      return [
+        {
+          field: 'country',
+          type: 'is-danger',
+          message: 'you must add a country'
+        }
+      ]
     }
   },
   methods: {
     focusName () {
       this.$refs.userinput.focus()
+    },
+    delayTouch ($v) {
+      $v.$reset()
+      if (touchMap.has($v)) {
+        clearTimeout(touchMap.get($v))
+      }
+      touchMap.set($v, setTimeout($v.$touch, 1000))
     }
   },
   validations () {
@@ -564,6 +584,11 @@ export default {
       previousName: {
       },
       suffix: {
+      },
+      abrAdr: {
+        country: { required },
+        thoroughfare: { required },
+        locality: { required }
       },
       voterClass: {
         required

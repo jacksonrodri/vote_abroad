@@ -236,7 +236,9 @@ collections:
                 name: "messages"
                 widget: "object"
                 fields:
-                  - {label: "Required", name: "required", widget: "string"}
+                  - {label: "Country Required", name: "country-required", widget: "string"}
+                  - {label: "Street Required", name: "thoroughfare-required", widget: "string"}
+                  - {label: "City Required", name: "locality-required", widget: "string"}
           - label: "Voting Address"
             name: "votAdr"
             widget: "object"

@@ -7,9 +7,13 @@
     </b-message>
     <div v-if="usOnly === undefined || usOnly === false" class="field is-fullwidth" v-show="!usesAlternateFormat">
           <div class="field-body">
-            <b-field class="grouped" >
+            <b-field
+              :message="validations.country.$error ? Object.keys(validations.country.$params).map(x => $t(`request.abrAdr.messages.country-${x}`)) : '' "
+              :type="(validations.country.$error ? 'is-danger': '')"
+              class="grouped" >
               <b-field expanded>
-                <b-field>
+                <b-field
+                  :type="(validations.country.$error ? 'is-danger': '')">
                   <p class="control flag-container">
                     <b-icon
                       pack="flag-icon"
@@ -46,8 +50,10 @@
             <label class="label"></label>
           </div>
           <div class="field-body">
-            <div class="field">
-              <div class="control">
+            <b-field
+              :type="validations.thoroughfare.$error ? 'is-danger' : ''"
+              :message="validations.thoroughfare.$error ? Object.keys(validations.thoroughfare.$params).map(x => $t(`request.abrAdr.messages.thoroughfare-${x}`)) : '' ">
+              <!-- <div class="control"> -->
                 <b-autocomplete
                   v-model="streetAddress"
                   :data="data"
@@ -61,8 +67,8 @@
                   <template slot-scope="props">{{ props.option.description }}</template>
                   <template slot="empty">No results found</template>
                 </b-autocomplete>
-              </div>
-            </div>
+              <!-- </div> -->
+            </b-field>
           </div>
         </div>
         <div class="field" v-show="!usesAlternateFormat">
@@ -80,9 +86,17 @@
         <div class="field is-horizontal" v-show="!usesAlternateFormat">
           <div class="field-body">
             <div class="field" v-for="field in localityFields" :key="Object.keys(field)[0]">
-              <p v-if="Object.keys(field)[0] === 'localityname'" class="control is-expanded">
+              <!-- <p v-if="Object.keys(field)[0] === 'localityname'" class="control is-expanded">
                 <input class="input" type="text" @input="updateAddress()" v-model="locality" :placeholder="field.localityname.label">
-              </p>
+              </p> -->
+              <b-field :type="validations.locality.$error ? 'is-danger' : ''"
+                v-if="Object.keys(field)[0] === 'localityname'"
+                :message="validations.locality.$error ? Object.keys(validations.locality.$params).map(x => $t(`request.abrAdr.messages.locality-${x}`)) : '' ">
+                <b-input v-model="locality"
+                  :placeholder="field.localityname.label"
+                  @input="updateAddress()">
+                </b-input>
+              </b-field>
               <div v-if="Object.keys(field)[0] === 'administrativearea'">
                 <div v-if="field.administrativearea && field.administrativearea.options" >
                   <b-autocomplete
@@ -172,6 +186,7 @@ export default {
     'value',
     'usOnly',
     'label',
+    'validations',
     'toolTipTitle'
   ],
   async created () {
@@ -310,6 +325,12 @@ export default {
         })
       }
       return formatted.join(' ')
+    },
+    countryMessage: function () {
+      return this.findMessage('country')
+    },
+    countryType: function () {
+      return this.findType('country')
     }
   },
   watch: {
@@ -420,6 +441,12 @@ export default {
         alt4: this.alt4,
         alt5: this.alt5
       })
+    },
+    findMessage (field) {
+      return this.validations
+    },
+    findType (field) {
+      return this.validations
     }
   }
 }
