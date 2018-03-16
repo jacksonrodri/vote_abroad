@@ -203,6 +203,11 @@
       "instructionsOptional": "Optional. Providing **either** the last 4 digits of your Social Security Number **OR** your State ID may help your election official find your voting record.",
       "SSN4": "the last 4 digits of your Social Security Number",
       "MilitaryID": "Military ID",
+      "messages": {
+        "fullSSNRequired": "You must provide your full Social Security Number if you have one",
+        "SSN4Required": "You must provide the last 4 digits of your Social Security Number if you have one",
+        "stateIdRequired": "You must provide at least ONE of valid form of ID (from the list above) if you have it.  "
+      },
       "StateID": "State ID",
       "SSN": "your full Social Security Number",
       "label": "Identification",
@@ -214,7 +219,8 @@
       "instructionsReq1": "{state} voters must provide a {id}.  If you don't have {id}, please select **I don't have a {id}.**",
       "instructionsReq2": "{state} voters must provide **ONE** of the following forms of identification: {allButLastTypes} or {lastType}. If you don't have any of these, please select **'I don't have the above identification.'**",
       "PassportNumber": "Passport Number",
-      "TribalID": "Tribal ID"
+      "TribalID": "Tribal ID",
+      "NYDMVID": "NY DMV Issued ID"
     },
     "firstName": {
       "label": "First Name",
