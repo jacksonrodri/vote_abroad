@@ -175,6 +175,7 @@
         :label="$t('request.fwdAdr.label')"
         key="forwardingAddress"
         ref="fwdAdr"
+        v-if="recBallot === 'mail'"
         v-model="fwdAdr"
         @input="delayTouch($v.fwdAdr)"
         :validations=$v.fwdAdr
