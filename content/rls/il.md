@@ -1,7 +1,7 @@
 ---
 state: Illinois 
 iso: IL
-allowsNeverResided: true
+allowsNeverResided: false
 id:
   - SSN4
   - StateID

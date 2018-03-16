@@ -568,46 +568,46 @@ export default {
       }
 
       switch (true) {
-        case this.$v.firstName.$error:
+        case this.stage.slug === 'your-information' && this.$v.firstName.$error:
           this.$refs.firstName.focus()
           break
-        case this.$v.lastName.$error:
+        case this.stage.slug === 'your-information' && this.$v.lastName.$error:
           this.$refs.lastName.focus()
           break
-        case this.$v.email.$error:
+        case this.stage.slug === 'your-information' && this.$v.email.$error:
           this.$refs.email.focus()
           break
-        case this.$v.abrAdr.country.$error:
+        case this.stage.slug === 'your-information' && this.$v.abrAdr.country.$error:
           this.$refs.abrAdr.$refs.country.focus()
           break
-        case this.$v.abrAdr.thoroughfare.$error:
+        case this.stage.slug === 'your-information' && this.$v.abrAdr.thoroughfare.$error:
           this.$refs.abrAdr.$refs.thoroughfare.focus()
           break
-        case this.$v.abrAdr.locality.$error:
+        case this.stage.slug === 'your-information' && this.$v.abrAdr.locality.$error:
           this.$refs.abrAdr.$refs.locality[0].focus()
           break
-        case this.$v.votAdr.thoroughfare.$error:
+        case this.stage.slug === 'voting-information' && this.$v.votAdr.thoroughfare.$error:
           this.$refs.votAdr.$refs.street.focus()
           break
-        case this.$v.votAdr.locality.$error:
+        case this.stage.slug === 'voting-information' && this.$v.votAdr.locality.$error:
           this.$refs.votAdr.$refs.city.focus()
           break
-        case this.$v.votAdr.regionCode.$error:
+        case this.stage.slug === 'voting-information' && this.$v.votAdr.regionCode.$error:
           this.$refs.votAdr.$refs.state.focus()
           break
-        case this.$v.votAdr.postalcode.$error:
+        case this.stage.slug === 'voting-information' && this.$v.votAdr.postalcode.$error:
           this.$refs.votAdr.$refs.zip.focus()
           break
-        case this.$v.jurisdiction.$error:
+        case this.stage.slug === 'voting-information' && this.$v.jurisdiction.$error:
           this.$refs.jurisdiction.$refs.jurisdiction.focus()
           break
-        case this.$v.dob.$error:
+        case this.stage.slug === 'id-and-contact-information' && this.$v.dob.$error:
           this.$refs.dob.$refs.dob.focus()
           break
-        case this.$v.identification.ssn.$error:
+        case this.stage.slug === 'id-and-contact-information' && this.$v.identification.ssn.$error:
           if (this.$refs.id) this.$refs.id.$refs.ssn ? this.$refs.id.$refs.ssn.focus() : this.$refs.id.$refs.ssn4.focus()
           break
-        case this.$v.identification.stateId.$error:
+        case this.stage.slug === 'id-and-contact-information' && this.$v.identification.stateId.$error:
           this.$refs.id.$refs.StateId.focus()
           break
         default:
