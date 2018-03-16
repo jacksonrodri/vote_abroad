@@ -51,7 +51,7 @@
       :type="($v.email.$error ? 'is-danger': '')"
       :message="$v.email.$error ? Object.keys($v.email.$params).map(x => $t(`request.email.messages.${x}`)) : '' "
       :label="$t('request.email.label')">
-        <b-input v-model="email" @input="delayTouch($v.email)"></b-input>
+        <b-input v-model="email" @input="delayTouch($v.email)" ref="email"></b-input>
       </b-field>
 
       <!-- countryName -->
@@ -566,6 +566,9 @@ export default {
         case this.$v.lastName.$error:
           this.$refs.lastName.focus()
           break
+        case this.$v.email.$error:
+          this.$refs.email.focus()
+          break
         case this.$v.abrAdr.country.$error:
           this.$refs.abrAdr.$refs.country.focus()
           break
@@ -605,9 +608,10 @@ export default {
   validations () {
     return {
       email: {
-        required: requiredIf(function () {
-          return this.recBallot === 'email'
-        }),
+        // required: requiredIf(function () {
+        //   return this.recBallot === 'email'
+        // }),
+        required,
         email
       },
       firstName: {

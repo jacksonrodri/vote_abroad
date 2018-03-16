@@ -33,7 +33,8 @@
           @focus="$event.target.select()"
           @select="option => select(option)">
         <template slot-scope="props">
-          <span :class="`flag-icon flag-icon-${props.option.code.toLowerCase()}`"></span>{{ props.option.label }} (+{{getPhoneCode(props.option.iso)}})
+          <span :class="`flag-icon flag-icon-${props.option.code.toLowerCase()}`"></span>{{ props.option.name }} (+{{getPhoneCode(props.option.code)}})
+          <!-- <span :class="`flag-icon flag-icon-${props.option.code.toLowerCase()}`"></span>{{ props.option.label }} (+{{getPhoneCode(props.option.iso)}}) -->
         </template>
       </b-autocomplete>
       <b-input
