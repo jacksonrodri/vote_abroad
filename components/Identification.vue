@@ -4,7 +4,10 @@
     <slot name="instructions"></slot>
     <br/>
 
-    <b-field v-if="idOptions && idOptions.indexOf('SSN') > -1" :label="$t('request.id.SSN')">
+    <b-field v-if="idOptions && idOptions.indexOf('SSN') > -1"
+      :label="$t('request.identification.SSN')"
+      :message="validations.ssn.$error ? $t(`request.identification.messages.fullSSNRequired`) : '' "
+      :type="(validations.ssn.$error ? 'is-danger': '')">
       <b-input v-cleave="masks.ssn"
         :value="value ? value.ssnTyped : ''"
         ref="ssn"
@@ -13,7 +16,10 @@
       </b-input>
     </b-field>
 
-    <b-field v-if="!idOptions || (idOptions && idOptions.indexOf('SSN4') > -1)" :label="$t('request.id.SSN4')">
+    <b-field v-if="!idOptions || (idOptions && idOptions.indexOf('SSN4') > -1)"
+      :message="validations.ssn.$error ? $t(`request.identification.messages.SSN4Required`) : '' "
+      :type="(validations.ssn.$error ? 'is-danger': '')"
+      :label="$t('request.id.SSN4')">
       <b-input v-cleave="masks.ssn4"
         :value="value ? value.ssnTyped : ''"
         ref="ssn4"
@@ -25,6 +31,8 @@
     <div class="has-text-centered"><strong>{{ $t('request.id.or')}}</strong></div>
 
     <b-field v-if="!idOptions || (idOptions && idOptions.filter(x => x!== 'SSN' && x !== 'SSN4').length > 0)"
+      :message="validations.stateId.$error ? $t(`request.identification.messages.stateIdRequired`) : '' "
+      :type="(validations.stateId.$error ? 'is-danger': '')"
       :label="stateIdLabel">
       <b-input :value="value ? value.stateId : ''"
         ref="stateId"
@@ -71,7 +79,8 @@ export default {
     'label',
     'value',
     'toolTipTitle',
-    'idOptions'
+    'idOptions',
+    'validations'
   ],
   data () {
     return {

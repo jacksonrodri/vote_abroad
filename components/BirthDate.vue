@@ -1,6 +1,8 @@
 <template>
   <div class="field">
-    <b-field :label="$t('request.dob.label')" :message="message">
+    <b-field :label="$t('request.dob.label')"
+      :message="validations.$error ? Object.keys(validations.$params).map(x => $t(`request.dob.messages.${x}`)) : '' "
+      :type="(validations.$error ? 'is-danger': '')">
       <b-datepicker
         v-model="dobb"
         :readonly="false"
@@ -8,6 +10,7 @@
         :date-formatter="(date) => {date.setHours(date.getHours() + 4); return date.toLocaleDateString()}"
         :min-date="minDate"
         :max-date="maxDate"
+        @input="update"
         :focused-date="new Date(new Date().getFullYear() - 18, 0, 1)"
         icon="calendar"
         icon-pack="fas"></b-datepicker>
@@ -18,7 +21,8 @@
 <script>
 export default {
   props: [
-    'message'
+    'message',
+    'validations'
   ],
   data () {
     return {
@@ -68,6 +72,11 @@ export default {
     },
     minDate () {
       return new Date(1870, 0, 1)
+    }
+  },
+  methods: {
+    update: function () {
+      this.$emit('input')
     }
   }
 }

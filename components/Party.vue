@@ -51,7 +51,7 @@ export default {
       partyChoices: {
         Democratic: {aliases: ['democratic', 'democrat', 'dfl', 'd']},
         Republican: {aliases: ['republican', 'rep', 'r', 'gop']},
-        Independent: {aliases: ['independent', 'ind', 'i']},
+        // Independent: {aliases: ['independent', 'ind', 'i']},
         none: {aliases: ['none', 'no party']}
       },
       isOtherButNoValue: false

@@ -199,7 +199,9 @@
   <section v-if="stage.slug === 'id-and-contact-information'">
 <!-- identity and Contact information -->
       <!-- dob -->
-      <birth-date></birth-date>
+      <birth-date
+        :validations="$v.dob"
+        @input="delayTouch($v.dob)"></birth-date>
 
       <!-- gender -->
       <gender
@@ -250,6 +252,8 @@
         v-if="stateRules"
         :label="$t('request.id.label')"
         :idOptions="stateRules && stateRules.id && stateRules.id.length > 0 ? stateRules.id : null"
+        :validations="($v.identification)"
+        @input="delayTouch($v.identification)"
         :toolTipTitle="`Why am I being asked this?`"
         v-model="identification">
         <div slot="instructions">
@@ -476,7 +480,7 @@ export default {
       set (value) { this.$store.commit('requests/update', {voterClass: value}) }
     },
     identification: {
-      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].identification : {noId: false, ssn: '', ssnTyped: '', stateId: ''} },
+      get () { return this.requests[this.currentRequest] && this.requests[this.currentRequest].identification ? this.requests[this.currentRequest].identification : {noId: false, ssn: '', ssnTyped: '', stateId: ''} },
       set (value) { this.$store.commit('requests/update', {identification: value}) }
     },
     ssn: {
@@ -546,6 +550,7 @@ export default {
         case 'your-information':
           this.$v.firstName.$touch()
           this.$v.lastName.$touch()
+          this.$v.email.$touch()
           this.$v.abrAdr.$touch()
           break
         case 'voting-information':
@@ -646,6 +651,8 @@ export default {
       },
       dob: {
         required
+        // minValue: new Date(1880, 0, 1),
+        // maxValue: new Date(2000, 10, 6)
       },
       fax: {
       },
@@ -660,9 +667,24 @@ export default {
       sex: {
       },
       identification: {
-        required: requiredIf(function (model) {
-          return false
-        })
+        ssn: {
+          requiredIf: requiredIf(() => {
+            if (!this.stateRules || !this.stateRules.id) {
+              return false
+            }
+            let needsSSN = Boolean(this.stateRules.id.indexOf('SSN') > -1 || this.stateRules.id.indexOf('SSN4') > -1)
+            return Boolean(needsSSN && !this.identification.stateId && !this.identification.noId)
+          })
+        },
+        stateId: {
+          requiredIf: requiredIf((model) => {
+            if (!this.stateRules || !this.stateRules.id) {
+              return false
+            }
+            let needsStateId = Boolean(this.stateRules.id.filter(x => x !== 'SSN' || x !== 'SSN4').length > 0)
+            return Boolean(needsStateId && !this.identification.ssn && !this.identification.noId)
+          })
+        }
       },
       // ssn: {
       //   required

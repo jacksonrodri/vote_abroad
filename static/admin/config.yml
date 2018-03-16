@@ -569,4 +569,6 @@ collections:
                 name: "messages"
                 widget: "object"
                 fields:
-                  - {label: "Required", name: "required", widget: "string"}
+                  - {label: "Full SSN Required", name: "fullSSNRequired", widget: "string"}
+                  - {label: "Last 4 digits of SSN Required", name: "SSN4Required", widget: "string"}
+                  - {label: "State (or other ID) Required", name: "stateIdRequired", widget: "string"}
