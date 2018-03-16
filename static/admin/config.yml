@@ -558,6 +558,7 @@ collections:
               - {label: "Tribal ID", name: "TribalID", widget: "string"}
               - {label: "Military ID", name: "MilitaryID", widget: "string"}
               - {label: "Passport Number", name: "PassportNumber", widget: "string"}
+              - {label: "NY DMV Issued ID", name: "NYDMVID", widget: "string"}
               - {label: "Placeholder", name: "placeholder", widget: "string"}
               - {label: "item separator (--OR--)", name: "or", widget: "string"}
               - {label: "No ID button (only 1 id choice)", name: "noid1", widget: "string"}

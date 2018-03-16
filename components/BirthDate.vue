@@ -10,6 +10,7 @@
         :date-formatter="(date) => {date.setHours(date.getHours() + 4); return date.toLocaleDateString()}"
         :min-date="minDate"
         :max-date="maxDate"
+        ref="dob"
         @input="update"
         :focused-date="new Date(new Date().getFullYear() - 18, 0, 1)"
         icon="calendar"

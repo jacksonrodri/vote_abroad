@@ -201,6 +201,7 @@
       <!-- dob -->
       <birth-date
         :validations="$v.dob"
+        ref="dob"
         @input="delayTouch($v.dob)"></birth-date>
 
       <!-- gender -->
@@ -253,6 +254,7 @@
         :label="$t('request.id.label')"
         :idOptions="stateRules && stateRules.id && stateRules.id.length > 0 ? stateRules.id : null"
         :validations="($v.identification)"
+        ref="id"
         @input="delayTouch($v.identification)"
         :toolTipTitle="`Why am I being asked this?`"
         v-model="identification">
@@ -561,6 +563,7 @@ export default {
           break
         case 'id-and-contact-information':
           this.$v.dob.$touch()
+          this.$v.identification.$touch()
           break
       }
 
@@ -597,6 +600,15 @@ export default {
           break
         case this.$v.jurisdiction.$error:
           this.$refs.jurisdiction.$refs.jurisdiction.focus()
+          break
+        case this.$v.dob.$error:
+          this.$refs.dob.$refs.dob.focus()
+          break
+        case this.$v.identification.ssn.$error:
+          if (this.$refs.id) this.$refs.id.$refs.ssn ? this.$refs.id.$refs.ssn.focus() : this.$refs.id.$refs.ssn4.focus()
+          break
+        case this.$v.identification.stateId.$error:
+          this.$refs.id.$refs.StateId.focus()
           break
         default:
           this.$router.push(nextPage)
