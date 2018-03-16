@@ -104,7 +104,6 @@
     },
     "votAdr": {
       "zip": "Zip",
-      "jurisdiction": "",
       "street": "Street",
       "tooltip": "Use the **residence address** of the last place you lived in the US. If you have never resided in the US, use the residence address of the last place your US parent(s) lived in the US. If your US parents last lived in the US in different locations, you may choose which one to use as your voting address.",
       "instructions": "Input the last address where you lived in the US. If you have never lived in the US, use the last US address of your US citizen parent(s).",
@@ -239,7 +238,12 @@
       "tooltip": "You must provide your current residence address outside the US for informational purposes. Please provide your address outside the US even if you request your blank ballot be sent to you by email/online or fax.",
       "unstructured-label": "I need to use a different format for my address.",
       "structured-label": "Use the standard international format for my address.",
-      "changeFormat": "Change Format"
+      "changeFormat": "Change Format",
+      "messages": {
+        "country-required": "You must provide your country of residence. (Outside the United States)",
+        "thoroughfare-required": "You must provide your street address",
+        "locality-required": "City is required"
+      }
     }
   }
 }
