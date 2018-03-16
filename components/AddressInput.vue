@@ -360,7 +360,7 @@ export default {
       console.log('option', option)
       if (option && option.place_id) {
         this.suppressDropdown = true
-        axios.get(`${process.env.placesUrl + process.env.detailsEndpoint}?placeid=${option.place_id}&key=${process.env.placesKey}`)
+        axios.get(`${process.env.placesUrl + process.env.detailsEndpoint}?placeid=${option.place_id}$language=en&key=${process.env.placesKey}`)
           .then(({ data }) => {
             data.result.adr_address
               .split(/<span class="|">|<\/span>,?\s?/)
