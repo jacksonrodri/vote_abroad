@@ -1,6 +1,7 @@
 <template>
-<div class="content-container">
+<div class="section">
   <slot name="lead"></slot>
+  <br>
   <div class="content">
     <slot name="content"></slot>
   </div>
