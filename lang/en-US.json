@@ -111,7 +111,10 @@
       "county": "County",
       "city": "City",
       "messages": {
-        "required": "This field is required so your election official can send you the correct ballot."
+        "street-required": "Street address is required",
+        "city-required": "City is required",
+        "State-required": "State is required",
+        "zip-required": "Zip is required"
       },
       "state": "State",
       "label": "Voting Address"
