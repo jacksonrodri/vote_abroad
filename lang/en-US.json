@@ -59,7 +59,10 @@
       "email": "Email or online",
       "mail": "Mail",
       "fax": "Fax",
-      "tooltip": "You may request to receive your blank ballot by email/online, fax or mail. We encourage voters to request their blank ballot be sent by email/online or fax to avoid the delay associated with mail  and the possibility the ballot will be lost in transit."
+      "tooltip": "You may request to receive your blank ballot by email/online, fax or mail. We encourage voters to request their blank ballot be sent by email/online or fax to avoid the delay associated with mail  and the possibility the ballot will be lost in transit.",
+      "messages": {
+        "required": "This is required.  Please select how you would like to receive your ballot."
+      }
     },
     "stateSpecial": {
       "label": "{state} Specific Rules"
@@ -73,7 +76,10 @@
       "label": "Are you already registered to vote in {jurisdiction}?",
       "yes": "Yes",
       "no": "No",
-      "unsure": "Not Sure"
+      "unsure": "Not Sure",
+      "messages": {
+        "required": "This is required."
+      }
     },
     "akRules": {
       "label": "What proof will you provide? (You must also attach a photocopy with your submission)",
@@ -88,6 +94,11 @@
       "whatCivType": "Are you abroad temporarily or indefinitely?",
       "whatMilType": "What type of military voter are you?",
       "militaryType": "Military",
+      "messages": {
+        "typeRequired": "This is required",
+        "civilianRequired": "Please select your overseas status",
+        "militaryRequired": "Please select your military status"
+      },
       "military": "Active Duty Military",
       "neverResided": "Never Resided",
       "civilianOrMilitary": "Are you a civilian or military voter?",
