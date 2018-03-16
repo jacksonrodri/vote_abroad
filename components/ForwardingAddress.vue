@@ -31,7 +31,7 @@
       :label="$t('request.fwdAdr.label')"
       key="forwardingAddress"
       :value="value"
-      v-show="hasForwardingAddress"
+      v-if="hasForwardingAddress"
       @input="updateVal">
       <div slot="instructions">
         <p>{{ $t('request.fwdAdr.instructions') }}</p>

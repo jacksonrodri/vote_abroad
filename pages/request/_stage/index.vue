@@ -163,20 +163,34 @@
     </b-field>
 
       <!-- fwdAdr -->
-      <forwarding-address v-model="fwdAdr"
+      <!-- <forwarding-address v-model="fwdAdr"
         :label="$t('request.fwdAdr.label')"
         toolTipTitle="Optional"
         v-if="recBallot === 'mail'">
         <div slot="tooltip">
           <vue-markdown>{{$t('request.fwdAdr.tooltip')}}</vue-markdown>
         </div>
-      </forwarding-address>
+      </forwarding-address> -->
+      <address-input
+        :label="$t('request.fwdAdr.label')"
+        key="forwardingAddress"
+        ref="fwdAdr"
+        v-model="fwdAdr"
+        @input="delayTouch($v.fwdAdr)"
+        :validations=$v.fwdAdr
+        toolTipTitle="Optional">
+        <div slot="instructions">
+          <p>{{$t('request.fwdAdr.instructions')}}</p>
+        </div>
+        <div slot="tooltip">
+          <vue-markdown>{{$t('request.fwdAdr.tooltip')}}</vue-markdown>
+        </div>
+      </address-input>
 
     <scroll-up :key="$route.params.stage"></scroll-up>
 
     <section >
         <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>Back</span></nuxt-link>
-        <!-- <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'id-and-contact-information'} })" class="button is-primary is-medium is-pulled-right" exact ><span> Next </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link> -->
         <button @click="focusFirstErrorOrAdvance(localePath({ name: 'request-stage', params: { stage: 'id-and-contact-information'} }))" class="button is-primary is-medium is-pulled-right" exact ><span> Next </span><b-icon pack="fas" icon="caret-right"></b-icon></button>
     </section>
   </section>
@@ -257,16 +271,6 @@
         </div>
       </identification>
 
-      <!-- ssn -->
-      <!-- <b-field :type="($v.ssn.$error ? 'is-danger': '')" :message="$v.ssn.$error ? Object.keys($v.ssn.$params).map(x => x) : '' " label="The last 4 digits of your Social Security Number">
-        <b-input v-model="ssn" @input="$v.ssn.$touch()"></b-input>
-      </b-field> -->
-
-      <!-- stateId -->
-      <!-- <b-field :type="($v.stateId.$error ? 'is-danger': '')" :message="$v.stateId.$error ? Object.keys($v.stateId.$params).map(x => x) : '' " label="Driver's license or   state ID #">
-        <b-input v-model="stateId" @input="$v.stateId.$touch()"></b-input>
-      </b-field> -->
-
       <!-- fwabRequest -->
       <b-field :type="($v.fwabRequest.$error ? 'is-danger': '')"
         :message="$v.fwabRequest.$error ? Object.keys($v.fwabRequest.$params).map(x => x) : '' "
@@ -275,49 +279,11 @@
         <b-input v-model="fwabRequest" @input="$v.fwabRequest.$touch()"></b-input>
       </b-field>
 
-      <!-- addlInfo -->
-      <!-- <b-field :type="($v.addlInfo.$error ? 'is-danger': '')" :message="$v.addlInfo.$error ? Object.keys($v.addlInfo.$params).map(x => x) : '' " label="Add any additional information here to help your election official find your records.">
-        <b-input maxlength="258" type="textarea" v-model="addlInfo" @input="$v.addlInfo.$touch()"></b-input>
-      </b-field> -->
-
-      <!-- date -->
-      <!-- <b-field label="Date" :message="$v.dob.$error ? Object.keys($v.dob.$params).map(x => x) : '' ">
-        <b-datepicker
-          :value="localDate || lcldate"
-          @input="value =>{ this.updateDate(value) }"
-          placeholder="Type or select today's date"
-          icon="calendar"
-          :date-formatter="(date) => date.toLocaleDateString()"
-          :min-date="new Date(new Date().getFullYear(), 0, 1)"
-          :max-date="new Date(new Date().getFullYear(), 11, 31)"
-          icon-pack="fa"
-          position="is-top-right"
-          :readonly="false">
-          <div class="buttons">
-            <button class="button is-primary"
-              @click="date = new Date()">
-              <b-icon icon="calendar"></b-icon>
-              <span>Today</span>
-            </button>
-
-            <button class="button is-danger"
-              @click="date = null">
-              <b-icon icon="times"></b-icon>
-              <span>Clear</span>
-            </button>
-          </div>
-        </b-datepicker> -->
-
-
-          <!-- :date-parser="(date) => new Date(parseInt(date.substr(0,4)), parseInt(date.substr(5,2)) - 1, parseInt(date.substr(8,2)))" -->
-
-      <!-- </b-field> -->
       <scroll-up :key="$route.params.stage"></scroll-up>
     <section >
-      <!-- <div class="control buttons is-right"> -->
-        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'voting-information'} })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>Back</span></nuxt-link>
-        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'review'} })" class="button is-primary is-medium is-pulled-right" exact ><span> Generate &amp; review your form </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link>
-      <!-- </div> -->
+      <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'voting-information'} })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>Back</span></nuxt-link>
+      <button @click="focusFirstErrorOrAdvance(localePath({ name: 'request-stage', params: { stage: 'review'} }))" class="button is-primary is-medium is-pulled-right" exact ><span> Next </span><b-icon pack="fas" icon="caret-right"></b-icon></button>
+      <!-- <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'review'} })" class="button is-primary is-medium is-pulled-right" exact ><span> Generate &amp; review your form </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link> -->
     </section>
   </section>
 </section>
@@ -336,7 +302,6 @@ import ReceiveBallot from '~/components/ReceiveBallot'
 import TelInput from '~/components/TelInput'
 import ForwardingAddress from '~/components/ForwardingAddress'
 import BirthDate from '~/components/BirthDate'
-// import PartyInput from '~/components/PartyInput'
 import Party from '~/components/Party'
 import JoinDemocratsabroad from '~/components/JoinDemocratsabroad'
 import PreviousName from '~/components/PreviousName'
@@ -393,7 +358,6 @@ export default {
     TelInput,
     ForwardingAddress,
     BirthDate,
-    // PartyInput,
     Party,
     JoinDemocratsabroad,
     PreviousName,
@@ -590,6 +554,7 @@ export default {
           this.$v.recBallot.$touch()
           break
         case 'id-and-contact-information':
+          this.$v.dob.$touch()
           break
       }
 
@@ -678,33 +643,34 @@ export default {
         required
       },
       fax: {
-        required
       },
       tel: {
-        required
       },
       altEmail: {
       },
       fwabRequest: {
-        required
       },
       party: {
-        required
       },
       sex: {
-        required
       },
-      ssn: {
-        required
+      identification: {
+        required: requiredIf(function (model) {
+          return false
+        })
       },
-      stateId: {
-        required
-      },
+      // ssn: {
+      //   required
+      // },
+      // stateId: {
+      //   required
+      // },
       fwdAdr: {
-        required
+        country: { },
+        thoroughfare: { },
+        locality: { }
       },
       addlInfo: {
-        required
       },
       date: ''
     }
