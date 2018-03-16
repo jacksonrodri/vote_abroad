@@ -559,6 +559,7 @@ export default {
           this.$v.votAdr.$touch()
           this.$v.jurisdiction.$touch()
           this.$v.voterClass.$touch()
+          this.$v.isRegistered.$touch()
           this.$v.recBallot.$touch()
           break
         case 'id-and-contact-information':
