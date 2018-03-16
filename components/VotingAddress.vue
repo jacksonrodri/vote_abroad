@@ -6,8 +6,8 @@
       <slot name="tooltip"></slot>
     </b-message>
     <b-field
-      :message="validations.street.$error ? Object.keys(validations.street.$params).map(x => $t(`request.votAdr.messages.street-${x}`)) : '' "
-      :type="(validations.street.$error ? 'is-danger': '')">
+      :message="validations.thoroughfare.$error ? Object.keys(validations.thoroughfare.$params).map(x => $t(`request.votAdr.messages.street-${x}`)) : '' "
+      :type="(validations.thoroughfare.$error ? 'is-danger': '')">
       <b-autocomplete ref="street"
         :placeholder="$t('request.votAdr.street')"
         :data="data"
@@ -29,8 +29,8 @@
     <div class="field is-horizontal">
       <div class="field-body">
         <b-field
-          :message="validations.city.$error ? Object.keys(validations.city.$params).map(x => $t(`request.city.messages.street-${x}`)) : '' "
-          :type="(validations.city.$error ? 'is-danger': '')">
+          :message="validations.locality.$error ? Object.keys(validations.locality.$params).map(x => $t(`request.votAdr.messages.city-${x}`)) : '' "
+          :type="(validations.locality.$error ? 'is-danger': '')">
           <b-autocomplete ref="city"
             :placeholder="$t('request.votAdr.city')"
             :data="data"
@@ -46,8 +46,8 @@
           </b-autocomplete>
         </b-field>
         <b-field
-          :message="validations.state.$error ? Object.keys(validations.state.$params).map(x => $t(`request.votAdr.messages.state-${x}`)) : '' "
-          :type="(validations.state.$error ? 'is-danger': '')">
+          :message="validations.regionCode.$error ? Object.keys(validations.regionCode.$params).map(x => $t(`request.votAdr.messages.state-${x}`)) : '' "
+          :type="(validations.regionCode.$error ? 'is-danger': '')">
           <b-select v-model="state"
             ref="state"
             expanded
@@ -61,8 +61,8 @@
           </b-select>
         </b-field>
         <b-field
-          :message="validations.zip.$error ? Object.keys(validations.zip.$params).map(x => $t(`request.votAdr.messages.zip-${x}`)) : '' "
-          :type="(validations.zip.$error ? 'is-danger': '')">
+          :message="validations.postalcode.$error ? Object.keys(validations.postalcode.$params).map(x => $t(`request.votAdr.messages.zip-${x}`)) : '' "
+          :type="(validations.postalcode.$error ? 'is-danger': '')">
           <b-input
             :placeholder="$t('request.votAdr.zip')"
             ref="zip"

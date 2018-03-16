@@ -4,25 +4,30 @@
     <slot name="instructions"></slot>
     <!-- Jurisdiction: {{leos.length}} leos found -->
     <!-- <button class="button">Wake County</button> -->
-    <b-field>
-      <b-autocomplete
-        :value="typedJurisdiction || jurisdiction || ''"
-        open-on-focus
-        keep-first
-        expanded
-        ref="jurisdiction"
-        :data="filteredLeos"
-        field="n"
-        placeholder="Start typing to find your jurisdiction"
-        @select="option => updateLeo(option)">
-        <template slot-scope="props"><strong>{{props.option.j}} {{props.option.j.toLowerCase().indexOf(props.option.t.toLowerCase()) > -1 ? '' : props.option.t}}</strong> - <small>{{props.option.n}}</small></template>
-        </b-autocomplete>
-        <p class="control">
-            <button class="button is-grey is-inverted is-outlined"
-              @click="$refs.jurisdiction.focus()">
-              <b-icon icon="chevron-down"></b-icon>
-            </button>
-        </p>
+    <b-field
+      :type="validations.$error ? 'is-danger' : ''"
+      :message="validations.$error ? Object.keys(validations.$params).map(x => $t(`request.jurisdiction.messages.${x}`)) : '' ">
+      <b-field>
+        <b-autocomplete
+          :value="typedJurisdiction || jurisdiction || ''"
+          open-on-focus
+          keep-first
+          expanded
+          @input="updated"
+          ref="jurisdiction"
+          :data="filteredLeos"
+          field="n"
+          placeholder="Start typing to find your jurisdiction"
+          @select="option => updateLeo(option)">
+          <template slot-scope="props"><strong>{{props.option.j}} {{props.option.j.toLowerCase().indexOf(props.option.t.toLowerCase()) > -1 ? '' : props.option.t}}</strong> - <small>{{props.option.n}}</small></template>
+          </b-autocomplete>
+          <p class="control">
+              <button class="button is-grey is-inverted is-outlined"
+                @click="$refs.jurisdiction.focus()">
+                <b-icon icon="chevron-down"></b-icon>
+              </button>
+          </p>
+        </b-field>
       </b-field>
   <b-message :title="toolTipTitle" type="is-info" has-icon :active.sync="isOpen">
     <slot name="tooltip"></slot>
@@ -40,6 +45,7 @@ export default {
     'type',
     'label',
     'message',
+    'validations',
     'toolTipTitle'
   ],
   async created () {
@@ -96,6 +102,9 @@ export default {
   methods: {
     updateLeo: function (value) {
       this.$store.commit('requests/update', {votAdr: Object.assign({}, this.votAdr, {leo: value})})
+    },
+    updated: function () {
+      this.$emit('input')
     }
   }
 }

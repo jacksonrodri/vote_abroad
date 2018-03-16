@@ -295,7 +295,9 @@ collections:
                 name: "messages"
                 widget: "object"
                 fields:
-                  - {label: "Required", name: "required", widget: "string"}
+                  - {label: "Type Required", name: "typeRequired", widget: "string"}
+                  - {label: "Civilian Status Required", name: "civilianRequired", widget: "string"}
+                  - {label: "Military Status Required", name: "militaryRequired", widget: "string"}
           - label: "Registration Status"
             name: "isRegistered"
             widget: "object"

@@ -1,5 +1,7 @@
 <template>
-<b-field :label="label">
+<b-field :label="label"
+  type='is-danger'
+  :message="validations.$error ? $t(`request.isRegistered.messages.required`) : ''">
   <b-field grouped
     group-multiline>
     <p class="control">
@@ -43,7 +45,8 @@ export default {
     'label',
     'value',
     'jurisdiction',
-    'jurisdictionType'
+    'jurisdictionType',
+    'validations'
   ],
   data () {
     return {

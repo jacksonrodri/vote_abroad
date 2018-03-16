@@ -1,6 +1,7 @@
 <template>
 <div class="field">
   <span class="is-flex"><label class="label">{{ label }}</label><span @click="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
+  <p v-if="validations.$error" class="help is-danger">{{ $t(`request.receiveBallot.messages.required`) }}</p>
   <b-field grouped group-multiline>
     <p class="control" v-if="ballotReceiptOptions.indexOf('Email') > -1">
       <button @click="setVal('email')" :class="[baseClass, {'is-success': email}]">
@@ -46,7 +47,8 @@ export default {
     'label',
     'value',
     'toolTipTitle',
-    'ballotReceiptOptions'
+    'ballotReceiptOptions',
+    'validations'
   ],
   data () {
     return {

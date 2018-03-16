@@ -1,6 +1,8 @@
 <template>
   <div class="field">
-      <b-field :label="$t('request.voterClass.civilianOrMilitary')">
+      <b-field :label="$t('request.voterClass.civilianOrMilitary')"
+        type='is-danger'
+        :message="!isCivilianType && !isMilitaryType  && validations.$error ? $t(`request.voterClass.messages.typeRequired`) : ''">
         <b-field grouped group-multiline>
           <p class="control">
             <button @click="setVal('civilianType')" :class="[baseClass, {'is-success': isCivilianType}]">
@@ -34,6 +36,8 @@
             <i class="fas fa-info-circle"></i>
           </span>
         </span>
+        <p v-if="isCivilianType  && validations.$error" class="help is-danger">{{ $t(`request.voterClass.messages.civilianRequired`) }}</p>
+        <p v-if="isMilitaryType  && validations.$error" class="help is-danger">{{ $t(`request.voterClass.messages.militaryRequired`) }}</p>
       <!-- <b-field disabled :label="isMilitaryType ? 'What type of military voter are you?' : 'Which best describes you?'"> -->
         <b-field grouped group-multiline>
           <p class="control" v-show="isMilitaryType">
@@ -112,7 +116,8 @@ export default {
     'label',
     'value',
     'toolTipTitle',
-    'allowsNeverResided'
+    'allowsNeverResided',
+    'validations'
   ],
   data () {
     return {

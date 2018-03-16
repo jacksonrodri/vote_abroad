@@ -74,7 +74,7 @@
     <section >
         <nuxt-link :to="localePath({ name: 'index' })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>Back</span></nuxt-link>
         <!-- <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'voting-information'} })" class="button is-primary is-medium is-pulled-right" exact ><span> Next </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link> -->
-        <button @click="focusFirstError" class="button is-primary is-medium is-pulled-right" exact ><span> Next </span><b-icon pack="fas" icon="caret-right"></b-icon></button>
+        <button @click="focusFirstErrorOrAdvance(localePath({ name: 'request-stage', params: {stage: 'voting-information'} }))" class="button is-primary is-medium is-pulled-right" exact ><span> Next </span><b-icon pack="fas" icon="caret-right"></b-icon></button>
     </section>
   </section>
 
@@ -84,6 +84,7 @@
       <voting-address
         :label="$t('request.votAdr.label')"
         :validations=$v.votAdr
+        ref="votAdr"
         @input="delayTouch($v.votAdr)"
         toolTipTitle="Your last US Address">
         <div slot="instructions">
@@ -98,6 +99,9 @@
         :label="$t('request.jurisdiction.label')"
         toolTipTitle="Jurisdiction help"
         :key="votAdr.regionCode"
+        ref="jurisdiction"
+        @input="delayTouch($v.jurisdiction)"
+        :validations="($v.jurisdiction)"
         :state="this.votAdr.regionCode">
         <div slot="instructions">
           <p>{{$t('request.jurisdiction.instructions')}}</p>
@@ -109,6 +113,8 @@
 
     <voter-class v-model="voterClass"
       :allowsNeverResided="stateRules ? stateRules.allowsNeverResided : false"
+      :validations="($v.voterClass)"
+      @input="delayTouch($v.voterClass)"
       toolTipTitle="Intend to return vs. Return is uncertain">
       <div slot="tooltip">
         <vue-markdown>{{$t('request.voterClass.tooltip')}}</vue-markdown>
@@ -119,6 +125,8 @@
     <is-registered
       v-if="votAdr && votAdr.leo && votAdr.leo.jurisdiction && votAdr.leo.jurisdictionType"
       :label="$t('request.isRegistered.label', {jurisdiction: votAdr.leo.jurisdictionType === 'All' ? votAdr.leo.state : votAdr.leo.jurisdiction + ' ' + votAdr.leo.jurisdictionType})"
+      :validations="($v.isRegistered)"
+      @input="delayTouch($v.isRegistered)"
       v-model="isRegistered">
     </is-registered>
 
@@ -126,6 +134,8 @@
     <receive-ballot v-model="recBallot"
       v-if="votAdr && votAdr.regionCode"
       :label="$t('request.receiveBallot.label')"
+      :validations="$v.recBallot"
+      @input="delayTouch($v.recBallot)"
       :ballotReceiptOptions="stateRules ? stateRules.ballotReceiptOptions : ['Mail']"
       toolTipTitle="What is the best choice?">
       <div slot="tooltip">
@@ -166,7 +176,8 @@
 
     <section >
         <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>Back</span></nuxt-link>
-        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'id-and-contact-information'} })" class="button is-primary is-medium is-pulled-right" exact ><span> Next </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link>
+        <!-- <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'id-and-contact-information'} })" class="button is-primary is-medium is-pulled-right" exact ><span> Next </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link> -->
+        <button @click="focusFirstErrorOrAdvance(localePath({ name: 'request-stage', params: { stage: 'id-and-contact-information'} }))" class="button is-primary is-medium is-pulled-right" exact ><span> Next </span><b-icon pack="fas" icon="caret-right"></b-icon></button>
     </section>
   </section>
 
@@ -362,7 +373,6 @@ export default {
       updatedAt: '',
       createdBy: '',
       emailOrPhone: '',
-      leoAdr: {},
       localDob: null,
       localDate: null,
       fwabRequest: '',
@@ -491,6 +501,7 @@ export default {
       get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].votAdr : null },
       set (value) { this.$store.commit('requests/update', {votAdr: value}) }
     },
+    jurisdiction () { return this.votAdr.leo && this.votAdr.leo.n ? this.votAdr.leo.n : '' },
     abrAdr: {
       get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].abrAdr : null },
       set (value) { this.$store.commit('requests/update', {abrAdr: value}) }
@@ -565,7 +576,23 @@ export default {
     focusName () {
       this.$refs.userinput.focus()
     },
-    focusFirstError () {
+    focusFirstErrorOrAdvance (nextPage) {
+      switch (this.$route.params.stage) {
+        case 'your-information':
+          this.$v.firstName.$touch()
+          this.$v.lastName.$touch()
+          this.$v.abrAdr.$touch()
+          break
+        case 'voting-information':
+          this.$v.votAdr.$touch()
+          this.$v.jurisdiction.$touch()
+          this.$v.voterClass.$touch()
+          this.$v.recBallot.$touch()
+          break
+        case 'id-and-contact-information':
+          break
+      }
+
       switch (true) {
         case this.$v.firstName.$error:
           this.$refs.firstName.focus()
@@ -582,8 +609,23 @@ export default {
         case this.$v.abrAdr.locality.$error:
           this.$refs.abrAdr.$refs.locality[0].focus()
           break
+        case this.$v.votAdr.thoroughfare.$error:
+          this.$refs.votAdr.$refs.street.focus()
+          break
+        case this.$v.votAdr.locality.$error:
+          this.$refs.votAdr.$refs.city.focus()
+          break
+        case this.$v.votAdr.regionCode.$error:
+          this.$refs.votAdr.$refs.state.focus()
+          break
+        case this.$v.votAdr.postalcode.$error:
+          this.$refs.votAdr.$refs.zip.focus()
+          break
+        case this.$v.jurisdiction.$error:
+          this.$refs.jurisdiction.$refs.jurisdiction.focus()
+          break
         default:
-          this.$router.push(this.localePath({ name: 'request-stage', params: {stage: 'voting-information'} }))
+          this.$router.push(nextPage)
       }
     },
     delayTouch ($v) {
@@ -623,25 +665,12 @@ export default {
         required
       },
       votAdr: {
-        apt: {
-          required
-        },
-        street: {
-          required
-        },
-        city: {
-          required
-        },
-        state: {
-          required
-        },
-        zip: {
-          required
-        }
+        thoroughfare: { required },
+        locality: { required },
+        regionCode: { required },
+        postalcode: { required }
       },
-      leoAdr: {
-        required
-      },
+      jurisdiction: { required },
       recBallot: {
         required
       },
