@@ -180,7 +180,10 @@
     "dob": {
       "label": "Date of Birth",
       "instructions": "",
-      "placeholder": "e.g. 01/31/1970"
+      "placeholder": "e.g. 01/31/1970",
+      "messages": {
+        "required": "Your date of birth is required."
+      }
     },
     "tel": {
       "label": "Your current phone number",
