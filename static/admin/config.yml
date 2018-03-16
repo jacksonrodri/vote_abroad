@@ -256,7 +256,10 @@ collections:
                 name: "messages"
                 widget: "object"
                 fields:
-                  - {label: "Required", name: "required", widget: "string"}
+                  - {label: "Street Required", name: "street-required", widget: "string"}
+                  - {label: "City Required", name: "city-required", widget: "string"}
+                  - {label: "State Required", name: "State-required", widget: "string"}
+                  - {label: "Zip Required", name: "zip-required", widget: "string"}
           - label: "Jurisdiction"
             name: "jurisdiction"
             widget: "object"

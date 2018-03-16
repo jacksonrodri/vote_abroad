@@ -5,7 +5,9 @@
     <b-message v-if="toolTipTitle" :title="toolTipTitle" type="is-info" has-icon :active.sync="isOpen">
       <slot name="tooltip"></slot>
     </b-message>
-    <b-field>
+    <b-field
+      :message="validations.street.$error ? Object.keys(validations.street.$params).map(x => $t(`request.votAdr.messages.street-${x}`)) : '' "
+      :type="(validations.street.$error ? 'is-danger': '')">
       <b-autocomplete ref="street"
         :placeholder="$t('request.votAdr.street')"
         :data="data"
@@ -26,7 +28,9 @@
     </b-field>
     <div class="field is-horizontal">
       <div class="field-body">
-        <div class="field is-expanded">
+        <b-field
+          :message="validations.city.$error ? Object.keys(validations.city.$params).map(x => $t(`request.city.messages.street-${x}`)) : '' "
+          :type="(validations.city.$error ? 'is-danger': '')">
           <b-autocomplete ref="city"
             :placeholder="$t('request.votAdr.city')"
             :data="data"
@@ -40,9 +44,12 @@
             <template slot-scope="props">{{ props.option.description.replace(', USA', '') }} </template>
             <template slot="empty">No results found</template>
           </b-autocomplete>
-        </div>
-        <div class="field">
+        </b-field>
+        <b-field
+          :message="validations.state.$error ? Object.keys(validations.state.$params).map(x => $t(`request.votAdr.messages.state-${x}`)) : '' "
+          :type="(validations.state.$error ? 'is-danger': '')">
           <b-select v-model="state"
+            ref="state"
             expanded
             :placeholder="$t('request.votAdr.state')">
             <option
@@ -52,17 +59,20 @@
               {{ state.name }}
             </option>
           </b-select>
-        </div>
-        <div class="field">
+        </b-field>
+        <b-field
+          :message="validations.zip.$error ? Object.keys(validations.zip.$params).map(x => $t(`request.votAdr.messages.zip-${x}`)) : '' "
+          :type="(validations.zip.$error ? 'is-danger': '')">
           <b-input
             :placeholder="$t('request.votAdr.zip')"
+            ref="zip"
             expanded
             v-model="zip"></b-input>
-        </div>
+        </b-field>
       </div>
     </div>
     <b-field :label="$t('request.votAdr.county')">
-      <b-input
+      <b-input ref="county"
         :placeholder="$t('request.votAdr.county')"
         v-model="county"></b-input>
     </b-field>
@@ -78,7 +88,8 @@ export default {
   props: [
     'value',
     'label',
-    'toolTipTitle'
+    'toolTipTitle',
+    'validations'
   ],
   data () {
     return {
@@ -144,12 +155,6 @@ export default {
         {'name': 'Wisconsin', 'iso': 'WI'},
         {'name': 'Wyoming', 'iso': 'WY'}
       ],
-      // street: '',
-      // apt: '',
-      // city: '',
-      // state: '',
-      // zip: '',
-      // county: '',
       isFetching: false,
       isFetchingCity: false,
       suppressDropdown: true,
@@ -190,6 +195,7 @@ export default {
     },
     updateAddress: function (field, value) {
       this.$store.commit('requests/update', {votAdr: Object.assign({}, this.votAdr, {[field]: value})})
+      this.$emit('input')
     },
     getAsyncData: debounce(function () {
       this.isFetching = true

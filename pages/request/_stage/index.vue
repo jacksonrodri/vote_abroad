@@ -7,8 +7,10 @@
   <section v-if="stage.slug === 'your-information'">
 
       <!-- firstName -->
-      <b-field :type="($v.firstName.$error ? 'is-danger': '')" :message="$v.firstName.$error ? Object.keys($v.firstName.$params).map(x => x) : '' " :label="$t('request.firstName.label')">
-        <b-input v-model="firstName" @input="delayTouch($v.firstName)"></b-input>
+      <b-field :type="($v.firstName.$error ? 'is-danger': '')" :message="$v.firstName.$error ? Object.keys($v.firstName.$params).map(x => $t(`request.firstName.messages.${x}`)) : '' " :label="$t('request.firstName.label')">
+        <b-input v-model="firstName"
+          @input="delayTouch($v.firstName)"
+          ref="firstName"></b-input>
       </b-field>
 
       <!-- middleName -->
@@ -17,8 +19,10 @@
       </b-field>
 
       <!-- lastName -->
-      <b-field :type="($v.lastName.$error ? 'is-danger': '')" :message="$v.lastName.$error ? Object.keys($v.lastName.$params).map(x => x) : '' " :label="$t('request.lastName.label')">
-        <b-input v-model="lastName" @input="delayTouch($v.lastName)"></b-input>
+      <b-field :type="($v.lastName.$error ? 'is-danger': '')" :message="$v.lastName.$error ? Object.keys($v.lastName.$params).map(x => $t(`request.lastName.messages.${x}`)) : '' " :label="$t('request.lastName.label')">
+        <b-input v-model="lastName"
+          @input="delayTouch($v.lastName)"
+          ref="lastName"></b-input>
       </b-field>
 
       <!-- suffix -->
@@ -54,6 +58,7 @@
       <address-input
         :label="$t('request.abrAdr.label')"
         key="overseas"
+        ref="abrAdr"
         v-model="abrAdr"
         @input="delayTouch($v.abrAdr)"
         :validations=$v.abrAdr
@@ -68,7 +73,8 @@
       <scroll-up :key="$route.params.stage"></scroll-up>
     <section >
         <nuxt-link :to="localePath({ name: 'index' })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>Back</span></nuxt-link>
-        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'voting-information'} })" class="button is-primary is-medium is-pulled-right" exact ><span> Next </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link>
+        <!-- <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'voting-information'} })" class="button is-primary is-medium is-pulled-right" exact ><span> Next </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link> -->
+        <button @click="focusFirstError" class="button is-primary is-medium is-pulled-right" exact ><span> Next </span><b-icon pack="fas" icon="caret-right"></b-icon></button>
     </section>
   </section>
 
@@ -77,6 +83,8 @@
 
       <voting-address
         :label="$t('request.votAdr.label')"
+        :validations=$v.votAdr
+        @input="delayTouch($v.votAdr)"
         toolTipTitle="Your last US Address">
         <div slot="instructions">
           <p>{{ $t('request.votAdr.instructions') }}</p>
@@ -556,6 +564,27 @@ export default {
   methods: {
     focusName () {
       this.$refs.userinput.focus()
+    },
+    focusFirstError () {
+      switch (true) {
+        case this.$v.firstName.$error:
+          this.$refs.firstName.focus()
+          break
+        case this.$v.lastName.$error:
+          this.$refs.lastName.focus()
+          break
+        case this.$v.abrAdr.country.$error:
+          this.$refs.abrAdr.$refs.country.focus()
+          break
+        case this.$v.abrAdr.thoroughfare.$error:
+          this.$refs.abrAdr.$refs.thoroughfare.focus()
+          break
+        case this.$v.abrAdr.locality.$error:
+          this.$refs.abrAdr.$refs.locality[0].focus()
+          break
+        default:
+          this.$router.push(this.localePath({ name: 'request-stage', params: {stage: 'voting-information'} }))
+      }
     },
     delayTouch ($v) {
       $v.$reset()

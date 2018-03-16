@@ -57,7 +57,7 @@
                 <b-autocomplete
                   v-model="streetAddress"
                   :data="data"
-                  ref="premise"
+                  ref="thoroughfare"
                   keep-first
                   :placeholder="throroughfareLabel"
                   field="structured_formatting.main_text"
@@ -94,6 +94,7 @@
                 :message="validations.locality.$error ? Object.keys(validations.locality.$params).map(x => $t(`request.abrAdr.messages.locality-${x}`)) : '' ">
                 <b-input v-model="locality"
                   :placeholder="field.localityname.label"
+                  ref="locality"
                   @input="updateAddress()">
                 </b-input>
               </b-field>
@@ -197,11 +198,7 @@ export default {
     )
   },
   mounted () {
-    if (this.usOnly !== undefined) {
-      this.countryCode = 'US'
-      this.countryName = 'United States'
-      this.$refs.premise.focus()
-    }
+    console.log(this.$refs)
     if (this.value) {
       this.postOfficeBox = this.value.poBox || ''
       this.extendedAddress = this.value.premise || ''
@@ -349,7 +346,7 @@ export default {
   },
   methods: {
     setFocus () {
-      this.$refs.premise.focus()
+      this.$refs.thoroughfare.focus()
     },
     updateAlt () {
       this.alt1 = this.extendedAddress || this.streetAddress
@@ -408,7 +405,7 @@ export default {
     getAsyncData: debounce(function () {
       if (this.suppressDropdown) {
         this.$refs.region.isActive = false
-        this.$refs.premise.isActive = false
+        this.$refs.thoroughfare.isActive = false
         this.$refs.country.isActive = false
         this.suppressDropdown = false
       }
