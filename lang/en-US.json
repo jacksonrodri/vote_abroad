@@ -44,7 +44,7 @@
       "democratic": "Democratic",
       "republican": "Republican",
       "independent": "Independent",
-      "none": "No Party",
+      "none": "No Party Preference",
       "other": "Other",
       "placeholder": "Your Political Party",
       "tooltip": "Many states require voters to designate a political party to be eligible to vote in primary elections. Choosing a political party is optional."
@@ -180,7 +180,10 @@
     "dob": {
       "label": "Date of Birth",
       "instructions": "",
-      "placeholder": "e.g. 01/31/1970"
+      "placeholder": "e.g. 01/31/1970",
+      "messages": {
+        "required": "Your date of birth is required."
+      }
     },
     "tel": {
       "label": "Your current phone number",
