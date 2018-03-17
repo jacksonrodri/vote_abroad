@@ -1,2 +1,2 @@
 rm pdftk-example.zip
-zip pdftk-example.zip pdftk.js bin/*
+zip pdftk-example.zip index.js bin/*
