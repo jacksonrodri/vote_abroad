@@ -11,11 +11,11 @@ process.env['LD_LIBRARY_PATH'] = process.env['LAMBDA_TASK_ROOT'] + '/bin';
 
 const pdfFiller = require('pdffiller-stream');
 
-const nameRegex = null;  
+const nameRegex = null;
 
 const shouldFlatten = false;
 
-module.exports.pdf = (event, context, callback) => {
+exports.handler = (event, context, callback) => {
   console.log('event', event.queryStringParameters)
   let rData = {
     'topmostSubform[0].Page1[0].last_name[0]': '',
@@ -51,7 +51,7 @@ module.exports.pdf = (event, context, callback) => {
     'topmostSubform[0].Page2[0].leo_address[0]': '',
     'topmostSubform[0].Page1[0].classification[0]': '',
     'topmostSubform[0].Page1[0].sex[0]': '',
-    'topmostSubform[0].Page1[0].rec_materials[0]': '' 
+    'topmostSubform[0].Page1[0].rec_materials[0]': ''
   };
   if(event.httpMethod === 'GET' && event.queryStringParameters){
     rData['topmostSubform[0].Page1[0].last_name[0]'] = event.queryStringParameters.lastName ? event.queryStringParameters.lastName : '';
@@ -67,7 +67,7 @@ module.exports.pdf = (event, context, callback) => {
     if(event.queryStringParameters.ssn && Number.isInteger(parseInt(event.queryStringParameters.ssn))){
       let ssn = event.queryStringParameters.ssn
       if(event.queryStringParameters.ssn.length < 5){
-        rData['topmostSubform[0].Page1[0].ssn3[0]'] = ssn 
+        rData['topmostSubform[0].Page1[0].ssn3[0]'] = ssn
       } else if(event.queryStringParameters.ssn.length < 7){
         rData['topmostSubform[0].Page1[0].ssn3[0]'] = ssn.substr(ssn.length - 4, 4)
         rData['topmostSubform[0].Page1[0].ssn2[0]'] = ssn.substr(0, ssn.length - 4)
@@ -158,7 +158,7 @@ module.exports.pdf = (event, context, callback) => {
       })()
     }
   } else if(event.httpMethod === 'POST'){
-    
+
   }
   const sourcePDF = "fpca.pdf";
   // pdfFiller.fillFormWithFlatten( sourcePDF, rData, shouldFlatten)
