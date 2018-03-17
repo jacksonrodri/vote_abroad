@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "full-icu": "^1.2.0",
+    "luxon": "^0.2.7",
+    "pdffiller-stream": "^0.2.0",
+    "util": "^0.10.3"
+  }
+}
