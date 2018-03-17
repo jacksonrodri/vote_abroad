@@ -351,7 +351,7 @@ export default {
     updateAlt () {
       this.alt1 = this.extendedAddress || this.streetAddress
       this.alt2 = this.extendedAddress ? this.streetAddress : this.formattedLocality
-      this.alt3 = this.extendedAddress ? this.formattedLocality : this.countryCode
+      this.alt3 = this.extendedAddress ? this.formattedLocality : this.countryName || this.countryCode
       this.alt4 = this.extendedAddress ? this.countryName || this.countryCode : ''
       this.alt5 = ''
     },
