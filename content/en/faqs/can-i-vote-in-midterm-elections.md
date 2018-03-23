@@ -1,5 +1,5 @@
 ---
-title: 2. CAN I VOTE IN MIDTERM ELECTIONS?
+title: Can I vote in midterm elections?
 categories:
   - category: Eligibility / First Time Voter
 relatedFaqs: []
