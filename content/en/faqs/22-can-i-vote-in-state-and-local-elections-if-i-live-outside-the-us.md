@@ -1,5 +1,5 @@
 ---
-title: 22. CAN I VOTE IN STATE AND LOCAL ELECTIONS IF I LIVE OUTSIDE THE US?
+title: Can I vote in state and local elections if I live outside the US?
 categories:
   - category: Eligibility / First Time Voter
   - category: Other Related Issues
