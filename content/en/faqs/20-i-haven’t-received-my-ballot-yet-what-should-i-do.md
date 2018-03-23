@@ -1,5 +1,5 @@
 ---
-title: '20. I HAVEN’T RECEIVED MY BALLOT YET, WHAT SHOULD I DO?:'
+title: 'I haven''t received my ballot yet, what should I do?'
 categories:
   - category: FWAB - Emergency Write-in Ballot
 relatedFaqs:
