@@ -1,7 +1,5 @@
 ---
-title: >-
-  4. HOW DO I REGISTER TO VOTE OR REQUEST A BALLOT AS A US CITIZEN LIVING
-  ABROAD?
+title: How to vote or request a ballo as a US citizen living abroad?
 categories:
   - category: Registration Process
 relatedFaqs:
