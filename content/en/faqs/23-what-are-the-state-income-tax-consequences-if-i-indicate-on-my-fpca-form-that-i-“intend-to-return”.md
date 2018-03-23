@@ -1,7 +1,7 @@
 ---
 title: >-
-  23. WHAT ARE THE STATE INCOME TAX CONSEQUENCES IF I INDICATE ON MY FPCA FORM
-  THAT I “INTEND TO RETURN”?
+  What are the state income tax consequences if I indicate on my FPCA form that
+  I "intend to return"?
 categories:
   - category: Registration Process
   - category: Other Related Issues
