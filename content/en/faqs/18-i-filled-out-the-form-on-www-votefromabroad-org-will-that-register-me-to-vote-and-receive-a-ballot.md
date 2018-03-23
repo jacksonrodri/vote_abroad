@@ -5,4 +5,4 @@ categories:
 relatedFaqs:
   - {}
 ---
-Great that you filled out the form! To finish the process you need to print your form, sign and send it in to your local election official back in the US. Only your local election official has the authority to register you to vote and send out ballots.
+To finish the process you still need to print your form, sign and send it in to your local election official back in the US. Only your local election official has the authority to register you to vote and send out ballots.
