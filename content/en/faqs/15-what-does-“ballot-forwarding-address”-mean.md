@@ -1,5 +1,5 @@
 ---
-title: '15. WHAT DOES “BALLOT FORWARDING ADDRESS” MEAN? '
+title: What does "ballot forwarding address" mean?
 categories:
   - category: Registration Process
 relatedFaqs:
