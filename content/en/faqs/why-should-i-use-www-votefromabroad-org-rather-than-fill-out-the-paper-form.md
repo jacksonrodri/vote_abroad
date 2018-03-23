@@ -1,5 +1,5 @@
 ---
-title: Why Should I Use VOTEFROMABROAD.ORG Rather Than Fill Out the Paper Form?
+title: Why Should I Use votefromabroad.org Rather Than Fill Out the Paper Form?
 categories:
   - category: Registration Process
 relatedFaqs:
