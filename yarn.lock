@@ -1231,9 +1231,9 @@ btoa@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/btoa/-/btoa-1.1.2.tgz#3e40b81663f81d2dd6596a4cb714a8dc16cfabe0"
 
-buefy@^0.6.3:
-  version "0.6.3"
-  resolved "https://registry.yarnpkg.com/buefy/-/buefy-0.6.3.tgz#9e9e4f4fd0193aaba42aab2af6da29513ac80b70"
+buefy@^0.6.4:
+  version "0.6.4"
+  resolved "https://registry.yarnpkg.com/buefy/-/buefy-0.6.4.tgz#a5447886c4c6311283f54555699991ed5179fa0a"
   dependencies:
     bulma "^0.6.2"
 

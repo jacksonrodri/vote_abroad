@@ -1,6 +1,9 @@
 const { API_ROOT, I18N } = require('./config')
 const axios = require('axios')
 
+// remove following line after buefy updates to 0.6.5
+global.HTMLElement = typeof window === 'undefined' ? Object : window.HTMLElement
+
 module.exports = {
   /*
   ** Headers of the page
