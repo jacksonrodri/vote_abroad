@@ -27,6 +27,24 @@ module.exports = {
         'getAll'
       ]
     }],
+    ['es/pages', {
+      page: '/page',
+      permalink: 'es/:slug',
+      isPost: false,
+      generate: [
+        'get',
+        'getAll'
+      ]
+    }],
+    ['es/faqs', {
+      page: 'faqs/_slug',
+      permalink: 'es/faqs/:slug',
+      isPost: false,
+      generate: [
+        'get',
+        'getAll'
+      ]
+    }],
     ['elections', {
       page: '/elections/_state',
       isPost: false,

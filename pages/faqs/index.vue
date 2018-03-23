@@ -21,7 +21,7 @@
 <script>
 export default {
   asyncData: async ({ app, route }) => ({
-    faqs: await app.$content('/en/faqs').getAll()
+    faqs: await app.$content(app.i18n.locale + '/faqs').getAll()
   }),
   computed: {
     categories: function () {

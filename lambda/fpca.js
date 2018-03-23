@@ -1,5 +1,5 @@
 'use strict';
-
+// require('./bin')
 var exec = require('child_process').exec;
 
 // Set the PATH and LD_LIBRARY_PATH environment variables.
