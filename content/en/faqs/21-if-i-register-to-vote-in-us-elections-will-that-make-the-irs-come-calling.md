@@ -1,7 +1,5 @@
 ---
-title: >-
-  21. IF I REGISTER TO VOTE IN US ELECTIONS, WILL THAT MAKE THE IRS COME
-  CALLING?
+title: 'If I register to vote in US elections, will that make the IRS come calling?'
 categories:
   - category: Other Related Issues
 relatedFaqs:
