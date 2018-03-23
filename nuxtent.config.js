@@ -10,7 +10,7 @@ module.exports = {
       ]
     }],
     ['en/pages', {
-      page: '/page',
+      page: '/_page',
       permalink: ':slug',
       isPost: false,
       generate: [
@@ -28,7 +28,7 @@ module.exports = {
       ]
     }],
     ['es/pages', {
-      page: '/page',
+      page: '/_page',
       permalink: 'es/:slug',
       isPost: false,
       generate: [
