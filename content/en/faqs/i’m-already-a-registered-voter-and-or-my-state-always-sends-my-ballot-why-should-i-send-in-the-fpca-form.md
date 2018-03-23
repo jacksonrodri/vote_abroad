@@ -1,7 +1,7 @@
 ---
 title: >-
-  7. I’M ALREADY A REGISTERED VOTER AND/OR MY STATE ALWAYS SENDS MY BALLOT, WHY
-  SHOULD I SEND IN THE FPCA FORM? 
+  I'm already a registered voter and/or my state always sends my ballot, why
+  should I send in the FPCA form?
 categories:
   - category: Registration Process
 relatedFaqs:
