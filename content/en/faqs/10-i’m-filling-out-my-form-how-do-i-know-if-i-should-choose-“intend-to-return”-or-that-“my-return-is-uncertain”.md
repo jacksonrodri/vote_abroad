@@ -1,6 +1,6 @@
 ---
 title: >-
-  I'm filling out my form, how do I choose between "Inten to return?" or "My
+  I'm filling out my form, how do I choose between "Intend to return?" or "My
   return is uncertain"?
 categories:
   - category: Registration Process
