@@ -1,7 +1,7 @@
 ---
 title: >-
-  10. I’M FILLING OUT MY FORM, HOW DO I KNOW IF I SHOULD CHOOSE “INTEND TO
-  RETURN” OR THAT “MY RETURN IS UNCERTAIN”?
+  I'm filling out my form, how do I choose between "Inten to return?" or "My
+  return is uncertain"?
 categories:
   - category: Registration Process
 relatedFaqs:
