@@ -1,5 +1,5 @@
 ---
-title: '13. I’M FILLING OUT MY FORM, WHAT SHOULD I LIST AS MY US VOTING ADDRESS?'
+title: 'I''m filling out my form, what should I list as my US voting address?'
 categories:
   - category: Registration Process
 relatedFaqs:
