@@ -1,7 +1,7 @@
 ---
 title: >-
-  12. I’M A US CITIZEN AND MY VOTER REGISTRATION WAS PREVIOUSLY REJECTED BECAUSE
-  I’VE NEVER RESIDED IN THE US. WHAT CAN I DO?
+  I'm a US citizen, but my voter registration was rejected because I've never
+  resided in the US. What can I do?
 categories:
   - category: US Citizens without Residency
 relatedFaqs:
