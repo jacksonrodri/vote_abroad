@@ -1,8 +1,8 @@
 ---
 title: >-
-  24. MY STATE SENDS ME A FULL BALLOT WITH BOTH STATE AND FEDERAL ELECTIONS. CAN
-  I PROTECT MYSELF FROM STATE INCOME TAX LIABILITY IF I ONLY VOTE FOR THE
-  FEDERAL OFFICES?
+  My state sends me a full ballot for both State and Federal elections. Do I
+  protect myself from state income tax liability if I only vote for Federal
+  offices?
 categories:
   - category: Other Related Issues
 relatedFaqs:
