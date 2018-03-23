@@ -1,5 +1,5 @@
 ---
-title: 16. CAN I REGISTER TO VOTE IN A DIFFERENT STATE?
+title: Can I register to vote in a different state?
 categories:
   - category: Registration Process
 relatedFaqs:
