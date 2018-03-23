@@ -1,7 +1,7 @@
 ---
 title: >-
-  17. THE FORM GIVES ME A CHOICE TO RECEIVE MY BALLOT BY EMAIL/ONLINE, FAX OR
-  MAIL. IS ANY OPTION BETTER? 
+  The form gives me a choice to receive my ballot by email/online, fax or mail.
+  Is any option better?
 categories:
   - category: Registration Process
 relatedFaqs:
