@@ -233,7 +233,7 @@
                         <span><strong>{{ currentRequest.votAdr.leo.c }}, </strong>
                         <strong>{{ currentRequest.votAdr.leo.s }} </strong>
                         <strong>{{ currentRequest.votAdr.leo.z }}</strong><br/></span>
-                        <span class="has-text-right"><strong>USA</strong><br/></span>
+                        <span class="has-text-right"><strong>United States of America</strong><br/></span>
                       </div>
                     </div>
                   </article>
@@ -369,7 +369,7 @@ export default {
           console.log(err.name + ': ' + err.message)
         })
     }
-    axios.get(encodeURI(`/api/fpca?firstName=${this.firstName || ''}&lastName=${this.lastName || ''}&middleName=${this.middleName || ''}&suffix=${this.suffix || ''}&ssn=${this.ssn || ''}&previousName=${this.previousName.previousName || ''}&dob=${this.dob || ''}&stateId=${this.stateId || ''}&votStreet=${this.votStreet || ''}&votApt=${this.votApt || ''}&votCity=${this.votCity || ''}&votState=${this.votState || ''}&votCounty=${this.votCounty || ''}&votZip=${this.votZip || ''}&abrAdr=${this.abrAdr ? this.abrAdr.alt1 : ''}\n${this.abrAdr ? this.abrAdr.alt2 : ''}\n${this.abrAdr ? this.abrAdr.alt3 : ''}\n${this.abrAdr ? this.abrAdr.alt4 : ''}\n${this.abrAdr ? this.abrAdr.alt5 : ''}&fwdAdr=${this.fwdAdr ? this.fwdAdr.alt1 : ''}\n${this.fwdAdr ? this.fwdAdr.alt2 : ''}\n${this.fwdAdr ? this.fwdAdr.alt3 : ''}\n${this.fwdAdr ? this.fwdAdr.alt4 : ''}\n${this.fwdAdr ? this.fwdAdr.alt5 : ''}&email=${this.email || ''}&altEmail=${this.altEmail || ''}&tel=${this.tel && this.tel.intNumber ? this.tel.intNumber : ''}&fax=${this.fax || ''}&party=${this.party || ''}&addlInfo=${this.addlInfo || ''}&date=${this.date || ''}&leoAdr=${this.leoAdr}&class=${this.voterClass || ''}&sex=${this.sex || ''}&recBallot=${this.recBallot || ''}&method=download`), {responseType: 'arraybuffer'})
+    axios.get(encodeURI(`/api/fpca?firstName=${this.firstName || ''}&lastName=${this.lastName || ''}&middleName=${this.middleName || ''}&suffix=${this.suffix || ''}&ssn=${this.ssn || ''}&previousName=${this.previousName.previousName || ''}&dob=${this.dob || ''}&stateId=${this.stateId || ''}&votStreet=${this.votStreet || ''}&votApt=${this.votApt || ''}&votCity=${this.votCity || ''}&votState=${this.votState || ''}&votCounty=${this.votCounty || ''}&votZip=${this.votZip || ''}&abrAdr=${this.abrAdr ? this.abrAdr.alt1 : ''}\n${this.abrAdr ? this.abrAdr.alt2 : ''}\n${this.abrAdr ? this.abrAdr.alt3 : ''}\n${this.abrAdr ? this.abrAdr.alt4 : ''}\n${this.abrAdr ? this.abrAdr.alt5 : ''}&fwdAdr=${this.fwdAdr ? this.fwdAdr.alt1 : ''}\n${this.fwdAdr ? this.fwdAdr.alt2 : ''}\n${this.fwdAdr ? this.fwdAdr.alt3 : ''}\n${this.fwdAdr ? this.fwdAdr.alt4 : ''}\n${this.fwdAdr ? this.fwdAdr.alt5 : ''}&email=${this.email || ''}&altEmail=${this.altEmail || ''}&tel=${this.tel && this.tel.intNumber ? this.tel.intNumber : ''}&fax=${this.fax || ''}&party=${this.party || ''}&addlInfo=${this.addlInfo || ''}&date=${this.date || ''}&leoAdr=${this.leoAdr}&class=${this.voterClass || ''}&sex=${this.sex || ''}&recBallot=${this.recBallot || ''}&leoName=${this.leoName || ''}&leoAddress=${this.leoAdr || ''}&leoFax=${this.leoFax || ''}&leoEmail=${this.leoEmail || ''}&leoPhone=${this.leoPhone || ''}&transmitOpts=${this.stateRules.ballotReceiptOptions.join(',')}&deadline=${'IMPORTANT: Your ballot must be received by XX to be able to vote in the November 6 general Election.'}`), {responseType: 'arraybuffer'})
       .then((response) => {
         // console.log(response)
         let blob = new Blob([response.data], {type: 'application/pdf'})
@@ -379,12 +379,25 @@ export default {
       })
   },
   methods: {
+    confirmPdfDownload () {
+      this.$dialog.alert({
+        title: 'Finished Downloading',
+        message: 'Your form has been downloaded (check your downloads folder).  You must <b>SIGN, DATE and SEND</b> it to your election official.',
+        confirmText: 'OK',
+        type: 'is-danger',
+        hasIcon: true,
+        icon: 'download',
+        iconPack: 'fas'
+      })
+    },
     openPdf () {
       window.open(this.pdf, '_blank')
       this.$router.push('/dashboard')
+      this.confirmPdfDownload()
     },
     finish () {
       this.$router.push('/dashboard')
+      this.confirmPdfDownload()
     },
     // getFPCA () {
     //   // axios.get('/api/fpca?firstName=Alex&lastName=Montgomery&middleName=Parry&suffix=&ssn=0116')
@@ -402,8 +415,17 @@ export default {
     //   })
     //   this.$router.push('/dashboard')
     // },
+    // currentRequest.votAdr.leo.n"><strong>{{ currentRequest.votAdr.leo.n }}</strong><br/></span>
+    //                     <span v-if="currentRequest.votAdr.leo.a1"><strong>{{ currentRequest.votAdr.leo.a1 }}</strong><br/></span>
+    //                     <span v-if="currentRequest.votAdr.leo.a2"><strong>{{ currentRequest.votAdr.leo.a2 }}</strong><br/></span>
+    //                     <span v-if="currentRequest.votAdr.leo.a3"><strong>{{ currentRequest.votAdr.leo.a3 }}</strong><br/></span>
+    //                     <span><strong>{{ currentRequest.votAdr.leo.c }}, </strong>
+    //                     <strong>{{ currentRequest.votAdr.leo.s }} </strong>
+    //                     <strong>{{ currentRequest.votAdr.leo.z
     getFPCA (method) {
-      axios.get(encodeURI(`/api/fpca?firstName=${this.firstName || ''}&lastName=${this.lastName || ''}&middleName=${this.middleName || ''}&suffix=${this.suffix || ''}&ssn=${this.ssn || ''}&previousName=${this.previousName.previousName || ''}&dob=${this.dob || ''}&stateId=${this.stateId || ''}&votStreet=${this.votStreet || ''}&votApt=${this.votApt || ''}&votCity=${this.votCity || ''}&votState=${this.votState || ''}&votCounty=${this.votCounty || ''}&votZip=${this.votZip || ''}&abrAdr=${this.abrAdr ? this.abrAdr.alt1 : ''}\n${this.abrAdr ? this.abrAdr.alt2 : ''}\n${this.abrAdr ? this.abrAdr.alt3 : ''}\n${this.abrAdr ? this.abrAdr.alt4 : ''}\n${this.abrAdr ? this.abrAdr.alt5 : ''}&fwdAdr=${this.fwdAdr ? this.fwdAdr.alt1 : ''}\n${this.fwdAdr ? this.fwdAdr.alt2 : ''}\n${this.fwdAdr ? this.fwdAdr.alt3 : ''}\n${this.fwdAdr ? this.fwdAdr.alt4 : ''}\n${this.fwdAdr ? this.fwdAdr.alt5 : ''}&email=${this.email || ''}&altEmail=${this.altEmail || ''}&tel=${this.tel && this.tel.intNumber ? this.tel.intNumber : ''}&fax=${this.fax || ''}&party=${this.party || ''}&addlInfo=${this.addlInfo || ''}&date=${this.date || ''}&leoAdr=${this.leoAdr}&class=${this.voterClass || ''}&sex=${this.sex || ''}&recBallot=${this.recBallot || ''}&method=${method}`), {responseType: 'arraybuffer'})
+      // let leo = this.currentRequest.votAdr.leo || null
+      // let leoAdrFmt = `${leo.n ? leo.n + '\n' : ''}${leo.a1 ? leo.a1 + '\n' : ''}${leo.a2 ? leo.a2 + '\n' : ''}${leo.a3 ? leo.a3 + '\n' : ''}${leo.c}, ${leo.s} ${leo.z}\nUnited States of America`
+      axios.get(encodeURI(`/api/fpca?firstName=${this.firstName || ''}&lastName=${this.lastName || ''}&middleName=${this.middleName || ''}&suffix=${this.suffix || ''}&ssn=${this.ssn || ''}&previousName=${this.previousName.previousName || ''}&dob=${this.dob || ''}&stateId=${this.stateId || ''}&votStreet=${this.votStreet || ''}&votApt=${this.votApt || ''}&votCity=${this.votCity || ''}&votState=${this.votState || ''}&votCounty=${this.votCounty || ''}&votZip=${this.votZip || ''}&abrAdr=${this.abrAdr ? this.abrAdr.alt1 : ''}\n${this.abrAdr ? this.abrAdr.alt2 : ''}\n${this.abrAdr ? this.abrAdr.alt3 : ''}\n${this.abrAdr ? this.abrAdr.alt4 : ''}\n${this.abrAdr ? this.abrAdr.alt5 : ''}&fwdAdr=${this.fwdAdr ? this.fwdAdr.alt1 : ''}\n${this.fwdAdr ? this.fwdAdr.alt2 : ''}\n${this.fwdAdr ? this.fwdAdr.alt3 : ''}\n${this.fwdAdr ? this.fwdAdr.alt4 : ''}\n${this.fwdAdr ? this.fwdAdr.alt5 : ''}&email=${this.email || ''}&altEmail=${this.altEmail || ''}&tel=${this.tel && this.tel.intNumber ? this.tel.intNumber : ''}&fax=${this.fax || ''}&party=${this.party || ''}&addlInfo=${this.addlInfo || ''}&date=${this.date || ''}&leoAdr=${this.leoAdr}&class=${this.voterClass || ''}&sex=${this.sex || ''}&recBallot=${this.recBallot || ''}&leoName=${this.leoName || ''}&leoAddress=${this.leoAdr || ''}&leoFax=${this.leoFax || ''}&leoEmail=${this.leoEmail || ''}&leoPhone=${this.leoPhone || ''}&transmitOpts=${this.stateRules.ballotReceiptOptions.join(',')}&deadline=${`IMPORTANT: Your ballot must be received by XX to be able to vote in the November 6 general Election.`}&method=${method}`), {responseType: 'arraybuffer'})
         .then((response) => {
           console.log(response)
           let blob = new Blob([response.data], {type: 'application/pdf'})
@@ -489,10 +511,16 @@ export default {
       return `${leo.n ? leo.n + '\n' : ''}${leo.a1 ? leo.a1 + '\n' : ''}${leo.a2 ? leo.a2 + '\n' : ''}${leo.a3 ? leo.a3 + '\n' : ''}${leo.c ? leo.c + ', ' : ''}${leo.s ? leo.s + ' ' : ''}${leo.z ? leo.z + '\n' : '\n'}United States of America`
     },
     leoEmail () {
-      return this.currentRequest.votAdr.leo.e || ''
+      return this.currentRequest.votAdr.leo && this.currentRequest.votAdr.leo.e ? this.currentRequest.votAdr.leo.e : ''
+    },
+    leoName () {
+      return this.currentRequest.votAdr.leo && this.currentRequest.votAdr.leo.n ? this.currentRequest.votAdr.leo.n : ''
     },
     leoFax () {
-      return '+1 ' + this.currentRequest.votAdr.leo.f || ''
+      return this.currentRequest.votAdr.leo && this.currentRequest.votAdr.leo.f ? '+1 ' + this.currentRequest.votAdr.leo.f : ''
+    },
+    leoPhone () {
+      return this.currentRequest.votAdr.leo && this.currentRequest.votAdr.leo.p ? '+1 ' + this.currentRequest.votAdr.leo.p : ''
     },
     ballotReceiptOptionsString () {
       if (!this.stateRules || this.stateRules.fpcaSubmitOptionsRequest.length === 0) {

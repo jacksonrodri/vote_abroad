@@ -305,7 +305,7 @@
           <!-- stats and buttons -->
           <div class="columns is-multiline is-centered">
             <div class="column">
-              <a href="">
+              <nuxt-link to="/FAQs">
                 <div class="notification is-info has-text">
                   <div class="media">
                     <div class="media-left">
@@ -319,11 +319,11 @@
                     </div>
                   </div>
                 </div>
-              </a>
+              </nuxt-link>
             </div>
 
             <div class="column">
-              <a href="">
+              <a @click="share">
                 <div class="notification is-danger has-text">
                   <div class="media">
                     <div class="media-left">
@@ -412,6 +412,19 @@ export default {
     states () { return new Set(this.requests.map(x => x.votAdr.regionCode)) },
     name () { return this.user && this.user.firstName ? this.user.firstName : this.requests && this.requests[0] && this.requests[0].firstName ? this.requests[0].firstName : '' },
     isAuthenticated: function () { return this.$store.getters['userauth/isAuthenticated'] }
+  },
+  methods: {
+    share () {
+      this.$dialog.alert({
+        title: 'Tell a friend about VoteFromAbroad',
+        message: 'To be added after launch',
+        confirmText: 'OK',
+        type: 'is-danger',
+        hasIcon: true,
+        icon: 'share',
+        iconPack: 'fas'
+      })
+    }
   }
 }
 </script>

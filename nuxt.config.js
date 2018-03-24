@@ -38,7 +38,7 @@ module.exports = {
   ],
   proxy: {
     '/api/fpca': {
-      target: 'https://svj2ivekgi.execute-api.us-east-1.amazonaws.com/dev/pdf/see',
+      target: 'https://svj2ivekgi.execute-api.us-east-1.amazonaws.com/dev/fpca',
       pathRewrite: {
         '^/api/fpca' : '/'
       }
