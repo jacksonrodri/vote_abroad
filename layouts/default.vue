@@ -57,7 +57,7 @@
                         {{ new Date(election.date).toLocaleDateString('en-US', {day: 'numeric'}) }}
                       </div>
                     </div>
-                     <span class="is-size-5"><span class="has-text-weight-semibold">{{ election.state }}</span> - {{ election.electionType}}</span>
+                     <span class="is-size-6"><span class="has-text-weight-semibold">{{ election.state }}</span> - {{ election.electionType}}</span>
                      <!-- </span> - {{ $t(`elections.electionTypes['${election.electionType}']`) }}</span> -->
                   </nuxt-link>
                   <hr class="navbar-divider">
@@ -167,14 +167,14 @@
     <div class="container">
       <nav class="level">
         <p class="level-item has-text-centered">
-          <a class="link is-info">Privacy</a>
+          <a class="link has-text-vfalight">Privacy</a>
         </p>
-        <p class="level-item has-text-centered is-size-7">
+        <p class="level-item has-text-centered is-size-7 has-text-vfalight">
           Public Service provided by Democratic Party Committee Abroad (DemocratsAbroad.org).<br/>
 This communication is not authorized by any candidate or candidate's committee.
         </p>
         <p class="level-item has-text-centered">
-          <a class="link is-info">Terms of Use</a>
+          <a class="link has-text-vfalight">Terms of Use</a>
         </p>
       </nav>
     </div>

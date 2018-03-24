@@ -14,7 +14,7 @@
           </button>
         </p>
         <p class="control">
-          <button @click="setUsesPreviousName(false)" :class="['button', 'is-outlined', {'is-success': !usesPreviousName}]">
+          <button @click="setUsesPreviousName(false)" :class="[baseClass, {'is-success': !usesPreviousName}]">
             <span v-show="!usesPreviousName" class="icon is-small">
               <i class="fas fa-check"></i>
             </span>
@@ -54,7 +54,12 @@ export default {
   },
   data () {
     return {
-      isOpen: false
+      isOpen: false,
+      baseClass: {
+        'is-medium': false,
+        'is-outlined': false,
+        button: true
+      }
     }
   },
   methods: {

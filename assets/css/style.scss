@@ -16,6 +16,8 @@ $vfalight: lighten($vfa, 65%);
 $vfalight-invert: findColorInvert($vfalight);
 $semitransparent: hsla(0, 0%, 96%, 0.45);
 $semitransparent-invert: $black;
+// $success: #5FAD41;
+// $success-invert: findColorInvert($success);
 
 // Setup $colors to use as bulma classes (e.g. 'is-twitter')
 $colors: (
@@ -161,7 +163,7 @@ $flag-icon-css-path: '/flags';
   border-style: outset;
   margin: 1px 8px -6px -10px;
   box-shadow: 2px 2px $light;
-  min-width: 3rem;
+  min-width: 2.6rem;
 }
 
 .calendar-month {
@@ -170,15 +172,15 @@ $flag-icon-css-path: '/flags';
   font-weight: bold;
   font-size: .75rem;
   line-height: .7rem;
-  padding: .1rem .2rem;
+  padding: .1rem .1rem;
   text-align: center;
 }
 
 .calendar-date {
   font-weight: bold;
-  font-size: 1.7rem;
+  font-size: 1.2rem;
   text-align: center;
-  line-height: 1.8rem;
+  line-height: 1.5rem;
 }
 
 .tabs a {

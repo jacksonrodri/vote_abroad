@@ -242,7 +242,7 @@ export default {
       alt4: '',
       alt5: '',
       isOpen: false,
-      suppressDropdown: true,
+      // suppressDropdown: true,
       countryList: []
     }
   },
@@ -359,7 +359,7 @@ export default {
       console.log('selected:', this.selected)
       console.log('option', option)
       if (option && option.place_id) {
-        this.suppressDropdown = true
+        // this.suppressDropdown = true
         axios.get(`${process.env.placesUrl + process.env.detailsEndpoint}?placeid=${option.place_id}$language=en&key=${process.env.placesKey}`)
           .then(({ data }) => {
             data.result.adr_address
@@ -403,12 +403,12 @@ export default {
       }
     },
     getAsyncData: debounce(function () {
-      if (this.suppressDropdown) {
-        this.$refs.region.isActive = false
-        this.$refs.thoroughfare.isActive = false
-        this.$refs.country.isActive = false
-        this.suppressDropdown = false
-      }
+      // if (this.suppressDropdown) {
+      //   this.$refs.region.isActive = false
+      //   this.$refs.thoroughfare.isActive = false
+      //   this.$refs.country.isActive = false
+      //   this.suppressDropdown = false
+      // }
       this.data = []
       this.updateAddress()
       console.log(this.streetAddress)

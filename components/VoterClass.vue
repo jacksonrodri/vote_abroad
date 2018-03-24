@@ -123,8 +123,8 @@ export default {
     return {
       milOrCiv: '',
       baseClass: {
-        'is-medium': true,
-        'is-outlined': true,
+        'is-medium': false,
+        'is-outlined': false,
         button: true
       },
       isOpen: false
