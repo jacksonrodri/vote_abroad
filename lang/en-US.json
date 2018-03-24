@@ -268,5 +268,12 @@
         "locality-required": "City is required"
       }
     }
+  },
+  "dashboard": {
+    "greeting": "Hello { name }",
+    "title": "Ballot Request Status",
+    "subtitle": "Next Steps...",
+    "todo": "Todo: ",
+    "requestStages": []
   }
 }
