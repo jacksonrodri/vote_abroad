@@ -24,7 +24,7 @@ export default {
     faqs: await app.$content(app.i18n.locale + '/faqs').getAll()
   }),
   computed: {
-    categories: function () {
+    try: function () {
       return this.faqs
         .map(x => x.categories.map(y => y.category)[0])
         .map(cat => ({
@@ -32,17 +32,12 @@ export default {
           faqs: this.faqs.filter(x => x.categories.map(x => x.category).reduce((acc, cur) => cur === cat ? true : acc, false))
         }))
     },
-    first: function () {
-      return this.faqs.filter(x => x.categories.map(x => x.category).indexOf('Eligibility / First Time Voter') > -1)
-    },
-    second: function () {
-      return this.faqs.map(x => x.categories.map(y => y.category).reduce((acc, cur) => cur === 'Eligibility / First Time Voter' ? true : acc, false))
-    },
-    third: function () {
-      return this.faqs.filter(x => x.categories.map(x => x.category).reduce((acc, cur) => cur === 'Eligibility / First Time Voter' ? true : acc, false))
-    },
-    fourth: function () {
-      return this.faqs.map(x => x.categories.map(y => y.category)[0])
+    categories: function () {
+      return [...new Set(this.faqs.map(x => x.categories).reduce((acc, cur) => acc.concat(cur), []).map(x => x.category))]
+        .map(subject => ({
+          category: subject,
+          faqs: this.faqs.filter(x => x.categories.map(x => x.category).indexOf(subject) > -1)
+        }))
     }
   }
 }
