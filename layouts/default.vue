@@ -140,18 +140,20 @@
       <nav class="tabs is-boxed is-fullwidth">
         <div class="container">
           <ul>
-            <li class="is-active">
-              <nuxt-link :to="localePath({ name: 'faqs-slug', params: { slug: 'how-do-i-vote-as-a-us-citizen-living-abroad' } })">How to<span class="is-hidden-touch">&nbsp;Vote From Abroad</span></nuxt-link>
+            <li :class="{'is-active': $route.path === localePath({ name: 'faqs-slug', params: { slug: 'how-do-i-vote-as-a-us-citizen-living-abroad' } })}">
+              <nuxt-link :to="localePath({ name: 'faqs-slug', params: { slug: 'how-do-i-vote-as-a-us-citizen-living-abroad' } })">
+                How to<span class="is-hidden-touch">&nbsp;Vote From Abroad</span>
+              </nuxt-link>
               <!-- <a>How to<span class="is-hidden-touch">&nbsp;Vote From Abroad</span></a> -->
             </li>
-            <li>
+            <li :class="{'is-active': $route.path === localePath('faqs')}">
               <nuxt-link :to="localePath('faqs')"><span class="is-hidden-touch">Voter Help Desk/</span>FAQ</nuxt-link>
             </li>
-            <li>
+            <li :class="{'is-active': $route.path === localePath({ name: 'page', params: {page: 'about-us'}})}">
               <nuxt-link :to="localePath({ name: 'page', params: {page: 'about-us'}})">About Us</nuxt-link>
               <!-- <a>About Us</a> -->
             </li>
-            <li>
+            <li :class="{'is-active': $route.path === localePath('states')}">
               <nuxt-link :to="localePath('states')">Election Official Directory</nuxt-link>
               <!-- <a>Election Official Directory</a> -->
             </li>
