@@ -9,5 +9,11 @@ module.exports = {
   'elections/_state': {
     en: '/elections/:state',
     es: '/spelections/:state'
+  },
+  privacy: {
+    es: 'privacidad'
+  },
+  'terms-of-use': {
+    es: 'terminos-de-Uso'
   }
 }
