@@ -167,14 +167,14 @@
     <div class="container">
       <nav class="level">
         <p class="level-item has-text-centered">
-          <nuxt-link :to="localePath('privacy')" class="link has-text-vfalight">Privacy</nuxt-link>
+          <nuxt-link to="/privacy" class="link has-text-vfalight">Privacy</nuxt-link>
         </p>
         <p class="level-item has-text-centered is-size-7 has-text-vfalight">
           Public Service provided by Democratic Party Committee Abroad (DemocratsAbroad.org).<br/>
 This communication is not authorized by any candidate or candidate's committee.
         </p>
         <p class="level-item has-text-centered">
-          <nuxt-link :to="localePath('terms-of-use')" class="link has-text-vfalight">Terms of Use</nuxt-link>
+          <nuxt-link to="/terms-of-use" class="link has-text-vfalight">Terms of Use</nuxt-link>
         </p>
       </nav>
     </div>
