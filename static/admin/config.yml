@@ -581,63 +581,53 @@ collections:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Subtitle", name: "subtitle", widget: "string"}
           - {label: "Todo", name: "todo", widget: "string"}
-          - label: "Request Stages"
-            name: "requestStages"
-            widget: "list"
-            allow_add: false
+          - label: "Fill & Sign Request Stage"
+            name: "fill"
+            widget: "object"
             fields:
-              - label: "Fill & Sign"
-                name: "fill"
-                widget: "object"
-                fields:
-                  - {label: "title", name: "title", widget: "string"}
-                  - {label: "icon", name: "icon", widget: "string"}
-                  - {label: "content", name: "content", widget: "markdown"}
-                  - {label: "Action Text", name: "actionText", widget: "string"}
-                  - {label: "Complete Text", name: "completeText", widget: "string"}
-              - label: "Send in Request"
-                name: "send"
-                widget: "object"
-                fields:
-                  - {label: "title", name: "title", widget: "string"}
-                  - {label: "icon", name: "icon", widget: "string"}
-                  - {label: "content", name: "content", widget: "markdown"}
-                  - {label: "Action Text", name: "actionText", widget: "string"}
-                  - {label: "Complete Text", name: "completeText", widget: "string"}
-              - label: "Receive Ballot"
-                name: "receive"
-                widget: "object"
-                fields:
-                  - {label: "title", name: "title", widget: "string"}
-                  - {label: "icon", name: "icon", widget: "string"}
-                  - {label: "content", name: "content", widget: "markdown"}
-                  - {label: "Action Text", name: "actionText", widget: "string"}
-                  - {label: "Complete Text", name: "completeText", widget: "string"}
-              - label: "Vote"
-                name: "vote"
-                widget: "object"
-                fields:
-                  - {label: "title", name: "title", widget: "string"}
-                  - {label: "icon", name: "icon", widget: "string"}
-                  - {label: "content", name: "content", widget: "markdown"}
-                  - {label: "Action Text", name: "actionText", widget: "string"}
-                  - {label: "Complete Text", name: "completeText", widget: "string"}
-          - label: "Action Buttons"
-            name: "actionButtons"
-            widget: "list"
-            allow_add: false
+              - {label: "title", name: "title", widget: "string"}
+              - {label: "icon", name: "icon", widget: "string"}
+              - {label: "content", name: "content", widget: "markdown"}
+              - {label: "Action Text", name: "actionText", widget: "string"}
+              - {label: "Complete Text", name: "completeText", widget: "string"}
+          - label: "Send in Request Stage"
+            name: "send"
+            widget: "object"
             fields:
-              - label: "learn"
-                name: "learn"
-                widget: "object"
-                fields:
-                  - {label: "title", name: "title", widget: "string"}
-                  - {label: "icon", name: "icon", widget: "string"}
-                  - {label: "content", name: "content", widget: "markdown"}
-              - label: "share"
-                name: "share"
-                widget: "object"
-                fields:
-                  - {label: "title", name: "title", widget: "string"}
-                  - {label: "icon", name: "icon", widget: "string"}
-                  - {label: "content", name: "content", widget: "markdown"}
+              - {label: "title", name: "title", widget: "string"}
+              - {label: "icon", name: "icon", widget: "string"}
+              - {label: "content", name: "content", widget: "markdown"}
+              - {label: "Action Text", name: "actionText", widget: "string"}
+              - {label: "Complete Text", name: "completeText", widget: "string"}
+          - label: "Receive Ballot Requet Stage"
+            name: "receive"
+            widget: "object"
+            fields:
+              - {label: "title", name: "title", widget: "string"}
+              - {label: "icon", name: "icon", widget: "string"}
+              - {label: "content", name: "content", widget: "markdown"}
+              - {label: "Action Text", name: "actionText", widget: "string"}
+              - {label: "Complete Text", name: "completeText", widget: "string"}
+          - label: "Vote Request Stage"
+            name: "vote"
+            widget: "object"
+            fields:
+              - {label: "title", name: "title", widget: "string"}
+              - {label: "icon", name: "icon", widget: "string"}
+              - {label: "content", name: "content", widget: "markdown"}
+              - {label: "Action Text", name: "actionText", widget: "string"}
+              - {label: "Complete Text", name: "completeText", widget: "string"}
+          - label: "Learn Action"
+            name: "learn"
+            widget: "object"
+            fields:
+              - {label: "title", name: "title", widget: "string"}
+              - {label: "icon", name: "icon", widget: "string"}
+              - {label: "content", name: "content", widget: "markdown"}
+          - label: "Share Action"
+            name: "share"
+            widget: "object"
+            fields:
+              - {label: "title", name: "title", widget: "string"}
+              - {label: "icon", name: "icon", widget: "string"}
+              - {label: "content", name: "content", widget: "markdown"}
