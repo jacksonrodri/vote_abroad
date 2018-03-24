@@ -74,7 +74,7 @@ module.exports = {
     minify: {
       collapseWhitespace: false
     },
-    routes: ['request/your-information', 'request/canvas', 'request/voting-information', 'request/id-and-contact-information']
+    routes: ['request/your-information', 'request/canvas', 'request/voting-information', 'request/id-and-contact-information', 'privacy', 'terms-of-use']
     // routes: ['/elections/AL', '/elections/AK', '/elections/AS', '/elections/AZ', '/elections/AR', '/elections/CA', '/elections/CO', '/elections/CT', '/elections/DE', '/elections/DC', '/elections/FL', '/elections/GA', '/elections/GU', '/elections/HI', '/elections/ID', '/elections/IL', '/elections/IN', '/elections/IA', '/elections/KS', '/elections/KY', '/elections/LA', '/elections/ME', '/elections/MD', '/elections/MA', '/elections/MI', '/elections/MN', '/elections/MS', '/elections/MO', '/elections/MT', '/elections/NE', '/elections/NV', '/elections/NH', '/elections/NJ', '/elections/NM', '/elections/NY', '/elections/NC', '/elections/ND', '/elections/OH', '/elections/OK', '/elections/OR', '/elections/PA', '/elections/undefined', '/elections/RI', '/elections/SC', '/elections/SD', '/elections/TN', '/elections/TX', '/elections/UT', '/elections/VT', '/elections/VI', '/elections/VA', '/elections/WA', '/elections/WV', '/elections/WI', '/elections/WY', '/request/', '/request/your-information/']
     // routes: function () {
     //   return axios.get('http://localhost:3000/content-api/elections/elections')
