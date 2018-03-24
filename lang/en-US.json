@@ -270,10 +270,47 @@
     }
   },
   "dashboard": {
-    "greeting": "Hello { name }",
-    "title": "Ballot Request Status",
-    "subtitle": "Next Steps...",
+    "fill": {
+      "title": "Fill & Sign",
+      "icon": "edit",
+      "content": "You must completely fill out your ballot request, sign and date it before sending it in.",
+      "actionText": "Edit my form",
+      "completeText": "Mark as complete."
+    },
+    "receive": {
+      "title": "Receive Ballot",
+      "icon": "inbox",
+      "content": "States must send out ballots at least 45 days prior to an election.  We recomend confirming with your local election official that they have accepted your request.",
+      "actionText": "Email my election official",
+      "completeText": "I've received my ballot"
+    },
+    "learn": {
+      "title": "Learn",
+      "icon": "graduation-cap",
+      "content": "about your rights as a voter abroad"
+    },
     "todo": "Todo: ",
-    "requestStages": []
+    "send": {
+      "title": "Send",
+      "icon": "paper-plane",
+      "content": "You must submit your request to your local election official in your town, county or state.  blah blah blah",
+      "actionText": "Send Request electronically",
+      "completeText": "I've already sent my form"
+    },
+    "vote": {
+      "title": "Vote",
+      "icon": "check",
+      "content": "Be sure to send in your voted ballot by the deadline of....",
+      "actionText": "Check my deadlines",
+      "completeText": "I've already voted"
+    },
+    "subtitle": "Next Steps...",
+    "title": "Ballot Request Status",
+    "greeting": "Hello { name }",
+    "share": {
+      "title": "Share",
+      "icon": "share",
+      "content": "Ask your friends to vote from abroad"
+    }
   }
 }
