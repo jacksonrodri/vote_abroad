@@ -114,6 +114,13 @@ $flag-icon-css-path: '/flags';
   .media-right {
     margin: 0 0 0.5rem;
   }
+
+  .breadcrumb span {
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 9ch;
+  }
 }
 
 // .flag-icon

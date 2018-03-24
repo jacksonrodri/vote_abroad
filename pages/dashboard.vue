@@ -218,7 +218,7 @@ export default {
           faqs: ['What state can I vote in?', 'Do I have to do this every year?']
         },
         {
-          title: 'Send<span class="is-hidden-mobile"> in Request</span>',
+          title: 'Send in Request',
           icon: 'paper-plane',
           content: 'You must submit your request to your local election official in your town, county or state.  blah blah blah',
           actionText: 'Send Request electronically',
