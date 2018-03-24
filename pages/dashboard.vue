@@ -131,12 +131,17 @@
                       <ul>
                         <li v-for="stage in requestStages" :key="stage.title">
                           <a @click="currentRequestStage = stage.title">
-                            <!-- <span :class="[{'has-text-primary': currentRequestStage === stage.title}, {'has-text-grey': currentRequestStage !== stage.title}, 'is-size-7-mobile']">
+                            <span :class="[{'has-text-primary': currentRequestStage === stage.title}, {'has-text-grey': currentRequestStage !== stage.title}, 'is-size-7-mobile']">
                               {{stage.title}}
-                            </span> -->
-                            <vue-markdown :html="true" :class="[{'has-text-primary': currentRequestStage === stage.title}, {'has-text-grey': currentRequestStage !== stage.title}, 'is-size-7-mobile']">
+                            </span>
+                            <!-- <vue-markdown :html="true" :class="[{'has-text-primary': currentRequestStage === stage.title}, {'has-text-grey': currentRequestStage !== stage.title}, 'is-size-7-mobile']">
                               {{stage.title}}
-                            </vue-markdown>
+                            </vue-markdown> -->
+                            <!-- <i18n path="request.stages.emailIntro"
+                              :class="[{'has-text-primary': currentRequestStage === stage.title}, {'has-text-grey': currentRequestStage !== stage.title}, 'is-size-7-mobile']"
+                              tag="vue-markdown"
+                              :html="true">
+                            </i18n> -->
                           </a>
                         </li>
                       </ul>
