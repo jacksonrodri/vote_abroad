@@ -69,11 +69,14 @@
                   Help
                 </a>
 
-                <div class="navbar-dropdown">
-                  <a class="navbar-item">
-                    Can I choose the state where I vote?
-                  </a>
-                  <a class="navbar-item">
+                <div class="navbar-dropdown is-right">
+                  <nuxt-link :to="localePath({ name: 'faqs-slug', params: { slug: faq.slug } })" v-for="(faq, index) in topFaqs" :key="index" class="navbar-item">
+                    <span class="panel-icon">
+                      <i class="far fa-question-circle"></i>
+                    </span>
+                    {{faq.title}}
+                  </nuxt-link>
+                  <!-- <a class="navbar-item">
                     I can't remember or find my exact street address - what do I do?
                   </a>
                   <a class="navbar-item">
@@ -84,7 +87,7 @@
                   </a>
                   <a class="navbar-item">
                     When will you send my ballot?
-                  </a>
+                  </a> -->
                   <hr class="navbar-divider">
                   <nuxt-link to="/FAQs" class="navbar-item">More FAQ's</nuxt-link>
                   <!-- <a class="navbar-item">
@@ -138,18 +141,18 @@
         <div class="container">
           <ul>
             <li class="is-active">
-              <nuxt-link to="/how-to">How to<span class="is-hidden-touch">&nbsp;Vote From Abroad</span></nuxt-link>
+              <nuxt-link :to="localePath({ name: 'faqs-slug', params: { slug: 'how-do-i-vote-as-a-us-citizen-living-abroad' } })">How to<span class="is-hidden-touch">&nbsp;Vote From Abroad</span></nuxt-link>
               <!-- <a>How to<span class="is-hidden-touch">&nbsp;Vote From Abroad</span></a> -->
             </li>
             <li>
-              <nuxt-link to="/FAQs"><span class="is-hidden-touch">Voter Help Desk/</span>FAQ</nuxt-link>
+              <nuxt-link :to="localePath('faqs')"><span class="is-hidden-touch">Voter Help Desk/</span>FAQ</nuxt-link>
             </li>
             <li>
-              <nuxt-link to="/about-us">About Us</nuxt-link>
+              <nuxt-link :to="localePath({ name: 'page', params: {page: 'about-us'}})">About Us</nuxt-link>
               <!-- <a>About Us</a> -->
             </li>
             <li>
-              <nuxt-link to="/election-officials">Election Official Directory</nuxt-link>
+              <nuxt-link :to="localePath('states')">Election Official Directory</nuxt-link>
               <!-- <a>Election Official Directory</a> -->
             </li>
           </ul>
@@ -189,7 +192,29 @@ export default {
   data () {
     return {
       isMobileMenuActive: false,
-      isLoginModalActive: false
+      isLoginModalActive: false,
+      topFaqs: [
+        {
+          title: 'I can\'t remember my last US address, how do I find it?',
+          slug: '14-i-can-t-remember-my-last-us-address-how-do-i-find-it'
+        },
+        {
+          title: 'I live outside the US, am I eligible to vote in US elections?',
+          slug: 'i-live-outside-the-us-am-i-eligible-to-vote-in-us-elections'
+        },
+        {
+          title: 'Can I register to vote in a different state?',
+          slug: '16-can-i-register-to-vote-in-a-different-state'
+        },
+        {
+          title: 'Why should I send in the form to request my ballot every calendar year?',
+          slug: '6-why-should-i-send-in-the-form-to-request-my-ballot-every-calendar-year'
+        },
+        {
+          title: 'Can I vote in midterm elections?',
+          slug: 'can-i-vote-in-midterm-elections'
+        }
+      ]
     }
   },
   components: {
