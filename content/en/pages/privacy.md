@@ -1,5 +1,5 @@
 ---
-title: Privacy
+title: Privacy Policy
 ---
 VoteFromAbroad.org is a nonpartisan voter registration tool provided as a public service by Democrats Abroad.
 
