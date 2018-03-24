@@ -123,184 +123,28 @@
                         </nav>
                       </div>
                       <div class="media-right">
-                        <!-- <a class="button is-outlined">
-                          <span class="icon is-small">
-                            <i class="fas fa-check"></i>
-                          </span>
-                          <span>I've done this</span>
-                        </a> -->
                       </div>
                     </article>
                   </div>
-                  <!-- <footer class="card-footer">
-                    <a href="#" class="card-footer-item">I need help</a>
-                    <a href="#" class="card-footer-item">Edit my request</a>
-                    <a href="#" class="card-footer-item">I've done this</a>
-                  </footer> -->
                   <footer class="card-footer">
                     <nav class="breadcrumb is-centered card-footer-item has-arrow-separator">
                       <ul>
                         <li v-for="stage in requestStages" :key="stage.title">
-                          <!-- &nbsp;
-                          <span class="icon is-small">
-                            <i :class="['fas', `fa-${stage.icon}`]"></i>
-                          </span> -->
                           <a @click="currentRequestStage = stage.title">
-                            <span :class="[{'has-text-primary': currentRequestStage === stage.title}, {'has-text-grey': currentRequestStage !== stage.title}, 'is-size-7-mobile']">
+                            <!-- <span :class="[{'has-text-primary': currentRequestStage === stage.title}, {'has-text-grey': currentRequestStage !== stage.title}, 'is-size-7-mobile']">
                               {{stage.title}}
-                            </span>
+                            </span> -->
+                            <vue-markdown :html="true" :class="[{'has-text-primary': currentRequestStage === stage.title}, {'has-text-grey': currentRequestStage !== stage.title}, 'is-size-7-mobile']">
+                              {{stage.title}}
+                            </vue-markdown>
                           </a>
                         </li>
-                        <!-- <li><a href="#"><span class="icon is-small"><i class="fas fa-paper-plane"></i></span><span class="is-size-7-mobile">Send</span></a></li>
-                        <li><a href="#"><span class="icon is-small"><i class="fas fa-phone"></i></span><span class="is-size-7-mobile">Confirm</span></a></li>
-                        <li><a href="#"><span class="icon is-small"><i class="fas fa-thumbs-up"></i></span><span class="is-size-7-mobile">Receive</span></a></li>
-                        <li><a href="#"><span class="icon is-small"><i class="fas fa-check"></i></span><span class="is-size-7-mobile">Vote</span></a></li> -->
                       </ul>
                     </nav>
                   </footer>
                 </div>
               </div>
             </div>
-            <!-- <div class="columns">
-              <div class="column">
-                <div class="hero is-vfa">
-                  <div class="hero-head columns is-multiline is-gapless">
-                    <div class="column notification is-radiusless is-vfa is-12">
-                      <h1 class="title has-text-white has-text-centered">Your Ballot Request Status</h1>
-                    </div>
-                    <div class="column hero navbar is-vfa">
-                        <div class="level">
-                          <a v-for="stage in requestStages" :key="stage.title" :class="['navbar-item', 'is-tab', 'level-item', 'has-text-centered', 'is-marginless', {'is-active': currentRequestStage === stage.title}]">
-                            <div>
-                              <p class="is-hidden-mobile"><span class="icon"><i :class="['fas', `fa-${stage.icon}`]"></i></span></p>
-                              <p><span class="heading is-size-6-mobile"><span class="icon is-hidden-tablet"><i :class="['fas', `fa-${stage.icon}`]"></i></span>{{ stage.title }}</span></p>
-                            </div>
-                          </a>
-                      </div>
-                    </div>
-                  </div>
-
-                    <div class="card is-borderless is-shadowless hero is-vfa">
-                      <div class="card-content">
-                        <p class="title">
-                          {{ requestStages.find(stage => currentRequestStage === stage.title).content }}
-                        </p>
-                        <button class="button is-primary">{{ requestStages.find(stage => currentRequestStage === stage.title).completeActionText }}</button>
-                      </div>
-                      <footer class="card-footer">
-                        <a v-for="(faq, index) in requestStages.find(stage => currentRequestStage === stage.title).faqs" :key="index" class="card-footer-item has-text-white">
-                          <span>
-                            {{ faq }}
-                          </span>
-                        </a>
-                        <a class="card-footer-item">
-                          <span class="has-text-primary">
-                            Ask the help desk.
-                          </span>
-                        </a>
-                      </footer>
-                    </div>
-                </div>
-
-              </div>
-            </div> -->
-            <!-- dashboard area -->
-            <!-- <div class="columns is-multiline">
-              <div class="column is-12-tablet is-6-desktop">
-                <div class="card">
-                  <header class="card-header">
-                    <p class="card-header-title title is-5">
-                      Your upcoming elections
-                    </p>
-                    <div class="card-header-icon">
-                      <div class="select">
-                        <select>
-                          <option selected>2018</option>
-                          <option>2019</option>
-                          <option>2020</option>
-                        </select>
-                      </div>
-                    </div>
-                  </header>
-                  <div class="card-content">
-                    <div>Elections content</div>
-                  </div>
-                  <footer class="card-footer">
-                    <p class="card-footer-item">
-                    </p>
-                    <p class="card-footer-item">
-                      <span>
-                        Are we missing an election?
-                      </span>
-                    </p>
-                  </footer>
-                </div>
-              </div>
-
-              <div class="column is-12-tablet is-6-desktop">
-                <div class="card">
-                  <header class="card-header">
-                    <p class="card-header-title title is-5">
-                      Your family's ballot requests
-                    </p>
-                    <div class="card-header-icon">
-                      <div class="select">
-                        <select>
-                          <option selected>2018</option>
-                          <option>2019</option>
-                          <option>2020</option>
-                        </select>
-                      </div>
-                    </div>
-                  </header>
-                  <div class="card-content">
-                    <div v-for="(request, index) in requests" :key="index">
-                      <div class="level is-marginless">
-                        <div class="level-left">
-                          <div>
-                            <p class="title is-5 is-marginless">
-                              <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" exact >{{ request && request.firstName ? request.firstName : '' }} {{ request && request.lastName ? request.lastName : ''}}</nuxt-link>
-                            </p>
-                          </div>
-                        </div>
-                        <div class="level-right">
-                          <div class="has-text-right">
-                            <span class="tag is-warning">In progress</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="level is-marginless">
-                        <div class="level-item">
-                          <nav class="breadcrumb is-small is-centered has-arrow-separator" aria-label="breadcrumbs">
-                            <ul>
-                              <li class="is-active"><a href="#"><strong class="has-text-info">Request a ballot</strong></a></li>
-                              <li><a href="#">Receive your ballot</a></li>
-                              <li><a href="#">Vote</a></li>
-                            </ul>
-                          </nav>
-                        </div>
-                        <div class="level-right">
-                        </div>
-                      </div>
-                      <div class="level">
-                        <div class="level-left">
-                        </div>
-                        <div class="level-right">
-                        <div class="has-text-right">
-                          <span class="button is-link is-outlined">Continue</span>
-                        </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <footer class="card-footer">
-                    <p class="card-footer-item">
-                    </p>
-                    <nuxt-link class="card-footer-item has-text-link" :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" exact >Add a family member</nuxt-link>
-                  </footer>
-                </div>
-              </div>
-            </div> -->
 
           <!-- stats and buttons -->
           <div class="columns is-multiline is-centered">
@@ -339,21 +183,6 @@
                 </div>
               </a>
             </div>
-
-            <!-- <div class="column is-12-tablet is-6-desktop is-3-widescreen">
-              <div class="notification is-warning has-text">
-                <p class="title is-3">Ask</p>
-                <p class="subtitle is-6">a friend to vote from abroad</p>
-              </div>
-            </div> -->
-
-            <!-- <div class="column is-12-tablet is-6-desktop is-3-widescreen">
-              <div class="notification is-success has-text">
-                <p class="title is-3">Support</p>
-                <p class="subtitle is-6">votefromabroad.org</p>
-              </div>
-            </div> -->
-
           </div>
         </div>
       </div>
@@ -363,11 +192,13 @@
 
 <script>
 import UserDashboard from '~/components/UserDashboard'
+import VueMarkdown from 'vue-markdown'
 
 export default {
   name: 'User-Account',
   components: {
-    UserDashboard
+    UserDashboard,
+    VueMarkdown
   },
   data () {
     return {
@@ -382,7 +213,7 @@ export default {
           faqs: ['What state can I vote in?', 'Do I have to do this every year?']
         },
         {
-          title: 'Send in Request',
+          title: 'Send<span class="is-hidden-mobile"> in Request</span>',
           icon: 'paper-plane',
           content: 'You must submit your request to your local election official in your town, county or state.  blah blah blah',
           actionText: 'Send Request electronically',

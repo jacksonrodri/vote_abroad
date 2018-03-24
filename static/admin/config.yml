@@ -573,3 +573,28 @@ collections:
                   - {label: "Full SSN Required", name: "fullSSNRequired", widget: "string"}
                   - {label: "Last 4 digits of SSN Required", name: "SSN4Required", widget: "string"}
                   - {label: "State (or other ID) Required", name: "stateIdRequired", widget: "string"}
+      - label: "Dashboard"
+        name: "dashboard"
+        widget: "object"
+        fields:
+          - {label: "Greeting", name: "greeting", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Subtitle", name: "subtitle", widget: "string"}
+          - {label: "Todo", name: "todo", widget: "string"}
+          - label: "Request Stages"
+            name: "requestStages"
+            widget: "list"
+            fields:
+              - {label: "title", name: "title", widget: "string"}
+              - {label: "icon", name: "icon", widget: "string"}
+              - {label: "content", name: "content", widget: "markdown"}
+              - {label: "Action Text", name: "actionText", widget: "string"}
+              - {label: "Complete Text", name: "completeText", widget: "string"}
+
+          - label: "Action Buttons"
+            name: "actionButtons"
+            widget: "list"
+            fields:
+              - {label: "title", name: "title", widget: "string"}
+              - {label: "icon", name: "icon", widget: "string"}
+              - {label: "content", name: "content", widget: "markdown"}
