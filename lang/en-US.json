@@ -153,7 +153,7 @@
       "faxIntro": "Sign and send your form by fax",
       "instructions4": "Confirm that the following information is correct. If you need to correct anything click 'Back.' When everything is correct click 'Next' for instructions on how to sign and send your form to your election official.",
       "emailIntro": "Sign and send your form by email",
-      "instructions5": "You must send your <strong class=\"has-text-danger\">signed</strong> ballot request to your Wake County election official by email, fax or mail.   Choose how to send your ballot request.",
+      "instructions5": "You must send your <strong class=\"has-text-danger\">signed</strong> ballot request to your {leo} election official by email, fax or mail.   Choose how to send your ballot request.",
       "stage1": "Your Information",
       "next": "Next",
       "mailSign": "Print, sign and date your form.",
