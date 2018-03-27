@@ -311,13 +311,13 @@ export default {
     formattedLocality () {
       let formatted = []
       if (this.localityFields) {
-        this.localityFields.forEach(x => {
+        this.localityFields.forEach((x, index, arr) => {
           if (x.localityname && this.locality) {
-            formatted.push(this.locality + ',')
+            formatted.push(this.locality + (index < arr.length - 1 ? ',' : ''))
           } else if (x.administrativearea && this.region) {
-            formatted.push(this.region)
+            formatted.push(this.region + (index < arr.length - 1 ? ',' : ''))
           } else if (x.postalcode && this.postalCode) {
-            formatted.push(this.postalcode)
+            formatted.push(this.postalCode + (index < arr.length - 1 ? ',' : ''))
           }
         })
       }
@@ -349,8 +349,8 @@ export default {
       this.$refs.thoroughfare.focus()
     },
     updateAlt () {
-      this.alt1 = this.extendedAddress || this.streetAddress
-      this.alt2 = this.extendedAddress ? this.streetAddress : this.formattedLocality
+      this.alt1 = this.streetAddress
+      this.alt2 = this.extendedAddress ? this.extendedAddress : this.formattedLocality
       this.alt3 = this.extendedAddress ? this.formattedLocality : this.countryName || this.countryCode
       this.alt4 = this.extendedAddress ? this.countryName || this.countryCode : ''
       this.alt5 = ''

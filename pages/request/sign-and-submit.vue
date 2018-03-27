@@ -8,7 +8,7 @@
           class="is-size-4"
           tag="vue-markdown"
           :html="true"
-          :places="{leo: `${currentRequest ? currentRequest.votAdr.leo.jurisdiction : ''}${currentRequest ? currentRequest.votAdr.leo.jurisdictionType : 'local'}`, options: ballotReceiptOptionsString}">
+          :places="{leo: `${leoName ? 'the ' + leoName : 'your local election official'}`, options: ballotReceiptOptionsString}">
         </i18n>
       </div>
 
