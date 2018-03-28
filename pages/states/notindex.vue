@@ -1,3 +1,3 @@
 <template>
-  <h1 class="title">State Election officials and Elections</h1>
+  <h1 class="title">Voting from abroad in your State</h1>
 </template>
