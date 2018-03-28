@@ -1,5 +1,5 @@
 ---
-title: '1. I live outside the US, am I eligible to vote in US elections?'
+title: 'I live outside the US, am I eligible to vote in US elections?'
 categories:
   - 
     category: Eligibility / First Time Voter

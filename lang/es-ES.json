@@ -28,7 +28,7 @@
     },
     "previousName": {
       "label": "Previous name(s)",
-      "yes": "Yes",
+      "yes": "Sí",
       "no": "No",
       "instructions": "Have you previously registered to vote under a different name?",
       "tooltip": "If you have previously voted with a different name, your election official may need to look you up using your previous name."
@@ -44,8 +44,8 @@
       "democratic": "Democratic",
       "republican": "Republican",
       "independent": "Independent",
-      "none": "No Party",
-      "other": "Other",
+      "none": "No Party Preference",
+      "other": "Otros",
       "placeholder": "Your Political Party",
       "tooltip": "Many states require voters to designate a political party to be eligible to vote in primary elections. Choosing a political party is optional."
     },
@@ -59,7 +59,10 @@
       "email": "Email or online",
       "mail": "Mail",
       "fax": "Fax",
-      "tooltip": "You may request to receive your blank ballot by email/online, fax or mail. We encourage voters to request their blank ballot be sent by email/online or fax to avoid the delay associated with mail  and the possibility the ballot will be lost in transit."
+      "tooltip": "You may request to receive your blank ballot by email/online, fax or mail. We encourage voters to request their blank ballot be sent by email/online or fax to avoid the delay associated with mail  and the possibility the ballot will be lost in transit.",
+      "messages": {
+        "required": "This is required.  Please select how you would like to receive your ballot."
+      }
     },
     "stateSpecial": {
       "label": "{state} Specific Rules"
@@ -71,9 +74,12 @@
     },
     "isRegistered": {
       "label": "Are you already registered to vote in {jurisdiction}?",
-      "yes": "Yes",
+      "yes": "Sí",
       "no": "No",
-      "unsure": "Not Sure"
+      "unsure": "Not Sure",
+      "messages": {
+        "required": "This is required."
+      }
     },
     "akRules": {
       "label": "What proof will you provide? (You must also attach a photocopy with your submission)",
@@ -88,6 +94,11 @@
       "whatCivType": "Are you abroad temporarily or indefinitely?",
       "whatMilType": "What type of military voter are you?",
       "militaryType": "Military",
+      "messages": {
+        "typeRequired": "This is required",
+        "civilianRequired": "Please select your overseas status",
+        "militaryRequired": "Please select your military status"
+      },
       "military": "Active Duty Military",
       "neverResided": "Never Resided",
       "civilianOrMilitary": "Are you a civilian or military voter?",
@@ -104,7 +115,6 @@
     },
     "votAdr": {
       "zip": "Zip",
-      "jurisdiction": "",
       "street": "Street",
       "tooltip": "Use the **residence address** of the last place you lived in the US. If you have never resided in the US, use the residence address of the last place your US parent(s) lived in the US. If your US parents last lived in the US in different locations, you may choose which one to use as your voting address.",
       "instructions": "Input the last address where you lived in the US. If you have never lived in the US, use the last US address of your US citizen parent(s).",
@@ -112,7 +122,10 @@
       "county": "County",
       "city": "City",
       "messages": {
-        "required": "This field is required so your election official can send you the correct ballot."
+        "street-required": "Street address is required",
+        "city-required": "City is required",
+        "State-required": "State is required",
+        "zip-required": "Zip is required"
       },
       "state": "State",
       "label": "Voting Address"
@@ -138,23 +151,23 @@
       "mailConfirm": "<strong class='has-text-danger'>Confirm</strong> with your local election official that they received it.",
       "step": "Step {step} of 5",
       "faxIntro": "Sign and send your form by fax",
-      "instructions4": "Confirm that the following information is correct. If you need to correct anything click 'Back.' When everything is correct click 'Sign and submit' for instructions on how to send your form to your election official.",
+      "instructions4": "Confirm that the following information is correct. If you need to correct anything click 'Back.' When everything is correct click 'Next' for instructions on how to sign and send your form to your election official.",
       "emailIntro": "Sign and send your form by email",
-      "instructions5": "You must send your <strong class=\"has-text-danger\">signed</strong> ballot request to your Wake County election official by email, fax or mail.   Choose how to send your ballot request.",
+      "instructions5": "You must send your <strong class=\"has-text-danger\">signed</strong> ballot request to {leo} by email, fax or mail.   Choose how to send your ballot request.",
       "stage1": "Your Information",
       "next": "Next",
       "mailSign": "Print, sign and date your form.",
       "sendEmail": "Send Email",
       "stage2": "Voting Information",
       "stage3": "ID & Contact Information",
-      "generate": "Generate & Review your form",
+      "generate": "Next",
       "sendFax": "Send Fax electronically",
       "mailIntro": "Download, print, sign and send your form by postal mail",
       "stage4": "Review your form",
       "stage5": "Sign and Submit",
       "mail": "Mail",
       "mailPost": "Mail your form to:",
-      "submit": "Instructions for sending",
+      "submit": "Next",
       "emailSign": "<strong class='has-text-danger'>Sign and Date</strong> your form",
       "faxSign": "<strong class='has-text-danger'>Sign and Date</strong> your form",
       "email": "Email",
@@ -167,7 +180,10 @@
     "dob": {
       "label": "Date of Birth",
       "instructions": "",
-      "placeholder": "e.g. 01/31/1970"
+      "placeholder": "e.g. 01/31/1970",
+      "messages": {
+        "required": "Your date of birth is required."
+      }
     },
     "tel": {
       "label": "Your current phone number",
@@ -187,6 +203,11 @@
       "instructionsOptional": "Optional. Providing **either** the last 4 digits of your Social Security Number **OR** your State ID may help your election official find your voting record.",
       "SSN4": "the last 4 digits of your Social Security Number",
       "MilitaryID": "Military ID",
+      "messages": {
+        "fullSSNRequired": "You must provide your full Social Security Number if you have one",
+        "SSN4Required": "You must provide the last 4 digits of your Social Security Number if you have one",
+        "stateIdRequired": "You must provide at least ONE of valid form of ID (from the list above) if you have it.  "
+      },
       "StateID": "State ID",
       "SSN": "your full Social Security Number",
       "label": "Identification",
@@ -198,7 +219,8 @@
       "instructionsReq1": "{state} voters must provide a {id}.  If you don't have {id}, please select **I don't have a {id}.**",
       "instructionsReq2": "{state} voters must provide **ONE** of the following forms of identification: {allButLastTypes} or {lastType}. If you don't have any of these, please select **'I don't have the above identification.'**",
       "PassportNumber": "Passport Number",
-      "TribalID": "Tribal ID"
+      "TribalID": "Tribal ID",
+      "NYDMVID": "NY DMV Issued ID"
     },
     "firstName": {
       "label": "First Name",
@@ -210,8 +232,8 @@
       }
     },
     "fwdAdr": {
-      "label": "What address would you like your ballot sent to?",
-      "instructions": "Input your forwarding address",
+      "label": "Forwarding Address (optional)",
+      "instructions": "If you would like your ballot sent to a different address such as a P.O. box or forwarding address, enter it here.",
       "tooltip": "This is optional. Please provide a forwarding address only if you request your blank ballot be sent to you by mail and you do not want it mailed to your current residence address outside the US. If you are uncertain what your mailing address will be when ballots are due to be sent out, you may have your blank ballot sent to a reliable third-party, such as a University student office or postal box.",
       "question": "Would you like your ballot sent to a different address than your residential address?",
       "yes": "Yes",
@@ -239,7 +261,56 @@
       "tooltip": "You must provide your current residence address outside the US for informational purposes. Please provide your address outside the US even if you request your blank ballot be sent to you by email/online or fax.",
       "unstructured-label": "I need to use a different format for my address.",
       "structured-label": "Use the standard international format for my address.",
-      "changeFormat": "Change Format"
+      "changeFormat": "Change Format",
+      "messages": {
+        "country-required": "You must provide your country of residence. (Outside the United States)",
+        "thoroughfare-required": "You must provide your street address",
+        "locality-required": "City is required"
+      }
+    }
+  },
+  "dashboard": {
+    "fill": {
+      "title": "Fill & Sign",
+      "icon": "edit",
+      "content": "You must completely fill out your ballot request, sign and date it before sending it in.",
+      "actionText": "Edit my form",
+      "completeText": "Mark as complete."
+    },
+    "receive": {
+      "title": "Receive Ballot",
+      "icon": "inbox",
+      "content": "States must send out ballots at least 45 days prior to an election.  We recomend confirming with your local election official that they have accepted your request.",
+      "actionText": "Email my election official",
+      "completeText": "I've received my ballot"
+    },
+    "learn": {
+      "title": "Learn",
+      "icon": "graduation-cap",
+      "content": "about your rights as a voter abroad"
+    },
+    "todo": "Todo: ",
+    "send": {
+      "title": "Send",
+      "icon": "paper-plane",
+      "content": "You must submit your request to your local election official in your town, county or state.  blah blah blah",
+      "actionText": "Send Request electronically",
+      "completeText": "I've already sent my form"
+    },
+    "vote": {
+      "title": "Vote",
+      "icon": "check",
+      "content": "Be sure to send in your voted ballot by the deadline of....",
+      "actionText": "Check my deadlines",
+      "completeText": "I've already voted"
+    },
+    "subtitle": "Next Steps...",
+    "title": "Ballot Request Status",
+    "greeting": "Hello { name }",
+    "share": {
+      "title": "Share",
+      "icon": "share",
+      "content": "Ask your friends to vote from abroad"
     }
   }
 }

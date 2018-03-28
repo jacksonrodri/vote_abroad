@@ -1,6 +1,6 @@
 ---
 title: >-
-  8. HOW DO I CHECK IF I AM REGISTERED TO VOTE AND/OR IF MY BALLOT REQUEST WAS RECEIVED? HOW DO I CHECK THAT I WILL RECEIVE A BALLOT?
+  How do I check if I am registered to vote and/or if my ballot request was received? How do I check that I will receive a ballot?
 categories:
   - 
     category: Registration Process

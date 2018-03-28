@@ -1,5 +1,5 @@
 ---
-title: FPCA Sentencia
+title: FPCA Ruling
 slug: fpca_rules
 ---
-Hola mundo.
+Hello World.

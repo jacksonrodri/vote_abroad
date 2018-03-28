@@ -1,5 +1,11 @@
 <template>
-  <h1 class="title">Voting from abroad in your State</h1>
+<div>
+  <!-- <h1 class="title">Voting from abroad in your State</h1> -->
+  <h1 class="title">
+    {{ page.title }}
+  </h1>
+  <nuxtent-body class="content" :body="page.body" />
+</div>
 </template>
 <script>
 export default {
