@@ -1,7 +1,7 @@
 <template>
-  <section class="container">
+  <section class="section">
     <div class="columns is-centered">
-      <div class="column is-8">
+      <div class="column is-10 is-8-desktop is-7-widescreen is-6-fullhd is-paddingless">
         <h1 class="title">
           {{ state.state }}
         </h1>
@@ -49,7 +49,7 @@ export default {
   async asyncData ({ app, params }) {
     return {
       elections: (await app.$content('/elections').get('elections')).body.filter(election => election.state && params.state && election.state.toLowerCase() === params.state.toLowerCase()),
-      state: (await app.$content('/rls').get(`states/${params.state}`))
+      state: (await app.$content('/rls').get(`states/${params.state.toLowerCase()}`))
     }
   },
   head: {

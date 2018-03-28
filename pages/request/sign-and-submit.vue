@@ -387,13 +387,24 @@ export default {
         type: 'is-danger',
         hasIcon: true,
         icon: 'download',
-        iconPack: 'fas'
+        iconPack: 'fas',
+        onConfirm: () => this.$router.push('/dashboard')
       })
     },
     openPdf () {
-      window.open(this.pdf, '_blank')
-      this.$router.push('/dashboard')
-      this.confirmPdfDownload()
+      this.$dialog.alert({
+        title: 'Finished Downloading',
+        message: 'Your form has been downloaded (check your downloads folder).  You must <b>SIGN, DATE and SEND</b> it to your election official.',
+        confirmText: 'OK',
+        type: 'is-danger',
+        hasIcon: true,
+        icon: 'download',
+        iconPack: 'fas',
+        onConfirm: () => { this.$router.push('/dashboard'); window.open(this.pdf, '_blank') }
+      })
+      // window.open(this.pdf, '_blank')
+      // this.$router.push('/dashboard')
+      // this.confirmPdfDownload()
     },
     finish () {
       this.$router.push('/dashboard')

@@ -5,9 +5,10 @@
       <div class="article-lead">
         <h1 class="article-title">{{ page.title }}</h1>
       </div>
-      <section class="article-body">
+      <!-- <section class="article-body">
         <div v-html="page.body"></div>
-      </section>
+      </section> -->
+      <nuxtent-body class="content" :body="page.body" />
     </div>
   </div>
 <!-- </div> -->

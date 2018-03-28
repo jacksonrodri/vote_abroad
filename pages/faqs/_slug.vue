@@ -7,7 +7,7 @@
           <h1 class="title is-4">{{ page.title }}</h1>
         </div>
         <section slot="content" class="content">
-          <div v-html="page.body"></div>
+          <nuxtent-body class="content" :body="page.body" />
         </section>
         <div slot="closer" class="article-closer"><img v-if="page.image" :src="`/img/articles/${page.image}`" class="article-image"/>
           <p v-if="page.quote" class="article-quote">{{ page.quote }}</p>
