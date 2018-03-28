@@ -198,7 +198,7 @@ export default {
     )
   },
   mounted () {
-    console.log(this.$refs)
+    // console.log(this.$refs)
     if (this.value) {
       this.postOfficeBox = this.value.poBox || ''
       this.extendedAddress = this.value.premise || ''
@@ -356,21 +356,22 @@ export default {
       this.alt5 = ''
     },
     fillData (option) {
-      console.log('selected:', this.selected)
-      console.log('option', option)
+      // console.log('selected:', this.selected)
+      // console.log('option', option)
       if (option && option.place_id) {
         // this.suppressDropdown = true
-        axios.get(`${process.env.placesUrl + process.env.detailsEndpoint}?placeid=${option.place_id}$language=en&key=${process.env.placesKey}`)
+        axios.get(`${process.env.placesUrl + process.env.detailsEndpoint}?placeid=${option.place_id}&language=en&key=${process.env.placesKey}`)
           .then(({ data }) => {
+            // console.log(data.result)
             data.result.adr_address
               .split(/<span class="|">|<\/span>,?\s?/)
               .filter(e => e)
               .forEach((item, index, arr) => {
-                console.log(index, item)
+                // console.log(index, item)
                 var myRe = /post-office-box|extended-address|street-address|locality|region|postal-code|country-name/g
                 if (index === 0 && !myRe.test(item)) {
                   this.extendedAddress = item
-                  console.log(`extended-address = ${item}`)
+                  // console.log(`extended-address = ${item}`)
                 } else if (item === 'country-name') {
                   data.result['address_components'].forEach(x => {
                     if (x.types[0] === 'country') {
@@ -396,7 +397,7 @@ export default {
                       this.postalCode = arr[index + 1]
                       break
                   }
-                  console.log(`${item} = ${arr[index + 1]}`)
+                  // console.log(`${item} = ${arr[index + 1]}`)
                 }
               })
           })
@@ -411,7 +412,7 @@ export default {
       // }
       this.data = []
       this.updateAddress()
-      console.log(this.streetAddress)
+      // console.log(this.streetAddress)
       this.isFetching = true
       axios.get(`${process.env.placesUrl + process.env.autocompleteEndpoint}?input=${this.streetAddress}&types=geocode&language=en${this.cCountryCode && this.cCountryCode !== 'un' ? '&components=country:' + this.cCountryCode : ''}&key=${process.env.placesKey}`)
         .then(({ data }) => {

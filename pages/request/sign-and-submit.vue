@@ -344,8 +344,10 @@ export default {
       signature: '',
       hasCamera: false,
       downloadAttrSupported: false,
+      needsMsSaveOrOpenBlob: false,
       isSigning: false,
-      pdf: ''
+      pdf: '',
+      msPdf: ''
     }
   },
   mounted () {
@@ -356,6 +358,7 @@ export default {
     // }
     if (process.browser) {
       feat.downloadAttrSupported = ('download' in document.createElement('a'))
+      feat.needsMsSaveOrOpenBlob = Boolean(window.navigator.msSaveOrOpenBlob)
       if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
         feat.hasCamera = false
         return
@@ -373,6 +376,7 @@ export default {
       .then((response) => {
         // console.log(response)
         let blob = new Blob([response.data], {type: 'application/pdf'})
+        this.msPdf = blob
         this.pdf = window.URL.createObjectURL(blob)
         // let pdfile = new File([response.data], 'fpcafile.pdf', {type: 'application/pdf'})
         // this.pdf = pdfile
@@ -394,17 +398,24 @@ export default {
     openPdf () {
       this.$dialog.alert({
         title: 'Finished Downloading',
-        message: 'Your form has been downloaded (check your downloads folder).  You must <b>SIGN, DATE and SEND</b> it to your election official.',
+        message: 'Clicking \'OK\' will open a new window with your completed form.  You must <b>SIGN, DATE and SEND</b> it to your election official.',
         confirmText: 'OK',
         type: 'is-danger',
         hasIcon: true,
         icon: 'download',
         iconPack: 'fas',
-        onConfirm: () => { this.$router.push('/dashboard'); window.open(this.pdf, '_blank') }
+        onConfirm: () => { this.$router.push('/dashboard'); this.openPdfNewWindow() }
       })
       // window.open(this.pdf, '_blank')
       // this.$router.push('/dashboard')
       // this.confirmPdfDownload()
+    },
+    openPdfNewWindow () {
+      if (this.needsMsSaveOrOpenBlob) {
+        window.navigator.msSaveOrOpenBlob(this.msPdf, `${this.firstName}-${this.lastName}-2018-fpca.pdf`)
+      } else {
+        window.open(this.pdf, '_blank')
+      }
     },
     finish () {
       this.$router.push('/dashboard')

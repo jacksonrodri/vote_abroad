@@ -7,9 +7,9 @@
         <p class="is-size-5">{{ $t('request.stages.instructions4')}}</p>
       </div>
       <!-- <div class="control buttons"> -->
-        <nuxt-link :to="localePath({ name: 'request-stage', params: {stage: 'id-and-contact-information'} })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>{{$t('request.stages.back')}}</span></nuxt-link>
+        <!-- <nuxt-link :to="localePath({ name: 'request-stage', params: {stage: 'id-and-contact-information'} })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>{{$t('request.stages.back')}}</span></nuxt-link> -->
         <!-- <div class="button is-text is-expanded">&nbsp;</div> -->
-        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'sign-and-submit'} })" class="button is-primary is-medium is-pulled-right" exact ><span>{{$t('request.stages.submit')}}</span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link>
+        <!-- <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'sign-and-submit'} })" class="button is-primary is-medium is-pulled-right" exact ><span>{{$t('request.stages.submit')}}</span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link> -->
       <!-- </div> -->
   </div>
   <div class="column is-12 is-10-desktop is-8-widescreen is-7-fullhd is-paddingless">
