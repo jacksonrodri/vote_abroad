@@ -154,7 +154,7 @@
               <!-- <a>About Us</a> -->
             </li>
             <li :class="{'is-active': $route.path === localePath('states')}">
-              <nuxt-link :to="localePath('states')">Election Official Directory</nuxt-link>
+              <nuxt-link :to="localePath('states')">State Voting Guide</nuxt-link>
               <!-- <a>Election Official Directory</a> -->
             </li>
           </ul>
