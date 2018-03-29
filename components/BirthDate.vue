@@ -1,7 +1,7 @@
 <template>
   <div class="field">
-    <b-field :label="$t('request.dob.label')"
-      :message="validations.$error ? Object.keys(validations.$params).map(x => $t(`request.dob.messages.${x}`)) : '' "
+  <span class="is-flex"><label class="label">{{ $t('request.dob.label') }}</label><span @click="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
+    <b-field :message="validations.$error ? Object.keys(validations.$params).map(x => $t(`request.dob.messages.${x}`)) : '' "
       :type="(validations.$error ? 'is-danger': '')">
       <b-datepicker
         v-model="dobb"
@@ -16,6 +16,9 @@
         icon="calendar"
         icon-pack="fas"></b-datepicker>
     </b-field>
+    <b-message :title="toolTipTitle" type="is-info" has-icon :active.sync="isOpen">
+      <slot name="tooltip"></slot>
+    </b-message>
   </div>
 </template>
 
@@ -27,7 +30,8 @@ export default {
   ],
   data () {
     return {
-      dob: null
+      dob: null,
+      isOpen: false
     }
   },
   computed: {

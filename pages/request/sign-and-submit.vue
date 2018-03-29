@@ -43,12 +43,14 @@
                         <span place="device">Computer</span>
                       </i18n>
                       <br>
-                      <button class="button is-pulled-right is-primary" @click="isSignatureModalActive = true"><b-icon icon="camera" size="is-small"></b-icon><span>{{$t('request.stages.sign')}}</span></button>
+                      <!-- <button class="button is-pulled-right is-primary" @click="isSignatureModalActive = true"><b-icon icon="camera" size="is-small"></b-icon><span>{{$t('request.stages.sign')}}</span></button> -->
+                      <nuxt-link class="button is-pulled-right is-primary" to="sign"><b-icon icon="camera" size="is-small"></b-icon><span>{{$t('request.stages.sign')}}</span></nuxt-link>
                       <!-- {{ hasCamera ? "you have a camera" : "you don't have a camera" }}
                       {{ downloadAttrSupported ? "this browser supports the download attribute" : "this browser doesn't support the download attribute"}}
                       <embed type="application/pdf" :src="pdf" /> -->
                     </div>
                   </article>
+                  <nuxt-child/>
                   <article class="media">
                     <figure class="media-left">
                       <span class="icon is-large">
@@ -75,6 +77,7 @@
                   </article>
                 </div>
               </article>
+              <!-- <nuxt-child/> -->
             </section>
           </b-tab-item>
           <b-tab-item label="Fax"
@@ -295,8 +298,9 @@
     </section>
 
     <b-modal :active.sync="isSignatureModalActive">
-      <div class="box">instructions</div>
-      <sign v-show="isSigning" @sigcap="addSig" />
+      <div class="box">instructions
+        <sign v-show="isSigning" @sigcap="addSig" />
+      </div>
     </b-modal>
     </div>
   </div>

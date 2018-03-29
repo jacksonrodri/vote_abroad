@@ -10,9 +10,9 @@
       </ol>
       <div class="signature">
         <div class="signatureline"></div>
-        <div>
+        <div style="position:relative;">
           <video v-show="isCapture"
-            style="position:absolute"
+            style="position:absolute;top:0;right:0;z-index:-1;"
             @play="timerCallback()"
             v-bind:width="width"
             v-bind:height="height"

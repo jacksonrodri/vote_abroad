@@ -202,7 +202,11 @@
       <birth-date
         :validations="$v.dob"
         ref="dob"
-        @input="delayTouch($v.dob)"></birth-date>
+        @input="delayTouch($v.dob)">
+        <div slot="tooltip">
+          <vue-markdown>{{$t('request.dob.tooltip')}}</vue-markdown>
+        </div>
+      </birth-date>
 
       <!-- gender -->
       <gender
