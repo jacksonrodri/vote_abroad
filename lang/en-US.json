@@ -37,7 +37,8 @@
       "label": "Sex",
       "male": "Male",
       "female": "Female",
-      "tooltip": "This is only required for Idaho voters."
+      "decline": "Decline to State",
+      "tooltip": "Most states do not require gender information, but a few, like ID and SC, still do. If you decline to state a gender and your state requires it, your state must let you know that you need to fill in the missing information."
     },
     "party": {
       "label": "Your Political Party",
@@ -63,6 +64,13 @@
       "messages": {
         "required": "This is required.  Please select how you would like to receive your ballot."
       }
+    },
+    "joinDa": {
+      "label": "Would you like to Join Democrats Abroad?",
+      "male": "",
+      "female": "",
+      "alreadyMember": "",
+      "tooltip": ""
     },
     "stateSpecial": {
       "label": "{state} Specific Rules"
