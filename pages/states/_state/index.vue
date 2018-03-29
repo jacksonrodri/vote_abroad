@@ -10,7 +10,20 @@
             <li>{{ election.state }} - {{election.electionType }}</li>
             <li>{{ election.date }}</li>
           </ul> -->
-          <h1 class="title is-4">Find your local Election Official ({{state.state}})</h1>
+          <!-- <h1 class="title is-4">Find your local Election Official ({{state.state}})</h1>
+          <b-autocomplete
+            :value="typedJurisdiction || jurisdiction || ''"
+            open-on-focus
+            keep-first
+            expanded
+            @input="updated"
+            ref="jurisdiction"
+            :data="filteredLeos"
+            field="n"
+            placeholder="Start typing to find your jurisdiction"
+            @select="option => updateLeo(option)">
+            <template slot-scope="props"><strong>{{props.option.j}} {{props.option.j.toLowerCase().indexOf(props.option.t.toLowerCase()) > -1 ? '' : props.option.t}}</strong> - <small>{{props.option.n}}</small></template>
+          </b-autocomplete> -->
           <h1 class="title is-4">Elections Deadlines for {{state.state}} Voters Abroad</h1>
           <b-table hoverable :data="elections">
             <template slot-scope="props">

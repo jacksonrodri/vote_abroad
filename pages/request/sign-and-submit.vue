@@ -331,11 +331,22 @@ export default {
     Sign,
     VueMarkdown
   },
-  async asyncData ({app}) {
+  async asyncData ({app, store}) {
+    let state = store.getters['requests/getCurrent'].votAdr.leo.s || ''
+    // let voterClass = store.getters['requests/getCurrent'].voterClass || ''
+    // let milVoter = Boolean(voterClass === 'military' || voterClass === 'milSpouse' || voterClass === 'natGuard')
+    // let registering = store.getters['requests/getCurrent'].isRegistered !== 'registered' || true
     return {
+      // voterClass: store.getters['requests/getCurrent'].voterClass || '',
+      registering: store.getters['requests/getCurrent'].isRegistered !== 'registered',
+      state: store.getters['requests/getCurrent'].votAdr.leo.s,
       allStateRules: await app.$content('rls')
         .query({ exclude: ['anchors', 'body', 'meta', 'path', 'permalink'] })
-        .getAll()
+        .getAll(),
+      stateElections: (await app.$content('/elections').get('elections')).body
+        .filter(election => election.state && state && election.state.toLowerCase() === state.toLowerCase())
+        // .filter(election => election.rules['Registration'][0].date.substr(0, 4) !== '2018' || (new Date(election.rules['Registration'][0].date) > new Date() && new Date(election.rules['Ballot Request'][0].date) > new Date()))[0]
+
     }
   },
   data () {
@@ -347,10 +358,12 @@ export default {
       needsMsSaveOrOpenBlob: false,
       isSigning: false,
       pdf: '',
-      msPdf: ''
+      msPdf: '',
+      deadline: `IMPORTANT: If you are not yet a registered voter, your form must be received by XX to be eligible to vote in the November 6 General Election. If you already are a registered voter, your form must be received by XX to receive a ballot for the November 6 General Election.`
     }
   },
   mounted () {
+    // console.log(electionArr)
     let feat = this
     // function updateHasCamera (res) {
     //   console.log(res)
@@ -372,7 +385,7 @@ export default {
           console.log(err.name + ': ' + err.message)
         })
     }
-    axios.get(encodeURI(`/api/fpca?firstName=${this.firstName || ''}&lastName=${this.lastName || ''}&middleName=${this.middleName || ''}&suffix=${this.suffix || ''}&ssn=${this.ssn || ''}&previousName=${this.previousName.previousName || ''}&dob=${this.dob || ''}&stateId=${this.stateId || ''}&votStreet=${this.votStreet || ''}&votApt=${this.votApt || ''}&votCity=${this.votCity || ''}&votState=${this.votState || ''}&votCounty=${this.votCounty || ''}&votZip=${this.votZip || ''}&abrAdr=${this.abrAdr ? this.abrAdr.alt1 : ''}\n${this.abrAdr ? this.abrAdr.alt2 : ''}\n${this.abrAdr ? this.abrAdr.alt3 : ''}\n${this.abrAdr ? this.abrAdr.alt4 : ''}\n${this.abrAdr ? this.abrAdr.alt5 : ''}&fwdAdr=${this.fwdAdr ? this.fwdAdr.alt1 : ''}\n${this.fwdAdr ? this.fwdAdr.alt2 : ''}\n${this.fwdAdr ? this.fwdAdr.alt3 : ''}\n${this.fwdAdr ? this.fwdAdr.alt4 : ''}\n${this.fwdAdr ? this.fwdAdr.alt5 : ''}&email=${this.email || ''}&altEmail=${this.altEmail || ''}&tel=${this.tel && this.tel.intNumber ? this.tel.intNumber : ''}&fax=${this.fax || ''}&party=${this.party || ''}&addlInfo=${this.addlInfo || ''}&date=${this.date || ''}&leoAdr=${this.leoAdr}&class=${this.voterClass || ''}&sex=${this.sex || ''}&recBallot=${this.recBallot || ''}&leoName=${this.leoName || ''}&leoAddress=${this.leoAdr || ''}&leoFax=${this.leoFax || ''}&leoEmail=${this.leoEmail || ''}&leoPhone=${this.leoPhone || ''}&transmitOpts=${this.stateRules.ballotReceiptOptions.join(',')}&deadline=${'IMPORTANT: Your ballot must be received by XX to be able to vote in the November 6 general Election.'}`), {responseType: 'arraybuffer'})
+    axios.get(encodeURI(`/api/fpca?firstName=${this.firstName || ''}&lastName=${this.lastName || ''}&middleName=${this.middleName || ''}&suffix=${this.suffix || ''}&ssn=${this.ssn || ''}&previousName=${this.previousName.previousName || ''}&dob=${this.dob || ''}&stateId=${this.stateId || ''}&votStreet=${this.votStreet || ''}&votApt=${this.votApt || ''}&votCity=${this.votCity || ''}&votState=${this.votState || ''}&votCounty=${this.votCounty || ''}&votZip=${this.votZip || ''}&abrAdr=${this.abrAdr ? this.abrAdr.alt1 : ''}\n${this.abrAdr ? this.abrAdr.alt2 : ''}\n${this.abrAdr ? this.abrAdr.alt3 : ''}\n${this.abrAdr ? this.abrAdr.alt4 : ''}\n${this.abrAdr ? this.abrAdr.alt5 : ''}&fwdAdr=${this.fwdAdr && this.fwdAdr.alt1 ? this.fwdAdr.alt1 : ''}\n${this.fwdAdr && this.fwdAdr.alt2 ? this.fwdAdr.alt2 : ''}\n${this.fwdAdr && this.fwdAdr.alt3 ? this.fwdAdr.alt3 : ''}\n${this.fwdAdr && this.fwdAdr.alt4 ? this.fwdAdr.alt4 : ''}\n${this.fwdAdr && this.fwdAdr.alt5 ? this.fwdAdr.alt5 : ''}&email=${this.email || ''}&altEmail=${this.altEmail || ''}&tel=${this.tel && this.tel.intNumber ? this.tel.intNumber : ''}&fax=${this.fax || ''}&party=${this.party || ''}&addlInfo=${this.addlInfo || ''}&date=${this.date || ''}&class=${this.voterClass || ''}&sex=${this.sex || ''}&recBallot=${this.recBallot || ''}&leoName=${this.leoName || ''}&leoAddress=${this.leoAdr || ''}&leoFax=${this.leoFax || ''}&leoEmail=${this.leoEmail || ''}&leoPhone=${this.leoPhone || ''}&transmitOpts=${this.stateRules.ballotReceiptOptions.join(',')}&deadline=${this.nextDeadline}`), {responseType: 'arraybuffer'})
       .then((response) => {
         // console.log(response)
         let blob = new Blob([response.data], {type: 'application/pdf'})
@@ -447,7 +460,7 @@ export default {
     getFPCA (method) {
       // let leo = this.currentRequest.votAdr.leo || null
       // let leoAdrFmt = `${leo.n ? leo.n + '\n' : ''}${leo.a1 ? leo.a1 + '\n' : ''}${leo.a2 ? leo.a2 + '\n' : ''}${leo.a3 ? leo.a3 + '\n' : ''}${leo.c}, ${leo.s} ${leo.z}\nUnited States of America`
-      axios.get(encodeURI(`/api/fpca?firstName=${this.firstName || ''}&lastName=${this.lastName || ''}&middleName=${this.middleName || ''}&suffix=${this.suffix || ''}&ssn=${this.ssn || ''}&previousName=${this.previousName.previousName || ''}&dob=${this.dob || ''}&stateId=${this.stateId || ''}&votStreet=${this.votStreet || ''}&votApt=${this.votApt || ''}&votCity=${this.votCity || ''}&votState=${this.votState || ''}&votCounty=${this.votCounty || ''}&votZip=${this.votZip || ''}&abrAdr=${this.abrAdr ? this.abrAdr.alt1 : ''}\n${this.abrAdr ? this.abrAdr.alt2 : ''}\n${this.abrAdr ? this.abrAdr.alt3 : ''}\n${this.abrAdr ? this.abrAdr.alt4 : ''}\n${this.abrAdr ? this.abrAdr.alt5 : ''}&fwdAdr=${this.fwdAdr ? this.fwdAdr.alt1 : ''}\n${this.fwdAdr ? this.fwdAdr.alt2 : ''}\n${this.fwdAdr ? this.fwdAdr.alt3 : ''}\n${this.fwdAdr ? this.fwdAdr.alt4 : ''}\n${this.fwdAdr ? this.fwdAdr.alt5 : ''}&email=${this.email || ''}&altEmail=${this.altEmail || ''}&tel=${this.tel && this.tel.intNumber ? this.tel.intNumber : ''}&fax=${this.fax || ''}&party=${this.party || ''}&addlInfo=${this.addlInfo || ''}&date=${this.date || ''}&leoAdr=${this.leoAdr}&class=${this.voterClass || ''}&sex=${this.sex || ''}&recBallot=${this.recBallot || ''}&leoName=${this.leoName || ''}&leoAddress=${this.leoAdr || ''}&leoFax=${this.leoFax || ''}&leoEmail=${this.leoEmail || ''}&leoPhone=${this.leoPhone || ''}&transmitOpts=${this.stateRules.ballotReceiptOptions.join(',')}&deadline=${`IMPORTANT: Your ballot must be received by XX to be able to vote in the November 6 general Election.`}&method=${method}`), {responseType: 'arraybuffer'})
+      axios.get(encodeURI(`/api/fpca?firstName=${this.firstName || ''}&lastName=${this.lastName || ''}&middleName=${this.middleName || ''}&suffix=${this.suffix || ''}&ssn=${this.ssn || ''}&previousName=${this.previousName.previousName || ''}&dob=${this.dob || ''}&stateId=${this.stateId || ''}&votStreet=${this.votStreet || ''}&votApt=${this.votApt || ''}&votCity=${this.votCity || ''}&votState=${this.votState || ''}&votCounty=${this.votCounty || ''}&votZip=${this.votZip || ''}&abrAdr=${this.abrAdr ? this.abrAdr.alt1 : ''}\n${this.abrAdr ? this.abrAdr.alt2 : ''}\n${this.abrAdr ? this.abrAdr.alt3 : ''}\n${this.abrAdr ? this.abrAdr.alt4 : ''}\n${this.abrAdr ? this.abrAdr.alt5 : ''}&fwdAdr=${this.fwdAdr ? this.fwdAdr.alt1 : ''}\n${this.fwdAdr ? this.fwdAdr.alt2 : ''}\n${this.fwdAdr ? this.fwdAdr.alt3 : ''}\n${this.fwdAdr ? this.fwdAdr.alt4 : ''}\n${this.fwdAdr ? this.fwdAdr.alt5 : ''}&email=${this.email || ''}&altEmail=${this.altEmail || ''}&tel=${this.tel && this.tel.intNumber ? this.tel.intNumber : ''}&fax=${this.fax || ''}&party=${this.party || ''}&addlInfo=${this.addlInfo || ''}&date=${this.date || ''}&leoAdr=${this.leoAdr}&class=${this.voterClass || ''}&sex=${this.sex || ''}&recBallot=${this.recBallot || ''}&leoName=${this.leoName || ''}&leoAddress=${this.leoAdr || ''}&leoFax=${this.leoFax || ''}&leoEmail=${this.leoEmail || ''}&leoPhone=${this.leoPhone || ''}&transmitOpts=${this.stateRules.ballotReceiptOptions.join(',')}&deadline=${this.nextDeadline}&method=${method}`), {responseType: 'arraybuffer'})
         .then((response) => {
           console.log(response)
           let blob = new Blob([response.data], {type: 'application/pdf'})
@@ -554,6 +567,71 @@ export default {
       } else {
         return this.$t(`request.stages.${this.stateRules.fpcaSubmitOptionsRequest[0].toLowerCase()}`) + ', ' + this.$t(`request.stages.${this.stateRules.fpcaSubmitOptionsRequest[1].toLowerCase()}`) + ' ' + this.$t('request.id.or') + ' ' + this.$t(`request.stages.${this.stateRules.fpcaSubmitOptionsRequest[2].toLowerCase()}`)
       }
+    },
+    nextDeadline () {
+      let electionArr = []
+      this.stateElections.forEach(election => Object.entries(election.rules).forEach(([ruleKey, ruleValue]) => ruleValue.forEach(item => electionArr.push({
+        electionType: election.electionType,
+        electionDate: election.date.substr(0, 4) === '2018' ? new Date(election.date) : null,
+        requestType: ruleKey,
+        ruleType: item.rule,
+        voterType: typeof item.voterType === 'string' ? item.voterType : 'All',
+        ruleDate: item.date.substr(0, 4) === '2018' ? new Date(item.date) : null
+      }))))
+      let importantE
+      if (this.voterClass && Boolean(this.voterClass === 'military' || this.voterClass === 'milSpouse' || this.voterClass === 'natGuard')) {
+        importantE = electionArr.filter(x => x.voterType.indexOf('Citizen') === -1)
+        // if (this.registering) {
+        //   importantE = electionArr.filter(x => x.voterType.indexOf('Citizen') === -1 && x.requestType === 'Registration')
+        // } else {
+        //   importantE = electionArr.filter(x => x.voterType.indexOf('Citizen') === -1 && x.requestType === 'Ballot Request')
+        // }
+      } else {
+        importantE = electionArr.filter(x => x.voterType.indexOf('Uniformed') === -1)
+        // if (this.registering) {
+        //   importantE = electionArr.filter(x => x.voterType.indexOf('Uniformed') === -1 && x.requestType === 'Registration')
+        // } else {
+        //   importantE = electionArr.filter(x => x.voterType.indexOf('Uniformed') === -1 && x.requestType === 'Ballot Request')
+        // }
+      }
+      if (this.isRegistered === 'registered') {
+        importantE = importantE.filter(x => x.requestType === 'Ballot Request').filter(x => x.ruleDate > new Date()).sort((a, b) => a.ruleDate - b.ruleDate)[0]
+        return `IMPORTANT: As a registered voter, your form must be ${importantE.ruleType.toLowerCase()} ${importantE.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to be eligible to vote in the ${importantE.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} ${importantE.electionType}. See all your state deadlines at www.votefromabroad.org/states/${this.state}`
+        // return importantE.filter(x => x.ruleDate > new Date()).sort((a, b) => a.ruleDate - b.ruleDate)[0]
+      } else if (this.isRegistered === 'notRegistered') {
+        importantE = importantE.filter(x => x.requestType === 'Registration').filter(x => x.ruleDate > new Date()).sort((a, b) => a.ruleDate - b.ruleDate)[0]
+        return `IMPORTANT: As a new voter, your form must be ${importantE.ruleType.toLowerCase()} ${importantE.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to be eligible to vote in the ${importantE.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} ${importantE.electionType}. See all your state deadlines at www.votefromabroad.org/states/${this.state}`
+        // return importantE.filter(x => x.ruleDate > new Date()).sort((a, b) => a.ruleDate - b.ruleDate)[0]
+      } else {
+        importantE = importantE.filter(x => x.requestType !== 'Ballot Return').filter(x => x.ruleDate > new Date()).sort((a, b) => a.ruleDate - b.ruleDate).slice(0, 2)
+        let reg = importantE.filter(x => x.requestType === 'Ballot Request')[0]
+        let req = importantE.filter(x => x.requestType === 'Ballot Request')[0]
+        return `IMPORTANT: If you are not yet a registered voter, your form must be received by ${reg.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to be eligible to vote in the ${reg.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} General Election. If you already are a registered voter, your form must be received by ${req.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to receive a ballot for the ${req.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} General Election. See all your state deadlines at www.votefromabroad.org/states/${this.state}`
+        // return importantE.filter(x => x.ruleDate > new Date()).sort((a, b) => a.ruleDate - b.ruleDate).slice(0, 2)
+      }
+      // return importantE
+
+      // return d
+      // let dmessage = d.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})
+      // if (this.isRegistered === 'registered') {
+      //   return `IMPORTANT: As a registered voter, your form must be ${d.ruleType.toLowerCase()} ${d.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to be eligible to vote in the ${d.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} ${d.electionType}.`
+      // } else if (this.isRegistered === 'notRegistered') {
+      //   return `IMPORTANT: As a new voter, your form must be ${d.ruleType.toLowerCase()} ${d.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to be eligible to vote in the ${d.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} ${d.electionType}.`
+      // } else {
+      //   return `IMPORTANT: If you are not yet a registered voter, your form must be received by ${d.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to be eligible to vote in the ${d.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} General Election. If you already are a registered voter, your form must be received by ${d.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to receive a ballot for the ${d.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} General Election.`
+      // }
+      // switch (this.isRegistered) {
+      //   case 'registered':
+      //     dmessage = `IMPORTANT: As a registered voter, your form must be ${d.ruleType.toLowerCase()} ${d.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to be eligible to vote in the ${d.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} ${d.electionType}.`
+      //     break
+      //   // case 'unsure':
+      //   //   dmessage = `IMPORTANT: If you are not yet a registered voter, your form must be received by ${d.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to be eligible to vote in the ${d.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} General Election. If you already are a registered voter, your form must be received by ${d.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to receive a ballot for the ${d.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} General Election.`
+      //   //   break
+      //   case 'notRegistered':
+      //     dmessage = `IMPORTANT: As a new voter, your form must be ${d.ruleType.toLowerCase()} ${d.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to be eligible to vote in the ${d.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} ${d.electionType}.`
+      //     break
+      // }
+      // return dmessage
     },
     ...mapState({
       currentRequestIndex: state => state.requests.currentRequest,
