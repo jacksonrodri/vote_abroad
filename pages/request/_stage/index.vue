@@ -230,7 +230,7 @@
       <join-democratsabroad
         v-model="joinDa"
         v-if="party!=='Republican' && party && !$store.state.userauth.user.isDA"
-        :label="$t('request.party.label')">
+        :label="$t('request.joinDa.label')">
         <div slot="tooltip">
           <vue-markdown>{{$t('request.joinDa.tooltip')}}</vue-markdown>
           <!-- <p>Many states require voters to designate a political party to be eligible to vote in primary elections. Choosing a political party is optional.</p> -->
