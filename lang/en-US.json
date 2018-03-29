@@ -190,6 +190,7 @@
       "label": "Date of Birth",
       "instructions": "",
       "placeholder": "e.g. 01/31/1970",
+      "tooltip": "You must be 18 years old by the time of the next General Election to register to vote.",
       "messages": {
         "required": "Your date of birth is required."
       }
