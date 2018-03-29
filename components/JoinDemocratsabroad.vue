@@ -5,29 +5,30 @@
     <p class="control">
       <button @click="thisValue = true; isExistingDaMember = false" :class="[baseClass, {'is-success': thisValue}]">
         <b-icon v-if="thisValue" icon="check"></b-icon>
-        <span>Yes</span>
+        {{$t('request.joinDa.yes')}}
       </button>
     </p>
     <p class="control">
       <button @click="thisValue = false; isExistingDaMember = false" :class="[baseClass, {'is-success': thisValue === false}]">
         <b-icon v-if="thisValue === false" icon="check"></b-icon>
-        <span>No</span>
+        {{$t('request.joinDa.no')}}
       </button>
     </p>
     <p class="control">
       <button @click="isExistingDaMember = !isExistingDaMember; thisValue = null" :class="[baseClass, {'is-success': isExistingDaMember}]">
         <b-icon v-if="isExistingDaMember" icon="check"></b-icon>
-        <span>Already a member</span>
+        {{$t('request.joinDa.alreadyMember')}}
       </button>
     </p>
   </b-field>
   <transition name="fade">
     <b-field v-if="isExistingDaMember">
       <b-input
-        placeholder="Please enter your account email address if you remember it so we can update your record"
+        :placeholder="$t('request.joinDa.accountEmail')"
         type="text"
         v-model="daEmail"></b-input>
     </b-field>
+    <!-- Please enter your account email address if you remember it so we can update your record -->
   </transition>
   <!-- <div class="field">
     <b-checkbox v-model="isExistingDaMember">I am already a member of Democrats Abroad.</b-checkbox>

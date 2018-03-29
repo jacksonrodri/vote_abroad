@@ -230,10 +230,10 @@
       <join-democratsabroad
         v-model="joinDa"
         v-if="party!=='Republican' && party && !$store.state.userauth.user.isDA"
-        label="Would you like to Join Democrats Abroad?">
+        :label="$t('request.party.label')">
         <div slot="tooltip">
-          <!-- <vue-markdown>{{$t('request.party.tooltip')}}</vue-markdown> -->
-          <p>Many states require voters to designate a political party to be eligible to vote in primary elections. Choosing a political party is optional.</p>
+          <vue-markdown>{{$t('request.joinDa.tooltip')}}</vue-markdown>
+          <!-- <p>Many states require voters to designate a political party to be eligible to vote in primary elections. Choosing a political party is optional.</p> -->
         </div>
       </join-democratsabroad>
       </transition>

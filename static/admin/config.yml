@@ -410,9 +410,10 @@ collections:
               - {label: "Field Label", name: "label", widget: "string"}
               - {label: "Instructions", name: "instructions", widget: "string"}
               - {label: "Placeholder", name: "placeholder", widget: "string"}
-              - {label: "Yes", name: "male", widget: "string"}
-              - {label: "No", name: "female", widget: "string"}
+              - {label: "Yes", name: "yes", widget: "string"}
+              - {label: "No", name: "no", widget: "string"}
               - {label: "Already a Member", name: "alreadyMember", widget: "string"}
+              - {label: "Account Email", name: "accountEmail", widget: "string"}
               - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - label: "Messages"
                 name: "messages"
