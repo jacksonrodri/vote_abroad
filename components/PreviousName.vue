@@ -4,7 +4,7 @@
     <span class="is-flex"><label class="label">{{ instructions }}</label><span @click="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
       <b-field grouped>
         <p class="control">
-          <button @click="setUsesPreviousName(true)" :class="['button', {'is-success': usesPreviousName}]">
+          <button @click="setUsesPreviousName(true)" :class="[baseClass, {'is-success': usesPreviousName}]">
             <span v-show="usesPreviousName" class="icon is-small">
               <i class="fas fa-check"></i>
             </span>
@@ -56,7 +56,7 @@ export default {
     return {
       isOpen: false,
       baseClass: {
-        'is-medium': false,
+        'is-medium': true,
         'is-outlined': false,
         button: true
       }

@@ -123,7 +123,7 @@ export default {
     return {
       milOrCiv: '',
       baseClass: {
-        'is-medium': false,
+        'is-medium': true,
         'is-outlined': false,
         button: true
       },

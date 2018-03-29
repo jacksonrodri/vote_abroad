@@ -22,6 +22,16 @@
         </span>
       </button>
     </p>
+    <p class="control">
+      <button @click="setVal('decline')" :class="[baseClass, {'is-success': value === 'decline'}]">
+        <span v-show="value === 'female'" class="icon is-small">
+          <i class="fas fa-check"></i>
+        </span>
+        <span>
+          {{$t('request.sex.decline')}}
+        </span>
+      </button>
+    </p>
   </b-field>
   <b-message :title="toolTipTitle" type="is-info" has-icon :active.sync="isOpen">
     <slot name="tooltip"></slot>
@@ -40,7 +50,7 @@ export default {
   data () {
     return {
       baseClass: {
-        'is-medium': false,
+        'is-medium': true,
         'is-outlined': false,
         button: true
       },

@@ -50,7 +50,7 @@ export default {
   data () {
     return {
       baseClass: {
-        'is-medium': false,
+        'is-medium': true,
         'is-outlined': false,
         button: true
       },

@@ -410,7 +410,7 @@ export default {
     },
     openPdf () {
       this.$dialog.alert({
-        title: 'Finished Downloading',
+        title: 'Downloading',
         message: 'Clicking \'OK\' will open a new window with your completed form.  You must <b>SIGN, DATE and SEND</b> it to your election official.',
         confirmText: 'OK',
         type: 'is-danger',
