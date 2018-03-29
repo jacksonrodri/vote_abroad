@@ -67,10 +67,11 @@
     },
     "joinDa": {
       "label": "Would you like to Join Democrats Abroad?",
-      "male": "",
-      "female": "",
-      "alreadyMember": "",
-      "tooltip": ""
+      "yes": "Yes",
+      "no": "No",
+      "alreadyMember": "Already a Member",
+      "accountEmail": "Please enter your account email address if you remember it so we can update your record.",
+      "tooltip": "Democrats Abroad is the official Democratic Party organization for the millions of Americans living outside the United States."
     },
     "stateSpecial": {
       "label": "{state} Specific Rules"
