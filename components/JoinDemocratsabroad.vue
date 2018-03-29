@@ -5,26 +5,26 @@
     <p class="control">
       <button @click="thisValue = true; isExistingDaMember = false" :class="[baseClass, {'is-success': thisValue}]">
         <b-icon v-if="thisValue" icon="check"></b-icon>
-        {{$t('request.joinDa.yes')}}
+        <span>{{$t('request.joinDa.yes')}}</span>
       </button>
     </p>
     <p class="control">
       <button @click="thisValue = false; isExistingDaMember = false" :class="[baseClass, {'is-success': thisValue === false}]">
         <b-icon v-if="thisValue === false" icon="check"></b-icon>
-        {{$t('request.joinDa.no')}}
+        <span>{{$t('request.joinDa.no')}}</span>
       </button>
     </p>
     <p class="control">
       <button @click="isExistingDaMember = !isExistingDaMember; thisValue = null" :class="[baseClass, {'is-success': isExistingDaMember}]">
         <b-icon v-if="isExistingDaMember" icon="check"></b-icon>
-        {{$t('request.joinDa.alreadyMember')}}
+        <span>{{$t('request.joinDa.alreadyMember')}}</span>
       </button>
     </p>
   </b-field>
   <transition name="fade">
-    <b-field v-if="isExistingDaMember">
+    <b-field v-if="isExistingDaMember" :label="$t('request.joinDa.accountEmail')">
       <b-input
-        :placeholder="$t('request.joinDa.accountEmail')"
+        placeholder="e.g. user@email.com"
         type="text"
         v-model="daEmail"></b-input>
     </b-field>
