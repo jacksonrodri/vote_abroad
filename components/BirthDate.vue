@@ -26,7 +26,8 @@
 export default {
   props: [
     'message',
-    'validations'
+    'validations',
+    'toolTipTitle'
   ],
   data () {
     return {

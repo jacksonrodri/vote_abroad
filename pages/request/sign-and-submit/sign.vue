@@ -175,13 +175,14 @@ export default {
         let mat = new jsfeat.matrix_t(videoWidth, videoHeight, jsfeat.U8_t | jsfeat.C4_t, dataBuffer) // eslint-disable-line new-cap
         // var gray = tracking.Image.grayscale(mat.data, videoWidth, videoHeight, true)
         var gray = tracking.Image.sobel(mat.data, videoWidth, videoHeight, true)
+        gray = tracking.Image.blur(gray, videoWidth, videoHeight, 6)
         // console.log(sobelImg)
-        var threshold = 70
+        var threshold = 30
         for (var i = 0; i < gray.length; i += 4) {
-          gray[i] = gray[i] > threshold ? 0 : 255
           gray[i + 1] = gray[i] > threshold ? 0 : 255
           gray[i + 2] = gray[i] > threshold ? 0 : 255
-          gray[i + 3] = gray[i] > threshold ? 0 : 255
+          gray[i + 3] = gray[i] > threshold ? 255 : 0
+          gray[i] = gray[i] > threshold ? 0 : 255
         }
         gray = Uint8ClampedArray.from(gray)
         this.ctx1.putImageData(new ImageData(gray, videoWidth, videoHeight), 0, 0)
