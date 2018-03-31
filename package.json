@@ -31,6 +31,7 @@
     "@nuxtjs/localtunnel": "^1.0.1",
     "@nuxtjs/proxy": "^1.1.4",
     "@nuxtjs/pwa": "^2.0.5",
+    "WebGLImageFilter": "https://github.com/phoboslab/WebGLImageFilter",
     "auth0-js": "^9.0.2",
     "babel-polyfill": "^6.26.0",
     "buefy": "^0.6.4",
