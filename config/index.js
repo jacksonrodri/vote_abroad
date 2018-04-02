@@ -1,7 +1,7 @@
 const en = require('../lang/en-US.json')
 const es = require('../lang/es-ES.json')
 
-const API_ROOT = 'http://localhost:3000/content-api';
+const API_ROOT = 'http://localhost:3000/content-api'
 
 const I18N = {
   locales: [

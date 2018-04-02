@@ -50,7 +50,7 @@
                       <embed type="application/pdf" :src="pdf" /> -->
                     </div>
                   </article>
-                  <nuxt-child/>
+                  <Sign @sigcap="addSig"/>
                   <article class="media">
                     <figure class="media-left">
                       <span class="icon is-large">
@@ -284,6 +284,7 @@
         :recBallot="recBallot"
         :signature="signature"></my-box>
     </my-canvas>
+    <img ref="pic" alt="">
     <!-- </no-ssr> -->
 
       <!-- <div class="control buttons is-right">
@@ -309,7 +310,7 @@
 <script>
 import MyCanvas from '~/components/MyCanvas.vue'
 import MyBox from '~/components/MyBox.vue'
-import Sign from '~/components/sign.vue'
+import Sign from '~/components/sign3.vue'
 import { mapState } from 'vuex'
 import axios from 'axios'
 import VueMarkdown from 'vue-markdown'
@@ -478,6 +479,7 @@ export default {
     addSig (val) {
       this.signature = val
       // console.log(val)
+      this.$refs.pic.src = this.signature
     },
     sendEmail () {
       let fpca = this.$refs.fpca.$refs['my-canvas'].toDataURL()

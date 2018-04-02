@@ -395,8 +395,10 @@ export default {
     let sign = () => {
       let signature = new Image()
       signature.src = this.signature
+      console.log('signatrue', signature)
       signature.onload = () => {
-        ctx.drawImage(signature, 43, 12, 427, 240, this.calculated.signature.x, this.calculated.signature.y, 1152, 648)
+        ctx.drawImage(signature, 0, 0, 1280, 720, this.calculated.signature.x, this.calculated.signature.y, 1152, 648)
+        // ctx.drawImage(signature, 43, 12, 427, 240, this.calculated.signature.x, this.calculated.signature.y, 1152, 648)
       }
     }
 

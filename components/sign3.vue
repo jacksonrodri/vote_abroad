@@ -24,17 +24,20 @@
 
             <!-- style="width: 1px; height: 1px; margin -1px; filter: grayscale(100%) brightness(200%) contrast(100%)" -->
           <canvas ref="sigCanvas"
-            style="position:absolute;background-image:url('/fpca_sign.png'); background-size: cover;"
+            style="position:absolute;background-image:url('/fpca_sign.png'); background-size: cover;opacity:0;"
             v-bind:width="width"
             v-bind:height="height"
             v-show="true"></canvas>
+          <div ref="glfilter"
+            style="position:absolute;background-image:url('/fpca_sign.png'); background-size: cover;"></div>
           <canvas ref="edited"
             v-bind:width="width"
             v-bind:height="height"
             v-on:click="takePhoto"
-            style="background-image:url('/fpca_sign.png'); background-size: cover;"></canvas>
+            style="background-image:url('/fpca_sign.png'); background-size: cover;opacity:0;"></canvas>
         </div>
       </div>
+
       <b-collapse v-if="isSigningActive" class="card is-shadowless" :open.sync="isEditing">
         <div class="card-header" slot="trigger">
           <p class="card-header-title">Adjust photo</p>
@@ -68,7 +71,8 @@
 
 <script>
 import slider from '~/components/slider'
-require('WebGLImageFilter/webgl-image-filter')
+// require('WebGLImageFilter/webgl-image-filter')
+require('~/assets/filter')
 // import * as jsfeat from 'jsfeat'
 // eslint-disable-line
 
@@ -108,7 +112,10 @@ export default {
       details: 'nothing yet',
       paused: true,
       isSigningActive: false,
-      filter: null
+      filter: null,
+      hasWebGlCanvas: false,
+      computeAnimationFrame: null,
+      filteredImage: null
     }
   },
   computed: {
@@ -124,9 +131,9 @@ export default {
   // },
   methods: {
     save () {
-      this.optimizedPhoto = this.$refs.edited.toDataURL()
+      this.optimizedPhoto = this.filteredImage.toDataURL('image/png')
       this.$emit('sigcap', this.optimizedPhoto)
-      this.$parent.close()
+      // this.$parent.close()
     },
     reset () {
       this.isCapture = true
@@ -148,11 +155,13 @@ export default {
       }
     },
     timerCallback () {
+      this.ctx1 = this._refs.sigCanvas.getContext('2d')
+      this._ctx = this._refs.edited.getContext('2d')
       // console.log(this.$refs.video.paused)
       if (!this.$refs.video.paused) {
         // this.computeFrame()
         // this.timerCallback()
-        window.requestAnimationFrame(() => {
+        this.computeAnimationFrame = window.requestAnimationFrame(() => {
           // if (this.$refs.video.paused) { this.timerCallback() }
           this.computeFrame()
           this.timerCallback()
@@ -176,7 +185,12 @@ export default {
         // console.log(this.$refs.video)
         let imageData = this.ctx1.getImageData(0, 0, videoWidth, videoHeight)
         // console.log('image', imageData)
-        var filteredImage = this.filter.apply(imageData)
+        this.filteredImage = this.filter.apply(imageData)
+        if (!this.hasWebGlCanvas) {
+          this.$refs.glfilter.appendChild(this.filteredImage)
+          this.hasWebGlCanvas = true
+        }
+        // this.$refs.sigCanvas = this.filter.apply(this.$refs.video)
 
         // let igl = filteredImage.getContext('webgl')
         // var pixels = new Uint8Array(igl.drawingBufferWidth * igl.drawingBufferHeight * 4)
@@ -191,7 +205,7 @@ export default {
         // this.ctx1.putImageData(imageData2, 0, 0)
         // let gl = filteredImage.getContext('webgl')
         // gl.pixelStorei(gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL, true)
-        this.ctx1.drawImage(filteredImage, 0, 0)
+        // this.ctx1.drawImage(filteredImage, 0, 0)
         // let dataBuffer = new jsfeat.data_t(videoWidth * videoHeight, imageData.data.buffer) // eslint-disable-line new-cap
         // let mat = new jsfeat.matrix_t(videoWidth, videoHeight, jsfeat.U8_t | jsfeat.C4_t, dataBuffer) // eslint-disable-line new-cap
         // var gray = new jsfeat.matrix_t(mat.cols, mat.rows, jsfeat.U8_t | jsfeat.C1_t) // eslint-disable-line new-cap
@@ -227,8 +241,6 @@ export default {
       this.isSigningActive = true
       this._refs = this.$refs
       this._video = this._refs.video
-      this.ctx1 = this._refs.sigCanvas.getContext('2d')
-      this._ctx = this._refs.edited.getContext('2d')
       console.log('video: ', this._video)
 
       var md = this.getMediaDevices()
@@ -243,19 +255,20 @@ export default {
       })
         .then((stream) => {
           this.src = stream
-          this._video.srcObject = stream
+          console.log('this from stream: ', this)
+          this._refs.video.srcObject = stream
           this._stream = stream
           this._hasUserMedia = true
           console.log(this.paused)
-          this._video.addEventListener('canplay', () => {
-            console.log('canplay', this._video)
-            this.width = this._video.videoWidth
-            this.height = this._video.videoHeight
+          this._refs.video.addEventListener('canplay', () => {
+            console.log('canplay', this._refs.video)
+            this.width = this._refs.video.videoWidth
+            this.height = this._refs.video.videoHeight
             // this.width = 1280
             // this.height = 720
             // this.timerCallback()
             this.paused = false
-            this._video.play()
+            this._refs.video.play()
           })
         }, (err) => {
           console.log(err)
@@ -263,6 +276,8 @@ export default {
     }
   },
   mounted () {
+    this._refs = this.$refs
+    this._video = this._refs.video
     try {
       this.filter = new window.WebGLImageFilter()
     } catch (err) {
@@ -280,24 +295,37 @@ export default {
     // ColorMatrix2=0;1;0;-1;0
     // ColorMatrix3=0;0;1;-1;0
 
-    // this.filter.addFilter('blur', 5)
+    // this.filter.addFilter('blur', 3)
     // this.filter.addFilter('detectEdges')
+    // this.filter.addFilter('emboss', 10)
     // this.filter.addFilter('sobelX')
     // this.filter.addFilter('sobelY')
+    // this.filter.addFilter('blur', 3)
+    // this.filter.addFilter('convolution', [
+    //   -3, 0, 3, -10, 0, 10, -3, 0, 3
+    // ])
     // this.filter.addFilter('desaturateLuminance')
-    // this.filter.addFilter('brightness', 10)
-    this.filter.addFilter('colorMatrix', [
-      1.5, 1.5, 1.5, 0, 0,
-      1.5, 1.5, 1.5, 0, 0,
-      1.5, 1.5, 1.5, 0, 0,
-      -0.3, -0.3, -0.3, 0, 255
-    ])
-    this.filter.addFilter('blur', 3)
     // this.filter.addFilter('negative')
+    // this.filter.addFilter('brightness', 0.7)
     // this.filter.addFilter('contrast', 2)
+    // this.filter.addFilter('colorMatrix', [
+    //   0.33, 0.33, 0.33, 0, 0,
+    //   0.33, 0.33, 0.33, 0, 0,
+    //   0.33, 0.33, 0.33, 0, 0,
+    //   -0.33, -0.33, -0.33, 0, 255
+    // ])
+    this.filter.addFilter('colorMatrix', [
+      -1.4, -1.4, -1.4, 0, 255,
+      -1.4, -1.4, -1.4, 0, 255,
+      -1.4, -1.4, -1.4, 0, 255,
+      -0.33, -0.33, -0.33, 0, 255
+    ])
+    // this.filter.addFilter('negative')
+    // this.filter.addFilter('desaturate')
+    // this.filter.addFilter('emboss', 5)
+    // this.filter.addFilter('blur', 3)
     // this.filter.addFilter('brightness', -0.4)
     // this.filter.addFilter('contrast', 6)
-    // this.filter.addFilter('brightness', 0.4)
   //   this._refs = this.$refs
   //   this._video = this._refs.video
   //   this.ctx1 = this._refs.sigCanvas.getContext('2d')
@@ -339,6 +367,11 @@ export default {
       this.$refs.video.pause()
       this.src = null
       this._stream.getTracks()[0].stop()
+      this.filter.reset()
+      this.isCapture = false
+    }
+    if (this.computeAnimationFrame) {
+      cancelAnimationFrame(this.computeAnimationFrame)
     }
   },
   destroyed () {

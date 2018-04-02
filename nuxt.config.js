@@ -40,19 +40,19 @@ module.exports = {
     '/api/fpca': {
       target: 'https://svj2ivekgi.execute-api.us-east-1.amazonaws.com/dev/fpca',
       pathRewrite: {
-        '^/api/fpca' : '/'
+        '^/api/fpca': '/'
       }
     },
     '/api/*': {
       target: 'http://localhost:9000/',
       pathRewrite: {
-        '^/api/' : '/'
+        '^/api/': '/'
       }
     },
     '/api/place/**': {
       target: 'https://maps.googleapis.com/maps/api/place',
       pathRewrite: {
-        '^/api/place/' : '/'
+        '^/api/place/': '/'
       }
     }
   },
@@ -64,7 +64,7 @@ module.exports = {
   css: [
     // '@fortawesome/fontawesome/styles.css',
     {src: '@/assets/css/style.scss',
-    lang: 'sass'}
+      lang: 'sass'}
   ],
   /*
   ** Customize the progress bar color
@@ -110,22 +110,22 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
-   vendor: [
-     'babel-polyfill',
-    // '~/assets/countryaddresses.js',
-    'mailcheck',
-    'auth0-js'
-   ],
-   babel: {
-     presets: [
-       ['vue-app', {
-         useBuiltIns: true,
-         targets: {
-           ie: 11, uglify: true
-         }
-       }]
-     ]
-   },
+    vendor: [
+      'babel-polyfill',
+      // '~/assets/countryaddresses.js',
+      'mailcheck',
+      'auth0-js'
+    ],
+    babel: {
+      presets: [
+        ['vue-app', {
+          useBuiltIns: true,
+          targets: {
+            ie: 11, uglify: true
+          }
+        }]
+      ]
+    },
     extend (config, ctx) {
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({

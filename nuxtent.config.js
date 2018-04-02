@@ -3,7 +3,7 @@ module.exports = {
     ['rls', {
       page: 'states/_state',
       permalink: 'states/:slug',
-      isPost:false,
+      isPost: false,
       generate: [
         'get',
         'getAll'
@@ -65,7 +65,7 @@ module.exports = {
       }
     ]
   ],
-  api: function(isStatic) {
+  api: function (isStatic) {
     let url = process.env.baseUrl
     return {
       browserBaseURL: isStatic ? url : ''
