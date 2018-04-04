@@ -65,7 +65,7 @@
 
           <b-field horizontal>
             <p class="control">
-              <button class="button is-primary">
+              <button class="button is-primary" @click="sendEmail">
                 Send message
               </button>
             </p>
@@ -263,6 +263,32 @@ export default {
       console.log('save', this.ctx1.canvas.toDataURL())
       this.chosenSig = this.ctx1.canvas.toDataURL()
       this.updateStage('composeMessage')
+    },
+    sendEmail () {
+      function dataURItoBlob (dataURI) {
+        var byteString = atob(dataURI.split(',')[1])
+        var ab = new ArrayBuffer(byteString.length)
+        var ia = new Uint8Array(ab)
+        for (var i = 0; i < byteString.length; i++) {
+          ia[i] = byteString.charCodeAt(i)
+        }
+        return new Blob([ab], { type: 'image/png' })
+      }
+      var blob = dataURItoBlob(this.fpca)
+      console.log(blob)
+      let data = new FormData()
+      data.append('from', 'VoteFromAbroad <mailer@votefromabroad.org>')
+      data.append('to', 'alexpm@gmail.com')
+      data.append('subject', 'FPCA')
+      data.append('text', 'Your FPCA application')
+      data.append('attachment', blob, '@file/fpca.png')
+      data.append('inline', blob, 'file/fpca.png')
+      data.append('html', '<html>HTML version of the body<img src="cid:fpca.png" width="120" alt="FPCA"><br/></html>')
+      let url = 'https://votefromabroad.netlify.com/api/mail'
+      let config = { url: url, method: 'post', headers: { 'Content-Type': 'multipart/form-data' }, auth: { username: 'api', password: 'key-44903961cb823b645750fe64358dfc40' } }
+      this.$axios.post(url, data, config)
+        .then(response => console.log(response))
+        .catch(errors => console.log(errors))
     }
   },
   // watch: {
