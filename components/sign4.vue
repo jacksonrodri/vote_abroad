@@ -50,34 +50,42 @@
           <li>Type a message to include with your email to your local election official.  We will attach your completed, signed and dated form. Click send to send the email. We will also send a copy to your email address for your records.</li>
         </ol>
         <section>
-          <b-field horizontal label="Subject" type="is-danger" message="Please enter a subject">
-            <b-input name="subject" expanded></b-input>
+          <b-field horizontal label="Subject">
+            <b-input v-model="subject" name="subject" expanded></b-input>
           </b-field>
 
           <b-field horizontal label="From">
-            <b-input name="name" placeholder="Name" expanded></b-input>
-            <b-input name="email" type="email" placeholder="nobody@nowhere.com" expanded></b-input>
+            <b-input v-model="fromName" name="name" placeholder="Name" expanded></b-input>
+            <b-input v-model="email" name="email" type="email" placeholder="nobody@nowhere.com" disabled expanded></b-input>
           </b-field>
 
           <b-field horizontal label="Message">
-            <b-input type="textarea"></b-input>
+            <b-input v-model="message" type="textarea"></b-input>
           </b-field>
+
+          <!-- <button class="button is-primary is-medium is-fullwidth" @click="sendEmail">
+            Send Email
+          </button> -->
 
           <b-field horizontal>
             <p class="control">
-              <button class="button is-primary" @click="sendEmail">
-                Send message
+              <button class="button is-primary is-medium is-fullwidth" @click="sendEmail">
+                Send Email
               </button>
             </p>
           </b-field>
       </section>
       <section class="section">
-        <div class="field">
-          <label class="label">Attachment</label>
+        <div class="field is-horizontal">
+          <div class="field-label">
+            <label class="label">Attachment</label>
+          </div>
+          <div class="field-body">
+            <figure class="field image" style="border: gray solid;">
+              <img v-if="fpca" :src="fpca || null">
+            </figure>
+          </div>
         </div>
-        <figure class="image">
-          <img v-if="fpca" :src="fpca || null">
-        </figure>
       </section>
       </div>
     </transition>
@@ -106,11 +114,16 @@ export default {
       ctx2: null,
       ctx3: null,
       sigImage: null,
-      chosenSig: null
+      chosenSig: null,
+      fromName: null,
+      subject: null,
+      message: null
     }
   },
   computed: {
     currentRequest () { return this.requests[this.currentRequestIndex] },
+    firstName () { return this.currentRequest && this.currentRequest.firstName ? this.currentRequest.firstName : ' ' },
+    lastName () { return this.currentRequest && this.currentRequest.lastName ? this.currentRequest.lastName : ' ' },
     email () { return this.currentRequest && this.currentRequest.email ? this.currentRequest.email.toString() : ' ' },
     leoEmail () {
       return this.currentRequest.votAdr.leo && this.currentRequest.votAdr.leo.e ? this.currentRequest.votAdr.leo.e : ''
@@ -295,11 +308,11 @@ export default {
       let data = new FormData()
       data.append('from', 'VoteFromAbroad <mailer@votefromabroad.org>')
       data.append('to', this.email)
-      data.append('subject', 'FPCA')
-      data.append('text', 'Your FPCA application')
+      data.append('subject', this.subject)
+      data.append('text', this.message)
       data.append('attachment', blob, '@file/fpca.png')
       data.append('inline', blob, 'file/fpca.png')
-      data.append('html', `<html>This message will be sent to ${this.leoEmail} ${this.leoName} in production: HTML version of the body to be written later. <img src="cid:fpca.png" width="120" alt="FPCA"><br/></html>`)
+      data.append('html', `<html>This message will be sent to ${this.leoEmail} ${this.leoName} in production:<br/><br/> ${this.message} <br/><br/><img src="cid:fpca.png" width="120" alt="FPCA"><br/></html>`)
       let url = 'https://votefromabroad.netlify.com/api/mail'
       let config = { url: url, method: 'post', headers: { 'Content-Type': 'multipart/form-data' }, auth: { username: 'api', password: 'key-44903961cb823b645750fe64358dfc40' } }
       this.$axios.post(url, data, config)
@@ -307,23 +320,14 @@ export default {
         .catch(errors => console.log(errors))
     }
   },
-  // watch: {
-  //   value: function (val) {
-  //     if (val === 'capture') {
-  //       this.start()
-  //     } else if (val === 'select') {
-  //       setTimeout(() => {
-  //         console.log('thisfromsettimeout', this)
-  //         this.drawSignatureSelections()
-  //       }, 2000)
-  //     }
-  //   }
-  // },
   mounted: function () {
     console.log('mounted', this)
     // let c = document.createElement('canvas')
     this.canvas = document.createElement('canvas')
     this.ctx = this.canvas.getContext('2d')
+    this.fromName = `${this.firstName} ${this.lastName}`
+    this.subject = 'FPCA Submission'
+    this.message = 'Please find my FPCA form for the 2018 calendar year. Can you confirm receipt and also confirm that I do not need to send in the paper copy? \n\nThank you so much for everything you do - your work is much appreciated by Americans abroad!!'
   },
   beforeDestroy: function () {
     if (this.$refs.video) {

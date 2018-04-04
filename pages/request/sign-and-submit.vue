@@ -16,7 +16,7 @@
           <b-tab-item :label="$t('request.stages.email')"
             v-if="stateRules && stateRules.fpcaSubmitOptionsRequest.indexOf('Email') > -1"
             icon="at">
-            <section class="section">
+            <section v-if="!signStep" class="section">
               <article class="media">
                 <div class="media-content">
                   <i18n path="request.stages.emailIntro"
@@ -52,8 +52,6 @@
                     </div>
                   </article>
                   <!-- <Sign :signStep="signStep" @sigcap="addSig" @cancel="signStep = null"/> -->
-                  <sign4 v-model="signStep" :fpca="fpca" @sigcap="addSig">
-                  </sign4>
                   <article class="media">
                     <figure class="media-left">
                       <span class="icon is-large">
@@ -81,6 +79,10 @@
                 </div>
               </article>
               <!-- <nuxt-child/> -->
+            </section>
+            <section v-if="signStep" class="section">
+              <sign4 v-model="signStep" :fpca="fpca" @sigcap="addSig">
+              </sign4>
             </section>
           </b-tab-item>
           <b-tab-item label="Fax"
@@ -256,7 +258,7 @@
             </section>
           </b-tab-item>
         </b-tabs>
-        <my-canvas class="canvas" ref="fpca">
+        <my-canvas class="canvas" ref="fpca" style="position:absolute;left:-2600px;">
           <my-box
             :lastName="lastName"
             :firstName="firstName"
@@ -500,6 +502,9 @@ export default {
     },
     addSig (val) {
       this.signature = val
+      var d = new Date()
+      var today = `${d.getFullYear()}-${d.getMonth() < 9 ? '0' : ''}${d.getMonth() + 1}-${d.getDate() < 9 ? '0' : ''}${d.getDate()}`
+      this.$store.commit('requests/update', { date: today })
       console.log('addsig', this.$refs.fpca.$refs['my-canvas'])
       setTimeout(() => {
         this.fpca = this.$refs.fpca.$refs['my-canvas'].toDataURL()
