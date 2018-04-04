@@ -33,14 +33,14 @@
          :width="width * 4 / 5"
          :height="height / 2"
          @click="save"></canvas>
-        <!-- <canvas ref="signature2"
+        <canvas ref="signature2"
          :width="width * 4 / 5"
          :height="height / 2"
          @click="save"></canvas>
         <canvas ref="signature3"
          :width="width * 4 / 5"
          :height="height / 2"
-         @click="save"></canvas> -->
+         @click="save"></canvas>
         <button @click="updateStage('capture')" class="button">Try again</button>
         <button @click="save" class="button">Save</button>
       </div>
@@ -85,6 +85,8 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   data () {
     return {
@@ -106,6 +108,20 @@ export default {
       sigImage: null,
       chosenSig: null
     }
+  },
+  computed: {
+    currentRequest () { return this.requests[this.currentRequestIndex] },
+    email () { return this.currentRequest && this.currentRequest.email ? this.currentRequest.email.toString() : ' ' },
+    leoEmail () {
+      return this.currentRequest.votAdr.leo && this.currentRequest.votAdr.leo.e ? this.currentRequest.votAdr.leo.e : ''
+    },
+    leoName () {
+      return this.currentRequest.votAdr.leo && this.currentRequest.votAdr.leo.n ? this.currentRequest.votAdr.leo.n : ''
+    },
+    ...mapState({
+      currentRequestIndex: state => state.requests.currentRequest,
+      requests: state => state.requests.requests
+    })
   },
   props: [
     'value',
@@ -187,12 +203,12 @@ export default {
     },
     drawSignatureSelections: function () {
       this.ctx1 = this.$refs.signature1.getContext('2d')
-      // this.ctx2 = this.$refs.signature2.getContext('2d')
-      // this.ctx3 = this.$refs.signature3.getContext('2d')
+      this.ctx2 = this.$refs.signature2.getContext('2d')
+      this.ctx3 = this.$refs.signature3.getContext('2d')
       let edited = this.editImg(this.sigImage, this.width, this.height / 2)
       this.ctx1.putImageData(edited, 0, 0)
-      // this.ctx2.putImageData(edited, 0, 0)
-      // this.ctx3.putImageData(edited, 0, 0)
+      this.ctx2.putImageData(edited, 0, 0)
+      this.ctx3.putImageData(edited, 0, 0)
     },
     editImg: function (imgData, canvasWidth, canvasHeight) {
       var data = imgData.data
@@ -278,12 +294,12 @@ export default {
       console.log(blob)
       let data = new FormData()
       data.append('from', 'VoteFromAbroad <mailer@votefromabroad.org>')
-      data.append('to', 'alexpm@gmail.com')
+      data.append('to', this.email)
       data.append('subject', 'FPCA')
       data.append('text', 'Your FPCA application')
       data.append('attachment', blob, '@file/fpca.png')
       data.append('inline', blob, 'file/fpca.png')
-      data.append('html', '<html>HTML version of the body<img src="cid:fpca.png" width="120" alt="FPCA"><br/></html>')
+      data.append('html', `<html>This message will be sent to ${this.leoEmail} ${this.leoName} in production: HTML version of the body to be written later. <img src="cid:fpca.png" width="120" alt="FPCA"><br/></html>`)
       let url = 'https://votefromabroad.netlify.com/api/mail'
       let config = { url: url, method: 'post', headers: { 'Content-Type': 'multipart/form-data' }, auth: { username: 'api', password: 'key-44903961cb823b645750fe64358dfc40' } }
       this.$axios.post(url, data, config)
