@@ -51,16 +51,21 @@
         </ol>
         <section>
           <b-field horizontal label="Subject">
-            <b-input v-model="subject" name="subject" expanded></b-input>
+            <b-input v-model="subject" name="subject" :disabled="isMailing === true" expanded></b-input>
           </b-field>
 
           <b-field horizontal label="From">
-            <b-input v-model="fromName" name="name" placeholder="Name" expanded></b-input>
-            <b-input v-model="email" name="email" type="email" placeholder="nobody@nowhere.com" disabled expanded></b-input>
+            <b-input v-model="fromName" name="name" placeholder="Name" :disabled="isMailing === true" expanded></b-input>
+            <b-input :value="email" name="email" type="email" placeholder="nobody@nowhere.com" disabled expanded></b-input>
+          </b-field>
+
+          <b-field horizontal label="From">
+            <b-input :value="leoName" name="LeoName" placeholder="Name" disabled expanded></b-input>
+            <b-input :value="leoEmail" name="LeoEmail" type="email" placeholder="nobody@nowhere.com" disabled expanded></b-input>
           </b-field>
 
           <b-field horizontal label="Message">
-            <b-input v-model="message" type="textarea"></b-input>
+            <b-input v-model="message" :disabled="isMailing === true" type="textarea"></b-input>
           </b-field>
 
           <!-- <button class="button is-primary is-medium is-fullwidth" @click="sendEmail">
@@ -69,7 +74,7 @@
 
           <b-field horizontal>
             <p class="control">
-              <button class="button is-primary is-medium is-fullwidth" @click="sendEmail">
+              <button :class="[buttonClass, {'is-loading': isMailing}]" @click="sendEmail">
                 Send Email
               </button>
             </p>
@@ -117,7 +122,14 @@ export default {
       chosenSig: null,
       fromName: null,
       subject: null,
-      message: null
+      isMailing: false,
+      message: null,
+      buttonClass: {
+        button: true,
+        'is-primary': true,
+        'is-medium': true,
+        'is-fullwidth': true
+      }
     }
   },
   computed: {
@@ -294,6 +306,7 @@ export default {
       this.updateStage('composeMessage')
     },
     sendEmail () {
+      this.isMailing = true
       function dataURItoBlob (dataURI) {
         var byteString = atob(dataURI.split(',')[1])
         var ab = new ArrayBuffer(byteString.length)
@@ -316,8 +329,27 @@ export default {
       let url = 'https://votefromabroad.netlify.com/api/mail'
       let config = { url: url, method: 'post', headers: { 'Content-Type': 'multipart/form-data' }, auth: { username: 'api', password: 'key-44903961cb823b645750fe64358dfc40' } }
       this.$axios.post(url, data, config)
-        .then(response => console.log(response))
-        .catch(errors => console.log(errors))
+        .then(response => {
+          console.log(response)
+          this.$toast.open({
+            message: `Sent! Check your inbox for a copy (${this.email})`,
+            type: 'is-success'
+          })
+          this.$router.push('/dashboard')
+        })
+        .catch(errors => {
+          this.isMailing = false
+          this.$dialog.alert({
+            title: 'Error Sending',
+            message: 'There was an error sending your email. Please try again or return to the last page and download a copy.',
+            confirmText: 'OK',
+            type: 'is-danger',
+            hasIcon: true,
+            icon: 'error',
+            iconPack: 'fas'
+          })
+          console.log(errors)
+        })
     }
   },
   mounted: function () {
