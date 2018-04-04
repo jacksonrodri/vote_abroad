@@ -308,6 +308,7 @@
       </div>
     </b-modal>
     </div>
+  <scroll-up></scroll-up>
   </div>
 </template>
 
@@ -319,6 +320,7 @@ import Sign4 from '~/components/sign4.vue'
 import { mapState } from 'vuex'
 import axios from 'axios'
 import VueMarkdown from 'vue-markdown'
+import ScrollUp from '~/components/ScrollUp'
 
 // var mailgun = require('mailgun.js')
 // var apiKey = 'key-44903961cb823b645750fe64358dfc40'
@@ -340,7 +342,8 @@ export default {
     MyBox,
     Sign,
     Sign4,
-    VueMarkdown
+    VueMarkdown,
+    ScrollUp
   },
   async asyncData ({app, store}) {
     let state = store.getters['requests/getCurrent'].votAdr.leo.s || ''
