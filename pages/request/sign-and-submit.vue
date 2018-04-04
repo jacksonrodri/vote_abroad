@@ -42,15 +42,18 @@
                         :html="true">
                         <span place="device">Computer</span>
                       </i18n>
+                      <button v-if="!signStep" class="button is-pulled-right is-primary" @click="signatureAgree"><b-icon icon="camera" size="is-small"></b-icon><span>{{$t('request.stages.sign')}}</span></button>
                       <br>
                       <!-- <button class="button is-pulled-right is-primary" @click="isSignatureModalActive = true"><b-icon icon="camera" size="is-small"></b-icon><span>{{$t('request.stages.sign')}}</span></button> -->
-                      <nuxt-link class="button is-pulled-right is-primary" to="sign"><b-icon icon="camera" size="is-small"></b-icon><span>{{$t('request.stages.sign')}}</span></nuxt-link>
+                      <!-- <nuxt-link class="button is-pulled-right is-primary" to="sign"><b-icon icon="camera" size="is-small"></b-icon><span>{{$t('request.stages.sign')}}</span></nuxt-link> -->
                       <!-- {{ hasCamera ? "you have a camera" : "you don't have a camera" }}
                       {{ downloadAttrSupported ? "this browser supports the download attribute" : "this browser doesn't support the download attribute"}}
                       <embed type="application/pdf" :src="pdf" /> -->
                     </div>
                   </article>
-                  <Sign @sigcap="addSig"/>
+                  <!-- <Sign :signStep="signStep" @sigcap="addSig" @cancel="signStep = null"/> -->
+                  <sign4 v-model="signStep" :fpca="fpca" @sigcap="addSig">
+                  </sign4>
                   <article class="media">
                     <figure class="media-left">
                       <span class="icon is-large">
@@ -253,38 +256,37 @@
             </section>
           </b-tab-item>
         </b-tabs>
-
-    <my-canvas v-if="signature" class="canvas" ref="fpca">
-      <my-box
-        :lastName="lastName"
-        :firstName="firstName"
-        :middleName="middleName"
-        :suffix="suffix"
-        :previousName="previousName.previousName"
-        :dob="dob"
-        :ssn="ssn"
-        :stateId="stateId"
-        :votStreet="votStreet"
-        :votApt="votApt"
-        :votCity="votCity"
-        :votState="votState"
-        :votCounty="votCounty"
-        :votZip="votZip"
-        :abrAdr="abrAdr"
-        :fwdAdr="fwdAdr"
-        :email="email"
-        :altEmail="altEmail"
-        :tel="tel.intNumber"
-        :fax="fax.intNumber"
-        :party="party"
-        :addlInfo="addlInfo"
-        :date="date"
-        :classification="voterClass"
-        :sex="sex"
-        :recBallot="recBallot"
-        :signature="signature"></my-box>
-    </my-canvas>
-    <img ref="pic" alt="">
+        <my-canvas class="canvas" ref="fpca">
+          <my-box
+            :lastName="lastName"
+            :firstName="firstName"
+            :middleName="middleName"
+            :suffix="suffix"
+            :previousName="previousName.previousName"
+            :dob="dob"
+            :ssn="ssn"
+            :stateId="stateId"
+            :votStreet="votStreet"
+            :votApt="votApt"
+            :votCity="votCity"
+            :votState="votState"
+            :votCounty="votCounty"
+            :votZip="votZip"
+            :abrAdr="abrAdr"
+            :fwdAdr="fwdAdr"
+            :email="email"
+            :altEmail="altEmail"
+            :tel="tel.intNumber"
+            :fax="fax.intNumber"
+            :party="party"
+            :addlInfo="addlInfo"
+            :date="date"
+            :classification="voterClass"
+            :sex="sex"
+            :recBallot="recBallot"
+            :signature="signature"></my-box>
+        </my-canvas>
+    <!-- <img ref="pic" alt=""> -->
     <!-- </no-ssr> -->
 
       <!-- <div class="control buttons is-right">
@@ -311,6 +313,7 @@
 import MyCanvas from '~/components/MyCanvas.vue'
 import MyBox from '~/components/MyBox.vue'
 import Sign from '~/components/sign3.vue'
+import Sign4 from '~/components/sign4.vue'
 import { mapState } from 'vuex'
 import axios from 'axios'
 import VueMarkdown from 'vue-markdown'
@@ -334,6 +337,7 @@ export default {
     MyCanvas,
     MyBox,
     Sign,
+    Sign4,
     VueMarkdown
   },
   async asyncData ({app, store}) {
@@ -364,7 +368,9 @@ export default {
       isSigning: false,
       pdf: '',
       msPdf: '',
-      deadline: `IMPORTANT: If you are not yet a registered voter, your form must be received by XX to be eligible to vote in the November 6 General Election. If you already are a registered voter, your form must be received by XX to receive a ballot for the November 6 General Election.`
+      deadline: `IMPORTANT: If you are not yet a registered voter, your form must be received by XX to be eligible to vote in the November 6 General Election. If you already are a registered voter, your form must be received by XX to receive a ballot for the November 6 General Election.`,
+      signStep: null,
+      fpca: null
     }
   },
   mounted () {
@@ -401,6 +407,22 @@ export default {
       })
   },
   methods: {
+    signatureAgree () {
+      this.$dialog.confirm({
+        title: 'You must read and confirm',
+        message: `<h1 class="title is-5">I swear or affirm, under penalty of purjury that:</h1>
+        <div class="content">
+        <ul>
+          <li>The information on this form is true, accurate, and complete to the best of my knowledge. I understand that a material misstatement of fact in completion of this document may constitute grounds for conviction of perjury.</li>
+          <li>I am a U.S. citizen, at least 18 years of age (or will be by the day of the election), eligible to vote in the requested jurisdiction, and</li>
+          <li>I am not disqualified to vote due to having been convicted of a felony or other disqualifying offense, nor have I been adjudicated mentally incompetent; or if so, my voting rights have been reinstated; and</li>
+          <li>I am not registering, requesting a ballot, or voting in any other jurisdiction in the United States, except the jurisdiction cited in this voting form. </li><ul></div>`,
+        cancelText: 'Disagree',
+        confirmText: 'Agree',
+        type: 'is-success',
+        onConfirm: () => { this.signStep = 'instructions' }
+      })
+    },
     confirmPdfDownload () {
       this.$dialog.alert({
         title: 'Finished Downloading',
@@ -478,8 +500,13 @@ export default {
     },
     addSig (val) {
       this.signature = val
+      console.log('addsig', this.$refs.fpca.$refs['my-canvas'])
+      setTimeout(() => {
+        this.fpca = this.$refs.fpca.$refs['my-canvas'].toDataURL()
+      }, 800)
+      // this.fpca = this.$refs.fpca.$refs['my-canvas'].toDataURL()
       // console.log(val)
-      this.$refs.pic.src = this.signature
+      // this.$refs.pic.src = this.signature
     },
     sendEmail () {
       let fpca = this.$refs.fpca.$refs['my-canvas'].toDataURL()

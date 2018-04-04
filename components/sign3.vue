@@ -1,15 +1,9 @@
 <template>
-  <div class="card">
+<div>
+  <div class="card" v-if="signStep">
     <div class="card-content">
-      <p class="title is-5">Signature Capture</p>
-      <ol class="is-size-6">
-        <li>Sign your name on white paper with a dark pen.  </li>
-        <li>Hold it in front of your camera and align it in the box.</li>
-        <li>Click capture and adjust it.</li>
-        {{ details }}
-      </ol>
-      <button class="button is-primary is-medium" @click="startCamera">Start my camera</button>
-      <div v-if="isSigningActive" class="signature">
+      <!-- <button class="button is-primary is-medium" @click="startCamera">Start my camera</button> -->
+      <div v-if="signStep==='instructions'" class="signature">
         <div class="signatureline"></div>
         <div style="position:relative;">
           <video v-show="isCapture"
@@ -24,21 +18,20 @@
 
             <!-- style="width: 1px; height: 1px; margin -1px; filter: grayscale(100%) brightness(200%) contrast(100%)" -->
           <canvas ref="sigCanvas"
-            style="position:absolute;background-image:url('/fpca_sign.png'); background-size: cover;opacity:0;"
+            style="position:absolute;background-image:url('/fpca_sign.png');background-size:cover;opacity:0;"
             v-bind:width="width"
             v-bind:height="height"
             v-show="true"></canvas>
-          <div ref="glfilter"
-            style="position:absolute;background-image:url('/fpca_sign.png'); background-size: cover;"></div>
           <canvas ref="edited"
             v-bind:width="width"
             v-bind:height="height"
             v-on:click="takePhoto"
-            style="background-image:url('/fpca_sign.png'); background-size: cover;opacity:0;"></canvas>
+            style="position:absolute;background-image:url('/fpca_sign.png');background-size:cover;opacity:0;"></canvas>
+          <div ref="glfilter" id="gl"></div>
         </div>
       </div>
 
-      <b-collapse v-if="isSigningActive" class="card is-shadowless" :open.sync="isEditing">
+      <!-- <b-collapse v-if="isSigningActive" class="card is-shadowless" :open.sync="isEditing">
         <div class="card-header" slot="trigger">
           <p class="card-header-title">Adjust photo</p>
           <a class="card-header-icon">
@@ -55,7 +48,7 @@
             <output for="contrastSlider">{{ contrast }}</output>
           </div>
         </div>
-      </b-collapse>
+      </b-collapse> -->
     </div>
     <footer v-if="isSigningActive" class="card-footer">
       <p class="card-footer-item">
@@ -67,6 +60,7 @@
       </p>
     </footer>
   </div>
+</div>
 </template>
 
 <script>
@@ -84,6 +78,9 @@ export default {
   //     ]
   //   }
   // },
+  props: [
+    'signStep'
+  ],
   components: {
     slider
   },
@@ -122,6 +119,14 @@ export default {
     cont () { return Math.exp(parseInt(this.contrast) / 100) },
     br () { return parseInt(this.brightness) }
   },
+  watch: {
+    signStep (val) {
+      if (val === 'instructions') {
+        console.log('instructions Step')
+        this.cameraInstructions()
+      }
+    }
+  },
   // watch: {
   //   paused (newVal, oldVal) {
   //     if (newVal === false) {
@@ -130,10 +135,83 @@ export default {
   //   }
   // },
   methods: {
+    cameraInstructions () {
+      this.$dialog.confirm({
+        title: 'Instructions',
+        message: `<h1 class="title is-5">I swear or affirm, under penalty of purjury that:</h1>
+        <div class="content">
+        <ol>
+          <li>Click 'Accept' to allow access to your camera.</li>
+          <li>Sign your name with a dark pen on a sheet of plain white paper.</li>
+          <li>Click 'capture' to take a picture of you signature</li>
+          <li>Select the clearest version</li>
+        </ol>
+        </div>`,
+        confirmText: 'Allow access to your camera',
+        type: 'is-success',
+        onConfirm: this.startCamera()
+      })
+    },
     save () {
-      this.optimizedPhoto = this.filteredImage.toDataURL('image/png')
+      var gl = this.filteredImage.getContext('webgl')
+      var ctx = this.ctx1
+
+      var width = gl.drawingBufferWidth
+      var height = gl.drawingBufferHeight
+      var pixels = new Uint8Array(width * height * 4)
+      gl.readPixels(0, 0, width, height, gl.RGBA, gl.UNSIGNED_BYTE, pixels)
+
+      var halfHeight = height / 2 | 0 // the | 0 keeps the result an int
+      var bytesPerRow = width * 4
+
+      // make a temp buffer to hold one row
+      var temp = new Uint8Array(width * 4)
+      for (var y = 0; y < halfHeight; ++y) {
+        var topOffset = y * bytesPerRow
+        var bottomOffset = (height - y - 1) * bytesPerRow
+
+        // make copy of a row on the top half
+        temp.set(pixels.subarray(topOffset, topOffset + bytesPerRow))
+
+        // copy a row from the bottom half to the top
+        pixels.copyWithin(topOffset, bottomOffset, bottomOffset + bytesPerRow)
+
+        // copy the copy of the top half row to the bottom half
+        pixels.set(temp, bottomOffset)
+      }
+      console.log(pixels)
+      var sorted = pixels.slice().sort()
+      var len = pixels.length
+      let thresholds = [1, 3, 5, 8, 11, 15]
+      console.log(thresholds)
+
+      function createImage (threshold) {
+        let brightnessThreshold = Math.floor(len * threshold / 100)
+        pixels.forEach((p, i, a) => {
+          if ((i + 1) % 4 === 0) {
+            let avg = (a[i - 3] + a[i - 2] + a[i - 1]) / 3
+            if (i <= width * height * 4 * 0.3 || avg > sorted[brightnessThreshold]) {
+              pixels[i] = 0
+            } else {
+              pixels[i] = 255 - ((255 - avg) / 2)
+              pixels[i - 1] = 0
+              pixels[i - 2] = 0
+              pixels[i - 3] = 0
+            }
+          }
+        })
+        var imgd = new ImageData(width, height)
+        imgd.data.set(pixels)
+        return imgd
+      }
+
+      // This part is not part of the answer. It's only here
+      // to show the code above worked
+      // copy the pixels in a 2d canvas to show it worked
+      var imgdata = createImage(1)
+      ctx.putImageData(imgdata, 0, 0)
+      this.optimizedPhoto = ctx.canvas.toDataURL('image/png')
       this.$emit('sigcap', this.optimizedPhoto)
-      // this.$parent.close()
     },
     reset () {
       this.isCapture = true
@@ -295,31 +373,32 @@ export default {
     // ColorMatrix2=0;1;0;-1;0
     // ColorMatrix3=0;0;1;-1;0
 
-    // this.filter.addFilter('blur', 3)
+    this.filter.addFilter('blur', 1)
     // this.filter.addFilter('detectEdges')
-    // this.filter.addFilter('emboss', 10)
+    // this.filter.addFilter('emboss', 1)
     // this.filter.addFilter('sobelX')
     // this.filter.addFilter('sobelY')
     // this.filter.addFilter('blur', 3)
     // this.filter.addFilter('convolution', [
     //   -3, 0, 3, -10, 0, 10, -3, 0, 3
     // ])
-    // this.filter.addFilter('desaturateLuminance')
+    this.filter.addFilter('desaturateLuminance')
+    // this.filter.addFilter('contrast', 0.3)
     // this.filter.addFilter('negative')
-    // this.filter.addFilter('brightness', 0.7)
-    // this.filter.addFilter('contrast', 2)
+    // this.filter.addFilter('blur', 3)
+    // this.filter.addFilter('brightness', -0.5)
     // this.filter.addFilter('colorMatrix', [
-    //   0.33, 0.33, 0.33, 0, 0,
-    //   0.33, 0.33, 0.33, 0, 0,
-    //   0.33, 0.33, 0.33, 0, 0,
+    //   0.65, 0.65, 0.65, 0, -96,
+    //   0.65, 0.65, 0.65, 0, -96,
+    //   0.65, 0.65, 0.65, 0, -96,
+    //   -0.5, -0.5, -0.5, 0, 400
+    // ])
+    // this.filter.addFilter('colorMatrix', [
+    //   -1.4, -1.4, -1.4, 0, 255,
+    //   -1.4, -1.4, -1.4, 0, 255,
+    //   -1.4, -1.4, -1.4, 0, 255,
     //   -0.33, -0.33, -0.33, 0, 255
     // ])
-    this.filter.addFilter('colorMatrix', [
-      -1.4, -1.4, -1.4, 0, 255,
-      -1.4, -1.4, -1.4, 0, 255,
-      -1.4, -1.4, -1.4, 0, 255,
-      -0.33, -0.33, -0.33, 0, 255
-    ])
     // this.filter.addFilter('negative')
     // this.filter.addFilter('desaturate')
     // this.filter.addFilter('emboss', 5)
@@ -383,5 +462,19 @@ export default {
 <style>
 canvas {
   max-width: 100%;
+}
+#gl {
+  position: relative;
+}
+#gl:after {
+  content: "";
+  position:absolute;
+  background-image:url('/fpca_sign.png');
+  background-size: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 </style>
