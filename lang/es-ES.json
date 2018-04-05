@@ -3,8 +3,8 @@
   "home": "Página de inicio",
   "posts": "Mensajes",
   "homepage": {
-    "subtitle": "Absentee ballots for Americans abroad",
-    "loginInstructions": "Type your email address or phone number to start a secure session."
+    "subtitle": "Boletas electorales para los estadounidenses en el extranjero",
+    "loginInstructions": "Escriba su número de teléfono o dirección de correo electrónico para iniciar una sesión segura."
   },
   "request": {
     "middleName": {
@@ -149,21 +149,21 @@
       "back": "Back",
       "download": "Download Now",
       "mailConfirm": "<strong class='has-text-danger'>Confirm</strong> with your local election official that they received it.",
-      "step": "Step {step} of 5",
+      "step": "Paso {step} de 5",
       "faxIntro": "Sign and send your form by fax",
       "instructions4": "Confirm that the following information is correct. If you need to correct anything click 'Back.' When everything is correct click 'Next' for instructions on how to sign and send your form to your election official.",
       "emailIntro": "Sign and send your form by email",
       "instructions5": "You must send your <strong class=\"has-text-danger\">signed</strong> ballot request to {leo} by email, fax or mail.   Choose how to send your ballot request.",
-      "stage1": "Your Information",
+      "stage1": "Su información",
       "next": "Next",
       "mailSign": "Print, sign and date your form.",
       "sendEmail": "Send Email",
-      "stage2": "Voting Information",
-      "stage3": "ID & Contact Information",
+      "stage2": "Información sobre la votación",
+      "stage3": "Identificación e información de contacto",
       "generate": "Next",
       "sendFax": "Send Fax electronically",
       "mailIntro": "Download, print, sign and send your form by postal mail",
-      "stage4": "Review your form",
+      "stage4": "Revise su formulario",
       "stage5": "Sign and Submit",
       "mail": "Mail",
       "mailPost": "Mail your form to:",
