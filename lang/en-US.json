@@ -3,25 +3,8 @@
   "home": "Homepage",
   "posts": "Posts",
   "homepage": {
-    "title": "Vote from abroad",
     "subtitle": "Absentee ballots for Americans abroad",
-    "loginInstructions": "Type your email address or phone number to start a secure session.",
-    "start": "Start",
-    "anonymous": "or start an anonymous session"
-  },
-  "menu": {
-    "contact": "Contact the Help Desk",
-    "help": "Help",
-    "terms": "Terms of Use",
-    "privacy": "Privacy",
-    "stateGuide": "State Voting Guide",
-    "howto": "How to Vote From Abroad",
-    "about": "About Us",
-    "moreFAQs": "More FAQ's",
-    "helpfaq": "Voter Help Desk/ FAQ",
-    "allElections": "All Upcoming Elections",
-    "disclaimer": "Public Service provided by Democratic Party Committee Abroad (DemocratsAbroad.org).\n\nThis communication is not authorized by any candidate or candidate's committee.",
-    "upcomingElections": "Upcoming Elections"
+    "loginInstructions": "Type your email address or phone number to start a secure session."
   },
   "request": {
     "middleName": {
@@ -320,14 +303,14 @@
     "send": {
       "title": "Send",
       "icon": "paper-plane",
-      "content": "You must submit your request to your local election official in your town, county or state.  blah blah blah",
+      "content": "You must submit your signed and dated request to { leo }. their contact information is below.",
       "actionText": "Send Request electronically",
       "completeText": "I've already sent my form"
     },
     "vote": {
       "title": "Vote",
       "icon": "check",
-      "content": "Be sure to send in your voted ballot by the deadline of....",
+      "content": "Be sure to send in your voted ballot on time.  It must be {rule} by {deadline}",
       "actionText": "Check my deadlines",
       "completeText": "I've already voted"
     },
