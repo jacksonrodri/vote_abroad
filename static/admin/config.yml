@@ -145,6 +145,33 @@ collections:
               - {label: "Download Button", name: "download", widget: "string"}
               - {label: "Remind Me Button", name: "remindMe", widget: "string"}
               - {label: "Sign & Submit Button", name: "sign", widget: "string"}
+          - label: "Signature Capture Fields"
+            name: "sig"
+            widget: "object"
+            fields:
+              - {label: "Your must Read and Affirm:", name: "affirmation", widget: "string"}
+              - {label: "Agree", name: "agree", widget: "string"}
+              - {label: "Disagree", name: "disagree", widget: "string"}
+              - {label: "Instructions", name: "instructions", widget: "markdown"}
+              - {label: "Allow Webcam", name: "rtcConfirm", widget: "string"}
+              - {label: "Capture", name: "capture", widget: "string"}
+              - {label: "Capture Instructions", name: "capInstructions", widget: "markdown"}
+              - {label: "Take Photo", name: "capture", widget: "string"}
+              - {label: "Select Photo", name: "select", widget: "markdown"}
+              - {label: "Select Instructions", name: "selectInstructions", widget: "markdown"}
+              - {label: "Try Again", name: "retry", widget: "string"}
+              - {label: "Save", name: "save", widget: "string"}
+              - {label: "Send Title", name: "sendTitle", widget: "string"}
+              - {label: "Send Instructions", name: "sendInstructions", widget: "markdown"}
+              - {label: "Subject", name: "subject", widget: "string"}
+              - {label: "From", name: "from", widget: "string"}
+              - {label: "To", name: "to", widget: "string"}
+              - {label: "Message", name: "message", widget: "string"}
+              - {label: "Attachment", name: "attachment", widget: "string"}
+              - {label: "Send Email Button", name: "sendEmail", widget: "string"}
+              - {label: "Send Fax Button", name: "sendFax", widget: "string"}
+              - {label: "Success Message", name: "successMessage", widget: "string"}
+              - {label: "Failure Message", name: "failureMessage", widget: "string"}
           - label: "First Name"
             name: "firstName"
             widget: "object"
