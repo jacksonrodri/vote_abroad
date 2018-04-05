@@ -258,7 +258,7 @@
             </section>
           </b-tab-item>
         </b-tabs>
-        <my-canvas class="canvas" ref="fpca" style="position:absolute;left:-2600px;">
+        <my-canvas class="canvas" ref="fpca" style="position:absolute;left:-4600px;width:1px;height:1px;">
           <my-box
             :lastName="lastName"
             :firstName="firstName"
