@@ -3,8 +3,25 @@
   "home": "Homepage",
   "posts": "Posts",
   "homepage": {
+    "title": "Vote from abroad",
     "subtitle": "Absentee ballots for Americans abroad",
-    "loginInstructions": "Type your email address or phone number to start a secure session."
+    "loginInstructions": "Type your email address or phone number to start a secure session.",
+    "start": "Start",
+    "anonymous": "or start an anonymous session"
+  },
+  "menu": {
+    "contact": "Contact the Help Desk",
+    "help": "Help",
+    "terms": "Terms of Use",
+    "privacy": "Privacy",
+    "stateGuide": "State Voting Guide",
+    "howto": "How to Vote From Abroad",
+    "about": "About Us",
+    "moreFAQs": "More FAQ's",
+    "helpfaq": "Voter Help Desk/ FAQ",
+    "allElections": "All Upcoming Elections",
+    "disclaimer": "Public Service provided by Democratic Party Committee Abroad (DemocratsAbroad.org).\n\nThis communication is not authorized by any candidate or candidate's committee.",
+    "upcomingElections": "Upcoming Elections"
   },
   "request": {
     "middleName": {
