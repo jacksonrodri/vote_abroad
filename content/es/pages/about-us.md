@@ -1,5 +1,5 @@
 ---
-title: About Us
+title: Quiénes somos
 ---
 Placeholder text for the about us page
 
