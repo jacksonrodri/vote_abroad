@@ -250,7 +250,7 @@
                       <b-icon icon="check" size="is-medium"></b-icon>
                     </figure>
                     <div class="media-content">
-                      <p class="is-size-5"><strong class="has-text-danger">Confirm</strong> with your your local election official that they received it. </p>
+                      <p class="is-size-5"><strong class="has-text-danger">Confirm</strong> with your local election official that they received it. </p>
                     </div>
                   </article>
                 </div>
