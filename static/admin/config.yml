@@ -145,6 +145,15 @@ collections:
               - {label: "Download Button", name: "download", widget: "string"}
               - {label: "Remind Me Button", name: "remindMe", widget: "string"}
               - {label: "Sign & Submit Button", name: "sign", widget: "string"}
+          - label: "FPCA Download"
+            name: "fpcaDownload"
+            widget: "object"
+            fields:
+              - {label: "Download Finished Title", name: "downloadedAlertTitle", widget: "string"}
+              - {label: "Download Finished Message", name: "downloadedAlertMessage", widget: "markdown"}
+              - {label: "Confirm Button", name: "confirmButton", widget: "string"}
+              - {label: "Downloading Title", name: "downloadingAlertTitle", widget: "string"}
+              - {label: "Downloading Message", name: "downloadingAlertMessage", widget: "markdown"}
           - label: "Signature Capture Fields"
             name: "sig"
             widget: "object"
@@ -171,7 +180,9 @@ collections:
               - {label: "Send Email Button", name: "sendEmail", widget: "string"}
               - {label: "Send Fax Button", name: "sendFax", widget: "string"}
               - {label: "Success Message", name: "successMessage", widget: "string"}
+              - {label: "Failure Title", name: "failureTitle", widget: "string"}
               - {label: "Failure Message", name: "failureMessage", widget: "string"}
+              - {label: "Failure Confirm Text", name: "failureConfirm", widget: "string"}
           - label: "First Name"
             name: "firstName"
             widget: "object"
