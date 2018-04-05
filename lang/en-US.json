@@ -132,6 +132,30 @@
       "uncertainReturn": "My Return is Uncertain",
       "civilianType": "Civilian"
     },
+    "sig": {
+      "selectInstructions": "Select the signature below that is the clearest.  Choose the version that has a white background with a completely visible signature.",
+      "attachment": "Attachment",
+      "successMessage": "Sent! Check your inbox for a copy.",
+      "instructions": "1. Sign your name with a dark pen on a sheet of plain white paper\n2. Click 'Allow access to my webcam' and accept the following prompt.\n3. Hold your signature up in front of the camera and align it above the red signature line, then click 'take photo'\n4. Select the clearest version of your signature\n5. Click 'Send' to send your signed form to your election official.",
+      "capture": "Take Photo",
+      "message": "Message",
+      "retry": "Try again",
+      "from": "From",
+      "subject": "Subject",
+      "agree": "Agree",
+      "sendInstructions": "Type a message to include with your email to your local election official. We will attach your completed, signed and dated form. Click 'Send'. We will also send a copy to your email address for your records.",
+      "sendTitle": "Send to your Local Election Official",
+      "affirmation": "You must read and affirm:",
+      "sendEmail": "Send Email",
+      "sendFax": "Send Fax",
+      "capInstructions": "Hold your signature up in front of the camera, align it above the red signature line and click 'take photo' to capture your signature.",
+      "to": "To",
+      "select": "Select the clearest version",
+      "save": "Save",
+      "failureMessage": "There was an error sending your email. Please try again or return to the last page and download a copy.",
+      "disagree": "Disagree",
+      "rtcConfirm": "Allow access to my webcam"
+    },
     "suffix": {
       "label": "Suffix"
     },
