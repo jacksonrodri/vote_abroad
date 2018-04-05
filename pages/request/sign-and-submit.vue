@@ -250,7 +250,7 @@
                       <b-icon icon="check" size="is-medium"></b-icon>
                     </figure>
                     <div class="media-content">
-                      <p class="is-size-5"><strong class="has-text-danger">Confirm</strong> with your your local election official that they received it. </p>
+                      <p class="is-size-5"><strong class="has-text-danger">Confirm</strong> with your local election official that they received it. </p>
                     </div>
                   </article>
                 </div>
@@ -258,7 +258,7 @@
             </section>
           </b-tab-item>
         </b-tabs>
-        <my-canvas class="canvas" ref="fpca" style="position:absolute;left:-2600px;">
+        <my-canvas class="canvas" ref="fpca" style="position:absolute;left:-4600px;width:1px;height:1px;">
           <my-box
             :lastName="lastName"
             :firstName="firstName"

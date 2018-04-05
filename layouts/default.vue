@@ -60,8 +60,8 @@
                      <span class="is-size-6"><span class="has-text-weight-semibold">{{ election.state }}</span> - {{ election.electionType}}</span>
                      <!-- </span> - {{ $t(`elections.electionTypes['${election.electionType}']`) }}</span> -->
                   </nuxt-link>
-                  <hr class="navbar-divider">
-                  <nuxt-link :to="localePath({ name: 'elections' })" class="navbar-item" exact >... All upcoming elections</nuxt-link>
+                  <!-- <hr class="navbar-divider">
+                  <nuxt-link :to="localePath({ name: 'elections' })" class="navbar-item" exact >... All upcoming elections</nuxt-link> -->
                 </div>
               </div>
               <div class="navbar-item has-dropdown is-hoverable" style="order:-1;">
