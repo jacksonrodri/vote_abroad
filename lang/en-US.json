@@ -113,6 +113,13 @@
       "fwabWitness": "One witness signature",
       "tooltip": "Only Alaska voters need to answer this question as per state law."
     },
+    "fpcaDownload": {
+      "downloadedAlertTitle": "Finished Downloading",
+      "downloadedAlertMessage": "Your form has been downloaded (check your downloads folder).  You must **SIGN, DATE and SEND** it to your election official.",
+      "confirmButton": "OK",
+      "downloadingAlertTitle": "Downloading",
+      "downloadingAlertMessage": "Clicking 'OK' will open a new window with your completed form. You must **SIGN, DATE and SEND** it to your election official."
+    },
     "voterClass": {
       "tooltip": "Voters may choose **I Intend to Return** if they intend to return to the state in which they are registering to vote. An \"intention\" is sufficient, you don’t need to have a fixed date of return or firm plans. Registering as **Intend to Return **should make you eligible to vote in state and local races. However, it may also make you liable for state income taxes (if applicable in your state).\n\nVoters may choose **My Return is Uncertain** if they do not have a current intention to return to the state in which they are registering to vote. Voters are entitled to receive a ballot for federal offices and may, depending on their state, also receive a ballot for state and local offices.",
       "natGuard": "National Guard",
@@ -144,15 +151,17 @@
       "subject": "Subject",
       "agree": "Agree",
       "sendInstructions": "Type a message to include with your email to your local election official. We will attach your completed, signed and dated form. Click 'Send'. We will also send a copy to your email address for your records.",
+      "failureTitle": "Error Sending",
       "sendTitle": "Send to your Local Election Official",
       "affirmation": "You must read and affirm:",
       "sendEmail": "Send Email",
       "sendFax": "Send Fax",
+      "failureConfirm": "OK",
       "capInstructions": "Hold your signature up in front of the camera, align it above the red signature line and click 'take photo' to capture your signature.",
       "to": "To",
       "select": "Select the clearest version",
       "save": "Save",
-      "failureMessage": "There was an error sending your email. Please try again or return to the last page and download a copy.",
+      "failureMessage": "There was an error sending your {message}. Please try again or return to the last page and download a copy.",
       "disagree": "Disagree",
       "rtcConfirm": "Allow access to my webcam"
     },
