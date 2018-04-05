@@ -75,8 +75,27 @@ collections:
         name: "homepage"
         widget: "object"
         fields:
+          - {label: "Title", name: "title", widget: "string"}
           - {label: "Subtitle", name: "subtitle", widget: "string"}
           - {label: "Login Instructions", name: "loginInstructions", widget: "string"}
+          - {label: "Start Button", name: "start", widget: "string"}
+          - {label: "Anonymous Session", name: "anonymous", widget: "string"}
+      - label: "Layout and Menus"
+        name: "menu"
+        widget: "object"
+        fields:
+          - {label: "Upcoming Elections", name: "upcomingElections", widget: "string"}
+          - {label: "All Upcoming Elections", name: "allElections", widget: "string"}
+          - {label: "Help", name: "help", widget: "string"}
+          - {label: "More FAQs", name: "moreFAQs", widget: "string"}
+          - {label: "Contact", name: "contact", widget: "string"}
+          - {label: "How to Vote from Abroad", name: "howto", widget: "string"}
+          - {label: "Voter Help Desk/FAQ", name: "helpfaq", widget: "string"}
+          - {label: "About Us", name: "about", widget: "string"}
+          - {label: "State Voting Guide", name: "stateGuide", widget: "string"}
+          - {label: "Privacy", name: "privacy", widget: "string"}
+          - {label: "Disclaimer", name: "disclaimer", widget: "markdown"}
+          - {label: "Terms of Use", name: "terms", widget: "string"}
       - label: "Request Fields"
         name: "request"
         widget: "object"

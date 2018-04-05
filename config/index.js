@@ -18,11 +18,11 @@ const I18N = {
       langFile: 'es-ES.json'
     }
   ],
-  loadLanguagesAsync: false,
+  loadLanguagesAsync: true,
   langDir: 'lang/',
   defaultLocale: 'en',
   seo: false,
-  routes: require('./routes.js'),
+  // routes: require('./routes.js'),
   vueI18n: {
     messages: {
       en: require('../lang/en-US.json'),
