@@ -136,7 +136,6 @@
       "tooltip": "Según la ley del territorio, sololos votantes de Puerto Rico necesitan responder a esta pregunta."
     },
     "stages": {
-<<<<<<< HEAD
       "emailDigiSign": "** Si tiene una cámara ** en esta <span class='is-hidden-touch'>computadora</span><span class='is-hidden-de escritorio is-hidden-mobile'>tableta</span><span class='is-hidden-tablet'>teléfono</span>, puede capturar su firma y enviar el formulario directamente desde este sitio Web por correo electrónico.",
       "faxDigiSign": "** Si tiene una cámara ** en esta <span class='is-hidden-touch'>computadora</span><span class='is-hidden-de escritorio is-hidden-mobile'>tableta</span><span class='is-hidden-tablet'>teléfono</span>, puede capturar su firma y enviar el formulario directamente desde este sitio Web por correo electrónico.",
       "faxConfirm": "Confirme con su funcionario local de elecciones que lo recibió.",
@@ -152,29 +151,11 @@
       "mailConfirm": "<strong class='has-text-danger'>Confirme</strong> con su funcionario local de elecciones que lo recibió.",
       "step": "Paso {step} de 5",
       "faxIntro": "Firme y envíe el formulario por fax",
-=======
-      "emailDigiSign": "**If you have a camera** on this <span class='is-hidden-touch'>computer</span><span class='is-hidden-desktop is-hidden-mobile'>tablet</span><span class='is-hidden-tablet'>phone</span>, you can capture your signature and email your form straight from this website.",
-      "faxDigiSign": "**If you have a camera** on this <span class='is-hidden-touch'>computer</span><span class='is-hidden-desktop is-hidden-mobile'>tablet</span><span class='is-hidden-tablet'>phone</span>, you can capture your signature and fax your form straight from this website.",
-      "faxConfirm": "Confirm with your local election official that they received it.",
-      "emailDownload": "**If you don't have a camera** on this <span class='is-hidden-touch'>computer</span><span class='is-hidden-desktop is-hidden-mobile'>tablet</span><span class='is-hidden-tablet'>phone</span>, you will need to download your form, print, sign, date and scan it.",
-      "emailSend": "Email your form to {leoEmail}",
-      "digiSign": "Capture Signature",
-      "emailConfirm": "<strong class='has-text-danger'>Confirm</strong> with your local election official that they received it.",
-      "faxSend": "Fax your form to",
-      "instructions": "Instructions:",
-      "faxDownload": "**If you don't have a camera** on this <span class='is-hidden-touch'>computer</span><span class='is-hidden-desktop is-hidden-mobile'>tablet</span><span class='is-hidden-tablet'>phone</span>, you will need to download your form, print, sign and date it before faxing.",
-      "back": "Atrás",
-      "download": "Download Now",
-      "mailConfirm": "<strong class='has-text-danger'>Confirm</strong> with your local election official that they received it.",
-      "step": "Paso {step} de 5",
-      "faxIntro": "Sign and send your form by fax",
->>>>>>> 9399dca384e096322ba35a0cb947c472f31fd5bc
       "instructions4": "Confirme que la siguiente información es correcta. Si usted necesita corregir algo, seleccione 'Atrás'. Cuando todo esté correcto seleccione 'Siguiente' para obtener instrucciones sobre cómo firmar y enviar el formulario a su funcionario de elecciones.",
       "emailIntro": "Firme y envíe el formulario por correo electrónico",
       "instructions5": "Debe enviar su solicitud de boleta electoral <strong class=\"has-text-danger\">firmada</strong> a {leo} por correo electrónico, fax o correo postal. Seleccione la forma en que desea enviar su solicitud de boleta.",
       "stage1": "Su información",
       "next": "Siguiente",
-<<<<<<< HEAD
       "mailSign": "Imprima, firme y feche su formulario.",
       "sendEmail": "Enviar correo electrónico",
       "stage2": "Información sobre la votación",
@@ -195,28 +176,6 @@
       "fax": "Fax",
       "choose5": "Seleccione cómo desea enviar su solicitud de boleta electoral",
       "mailDownload": "Descargue su formulario lleno."
-=======
-      "mailSign": "Print, sign and date your form.",
-      "sendEmail": "Send Email",
-      "stage2": "Información sobre la votación",
-      "stage3": "Identificación e información de contacto",
-      "generate": "Siguiente",
-      "sendFax": "Send Fax electronically",
-      "mailIntro": "Download, print, sign and send your form by postal mail",
-      "stage4": "Revise su formulario",
-      "stage5": "Firme y envíe",
-      "mail": "Mail",
-      "mailPost": "Mail your form to:",
-      "submit": "Siguiente",
-      "emailSign": "<strong class='has-text-danger'>Firme y feche</strong> su formulario",
-      "faxSign": "<strong class='has-text-danger'>Sign and Date</strong> your form",
-      "email": "Correo electrónico",
-      "remindMe": "Remind Me",
-      "sign": "Capture Signature",
-      "fax": "Fax",
-      "choose5": "Seleccione cómo desea enviar su solicitud de boleta electoral",
-      "mailDownload": "Download your completed form."
->>>>>>> 9399dca384e096322ba35a0cb947c472f31fd5bc
     },
     "dob": {
       "label": "Fecha de nacimiento",
