@@ -1,5 +1,5 @@
 ---
-state: Wyoming 
+state: Wyoming
 iso: WY
 allowsNeverResided: true
 id: []
@@ -18,5 +18,4 @@ canRegisterWithFwab: true
 fwabSubmitOptions:
   - Mail
 ---
-
-# Wyoming Rules
+#
