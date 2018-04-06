@@ -1,5 +1,5 @@
 ---
-state: Arkansas 
+state: Arkansas
 iso: AR
 allowsNeverResided: false
 id:
@@ -17,5 +17,4 @@ canRegisterWithFwab: false
 fwabSubmitOptions:
   - Mail
 ---
-
-# California Rules
+# Arkansas Rules
