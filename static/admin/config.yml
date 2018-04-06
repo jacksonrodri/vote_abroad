@@ -52,7 +52,6 @@ collections:
         name: "id"
         widget: "list"
         required: false
-        pattern: ['^(?![\s\S])|SSN$|SSN4$|StateID$|TerritoryID$|DCID$|TribalID$|MilitaryID$|PassportNumber$|NYDMVID$', "Must be one of the following: SSN, SSN4, StateID, TerritoryID, DCID, TribalID, MilitaryID, PassportNumber, NYDMVID (Contact Alex to add something different)"]
       - {label: "Has Party Primaries?", name: "partyPrimary", widget: "boolean"}
       - {label: "Ballot Receipt Options", name: "ballotReceiptOptions", widget: "list"}
       - {label: "FPCA Submit Options for NEW voters", name: "fpcaSubmitOptionsRegister", widget: "list"}
