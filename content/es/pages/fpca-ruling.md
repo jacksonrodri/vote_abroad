@@ -1,5 +1,5 @@
 ---
-title: FPCA Ruling
+title: Reglamentación de la FPCA
 slug: fpca_rules
 ---
-Hello World.
+Hola mundo.

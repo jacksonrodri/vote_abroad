@@ -1,8 +1,8 @@
 ---
 title: Quiénes somos
 ---
-Placeholder text for the about us page
+Texto marcador de posición de la página Quiénes somos
 
-## About VoteFromAbroad.org
+## Acerca de VoteFromAbroad.org
 
-Votefromabroad.org is ...
+Votefromabroad.org es...

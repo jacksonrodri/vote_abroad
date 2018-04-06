@@ -1,5 +1,5 @@
 ---
-title: Terms of Use
+title: Condiciones de uso
 ---
 VoteFromAbroad.org is a nonpartisan voter registration tool provided as a public service by Democrats Abroad.
 

@@ -1,9 +1,9 @@
 ---
-title: Privacy Policy
+title: Política de privacidad
 ---
-VoteFromAbroad.org is a nonpartisan voter registration tool provided as a public service by Democrats Abroad.
+VoteFromAbroad.org es una herramienta de registro de votantes no partidista provista como servicio público por Democrats Abroad.
 
-Democrats Abroad is committed to protecting your privacy online. Democrats Abroad does not retain any sensitive personally identifiable information such as your social security number, driverâs license number, or passport number. Democrats Abroad maintains aggregate data for statistical purposes. Democrats Abroad will not use any information provided to us here for any other purpose unless we first obtain your consent.
+Democrats Abroad se compromete a proteger su privacidad en línea. Democrats Abroad no conserva ninguna información confidencial de identificación personal, como su número de seguro social, el número de licencia del conductor o el número de pasaporte. Democrats Abroad conserva datos agregados para propósitos estadísticos. Democrats Abroad no utilizará ninguna información que se nos proporcione aquí para ningún otro fin a menos que primero obtengamos su consentimiento.
 
 Democrats Abroad will hold any information you provide us here with the utmost care and will only use it in ways to which you have consented: for preparation of the voter registration materials in all cases; and, according to your expressed consent, for voting reminders and information, for contact from Democratic candidates, or for membership in Democrats Abroad, as the case may be.
 
