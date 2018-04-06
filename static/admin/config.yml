@@ -80,6 +80,12 @@ collections:
           - {label: "Login Instructions", name: "loginInstructions", widget: "string"}
           - {label: "Start Button", name: "start", widget: "string"}
           - {label: "Anonymous Session", name: "anonymous", widget: "string"}
+      - label: "FAQ Page"
+        name: "faq"
+        widget: "object"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Intro", name: "intro", widget: "markdown"}
       - label: "Layout and Menus"
         name: "menu"
         widget: "object"
