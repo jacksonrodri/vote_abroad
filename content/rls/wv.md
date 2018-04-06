@@ -1,5 +1,5 @@
 ---
-state: West Virginia 
+state: West Virginia
 iso: WV
 allowsNeverResided: true
 id:
@@ -24,5 +24,4 @@ fwabSubmitOptions:
   - Fax
   - Mail
 ---
-
-# West Virginia Rules
+a
