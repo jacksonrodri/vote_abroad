@@ -1,5 +1,5 @@
 ---
-state: Texas 
+state: Texas
 iso: TX
 allowsNeverResided: false
 id:
@@ -21,5 +21,4 @@ canRegisterWithFwab: false
 fwabSubmitOptions:
   - Mail
 ---
-
-# Texas Rules
+#
