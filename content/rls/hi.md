@@ -1,5 +1,5 @@
 ---
-state: Hawaii 
+state: Hawaii
 iso: HI
 allowsNeverResided: true
 id:
@@ -24,7 +24,4 @@ fwabSubmitOptions:
   - Fax
   - Mail
 ---
-
-# Hawaii Rules
-
-You may only fax your fwab if requesting a ballot within 5 days of the election
+Remember that you need to request a ballot each calendar year that you'd like to vote in. Check below for your primary and general deadlines. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
