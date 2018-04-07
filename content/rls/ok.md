@@ -1,5 +1,5 @@
 ---
-state: Oklahoma 
+state: Oklahoma
 iso: OK
 allowsNeverResided: true
 id:
@@ -24,7 +24,4 @@ fwabSubmitOptions:
   - Fax
   - Mail
 ---
-
-# Oklahoma Rules
-
-If you send your ballot by email you must include your full Social Security Number
+Remember that you need to request a ballot each calendar year that you'd like to vote in. Check below for your primary and general deadlines. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
