@@ -1,5 +1,5 @@
 ---
-state: Mississippi 
+state: Mississippi
 iso: MS
 allowsNeverResided: false
 id:
@@ -24,5 +24,4 @@ fwabSubmitOptions:
   - Fax
   - Mail
 ---
-
-# Mississippi Rules
+Remember that you need to request a ballot each calendar year that you'd like to vote in. Check below for your primary and general deadlines. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
