@@ -1,5 +1,5 @@
 ---
-state: Florida 
+state: Florida
 iso: FL
 allowsNeverResided: false
 id:
@@ -21,7 +21,4 @@ fwabSubmitOptions:
   - Fax
   - Mail
 ---
-
-# Florida Rules
-
-You may only fax your FWAB if you are outside of the US
+Remember that you need to request a ballot each calendar year that you'd like to vote in. Check below for your primary and general deadlines. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
