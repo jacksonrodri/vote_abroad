@@ -2,19 +2,20 @@
   <div>
     <transition name="fade" mode="out-in" v-on:after-enter="afterEnter">
       <div v-if="value === 'instructions'" key="instructions">
-        <h3 class="title is-3">Instructions</h3>
+        <h3 class="title is-3">{{$t('request.stages.instructions')}}</h3>
         <div class="content">
-        <ol>
+          <p v-html="$t('request.sig.instructions')"></p>
+        <!-- <ol>
           <li>Click 'Accept' to allow access to your camera.</li>
           <li>Sign your name with a dark pen on a sheet of plain white paper.</li>
           <li>Click 'capture' to take a picture of you signature</li>
           <li>Select the clearest version</li>
-        </ol>
+        </ol> -->
         </div>
-        <button @click="updateStage('capture')" class="button">Allow access to my webcam</button>
+        <button @click="updateStage('capture')" class="button">{{$t('request.sig.rtcConfirm')}}</button>
       </div>
       <div v-if="value === 'capture'" key="capture">
-        <h3 class="title is-3">Capture</h3>
+        <h3 class="title is-3">{{$t('request.sig.capture')}}</h3>
         <div class="video">
           <video @play="timerCallback()"
               :autoplay="autoplay"
@@ -22,13 +23,14 @@
               :controls="controls"
               ref="video"></video>
         </div>
-        <button @click="takePhoto" class="button">Capture</button>
+        <button @click="takePhoto" class="button is-primary is-medium">{{$t('request.sig.capture')}}</button>
       </div>
       <div v-if="value === 'select'" key="select">
-        <h3 class="title is-3">Select the clearest</h3>
-        <ol>
+        <h3 class="title is-3">{{$t('request.sig.select')}}</h3>
+        <p>{{$t('request.sig.selectInstructions')}}</p>
+        <!-- <ol>
           <li>Choose the version below with the clearest signature and whitest background</li>
-        </ol>
+        </ol> -->
         <canvas ref="signature1"
          :width="width * 4 / 5"
          :height="height / 2"
@@ -41,30 +43,31 @@
          :width="width * 4 / 5"
          :height="height / 2"
          @click="save"></canvas>
-        <button @click="updateStage('capture')" class="button">Try again</button>
-        <button @click="save" class="button">Save</button>
+        <button @click="updateStage('capture')" class="button">{{$t('request.sig.retry')}}</button>
+        <button @click="save" class="button">{{$t('request.sig.save')}}</button>
       </div>
       <div v-if="value === 'composeMessage'" key="composeMessage">
-        <h3 class="title is-3">Send to your Local Election Official</h3>
-        <ol>
+        <h3 class="title is-3">{{$t('request.sig.sendTitle')}}</h3>
+        <p>{{$t('request.sig.sendInstructions')}}</p>
+        <!-- <ol>
           <li>Type a message to include with your email to your local election official.  We will attach your completed, signed and dated form. Click send to send the email. We will also send a copy to your email address for your records.</li>
-        </ol>
+        </ol> -->
         <section>
-          <b-field horizontal label="Subject">
+          <b-field horizontal :label="$t('request.sig.subject')">
             <b-input v-model="subject" name="subject" :disabled="isMailing === true" expanded></b-input>
           </b-field>
 
-          <b-field horizontal label="From">
+          <b-field horizontal :label="$t('request.sig.from')">
             <b-input v-model="fromName" name="name" placeholder="Name" :disabled="isMailing === true" expanded></b-input>
             <b-input :value="email" name="email" type="email" placeholder="nobody@nowhere.com" disabled expanded></b-input>
           </b-field>
 
-          <b-field horizontal label="From">
+          <b-field horizontal :label="$t('request.sig.to')">
             <b-input :value="leoName" name="LeoName" placeholder="Name" disabled expanded></b-input>
             <b-input :value="leoEmail" name="LeoEmail" type="email" placeholder="nobody@nowhere.com" disabled expanded></b-input>
           </b-field>
 
-          <b-field horizontal label="Message">
+          <b-field horizontal :label="$t('request.sig.message')">
             <b-input v-model="message" :disabled="isMailing === true" type="textarea"></b-input>
           </b-field>
 
@@ -75,7 +78,7 @@
           <b-field horizontal>
             <p class="control">
               <button :class="[buttonClass, {'is-loading': isMailing}]" @click="sendEmail">
-                Send Email
+                {{$t('request.sig.sendEmail')}}
               </button>
             </p>
           </b-field>
@@ -83,7 +86,7 @@
       <section class="section">
         <div class="field is-horizontal">
           <div class="field-label">
-            <label class="label">Attachment</label>
+            <label class="label">{{$t('request.sig.attachment')}}</label>
           </div>
           <div class="field-body">
             <figure class="field image" style="border: gray solid;">

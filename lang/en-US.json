@@ -27,7 +27,7 @@
     "moreFAQs": "More FAQs",
     "helpfaq": "Voter Help Desk/ FAQ",
     "allElections": "All Upcoming Elections",
-    "disclaimer": "Public Service provided by Democratic Party Committee Abroad (DemocratsAbroad.org).\n\nThis communication is not authorized by any candidate or candidate's committee.",
+    "disclaimer": "Public Service provided by Democratic Party Committee Abroad (DemocratsAbroad.org).<br/>This communication is not authorized by any candidate or candidate's committee.",
     "upcomingElections": "Upcoming Elections"
   },
   "request": {
@@ -150,7 +150,7 @@
       "selectInstructions": "Select the signature below that is the clearest.  Choose the version that has a white background with a completely visible signature.",
       "attachment": "Attachment",
       "successMessage": "Sent! Check your inbox for a copy.",
-      "instructions": "1. Sign your name with a dark pen on a sheet of plain white paper\n2. Click 'Allow access to my webcam' and accept the following prompt.\n3. Hold your signature up in front of the camera and align it above the red signature line, then click 'take photo'\n4. Select the clearest version of your signature\n5. Click 'Send' to send your signed form to your election official.",
+      "instructions": "1. Sign your name with a dark pen on a sheet of plain white paper.<br/> Click 'Allow access to my webcam' and accept the following prompt.<br/>3. Hold your signature up in front of the camera and align it above the red signature line, then click 'take photo'<br/>4. Select the clearest version of your signature<br/>5. Click 'Send' to send your signed form to your election official.",
       "capture": "Take Photo",
       "message": "Message",
       "retry": "Try again",

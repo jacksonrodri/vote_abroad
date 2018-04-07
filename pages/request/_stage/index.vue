@@ -72,9 +72,9 @@
       </address-input>
       <scroll-up :key="$route.params.stage"></scroll-up>
     <section >
-        <nuxt-link :to="localePath({ name: 'index' })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>Back</span></nuxt-link>
+        <nuxt-link :to="localePath({ name: 'index' })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>{{$t('request.stages.back')}}</span></nuxt-link>
         <!-- <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'voting-information'} })" class="button is-primary is-medium is-pulled-right" exact ><span> Next </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link> -->
-        <button @click="focusFirstErrorOrAdvance(localePath({ name: 'request-stage', params: {stage: 'voting-information'} }))" class="button is-primary is-medium is-pulled-right" exact ><span> Next </span><b-icon pack="fas" icon="caret-right"></b-icon></button>
+        <button @click="focusFirstErrorOrAdvance(localePath({ name: 'request-stage', params: {stage: 'voting-information'} }))" class="button is-primary is-medium is-pulled-right" exact ><span> {{$t('request.stages.next')}} </span><b-icon pack="fas" icon="caret-right"></b-icon></button>
     </section>
   </section>
 
@@ -191,8 +191,8 @@
     <scroll-up :key="$route.params.stage"></scroll-up>
 
     <section >
-        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>Back</span></nuxt-link>
-        <button @click="focusFirstErrorOrAdvance(localePath({ name: 'request-stage', params: { stage: 'id-and-contact-information'} }))" class="button is-primary is-medium is-pulled-right" exact ><span> Next </span><b-icon pack="fas" icon="caret-right"></b-icon></button>
+        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>{{$t('request.stages.back')}}</span></nuxt-link>
+        <button @click="focusFirstErrorOrAdvance(localePath({ name: 'request-stage', params: { stage: 'id-and-contact-information'} }))" class="button is-primary is-medium is-pulled-right" exact ><span> {{$t('request.stages.next')}} </span><b-icon pack="fas" icon="caret-right"></b-icon></button>
     </section>
   </section>
 
@@ -292,8 +292,8 @@
 
       <scroll-up :key="$route.params.stage"></scroll-up>
     <section >
-      <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'voting-information'} })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>Back</span></nuxt-link>
-      <button @click="focusFirstErrorOrAdvance(localePath({ name: 'request-stage', params: { stage: 'review'} }))" class="button is-primary is-medium is-pulled-right" exact ><span> Next </span><b-icon pack="fas" icon="caret-right"></b-icon></button>
+      <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'voting-information'} })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>{{$t('request.stages.back')}}</span></nuxt-link>
+      <button @click="focusFirstErrorOrAdvance(localePath({ name: 'request-stage', params: { stage: 'review'} }))" class="button is-primary is-medium is-pulled-right" exact ><span> {{$t('request.stages.next')}} </span><b-icon pack="fas" icon="caret-right"></b-icon></button>
       <!-- <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'review'} })" class="button is-primary is-medium is-pulled-right" exact ><span> Generate &amp; review your form </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link> -->
     </section>
   </section>

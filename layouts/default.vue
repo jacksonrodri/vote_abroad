@@ -25,7 +25,7 @@
                     icon="sign-out-alt"
                     size="is-small">
                   </b-icon>
-                  &nbsp;Logout
+                  <span>{{ $t('menu.logout')}}</span>
                 </a>
                 <!-- <a v-else
                   class="navbar-item is-expanded has-text-centered"
@@ -46,7 +46,7 @@
               </span>
               <div class="navbar-item has-dropdown is-hoverable" style="order:-1;">
                 <a class="navbar-link">
-                  Upcoming Elections
+                  {{$t('menu.upcomingElections')}}
                 </a>
 
                 <div class="navbar-dropdown">
@@ -66,7 +66,7 @@
               </div>
               <div class="navbar-item has-dropdown is-hoverable" style="order:-1;">
                 <a class="navbar-link">
-                  Help
+                  {{$t('menu.help')}}
                 </a>
 
                 <div class="navbar-dropdown is-right">
@@ -142,19 +142,29 @@
           <ul>
             <li :class="{'is-active': $route.path === localePath({ name: 'faqs-slug', params: { slug: 'how-do-i-vote-as-a-us-citizen-living-abroad' } })}">
               <nuxt-link :to="localePath({ name: 'faqs-slug', params: { slug: 'how-do-i-vote-as-a-us-citizen-living-abroad' } })">
-                How to<span class="is-hidden-touch">&nbsp;Vote From Abroad</span>
+                <!-- How to<span class="is-hidden-touch">&nbsp;Vote From Abroad</span> -->
+                {{$t('menu.howto')}}
               </nuxt-link>
               <!-- <a>How to<span class="is-hidden-touch">&nbsp;Vote From Abroad</span></a> -->
             </li>
             <li :class="{'is-active': $route.path === localePath('faqs')}">
-              <nuxt-link :to="localePath('faqs')"><span class="is-hidden-touch">Voter Help Desk/</span>FAQ</nuxt-link>
+              <nuxt-link :to="localePath('faqs')">
+                {{$t('menu.helpfaq')}}
+                <!-- <span class="is-hidden-touch">Voter Help Desk/</span>FAQ -->
+              </nuxt-link>
             </li>
             <li :class="{'is-active': $route.path === localePath({ name: 'page', params: {page: 'about-us'}})}">
-              <nuxt-link :to="localePath({ name: 'page', params: {page: 'about-us'}})">About Us</nuxt-link>
+              <nuxt-link :to="localePath({ name: 'page', params: {page: 'about-us'}})">
+                {{$t('menu.about')}}
+                <!-- About Us -->
+              </nuxt-link>
               <!-- <a>About Us</a> -->
             </li>
             <li :class="{'is-active': $route.path === localePath('states')}">
-              <nuxt-link :to="localePath('states')">State Voting Guide</nuxt-link>
+              <nuxt-link :to="localePath('states')">
+                {{$t('menu.stateGuide')}}
+                <!-- State Voting Guide -->
+              </nuxt-link>
               <!-- <a>Election Official Directory</a> -->
             </li>
           </ul>
@@ -167,34 +177,33 @@
     <div class="container">
       <nav class="level">
         <p class="level-item has-text-centered">
-          <nuxt-link to="/privacy" class="link has-text-vfalight">Privacy</nuxt-link>
+          <nuxt-link to="/privacy" class="link has-text-vfalight">{{$t('menu.privacy')}}</nuxt-link>
         </p>
-        <p class="level-item has-text-centered is-size-7 has-text-vfalight">
-          Public Service provided by Democratic Party Committee Abroad (DemocratsAbroad.org).<br/>
-This communication is not authorized by any candidate or candidate's committee.
+        <p v-html="$t('menu.disclaimer')" class="level-item has-text-centered is-size-7 has-text-vfalight">
+          <!-- {{$t('menu.disclaimer')}} -->
         </p>
         <p class="level-item has-text-centered">
-          <nuxt-link to="/terms-of-use" class="link has-text-vfalight">Terms of Use</nuxt-link>
+          <nuxt-link to="/terms-of-use" class="link has-text-vfalight">{{$t('menu.terms')}}</nuxt-link>
         </p>
       </nav>
     </div>
   </div>
 </section>
-<b-modal :active.sync="isLoginModalActive" has-modal-card>
+<!-- <b-modal :active.sync="isLoginModalActive" has-modal-card>
   <login></login>
-</b-modal>
+</b-modal> -->
 </div>
 </template>
 
 <script>
 import PhoneEmail from '~/components/PhoneEmail.vue'
-import Login from '~/components/Login.vue'
+// import Login from '~/components/Login.vue'
 
 export default {
   data () {
     return {
       isMobileMenuActive: false,
-      isLoginModalActive: false,
+      // isLoginModalActive: false,
       topFaqs: [
         {
           title: 'I can\'t remember my last US address, how do I find it?',
@@ -220,8 +229,8 @@ export default {
     }
   },
   components: {
-    PhoneEmail,
-    Login
+    PhoneEmail
+    // Login
   },
   computed: {
     upcomingElections: function () { return this.$store.state.upcomingElections },

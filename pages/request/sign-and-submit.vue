@@ -69,7 +69,7 @@
                       </i18n>
                       <a v-if="downloadAttrSupported" :href="pdf" :download="`${firstName}-${lastName}-2018-fpca.pdf`" :class="['button', 'is-pulled-right', 'is-primary', {'is-loading': !Boolean(pdf)}]" @click="finish"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></a>
                       <button v-else class="button is-pulled-right is-primary" @click="openPdf"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
-                      <span v-if="!downloadAttrSupported">right click and select save to disk</span>
+                      <!-- <span v-if="!downloadAttrSupported">right click and select save to disk</span> -->
 
                       <!-- <button v-if="downloadAttrSupported" class="button is-pulled-right is-primary" @click="getFPCA(download)"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
                       <button v-else class="button is-pulled-right is-primary" @click="getFPCA(blank)"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
@@ -85,7 +85,7 @@
               </sign4>
             </section>
           </b-tab-item>
-          <b-tab-item label="Fax"
+          <b-tab-item :label="$t('request.stages.fax')"
             v-if="stateRules && stateRules.fpcaSubmitOptionsRequest.indexOf('Fax') > -1"
             icon="fax">
             <section class="section">
@@ -135,7 +135,7 @@
                       <!-- <button class="button is-pulled-right is-primary" @click="getFPCA"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button> -->
                       <a v-if="downloadAttrSupported" :href="pdf" :download="`${firstName}-${lastName}-2018-fpca.pdf`" :class="['button', 'is-pulled-right', 'is-primary', {'is-loading': !Boolean(pdf)}]" @click="finish"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></a>
                       <button v-else class="button is-pulled-right is-primary" @click="openPdf"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
-                      <span v-if="!downloadAttrSupported">right click and select save to disk</span>
+                      <!-- <span v-if="!downloadAttrSupported">right click and select save to disk</span> -->
                     </div>
                   </article>
                 </div>
@@ -197,25 +197,25 @@
               </div>
             </section> -->
           </b-tab-item>
-          <b-tab-item label="Mail"
+          <b-tab-item :label="$t('request.stages.mail')"
             v-if="stateRules && stateRules.fpcaSubmitOptionsRequest.indexOf('Mail') > -1"
             icon="envelope-open"><section class="section">
-              <h3 class="subtitle is-4">Sign and Send your form by Postal Mail</h3>
+              <h3 class="subtitle is-4">{{$t('request.stages.mailIntro')}}</h3>
               <div class="media">
                 <div class="media-content">
-                  <h3 class="title is-5">Instructions:</h3>
+                  <h3 class="title is-5">{{$t('request.stages.instructions')}}</h3>
                   <article class="media">
                     <figure class="media-left">
                       <b-icon icon="download" size="is-medium"></b-icon>
                     </figure>
                     <div class="media-content">
-                      <p class="is-size-5">Download your completed form.</p>
+                      <p class="is-size-5">{{$t('request.stages.mailDownload')}}</p>
                     </div>
-                    <div class="media-lef">
+                    <div class="media-left">
                       <!-- <button @click="getFPCA" class="button is-primary"><span>Download now</span></button> -->
                       <a v-if="downloadAttrSupported" :href="pdf" :download="`${firstName}-${lastName}-2018-fpca.pdf`" :class="['button', 'is-pulled-right', 'is-primary', {'is-loading': !Boolean(pdf)}]" @click="finish"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></a>
                       <button v-else class="button is-pulled-right is-primary" @click="openPdf"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
-                      <span v-if="!downloadAttrSupported">right click and select save to disk</span>
+                      <!-- <span v-if="!downloadAttrSupported">right click and select save to disk</span> -->
                     </div>
                   </article>
                   <article class="media">
@@ -223,7 +223,8 @@
                       <b-icon icon="pencil-alt" size="is-medium"></b-icon>
                     </figure>
                     <div class="media-content">
-                      <p class="is-size-5">Print, <strong class="has-text-danger">sign and date</strong> your form.</p>
+                      <p v-html="$t('request.stages.mailSign')" class="is-size-5"></p>
+                      <!-- <p class="is-size-5">Print, <strong class="has-text-danger">sign and date</strong> your form.</p> -->
                     </div>
                   </article>
 
@@ -232,7 +233,7 @@
                       <b-icon icon="envelope" size="is-medium"></b-icon>
                     </figure>
                     <div class="media-content">
-                      <span class="is-size-5">Mail your form to: </span>
+                      <span class="is-size-5">{{$t('request.stages.mailPost')}}</span>
                       <div class="box">
                         <span v-if="currentRequest.votAdr.leo.n"><strong>{{ currentRequest.votAdr.leo.n }}</strong><br/></span>
                         <span v-if="currentRequest.votAdr.leo.a1"><strong>{{ currentRequest.votAdr.leo.a1 }}</strong><br/></span>
@@ -250,7 +251,8 @@
                       <b-icon icon="check" size="is-medium"></b-icon>
                     </figure>
                     <div class="media-content">
-                      <p class="is-size-5"><strong class="has-text-danger">Confirm</strong> with your local election official that they received it. </p>
+                      <p v-html="$t('request.stages.mailConfirm')" class="is-size-5"></p>
+                      <!-- <p class="is-size-5"><strong class="has-text-danger">Confirm</strong> with your local election official that they received it. </p> -->
                     </div>
                   </article>
                 </div>
@@ -297,7 +299,7 @@
       </div> -->
       <section >
       <!-- <div class="control buttons is-right"> -->
-        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'review'} })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>Back</span></nuxt-link>
+        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'review'} })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>{{$t('request.stages.back')}}</span></nuxt-link>
         <!-- <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" class="button is-primary is-medium is-pulled-right" exact ><span> Start a New Request </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link> -->
       <!-- </div> -->
     </section>
@@ -401,22 +403,22 @@ export default {
             feat.hasCamera = false
             console.log(err.name + ': ' + err.message)
           })
-        axios.get(encodeURI(`/api/fpca?firstName=${this.firstName || ''}&lastName=${this.lastName || ''}&middleName=${this.middleName || ''}&suffix=${this.suffix || ''}&ssn=${this.ssn || ''}&previousName=${this.previousName.previousName || ''}&dob=${this.dob || ''}&stateId=${this.stateId || ''}&votStreet=${this.votStreet || ''}&votApt=${this.votApt || ''}&votCity=${this.votCity || ''}&votState=${this.votState || ''}&votCounty=${this.votCounty || ''}&votZip=${this.votZip || ''}&abrAdr=${this.abrAdr ? this.abrAdr.alt1 : ''}\n${this.abrAdr ? this.abrAdr.alt2 : ''}\n${this.abrAdr ? this.abrAdr.alt3 : ''}\n${this.abrAdr ? this.abrAdr.alt4 : ''}\n${this.abrAdr ? this.abrAdr.alt5 : ''}&fwdAdr=${this.fwdAdr && this.fwdAdr.alt1 ? this.fwdAdr.alt1 : ''}\n${this.fwdAdr && this.fwdAdr.alt2 ? this.fwdAdr.alt2 : ''}\n${this.fwdAdr && this.fwdAdr.alt3 ? this.fwdAdr.alt3 : ''}\n${this.fwdAdr && this.fwdAdr.alt4 ? this.fwdAdr.alt4 : ''}\n${this.fwdAdr && this.fwdAdr.alt5 ? this.fwdAdr.alt5 : ''}&email=${this.email || ''}&altEmail=${this.altEmail || ''}&tel=${this.tel && this.tel.intNumber ? this.tel.intNumber : ''}&fax=${this.fax || ''}&party=${this.party || ''}&addlInfo=${this.addlInfo || ''}&date=${this.date || ''}&class=${this.voterClass || ''}&sex=${this.sex || ''}&recBallot=${this.recBallot || ''}&leoName=${this.leoName || ''}&leoAddress=${this.leoAdr || ''}&leoFax=${this.leoFax || ''}&leoEmail=${this.leoEmail || ''}&leoPhone=${this.leoPhone || ''}&transmitOpts=${this.stateRules.ballotReceiptOptions.join(',')}&deadline=${this.nextDeadline}`), {responseType: 'arraybuffer'})
-          .then((response) => {
-            // console.log(response)
-            let blob = new Blob([response.data], {type: 'application/pdf'})
-            this.msPdf = blob
-            this.pdf = window.URL.createObjectURL(blob)
-            // let pdfile = new File([response.data], 'fpcafile.pdf', {type: 'application/pdf'})
-            // this.pdf = pdfile
-          })
       })
+      axios.get(encodeURI(`/api/fpca?firstName=${this.firstName || ''}&lastName=${this.lastName || ''}&middleName=${this.middleName || ''}&suffix=${this.suffix || ''}&ssn=${this.ssn || ''}&previousName=${this.previousName.previousName || ''}&dob=${this.dob || ''}&stateId=${this.stateId || ''}&votStreet=${this.votStreet || ''}&votApt=${this.votApt || ''}&votCity=${this.votCity || ''}&votState=${this.votState || ''}&votCounty=${this.votCounty || ''}&votZip=${this.votZip || ''}&abrAdr=${this.abrAdr ? this.abrAdr.alt1 : ''}\n${this.abrAdr ? this.abrAdr.alt2 : ''}\n${this.abrAdr ? this.abrAdr.alt3 : ''}\n${this.abrAdr ? this.abrAdr.alt4 : ''}\n${this.abrAdr ? this.abrAdr.alt5 : ''}&fwdAdr=${this.fwdAdr && this.fwdAdr.alt1 ? this.fwdAdr.alt1 : ''}\n${this.fwdAdr && this.fwdAdr.alt2 ? this.fwdAdr.alt2 : ''}\n${this.fwdAdr && this.fwdAdr.alt3 ? this.fwdAdr.alt3 : ''}\n${this.fwdAdr && this.fwdAdr.alt4 ? this.fwdAdr.alt4 : ''}\n${this.fwdAdr && this.fwdAdr.alt5 ? this.fwdAdr.alt5 : ''}&email=${this.email || ''}&altEmail=${this.altEmail || ''}&tel=${this.tel && this.tel.intNumber ? this.tel.intNumber : ''}&fax=${this.fax || ''}&party=${this.party || ''}&addlInfo=${this.addlInfo || ''}&date=${this.date || ''}&class=${this.voterClass || ''}&sex=${this.sex || ''}&recBallot=${this.recBallot || ''}&leoName=${this.leoName || ''}&leoAddress=${this.leoAdr || ''}&leoFax=${this.leoFax || ''}&leoEmail=${this.leoEmail || ''}&leoPhone=${this.leoPhone || ''}&transmitOpts=${this.stateRules.ballotReceiptOptions.join(',')}&deadline=${this.nextDeadline}`), {responseType: 'arraybuffer'})
+        .then((response) => {
+          // console.log(response)
+          let blob = new Blob([response.data], {type: 'application/pdf'})
+          this.msPdf = blob
+          this.pdf = window.URL.createObjectURL(blob)
+          // let pdfile = new File([response.data], 'fpcafile.pdf', {type: 'application/pdf'})
+          // this.pdf = pdfile
+        })
     }
   },
   methods: {
     signatureAgree () {
       this.$dialog.confirm({
-        title: 'You must read and confirm',
+        title: this.$t('request.sig.affirmation'),
         message: `<h1 class="title is-5">I swear or affirm, under penalty of purjury that:</h1>
         <div class="content">
         <ul>
@@ -424,17 +426,17 @@ export default {
           <li>I am a U.S. citizen, at least 18 years of age (or will be by the day of the election), eligible to vote in the requested jurisdiction, and</li>
           <li>I am not disqualified to vote due to having been convicted of a felony or other disqualifying offense, nor have I been adjudicated mentally incompetent; or if so, my voting rights have been reinstated; and</li>
           <li>I am not registering, requesting a ballot, or voting in any other jurisdiction in the United States, except the jurisdiction cited in this voting form. </li><ul></div>`,
-        cancelText: 'Disagree',
-        confirmText: 'Agree',
+        cancelText: this.$t('request.sig.disagree'),
+        confirmText: this.$t('request.sig.agree'),
         type: 'is-success',
         onConfirm: () => { this.signStep = 'instructions' }
       })
     },
     confirmPdfDownload () {
       this.$dialog.alert({
-        title: 'Finished Downloading',
-        message: 'Your form has been downloaded (check your downloads folder).  You must <b>SIGN, DATE and SEND</b> it to your election official.',
-        confirmText: 'OK',
+        title: this.$t('request.fpcaDownload.downloadedAlertTitle'),
+        message: this.$t('request.fpcaDownload.downloadedAlertMessage'),
+        confirmText: this.$t('request.fpcaDownload.confirmButton'),
         type: 'is-danger',
         hasIcon: true,
         icon: 'download',
@@ -444,9 +446,9 @@ export default {
     },
     openPdf () {
       this.$dialog.alert({
-        title: 'Downloading',
-        message: 'Clicking \'OK\' will open a new window with your completed form.  You must <b>SIGN, DATE and SEND</b> it to your election official.',
-        confirmText: 'OK',
+        title: this.$t('request.fpcaDownload.downloadingAlertTitle'),
+        message: this.$t('request.fpcaDownload.downloadedAlertMessage'),
+        confirmText: this.$t('request.fpcaDownload.confirmButton'),
         type: 'is-danger',
         hasIcon: true,
         icon: 'download',
