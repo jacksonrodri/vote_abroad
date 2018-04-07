@@ -1,5 +1,5 @@
 ---
-state: Colorado 
+state: Colorado
 iso: CO
 allowsNeverResided: true
 id:
@@ -24,7 +24,4 @@ fwabSubmitOptions:
   - Fax
   - Mail
 ---
-
-# Colorado Rules
-
-You may also submit a FWAB using Colorado's secure document  transfer system to return your FWAB electronically. Go to [https://ballotreturn.sos.colorado.gov](https://ballotreturn.sos.colorado.gov) and follow the instructions to securely upload your FWAB for delivery to your county clerk and recorder.)
+Remember that you need to request a ballot each calendar year that you'd like to vote in. Check below for your primary and general deadlines. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
