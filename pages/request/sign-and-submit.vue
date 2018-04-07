@@ -302,11 +302,11 @@
       <!-- </div> -->
     </section>
 
-    <b-modal :active.sync="isSignatureModalActive">
+    <!-- <b-modal :active.sync="isSignatureModalActive">
       <div class="box">instructions
         <sign v-show="isSigning" @sigcap="addSig" />
       </div>
-    </b-modal>
+    </b-modal> -->
     </div>
   <scroll-up></scroll-up>
   </div>
@@ -315,7 +315,7 @@
 <script>
 import MyCanvas from '~/components/MyCanvas.vue'
 import MyBox from '~/components/MyBox.vue'
-import Sign from '~/components/sign3.vue'
+// import Sign from '~/components/sign3.vue'
 import Sign4 from '~/components/sign4.vue'
 import { mapState } from 'vuex'
 import axios from 'axios'
@@ -340,7 +340,7 @@ export default {
   components: {
     MyCanvas,
     MyBox,
-    Sign,
+    // Sign,
     Sign4,
     VueMarkdown,
     ScrollUp
@@ -386,30 +386,32 @@ export default {
     //   that.hasCamera = res
     // }
     if (process.browser) {
-      feat.downloadAttrSupported = ('download' in document.createElement('a'))
-      feat.needsMsSaveOrOpenBlob = Boolean(window.navigator.msSaveOrOpenBlob)
-      if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
-        feat.hasCamera = false
-        return
-      }
-      navigator.mediaDevices.enumerateDevices()
-        .then(function (devices) {
-          feat.hasCamera = devices.filter(x => x.kind === 'videoinput').length > 0
-        })
-        .catch(function (err) {
+      window.onNuxtReady((app) => {
+        feat.downloadAttrSupported = ('download' in document.createElement('a'))
+        feat.needsMsSaveOrOpenBlob = Boolean(window.navigator.msSaveOrOpenBlob)
+        if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
           feat.hasCamera = false
-          console.log(err.name + ': ' + err.message)
-        })
-    }
-    axios.get(encodeURI(`/api/fpca?firstName=${this.firstName || ''}&lastName=${this.lastName || ''}&middleName=${this.middleName || ''}&suffix=${this.suffix || ''}&ssn=${this.ssn || ''}&previousName=${this.previousName.previousName || ''}&dob=${this.dob || ''}&stateId=${this.stateId || ''}&votStreet=${this.votStreet || ''}&votApt=${this.votApt || ''}&votCity=${this.votCity || ''}&votState=${this.votState || ''}&votCounty=${this.votCounty || ''}&votZip=${this.votZip || ''}&abrAdr=${this.abrAdr ? this.abrAdr.alt1 : ''}\n${this.abrAdr ? this.abrAdr.alt2 : ''}\n${this.abrAdr ? this.abrAdr.alt3 : ''}\n${this.abrAdr ? this.abrAdr.alt4 : ''}\n${this.abrAdr ? this.abrAdr.alt5 : ''}&fwdAdr=${this.fwdAdr && this.fwdAdr.alt1 ? this.fwdAdr.alt1 : ''}\n${this.fwdAdr && this.fwdAdr.alt2 ? this.fwdAdr.alt2 : ''}\n${this.fwdAdr && this.fwdAdr.alt3 ? this.fwdAdr.alt3 : ''}\n${this.fwdAdr && this.fwdAdr.alt4 ? this.fwdAdr.alt4 : ''}\n${this.fwdAdr && this.fwdAdr.alt5 ? this.fwdAdr.alt5 : ''}&email=${this.email || ''}&altEmail=${this.altEmail || ''}&tel=${this.tel && this.tel.intNumber ? this.tel.intNumber : ''}&fax=${this.fax || ''}&party=${this.party || ''}&addlInfo=${this.addlInfo || ''}&date=${this.date || ''}&class=${this.voterClass || ''}&sex=${this.sex || ''}&recBallot=${this.recBallot || ''}&leoName=${this.leoName || ''}&leoAddress=${this.leoAdr || ''}&leoFax=${this.leoFax || ''}&leoEmail=${this.leoEmail || ''}&leoPhone=${this.leoPhone || ''}&transmitOpts=${this.stateRules.ballotReceiptOptions.join(',')}&deadline=${this.nextDeadline}`), {responseType: 'arraybuffer'})
-      .then((response) => {
-        // console.log(response)
-        let blob = new Blob([response.data], {type: 'application/pdf'})
-        this.msPdf = blob
-        this.pdf = window.URL.createObjectURL(blob)
-        // let pdfile = new File([response.data], 'fpcafile.pdf', {type: 'application/pdf'})
-        // this.pdf = pdfile
+          return
+        }
+        navigator.mediaDevices.enumerateDevices()
+          .then(function (devices) {
+            feat.hasCamera = devices.filter(x => x.kind === 'videoinput').length > 0
+          })
+          .catch(function (err) {
+            feat.hasCamera = false
+            console.log(err.name + ': ' + err.message)
+          })
+        axios.get(encodeURI(`/api/fpca?firstName=${this.firstName || ''}&lastName=${this.lastName || ''}&middleName=${this.middleName || ''}&suffix=${this.suffix || ''}&ssn=${this.ssn || ''}&previousName=${this.previousName.previousName || ''}&dob=${this.dob || ''}&stateId=${this.stateId || ''}&votStreet=${this.votStreet || ''}&votApt=${this.votApt || ''}&votCity=${this.votCity || ''}&votState=${this.votState || ''}&votCounty=${this.votCounty || ''}&votZip=${this.votZip || ''}&abrAdr=${this.abrAdr ? this.abrAdr.alt1 : ''}\n${this.abrAdr ? this.abrAdr.alt2 : ''}\n${this.abrAdr ? this.abrAdr.alt3 : ''}\n${this.abrAdr ? this.abrAdr.alt4 : ''}\n${this.abrAdr ? this.abrAdr.alt5 : ''}&fwdAdr=${this.fwdAdr && this.fwdAdr.alt1 ? this.fwdAdr.alt1 : ''}\n${this.fwdAdr && this.fwdAdr.alt2 ? this.fwdAdr.alt2 : ''}\n${this.fwdAdr && this.fwdAdr.alt3 ? this.fwdAdr.alt3 : ''}\n${this.fwdAdr && this.fwdAdr.alt4 ? this.fwdAdr.alt4 : ''}\n${this.fwdAdr && this.fwdAdr.alt5 ? this.fwdAdr.alt5 : ''}&email=${this.email || ''}&altEmail=${this.altEmail || ''}&tel=${this.tel && this.tel.intNumber ? this.tel.intNumber : ''}&fax=${this.fax || ''}&party=${this.party || ''}&addlInfo=${this.addlInfo || ''}&date=${this.date || ''}&class=${this.voterClass || ''}&sex=${this.sex || ''}&recBallot=${this.recBallot || ''}&leoName=${this.leoName || ''}&leoAddress=${this.leoAdr || ''}&leoFax=${this.leoFax || ''}&leoEmail=${this.leoEmail || ''}&leoPhone=${this.leoPhone || ''}&transmitOpts=${this.stateRules.ballotReceiptOptions.join(',')}&deadline=${this.nextDeadline}`), {responseType: 'arraybuffer'})
+          .then((response) => {
+            // console.log(response)
+            let blob = new Blob([response.data], {type: 'application/pdf'})
+            this.msPdf = blob
+            this.pdf = window.URL.createObjectURL(blob)
+            // let pdfile = new File([response.data], 'fpcafile.pdf', {type: 'application/pdf'})
+            // this.pdf = pdfile
+          })
       })
+    }
   },
   methods: {
     signatureAgree () {
@@ -538,7 +540,7 @@ export default {
       data.append('attachment', blob, '@file/fpca.png')
       data.append('inline', blob, 'file/fpca.png')
       data.append('html', '<html>HTML version of the body<img src="cid:fpca.png" width="120" alt="FPCA"><br/></html>')
-      let url = 'https://votefromabroad.netlify.com/api/mail'
+      let url = '/api/mail'
       // let url = 'https://api.mailgun.net/v3/mon.tg/messages'
       let config = { url: url, method: 'post', headers: { 'Content-Type': 'multipart/form-data' }, auth: { username: 'api', password: 'key-44903961cb823b645750fe64358dfc40' } }
       this.$axios.post(url, data, config)

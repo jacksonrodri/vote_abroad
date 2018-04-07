@@ -54,6 +54,12 @@ module.exports = {
       pathRewrite: {
         '^/api/place/': '/'
       }
+    },
+    '/api/mail': {
+      target: 'https://api.mailgun.net/v3/mon.tg/messages',
+      pathRewrite: {
+        '^/api/mail': '/'
+      }
     }
   },
   manifest: {
@@ -96,7 +102,7 @@ module.exports = {
     linkExactActiveClass: 'is-active',
     middleware: 'menu-helper'
   },
-  plugins: ['~/plugins/buefy', '~/plugins/vuelidate'],
+  plugins: ['~/plugins/buefy', '~/plugins/vuelidate', '~/plugins/intercom'],
   /*
   ** Build configuration
   */

@@ -232,6 +232,14 @@ export default {
       return this.$route.name
     },
     isAuthenticated: function () { return this.$store.getters['userauth/isAuthenticated'] }
+  },
+  mounted () {
+    if (process.browser) {
+      window.onNuxtReady((app) => {
+        this.$intercom.boot()
+        // this.$intercom.show()
+      })
+    }
   }
 }
 </script>
