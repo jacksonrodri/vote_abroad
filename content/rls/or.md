@@ -1,5 +1,5 @@
 ---
-state: Oregon 
+state: Oregon
 iso: OR
 allowsNeverResided: true
 id:
@@ -22,7 +22,4 @@ fwabSubmitOptions:
   - Fax
   - Mail
 ---
-
-# Oregon Rules
-
-Oregon prefers that you use your state ID
+Remember that you need to request a ballot each calendar year that you'd like to vote in. Check below for your primary and general deadlines. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
