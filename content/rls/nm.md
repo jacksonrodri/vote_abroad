@@ -1,5 +1,5 @@
 ---
-state: New Mexico 
+state: New Mexico
 iso: NM
 allowsNeverResided: true
 id:
@@ -23,5 +23,4 @@ fwabSubmitOptions:
   - Fax
   - Mail
 ---
-
-# New Mexico Rules
+Remember that you need to request a ballot each calendar year that you'd like to vote in. Check below for your primary and general deadlines. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
