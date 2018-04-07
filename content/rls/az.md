@@ -1,5 +1,5 @@
 ---
-state: Arizona 
+state: Arizona
 iso: AZ
 allowsNeverResided: true
 id:
@@ -23,9 +23,4 @@ fwabSubmitOptions:
   - Fax
   - Mail
 ---
-
-# Arizona Rules
-
-You may be able to submit a ballot online/by email if your Local Election Official instructs you to.
-
-If you are using this form to register to vote, you must provide proof of citizenship. You must include a photocopy, do not send original documents.
+Remember that you need to request a ballot each calendar year that you'd like to vote in. Check below for your primary and general deadlines. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
