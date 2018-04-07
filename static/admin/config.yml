@@ -90,6 +90,8 @@ collections:
         name: "menu"
         widget: "object"
         fields:
+          - {label: "Login", name: "login", widget: "string"}
+          - {label: "Logout", name: "logout", widget: "string"}
           - {label: "Upcoming Elections", name: "upcomingElections", widget: "string"}
           - {label: "All Upcoming Elections", name: "allElections", widget: "string"}
           - {label: "Help", name: "help", widget: "string"}

@@ -1,7 +1,6 @@
 <template>
   <section>
     <b-field
-      label="Type your email address or phone number to start a secure session."
       type="is-vfalight"
       label-for="emailOrPhone">
       <b-field>
