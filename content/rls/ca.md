@@ -1,5 +1,5 @@
 ---
-state: California 
+state: California
 iso: CA
 allowsNeverResided: true
 id:
@@ -23,7 +23,4 @@ fwabSubmitOptions:
   - Fax
   - Mail
 ---
-
-# California Rules
-
-You may only submit a fwab by fax if you are overseas within 6 days of the election
+Remember that you need to request a ballot each calendar year that you'd like to vote in. Check below for your primary and general deadlines. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
