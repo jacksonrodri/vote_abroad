@@ -33,9 +33,17 @@
                   <span class="has-text-grey-light">Welcome back, </span><span><strong>{{ name }}!</strong></span>
                 </h1>
                 <div class="buttons is-right">
-                  <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" class="button is-medium is-primary" exact >Continue my request</nuxt-link>
+                  <button @click="$store.dispatch('userauth/logout')" class="button is-light">
+                    <b-icon
+                      pack="fas"
+                      icon="sign-out-alt"
+                      size="is-small">
+                    </b-icon>
+                    <span>{{ $t('menu.logout')}}</span>
+                  </button>
+                  <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" class="button is-primary" exact >Continue my request</nuxt-link>
                 </div>
-                <div class="buttons is-right is-marginless">
+                <!-- <div class="buttons is-right is-marginless">
                   <button @click="$store.dispatch('userauth/logout')" class="button is-medium is-light">
                     <b-icon
                       pack="fas"
@@ -44,7 +52,7 @@
                     </b-icon>
                     <span>{{ $t('menu.logout')}}</span>
                   </button>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
