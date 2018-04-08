@@ -1,14 +1,14 @@
 ---
 title: >-
-  I'm a US citizen, but my voter registration was rejected because I've never resided in the US. What can I do?
+  Soy ciudadano estadounidense, pero mi registro electoral fue rechazado porque nunca he vivido en los EEUU. ¿Qué puedo hacer?
 categories:
   - 
-    category: US Citizens without Residency
+    category: Ciudadanos de los Estados Unidos sin residencia
 relatedFaqs:
   -
 ---
-Most states allow a US citizen who has never resided in the US to register to vote using the address of the last place the US citizen parent lived in the US.
+La mayoría de los estados permite a los ciudadanos estadounidenses que nunca ha residido en los Estados Unidos registrarse para votar utilizando el último domicilio de sus padres en los Estados Unidos.
 
-However, 14 states require that a voter must have actually resided in the state, a position that disenfranchises US citizens like yourself. The US government website to register to vote from abroad (fvap.gov) do not include this option in the form for the 14 states that exclude US citizens who have not resided in their states. Votefromabroad.org also excludes this option.
+Sin embargo, 14 estados requieren que un votante debe haber residido efectivamente en el estado, posición que priva del derecho de votar a los ciudadanos como usted. El sitio web de gobierno de los Estados Unidos donde puede registrarse para votar desde el extranjero (fvap.gov), no incluye esta opción en el formulario de los 14 Estados que excluyen a los ciudadanos estadounidenses que no han residido en sus estados. Votefromabroad.org también excluye esta opción.
 
-Unfortunately, if you tried to register to vote and indicated you’ve “never resided” in the state, you will likely not be able to register to vote there. If you have a strong tie to another state, and have spent lengthy (30 days in-state is often a requirement to register to vote) or multiple visits to friends or relatives, you might try to use one of those addresses to register to vote this year.
+Desafortunadamente, si usted ha intentado registrarse para votar y había indicado que "nunca residió" en el estado, probablemente no podrá registrarse para votar allí. Si usted tiene una sólida relación con otro estado y ha pasado en él períodos largos (30 días en el estado es a menudo un requisito para registrarse como votante) o ha realizado múltiples visitas a amigos o familiares, podría tratar de utilizar una de esas direcciones con el fin de registrarse para votar este año.

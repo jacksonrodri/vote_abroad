@@ -1,17 +1,17 @@
 ---
 title: Condiciones de uso
 ---
-VoteFromAbroad.org is a nonpartisan voter registration tool provided as a public service by Democrats Abroad.
+VoteFromAbroad.org es una herramienta de registro de votantes no partidista provista como servicio público por Democrats Abroad.
 
-While Democrats Abroad uses reasonable efforts to ensure that the information on this site is accurate and up to date, we reserve the right to make corrections. Democrats Abroad shall not be liable for any errors, or inaccuracies of the information on this Site, any delays in transmission of that information, or for any actions taken by you in reliance thereon. This site and the information therein is offered on a best intentions basis.
+Si bien Democrats Abroad realiza esfuerzos razonables para asegurar que la información de este sitio sea exacta y esté actualizada, nos reservamos el derecho de hacer correcciones. Democrats Abroad no será responsable por cualquier error o inexactitud de la información en este sitio, cualquier demora en la transmisión de esa información, o por cualquier acción tomada por usted al respecto. Este sitio y la información contenida en él, se ofrece sobre con base en las mejores intenciones.
 
-Democrats Abroad offers no warranty, express or implied, with respect to the accuracy, adequacy, or timeliness of the information for any particular purpose. Users should contact their local or state election officials to verify information before taking action in reliance on it, because information may have changed since the last update of the site.
+Democrats Abroad no ofrece ninguna garantía, expresa o implícita, con respecto a la exactitud, idoneidad u oportunidad de la información para cualquier propósito en particular. Los usuarios deben comunicarse con sus funcionarios electorales locales o estatales para verificar la información antes de tomar acción con base en ella, porque la información puede haber cambiado desde la última actualización del sitio.
 
-Democrats Abroad does not endorse, and shall not be responsible for the accuracy, adequacy, or timeliness of any information, advice or opinion made by individuals or organizations linked to this site. Documents, images, and other content on this site may also be protected under U.S. or foreign copyright laws, and permission to reproduce may be required.
+Democrats Abroad no respalda y no será responsable por la exactitud, idoneidad u oportunidad de cualquier información, consejo u opinión que se haya publicado por individuos u organizaciones vinculados a este sitio. Los documentos, imágenes u otro contenido en este sitio puede estar también protegido por leyes de derechos de autor de los Estados Unidos o extranjeras; y puede ser necesario contar con permiso expreso para reproducirlos.
 
-Democrats Abroad shall not be liable for any direct, indirect, consequential, or exemplary damages of any kind, including, but not limited to, lost revenues or profits, loss of business or loss of data, or for any claim, loss, or injury based upon errors, omissions, interruptions, or inaccuracies in the information housed at or linked to this site.
+Democrats Abroad no será responsable por ningún daño directo, indirecto, consecuente o ejemplar de cualquier tipo, incluyendo pero no limitado a, pérdida de ingresos o beneficios, pérdida de negocio o pérdida de datos o de cualquier reclamación, pérdida o lesión basada en errores, omisiones, interrupciones, o inexactitudes en la información contenida en o vinculada a este sitio.
 
-You may download, print, and store the Content and downloadable materials displayed on this website for your personal use only. Requests for any other use may be made in writing to:
+Usted puede descargar, imprimir y guardar el contenido y materiales descargables desplegados en este sitio web solamente para su uso personal. Las solicitudes para cualquier otro uso pueden hacerse por escrito a:
 
 Democrats Abroad
 

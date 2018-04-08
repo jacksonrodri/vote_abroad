@@ -1,4 +1,4 @@
 ---
-title: states
+title: estados
 ---
-Voting from abroad in your state is easy.
+Es fácil votar en su estado desde el extranjero.

@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <div class="field">
     <b-field
       type="is-vfalight"
       label-for="emailOrPhone">
@@ -45,7 +45,7 @@
       </b-field>
     </b-field>
     <p v-if="mailCheckedEmail" class="help is-vfa">Did you mean <a @click="setEmail">{{ mailCheckedEmail }}</a>?</p>
-  </section>
+  </div>
 </template>
 
 <script>

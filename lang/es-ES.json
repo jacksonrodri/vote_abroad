@@ -20,7 +20,7 @@
     "moreFAQs": "Más preguntas frecuentes",
     "helpfaq": "Soporte técnico/Preguntas frecuentes del votante",
     "allElections": "Todas las próximas elecciones",
-    "disclaimer": "Servicio Público provisto por el Comité en el Extranjero del Partido Demócrata (DemocratsAbroad.org).",
+    "disclaimer": "Servicio Público provisto por el Comité del Partido Demócrata en el Extranjero (DemocratsAbroad.org).",
     "upcomingElections": "Próximas elecciones"
   },
   "request": {
@@ -88,7 +88,7 @@
       "no": "No",
       "alreadyMember": "Ya soy miembro",
       "accountEmail": "Por favor ingrese la dirección de correo electrónico de su cuenta si la recuerda, para que podamos actualizar su registro.",
-      "tooltip": "Demócratas en el Extranjero es la organización oficial del Partido Demócrata para los millones de estadounidenses que viven fuera de Estados Unidos."
+      "tooltip": "Democrats Abroad es la organización oficial del Partido Demócrata para los millones de estadounidenses que viven fuera de Estados Unidos."
     },
     "stateSpecial": {
       "label": "Reglas específicas (estatales)"
@@ -176,7 +176,7 @@
       "zip": "Código postal",
       "street": "Calle",
       "tooltip": "Use el último ** domicilio ** en donde vivió en los Estados Unidos. Si nunca ha residido en los Estados Unidos, utilice el último domicilio en el que su madre, padre o ambos vivieron en los Estados Unidos. Si su(s) padre(s) estadounidenses tuvieron su último domicilio en diferentes lugares de los Estados Unidos, puede elegir el que utilizará como domicilio de referencia para votar.",
-      "instructions": "Escriba el último domicilio en donde vivió en los Estados Unidos. Si usted nunca ha vivido en los Estados Unidos, use el último domicilio en los Estados Unidos de su madre o padre ciudadano de los Estados Unidos.",
+      "instructions": "Escriba el último domicilio en donde vivió en los Estados Unidos. Si usted nunca ha residido en los Estados Unidos, use el último domicilio en los Estados Unidos de su madre o padre ciudadano de los Estados Unidos.",
       "apt": "Apartamento #",
       "county": "Condado",
       "city": "Ciudad",
