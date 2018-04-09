@@ -81,12 +81,13 @@
           </nav>
         </div>
           <div class="column">
-            <b-message title="Important! You must send your signed request to your election official" type="is-warning" has-icon>
+            <!-- <b-message title="Important! You must send your signed request to your election official" type="is-warning" has-icon>
               You are not finished yet. You must send your <strong>signed and dated</strong> ballot request to your election official.
-            </b-message>
+            </b-message> -->
             <!-- ballot request status area -->
             <div class="columns">
               <div class="column">
+                <request-stage></request-stage>
                 <div class="card">
                   <header class="card-header">
                     <h3 class="card-header-title title is-5 is-size-6-mobile has-text-vfa">
@@ -198,12 +199,14 @@
 <script>
 import UserDashboard from '~/components/UserDashboard'
 import VueMarkdown from 'vue-markdown'
+import RequestStage from '~/components/RequestStage'
 
 export default {
   name: 'User-Account',
   components: {
     UserDashboard,
-    VueMarkdown
+    VueMarkdown,
+    RequestStage
   },
   data () {
     return {
@@ -237,7 +240,6 @@ export default {
           actionText: 'Check my deadlines',
           completeText: 'I\'ve already voted'
         }
-
       ]
     }
   },
@@ -248,6 +250,7 @@ export default {
     states () { return new Set(this.requests.map(x => x.votAdr.regionCode)) },
     name () { return this.user && this.user.firstName ? this.user.firstName : this.requests && this.requests[0] && this.requests[0].firstName ? this.requests[0].firstName : '' },
     isAuthenticated: function () { return this.$store.getters['userauth/isAuthenticated'] }
+    // currentRequestStage () { return this.currentRequest && this.currentRequest.stage ? this.currentRequest.stage : 'fill' }
   },
   methods: {
     share () {
