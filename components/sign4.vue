@@ -124,7 +124,6 @@ export default {
       ctx2: null,
       ctx3: null,
       sigImage: null,
-      orientation: 'landscape',
       chosenSig: null,
       fromName: null,
       subject: null,
