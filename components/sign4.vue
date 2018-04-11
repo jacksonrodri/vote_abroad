@@ -160,9 +160,8 @@ export default {
   ],
   methods: {
     beginCapture: function () {
-      if (this.orientation === 'landscape') {
-        this.updateStage('capture')
-      } else {
+      var mql = window.matchMedia('(orientation: portrait)')
+      if (mql.matches) {
         this.$dialog.alert({
           title: 'Please rotate your phone',
           message: 'Please rotate your phone to landscape orientation',
@@ -172,6 +171,8 @@ export default {
           icon: 'exclamation-circle',
           iconPack: 'fas'
         })
+      } else {
+        this.updateStage('capture')
       }
     },
     afterEnter: function (el) {
@@ -383,20 +384,6 @@ export default {
     this.fromName = `${this.firstName} ${this.lastName}`
     this.subject = 'FPCA Submission'
     this.message = 'Please find my FPCA form for the 2018 calendar year. Can you confirm receipt and also confirm that I do not need to send in the paper copy? \n\nThank you so much for everything you do - your work is much appreciated by Americans abroad!!'
-    // Check orientation of mobile devices
-    var mql = window.matchMedia('(orientation: portrait)')
-    if (mql.matches) {
-      this.orientation = 'portrait'
-    } else {
-      this.orientation = 'landscape'
-    }
-    mql.addListener(function (m) {
-      if (m.matches) {
-        this.orientation = 'portrait'
-      } else {
-        this.orientation = 'landscape'
-      }
-    })
   },
   beforeDestroy: function () {
     if (this.$refs.video) {
