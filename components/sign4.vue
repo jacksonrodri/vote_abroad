@@ -124,6 +124,7 @@ export default {
       ctx2: null,
       ctx3: null,
       sigImage: null,
+      orientation: 'landscape',
       chosenSig: null,
       fromName: null,
       subject: null,
@@ -207,8 +208,8 @@ export default {
           this._stream = stream
           this._hasUserMedia = true
           this.$refs.video.addEventListener('canplay', () => {
-            this.width = this.$refs.video.videoWidth > this.$refs.video.videoHeight ? this.$refs.video.videoWidth : this.$refs.video.videoHeight
-            this.height = this.$refs.video.videoHeight < this.$refs.video.videoWidth ? this.$refs.video.videoHeight : this.$refs.video.videoWidth
+            this.width = this.$refs.video.videoWidth
+            this.height = this.$refs.video.videoHeight
             this.paused = false
             this.$refs.video.play()
           })
@@ -235,12 +236,14 @@ export default {
       this.ctx1 = this.$refs.signature1.getContext('2d')
       this.ctx2 = this.$refs.signature2.getContext('2d')
       this.ctx3 = this.$refs.signature3.getContext('2d')
-      let edited = this.editImg(this.sigImage, this.width, this.height / 2)
-      this.ctx1.putImageData(edited, 0, 0)
-      this.ctx2.putImageData(edited, 0, 0)
-      this.ctx3.putImageData(edited, 0, 0)
+      let edited1 = this.editImg(this.sigImage, this.width, this.height / 2, 60, 120)
+      let edited2 = this.editImg(this.sigImage, this.width, this.height / 2, 80, 140)
+      let edited3 = this.editImg(this.sigImage, this.width, this.height / 2, 100, 160)
+      this.ctx1.putImageData(edited1, 0, 0)
+      this.ctx2.putImageData(edited2, 0, 0)
+      this.ctx3.putImageData(edited3, 0, 0)
     },
-    editImg: function (imgData, canvasWidth, canvasHeight) {
+    editImg: function (imgData, canvasWidth, canvasHeight, lowerBound, upperBound) {
       var data = imgData.data
       console.log(data)
       let sorted = imgData.data.slice().sort()
@@ -254,12 +257,12 @@ export default {
         var avg = (data[i] + data[i + 1] + data[i + 2]) / 3
         // let adj = (Math.pow((avg - 127) / 127, 3) + 1) * 127
         let adj
-        if (avg < 80) {
+        if (avg < lowerBound) {
           adj = 0
-        } else if (avg > 140) {
+        } else if (avg > upperBound) {
           adj = 255
         } else {
-          adj = Math.floor(255 - ((140 - avg) / 60 * 255))
+          adj = Math.floor(255 - ((upperBound - avg) / 60 * 255))
         }
         // avg = avg > firstpercentile ? 255 : avg
         var alpha = 255 - adj
@@ -365,6 +368,20 @@ export default {
     this.fromName = `${this.firstName} ${this.lastName}`
     this.subject = 'FPCA Submission'
     this.message = 'Please find my FPCA form for the 2018 calendar year. Can you confirm receipt and also confirm that I do not need to send in the paper copy? \n\nThank you so much for everything you do - your work is much appreciated by Americans abroad!!'
+    // Check orientation of mobile devices
+    var mql = window.matchMedia('(orientation: portrait)')
+    if (mql.matches) {
+      this.orientation = 'portrait'
+    } else {
+      this.orientation = 'landscape'
+    }
+    mql.addListener(function (m) {
+      if (m.matches) {
+        this.orientation = 'portrait'
+      } else {
+        this.orientation = 'landscape'
+      }
+    })
   },
   beforeDestroy: function () {
     if (this.$refs.video) {
