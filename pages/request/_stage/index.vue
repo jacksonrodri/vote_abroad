@@ -354,7 +354,7 @@ export default {
       fwabRequest: '',
       isFwab: false,
       isOpen: false,
-      joinDa: null,
+      // joinDa: null,
       prty: ''
     }
   },
@@ -532,6 +532,10 @@ export default {
     stateSpecial: {
       get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].stateSpecial : null },
       set (value) { this.$store.commit('requests/update', {stateSpecial: value}) }
+    },
+    joinDa: {
+      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].joinDa : null },
+      set (value) { this.$store.commit('requests/update', {joinDa: value}) }
     },
     isFWAB: {
       get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].isFWAB : false },

@@ -1,8 +1,15 @@
 import { WebAuth } from 'auth0-js'
 import axios from 'axios'
 import { Dialog, Toast, Snackbar, LoadingProgrammatic } from 'buefy'
+import * as AWS from 'aws-sdk'
+import 'amazon-cognito-js'
 const jwtDecode = require('jwt-decode')
+// var AWS = require('aws-sdk')
 
+AWS.config.region = 'us-east-1' // Region
+AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+  IdentityPoolId: 'us-east-1:7bd016b9-b2ad-4ed3-bb1a-8915af42a2b5'
+})
 // const redirectUri = `https://votefromabroad.netlify.com`
 // const redirectUri = `http://localhost:3000`
 const redirectUri = process.env.url
@@ -274,8 +281,8 @@ export const actions = {
           scope: 'openid profile email'
         }, function (err, authResult) {
           if (err) {
-            console.log(err)
-            dispatch('clearData')
+            console.log('checkSessionErr', err)
+            // dispatch('clearData')
             return
           }
           resolve(authResult)
@@ -338,6 +345,63 @@ export const actions = {
       duration: 8000
     })
     // console.log('hi from after Snackbar.open')
+    AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+      IdentityPoolId: 'us-east-1:7bd016b9-b2ad-4ed3-bb1a-8915af42a2b5',
+      Logins: {
+        'montg.auth0.com': idToken
+      }
+    })
+    AWS.config.credentials.get(function () {
+      var syncClient = new AWS.CognitoSyncManager()
+      syncClient.openOrCreateDataset('myDataset', function (err, dataset) {
+        if (err) throw (err)
+        dataset.put('myKey', 'myValue', function (err, record) {
+          if (err) throw (err)
+          dataset.synchronize({
+            onSuccess: function (data, newRecords) {
+              console.log('data', data, 'newRecords', newRecords)
+            }
+          })
+        })
+      })
+    })
+    // var syncManager = new AWS.CognitoSyncManager()
+    // let dataset
+    // syncManager.openOrCreateDataset('alexData', function (err, d) {
+    //   if (err) throw (err)
+    //   dataset = d
+    //   dataset.put('Alex', 'Montgomery', function (err, record) {
+    //     if (err) console.log('datasetputerr', err)
+    //     console.log(record)
+    //     dataset.synchronize()
+    //   })
+    // })
+    // console.log(dataset)
+    // dataset.synchronize({
+    //   onSuccess: function(dataset, newRecords) {
+    //     console.log(dataset, newRecords)
+    //  },
+    //  onFailure: function(err) {
+    //     console.log(err)
+    //  }
+    // })
+    // dataset.put('newData', 'newValue', function (err, record) {
+    //   if (err) throw (err)
+    //   console.log('returned record', record)
+    // })
+    // dataset.synchronize()
+    // syncManager.openOrCreateDataset('myDatasetName', function (err, dataset) {
+    //   if (err) {
+    //     console.log('ERROR-syncManager.openOrCreateDataset', err)
+    //   } else {
+    //     console.log('SUCCESS-syncManager.openOrCreateDataset', dataset)
+    //     dataset.put('newKey', 'newValue', function (err, record) {
+    //       if (err) throw (err)
+    //       console.log('record', record)
+    //       dataset.synchronize()
+    //     })
+    //   }
+    // })
   },
   clearData ({ commit, dispatch }) {
     commit('updateGcToken', null)

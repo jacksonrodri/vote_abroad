@@ -16,6 +16,7 @@
       </div>
       <div v-if="value === 'capture'" key="capture">
         <h3 class="title is-3">{{$t('request.sig.capture')}}</h3>
+        <h1 class="title">Width: {{width}} Height: {{height}}</h1>
         <div class="video">
           <video @play="timerCallback()"
               :autoplay="autoplay"
@@ -28,6 +29,7 @@
       <div v-if="value === 'select'" key="select">
         <h3 class="title is-3">{{$t('request.sig.select')}}</h3>
         <p>{{$t('request.sig.selectInstructions')}}</p>
+        <h1 class="title">Width: {{width}} Height: {{height}}</h1>
         <!-- <ol>
           <li>Choose the version below with the clearest signature and whitest background</li>
         </ol> -->
