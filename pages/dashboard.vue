@@ -1,4 +1,9 @@
 <template>
+<div class="hero-head">
+  <div>
+    <h1 class="has-text-centered title is-3">Ballot Request Status</h1>
+    <h3 class="has-text-centered subtitle is-4">Next Steps...</h3>
+  </div>
   <div class="hero-body columns is-centered">
     <div class="column is-12 is-8-desktop is-7-widescreen is-6-fullhd">
       <!-- level menu -->
@@ -30,10 +35,6 @@
             </h1>
           </div>
         </div>
-      </div>
-      <div>
-        <h1 class="has-text-centered title is-3">Ballot Request Status</h1>
-        <h3 class="has-text-centered subtitle is-4">Next Steps...</h3>
       </div>
 
       <!-- main section -->
@@ -81,74 +82,17 @@
           </nav>
         </div>
           <div class="column">
-            <!-- <b-message title="Important! You must send your signed request to your election official" type="is-warning" has-icon>
-              You are not finished yet. You must send your <strong>signed and dated</strong> ballot request to your election official.
-            </b-message> -->
-            <!-- ballot request status area -->
             <div class="columns">
               <div class="column">
-                <request-stage></request-stage>
-                <div class="card">
-                  <header class="card-header">
-                    <h3 class="card-header-title title is-5 is-size-6-mobile has-text-vfa">
-                      Todo: {{currentRequestStage}}
-                    </h3>
-                  </header>
-                  <div class="card-content">
-                    <article class="media">
-                      <figure class="media-left">
-                        <span class="icon is-medium has-text-vfa">
-                          <i :class="['fas', 'fa-2x', `fa-${requestStages.find(stage => currentRequestStage === stage.title).icon}`]"></i>
-                        </span>
-                      </figure>
-                      <div class="media-content">
-                        <div class="content">
-                          <p>
-                            {{ requestStages.find(stage => currentRequestStage === stage.title).content }}
-                          </p>
-                          <div v-if="currentRequestStage === 'fill-sign'">Fill and Sign</div>
-                          <div v-if="currentRequestStage === 'send'">Send</div>
-                          <div v-if="currentRequestStage === 'receive-ballot'">Receive Ballot</div>
-                          <div v-if="currentRequestStage === 'vote'">Vote</div>
-                        </div>
-                        <nav class="level is-mobile">
-                          <div class="level-left"></div>
-                          <div class="level-right">
-                            <a class="level-item">
-                              <span class="icon is-small"><i class="fas fa-pencil-alt"></i></span><span>&nbsp;{{ requestStages.find(stage => currentRequestStage === stage.title).actionText }}</span>
-                            </a>
-                            <a class="level-item">
-                              <span class="icon is-small"><i class="fas fa-check"></i></span><span>&nbsp;Mark as complete</span>
-                            </a>
-                          </div>
-                        </nav>
-                      </div>
-                      <div class="media-right">
-                      </div>
-                    </article>
+                <!-- <request-stage></request-stage> -->
+                <article class="message is-info">
+                  <div class="message-body">
+                    Thank you for using www.votefromabroad.org to generate your Voter Registration/Ballot Request form.
+                    Below are the instructions to submit your completed form.
+                    If you need any help, contact our volunteer voter support team at: help@votefromabroad.org.
+                    Thanks for voting!
                   </div>
-                  <footer class="card-footer">
-                    <nav class="breadcrumb is-centered card-footer-item has-arrow-separator">
-                      <ul>
-                        <li v-for="stage in requestStages" :key="stage.title">
-                          <a @click="currentRequestStage = stage.title">
-                            <span :class="[{'has-text-primary': currentRequestStage === stage.title}, {'has-text-grey': currentRequestStage !== stage.title}, 'is-size-7-mobile']">
-                              {{stage.title}}
-                            </span>
-                            <!-- <vue-markdown :html="true" :class="[{'has-text-primary': currentRequestStage === stage.title}, {'has-text-grey': currentRequestStage !== stage.title}, 'is-size-7-mobile']">
-                              {{stage.title}}
-                            </vue-markdown> -->
-                            <!-- <i18n path="request.stages.emailIntro"
-                              :class="[{'has-text-primary': currentRequestStage === stage.title}, {'has-text-grey': currentRequestStage !== stage.title}, 'is-size-7-mobile']"
-                              tag="vue-markdown"
-                              :html="true">
-                            </i18n> -->
-                          </a>
-                        </li>
-                      </ul>
-                    </nav>
-                  </footer>
-                </div>
+                </article>
               </div>
             </div>
 
@@ -194,6 +138,7 @@
       </div>
     </div>
   </div>
+</div>
 </template>
 
 <script>

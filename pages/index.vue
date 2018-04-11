@@ -22,7 +22,9 @@
                   <button @click="authStart('/request/your-information')" class="button is-large is-danger">{{ $t('homepage.start') }}</button>
                 </div>
                 <div class="buttons is-right">
-                  <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" class="button is-text has-text-black is-paddingless" exact ><span>{{ $t('homepage.anonymous') }}</span></nuxt-link><span @click="toolTipOpen = !toolTipOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span>
+                  <!-- <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" class="button is-text has-text-black is-paddingless" exact ><span>{{ $t('homepage.anonymous') }}</span></nuxt-link> -->
+                  <button @click="anonymousStart" class="button is-text has-text-black is-paddingless" exact ><span>{{ $t('homepage.anonymous') }}</span></button>
+                  <span @click="toolTipOpen = !toolTipOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span>
                 </div>
                 <b-message title="What is this?" type="is-info" has-icon :active.sync="toolTipOpen">
                   {{ $t('homepage.tooltip')}}
@@ -104,6 +106,14 @@ export default {
     name () { return this.user && this.user.firstName ? this.user.firstName : this.requests && this.requests[0] && this.requests[0].firstName ? this.requests[0].firstName : '' }
   },
   methods: {
+    anonymousStart: function () {
+      this.$toast.open({
+        message: 'You have started an anonymous session.  Please close this window when you are finished to delete all data.',
+        type: 'is-success',
+        duration: 8000
+      })
+      this.$router.push(this.localePath({ name: 'request-stage', params: { stage: 'your-information' } }))
+    },
     ...mapActions('userauth', [
       'sendEmailCode',
       'sendEmailLink',

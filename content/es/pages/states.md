@@ -1,4 +1,4 @@
 ---
-title: estados
+title: States
 ---
-Es fácil votar en su estado desde el extranjero.
+Look up your state's primary and general election deadlines, as well as its submission rules, and stay on top of voting in this year's elections.

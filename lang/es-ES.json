@@ -5,22 +5,29 @@
   "homepage": {
     "title": "Vote desde el extranjero",
     "subtitle": "Solicite ahora una boleta electoral",
-    "loginInstructions": "Escriba su número de teléfono o dirección de correo electrónico para iniciar una sesión segura.",
+    "loginInstructions": "Escriba su dirección de correo electrónico o número de teléfono para comenzar.",
     "start": "Inicio",
-    "anonymous": "o inicie una sesión anónima"
+    "anonymous": "o inicie una sesión anónima",
+    "tooltip": "Su correo electrónico o número telefónico creará una cuenta para que usted pueda ingresar fácilmente a votefromabroad y guardar la información de un año a otro. Una sesión anónima le permite crear un formulario FPCA y enviarlo a la oficina de elecciones locales, pero no conservará su información para que usted pueda reusarla en el futuro."
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "intro": "Estas son las preguntas que escuchamos con mayor frecuencia mientras ayudamos a los votantes en el exterior para registrarse y solicitar su boleta electoral. Si usted tiene alguna pregunta que no esté respondida aquí, por favor póngase en contacto con nosotros a través de helpdesk@votefromabroad.org. ¡Nos encantaría saberde usted!"
   },
   "menu": {
     "contact": "Comuníquese con soporte técnico",
     "help": "Ayuda",
     "terms": "Condiciones de uso",
     "privacy": "Privacidad",
+    "login": "Inicio de sesión",
+    "logout": "Cierre de sesión",
     "stateGuide": "Guía Electoral del Estado",
     "howto": "Cómo votar desde el extranjero",
     "about": "Quiénes somos",
     "moreFAQs": "Más preguntas frecuentes",
     "helpfaq": "Soporte técnico/Preguntas frecuentes del votante",
     "allElections": "Todas las próximas elecciones",
-    "disclaimer": "Servicio Público provisto por el Comité del Partido Demócrata en el Extranjero (DemocratsAbroad.org).",
+    "disclaimer": "Servicio Público provisto por el Comité del Partido Demócrata en el Extranjero (DemocratsAbroad.org). <br/> Este comunicado no está autorizado por ningún candidato o comité de candidato.",
     "upcomingElections": "Próximas elecciones"
   },
   "request": {
@@ -143,7 +150,7 @@
       "selectInstructions": "Seleccione la firma abajo que sea la más bien definida.  Elija la versión que tenga un fondo blanco con una firma totalmente visible.",
       "attachment": "Archivo adjunto",
       "successMessage": "¡Enviado! Compruebe en su bandeja de entrada la recepción de una copia.",
-      "instructions": "1. Escriba su nombre con un un bolígrafo con tinta oscura en una hoja de papel blanco.\n2. Seleccione 'Permitir acceso a mi cámara web' y acepte el siguiente mensaje. \n3. Mantenga su firma frente a la cámara y hágala coincidir sobre la línea roja de la firma y entonces seleccione 'Tomar foto'.\n4. Seleccione la versión de la firma que esté mejor definida.\n5. Seleccione 'Enviar' para enviar su formulario firmado a su funcionario electoral.",
+      "instructions": "1. Escriba su nombre con un un bolígrafo con tinta oscura en una hoja de papel blanco.<br/>\n2. Seleccione 'Permitir acceso a mi cámara web' y acepte el siguiente mensaje. <br/>\n3. Mantenga su firma frente a la cámara y hágala coincidir sobre la línea roja de la firma y entonces seleccione 'Tomar foto'.<br/>\n4. Seleccione la versión de la firma que esté mejor definida.<br/>\n5. Seleccione 'Enviar' para enviar su formulario firmado a su funcionario electoral.",
       "capture": "Tomar foto",
       "message": "Mensaje",
       "retry": "Vuelve a intentarlo",
@@ -292,9 +299,9 @@
       }
     },
     "fwdAdr": {
-      "label": "Dirección de reenvío (opcional)",
-      "instructions": "Si desea que su boleta electoral sea enviada a una dirección diferente como un apartado postal o dirección de reenvío, ingrésela aquí.",
-      "tooltip": "Esto es opcional. Por favor proporcione una dirección de reenvío solo si usted solicita que su boleta electoral en blanco se le envíe por correo postal y no desea que se le envíe a su domicilio actual de residencia fuera de los Estados Unidos. Si no tiene seguridad de cuál será su dirección de correo postal cuando las boletas electorales deban ser enviadas, usted puede solicitar que su boleta en blanco sea enviada a un tercero confiable, como una oficina del estudiante de Universidad o apartado postal.",
+      "label": "Dirección de destino (opcional)",
+      "instructions": "Si desea que su boleta electoral sea enviada a una dirección diferente como un apartado postal o dirección de destino, ingrésela aquí.",
+      "tooltip": "Esto es opcional. Por favor proporcione una dirección de destino solo si usted solicita que su boleta electoral en blanco se le envíe por correo postal y no desea que se le envíe a su domicilio actual de residencia fuera de los Estados Unidos. Si no tiene seguridad de cuál será su dirección de correo postal cuando las boletas electorales deban ser enviadas, usted puede solicitar que su boleta en blanco sea enviada a un tercero confiable, como una oficina del estudiante en una Universidad o en un apartado postal.",
       "question": "¿Quisiera que su boleta electoral sea enviada a una dirección diferente de su domicilio actual?",
       "yes": "Sí",
       "no": "No"

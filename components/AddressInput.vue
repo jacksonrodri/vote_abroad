@@ -214,6 +214,9 @@ export default {
       this.alt3 = this.value.alt3 || ''
       this.alt4 = this.value.alt4 || ''
       this.alt5 = this.value.alt5 || ''
+      // if (this.countryCode && !this.countryName) {
+      //   this.countryName = this.codeFilteredCountries[0].label
+      // }
     }
   },
   data: function () {
@@ -340,8 +343,17 @@ export default {
     streetAddress: function () {
       this.updateAlt()
     },
-    countryCode: function () {
+    countryCode: function (val) {
+      // if (val && !this.countryName && this.codeFilteredCountries) {
+      //   console.log('cfc', this.codeFilteredCountries)
+      //   // this.countryName = this.codeFilteredCountries[0].label
+      // }
       this.updateAlt()
+    },
+    codeFilteredCountries: function (val) {
+      if (!this.countryName && val.length === 1) {
+        this.countryName = val[0].label
+      }
     }
   },
   methods: {

@@ -256,7 +256,7 @@ export const actions = {
       })
     })
   },
-  async setSession ({ state, commit, dispatch }) {
+  async setSession ({ state, rootState, commit, dispatch }) {
     function parseHash () {
       return new Promise((resolve, reject) => {
         webAuth.parseHash({ hash: window.location.hash }, function (err, authResult) {
@@ -305,13 +305,15 @@ export const actions = {
     commit('updateIdToken', idToken)
     commit('updateExpirationDate', jwtDecode(idToken).exp)
     commit('updateGcToken', jwtDecode(idToken)['https://graph.cool/token'])
-    dispatch('redirect', state.redirectPath)
+    if (state.redirectPath) {
+      dispatch('redirect', state.redirectPath)
+    }
     console.log('[https://demsabroad.org/user]', jwtDecode(idToken)['https://demsabroad.org/user'])
     commit('updateUser', {isDA: jwtDecode(idToken)['https://demsabroad.org/isDA'], da: jwtDecode(idToken)['https://demsabroad.org/user']})
-    if (jwtDecode(idToken)['https://demsabroad.org/isDA']) {
+    if (jwtDecode(idToken)['https://demsabroad.org/isDA'] && !rootState.requests.requests[rootState.requests.currentRequest].lastName) {
       Dialog.confirm({
         title: 'Democrats Abroad Members',
-        message: `As a verified Democrats Abroad member you can prefill your form with your membership data. Would you like to?`,
+        message: `As an authenticated member of Democrats Abroad, you can prefill your form with your membership data. Would you like to?`,
         cancelText: 'Start a new request',
         confirmText: 'Prefill my data',
         type: 'is-success',
@@ -323,6 +325,7 @@ export const actions = {
             position: 'is-top',
             duration: 8000
           })
+          dispatch('redirect', state.redirectPath || '/request/your-information')
         }
       })
     }

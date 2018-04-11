@@ -44,14 +44,8 @@
                       </i18n>
                       <button v-if="!signStep" class="button is-pulled-right is-primary" @click="signatureAgree"><b-icon icon="camera" size="is-small"></b-icon><span>{{$t('request.stages.sign')}}</span></button>
                       <br>
-                      <!-- <button class="button is-pulled-right is-primary" @click="isSignatureModalActive = true"><b-icon icon="camera" size="is-small"></b-icon><span>{{$t('request.stages.sign')}}</span></button> -->
-                      <!-- <nuxt-link class="button is-pulled-right is-primary" to="sign"><b-icon icon="camera" size="is-small"></b-icon><span>{{$t('request.stages.sign')}}</span></nuxt-link> -->
-                      <!-- {{ hasCamera ? "you have a camera" : "you don't have a camera" }}
-                      {{ downloadAttrSupported ? "this browser supports the download attribute" : "this browser doesn't support the download attribute"}}
-                      <embed type="application/pdf" :src="pdf" /> -->
                     </div>
                   </article>
-                  <!-- <Sign :signStep="signStep" @sigcap="addSig" @cancel="signStep = null"/> -->
                   <article class="media">
                     <figure class="media-left">
                       <span class="icon is-large">
@@ -69,16 +63,10 @@
                       </i18n>
                       <a v-if="downloadAttrSupported" :href="pdf" :download="`${firstName}-${lastName}-2018-fpca.pdf`" :class="['button', 'is-pulled-right', 'is-primary', {'is-loading': !Boolean(pdf)}]" @click="finish"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></a>
                       <button v-else class="button is-pulled-right is-primary" @click="openPdf"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
-                      <!-- <span v-if="!downloadAttrSupported">right click and select save to disk</span> -->
-
-                      <!-- <button v-if="downloadAttrSupported" class="button is-pulled-right is-primary" @click="getFPCA(download)"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
-                      <button v-else class="button is-pulled-right is-primary" @click="getFPCA(blank)"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
-                      <a href="/images/myw3schoolsimage.jpg" download>Download</a> -->
                     </div>
                   </article>
                 </div>
               </article>
-              <!-- <nuxt-child/> -->
             </section>
             <section v-if="signStep" class="section">
               <sign4 v-model="signStep" :fpca="fpca" @sigcap="addSig">
@@ -132,70 +120,13 @@
                         tag="vue-markdown"
                         :html="true">
                       </i18n>
-                      <!-- <button class="button is-pulled-right is-primary" @click="getFPCA"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button> -->
                       <a v-if="downloadAttrSupported" :href="pdf" :download="`${firstName}-${lastName}-2018-fpca.pdf`" :class="['button', 'is-pulled-right', 'is-primary', {'is-loading': !Boolean(pdf)}]" @click="finish"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></a>
                       <button v-else class="button is-pulled-right is-primary" @click="openPdf"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
-                      <!-- <span v-if="!downloadAttrSupported">right click and select save to disk</span> -->
                     </div>
                   </article>
                 </div>
               </article>
             </section>
-            <!-- <section class="section">
-              <i18n path="request.stages.faxIntro"
-                class="is-size-4"
-                tag="vue-markdown"
-                :html="true">
-              </i18n>
-              <div class="media">
-                <div class="media-content">
-                  <div class="content">
-                    <h3 class="title is-5">{{$t('request.stages.instructions')}}</h3>
-                  </div>
-                  <article class="media">
-                    <div class="media-content">
-                      <i18n class="is-size-5" path="request.stages.faxSign"
-                        tag="vue-markdown"
-                        :html="true">
-                      </i18n>
-                          <article class="media">
-                            <figure class="media-left">
-                              <span class="icon is-large">
-                                <i class="fas fa-camera fa-2x"></i>
-                              </span>
-                            </figure>
-                            <div class="media-content">
-                              <i18n tag="vue-markdown"
-                                class="is-size-5"
-                                path="request.stages.faxDigiSign"
-                                :html="true">
-                                <span place="device">Computer</span>
-                              </i18n>
-                              <button class="button is-pulled-right is-medium is-primary" @click="isSignatureModalActive = true"><b-icon icon="camera" size="is-small"></b-icon><span>{{$t('request.stages.sign')}}</span></button>
-                            </div>
-                          </article>
-                          <article class="media">
-                            <figure class="media-left">
-                              <span class="icon is-large">
-                                <span class="fa-stack fa-lg">
-                                  <i class="fas fa-camera fa-stack-1x"></i>
-                                  <i class="fas fa-ban fa-stack-2x"></i>
-                                </span>
-                              </span>
-                            </figure>
-                            <div class="media-content">
-                              <i18n path="request.stages.faxDownload"
-                                tag="vue-markdown"
-                                :html="true">
-                              </i18n>
-                              <button class="button is-pulled-right is-medium is-primary" @click="getFPCA"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
-                            </div>
-                          </article>
-                    </div>
-                  </article>
-                </div>
-              </div>
-            </section> -->
           </b-tab-item>
           <b-tab-item :label="$t('request.stages.mail')"
             v-if="stateRules && stateRules.fpcaSubmitOptionsRequest.indexOf('Mail') > -1"
@@ -212,10 +143,8 @@
                       <p class="is-size-5">{{$t('request.stages.mailDownload')}}</p>
                     </div>
                     <div class="media-left">
-                      <!-- <button @click="getFPCA" class="button is-primary"><span>Download now</span></button> -->
                       <a v-if="downloadAttrSupported" :href="pdf" :download="`${firstName}-${lastName}-2018-fpca.pdf`" :class="['button', 'is-pulled-right', 'is-primary', {'is-loading': !Boolean(pdf)}]" @click="finish"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></a>
                       <button v-else class="button is-pulled-right is-primary" @click="openPdf"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
-                      <!-- <span v-if="!downloadAttrSupported">right click and select save to disk</span> -->
                     </div>
                   </article>
                   <article class="media">
@@ -224,7 +153,6 @@
                     </figure>
                     <div class="media-content">
                       <p v-html="$t('request.stages.mailSign')" class="is-size-5"></p>
-                      <!-- <p class="is-size-5">Print, <strong class="has-text-danger">sign and date</strong> your form.</p> -->
                     </div>
                   </article>
 
@@ -252,7 +180,6 @@
                     </figure>
                     <div class="media-content">
                       <p v-html="$t('request.stages.mailConfirm')" class="is-size-5"></p>
-                      <!-- <p class="is-size-5"><strong class="has-text-danger">Confirm</strong> with your local election official that they received it. </p> -->
                     </div>
                   </article>
                 </div>
@@ -290,25 +217,9 @@
             :recBallot="recBallot"
             :signature="signature"></my-box>
         </my-canvas>
-    <!-- <img ref="pic" alt=""> -->
-    <!-- </no-ssr> -->
-
-      <!-- <div class="control buttons is-right">
-        <nuxt-link :to="localePath({ name: 'index' })" class="button is-light is-medium" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>Back</span></nuxt-link>
-        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'voting-information'} })" class="button is-primary is-medium" exact ><span> Next </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link>
-      </div> -->
       <section >
-      <!-- <div class="control buttons is-right"> -->
         <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'review'} })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>{{$t('request.stages.back')}}</span></nuxt-link>
-        <!-- <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" class="button is-primary is-medium is-pulled-right" exact ><span> Start a New Request </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link> -->
-      <!-- </div> -->
     </section>
-
-    <!-- <b-modal :active.sync="isSignatureModalActive">
-      <div class="box">instructions
-        <sign v-show="isSigning" @sigcap="addSig" />
-      </div>
-    </b-modal> -->
     </div>
   <scroll-up></scroll-up>
   </div>
@@ -317,24 +228,11 @@
 <script>
 import MyCanvas from '~/components/MyCanvas.vue'
 import MyBox from '~/components/MyBox.vue'
-// import Sign from '~/components/sign3.vue'
 import Sign4 from '~/components/sign4.vue'
 import { mapState } from 'vuex'
 import axios from 'axios'
 import VueMarkdown from 'vue-markdown'
 import ScrollUp from '~/components/ScrollUp'
-
-// var mailgun = require('mailgun.js')
-// var apiKey = 'key-44903961cb823b645750fe64358dfc40'
-// var DOMAIN = 'mon.tg'
-// var mg = mailgun.client({key: apiKey, username: 'api'})
-
-// var data = {
-//   from: 'Excited User <me@samples.mailgun.org>',
-//   to: 'alexpm@gmail.com',
-//   subject: 'Hello',
-//   text: 'Testing some Mailgun awesomness!'
-// }
 
 export default {
   name: 'SignAndSubmit',
@@ -342,18 +240,13 @@ export default {
   components: {
     MyCanvas,
     MyBox,
-    // Sign,
     Sign4,
     VueMarkdown,
     ScrollUp
   },
   async asyncData ({app, store}) {
     let state = store.getters['requests/getCurrent'].votAdr.leo.s || ''
-    // let voterClass = store.getters['requests/getCurrent'].voterClass || ''
-    // let milVoter = Boolean(voterClass === 'military' || voterClass === 'milSpouse' || voterClass === 'natGuard')
-    // let registering = store.getters['requests/getCurrent'].isRegistered !== 'registered' || true
     return {
-      // voterClass: store.getters['requests/getCurrent'].voterClass || '',
       registering: store.getters['requests/getCurrent'].isRegistered !== 'registered',
       state: store.getters['requests/getCurrent'].votAdr.leo.s,
       allStateRules: await app.$content('rls')
@@ -361,8 +254,6 @@ export default {
         .getAll(),
       stateElections: (await app.$content('/elections').get('elections')).body
         .filter(election => election.state && state && election.state.toLowerCase() === state.toLowerCase())
-        // .filter(election => election.rules['Registration'][0].date.substr(0, 4) !== '2018' || (new Date(election.rules['Registration'][0].date) > new Date() && new Date(election.rules['Ballot Request'][0].date) > new Date()))[0]
-
     }
   },
   data () {
@@ -381,12 +272,7 @@ export default {
     }
   },
   mounted () {
-    // console.log(electionArr)
     let feat = this
-    // function updateHasCamera (res) {
-    //   console.log(res)
-    //   that.hasCamera = res
-    // }
     if (process.browser) {
       window.onNuxtReady((app) => {
         feat.downloadAttrSupported = ('download' in document.createElement('a'))
@@ -406,12 +292,9 @@ export default {
       })
       axios.get(encodeURI(`/api/fpca?firstName=${this.firstName || ''}&lastName=${this.lastName || ''}&middleName=${this.middleName || ''}&suffix=${this.suffix || ''}&ssn=${this.ssn || ''}&previousName=${this.previousName.previousName || ''}&dob=${this.dob || ''}&stateId=${this.stateId || ''}&votStreet=${this.votStreet || ''}&votApt=${this.votApt || ''}&votCity=${this.votCity || ''}&votState=${this.votState || ''}&votCounty=${this.votCounty || ''}&votZip=${this.votZip || ''}&abrAdr=${this.abrAdr ? this.abrAdr.alt1 : ''}\n${this.abrAdr ? this.abrAdr.alt2 : ''}\n${this.abrAdr ? this.abrAdr.alt3 : ''}\n${this.abrAdr ? this.abrAdr.alt4 : ''}\n${this.abrAdr ? this.abrAdr.alt5 : ''}&fwdAdr=${this.fwdAdr && this.fwdAdr.alt1 ? this.fwdAdr.alt1 : ''}\n${this.fwdAdr && this.fwdAdr.alt2 ? this.fwdAdr.alt2 : ''}\n${this.fwdAdr && this.fwdAdr.alt3 ? this.fwdAdr.alt3 : ''}\n${this.fwdAdr && this.fwdAdr.alt4 ? this.fwdAdr.alt4 : ''}\n${this.fwdAdr && this.fwdAdr.alt5 ? this.fwdAdr.alt5 : ''}&email=${this.email || ''}&altEmail=${this.altEmail || ''}&tel=${this.tel && this.tel.intNumber ? this.tel.intNumber : ''}&fax=${this.fax || ''}&party=${this.party || ''}&addlInfo=${this.addlInfo || ''}&date=${this.date || ''}&class=${this.voterClass || ''}&sex=${this.sex || ''}&recBallot=${this.recBallot || ''}&leoName=${this.leoName || ''}&leoAddress=${this.leoAdr || ''}&leoFax=${this.leoFax || ''}&leoEmail=${this.leoEmail || ''}&leoPhone=${this.leoPhone || ''}&transmitOpts=${this.stateRules.ballotReceiptOptions.join(',')}&deadline=${this.nextDeadline}`), {responseType: 'arraybuffer'})
         .then((response) => {
-          // console.log(response)
           let blob = new Blob([response.data], {type: 'application/pdf'})
           this.msPdf = blob
           this.pdf = window.URL.createObjectURL(blob)
-          // let pdfile = new File([response.data], 'fpcafile.pdf', {type: 'application/pdf'})
-          // this.pdf = pdfile
         })
     }
   },
@@ -455,9 +338,6 @@ export default {
         iconPack: 'fas',
         onConfirm: () => { this.$router.push('/dashboard'); this.openPdfNewWindow() }
       })
-      // window.open(this.pdf, '_blank')
-      // this.$router.push('/dashboard')
-      // this.confirmPdfDownload()
     },
     openPdfNewWindow () {
       if (this.needsMsSaveOrOpenBlob) {
@@ -470,32 +350,7 @@ export default {
       this.$router.push('/dashboard')
       this.confirmPdfDownload()
     },
-    // getFPCA () {
-    //   // axios.get('/api/fpca?firstName=Alex&lastName=Montgomery&middleName=Parry&suffix=&ssn=0116')
-    //   axios({
-    //     url: encodeURI(`/api/fpca?firstName=${this.firstName || ''}&lastName=${this.lastName || ''}&middleName=${this.middleName || ''}&suffix=${this.suffix || ''}&ssn=${this.ssn || ''}&previousName=${this.previousName.previousName || ''}&dob=${this.dob || ''}&stateId=${this.stateId || ''}&votStreet=${this.votStreet || ''}&votApt=${this.votApt || ''}&votCity=${this.votCity || ''}&votState=${this.votState || ''}&votCounty=${this.votCounty || ''}&votZip=${this.votZip || ''}&abrAdr=${this.abrAdr ? this.abrAdr.alt1 : ''}\n${this.abrAdr ? this.abrAdr.alt2 : ''}\n${this.abrAdr ? this.abrAdr.alt3 : ''}\n${this.abrAdr ? this.abrAdr.alt4 : ''}\n${this.abrAdr ? this.abrAdr.alt5 : ''}&fwdAdr=${this.fwdAdr ? this.fwdAdr.alt1 : ''}\n${this.fwdAdr ? this.fwdAdr.alt2 : ''}\n${this.fwdAdr ? this.fwdAdr.alt3 : ''}\n${this.fwdAdr ? this.fwdAdr.alt4 : ''}\n${this.fwdAdr ? this.fwdAdr.alt5 : ''}&email=${this.email || ''}&altEmail=${this.altEmail || ''}&tel=${this.tel && this.tel.intNumber ? this.tel.intNumber : ''}&fax=${this.fax || ''}&party=${this.party || ''}&addlInfo=${this.addlInfo || ''}&date=${this.date || ''}&leoAdr=${this.leoAdr}&class=${this.voterClass || ''}&sex=${this.sex || ''}&recBallot=${this.recBallot || ''}`),
-    //     method: 'GET',
-    //     responseType: 'blob' // important
-    //   }).then((response) => {
-    //     const url = window.URL.createObjectURL(new Blob([response.data]))
-    //     const link = document.createElement('a')
-    //     link.href = url
-    //     link.setAttribute('download', `${this.firstName}-${this.lastName}-fpca.pdf`)
-    //     document.body.appendChild(link)
-    //     link.click()
-    //   })
-    //   this.$router.push('/dashboard')
-    // },
-    // currentRequest.votAdr.leo.n"><strong>{{ currentRequest.votAdr.leo.n }}</strong><br/></span>
-    //                     <span v-if="currentRequest.votAdr.leo.a1"><strong>{{ currentRequest.votAdr.leo.a1 }}</strong><br/></span>
-    //                     <span v-if="currentRequest.votAdr.leo.a2"><strong>{{ currentRequest.votAdr.leo.a2 }}</strong><br/></span>
-    //                     <span v-if="currentRequest.votAdr.leo.a3"><strong>{{ currentRequest.votAdr.leo.a3 }}</strong><br/></span>
-    //                     <span><strong>{{ currentRequest.votAdr.leo.c }}, </strong>
-    //                     <strong>{{ currentRequest.votAdr.leo.s }} </strong>
-    //                     <strong>{{ currentRequest.votAdr.leo.z
     getFPCA (method) {
-      // let leo = this.currentRequest.votAdr.leo || null
-      // let leoAdrFmt = `${leo.n ? leo.n + '\n' : ''}${leo.a1 ? leo.a1 + '\n' : ''}${leo.a2 ? leo.a2 + '\n' : ''}${leo.a3 ? leo.a3 + '\n' : ''}${leo.c}, ${leo.s} ${leo.z}\nUnited States of America`
       axios.get(encodeURI(`/api/fpca?firstName=${this.firstName || ''}&lastName=${this.lastName || ''}&middleName=${this.middleName || ''}&suffix=${this.suffix || ''}&ssn=${this.ssn || ''}&previousName=${this.previousName.previousName || ''}&dob=${this.dob || ''}&stateId=${this.stateId || ''}&votStreet=${this.votStreet || ''}&votApt=${this.votApt || ''}&votCity=${this.votCity || ''}&votState=${this.votState || ''}&votCounty=${this.votCounty || ''}&votZip=${this.votZip || ''}&abrAdr=${this.abrAdr ? this.abrAdr.alt1 : ''}\n${this.abrAdr ? this.abrAdr.alt2 : ''}\n${this.abrAdr ? this.abrAdr.alt3 : ''}\n${this.abrAdr ? this.abrAdr.alt4 : ''}\n${this.abrAdr ? this.abrAdr.alt5 : ''}&fwdAdr=${this.fwdAdr ? this.fwdAdr.alt1 : ''}\n${this.fwdAdr ? this.fwdAdr.alt2 : ''}\n${this.fwdAdr ? this.fwdAdr.alt3 : ''}\n${this.fwdAdr ? this.fwdAdr.alt4 : ''}\n${this.fwdAdr ? this.fwdAdr.alt5 : ''}&email=${this.email || ''}&altEmail=${this.altEmail || ''}&tel=${this.tel && this.tel.intNumber ? this.tel.intNumber : ''}&fax=${this.fax || ''}&party=${this.party || ''}&addlInfo=${this.addlInfo || ''}&date=${this.date || ''}&leoAdr=${this.leoAdr}&class=${this.voterClass || ''}&sex=${this.sex || ''}&recBallot=${this.recBallot || ''}&leoName=${this.leoName || ''}&leoAddress=${this.leoAdr || ''}&leoFax=${this.leoFax || ''}&leoEmail=${this.leoEmail || ''}&leoPhone=${this.leoPhone || ''}&transmitOpts=${this.stateRules.ballotReceiptOptions.join(',')}&deadline=${this.nextDeadline}&method=${method}`), {responseType: 'arraybuffer'})
         .then((response) => {
           console.log(response)
@@ -516,9 +371,6 @@ export default {
       setTimeout(() => {
         this.fpca = this.$refs.fpca.$refs['my-canvas'].toDataURL()
       }, 800)
-      // this.fpca = this.$refs.fpca.$refs['my-canvas'].toDataURL()
-      // console.log(val)
-      // this.$refs.pic.src = this.signature
     },
     sendEmail () {
       let fpca = this.$refs.fpca.$refs['my-canvas'].toDataURL()
@@ -543,7 +395,6 @@ export default {
       data.append('inline', blob, 'file/fpca.png')
       data.append('html', '<html>HTML version of the body<img src="cid:fpca.png" width="120" alt="FPCA"><br/></html>')
       let url = '/api/mail'
-      // let url = 'https://api.mailgun.net/v3/mon.tg/messages'
       let config = { url: url, method: 'post', headers: { 'Content-Type': 'multipart/form-data' }, auth: { username: 'api', password: 'key-44903961cb823b645750fe64358dfc40' } }
       this.$axios.post(url, data, config)
         .then(response => console.log(response))
@@ -626,57 +477,21 @@ export default {
       let importantE
       if (this.voterClass && Boolean(this.voterClass === 'military' || this.voterClass === 'milSpouse' || this.voterClass === 'natGuard')) {
         importantE = electionArr.filter(x => x.voterType.indexOf('Citizen') === -1)
-        // if (this.registering) {
-        //   importantE = electionArr.filter(x => x.voterType.indexOf('Citizen') === -1 && x.requestType === 'Registration')
-        // } else {
-        //   importantE = electionArr.filter(x => x.voterType.indexOf('Citizen') === -1 && x.requestType === 'Ballot Request')
-        // }
       } else {
         importantE = electionArr.filter(x => x.voterType.indexOf('Uniformed') === -1)
-        // if (this.registering) {
-        //   importantE = electionArr.filter(x => x.voterType.indexOf('Uniformed') === -1 && x.requestType === 'Registration')
-        // } else {
-        //   importantE = electionArr.filter(x => x.voterType.indexOf('Uniformed') === -1 && x.requestType === 'Ballot Request')
-        // }
       }
       if (this.isRegistered === 'registered') {
         importantE = importantE.filter(x => x.requestType === 'Ballot Request').filter(x => x.ruleDate > new Date()).sort((a, b) => a.ruleDate - b.ruleDate)[0]
         return `IMPORTANT: As a registered voter, your form must be ${importantE.ruleType.toLowerCase()} ${importantE.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to be eligible to vote in the ${importantE.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} ${importantE.electionType}. See all your state deadlines at www.votefromabroad.org/states/${this.state}`
-        // return importantE.filter(x => x.ruleDate > new Date()).sort((a, b) => a.ruleDate - b.ruleDate)[0]
       } else if (this.isRegistered === 'notRegistered') {
         importantE = importantE.filter(x => x.requestType === 'Registration').filter(x => x.ruleDate > new Date()).sort((a, b) => a.ruleDate - b.ruleDate)[0]
         return `IMPORTANT: As a new voter, your form must be ${importantE.ruleType.toLowerCase()} ${importantE.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to be eligible to vote in the ${importantE.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} ${importantE.electionType}. See all your state deadlines at www.votefromabroad.org/states/${this.state}`
-        // return importantE.filter(x => x.ruleDate > new Date()).sort((a, b) => a.ruleDate - b.ruleDate)[0]
       } else {
         importantE = importantE.filter(x => x.requestType !== 'Ballot Return').filter(x => x.ruleDate > new Date()).sort((a, b) => a.ruleDate - b.ruleDate).slice(0, 2)
         let reg = importantE.filter(x => x.requestType === 'Ballot Request')[0]
         let req = importantE.filter(x => x.requestType === 'Ballot Request')[0]
         return `IMPORTANT: If you are not yet a registered voter, your form must be received by ${reg.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to be eligible to vote in the ${reg.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} General Election. If you already are a registered voter, your form must be received by ${req.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to receive a ballot for the ${req.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} General Election. See all your state deadlines at www.votefromabroad.org/states/${this.state}`
-        // return importantE.filter(x => x.ruleDate > new Date()).sort((a, b) => a.ruleDate - b.ruleDate).slice(0, 2)
       }
-      // return importantE
-
-      // return d
-      // let dmessage = d.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})
-      // if (this.isRegistered === 'registered') {
-      //   return `IMPORTANT: As a registered voter, your form must be ${d.ruleType.toLowerCase()} ${d.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to be eligible to vote in the ${d.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} ${d.electionType}.`
-      // } else if (this.isRegistered === 'notRegistered') {
-      //   return `IMPORTANT: As a new voter, your form must be ${d.ruleType.toLowerCase()} ${d.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to be eligible to vote in the ${d.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} ${d.electionType}.`
-      // } else {
-      //   return `IMPORTANT: If you are not yet a registered voter, your form must be received by ${d.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to be eligible to vote in the ${d.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} General Election. If you already are a registered voter, your form must be received by ${d.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to receive a ballot for the ${d.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} General Election.`
-      // }
-      // switch (this.isRegistered) {
-      //   case 'registered':
-      //     dmessage = `IMPORTANT: As a registered voter, your form must be ${d.ruleType.toLowerCase()} ${d.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to be eligible to vote in the ${d.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} ${d.electionType}.`
-      //     break
-      //   // case 'unsure':
-      //   //   dmessage = `IMPORTANT: If you are not yet a registered voter, your form must be received by ${d.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to be eligible to vote in the ${d.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} General Election. If you already are a registered voter, your form must be received by ${d.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to receive a ballot for the ${d.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} General Election.`
-      //   //   break
-      //   case 'notRegistered':
-      //     dmessage = `IMPORTANT: As a new voter, your form must be ${d.ruleType.toLowerCase()} ${d.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to be eligible to vote in the ${d.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} ${d.electionType}.`
-      //     break
-      // }
-      // return dmessage
     },
     ...mapState({
       currentRequestIndex: state => state.requests.currentRequest,

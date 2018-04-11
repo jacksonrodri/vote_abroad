@@ -10,7 +10,7 @@ const vuexLocalPlugin = store => {
     window.onNuxtReady(nuxt => {
       vuexLocal = new VuexPersistence({
         strictMode: true,
-        storage: window.localStorage
+        storage: window.sessionStorage
       })
       return (vuexLocal.plugin)(store)
     })
@@ -19,11 +19,15 @@ const vuexLocalPlugin = store => {
     if (mutation.type === 'RESTORE_MUTATION') {
       // console.log('Restoring State')
       store.dispatch('requests/refresh')
-      if (store.state.userauth.user.idToken || window.location.hash) {
-        store.dispatch('userauth/setSession')
-      } else {
+      if (!store.state.userauth.user.idToken && !window.location.hash) {
         store.dispatch('userauth/getUser')
       }
+      store.dispatch('userauth/setSession')
+      // if (store.state.userauth.user.idToken || window.location.hash) {
+      //   store.dispatch('userauth/setSession')
+      // } else {
+      //   store.dispatch('userauth/getUser')
+      // }
     }
   })
 }

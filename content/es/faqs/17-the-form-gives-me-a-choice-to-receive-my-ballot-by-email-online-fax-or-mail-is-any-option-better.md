@@ -1,12 +1,12 @@
 ---
 title: >-
-  The form gives me a choice to receive my ballot by email/online, fax or mail. Is any option better?
+  El formulario me da opción para recibir mi boleta electoral por correo electrónico o en línea, fax o correo postal. ¿Alguna de estas opciones es mejor?
 categories:
   - 
-    category: Registration Process
+    category: Proceso de registro
 relatedFaqs:
   -
 ---
-Yes, we strongly recommend that voters request their ballots be sent to them electronically, that is, either via email/online or via fax.
+Sí, recomendamos que los votantes soliciten que sus boletas electorales les sean enviadas electrónicamente, es decir, vía correo electrónico, en línea o por fax.
 
-Remember this is the blank ballot coming to you, so there are no privacy concerns. Selecting electronic delivery means you will get your ballot almost immediately after it is sent to you. You don’t have to worry about the ballot being delayed or lost while coming in the mail. Particularly in countries with poor, slow or non-existent mail service, receiving a blank ballot electronically can make the difference in getting your voted ballot back by the election deadline.
+Recuerde que se trata de la boleta electoral en blanco la que le va a llegari, así que no hay ninguna preocupación en cuanto a su privacidad. Seleccionar el envío por medios electrónicos significa que usted obtendrá su boleta casi inmediatamente después de que le sea enviada. No tendrá que preocuparse por que la boleta electoral se haya retrasado o perdido durante el envío por correo postal. En particular, en los países que tienen un servicio de correo postal deficiente, lento o inexistente, recibir una boleta electoral en blanco por via electrónica puede significar la diferencia para que se reciba de regreso su boleta con su voto antes de la fecha límite de la elección.

@@ -1,11 +1,11 @@
 ---
-title: Can I register to vote in a different state?
+title: '¿Puedo registrarme para votar en un estado diferente?'
 categories:
   - 
-    category: Registration Process
+    category: Proceso de registro
 relatedFaqs:
   -
 ---
-As a US citizen living abroad, your voting address is usually the address of the last place you lived in the US. If you feel you have sufficient ties with another state, you may be eligible to change your voter registration. But it is up to the Local Election Official whether to accept your voter registration in their jurisdiction. You may wish to contact them, explain your situation and ask what their decision will be.
+Como ciudadano de los Estados Unidos que vive en el extranjero, su domicilio para votar es usualmente su último domicilio en los Estados Unidos. Si considera que tiene suficientes lazos con otro Estado, usted puede ser elegible para cambiar su registro de votante. Pero depende del funcionario electoral local el aceptar o no su registro como votante en su jurisdicción. Usted puede comunicarse con la oficina del funcionario electoral, explicarle su situación y preguntarle cuál será su decisión.
 
-You can look up the contact information for Local Election Officials here: www.votefromabroad.org/vote/eod.htm?submission=true
+Usted puede encontrar información de contacto de las autoridades electorales locales aquí: https://www.votefromabroad.org/vote/eod.htm?submission=true

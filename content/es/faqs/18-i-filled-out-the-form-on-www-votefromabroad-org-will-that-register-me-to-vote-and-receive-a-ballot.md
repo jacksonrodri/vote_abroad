@@ -1,9 +1,9 @@
 ---
-title: 'I filled out my form on votefromabroad.org, I''m registered to vote now, right?'
+title: 'He llenado mi formulario en votefromabroad.org, Ya esto registrado para votar ¿correcto?'
 categories:
   - 
-    category: Registration Process
+    category: Proceso de registro
 relatedFaqs:
   -
 ---
-To finish the process you still need to print your form, sign and send it in to your local election official back in the US. Only your local election official has the authority to register you to vote and send out ballots.
+Para finalizar el proceso usted todavía tiene que imprimir su formulario, firmarlo y enviarlo a su funcionario electoral local de vuelta a los Estados Unidos. Sólo su funcionario electoral local tiene la autoridad para registrarle para votar y enviarle las boletas electorales.

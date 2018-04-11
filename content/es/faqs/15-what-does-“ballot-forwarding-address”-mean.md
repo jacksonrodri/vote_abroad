@@ -1,9 +1,9 @@
 ---
-title: What does "ballot forwarding address" mean?
+title: '¿Qué significa "dirección de destino de la boleta electoral"?'
 categories:
   - 
-    category: Registration Process
+    category: Proceso de registro
 relatedFaqs:
   -
 ---
-We strongly recommend that voters opt to receive their blank ballot via email/online or fax rather than mail. But, if you decide to request your blank ballot be sent to you via postal mail, you can designate a “ballot forwarding address” if you don’t wish to receive mail at your current (non-US) mailing address. This is useful for voters who may be moving or travelling before ballots are due to come out or do not have a fixed non-US address. You may use any non-US address that you trust to receive and hold your blank ballot, including a mailbox facility or a University Study Abroad office.
+Recomendamos encarecidamente que los votantes opten por recibir su boleta electoral en blanco vía correo electrónico, en línea o fax, en lugar de correo postal. Sin embargo, si usted decide solicitar que su boleta en blanco se le envíe por correo postal, puede indicar una "dirección de destino de la boleta electoral" en caso de que usted no desee recibir correo a su dirección de correo postal actual (fuera de Estados Unidos). Esta opción es útil para los votantes que podrían cambiar de domicilio o viajar antes de que las boletas estén listas para ser enviadas, o en caso de que no tenga una dirección fuera de los Estados Unidos. Usted puede utilizar cualquier dirección fuera de Estados Unidos en la que confíe para recibir y retener su boleta electoral en blanco, incluyendo un apartado postal o una oficina del estudiante en una Universidad en el extranjero.

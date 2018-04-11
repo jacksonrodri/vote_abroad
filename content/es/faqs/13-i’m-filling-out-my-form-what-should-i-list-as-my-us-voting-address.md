@@ -1,11 +1,11 @@
 ---
-title: 'I''m filling out my form, what should I list as my US voting address?'
+title: 'Estoy llenando mi formulario, ¿qué debo indicar como mi domicilio para votar en los Estados Unidos?'
 categories:
   - 
-    category: Registration Process
+    category: Proceso de registro
 relatedFaqs:
   -
 ---
-As a US citizen living abroad, your voting address is usually the address of the last place you lived in the US. This applies even if your family no longer owns the property or you no longer have ties to the state or that you don't intend to return to that state.
+Como ciudadano de los Estados Unidos que vive en el extranjero, su domicilio para votar es usualmente su último domicilio en los Estados Unidos. Esto se aplica incluso si su familia ya no posee la propiedad, o si usted ya no tiene vínculos con el estado, o si ya no tiene intenciones de volver a ese estado.
 
-If you are a US citizen who has never lived in the US, you use the address of the last place your US citizen parent lived in the US. If both of your parents are US citizens, you may use the last US address of either US parent.
+Si usted es ciudadano estadounidense que nunca ha vivido en los Estados Unidos, utilice el último domicilio en los Estados Unido de su madre o padre ciudadano estadounidense. Si ambos padres son ciudadanos estadounidenses, puede utilizar el último domicilio en los Estados Unidos de cualquiera de ellos.
