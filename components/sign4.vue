@@ -12,7 +12,7 @@
           <li>Select the clearest version</li>
         </ol> -->
         </div>
-        <button @click="updateStage('capture')" class="button">{{$t('request.sig.rtcConfirm')}}</button>
+        <button @click="beginCapture" class="button">{{$t('request.sig.rtcConfirm')}}</button>
       </div>
       <div v-if="value === 'capture'" key="capture">
         <h3 class="title is-3">{{$t('request.sig.capture')}}</h3>
@@ -159,6 +159,21 @@ export default {
     'fpca'
   ],
   methods: {
+    beginCapture: function () {
+      if (this.orientation === 'landscape') {
+        this.updateStage('capture')
+      } else {
+        this.$dialog.alert({
+          title: 'Please rotate your phone',
+          message: 'Please rotate your phone to landscape orientation',
+          confirmText: 'OK',
+          type: 'is-danger',
+          hasIcon: true,
+          icon: 'exclamation-circle',
+          iconPack: 'fas'
+        })
+      }
+    },
     afterEnter: function (el) {
       console.log('el', el)
       if (this.value === 'capture') {
