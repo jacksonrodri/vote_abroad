@@ -393,11 +393,16 @@ export default {
       })
     },
     openPdfNewWindow () {
-      if (this.needsMsSaveOrOpenBlob) {
-        window.navigator.msSaveOrOpenBlob(this.msPdf, `${this.firstName}-${this.lastName}-2018-fpca.pdf`)
+      if (window.navigator && window.navigator.msSaveOrOpenBlob) {
+        window.navigator.msSaveOrOpenBlob(this.msPdf)
       } else {
         window.open(this.pdf, '_blank')
       }
+      // if (this.needsMsSaveOrOpenBlob) {
+      //   window.navigator.msSaveOrOpenBlob(this.msPdf, `${this.firstName}-${this.lastName}-2018-fpca.pdf`)
+      // } else {
+      //   window.open(this.pdf, '_blank')
+      // }
     },
     finish () {
       this.$router.push('/dashboard')

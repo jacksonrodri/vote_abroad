@@ -107,7 +107,7 @@
                         <i class="fas fa-3x fa-graduation-cap"></i>
                       </span>
                     </div>
-                    <div class="media-content">
+                    <div class="media-content" style="overflow:hidden;">
                       <p class="title is-3">Learn</p>
                       <p class="subtitle is-6">about your rights as a voter abroad</p>
                     </div>
@@ -125,7 +125,7 @@
                         <i class="fas fa-3x fa-share"></i>
                       </span>
                     </div>
-                    <div class="media-content">
+                    <div class="media-content" style="overflow:hidden;">
                       <p class="title is-3">Share</p>
                       <p class="subtitle is-6">Ask your friends to vote from abroad</p>
                     </div>
