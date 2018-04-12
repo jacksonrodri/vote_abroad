@@ -12,19 +12,37 @@
           <li>Select the clearest version</li>
         </ol> -->
         </div>
-        <button @click="beginCapture" class="button">{{$t('request.sig.rtcConfirm')}}</button>
+        <div class="buttons">
+          <button @click="$emit('input', null)" class="button is-medium is-light">Cancel</button>
+          <button @click="beginCapture" class="button is-medium is-primary">{{$t('request.sig.rtcConfirm')}}</button>
+        </div>
       </div>
       <div v-if="value === 'capture'" key="capture">
         <h3 class="title is-3">{{$t('request.sig.capture')}}</h3>
         <!-- <h1 class="title">Width: {{width}} Height: {{height}}</h1> -->
-        <div class="video">
+        <div class="video" @click="takePhoto" :style="{cursor: !isLoading ? 'pointer' : ''}">
           <video @play="timerCallback()"
               :autoplay="autoplay"
               :playsinline="playsinline"
               :controls="controls"
               ref="video"></video>
+          <b-loading :active.sync="isLoading"></b-loading>
         </div>
-        <button @click="takePhoto" class="button is-primary is-medium">{{$t('request.sig.capture')}}</button>
+        <div class="field is-grouped">
+          <div class="control">
+            <button @click="$emit('input', null)" class="button is-medium is-light">Cancel</button>
+          </div>
+          <div class="control is-expanded">
+            <button @click="takePhoto" class="button is-primary is-medium is-fullwidth">
+              <span class="icon">
+                <i class="fas fa-camera"></i>
+              </span>
+              <span>
+                {{$t('request.sig.capture')}}
+              </span>
+            </button>
+          </div>
+        </div>
       </div>
       <div v-if="value === 'select'" key="select">
         <h3 class="title is-3">{{$t('request.sig.select')}}</h3>
@@ -34,19 +52,22 @@
           <li>Choose the version below with the clearest signature and whitest background</li>
         </ol> -->
         <canvas ref="signature1"
-         :width="width * 4 / 5"
+         :width="width"
          :height="height / 2"
-         @click="save"></canvas>
+         style="cursor:pointer;"
+         @click="save('ctx1')"></canvas>
         <canvas ref="signature2"
-         :width="width * 4 / 5"
+         :width="width"
          :height="height / 2"
-         @click="save"></canvas>
+         style="cursor:pointer;"
+         @click="save('ctx2')"></canvas>
         <canvas ref="signature3"
-         :width="width * 4 / 5"
+         :width="width"
          :height="height / 2"
-         @click="save"></canvas>
-        <button @click="updateStage('capture')" class="button">{{$t('request.sig.retry')}}</button>
-        <button @click="save" class="button">{{$t('request.sig.save')}}</button>
+         style="cursor:pointer;"
+         @click="save('ctx3')"></canvas>
+        <button @click="updateStage('capture')" class="button is-primary is-medium">{{$t('request.sig.retry')}}</button>
+        <!-- <button @click="save('ctx1')" class="button">{{$t('request.sig.save')}}</button> -->
       </div>
       <div v-if="value === 'composeMessage'" key="composeMessage">
         <h3 class="title is-3">{{$t('request.sig.sendTitle')}}</h3>
@@ -70,7 +91,7 @@
           </b-field>
 
           <b-field horizontal :label="$t('request.sig.message')">
-            <b-input v-model="message" :disabled="isMailing === true" type="textarea"></b-input>
+            <b-input v-model="message" :disabled="isMailing === true" type="textarea" rows="12"></b-input>
           </b-field>
 
           <!-- <button class="button is-primary is-medium is-fullwidth" @click="sendEmail">
@@ -78,11 +99,18 @@
           </button> -->
 
           <b-field horizontal>
-            <p class="control">
-              <button :class="[buttonClass, {'is-loading': isMailing}]" @click="sendEmail">
-                {{$t('request.sig.sendEmail')}}
-              </button>
-            </p>
+            <b-field grouped>
+              <b-field>
+                <button :class="['button', 'is-light', 'is-medium', {'is-loading': isMailing}]" @click="$emit('input', null)">
+                  Cancel
+                </button>
+              </b-field>
+              <b-field expanded>
+                <button :class="[buttonClass, 'is-fullwidth', {'is-loading': isMailing}]" @click="sendEmail">
+                  {{$t('request.sig.sendEmail')}}
+                </button>
+              </b-field>
+            </b-field>
           </b-field>
       </section>
       <section class="section">
@@ -129,6 +157,7 @@ export default {
       subject: null,
       isMailing: false,
       message: null,
+      isLoading: false,
       buttonClass: {
         button: true,
         'is-primary': true,
@@ -142,6 +171,7 @@ export default {
     firstName () { return this.currentRequest && this.currentRequest.firstName ? this.currentRequest.firstName : ' ' },
     lastName () { return this.currentRequest && this.currentRequest.lastName ? this.currentRequest.lastName : ' ' },
     email () { return this.currentRequest && this.currentRequest.email ? this.currentRequest.email.toString() : ' ' },
+    tel () { return this.currentRequest && this.currentRequest.tel && this.currentRequest.tel.intNumber ? this.currentRequest.tel.intNumber : '' },
     leoEmail () {
       return this.currentRequest.votAdr.leo && this.currentRequest.votAdr.leo.e ? this.currentRequest.votAdr.leo.e : ''
     },
@@ -159,8 +189,10 @@ export default {
   ],
   methods: {
     beginCapture: function () {
+      this.isLoading = true
       var mql = window.matchMedia('(orientation: portrait)')
       if (mql.matches) {
+        this.isLoading = false
         this.$dialog.alert({
           title: 'Please rotate your phone',
           message: 'Please rotate your phone to landscape orientation',
@@ -213,8 +245,7 @@ export default {
         video: {
           facingMode: 'environment',
           width: 1280,
-          height: 720,
-          aspectRatio: 1.7777777778
+          height: 720
         }
       })
         .then((stream) => {
@@ -226,10 +257,13 @@ export default {
             this.width = this.$refs.video.videoWidth
             this.height = this.$refs.video.videoHeight
             this.paused = false
+            this.isLoading = false
             this.$refs.video.play()
           })
         }, (err) => {
+          this.isLoading = false
           console.log(err)
+          alert(err)
         })
     },
     timerCallback: function () {
@@ -243,7 +277,8 @@ export default {
       this.paused = true
       this.canvas.width = this.width
       this.canvas.height = this.height / 2
-      this.ctx.drawImage(this.$refs.video, this.width / 5, this.height / 4, this.width * 4 / 5, this.height / 2, 0, 0, this.width, this.height / 2)
+      this.ctx = this.canvas.getContext('2d')
+      this.ctx.drawImage(this.$refs.video, this.width * 1 / 5, this.height / 4, this.width * 4 / 5, this.height / 2, 0, 0, this.width, this.height / 2)
       this.sigImage = this.ctx.getImageData(0, 0, this.width, this.height / 2)
       this.updateStage('select')
     },
@@ -251,23 +286,23 @@ export default {
       this.ctx1 = this.$refs.signature1.getContext('2d')
       this.ctx2 = this.$refs.signature2.getContext('2d')
       this.ctx3 = this.$refs.signature3.getContext('2d')
-      let edited1 = this.editImg(this.sigImage, this.width, this.height / 2, 60, 120)
-      let edited2 = this.editImg(this.sigImage, this.width, this.height / 2, 80, 140)
+      let edited1 = this.editImg(this.sigImage, this.width, this.height / 2, 40, 100)
+      let edited2 = this.editImg(this.sigImage, this.width, this.height / 2, 60, 120)
       let edited3 = this.editImg(this.sigImage, this.width, this.height / 2, 100, 160)
       this.ctx1.putImageData(edited1, 0, 0)
       this.ctx2.putImageData(edited2, 0, 0)
       this.ctx3.putImageData(edited3, 0, 0)
     },
     editImg: function (imgData, canvasWidth, canvasHeight, lowerBound, upperBound) {
-      var data = imgData.data
-      console.log(data)
-      let sorted = imgData.data.slice().sort()
-      let percentages = [1, 2, 3, 4, 5, 10]
-      // let firstpercentile
-      percentages.forEach((x) => {
-        // if (x === 10) { firstpercentile = sorted[Math.floor(x / 100 * imgData.data.length)] }
-        console.log('before- ' + x + '%: ' + sorted[Math.floor(x / 100 * imgData.data.length)] + ' item: ' + Math.floor(x / 100 * imgData.data.length))
-      })
+      var data = imgData.data.slice()
+      // console.log(data)
+      // let sorted = imgData.data.slice().sort()
+      // let percentages = [1, 2, 3, 4, 5, 10]
+      // // let firstpercentile
+      // percentages.forEach((x) => {
+      //   // if (x === 10) { firstpercentile = sorted[Math.floor(x / 100 * imgData.data.length)] }
+      //   console.log('before- ' + x + '%: ' + sorted[Math.floor(x / 100 * imgData.data.length)] + ' item: ' + Math.floor(x / 100 * imgData.data.length))
+      // })
       for (var i = 0; i < data.length; i += 4) {
         var avg = (data[i] + data[i + 1] + data[i + 2]) / 3
         // let adj = (Math.pow((avg - 127) / 127, 3) + 1) * 127
@@ -277,7 +312,7 @@ export default {
         } else if (avg > upperBound) {
           adj = 255
         } else {
-          adj = Math.floor(255 - ((upperBound - avg) / 60 * 255))
+          adj = Math.floor(255 - ((upperBound - avg) / (upperBound - lowerBound) * 255))
         }
         // avg = avg > firstpercentile ? 255 : avg
         var alpha = 255 - adj
@@ -286,14 +321,14 @@ export default {
         data[i + 2] = adj // blue
         data[i + 3] = alpha // alpha
       }
-      let sorted2 = data.slice().sort()
-      percentages.forEach((x) => {
-        // if (x === 10) { firstpercentile = sorted[Math.floor(x / 100 * imgData.data.length)] }
-        console.log('after-' + x + '%: ' + sorted2[Math.floor(x / 100 * imgData.data.length)] + ' item: ' + Math.floor(x / 100 * imgData.data.length))
-      })
-      var imgd = new ImageData(canvasWidth, canvasHeight)
+      // let sorted2 = data.slice().sort()
+      // percentages.forEach((x) => {
+      //   // if (x === 10) { firstpercentile = sorted[Math.floor(x / 100 * imgData.data.length)] }
+      //   console.log('after-' + x + '%: ' + sorted2[Math.floor(x / 100 * imgData.data.length)] + ' item: ' + Math.floor(x / 100 * imgData.data.length))
+      // })
+      var imgd = new ImageData(this.width, this.height / 2)
       imgd.data.set(data)
-      console.log('imgd', imgd)
+      // console.log('imgd', imgd)
       return imgd
       // console.log('buf', buf)
       // var data = Uint32Array.from(buf)
@@ -323,9 +358,9 @@ export default {
       // console.log(imgd)
       // return imgd
     },
-    save: function (imgData) {
-      console.log('save', this.ctx1.canvas.toDataURL())
-      this.chosenSig = this.ctx1.canvas.toDataURL()
+    save: function (ctx) {
+      console.log('save', this[ctx].canvas.toDataURL())
+      this.chosenSig = this[ctx].canvas.toDataURL()
       this.updateStage('composeMessage')
     },
     sendEmail () {
@@ -379,10 +414,9 @@ export default {
     console.log('mounted', this)
     // let c = document.createElement('canvas')
     this.canvas = document.createElement('canvas')
-    this.ctx = this.canvas.getContext('2d')
     this.fromName = `${this.firstName} ${this.lastName}`
     this.subject = 'FPCA Submission'
-    this.message = 'Please find my FPCA form for the 2018 calendar year. Can you confirm receipt and also confirm that I do not need to send in the paper copy? \n\nThank you so much for everything you do - your work is much appreciated by Americans abroad!!'
+    this.message = `Please find my FPCA form for the 2018 calendar year. Can you confirm receipt and also confirm that I do not need to send in the paper copy? \n\nThank you so much for everything you do - your work is much appreciated by Americans abroad!! \n\n Sincerely, \n\n${this.firstName} ${this.lastName}\n${this.email}\n${this.tel}`
   },
   beforeDestroy: function () {
     if (this.$refs.video) {
@@ -400,19 +434,27 @@ export default {
 <style>
 .video {
   position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 28%
 }
 .video video {
-  filter: grayscale(1) contrast(2)
+  filter: grayscale(1) contrast(2);
+  position: absolute;
+  top: -35%;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 .video:after {
   content: '';
   position: absolute;
   background-image: url('/signaturebg2.png');
   background-size: cover;
-  top: 0;
+  top: -35%;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 135%;
   z-index: 1;
 }
 

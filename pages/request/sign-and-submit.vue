@@ -77,6 +77,58 @@
             v-if="stateRules && stateRules.fpcaSubmitOptionsRequest.indexOf('Fax') > -1"
             icon="fax">
             <section class="section">
+              <h3 class="subtitle is-4">{{$t('request.stages.faxIntro')}}</h3>
+              <div class="media">
+                <div class="media-content">
+                  <h3 class="title is-5">{{$t('request.stages.instructions')}}</h3>
+                  <article class="media">
+                    <figure class="media-left">
+                      <b-icon icon="download" size="is-medium"></b-icon>
+                    </figure>
+                    <div class="media-content">
+                      <p class="is-size-5">{{$t('request.stages.mailDownload')}}</p>
+                    </div>
+                    <div class="media-left">
+                      <a v-if="downloadAttrSupported" :href="pdf" :download="`${firstName}-${lastName}-2018-fpca.pdf`" :class="['button', 'is-pulled-right', 'is-primary', {'is-loading': !Boolean(pdf)}]" @click="finish"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></a>
+                      <button v-else class="button is-pulled-right is-primary" @click="openPdf"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
+                    </div>
+                  </article>
+                  <article class="media">
+                    <figure class="media-left">
+                      <b-icon icon="pencil-alt" size="is-medium"></b-icon>
+                    </figure>
+                    <div class="media-content">
+                      <p v-html="$t('request.stages.mailSign')" class="is-size-5"></p>
+                    </div>
+                  </article>
+
+                  <article class="media">
+                    <figure class="media-left">
+                      <b-icon icon="fax" size="is-medium"></b-icon>
+                    </figure>
+                    <div class="media-content">
+                      <span class="is-size-5">
+                        Fax your form to:
+                        <!-- {{$t('request.stages.mailPost')}} -->
+                      </span>
+                      <div class="box">
+                        <span v-if="currentRequest.votAdr.leo.n"><strong>{{ currentRequest.votAdr.leo.n }}</strong><br/></span>
+                        <span v-if="currentRequest.votAdr.leo.f"><strong>+1 {{ currentRequest.votAdr.leo.f }}</strong><br/></span>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="media">
+                    <figure class="media-left">
+                      <b-icon icon="check" size="is-medium"></b-icon>
+                    </figure>
+                    <div class="media-content">
+                      <p v-html="$t('request.stages.mailConfirm')" class="is-size-5"></p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </section>
+            <!-- <section class="section">
               <article class="media">
                 <div class="media-content">
                   <i18n path="request.stages.faxIntro"
@@ -126,11 +178,12 @@
                   </article>
                 </div>
               </article>
-            </section>
+            </section> -->
           </b-tab-item>
           <b-tab-item :label="$t('request.stages.mail')"
             v-if="stateRules && stateRules.fpcaSubmitOptionsRequest.indexOf('Mail') > -1"
-            icon="envelope-open"><section class="section">
+            icon="envelope-open">
+            <section class="section">
               <h3 class="subtitle is-4">{{$t('request.stages.mailIntro')}}</h3>
               <div class="media">
                 <div class="media-content">

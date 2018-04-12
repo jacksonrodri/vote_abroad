@@ -24,7 +24,7 @@
     </p>
     <p class="control">
       <button @click="setVal('decline')" :class="[baseClass, {'is-success': value === 'decline'}]">
-        <span v-show="value === 'female'" class="icon is-small">
+        <span v-show="value === 'decline'" class="icon is-small">
           <i class="fas fa-check"></i>
         </span>
         <span>
