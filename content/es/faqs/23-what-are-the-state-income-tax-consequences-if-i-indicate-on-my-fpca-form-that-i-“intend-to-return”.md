@@ -1,14 +1,14 @@
 ---
 title: >-
-  What are the state income tax consequences if I indicate on my FPCA form that I "intend to return"?
+  ¿Cuáles son las consecuencias en los impuestos estatales si en mi Formulario FPCA (Federal Post	Card Application o Tarjeta Postal Federal de Solicitud) indico que "Tengo intención de retornar"?
 categories:
   - 
-    category: Registration Process
+    category: Proceso de registro
   - 
-    category: Other Related Issues
+    category: Otros temas relacionados
 relatedFaqs:
   - 
     related: >-
-      10. I’M FILLING OUT MY FORM, HOW DO I KNOW IF I SHOULD CHOOSE “INTEND TO RETURN” OR THAT “MY RETURN IS UNCERTAIN”?
+      ESTOY LLENANDO MI FORMULARIO. ¿CÓMO SE SI DEBO ELEGIR "TENGO INTENCIÓN DE RETORNAR" O QUE "MI RETORNO ES INCIERTO"?
 ---
-Please be aware that if you say you "intend to return" that might have state income tax consequences. We don't give tax advice, so if you have any concerns about that you should talk to a tax professional.
+Por favor tenga presente que pueden haber consecuencias relacionadas con el impuesto sobre la renta estatal si usted elige "Tengo intención de retornar". Nosotros no podemos darle asesoría fiscal, por lo que si usted tiene dudas al respecto debe conversar con un profesional sobre el tema de impuestos.

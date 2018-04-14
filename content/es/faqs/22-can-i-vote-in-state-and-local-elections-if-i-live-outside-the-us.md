@@ -1,15 +1,15 @@
 ---
-title: Can I vote in state and local elections if I live outside the US?
+title: '¿Puedo votar en elecciones estatales y locales si vivo fuera de los Estados Unidos?'
 categories:
   - 
-    category: Eligibility / First Time Voter
+    category: Elegibilidad / Votante por primera vez
   - 
-    category: Other Related Issues
+    category: Otros temas relacionados
 relatedFaqs:
   -
 ---
-As an overseas voter, you need to send in your form to request a ballot (and register to vote if necessary), and your state will send a ballot listing all the races you are eligible to vote in.
+En su condición de votante en el extranjero, debe enviar el formulario para solicitar una boleta electoral (y registrarse para votar si es necesario), y su estado le enviará una boleta electoral indicando todas las elecciones en las que es elegible para votar.
 
-All US overseas voters have the right to vote for Federal offices (that is, President, US Senate and US House of Representatives).
+Todos los votantes de los Estados Unidos en el extranjero tienen derecho a votar para cargos federales (es decir, para Presidente, Senado y Cámara de Representantes).
 
-But each state decides if some or all of its overseas voters may vote in State and Local elections (such as, Governor, state legislature and local offices). Most every state allow overseas voters who indicate on their voter registration/ballot request form that they “intend to return” to vote in state and local elections. Some states also allow overseas voters whose “return is uncertain” to vote in these elections, but other states do not and will send these voters a ballot listing Federal offices only.
+Pero cada estado decide si algunos o todos sus votantes en el extranjero pueden votar en elecciones estatales y locales (como por Gobernador, legislatura estatal y funcionarios locales). La mayoría de los estados permiten a los votantes en el extranjero que indican en su registro como votante o solicitud de boleta electoral "Tengo intención de retornar" para votar en las elecciones estatales y locales. Algunos estados también permiten a los votantes en el extranjero cuyo "retorno es incierto" votar en esas elecciones; pero otros estados no lo permiten y solamente enviarán a esos votantes una boleta electoral con solo el listado de cargos federales.

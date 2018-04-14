@@ -1,15 +1,15 @@
 ---
-title: Why should I use votefromabroad.org rather than fill out the paper form?
+title: '¿Por qué debo usar votefromabroad.org en lugar de llenar el formulario en papel?'
 categories:
   - 
-    category: Registration Process
+    category: Proceso de registro
 relatedFaqs:
   -
 ---
-We urge voters to use votefromabroad.org to fill out their Federal Post Card Application (FPCA) because: The form covers all 50+ US voting jurisdictions, but many states have unique requirements. When you use the website, you can be assured that your form will meet the unique requirements of your state.
+Instamos a los electores a utilizar votefromabroad.org para llenar a su Tarjeta Postal Federal de Solicitud o FPCA (Federal Post Card Application) porque: el formulario cubre el total de 50+ jurisdicciones de votación en los Estados Unidos, pero muchos estados tienen requerimientos particulares. Al utilizar el sitio web, usted puede asegurarse de que su formulario cumplirá con los requerimientos particulares de su estado.
 
-You will be assured all information on your form will be printed out legibly. Illegibility is the major cause of form rejection.
+Usted se asegurará de que toda la información en el formulario se va a imprimir de manera legible. La ilegibilidad es la principal causa de rechazo del formulario.
 
-The Instructions will provide the correct address, email, phone and fax information for you to submit your form to your Local Election Official and also to verify that your form has been received.
+Las instrucciones le proporcionarán información sobre la dirección correcta, el correo electrónico, el teléfono y el fax para enviar el formulario a su funcionario electoral local y también para verificar que el formulario haya sido recibido.
 
-If you opt to set up a “Voter Account” you can have the website automatically fill in much of your information when you need to send in the form in subsequent years or if it gets lost and you need to re-send it this year. If you need to vote a back up/emergency ballot (FWAB), the website will automatically fill in much of the information required on that form as well. (For privacy reasons, your Voter Account will not save your Social Security number).
+Si usted opta por crear una "Cuenta de votante" puede hacer que el sitio web automáticamente rellene gran parte de su información cuando usted necesite enviar el formulario en años posteriores o si el formulario se pierde y tiene que volver a enviarlo este año. Si usted necesita votar con una boleta de respaldo o emergencia (FWAB), el sitio web también llenará automáticamente mucha de la información requerida en ese formulario. (Por motivos de privacidad, su cuenta de votante no guardará su número de Seguro Social.).

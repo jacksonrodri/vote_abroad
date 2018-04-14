@@ -1,8 +1,8 @@
 ---
-title: Can I vote in midterm elections?
+title: '¿Puedo votar en elecciones de mitad de período?'
 categories:
   - 
-    category: Eligibility / First Time Voter
+    category: Elegibilidad / Votante por primera vez
 relatedFaqs: [ ]
 ---
-Yes. All US citizens living outside the US may vote in Federal elections, that is, President, US Senator and US House of Representatives. The Congressional Midterm Elections occur every two years and include all 435 seats in the US House of Representatives along with 33 (or 34) seats in the US Senate.
+Sí. Todos los ciudadanos estadounidenses que viven fuera de los Estados Unidos pueden votar en las elecciones federales, es decir, para presidente, senador y miembros de la cámara de representantes. Las elecciones parlamentarias de mitad de período tienen lugar cada dos años y son por los 435 escaños en la Cámara de Representantes junto con 33 (o 34) escaños en el Senado.

@@ -1,14 +1,14 @@
 ---
-title: 'If I register to vote in US elections, will that make the IRS come calling?'
+title: '¿Si me registro para votar en las elecciones de los Estados Unidos, esto hará que la autoridad fiscal (IRS) se comunique conmigo?'
 categories:
   - 
-    category: Other Related Issues
+    category: Otros temas relacionados
 relatedFaqs:
   -
 ---
-We aren’t able to provide tax advice, but every US citizen has certain income tax filing obligations, whether they are living in the US or outside the country. Registering to vote does not change your tax status or filing requirements.
+Nosotros no podemos proporcionar asesoría fiscal, pero todo ciudadano de los Estados Unidos tiene ciertas obligaciones en cuanto a declarar sus ingresos para pago de impuestos, ya sea que viva en los Estados Unidos o en el extranjero. Registrarse para votar no cambia su situación tributaria o presentación de requisitos fiscales.
 
-If you are not currently up to date with your US tax obligations, you may wish to talk to your tax advisor about the “streamline filing” program currently run by the IRS. Here’s a link to some IRS websites that may be helpful:
+Si actualmente no está al día con sus obligaciones fiscales en los Estados Unidos, puede conversar con su asesor fiscal sobre el programa de Procedimientos "Racionalizados de Presentación" de Cumplimiento ("streamline filing") que está aplicando la autoridad fiscal (IRS). Este es un enlace hacia algunos sitios web del IRS que pueden ser útilles:
 
 www.irs.gov/individuals/international-taxpayers/u-s-taxpayers-residing-outside-the-united-states
 

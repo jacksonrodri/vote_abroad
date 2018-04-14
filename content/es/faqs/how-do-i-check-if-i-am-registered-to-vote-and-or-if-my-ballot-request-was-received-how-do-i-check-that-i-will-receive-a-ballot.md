@@ -1,12 +1,12 @@
 ---
 title: >-
-  How do I check if I am registered to vote and/or if my ballot request was received? How do I check that I will receive a ballot?
+  ¿Cómo puedo verificar si estoy registrado para votar o si fue recibida mi solicitud de boleta electoral? ¿Cómo puedo comprobar que recibiré una boleta electoral?
 categories:
   - 
-    category: Registration Process
+    category: Proceso de registro
 relatedFaqs:
   -
 ---
-The most reliable way to verify you will be receiving a ballot this calendar year is to email or call your Local Election Official. You can look up the contact information for your Local Election Official here: www.votefromabroad.org/vote/eod.htm?submission=true
+La manera más confiable de verificar que recibirá una boleta electoral para este año calendario es enviar un correo electrónico o llamar a su funcionario electoral local de elecciones. Usted puede encontrar información de contacto de su funcionario electoral local aquí: https://www.votefromabroad.org/vote/eod.htm?submission=true
 
-Most states also provide a website where you can check to verify your voter status, but it is not always up to date. To find your state’s website, Google “[state] verify voter registration.”
+La mayoría de los estados también proporciona un sitio web donde usted puede verificar su condición como votante, pero no siempre están actualizados. Para encontrar el sitio web de su estado, busque en Google "verificar el registro de votantes de [state]"

@@ -128,7 +128,7 @@
       "downloadingAlertMessage": "Al seleccionar 'Aceptar' se abrirá una nueva ventana con su formulario lleno. Usted debe ** FIRMAR, FECHAR y ENVIAR ** a su funcionario electoral."
     },
     "voterClass": {
-      "tooltip": "Los votantes pueden elegir ** Tengo intención de volver ** si van a volver al estado en el que se están registrando para votar. La \"intención\" es suficiente, no es necesario tener una fecha fija de retorno o planes definitivos. Registrarse como ** la intención de retorno ** debería hacerle elegible para votar en las elecciones estatales y locales. Sin embargo, también puede hacerle responsable de pagar impuestos estatales sobre la renta (si son aplicables en su estado). \n\nLos votantes pueden elegir ** Mi retorno es incierto ** si no tienen una intención actual para volver al estado en el que se están registrando para votar. Los votantes tienen derecho a recibir una boleta electoral para cargos federales y, dependiendo de su estado, también pueden recibir una boleta electoral para cargos estatales y locales.",
+      "tooltip": "Los votantes pueden elegir ** Tengo intención de retornar** si van a volver al estado en el que se están registrando para votar. La \"intención\" es suficiente, no es necesario tener una fecha fija de retorno o planes definitivos. Registrarse como ** Tengo intención de retornar** debería hacerle elegible para votar en las elecciones estatales y locales. Sin embargo, también puede hacerle responsable de pagar impuestos estatales sobre la renta (si son aplicables en su estado). \n\nLos votantes pueden elegir ** Mi retorno es incierto ** si no tienen una intención actual para volver al estado en el que se están registrando para votar. Los votantes tienen derecho a recibir una boleta electoral para cargos federales y, dependiendo de su estado, también pueden recibir una boleta electoral para cargos estatales y locales.",
       "natGuard": "Guardia Nacional",
       "milSpouse": "Cónyuge o dependiente de militar elegible",
       "whatCivType": "¿Está en el extranjero temporal o indefinidamente?",
@@ -142,7 +142,7 @@
       "military": "Servicio militar activo",
       "neverResided": "Nunca ha sido residente",
       "civilianOrMilitary": "¿Es usted un(a) votante civil o militar?",
-      "intendToReturn": "Tengo intención de volver",
+      "intendToReturn": "Tengo intención de retornar",
       "uncertainReturn": "Mi retorno es incierto",
       "civilianType": "Civil"
     },

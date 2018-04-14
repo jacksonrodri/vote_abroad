@@ -1,12 +1,12 @@
 ---
 title: >-
-  My state sends me a full ballot for both state and federal elections. Do I protect myself from state income tax liability if I only vote for Federal offices?
+  Mi estado me envía una boleta para elecciones federales y estatales. ¿Me protejo de la responsabilidad de impuestos sobre la renta estatal si solamente voto por los cargos federales?
 categories:
   - 
-    category: Other Related Issues
+    category: Otros temas relacionados
 relatedFaqs:
   -
 ---
-Some overseas voters who receive a full ballot (that is, containing both federal and state races) will only vote the federal offices as voting for federal offices as an overseas voter does not change your tax status. However, while we aren’t able to give tax advice, but voting only for federal offices when you’ve received a full ballot should not make a difference in your state income tax liability. Ballots are secret; no one knows which offices on the ballot you have voted for.
+Algunos votantes que reciben una boleta electoral completa (esto es, que contiene elecciones tanto estatales como federales) solo votarán por los cargos federales, ya que votar solamente por cargos federales como votante en el extranjero no cambia su situación fiscal. Sin embargo, si bien no podemos darle asesoría fiscal, el votar solamente por cargos federales cuando usted recibe una boleta electoral completa no debe ocasionar diferencia en su responsabilidad de impuesto sobre la renta estatal. Las boletas electorales son secretas; nadie sabe por cuáles cargos en la boleta usted ha votado.
 
-Voting in state and local elections is hugely important! These races decide how your state will apply federal laws and its own state laws on vital issues like education, health care and the environment. And governors and state legislators elected in 2018 will control re-districting for both state and federal districts following the 2020 Census.
+Votar en las elecciones locales y estatales es sumamente importante! En estas elecciones se decide la forma en que su estado aplicará las leyes federales y sus propias leyes del estado en cuestiones vitales como educación, cuidado de la salud y el medio ambiente. Y los gobernadores y legisladores estatales que sean elegidos en 2018 controlarán la delimitación de los distritos tanto estatales y federales después del Censo de 2020.

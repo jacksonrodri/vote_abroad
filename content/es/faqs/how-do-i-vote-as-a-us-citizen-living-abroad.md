@@ -1,18 +1,18 @@
 ---
-title: How do I vote as a US citizen living abroad?
+title: '¿Cómo puedo votar como ciudadano de los Estados Unidos que vive en el extranjero?'
 categories:
   - 
-    category: Eligibility / First Time Voter
+    category: Elegibilidad / Votante por primera vez
 relatedFaqs:
   -
 ---
-Here's the process to vote in US elections while living abroad:
+Este es el proceso para votar en las elecciones de Estados Unidos mientras vive en el extranjero:
 
-1. Register to vote and/or request a ballot: Submit the Federal Post Card Application (FPCA) form to your Local Election Official to register to vote--and it will also request a ballot for that calendar year. 
+1. Regístrese para votar y/o solicite una boleta electoral: Envíe una Tarjeta Postal Federal de Solicitud o FPCA (Federal Post Card Application) a su funcionario electoral local para registrarse como votante --con lo que también estará solicitando una boleta electoral para el año calendario. 
 
-If you are already registered to vote, you still need to submit the FPCA to request your absentee ballot every calendar year.
+Si usted ya está registrado para votar, aún así necesita enviar la Tarjeta Postal Federal de Solicitud o FPCA (Federal Post Card Application) para solicitar su boleta electoral en ausencia cada año calendario.
 
-Be sure to sign the FPCA!
+¡Asegúrese de firmar la Tarjeta Postal Federal de Solicitud o FPCA (Federal Post Card Application)!
 
-1. Your Local Election Official sends you a blank Absentee Ballot, either by email, fax, website link or postal mail.
-2. You fill in the ballot, then submit the voted ballot to your Local Election Official by the deadline. Depending on the state, you may be able to submit the voted ballot by email or fax, but postal mail is accepted in all states.
+1. Su funcionario electoral local le envía una boleta electoral en blanco, ya sea por correo electrónico, fax, enlace a un sitio web o correo postal.
+2. Usted llena la boleta electoral y la envía con su voto a su funcionario electoral local antes de la fecha límite. Dependiendo del estado, podrá enviar la boleta por correo electrónico o fax, pero el envío por correo postal es aceptado en todos los estados.

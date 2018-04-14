@@ -1,25 +1,25 @@
 ---
-title: Why should I send in the form to request my ballot every calendar year?
+title: '¿Por qué debo enviar el formulario para solicitar mi boleta electoral cada año calendario?'
 categories:
   - 
-    category: Registration Process
+    category: Proceso de registro
 relatedFaqs:
   -
 ---
-An FPCA form, sent in the calendar year of an election, protects your ballot at the federal level in case of a recount.
+Enviar un formulario FPCA (Tarjeta Postal Federal de Solicitud) en el año de una elección, protege su boleta electoral a nivel federal en caso de un recuento.
 
-As an overseas voter, you need to send in the form to request your ballot every calendar year in which you wish to vote.
+En su condición de votante en el extranjero, usted tiene que enviar el formulario para solicitar su boleta electoral cada año calendario en el que desee votar.
 
-Under Federal law, states are only required to send out your ballot if you submit the form to request it that calendar year--even if you're a registered voter. Some states are more generous and will send ballots without an annual request, but others are very strict. So we advise all overseas voters to be safe and send it in each year. You don't want to miss your chance to vote!
+Bajo la ley federal, los estados sólo tiene obligación de enviar su boleta electoral si usted envía el formulario para solicitarlo en ese año calendario --incluso si usted es un votante registrado. Algunos estados son más generosos y enviarán boletas electorales sin una solicitud anual, pero otros estados son más estrictos. Por esta razón, aconsejamos a todos los votantes en el extranjero que no se confíen y envíen el formulario cada año. ¡Usted no quiere perder su oportunidad de votar!
 
-Overseas voters use the same form (the Federal Post Card Application or FPCA) to both register to vote initially and to request a ballot each year. But the FPCA is only one page and you can fill it out online at www.votefromabroad.org. And the one form will cover you for all elections in the calendar year: Primary, General and Special Elections that you may otherwise not be aware of. Here’s what you need to do :
+Los votantes en el extranjero utilizan el mismo formulario (la Tarjeta Postal Federal de Solicitud o FPCA (Federal Post Card Application) tanto para registrarse para votar como para solicitar una boleta electoral cada año. Pero la Tarjeta Postal Federal de Solicitud o FPCA (Federal Post Card Application) tiene solo una página y usted la puede llenar en línea en www.votefromabroad.org Y un solo formulario será suficiente para todas las elecciones en el año calendario: primaria, general y elecciones especiales de las que, de otra forma, usted podría no enterarse. Esto es lo que usted tiene que hacer:
 
-1. Go to www.votefromabroad.org, click on “Start Here” and follow the prompts. 
-2. Print out and sign the form.
-3. Return the form to your Local Election Official by mail, email or fax, using information in the Instructions from the website. (The email, phone and fax information is on a separate page from the mailing address. Submission methods and deadlines vary by state. The info for your state is included in the Instructions)
+1. Vaya a www.votefromabroad.org, haga clic en "Empezar aquí" y siga las instrucciones. 
+2. Imprima y firme el formulario.
+3. Devuelva el formulario a su funcionario electoral local por correo postal, correo electrónico o fax, usando la información contenida en las instrucciones de la página web. (La información de correo electrónico, teléfono y fax es está una página separada de la dirección de correo. Los métodos de envío y los plazos varían según el estado. La información correspondiente a su estado se incluye en las instrucciones)
 
-If you have any questions while filling out the form, the website has an online chat box (the orange square in the lower right corner of the screen).
+Si usted tiene dudas al llenar el formulario, el sitio web tiene una ventana de chat en línea (el cuadrado naranja en la esquina inferior derecha de la pantalla).
 
-And after you send in your FPCA, be sure to check with your Local Election Official that they received it and will be sending a ballot to you. The applicable contact information will be in the Instructions from votefromabroad.org when you print out the form. You can also look up the contact information for your Local Election Official here: www.votefromabroad.org/vote/eod.htm?submission=true
+Y después de enviar su Tarjeta Postal Federal de Solicitud o FPCA (Federal Post Card Application), asegúrese de consultar con su funcionario electoral local que recibieron su solicituy y que le enviará una boleta electoral. Usted podrá ver la información de contacto correspondiente en las instrucciones de votefromabroad.org cuando imprima el formulario. Usted puede también encontrar información de contacto de su funcionario electoral local aquí: https://www.votefromabroad.org/vote/eod.htm?submission=true
 
-Please send in your form right away to get your ballot for the 2018 elections!
+¡Por favor envíe el formulario inmediatamente para obtener su boleta para las elecciones de 2018!

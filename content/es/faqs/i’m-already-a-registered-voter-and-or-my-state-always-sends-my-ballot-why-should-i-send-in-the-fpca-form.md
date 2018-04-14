@@ -1,16 +1,16 @@
 ---
 title: >-
-  I'm already a registered voter and/or my state always sends my ballot, why should I send in the FPCA form?
+  Ya estoy registrado para votar y/o mi estado siempre envía mi boleta electoral, ¿por qué debo enviar Tarjeta Postal Federal de Solicitud o FPCA (Federal Post Card Application)?
 categories:
   - 
-    category: Registration Process
+    category: Proceso de registro
 relatedFaqs:
   -
 ---
-Even though you may vote in a state that typically sends out a ballot without an annual request we still urge all overseas voters to send in their form to request a ballot every year to make sure you will be able to vote.
+Aunque usted puede votar en un estado que usualmente emite una boleta electoral sin una solicitud anual, aún así instamos a todos los votantes en el extranjero a que envíen su formulario para solicitar una boleta electoral cada año, con el fin de asegurarse que podrán votar.
 
-But, if you don’t want to send in the form, it’s still very important that you email or call your Local Election official to verify that you will be getting a ballot this year. Mistakes can happen and states can change their voting rules! Every election, we have voters who find out too late that they won’t be able to vote because they missed the deadline to request their ballot.
+Pero, si usted no desea enviar el formulario, sigue siendo muy importante que envíe un correo electrónico o llame a su funcionario electoral local para verificar que usted va a obtener una boleta este año. Pueden ocurrir errores y ¡los estados pueden cambiar sus reglas de votación! En todas las elecciones, tenemos votantes que descubren demasiado tarde que no podrán votar porque se les pasó la fecha límite para solicitar su boleta electoral.
 
-And remember, an FPCA form, sent in the calendar year of an election, protects your ballot at the federal level in case of a recount.
+Y recuerde, una Tarjeta Postal Federal de Solicitud o formulario FPCA (Federal Post Card Application), enviado en el año de una elección, protege tu boleta a nivel federal en caso de un recuento.
 
-You can look up the contact information for your Local Election Official here: www.votefromabroad.org/vote/eod.htm?submission=true
+Usted puede encontrar información de contacto de su funcionario electoral local aquí: https://www.votefromabroad.org/vote/eod.htm?submission=true

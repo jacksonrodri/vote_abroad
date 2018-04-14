@@ -1,18 +1,18 @@
 ---
-title: Can I register to vote if I've never resided in the US?
+title: '¿Puedo registrarme para votar si nunca he vivido en los Estados Unidos?'
 categories:
   - 
-    category: US Citizens without Residency
+    category: Ciudadanos de los Estados Unidos sin residencia
 relatedFaqs:
   -
 ---
-Yes. As a US citizen living abroad, you can submit the Federal Post Card Application to register to vote and request your ballot even though you have never resided in the US. On the form, you can can chose “I have never lived in the United States” as your voter category.
+Sí. En su condición de ciudadano de los Estados Unidos que vive en el extranjero, puede enviar la Tarjeta Postal Federal de Solicitud o FPCA (Federal Post Card Application) con el propósito de registrarse para votar y solicitar su boleta electoral a pesar de nunca haber residido en los Estados Unidos. En el formulario, usted puede elegir "Nunca he vivido en los Estados Unidos" como su categoría electoral.
 
-For your “voting address,” use the address of the last place your US citizen parent lived in the US. (If both of your parents are US citizens, you may use the last US address of either US parent.)
+Para su "dirección de votación", utilice el último domicilio en los Estados Unidos de su madre o padre ciudadano estadounidense. (Si ambos padres son ciudadanos estadounidenses, puede utilizar el último domicilio en los Estados Unidos de cualquiera de ellos)
 
-Please note that 14 states do not allow US citizens who have never resided in the US to register to vote in their jurisdiction. This effectively disenfranchises US citizens who otherwise are otherwise entitled to vote and also incur all the responsibilities of being a US citizen, such as filing tax returns and registering for the military draft. The US government website to register to vote from abroad (www.fvap.gov) doesn't list the “never lived” option for the 14 states that exclude these voters and votefromabroad.org also excludes this option. If you are a US citizen who has never lived in the US and are registering to vote in one of these states, then as a a non-military overseas voter, you should choose as your voter type that you either “intend to return” or that your “return is uncertain.”
+Por favor tome en cuenta que 14 estados no permiten registrarse para votar en su jurisdicción a ciudadanos estadounidenses que nunca han residido en los Estados Unidos. Esto efectivamente priva del derecho de votar a los ciudadanos estadounidenses que, de otra forma, tendrían derecho a votar y también incurrir en todas las responsabilidades que conlleva ser ciudadano estadounidense, como presentar declaraciones de impuestos y registrarse para el servicio militar obligatorio. El sitio web del gobierno de los Estados Unidos donde puede registrarse para votar desde el extranjero (fvap.gov), no incluye la opción "nunca he vivido" (en los Estados Unidos) para los 14 estados que excluyen a estos votantes y votefromabroad.org también excluye esta opción. Si usted es ciudadano estadounidense que nunca ha vivido en los Estados Unidos y se está registrando para votar en uno de estos estados, entonces, como votante no militar en el extranjero ustede debe elegir como su tipo de votante que usted tiene "intención de retornar" o que su "retorno es incierto".
 
-The 14 states that do not allow US citizens who have never resided in the US to register to vote in their jurisdiction are:
+Los 14 Estados que no permiten registrarse para votar en su jurisdicción a los ciudadanos que nunca han residido en los Estados Unidos son:
 
 Alabama
 
@@ -22,7 +22,7 @@ Florida
 
 Idaho
 
-Illinois (non-military)
+Illinois (no militares)
 
 Indiana
 
