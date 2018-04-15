@@ -16,7 +16,7 @@
         icon="calendar"
         icon-pack="fas"></b-datepicker>
     </b-field>
-    <b-message :title="toolTipTitle" type="is-info" has-icon :active.sync="isOpen">
+    <b-message :title="tooltipTitle" type="is-info" has-icon :active.sync="isOpen">
       <slot name="tooltip"></slot>
     </b-message>
   </div>
@@ -27,7 +27,7 @@ export default {
   props: [
     'message',
     'validations',
-    'toolTipTitle'
+    'tooltipTitle'
   ],
   data () {
     return {

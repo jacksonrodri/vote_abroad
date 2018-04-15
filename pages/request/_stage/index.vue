@@ -35,7 +35,12 @@
         :message="$v.previousName.$error ? Object.keys($v.previousName.$params).map(x => x) : '' "
         :label="$t('request.previousName.label')"
         :instructions="$t('request.previousName.instructions')"
+        :tooltipTitle="$t('request.previousName.tooltipTitle')"
         @input="$v.previousName.$touch()">
+        <div slot="tooltip">
+          {{$t('request.previousName.tooltip')}}
+        </div>
+        <!-- tooltipTitle="Why do you need my previous name?"         -->
       </previous-name>
 
       <!-- phone Number -->
@@ -62,7 +67,8 @@
         v-model="abrAdr"
         @input="delayTouch($v.abrAdr)"
         :validations=$v.abrAdr
-        toolTipTitle="Where are you now?">
+        :toolTipTitle="$t('request.abrAdr.tooltipTitle')">
+        <!-- toolTipTitle="Where are you now?" -->
         <div slot="instructions">
           <p>{{$t('request.abrAdr.instructions')}}</p>
         </div>
@@ -86,7 +92,8 @@
         :validations=$v.votAdr
         ref="votAdr"
         @input="delayTouch($v.votAdr)"
-        toolTipTitle="Your last US Address">
+        :toolTipTitle="$t('request.votAdr.tooltipTitle')">
+        <!-- toolTipTitle="Your last US Address" -->
         <div slot="instructions">
           <p>{{ $t('request.votAdr.instructions') }}</p>
         </div>
@@ -97,12 +104,14 @@
 
       <jurisdiction v-if="votAdr && votAdr.regionCode"
         :label="$t('request.jurisdiction.label')"
-        toolTipTitle="Jurisdiction help"
+        :toolTipTitle="$t('request.jurisdiction.tooltipTitle')"
+        :placeholder="$t('request.jurisdiction.placeholder')"
         :key="votAdr.regionCode"
         ref="jurisdiction"
         @input="delayTouch($v.jurisdiction)"
         :validations="($v.jurisdiction)"
         :state="this.votAdr.regionCode">
+                <!-- toolTipTitle="Jurisdiction help" -->
         <div slot="instructions">
           <p>{{$t('request.jurisdiction.instructions')}}</p>
         </div>
@@ -115,7 +124,8 @@
       :allowsNeverResided="stateRules ? stateRules.allowsNeverResided : false"
       :validations="($v.voterClass)"
       @input="delayTouch($v.voterClass)"
-      toolTipTitle="Intend to return vs. Return is uncertain">
+      :toolTipTitle="$t('request.voterClass.tooltipTitle')">
+      <!-- toolTipTitle="Intend to return vs. Return is uncertain" -->
       <div slot="tooltip">
         <vue-markdown>{{$t('request.voterClass.tooltip')}}</vue-markdown>
       </div>
@@ -137,7 +147,8 @@
       :validations="$v.recBallot"
       @input="delayTouch($v.recBallot)"
       :ballotReceiptOptions="stateRules ? stateRules.ballotReceiptOptions : ['Mail']"
-      toolTipTitle="What is the best choice?">
+      :toolTipTitle="$t('request.receiveBallot.tooltipTitle')">
+      <!-- toolTipTitle="What is the best choice?"> -->
       <div slot="tooltip">
         <vue-markdown>{{$t('request.receiveBallot.tooltip')}}</vue-markdown>
       </div>
@@ -179,7 +190,8 @@
         v-model="fwdAdr"
         @input="delayTouch($v.fwdAdr)"
         :validations=$v.fwdAdr
-        toolTipTitle="Optional">
+        :toolTipTitle="$t('request.fwdAdr.tooltipTitle')">
+        <!-- toolTipTitle="Optional"> -->
         <div slot="instructions">
           <p>{{$t('request.fwdAdr.instructions')}}</p>
         </div>
@@ -202,6 +214,7 @@
       <birth-date
         :validations="$v.dob"
         ref="dob"
+        :tooltipTitle="$t('request.dob.tooltipTitle')"
         @input="delayTouch($v.dob)">
         <div slot="tooltip">
           <vue-markdown>{{$t('request.dob.tooltip')}}</vue-markdown>
@@ -211,8 +224,9 @@
       <!-- gender -->
       <gender
         :label="$t('request.sex.label')"
-        toolTipTitle="Why is this required?"
+        :tooltipTitle="$t('request.sex.tooltipTitle')"
         v-model="sex">
+        <!-- toolTipTitle="Why is this required?"         -->
         <div slot="tooltip">
           <vue-markdown>{{$t('request.sex.tooltip')}}</vue-markdown>
         </div>
@@ -222,9 +236,10 @@
       <party
         :label="$t('request.party.label')"
         v-model="party"
-        toolTipTitle="What is this?"
+        :tooltipTitle="$t('request.party.tooltipTitle')"
         :message="$v.party.$error ? Object.keys($v.party.$params).map(x => x) : '' "
         :type="($v.party.$error ? 'is-danger': '')">
+        <!-- toolTipTitle="What is this?" -->
         <div slot="tooltip">
           <vue-markdown>{{$t('request.party.tooltip')}}</vue-markdown>
         </div>
@@ -234,10 +249,10 @@
       <join-democratsabroad
         v-model="joinDa"
         v-if="party!=='Republican' && party && !$store.state.userauth.user.isDA"
+        :tooltipTitle="$t('request.joinDa.tooltipTitle')"
         :label="$t('request.joinDa.label')">
         <div slot="tooltip">
           <vue-markdown>{{$t('request.joinDa.tooltip')}}</vue-markdown>
-          <!-- <p>Many states require voters to designate a political party to be eligible to vote in primary elections. Choosing a political party is optional.</p> -->
         </div>
       </join-democratsabroad>
       </transition>
@@ -260,8 +275,9 @@
         :validations="($v.identification)"
         ref="id"
         @input="delayTouch($v.identification)"
-        :toolTipTitle="`Why am I being asked this?`"
+        :tooltipTitle="$t('request.id.tooltipTitle')"
         v-model="identification">
+        <!-- :tooltipTitle="`Why am I being asked this?`" -->
         <div slot="instructions">
           <i18n v-if="stateRules && stateRules.id && stateRules.id.length === 0"
             path=request.id.instructionsOptional tag="vue-markdown" :places="{ state: stateRules.state}">

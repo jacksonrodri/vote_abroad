@@ -33,7 +33,7 @@
   <!-- <div class="field">
     <b-checkbox v-model="isExistingDaMember">I am already a member of Democrats Abroad.</b-checkbox>
   </div> -->
-  <b-message :title="toolTipTitle" type="is-info" has-icon :active.sync="isOpen">
+  <b-message :title="tooltipTitle" type="is-info" has-icon :active.sync="isOpen">
     <slot name="tooltip"></slot>
   </b-message>
 </div>
@@ -46,7 +46,7 @@ export default {
     'value',
     'label',
     'type',
-    'toolTipTitle'
+    'tooltipTitle'
   ],
   data () {
     return {

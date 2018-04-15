@@ -17,7 +17,7 @@
           ref="jurisdiction"
           :data="filteredLeos"
           field="n"
-          placeholder="Start typing to find your jurisdiction"
+          :placeholder="placeholder"
           @select="option => updateLeo(option)">
           <template slot-scope="props"><strong>{{props.option.j}} {{props.option.j.toLowerCase().indexOf(props.option.t.toLowerCase()) > -1 ? '' : props.option.t}}</strong> - <small>{{props.option.n}}</small></template>
           </b-autocomplete>
@@ -46,7 +46,8 @@ export default {
     'label',
     'message',
     'validations',
-    'toolTipTitle'
+    'toolTipTitle',
+    'placeholder'
   ],
   async created () {
     this.leos = await (

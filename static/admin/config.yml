@@ -252,6 +252,7 @@ collections:
               - {label: "No Answer", name: "no", widget: "string"}
               - {label: "Instructions", name: "instructions", widget: "string"}
               - {label: "Placeholder", name: "placeholder", widget: "string"}
+              - {label: "Tooltip Title", name: "tooltipTitle", widget: "string"}
               - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - label: "Messages"
                 name: "messages"
@@ -293,6 +294,7 @@ collections:
               - {label: "Field Label", name: "label", widget: "string"}
               - {label: "Instructions", name: "instructions", widget: "string"}
               - {label: "Country Placeholder", name: "placeholder", widget: "string"}
+              - {label: "Tooltip Title", name: "tooltipTitle", widget: "string"}
               - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - {label: "Use unstructured input", name: "unstructured-label", widget: "string"}
               - {label: "Use structured Input label", name: "structured-label", widget: "string"}
@@ -316,6 +318,7 @@ collections:
               - {label: "State placeholder", name: "state", widget: "string"}
               - {label: "Zip placeholder", name: "zip", widget: "string"}
               - {label: "County", name: "county", widget: "string"}
+              - {label: "Tooltip Title", name: "tooltipTitle", widget: "string"}
               - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - label: "Messages"
                 name: "messages"
@@ -332,6 +335,7 @@ collections:
               - {label: "Field Label", name: "label", widget: "string"}
               - {label: "Instructions", name: "instructions", widget: "string"}
               - {label: "Placeholder", name: "placeholder", widget: "string"}
+              - {label: "Tooltip Title", name: "tooltipTitle", widget: "string"}
               - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - label: "Messages"
                 name: "messages"
@@ -355,6 +359,7 @@ collections:
               - {label: "Never Resided", name: "neverResided", widget: "string"}
               - {label: "Instructions", name: "instructions", widget: "string"}
               - {label: "Placeholder", name: "placeholder", widget: "string"}
+              - {label: "Tooltip Title", name: "tooltipTitle", widget: "string"}
               - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - label: "Messages"
                 name: "messages"
@@ -389,6 +394,7 @@ collections:
               - {label: "Fax", name: "fax", widget: "string"}
               - {label: "Instructions", name: "instructions", widget: "string"}
               - {label: "Placeholder", name: "placeholder", widget: "string"}
+              - {label: "Tooltip Title", name: "tooltipTitle", widget: "string"}
               - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - label: "Messages"
                 name: "messages"
@@ -429,6 +435,7 @@ collections:
             fields:
               - {label: "Field Label", name: "label", widget: "string"}
               - {label: "Instructions", name: "instructions", widget: "string"}
+              - {label: "Tooltip Title", name: "tooltipTitle", widget: "string"}
               - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - {label: "Have Forwarding Address", name: "question", widget: "string"}
               - {label: "Yes Answer", name: "yes", widget: "string"}
@@ -445,6 +452,7 @@ collections:
               - {label: "Field Label", name: "label", widget: "string"}
               - {label: "Instructions", name: "instructions", widget: "string"}
               - {label: "Placeholder", name: "placeholder", widget: "string"}
+              - {label: "Tooltip Title", name: "tooltipTitle", widget: "string"}
               - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - label: "Messages"
                 name: "messages"
@@ -462,6 +470,7 @@ collections:
               - {label: "Male", name: "male", widget: "string"}
               - {label: "Female", name: "female", widget: "string"}
               - {label: "Decline to State", name: "decline", widget: "string"}
+              - {label: "Tooltip Title", name: "tooltipTitle", widget: "string"}
               - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - label: "Messages"
                 name: "messages"
@@ -479,6 +488,7 @@ collections:
               - {label: "No", name: "no", widget: "string"}
               - {label: "Already a Member", name: "alreadyMember", widget: "string"}
               - {label: "Account Email", name: "accountEmail", widget: "string"}
+              - {label: "Tooltip Title", name: "tooltipTitle", widget: "string"}
               - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - label: "Messages"
                 name: "messages"
@@ -497,6 +507,7 @@ collections:
               - {label: "No Party", name: "none", widget: "string"}
               - {label: "Other", name: "other", widget: "string"}
               - {label: "Other Placeholder", name: "placeholder", widget: "string"}
+              - {label: "Tooltip Title", name: "tooltipTitle", widget: "string"}
               - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - label: "Messages"
                 name: "messages"
@@ -630,6 +641,7 @@ collections:
               - {label: "item separator (--OR--)", name: "or", widget: "string"}
               - {label: "No ID button (only 1 id choice)", name: "noid1", widget: "string"}
               - {label: "No ID button (2+ id choices)", name: "noid2", widget: "string"}
+              - {label: "Tooltip Title", name: "tooltipTitle", widget: "string"}
               - {label: "Tooltip Optional ID", name: "tooltipOptional", widget: "markdown"}
               - {label: "Tooltip 1 req ID", name: "tooltipReq1", widget: "markdown"}
               - {label: "Tooltip multiple req ID", name: "tooltipReq2", widget: "markdown"}

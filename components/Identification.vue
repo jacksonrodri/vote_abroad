@@ -47,7 +47,7 @@
       </b-checkbox>
     </div>
 
-    <b-message :title="toolTipTitle" type="is-info" has-icon :active.sync="isOpen">
+    <b-message :title="tooltipTitle" type="is-info" has-icon :active.sync="isOpen">
       <slot name="tooltip"></slot>
     </b-message>
   </div>
@@ -78,7 +78,7 @@ export default {
   props: [
     'label',
     'value',
-    'toolTipTitle',
+    'tooltipTitle',
     'idOptions',
     'validations'
   ],

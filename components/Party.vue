@@ -25,7 +25,7 @@
         @input="val => thisValue = val"></b-input>
     </b-field>
   </transition>
-  <b-message :title="toolTipTitle" type="is-info" has-icon :active.sync="isOpen">
+  <b-message :title="tooltipTitle" type="is-info" has-icon :active.sync="isOpen">
     <slot name="tooltip"></slot>
   </b-message>
 </div>
@@ -38,7 +38,7 @@ export default {
     'value',
     'label',
     'type',
-    'toolTipTitle'
+    'tooltipTitle'
   ],
   data () {
     return {

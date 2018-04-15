@@ -161,7 +161,8 @@
             :native-value="!usesAlternateFormat"
             :type="usesAlternateFormat ? 'is-success' : 'is-danger'">
             <b-icon :icon="!usesAlternateFormat ? 'edit' : 'align-justify'"></b-icon>
-            <span>Change format</span>
+            <span>{{$t('request.abrAdr.changeFormat')}}</span>
+            <!-- <span>Change format</span> -->
           </b-radio-button>
         </b-field>
       </b-field>
