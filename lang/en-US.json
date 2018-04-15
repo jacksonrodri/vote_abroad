@@ -44,7 +44,8 @@
     "jurisdiction": {
       "label": "Jurisdiction",
       "instructions": "Type to find your local election official (county, city, town...)",
-      "placeholder": "Type to search...",
+      "placeholder": "Click to find your voting jurisdiction",
+      "tooltipTitle": "What is a voting jurisdiction?",
       "tooltip": "All ballots are sent from your local election official in your town, city or county.  You must select the correct election official to receive a ballot.  (to be updated)",
       "messages": {
         "required": "You must select your local election official. "
@@ -55,6 +56,7 @@
       "yes": "Yes",
       "no": "No",
       "instructions": "Have you previously registered to vote under a different name?",
+      "tooltipTitle": "Why is this needed?",
       "tooltip": "If you have previously voted with a different name, your election official may need to look you up using your previous name."
     },
     "sex": {
@@ -62,21 +64,25 @@
       "male": "Male",
       "female": "Female",
       "decline": "Decline to State",
+      "tooltipTitle": "Why is this required?",
       "tooltip": "Most states do not require gender information, but a few, like ID and SC, still do. If you decline to state a gender and your state requires it, your state must let you know that you need to fill in the missing information."
     },
     "party": {
-      "label": "Your Political Party",
-      "democratic": "Democratic",
+      "tooltip": "Many states require voters to designate a political party to be eligible to vote in primary elections. Choosing a political party is optional.",
       "republican": "Republican",
-      "independent": "Independent",
-      "none": "No Party Preference",
       "other": "Other",
       "placeholder": "Your Political Party",
-      "tooltip": "Many states require voters to designate a political party to be eligible to vote in primary elections. Choosing a political party is optional."
+      "label": "Your Political Party",
+      "tooltipTitle": "What is this for?",
+      "none": "No Party Preference",
+      "independent": "Independent",
+      "democratic": "Democratic"
     },
     "scRules": {
       "label": "Race",
-      "raceInstructions": "**You must provide your race.** <br> **You must provide your previous location of registration, if in another state.**",
+      "raceInstructions": "You must provide your race.",
+      "prevRegLabel": "Previous location of registration (if previously registered in a state other than South Carolina)",
+      "prevRegInstructions": "You must provide your previous location of registration, if in another state.",
       "tooltip": "Only South Carolina voters need to answer this question as per state law."
     },
     "receiveBallot": {
@@ -84,6 +90,7 @@
       "email": "Email or online",
       "mail": "Mail",
       "fax": "Fax",
+      "tooltipTitle": "What is the best choice?",
       "tooltip": "You may request to receive your blank ballot by email/online, fax or mail. We encourage voters to request their blank ballot be sent by email/online or fax to avoid the delay associated with mail  and the possibility the ballot will be lost in transit.",
       "messages": {
         "required": "This is required.  Please select how you would like to receive your ballot."
@@ -95,6 +102,7 @@
       "no": "No",
       "alreadyMember": "Already a Member",
       "accountEmail": "Please enter your account email address if you remember it so we can update your record.",
+      "tooltipTitle": "What is Democrats Abroad?",
       "tooltip": "Democrats Abroad is the official Democratic Party organization for the millions of Americans living outside the United States."
     },
     "stateSpecial": {
@@ -142,6 +150,7 @@
       "military": "Active Duty Military",
       "neverResided": "Never Resided",
       "civilianOrMilitary": "Are you a civilian or military voter?",
+      "tooltipTitle": "Intend to return vs. Return is uncertain",
       "intendToReturn": "I Intend to Return",
       "uncertainReturn": "My Return is Uncertain",
       "civilianType": "Civilian"
@@ -194,7 +203,8 @@
         "zip-required": "Zip is required"
       },
       "state": "State",
-      "label": "Voting Address"
+      "label": "Voting Address",
+      "tooltipTitle": "Your last US Address..."
     },
     "prRules": {
       "label": "Father's and Mother's first names",
@@ -247,6 +257,7 @@
       "label": "Date of Birth",
       "instructions": "",
       "placeholder": "e.g. 01/31/1970",
+      "tooltipTitle": "Why is this required?",
       "tooltip": "You must be 18 years old by the time of the next General Election to register to vote.",
       "messages": {
         "required": "Your date of birth is required."
@@ -278,6 +289,7 @@
       "StateID": "State ID",
       "SSN": "your full Social Security Number",
       "label": "Identification",
+      "tooltipTitle": "Why am I being asked this?",
       "noid1": "I don't have a {id}",
       "TerritoryID": "Territory ID",
       "noid2": "I don't have the above identification",
@@ -292,8 +304,8 @@
     "firstName": {
       "label": "First Name",
       "instructions": "Please enter your first name.",
-      "placeholder": "e.g. 'George Washington'",
-      "tooltip": "This name is a name that most people call you.",
+      "placeholder": "",
+      "tooltip": "",
       "messages": {
         "required": "You must enter a first name."
       }
@@ -301,6 +313,7 @@
     "fwdAdr": {
       "label": "Forwarding Address (optional)",
       "instructions": "If you would like your ballot sent to a different address such as a P.O. box or forwarding address, enter it here.",
+      "tooltipTitle": "Optional.",
       "tooltip": "This is optional. Please provide a forwarding address only if you request your blank ballot be sent to you by mail and you do not want it mailed to your current residence address outside the US. If you are uncertain what your mailing address will be when ballots are due to be sent out, you may have your blank ballot sent to a reliable third-party, such as a University student office or postal box.",
       "question": "Would you like your ballot sent to a different address than your residential address?",
       "yes": "Yes",
@@ -322,18 +335,19 @@
       "tooltip": "Only Arizona voters need to answer this question as per state law."
     },
     "abrAdr": {
-      "label": "Your current address abroad",
-      "instructions": "Please add your international address",
-      "placeholder": "Country",
       "tooltip": "You must provide your current residence address outside the US for informational purposes. Please provide your address outside the US even if you request your blank ballot be sent to you by email/online or fax.",
-      "unstructured-label": "I need to use a different format for my address.",
-      "structured-label": "Use the standard international format for my address.",
+      "instructions": "Please add your international address",
       "changeFormat": "Change Format",
       "messages": {
         "country-required": "You must provide your country of residence. (Outside the United States)",
         "thoroughfare-required": "You must provide your street address",
         "locality-required": "City is required"
-      }
+      },
+      "unstructured-label": "I need to use a different format for my address.",
+      "placeholder": "Country",
+      "label": "Your current address abroad",
+      "tooltipTitle": "Where do you live now?",
+      "structured-label": "Use the standard international format for my address."
     }
   },
   "dashboard": {
