@@ -19,7 +19,7 @@
                   v-model="phoneOrEmail">
                 </phone-email>
                 <div class="buttons is-right is-marginless">
-                  <button @click="authStart('/request/your-information')" class="button is-large is-danger">{{ $t('homepage.start') }}</button>
+                  <button @click="startAuth" :class="['button', 'is-large', 'is-danger', {'is-loading': authenticating}]">{{ $t('homepage.start') }}</button>
                 </div>
                 <div class="buttons is-right">
                   <!-- <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" class="button is-text has-text-black is-paddingless" exact ><span>{{ $t('homepage.anonymous') }}</span></nuxt-link> -->
@@ -96,7 +96,8 @@ export default {
   data () {
     return {
       phoneOrEmail: {},
-      toolTipOpen: false
+      toolTipOpen: false,
+      authenticating: false
     }
   },
   computed: {
@@ -113,6 +114,16 @@ export default {
         duration: 8000
       })
       this.$router.push(this.localePath({ name: 'request-stage', params: { stage: 'your-information' } }))
+    },
+    startAuth: function () {
+      if (!this.phoneOrEmail.isValidEmail && !this.phoneOrEmail.isValidPhone) {
+        return
+      }
+      this.authenticating = true
+      this.authStart('/request/your-information')
+      setTimeout(() => {
+        this.authenticating = false
+      }, 1500)
     },
     ...mapActions('userauth', [
       'sendEmailCode',

@@ -104,7 +104,7 @@ export const actions = {
           reject(err)
         }
         // console.log(`Sent code to ${state.user.emailAddress}`)
-        resolve()
+        resolve(`Sent login link to ${state.user.emailAddress}`)
       })
     })
   },
@@ -139,7 +139,7 @@ export const actions = {
     let loginType
     if (state.user.emailAddress) {
       loginType = 'email'
-      await dispatch('sendEmailCode')
+      await dispatch('sendEmailLink')
     } else if (state.user.mobileIntFormat) {
       loginType = 'sms'
       await dispatch('sendSmsCode')
@@ -147,9 +147,11 @@ export const actions = {
     await dispatch('promptCode', loginType)
   },
   promptCode ({ state, dispatch, commit }, loginType) {
+    let msg = loginType === 'sms' ? `Enter the code we sent to ${state.user.mobileIntFormat}` : `Click the login link or enter the code we sent to ${state.user.emailAddress}.`
     Dialog.prompt({
       title: 'Authentication',
-      message: `Enter the code we sent to ${state.user.emailAddress || state.user.mobileIntFormat}`,
+      message: msg,
+      // message: `Enter the code we sent to ${state.user.emailAddress || state.user.mobileIntFormat}`,
       inputAttrs: {
         type: 'number',
         placeholder: 'Type the code.',
@@ -337,13 +339,13 @@ export const actions = {
       })
     }
     // console.log(state.redirectPath)
-    Snackbar.open({
-      message: `Your graphcool token is: ${jwtDecode(idToken)['https://graph.cool/token']}`,
-      type: 'is-info',
-      position: 'is-top',
-      actionText: 'Retry',
-      duration: 8000
-    })
+    // Snackbar.open({
+    //   message: `Your graphcool token is: ${jwtDecode(idToken)['https://graph.cool/token']}`,
+    //   type: 'is-info',
+    //   position: 'is-top',
+    //   actionText: 'Retry',
+    //   duration: 8000
+    // })
     // console.log('hi from after Snackbar.open')
     AWS.config.credentials = new AWS.CognitoIdentityCredentials({
       IdentityPoolId: 'us-east-1:7bd016b9-b2ad-4ed3-bb1a-8915af42a2b5',
