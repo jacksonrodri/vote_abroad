@@ -153,14 +153,14 @@ export const actions = {
       message: msg,
       // message: `Enter the code we sent to ${state.user.emailAddress || state.user.mobileIntFormat}`,
       inputAttrs: {
-        type: 'number',
+        type: 'text',
         placeholder: 'Type the code.',
         minlength: 6,
         maxlength: 6,
         autocomplete: 'off',
         size: 6,
         max: 999999,
-        pattern: '[0-9]{6}',
+        pattern: 'd*',
         title: 'enter a 6 digit code'
       },
       confirmText: 'Submit',
