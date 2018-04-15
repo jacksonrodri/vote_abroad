@@ -190,7 +190,7 @@
         v-model="fwdAdr"
         @input="delayTouch($v.fwdAdr)"
         :validations=$v.fwdAdr
-        :toolTipTitle="$t('request.fwdAdr.tooltipTitle')">
+        :tooltipTitle="$t('request.fwdAdr.tooltipTitle')">
         <!-- toolTipTitle="Optional"> -->
         <div slot="instructions">
           <p>{{$t('request.fwdAdr.instructions')}}</p>

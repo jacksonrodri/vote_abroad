@@ -69,8 +69,8 @@
       <b-message title="Why am I being asked this?" type="is-info" has-icon :active.sync="isOpen">
         <vue-markdown>{{$t('request.vaRules.tooltip')}}</vue-markdown>
       </b-message>
-      {{$t('request.vaRules.employerInstructions')}}
       <b-field :label="$t('request.vaRules.label')">
+      <!-- {{$t('request.vaRules.employerInstructions')}} -->
         <b-input  @input="setVal(val)"></b-input>
       </b-field>
     </div>

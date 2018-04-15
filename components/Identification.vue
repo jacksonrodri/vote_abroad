@@ -5,7 +5,7 @@
     <br/>
 
     <b-field v-if="idOptions && idOptions.indexOf('SSN') > -1"
-      :label="$t('request.identification.SSN')"
+      :label="$t('request.id.SSN')"
       :message="validations.ssn.$error ? $t(`request.id.messages.fullSSNRequired`) : '' "
       :type="(validations.ssn.$error ? 'is-danger': '')">
       <b-input v-cleave="masks.ssn"
@@ -42,7 +42,7 @@
 
     <div class="field">
       <b-checkbox :value="value ? value.noId : false" @input="setVal" ref="noId">
-        <span v-if="idOptions && idOptions.length === 1">{{$t('request.id.noid1', {id: $t(`request.idTypes.${idOptions[0]}`)})}}"</span>
+        <span v-if="idOptions && idOptions.length === 1">{{$t('request.id.noid1', {id: $t(`request.id.${idOptions[0]}`)})}}</span>
         <span v-else>{{$t('request.id.noid2')}}</span>
       </b-checkbox>
     </div>

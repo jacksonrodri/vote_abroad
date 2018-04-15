@@ -197,8 +197,6 @@ collections:
             fields:
               - {label: "Field Label", name: "label", widget: "string"}
               - {label: "Instructions", name: "instructions", widget: "string"}
-              - {label: "Placeholder", name: "placeholder", widget: "string"}
-              - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - label: "Messages"
                 name: "messages"
                 widget: "object"
@@ -209,22 +207,11 @@ collections:
             widget: "object"
             fields:
               - {label: "Field Label", name: "label", widget: "string"}
-              - {label: "Instructions", name: "instructions", widget: "string"}
-              - {label: "Placeholder", name: "placeholder", widget: "string"}
-              - {label: "Tooltip", name: "tooltip", widget: "markdown"}
-              - label: "Messages"
-                name: "messages"
-                widget: "object"
-                fields:
-                  - {label: "Required", name: "required", widget: "string"}
           - label: "Last Name"
             name: "lastName"
             widget: "object"
             fields:
               - {label: "Field Label", name: "label", widget: "string"}
-              - {label: "Instructions", name: "instructions", widget: "string"}
-              - {label: "Placeholder", name: "placeholder", widget: "string"}
-              - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - label: "Messages"
                 name: "messages"
                 widget: "object"
@@ -235,14 +222,6 @@ collections:
             widget: "object"
             fields:
               - {label: "Field Label", name: "label", widget: "string"}
-              - {label: "Instructions", name: "instructions", widget: "string"}
-              - {label: "Placeholder", name: "placeholder", widget: "string"}
-              - {label: "Tooltip", name: "tooltip", widget: "markdown"}
-              - label: "Messages"
-                name: "messages"
-                widget: "object"
-                fields:
-                  - {label: "Required", name: "required", widget: "string"}
           - label: "Previous Name"
             name: "previousName"
             widget: "object"
@@ -251,7 +230,6 @@ collections:
               - {label: "Yes Answer", name: "yes", widget: "string"}
               - {label: "No Answer", name: "no", widget: "string"}
               - {label: "Instructions", name: "instructions", widget: "string"}
-              - {label: "Placeholder", name: "placeholder", widget: "string"}
               - {label: "Tooltip Title", name: "tooltipTitle", widget: "string"}
               - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - label: "Messages"
@@ -264,23 +242,20 @@ collections:
             widget: "object"
             fields:
               - {label: "Field Label", name: "label", widget: "string"}
-              - {label: "Instructions", name: "instructions", widget: "string"}
+              - {label: "Mobile Number", name: "mobile", widget: "string"}
+              - {label: "Landline Number", name: "landline", widget: "string"}
               - {label: "Placeholder", name: "placeholder", widget: "string"}
-              - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - label: "Messages"
                 name: "messages"
                 widget: "object"
                 fields:
-                  - {label: "Required", name: "required", widget: "string"}
                   - {label: "Invalid Number", name: "invalid", widget: "string"}
           - label: "Email"
             name: "email"
             widget: "object"
             fields:
               - {label: "Field Label", name: "label", widget: "string"}
-              - {label: "Instructions", name: "instructions", widget: "string"}
-              - {label: "Placeholder", name: "placeholder", widget: "string"}
-              - {label: "Tooltip", name: "tooltip", widget: "markdown"}
+              - {label: "Did you mean? (typo suggester)", name: "suggestion", widget: "string"}
               - label: "Messages"
                 name: "messages"
                 widget: "object"
@@ -357,8 +332,6 @@ collections:
               - {label: "Uncertain Return", name: "uncertainReturn", widget: "string"}
               - {label: "Intend to Return", name: "intendToReturn", widget: "string"}
               - {label: "Never Resided", name: "neverResided", widget: "string"}
-              - {label: "Instructions", name: "instructions", widget: "string"}
-              - {label: "Placeholder", name: "placeholder", widget: "string"}
               - {label: "Tooltip Title", name: "tooltipTitle", widget: "string"}
               - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - label: "Messages"
@@ -376,9 +349,6 @@ collections:
               - {label: "Yes Answer", name: "yes", widget: "string"}
               - {label: "No Answer", name: "no", widget: "string"}
               - {label: "Unsure Answer", name: "unsure", widget: "string"}
-              - {label: "Instructions", name: "instructions", widget: "string"}
-              - {label: "Placeholder", name: "placeholder", widget: "string"}
-              - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - label: "Messages"
                 name: "messages"
                 widget: "object"
@@ -392,8 +362,6 @@ collections:
               - {label: "Email", name: "email", widget: "string"}
               - {label: "Mail", name: "mail", widget: "string"}
               - {label: "Fax", name: "fax", widget: "string"}
-              - {label: "Instructions", name: "instructions", widget: "string"}
-              - {label: "Placeholder", name: "placeholder", widget: "string"}
               - {label: "Tooltip Title", name: "tooltipTitle", widget: "string"}
               - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - label: "Messages"
@@ -406,9 +374,6 @@ collections:
             widget: "object"
             fields:
               - {label: "Field Label", name: "label", widget: "string"}
-              - {label: "Instructions", name: "instructions", widget: "string"}
-              - {label: "Placeholder", name: "placeholder", widget: "string"}
-              - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - label: "Messages"
                 name: "messages"
                 widget: "object"
@@ -420,9 +385,6 @@ collections:
             widget: "object"
             fields:
               - {label: "Field Label", name: "label", widget: "string"}
-              - {label: "Instructions", name: "instructions", widget: "string"}
-              - {label: "Placeholder", name: "placeholder", widget: "string"}
-              - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - label: "Messages"
                 name: "messages"
                 widget: "object"
@@ -450,7 +412,6 @@ collections:
             widget: "object"
             fields:
               - {label: "Field Label", name: "label", widget: "string"}
-              - {label: "Instructions", name: "instructions", widget: "string"}
               - {label: "Placeholder", name: "placeholder", widget: "string"}
               - {label: "Tooltip Title", name: "tooltipTitle", widget: "string"}
               - {label: "Tooltip", name: "tooltip", widget: "markdown"}
@@ -459,14 +420,11 @@ collections:
                 widget: "object"
                 fields:
                   - {label: "Required", name: "required", widget: "string"}
-                  - {label: "Invalid Number", name: "invalid", widget: "string"}
           - label: "Sex"
             name: "sex"
             widget: "object"
             fields:
               - {label: "Field Label", name: "label", widget: "string"}
-              - {label: "Instructions", name: "instructions", widget: "string"}
-              - {label: "Placeholder", name: "placeholder", widget: "string"}
               - {label: "Male", name: "male", widget: "string"}
               - {label: "Female", name: "female", widget: "string"}
               - {label: "Decline to State", name: "decline", widget: "string"}
@@ -482,8 +440,6 @@ collections:
             widget: "object"
             fields:
               - {label: "Field Label", name: "label", widget: "string"}
-              - {label: "Instructions", name: "instructions", widget: "string"}
-              - {label: "Placeholder", name: "placeholder", widget: "string"}
               - {label: "Yes", name: "yes", widget: "string"}
               - {label: "No", name: "no", widget: "string"}
               - {label: "Already a Member", name: "alreadyMember", widget: "string"}
@@ -500,7 +456,6 @@ collections:
             widget: "object"
             fields:
               - {label: "Field Label", name: "label", widget: "string"}
-              - {label: "Instructions", name: "instructions", widget: "string"}
               - {label: "Democratic", name: "democratic", widget: "string"}
               - {label: "Republican", name: "republican", widget: "string"}
               - {label: "Independent", name: "independent", widget: "string"}
@@ -519,14 +474,6 @@ collections:
             widget: "object"
             fields:
               - {label: "Field Label(use '{state} for the state's name')", name: "label", widget: "string"}
-              - {label: "Instructions", name: "instructions", widget: "string"}
-              - {label: "Other Placeholder", name: "placeholder", widget: "string"}
-              - {label: "Tooltip", name: "tooltip", widget: "markdown"}
-              - label: "Messages"
-                name: "messages"
-                widget: "object"
-                fields:
-                  - {label: "Required", name: "required", widget: "string"}
           - label: "Alaska Rules"
             name: "akRules"
             widget: "object"
@@ -534,7 +481,7 @@ collections:
               - {label: "Proof of Residency Label", name: "label", widget: "string"}
               - {label: "Proof of Residency Instructions", name: "resInstructions", widget: "string"}
               - {label: "FWAB witness Instructions", name: "fwabWitness", widget: "string"}
-              - {label: "Other Placeholder", name: "placeholder", widget: "string"}
+              - {label: "Tooltip Title", name: "tooltipTitle", widget: "string"}
               - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - label: "Messages"
                 name: "messages"
@@ -547,7 +494,6 @@ collections:
             fields:
               - {label: "Proof of Citizenship Label", name: "label", widget: "string"}
               - {label: "Proof of Citizenship Instructions", name: "citInstructions", widget: "string"}
-              - {label: "Placeholder", name: "placeholder", widget: "string"}
               - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - label: "Messages"
                 name: "messages"
@@ -560,7 +506,6 @@ collections:
             fields:
               - {label: "Independent Primary Label", name: "label", widget: "string"}
               - {label: "Independent Primary Instructions", name: "primaryInstructions", widget: "string"}
-              - {label: "Placeholder", name: "placeholder", widget: "string"}
               - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - label: "Messages"
                 name: "messages"
@@ -573,7 +518,6 @@ collections:
             fields:
               - {label: "Parents' Names Label", name: "label", widget: "string"}
               - {label: "Parents' Names Instructions", name: "parentsInstructions", widget: "string"}
-              - {label: "Placeholder", name: "placeholder", widget: "string"}
               - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - label: "Messages"
                 name: "messages"
@@ -588,7 +532,7 @@ collections:
               - {label: "Race Instructions", name: "raceInstructions", widget: "string"}
               - {label: "Previous Registration Label", name: "prevRegLabel", widget: "string"}
               - {label: "Previous Registration Instructions", name: "prevRegInstructions", widget: "string"}
-              - {label: "Placeholder", name: "placeholder", widget: "string"}
+              - {label: "Tooltip Title", name: "tooltipTitle", widget: "string"}
               - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - label: "Messages"
                 name: "messages"
@@ -600,8 +544,7 @@ collections:
             widget: "object"
             fields:
               - {label: "Field Label", name: "label", widget: "string"}
-              - {label: "Employer Instructions", name: "employerInstructions", widget: "string"}
-              - {label: "Placeholder", name: "placeholder", widget: "string"}
+              - {label: "Tooltip Title", name: "tooltipTitle", widget: "string"}
               - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - label: "Messages"
                 name: "messages"
@@ -614,7 +557,7 @@ collections:
             fields:
               - {label: "Field Label", name: "label", widget: "string"}
               - {label: "Voter's Oath Instructions", name: "oathInstructions", widget: "string"}
-              - {label: "Placeholder", name: "placeholder", widget: "string"}
+              - {label: "Tooltip Title", name: "tooltipTitle", widget: "string"}
               - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - label: "Messages"
                 name: "messages"
@@ -637,7 +580,6 @@ collections:
               - {label: "Military ID", name: "MilitaryID", widget: "string"}
               - {label: "Passport Number", name: "PassportNumber", widget: "string"}
               - {label: "NY DMV Issued ID", name: "NYDMVID", widget: "string"}
-              - {label: "Placeholder", name: "placeholder", widget: "string"}
               - {label: "item separator (--OR--)", name: "or", widget: "string"}
               - {label: "No ID button (only 1 id choice)", name: "noid1", widget: "string"}
               - {label: "No ID button (2+ id choices)", name: "noid2", widget: "string"}
