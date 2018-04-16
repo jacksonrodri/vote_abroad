@@ -160,7 +160,7 @@ export const actions = {
         autocomplete: 'off',
         size: 6,
         max: 999999,
-        pattern: 'd*',
+        pattern: '[0-9]{6}',
         title: 'enter a 6 digit code'
       },
       confirmText: 'Submit',
