@@ -153,7 +153,7 @@ export const actions = {
       message: msg,
       // message: `Enter the code we sent to ${state.user.emailAddress || state.user.mobileIntFormat}`,
       inputAttrs: {
-        type: 'text',
+        type: 'tel',
         placeholder: 'Type the code.',
         minlength: 6,
         maxlength: 6,
