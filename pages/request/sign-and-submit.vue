@@ -1,6 +1,25 @@
 <template>
   <div class="columns is-centered is-multiline">
     <div class="column is-10 is-8-desktop is-7-widescreen is-6-fullhd is-paddingless">
+      <div :class="['modal', {'is-active': pleaseRotate}]">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+          <div class="has-text-centered">
+            <h1 class="title has-text-primary">Rotate your device</h1>
+            <transition name="rotate">
+              <span v-if="pleaseRotate"
+                class="icon is-large rotated">
+                <span class="fa-stack fa-5x has-text-primary">
+                  <i class="fas fa-mobile-alt fa-stack-2x"></i>
+                  <i class="fas fa-redo fa-stack-1x shrink"></i>
+                  <!-- <span class="fa-stack-1x fa-inverse" style="margin-top: .3em;"><strong>27</strong></span> -->
+                </span>
+              </span>
+              </transition>
+          </div>
+        </div>
+        <!-- <button class="modal-close is-large" aria-label="close"></button> -->
+      </div>
       <div>
         <h1 class="has-text-centered title is-3">{{ $t('request.stages.step', {step: 5})}}</h1>
         <h3 class="has-text-centered subtitle is-4">{{ $t('request.stages.stage5')}}</h3>
@@ -460,6 +479,10 @@ export default {
     }
   },
   computed: {
+    pleaseRotate () {
+      // return this.signStep === 'instructions'
+      return this.$store.state.userauth.device.type === 'mobile' && this.$store.state.userauth.device.orientation === 'portrait' && this.signStep === 'instructions'
+    },
     currentRequest () { return this.requests[this.currentRequestIndex] },
     firstName () { return this.currentRequest && this.currentRequest.firstName ? this.currentRequest.firstName : ' ' },
     lastName () { return this.currentRequest && this.currentRequest.lastName ? this.currentRequest.lastName : ' ' },
@@ -558,3 +581,23 @@ export default {
   }
 }
 </script>
+
+<style>
+.rotated {
+  transform: rotate(90deg);
+}
+.shrink {
+  transform: scale(0.8) translate(0.2em, -0.15em);
+}
+
+.rotate-enter-active {
+  transition: all 3s ease;
+}
+.rotate-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.rotate-enter, .rotate-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: rotate(0deg);
+}
+</style>

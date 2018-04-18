@@ -203,6 +203,7 @@ export default {
   data () {
     return {
       isMobileMenuActive: false,
+      device: {},
       // isLoginModalActive: false,
       topFaqs: [
         {
@@ -242,8 +243,24 @@ export default {
     },
     isAuthenticated: function () { return this.$store.getters['userauth/isAuthenticated'] }
   },
-  mounted () {
+  async mounted () {
     if (process.browser) {
+      await import('current-device').then(({default: device}) => {
+        console.log(device)
+        this.$store.commit('userauth/updateDevice', {
+          type: device.type,
+          os: device.os,
+          orientation: device.orientation
+        })
+        device.onChangeOrientation(newOrientation => {
+          this.$store.commit('userauth/updateDevice', {
+            type: device.type,
+            os: device.os,
+            orientation: newOrientation
+          })
+        })
+      })
+      // console.log(device.default.tablet())
       window.onNuxtReady((app) => {
         this.$intercom.boot()
         // this.$intercom.show()

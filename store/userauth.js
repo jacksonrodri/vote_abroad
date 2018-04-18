@@ -44,6 +44,11 @@ export const state = () => ({
     city: null,
     region: null,
     country: null
+  },
+  device: {
+    type: null,
+    orientation: null,
+    os: null
   }
 })
 
@@ -68,6 +73,9 @@ export const mutations = {
   },
   updateSessionGeo (state, geo) {
     state.session = geo
+  },
+  updateDevice (state, device) {
+    state.device = device
   },
   updateUser (state, userObj) {
     state.user = Object.assign({}, state.user, userObj)
@@ -164,7 +172,7 @@ export const actions = {
         title: 'enter a 6 digit code'
       },
       confirmText: 'Submit',
-      cancelText: 'cancel',
+      cancelText: 'Cancel',
       // onCancel: () => commit('updateRedirectPath', null),
       onConfirm: (value) => {
         if (state.user.emailAddress) {
@@ -172,7 +180,8 @@ export const actions = {
         } else if (state.user.mobileIntFormat) {
           dispatch('loginSmsVerify', value)
         }
-      }
+      },
+      onCancel: () => {}
     })
   },
   loginEmailVerify ({commit, dispatch, state}, code) {
@@ -190,9 +199,9 @@ export const actions = {
           loadingComponent.close()
           Dialog.prompt({
             title: 'Authentication',
-            message: `That code is incorrect, please try again. Enter the code we sent to ${state.user.emailAddress}`,
+            message: `That code is incorrect, please try again. Enter the code we sent to ${state.user.emailAddress} or click the login link in that email.`,
             inputAttrs: {
-              type: 'number',
+              type: 'tel',
               placeholder: 'Type the code.',
               minlength: 6,
               maxlength: 6,
@@ -237,7 +246,7 @@ export const actions = {
             title: 'Authentication',
             message: `That code is incorrect, please try again. Enter the code we sent to ${state.user.mobileIntFormat}`,
             inputAttrs: {
-              type: 'number',
+              type: 'tel',
               placeholder: 'Type the code.',
               minlength: 6,
               maxlength: 6,
