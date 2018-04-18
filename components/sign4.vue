@@ -52,17 +52,17 @@
           <li>Choose the version below with the clearest signature and whitest background</li>
         </ol> -->
         <canvas ref="signature1"
-         :width="width * 4 / 5"
+         :width="width"
          :height="height / 2"
          style="cursor:pointer;"
          @click="save('ctx1')"></canvas>
         <canvas ref="signature2"
-         :width="width * 4 / 5"
+         :width="width"
          :height="height / 2"
          style="cursor:pointer;"
          @click="save('ctx2')"></canvas>
         <canvas ref="signature3"
-         :width="width * 4 / 5"
+         :width="width"
          :height="height / 2"
          style="cursor:pointer;"
          @click="save('ctx3')"></canvas>
@@ -283,17 +283,17 @@ export default {
       this.canvas.width = this.width
       this.canvas.height = this.height / 2
       this.ctx = this.canvas.getContext('2d')
-      this.ctx.drawImage(this.$refs.video, this.width * 1 / 5, this.height / 8, this.width * 4 / 5, this.height / 2, 0, 0, this.width, this.height / 2)
-      this.sigImage = this.ctx.getImageData(0, 0, this.width * 4 / 5, this.height / 2)
+      this.ctx.drawImage(this.$refs.video, this.width * 1 / 5, this.height / 5, this.width * 4 / 5, this.height / 2, 0, 0, this.width, this.height / 2)
+      this.sigImage = this.ctx.getImageData(0, 0, this.width, this.height / 2)
       this.updateStage('select')
     },
     drawSignatureSelections: function () {
       this.ctx1 = this.$refs.signature1.getContext('2d')
       this.ctx2 = this.$refs.signature2.getContext('2d')
       this.ctx3 = this.$refs.signature3.getContext('2d')
-      let edited1 = this.editImg(this.sigImage, this.width * 4 / 5, this.height / 2, 40, 100)
-      let edited2 = this.editImg(this.sigImage, this.width * 4 / 5, this.height / 2, 60, 120)
-      let edited3 = this.editImg(this.sigImage, this.width * 4 / 5, this.height / 2, 100, 160)
+      let edited1 = this.editImg(this.sigImage, this.width, this.height / 2, 40, 100)
+      let edited2 = this.editImg(this.sigImage, this.width, this.height / 2, 60, 120)
+      let edited3 = this.editImg(this.sigImage, this.width, this.height / 2, 100, 160)
       this.ctx1.putImageData(edited1, 0, 0)
       this.ctx2.putImageData(edited2, 0, 0)
       this.ctx3.putImageData(edited3, 0, 0)
