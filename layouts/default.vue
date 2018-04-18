@@ -367,11 +367,17 @@ export default {
           os: device.os,
           orientation: device.orientation
         })
+        // window.addEventListener('orientationchange', () => {
+        //   this.$store.commit('userauth/updateDevice', {
+        //     orientation: device.orientation
+        //   })
+        // })
         device.onChangeOrientation(newOrientation => {
+          // console.log(device)
           this.$store.commit('userauth/updateDevice', {
             type: device.type,
             os: device.os,
-            orientation: newOrientation
+            orientation: device.orientation
           })
         })
       })
