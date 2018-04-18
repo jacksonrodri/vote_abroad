@@ -283,7 +283,7 @@ export default {
       this.canvas.width = this.width
       this.canvas.height = this.height / 2
       this.ctx = this.canvas.getContext('2d')
-      this.ctx.drawImage(this.$refs.video, this.width * 1 / 5, this.height / 4, this.width * 4 / 5, this.height / 2, 0, 0, this.width, this.height / 2)
+      this.ctx.drawImage(this.$refs.video, this.width * 1 / 5, this.height / 8, this.width * 4 / 5, this.height / 2, 0, 0, this.width, this.height / 2)
       this.sigImage = this.ctx.getImageData(0, 0, this.width, this.height / 2)
       this.updateStage('select')
     },
