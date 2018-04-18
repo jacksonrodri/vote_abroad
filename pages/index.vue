@@ -14,24 +14,6 @@
                   <!-- Request a ballot <span class="has-text-weight-semibold">now!</span> -->
                 </h2>
                 <span class="is-flex"><label class="label">{{ $t('homepage.loginInstructions') }}</label><span @click="toolTipOpen = !toolTipOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
-                <span class="fa-layers fa-fw" style="background:MistyRose">
-                  <i class="fas fa-calendar"></i>
-                  <span class="fa-layers-text fa-inverse" data-fa-transform="shrink-8 down-3" style="font-weight:900">27</span>
-                </span>
-
-                <span class="fa-layers fa-fw" style="background:MistyRose">
-                  <i class="fas fa-certificate"></i>
-                  <span class="fa-layers-text fa-inverse" data-fa-transform="shrink-11.5 rotate--30" style="font-weight:900">NEW</span>
-                </span>
-                <span class="icon is-large">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-camera fa-stack-1x"></i>
-                    <i class="fas fa-ban fa-stack-2x has-text-danger"></i>
-                  </span>
-                </span>
-                <span class="icon is-large" style="transform: rotate(45deg);">
-                  <i class="fas fa-shield-alt"></i>
-                </span>
                 <phone-email
                   size="is-medium"
                   v-model="phoneOrEmail">
