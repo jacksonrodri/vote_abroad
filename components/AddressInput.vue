@@ -32,6 +32,7 @@
                       open-on-focus
                       expanded
                       :data="filteredCountries"
+                      autocomplete="country"
                       field="label"
                       @input="updateAddress()"
                       @focus="$event.target.select()"
@@ -62,6 +63,7 @@
                   :placeholder="throroughfareLabel"
                   field="structured_formatting.main_text"
                   :loading="isFetching"
+                  autocomplete="address-line1"
                   @input="getAsyncData"
                   @select="option => fillData(option)">
                   <template slot-scope="props">{{ props.option.description }}</template>
@@ -78,7 +80,12 @@
           <div class="field-body">
             <div class="field">
               <div class="control">
-                <input class="input" @input="updateAddress()" v-model="extendedAddress" type="text" :placeholder="premiseLabel">
+                <input class="input"
+                  @input="updateAddress()"
+                  v-model="extendedAddress"
+                  type="text"
+                  autocomplete="address-line2"
+                  :placeholder="premiseLabel">
               </div>
             </div>
           </div>
@@ -95,6 +102,7 @@
                 <b-input v-model="locality"
                   :placeholder="field.localityname.label"
                   ref="locality"
+                  autocomplete="address-level2"
                   @input="updateAddress()">
                 </b-input>
               </b-field>
@@ -108,6 +116,7 @@
                     ref="region"
                     :keep-first="true"
                     field="name"
+                    autocomplete="address-level1"
                     @input="updateAddress()"
                     @select="option => {if (!option) {return}; selected = option}">
                   </b-autocomplete>
@@ -115,7 +124,12 @@
                 <input v-if="field.administrativearea && !field.administrativearea.options" v-model="region" @input="updateAddress()" class="input" type="text" :placeholder="field.administrativearea.label">
               </div>
               <p v-if="Object.keys(field)[0] === 'postalcode'" class="control is-expanded">
-                <input class="input" v-model="postalCode" type="text" @input="updateAddress()" :placeholder="field.postalcode.label">
+                <input class="input"
+                  v-model="postalCode"
+                  type="text"
+                  @input="updateAddress()"
+                  autocomplete="postal-code"
+                  :placeholder="field.postalcode.label">
               </p>
             </div>
           </div>

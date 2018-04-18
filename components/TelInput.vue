@@ -43,6 +43,7 @@
         v-model="typed"
         :size="size"
         :placeholder="$t('request.tel.placeholder', { example: phonePlaceholder})"
+        autocomplete="mobile tel"
         expanded>
       </b-input>
     </b-field>

@@ -10,24 +10,26 @@
       <b-field :type="($v.firstName.$error ? 'is-danger': '')" :message="$v.firstName.$error ? Object.keys($v.firstName.$params).map(x => $t(`request.firstName.messages.${x}`)) : '' " :label="$t('request.firstName.label')">
         <b-input v-model="firstName"
           @input="delayTouch($v.firstName)"
+          autocomplete="given-name"
           ref="firstName"></b-input>
       </b-field>
 
       <!-- middleName -->
       <b-field :type="($v.middleName.$error ? 'is-danger': '')" :message="$v.middleName.$error ? Object.keys($v.middleName.$params).map(x => x) : '' " :label="$t('request.middleName.label')">
-        <b-input v-model="middleName" @input="$v.middleName.$touch()"></b-input>
+        <b-input v-model="middleName" @input="$v.middleName.$touch()" autocomplete="additional-name"></b-input>
       </b-field>
 
       <!-- lastName -->
       <b-field :type="($v.lastName.$error ? 'is-danger': '')" :message="$v.lastName.$error ? Object.keys($v.lastName.$params).map(x => $t(`request.lastName.messages.${x}`)) : '' " :label="$t('request.lastName.label')">
         <b-input v-model="lastName"
           @input="delayTouch($v.lastName)"
+          autocomplete="family-name"
           ref="lastName"></b-input>
       </b-field>
 
       <!-- suffix -->
       <b-field :type="($v.suffix.$error ? 'is-danger': '')" :message="$v.suffix.$error ? Object.keys($v.suffix.$params).map(x => x) : '' " :label="$t('request.suffix.label')">
-        <b-input v-model="suffix" @input="$v.suffix.$touch()"></b-input>
+        <b-input v-model="suffix" @input="$v.suffix.$touch()" autocomplete="honorific-suffix"></b-input>
       </b-field>
 
       <previous-name v-model="previousName"
@@ -56,7 +58,10 @@
       :type="($v.email.$error ? 'is-danger': '')"
       :message="$v.email.$error ? Object.keys($v.email.$params).map(x => $t(`request.email.messages.${x}`)) : '' "
       :label="$t('request.email.label')">
-        <b-input v-model="email" @input="delayTouch($v.email)" ref="email"></b-input>
+        <b-input v-model="email"
+          @input="delayTouch($v.email)"
+          autocomplete="email"
+          ref="email"></b-input>
       </b-field>
 
       <!-- countryName -->
@@ -92,6 +97,7 @@
         :validations=$v.votAdr
         ref="votAdr"
         @input="delayTouch($v.votAdr)"
+        autocomplete="off"
         :toolTipTitle="$t('request.votAdr.tooltipTitle')">
         <!-- toolTipTitle="Your last US Address" -->
         <div slot="instructions">
@@ -108,6 +114,7 @@
         :placeholder="$t('request.jurisdiction.placeholder')"
         :key="votAdr.regionCode"
         ref="jurisdiction"
+        autocomplete="off"
         @input="delayTouch($v.jurisdiction)"
         :validations="($v.jurisdiction)"
         :state="this.votAdr.regionCode">
@@ -170,7 +177,9 @@
       :message="$v.altEmail.$error ? Object.keys($v.altEmail.$params).map(x => x) : '' "
       v-if="recBallot === 'email'"
       :label="$t('request.altEmail.label')">
-      <b-input v-model="altEmail" @input="$v.altEmail.$touch()"></b-input>
+      <b-input v-model="altEmail"
+        autocomplete="email"
+        @input="$v.altEmail.$touch()"></b-input>
     </b-field>
 
       <!-- fwdAdr -->
