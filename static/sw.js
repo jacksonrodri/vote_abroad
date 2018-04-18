@@ -64,8 +64,8 @@ workboxSW.precache([
     "revision": "68e1bc68ec2ccd61b67f07ff3879129a"
   },
   {
-    "url": "/_nuxt/3.a284eaf15b36d275f0f0.js",
-    "revision": "76037058a25d8e4dff703d7f0970ac17"
+    "url": "/_nuxt/3.86396e6db7fedca91475.js",
+    "revision": "788de91ca1f820cc3af59c98edf00917"
   },
   {
     "url": "/_nuxt/4.d9158de70af28b8147d4.js",
@@ -76,8 +76,8 @@ workboxSW.precache([
     "revision": "8443a59795c4b4e29c16549fc2e9498c"
   },
   {
-    "url": "/_nuxt/6.6cabca382b0b5a84357c.js",
-    "revision": "5b3a889cdb0929b310114c84197b68a7"
+    "url": "/_nuxt/6.b82bea83c2cc488f16b6.js",
+    "revision": "04709a439d1cc16fc083eaaf6a6b51fc"
   },
   {
     "url": "/_nuxt/8.756cd01c7c5395773648.js",
@@ -88,12 +88,12 @@ workboxSW.precache([
     "revision": "19c10dbb32540eba85b801f7217e21b2"
   },
   {
-    "url": "/_nuxt/app.232f1403a9f2494f3ff0f1e10bfd14f0.css",
-    "revision": "232f1403a9f2494f3ff0f1e10bfd14f0"
+    "url": "/_nuxt/app.18c9759a79cd1bc6d469.js",
+    "revision": "9db41dcb5deb3ae0f37e5f7539003f9b"
   },
   {
-    "url": "/_nuxt/app.c38b2da6c6c5c82accf8.js",
-    "revision": "7f4619a2dc86fa611b956b4cb85bd768"
+    "url": "/_nuxt/app.232f1403a9f2494f3ff0f1e10bfd14f0.css",
+    "revision": "232f1403a9f2494f3ff0f1e10bfd14f0"
   },
   {
     "url": "/_nuxt/countrydata.8b0eafac1b7d7f8a7352.js",
@@ -108,8 +108,8 @@ workboxSW.precache([
     "revision": "7cdd5eb1cea5d5fa3f1dcdfe43d06c2e"
   },
   {
-    "url": "/_nuxt/layouts/default.557cdd44ab0ba2b2a0d2.js",
-    "revision": "9b49c33327d6db2e3a929350cdddedb9"
+    "url": "/_nuxt/layouts/default.ee119fdc27119bb56765.js",
+    "revision": "f97a80a8aba5f78926e72bdf512fbe41"
   },
   {
     "url": "/_nuxt/leodata0.dbe47315d639b8aed12d.js",
@@ -336,8 +336,8 @@ workboxSW.precache([
     "revision": "dae60cca99747249840758e643540749"
   },
   {
-    "url": "/_nuxt/manifest.8bd4c736c86b30e92b43.js",
-    "revision": "1d43806e8a5eaae8b6ab80e02a1aa965"
+    "url": "/_nuxt/manifest.ea8957113fc51438abc0.js",
+    "revision": "b11ecf365c023124556206bd2f905f73"
   }
 ])
 

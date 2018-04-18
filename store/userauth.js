@@ -75,7 +75,7 @@ export const mutations = {
     state.session = geo
   },
   updateDevice (state, device) {
-    state.device = device
+    state.device = Object.assign({}, state.device, device)
   },
   updateUser (state, userObj) {
     state.user = Object.assign({}, state.user, userObj)
