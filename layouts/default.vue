@@ -372,14 +372,14 @@ export default {
         //     orientation: device.orientation
         //   })
         // })
-        device.onChangeOrientation(newOrientation => {
-          // console.log(device)
+        window.onresize = () => {
+          console.log(device)
           this.$store.commit('userauth/updateDevice', {
             type: device.type,
             os: device.os,
             orientation: device.orientation
           })
-        })
+        }
       })
       // console.log(device.default.tablet())
       window.onNuxtReady((app) => {
