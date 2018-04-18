@@ -373,11 +373,8 @@ export default {
         //   })
         // })
         window.onresize = () => {
-          console.log(device)
           this.$store.commit('userauth/updateDevice', {
-            type: device.type,
-            os: device.os,
-            orientation: device.orientation
+            orientation: window.innerWidth > window.innerHeight ? 'landscape' : 'portrait'
           })
         }
       })
