@@ -1,11 +1,12 @@
 import { WebAuth } from 'auth0-js'
 import axios from 'axios'
 import { Dialog, Toast, Snackbar, LoadingProgrammatic } from 'buefy'
-import * as AWS from '~/assets/aws-sdk-2.225.1.min.js'
-// import * as AWS from 'aws-sdk'
-import 'amazon-cognito-js'
+// import * as AWS from '~/assets/aws-sdk-2.225.1.min.js'
+import * as AWS from 'aws-sdk'
+// import 'amazon-cognito-js'
 const jwtDecode = require('jwt-decode')
 // var AWS = require('aws-sdk')
+// const AWS = require('~/assets/aws-sdk-2.225.1.min.js')
 
 AWS.config.region = 'us-east-1' // Region
 AWS.config.credentials = new AWS.CognitoIdentityCredentials({
@@ -13,8 +14,8 @@ AWS.config.credentials = new AWS.CognitoIdentityCredentials({
 })
 // const redirectUri = `https://votefromabroad.netlify.com`
 // const redirectUri = `http://localhost:3000`
-const redirectUri = 'https://d31eu57a9bj427.cloudfront.net'
-// const redirectUri = process.env.url
+// const redirectUri = 'https://d31eu57a9bj427.cloudfront.net'
+const redirectUri = process.env.url
 
 const webAuth = new WebAuth({
   domain: 'montg.auth0.com',
@@ -359,7 +360,7 @@ export const actions = {
     // })
     // console.log('hi from after Snackbar.open')
     AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-      IdentityPoolId: 'us-east-1:7bd016b9-b2ad-4ed3-bb1a-8915af42a2b5',
+      IdentityPoolId: 'us-east-1:f8d2c9d3-22f9-4de7-a8b2-88eb298dfd0a',
       Logins: {
         'montg.auth0.com': idToken
       }
