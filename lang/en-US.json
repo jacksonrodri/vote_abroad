@@ -32,8 +32,7 @@
   },
   "request": {
     "middleName": {
-      "label": "Middle Name(s)",
-      "instructions": ""
+      "label": "Middle Name(s)"
     },
     "lastName": {
       "label": "Last Name",
@@ -185,8 +184,7 @@
       "label": "Suffix"
     },
     "altEmail": {
-      "label": "If you have a second email address, add it here to ensure ballot delivery.",
-      "instructions": ""
+      "label": "If you have a second email address, add it here to ensure ballot delivery."
     },
     "votAdr": {
       "zip": "Zip",
@@ -255,7 +253,6 @@
     },
     "dob": {
       "label": "Date of Birth",
-      "instructions": "",
       "placeholder": "e.g. 01/31/1970",
       "tooltipTitle": "Why is this required?",
       "tooltip": "You must be 18 years old by the time of the next General Election to register to vote.",
@@ -287,7 +284,7 @@
         "stateIdRequired": "You must provide at least ONE of valid form of ID (from the list above) if you have it.  "
       },
       "StateID": "State ID",
-      "SSN": "your full Social Security Number",
+      "SSN": "Your full Social Security Number",
       "label": "Identification",
       "tooltipTitle": "Why am I being asked this?",
       "noid1": "I don't have a {id}",
@@ -304,8 +301,6 @@
     "firstName": {
       "label": "First Name",
       "instructions": "Please enter your first name.",
-      "placeholder": "",
-      "tooltip": "",
       "messages": {
         "required": "You must enter a first name."
       }
