@@ -34,7 +34,7 @@
     "WebGLImageFilter": "https://github.com/phoboslab/WebGLImageFilter",
     "amazon-cognito-js": "^1.1.0",
     "auth0-js": "^9.0.2",
-    "aws-sdk": "^2.224.1",
+    "aws-amplify": "^0.3.0",
     "babel-polyfill": "^6.26.0",
     "buefy": "^0.6.4",
     "bulma-slider": "^0.1.1",
