@@ -1,0 +1,13 @@
+{
+    "apiId": "73pukh56abc7xo7zfhckmy4nta",
+    "region": "us-east-1",
+    "name": "VoteFromAbroad",
+    "graphqlEndpoint": "https://wby5f34iifczrepey7yf57hnde.appsync-api.us-east-1.amazonaws.com/graphql",
+    "authenticationType": "AWS_IAM",
+    "creationTime": "2018-04-20-20-10-31",
+    "lastUpdateTime": "2018-04-20-20-10-31",
+    "lastSyncTime": "2018-04-20-20-40-19",
+    "lastPushSuccessful": true,
+    "AppSyncConsoleUrl": "https://console.aws.amazon.com/appsync/home?region=us-east-1#/73pukh56abc7xo7zfhckmy4nta/v1/home",
+    "lastSyncToDevTime": "2018-04-20-20-40-23"
+}

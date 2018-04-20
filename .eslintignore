@@ -8,3 +8,5 @@ node_modules
 .nuxt
 # Nuxt generate
 dist
+# AWS files
+aws-exports.js

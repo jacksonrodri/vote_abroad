@@ -1,12 +1,10 @@
 import { WebAuth } from 'auth0-js'
 import axios from 'axios'
 import { Dialog, Toast, Snackbar, LoadingProgrammatic } from 'buefy'
-// import * as AWS from '~/assets/aws-sdk-2.225.1.min.js'
 import * as AWS from 'aws-sdk'
 // import 'amazon-cognito-js'
 const jwtDecode = require('jwt-decode')
 // var AWS = require('aws-sdk')
-// const AWS = require('~/assets/aws-sdk-2.225.1.min.js')
 
 AWS.config.region = 'us-east-1' // Region
 AWS.config.credentials = new AWS.CognitoIdentityCredentials({
@@ -14,7 +12,6 @@ AWS.config.credentials = new AWS.CognitoIdentityCredentials({
 })
 // const redirectUri = `https://votefromabroad.netlify.com`
 // const redirectUri = `http://localhost:3000`
-// const redirectUri = 'https://d31eu57a9bj427.cloudfront.net'
 const redirectUri = process.env.url
 
 const webAuth = new WebAuth({
@@ -365,20 +362,20 @@ export const actions = {
         'montg.auth0.com': idToken
       }
     })
-    AWS.config.credentials.get(function () {
-      var syncClient = new AWS.CognitoSyncManager()
-      syncClient.openOrCreateDataset('myDataset', function (err, dataset) {
-        if (err) throw (err)
-        dataset.put('myKey', 'myValue', function (err, record) {
-          if (err) throw (err)
-          dataset.synchronize({
-            onSuccess: function (data, newRecords) {
-              console.log('data', data, 'newRecords', newRecords)
-            }
-          })
-        })
-      })
-    })
+    // AWS.config.credentials.get(function () {
+    //   var syncClient = new AWS.CognitoSyncManager()
+    //   syncClient.openOrCreateDataset('myDataset', function (err, dataset) {
+    //     if (err) throw (err)
+    //     dataset.put('myKey', 'myValue', function (err, record) {
+    //       if (err) throw (err)
+    //       dataset.synchronize({
+    //         onSuccess: function (data, newRecords) {
+    //           console.log('data', data, 'newRecords', newRecords)
+    //         }
+    //       })
+    //     })
+    //   })
+    // })
     // var syncManager = new AWS.CognitoSyncManager()
     // let dataset
     // syncManager.openOrCreateDataset('alexData', function (err, d) {

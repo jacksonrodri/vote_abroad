@@ -102,7 +102,12 @@ module.exports = {
     linkExactActiveClass: 'is-active',
     middleware: 'menu-helper'
   },
-  plugins: ['~/plugins/buefy', '~/plugins/vuelidate', '~/plugins/intercom'],
+  plugins: [
+    { src: '~plugins/amplify_init.js', ssr: false },
+    {src: '~/plugins/buefy'},
+    {src: '~/plugins/vuelidate'},
+    {src: '~/plugins/intercom'}
+  ],
   /*
   ** Build configuration
   */
