@@ -6,7 +6,7 @@
             "type": "AMAZON_DYNAMODB",
             "serviceRoleArn": "{managed-by-awsmobile-cli}",
             "dynamodbConfig": {
-                "tableName": "AppSyncCommentTable-GkuyiQVM",
+                "tableName": "AppSyncCommentTable-HFvKVPfV",
                 "awsRegion": "us-east-1",
                 "useCallerCredentials": false
             }
@@ -17,7 +17,7 @@
             "type": "AMAZON_DYNAMODB",
             "serviceRoleArn": "{managed-by-awsmobile-cli}",
             "dynamodbConfig": {
-                "tableName": "AppSyncEventTable-GkuyiQVM",
+                "tableName": "AppSyncEventTable-HFvKVPfV",
                 "awsRegion": "us-east-1",
                 "useCallerCredentials": false
             }
@@ -39,7 +39,7 @@
                     "AttributeType": "S"
                 }
             ],
-            "TableName": "AppSyncCommentTable-GkuyiQVM",
+            "TableName": "AppSyncCommentTable-HFvKVPfV",
             "KeySchema": [
                 {
                     "AttributeName": "eventId",
@@ -81,7 +81,7 @@
                     "AttributeType": "S"
                 }
             ],
-            "TableName": "AppSyncEventTable-GkuyiQVM",
+            "TableName": "AppSyncEventTable-HFvKVPfV",
             "KeySchema": [
                 {
                     "AttributeName": "id",

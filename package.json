@@ -42,6 +42,7 @@
     "current-device": "^0.7.2",
     "flag-icon-css": "^2.9.0",
     "full-icu": "^1.2.1",
+    "graphql-tag": "^2.9.1",
     "jsfeat": "^0.0.8",
     "jwt-decode": "^2.2.0",
     "libphonenumber-js": "^0.4.48",

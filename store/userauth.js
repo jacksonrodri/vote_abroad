@@ -1,15 +1,17 @@
 import { WebAuth } from 'auth0-js'
 import axios from 'axios'
 import { Dialog, Toast, Snackbar, LoadingProgrammatic } from 'buefy'
-import * as AWS from 'aws-sdk'
+// import { API, graphqlOperation } from 'aws-amplify'
+// import * as AWS from 'aws-sdk'
+import AWSExports from '../aws-exports'
 // import 'amazon-cognito-js'
 const jwtDecode = require('jwt-decode')
 // var AWS = require('aws-sdk')
 
-AWS.config.region = 'us-east-1' // Region
-AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-  IdentityPoolId: 'us-east-1:f8d2c9d3-22f9-4de7-a8b2-88eb298dfd0a'
-})
+// AWS.config.region = 'us-east-1' // Region
+// AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+//   IdentityPoolId: 'us-east-1:f8d2c9d3-22f9-4de7-a8b2-88eb298dfd0a'
+// })
 // const redirectUri = `https://votefromabroad.netlify.com`
 // const redirectUri = `http://localhost:3000`
 const redirectUri = process.env.url
@@ -86,6 +88,34 @@ export const mutations = {
 }
 
 export const actions = {
+  async getEvent ({app}) {
+    const API = this.app.$API
+    const graphqlOperation = this.app.$graphqlOperation
+    // const GetEvent = `query GetEvent($id: ID! $nextToken: String) {
+    //   getEvent(id: $id) {
+    //     id
+    //     name
+    //     description
+    //     comments(nextToken: $nextToken) {
+    //       items {
+    //         content
+    //       }
+    //     }
+    //   }
+    // }`
+    const GetThing = `query Test($id: ID! $meta: String) {
+      get(id: $id meta: $meta){
+        id
+        meta
+      }
+    }`
+    const oneThing = await API.graphql(graphqlOperation(GetThing, { id: 123, meta: 'testing' }))
+    // const oneEvent = await API.graphql(graphqlOperation(GetEvent, { id: '5e693559-5b87-4973-8647-771329e24777' }))
+    console.log(oneThing.data.get)
+    // console.log(oneEvent.data.getEvent)
+    // console.log(this.app)
+    return oneThing.data
+  },
   sendEmailCode ({commit, state}) {
     return new Promise((resolve, reject) => {
       webAuth.passwordlessStart({
@@ -274,7 +304,8 @@ export const actions = {
       })
     })
   },
-  async setSession ({ state, rootState, commit, dispatch }) {
+  async setSession ({ state, rootState, commit, dispatch, app }) {
+    this.app.Amplify.configure(AWSExports)
     function parseHash () {
       return new Promise((resolve, reject) => {
         webAuth.parseHash({ hash: window.location.hash }, function (err, authResult) {
@@ -356,11 +387,32 @@ export const actions = {
     //   duration: 8000
     // })
     // console.log('hi from after Snackbar.open')
-    AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-      IdentityPoolId: 'us-east-1:f8d2c9d3-22f9-4de7-a8b2-88eb298dfd0a',
-      Logins: {
-        'montg.auth0.com': idToken
+    // AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+    //   IdentityPoolId: 'us-east-1:f8d2c9d3-22f9-4de7-a8b2-88eb298dfd0a',
+    //   Logins: {
+    //     'montg.auth0.com': idToken
+    //   }
+    // })
+    // console.log('Auth', this.app.$Auth.currentSession())
+    this.app.$Auth.federatedSignIn(
+      // Initiate federated sign-in with Google identity provider
+      'montg.auth0.com',
+      {
+        // the JWT token
+        token: idToken,
+        // the expiration time
+        expires_at: jwtDecode(idToken).exp
+      },
+      // a user object
+      {
+        name: jwtDecode(idToken)['https://demsabroad.org/user'].lastName,
+        email: jwtDecode(idToken)['https://demsabroad.org/user'].email
       }
+    ).then(async () => {
+      // console.log(this)
+      let user = await this.app.$Auth.currentAuthenticatedUser()
+      console.log('user', user)
+      // console.log('Auth', this.app.$Auth.currentSession())
     })
     // AWS.config.credentials.get(function () {
     //   var syncClient = new AWS.CognitoSyncManager()

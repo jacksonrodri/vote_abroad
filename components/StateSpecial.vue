@@ -71,7 +71,7 @@
       </b-message>
       <b-field :label="$t('request.vaRules.label')">
       <!-- {{$t('request.vaRules.employerInstructions')}} -->
-        <b-input  @input="setVal(val)"></b-input>
+        <b-input  @input="(val) => setVal(`The name of your employer or the name of your spouse's or parent/guardian's employer: ${val}`)"></b-input>
       </b-field>
     </div>
   <!-- VT -->

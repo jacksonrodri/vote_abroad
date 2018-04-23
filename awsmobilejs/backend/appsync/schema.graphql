@@ -51,6 +51,15 @@ getEvent(id: ID! ): Event
 listEvents(limit: Int,nextToken: String ): EventConnection
 }
 
+type Request
+{
+requestId: ID!
+firstName: String
+middleName: String
+lastName: String
+party: String
+}
+
 type Subscription
 {
 subscribeToEventComments(eventId: String! ): Comment
