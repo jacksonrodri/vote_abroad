@@ -288,7 +288,7 @@
         "stateIdRequired": "You must provide at least ONE of valid form of ID (from the list above) if you have it.  "
       },
       "StateID": "State ID",
-      "SSN": "Your full Social Security Number",
+      "SSN": "a Social Security Number",
       "label": "Identification",
       "tooltipTitle": "Why am I being asked this?",
       "noid1": "I don't have a {id}",
@@ -296,7 +296,7 @@
       "noid2": "I don't have the above identification",
       "tooltipReq1": "{state} voters must provide a {id}. \n\n\n\nIf you can't find your {id}, you can look (suggestions)\n\n \\*\\*'I don't have a {id}.'\\*\\*",
       "tooltipReq2": "**_ONE_** of the following forms of identification is required for {state} voters:\n\n {allButLastTypes} or {lastType}. \n\n(todo: add suggestions on finding the number if forgotten) \n\nIf you don't have any of these, please select **'I don't have the above identification.'**",
-      "instructionsReq1": "{state} voters must provide a {id}.  If you don't have {id}, please select **I don't have a {id}.**",
+      "instructionsReq1": "{state} voters must provide {id}.  If you don't have {idType}, please select **I don't have a {idType}.**",
       "instructionsReq2": "{state} voters must provide **ONE** of the following forms of identification: {allButLastTypes} or {lastType}. If you don't have any of these, please select **'I don't have the above identification.'**",
       "PassportNumber": "Passport Number",
       "TribalID": "Tribal ID",
