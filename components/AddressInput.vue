@@ -92,11 +92,11 @@
         </div>
         <div class="field is-horizontal" v-show="!usesAlternateFormat">
           <div class="field-body">
-            <div class="field" v-for="field in localityFields" :key="Object.keys(field)[0]">
+            <template v-for="field in localityFields">
               <!-- <p v-if="Object.keys(field)[0] === 'localityname'" class="control is-expanded">
                 <input class="input" type="text" @input="updateAddress()" v-model="locality" :placeholder="field.localityname.label">
               </p> -->
-              <b-field :type="validations.locality.$error ? 'is-danger' : ''"
+              <b-field :key="Object.keys(field)[0]" :type="validations.locality.$error ? 'is-danger' : ''"
                 v-if="Object.keys(field)[0] === 'localityname'"
                 :message="validations.locality.$error ? Object.keys(validations.locality.$params).map(x => $t(`request.abrAdr.messages.locality-${x}`)) : '' ">
                 <b-input v-model="locality"
@@ -106,7 +106,7 @@
                   @input="updateAddress()">
                 </b-input>
               </b-field>
-              <div v-if="Object.keys(field)[0] === 'administrativearea'">
+              <div :key="Object.keys(field)[0]" v-if="Object.keys(field)[0] === 'administrativearea'" class="field">
                 <div v-if="field.administrativearea && field.administrativearea.options" >
                   <b-autocomplete
                     v-model="region"
@@ -123,15 +123,15 @@
                 </div>
                 <input v-if="field.administrativearea && !field.administrativearea.options" v-model="region" @input="updateAddress()" class="input" type="text" :placeholder="field.administrativearea.label">
               </div>
-              <p v-if="Object.keys(field)[0] === 'postalcode'" class="control is-expanded">
+              <div :key="Object.keys(field)[0]" v-if="Object.keys(field)[0] === 'postalcode'" class="field">
                 <input class="input"
                   v-model="postalCode"
                   type="text"
                   @input="updateAddress()"
                   autocomplete="postal-code"
                   :placeholder="field.postalcode.label">
-              </p>
-            </div>
+              </div>
+            </template>
           </div>
         </div>
         <div v-if="(usOnly !== undefined && usOnly !== false) || usOnly === true" class="field is-fullwidth">
