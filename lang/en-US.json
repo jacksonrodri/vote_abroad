@@ -288,7 +288,7 @@
         "stateIdRequired": "You must provide at least ONE of valid form of ID (from the list above) if you have it.  "
       },
       "StateID": "State ID",
-      "SSN": "a Social Security Number",
+      "SSN": "Social Security Number",
       "label": "Identification",
       "tooltipTitle": "Why am I being asked this?",
       "noid1": "I don't have a {id}",
