@@ -505,7 +505,7 @@ export default {
     tel () { return this.currentRequest && this.currentRequest.tel ? this.currentRequest.tel : ' ' },
     fax () { return this.currentRequest && this.currentRequest.fax ? this.currentRequest.fax : ' ' },
     party () { return this.currentRequest && this.currentRequest.party ? this.currentRequest.party.toString() : ' ' },
-    addlInfo () { return this.currentRequest && this.currentRequest.addlInfo ? this.currentRequest.addlInfo.toString() : ' ' },
+    addlInfo () { return this.currentRequest && this.currentRequest.stateSpecial ? this.currentRequest.addlInfo.stateSpecial() : ' ' },
     date () { return this.currentRequest && this.currentRequest.date ? this.currentRequest.date.toString() : ' ' },
     voterClass () { return this.currentRequest && this.currentRequest.voterClass ? this.currentRequest.voterClass.toString() : ' ' },
     sex () { return this.currentRequest && this.currentRequest.sex && this.currentRequest.sex !== 'decline' ? this.currentRequest.sex.toString() : ' ' },

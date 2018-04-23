@@ -1,5 +1,5 @@
 <template>
-  <div><br/>
+  <div class="field"><br/>
   <!-- AK -->
     <div v-if="state === 'AK'">
       <span class="is-flex"><label class="label">{{ label }}</label><span @click="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
@@ -8,7 +8,7 @@
       </b-message>
       {{$t('request.akRules.resInstructions')}}
       <b-field :label="$t('request.akRules.label')">
-        <b-input  @input="setVal(val)"></b-input>
+        <b-input  @input="(val) => setVal(`I will provide the following proof of Alaska Residency: ${val}`)"></b-input>
       </b-field>
       <div v-if="isFWAB">
         {{$t('request.akRules.fwabWitness')}}
@@ -22,7 +22,7 @@
       </b-message>
       {{$t('request.azRules.citInstructions')}}
       <b-field :label="$t('request.azRules.label')">
-        <b-input  @input="setVal(val)"></b-input>
+        <b-input  @input="(val) => setVal(`I will provide the following proof of citizenship: ${val}`)"></b-input>
       </b-field>
     </div>
   <!-- OK -->
@@ -33,7 +33,7 @@
       </b-message>
       {{$t('request.okRules.primaryInstructions')}}
       <b-field :label="$t('request.okRules.label')">
-        <b-input @input="setVal(val)"></b-input>
+        <b-input @input="(val) => setVal(`I request to be able to vote in the following party primary: ${val}`)"></b-input>
       </b-field>
     </div>
   <!-- PR -->
@@ -44,7 +44,7 @@
       </b-message>
       {{ $t('request.prRules.parentsInstructions')}}
       <b-field>
-        <b-input @input="val => setVal(val)" :label="$t('request.prRules.parentsInstructions')"></b-input>
+        <b-input @input="val => setVal(`My father and mother's first names: ${val}`)" :label="$t('request.prRules.parentsInstructions')"></b-input>
       </b-field>
     </div>
   <!-- SC -->
@@ -53,12 +53,11 @@
       <b-message title="Why am I being asked this?" type="is-info" has-icon :active.sync="isOpen">
         <vue-markdown>{{$t('request.scRules.tooltip')}}</vue-markdown>
       </b-message>
-      {{$t('request.scRules.raceInstructions')}}
+      {{$t('request.scRules.raceInstructions')}} {{$t('request.scRules.prevRegInstructions')}}
       <b-field :label="$t('request.scRules.label')">
         <b-input v-model="scRace" @input="setVal(scVal)"></b-input>
       </b-field>
       <!-- Your previous state of registration (if any) -->
-      {{$t('request.scRules.prevRegInstructions')}}
       <b-field :label="$t('request.scRules.prevRegLabel')">
         <b-input v-model="scPrev" @input="setVal(scVal)"></b-input>
       </b-field>
@@ -71,19 +70,19 @@
       </b-message>
       <b-field :label="$t('request.vaRules.label')">
       <!-- {{$t('request.vaRules.employerInstructions')}} -->
-        <b-input  @input="setVal(val)"></b-input>
+        <b-input  @input="(val) => setVal(`The name of your employer or the name of your spouse's or parent/guardian's employer: ${val}`)"></b-input>
       </b-field>
     </div>
   <!-- VT -->
     <div v-if="state === 'VT'  && isRegistering">
       <span class="is-flex"><label class="label">{{ label }}</label><span @click="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
+      <b-field :label="$t('request.vtRules.label')">
+        {{$t('request.vtRules.oathInstructions')}}
+        <b-input @input="val => setVal(val)"></b-input>
+      </b-field>
       <b-message title="Why am I being asked this?" type="is-info" has-icon :active.sync="isOpen">
         <vue-markdown>{{$t('request.vtRules.tooltip')}}</vue-markdown>
       </b-message>
-      {{$t('request.vtRules.oathInstructions')}}
-      <b-field :label="$t('request.vtRules.label')">
-        <b-input @input="setVal(val)"></b-input>
-      </b-field>
     </div>
   </div>
 </template>

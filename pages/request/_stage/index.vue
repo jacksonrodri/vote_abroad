@@ -291,7 +291,7 @@
           <i18n v-if="stateRules && stateRules.id && stateRules.id.length === 0"
             path=request.id.instructionsOptional tag="vue-markdown" :places="{ state: stateRules.state}">
           </i18n>
-          <i18n v-else-if="stateRules && stateRules.id && stateRules.id.length === 1" path=request.id.instructionsReq1 tag="vue-markdown" :places="{ state: stateRules.state, id: $t(`request.id.${stateRules.id[0]}`)}">
+          <i18n v-else-if="stateRules && stateRules.id && stateRules.id.length === 1" path=request.id.instructionsReq1 tag="vue-markdown" :places="{ state: stateRules.state, id: $t(`request.id.${stateRules.id[0]}`), idType: $t(`request.id.${stateRules.id[0].indexOf('SSN') > -1 ? 'SSN' : stateRules.id[0]}`)}">
           </i18n>
           <i18n v-else path=request.id.instructionsReq2 tag="vue-markdown" :places="{ state: stateRules.state, allButLastTypes: allButLastIdType, lastType: lastIdType }">
           </i18n>
