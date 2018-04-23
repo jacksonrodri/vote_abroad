@@ -552,7 +552,7 @@ collections:
                 fields:
                   - {label: "Required", name: "required", widget: "string"}
           - label: "Vermont Rules"
-            name: "vaRules"
+            name: "vtRules"
             widget: "object"
             fields:
               - {label: "Field Label", name: "label", widget: "string"}
