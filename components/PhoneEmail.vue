@@ -70,12 +70,12 @@ export default {
     },
     value: {
       type: Object,
-      default: () => ({typed: '', country: '', isValidEmail: '', isValidPhone: '', intNumber: ''})
+      default: () => ({rawInput: '', country: '', isValidEmail: '', isValidPhone: '', intNumber: ''})
     }
   },
   async mounted () {
     this.phoneCountry = this.value.country || this.userCountry || 'US'
-    this.typed = this.value.typed || ''
+    this.typed = this.value.rawInput || ''
     this.phoneExamples = await phoneExamples()
     metadata = await md()
     console.log(metadata)
@@ -118,11 +118,11 @@ export default {
         validPhone = isValidNumber(this.typed, this.phoneCountry, metadata)
         if (validPhone) { intNumber = format(parse(this.typed, this.phoneCountry, metadata), 'E.164', metadata) }
       }
-      this.$emit('input', {typed: this.typed, country: this.phoneCountry, isValidEmail: validEmail, isValidPhone: validPhone, intNumber: intNumber})
+      this.$emit('input', {rawInput: this.typed, country: this.phoneCountry, isValidEmail: validEmail, isValidPhone: validPhone, intNumber: intNumber})
       this.$store.commit('userauth/updateUser', {emailAddress: validEmail ? this.typed : '', mobileIntFormat: intNumber})
     },
     value: function (newVal, oldVal) {
-      this.typed = newVal.typed
+      this.typed = newVal.rawInput
     },
     userCountry: function (newVal, oldVal) {
       if (!this.phoneCountry || this.phoneCountry === 'US') { this.phoneCountry = newVal }

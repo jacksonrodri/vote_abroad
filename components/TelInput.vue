@@ -77,12 +77,12 @@ export default {
     },
     value: {
       type: Object,
-      default: () => ({typed: '', country: '', isValidPhone: '', intNumber: ''})
+      default: () => ({rawInput: '', country: '', isValidPhone: '', intNumber: ''})
     }
   },
   mounted () {
     this.phoneCountry = this.value.country || this.userCountry || 'US'
-    this.typed = this.value.typed || this.$store.state.userauth.user.mobileIntFormat || ''
+    this.typed = this.value.rawInput || this.$store.state.userauth.user.mobileIntFormat || ''
   },
   data () {
     return {
@@ -113,10 +113,10 @@ export default {
       if (formatter.country) { this.phoneCountry = formatter.country }
       validPhone = isValidNumber(this.typed, this.phoneCountry)
       if (validPhone) { intNumber = format(parse(this.typed, this.phoneCountry), 'E.164') }
-      this.$emit('input', {typed: this.typed, country: this.phoneCountry, isValidPhone: validPhone, intNumber: intNumber})
+      this.$emit('input', {rawInput: this.typed, country: this.phoneCountry, isValidPhone: validPhone, intNumber: intNumber})
     },
     value: function (newVal, oldVal) {
-      this.typed = newVal.typed
+      this.typed = newVal.rawInput
     }
   },
   computed: {
