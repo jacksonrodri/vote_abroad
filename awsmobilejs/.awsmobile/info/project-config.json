@@ -1,6 +1,6 @@
 {
 	"SourceDir": ".",
 	"DistributionDir": "dist",
-	"BuildCommand": "yarn generate",
-	"StartCommand": "yarn dev"
+	"BuildCommand": "npm run generate",
+	"StartCommand": "npm run dev"
 }
