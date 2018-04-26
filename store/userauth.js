@@ -12,9 +12,9 @@ const jwtDecode = require('jwt-decode')
 // AWS.config.credentials = new AWS.CognitoIdentityCredentials({
 //   IdentityPoolId: 'us-east-1:f8d2c9d3-22f9-4de7-a8b2-88eb298dfd0a'
 // })
-// const redirectUri = `https://votefromabroad.netlify.com`
+const redirectUri = `https://amplify-appsync--votefromabroad.netlify.com`
 // const redirectUri = `http://localhost:3000`
-const redirectUri = process.env.url
+// const redirectUri = process.env.url
 
 const webAuth = new WebAuth({
   domain: 'montg.auth0.com',
