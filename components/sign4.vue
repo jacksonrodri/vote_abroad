@@ -173,10 +173,10 @@ export default {
     email () { return this.currentRequest && this.currentRequest.email ? this.currentRequest.email.toString() : ' ' },
     tel () { return this.currentRequest && this.currentRequest.tel && this.currentRequest.tel.intNumber ? this.currentRequest.tel.intNumber : '' },
     leoEmail () {
-      return this.currentRequest.votAdr.leo && this.currentRequest.votAdr.leo.e ? this.currentRequest.votAdr.leo.e : ''
+      return this.currentRequest.leo && this.currentRequest.leo.e ? this.currentRequest.leo.e : ''
     },
     leoName () {
-      return this.currentRequest.votAdr.leo && this.currentRequest.votAdr.leo.n ? this.currentRequest.votAdr.leo.n : ''
+      return this.currentRequest.leo && this.currentRequest.leo.n ? this.currentRequest.leo.n : ''
     },
     ...mapState({
       currentRequestIndex: state => state.requests.currentRequest,

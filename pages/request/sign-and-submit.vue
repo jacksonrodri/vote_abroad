@@ -131,8 +131,8 @@
                         <!-- {{$t('request.stages.mailPost')}} -->
                       </span>
                       <div class="box">
-                        <span v-if="currentRequest.votAdr.leo.n"><strong>{{ currentRequest.votAdr.leo.n }}</strong><br/></span>
-                        <span v-if="currentRequest.votAdr.leo.f"><strong>+1 {{ currentRequest.votAdr.leo.f }}</strong><br/></span>
+                        <span v-if="currentRequest.leo.n"><strong>{{ currentRequest.leo.n }}</strong><br/></span>
+                        <span v-if="currentRequest.leo.f"><strong>+1 {{ currentRequest.leo.f }}</strong><br/></span>
                       </div>
                     </div>
                   </article>
@@ -235,13 +235,13 @@
                     <div class="media-content">
                       <span class="is-size-5">{{$t('request.stages.mailPost')}}</span>
                       <div class="box">
-                        <span v-if="currentRequest.votAdr.leo.n"><strong>{{ currentRequest.votAdr.leo.n }}</strong><br/></span>
-                        <span v-if="currentRequest.votAdr.leo.a1"><strong>{{ currentRequest.votAdr.leo.a1 }}</strong><br/></span>
-                        <span v-if="currentRequest.votAdr.leo.a2"><strong>{{ currentRequest.votAdr.leo.a2 }}</strong><br/></span>
-                        <span v-if="currentRequest.votAdr.leo.a3"><strong>{{ currentRequest.votAdr.leo.a3 }}</strong><br/></span>
-                        <span><strong>{{ currentRequest.votAdr.leo.c }}, </strong>
-                        <strong>{{ currentRequest.votAdr.leo.s }} </strong>
-                        <strong>{{ currentRequest.votAdr.leo.z }}</strong><br/></span>
+                        <span v-if="currentRequest.leo.n"><strong>{{ currentRequest.leo.n }}</strong><br/></span>
+                        <span v-if="currentRequest.leo.a1"><strong>{{ currentRequest.leo.a1 }}</strong><br/></span>
+                        <span v-if="currentRequest.leo.a2"><strong>{{ currentRequest.leo.a2 }}</strong><br/></span>
+                        <span v-if="currentRequest.leo.a3"><strong>{{ currentRequest.leo.a3 }}</strong><br/></span>
+                        <span><strong>{{ currentRequest.leo.c }}, </strong>
+                        <strong>{{ currentRequest.leo.s }} </strong>
+                        <strong>{{ currentRequest.leo.z }}</strong><br/></span>
                         <span class="has-text-right"><strong>United States of America</strong><br/></span>
                       </div>
                     </div>
@@ -317,10 +317,10 @@ export default {
     ScrollUp
   },
   async asyncData ({app, store}) {
-    let state = store.getters['requests/getCurrent'].votAdr.leo.s || ''
+    let state = store.getters['requests/getCurrent'].leo.s || ''
     return {
       registering: store.getters['requests/getCurrent'].isRegistered !== 'registered',
-      state: store.getters['requests/getCurrent'].votAdr.leo.s,
+      state: store.getters['requests/getCurrent'].leo.s,
       allStateRules: await app.$content('rls')
         .query({ exclude: ['anchors', 'body', 'meta', 'path', 'permalink'] })
         .getAll(),
@@ -495,7 +495,7 @@ export default {
     votStreet () { return this.currentRequest && this.currentRequest.votAdr && this.currentRequest.votAdr.thoroughfare ? this.currentRequest.votAdr.thoroughfare.toString() : ' ' },
     votApt () { return this.currentRequest && this.currentRequest.votAdr && this.currentRequest.votAdr.premise ? this.currentRequest.votAdr.premise.toString() : ' ' },
     votCity () { return this.currentRequest && this.currentRequest.votAdr && this.currentRequest.votAdr.locality ? this.currentRequest.votAdr.locality.toString() : ' ' },
-    votState () { return this.currentRequest && this.currentRequest.votAdr && this.currentRequest.votAdr.regionCode ? this.currentRequest.votAdr.regionCode.toString() : ' ' },
+    votState () { return this.currentRequest && this.currentRequest.votAdr && this.currentRequest.votAdr.stateISO ? this.currentRequest.votAdr.stateISO.toString() : ' ' },
     votCounty () { return this.currentRequest && this.currentRequest.votAdr && this.currentRequest.votAdr.county ? this.currentRequest.votAdr.county.toString() : ' ' },
     votZip () { return this.currentRequest && this.currentRequest.votAdr && this.currentRequest.votAdr.postalcode ? this.currentRequest.votAdr.postalcode.toString() : ' ' },
     abrAdr () { return this.currentRequest && this.currentRequest.abrAdr ? this.currentRequest.abrAdr : null },
@@ -519,20 +519,20 @@ export default {
       }
     },
     leoAdr () {
-      let leo = this.currentRequest.votAdr.leo
+      let leo = this.currentRequest.leo
       return `${leo.n ? leo.n + '\n' : ''}${leo.a1 ? leo.a1 + '\n' : ''}${leo.a2 ? leo.a2 + '\n' : ''}${leo.a3 ? leo.a3 + '\n' : ''}${leo.c ? leo.c + ', ' : ''}${leo.s ? leo.s + ' ' : ''}${leo.z ? leo.z + '\n' : '\n'}United States of America`
     },
     leoEmail () {
-      return this.currentRequest.votAdr.leo && this.currentRequest.votAdr.leo.e ? this.currentRequest.votAdr.leo.e : ''
+      return this.currentRequest.leo && this.currentRequest.leo.e ? this.currentRequest.leo.e : ''
     },
     leoName () {
-      return this.currentRequest.votAdr.leo && this.currentRequest.votAdr.leo.n ? this.currentRequest.votAdr.leo.n : ''
+      return this.currentRequest.leo && this.currentRequest.leo.n ? this.currentRequest.leo.n : ''
     },
     leoFax () {
-      return this.currentRequest.votAdr.leo && this.currentRequest.votAdr.leo.f ? '+1 ' + this.currentRequest.votAdr.leo.f : ''
+      return this.currentRequest.leo && this.currentRequest.leo.f ? '+1 ' + this.currentRequest.leo.f : ''
     },
     leoPhone () {
-      return this.currentRequest.votAdr.leo && this.currentRequest.votAdr.leo.p ? '+1 ' + this.currentRequest.votAdr.leo.p : ''
+      return this.currentRequest.leo && this.currentRequest.leo.p ? '+1 ' + this.currentRequest.leo.p : ''
     },
     ballotReceiptOptionsString () {
       if (!this.stateRules || this.stateRules.fpcaSubmitOptionsRequest.length === 0) {

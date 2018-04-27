@@ -2,12 +2,12 @@
     "version" : "2017-02-28",
     "operation" : "DeleteItem",
     "key" : {
-        "id" : { "S" : "${context.args.id}" }
+        "id" : { "S" : "${context.args.input.id}" }
     },
     "condition" : {
-        "expression"       : "contains(Owner,:expectedOwner)",
+        "expression"       : "contains(createdBy,:expectedIdentity)",
         "expressionValues" : {
-            ":expectedOwner" : { "S" : "${context.identity.username}" }
+            ":expectedIdentity" : { "S" : "${context.identity.cognitoIdentityId}" }
         }
     }
 }

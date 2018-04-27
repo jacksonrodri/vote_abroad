@@ -57,6 +57,43 @@ export const mutations = {
 }
 
 export const actions = {
+  async updateRequest ({commit, state, app}) {
+    const API = this.app.$API
+    const graphqlOperation = this.app.$graphqlOperation
+    const CreateRequest = `mutation CreateRequest($input: CreateRequestInput!){
+      createRequest(input: $input) {
+        id
+        firstName
+        middleName
+        lastName
+        abrAdr{
+          premise
+        }
+      }
+    }`
+    // const requestInput = {
+    //   input: {
+    //     firstName: 'Tomorrow',
+    //     middleName: 'Party',
+    //     lastName: 'Montgomery',
+    //     abrAdr: {
+    //       premise: 'Flat 7, 27/f Block C, Greenwood Garden',
+    //       thoroughfare: '7-11 Shakok St',
+    //       locality: 'Shatin',
+    //       administrativearea: 'New Territories',
+    //       countryiso: 'HK',
+    //       country: 'Hong Kong'
+    //     }
+    //   }
+    // }
+    let currentRequestState = Object.assign({}, state.requests[0])
+    if (currentRequestState.identification) delete currentRequestState.identification
+    const stateRequestInput = {input: currentRequestState}
+    const newRequest = await API.graphql(graphqlOperation(CreateRequest, stateRequestInput))
+    console.log('id', newRequest.data.createRequest.id)
+    commit('update', {id: newRequest.data.createRequest.id})
+    return newRequest.data
+  },
   addOrUpdate ({ commit, state }, {id, ...args} = {}) {
     if (!state.requests.findIndex(x => x.id === id) || !id) {
       // add request

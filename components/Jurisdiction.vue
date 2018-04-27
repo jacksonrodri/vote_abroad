@@ -65,7 +65,8 @@ export default {
   },
   computed: {
     votAdr () { return this.$store.getters['requests/getCurrent'].votAdr },
-    jurisdiction () { return this.votAdr.leo && this.votAdr.leo.n ? this.votAdr.leo.n : '' },
+    leo () { return this.$store.getters['requests/getCurrent'].leo },
+    jurisdiction () { return this.leo && this.leo.n ? this.leo.n : '' },
     street: {
       get () { return this.votAdr.thoroughfare || '' },
       set (value) { this.updateAddress('thoroughfare', value) }
@@ -102,7 +103,11 @@ export default {
   },
   methods: {
     updateLeo: function (value) {
-      this.$store.commit('requests/update', {votAdr: Object.assign({}, this.votAdr, {leo: value})})
+      let leo = {}
+      Object.keys(value).forEach(x => {
+        if (value[x]) leo[x] = value[x]
+      })
+      this.$store.commit('requests/update', {leo: leo})
     },
     updated: function () {
       this.$emit('input')

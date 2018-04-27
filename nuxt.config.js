@@ -103,11 +103,11 @@ module.exports = {
     middleware: 'menu-helper'
   },
   plugins: [
+    {src: '~/plugins/plugged', ssr: false },
     // { src: '~plugins/amplify_init.js', ssr: false },
     {src: '~/plugins/buefy'},
     {src: '~/plugins/vuelidate'},
-    {src: '~/plugins/intercom'},
-    {src: '~/plugins/plugged', ssr: false }
+    {src: '~/plugins/intercom'}
   ],
   /*
   ** Build configuration

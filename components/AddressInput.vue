@@ -450,22 +450,22 @@ export default {
         })
     }, 500),
     updateAddress () {
-      this.$emit('input', {
-        poBox: this.postOfficeBox,
-        premise: this.extendedAddress,
-        thoroughfare: this.streetAddress,
-        locality: this.locality,
-        administrativearea: this.region,
-        postalcode: this.postalCode,
-        country: this.countryName,
-        countryiso: this.cCountryCode !== 'un' && this.countryCode ? this.cCountryCode : '',
-        usesAlternateFormat: this.usesAlternateFormat,
-        alt1: this.alt1,
-        alt2: this.alt2,
-        alt3: this.alt3,
-        alt4: this.alt4,
-        alt5: this.alt5
-      })
+      let input = {}
+      if (this.postOfficeBox) input.poBox = this.postOfficeBox
+      if (this.extendedAddress) input.premise = this.extendedAddress
+      if (this.streetAddress) input.thoroughfare = this.streetAddress
+      if (this.locality) input.locality = this.locality
+      if (this.regions) input.administrativearea = this.region
+      if (this.postalCode) input.postalcode = this.postalCode
+      if (this.countryName) input.country = this.countryName
+      if (this.cCountryCode !== 'un' && this.countryCode) input.countryiso = this.cCountryCode
+      if (this.usesAlternateFormat) input.usesAlternateFormat = this.usesAlternateFormat
+      if (this.alt1) input.alt1 = this.alt1
+      if (this.alt2) input.alt2 = this.alt2
+      if (this.alt3) input.alt3 = this.alt3
+      if (this.alt4) input.alt4 = this.alt4
+      if (this.alt5) input.alt5 = this.alt5
+      this.$emit('input', input)
     },
     findMessage (field) {
       return this.validations

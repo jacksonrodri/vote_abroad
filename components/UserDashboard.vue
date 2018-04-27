@@ -120,7 +120,7 @@ export default {
     user () { return this.$store.state.userauth.user },
     requests () { return this.$store.state.requests.requests },
     currentRequest () { return this.$store.state.requests.currentRequest },
-    states () { return new Set(this.requests.map(x => x.votAdr.regionCode)) }
+    states () { return new Set(this.requests.map(x => x.votAdr.stateISO)) }
   }
 }
 </script>

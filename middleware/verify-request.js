@@ -20,10 +20,10 @@ export default function ({ route, params, store, redirect }) {
     (!current.votAdr ||
     !current.votAdr.thoroughfare ||
     !current.votAdr.locality ||
-    !current.votAdr.regionCode ||
+    !current.votAdr.stateISO ||
     !current.votAdr.postalcode ||
-    !current.votAdr.leo ||
-    !current.votAdr.leo.a1 ||
+    // !current.leo ||
+    !current.leo.a1 ||
     !current.voterClass ||
     !current.recBallot)
   ) {

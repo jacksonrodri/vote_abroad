@@ -1,17 +1,8 @@
 import { WebAuth } from 'auth0-js'
 import axios from 'axios'
 import { Dialog, Toast, Snackbar, LoadingProgrammatic } from 'buefy'
-// import { API, graphqlOperation } from 'aws-amplify'
-// import * as AWS from 'aws-sdk'
 import AWSExports from '../aws-exports'
-// import 'amazon-cognito-js'
 const jwtDecode = require('jwt-decode')
-// var AWS = require('aws-sdk')
-
-// AWS.config.region = 'us-east-1' // Region
-// AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-//   IdentityPoolId: 'us-east-1:f8d2c9d3-22f9-4de7-a8b2-88eb298dfd0a'
-// })
 // const redirectUri = `https://amplify-appsync--votefromabroad.netlify.com`
 // const redirectUri = `http://localhost:3000`
 const redirectUri = process.env.url
@@ -21,13 +12,13 @@ const webAuth = new WebAuth({
   redirectUri: redirectUri,
   clientID: '0Wy4khZcuXefSfrUuYDUP0Udag4FqL2u',
   responseType: 'token id_token'
-  // audience: optons.audience || options.domain.concat('/userinfo')
 })
 
 export const state = () => ({
   idToken: null,
   expirationDate: null,
   gcToken: null,
+  IdentityId: null,
   redirectPath: null,
   user: {
     firstName: null,
@@ -84,50 +75,13 @@ export const mutations = {
   },
   updateRedirectPath (state, path) {
     state.redirectPath = path
+  },
+  updateIdentityId (state, id) {
+    state.IdentityId = id
   }
 }
 
 export const actions = {
-  async getEvent ({app}) {
-    const API = this.app.$API
-    const graphqlOperation = this.app.$graphqlOperation
-    const CreateRequest = `mutation CreateRequest($input: CreateRequestInput!){
-      createRequest(input: $input) {
-        id
-        firstName
-        middleName
-        lastName
-      }
-    }`
-    // id: '82d8b9a0-d961-4ab3-9b12-610e8f1779be',
-    const newRequest = await API.graphql(graphqlOperation(CreateRequest, { input: { firstName: 'Tomorrow', middleName: 'Party  ', lastName: 'Montgomery' } }))
-    console.log('newRequest.data', newRequest.data)
-    return newRequest.data
-    // const GetEvent = `query GetEvent($id: ID! $nextToken: String) {
-    //   getEvent(id: $id) {
-    //     id
-    //     name
-    //     description
-    //     comments(nextToken: $nextToken) {
-    //       items {
-    //         content
-    //       }
-    //     }
-    //   }
-    // }`
-    // const GetThing = `query Test($id: ID! $meta: String) {
-    //   get(id: $id meta: $meta){
-    //     id
-    //     meta
-    //   }
-    // }`
-    // const oneThing = await API.graphql(graphqlOperation(GetThing, { id: 123, meta: 'testing' }))
-    // // const oneEvent = await API.graphql(graphqlOperation(GetEvent, { id: '5e693559-5b87-4973-8647-771329e24777' }))
-    // console.log('onething', oneThing.data.get)
-    // // console.log(oneEvent.data.getEvent)
-    // // console.log(this.app)
-    // return oneThing.data
-  },
   sendEmailCode ({commit, state}) {
     return new Promise((resolve, reject) => {
       webAuth.passwordlessStart({
@@ -138,7 +92,6 @@ export const actions = {
         if (err) {
           reject(err)
         }
-        // console.log(`Sent code to ${state.user.emailAddress}`)
         resolve(`Sent code to ${state.user.emailAddress}`)
       })
     })
@@ -153,7 +106,6 @@ export const actions = {
         if (err) {
           reject(err)
         }
-        // console.log(`Sent code to ${state.user.emailAddress}`)
         resolve(`Sent login link to ${state.user.emailAddress}`)
       })
     })
@@ -168,7 +120,6 @@ export const actions = {
         if (err) {
           reject(err)
         }
-        // console.log(`Sent code to ${state.user.mobilePhone}`)
         resolve()
       })
     })
@@ -177,7 +128,6 @@ export const actions = {
     if (!state.session.country) {
       let res = await axios.get('https://ipinfo.io/geo')
       commit('updateSessionGeo', res.data)
-      // console.log(res.data)
     }
   },
   async getUser ({commit, state, dispatch}) {
@@ -201,7 +151,6 @@ export const actions = {
     Dialog.prompt({
       title: 'Authentication',
       message: msg,
-      // message: `Enter the code we sent to ${state.user.emailAddress || state.user.mobileIntFormat}`,
       inputAttrs: {
         type: 'tel',
         placeholder: 'Type the code.',
@@ -230,12 +179,10 @@ export const actions = {
     const loadingComponent = LoadingProgrammatic.open()
     return new Promise((resolve, reject) => {
       webAuth.passwordlessVerify({
-        // realm: 'Username-Password-Authentication', // connection name or HRD domain
         connection: 'email',
         email: state.user.emailAddress,
         verificationCode: code,
         scope: 'openid profile email'
-        // audience: this.options.audience
       }, (err, authResult) => {
         if (err) {
           loadingComponent.close()
@@ -275,12 +222,10 @@ export const actions = {
     const loadingComponent = LoadingProgrammatic.open()
     return new Promise((resolve, reject) => {
       webAuth.passwordlessVerify({
-        // realm: 'Username-Password-Authentication', // connection name or HRD domain
         connection: 'sms',
         phoneNumber: state.user.mobileIntFormat,
         verificationCode: code,
         scope: 'openid profile email'
-        // audience: this.options.audience
       }, (err, authResult) => {
         if (err) {
           loadingComponent.close()
@@ -303,13 +248,13 @@ export const actions = {
           reject(err)
         }
         loadingComponent.close()
-        Snackbar.open({
-          message: `${authResult}`,
-          type: 'is-info',
-          position: 'is-top',
-          actionText: 'Retry',
-          duration: 8000
-        })
+        // Snackbar.open({
+        //   message: `${authResult}`,
+        //   type: 'is-info',
+        //   position: 'is-top',
+        //   actionText: 'Retry',
+        //   duration: 8000
+        // })
         // this.setSession(authResult)
         // Auth tokens in the result or an error
         resolve()
@@ -329,13 +274,17 @@ export const actions = {
         })
       })
     }
+    let Auth = this.app.$Auth
     function checkSession () {
       return new Promise((resolve, reject) => {
         webAuth.checkSession({
           scope: 'openid profile email'
         }, function (err, authResult) {
           if (err) {
-            console.log('checkSessionErr', err)
+            let id = Auth.credentials.data.IdentityId
+            let name = Auth.credentials_source
+            commit('updateIdentityId', id)
+            commit('updateUser', { firstName: name })
             // dispatch('clearData')
             return
           }
@@ -359,10 +308,8 @@ export const actions = {
     let authResult = hasHash ? await parseHash() : await checkSession()
     if (authResult.expiresIn * 1000 > Date.now()) {
       authResult = await renewAuth()
-      // console.log('renewing auth', authResult.expiresIn * 1000, Date.now())
     }
     let idToken = authResult.idToken
-    // console.log('authresult', authResult)
     commit('updateIdToken', idToken)
     commit('updateExpirationDate', jwtDecode(idToken).exp)
     commit('updateGcToken', jwtDecode(idToken)['https://graph.cool/token'])
@@ -390,29 +337,10 @@ export const actions = {
         }
       })
     }
-    // console.log(state.redirectPath)
-    // Snackbar.open({
-    //   message: `Your graphcool token is: ${jwtDecode(idToken)['https://graph.cool/token']}`,
-    //   type: 'is-info',
-    //   position: 'is-top',
-    //   actionText: 'Retry',
-    //   duration: 8000
-    // })
-    // console.log('hi from after Snackbar.open')
-    // AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-    //   IdentityPoolId: 'us-east-1:f8d2c9d3-22f9-4de7-a8b2-88eb298dfd0a',
-    //   Logins: {
-    //     'montg.auth0.com': idToken
-    //   }
-    // })
-    // console.log('Auth', this.app.$Auth.currentSession())
     this.app.$Auth.federatedSignIn(
-      // Initiate federated sign-in with Google identity provider
       'montg.auth0.com',
       {
-        // the JWT token
         token: idToken,
-        // the expiration time
         expires_at: jwtDecode(idToken).exp
       },
       // a user object
@@ -420,63 +348,11 @@ export const actions = {
         name: jwtDecode(idToken)['https://demsabroad.org/user'].lastName,
         email: jwtDecode(idToken)['https://demsabroad.org/user'].email
       }
-    ).then(async () => {
-      // console.log(this)
+    ).then(async (result) => {
+      console.log('result', result)
       let user = await this.app.$Auth.currentAuthenticatedUser()
       console.log('user', user)
-      // console.log('Auth', this.app.$Auth.currentSession())
     })
-    // AWS.config.credentials.get(function () {
-    //   var syncClient = new AWS.CognitoSyncManager()
-    //   syncClient.openOrCreateDataset('myDataset', function (err, dataset) {
-    //     if (err) throw (err)
-    //     dataset.put('myKey', 'myValue', function (err, record) {
-    //       if (err) throw (err)
-    //       dataset.synchronize({
-    //         onSuccess: function (data, newRecords) {
-    //           console.log('data', data, 'newRecords', newRecords)
-    //         }
-    //       })
-    //     })
-    //   })
-    // })
-    // var syncManager = new AWS.CognitoSyncManager()
-    // let dataset
-    // syncManager.openOrCreateDataset('alexData', function (err, d) {
-    //   if (err) throw (err)
-    //   dataset = d
-    //   dataset.put('Alex', 'Montgomery', function (err, record) {
-    //     if (err) console.log('datasetputerr', err)
-    //     console.log(record)
-    //     dataset.synchronize()
-    //   })
-    // })
-    // console.log(dataset)
-    // dataset.synchronize({
-    //   onSuccess: function(dataset, newRecords) {
-    //     console.log(dataset, newRecords)
-    //  },
-    //  onFailure: function(err) {
-    //     console.log(err)
-    //  }
-    // })
-    // dataset.put('newData', 'newValue', function (err, record) {
-    //   if (err) throw (err)
-    //   console.log('returned record', record)
-    // })
-    // dataset.synchronize()
-    // syncManager.openOrCreateDataset('myDatasetName', function (err, dataset) {
-    //   if (err) {
-    //     console.log('ERROR-syncManager.openOrCreateDataset', err)
-    //   } else {
-    //     console.log('SUCCESS-syncManager.openOrCreateDataset', dataset)
-    //     dataset.put('newKey', 'newValue', function (err, record) {
-    //       if (err) throw (err)
-    //       console.log('record', record)
-    //       dataset.synchronize()
-    //     })
-    //   }
-    // })
   },
   clearData ({ commit, dispatch }) {
     commit('updateGcToken', null)
