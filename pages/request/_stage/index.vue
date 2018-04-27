@@ -108,16 +108,16 @@
         </div>
       </voting-address>
 
-      <jurisdiction v-if="votAdr && votAdr.regionCode"
+      <jurisdiction v-if="votAdr && votAdr.stateISO"
         :label="$t('request.jurisdiction.label')"
         :toolTipTitle="$t('request.jurisdiction.tooltipTitle')"
         :placeholder="$t('request.jurisdiction.placeholder')"
-        :key="votAdr.regionCode"
+        :key="votAdr.stateISO"
         ref="jurisdiction"
         autocomplete="off"
         @input="delayTouch($v.jurisdiction)"
         :validations="($v.jurisdiction)"
-        :state="this.votAdr.regionCode">
+        :state="this.votAdr.stateISO">
                 <!-- toolTipTitle="Jurisdiction help" -->
         <div slot="instructions">
           <p>{{$t('request.jurisdiction.instructions')}}</p>
@@ -140,8 +140,8 @@
 
       <!-- isRegistered -->
     <is-registered
-      v-if="votAdr && votAdr.leo && votAdr.leo.j && votAdr.leo.t"
-      :label="$t('request.isRegistered.label', {jurisdiction: votAdr.leo.t === 'All' ? votAdr.leo.s : votAdr.leo.j + ' ' + votAdr.leo.t})"
+      v-if="votAdr && jurisdiction && jurisdiction.j && jurisdiction.t"
+      :label="$t('request.isRegistered.label', {jurisdiction: jurisdiction.t === 'All' ? jusridiction.s : jurisdiction.j + ' ' + jurisdiction.t})"
       :validations="($v.isRegistered)"
       @input="delayTouch($v.isRegistered)"
       v-model="isRegistered">
@@ -149,7 +149,7 @@
 
     <!-- recBallot -->
     <receive-ballot v-model="recBallot"
-      v-if="votAdr && votAdr.regionCode"
+      v-if="votAdr && votAdr.stateISO"
       :label="$t('request.receiveBallot.label')"
       :validations="$v.recBallot"
       @input="delayTouch($v.recBallot)"
@@ -269,7 +269,7 @@
       <state-special
         :label="$t('request.stateSpecial.label', {state: stateRules && stateRules.state ? stateRules.state: 'State'})"
         v-model="stateSpecial"
-        :state="votAdr && votAdr.regionCode ? votAdr.regionCode : ''"
+        :state="votAdr && votAdr.stateISO ? votAdr.stateISO : ''"
         :isFWAB="isFWAB"
         :isIndNoParty="party && (party.toLowerCase() === 'republican' || party.toLowerCase() === 'rep' || party.toLowerCase() === 'democrat' || party.toLowerCase() === 'dem') ? false : true"
         :isReturnUncertain="Boolean(voterClass === 'uncertainReturn')"
@@ -355,7 +355,7 @@ export default {
   scrollToTop: true,
   middleware: 'verify-request',
   mounted () {
-    console.log(this.$v)
+    // console.log(this.$v)
   },
   async asyncData ({app}) {
     return {
@@ -406,8 +406,8 @@ export default {
   },
   computed: {
     stateRules () {
-      if (this.votAdr && this.votAdr.regionCode) {
-        return this.allStateRules.find(x => x.iso.toLowerCase() === this.votAdr.regionCode.toLowerCase())
+      if (this.votAdr && this.votAdr.stateISO) {
+        return this.allStateRules.find(x => x.iso.toLowerCase() === this.votAdr.stateISO.toLowerCase())
       } else {
         return undefined
       }
@@ -501,7 +501,8 @@ export default {
       get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].votAdr : null },
       set (value) { this.$store.commit('requests/update', {votAdr: value}) }
     },
-    jurisdiction () { return this.votAdr.leo && this.votAdr.leo.n ? this.votAdr.leo.n : '' },
+    // jurisdiction () { return this.leo && this.leo.n ? this.leo.n : '' },
+    jurisdiction () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].leo : null },
     abrAdr: {
       get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].abrAdr : null },
       set (value) { this.$store.commit('requests/update', {abrAdr: value}) }
@@ -626,7 +627,7 @@ export default {
         case this.stage.slug === 'voting-information' && this.$v.votAdr.locality.$error:
           this.$refs.votAdr.$refs.city.focus()
           break
-        case this.stage.slug === 'voting-information' && this.$v.votAdr.regionCode.$error:
+        case this.stage.slug === 'voting-information' && this.$v.votAdr.stateISO.$error:
           this.$refs.votAdr.$refs.state.focus()
           break
         case this.stage.slug === 'voting-information' && this.$v.votAdr.postalcode.$error:
@@ -646,6 +647,7 @@ export default {
           break
         default:
           this.$router.push(nextPage)
+          this.$store.dispatch('requests/updateRequest')
       }
     },
     delayTouch ($v) {
@@ -688,7 +690,7 @@ export default {
       votAdr: {
         thoroughfare: { required },
         locality: { required },
-        regionCode: { required },
+        stateISO: { required },
         postalcode: { required }
       },
       jurisdiction: { required },

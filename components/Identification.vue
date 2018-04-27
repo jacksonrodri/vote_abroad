@@ -158,9 +158,6 @@ export default {
     },
     getRawValue (val, event) {
       this.rawValue = event.target._vCleave.getRawValue()
-    },
-    print (val) {
-      console.log('val', val)
     }
   }
 }

@@ -57,7 +57,7 @@ export default {
   },
   methods: {
     addRequest: function (event) {
-      console.log(event, this.tabs.length)
+      // console.log(event, this.tabs.length)
       // add a request if at end
       if (event === this.tabs.length - 1) {
         this.$store.commit('requests/add')
@@ -66,13 +66,13 @@ export default {
     },
     removeRequest: function () {
       this.$store.dispatch('requests/removeCurrent')
-    },
-    goBack: function () {
-      console.log('back')
-    },
-    goForward: function () {
-      console.log('forward')
     }
+    // goBack: function () {
+    //   console.log('back')
+    // },
+    // goForward: function () {
+    //   console.log('forward')
+    // }
   }
 }
 </script>

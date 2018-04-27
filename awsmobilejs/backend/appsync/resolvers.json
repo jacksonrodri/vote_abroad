@@ -1,0 +1,79 @@
+[
+    {
+        "typeName": "Event",
+        "fieldName": "comments",
+        "dataSourceName": "AppSyncCommentTable",
+        "requestMappingTemplate": "{managed-by-awsmobile-cli}:Event.comments.request",
+        "responseMappingTemplate": "{managed-by-awsmobile-cli}:Event.comments.response"
+    },
+    {
+        "typeName": "Mutation",
+        "fieldName": "commentOnEvent",
+        "dataSourceName": "AppSyncCommentTable",
+        "requestMappingTemplate": "{managed-by-awsmobile-cli}:Mutation.commentOnEvent.request",
+        "responseMappingTemplate": "{managed-by-awsmobile-cli}:Mutation.commentOnEvent.response"
+    },
+    {
+        "typeName": "Mutation",
+        "fieldName": "createEvent",
+        "dataSourceName": "AppSyncEventTable",
+        "requestMappingTemplate": "{managed-by-awsmobile-cli}:Mutation.createEvent.request",
+        "responseMappingTemplate": "{managed-by-awsmobile-cli}:Mutation.createEvent.response"
+    },
+    {
+        "typeName": "Mutation",
+        "fieldName": "createRequest",
+        "dataSourceName": "Requests",
+        "requestMappingTemplate": "{managed-by-awsmobile-cli}:Mutation.createRequest.request",
+        "responseMappingTemplate": "{managed-by-awsmobile-cli}:Mutation.createRequest.response"
+    },
+    {
+        "typeName": "Mutation",
+        "fieldName": "deleteEvent",
+        "dataSourceName": "AppSyncEventTable",
+        "requestMappingTemplate": "{managed-by-awsmobile-cli}:Mutation.deleteEvent.request",
+        "responseMappingTemplate": "{managed-by-awsmobile-cli}:Mutation.deleteEvent.response"
+    },
+    {
+        "typeName": "Mutation",
+        "fieldName": "deleteRequest",
+        "dataSourceName": "Requests",
+        "requestMappingTemplate": "{managed-by-awsmobile-cli}:Mutation.deleteRequest.request",
+        "responseMappingTemplate": "{managed-by-awsmobile-cli}:Mutation.deleteRequest.response"
+    },
+    {
+        "typeName": "Mutation",
+        "fieldName": "updateRequest",
+        "dataSourceName": "Requests",
+        "requestMappingTemplate": "{managed-by-awsmobile-cli}:Mutation.updateRequest.request",
+        "responseMappingTemplate": "{managed-by-awsmobile-cli}:Mutation.updateRequest.response"
+    },
+    {
+        "typeName": "Query",
+        "fieldName": "getEvent",
+        "dataSourceName": "AppSyncEventTable",
+        "requestMappingTemplate": "{managed-by-awsmobile-cli}:Query.getEvent.request",
+        "responseMappingTemplate": "{managed-by-awsmobile-cli}:Query.getEvent.response"
+    },
+    {
+        "typeName": "Query",
+        "fieldName": "getRequest",
+        "dataSourceName": "Requests",
+        "requestMappingTemplate": "{managed-by-awsmobile-cli}:Query.getRequest.request",
+        "responseMappingTemplate": "{managed-by-awsmobile-cli}:Query.getRequest.response"
+    },
+    {
+        "typeName": "Query",
+        "fieldName": "listEvents",
+        "dataSourceName": "AppSyncEventTable",
+        "requestMappingTemplate": "{managed-by-awsmobile-cli}:Query.listEvents.request",
+        "responseMappingTemplate": "{managed-by-awsmobile-cli}:Query.listEvents.response"
+    },
+    {
+        "typeName": "Query",
+        "fieldName": "listRequests",
+        "dataSourceName": "Requests",
+        "requestMappingTemplate": "{managed-by-awsmobile-cli}:Query.listRequests.request",
+        "responseMappingTemplate": "{managed-by-awsmobile-cli}:Query.listRequests.response"
+    }
+]

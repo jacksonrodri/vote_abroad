@@ -173,10 +173,10 @@ export default {
     email () { return this.currentRequest && this.currentRequest.email ? this.currentRequest.email.toString() : ' ' },
     tel () { return this.currentRequest && this.currentRequest.tel && this.currentRequest.tel.intNumber ? this.currentRequest.tel.intNumber : '' },
     leoEmail () {
-      return this.currentRequest.votAdr.leo && this.currentRequest.votAdr.leo.e ? this.currentRequest.votAdr.leo.e : ''
+      return this.currentRequest.leo && this.currentRequest.leo.e ? this.currentRequest.leo.e : ''
     },
     leoName () {
-      return this.currentRequest.votAdr.leo && this.currentRequest.votAdr.leo.n ? this.currentRequest.votAdr.leo.n : ''
+      return this.currentRequest.leo && this.currentRequest.leo.n ? this.currentRequest.leo.n : ''
     },
     ...mapState({
       currentRequestIndex: state => state.requests.currentRequest,
@@ -207,15 +207,15 @@ export default {
       }
     },
     afterEnter: function (el) {
-      console.log('el', el)
+      // console.log('el', el)
       if (this.value === 'capture') {
         this.startCamera()
       } else if (this.value === 'select') {
         this.drawSignatureSelections()
       } else if (this.value === 'choose') {
-        console.log('choose')
+        // console.log('choose')
       } else if (this.value === 'composeMessage') {
-        console.log('chosen sig', this.chosenSig)
+        // console.log('chosen sig', this.chosenSig)
         this.$emit('sigcap', this.chosenSig)
       }
     },
@@ -267,12 +267,12 @@ export default {
           })
         }, (err) => {
           this.isLoading = false
-          console.log(err)
+          // console.log(err)
           alert(err)
         })
     },
     timerCallback: function () {
-      console.log('playing')
+      // console.log('playing')
     },
     takePhoto: function () {
       if (!this._hasUserMedia) {
@@ -364,7 +364,7 @@ export default {
       // return imgd
     },
     save: function (ctx) {
-      console.log('save', this[ctx].canvas.toDataURL())
+      // console.log('save', this[ctx].canvas.toDataURL())
       this.chosenSig = this[ctx].canvas.toDataURL()
       this.updateStage('composeMessage')
     },
@@ -380,7 +380,7 @@ export default {
         return new Blob([ab], { type: 'image/png' })
       }
       var blob = dataURItoBlob(this.fpca)
-      console.log(blob)
+      // console.log(blob)
       let data = new FormData()
       data.append('from', 'VoteFromAbroad <mailer@votefromabroad.org>')
       data.append('to', this.email)
@@ -393,7 +393,7 @@ export default {
       let config = { url: url, method: 'post', headers: { 'Content-Type': 'multipart/form-data' }, auth: { username: 'api', password: 'key-44903961cb823b645750fe64358dfc40' } }
       this.$axios.post(url, data, config)
         .then(response => {
-          console.log(response)
+          // console.log(response)
           this.$toast.open({
             message: `Sent! Check your inbox for a copy (${this.email})`,
             type: 'is-success'
@@ -411,12 +411,12 @@ export default {
             icon: 'error',
             iconPack: 'fas'
           })
-          console.log(errors)
+          // console.log(errors)
         })
     }
   },
   mounted: function () {
-    console.log('mounted', this)
+    // console.log('mounted', this)
     // let c = document.createElement('canvas')
     this.canvas = document.createElement('canvas')
     this.fromName = `${this.firstName} ${this.lastName}`
@@ -431,7 +431,7 @@ export default {
     }
   },
   destroyed: function () {
-    console.log('Destroyed')
+    // console.log('Destroyed')
   }
 }
 </script>

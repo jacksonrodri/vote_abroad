@@ -46,8 +46,8 @@
           </b-autocomplete>
         </b-field>
         <b-field
-          :message="validations.regionCode.$error ? Object.keys(validations.regionCode.$params).map(x => $t(`request.votAdr.messages.state-${x}`)) : '' "
-          :type="(validations.regionCode.$error ? 'is-danger': '')">
+          :message="validations.stateISO.$error ? Object.keys(validations.stateISO.$params).map(x => $t(`request.votAdr.messages.state-${x}`)) : '' "
+          :type="(validations.stateISO.$error ? 'is-danger': '')">
           <b-select v-model="state"
             ref="state"
             expanded
@@ -177,8 +177,8 @@ export default {
       set (value) { this.updateAddress('locality', value) }
     },
     state: {
-      get () { return this.votAdr.regionCode || '' },
-      set (value) { this.updateAddress('regionCode', value) }
+      get () { return this.votAdr.stateISO || '' },
+      set (value) { this.updateAddress('stateISO', value) }
     },
     zip: {
       get () { return this.votAdr.postalcode || '' },
@@ -190,9 +190,6 @@ export default {
     }
   },
   methods: {
-    print: function (value) {
-      console.log(value === document.activeElement)
-    },
     updateAddress: function (field, value) {
       this.$store.commit('requests/update', {votAdr: Object.assign({}, this.votAdr, {[field]: value})})
       this.$emit('input')

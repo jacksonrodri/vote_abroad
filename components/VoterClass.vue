@@ -132,7 +132,7 @@ export default {
   },
   methods: {
     setVal: function (val) {
-      console.log('val', val)
+      // console.log('val', val)
       if (val === 'civilianType' || val === 'militaryType') {
         this.milOrCiv = val
         this.$emit('input', '')

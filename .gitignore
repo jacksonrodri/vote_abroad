@@ -9,3 +9,11 @@ npm-debug.log
 
 # Nuxt generate
 dist
+
+#awsmobilejs
+appsync-info.json
+aws-info.json
+project-info.json
+awsmobilejs/.awsmobile/backend-build
+awsmobilejs/\#current-backend-info
+~awsmobilejs-*/

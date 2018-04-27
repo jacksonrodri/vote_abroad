@@ -16,6 +16,7 @@
                 <span class="is-flex"><label class="label">{{ $t('homepage.loginInstructions') }}</label><span @click="toolTipOpen = !toolTipOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
                 <phone-email
                   size="is-medium"
+                  @pressEnter="startAuth"
                   v-model="phoneOrEmail">
                 </phone-email>
                 <div class="buttons is-right is-marginless">

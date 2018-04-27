@@ -1,31 +1,24 @@
 import { WebAuth } from 'auth0-js'
 import axios from 'axios'
 import { Dialog, Toast, Snackbar, LoadingProgrammatic } from 'buefy'
-import * as AWS from 'aws-sdk'
-import 'amazon-cognito-js'
+import AWSExports from '../aws-exports'
 const jwtDecode = require('jwt-decode')
-// var AWS = require('aws-sdk')
-
-AWS.config.region = 'us-east-1' // Region
-AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-  IdentityPoolId: 'us-east-1:7bd016b9-b2ad-4ed3-bb1a-8915af42a2b5'
-})
-// const redirectUri = `https://votefromabroad.netlify.com`
+const redirectUri = `https://amplify-appsync--votefromabroad.netlify.com`
 // const redirectUri = `http://localhost:3000`
-const redirectUri = process.env.url
+// const redirectUri = process.env.url
 
 const webAuth = new WebAuth({
   domain: 'montg.auth0.com',
   redirectUri: redirectUri,
   clientID: '0Wy4khZcuXefSfrUuYDUP0Udag4FqL2u',
   responseType: 'token id_token'
-  // audience: optons.audience || options.domain.concat('/userinfo')
 })
 
 export const state = () => ({
   idToken: null,
   expirationDate: null,
   gcToken: null,
+  IdentityId: null,
   redirectPath: null,
   user: {
     firstName: null,
@@ -82,6 +75,9 @@ export const mutations = {
   },
   updateRedirectPath (state, path) {
     state.redirectPath = path
+  },
+  updateIdentityId (state, id) {
+    state.IdentityId = id
   }
 }
 
@@ -96,7 +92,6 @@ export const actions = {
         if (err) {
           reject(err)
         }
-        // console.log(`Sent code to ${state.user.emailAddress}`)
         resolve(`Sent code to ${state.user.emailAddress}`)
       })
     })
@@ -111,7 +106,6 @@ export const actions = {
         if (err) {
           reject(err)
         }
-        // console.log(`Sent code to ${state.user.emailAddress}`)
         resolve(`Sent login link to ${state.user.emailAddress}`)
       })
     })
@@ -126,7 +120,6 @@ export const actions = {
         if (err) {
           reject(err)
         }
-        // console.log(`Sent code to ${state.user.mobilePhone}`)
         resolve()
       })
     })
@@ -135,7 +128,6 @@ export const actions = {
     if (!state.session.country) {
       let res = await axios.get('https://ipinfo.io/geo')
       commit('updateSessionGeo', res.data)
-      // console.log(res.data)
     }
   },
   async getUser ({commit, state, dispatch}) {
@@ -159,7 +151,6 @@ export const actions = {
     Dialog.prompt({
       title: 'Authentication',
       message: msg,
-      // message: `Enter the code we sent to ${state.user.emailAddress || state.user.mobileIntFormat}`,
       inputAttrs: {
         type: 'tel',
         placeholder: 'Type the code.',
@@ -188,12 +179,10 @@ export const actions = {
     const loadingComponent = LoadingProgrammatic.open()
     return new Promise((resolve, reject) => {
       webAuth.passwordlessVerify({
-        // realm: 'Username-Password-Authentication', // connection name or HRD domain
         connection: 'email',
         email: state.user.emailAddress,
         verificationCode: code,
         scope: 'openid profile email'
-        // audience: this.options.audience
       }, (err, authResult) => {
         if (err) {
           loadingComponent.close()
@@ -233,12 +222,10 @@ export const actions = {
     const loadingComponent = LoadingProgrammatic.open()
     return new Promise((resolve, reject) => {
       webAuth.passwordlessVerify({
-        // realm: 'Username-Password-Authentication', // connection name or HRD domain
         connection: 'sms',
         phoneNumber: state.user.mobileIntFormat,
         verificationCode: code,
         scope: 'openid profile email'
-        // audience: this.options.audience
       }, (err, authResult) => {
         if (err) {
           loadingComponent.close()
@@ -261,20 +248,21 @@ export const actions = {
           reject(err)
         }
         loadingComponent.close()
-        Snackbar.open({
-          message: `${authResult}`,
-          type: 'is-info',
-          position: 'is-top',
-          actionText: 'Retry',
-          duration: 8000
-        })
+        // Snackbar.open({
+        //   message: `${authResult}`,
+        //   type: 'is-info',
+        //   position: 'is-top',
+        //   actionText: 'Retry',
+        //   duration: 8000
+        // })
         // this.setSession(authResult)
         // Auth tokens in the result or an error
         resolve()
       })
     })
   },
-  async setSession ({ state, rootState, commit, dispatch }) {
+  async setSession ({ state, rootState, commit, dispatch, app }) {
+    this.app.Amplify.configure(AWSExports)
     function parseHash () {
       return new Promise((resolve, reject) => {
         webAuth.parseHash({ hash: window.location.hash }, function (err, authResult) {
@@ -286,13 +274,17 @@ export const actions = {
         })
       })
     }
+    let Auth = this.app.$Auth
     function checkSession () {
       return new Promise((resolve, reject) => {
         webAuth.checkSession({
           scope: 'openid profile email'
-        }, function (err, authResult) {
+        }, async function (err, authResult) {
           if (err) {
-            console.log('checkSessionErr', err)
+            let id = await Auth.credentials
+            let name = Auth.credentials_source
+            commit('updateIdentityId', id.data.IdentityId)
+            commit('updateUser', { firstName: name })
             // dispatch('clearData')
             return
           }
@@ -316,17 +308,15 @@ export const actions = {
     let authResult = hasHash ? await parseHash() : await checkSession()
     if (authResult.expiresIn * 1000 > Date.now()) {
       authResult = await renewAuth()
-      // console.log('renewing auth', authResult.expiresIn * 1000, Date.now())
     }
     let idToken = authResult.idToken
-    // console.log('authresult', authResult)
     commit('updateIdToken', idToken)
     commit('updateExpirationDate', jwtDecode(idToken).exp)
     commit('updateGcToken', jwtDecode(idToken)['https://graph.cool/token'])
     if (state.redirectPath) {
       dispatch('redirect', state.redirectPath)
     }
-    console.log('[https://demsabroad.org/user]', jwtDecode(idToken)['https://demsabroad.org/user'])
+    // console.log('[https://demsabroad.org/user]', jwtDecode(idToken)['https://demsabroad.org/user'])
     commit('updateUser', {isDA: jwtDecode(idToken)['https://demsabroad.org/isDA'], da: jwtDecode(idToken)['https://demsabroad.org/user']})
     if (jwtDecode(idToken)['https://demsabroad.org/isDA'] && !rootState.requests.requests[rootState.requests.currentRequest].lastName) {
       Dialog.confirm({
@@ -347,72 +337,22 @@ export const actions = {
         }
       })
     }
-    // console.log(state.redirectPath)
-    // Snackbar.open({
-    //   message: `Your graphcool token is: ${jwtDecode(idToken)['https://graph.cool/token']}`,
-    //   type: 'is-info',
-    //   position: 'is-top',
-    //   actionText: 'Retry',
-    //   duration: 8000
-    // })
-    // console.log('hi from after Snackbar.open')
-    AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-      IdentityPoolId: 'us-east-1:7bd016b9-b2ad-4ed3-bb1a-8915af42a2b5',
-      Logins: {
-        'montg.auth0.com': idToken
+    this.app.$Auth.federatedSignIn(
+      'montg.auth0.com',
+      {
+        token: idToken,
+        expires_at: jwtDecode(idToken).exp
+      },
+      // a user object
+      {
+        name: jwtDecode(idToken)['https://demsabroad.org/user'].lastName,
+        email: jwtDecode(idToken)['https://demsabroad.org/user'].email
       }
+    ).then(async (result) => {
+      // console.log('result', result)
+      let user = await this.app.$Auth.currentAuthenticatedUser()
+      console.log('user', user)
     })
-    AWS.config.credentials.get(function () {
-      var syncClient = new AWS.CognitoSyncManager()
-      syncClient.openOrCreateDataset('myDataset', function (err, dataset) {
-        if (err) throw (err)
-        dataset.put('myKey', 'myValue', function (err, record) {
-          if (err) throw (err)
-          dataset.synchronize({
-            onSuccess: function (data, newRecords) {
-              console.log('data', data, 'newRecords', newRecords)
-            }
-          })
-        })
-      })
-    })
-    // var syncManager = new AWS.CognitoSyncManager()
-    // let dataset
-    // syncManager.openOrCreateDataset('alexData', function (err, d) {
-    //   if (err) throw (err)
-    //   dataset = d
-    //   dataset.put('Alex', 'Montgomery', function (err, record) {
-    //     if (err) console.log('datasetputerr', err)
-    //     console.log(record)
-    //     dataset.synchronize()
-    //   })
-    // })
-    // console.log(dataset)
-    // dataset.synchronize({
-    //   onSuccess: function(dataset, newRecords) {
-    //     console.log(dataset, newRecords)
-    //  },
-    //  onFailure: function(err) {
-    //     console.log(err)
-    //  }
-    // })
-    // dataset.put('newData', 'newValue', function (err, record) {
-    //   if (err) throw (err)
-    //   console.log('returned record', record)
-    // })
-    // dataset.synchronize()
-    // syncManager.openOrCreateDataset('myDatasetName', function (err, dataset) {
-    //   if (err) {
-    //     console.log('ERROR-syncManager.openOrCreateDataset', err)
-    //   } else {
-    //     console.log('SUCCESS-syncManager.openOrCreateDataset', dataset)
-    //     dataset.put('newKey', 'newValue', function (err, record) {
-    //       if (err) throw (err)
-    //       console.log('record', record)
-    //       dataset.synchronize()
-    //     })
-    //   }
-    // })
   },
   clearData ({ commit, dispatch }) {
     commit('updateGcToken', null)

@@ -1,7 +1,7 @@
 export default function ({ route, params, store, redirect }) {
   let current = store.getters['requests/getCurrent']
-  console.log(params)
-  console.log(route.name)
+  // console.log(params)
+  // console.log(route.name)
   if ((params.stage === 'voting-information' ||
   params.stage === 'id-and-contact-information' ||
   route.name.indexOf('review') > -1 ||
@@ -20,10 +20,10 @@ export default function ({ route, params, store, redirect }) {
     (!current.votAdr ||
     !current.votAdr.thoroughfare ||
     !current.votAdr.locality ||
-    !current.votAdr.regionCode ||
+    !current.votAdr.stateISO ||
     !current.votAdr.postalcode ||
-    !current.votAdr.leo ||
-    !current.votAdr.leo.a1 ||
+    // !current.leo ||
+    !current.leo.a1 ||
     !current.voterClass ||
     !current.recBallot)
   ) {

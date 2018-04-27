@@ -1,5 +1,5 @@
 [build]
-  Command = "yarn generate"
+  Command = "npm run generate"
   Functions = "lambda"
   Publish = "dist"
 

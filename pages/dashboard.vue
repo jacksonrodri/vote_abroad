@@ -192,7 +192,7 @@ export default {
     user () { return this.$store.state.userauth.user },
     requests () { return this.$store.state.requests.requests },
     currentRequest () { return this.$store.state.requests.currentRequest },
-    states () { return new Set(this.requests.map(x => x.votAdr.regionCode)) },
+    states () { return new Set(this.requests.map(x => x.votAdr.stateISO)) },
     name () { return this.user && this.user.firstName ? this.user.firstName : this.requests && this.requests[0] && this.requests[0].firstName ? this.requests[0].firstName : '' },
     isAuthenticated: function () { return this.$store.getters['userauth/isAuthenticated'] }
     // currentRequestStage () { return this.currentRequest && this.currentRequest.stage ? this.currentRequest.stage : 'fill' }

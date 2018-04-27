@@ -39,6 +39,7 @@
           v-model="typed"
           :size="size"
           @input="verifyEmail"
+          @keyup.native.enter="$emit('pressEnter')"
           :placeholder="phonePlaceholder"
           expanded>
         </b-input>
@@ -79,7 +80,7 @@ export default {
     this.typed = this.value.rawInput || ''
     this.phoneExamples = await phoneExamples()
     metadata = await md()
-    console.log(metadata)
+    // console.log(metadata)
   },
   data () {
     return {

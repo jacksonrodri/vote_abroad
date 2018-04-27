@@ -79,7 +79,7 @@ export default {
   },
   methods: {
     updatePhoto (evt) {
-      console.log(this._pic)
+      // console.log(this._pic)
       var canvas = this.getFilteredCanvas(this.brightness, this.contrast)
       this.optimizedPhoto = canvas.toDataURL(this.screenshotFormat)
     },
@@ -131,12 +131,12 @@ export default {
           sigCtx.drawImage(sig, 0, 0)
           let sigImg = sigCtx.getImageData(0, 0, 1280, 720)
           var imageData = sigImg.data
-          console.log(imageData)
+          // console.log(imageData)
           var dataLength = imageData.length
           for (var i = 3; i < dataLength; i += 4) {
             imageData[i] = 255 - imageData[i - 1]
           }
-          console.log(imageData)
+          // console.log(imageData)
           sigCtx.putImageData(sigImg, 0, 0)
           this.optimizedPhoto = sigCanvas.toDataURL()
           this.$emit('sigcap', this.optimizedPhoto)
@@ -181,7 +181,7 @@ export default {
     this._refs = this.$refs
     this._video = this._refs.video
     this._pic = this._refs.pic
-    console.log('pic: ', this._pic.src, 'video: ', this._video)
+    // console.log('pic: ', this._pic.src, 'video: ', this._video)
 
     var md = this.getMediaDevices()
     md.getUserMedia({
@@ -213,7 +213,7 @@ export default {
     this._stream.getTracks()[0].stop()
   },
   destroyed () {
-    console.log('Destroyed')
+    // console.log('Destroyed')
   }
 }
 </script>

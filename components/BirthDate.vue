@@ -48,7 +48,7 @@ export default {
         }
       },
       set (value) {
-        console.log('value', value)
+        // console.log('value', value)
         this.dob = value
         this.storeDOB = value
       }
@@ -60,14 +60,14 @@ export default {
         if (!dob || dob.toString().length !== 10) {
           return null
         } else {
-          console.log('dateobj', createDateObj(dob))
+          // console.log('dateobj', createDateObj(dob))
           return createDateObj(dob)
         }
       },
       set (value) {
         function createDateString (d) { return `${d.getFullYear()}-${d.getMonth() < 9 ? '0' : ''}${d.getMonth() + 1}-${d.getDate() < 9 ? '0' : ''}${d.getDate()}` }
         if (value) {
-          console.log('datestring', createDateString(value))
+          // console.log('datestring', createDateString(value))
           this.$store.commit('requests/update', {dob: createDateString(value)})
         } else {
           this.$store.commit('requests/update', {dob: null})
