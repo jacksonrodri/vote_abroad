@@ -3,9 +3,9 @@ import axios from 'axios'
 import { Dialog, Toast, Snackbar, LoadingProgrammatic } from 'buefy'
 import AWSExports from '../aws-exports'
 const jwtDecode = require('jwt-decode')
-const redirectUri = `https://amplify-appsync--votefromabroad.netlify.com`
+// const redirectUri = `https://amplify-appsync--votefromabroad.netlify.com`
 // const redirectUri = `http://localhost:3000`
-// const redirectUri = process.env.url
+const redirectUri = process.env.url
 
 const webAuth = new WebAuth({
   domain: 'montg.auth0.com',
