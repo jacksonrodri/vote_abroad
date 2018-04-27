@@ -355,7 +355,7 @@ export default {
   scrollToTop: true,
   middleware: 'verify-request',
   mounted () {
-    console.log(this.$v)
+    // console.log(this.$v)
   },
   async asyncData ({app}) {
     return {
@@ -605,7 +605,6 @@ export default {
       switch (true) {
         case this.stage.slug === 'your-information' && this.$v.firstName.$error:
           this.$refs.firstName.focus()
-          console.log('found it error')
           break
         case this.stage.slug === 'your-information' && this.$v.lastName.$error:
           this.$refs.lastName.focus()
@@ -624,27 +623,21 @@ export default {
           break
         case this.stage.slug === 'voting-information' && this.$v.votAdr.thoroughfare.$error:
           this.$refs.votAdr.$refs.street.focus()
-          console.log('found it error 1')
           break
         case this.stage.slug === 'voting-information' && this.$v.votAdr.locality.$error:
           this.$refs.votAdr.$refs.city.focus()
-          console.log('found it error 2')
           break
         case this.stage.slug === 'voting-information' && this.$v.votAdr.stateISO.$error:
           this.$refs.votAdr.$refs.state.focus()
-          console.log('found it error 3')
           break
         case this.stage.slug === 'voting-information' && this.$v.votAdr.postalcode.$error:
           this.$refs.votAdr.$refs.zip.focus()
-          console.log('found it error 4')
           break
         case this.stage.slug === 'voting-information' && this.$v.jurisdiction.$error:
           this.$refs.jurisdiction.$refs.jurisdiction.focus()
-          console.log('found it error 5')
           break
         case this.stage.slug === 'id-and-contact-information' && this.$v.dob.$error:
           this.$refs.dob.$refs.dob.focus()
-          console.log('found it error 6')
           break
         case this.stage.slug === 'id-and-contact-information' && this.$v.identification.ssn.$error:
           if (this.$refs.id) this.$refs.id.$refs.ssn ? this.$refs.id.$refs.ssn.focus() : this.$refs.id.$refs.ssn4.focus()

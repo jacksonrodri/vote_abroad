@@ -3,9 +3,9 @@ import axios from 'axios'
 import { Dialog, Toast, Snackbar, LoadingProgrammatic } from 'buefy'
 import AWSExports from '../aws-exports'
 const jwtDecode = require('jwt-decode')
-// const redirectUri = `https://amplify-appsync--votefromabroad.netlify.com`
+const redirectUri = `https://amplify-appsync--votefromabroad.netlify.com`
 // const redirectUri = `http://localhost:3000`
-const redirectUri = process.env.url
+// const redirectUri = process.env.url
 
 const webAuth = new WebAuth({
   domain: 'montg.auth0.com',
@@ -279,11 +279,11 @@ export const actions = {
       return new Promise((resolve, reject) => {
         webAuth.checkSession({
           scope: 'openid profile email'
-        }, function (err, authResult) {
+        }, async function (err, authResult) {
           if (err) {
-            let id = Auth.credentials.data.IdentityId
+            let id = await Auth.credentials
             let name = Auth.credentials_source
-            commit('updateIdentityId', id)
+            commit('updateIdentityId', id.data.IdentityId)
             commit('updateUser', { firstName: name })
             // dispatch('clearData')
             return
@@ -316,7 +316,7 @@ export const actions = {
     if (state.redirectPath) {
       dispatch('redirect', state.redirectPath)
     }
-    console.log('[https://demsabroad.org/user]', jwtDecode(idToken)['https://demsabroad.org/user'])
+    // console.log('[https://demsabroad.org/user]', jwtDecode(idToken)['https://demsabroad.org/user'])
     commit('updateUser', {isDA: jwtDecode(idToken)['https://demsabroad.org/isDA'], da: jwtDecode(idToken)['https://demsabroad.org/user']})
     if (jwtDecode(idToken)['https://demsabroad.org/isDA'] && !rootState.requests.requests[rootState.requests.currentRequest].lastName) {
       Dialog.confirm({
@@ -349,7 +349,7 @@ export const actions = {
         email: jwtDecode(idToken)['https://demsabroad.org/user'].email
       }
     ).then(async (result) => {
-      console.log('result', result)
+      // console.log('result', result)
       let user = await this.app.$Auth.currentAuthenticatedUser()
       console.log('user', user)
     })

@@ -97,7 +97,7 @@ export default {
     },
     sendEmail () {
       let fpca = this.$refs.fpca.$refs['my-canvas'].toDataURL()
-      console.log(fpca)
+      // console.log(fpca)
       function dataURItoBlob (dataURI) {
         var byteString = atob(dataURI.split(',')[1])
         var ab = new ArrayBuffer(byteString.length)
@@ -108,7 +108,7 @@ export default {
         return new Blob([ab], { type: 'image/png' })
       }
       var blob = dataURItoBlob(fpca)
-      console.log(blob)
+      // console.log(blob)
       let data = new FormData()
       data.append('from', 'VoteFromAbroad <mailer@votefromabroad.org>')
       data.append('to', 'alexpm@gmail.com')

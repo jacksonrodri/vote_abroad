@@ -350,7 +350,7 @@ export default {
       })
       navigator.mediaDevices.ondevicechange = () => {
         checkDeviceSupport((event) => {
-          console.log('device change event', event)
+          // console.log('device change event', event)
           this.$store.commit('userauth/updateDevice', {
             'hasWebCam': hasWebcam,
             'hasMicrophone': hasMicrophone,
@@ -361,7 +361,7 @@ export default {
         })
       }
       await import('current-device').then(({default: device}) => {
-        console.log(device)
+        // console.log(device)
         this.$store.commit('userauth/updateDevice', {
           type: device.type,
           os: device.os,

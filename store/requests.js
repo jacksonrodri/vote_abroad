@@ -90,7 +90,7 @@ export const actions = {
     if (currentRequestState.identification) delete currentRequestState.identification
     const stateRequestInput = {input: currentRequestState}
     const newRequest = await API.graphql(graphqlOperation(CreateRequest, stateRequestInput))
-    console.log('id', newRequest.data.createRequest.id)
+    // console.log('id', newRequest.data.createRequest.id)
     commit('update', {id: newRequest.data.createRequest.id})
     return newRequest.data
   },

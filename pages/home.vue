@@ -252,9 +252,9 @@ export default {
       }
       let num = formatter.country ? parse(this.userPhone, formatter.country) : parse(this.userPhone)
       let intFormat = format(num, 'International_plaintext')
-      let domesticFormat = format(num, 'National')
+      // let domesticFormat = format(num, 'National')
       this.$store.commit('userauth/updateUser', {mobileIntFormat: intFormat})
-      console.log('int', intFormat, 'domestic', domesticFormat)
+      // console.log('int', intFormat, 'domestic', domesticFormat)
     },
     promptCode () {
       this.$store.dispatch('promptCode')

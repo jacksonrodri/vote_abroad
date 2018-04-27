@@ -190,9 +190,6 @@ export default {
     }
   },
   methods: {
-    print: function (value) {
-      console.log(value === document.activeElement)
-    },
     updateAddress: function (field, value) {
       this.$store.commit('requests/update', {votAdr: Object.assign({}, this.votAdr, {[field]: value})})
       this.$emit('input')

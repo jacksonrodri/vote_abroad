@@ -66,7 +66,7 @@ export default {
   },
   methods: {
     setName: function (val) {
-      console.log(val, this.value)
+      // console.log(val, this.value)
       this.$emit('input', {
         previousName: val,
         usesPreviousName: true
