@@ -1,0 +1,21 @@
+#set( $attributes = $context.args.input )
+$util.qr($attributes.put("createdBy", $context.identity.cognitoIdentityId))
+#if($attributes.id)
+#else 
+      $util.qr($attributes.put("id", $util.autoId()))
+#end
+
+{
+    "version" : "2017-02-28",
+    "operation" : "PutItem",
+    "key" : {
+        "id": $util.dynamodb.toDynamoDBJson($attributes.id)
+    },
+    "attributeValues": $util.dynamodb.toMapValuesJson($attributes),
+    "condition": {
+    	"expression": "createdBy = :expectedIdentity OR attribute_not_exists (createdBy)",
+        "expressionValues": {
+        	":expectedIdentity": $util.dynamodb.toDynamoDBJson($context.identity.cognitoIdentityId)
+            }
+    }
+}

@@ -12,9 +12,9 @@ const jwtDecode = require('jwt-decode')
 // AWS.config.credentials = new AWS.CognitoIdentityCredentials({
 //   IdentityPoolId: 'us-east-1:f8d2c9d3-22f9-4de7-a8b2-88eb298dfd0a'
 // })
-const redirectUri = `https://amplify-appsync--votefromabroad.netlify.com`
+// const redirectUri = `https://amplify-appsync--votefromabroad.netlify.com`
 // const redirectUri = `http://localhost:3000`
-// const redirectUri = process.env.url
+const redirectUri = process.env.url
 
 const webAuth = new WebAuth({
   domain: 'montg.auth0.com',
@@ -91,6 +91,18 @@ export const actions = {
   async getEvent ({app}) {
     const API = this.app.$API
     const graphqlOperation = this.app.$graphqlOperation
+    const CreateRequest = `mutation CreateRequest($input: CreateRequestInput!){
+      createRequest(input: $input) {
+        id
+        firstName
+        middleName
+        lastName
+      }
+    }`
+    // id: '82d8b9a0-d961-4ab3-9b12-610e8f1779be',
+    const newRequest = await API.graphql(graphqlOperation(CreateRequest, { input: { firstName: 'Tomorrow', middleName: 'Party  ', lastName: 'Montgomery' } }))
+    console.log('newRequest.data', newRequest.data)
+    return newRequest.data
     // const GetEvent = `query GetEvent($id: ID! $nextToken: String) {
     //   getEvent(id: $id) {
     //     id
@@ -103,18 +115,18 @@ export const actions = {
     //     }
     //   }
     // }`
-    const GetThing = `query Test($id: ID! $meta: String) {
-      get(id: $id meta: $meta){
-        id
-        meta
-      }
-    }`
-    const oneThing = await API.graphql(graphqlOperation(GetThing, { id: 123, meta: 'testing' }))
-    // const oneEvent = await API.graphql(graphqlOperation(GetEvent, { id: '5e693559-5b87-4973-8647-771329e24777' }))
-    console.log(oneThing.data.get)
-    // console.log(oneEvent.data.getEvent)
-    // console.log(this.app)
-    return oneThing.data
+    // const GetThing = `query Test($id: ID! $meta: String) {
+    //   get(id: $id meta: $meta){
+    //     id
+    //     meta
+    //   }
+    // }`
+    // const oneThing = await API.graphql(graphqlOperation(GetThing, { id: 123, meta: 'testing' }))
+    // // const oneEvent = await API.graphql(graphqlOperation(GetEvent, { id: '5e693559-5b87-4973-8647-771329e24777' }))
+    // console.log('onething', oneThing.data.get)
+    // // console.log(oneEvent.data.getEvent)
+    // // console.log(this.app)
+    // return oneThing.data
   },
   sendEmailCode ({commit, state}) {
     return new Promise((resolve, reject) => {
