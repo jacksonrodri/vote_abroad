@@ -604,51 +604,66 @@ export default {
 
       switch (true) {
         case this.stage.slug === 'your-information' && this.$v.firstName.$error:
+          this.$store.dispatch('requests/recordAnalytics', { event: 'Form Error', attributes: { field: 'firstName' } })
+          console.log('Form Error', {field: 'firstName'})
           this.$refs.firstName.focus()
           break
         case this.stage.slug === 'your-information' && this.$v.lastName.$error:
           this.$refs.lastName.focus()
+          this.$store.dispatch('requests/recordAnalytics', { event: 'Form Error', attributes: { field: 'lastName' } })
           break
         case this.stage.slug === 'your-information' && this.$v.email.$error:
+          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'email'}})
           this.$refs.email.focus()
           break
         case this.stage.slug === 'your-information' && this.$v.abrAdr.country.$error:
+          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.country'}})
           this.$refs.abrAdr.$refs.country.focus()
           break
         case this.stage.slug === 'your-information' && this.$v.abrAdr.thoroughfare.$error:
           this.$refs.abrAdr.$refs.thoroughfare.focus()
+          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.thoroughfare'}})
           break
         case this.stage.slug === 'your-information' && this.$v.abrAdr.locality.$error:
+          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.locality'}})
           this.$refs.abrAdr.$refs.locality[0].focus()
           break
         case this.stage.slug === 'voting-information' && this.$v.votAdr.thoroughfare.$error:
+          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'votAdr.thoroughfare'}})
           this.$refs.votAdr.$refs.street.focus()
           break
         case this.stage.slug === 'voting-information' && this.$v.votAdr.locality.$error:
           this.$refs.votAdr.$refs.city.focus()
+          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'votAdr.locality'}})
           break
         case this.stage.slug === 'voting-information' && this.$v.votAdr.stateISO.$error:
           this.$refs.votAdr.$refs.state.focus()
+          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'votAdr.stateISO'}})
           break
         case this.stage.slug === 'voting-information' && this.$v.votAdr.postalcode.$error:
           this.$refs.votAdr.$refs.zip.focus()
+          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'votAdr.postalcode'}})
           break
         case this.stage.slug === 'voting-information' && this.$v.jurisdiction.$error:
           this.$refs.jurisdiction.$refs.jurisdiction.focus()
+          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'jurisdiction'}})
           break
         case this.stage.slug === 'id-and-contact-information' && this.$v.dob.$error:
           this.$refs.dob.$refs.dob.focus()
+          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'dob'}})
           break
         case this.stage.slug === 'id-and-contact-information' && this.$v.identification.ssn.$error:
           if (this.$refs.id) this.$refs.id.$refs.ssn ? this.$refs.id.$refs.ssn.focus() : this.$refs.id.$refs.ssn4.focus()
+          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'identification.ssn'}})
           break
         case this.stage.slug === 'id-and-contact-information' && this.$v.identification.stateId.$error:
+          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'identification.stateId'}})
           this.$refs.id.$refs.StateId.focus()
           break
         default:
+          this.$store.dispatch('requests/recordAnalytics', {event: 'completed: ' + this.stage.slug})
           this.$router.push(nextPage)
           this.$store.dispatch('requests/updateRequest')
-          this.$store.dispatch('requests/recordAnalytics', nextPage)
       }
     },
     delayTouch ($v) {
