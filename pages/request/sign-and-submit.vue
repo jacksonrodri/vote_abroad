@@ -372,6 +372,7 @@ export default {
   },
   methods: {
     signatureAgree () {
+      this.$store.dispatch('requests/recordAnalytics', {event: 'start digital signature'})
       this.$dialog.confirm({
         title: this.$t('request.sig.affirmation'),
         message: `<h1 class="title is-5">I swear or affirm, under penalty of purjury that:</h1>

@@ -47,8 +47,8 @@
   <div class="column is-10 is-8-desktop is-7-widescreen is-6-fullhd is-paddingless">
 
       <!-- <div class="control buttons is-right"> -->
-        <nuxt-link :to="localePath({ name: 'request-stage', params: {stage: 'id-and-contact-information'} })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>{{$t('request.stages.back')}}</span></nuxt-link>
-        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'sign-and-submit'} })" class="button is-primary is-medium is-pulled-right" exact ><span>{{$t('request.stages.submit')}}</span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link>
+        <nuxt-link @click="$store.dispatch('requests/recordAnalytics', {event: 'found errors on review'})" :to="localePath({ name: 'request-stage', params: {stage: 'id-and-contact-information'} })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>{{$t('request.stages.back')}}</span></nuxt-link>
+        <nuxt-link @click="$store.dispatch('requests/recordAnalytics', {event: 'completed: review'})" :to="localePath({ name: 'request-stage', params: { stage: 'sign-and-submit'} })" class="button is-primary is-medium is-pulled-right" exact ><span>{{$t('request.stages.submit')}}</span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link>
       <!-- </div> -->
 
     <b-modal :active.sync="isSignatureModalActive" has-modal-card>
