@@ -648,6 +648,7 @@ export default {
         default:
           this.$router.push(nextPage)
           this.$store.dispatch('requests/updateRequest')
+          this.$store.dispatch('requests/recordAnalytics', nextPage)
       }
     },
     delayTouch ($v) {

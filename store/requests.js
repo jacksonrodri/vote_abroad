@@ -57,6 +57,9 @@ export const mutations = {
 }
 
 export const actions = {
+  recordAnalytics ({app}, event, attributes, metrics) {
+    this.app.$Analytics.record(event, attributes, metrics)
+  },
   async updateRequest ({commit, state, app}) {
     const API = this.app.$API
     const graphqlOperation = this.app.$graphqlOperation

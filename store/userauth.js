@@ -1,6 +1,7 @@
 import { WebAuth } from 'auth0-js'
 import axios from 'axios'
-import { Dialog, Toast, Snackbar, LoadingProgrammatic } from 'buefy'
+import { Dialog, Toast, LoadingProgrammatic } from 'buefy'
+// Snackbar,
 import AWSExports from '../aws-exports'
 const jwtDecode = require('jwt-decode')
 // const redirectUri = `https://amplify-appsync--votefromabroad.netlify.com`
@@ -205,13 +206,14 @@ export const actions = {
           reject(err)
         }
         loadingComponent.close()
-        Snackbar.open({
-          message: `${authResult}`,
-          type: 'is-info',
-          position: 'is-top',
-          actionText: 'Retry',
-          duration: 8000
-        })
+        // Snackbar.open({
+        //   message: `${authResult}`,
+        //   type: 'is-info',
+        //   position: 'is-top',
+        //   actionText: 'Retry',
+        //   duration: 8000
+        // })
+        alert('authResult', authResult)
         // this.setSession(authResult)
         // Auth tokens in the result or an error
         resolve()
@@ -270,6 +272,7 @@ export const actions = {
           if (err) {
             reject(err)
           }
+          console.log('authResult', authResult)
           resolve(authResult)
         })
       })
