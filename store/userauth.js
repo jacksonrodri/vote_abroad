@@ -372,12 +372,12 @@ export const actions = {
       console.log('user', user)
       Analytics.updateEndpoint({
         // Customized userId
-        UserId: state.user.IdentityId,
+        UserId: user.id,
         // User attributes
         Attributes: {
           country: state.user.country,
           isDA: state.user.isDA,
-          email: state.user.emailAddress,
+          email: user.email,
           firstName: state.user.firstName
         },
         // Custom user attributes
