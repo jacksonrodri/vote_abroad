@@ -191,7 +191,7 @@ export default {
   },
   methods: {
     updateAddress: function (field, value) {
-      this.$store.commit('requests/update', {votAdr: Object.assign({}, this.votAdr, {[field]: value})})
+      this.$store.commit('requests/update', {votAdr: Object.assign({}, this.votAdr, {[field]: value || null})})
       this.$emit('input')
     },
     getAsyncData: debounce(function () {

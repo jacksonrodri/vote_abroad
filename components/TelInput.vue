@@ -77,7 +77,7 @@ export default {
     },
     value: {
       type: Object,
-      default: () => ({rawInput: '', country: '', isValidPhone: '', intNumber: ''})
+      default: () => ({rawInput: '', country: '', isValidPhone: '', intNumber: '', type: ''})
     }
   },
   mounted () {
@@ -113,7 +113,7 @@ export default {
       if (formatter.country) { this.phoneCountry = formatter.country }
       validPhone = isValidNumber(this.typed, this.phoneCountry)
       if (validPhone) { intNumber = format(parse(this.typed, this.phoneCountry), 'E.164') }
-      this.$emit('input', {rawInput: this.typed, country: this.phoneCountry, isValidPhone: validPhone, intNumber: intNumber})
+      this.$emit('input', {rawInput: this.typed, country: this.phoneCountry, isValidPhone: validPhone, intNumber: intNumber, type: this.value.type || undefined})
     },
     value: function (newVal, oldVal) {
       this.typed = newVal.rawInput

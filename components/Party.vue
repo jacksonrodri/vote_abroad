@@ -60,7 +60,10 @@ export default {
   computed: {
     thisValue: {
       get () { return this.value },
-      set (value) { this.$emit('input', value || '') }
+      set (value) {
+        if (value === 'Republican') this.$store.commit('requests/update', {joinDa: null})
+        this.$emit('input', value || '')
+      }
     },
     isOther: {
       get () { return Boolean((Object.keys(this.partyChoices).map(x => this.partyChoices[x].aliases).reduce((a, b) => a.concat(b), [])).indexOf(this.thisValue ? this.thisValue.toString().toLowerCase() : '') === -1 && (this.thisValue || this.isOtherButNoValue)) }
