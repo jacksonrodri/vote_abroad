@@ -282,10 +282,10 @@ export const actions = {
           scope: 'openid profile email'
         }, async function (err, authResult) {
           if (err) {
-            let id = await Auth.credentials
+            let id = await Auth.currentCredentials().then(x => x.data.IdentityId)
             // console.log(id)
             let name = Auth.credentials_source
-            commit('updateIdentityId', id._identityId)
+            commit('updateIdentityId', id)
             commit('updateUser', { firstName: name })
             Analytics.updateEndpoint({
               // Customized userId
