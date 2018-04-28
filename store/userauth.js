@@ -275,6 +275,7 @@ export const actions = {
       })
     }
     let Auth = this.app.$Auth
+    let Analytics = this.app.$Analytics
     function checkSession () {
       return new Promise((resolve, reject) => {
         webAuth.checkSession({
@@ -282,9 +283,26 @@ export const actions = {
         }, async function (err, authResult) {
           if (err) {
             let id = await Auth.credentials
+            // console.log(id)
             let name = Auth.credentials_source
-            commit('updateIdentityId', id.data.IdentityId)
+            commit('updateIdentityId', id._identityId)
             commit('updateUser', { firstName: name })
+            Analytics.updateEndpoint({
+              // Customized userId
+              UserId: id._identityId,
+              // User attributes
+              Attributes: {
+                country: state.user.country,
+                isDA: state.user.isDA,
+                email: state.user.emailAddress,
+                firstName: state.user.firstName
+              },
+              // Custom user attributes
+              UserAttributes: {
+                hobbies: ['piano', 'hiking']
+                // ...
+              }
+            })
             // dispatch('clearData')
             return
           }
@@ -352,6 +370,22 @@ export const actions = {
       // console.log('result', result)
       let user = await this.app.$Auth.currentAuthenticatedUser()
       console.log('user', user)
+      Analytics.updateEndpoint({
+        // Customized userId
+        UserId: state.user.IdentityId,
+        // User attributes
+        Attributes: {
+          country: state.user.country,
+          isDA: state.user.isDA,
+          email: state.user.emailAddress,
+          firstName: state.user.firstName
+        },
+        // Custom user attributes
+        UserAttributes: {
+          hobbies: ['piano', 'hiking', 'logging in']
+          // ...
+        }
+      })
     })
   },
   clearData ({ commit, dispatch }) {
