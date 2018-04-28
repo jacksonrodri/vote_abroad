@@ -176,7 +176,8 @@ export const actions = {
       onCancel: () => {}
     })
   },
-  loginEmailVerify ({commit, dispatch, state}, code) {
+  loginEmailVerify ({app, commit, dispatch, state}, code) {
+    let Analytics = this.app.$Analytics
     const loadingComponent = LoadingProgrammatic.open()
     return new Promise((resolve, reject) => {
       webAuth.passwordlessVerify({
@@ -186,6 +187,7 @@ export const actions = {
         scope: 'openid profile email'
       }, (err, authResult) => {
         if (err) {
+          Analytics.record('_userauth.auth_fail')
           loadingComponent.close()
           Dialog.prompt({
             title: 'Authentication',
@@ -220,7 +222,8 @@ export const actions = {
       })
     })
   },
-  loginSmsVerify ({commit, dispatch, state}, code) {
+  loginSmsVerify ({app, commit, dispatch, state}, code) {
+    let Analytics = this.app.$Analytics
     const loadingComponent = LoadingProgrammatic.open()
     return new Promise((resolve, reject) => {
       webAuth.passwordlessVerify({
@@ -230,6 +233,7 @@ export const actions = {
         scope: 'openid profile email'
       }, (err, authResult) => {
         if (err) {
+          Analytics.record('_userauth.auth_fail')
           loadingComponent.close()
           Dialog.prompt({
             title: 'Authentication',
@@ -411,7 +415,8 @@ export const actions = {
     commit('requests/clearRequests', null, { root: true })
     dispatch('getUser')
   },
-  async logout ({ dispatch }) {
+  async logout ({ app, dispatch }) {
+    this.app.$Analytics.record('logout')
     await webAuth.logout({
       returnTo: redirectUri,
       clientID: '0Wy4khZcuXefSfrUuYDUP0Udag4FqL2u'
