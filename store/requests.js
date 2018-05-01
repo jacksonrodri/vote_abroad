@@ -58,8 +58,8 @@ export const mutations = {
 
 export const actions = {
   recordAnalytics ({app}, payload) {
-    console.log(payload)
-    this.app.$Analytics.record(payload.event, payload.attributes || {}, payload.metrics || {}).then(x => { console.log(x) })
+    // console.log(payload)
+    this.app.$Analytics.record(payload.event, payload.attributes || {}, payload.metrics || {})
   },
   async updateRequest ({commit, state, app}, payload) {
     const API = this.app.$API
