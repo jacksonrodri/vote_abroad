@@ -48,7 +48,7 @@
 
       <!-- <div class="control buttons is-right"> -->
         <nuxt-link @click="$store.dispatch('requests/recordAnalytics', {event: 'found errors on review'})" :to="localePath({ name: 'request-stage', params: {stage: 'id-and-contact-information'} })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>{{$t('request.stages.back')}}</span></nuxt-link>
-        <nuxt-link @click="record" :to="localePath({ name: 'request-stage', params: { stage: 'sign-and-submit'} })" class="button is-primary is-medium is-pulled-right" exact ><span>{{$t('request.stages.submit')}}</span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link>
+        <button @click="record(localePath({ name: 'request-stage', params: { stage: 'sign-and-submit'} }))" :to="localePath({ name: 'request-stage', params: { stage: 'sign-and-submit'} })" class="button is-primary is-medium is-pulled-right" exact ><span>{{$t('request.stages.submit')}}</span><b-icon pack="fas" icon="caret-right"></b-icon></button>
       <!-- </div> -->
 
     <b-modal :active.sync="isSignatureModalActive" has-modal-card>
@@ -91,9 +91,10 @@ export default {
     }
   },
   methods: {
-    record () {
+    record (nextPage) {
       this.$store.dispatch('requests/updateRequest', {status: 'completed: review'})
       this.$store.dispatch('requests/recordAnalytics', {event: 'completed: review'})
+      this.$router.push(nextPage)
     },
     addSig (val) {
       this.signature = val
