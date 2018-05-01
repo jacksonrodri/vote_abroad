@@ -663,7 +663,7 @@ export default {
         default:
           this.$store.dispatch('requests/recordAnalytics', {event: 'completed: ' + this.stage.slug})
           this.$router.push(nextPage)
-          this.$store.dispatch('requests/updateRequest')
+          this.$store.dispatch('requests/updateRequest', {status: 'completed: ' + this.stage.slug})
       }
     },
     delayTouch ($v) {

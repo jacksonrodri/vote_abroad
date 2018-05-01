@@ -61,7 +61,7 @@ export const actions = {
     console.log(payload)
     this.app.$Analytics.record(payload.event, payload.attributes || {}, payload.metrics || {}).then(x => { console.log(x) })
   },
-  async updateRequest ({commit, state, app}) {
+  async updateRequest ({commit, state, app}, payload) {
     const API = this.app.$API
     const graphqlOperation = this.app.$graphqlOperation
     const CreateRequest = `mutation CreateRequest($input: CreateRequestInput!){
@@ -92,6 +92,7 @@ export const actions = {
     // }
     let currentRequestState = Object.assign({}, state.requests[0])
     if (currentRequestState.identification) delete currentRequestState.identification
+    currentRequestState.status = payload.status
     const stateRequestInput = {input: currentRequestState}
     const newRequest = await API.graphql(graphqlOperation(CreateRequest, stateRequestInput))
     // console.log('id', newRequest.data.createRequest.id)

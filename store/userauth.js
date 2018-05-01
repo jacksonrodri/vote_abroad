@@ -294,6 +294,12 @@ export const actions = {
             let name = Auth.credentials_source
             commit('updateIdentityId', id)
             commit('updateUser', { firstName: name })
+            let user = await Auth.currentAuthenticatedUser()
+            let res = await Auth.updateUserAttributes(user, {
+              'email': 'me@anotherdomain.com',
+              'family_name': 'Lastname'
+            })
+            console.log('updateuserresult', res)
             Analytics.updateEndpoint({
               // Customized userId
               UserId: id._identityId,
@@ -375,8 +381,14 @@ export const actions = {
       }
     ).then(async (result) => {
       // console.log('result', result)
-      let user = await this.app.$Auth.currentAuthenticatedUser()
-      console.log('user', user)
+      // let user = await this.app.$Auth.currentAuthenticatedUser()
+      // console.log('user', user)
+      let user = await Auth.currentAuthenticatedUser()
+      let res = await Auth.updateUserAttributes(user, {
+        'email': 'me@anotherdomain.com',
+        'family_name': 'Lastname'
+      })
+      console.log('updateuserresult', res)
       Analytics.updateEndpoint({
         // Customized userId
         UserId: user.id,
