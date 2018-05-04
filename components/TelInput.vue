@@ -68,8 +68,8 @@ export default {
       default: 'Your Phone Number'
     },
     message: {
-      type: String,
-      default: ''
+      type: Array,
+      default: []
     },
     type: {
       type: String,

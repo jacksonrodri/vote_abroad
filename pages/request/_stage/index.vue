@@ -49,8 +49,10 @@
       <tel-input
         key="tel"
         :label="$t('request.tel.label')"
+        ref="tel"
+        @input="delayTouch($v.tel)"
         :type="($v.tel.$error ? 'is-danger': '')"
-        :message="$v.tel.$error ? Object.keys($v.tel.$params).map(x => x) : '' "
+        :message="$v.tel.$error ? Object.keys($v.tel.$params).map(x => x === 'validPhone' ? 'Please enter a valid phone number': x) : [] "
         v-model="tel"></tel-input>
 
         <!-- emailAddress -->
@@ -174,10 +176,11 @@
     <!-- altEmail -->
     <b-field
       :type="($v.altEmail.$error ? 'is-danger': '')"
-      :message="$v.altEmail.$error ? Object.keys($v.altEmail.$params).map(x => x) : '' "
+      :message="$v.altEmail.$error ? Object.keys($v.altEmail.$params).map(x => $t(`request.email.messages.${x}`)) : '' "
       v-if="recBallot === 'email'"
       :label="$t('request.altEmail.label')">
       <b-input v-model="altEmail"
+        ref="altEmail"
         autocomplete="email"
         @input="$v.altEmail.$touch()"></b-input>
     </b-field>
@@ -538,7 +541,7 @@ export default {
       set (value) { this.$store.commit('requests/update', {fax: value}) }
     },
     altEmail: {
-      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].altEmail : null },
+      get () { return this.requests[this.currentRequest] && this.requests[this.currentRequest].altEmail ? this.requests[this.currentRequest].altEmail : null },
       set (value) { this.$store.commit('requests/update', {altEmail: value}) }
     },
     isRegistered: {
@@ -593,6 +596,7 @@ export default {
           this.$v.firstName.$touch()
           this.$v.lastName.$touch()
           this.$v.email.$touch()
+          this.$v.tel.$touch()
           this.$v.abrAdr.$touch()
           break
         case 'voting-information':
@@ -601,6 +605,7 @@ export default {
           this.$v.voterClass.$touch()
           this.$v.isRegistered.$touch()
           this.$v.recBallot.$touch()
+          this.$v.altEmail.$touch()
           break
         case 'id-and-contact-information':
           this.$v.dob.$touch()
@@ -634,6 +639,10 @@ export default {
           this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.locality'}})
           this.$refs.abrAdr.$refs.locality[0].focus()
           break
+        case this.stage.slug === 'your-information' && this.$v.tel.$error:
+          this.$refs.tel.$refs.tel.focus()
+          this.$store.dispatch('requests/recordAnalytics', { event: 'Form Error', attributes: { field: 'tel' } })
+          break
         case this.stage.slug === 'voting-information' && this.$v.votAdr.thoroughfare.$error:
           this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'votAdr.thoroughfare'}})
           this.$refs.votAdr.$refs.street.focus()
@@ -653,6 +662,10 @@ export default {
         case this.stage.slug === 'voting-information' && this.$v.jurisdiction.$error:
           this.$refs.jurisdiction.$refs.jurisdiction.focus()
           this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'jurisdiction'}})
+          break
+        case this.stage.slug === 'voting-information' && this.$v.altEmail.$error:
+          this.$refs.altEmail.focus()
+          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'altEmail'}})
           break
         case this.stage.slug === 'id-and-contact-information' && this.$v.dob.$error:
           this.$refs.dob.$refs.dob.focus()
@@ -727,8 +740,10 @@ export default {
       fax: {
       },
       tel: {
+        validPhone () { return this.tel && this.tel.rawInput ? this.tel.isValidPhone : true }
       },
       altEmail: {
+        email
       },
       fwabRequest: {
       },
@@ -747,7 +762,14 @@ export default {
             }
             let needsSSN = Boolean(this.stateRules.id.indexOf('SSN') > -1 || this.stateRules.id.indexOf('SSN4') > -1)
             return Boolean(needsSSN && !this.identification.stateId && !this.identification.noId)
-          })
+          }),
+          correctLength () {
+            if (this.stateRules.id.indexOf('SSN4') > -1) {
+              return this.identification.ssn.length === 4
+            } else if (this.stateRules.id.indexOf('SSN') > -1) {
+              return this.identification.ssn.length === 9
+            }
+          }
         },
         stateId: {
           requiredIf: requiredIf((model) => {

@@ -82,7 +82,7 @@ export default {
       return new Date(2000, 10, 6)
     },
     minDate () {
-      return new Date(1870, 0, 1)
+      return new Date(1900, 0, 1)
     }
   },
   methods: {
