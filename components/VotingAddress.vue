@@ -74,6 +74,7 @@
     <b-field :label="$t('request.votAdr.county')">
       <b-input ref="county"
         :placeholder="$t('request.votAdr.county')"
+        :disabled="state === 'DC'"
         v-model="county"></b-input>
     </b-field>
   </div>
@@ -190,7 +191,7 @@ export default {
     }
   },
   async mounted () {
-    if (!this.county && this.state && this.city) {
+    if (!this.county && this.state && this.city && this.state !== 'DC') {
       let {data: { predictions }} = await axios.get(`${process.env.placesUrl + process.env.autocompleteEndpoint}?input=${this.street || ''}%20${this.city || ''}%20${this.state || ''}%20${this.zip || ''}&types=geocode&language=en&components=country:US&key=${process.env.placesKey}`)
       if (predictions.length > 0) {
         let {data: {result}} = await axios.get(`${process.env.placesUrl + process.env.detailsEndpoint}?placeid=${predictions[0].place_id}&key=${process.env.placesKey}`)
@@ -224,8 +225,11 @@ export default {
       if (option && option.place_id) {
         axios.get(`${process.env.placesUrl + process.env.detailsEndpoint}?placeid=${option.place_id}&key=${process.env.placesKey}`)
           .then(({ data }) => {
-            this.county = data.result.address_components.filter(y => y.types.indexOf('administrative_area_level_2') > -1)[0].long_name
             this.state = data.result.address_components.filter(n => n.types.indexOf('administrative_area_level_1') > -1)[0].short_name
+            if (this.state !== 'DC') {
+              this.county = data.result.address_components.filter(y => y.types.indexOf('administrative_area_level_2') > -1)[0].long_name
+            }
+            console.log('adr_address', data.result.adr_address.split(/<span class="|">|<\/span>,?\s?/))
             data.result.adr_address
               .split(/<span class="|">|<\/span>,?\s?/)
               .filter(e => e)

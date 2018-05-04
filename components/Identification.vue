@@ -9,8 +9,9 @@
       :message="validations.ssn.$error ? $t(`request.id.messages.fullSSNRequired`) : '' "
       :type="(validations.ssn.$error ? 'is-danger': '')">
       <b-input v-cleave="masks.ssn"
-        :value="value ? value.ssnTyped : ''"
+        :value="value ? value.ssnTyped : null"
         ref="ssn"
+        placeholder="XXX-XX-XXXX"
         @input="setVal"
         @input.native="val => setSSN(val.target._vCleave.getRawValue())">
       </b-input>
@@ -23,6 +24,9 @@
       <b-input v-cleave="masks.ssn4"
         :value="value ? value.ssnTyped : null"
         ref="ssn4"
+        placeholder="XXX-XX-"
+        pattern="X{3}-X{2}-[0-9]{4}"
+        required
         @input="setVal"
         @input.native="val => setSSN(val.target._vCleave.getRawValue())">
       </b-input>
@@ -34,7 +38,7 @@
       :message="validations.stateId.$error ? $t(`request.id.messages.stateIdRequired`) : '' "
       :type="(validations.stateId.$error ? 'is-danger': '')"
       :label="stateIdLabel">
-      <b-input :value="value ? value.stateId : ''"
+      <b-input :value="value ? value.stateId : null"
         ref="stateId"
         @input="setVal">
       </b-input>
@@ -84,24 +88,20 @@ export default {
   ],
   data () {
     return {
+      phone: '',
       baseClass: {
         'is-medium': true,
         'is-outlined': true,
         button: true
       },
       isOpen: false,
-      ssnclean: '',
+      ssnclean: null,
       checkbox: false,
       masks: {
-        creditCard: { creditCard: true },
-        numeral: {
-          numeral: true,
-          numeralThousandsGroupStyle: 'thousand',
-          prefix: '$ '
-        },
         ssn: {
           delimiter: '-',
           blocks: [3, 2, 4],
+          noImmediatePrefix: false,
           numericOnly: true
         },
         ssn4: {
@@ -109,6 +109,7 @@ export default {
           blocks: [3, 2, 4],
           numericOnly: true,
           prefix: 'XXXXX',
+          noImmediatePrefix: false,
           rawValueTrimPrefix: true
         }
       }
@@ -124,11 +125,13 @@ export default {
     },
     ssn: function () {
       if (this.$refs.ssn) {
+        console.log(this.$refs.ssn)
         return this.$refs.ssn.newValue
       } else if (this.$refs.ssn4) {
+        console.log(this.$refs.ssn4)
         return this.$refs.ssn4.newValue
       } else {
-        return ''
+        return null
       }
     },
     stateIdLabel: function () {
@@ -145,11 +148,17 @@ export default {
         }, '')
     }
   },
+  mounted () {
+    if (this.$refs.ssn4) {
+      this.$emit('input', Object.assign({}, this.value, {ssnTyped: 'XXX-XX', ssn: 'XXX-XX'}))
+    }
+    // this.$refs.ssn4
+  },
   methods: {
     setVal: function () {
-      let val = this.$refs.noId.newValue ? {noId: true, ssn: '', ssnTyped: '', stateId: ''} : {noId: false, ssn: this.ssnclean, ssnTyped: this.ssn, stateId: this.$refs.stateId ? this.$refs.stateId.newValue || '' : ''}
+      let val = this.$refs.noId.newValue ? {noId: true, ssn: null, ssnTyped: null, stateId: null} : {noId: false, ssn: this.ssnclean, ssnTyped: this.ssn, stateId: this.$refs.stateId ? this.$refs.stateId.newValue || null : null}
       if (this.$refs.noId.newValue) {
-        this.$refs.ssn4.value = ''
+        this.$refs.ssn4.value = null
       }
       this.$emit('input', val)
     },

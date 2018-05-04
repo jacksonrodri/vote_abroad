@@ -141,7 +141,7 @@
       <!-- isRegistered -->
     <is-registered
       v-if="votAdr && jurisdiction && jurisdiction.j && jurisdiction.t"
-      :label="$t('request.isRegistered.label', {jurisdiction: jurisdiction.t === 'All' ? jusridiction.s : jurisdiction.j + ' ' + jurisdiction.t})"
+      :label="$t('request.isRegistered.label', {jurisdiction: jurisdiction.t === 'All' ? jurisdiction.s : jurisdiction.j + ' ' + jurisdiction.t})"
       :validations="($v.isRegistered)"
       @input="delayTouch($v.isRegistered)"
       v-model="isRegistered">
