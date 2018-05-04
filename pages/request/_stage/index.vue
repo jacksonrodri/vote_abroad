@@ -518,7 +518,7 @@ export default {
       set (value) { this.$store.commit('requests/update', {voterClass: value}) }
     },
     identification: {
-      get () { return this.requests[this.currentRequest] && this.requests[this.currentRequest].identification ? this.requests[this.currentRequest].identification : {noId: false, ssn: '', ssnTyped: '', stateId: ''} },
+      get () { return this.requests[this.currentRequest] && this.requests[this.currentRequest].identification ? this.requests[this.currentRequest].identification : {noId: false, ssn: null, ssnTyped: null, stateId: null} },
       set (value) { this.$store.commit('requests/update', {identification: value}) }
     },
     ssn: {

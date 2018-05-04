@@ -21,7 +21,7 @@
       :type="(validations.ssn.$error ? 'is-danger': '')"
       :label="$t('request.id.SSN4')">
       <b-input v-cleave="masks.ssn4"
-        :value="value ? value.ssnTyped : ''"
+        :value="value ? value.ssnTyped : null"
         ref="ssn4"
         @input="setVal"
         @input.native="val => setSSN(val.target._vCleave.getRawValue())">
