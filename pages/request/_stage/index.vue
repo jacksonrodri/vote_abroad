@@ -462,27 +462,33 @@ export default {
       return this.$store.state.userauth.user
     },
     email: {
-      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].email : null },
+      // get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].email : null },
+      get () { return this.currentRequestObject.email || null },
       set (value) { this.$store.commit('requests/update', { email: value }) }
     },
     firstName: {
-      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].firstName : null },
+      // get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].firstName : null },
+      get () { return this.currentRequestObject.firstName || null },
       set (value) { this.$store.commit('requests/update', { firstName: value }) }
     },
     middleName: {
-      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].middleName : null },
+      // get () { return this.requests[this.currentRequest] && this.requests[this.currentRequest].middleName ? this.requests[this.currentRequest].middleName : null },
+      get () { return this.currentRequestObject.middleName || null },
       set (value) { this.$store.commit('requests/update', { middleName: value }) }
     },
     lastName: {
-      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].lastName : null },
+      // get () { return this.requests[this.currentRequest] && this.requests[this.currentRequest].lastName ? this.requests[this.currentRequest].lastName : null },
+      get () { return this.currentRequestObject.lastName || null },
       set (value) { this.$store.commit('requests/update', { lastName: value }) }
     },
     previousName: {
-      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].previousName : {usesPreviousName: false, previousName: ''} },
+      // get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].previousName : {usesPreviousName: false, previousName: null} },
+      get () { return this.currentRequestObject.previousName || null },
       set (value) { this.$store.commit('requests/update', { previousName: value }) }
     },
     suffix: {
-      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].suffix : null },
+      // get () { return this.requests[this.currentRequest] && this.requests[this.currentRequest].suffix ? this.requests[this.currentRequest].suffix : null },
+      get () { return this.currentRequestObject.suffix || null },
       set (value) { this.$store.commit('requests/update', { suffix: value }) }
     },
     dob: {

@@ -56,7 +56,7 @@ import Mailcheck from 'mailcheck'
 import debounce from 'lodash/debounce'
 const countries = require('~/assets/countries.json')
 const md = () => import(
-  /* webpackChunkName: "libphone" */ 'libphonenumber-js/metadata.min.json'
+  /* webpackChunkName: "libphone" */ 'libphonenumber-js/metadata.full.json'
 )
 let metadata = null
 const phoneExamples = async () => import(

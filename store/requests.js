@@ -8,7 +8,7 @@ export const getters = {
     return state.requests.find(request => request.id === id)
   },
   getCurrent: (state) => {
-    return state.requests[state.currentRequest]
+    return state.requests[state.currentRequest] || {firstName: null, lastName: null}
   }
 }
 
@@ -115,8 +115,8 @@ export const actions = {
       commit('update', {
         email: rootState.userauth.user.emailAddress,
         tel: {
-          intNumber: rootState.userauth.user.mobileIntFormat || '',
-          country: rootState.userauth.session.country || ''
+          intNumber: rootState.userauth.user.mobileIntFormat || undefined,
+          country: rootState.userauth.session.country || undefined
         },
         abrAdr: {
           countryiso: rootState.userauth.session.country

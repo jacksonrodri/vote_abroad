@@ -18,7 +18,7 @@
       </p>
       <b-autocomplete
           v-show="!showFlag"
-          v-model="phoneCountry"
+          v-model="countrySearch"
           placeholder="Country"
           ref="country"
           keep-first
@@ -31,7 +31,7 @@
           field="iso"
           @blur="focusField"
           @focus="$event.target.select()"
-          @select="option => select(option)">
+          @select="option => select(option.code)">
         <template slot-scope="props">
           <span :class="`flag-icon flag-icon-${props.option.code.toLowerCase()}`"></span>{{ props.option.name }} (+{{getPhoneCode(props.option.code)}})
           <!-- <span :class="`flag-icon flag-icon-${props.option.code.toLowerCase()}`"></span>{{ props.option.label }} (+{{getPhoneCode(props.option.iso)}}) -->
@@ -51,7 +51,7 @@
 </template>
 
 <script>
-import { getPhoneCode, parse, format, isValidNumber, asYouType as AsYouType } from 'libphonenumber-js'
+import { getPhoneCode, getNumberType, parse, format, isValidNumber, asYouType as AsYouType } from 'libphonenumber-js'
 import * as phoneExamples from 'libphonenumber-js/examples.mobile.json'
 
 const countries = require('~/assets/countries.json')
@@ -81,22 +81,24 @@ export default {
     }
   },
   mounted () {
-    this.phoneCountry = this.value.country || this.userCountry || 'US'
+    // this.phoneCountry = this.value.country || this.userCountry || 'US'
     this.typed = this.value.rawInput || this.$store.state.userauth.user.mobileIntFormat || ''
   },
   data () {
     return {
       data: [],
-      phoneCountry: '',
+      // phoneCountry: '',
       showFlag: true,
       selected: null,
-      typed: ''
+      typed: '',
+      countrySearch: ''
     }
   },
   watch: {
     typed: function (newVal, oldVal) {
       if (!newVal) {
-        return null
+        this.$emit('input', {rawInput: null, country: null, isValidPhone: false, intNumber: null, type: null})
+        return
       }
       let validPhone = false
       let intNumber = ''
@@ -110,31 +112,49 @@ export default {
         cleanNumber = `+${newVal}`
       }
       this.typed = formatter.input(cleanNumber)
-      if (formatter.country) { this.phoneCountry = formatter.country }
-      validPhone = isValidNumber(this.typed, this.phoneCountry)
+      // console.log('formatter', formatter)
+      // console.log('type', getNumberType(parse(this.typed, this.phoneCountry)))
+      // if (formatter.country) { this.phoneCountry = formatter.country }
+      validPhone = isValidNumber(this.typed, formatter.country || this.phoneCountry.toUpperCase())
       if (validPhone) { intNumber = format(parse(this.typed, this.phoneCountry), 'E.164') }
-      this.$emit('input', {rawInput: this.typed, country: this.phoneCountry, isValidPhone: validPhone, intNumber: intNumber, type: this.value.type || undefined})
+      this.$emit('input', {rawInput: this.typed || null, country: formatter.country || this.phoneCountry, isValidPhone: validPhone, intNumber: intNumber || null, type: getNumberType(parse(this.typed, this.phoneCountry)) || this.value.type || null})
     },
     value: function (newVal, oldVal) {
       this.typed = newVal.rawInput
     }
   },
   computed: {
+    phoneCountry: {
+      get () {
+        if (this.value && this.value.country && this.value.country.length === 2) {
+          return this.value.country
+        } else {
+          return this.userCountry || 'US'
+        }
+      },
+      // get () { return this.value && this.value.country ? this.value.country : this.userCountry || 'US' },
+      set (val) {
+        this.$emit('input', Object.assign({}, this.value, {country: val}))
+        // this.$emit('input', { rawInput: this.value ? this.value.rawInput || null : null, country: val || null, isValidPhone: this.value.validPhone || null, intNumber: this.value.intNumber || null, type: this.value.type || null })
+      }
+    },
     userCountry () { return this.$store.state.userauth.user.country },
     countryList () {
-      return countries
+      return countries.filter(({code: c}) => c !== 'AQ' && c !== 'BV' && c !== 'TF' && c !== 'HM' && c !== 'AN' && c !== 'PN' && c !== 'CS' && c !== 'UM' && c !== 'GS')
     },
     filteredCountries () {
-      if (this.phoneCountry && this.phoneCountry.length > 1) {
+      if (this.countrySearch && this.countrySearch.length > 0) {
         return this.countryList.filter((option) => {
           return option.name
             .toString()
             .toLowerCase()
-            .indexOf(this.phoneCountry.toLowerCase()) >= 0 || option.code
+            .indexOf(this.countrySearch.toLowerCase()) >= 0 || option.code
             .toString()
             .toLowerCase()
-            .indexOf(this.phoneCountry.toLowerCase()) >= 0
+            .indexOf(this.countrySearch.toLowerCase()) >= 0
         })
+      } else if (this.userCountry) {
+        return this.countryList.filter(country => country.code === this.userCountry).concat(this.countryList)
       } else {
         return this.countryList
       }
@@ -163,9 +183,9 @@ export default {
   },
   methods: {
     getPhoneCode (code) {
-      if (code === 'GS') {
-        return '500'
-      }
+      // if (code === 'GS') {
+      //   return '500'
+      // }
       try {
         return getPhoneCode(code)
       } catch (error) {
@@ -173,10 +193,13 @@ export default {
       }
     },
     select (option) {
-      this.selected = option
-      if (this.selected) {
-        this.focusField()
-      }
+      // console.log(option)
+      this.phoneCountry = option
+      // this.selected = option
+      // this.phoneCountry = this.selected.code
+      // if (this.selected) {
+      this.focusField()
+      // }
     },
     focusCountry () {
       this.showFlag = false

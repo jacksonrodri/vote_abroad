@@ -26,7 +26,8 @@
       </b-field>
   </div>
   <b-field v-show="usesPreviousName" :type="type" :message="message" :label="label">
-    <b-input :value="value && value.previousName ? value.previousName : ''" @input="val => setName(val)"></b-input>
+    <!-- <b-input :value="value && value.previousName ? value.previousName : ''" @input="val => setName(val)"></b-input> -->
+    <b-input v-model="pName"></b-input>
   </b-field>
   <b-message :title="tooltipTitle" type="is-info" has-icon :active.sync="isOpen">
     <slot name="tooltip"></slot>
@@ -49,6 +50,23 @@ export default {
   computed: {
     name () {
       return this.value && this.value.previousName ? this.value.previousName : ''
+    },
+    pName: {
+      get () {
+        if (typeof this.value === 'string' && this.value.length > 0) {
+          return this.value
+        } else if (this.value && typeof this.value.previousName === 'string' && this.value.previousName.length > 0) {
+          return this.value.previousName
+        } else {
+          return null
+        }
+      },
+      set (value) {
+        this.$emit('input', {
+          previousName: value || null,
+          usesPreviousName: this.value.usesPreviousName || false
+        })
+      }
     },
     usesPreviousName () {
       return this.value && this.value.usesPreviousName ? this.value.usesPreviousName : false
@@ -74,7 +92,8 @@ export default {
     },
     setUsesPreviousName: function (val) {
       this.$emit('input', {
-        previousName: val ? this.name : '',
+        // previousName: val ? this.name || null : null,
+        previousName: this.pName,
         usesPreviousName: val
       })
     }
