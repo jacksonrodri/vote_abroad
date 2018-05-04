@@ -59,7 +59,7 @@ export default {
         let dob = this.$store.getters['requests/getCurrent'] && this.$store.getters['requests/getCurrent'].dob ? this.$store.getters['requests/getCurrent'].dob : null
         function createDateObj (d) { return new Date(d.substr(0, 4), d.substr(5, 2) - 1, d.substr(8, 2), 12) }
         console.log('getdob', dob)
-        console.log('getDobObj', createDateObj(dob))
+        // console.log('getDobObj', createDateObj(dob || new Date)
         if (!dob || dob.toString().length !== 10) {
           return null
         } else {
