@@ -764,10 +764,14 @@ export default {
             return Boolean(needsSSN && !this.identification.stateId && !this.identification.noId)
           }),
           correctLength () {
-            if (this.stateRules.id.indexOf('SSN4') > -1) {
-              return this.identification.ssn.length === 4
-            } else if (this.stateRules.id.indexOf('SSN') > -1) {
-              return this.identification.ssn.length === 9
+            if (this.identification.ssn && this.stateRules && this.stateRules.id) {
+              if (this.stateRules.id.indexOf('SSN4') > -1) {
+                return this.identification.ssn.length === 4
+              } else if (this.stateRules.id.indexOf('SSN') > -1) {
+                return this.identification.ssn.length === 9
+              }
+            } else {
+              return true
             }
           }
         },
