@@ -6,7 +6,7 @@ import AWSExports from '../aws-exports'
 const jwtDecode = require('jwt-decode')
 // const redirectUri = `https://amplify-appsync--votefromabroad.netlify.com`
 // const redirectUri = `http://localhost:3000`
-const redirectUri = process.env.url
+const redirectUri = process.env.url + '/request/your-information/'
 
 const webAuth = new WebAuth({
   domain: 'montg.auth0.com',
