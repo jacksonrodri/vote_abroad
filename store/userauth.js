@@ -6,11 +6,11 @@ import AWSExports from '../aws-exports'
 const jwtDecode = require('jwt-decode')
 // const redirectUri = `https://amplify-appsync--votefromabroad.netlify.com`
 // const redirectUri = `http://localhost:3000`
-const redirectUri = process.env.url + '/request/your-information/'
+const redirectUri = process.env.url
 
 const webAuth = new WebAuth({
   domain: 'montg.auth0.com',
-  redirectUri: redirectUri,
+  redirectUri: redirectUri + '/request/your-information/',
   clientID: '0Wy4khZcuXefSfrUuYDUP0Udag4FqL2u',
   responseType: 'token id_token'
 })
@@ -291,9 +291,9 @@ export const actions = {
           if (err) {
             let id = await Auth.currentCredentials().then(x => x.data.IdentityId)
             // console.log(id)
-            let name = Auth.credentials_source
+            // let name = state.user.firstName || Auth.credentials_source
             commit('updateIdentityId', id)
-            commit('updateUser', { firstName: name })
+            // commit('updateUser', { firstName: name })
             // let user = await Auth.currentAuthenticatedUser()
             // let res = await Auth.updateUserAttributes(user, {
             //   'email': 'me@anotherdomain.com',

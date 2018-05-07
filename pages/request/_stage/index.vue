@@ -740,7 +740,7 @@ export default {
       fax: {
       },
       tel: {
-        validPhone () { return this.tel && this.tel.rawInput ? this.tel.isValidPhone : true }
+        async validPhone () { return this.tel && this.tel.rawInput ? this.tel.isValidPhone : true }
       },
       altEmail: {
         email

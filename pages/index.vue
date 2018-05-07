@@ -105,7 +105,7 @@ export default {
     isAuthenticated: function () { return this.$store.getters['userauth/isAuthenticated'] },
     user () { return this.$store.state.userauth.user },
     requests () { return this.$store.state.requests.requests },
-    name () { return this.user && this.user.firstName ? this.user.firstName : this.requests && this.requests[0] && this.requests[0].firstName ? this.requests[0].firstName : '' }
+    name () { return this.user && this.user.firstName ? this.user.firstName : this.requests && this.requests[0] && this.requests[0].firstName ? this.requests[0].firstName : 'guest' }
   },
   methods: {
     anonymousStart: function () {
