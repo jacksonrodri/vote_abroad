@@ -188,9 +188,11 @@ export default {
   methods: {
     updateLeo: function (value) {
       let leo = {}
-      Object.keys(value).forEach(x => {
-        if (value[x]) leo[x] = value[x]
-      })
+      if (value) {
+        Object.keys(value).forEach(x => {
+          if (value[x]) leo[x] = value[x]
+        })
+      }
       this.$store.commit('requests/update', {leo: leo})
     },
     updated: function () {
