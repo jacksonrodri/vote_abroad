@@ -120,7 +120,7 @@ export default {
             break
           case 'county':
           case 'island':
-            if (this.votAdr.county && (x.n.toLowerCase().indexOf(this.votAdr.locality.toLowerCase().replace('county', '').replace('island', '').trim()) > -1 || x.j.toLowerCase().indexOf(this.votAdr.locality.toLowerCase().replace('county', '').replace('island', '').trim()) > -1)) {
+            if (this.votAdr.county && (x.n.toLowerCase().indexOf(this.votAdr.county.toLowerCase().replace('county', '').replace('island', '').trim()) > -1 || x.j.toLowerCase().indexOf(this.votAdr.county.toLowerCase().replace('county', '').replace('island', '').trim()) > -1)) {
               countyLeos.push(x)
             }
             break
