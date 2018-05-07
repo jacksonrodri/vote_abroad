@@ -164,6 +164,7 @@ export default {
   },
   computed: {
     currentRequest () { return this.$store.getters['requests/getCurrent'] || {} },
+    leoState () { return this.currentRequest.leo && this.currentRequest.leo.s ? this.currentRequest.leo.s : null },
     votAdr () { return this.currentRequest.votAdr || {} },
     street: {
       get () { return this.votAdr.thoroughfare || '' },
@@ -188,6 +189,13 @@ export default {
     county: {
       get () { return this.votAdr.county || '' },
       set (value) { this.updateAddress('county', value) }
+    }
+  },
+  watch: {
+    state: function (newVal) {
+      if (this.leoState && this.leoState.toLowerCase() !== newVal.toLowerCase()) {
+        this.$store.commit('requests/update', {leo: null})
+      }
     }
   },
   async mounted () {

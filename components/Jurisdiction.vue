@@ -1,38 +1,49 @@
 <template>
   <div class="field">
-    <span class="is-flex"><label class="label">{{ label }}</label><span @click="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
-    <slot name="instructions"></slot>
-    <!-- Jurisdiction: {{leos.length}} leos found -->
-    <!-- <button class="button">Wake County</button> -->
-    <b-field
-      :type="validations.$error ? 'is-danger' : ''"
-      :message="validations.$error ? Object.keys(validations.$params).map(x => $t(`request.jurisdiction.messages.${x}`)) : '' ">
+    <!-- <div v-if="isSingleLeoState">
+      <span class="is-flex"><label class="label">{{ label }}</label><span @click="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span> -->
+      <!-- <slot name="instructions"></slot> -->
+      <!-- <p></p>
       <b-field>
-        <b-autocomplete
-          :value="typedJurisdiction || jurisdiction || ''"
-          open-on-focus
-          keep-first
-          expanded
-          @input="updated"
-          ref="jurisdiction"
-          :data="filteredLeos"
-          field="n"
-          :placeholder="placeholder"
-          @select="option => updateLeo(option)">
-          <template slot-scope="props"><strong>{{props.option.j}} {{props.option.j.toLowerCase().indexOf(props.option.t.toLowerCase()) > -1 ? '' : props.option.t}}</strong> - <small>{{props.option.n}}</small></template>
-          </b-autocomplete>
-          <p class="control">
-              <button class="button is-grey is-inverted is-outlined"
-                @click="$refs.jurisdiction.focus()">
-                <b-icon icon="chevron-down"></b-icon>
-              </button>
-          </p>
-        </b-field>
+        <b-input disabled :value="jurisdiction"></b-input>
       </b-field>
-  <b-message :title="toolTipTitle" type="is-info" has-icon :active.sync="isOpen">
-    <slot name="tooltip"></slot>
-  </b-message>
-  </div>
+    </div> -->
+    <!-- <div v-else> -->
+      <span class="is-flex"><label class="label">{{ label }}</label><span @click="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
+      <slot name="instructions"></slot>
+      <!-- Jurisdiction: {{leos.length}} leos found -->
+      <!-- <button class="button">Wake County</button> -->
+      <b-field
+        :type="validations.$error ? 'is-danger' : ''"
+        :message="validations.$error ? Object.keys(validations.$params).map(x => $t(`request.jurisdiction.messages.${x}`)) : '' ">
+            <!-- v-model="typedJurisdiction" -->
+        <b-field>
+          <b-autocomplete
+            :value="typedJurisdiction || jurisdiction || ''"
+            open-on-focus
+            keep-first
+            expanded
+            @input="(val) => {this.typedJurisdiction = val; this.updated()}"
+            ref="jurisdiction"
+            :data="filteredLeos"
+            field="n"
+            :placeholder="placeholder"
+            @select="option => updateLeo(option)">
+            <template slot-scope="props"><strong>{{props.option.j}} {{props.option.j.toLowerCase().indexOf(props.option.t.toLowerCase()) > -1 ? '' : props.option.t}}</strong> - <small>{{props.option.n}}</small></template>
+            </b-autocomplete>
+            <p class="control">
+                <button class="button is-grey is-inverted is-outlined"
+                  @click="$refs.jurisdiction.focus()">
+                  <b-icon icon="chevron-down"></b-icon>
+                </button>
+            </p>
+          </b-field>
+        </b-field>
+      <b-message :title="toolTipTitle" type="is-info" has-icon :active.sync="isOpen">
+        <slot name="tooltip"></slot>
+      </b-message>
+    </div>
+  <!-- </div> -->
 </template>
 
 <script>
@@ -55,10 +66,17 @@ export default {
         /* webpackChunkName: "leodata" */ `@/data/${this.state}-leos.json`
       )
     )
+    if (this.leos.length === 1) {
+      this.isSingleLeoState = true
+      this.updateLeo(this.leos[0])
+    } else {
+      this.isSingleLeoState = false
+    }
   },
   data () {
     return {
       leos: [],
+      isSingleLeoState: false,
       typedJurisdiction: '',
       isOpen: false
     }
@@ -67,38 +85,104 @@ export default {
     votAdr () { return this.$store.getters['requests/getCurrent'].votAdr },
     leo () { return this.$store.getters['requests/getCurrent'].leo },
     jurisdiction () { return this.leo && this.leo.n ? this.leo.n : '' },
+    leoTypes () { return [...new Set(this.leos.map(x => x.t))] },
+    // isSingleLeoState () { return this.leos.length === 1 },
     street: {
       get () { return this.votAdr.thoroughfare || '' },
       set (value) { this.updateAddress('thoroughfare', value) }
     },
-    prioritizedLeos () {
-      if (this.votAdr.county) {
-        let county = this.votAdr.county.toLowerCase().replace('county', '').trim()
-        return this.leos.slice()
-          .sort((a, b) => a.n - b.n)
-          .sort((a, b) => {
-            if (
-              a.n.toLowerCase().indexOf(county) > -1 &&
-              b.n.toLowerCase().indexOf(county) > -1
-            ) {
-              return 1
-            } else if (a.n.toLowerCase().indexOf(county) > -1) {
-              return -1
-            } else if (b.n.toLowerCase().indexOf(county) > -1) {
-              return 1
-            } else {
-              return 0
+    myLeos () {
+      let villageLeos = []
+      let townLeos = []
+      let cityLeos = []
+      let countyLeos = []
+      this.leos.forEach(x => {
+        switch (x.t.toLowerCase()) {
+          case 'all':
+            break
+          case 'village':
+            if (this.votAdr.locality && (x.n.toLowerCase().indexOf(this.votAdr.locality.toLowerCase().replace('village', '').trim()) > -1 || x.j.toLowerCase().indexOf(this.votAdr.locality.toLowerCase().replace('village', '').trim()) > -1)) {
+              villageLeos.push(x)
             }
-          })
-      } else {
-        return this.leos
-      }
+            break
+          case 'town':
+          case 'township':
+            if (this.votAdr.locality && (x.n.toLowerCase().indexOf(this.votAdr.locality.toLowerCase().replace('township', '').replace('town', '').trim()) > -1 || x.j.toLowerCase().indexOf(this.votAdr.locality.toLowerCase().replace('township', '').replace('town', '').trim()) > -1)) {
+              townLeos.push(x)
+            }
+            break
+          case 'parish':
+          case 'borough':
+          case 'city':
+            if (this.votAdr.locality && (x.n.toLowerCase().indexOf(this.votAdr.locality.toLowerCase().replace('parish', '').replace('borough', '').replace('city', '').trim()) > -1 || x.j.toLowerCase().indexOf(this.votAdr.locality.toLowerCase().replace('parish', '').replace('borough', '').replace('city', '').trim()) > -1)) {
+              cityLeos.push(x)
+            }
+            break
+          case 'county':
+          case 'island':
+            if (this.votAdr.county && (x.n.toLowerCase().indexOf(this.votAdr.locality.toLowerCase().replace('county', '').replace('island', '').trim()) > -1 || x.j.toLowerCase().indexOf(this.votAdr.locality.toLowerCase().replace('county', '').replace('island', '').trim()) > -1)) {
+              countyLeos.push(x)
+            }
+            break
+          default:
+            break
+        }
+      })
+      // this.leos.forEach(x => {
+      //   switch (x.toLowerCase()) {
+      //     case 'county':
+      //     case 'island':
+      //       if (this.votAdr.county) {
+      //         arr.push(this.leos.filter(x => x.n.indexOf(this.votAdr.county) > -1))
+      //       }
+      //       break
+      //     case 'town':
+      //     case 'village':
+      //     case 'city':
+      //     case 'parish':
+      //     case 'township':
+      //     case 'borough':
+      //       if (this.votAdr.locality) {
+      //         arr.unshift(this.leos.filter(x => x.n.indexOf(this.votAdr.locality) > -1)[0])
+      //       }
+      //       break
+      //     default:
+      //       console.log('other jurisdiction type: ', x)
+      //   }
+      // })
+      // console.log('types', arr)
+      return [].concat(villageLeos, townLeos, cityLeos, countyLeos)
+    },
+    prioritizedLeos () {
+      return [].concat(this.myLeos, this.leos)
+      // if (this.votAdr.county) {
+      //   let county = this.votAdr.county.toLowerCase().replace('county', '').trim()
+      //   return this.leos.slice()
+      //     .sort((a, b) => a.n - b.n)
+      //     .sort((a, b) => {
+      //       if (
+      //         a.n.toLowerCase().indexOf(county) > -1 &&
+      //         b.n.toLowerCase().indexOf(county) > -1
+      //       ) {
+      //         return 1
+      //       } else if (a.n.toLowerCase().indexOf(county) > -1) {
+      //         return -1
+      //       } else if (b.n.toLowerCase().indexOf(county) > -1) {
+      //         return 1
+      //       } else {
+      //         return 0
+      //       }
+      //     })
+      // } else {
+      //   return this.leos
+      // }
     },
     filteredLeos () {
       if (!this.typedJurisdiction) {
         return this.prioritizedLeos
       }
-      return this.prioritizedLeos.filter(leo => leo.n.toLowerCase().indexOf(this.typedJurisdiction.toLowerCase()) > -1)
+      return this.leos.filter(leo => leo.n.toLowerCase().indexOf(this.typedJurisdiction.toLowerCase()) > -1 || leo.j.toLowerCase().indexOf(this.typedJurisdiction.toLowerCase()) > -1)
+      // return this.prioritizedLeos.filter(leo => leo.n.toLowerCase().indexOf(this.typedJurisdiction.toLowerCase()) > -1 || leo.j.toLowerCase().indexOf(this.typedJurisdiction.toLowerCase()) > -1)
     }
   },
   methods: {
