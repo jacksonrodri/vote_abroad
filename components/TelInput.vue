@@ -28,10 +28,9 @@
           expanded
           :size="size"
           :data="filteredCountries"
-          field="iso"
           @blur="focusField"
           @focus="$event.target.select()"
-          @select="option => select(option.code)">
+          @select="option => select(option)">
         <template slot-scope="props">
           <span :class="`flag-icon flag-icon-${props.option.code.toLowerCase()}`"></span>{{ props.option.name }} (+{{getPhoneCode(props.option.code)}})
           <!-- <span :class="`flag-icon flag-icon-${props.option.code.toLowerCase()}`"></span>{{ props.option.label }} (+{{getPhoneCode(props.option.iso)}}) -->
@@ -193,13 +192,10 @@ export default {
       }
     },
     select (option) {
-      // console.log(option)
-      this.phoneCountry = option
-      // this.selected = option
-      // this.phoneCountry = this.selected.code
-      // if (this.selected) {
-      this.focusField()
-      // }
+      if (option && option.code) {
+        this.phoneCountry = option.code
+        this.focusField()
+      }
     },
     focusCountry () {
       this.showFlag = false

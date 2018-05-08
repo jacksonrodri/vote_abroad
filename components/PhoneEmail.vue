@@ -16,16 +16,16 @@
         </p>
         <b-autocomplete
             v-show="!showFlag"
-            v-model="phoneCountry"
+            v-model="countrySearch"
             placeholder="Country"
             ref="country"
             open-on-focus
             :icon="' ' + 'flag-icon-' + countryCode.toLowerCase()"
             icon-pack="flag-icon"
             expanded
+            keep-first
             :size="size"
             :data="filteredCountries"
-            field="code"
             @blur="focusField"
             @focus="$event.target.select()"
             @select="option => select(option)">
@@ -33,6 +33,7 @@
             <span :class="`flag-icon flag-icon-${props.option.code.toLowerCase()}`"></span>{{ props.option.name }} (+{{getPhoneCode(props.option.code)}})
           </template>
         </b-autocomplete>
+            <!-- field="iso" -->
         <b-input
           id="emailOrPhone"
           ref="emailOrPhone"
@@ -91,7 +92,8 @@ export default {
       typed: '',
       mailCheckedEmail: undefined,
       phoneExamples: {},
-      metadata: null
+      metadata: null,
+      countrySearch: ''
     }
   },
   watch: {
@@ -133,19 +135,21 @@ export default {
   computed: {
     userCountry () { return this.$store.state.userauth.user.country },
     countryList () {
-      return countries
+      return countries.filter(({code: c}) => c !== 'AQ' && c !== 'BV' && c !== 'TF' && c !== 'HM' && c !== 'AN' && c !== 'PN' && c !== 'CS' && c !== 'UM' && c !== 'GS')
     },
     filteredCountries () {
-      if (this.phoneCountry && this.phoneCountry.length > 1) {
+      if (this.countrySearch && this.countrySearch.length > 0) {
         return this.countryList.filter((option) => {
           return option.name
             .toString()
             .toLowerCase()
-            .indexOf(this.phoneCountry.toLowerCase()) >= 0 || option.code
+            .indexOf(this.countrySearch.toLowerCase()) >= 0 || option.code
             .toString()
             .toLowerCase()
-            .indexOf(this.phoneCountry.toLowerCase()) >= 0
+            .indexOf(this.countrySearch.toLowerCase()) >= 0
         })
+      } else if (this.userCountry) {
+        return this.countryList.filter(country => country.code === this.userCountry).concat(this.countryList)
       } else {
         return this.countryList
       }
@@ -185,8 +189,8 @@ export default {
       }
     },
     select (option) {
-      this.selected = option
-      if (this.selected) {
+      if (option && option.code) {
+        this.phoneCountry = option.code
         this.focusField()
       }
     },
