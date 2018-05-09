@@ -16,7 +16,9 @@
                 <span class="is-flex"><label class="label">{{ $t('homepage.loginInstructions') }}</label><span @click="toolTipOpen = !toolTipOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
                 <phone-email
                   size="is-medium"
+                  ref="pe"
                   @pressEnter="startAuth"
+                  @input="touch"
                   v-model="phoneOrEmail">
                 </phone-email>
                 <div class="buttons is-right is-marginless">
@@ -67,7 +69,9 @@
 <script>
 import PhoneEmail from '~/components/PhoneEmail.vue'
 import { mapActions } from 'vuex'
+import { email } from 'vuelidate/lib/validators'
 // import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
+const touchMap = new WeakMap()
 
 export default {
   layout: 'default',
@@ -105,7 +109,18 @@ export default {
     isAuthenticated: function () { return this.$store.getters['userauth/isAuthenticated'] },
     user () { return this.$store.state.userauth.user },
     requests () { return this.$store.state.requests.requests },
-    name () { return this.user && this.user.firstName ? this.user.firstName : this.requests && this.requests[0] && this.requests[0].firstName ? this.requests[0].firstName : 'guest' }
+    name () { return this.user && this.user.firstName ? this.user.firstName : this.requests && this.requests[0] && this.requests[0].firstName ? this.requests[0].firstName : 'guest' },
+    ph () { return this.phoneOrEmail.rawInput || null },
+    em () { return this.phoneOrEmail.rawInput || null },
+    emError () { return this.$v.em.$error },
+    emTest () {
+      // let eml = this.em || 'nnn'
+      return /(^$|^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$)/.test(this.em) // eslint-disable-line no-useless-escape
+      // const emailRegex = RegExp(/(^$|^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$)/) // eslint-disable-line no-useless-escape
+      // return emailRegex.test(eml)
+    },
+    phError () { return this.$v.ph.$error },
+    vvv () { return this.$v.$flattenParams() }
   },
   methods: {
     anonymousStart: function () {
@@ -118,6 +133,7 @@ export default {
     },
     startAuth: function () {
       if (!this.phoneOrEmail.isValidEmail && !this.phoneOrEmail.isValidPhone) {
+        this.$refs.pe.$refs.emailOrPhone.focus()
         return
       }
       this.authenticating = true
@@ -125,6 +141,18 @@ export default {
       setTimeout(() => {
         this.authenticating = false
       }, 1500)
+    },
+    touch () {
+      // this.delayTouch(this.$v)
+      // this.delayTouch(this.$v.ph)
+      this.$v.$touch()
+    },
+    delayTouch ($v) {
+      $v.$reset()
+      if (touchMap.has($v)) {
+        clearTimeout(touchMap.get($v))
+      }
+      touchMap.set($v, setTimeout($v.$touch, 1000))
     },
     ...mapActions('userauth', [
       'sendEmailCode',
@@ -134,7 +162,34 @@ export default {
       'authStart'
     ])
   },
-  transition: 'test'
+  transition: 'test',
+  validations: {
+    phoneOrEmail: {
+      validEmailorPhone: function (value, model) {
+        return Boolean(/(^$|^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$)/.test(value.rawInput) || this.phoneOrEmail.isValidPhone) // eslint-disable-line no-useless-escape
+      }
+    },
+    ph: {
+      // required: requiredIf(function () { return this.emError }),
+      validPhone: function (value, model) {
+        return !this.$v.em.$error || this.phoneOrEmail.isValidPhone || false
+      }
+    },
+    em: {
+      // required: requiredIf('emError'),
+      email
+    }
+  }
   // middleware: 'account'
+  // validations: {
+  //   email: {
+  //     required: requiredIf(() => this.$v.phone.$error),
+  //     email
+  //   },
+  //   phone: {
+  //     required: requiredIf(() => this.$v.email.$error),
+  //     async validPhone () { return this.phoneOrEmail && this.phoneOrEmail.rawInput ? this.phoneOrEmail.isValidPhone : false }
+  //   }
+  // }
 }
 </script>

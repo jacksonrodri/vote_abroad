@@ -50,6 +50,7 @@
         key="tel"
         :label="$t('request.tel.label')"
         ref="tel"
+        autocomplete="mobile tel"
         @input="delayTouch($v.tel)"
         :type="($v.tel.$error ? 'is-danger': '')"
         :message="$v.tel.$error ? Object.keys($v.tel.$params).map(x => x === 'validPhone' ? 'Please enter a valid phone number': x) : [] "

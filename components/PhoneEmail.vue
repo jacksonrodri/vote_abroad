@@ -28,7 +28,7 @@
             :data="filteredCountries"
             @blur="focusField"
             @focus="$event.target.select()"
-            @select="option => select(option)">
+            @select="option => {select(option); getPhonePlaceholder()}">
           <template slot-scope="props">
             <span :class="`flag-icon flag-icon-${props.option.code.toLowerCase()}`"></span>{{ props.option.name }} (+{{getPhoneCode(props.option.code)}})
           </template>
@@ -39,30 +39,35 @@
           ref="emailOrPhone"
           v-model="typed"
           :size="size"
-          @input="verifyEmail"
+          @input="delayTouch($v.value)"
           @keyup.native.enter="$emit('pressEnter')"
           :placeholder="phonePlaceholder"
           expanded>
         </b-input>
+          <!-- @input="verifyEmail" -->
       </b-field>
     </b-field>
-    <p v-if="mailCheckedEmail" class="help is-vfa">Did you mean <a @click="setEmail">{{ mailCheckedEmail }}</a>?</p>
+    <p v-if="$v.$dirty && !$v.value.validEmailorPhone" class="help is-danger">Please enter a valid phone number or email address. <span v-if="mailCheckedEmail">Did you mean <a @click="setEmail">{{ mailCheckedEmail }}</a>?</span></p>
+    <p v-else-if="mailCheckedEmail" class="help is-vfa">Did you mean <a @click="setEmail">{{ mailCheckedEmail }}</a>?</p>
   </div>
 </template>
 
 <script>
 import { getPhoneCode, parse, format, isValidNumber, asYouType as AsYouType } from 'libphonenumber-js/custom'
+import { required } from 'vuelidate/lib/validators'
 // import * as phoneExamples from 'libphonenumber-js/examples.mobile.json'
 import Mailcheck from 'mailcheck'
-import debounce from 'lodash/debounce'
+// import debounce from 'lodash/debounce'
 const countries = require('~/assets/countries.json')
-const md = () => import(
+const md = async () => import(
   /* webpackChunkName: "libphone" */ 'libphonenumber-js/metadata.full.json'
 )
 let metadata = null
 const phoneExamples = async () => import(
   /* webpackChunkName: "libphone" */ 'libphonenumber-js/examples.mobile.json'
 )
+
+const touchMap = new WeakMap()
 
 export default {
   name: 'phone-email',
@@ -81,6 +86,7 @@ export default {
     this.typed = this.value.rawInput || ''
     this.phoneExamples = await phoneExamples()
     metadata = await md()
+    this.getPhonePlaceholder()
     // console.log(metadata)
   },
   data () {
@@ -93,7 +99,8 @@ export default {
       mailCheckedEmail: undefined,
       phoneExamples: {},
       metadata: null,
-      countrySearch: ''
+      countrySearch: '',
+      phonePlaceholder: `e.g. +1 201 555 0123 -or- somebody@email.com`
     }
   },
   watch: {
@@ -107,7 +114,9 @@ export default {
       let regex = RegExp('[^0-9 +]+')
       if (/@/.test(newVal)) {
         this.typed = newVal.replace(/[ ]/gi, '')
-        validEmail = true
+        if (/(^$|^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$)/.test(newVal)) {
+          validEmail = true
+        }
       } else if (!regex.test(newVal)) {
         cleanNumber = newVal
         if (newVal.indexOf('001') === 0 || newVal.indexOf('011') === 0) {
@@ -127,9 +136,15 @@ export default {
     },
     value: function (newVal, oldVal) {
       this.typed = newVal.rawInput
+      if (newVal && newVal.country && (!oldVal || oldVal.country !== newVal.country)) {
+        this.getPhonePlaceholder()
+      }
     },
     userCountry: function (newVal, oldVal) {
-      if (!this.phoneCountry || this.phoneCountry === 'US') { this.phoneCountry = newVal }
+      if (!this.phoneCountry || this.phoneCountry === 'US') {
+        this.phoneCountry = newVal
+        this.getPhonePlaceholder()
+      }
     }
   },
   computed: {
@@ -160,20 +175,31 @@ export default {
       } else {
         return 'US'
       }
-    },
-    phonePlaceholder () {
+    }
+    // phonePlaceholder () {
+    //   let code = this.countryCode === 'un' ? 'US' : this.countryCode.toUpperCase()
+    //   let pe = this.phoneExamples
+    //   // let meta = await md()
+    //   // console.log(metadata)
+    //   if (!metadata) {
+    //     return `e.g. +1 201 555 0123 -or- somebody@email.com`
+    //   } else {
+    //     return `e.g. ${format(pe[code], code, 'International', metadata)} -or- somebody@email.com`
+    //   }
+    // }
+  },
+  methods: {
+    async getPhonePlaceholder () {
       let code = this.countryCode === 'un' ? 'US' : this.countryCode.toUpperCase()
       let pe = this.phoneExamples
       // let meta = await md()
       // console.log(metadata)
       if (!metadata) {
-        return `e.g. +1 201 555 0123 -or- somebody@email.com`
-      } else {
-        return `e.g. ${format(pe[code], code, 'International', metadata)} -or- somebody@email.com`
+        // return `e.g. +1 201 555 0123 -or- somebody@email.com`
+        metadata = await md()
       }
-    }
-  },
-  methods: {
+      this.phonePlaceholder = `e.g. ${format(pe[code], code, 'International', metadata)} -or- somebody@email.com`
+    },
     getPhoneCode (code) {
       if (!metadata) {
         return ''
@@ -202,27 +228,46 @@ export default {
       this.showFlag = true
       this.$refs.emailOrPhone.focus()
     },
-    verifyEmail: debounce(function () {
+    verifyEmail: function () {
+    // debounce(function () {
       this.mailCheckedEmail = undefined
-      if (this.value.isValidEmail) {
-        let self = this
-        // debounce(function () {}, 500)
-        Mailcheck.run({
-          email: self.typed,
-          suggested: function (suggestion) {
-            self.mailCheckedEmail = suggestion.full
-            console.log('suggestion', suggestion, 'self.mailCheckedEmail', self)
-            // self.value.isValidEmail = false
-          },
-          empty: function () {
-            console.log('nothing wrong with the email')
-          }
-        })
-      }
-    }, 1000),
+      // if (this.value.isValidEmail) {
+      let self = this
+      // debounce(function () {}, 500)
+      Mailcheck.run({
+        email: self.typed,
+        suggested: function (suggestion) {
+          self.mailCheckedEmail = suggestion.full
+          console.log('suggestion', suggestion, 'self.mailCheckedEmail', self)
+          // self.value.isValidEmail = false
+        },
+        empty: function () {
+          self.mailCheckedEmail = ''
+          // console.log('nothing wrong with the email')
+        }
+      })
+    },
+    // }, 1000),
     setEmail: function () {
       this.typed = this.mailCheckedEmail
       this.mailCheckedEmail = undefined
+    },
+    delayTouch ($v) {
+      this.verifyEmail()
+      $v.$reset()
+      if (touchMap.has($v)) {
+        clearTimeout(touchMap.get($v))
+      }
+      touchMap.set($v, setTimeout($v.$touch, 500))
+    }
+  },
+  validations: {
+    value: {
+      required,
+      validEmailorPhone: function (value, model) {
+        // return Boolean(/(^$|^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$)/.test(value.rawInput) || this.value.isValidPhone) // eslint-disable-line no-useless-escape
+        return Boolean(value.isValidEmail || value.isValidPhone)
+      }
     }
   }
 }
