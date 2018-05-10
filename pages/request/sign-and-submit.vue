@@ -279,8 +279,8 @@
             :fwdAdr="fwdAdr"
             :email="email"
             :altEmail="altEmail"
-            :tel="tel.intNumber"
-            :fax="fax.intNumber"
+            :tel="tel"
+            :fax="fax"
             :party="party"
             :addlInfo="addlInfo"
             :date="date"
@@ -503,8 +503,8 @@ export default {
     fwdAdr () { return this.currentRequest && this.currentRequest.fwdAdr ? this.currentRequest.fwdAdr : null },
     email () { return this.currentRequest && this.currentRequest.email ? this.currentRequest.email.toString() : ' ' },
     altEmail () { return this.currentRequest && this.currentRequest.altEmail ? this.currentRequest.altEmail.toString() : ' ' },
-    tel () { return this.currentRequest && this.currentRequest.tel ? this.currentRequest.tel : ' ' },
-    fax () { return this.currentRequest && this.currentRequest.fax ? this.currentRequest.fax : ' ' },
+    tel () { return this.currentRequest && this.currentRequest.tel && this.currentRequest.tel.intNumber ? this.currentRequest.tel.intNumber : ' ' },
+    fax () { return this.currentRequest && this.currentRequest.fax && this.currentRequest.fax.intNumber ? this.currentRequest.fax.intNumber : ' ' },
     party () { return this.currentRequest && this.currentRequest.party ? this.currentRequest.party.toString() : ' ' },
     addlInfo () { return this.currentRequest && this.currentRequest.stateSpecial ? this.currentRequest.stateSpecial.toString() : ' ' },
     date () { return this.currentRequest && this.currentRequest.date ? this.currentRequest.date.toString() : ' ' },
