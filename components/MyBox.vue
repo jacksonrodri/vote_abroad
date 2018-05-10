@@ -428,8 +428,12 @@ export default {
       ctx.fillText(this.ssn[this.ssn.length - 2] || '', this.calculated.ssn[7].x, this.calculated.ssn[7].y)
       ctx.fillText(this.ssn[this.ssn.length - 1] || '', this.calculated.ssn[8].x, this.calculated.ssn[8].y)
       // ctx.fillText(this.tel, this.calculated.tel.x, this.calculated.tel.y)
-      this.tel.split('').filter(x => x !== ' ').forEach((char, index) => ctx.fillText(char, this.calculated.tel.x + (index * percentWidthToPix(2.55, ctx)), this.calculated.tel.y))
-      this.fax.split('').filter(x => x !== ' ').forEach((char, index) => ctx.fillText(char, this.calculated.fax.x + (index * percentWidthToPix(2.55, ctx)), this.calculated.fax.y))
+      if (this.tel) {
+        this.tel.split('').filter(x => x !== ' ').forEach((char, index) => ctx.fillText(char, this.calculated.tel.x + (index * percentWidthToPix(2.55, ctx)), this.calculated.tel.y))
+      }
+      if (this.fax) {
+        this.fax.split('').filter(x => x !== ' ').forEach((char, index) => ctx.fillText(char, this.calculated.fax.x + (index * percentWidthToPix(2.55, ctx)), this.calculated.fax.y))
+      }
       // ctx.fillText(this.fax, this.calculated.fax.x, this.calculated.fax.y)
       ctx.textAlign = 'left'
       ctx.fillText(this.lastName || '', this.calculated.lastName.x, this.calculated.lastName.y)
