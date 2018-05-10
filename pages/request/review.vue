@@ -33,8 +33,8 @@
         :fwdAdr="fwdAdr"
         :email="email"
         :altEmail="altEmail"
-        :tel="tel.intNumber"
-        :fax="fax.intNumber"
+        :tel="telIntNumber"
+        :fax="faxIntNumber"
         :party="party"
         :addlInfo="addlInfo"
         :date="date"
@@ -139,7 +139,9 @@ export default {
     email () { return this.currentRequest && this.currentRequest.email ? this.currentRequest.email.toString() : ' ' },
     altEmail () { return this.currentRequest && this.currentRequest.altEmail ? this.currentRequest.altEmail.toString() : ' ' },
     tel () { return this.currentRequest && this.currentRequest.tel ? this.currentRequest.tel : ' ' },
+    telIntNumber () { return this.tel && this.fax.intNumber ? this.tel.intNumber : '' },
     fax () { return this.currentRequest && this.currentRequest.fax ? this.currentRequest.fax : ' ' },
+    faxIntNumber () { return this.fax && this.fax.intNumber ? this.fax.intNumber : '' },
     party () { return this.currentRequest && this.currentRequest.party ? this.currentRequest.party.toString() : ' ' },
     addlInfo () { return this.currentRequest && this.currentRequest.stateSpecial ? this.currentRequest.stateSpecial.toString() : ' ' },
     date () { return this.currentRequest && this.currentRequest.date ? this.currentRequest.date.toString() : ' ' },
