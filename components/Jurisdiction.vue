@@ -60,7 +60,7 @@ export default {
     'toolTipTitle',
     'placeholder'
   ],
-  async created () {
+  async mounted () {
     this.leos = await (
       await import(
         /* webpackChunkName: "leodata" */ `@/data/${this.state}-leos.json`
