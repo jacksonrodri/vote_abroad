@@ -64,18 +64,6 @@ import MyBox from '~/components/MyBox.vue'
 import Sign from '~/components/sign.vue'
 import { mapState } from 'vuex'
 
-// var mailgun = require('mailgun.js')
-// var apiKey = 'key-44903961cb823b645750fe64358dfc40'
-// var DOMAIN = 'mon.tg'
-// var mg = mailgun.client({key: apiKey, username: 'api'})
-
-// var data = {
-//   from: 'Excited User <me@samples.mailgun.org>',
-//   to: 'alexpm@gmail.com',
-//   subject: 'Hello',
-//   text: 'Testing some Mailgun awesomness!'
-// }
-
 export default {
   name: 'FPCAreview',
   middleware: 'verify-request',

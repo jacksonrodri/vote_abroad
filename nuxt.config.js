@@ -30,7 +30,6 @@ module.exports = {
     placesKey: process.env.PLACES_KEY || 'AIzaSyDK4AprF-iXbiX2-eU3SAQVyovB_8kIg20'
   },
   modules: [
-    // '@nuxtjs/localtunnel',
     '@nuxtjs/pwa',
     ['nuxt-i18n', I18N],
     '@nuxtjs/proxy',

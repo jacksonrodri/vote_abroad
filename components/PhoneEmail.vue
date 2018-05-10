@@ -33,7 +33,6 @@
             <span :class="`flag-icon flag-icon-${props.option.code.toLowerCase()}`"></span>{{ props.option.name }} (+{{getPhoneCode(props.option.code)}})
           </template>
         </b-autocomplete>
-            <!-- field="iso" -->
         <b-input
           id="emailOrPhone"
           ref="emailOrPhone"
@@ -44,7 +43,6 @@
           :placeholder="phonePlaceholder"
           expanded>
         </b-input>
-          <!-- @input="verifyEmail" -->
       </b-field>
     </b-field>
     <p v-if="$v.$dirty && !$v.value.validEmailorPhone" class="help is-danger">Please enter a valid phone number or email address. <span v-if="mailCheckedEmail">Did you mean <a @click="setEmail">{{ mailCheckedEmail }}</a>?</span></p>
@@ -55,9 +53,7 @@
 <script>
 import { getPhoneCode, parse, format, isValidNumber, asYouType as AsYouType } from 'libphonenumber-js/custom'
 import { required } from 'vuelidate/lib/validators'
-// import * as phoneExamples from 'libphonenumber-js/examples.mobile.json'
 import Mailcheck from 'mailcheck'
-// import debounce from 'lodash/debounce'
 const countries = require('~/assets/countries.json')
 const md = async () => import(
   /* webpackChunkName: "libphone" */ 'libphonenumber-js/metadata.full.json'
@@ -87,7 +83,6 @@ export default {
     this.phoneExamples = await phoneExamples()
     metadata = await md()
     this.getPhonePlaceholder()
-    // console.log(metadata)
   },
   data () {
     return {
@@ -105,7 +100,6 @@ export default {
   },
   watch: {
     typed: function (newVal, oldVal) {
-      // this.mailCheckedEmail = undefined
       let validEmail = false
       let validPhone = false
       let intNumber = ''
@@ -176,26 +170,12 @@ export default {
         return 'US'
       }
     }
-    // phonePlaceholder () {
-    //   let code = this.countryCode === 'un' ? 'US' : this.countryCode.toUpperCase()
-    //   let pe = this.phoneExamples
-    //   // let meta = await md()
-    //   // console.log(metadata)
-    //   if (!metadata) {
-    //     return `e.g. +1 201 555 0123 -or- somebody@email.com`
-    //   } else {
-    //     return `e.g. ${format(pe[code], code, 'International', metadata)} -or- somebody@email.com`
-    //   }
-    // }
   },
   methods: {
     async getPhonePlaceholder () {
       let code = this.countryCode === 'un' ? 'US' : this.countryCode.toUpperCase()
       let pe = this.phoneExamples
-      // let meta = await md()
-      // console.log(metadata)
       if (!metadata) {
-        // return `e.g. +1 201 555 0123 -or- somebody@email.com`
         metadata = await md()
       }
       this.phonePlaceholder = `e.g. ${format(pe[code], code, 'International', metadata)} -or- somebody@email.com`
@@ -229,25 +209,19 @@ export default {
       this.$refs.emailOrPhone.focus()
     },
     verifyEmail: function () {
-    // debounce(function () {
       this.mailCheckedEmail = undefined
-      // if (this.value.isValidEmail) {
       let self = this
-      // debounce(function () {}, 500)
       Mailcheck.run({
         email: self.typed,
         suggested: function (suggestion) {
           self.mailCheckedEmail = suggestion.full
           console.log('suggestion', suggestion, 'self.mailCheckedEmail', self)
-          // self.value.isValidEmail = false
         },
         empty: function () {
           self.mailCheckedEmail = ''
-          // console.log('nothing wrong with the email')
         }
       })
     },
-    // }, 1000),
     setEmail: function () {
       this.typed = this.mailCheckedEmail
       this.mailCheckedEmail = undefined
@@ -265,7 +239,6 @@ export default {
     value: {
       required,
       validEmailorPhone: function (value, model) {
-        // return Boolean(/(^$|^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$)/.test(value.rawInput) || this.value.isValidPhone) // eslint-disable-line no-useless-escape
         return Boolean(value.isValidEmail || value.isValidPhone)
       }
     }

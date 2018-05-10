@@ -76,7 +76,6 @@
         @input="delayTouch($v.abrAdr)"
         :validations=$v.abrAdr
         :toolTipTitle="$t('request.abrAdr.tooltipTitle')">
-        <!-- toolTipTitle="Where are you now?" -->
         <div slot="instructions">
           <p>{{$t('request.abrAdr.instructions')}}</p>
         </div>
@@ -87,7 +86,6 @@
       <scroll-up :key="$route.params.stage"></scroll-up>
     <section >
         <nuxt-link :to="localePath({ name: 'index' })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>{{$t('request.stages.back')}}</span></nuxt-link>
-        <!-- <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'voting-information'} })" class="button is-primary is-medium is-pulled-right" exact ><span> Next </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link> -->
         <button @click="focusFirstErrorOrAdvance(localePath({ name: 'request-stage', params: {stage: 'voting-information'} }))" class="button is-primary is-medium is-pulled-right" exact ><span> {{$t('request.stages.next')}} </span><b-icon pack="fas" icon="caret-right"></b-icon></button>
     </section>
   </section>
@@ -102,7 +100,6 @@
         @input="delayTouch($v.votAdr)"
         autocomplete="off"
         :toolTipTitle="$t('request.votAdr.tooltipTitle')">
-        <!-- toolTipTitle="Your last US Address" -->
         <div slot="instructions">
           <p>{{ $t('request.votAdr.instructions') }}</p>
         </div>
@@ -121,7 +118,6 @@
         @input="delayTouch($v.jurisdiction)"
         :validations="($v.jurisdiction)"
         :state="this.votAdr.stateISO">
-                <!-- toolTipTitle="Jurisdiction help" -->
         <div slot="instructions">
           <p>{{$t('request.jurisdiction.instructions')}}</p>
         </div>
@@ -135,7 +131,6 @@
       :validations="($v.voterClass)"
       @input="delayTouch($v.voterClass)"
       :toolTipTitle="$t('request.voterClass.tooltipTitle')">
-      <!-- toolTipTitle="Intend to return vs. Return is uncertain" -->
       <div slot="tooltip">
         <vue-markdown>{{$t('request.voterClass.tooltip')}}</vue-markdown>
       </div>
@@ -158,7 +153,6 @@
       @input="delayTouch($v.recBallot)"
       :ballotReceiptOptions="stateRules ? stateRules.ballotReceiptOptions : ['Mail']"
       :toolTipTitle="$t('request.receiveBallot.tooltipTitle')">
-      <!-- toolTipTitle="What is the best choice?"> -->
       <div slot="tooltip">
         <vue-markdown>{{$t('request.receiveBallot.tooltip')}}</vue-markdown>
       </div>
@@ -187,14 +181,6 @@
     </b-field>
 
       <!-- fwdAdr -->
-      <!-- <forwarding-address v-model="fwdAdr"
-        :label="$t('request.fwdAdr.label')"
-        toolTipTitle="Optional"
-        v-if="recBallot === 'mail'">
-        <div slot="tooltip">
-          <vue-markdown>{{$t('request.fwdAdr.tooltip')}}</vue-markdown>
-        </div>
-      </forwarding-address> -->
       <address-input
         :label="$t('request.fwdAdr.label')"
         key="forwardingAddress"
@@ -204,7 +190,6 @@
         @input="delayTouch($v.fwdAdr)"
         :validations=$v.fwdAdr
         :tooltipTitle="$t('request.fwdAdr.tooltipTitle')">
-        <!-- toolTipTitle="Optional"> -->
         <div slot="instructions">
           <p>{{$t('request.fwdAdr.instructions')}}</p>
         </div>
@@ -239,7 +224,6 @@
         :label="$t('request.sex.label')"
         :tooltipTitle="$t('request.sex.tooltipTitle')"
         v-model="sex">
-        <!-- toolTipTitle="Why is this required?"         -->
         <div slot="tooltip">
           <vue-markdown>{{$t('request.sex.tooltip')}}</vue-markdown>
         </div>
@@ -252,7 +236,6 @@
         :tooltipTitle="$t('request.party.tooltipTitle')"
         :message="$v.party.$error ? Object.keys($v.party.$params).map(x => x) : '' "
         :type="($v.party.$error ? 'is-danger': '')">
-        <!-- toolTipTitle="What is this?" -->
         <div slot="tooltip">
           <vue-markdown>{{$t('request.party.tooltip')}}</vue-markdown>
         </div>
@@ -290,7 +273,6 @@
         @input="delayTouch($v.identification)"
         :tooltipTitle="$t('request.id.tooltipTitle')"
         v-model="identification">
-        <!-- :tooltipTitle="`Why am I being asked this?`" -->
         <div slot="instructions">
           <i18n v-if="stateRules && stateRules.id && stateRules.id.length === 0"
             path=request.id.instructionsOptional tag="vue-markdown" :places="{ state: stateRules.state}">
@@ -323,7 +305,6 @@
     <section >
       <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'voting-information'} })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>{{$t('request.stages.back')}}</span></nuxt-link>
       <button @click="focusFirstErrorOrAdvance(localePath({ name: 'request-stage', params: { stage: 'review'} }))" class="button is-primary is-medium is-pulled-right" exact ><span> {{$t('request.stages.next')}} </span><b-icon pack="fas" icon="caret-right"></b-icon></button>
-      <!-- <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'review'} })" class="button is-primary is-medium is-pulled-right" exact ><span> Generate &amp; review your form </span><b-icon pack="fas" icon="caret-right"></b-icon></nuxt-link> -->
     </section>
   </section>
 </section>
@@ -333,14 +314,12 @@
 <script>
 import { required, requiredIf, email } from 'vuelidate/lib/validators'
 import AddressInput from '~/components/AddressInput'
-import UsAddress from '~/components/USAddress'
 import Jurisdiction from '~/components/Jurisdiction'
 import VotingAddress from '~/components/VotingAddress'
 import VoterClass from '~/components/VoterClass'
 import IsRegistered from '~/components/IsRegistered'
 import ReceiveBallot from '~/components/ReceiveBallot'
 import TelInput from '~/components/TelInput'
-import ForwardingAddress from '~/components/ForwardingAddress'
 import BirthDate from '~/components/BirthDate'
 import Party from '~/components/Party'
 import JoinDemocratsabroad from '~/components/JoinDemocratsabroad'
@@ -349,7 +328,6 @@ import Gender from '~/components/Gender'
 import StateSpecial from '~/components/StateSpecial'
 import ScrollUp from '~/components/ScrollUp'
 import Identification from '~/components/Identification'
-import AdditionalInfo from '~/components/AdditionalInfo'
 import VueMarkdown from 'vue-markdown'
 
 const touchMap = new WeakMap()
@@ -358,9 +336,6 @@ export default {
   transition: 'test',
   scrollToTop: true,
   middleware: 'verify-request',
-  mounted () {
-    // console.log(this.$v)
-  },
   async asyncData ({app}) {
     return {
       allStateRules: await app.$content('rls')
@@ -389,14 +364,12 @@ export default {
   },
   components: {
     AddressInput,
-    UsAddress,
     VotingAddress,
     Jurisdiction,
     VoterClass,
     IsRegistered,
     ReceiveBallot,
     TelInput,
-    ForwardingAddress,
     BirthDate,
     Party,
     JoinDemocratsabroad,
@@ -405,7 +378,6 @@ export default {
     StateSpecial,
     ScrollUp,
     Identification,
-    AdditionalInfo,
     VueMarkdown
   },
   computed: {
