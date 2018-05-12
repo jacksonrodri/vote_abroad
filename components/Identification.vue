@@ -125,10 +125,10 @@ export default {
     },
     ssn: function () {
       if (this.$refs.ssn) {
-        console.log(this.$refs.ssn)
+        // console.log(this.$refs.ssn)
         return this.$refs.ssn.newValue
       } else if (this.$refs.ssn4) {
-        console.log(this.$refs.ssn4)
+        // console.log(this.$refs.ssn4)
         return this.$refs.ssn4.newValue
       } else {
         return null

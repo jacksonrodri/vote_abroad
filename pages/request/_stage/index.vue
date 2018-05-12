@@ -589,7 +589,6 @@ export default {
       switch (true) {
         case this.stage.slug === 'your-information' && this.$v.firstName.$error:
           this.$store.dispatch('requests/recordAnalytics', { event: 'Form Error', attributes: { field: 'firstName' } })
-          console.log('Form Error', {field: 'firstName'})
           this.$refs.firstName.focus()
           break
         case this.stage.slug === 'your-information' && this.$v.lastName.$error:

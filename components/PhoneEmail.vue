@@ -215,7 +215,7 @@ export default {
         email: self.typed,
         suggested: function (suggestion) {
           self.mailCheckedEmail = suggestion.full
-          console.log('suggestion', suggestion, 'self.mailCheckedEmail', self)
+          // console.log('suggestion', suggestion, 'self.mailCheckedEmail', self)
         },
         empty: function () {
           self.mailCheckedEmail = ''
