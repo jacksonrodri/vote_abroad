@@ -149,7 +149,7 @@ export default {
     }
   },
   mounted () {
-    if (this.$refs.ssn4) {
+    if (this.$refs.ssn4 && !(this.ssnTyped || this.ssn)) {
       this.$emit('input', Object.assign({}, this.value, {ssnTyped: 'XXX-XX', ssn: 'XXX-XX'}))
     }
     // this.$refs.ssn4
