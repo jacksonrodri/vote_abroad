@@ -52,16 +52,19 @@
           <li>Choose the version below with the clearest signature and whitest background</li>
         </ol> -->
         <canvas ref="signature1"
+          id="sig1"
          :width="width"
          :height="height / 2"
          style="cursor:pointer;"
          @click="save('ctx1')"></canvas>
         <canvas ref="signature2"
+          id="sig2"
          :width="width"
          :height="height / 2"
          style="cursor:pointer;"
          @click="save('ctx2')"></canvas>
         <canvas ref="signature3"
+          id="sig3"
          :width="width"
          :height="height / 2"
          style="cursor:pointer;"
@@ -287,81 +290,125 @@ export default {
       this.sigImage = this.ctx.getImageData(0, 0, this.width, this.height / 2)
       this.updateStage('select')
     },
+    // drawSignatureSelections: function () {
+    //   this.ctx1 = this.$refs.signature1.getContext('2d')
+    //   this.ctx2 = this.$refs.signature2.getContext('2d')
+    //   this.ctx3 = this.$refs.signature3.getContext('2d')
+    //   let edited1 = this.editImg(this.sigImage, this.width, this.height / 2, 40, 100)
+    //   let edited2 = this.editImg(this.sigImage, this.width, this.height / 2, 60, 120)
+    //   let edited3 = this.editImg(this.sigImage, this.width, this.height / 2, 100, 160)
+    //   this.ctx1.putImageData(edited1, 0, 0)
+    //   this.ctx2.putImageData(edited2, 0, 0)
+    //   this.ctx3.putImageData(edited3, 0, 0)
+    // },
+    // editImg: function (imgData, canvasWidth, canvasHeight, lowerBound, upperBound) {
+    //   var data = imgData.data.slice()
+    //   // console.log(data)
+    //   // let sorted = imgData.data.slice().sort()
+    //   // let percentages = [1, 2, 3, 4, 5, 10]
+    //   // // let firstpercentile
+    //   // percentages.forEach((x) => {
+    //   //   // if (x === 10) { firstpercentile = sorted[Math.floor(x / 100 * imgData.data.length)] }
+    //   //   console.log('before- ' + x + '%: ' + sorted[Math.floor(x / 100 * imgData.data.length)] + ' item: ' + Math.floor(x / 100 * imgData.data.length))
+    //   // })
+    //   for (var i = 0; i < data.length; i += 4) {
+    //     var avg = (data[i] + data[i + 1] + data[i + 2]) / 3
+    //     // let adj = (Math.pow((avg - 127) / 127, 3) + 1) * 127
+    //     let adj
+    //     if (avg < lowerBound) {
+    //       adj = 0
+    //     } else if (avg > upperBound) {
+    //       adj = 255
+    //     } else {
+    //       adj = Math.floor(255 - ((upperBound - avg) / (upperBound - lowerBound) * 255))
+    //     }
+    //     // avg = avg > firstpercentile ? 255 : avg
+    //     var alpha = 255 - adj
+    //     data[i] = adj // red
+    //     data[i + 1] = adj // green
+    //     data[i + 2] = adj // blue
+    //     data[i + 3] = alpha // alpha
+    //   }
+    //   // let sorted2 = data.slice().sort()
+    //   // percentages.forEach((x) => {
+    //   //   // if (x === 10) { firstpercentile = sorted[Math.floor(x / 100 * imgData.data.length)] }
+    //   //   console.log('after-' + x + '%: ' + sorted2[Math.floor(x / 100 * imgData.data.length)] + ' item: ' + Math.floor(x / 100 * imgData.data.length))
+    //   // })
+    //   var imgd = new ImageData(this.width, this.height / 2)
+    //   imgd.data.set(data)
+    //   // console.log('imgd', imgd)
+    //   return imgd
+    //   // console.log('buf', buf)
+    //   // var data = Uint32Array.from(buf)
+    //   // for (var y = 0; y < data.length; y++) {
+    //   //   var value = buf[y * 4]
+    //   //   var a = 255 - value
+    //   //   data[y] =
+    //   //   (a << 24) | // alpha
+    //   //   (value << 16) | // blue
+    //   //   (value << 8) | // green
+    //   //   value // red
+    //   // }
+    //   // for (var y = 0; y < canvasHeight; ++y) {
+    //   //   for (var x = 0; x < canvasWidth; x += 4) {
+    //   //     var index = (y * canvasWidth + x) * 4
+    //   //     var value = buf[index]
+    //   //     data[y * canvasWidth + x] =
+    //   //     (255 - value << 24) | // alpha
+    //   //     (value << 16) | // blue
+    //   //     (value << 8) | // green
+    //   //     value // red
+    //   //   }
+    //   // }
+    //   // var buf8 = Uint8ClampedArray.from(data)
+    //   // var imgd = new ImageData(canvasWidth, canvasHeight)
+    //   // imgd.data.set(buf8)
+    //   // console.log(imgd)
+    //   // return imgd
+    // },
     drawSignatureSelections: function () {
       this.ctx1 = this.$refs.signature1.getContext('2d')
       this.ctx2 = this.$refs.signature2.getContext('2d')
       this.ctx3 = this.$refs.signature3.getContext('2d')
-      let edited1 = this.editImg(this.sigImage, this.width, this.height / 2, 40, 100)
-      let edited2 = this.editImg(this.sigImage, this.width, this.height / 2, 60, 120)
-      let edited3 = this.editImg(this.sigImage, this.width, this.height / 2, 100, 160)
+      let edited1 = this.editImg(this.sigImage, this.width, this.height / 2, 0, 5)
+      let edited2 = this.editImg(this.sigImage, this.width, this.height / 2, 0.5, 12)
+      let edited3 = this.editImg(this.sigImage, this.width, this.height / 2, 4, 20)
       this.ctx1.putImageData(edited1, 0, 0)
       this.ctx2.putImageData(edited2, 0, 0)
       this.ctx3.putImageData(edited3, 0, 0)
     },
     editImg: function (imgData, canvasWidth, canvasHeight, lowerBound, upperBound) {
       var data = imgData.data.slice()
-      // console.log(data)
-      // let sorted = imgData.data.slice().sort()
-      // let percentages = [1, 2, 3, 4, 5, 10]
-      // // let firstpercentile
-      // percentages.forEach((x) => {
-      //   // if (x === 10) { firstpercentile = sorted[Math.floor(x / 100 * imgData.data.length)] }
-      //   console.log('before- ' + x + '%: ' + sorted[Math.floor(x / 100 * imgData.data.length)] + ' item: ' + Math.floor(x / 100 * imgData.data.length))
-      // })
+      console.log(data)
+      let monoData = []
       for (var i = 0; i < data.length; i += 4) {
-        var avg = (data[i] + data[i + 1] + data[i + 2]) / 3
-        // let adj = (Math.pow((avg - 127) / 127, 3) + 1) * 127
+        monoData[i / 4] = Math.floor((data[i] + data[i + 1] + data[i + 2]) / 3)
+      }
+      console.log(monoData)
+      let sorted = monoData.slice().sort()
+      console.log(sorted)
+      let lowerBoundPix = sorted[Math.floor(lowerBound / 100 * monoData.length)]
+      let upperBoundPix = sorted[Math.floor(upperBound / 100 * monoData.length)]
+      console.log(lowerBound, lowerBoundPix, upperBound, upperBoundPix)
+
+      for (let i = 0; i < monoData.length; i++) {
         let adj
-        if (avg < lowerBound) {
+        if (monoData[i] < lowerBoundPix) {
           adj = 0
-        } else if (avg > upperBound) {
+        } else if (monoData[i] > upperBoundPix) {
           adj = 255
         } else {
-          adj = Math.floor(255 - ((upperBound - avg) / (upperBound - lowerBound) * 255))
+          adj = Math.floor(255 - ((upperBoundPix - monoData[i]) / (upperBoundPix - lowerBoundPix) * 255))
         }
-        // avg = avg > firstpercentile ? 255 : avg
         var alpha = 255 - adj
-        data[i] = adj // red
-        data[i + 1] = adj // green
-        data[i + 2] = adj // blue
-        data[i + 3] = alpha // alpha
+        data[i * 4] = adj // red
+        data[i * 4 + 1] = adj // green
+        data[i * 4 + 2] = adj // blue
+        data[i * 4 + 3] = alpha // alpha
       }
-      // let sorted2 = data.slice().sort()
-      // percentages.forEach((x) => {
-      //   // if (x === 10) { firstpercentile = sorted[Math.floor(x / 100 * imgData.data.length)] }
-      //   console.log('after-' + x + '%: ' + sorted2[Math.floor(x / 100 * imgData.data.length)] + ' item: ' + Math.floor(x / 100 * imgData.data.length))
-      // })
       var imgd = new ImageData(this.width, this.height / 2)
       imgd.data.set(data)
-      // console.log('imgd', imgd)
       return imgd
-      // console.log('buf', buf)
-      // var data = Uint32Array.from(buf)
-      // for (var y = 0; y < data.length; y++) {
-      //   var value = buf[y * 4]
-      //   var a = 255 - value
-      //   data[y] =
-      //   (a << 24) | // alpha
-      //   (value << 16) | // blue
-      //   (value << 8) | // green
-      //   value // red
-      // }
-      // for (var y = 0; y < canvasHeight; ++y) {
-      //   for (var x = 0; x < canvasWidth; x += 4) {
-      //     var index = (y * canvasWidth + x) * 4
-      //     var value = buf[index]
-      //     data[y * canvasWidth + x] =
-      //     (255 - value << 24) | // alpha
-      //     (value << 16) | // blue
-      //     (value << 8) | // green
-      //     value // red
-      //   }
-      // }
-      // var buf8 = Uint8ClampedArray.from(data)
-      // var imgd = new ImageData(canvasWidth, canvasHeight)
-      // imgd.data.set(buf8)
-      // console.log(imgd)
-      // return imgd
     },
     save: function (ctx) {
       // console.log('save', this[ctx].canvas.toDataURL())
