@@ -64,6 +64,7 @@
         <b-input v-model="email"
           @input="delayTouch($v.email)"
           autocomplete="email"
+          maxlength="40"
           ref="email"></b-input>
       </b-field>
 
@@ -177,6 +178,7 @@
       <b-input v-model="altEmail"
         ref="altEmail"
         autocomplete="email"
+        maxlength="40"
         @input="$v.altEmail.$touch()"></b-input>
     </b-field>
 
@@ -705,9 +707,9 @@ export default {
         required
       },
       dob: {
-        required
-        // minValue: new Date(1880, 0, 1),
-        // maxValue: new Date(2000, 10, 6)
+        required,
+        tooOld () { return new Date(1900, 0, 1) < new Date(this.dob) },
+        tooYoung () { return new Date(2000, 10, 6) > new Date(this.dob) }
       },
       fax: {
       },

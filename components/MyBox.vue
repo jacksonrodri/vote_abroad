@@ -461,8 +461,6 @@ export default {
       ctx.fillText(this.fwdAdr && this.fwdAdr.alt3 ? this.fwdAdr.alt3 : '', this.calculated.fwd[2].x, this.calculated.fwd[2].y)
       ctx.fillText(this.fwdAdr && this.fwdAdr.alt4 ? this.fwdAdr.alt4 : '', this.calculated.fwd[3].x, this.calculated.fwd[3].y)
       ctx.fillText(this.fwdAdr && this.fwdAdr.alt5 ? this.fwdAdr.alt5 : '', this.calculated.fwd[4].x, this.calculated.fwd[4].y)
-      ctx.fillText(this.email || '', this.calculated.email.x, this.calculated.email.y)
-      ctx.fillText(this.altEmail || '', this.calculated.altEmail.x, this.calculated.altEmail.y)
       ctx.fillText(this.party || '', this.calculated.party.x, this.calculated.party.y)
       ctx.fillText(this.addlComputed[0] || '', this.calculated.addlInfo[0].x, this.calculated.addlInfo[0].y)
       ctx.fillText(this.addlComputed[1] || '', this.calculated.addlInfo[1].x, this.calculated.addlInfo[1].y)
@@ -470,6 +468,12 @@ export default {
       ctx.fillText(this.dateDay || '', this.calculated.dateDay.x, this.calculated.dateDay.y)
       ctx.fillText(this.dateMon || '', this.calculated.dateMon.x, this.calculated.dateMon.y)
       ctx.fillText(this.dateYr || '', this.calculated.dateYr.x, this.calculated.dateYr.y)
+      if ((this.email && this.email.length > 33) || (this.altEmail && this.altEmail.length > 33)) {
+        let multiplier = 33 / Math.max(this.email ? this.email.length : 0, this.altEmail ? this.altEmail.length : 0)
+        ctx.font = this.calculated.fontSize * multiplier + 'px  monospace'
+      }
+      ctx.fillText(this.email || '', this.calculated.email.x, this.calculated.email.y)
+      ctx.fillText(this.altEmail || '', this.calculated.altEmail.x, this.calculated.altEmail.y)
       ctx.font = this.calculated.fontSize + 'px  Sans-Serif'
       ctx.fillText(this.isMale, this.calculated.isMale.x, this.calculated.isMale.y)
       ctx.fillText(this.isFemale, this.calculated.isFemale.x, this.calculated.isFemale.y)

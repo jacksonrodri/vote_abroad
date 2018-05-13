@@ -34,7 +34,9 @@ export default {
   data () {
     return {
       dob: null,
-      isOpen: false
+      isOpen: false,
+      maxDate: new Date(2000, 10, 6),
+      minDate: new Date(1900, 0, 1)
     }
   },
   computed: {
@@ -77,12 +79,6 @@ export default {
           this.$store.commit('requests/update', {dob: null})
         }
       }
-    },
-    maxDate () {
-      return new Date(2000, 10, 6)
-    },
-    minDate () {
-      return new Date(1900, 0, 1)
     }
   },
   methods: {
