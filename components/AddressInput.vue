@@ -372,6 +372,11 @@ export default {
     }
   },
   methods: {
+    decodeHtmlEntity (str) {
+      return str.replace(/&#(\d+);/g, function (match, dec) {
+        return String.fromCharCode(dec)
+      })
+    },
     setFocus () {
       this.$refs.thoroughfare.focus()
     },
@@ -415,7 +420,7 @@ export default {
                       this.streetAddress = arr[index + 1]
                       break
                     case 'locality':
-                      this.locality = arr[index + 1]
+                      this.locality = this.decodeHtmlEntity(arr[index + 1])
                       break
                     case 'region':
                       this.region = arr[index + 1]
