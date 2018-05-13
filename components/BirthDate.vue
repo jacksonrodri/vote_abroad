@@ -14,7 +14,7 @@
         autocomplete="bday"
         ref="dob"
         @input="update"
-        :focused-date="new Date(new Date().getFullYear() - 18, 0, 1)"
+        :focused-date="dob || new Date(new Date().getFullYear() - 18, 0, 1)"
         icon="calendar"
         icon-pack="fas"></b-datepicker>
     </b-field>
