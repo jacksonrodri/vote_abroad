@@ -157,9 +157,9 @@ export default {
   methods: {
     setVal: function () {
       let val = this.$refs.noId.newValue ? {noId: true, ssn: null, ssnTyped: null, stateId: null} : {noId: false, ssn: this.ssnclean, ssnTyped: this.ssn, stateId: this.$refs.stateId ? this.$refs.stateId.newValue || null : null}
-      if (this.$refs.noId.newValue) {
-        this.$refs.ssn4.value = null
-      }
+      // if (this.$refs.noId.newValue) {
+      //   this.$refs.ssn4.value = null
+      // }
       this.$emit('input', val)
     },
     setSSN: function (val) {

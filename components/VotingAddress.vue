@@ -237,7 +237,7 @@ export default {
             if (this.state !== 'DC') {
               this.county = data.result.address_components.filter(y => y.types.indexOf('administrative_area_level_2') > -1)[0].long_name
             }
-            console.log('adr_address', data.result.adr_address.split(/<span class="|">|<\/span>,?\s?/))
+            // console.log('adr_address', data.result.adr_address.split(/<span class="|">|<\/span>,?\s?/))
             data.result.adr_address
               .split(/<span class="|">|<\/span>,?\s?/)
               .filter(e => e)
