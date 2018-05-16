@@ -384,6 +384,7 @@ export const actions = {
     // loadingComponent.close()
     await dispatch('requests/loadRequests', null, { root: true })
     // if (rootState.requests.requests[rootState.requests.currentRequest].)
+    console.log('rootState.requests', rootState.requests)
     if (jwtDecode(idToken)['https://demsabroad.org/isDA'] && (!rootState.requests || rootState.requests.requests.length === 0 || !rootState.requests.requests[rootState.requests.currentRequest].lastName)) {
       Dialog.confirm({
         title: 'Democrats Abroad Members',
