@@ -42,7 +42,7 @@ module.exports = {
     placesKey: process.env.PLACES_KEY || 'AIzaSyDK4AprF-iXbiX2-eU3SAQVyovB_8kIg20'
   },
   modules: [
-    // '@nuxtjs/pwa',
+    '@nuxtjs/pwa',
     ['nuxt-i18n', I18N],
     '@nuxtjs/proxy',
     'nuxtent'
@@ -115,7 +115,6 @@ module.exports = {
   },
   plugins: [
     {src: '~/plugins/plugged', ssr: false },
-    // { src: '~plugins/amplify_init.js', ssr: false },
     {src: '~/plugins/buefy'},
     {src: '~/plugins/vuelidate'}
     // ,
