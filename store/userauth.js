@@ -384,7 +384,7 @@ export const actions = {
     // loadingComponent.close()
     await dispatch('requests/loadRequests', null, { root: true })
     // if (rootState.requests.requests[rootState.requests.currentRequest].)
-    if (jwtDecode(idToken)['https://demsabroad.org/isDA'] && !rootState.requests.requests[rootState.requests.currentRequest].lastName) {
+    if (jwtDecode(idToken)['https://demsabroad.org/isDA'] && (!rootState.requests || rootState.requests.requests.length === 0 || !rootState.requests.requests[rootState.requests.currentRequest].lastName)) {
       Dialog.confirm({
         title: 'Democrats Abroad Members',
         message: `As an authenticated member of Democrats Abroad, you can prefill your form with your membership data. Would you like to?`,
