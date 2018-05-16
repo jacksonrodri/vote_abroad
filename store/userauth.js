@@ -277,7 +277,7 @@ export const actions = {
           if (err) {
             reject(err)
           }
-          console.log('authResult', authResult)
+          // console.log('authResult', authResult)
           resolve(authResult)
         })
       })
@@ -348,7 +348,7 @@ export const actions = {
     if (state.redirectPath) {
       dispatch('redirect', state.redirectPath)
     }
-    // console.log('[https://demsabroad.org/user]', jwtDecode(idToken)['https://demsabroad.org/user'])
+    // console.log('[https://demsabroad.org/user]', jwtDecode(idToken))
     commit('updateUser', {isDA: jwtDecode(idToken)['https://demsabroad.org/isDA'], da: jwtDecode(idToken)['https://demsabroad.org/user']})
     await this.app.$Auth.federatedSignIn(
       'montg.auth0.com',
@@ -358,8 +358,8 @@ export const actions = {
       },
       // a user object
       {
-        name: jwtDecode(idToken)['https://demsabroad.org/user'].lastName,
-        email: jwtDecode(idToken)['https://demsabroad.org/user'].email
+        name: jwtDecode(idToken)['https://demsabroad.org/isDA'] ? jwtDecode(idToken)['https://demsabroad.org/user'].lastName : '',
+        email: jwtDecode(idToken)['https://demsabroad.org/isDA'] ? jwtDecode(idToken)['https://demsabroad.org/user'].email : ''
       }
     )
     // .then(async (result) => {
@@ -384,7 +384,7 @@ export const actions = {
     // loadingComponent.close()
     await dispatch('requests/loadRequests', null, { root: true })
     // if (rootState.requests.requests[rootState.requests.currentRequest].)
-    console.log('rootState.requests', rootState.requests)
+    // console.log('rootState.requests', rootState.requests)
     if (jwtDecode(idToken)['https://demsabroad.org/isDA'] && (!rootState.requests || rootState.requests.requests.length === 0 || !rootState.requests.requests[rootState.requests.currentRequest].lastName)) {
       Dialog.confirm({
         title: 'Democrats Abroad Members',

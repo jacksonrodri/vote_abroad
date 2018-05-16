@@ -176,17 +176,19 @@ export const actions = {
     const res = await API.graphql(graphqlOperation(UserRequests))
     const loadedRequests = res.data.userRequests.items
     loadedRequests.sort((a, b) => new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime())
-    console.log(loadedRequests)
+    // console.log(loadedRequests)
     commit('clearRequests')
     loadedRequests.forEach(request => {
       delete request.createdAt
-      console.log(request)
+      // console.log(request)
       commit('add')
       commit('changeCurrent', state.requests.length - 1)
       commit('update', request)
     })
+    return 'done'
   },
   async updateRequest ({commit, state, app}, payload) {
+    // console.log('payload', payload)
     const API = this.app.$API
     const graphqlOperation = this.app.$graphqlOperation
     const CreateRequest = `mutation CreateRequest($input: CreateRequestInput!){
@@ -215,7 +217,7 @@ export const actions = {
     //     }
     //   }
     // }
-    let currentRequestState = Object.assign({}, state.requests[0])
+    let currentRequestState = Object.assign({}, state.requests[state.currentRequest])
     if (currentRequestState.identification) delete currentRequestState.identification
     currentRequestState.status = payload.status
     const stateRequestInput = {input: currentRequestState}
