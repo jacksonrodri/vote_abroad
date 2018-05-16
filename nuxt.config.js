@@ -19,6 +19,18 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  render: {
+    bundleRenderer: {
+      shouldPrefetch: (file, type) => {
+        if (type === 'script') {
+          if (/leodata.*/.test(file)) {
+            return false
+          }
+        }
+        return true
+      }
+    }
+  },
   env: {
     baseUrl: process.env.DEPLOY_PRIME_URL || 'http://localhost:3000',
     url: process.env.URL || 'http://localhost:3000',
