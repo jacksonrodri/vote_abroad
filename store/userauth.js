@@ -268,6 +268,7 @@ export const actions = {
     })
   },
   async setSession ({ state, rootState, commit, dispatch, app }) {
+    // const loadingComponent = LoadingProgrammatic.open()
     this.app.Amplify.configure(AWSExports)
     function parseHash () {
       return new Promise((resolve, reject) => {
@@ -349,6 +350,40 @@ export const actions = {
     }
     // console.log('[https://demsabroad.org/user]', jwtDecode(idToken)['https://demsabroad.org/user'])
     commit('updateUser', {isDA: jwtDecode(idToken)['https://demsabroad.org/isDA'], da: jwtDecode(idToken)['https://demsabroad.org/user']})
+    await this.app.$Auth.federatedSignIn(
+      'montg.auth0.com',
+      {
+        token: idToken,
+        expires_at: jwtDecode(idToken).exp
+      },
+      // a user object
+      {
+        name: jwtDecode(idToken)['https://demsabroad.org/user'].lastName,
+        email: jwtDecode(idToken)['https://demsabroad.org/user'].email
+      }
+    )
+    // .then(async (result) => {
+    //   let user = await this.app.$Auth.currentAuthenticatedUser()
+
+    //   Analytics.updateEndpoint({
+    //     UserId: user.id,
+    //     Attributes: {
+    //       country: state.user.country,
+    //       isDA: state.user.isDA,
+    //       email: user.email,
+    //       firstName: state.user.firstName
+    //     }
+    //     // },
+    //     // // Custom user attributes
+    //     // UserAttributes: {
+    //     //   hobbies: ['piano', 'hiking', 'logging in']
+    //     //   // ...
+    //     // }
+    //   })
+    // })
+    // loadingComponent.close()
+    await dispatch('requests/loadRequests', null, { root: true })
+    // if (rootState.requests.requests[rootState.requests.currentRequest].)
     if (jwtDecode(idToken)['https://demsabroad.org/isDA'] && !rootState.requests.requests[rootState.requests.currentRequest].lastName) {
       Dialog.confirm({
         title: 'Democrats Abroad Members',
@@ -368,44 +403,6 @@ export const actions = {
         }
       })
     }
-    this.app.$Auth.federatedSignIn(
-      'montg.auth0.com',
-      {
-        token: idToken,
-        expires_at: jwtDecode(idToken).exp
-      },
-      // a user object
-      {
-        name: jwtDecode(idToken)['https://demsabroad.org/user'].lastName,
-        email: jwtDecode(idToken)['https://demsabroad.org/user'].email
-      }
-    ).then(async (result) => {
-      // console.log('result', result)
-      let user = await this.app.$Auth.currentAuthenticatedUser()
-      // console.log('user', user)
-      // let user = await Auth.currentAuthenticatedUser()
-      // let res = await Auth.updateUserAttributes(user, {
-      //   'email': 'me@anotherdomain.com',
-      //   'family_name': 'Lastname'
-      // })
-      // console.log('updateuserresult', res)
-      Analytics.updateEndpoint({
-        // Customized userId
-        UserId: user.id,
-        // User attributes
-        Attributes: {
-          country: state.user.country,
-          isDA: state.user.isDA,
-          email: user.email,
-          firstName: state.user.firstName
-        },
-        // Custom user attributes
-        UserAttributes: {
-          hobbies: ['piano', 'hiking', 'logging in']
-          // ...
-        }
-      })
-    })
   },
   clearData ({ commit, dispatch }) {
     commit('updateGcToken', null)

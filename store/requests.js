@@ -61,6 +61,131 @@ export const actions = {
     // console.log(payload)
     this.app.$Analytics.record(payload.event, payload.attributes || {}, payload.metrics || {})
   },
+  async loadRequests ({commit, state, app}) {
+    const API = this.app.$API
+    const graphqlOperation = this.app.$graphqlOperation
+    const UserRequests = `query UserRequests {
+      userRequests{
+        items {
+          id
+          createdAt
+          firstName
+          middleName
+          lastName
+          suffix
+          party
+          dob
+          sex
+          stateSpecial
+          joinDa
+          nbid
+          voterClass
+          recBallot
+          isRegistered
+          date
+          status
+          abrAdr {
+            poBox
+            premise
+            thoroughfare
+            dependentlocality
+            locality
+            administrativearea
+            stateISO
+            postalcode
+            country
+            countryiso
+            alt1
+            alt2
+            alt3
+            alt4
+            alt5
+            usesAlternateFormat
+          }
+          fwdAdr {
+            poBox
+            premise
+            thoroughfare
+            dependentlocality
+            locality
+            administrativearea
+            stateISO
+            postalcode
+            country
+            countryiso
+            alt1
+            alt2
+            alt3
+            alt4
+            alt5
+            usesAlternateFormat
+          }
+          votAdr {
+            poBox
+            premise
+            thoroughfare
+            dependentlocality
+            locality
+            administrativearea
+            stateISO
+            postalcode
+            country
+            countryiso
+            alt1
+            alt2
+            alt3
+            alt4
+            alt5
+            usesAlternateFormat
+          }
+          tel {
+            country
+            intNumber
+            isValidPhone
+            type
+            rawInput
+          }
+          email
+          altEmail
+          fax {
+            country
+            intNumber
+            isValidPhone
+            type
+            rawInput
+          }
+          leo {
+            a1
+            a2
+            a3
+            c
+            d
+            e
+            f
+            i
+            j
+            n
+            p
+            s
+            t
+            z
+          }
+        }
+      }
+    }`
+    const res = await API.graphql(graphqlOperation(UserRequests))
+    const loadedRequests = res.data.userRequests.items
+    loadedRequests.sort((a, b) => new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime())
+    console.log(loadedRequests)
+    commit('clearRequests')
+    loadedRequests.forEach(request => {
+      delete request.createdAt
+      console.log(request)
+      commit('add')
+      commit('changeCurrent', state.requests.length - 1)
+      commit('update', request)
+    })
+  },
   async updateRequest ({commit, state, app}, payload) {
     const API = this.app.$API
     const graphqlOperation = this.app.$graphqlOperation
