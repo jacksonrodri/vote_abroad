@@ -26,7 +26,7 @@
               <option>2020</option>
             </select>
           </div>
-          <div class="level-item">
+          <div class="level-item"  @click="$store.dispatch('userauth/logout')">
             <h1 class="subtitle is-5 has-text-grey">
               <span class="icon">
                 <i class="fas fa-sign-out-alt"></i>
