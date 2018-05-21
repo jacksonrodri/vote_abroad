@@ -50,8 +50,9 @@
 </template>
 
 <script>
-import { getPhoneCode, getNumberType, parse, format, isValidNumber, asYouType as AsYouType } from 'libphonenumber-js'
-import * as phoneExamples from 'libphonenumber-js/examples.mobile.json'
+import metadata from 'libphonenumber-js/metadata.full.json'
+import /* webpackChunkName: "libphone" */ { getPhoneCode, getNumberType, parse, format, isValidNumber, asYouType as AsYouType } from 'libphonenumber-js/custom'
+import /* webpackChunkName: "libphone" */ * as phoneExamples from 'libphonenumber-js/examples.mobile.json'
 
 const countries = require('~/assets/countries.json')
 
@@ -102,7 +103,7 @@ export default {
       let validPhone = false
       let intNumber = ''
       let cleanNumber = newVal
-      const formatter = new AsYouType(this.countryCode)
+      const formatter = new AsYouType(this.countryCode, metadata)
       if (newVal.indexOf('001') === 0 || newVal.indexOf('011') === 0) {
         cleanNumber = `+${newVal.substr(3)}`
       } else if (newVal.indexOf('00') === 0 && newVal.length > 2) {
@@ -114,9 +115,9 @@ export default {
       // console.log('formatter', formatter)
       // console.log('type', getNumberType(parse(this.typed, this.phoneCountry)))
       // if (formatter.country) { this.phoneCountry = formatter.country }
-      validPhone = isValidNumber(this.typed, formatter.country || this.phoneCountry.toUpperCase())
-      if (validPhone) { intNumber = format(parse(this.typed, this.phoneCountry), 'E.164') }
-      this.$emit('input', {rawInput: this.typed || null, country: formatter.country || this.phoneCountry, isValidPhone: validPhone, intNumber: intNumber || null, type: getNumberType(parse(this.typed, this.phoneCountry)) || this.value.type || null})
+      validPhone = isValidNumber(this.typed, formatter.country || this.phoneCountry.toUpperCase(), metadata)
+      if (validPhone) { intNumber = format(parse(this.typed, this.phoneCountry, metadata), 'E.164', metadata) }
+      this.$emit('input', {rawInput: this.typed || null, country: formatter.country || this.phoneCountry, isValidPhone: validPhone, intNumber: intNumber || null, type: getNumberType(parse(this.typed, this.phoneCountry, metadata), metadata) || this.value.type || null})
     },
     value: function (newVal, oldVal) {
       this.typed = newVal.rawInput
@@ -177,7 +178,7 @@ export default {
     },
     phonePlaceholder () {
       let code = this.countryCode === 'un' ? 'US' : this.countryCode.toUpperCase()
-      return `${format(phoneExamples[code], code, 'International')}`
+      return `${format(phoneExamples[code], code, 'International', metadata)}`
     }
   },
   methods: {
@@ -186,7 +187,7 @@ export default {
       //   return '500'
       // }
       try {
-        return getPhoneCode(code)
+        return getPhoneCode(code, metadata)
       } catch (error) {
         return ''
       }

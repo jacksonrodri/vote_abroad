@@ -88,7 +88,7 @@
                 <article class="message is-info">
                   <div class="message-body">
                     Thank you for using www.votefromabroad.org to generate your Voter Registration/Ballot Request form.
-                    Below are the instructions to submit your completed form.
+                    If you have already submitte
                     If you need any help, contact our volunteer voter support team at: help@votefromabroad.org.
                     Thanks for voting!
                   </div>
@@ -192,6 +192,8 @@ export default {
     user () { return this.$store.state.userauth.user },
     requests () { return this.$store.state.requests.requests },
     currentRequest () { return this.$store.state.requests.currentRequest },
+    currentRequestObject () { return this.$store.getters['requests/getCurrent'] },
+    stage () { return this.currentRequestObject && this.currentRequestObject.status ? this.currentRequestObject.status : 'start' },
     states () { return new Set(this.requests.map(x => x.votAdr.stateISO)) },
     name () { return this.user && this.user.firstName ? this.user.firstName : this.requests && this.requests[0] && this.requests[0].firstName ? this.requests[0].firstName : '' },
     isAuthenticated: function () { return this.$store.getters['userauth/isAuthenticated'] }

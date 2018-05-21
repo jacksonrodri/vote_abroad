@@ -137,7 +137,8 @@ module.exports = {
       'babel-polyfill',
       // '~/assets/countryaddresses.js',
       'mailcheck',
-      'auth0-js'
+      'auth0-js',
+      'libphonenumber-js/custom'
     ],
     babel: {
       presets: [

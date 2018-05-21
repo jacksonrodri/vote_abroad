@@ -136,7 +136,7 @@ export const actions = {
     commit('updateUser', {country: state.user.country !== 'US' && state.user.country ? state.user.country : state.session.country})
   },
   async authStart ({commit, state, dispatch}, redirectPath) {
-    commit('updateRedirectPath', redirectPath)
+    // commit('updateRedirectPath', redirectPath)
     let loginType
     if (state.user.emailAddress) {
       loginType = 'email'
@@ -400,7 +400,7 @@ export const actions = {
             position: 'is-top',
             duration: 8000
           })
-          dispatch('redirect', state.redirectPath || '/request/your-information')
+          // dispatch('redirect', state.redirectPath || '/request/your-information')
         }
       })
     }

@@ -51,7 +51,7 @@
 </template>
 
 <script>
-import { getPhoneCode, parse, format, isValidNumber, asYouType as AsYouType } from 'libphonenumber-js/custom'
+import /* webpackChunkName: "libphone" */ { getPhoneCode, parse, format, isValidNumber, asYouType as AsYouType } from 'libphonenumber-js/custom'
 import { required } from 'vuelidate/lib/validators'
 import Mailcheck from 'mailcheck'
 const countries = require('~/assets/countries.json')
