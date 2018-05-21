@@ -16,7 +16,8 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Absentee ballots for US Citizens abroad' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'preconnect', href: 'https://cognito-identity.us-east-1.amazonaws.com' }
     ]
   },
   render: {
