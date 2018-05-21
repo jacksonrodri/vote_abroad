@@ -48,8 +48,8 @@ workboxSW.precache([
     "revision": "9e8bc9778075e8bd0031d84b2660b0a5"
   },
   {
-    "url": "/_nuxt/2.70a671da22ab689adbb9.js",
-    "revision": "a0d881fe822ad33a3e0d74b9c547f00a"
+    "url": "/_nuxt/2.5826748b2e30eb765a4e.js",
+    "revision": "b2f76e5f5ff35b5be64ba585c648786e"
   },
   {
     "url": "/_nuxt/20.05b400ee7af70fa401e2.js",
@@ -336,8 +336,8 @@ workboxSW.precache([
     "revision": "4960403c1434bfb841089ea1f61ff841"
   },
   {
-    "url": "/_nuxt/manifest.ef619a2dd88745a8e4d1.js",
-    "revision": "f77c69d4ea2cbcf949ac8952273a7f28"
+    "url": "/_nuxt/manifest.92aa3c621f80efdf5931.js",
+    "revision": "75539cae93553a1f64fb05de1602c303"
   },
   {
     "url": "/_nuxt/vendor.18b06bfe28e5bf4e7c4f.js",

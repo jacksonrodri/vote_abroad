@@ -52,18 +52,18 @@ module.exports = {
         'get',
         'getAll'
       ]
-    }],
-    [
-      'leos',
-      {
-        page: 'leos/_state',
-        isPost: false,
-        generate: [
-          'get',
-          'getAll'
-        ]
-      }
-    ]
+    }]
+    // [
+    //   'leos',
+    //   {
+    //     page: 'leos/_state',
+    //     isPost: false,
+    //     generate: [
+    //       'get',
+    //       'getAll'
+    //     ]
+    //   }
+    // ]
   ],
   api: function (isStatic) {
     let url = process.env.baseUrl
