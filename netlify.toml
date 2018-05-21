@@ -37,4 +37,4 @@ force = false
 from = "http://votefromabroad.netlify.com/*"
 to = "https://votefromabroad.netlify.com/:splat"
 status = 301
-force = false
+force = true
