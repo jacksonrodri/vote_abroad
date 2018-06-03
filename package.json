@@ -11,7 +11,7 @@
     "build:lambda": "netlify-lambda build src/lambda",
     "start": "nuxt start",
     "start:lambda": "netlify-lambda serve src/lambda",
-    "generate": "npm run getaddressdata && nuxt generate",
+    "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint"
   },
