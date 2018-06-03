@@ -53,7 +53,7 @@
           :value="val"
           :id="this.$vnode.key"
           ref="phone"
-          :maxlength="mustBeEmail && label ? 40 : ''"
+          :maxlength="mustBeEmail && label ? 55 : ''"
           :autocomplete="autocomplete"
           @focus="setPlaceholder"
           @input.native="formatInput($event.target.value)"
