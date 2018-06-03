@@ -403,7 +403,7 @@ export default {
     openPdf () {
       this.$dialog.alert({
         title: this.$t('request.fpcaDownload.downloadingAlertTitle'),
-        message: this.$t('request.fpcaDownload.downloadedAlertMessage'),
+        message: this.$t('request.fpcaDownload.downloadingAlertMessage'),
         confirmText: this.$t('request.fpcaDownload.confirmButton'),
         type: 'is-danger',
         hasIcon: true,

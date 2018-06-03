@@ -244,7 +244,7 @@ export default {
     startCamera: function () {
       var md = this.getMediaDevices()
       if (!md) {
-        alert('Your browser does not allow access to your device camera.  Please try another browser or download, print sign and send your request to your local election official.')
+        alert('Your browser does not allow access to your device camera.  Please try another browser or download, print sign and send your request to your local election official. (Note that third party browsers on iphone do not have access to the device camera.)')
         this.$emit('input', null)
         return
       }
