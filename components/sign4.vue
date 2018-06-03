@@ -198,7 +198,7 @@ export default {
         this.isLoading = false
         this.$dialog.alert({
           title: 'Please rotate your phone',
-          message: 'Please rotate your phone to landscape orientation',
+          message: 'Please rotate your phone to landscape orientation. (unlock orientation lock)',
           confirmText: 'OK',
           type: 'is-danger',
           hasIcon: true,
@@ -468,7 +468,7 @@ export default {
     this.canvas = document.createElement('canvas')
     this.fromName = `${this.firstName} ${this.lastName}`
     this.subject = 'FPCA Submission'
-    this.message = `Please find my FPCA form for the 2018 calendar year. Can you confirm receipt and also confirm that I do not need to send in the paper copy? \n\nThank you so much for everything you do - your work is much appreciated by Americans abroad!! \n\n Sincerely, \n\n${this.firstName} ${this.lastName}\n${this.email}\n${this.tel}`
+    this.message = `Please find my FPCA form for the 2018 calendar year. Can you confirm receipt and also confirm that I do not need to send in the paper copy? \n\nThank you so much for everything you do - your work is much appreciated by Americans abroad! \n\n Sincerely, \n\n${this.firstName} ${this.lastName} \n\n${this.email} \n\n${this.tel}`
   },
   beforeDestroy: function () {
     if (this.$refs.video) {

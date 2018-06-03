@@ -88,7 +88,7 @@
                 <article class="message is-info">
                   <div class="message-body">
                     Thank you for using www.votefromabroad.org to generate your Voter Registration/Ballot Request form.
-                    If you have already submitte
+                    (Text to be added with relevent instructions)
                     If you need any help, contact our volunteer voter support team at: help@votefromabroad.org.
                     Thanks for voting!
                   </div>
