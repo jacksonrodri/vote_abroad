@@ -13,12 +13,18 @@
                   {{ $t('homepage.subtitle') }}
                 </h2>
                 <span class="is-flex"><label class="label">{{ $t('homepage.loginInstructions') }}</label><span @click="toolTipOpen = !toolTipOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
-                <phone-email
+                <phone-input ref="pe"
+                  key="pe"
+                  :accepts="['phone', 'email']"
+                  @input="val => $store.commit('userauth/updateUser', {emailAddress: val.isValidEmail ? val.rawInput : '', mobileIntFormat: val.intNumber})"
+                  v-model="phoneOrEmail">
+                </phone-input>
+                <!-- <phone-email
                   size="is-medium"
                   ref="pe"
                   @pressEnter="startAuth"
                   v-model="phoneOrEmail">
-                </phone-email>
+                </phone-email> -->
                 <div class="buttons is-right is-marginless">
                   <button @click="startAuth" :class="['button', 'is-large', 'is-danger', {'is-loading': authenticating}]">{{ $t('homepage.start') }}</button>
                 </div>
@@ -54,7 +60,8 @@
 </template>
 
 <script>
-import PhoneEmail from '~/components/PhoneEmail.vue'
+// import PhoneEmail from '~/components/PhoneEmail.vue'
+import PhoneInput from '~/components/PhoneInput'
 import { mapActions } from 'vuex'
 
 export default {
@@ -65,7 +72,8 @@ export default {
   //   ]
   // },
   components: {
-    PhoneEmail
+    // PhoneEmail,
+    PhoneInput
   },
   // mounted () {
   //   if (process.browser) {

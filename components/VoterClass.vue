@@ -5,7 +5,7 @@
         :message="!isCivilianType && !isMilitaryType  && validations.$error ? $t(`request.voterClass.messages.typeRequired`) : ''">
         <b-field grouped group-multiline>
           <p class="control">
-            <button @click="setVal('civilianType')" :class="[baseClass, {'is-success': isCivilianType}]">
+            <button @click.prevent="setVal('civilianType')" :class="[baseClass, {'is-success': isCivilianType}]">
               <span v-show="isCivilianType" class="icon is-small">
                 <i class="fas fa-check"></i>
               </span>
@@ -15,7 +15,7 @@
             </button>
           </p>
           <p class="control">
-            <button @click="setVal('militaryType')" :class="[baseClass, {'is-success': isMilitaryType}]">
+            <button @click.prevent="setVal('militaryType')" :class="[baseClass, {'is-success': isMilitaryType}]">
               <span v-show="isMilitaryType" class="icon is-small">
                 <i class="fas fa-check"></i>
               </span>
@@ -32,7 +32,7 @@
           <label class="label">
             {{ isMilitaryType ? $t('request.voterClass.whatMilType') : $t('request.voterClass.whatCivType') }}
           </label>
-          <span @click="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;">
+          <span @click.prevent="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;">
             <i class="fas fa-info-circle"></i>
           </span>
         </span>
@@ -41,7 +41,7 @@
       <!-- <b-field disabled :label="isMilitaryType ? 'What type of military voter are you?' : 'Which best describes you?'"> -->
         <b-field grouped group-multiline>
           <p class="control" v-show="isMilitaryType">
-            <button @click="setVal('military')" :class="[baseClass, {'is-success': isMilitary}]">
+            <button @click.prevent="setVal('military')" :class="[baseClass, {'is-success': isMilitary}]">
               <span v-show="isMilitary" class="icon is-small">
                 <i class="fas fa-check"></i>
               </span>
@@ -51,7 +51,7 @@
             </button>
           </p>
           <p class="control" v-show="isMilitaryType">
-            <button @click="setVal('milSpouse')" :class="[baseClass, {'is-success': isMilSpouse}]">
+            <button @click.prevent="setVal('milSpouse')" :class="[baseClass, {'is-success': isMilSpouse}]">
               <span v-show="isMilSpouse" class="icon is-small">
                 <i class="fas fa-check"></i>
               </span>
@@ -61,7 +61,7 @@
             </button>
           </p>
           <p class="control" v-show="isMilitaryType">
-            <button @click="setVal('natGuard')" :class="[baseClass, {'is-success': isNatGuard}]">
+            <button @click.prevent="setVal('natGuard')" :class="[baseClass, {'is-success': isNatGuard}]">
               <span v-show="isNatGuard" class="icon is-small">
                 <i class="fas fa-check"></i>
               </span>
@@ -71,7 +71,7 @@
             </button>
           </p>
           <p class="control" v-show="!isMilitaryType">
-            <button @click="setVal('uncertainReturn')" :class="[baseClass, {'is-success': isUncertainReturn}]">
+            <button @click.prevent="setVal('uncertainReturn')" :class="[baseClass, {'is-success': isUncertainReturn}]">
               <span v-show="isUncertainReturn" class="icon is-small">
                 <i class="fas fa-check"></i>
               </span>
@@ -81,7 +81,7 @@
             </button>
           </p>
           <p class="control" v-show="!isMilitaryType">
-            <button @click="setVal('intendToReturn')" :class="[baseClass, {'is-success': isIntendToReturn}]">
+            <button @click.prevent="setVal('intendToReturn')" :class="[baseClass, {'is-success': isIntendToReturn}]">
               <span v-show="isIntendToReturn" class="icon is-small">
                 <i class="fas fa-check"></i>
               </span>
@@ -91,7 +91,7 @@
             </button>
           </p>
           <p class="control" v-show="!isMilitaryType" v-if="allowsNeverResided">
-            <button @click="setVal('neverResided')" :class="[baseClass, {'is-success': isNeverResided}]">
+            <button @click.prevent="setVal('neverResided')" :class="[baseClass, {'is-success': isNeverResided}]">
               <span v-show="isNeverResided" class="icon is-small">
                 <i class="fas fa-check"></i>
               </span>

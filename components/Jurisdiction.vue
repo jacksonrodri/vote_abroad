@@ -1,7 +1,7 @@
 <template>
   <div class="field">
     <!-- <div v-if="isSingleLeoState">
-      <span class="is-flex"><label class="label">{{ label }}</label><span @click="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span> -->
+      <span class="is-flex"><label class="label">{{ label }}</label><span @click.prevent="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span> -->
       <!-- <slot name="instructions"></slot> -->
       <!-- <p></p>
       <b-field>
@@ -9,7 +9,7 @@
       </b-field>
     </div> -->
     <!-- <div v-else> -->
-      <span class="is-flex"><label class="label">{{ label }}</label><span @click="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
+      <span class="is-flex"><label class="label">{{ label }}</label><span @click.prevent="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
       <slot name="instructions"></slot>
       <!-- Jurisdiction: {{leos.length}} leos found -->
       <!-- <button class="button">Wake County</button> -->
@@ -33,7 +33,7 @@
             </b-autocomplete>
             <p class="control">
                 <button class="button is-grey is-inverted is-outlined"
-                  @click="$refs.jurisdiction.focus()">
+                  @click.prevent="$refs.jurisdiction.focus()">
                   <b-icon icon="chevron-down"></b-icon>
                 </button>
             </p>

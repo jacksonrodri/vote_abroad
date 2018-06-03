@@ -1,6 +1,6 @@
 <template>
   <div class="field">
-    <span class="is-flex"><label @click="$refs.street.focus()" class="label" style="cursor: pointer;">{{ label }} </label><span v-if="toolTipTitle" @click="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
+    <span class="is-flex"><label @click.prevent="$refs.street.focus()" class="label" style="cursor: pointer;">{{ label }} </label><span v-if="toolTipTitle" @click.prevent="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
     <slot name="instructions"></slot>
     <b-message v-if="toolTipTitle" :title="toolTipTitle" type="is-info" has-icon :active.sync="isOpen">
       <slot name="tooltip"></slot>

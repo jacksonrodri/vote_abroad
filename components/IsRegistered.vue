@@ -5,7 +5,7 @@
   <b-field grouped
     group-multiline>
     <p class="control">
-      <button @click="setVal('registered')" :class="[baseClass, {'is-success': registered}]">
+      <button @click.prevent="setVal('registered')" :class="[baseClass, {'is-success': registered}]">
         <span v-show="registered" class="icon is-small">
           <i class="fas fa-check"></i>
         </span>
@@ -15,7 +15,7 @@
       </button>
     </p>
     <p class="control">
-      <button @click="setVal('notRegistered')" :class="[baseClass, {'is-success': notRegistered}]">
+      <button @click.prevent="setVal('notRegistered')" :class="[baseClass, {'is-success': notRegistered}]">
         <span v-show="notRegistered" class="icon is-small">
           <i class="fas fa-check"></i>
         </span>
@@ -25,7 +25,7 @@
       </button>
     </p>
     <p class="control">
-      <button @click="setVal('unsure')" :class="[baseClass, {'is-success': unsure}]">
+      <button @click.prevent="setVal('unsure')" :class="[baseClass, {'is-success': unsure}]">
         <span v-show="unsure" class="icon is-small">
           <i class="fas fa-check"></i>
         </span>

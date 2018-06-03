@@ -5,32 +5,46 @@
     <h3 class="has-text-centered subtitle is-4">{{ $t(`request.stages.stage${stage.order}`)}}</h3>
 <!-- your information -->
   <section v-if="stage.slug === 'your-information'">
-
+    <form id="your-information" key="your-information">
       <!-- firstName -->
-      <b-field :type="($v.firstName.$error ? 'is-danger': '')" :message="$v.firstName.$error ? Object.keys($v.firstName.$params).map(x => $t(`request.firstName.messages.${x}`)) : '' " :label="$t('request.firstName.label')">
-        <b-input v-model="firstName"
-          @input="delayTouch($v.firstName)"
-          autocomplete="given-name"
-          ref="firstName"></b-input>
-      </b-field>
+      <div class="field">
+        <label class="label" for="firstName">{{ $t('request.firstName.label') }}<transition name="fade"><span v-if="!firstName && !$v.firstName.$error" class="required"> Required</span></transition></label>
+        <b-field :type="($v.firstName.$error ? 'is-danger': '')" :message="$v.firstName.$error ? Object.keys($v.firstName.$params).map(x => $t(`request.firstName.messages.${x}`)) : '' ">
+          <b-input v-model="firstName"
+            id="firstName"
+            @input="delayTouch($v.firstName)"
+            autocomplete="given-name"
+            ref="firstName"></b-input>
+        </b-field>
+      </div>
 
       <!-- middleName -->
-      <b-field :type="($v.middleName.$error ? 'is-danger': '')" :message="$v.middleName.$error ? Object.keys($v.middleName.$params).map(x => x) : '' " :label="$t('request.middleName.label')">
-        <b-input v-model="middleName" @input="$v.middleName.$touch()" autocomplete="additional-name"></b-input>
-      </b-field>
+      <div class="field">
+        <label class="label" for="middleName">{{ $t('request.middleName.label') }}<transition name="fade"><span v-if="!middleName" class="required"> Optional</span></transition></label>
+        <b-field :type="($v.middleName.$error ? 'is-danger': '')" :message="$v.middleName.$error ? Object.keys($v.middleName.$params).map(x => x) : '' ">
+          <b-input v-model="middleName" id="middleName" @input="$v.middleName.$touch()" autocomplete="additional-name"></b-input>
+        </b-field>
+      </div>
 
       <!-- lastName -->
-      <b-field :type="($v.lastName.$error ? 'is-danger': '')" :message="$v.lastName.$error ? Object.keys($v.lastName.$params).map(x => $t(`request.lastName.messages.${x}`)) : '' " :label="$t('request.lastName.label')">
-        <b-input v-model="lastName"
-          @input="delayTouch($v.lastName)"
-          autocomplete="family-name"
-          ref="lastName"></b-input>
-      </b-field>
+      <div class="field">
+        <label class="label" for="lastName">{{ $t('request.lastName.label') }}<transition name="fade"><span v-if="!lastName && !$v.lastName.$error" class="required"> Required</span></transition></label>
+        <b-field :type="($v.lastName.$error ? 'is-danger': '')" :message="$v.lastName.$error ? Object.keys($v.lastName.$params).map(x => $t(`request.lastName.messages.${x}`)) : '' ">
+          <b-input v-model="lastName"
+            id="lastName"
+            @input="delayTouch($v.lastName)"
+            autocomplete="family-name"
+            ref="lastName"></b-input>
+        </b-field>
+      </div>
 
       <!-- suffix -->
-      <b-field :type="($v.suffix.$error ? 'is-danger': '')" :message="$v.suffix.$error ? Object.keys($v.suffix.$params).map(x => x) : '' " :label="$t('request.suffix.label')">
-        <b-input v-model="suffix" @input="$v.suffix.$touch()" autocomplete="honorific-suffix"></b-input>
-      </b-field>
+      <div class="field">
+        <label class="label" for="suffix">{{ $t('request.suffix.label') }}<transition name="fade"><span v-if="!suffix" class="required"> Optional</span></transition></label>
+        <b-field :type="($v.suffix.$error ? 'is-danger': '')" :message="$v.suffix.$error ? Object.keys($v.suffix.$params).map(x => x) : '' ">
+          <b-input v-model="suffix" id="suffix" @input="$v.suffix.$touch()" autocomplete="honorific-suffix"></b-input>
+        </b-field>
+      </div>
 
       <previous-name v-model="previousName"
         :type="($v.previousName.$error ? 'is-danger': '')"
@@ -46,7 +60,7 @@
       </previous-name>
 
       <!-- phone Number -->
-      <tel-input
+      <!-- <tel-input
         key="tel"
         :label="$t('request.tel.label')"
         ref="tel"
@@ -54,10 +68,24 @@
         @input="delayTouch($v.tel)"
         :type="($v.tel.$error ? 'is-danger': '')"
         :message="$v.tel.$error ? Object.keys($v.tel.$params).map(x => x === 'validPhone' ? 'Please enter a valid phone number': x) : [] "
-        v-model="tel"></tel-input>
+        v-model="tel"></tel-input> -->
+
+      <phone-input ref="tel" key="telephone" :label="$t('request.tel.label')" :accepts="['phone']" v-model="tel"></phone-input>
+      <!-- <phone-input key="phoneEmail"
+        required
+        :label="$t('homepage.loginInstructions')"
+        :accepts="['phone', 'email']"
+        toolTipTitle="What is this?"
+        v-model="email">
+        <div slot="tooltip">
+          {{ $t('homepage.tooltip')}}
+        </div>
+      </phone-input> -->
+      <!-- <phone-input key="phone" :label="$t('request.tel.label')" :accepts="['phone']" v-model="phoneTest"></phone-input> -->
+      <phone-input key="email" ref="email" :label="$t('request.email.label')" :accepts="['email']" v-model="email"></phone-input>
 
         <!-- emailAddress -->
-      <b-field
+      <!-- <b-field
       :type="($v.email.$error ? 'is-danger': '')"
       :message="$v.email.$error ? Object.keys($v.email.$params).map(x => $t(`request.email.messages.${x}`)) : '' "
       :label="$t('request.email.label')">
@@ -66,10 +94,10 @@
           autocomplete="email"
           maxlength="40"
           ref="email"></b-input>
-      </b-field>
+      </b-field> -->
 
       <!-- countryName -->
-      <address-input
+      <!-- <address-input
         :label="$t('request.abrAdr.label')"
         key="overseas"
         ref="abrAdr"
@@ -83,16 +111,24 @@
         <div slot="tooltip">
           <vue-markdown>{{$t('request.abrAdr.tooltip')}}</vue-markdown>
         </div>
-      </address-input>
+      </address-input> -->
+
+      <adr-input v-model="abrAdr"
+        :label="$t('request.abrAdr.label')"
+        ref="abrAdr"
+        key="abrAdr"></adr-input>
       <scroll-up :key="$route.params.stage"></scroll-up>
     <section >
         <nuxt-link :to="localePath({ name: 'index' })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>{{$t('request.stages.back')}}</span></nuxt-link>
-        <button @click="focusFirstErrorOrAdvance(localePath({ name: 'request-stage', params: {stage: 'voting-information'} }))" class="button is-primary is-medium is-pulled-right" exact ><span> {{$t('request.stages.next')}} </span><b-icon pack="fas" icon="caret-right"></b-icon></button>
+        <button @click.prevent="focusFirstErrorOrAdvance(localePath({ name: 'request-stage', params: {stage: 'voting-information'} }))" class="button is-primary is-medium is-pulled-right" exact ><span> {{$t('request.stages.next')}} </span><b-icon pack="fas" icon="caret-right"></b-icon></button>
     </section>
+
+    </form>
   </section>
 
 <!-- voting information -->
   <section v-if="stage.slug === 'voting-information'">
+    <form id="voting-information" key="voting-information">
 
       <voting-address
         :label="$t('request.votAdr.label')"
@@ -204,11 +240,14 @@
 
     <section >
         <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>{{$t('request.stages.back')}}</span></nuxt-link>
-        <button @click="focusFirstErrorOrAdvance(localePath({ name: 'request-stage', params: { stage: 'id-and-contact-information'} }))" class="button is-primary is-medium is-pulled-right" exact ><span> {{$t('request.stages.next')}} </span><b-icon pack="fas" icon="caret-right"></b-icon></button>
+        <button @click.prevent="focusFirstErrorOrAdvance(localePath({ name: 'request-stage', params: { stage: 'id-and-contact-information'} }))" class="button is-primary is-medium is-pulled-right" exact ><span> {{$t('request.stages.next')}} </span><b-icon pack="fas" icon="caret-right"></b-icon></button>
     </section>
+
+  </form>
   </section>
 
   <section v-if="stage.slug === 'id-and-contact-information'">
+    <form id="id-and-contact-information" key="id-and-contact-information">
 <!-- identity and Contact information -->
       <!-- dob -->
       <birth-date
@@ -306,8 +345,9 @@
       <scroll-up :key="$route.params.stage"></scroll-up>
     <section >
       <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'voting-information'} })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>{{$t('request.stages.back')}}</span></nuxt-link>
-      <button @click="focusFirstErrorOrAdvance(localePath({ name: 'request-stage', params: { stage: 'review'} }))" class="button is-primary is-medium is-pulled-right" exact ><span> {{$t('request.stages.next')}} </span><b-icon pack="fas" icon="caret-right"></b-icon></button>
+      <button @click.prevent="focusFirstErrorOrAdvance(localePath({ name: 'request-stage', params: { stage: 'review'} }))" class="button is-primary is-medium is-pulled-right" exact ><span> {{$t('request.stages.next')}} </span><b-icon pack="fas" icon="caret-right"></b-icon></button>
     </section>
+  </form>
   </section>
 </section>
 </div>
@@ -330,6 +370,8 @@ import Gender from '~/components/Gender'
 import StateSpecial from '~/components/StateSpecial'
 import ScrollUp from '~/components/ScrollUp'
 import Identification from '~/components/Identification'
+import PhoneInput from '~/components/PhoneInput'
+import AdrInput from '~/components/AdrInput'
 import VueMarkdown from 'vue-markdown'
 
 const touchMap = new WeakMap()
@@ -361,7 +403,10 @@ export default {
       isFwab: false,
       isOpen: false,
       // joinDa: null,
-      prty: ''
+      prty: '',
+      phoneEmailTest: {},
+      phoneTest: {},
+      emailTest: {}
     }
   },
   components: {
@@ -380,7 +425,9 @@ export default {
     StateSpecial,
     ScrollUp,
     Identification,
-    VueMarkdown
+    VueMarkdown,
+    PhoneInput,
+    AdrInput
   },
   computed: {
     stateRules () {
@@ -605,13 +652,13 @@ export default {
           this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.country'}})
           this.$refs.abrAdr.$refs.country.focus()
           break
-        case this.stage.slug === 'your-information' && this.$v.abrAdr.thoroughfare.$error:
-          this.$refs.abrAdr.$refs.thoroughfare.focus()
-          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.thoroughfare'}})
+        case this.stage.slug === 'your-information' && this.$v.abrAdr.A.$error:
+          this.$refs.abrAdr.$refs.A.focus()
+          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.A'}})
           break
-        case this.stage.slug === 'your-information' && this.$v.abrAdr.locality.$error:
-          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.locality'}})
-          this.$refs.abrAdr.$refs.locality[0].focus()
+        case this.stage.slug === 'your-information' && this.$v.abrAdr.C.$error:
+          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.C'}})
+          this.$refs.abrAdr.$refs.C.focus()
           break
         case this.stage.slug === 'your-information' && this.$v.tel.$error:
           this.$refs.tel.$refs.tel.focus()
@@ -690,8 +737,8 @@ export default {
       },
       abrAdr: {
         country: { required },
-        thoroughfare: { required },
-        locality: { required }
+        A: { required },
+        C: { required }
       },
       voterClass: {
         required
@@ -730,15 +777,15 @@ export default {
       },
       identification: {
         ssn: {
-          requiredIf: requiredIf(() => {
-            if (!this.stateRules || !this.stateRules.id) {
+          requiredIf: requiredIf((model) => {
+            if (!this.stateRules || !this.stateRules.id || (Array.isArray(this.stateRules.id) && this.stateRules.id.length === 0)) {
               return false
             }
             let needsSSN = Boolean(this.stateRules.id.indexOf('SSN') > -1 || this.stateRules.id.indexOf('SSN4') > -1)
             return Boolean(needsSSN && !this.identification.stateId && !this.identification.noId)
           }),
           correctLength () {
-            if (this.identification.ssn && this.stateRules && this.stateRules.id) {
+            if (this.identification.ssn && this.stateRules && this.stateRules.id && this.stateRules.id.length > 0) {
               if (this.stateRules.id.indexOf('SSN4') > -1) {
                 return this.identification.ssn.length === 4
               } else if (this.stateRules.id.indexOf('SSN') > -1) {
@@ -777,3 +824,18 @@ export default {
   }
 }
 </script>
+<style>
+label.label {
+  position: relative;
+  width: 100%;
+}
+label.label > span.required {
+    position: absolute;
+    right: .5rem;
+    color: #9c9a9a;
+    font-size: 0.75rem;
+    font-weight: 300;
+    top: 2.5rem;
+    z-index: 4;
+}
+</style>

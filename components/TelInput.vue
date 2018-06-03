@@ -13,7 +13,7 @@
           style="cursor: pointer;"
           :custom-class="'flag-icon-' + countryCode.toLowerCase()"
           :size="size"
-          @click.native="focusCountry">
+          @click.prevent.native="focusCountry">
         </b-icon>
       </p>
       <b-autocomplete

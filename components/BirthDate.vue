@@ -1,6 +1,6 @@
 <template>
   <div class="field">
-  <span class="is-flex"><label class="label">{{ $t('request.dob.label') }}</label><span @click="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
+  <span class="is-flex"><label class="label">{{ $t('request.dob.label') }}</label><span @click.prevent="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
     <b-field :message="validations.$error ? Object.keys(validations.$params).map(x => $t(`request.dob.messages.${x}`)) : '' "
       :type="(validations.$error ? 'is-danger': '')">
         <!-- :date-formatter="(date) => {date.setHours(date.getHours() + 4); return date.toLocaleDateString()}" -->

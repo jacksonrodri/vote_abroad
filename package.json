@@ -6,11 +6,12 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
+    "getaddressdata": "rm -rf data/postal && svn export https://github.com/mirumee/google-i18n-address/trunk/i18naddress/data ./data/postal",
     "build": "nuxt build",
     "build:lambda": "netlify-lambda build src/lambda",
     "start": "nuxt start",
     "start:lambda": "netlify-lambda serve src/lambda",
-    "generate": "nuxt generate",
+    "generate": "npm run getaddressdata && nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint"
   },

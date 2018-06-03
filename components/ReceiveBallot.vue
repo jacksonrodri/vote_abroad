@@ -1,10 +1,10 @@
 <template>
 <div class="field">
-  <span class="is-flex"><label class="label">{{ label }}</label><span @click="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
+  <span class="is-flex"><label class="label">{{ label }}</label><span @click.prevent="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
   <p v-if="validations.$error" class="help is-danger">{{ $t(`request.receiveBallot.messages.required`) }}</p>
   <b-field grouped group-multiline>
     <p class="control" v-if="ballotReceiptOptions.indexOf('Email') > -1">
-      <button @click="setVal('email')" :class="[baseClass, {'is-success': email}]">
+      <button @click.prevent="setVal('email')" :class="[baseClass, {'is-success': email}]">
         <span v-show="email" class="icon is-small">
           <i class="fas fa-check"></i>
         </span>
@@ -14,7 +14,7 @@
       </button>
     </p>
     <p class="control" v-if="ballotReceiptOptions.indexOf('Mail') > -1">
-      <button @click="setVal('mail')" :class="[baseClass, {'is-success': mail}]">
+      <button @click.prevent="setVal('mail')" :class="[baseClass, {'is-success': mail}]">
         <span v-show="mail" class="icon is-small">
           <i class="fas fa-check"></i>
         </span>
@@ -24,7 +24,7 @@
       </button>
     </p>
     <p class="control" v-if="ballotReceiptOptions.indexOf('Fax') > -1">
-      <button @click="setVal('fax')" :class="[baseClass, {'is-success': fax}]">
+      <button @click.prevent="setVal('fax')" :class="[baseClass, {'is-success': fax}]">
         <span v-show="fax" class="icon is-small">
           <i class="fas fa-check"></i>
         </span>

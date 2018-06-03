@@ -1,6 +1,6 @@
 <template>
   <section>
-    <span class="is-flex"><label @click="$refs.country.focus()" class="label" style="cursor: pointer;">{{ label }} </label><span v-if="toolTipTitle" @click="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
+    <span class="is-flex"><label @click.prevent="$refs.country.focus()" class="label" style="cursor: pointer;">{{ label }} </label><span v-if="toolTipTitle" @click.prevent="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
     <slot name="instructions"></slot>
     <b-message v-if="toolTipTitle" title="Where are you now?" type="is-info" has-icon :active.sync="isOpen">
       <slot name="tooltip"></slot>
@@ -19,7 +19,7 @@
                       pack="flag-icon"
                       class="flag-container"
                       :custom-class="'flag-icon-' + cCountryCode.toLowerCase()"
-                      @click.native="$refs.country.focus()"
+                      @click.prevent.native="$refs.country.focus()"
                       style="cursor: pointer;">
                     </b-icon>
                   </p>
@@ -32,7 +32,7 @@
                       open-on-focus
                       expanded
                       :data="filteredCountries"
-                      autocomplete="country"
+                      autocomplete="country-name"
                       field="label"
                       @input="updateAddress()"
                       @focus="$event.target.select()"
@@ -48,7 +48,7 @@
         </div>
         <div class="field" v-show="!usesAlternateFormat">
           <div class="field-label is-normal">
-            <label class="label"></label>
+            <!-- <label class="label"></label> -->
           </div>
           <div class="field-body">
             <b-field
@@ -75,7 +75,7 @@
         </div>
         <div class="field" v-show="!usesAlternateFormat">
           <div class="field-label is-normal">
-            <label class="label"></label>
+            <!-- <label class="label"></label> -->
           </div>
           <div class="field-body">
             <div class="field">

@@ -1,15 +1,15 @@
 <template>
 <div class="field">
-  <span class="is-flex"><label class="label">{{ label }}</label><span @click="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
+  <span class="is-flex"><label class="label">{{ label }}</label><span @click.prevent="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
   <b-field grouped group-multiline :type="type">
     <p class="control" v-for="(party, index) in Object.keys(partyChoices)" :key="index">
-      <button @click="thisValue = party" :class="[baseClass, {'is-success': partyChoices[party].aliases.indexOf(thisValue ? thisValue.toString().toLowerCase() : '') > -1}]">
+      <button @click.prevent="thisValue = party" :class="[baseClass, {'is-success': partyChoices[party].aliases.indexOf(thisValue ? thisValue.toString().toLowerCase() : '') > -1}]">
         <b-icon v-if="partyChoices[party].aliases.indexOf(thisValue? thisValue.toString().toLowerCase() : '') > -1" icon="check"></b-icon>
         <span>{{$t(`request.party.${party.toLowerCase()}`)}}</span>
       </button>
     </p>
     <p class="control">
-      <button @click="selectOther(!isOther)" :class="[baseClass, {'is-success': isOther}]">
+      <button @click.prevent="selectOther(!isOther)" :class="[baseClass, {'is-success': isOther}]">
         <b-icon v-if="isOther" icon="check"></b-icon>
         <span>{{$t('request.party.other')}}</span>
       </button>

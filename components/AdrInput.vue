@@ -1,0 +1,432 @@
+<template>
+  <div class="field">
+    <label for="country" class="label">{{ label }}<span v-if="toolTipTitle" @click="toolTipOpen = !toolTipOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span><transition name="fade"><span v-if="!value && !$v.$error" class="required"> {{required || required === '' ? 'Required' : 'Optional'}}</span></transition></label>
+    <!-- <b-field expanded label="country">
+      :for="this.$vnode.key"
+      <b-input placeholder="Country"></b-input>
+    </b-field> -->
+    <b-field expanded placeholder="Country">
+      <a :class="['button', 'control', 'is-outlined', 'is-inverted', 'is-paddingless']"
+        @click="$refs.country.focus()"
+        style="padding-left:0px;">
+        <span class="flag-container fa-stack">
+          <i :class="`fa-stack-2x flag-icon flag-icon-${userCountry || 'un'}`"></i>
+          <i class="fas fa-sort-down fa-stack-1x has-text-grey breathe" style="transform:translateY(0.7rem)"></i>
+        </span>
+      </a>
+      <b-autocomplete
+        :open-on-focus=true
+        keep-first
+        :placeholder="$t('request.abrAdr.placeholder')"
+        v-model="countrySearch"
+        :field="'name' || null"
+        :data="filteredCountries"
+        ref="country"
+        autocomplete="off"
+        :id="country"
+        @select="option => selectCountry(option)"
+        expanded>
+        <template slot-scope="props">
+          <span :class="`flag-icon flag-icon-${props.option.code.toLowerCase()}`"></span>{{ props.option.name }}
+        </template>
+      </b-autocomplete>
+      <p class="control">
+        <a class="button is-outlined is-borderless" @click="$refs.country.focus()">
+          <span class="icon is-small">
+            <i class="fas fa-angle-down"></i>
+          </span>
+        </a>
+      </p>
+        <!-- @input="val => countrySearch = val" -->
+        <!-- :value="countrySearch || getCountryName(userCountry) || ''" -->
+
+    </b-field>
+    <transition name="fade" mode="out-in">
+      <div v-if="!usesAlternateFormat" key="formatted">
+        <template v-for="item in fmt">
+          <b-field v-if="typeof item === 'string'" expanded :key="item">
+            <b-autocomplete v-if="item === 'A'"
+                :value="A"
+                :data="data"
+                ref="A"
+                keep-first
+                :placeholder="getPlaceholder(item)"
+                field="structured_formatting.main_text"
+                :loading="isFetching"
+                autocomplete="address-line1"
+                @input="val => { update({A: val}); getAsyncData() }"
+                @select="option => fillData(option)">
+                <template slot-scope="props">{{ props.option.description }}</template>
+                <template slot="empty">No results found</template>
+              </b-autocomplete>
+              <b-autocomplete v-else-if="item === 'S' && sOptions"
+                :key="item"
+                :autocomplete="getAutocomplete(item)"
+                :value="S"
+                @input="val => update({S: val})"
+                @select="opt => {if (opt) { update({S: opt.key}) }}"
+                :data="!S ? sOptions : sOptions.filter((opt) => opt.name.toLowerCase().includes(S.toLowerCase()) || opt.key.toLowerCase().includes(S.toLowerCase()))"
+                field="name"
+                keep-first
+                :placeholder="getPlaceholder(item)"
+                :open-on-focus=true></b-autocomplete>
+            <b-input :placeholder="getPlaceholder(item)"
+              v-else
+              :value="getValue(item)"
+              @input="val => update({[item]: val})"
+              :autocomplete="getAutocomplete(item)">
+            </b-input>
+          </b-field>
+          <b-field v-else grouped group-multiline :key="item.join('-')">
+            <template v-for="subItem in item">
+              <b-autocomplete v-if="subItem === 'S'"
+                :key="subItem"
+                :autocomplete="getAutocomplete(item)"
+                :value="S"
+                @input="val => update({S: val})"
+                @select="opt => {if (opt) { update({S: opt.key}) }}"
+                :data="!S ? sOptions : sOptions.filter((opt) => opt.name.toLowerCase().includes(S.toLowerCase()) || opt.key.toLowerCase().includes(S.toLowerCase()))"
+                field="name"
+                keep-first
+                :placeholder="getPlaceholder(subItem)"
+                :open-on-focus=true></b-autocomplete>
+              <b-input v-else :key="subItem"
+                :value="getValue(subItem)"
+                @input="val => update({[subItem]: val})"
+                :expanded="subItem !== 'X' || subItem !== 'Z'"
+                :placeholder="getPlaceholder(subItem)"
+                :autocomplete="getAutocomplete(subItem)">
+              </b-input>
+            </template>
+          </b-field>
+        </template>
+      </div>
+      <div v-else key="altFormat">
+        <b-field>
+          <b-input type="text" :value="alt1" @input="val => update({alt1: val})"></b-input>
+        </b-field>
+        <b-field >
+          <b-input type="text" :value="alt2" @input="val => update({alt2: val})"></b-input>
+        </b-field>
+        <b-field>
+          <b-input type="text" :value="alt3" @input="val => update({alt3: val})"></b-input>
+        </b-field>
+        <b-field>
+          <b-input type="text" :value="alt4" @input="val => update({alt4: val})"></b-input>
+        </b-field>
+        <b-field>
+          <b-input type="text" :value="alt5" @input="val => update({alt5: val})"></b-input>
+        </b-field>
+      </div>
+    </transition>
+
+      <b-field :label="usesAlternateFormat ? $t('request.abrAdr.structured-label') : $t('request.abrAdr.unstructured-label')">
+        <b-field>
+          <b-radio-button v-model="usesAlternateFormat"
+            :native-value="!usesAlternateFormat"
+            :type="usesAlternateFormat ? 'is-success' : 'is-danger'">
+            <b-icon :icon="!usesAlternateFormat ? 'edit' : 'align-justify'"></b-icon>
+            <span>{{$t('request.abrAdr.changeFormat')}}</span>
+            <!-- <span>Change format</span> -->
+          </b-radio-button>
+        </b-field>
+      </b-field>
+  </div>
+</template>
+
+<script>
+import { required } from 'vuelidate/lib/validators'
+import axios from 'axios'
+import debounce from 'lodash/debounce'
+const countrylist = require('~/assets/countries.json')
+const ZZ = require('~/data/postal/zz.json')
+
+export default {
+  name: 'AdrInput',
+  props: [
+    'value',
+    'label',
+    'toolTipTitle',
+    'required'
+  ],
+  data () {
+    return {
+      toolTipOpen: false,
+      isFetching: false,
+      data: [],
+      formats: {},
+      countrySearch: '',
+      country: '',
+      model: [
+        'postOfficeBox',
+        'extendedAddress',
+        'streetAddress',
+        'locality',
+        'region',
+        'postalCode',
+        'countryName',
+        'countryiso',
+        'usesAlternateFormat',
+        'alt1',
+        'alt2',
+        'alt3',
+        'alt4',
+        'alt5'
+      ],
+      format: [
+        'streetAddress',
+        'extendedAddress',
+        [
+          'locality',
+          'region',
+          'postalCode'
+        ]
+      ]
+    }
+  },
+  computed: {
+    countries () { return countrylist },
+    N () { return this.value && this.value.N ? this.value.N : null },
+    O () { return this.value && this.value.O ? this.value.O : null },
+    A () { return this.value && this.value.A ? this.value.A : null },
+    B () { return this.value && this.value.B ? this.value.B : null },
+    D () { return this.value && this.value.D ? this.value.D : null },
+    C () { return this.value && this.value.C ? this.value.C : null },
+    S () { return this.value && this.value.S ? this.value.S : null },
+    Z () { return this.value && this.value.Z ? this.value.Z : null },
+    X () { return this.value && this.value.X ? this.value.X : null },
+    countryiso () { return this.value && this.value.countryiso ? this.value.countryiso : null },
+    alt1 () { return this.value && this.value.alt1 ? this.value.alt1 : null },
+    alt2 () { return this.value && this.value.alt2 ? this.value.alt2 : null },
+    alt3 () { return this.value && this.value.alt3 ? this.value.alt3 : null },
+    alt4 () { return this.value && this.value.alt4 ? this.value.alt4 : null },
+    alt5 () { return this.value && this.value.alt5 ? this.value.alt5 : null },
+    usesAlternateFormat: {
+      get () { return this.value && this.value.usesAlternateFormat ? this.value.usesAlternateFormat : false },
+      set (val) { this.update({usesAlternateFormat: val}) }
+    },
+    defaultFormat () { return ZZ.ZZ },
+    countryFormat () { return Object.assign({}, this.defaultFormat, this.formats[this.userCountry.toUpperCase() + '--en'] || this.formats[this.userCountry.toUpperCase()] || {}) },
+    sOptions () {
+      if (((this.countryFormat.lfmt && this.countryFormat.lfmt.includes('%S')) || (this.countryFormat.fmt && this.countryFormat.fmt.includes('%S'))) && this.countryFormat['sub_keys']) {
+        let subKeys = this.countryFormat['sub_keys'].split(/~+/g)
+        let subNames = this.countryFormat && this.countryFormat['sub_lnames'] ? this.countryFormat['sub_lnames'].split(/~+/g) : this.countryFormat['sub_names'].split(/~+/g)
+        return subKeys.reduce((arr, k, i) => arr.concat({ key: k, name: subNames[i] }), [])
+      } else {
+        return false
+      }
+    },
+    formatted () {
+      return this.countryFormat.fmt.replace(/(%[N|O|A|B|D|C|S|Z|X])/g, (match, p1, offset, string) => this[p1] || '')
+    },
+    fmt () {
+      let ft = this.countryFormat.lfmt || this.countryFormat.fmt
+      return ft.replace('%A', '%A%n%B').replace(/%[N|O]%n/g, '').split('%n').map(x => x.length === 2 ? x : x.split(/(%[A-Z])/).filter(x => /%[A-Z]/.test(x)).map(x => typeof x === 'string' ? x.substr(-1) : x)).map(x => typeof x === 'string' ? x.substr(-1) : x)
+    },
+    subkeys () {
+      if (this.countryFormat['sub_keys']) {
+        return this.removeDiacritics(this.countryFormat['sub_keys'])
+      } else {
+        return null
+      }
+    },
+    userCountry () { return this.value && this.value.countryiso ? this.value.countryiso.toLowerCase() : this.$store.state.userauth.user.country.toLowerCase() || null },
+    filteredCountries () {
+      if (this.countries.filter((option) => this.countrySearch.toLowerCase() === option.name.toLowerCase()).length === 1) {
+        return this.countries.filter((option) => this.countrySearch.toLowerCase() === option.name.toLowerCase()).concat(this.countries.filter((option) => this.countrySearch.toLowerCase() !== option.name.toLowerCase()))
+      } else if (this.countrySearch && this.countrySearch.length > 0) {
+        return this.countries.filter((option) => {
+          return option.name
+            .toString()
+            .toLowerCase()
+            .indexOf(this.countrySearch.toLowerCase()) >= 0 || option.code
+            .toString()
+            .toLowerCase()
+            .indexOf(this.countrySearch.toLowerCase()) >= 0
+        })
+      } else if (this.userCountry) {
+        return this.countries.filter(country => country.code === this.userCountry).concat(this.countries)
+      } else {
+        return this.countries
+      }
+    }
+  },
+  watch: {
+    userCountry (val, oldVal) {
+      this.getFormatAndCall()
+      if (this.countrySearch !== this.getCountryName(val)) {
+        this.countrySearch = this.getCountryName(val)
+      }
+      if (!this.countrySearch || this.oldVal === 'us') {
+        this.countrySearch = this.getCountryName(val)
+        this.update({country: this.countrySearch, countryiso: val})
+      }
+    }
+  },
+  methods: {
+    getValue: function (item) { return this && this[item] ? this[item] : null },
+    getCountryName: function (option) {
+      let ctry = this.countries.find((country) => country.code.toLowerCase() === option.toLowerCase())
+      return ctry ? ctry.name : option
+    },
+    selectCountry: async function (option) {
+      // this.countrySearch = option.name
+      this.getFormatAndCall(() => { this.countrySearch = option.name })
+      await this.update({country: option.name, countryiso: option.code})
+      this.countrySearch = option.name
+    },
+    update: async function (inputObj) {
+      if (inputObj.countryiso && this.value && this.value.countryiso && inputObj.countryiso !== this.value.countryiso) {
+        await this.$emit('input', inputObj)
+      } else {
+        let ft = this.countryFormat.lfmt || this.countryFormat.fmt || '%A%n%B%n%C%n%S'
+        let fullFt = ft + '%country%countryiso%B'
+        let newVal = Object.assign({}, this.value, inputObj)
+        Object.keys(newVal)
+          .forEach(x => {
+            if (newVal[x] && fullFt.includes(`%${x}`)) {
+              newVal[x] = this.removeDiacritics(newVal[x])
+            } else {
+              newVal[x] = null
+            }
+          })
+        // let formatted = ft.replace('%A%n', '%A%n%B%n').replace(/%[N|O]%n/g, '').replace(/%([A|B|D|C|S|Z|X])([%n]?)/g, (match, p1, p2, offset, string) => p1 && newVal[p1] ? this.countryFormat.upper.includes([p1]) ? newVal[p1].toUpperCase() + p2 || '' : newVal[p1] + p2 || '' : '').concat(`%n${newVal.country.toUpperCase()}`).split('%n')
+        let formatted = ft.replace('%A%n', '%A%n%B%n').replace(/%[N|O]%n/g, '').split('%n').map(x => x.replace(/%([A|B|D|C|S|Z|X])/g, (match, p1) => p1 && newVal[p1] ? this.countryFormat.upper.includes(p1) ? newVal[p1].toUpperCase() : newVal[p1] : '')).concat(newVal.country.toUpperCase()).filter(x => x)
+        console.log(formatted)
+        newVal.alt1 = inputObj.alt1 || formatted.length > 0 ? formatted[0] : null
+        newVal.alt2 = inputObj.alt2 || formatted.length > 1 ? formatted[1] : null
+        newVal.alt3 = inputObj.alt3 || formatted.length > 2 ? formatted[2] : null
+        newVal.alt4 = inputObj.alt4 || formatted.length > 3 ? formatted[3] : null
+        newVal.alt5 = inputObj.alt5 || formatted.length > 4 ? formatted.slice(4 - formatted.length).join(' ') : null
+        newVal.usesAlternateFormat = inputObj.usesAlternateFormat || false
+        if (newVal.D && newVal.B && newVal.D.toLowerCase() === newVal.B.toLowerCase()) {
+          newVal.B = null
+        }
+        await this.$emit('input', newVal)
+      }
+    },
+    async getFormatAndCall (passedFunction) {
+      let requestedFormat = await import(`~/data/postal/${this.userCountry.toLowerCase()}.json`)
+      console.log(requestedFormat)
+      this.formats = Object.assign({}, this.formats, await requestedFormat)
+      if (passedFunction) { passedFunction() }
+    },
+    getPlaceholder (item) {
+      switch (item) {
+        case 'N':
+          return 'Name'
+        case 'O':
+          return 'Organization'
+        case 'A':
+          return 'Address line 1'
+        case 'B':
+          return 'Address line 2'
+        case 'D':
+          return this.countryFormat['sublocality_name_type'].replace(/^\w/, c => c.toUpperCase()) || 'City'
+        case 'C':
+          return this.countryFormat['locality_name_type'].replace(/^\w/, c => c.toUpperCase()) || 'City'
+        case 'S':
+          return this.countryFormat['state_name_type'].replace(/^\w/, c => c.toUpperCase()) || 'State'
+        case 'Z':
+          return this.countryFormat['zip_name_type'].replace(/^\w/, c => c.toUpperCase()) || 'Postal Code'
+        case 'X':
+          return this.countryFormat.key === 'FR' ? 'CEDEX' : 'Sorting Code'
+          // return 'Zip'
+        default:
+          return item
+      }
+    },
+    getAutocomplete (item) {
+      return 'off'
+      // switch (item) {
+      //   case 'N':
+      //     return 'name'
+      //   case 'O':
+      //     return 'organization'
+      //   case 'A':
+      //     return 'address-line1'
+      //   case 'B':
+      //     return 'address-line2'
+      //   case 'D':
+      //     return 'address-level3'
+      //   case 'C':
+      //     return 'address-level2'
+      //   case 'S':
+      //     return 'address-level1'
+      //   case 'Z':
+      //     return 'postal-code'
+      // }
+    },
+    removeDiacritics (str) {
+      const baseChars = [
+        '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '_', ' ', '\'',
+        'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+        'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
+        'AA', 'AE', 'AO', 'AU', 'AV', 'AY', 'DZ', 'Dz', 'LJ', 'Lj', 'NJ', 'Nj', 'OI', 'OO', 'OU', 'TZ', 'VY',
+        'aa', 'ae', 'ao', 'au', 'av', 'ay', 'dz', 'hv', 'lj', 'nj', 'oi', 'ou', 'oo', 'tz', 'vy'
+      ]
+      return str.normalize('NFKD').split('')
+        .map(c => baseChars.find(bc => bc.localeCompare(c, 'en', { sensitivity: 'case' }) === 0))
+        .join('')
+    },
+    fillData (option) {
+      let input = {}
+      console.log('option', option)
+      if (option && option.place_id) {
+        axios.get(`${process.env.placesUrl + process.env.detailsEndpoint}?placeid=${option.place_id}&language=en&key=${process.env.placesKey}`)
+          .then(({ data: {result} }) => {
+            console.log('placeid data', result)
+            // input.A = result.adr_address && result.adr_address.includes('street-address') ? result.adr_address.match('<span class="street-address">(.*?)</span>')[1] : null
+            input.B = result.adr_address && result.adr_address.includes('extended-address') ? result.adr_address.match('<span class="extended-address">(.*?)</span>')[1] : null
+            input.D = result.address_components && result.address_components.filter(({types}) => types.includes('sublocality')).length > 0 ? result.address_components.filter(({types}) => types.includes('sublocality'))[0].long_name : null
+            input.C = result.adr_address && result.adr_address.includes('locality') ? result.adr_address.match('<span class="locality">(.*?)</span>')[1] : null
+            input.S = result.adr_address && result.adr_address.includes('region') ? result.adr_address.match('<span class="region">(.*?)</span>')[1] : null
+            input.Z = result.adr_address && result.adr_address.includes('postal-code') ? result.adr_address.match('<span class="postal-code">(.*?)</span>')[1] : null
+            this.update(input)
+          })
+      }
+    },
+    getAsyncData: debounce(function () {
+      this.data = []
+      this.isFetching = true
+      axios.get(`${process.env.placesUrl + process.env.autocompleteEndpoint}?input=${this.A}&types=geocode&language=en${this.countryiso ? '&components=country:' + this.countryiso : ''}&key=${process.env.placesKey}`)
+        .then(({ data }) => {
+          data.predictions.forEach((item) => this.data.push(item))
+          this.isFetching = false
+        }, response => {
+          this.isFetching = false
+        })
+    }, 500)
+  },
+  mounted () {
+    this.formats = Object.assign({}, ZZ)
+    this.getFormatAndCall()
+    this.countrySearch = this.value && this.value.country ? this.value.country : this.getCountryName(this.userCountry)
+    this.update({country: this.countrySearch, countryiso: this.userCountry})
+  },
+  validations: {
+    value: {
+      postOfficeBox: {},
+      extendedAddress: {},
+      streetAddress: {},
+      locality: {},
+      region: {},
+      postalCode: {},
+      countryName: {},
+      countryiso: {
+        required
+      },
+      usesAlternateFormat: {},
+      alt1: {},
+      alt2: {},
+      alt3: {},
+      alt4: {},
+      alt5: {}
+    }
+  }
+}
+</script>
+
+<style>
+
+</style>

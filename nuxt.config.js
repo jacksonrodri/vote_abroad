@@ -139,7 +139,8 @@ module.exports = {
       // '~/assets/countryaddresses.js',
       'mailcheck',
       'auth0-js',
-      'libphonenumber-js/custom'
+      'libphonenumber-js/custom',
+      'vue-markdown'
     ],
     babel: {
       presets: [

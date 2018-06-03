@@ -23,6 +23,7 @@
             :icon="' ' + 'flag-icon-' + countryCode.toLowerCase()"
             icon-pack="flag-icon"
             expanded
+            autocomplete="country-name"
             keep-first
             :size="size"
             :data="filteredCountries"

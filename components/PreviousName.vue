@@ -1,10 +1,10 @@
 <template>
 <div>
   <div class="field">
-    <span class="is-flex"><label class="label">{{ instructions }}</label><span @click="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
+    <span class="is-flex"><label class="label">{{ instructions }}<span @click="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span><transition name="fade"><span v-if="!name" class="required"> {{required || required === '' ? 'Required' : 'Optional'}}</span></transition></label></span>
       <b-field grouped>
         <p class="control">
-          <button @click="setUsesPreviousName(true)" :class="[baseClass, {'is-success': usesPreviousName}]">
+          <button @click.prevent="setUsesPreviousName(true)" :class="[baseClass, {'is-success': usesPreviousName}]">
             <span v-show="usesPreviousName" class="icon is-small">
               <i class="fas fa-check"></i>
             </span>
@@ -14,7 +14,7 @@
           </button>
         </p>
         <p class="control">
-          <button @click="setUsesPreviousName(false)" :class="[baseClass, {'is-success': !usesPreviousName}]">
+          <button @click.prevent="setUsesPreviousName(false)" :class="[baseClass, {'is-success': !usesPreviousName}]">
             <span v-show="!usesPreviousName" class="icon is-small">
               <i class="fas fa-check"></i>
             </span>
@@ -45,7 +45,8 @@ export default {
     'value',
     'type',
     'message',
-    'tooltipTitle'
+    'tooltipTitle',
+    'required'
   ],
   computed: {
     name () {
