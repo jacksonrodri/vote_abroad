@@ -280,16 +280,16 @@ export default {
         await this.$emit('input', inputObj)
       } else {
         let ft = this.countryFormat.lfmt || this.countryFormat.fmt || '%A%n%B%n%C%n%S'
-        let fullFt = ft + '%country%countryiso%B'
+        // let fullFt = ft + '%country%countryiso%B'
         let newVal = Object.assign({}, this.value, inputObj)
-        Object.keys(newVal)
-          .forEach(x => {
-            if (newVal[x] && fullFt.includes(`%${x}`)) {
-              newVal[x] = this.removeDiacritics(newVal[x])
-            } else {
-              newVal[x] = null
-            }
-          })
+        // Object.keys(newVal)
+        //   .forEach(x => {
+        //     if (newVal[x] && fullFt.includes(`%${x}`)) {
+        //       newVal[x] = this.removeDiacritics(newVal[x])
+        //     } else {
+        //       newVal[x] = null
+        //     }
+        //   })
         // let formatted = ft.replace('%A%n', '%A%n%B%n').replace(/%[N|O]%n/g, '').replace(/%([A|B|D|C|S|Z|X])([%n]?)/g, (match, p1, p2, offset, string) => p1 && newVal[p1] ? this.countryFormat.upper.includes([p1]) ? newVal[p1].toUpperCase() + p2 || '' : newVal[p1] + p2 || '' : '').concat(`%n${newVal.country.toUpperCase()}`).split('%n')
         let formatted = ft.replace('%A%n', '%A%n%B%n').replace(/%[N|O]%n/g, '').split('%n').map(x => x.replace(/%([A|B|D|C|S|Z|X])/g, (match, p1) => p1 && newVal[p1] ? this.countryFormat.upper.includes(p1) ? newVal[p1].toUpperCase() : newVal[p1] : '')).concat(newVal.country.toUpperCase()).filter(x => x)
         console.log(formatted)
