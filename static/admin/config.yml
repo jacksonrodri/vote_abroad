@@ -420,6 +420,8 @@ collections:
                 widget: "object"
                 fields:
                   - {label: "Required", name: "required", widget: "string"}
+                  - {label: "Too Young", name: "tooYoung", widget: "string"}
+                  - {label: "Too Old", name: "tooOld", widget: "string"}
           - label: "Sex"
             name: "sex"
             widget: "object"
