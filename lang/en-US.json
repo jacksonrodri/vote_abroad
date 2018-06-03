@@ -256,7 +256,9 @@
       "tooltipTitle": "Why is this required?",
       "tooltip": "You must be 18 years old by the time of the next General Election to register to vote.",
       "messages": {
-        "required": "Your date of birth is required."
+        "required": "Your date of birth is required.",
+        "tooOld": "Please select a valid date.",
+        "tooYoung": "You must turn 18 on or before the next General Election."
       }
     },
     "vtRules": {
