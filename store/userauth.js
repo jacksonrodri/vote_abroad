@@ -116,7 +116,7 @@ export const actions = {
       webAuth.passwordlessStart({
         connection: 'sms',
         send: 'code',
-        phoneNumber: state.user.mobileIntFormat
+        phoneNumber: state.user.mobileIntFormat.replace(/\s/g, '')
       }, function (err, res) {
         if (err) {
           reject(err)
@@ -228,7 +228,7 @@ export const actions = {
     return new Promise((resolve, reject) => {
       webAuth.passwordlessVerify({
         connection: 'sms',
-        phoneNumber: state.user.mobileIntFormat,
+        phoneNumber: state.user.mobileIntFormat.replace(/\s/g, ''),
         verificationCode: code,
         scope: 'openid profile email'
       }, (err, authResult) => {

@@ -282,6 +282,10 @@ export default {
         let ft = this.countryFormat.lfmt || this.countryFormat.fmt || '%A%n%B%n%C%n%S'
         // let fullFt = ft + '%country%countryiso%B'
         let newVal = Object.assign({}, this.value, inputObj)
+        Object.keys(newVal)
+          .forEach(x => {
+            newVal[x] = typeof newVal[x] === 'string' ? this.removeDiacritics(newVal[x]) : newVal[x]
+          })
         // Object.keys(newVal)
         //   .forEach(x => {
         //     if (newVal[x] && fullFt.includes(`%${x}`)) {
