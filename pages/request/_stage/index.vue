@@ -539,17 +539,6 @@ export default {
       get () { return this.requests[this.currentRequest] && this.requests[this.currentRequest].dob ? this.requests[this.currentRequest].dob : null },
       set (value) { this.$store.commit('requests/update', { dob: value }) }
     },
-    // dob: {
-    //   get () {
-    //     function createDateObj (d) { return new Date(d.substr(0, 4), d.substr(5, 2) - 1, d.substr(8, 2), 12) }
-    //     return this.requests[this.currentRequest] && this.requests[this.currentRequest].dob && typeof this.requests[this.currentRequest].dob === 'string' ? createDateObj(this.requests[this.currentRequest].dob) : null
-    //   },
-    //   set (val) {
-    //     function createDateString (d) { return `${d.getFullYear()}-${d.getMonth() < 9 ? '0' : ''}${d.getMonth() + 1}-${d.getDate() < 9 ? '0' : ''}${d.getDate()}` }
-    //     let value = createDateString(val)
-    //     this.$store.commit('requests/update', { dob: value })
-    //   }
-    // },
     date: {
       get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].date : null },
       set (value) { this.$store.commit('requests/update', { date: value }) }

@@ -570,7 +570,7 @@ export default {
         return `IMPORTANT: As a new voter, your form must be ${importantE.ruleType.toLowerCase()} ${importantE.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to be eligible to vote in the ${importantE.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} ${importantE.electionType}. See all your state deadlines at www.votefromabroad.org/states/${this.state}`
       } else {
         importantE = importantE.filter(x => x.requestType !== 'Ballot Return').filter(x => x.ruleDate > new Date()).sort((a, b) => a.ruleDate - b.ruleDate).slice(0, 2)
-        let reg = importantE.filter(x => x.requestType === 'Ballot Request')[0]
+        let reg = importantE.filter(x => x.requestType === 'Registration')[0]
         let req = importantE.filter(x => x.requestType === 'Ballot Request')[0]
         return `IMPORTANT: If you are not yet a registered voter, your form must be received by ${reg.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to be eligible to vote in the ${reg.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} General Election. If you already are a registered voter, your form must be received by ${req.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to receive a ballot for the ${req.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} General Election. See all your state deadlines at www.votefromabroad.org/states/${this.state}`
       }
