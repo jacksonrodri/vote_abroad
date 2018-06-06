@@ -61,7 +61,7 @@
           :placeholder="placeholder"></b-input>
       </b-field>
   </div>
-  <p v-if="$v.$dirty && !$v.value.validEmailorPhone" class="help is-danger">Please enter a valid phone number or email address. <span v-if="mailCheckedEmail && mailCheckedEmail !== val.toLowerCase()">Did you mean <a @click="setEmail"><span class="has-text-primary">{{ mailCheckedEmail }}</span></a>?</span></p>
+  <p v-if="$v.$dirty && !$v.value.validEmailorPhone" class="help is-danger">Please enter a valid <span v-if="this.accepts.includes('phone')">phone number</span><span v-if="this.accepts.includes('phone') && this.accepts.includes('email')"> or </span><span v-if="this.accepts.includes('email')">email address</span>. <span v-if="mailCheckedEmail && mailCheckedEmail !== val.toLowerCase()">Did you mean <a @click="setEmail"><span class="has-text-primary">{{ mailCheckedEmail }}</span></a>?</span></p>
   <p v-else-if="mailCheckedEmail && mailCheckedEmail !== val.toLowerCase()" class="help is-vfa">Did you mean <a @click="setEmail"><span class="has-text-primary">{{ mailCheckedEmail }}</span></a>?</p>
   <b-message v-if="toolTipTitle" :title="toolTipTitle" type="is-info" has-icon :active.sync="toolTipOpen">
     <slot name="tooltip"></slot>
