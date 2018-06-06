@@ -79,6 +79,7 @@ export default {
       let ddmmyyyyRegex = /^(?:1[1-2]|0?[1-9])(\/|-|\.)(1[1-2]|0?[1-9])\1(?:(?:(?:19)?\d{2})|(?:(?:20)?[0-2]\d))/g
       console.log('ddmmyyyyRegex', ddmmyyyyRegex.test(input))
       console.log('ddmmyyyyRegex', ddmmyyyyRegex.test(input))
+      let looseDate = /^(?:(?:\d\d?)(\/|-|\.)(?:\d\d?)\1(?:(?:(?:19)?\d{2})|(?:(?:20)?[0-2]\d)))$|^(?:(?:(?:(?:19)?\d{2})|(?:(?:20)?[0-2]\d))(\/|-|\.)\d\d?\2\d\d?)$/g
       // let yyyymmddSameRegex = /^(?:\d{2}){1,2}(\/|-|\.)(1[1-2]|0?[1-9])\1\2$/g
       // console.log('yyyymmddSameRegex', yyyymmddSameRegex.test(input))
       // let ddmmyyyySameRegex = /^(1[1-2]|0?[1-9])(\/|-|\.)\1\2(?:\d{2}){1,2}$/g
@@ -104,6 +105,14 @@ export default {
         year = year.length === 4 ? year : parseInt(year) < currentYear - 2010 ? '20' + year : '19' + year
         dateChoices.push(new Date(year, parseInt(inputArr[0]) - 1, inputArr[1]))
         if (parseInt(inputArr[0]) !== parseInt(inputArr[1])) {
+          dateChoices.push(new Date(year, parseInt(inputArr[1]) - 1, inputArr[0]))
+        }
+      }
+      if (looseDate.test(input)) {
+        let inputArr = input.split(/(?:\/|-|\.)/)
+        if (parseInt(inputArr[0]) > 12 && parseInt(inputArr[0]) < 32) {
+          let year = inputArr[2]
+          year = year.length === 4 ? year : parseInt(year) < currentYear - 2010 ? '20' + year : '19' + year
           dateChoices.push(new Date(year, parseInt(inputArr[1]) - 1, inputArr[0]))
         }
       }
