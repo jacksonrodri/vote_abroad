@@ -153,6 +153,8 @@ export default {
         this.cardModal(dateChoices, input)
       } else if (dateChoices.length === 1) {
         return dateChoices[0]
+      } else if (/^\d\d?(?:\/|-|\.)\d\d?$/.test(input)) {
+        return null
       } else {
         return new Date(Date.parse(input))
       }

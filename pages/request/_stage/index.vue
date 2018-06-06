@@ -581,7 +581,7 @@ export default {
       set (value) { this.$store.commit('requests/update', {ssn: value}) }
     },
     sex: {
-      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].sex : null },
+      get () { return this.requests[this.currentRequest] && this.requests[this.currentRequest].sex ? this.requests[this.currentRequest].sex : null },
       set (value) { this.$store.commit('requests/update', {sex: value}) }
     },
     party: {
@@ -785,7 +785,7 @@ export default {
       dob: {
         required,
         tooOld () { return new Date(1900, 0, 1) < new Date(this.dob) },
-        tooYoung () { return new Date(2000, 10, 6) > new Date(this.dob) }
+        tooYoung () { return new Date(2000, 10, 7) > new Date(this.dob) }
       },
       fax: {
       },
