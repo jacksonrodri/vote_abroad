@@ -276,14 +276,13 @@ export default {
     },
     selectCountry: async function (option) {
       // this.countrySearch = option.name
-      this.getFormatAndCall(() => { this.countrySearch = option.name })
-      await this.update({country: option.name, countryiso: option.code})
+      console.log(option)
+      this.getFormatAndCall(() => { this.countrySearch = option.name; console.log(this.countrySearch) })
+      this.update({country: option.name, countryiso: option.code})
       this.countrySearch = option.name
     },
     update: async function (inputObj) {
-      if (!this.value) {
-        console.log('no component value')
-      } else if (inputObj.countryiso && this.value && this.value.countryiso && inputObj.countryiso !== this.value.countryiso) {
+      if (inputObj.countryiso && this.value && this.value.countryiso && inputObj.countryiso !== this.value.countryiso) {
         await this.$emit('input', inputObj)
       } else {
         let ft = this.countryFormat.lfmt || this.countryFormat.fmt || '%A%n%B%n%C%n%S'
