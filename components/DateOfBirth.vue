@@ -1,5 +1,9 @@
 <template>
-  <b-field label="Select a date">
+  <div class="field">
+  <span class="is-flex"><label class="label">{{ $t('request.dob.label') }}</label><span @click.prevent="toolTipOpen = !toolTipOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
+  <b-field label="Select a date"
+    :message="validations.$error ? Object.keys(validations.$params).map(x => $t(`request.dob.messages.${x}`)) : '' "
+    :type="(validations.$error ? 'is-danger': '')">
     <b-datepicker v-model="dob"
       :date-formatter="(date) => date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })"
       :date-parser="dateParser"
@@ -15,6 +19,10 @@
       :placeholder="$t('request.dob.placeholder')">
     </b-datepicker>
   </b-field>
+  <b-message :title="tooltipTitle" type="is-info" has-icon :active.sync="toolTipOpen">
+    <slot name="tooltip"></slot>
+  </b-message>
+</div>
 </template>
 
 <script>
@@ -23,7 +31,10 @@ import ModalDateSelector from '~/components/ModalDateSelector'
 export default {
   name: 'date-of-birth',
   props: [
-    'value'
+    'value',
+    'message',
+    'validations',
+    'tooltipTitle'
   ],
   components: {
     ModalDateSelector
@@ -32,7 +43,8 @@ export default {
     return {
       date: undefined,
       maxDate: new Date(2000, 10, 7),
-      minDate: new Date(1900, 0, 1)
+      minDate: new Date(1900, 0, 1),
+      toolTipOpen: false
     }
   },
   computed: {
@@ -80,27 +92,26 @@ export default {
       // console.log('ddmmyyyyRegex', ddmmyyyyRegex.test(input))
       // console.log('ddmmyyyyRegex', ddmmyyyyRegex.test(input))
       let looseDate = /^(?:(?:\d\d?)(\/|-|\.)(?:\d\d?)\1(?:(?:(?:19)?\d{2})|(?:(?:20)?[0-2]\d)))$|^(?:(?:(?:(?:19)?\d{2})|(?:(?:20)?[0-2]\d))(\/|-|\.)\d\d?\2\d\d?)$/g
-      // let yyyymmddSameRegex = /^(?:\d{2}){1,2}(\/|-|\.)(1[1-2]|0?[1-9])\1\2$/g
-      // console.log('yyyymmddSameRegex', yyyymmddSameRegex.test(input))
-      // let ddmmyyyySameRegex = /^(1[1-2]|0?[1-9])(\/|-|\.)\1\2(?:\d{2}){1,2}$/g
-      // console.log('ddmmyyyySameRegex', ddmmyyyySameRegex.test(input))
-      // let yymmddTest = ((yyyymmddRegex.test(input)) && !(yyyymmddSameRegex.test(input)))
-      // let ddmmyyTest = (ddmmyyyyRegex.test(input) && !(ddmmyyyySameRegex.test(input)))
-      // console.log('yymmddTest', yymmddTest)
-      // console.log('ddmmyyTest', ddmmyyTest)
+      let baddate = /^[a-zA-Z]{1,2}(\/|-|\.)[a-zA-Z]{1,2}\1(?:(?:(?:19)?\d{2})|(?:(?:20)?[0-2]\d))/g
+
+      if (baddate.test(input)) {
+        return null
+      }
+
       if (yyyymmddRegex.test(input)) {
         let inputArr = input.split(/(?:\/|-|\.)/)
-        // console.log('yyyymmdd', 'inputArr', inputArr)
+        console.log('yyyymmdd', 'inputArr', inputArr)
         let year = inputArr[0]
         year = year.length === 4 ? year : parseInt(year) < currentYear - 2010 ? '20' + year : '19' + year
         dateChoices.push(new Date(year, parseInt(inputArr[1]) - 1, inputArr[2]))
         if (parseInt(inputArr[1]) !== parseInt(inputArr[2])) {
           dateChoices.push(new Date(year, parseInt(inputArr[2]) - 1, inputArr[1]))
         }
+        console.log('yymmdddatechoices', dateChoices)
       }
       if (ddmmyyyyRegex.test(input)) {
         let inputArr = input.split(/(?:\/|-|\.)/)
-        // console.log('ddmmyyyy', 'inputArr', inputArr)
+        console.log('ddmmyyyy', 'inputArr', inputArr)
         let year = inputArr[2]
         year = year.length === 4 ? year : parseInt(year) < currentYear - 2010 ? '20' + year : '19' + year
         dateChoices.push(new Date(year, parseInt(inputArr[0]) - 1, inputArr[1]))
@@ -110,6 +121,9 @@ export default {
       }
       if (looseDate.test(input)) {
         let inputArr = input.split(/(?:\/|-|\.)/)
+        if (inputArr.length === 3 && parseInt(inputArr[0]) > 12 && parseInt(inputArr[1]) > 12 && parseInt(inputArr[2]) > 12) {
+          return null
+        }
         if (parseInt(inputArr[0]) > 12 && parseInt(inputArr[0]) < 32) {
           let year = inputArr[2]
           year = year.length === 4 ? year : parseInt(year) < currentYear - 2010 ? '20' + year : '19' + year
@@ -118,7 +132,7 @@ export default {
           let year = inputArr[0]
           year = year.length === 4 ? year : parseInt(year) < currentYear - 2010 ? '20' + year : '19' + year
           dateChoices.push(new Date(year, parseInt(inputArr[1]) - 1, inputArr[2]))
-        } else if (inputArr[2].length === 2 && parseInt(inputArr[2]) > currentYear - 2010) {
+        } else if (inputArr[2].length === 2 && parseInt(inputArr[2]) > currentYear - 2010 && ((parseInt(inputArr[0]) < 32 && parseInt(inputArr[1]) < 13) || (parseInt(inputArr[1]) < 32 && parseInt(inputArr[0]) < 13))) {
           let year = parseInt(inputArr[2]) < currentYear - 2010 ? '20' + inputArr[2] : '19' + inputArr[2]
           let month = parseInt(inputArr[0]) > 12 ? parseInt(inputArr[1]) - 1 : parseInt(inputArr[0] - 1)
           let day = parseInt(inputArr[0]) > 12 ? parseInt(inputArr[0]) : parseInt(inputArr[1])
@@ -126,7 +140,15 @@ export default {
         }
       }
       // console.log(dateChoices.length, 'dateChoices', dateChoices)
-      dateChoices = Array.from(new Set(dateChoices))
+      // dateChoices = Array.from(new Set(dateChoices))
+      dateChoices = dateChoices
+        .map(function (date) { return date.getTime() })
+        .filter(function (date, i, array) {
+          return array.indexOf(date) === i
+        })
+        .map(function (time) { return new Date(time) })
+      // console.log('dateChoices2', uniqueArray)
+
       if (dateChoices.length > 1) {
         this.cardModal(dateChoices, input)
       } else if (dateChoices.length === 1) {

@@ -260,7 +260,15 @@
         </div>
       </birth-date> -->
 
-      <date-of-birth v-model="dob"></date-of-birth>
+      <date-of-birth v-model="dob"
+        :tooltipTitle="$t('request.dob.tooltipTitle')"
+        @input="delayTouch($v.dob)"
+        ref="dob"
+        :validations="$v.dob">
+        <div slot="tooltip">
+          <vue-markdown>{{$t('request.dob.tooltip')}}</vue-markdown>
+        </div>
+      </date-of-birth>
       <!-- <b-field label="Select a date">
         <b-datepicker v-model="dob"
           :date-formatter="(date) => date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })"

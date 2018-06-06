@@ -167,7 +167,7 @@ export default {
     },
     focusInput () {
       this.countryFocused = false
-      this.$refs.phone.focus()
+      this.$refs.input.focus()
     },
     setPlaceholder () {
       if (this.metadataLoaded) {
