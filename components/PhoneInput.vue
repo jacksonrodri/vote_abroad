@@ -57,6 +57,7 @@
           :autocomplete="autocomplete"
           @focus="setPlaceholder"
           @input.native="formatInput($event.target.value)"
+          @keyup.native.enter="$emit('pressEnter')"
           :placeholder="placeholder"></b-input>
       </b-field>
   </div>
@@ -157,6 +158,14 @@ export default {
       }
     }
   },
+  watch: {
+    value (val) {
+      if (val && val.rawInput && val.isValidEmail === null && val.isValidPhone === null) {
+        this.loadMetadataAndCall()
+          .then(() => this.formatInput(val.rawInput))
+      }
+    }
+  },
   methods: {
     focusCountry () {
       // if (this.metadataLoaded) {
@@ -193,7 +202,7 @@ export default {
           import(/* webpackChunkName: "libphone" */ 'libphonenumber-js/examples.mobile.json')
         ])
       this.metadataLoaded = true
-      passedFunction()
+      if (passedFunction) { passedFunction() }
     },
     showChange (val) {
       console.log('showChange', val)
@@ -203,7 +212,7 @@ export default {
       let validEmail = false
       let validPhone = false
       this.isEmail = false
-      console.log(val)
+      // console.log(val)
       // val = val.target.value
       if (!val || val.length === 0) {
         !this.accepts.includes('phone')
@@ -220,7 +229,7 @@ export default {
         //   // typed = typed.replace(/[^0-9 +-.]/gi, '')
         //   console.log(typed)
         // }
-        console.log('regex.test', typed.replace(regex, ''))
+        // console.log('regex.test', typed.replace(regex, ''))
         if (!this.accepts.includes('email') || (metadata && !regex.test(typed))) {
           const formatter = new AsYouType(this.userCountry, metadata)
           cleanNumber = typed
@@ -234,7 +243,7 @@ export default {
           // else {
           //   cleanNumber = cleanNumber.replace(regex, '')
           // }
-          console.log('cleanNumber', cleanNumber)
+          // console.log('cleanNumber', cleanNumber)
           typed = formatter.input(cleanNumber)
           // console.log(typed)
           if (formatter.country) { this.country = formatter.country }
@@ -265,7 +274,7 @@ export default {
       Mailcheck.run({
         email: em,
         suggested: function (suggestion) {
-          console.log(suggestion)
+          // console.log(suggestion)
           vm.mailCheckedEmail = suggestion.full
         },
         empty: function () {

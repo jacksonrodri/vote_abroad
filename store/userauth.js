@@ -386,6 +386,7 @@ export const actions = {
     // if (rootState.requests.requests[rootState.requests.currentRequest].)
     // console.log('rootState.requests', rootState.requests)
     if (jwtDecode(idToken)['https://demsabroad.org/isDA'] && (!rootState.requests || rootState.requests.requests.length === 0 || !rootState.requests.requests[rootState.requests.currentRequest].lastName)) {
+      console.log('jwtdata', jwtDecode(idToken)['https://demsabroad.org/user'])
       Dialog.confirm({
         title: 'Democrats Abroad Members',
         message: `As an authenticated member of Democrats Abroad, you can prefill your form with your membership data. Would you like to?`,

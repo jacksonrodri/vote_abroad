@@ -85,14 +85,13 @@ export const actions = {
           date
           status
           abrAdr {
-            poBox
-            premise
-            thoroughfare
-            dependentlocality
-            locality
-            administrativearea
-            stateISO
-            postalcode
+            A
+            B
+            C
+            D
+            S
+            Z
+            X
             country
             countryiso
             alt1
@@ -142,6 +141,7 @@ export const actions = {
             country
             intNumber
             isValidPhone
+            isValidEmail
             type
             rawInput
           }
@@ -198,7 +198,15 @@ export const actions = {
         middleName
         lastName
         abrAdr{
-          premise
+          A
+          B
+          D
+          C
+          S
+          Z
+          X
+          country
+          countryiso
         }
       }
     }`
@@ -244,9 +252,6 @@ export const actions = {
         tel: {
           intNumber: rootState.userauth.user.mobileIntFormat || undefined,
           country: rootState.userauth.session.country || undefined
-        },
-        abrAdr: {
-          countryiso: rootState.userauth.session.country
         }
       })
     }

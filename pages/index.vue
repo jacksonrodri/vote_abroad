@@ -17,6 +17,7 @@
                   key="pe"
                   :accepts="['phone', 'email']"
                   @input="val => $store.commit('userauth/updateUser', {emailAddress: val.isValidEmail ? val.rawInput : '', mobileIntFormat: val.intNumber})"
+                  @pressEnter="startAuth"
                   v-model="phoneOrEmail">
                 </phone-input>
                 <!-- <phone-email

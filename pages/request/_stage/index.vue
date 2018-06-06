@@ -815,7 +815,9 @@ export default {
           }),
           correctLength () {
             if (this.identification.ssn && this.stateRules && this.stateRules.id && this.stateRules.id.length > 0) {
-              if (this.stateRules.id.indexOf('SSN4') > -1) {
+              if (this.stateRules.id.includes('SSN4') && this.stateRules.id.includes('SSN')) {
+                return this.identification.ssn.length === 4 || this.identification.ssn.length === 9
+              } else if (this.stateRules.id.includes('SSN4')) {
                 return this.identification.ssn.length === 4
               } else if (this.stateRules.id.indexOf('SSN') > -1) {
                 return this.identification.ssn.length === 9
