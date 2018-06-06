@@ -60,20 +60,20 @@ export default {
       get () {
         let dob = this.$store.getters['requests/getCurrent'] && this.$store.getters['requests/getCurrent'].dob ? this.$store.getters['requests/getCurrent'].dob : null
         function createDateObj (d) { return new Date(d.substr(0, 4), d.substr(5, 2) - 1, d.substr(8, 2), 12) }
-        // console.log('getdob', dob)
+        console.log('getdob', dob)
         // console.log('getDobObj', createDateObj(dob || new Date)
         if (!dob || dob.toString().length !== 10) {
           return null
         } else {
-          // console.log('dateobj', createDateObj(dob))
+          console.log('dateobj', createDateObj(dob))
           return createDateObj(dob)
         }
       },
       set (value) {
         function createDateString (d) { return `${d.getFullYear()}-${d.getMonth() < 9 ? '0' : ''}${d.getMonth() + 1}-${d.getDate() < 9 ? '0' : ''}${d.getDate()}` }
         if (value) {
-          // console.log('value', value)
-          // console.log('datestring', createDateString(value))
+          console.log('value', value)
+          console.log('datestring', createDateString(value))
           this.$store.commit('requests/update', {dob: createDateString(value)})
         } else {
           this.$store.commit('requests/update', {dob: null})

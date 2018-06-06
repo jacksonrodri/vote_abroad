@@ -52,18 +52,16 @@
         <b-input
           :value="val"
           :id="this.$vnode.key"
-          ref="phone"
-          :maxlength="mustBeEmail && label ? 55 : ''"
+          ref="input"
+          :maxlength="mustBeEmail && label && !(($v.$dirty && !$v.value.validEmailorPhone) || (mailCheckedEmail && mailCheckedEmail !== val.toLowerCase()))? 55 : ''"
           :autocomplete="autocomplete"
           @focus="setPlaceholder"
           @input.native="formatInput($event.target.value)"
           :placeholder="placeholder"></b-input>
       </b-field>
   </div>
-  <!-- $event.target.value -->
-      <!-- @input="val => formatInput(val)" -->
-  <p v-if="$v.$dirty && !$v.value.validEmailorPhone" class="help is-danger">Please enter a valid phone number or email address. <span v-if="mailCheckedEmail">Did you mean <a @click="setEmail">{{ mailCheckedEmail }}</a>?</span></p>
-  <p v-else-if="mailCheckedEmail && mailCheckedEmail !== value.rawInput" class="help is-vfa">Did you mean <a @click="setEmail">{{ mailCheckedEmail }}</a>?</p>
+  <p v-if="$v.$dirty && !$v.value.validEmailorPhone" class="help is-danger">Please enter a valid phone number or email address. <span v-if="mailCheckedEmail && mailCheckedEmail !== val.toLowerCase()">Did you mean <a @click="setEmail"><span class="has-text-primary">{{ mailCheckedEmail }}</span></a>?</span></p>
+  <p v-else-if="mailCheckedEmail && mailCheckedEmail !== val.toLowerCase()" class="help is-vfa">Did you mean <a @click="setEmail"><span class="has-text-primary">{{ mailCheckedEmail }}</span></a>?</p>
   <b-message v-if="toolTipTitle" :title="toolTipTitle" type="is-info" has-icon :active.sync="toolTipOpen">
     <slot name="tooltip"></slot>
   </b-message>
@@ -73,7 +71,7 @@
 <script>
 import { format, parse, isValidNumber, getPhoneCode, asYouType as AsYouType } from 'libphonenumber-js/custom'
 // getPhoneCode, parse, , isValidNumber, asYouType as AsYouType
-import { required } from 'vuelidate/lib/validators'
+import { requiredIf } from 'vuelidate/lib/validators'
 import Mailcheck from 'mailcheck'
 const countrylist = require('~/assets/countries.json')
 let metadata, phoneExamples
@@ -208,7 +206,9 @@ export default {
       console.log(val)
       // val = val.target.value
       if (!val || val.length === 0) {
-        this.$emit('input', {rawInput: '', country: this.userCountry, isValidEmail: false, isValidPhone: false, intNumber: null})
+        !this.accepts.includes('phone')
+          ? this.$emit('input', null)
+          : this.$emit('input', {rawInput: '', country: this.userCountry, isValidEmail: false, isValidPhone: false, intNumber: null})
       } else {
         let typed = val.data || val || this.value.rawInput || ''
         let intNumber = ''
@@ -292,14 +292,16 @@ export default {
       }
     }
   },
-  validations: {
-    value: {
-      required,
-      validEmailorPhone: function (value, model) {
-        if (!this.accepts.includes('phone')) {
-          return /(^$|^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$)/.test(value)
+  validations () {
+    return {
+      value: {
+        required: requiredIf(this.required),
+        validEmailorPhone: function (value, model) {
+          if (!this.accepts.includes('phone')) {
+            return /(^$|^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$)/.test(value)
+          }
+          return Boolean(value.isValidEmail || value.isValidPhone)
         }
-        return Boolean(value.isValidEmail || value.isValidPhone)
       }
     }
   }

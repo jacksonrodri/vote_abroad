@@ -48,7 +48,7 @@
             <b-autocomplete v-if="item === 'A'"
                 :value="A"
                 :data="data"
-                ref="A"
+                ref="address"
                 keep-first
                 :placeholder="getPlaceholder(item)"
                 field="structured_formatting.main_text"
@@ -295,7 +295,7 @@ export default {
         //     }
         //   })
         // let formatted = ft.replace('%A%n', '%A%n%B%n').replace(/%[N|O]%n/g, '').replace(/%([A|B|D|C|S|Z|X])([%n]?)/g, (match, p1, p2, offset, string) => p1 && newVal[p1] ? this.countryFormat.upper.includes([p1]) ? newVal[p1].toUpperCase() + p2 || '' : newVal[p1] + p2 || '' : '').concat(`%n${newVal.country.toUpperCase()}`).split('%n')
-        let formatted = ft.replace('%A%n', '%A%n%B%n').replace(/%[N|O]%n/g, '').split('%n').map(x => x.replace(/%([A|B|D|C|S|Z|X])/g, (match, p1) => p1 && newVal[p1] ? this.countryFormat.upper.includes(p1) ? newVal[p1].toUpperCase() : newVal[p1] : '')).concat(newVal.country.toUpperCase()).filter(x => x)
+        let formatted = ft.replace('%A%n', '%A%n%B%n').replace(/%[N|O]%n/g, '').split('%n').map(x => x.replace(/%([A|B|D|C|S|Z|X])/g, (match, p1) => p1 && newVal[p1] ? this.countryFormat.upper.includes(p1) ? newVal[p1].toUpperCase() : newVal[p1] : '')).concat(newVal.country ? newVal.country.toUpperCase() : null).filter(x => x)
         console.log(formatted)
         newVal.alt1 = inputObj.alt1 || formatted.length > 0 ? formatted[0] : null
         newVal.alt2 = inputObj.alt2 || formatted.length > 1 ? formatted[1] : null

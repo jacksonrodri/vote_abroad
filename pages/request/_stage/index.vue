@@ -82,7 +82,7 @@
         </div>
       </phone-input> -->
       <!-- <phone-input key="phone" :label="$t('request.tel.label')" :accepts="['phone']" v-model="phoneTest"></phone-input> -->
-      <phone-input key="email" ref="email" :label="$t('request.email.label')" :accepts="['email']" v-model="email"></phone-input>
+      <phone-input key="email" ref="email" :label="$t('request.email.label')" :required="recBallot === 'email'" :accepts="['email']" v-model="email"></phone-input>
 
         <!-- emailAddress -->
       <!-- <b-field
@@ -250,7 +250,7 @@
     <form id="id-and-contact-information" key="id-and-contact-information">
 <!-- identity and Contact information -->
       <!-- dob -->
-      <birth-date
+      <!-- <birth-date
         :validations="$v.dob"
         ref="dob"
         :tooltipTitle="$t('request.dob.tooltipTitle')"
@@ -258,7 +258,15 @@
         <div slot="tooltip">
           <vue-markdown>{{$t('request.dob.tooltip')}}</vue-markdown>
         </div>
-      </birth-date>
+      </birth-date> -->
+
+      <date-of-birth v-model="dob"></date-of-birth>
+      <!-- <b-field label="Select a date">
+        <b-datepicker v-model="dob"
+          :date-formatter="(date) => date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })"
+          placeholder="Click to select...">
+        </b-datepicker>
+      </b-field> -->
 
       <!-- gender -->
       <gender
@@ -354,7 +362,7 @@
 </template>
 
 <script>
-import { required, requiredIf, email } from 'vuelidate/lib/validators'
+import { required, requiredIf, helpers, email } from 'vuelidate/lib/validators'
 import AddressInput from '~/components/AddressInput'
 import Jurisdiction from '~/components/Jurisdiction'
 import VotingAddress from '~/components/VotingAddress'
@@ -363,6 +371,7 @@ import IsRegistered from '~/components/IsRegistered'
 import ReceiveBallot from '~/components/ReceiveBallot'
 import TelInput from '~/components/TelInput'
 import BirthDate from '~/components/BirthDate'
+import DateOfBirth from '~/components/DateOfBirth'
 import Party from '~/components/Party'
 import JoinDemocratsabroad from '~/components/JoinDemocratsabroad'
 import PreviousName from '~/components/PreviousName'
@@ -374,6 +383,7 @@ import PhoneInput from '~/components/PhoneInput'
 import AdrInput from '~/components/AdrInput'
 import VueMarkdown from 'vue-markdown'
 
+const optionalEmail = (value) => !helpers.req(value) || email(value)
 const touchMap = new WeakMap()
 
 export default {
@@ -418,6 +428,7 @@ export default {
     ReceiveBallot,
     TelInput,
     BirthDate,
+    DateOfBirth,
     Party,
     JoinDemocratsabroad,
     PreviousName,
@@ -489,7 +500,7 @@ export default {
     email: {
       // get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].email : null },
       get () { return this.currentRequestObject.email || null },
-      set (value) { this.$store.commit('requests/update', { email: value }) }
+      set (value) { this.$store.commit('requests/update', { email: value || null }) }
     },
     firstName: {
       // get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].firstName : null },
@@ -520,6 +531,17 @@ export default {
       get () { return this.requests[this.currentRequest] && this.requests[this.currentRequest].dob ? this.requests[this.currentRequest].dob : null },
       set (value) { this.$store.commit('requests/update', { dob: value }) }
     },
+    // dob: {
+    //   get () {
+    //     function createDateObj (d) { return new Date(d.substr(0, 4), d.substr(5, 2) - 1, d.substr(8, 2), 12) }
+    //     return this.requests[this.currentRequest] && this.requests[this.currentRequest].dob && typeof this.requests[this.currentRequest].dob === 'string' ? createDateObj(this.requests[this.currentRequest].dob) : null
+    //   },
+    //   set (val) {
+    //     function createDateString (d) { return `${d.getFullYear()}-${d.getMonth() < 9 ? '0' : ''}${d.getMonth() + 1}-${d.getDate() < 9 ? '0' : ''}${d.getDate()}` }
+    //     let value = createDateString(val)
+    //     this.$store.commit('requests/update', { dob: value })
+    //   }
+    // },
     date: {
       get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].date : null },
       set (value) { this.$store.commit('requests/update', { date: value }) }
@@ -535,7 +557,7 @@ export default {
     // jurisdiction () { return this.leo && this.leo.n ? this.leo.n : '' },
     jurisdiction () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].leo : null },
     abrAdr: {
-      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].abrAdr : null },
+      get () { return this.requests[this.currentRequest] && this.requests[this.currentRequest].abrAdr ? this.requests[this.currentRequest].abrAdr : null },
       set (value) { this.$store.commit('requests/update', {abrAdr: value}) }
     },
     voterClass: {
@@ -646,22 +668,22 @@ export default {
           break
         case this.stage.slug === 'your-information' && this.$v.email.$error:
           this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'email'}})
-          this.$refs.email.focus()
+          this.$refs.email.$refs.input.focus()
           break
         case this.stage.slug === 'your-information' && this.$v.abrAdr.country.$error:
           this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.country'}})
           this.$refs.abrAdr.$refs.country.focus()
           break
         case this.stage.slug === 'your-information' && this.$v.abrAdr.A.$error:
-          this.$refs.abrAdr.$refs.A.focus()
+          this.$refs.abrAdr.$refs.address[0].focus()
           this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.A'}})
           break
         case this.stage.slug === 'your-information' && this.$v.abrAdr.C.$error:
           this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.C'}})
-          this.$refs.abrAdr.$refs.C.focus()
+          this.$refs.abrAdr.$refs.city.focus()
           break
         case this.stage.slug === 'your-information' && this.$v.tel.$error:
-          this.$refs.tel.$refs.tel.focus()
+          this.$refs.tel.$refs.input.focus()
           this.$store.dispatch('requests/recordAnalytics', { event: 'Form Error', attributes: { field: 'tel' } })
           break
         case this.stage.slug === 'voting-information' && this.$v.votAdr.thoroughfare.$error:
@@ -717,11 +739,10 @@ export default {
   validations () {
     return {
       email: {
-        // required: requiredIf(function () {
-        //   return this.recBallot === 'email'
-        // }),
-        required,
-        email
+        required: requiredIf(function (model) {
+          return this.recBallot === 'email'
+        }),
+        optionalEmail
       },
       firstName: {
         required
