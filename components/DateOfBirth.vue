@@ -69,16 +69,16 @@ export default {
       return new Date()
     },
     dateParser (input) {
-      console.log('input', input.toString())
+      // console.log('input', input.toString())
       let currentYear = new Date().getFullYear()
-      console.log('currentYear', currentYear)
+      // console.log('currentYear', currentYear)
       let dateChoices = []
       let yyyymmddRegex = /^(?:(?:(?:19)?\d{2})|(?:(?:20)?[0-2]\d))(\/|-|\.)(1[1-2]|0?[1-9])\1(1[1-2]|0?[1-9])$/g
-      console.log('yyyymmddRegex', yyyymmddRegex.test(input))
-      console.log('yyyymmddRegex', yyyymmddRegex.test(input))
+      // console.log('yyyymmddRegex', yyyymmddRegex.test(input))
+      // console.log('yyyymmddRegex', yyyymmddRegex.test(input))
       let ddmmyyyyRegex = /^(?:1[1-2]|0?[1-9])(\/|-|\.)(1[1-2]|0?[1-9])\1(?:(?:(?:19)?\d{2})|(?:(?:20)?[0-2]\d))/g
-      console.log('ddmmyyyyRegex', ddmmyyyyRegex.test(input))
-      console.log('ddmmyyyyRegex', ddmmyyyyRegex.test(input))
+      // console.log('ddmmyyyyRegex', ddmmyyyyRegex.test(input))
+      // console.log('ddmmyyyyRegex', ddmmyyyyRegex.test(input))
       let looseDate = /^(?:(?:\d\d?)(\/|-|\.)(?:\d\d?)\1(?:(?:(?:19)?\d{2})|(?:(?:20)?[0-2]\d)))$|^(?:(?:(?:(?:19)?\d{2})|(?:(?:20)?[0-2]\d))(\/|-|\.)\d\d?\2\d\d?)$/g
       // let yyyymmddSameRegex = /^(?:\d{2}){1,2}(\/|-|\.)(1[1-2]|0?[1-9])\1\2$/g
       // console.log('yyyymmddSameRegex', yyyymmddSameRegex.test(input))
@@ -90,7 +90,7 @@ export default {
       // console.log('ddmmyyTest', ddmmyyTest)
       if (yyyymmddRegex.test(input)) {
         let inputArr = input.split(/(?:\/|-|\.)/)
-        console.log('yyyymmdd', 'inputArr', inputArr)
+        // console.log('yyyymmdd', 'inputArr', inputArr)
         let year = inputArr[0]
         year = year.length === 4 ? year : parseInt(year) < currentYear - 2010 ? '20' + year : '19' + year
         dateChoices.push(new Date(year, parseInt(inputArr[1]) - 1, inputArr[2]))
@@ -100,7 +100,7 @@ export default {
       }
       if (ddmmyyyyRegex.test(input)) {
         let inputArr = input.split(/(?:\/|-|\.)/)
-        console.log('ddmmyyyy', 'inputArr', inputArr)
+        // console.log('ddmmyyyy', 'inputArr', inputArr)
         let year = inputArr[2]
         year = year.length === 4 ? year : parseInt(year) < currentYear - 2010 ? '20' + year : '19' + year
         dateChoices.push(new Date(year, parseInt(inputArr[0]) - 1, inputArr[1]))
@@ -114,9 +114,19 @@ export default {
           let year = inputArr[2]
           year = year.length === 4 ? year : parseInt(year) < currentYear - 2010 ? '20' + year : '19' + year
           dateChoices.push(new Date(year, parseInt(inputArr[1]) - 1, inputArr[0]))
+        } else if (parseInt(inputArr[2]) > 12 && parseInt(inputArr[2]) < 32) {
+          let year = inputArr[0]
+          year = year.length === 4 ? year : parseInt(year) < currentYear - 2010 ? '20' + year : '19' + year
+          dateChoices.push(new Date(year, parseInt(inputArr[1]) - 1, inputArr[2]))
+        } else if (inputArr[2].length === 2 && parseInt(inputArr[2]) > currentYear - 2010) {
+          let year = parseInt(inputArr[2]) < currentYear - 2010 ? '20' + inputArr[2] : '19' + inputArr[2]
+          let month = parseInt(inputArr[0]) > 12 ? parseInt(inputArr[1]) - 1 : parseInt(inputArr[0] - 1)
+          let day = parseInt(inputArr[0]) > 12 ? parseInt(inputArr[0]) : parseInt(inputArr[1])
+          dateChoices.push(new Date(year, month, day))
         }
       }
-      console.log(dateChoices.length, 'dateChoices', dateChoices)
+      // console.log(dateChoices.length, 'dateChoices', dateChoices)
+      dateChoices = Array.from(new Set(dateChoices))
       if (dateChoices.length > 1) {
         this.cardModal(dateChoices, input)
       } else if (dateChoices.length === 1) {
