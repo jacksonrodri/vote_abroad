@@ -195,7 +195,7 @@ export default {
     S () { return this.value && this.value.S ? this.value.S : null },
     Z () { return this.value && this.value.Z ? this.value.Z : null },
     X () { return this.value && this.value.X ? this.value.X : null },
-    countryiso () { return this.value && this.value.countryiso ? this.value.countryiso : null },
+    countryiso () { return !this.value ? this.userCountry : this.value.countryiso || null },
     alt1 () { return this.value && this.value.alt1 ? this.value.alt1 : null },
     alt2 () { return this.value && this.value.alt2 ? this.value.alt2 : null },
     alt3 () { return this.value && this.value.alt3 ? this.value.alt3 : null },
@@ -401,7 +401,7 @@ export default {
     getAsyncData: debounce(function () {
       this.data = []
       this.isFetching = true
-      axios.get(`${process.env.placesUrl + process.env.autocompleteEndpoint}?input=${this.A}&types=geocode&language=en${this.countryiso ? '&components=country:' + this.countryiso : ''}&key=${process.env.placesKey}`)
+      axios.get(`${process.env.placesUrl + process.env.autocompleteEndpoint}?input=${this.A}&types=geocode&language=en${this.userCountry ? '&components=country:' + this.userCountry : ''}&key=${process.env.placesKey}`)
         .then(({ data }) => {
           data.predictions.forEach((item) => this.data.push(item))
           this.isFetching = false

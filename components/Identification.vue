@@ -24,7 +24,7 @@
       <b-input v-cleave="masks.ssn4"
         :value="value ? value.ssnTyped : null"
         ref="ssn4"
-        placeholder="XXX-XX-"
+        placeholder="e.g. XXX-XX-1234"
         pattern="X{3}-X{2}-[0-9]{4}"
         required
         @input="setVal"
