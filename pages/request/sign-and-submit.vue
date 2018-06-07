@@ -556,12 +556,14 @@ export default {
         voterType: typeof item.voterType === 'string' ? item.voterType : 'All',
         ruleDate: item.date.substr(0, 4) === '2018' ? new Date(item.date) : null
       }))))
+      console.log(electionArr)
       let importantE
       if (this.voterClass && Boolean(this.voterClass === 'military' || this.voterClass === 'milSpouse' || this.voterClass === 'natGuard')) {
         importantE = electionArr.filter(x => x.voterType.indexOf('Citizen') === -1)
       } else {
         importantE = electionArr.filter(x => x.voterType.indexOf('Uniformed') === -1)
       }
+      console.log(importantE.filter(({requestType}) => requestType !== 'Ballot Return').filter(x => x.ruleDate > new Date()).sort((a, b) => a.ruleDate - b.ruleDate).slice(0, 2))
       if (this.isRegistered === 'registered') {
         importantE = importantE.filter(x => x.requestType === 'Ballot Request').filter(x => x.ruleDate > new Date()).sort((a, b) => a.ruleDate - b.ruleDate)[0]
         return `IMPORTANT: As a registered voter, your form must be ${importantE.ruleType.toLowerCase()} ${importantE.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to be eligible to vote in the ${importantE.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} ${importantE.electionType}. See all your state deadlines at www.votefromabroad.org/states/${this.state}`
@@ -569,10 +571,10 @@ export default {
         importantE = importantE.filter(x => x.requestType === 'Registration').filter(x => x.ruleDate > new Date()).sort((a, b) => a.ruleDate - b.ruleDate)[0]
         return `IMPORTANT: As a new voter, your form must be ${importantE.ruleType.toLowerCase()} ${importantE.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to be eligible to vote in the ${importantE.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} ${importantE.electionType}. See all your state deadlines at www.votefromabroad.org/states/${this.state}`
       } else {
-        importantE = importantE.filter(x => x.requestType !== 'Ballot Return').filter(x => x.ruleDate > new Date()).sort((a, b) => a.ruleDate - b.ruleDate).slice(0, 2)
+        importantE = importantE.filter(x => x.requestType !== 'Ballot Return') // .filter(x => x.ruleDate > new Date()).sort((a, b) => a.ruleDate - b.ruleDate).slice(0, 2)
         let reg = importantE.filter(x => x.requestType === 'Registration')[0]
         let req = importantE.filter(x => x.requestType === 'Ballot Request')[0]
-        return `IMPORTANT: If you are not yet a registered voter, your form must be received by ${reg.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to be eligible to vote in the ${reg.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} General Election. If you already are a registered voter, your form must be received by ${req.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to receive a ballot for the ${req.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} General Election. See all your state deadlines at www.votefromabroad.org/states/${this.state}`
+        return `IMPORTANT: If you are not yet a registered voter, your form must be ${reg.ruleType.toLowerCase()} ${reg.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to be eligible to vote in the ${reg.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} ${reg.electionType}. If you already are a registered voter, your form must be ${req.ruleType.toLowerCase()} ${req.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to receive a ballot for the ${req.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} ${req.electionType}. See all your state deadlines at www.votefromabroad.org/states/${this.state}`
       }
     },
     ...mapState({
