@@ -348,17 +348,19 @@ export default {
           'isWebcamAlreadyCaptured': isWebcamAlreadyCaptured
         })
       })
-      navigator.mediaDevices.ondevicechange = () => {
-        checkDeviceSupport((event) => {
-          // console.log('device change event', event)
-          this.$store.commit('userauth/updateDevice', {
-            'hasWebCam': hasWebcam,
-            'hasMicrophone': hasMicrophone,
-            'hasSpeakers': hasSpeakers,
-            'isMicrophoneAlreadyCaptured': isMicrophoneAlreadyCaptured,
-            'isWebcamAlreadyCaptured': isWebcamAlreadyCaptured
+      if (navigator.mediaDevices) {
+        navigator.mediaDevices.ondevicechange = () => {
+          checkDeviceSupport((event) => {
+            // console.log('device change event', event)
+            this.$store.commit('userauth/updateDevice', {
+              'hasWebCam': hasWebcam,
+              'hasMicrophone': hasMicrophone,
+              'hasSpeakers': hasSpeakers,
+              'isMicrophoneAlreadyCaptured': isMicrophoneAlreadyCaptured,
+              'isWebcamAlreadyCaptured': isWebcamAlreadyCaptured
+            })
           })
-        })
+        }
       }
       await import('current-device').then(({default: device}) => {
         // console.log(device)

@@ -277,7 +277,7 @@ export default {
     },
     selectCountry: async function (option) {
       // this.countrySearch = option.name
-      console.log(option)
+      // console.log(option)
       this.getFormatAndCall(() => { this.countrySearch = option.name; console.log(this.countrySearch) })
       this.update({country: option.name, countryiso: option.code})
       this.countrySearch = option.name
@@ -289,7 +289,7 @@ export default {
         let ft = this.countryFormat.lfmt || this.countryFormat.fmt || '%A%n%B%n%C%n%S'
         // let fullFt = ft + '%country%countryiso%B'
         let newVal = Object.assign({}, this.value, inputObj)
-        console.log('newVal1', newVal)
+        // console.log('newVal1', newVal)
         Object.keys(newVal)
           .forEach(x => {
             newVal[x] = this.latinize(newVal[x])
@@ -304,7 +304,7 @@ export default {
         //   })
         // let formatted = ft.replace('%A%n', '%A%n%B%n').replace(/%[N|O]%n/g, '').replace(/%([A|B|D|C|S|Z|X])([%n]?)/g, (match, p1, p2, offset, string) => p1 && newVal[p1] ? this.countryFormat.upper.includes([p1]) ? newVal[p1].toUpperCase() + p2 || '' : newVal[p1] + p2 || '' : '').concat(`%n${newVal.country.toUpperCase()}`).split('%n')
         let formatted = ft.replace('%A%n', '%A%n%B%n').replace(/%[N|O]%n/g, '').split('%n').map(x => x.replace(/%([A|B|D|C|S|Z|X])/g, (match, p1) => p1 && newVal[p1] ? this.countryFormat.upper.includes(p1) ? newVal[p1].toUpperCase() : newVal[p1] : '')).concat(newVal.country ? newVal.country.toUpperCase() : null).filter(x => x)
-        console.log('formatted', formatted)
+        // console.log('formatted', formatted)
         newVal.alt1 = inputObj.alt1 || formatted.length > 0 ? formatted[0] : null
         newVal.alt2 = inputObj.alt2 || formatted.length > 1 ? formatted[1] : null
         newVal.alt3 = inputObj.alt3 || formatted.length > 2 ? formatted[2] : null
@@ -314,7 +314,7 @@ export default {
         if (newVal.D && newVal.B && newVal.D.toLowerCase() === newVal.B.toLowerCase()) {
           newVal.B = null
         }
-        console.log('newVal', newVal)
+        // console.log('newVal', newVal)
         await this.$emit('input', newVal)
       }
     },
@@ -393,11 +393,11 @@ export default {
     },
     fillData (option) {
       let input = {}
-      console.log('option', option)
+      // console.log('option', option)
       if (option && option.place_id) {
         axios.get(`${process.env.placesUrl + process.env.detailsEndpoint}?placeid=${option.place_id}&language=en&key=${process.env.placesKey}`)
           .then(({ data: {result} }) => {
-            console.log('placeid data', result)
+            // console.log('placeid data', result)
             // input.A = result.adr_address && result.adr_address.includes('street-address') ? this.latinize(result.adr_address.match('<span class="street-address">(.*?)</span>')[1]) : null
             input.B = result.adr_address && result.adr_address.includes('extended-address') ? result.adr_address.match('<span class="extended-address">(.*?)</span>')[1] : null
             input.D = result.address_components && result.address_components.filter(({types}) => types.includes('sublocality')).length > 0 ? result.address_components.filter(({types}) => types.includes('sublocality'))[0].long_name : null
