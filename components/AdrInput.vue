@@ -292,7 +292,7 @@ export default {
         console.log('newVal1', newVal)
         Object.keys(newVal)
           .forEach(x => {
-            newVal[x] = typeof newVal[x] === 'string' ? this.latinize(newVal[x]) : newVal[x]
+            newVal[x] = this.latinize(newVal[x])
           })
         // Object.keys(newVal)
         //   .forEach(x => {
@@ -398,7 +398,7 @@ export default {
         axios.get(`${process.env.placesUrl + process.env.detailsEndpoint}?placeid=${option.place_id}&language=en&key=${process.env.placesKey}`)
           .then(({ data: {result} }) => {
             console.log('placeid data', result)
-            // input.A = result.adr_address && result.adr_address.includes('street-address') ? result.adr_address.match('<span class="street-address">(.*?)</span>')[1] : null
+            // input.A = result.adr_address && result.adr_address.includes('street-address') ? this.latinize(result.adr_address.match('<span class="street-address">(.*?)</span>')[1]) : null
             input.B = result.adr_address && result.adr_address.includes('extended-address') ? result.adr_address.match('<span class="extended-address">(.*?)</span>')[1] : null
             input.D = result.address_components && result.address_components.filter(({types}) => types.includes('sublocality')).length > 0 ? result.address_components.filter(({types}) => types.includes('sublocality'))[0].long_name : null
             input.C = result.adr_address && result.adr_address.includes('locality') ? result.adr_address.match('<span class="locality">(.*?)</span>')[1] : null
