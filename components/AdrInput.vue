@@ -140,6 +140,7 @@ import axios from 'axios'
 import debounce from 'lodash/debounce'
 const countrylist = require('~/assets/countries.json')
 const ZZ = require('~/data/postal/zz.json')
+const latinizeCharacters = require('~/assets/latinize.characters.json')
 
 export default {
   name: 'AdrInput',
@@ -225,7 +226,7 @@ export default {
     },
     subkeys () {
       if (this.countryFormat['sub_keys']) {
-        return this.removeDiacritics(this.countryFormat['sub_keys'])
+        return this.latinize(this.countryFormat['sub_keys'])
       } else {
         return null
       }
@@ -291,7 +292,7 @@ export default {
         console.log('newVal1', newVal)
         Object.keys(newVal)
           .forEach(x => {
-            newVal[x] = typeof newVal[x] === 'string' ? this.removeDiacritics(newVal[x]) : newVal[x]
+            newVal[x] = typeof newVal[x] === 'string' ? this.latinize(newVal[x]) : newVal[x]
           })
         // Object.keys(newVal)
         //   .forEach(x => {
@@ -368,6 +369,15 @@ export default {
       //   case 'Z':
       //     return 'postal-code'
       // }
+    },
+    latinize (str) {
+      if (typeof str === 'string') {
+        return str.replace(/[^A-Za-z0-9]/g, function (x) {
+          return latinizeCharacters[x] || x
+        })
+      } else {
+        return str
+      }
     },
     removeDiacritics (str) {
       const baseChars = [
