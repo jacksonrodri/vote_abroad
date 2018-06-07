@@ -774,7 +774,7 @@ export default {
       dob: {
         required,
         tooOld () { return new Date(1900, 0, 1) < new Date(this.dob) },
-        tooYoung () { return new Date(2000, 10, 7) > new Date(this.dob) }
+        tooYoung () { return new Date(2000, 10, 8) > new Date(this.dob) }
       },
       fax: {
       },
