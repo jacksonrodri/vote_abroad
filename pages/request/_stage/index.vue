@@ -197,7 +197,7 @@
       </div>
     </receive-ballot>
 
-    <tel-input
+    <!-- <tel-input
       key="fax"
       :label="$t('request.fax.label')"
       :type="($v.fax.$error ? 'is-danger': '')"
@@ -205,10 +205,37 @@
       v-if="recBallot === 'fax'"
       @input="$v.fax.$touch()"
       v-model="fax">
-    </tel-input>
+    </tel-input> -->
+    <phone-input key="fax"
+      ref="fax"
+      :label="$t('request.fax.label')"
+      v-if="recBallot === 'fax'"
+      @input="delayTouch($v.fax)"
+      :required="recBallot === 'fax'"
+      :accepts="['phone']"
+      v-model="fax"></phone-input>
 
     <!-- altEmail -->
-    <b-field
+    <phone-input v-if="recBallot === 'email' && (email === null || skippedEmail || $v.email.$error)"
+      key="email"
+      ref="email"
+      @input="skippedEmail = true"
+      :label="$t('request.email.label')"
+      :required="recBallot === 'email'"
+      :accepts="['email']"
+      v-model="email">
+    </phone-input>
+
+    <phone-input key="altEmail"
+      v-if="recBallot === 'email'"
+      ref="altEmail"
+      :label="$t('request.altEmail.label')"
+      :required="false"
+      :accepts="['email']"
+      v-model="altEmail">
+    </phone-input>
+
+    <!-- <b-field
       :type="($v.altEmail.$error ? 'is-danger': '')"
       :message="$v.altEmail.$error ? Object.keys($v.altEmail.$params).map(x => $t(`request.email.messages.${x}`)) : '' "
       v-if="recBallot === 'email'"
@@ -218,7 +245,7 @@
         autocomplete="email"
         maxlength="40"
         @input="$v.altEmail.$touch()"></b-input>
-    </b-field>
+    </b-field> -->
 
       <!-- fwdAdr -->
       <address-input
@@ -426,7 +453,7 @@ export default {
       prty: '',
       phoneEmailTest: {},
       phoneTest: {},
-      emailTest: {}
+      skippedEmail: false
     }
   },
   components: {
@@ -645,7 +672,7 @@ export default {
   },
   methods: {
     touch (val) {
-      console.log(val)
+      // console.log(val)
       Object.keys(val).forEach(item => console.log(item))
       this.delayTouch(this.$v.abrAdr)
       // if (val) {
@@ -672,6 +699,8 @@ export default {
           this.$v.voterClass.$touch()
           this.$v.isRegistered.$touch()
           this.$v.recBallot.$touch()
+          this.$v.email.$touch()
+          this.$v.fax.$touch()
           this.$v.altEmail.$touch()
           break
         case 'id-and-contact-information':
@@ -745,8 +774,16 @@ export default {
           this.$refs.jurisdiction.$refs.jurisdiction.focus()
           this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'jurisdiction'}})
           break
-        case this.stage.slug === 'voting-information' && this.$v.altEmail.$error:
-          this.$refs.altEmail.focus()
+        case this.stage.slug === 'voting-information' && this.$v.fax.$error:
+          this.$refs.fax.$refs.input.focus()
+          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'fax'}})
+          break
+        case this.stage.slug === 'voting-information' && this.$v.email.$error && this.$refs.email:
+          this.$refs.email.$refs.input.focus()
+          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'email'}})
+          break
+        case this.stage.slug === 'voting-information' && this.$v.altEmail.$error && this.$refs.altEmail:
+          this.$refs.altEmail.$refs.input.focus()
           this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'altEmail'}})
           break
         case this.stage.slug === 'id-and-contact-information' && this.$v.dob.$error:
@@ -762,12 +799,17 @@ export default {
           this.$refs.id.$refs.StateId.focus()
           break
         default:
+          if (this.stage.slug === 'voting-information') {
+            if (!this.$refs.altEmail && this.$v.altEmail.$error) this.altEmail = null
+            if (!this.$refs.fax && this.$v.fax.$error) this.fax = null
+          }
           this.$store.dispatch('requests/recordAnalytics', {event: 'completed: ' + this.stage.slug})
           this.$router.push(nextPage)
           this.$store.dispatch('requests/updateRequest', {status: 'completed: ' + this.stage.slug})
       }
     },
     delayTouch ($v) {
+      // console.log($v, touchMap)
       $v.$reset()
       if (touchMap.has($v)) {
         clearTimeout(touchMap.get($v))
@@ -830,7 +872,11 @@ export default {
         tooYoung () { return new Date(2000, 10, 8) > new Date(this.dob) }
       },
       fax: {
-        required: requiredIf((model) => this.recBallot === 'fax')
+        required: () => {
+          if (this.recBallot !== 'fax' || this.fax.isValidPhone) {
+            return true
+          } else { return false }
+        }
       },
       tel: {
         async validPhone () { return this.tel && this.tel.rawInput ? this.tel.isValidPhone : true }

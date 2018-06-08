@@ -90,7 +90,7 @@ export default {
       countrySearch: '',
       exampleNumber: '',
       metadataLoaded: false,
-      typed: '',
+      typed: null,
       mailCheckedEmail: undefined,
       vEmail: {},
       isEmail: false,
@@ -103,11 +103,11 @@ export default {
     countries () { return countrylist },
     val () {
       if (this.value && typeof this.value === 'string') {
-        return this.value || ''
+        return this.value || null
       } else if (this.value && typeof this.value === 'object' && this.value.rawInput) {
-        return this.value.rawInput || ''
+        return this.value.rawInput || null
       } else {
-        return ''
+        return null
       }
     },
     userCountry () { return this.country.toUpperCase() || this.$store.state.userauth.user.country.toUpperCase() || null },
@@ -217,11 +217,11 @@ export default {
       if (!val || val.length === 0) {
         !this.accepts.includes('phone')
           ? this.$emit('input', null)
-          : this.$emit('input', {rawInput: '', country: this.userCountry, isValidEmail: false, isValidPhone: false, intNumber: null})
+          : this.$emit('input', {rawInput: null, country: this.userCountry, isValidEmail: false, isValidPhone: false, intNumber: null})
       } else {
-        let typed = val.data || val || this.value.rawInput || ''
-        let intNumber = ''
-        let cleanNumber = ''
+        let typed = val.data || val || this.value.rawInput || null
+        let intNumber = null
+        let cleanNumber = null
         this.delayTouch(this.$v.value)
         let regex = RegExp('[^0-9 +]+')
         // if (!this.accepts.includes('email') && typed) {
@@ -260,7 +260,7 @@ export default {
         if (this.accepts.includes('phone') && !metadata) {
           this.loadMetadataAndCall(this.formatInput)
         } else if (this.accepts.includes('phone')) {
-          this.$emit('input', {rawInput: typed || '', country: this.userCountry, isValidEmail: validEmail, isValidPhone: validPhone, intNumber: intNumber})
+          this.$emit('input', {rawInput: typed || null, country: this.userCountry, isValidEmail: validEmail, isValidPhone: validPhone, intNumber: intNumber})
         } else {
           this.$emit('validEmail', validEmail)
           this.$emit('input', typed)
