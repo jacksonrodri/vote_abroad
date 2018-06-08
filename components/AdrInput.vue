@@ -287,6 +287,11 @@ export default {
     }
   },
   methods: {
+    decodeHtmlEntity (str) {
+      return str.replace(/&#(\d+);/g, function (match, dec) {
+        return String.fromCharCode(dec)
+      })
+    },
     getValue: function (item) { return this && this[item] ? this[item] : null },
     getCountryName: function (option) {
       // console.log('getCountryName', option)
@@ -295,16 +300,17 @@ export default {
     },
     selectCountry: async function (option) {
       // this.countrySearch = option.name
-      // console.log(option)
+      console.log(option)
       this.getFormatAndCall(() => { this.countrySearch = option.name; console.log(this.countrySearch) })
       this.update({country: option.name, countryiso: option.code})
       this.countrySearch = option.name
     },
     update: async function (inputObj) {
+      console.log(inputObj, this.value)
       // Object.keys(inputObj).forEach(item => this.delayTouch(this.$v[item]))
       if (inputObj.countryiso && this.value && inputObj.countryiso !== this.value.countryiso) {
         this.countrySearch = this.getCountryName(inputObj.countryiso)
-        // await this.$emit('input', {countryiso: inputObj.countryiso, country: this.getCountryName(inputObj.countryiso)})
+        this.$emit('input', {countryiso: inputObj.countryiso, country: this.getCountryName(inputObj.countryiso)})
         let countryiso = inputObj.countryiso
         delete inputObj.countryiso
         this.getFormatAndCall(() => this.update(inputObj), countryiso)
@@ -315,7 +321,7 @@ export default {
         // console.log('newVal1', newVal)
         Object.keys(newVal)
           .forEach(x => {
-            newVal[x] = this.latinize(newVal[x])
+            newVal[x] = typeof newVal[x] === 'string' ? this.decodeHtmlEntity(this.latinize(newVal[x])) : newVal[x]
           })
         // Object.keys(newVal)
         //   .forEach(x => {
@@ -342,14 +348,14 @@ export default {
       }
     },
     async getFormatAndCall (passedFunction, countryiso) {
+      // if (countryiso) console.log(`has country format countryiso: ${countryiso}, userCountry: ${this.userCountry}`, !this.formats[countryiso.toUpperCase()])
       if ((countryiso && !this.formats[countryiso.toUpperCase()]) || (!countryiso && this.userCountry && !this.formats[this.userCountry.toUpperCase()])) {
-        let requestedFormat = await import(`~/data/postal/${this.userCountry.toLowerCase()}.json`)
+        let requestedFormat = await import(`~/data/postal/${countryiso ? countryiso.toLowerCase() : this.userCountry.toLowerCase()}.json`)
         this.formats = Object.assign({}, this.formats, await requestedFormat)
         if (passedFunction) { passedFunction() }
       } else {
         if (passedFunction) { passedFunction() }
       }
-      // console.log(requestedFormat)
     },
     getPlaceholder (item) {
       switch (item) {
