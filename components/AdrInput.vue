@@ -43,14 +43,14 @@
           <!-- :value="countrySearch || getCountryName(userCountry) || ''" -->
 
       </b-field>
-      <p v-if="v.country.$error" class="help is-danger">This email is invalid</p>
+      <p v-if="v.country.$error" class="help is-danger">Please select a country.</p>
     </div>
     <transition name="fade" mode="out-in">
       <div v-if="!usesAlternateFormat" key="formatted">
         <template v-for="item in fmt">
           <b-field v-if="typeof item === 'string'" expanded :key="item"
             :type="v[item] && v[item]['$error'] ? 'is-danger' : ''"
-            :message="v[item] && v[item].$error ? 'please enter this field' : ''">
+            :message="v[item] && v[item].$error ? `Please enter your ${getPlaceholder(item)}.` : ''">
             <b-autocomplete v-if="item === 'A'"
                 :value="A"
                 :data="data"
@@ -87,11 +87,10 @@
           </b-field>
           <b-field v-else :key="item.join('-')"
             :type="item.filter(x => v[x].$error).length > 0 ? 'is-danger' : ''"
-            :message="item.filter(x => v[x].$error).length > 0 ? 'please enter this field' : ''">
+            :message="item.filter(x => v[x].$error).length === 0 ? '' : item.filter(x => v[x].$error).length === 1 ? `Please enter your ${getPlaceholder(item[0])}.` : `These fields are required: ${item.filter(x => v[x].$error).map(x => getPlaceholder(x)).join(', ')}.`">
             <b-field grouped>
               <b-field v-for="subItem in item" :expanded="subItem !== 'X' || subItem !== 'Z'" :key="subItem"
-                :type="v[subItem] && v[subItem]['$error'] ? 'is-danger' : ''"
-                :message="v[subItem] && v[subItem].$error ? 'please enter this field' : ''">
+                :type="v[subItem] && v[subItem]['$error'] ? 'is-danger' : ''">
                 <b-autocomplete v-if="subItem === 'S'"
                   :autocomplete="getAutocomplete(item)"
                   :value="S"
