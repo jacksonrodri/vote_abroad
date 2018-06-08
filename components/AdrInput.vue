@@ -1,7 +1,8 @@
 <template>
   <div class="field">
     <div class="field">
-      <label for="country" class="label">{{ label }}<span v-if="toolTipTitle" @click="toolTipOpen = !toolTipOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span><transition name="fade"><span v-if="!value && !$v.$error" class="required"> {{required || required === '' ? 'Required' : 'Optional'}}</span></transition></label>
+      <label for="country" class="label">{{ label }}<span v-if="toolTipTitle" @click="toolTipOpen = !toolTipOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></label>
+      <!-- <transition name="fade"><span v-if="!value && !$v.$error" class="required"> {{required || required === '' ? 'Required' : 'Optional'}}</span></transition> -->
       <!-- <b-field expanded label="country">
         :for="this.$vnode.key"
         <b-input placeholder="Country"></b-input>
@@ -147,7 +148,7 @@
 </template>
 
 <script>
-import { required, requiredIf } from 'vuelidate/lib/validators'
+import { requiredIf } from 'vuelidate/lib/validators'
 import axios from 'axios'
 import debounce from 'lodash/debounce'
 const countrylist = require('~/assets/countries.json')
@@ -211,7 +212,7 @@ export default {
     S () { return this.value && this.value.S ? this.value.S : null },
     Z () { return this.value && this.value.Z ? this.value.Z : null },
     X () { return this.value && this.value.X ? this.value.X : null },
-    countryiso () { return !this.value ? this.userCountry : this.value.countryiso || null },
+    countryiso () { return this.value === null ? this.userCountry : this.value.countryiso || null },
     alt1 () { return this.value && this.value.alt1 ? this.value.alt1 : null },
     alt2 () { return this.value && this.value.alt2 ? this.value.alt2 : null },
     alt3 () { return this.value && this.value.alt3 ? this.value.alt3 : null },
@@ -288,6 +289,7 @@ export default {
   methods: {
     getValue: function (item) { return this && this[item] ? this[item] : null },
     getCountryName: function (option) {
+      // console.log('getCountryName', option)
       let ctry = this.countries.find((country) => country.code.toLowerCase() === option.toLowerCase())
       return ctry ? ctry.name : option
     },
@@ -300,8 +302,12 @@ export default {
     },
     update: async function (inputObj) {
       // Object.keys(inputObj).forEach(item => this.delayTouch(this.$v[item]))
-      if (inputObj.countryiso && this.value && this.value.countryiso && inputObj.countryiso !== this.value.countryiso) {
-        await this.$emit('input', inputObj)
+      if (inputObj.countryiso && this.value && inputObj.countryiso !== this.value.countryiso) {
+        this.countrySearch = this.getCountryName(inputObj.countryiso)
+        // await this.$emit('input', {countryiso: inputObj.countryiso, country: this.getCountryName(inputObj.countryiso)})
+        let countryiso = inputObj.countryiso
+        delete inputObj.countryiso
+        this.getFormatAndCall(() => this.update(inputObj), countryiso)
       } else {
         let ft = this.countryFormat.lfmt || this.countryFormat.fmt || '%A%n%B%n%C%n%S'
         // let fullFt = ft + '%country%countryiso%B'
@@ -335,11 +341,15 @@ export default {
         await this.$emit('input', newVal)
       }
     },
-    async getFormatAndCall (passedFunction) {
-      let requestedFormat = await import(`~/data/postal/${this.userCountry.toLowerCase()}.json`)
+    async getFormatAndCall (passedFunction, countryiso) {
+      if ((countryiso && !this.formats[countryiso.toUpperCase()]) || (!countryiso && this.userCountry && !this.formats[this.userCountry.toUpperCase()])) {
+        let requestedFormat = await import(`~/data/postal/${this.userCountry.toLowerCase()}.json`)
+        this.formats = Object.assign({}, this.formats, await requestedFormat)
+        if (passedFunction) { passedFunction() }
+      } else {
+        if (passedFunction) { passedFunction() }
+      }
       // console.log(requestedFormat)
-      this.formats = Object.assign({}, this.formats, await requestedFormat)
-      if (passedFunction) { passedFunction() }
     },
     getPlaceholder (item) {
       switch (item) {
@@ -414,13 +424,17 @@ export default {
       if (option && option.place_id) {
         axios.get(`${process.env.placesUrl + process.env.detailsEndpoint}?placeid=${option.place_id}&language=en&key=${process.env.placesKey}`)
           .then(({ data: {result} }) => {
-            // console.log('placeid data', result)
+            let ctry = result.address_components && result.address_components.filter(({types}) => types.includes('country')).length > 0 ? result.address_components.filter(({types}) => types.includes('country'))[0].short_name : null
+            let region = result.address_components && result.address_components.filter(({types}) => types.includes('administrative_area_level_1')).length > 0 ? result.address_components.filter(({types}) => types.includes('administrative_area_level_1'))[0].short_name : null
+            // console.log('placeid data', result.address_components.filter(({types}) => types.includes('country')))
             // input.A = result.adr_address && result.adr_address.includes('street-address') ? this.latinize(result.adr_address.match('<span class="street-address">(.*?)</span>')[1]) : null
             input.B = result.adr_address && result.adr_address.includes('extended-address') ? result.adr_address.match('<span class="extended-address">(.*?)</span>')[1] : null
             input.D = result.address_components && result.address_components.filter(({types}) => types.includes('sublocality')).length > 0 ? result.address_components.filter(({types}) => types.includes('sublocality'))[0].long_name : null
             input.C = result.adr_address && result.adr_address.includes('locality') ? result.adr_address.match('<span class="locality">(.*?)</span>')[1] : null
-            input.S = result.adr_address && result.adr_address.includes('region') ? result.adr_address.match('<span class="region">(.*?)</span>')[1] : null
+            input.S = result.adr_address && result.adr_address.includes('region') ? result.adr_address.match('<span class="region">(.*?)</span>')[1] : region
             input.Z = result.adr_address && result.adr_address.includes('postal-code') ? result.adr_address.match('<span class="postal-code">(.*?)</span>')[1] : null
+            input.country = this.getCountryName(ctry)
+            input.countryiso = ctry
             this.update(input)
           })
       }
@@ -446,7 +460,6 @@ export default {
   },
   validations () {
     return {
-      userCountry: {required},
       A: {required: requiredIf((model) => this.countryFormat.require.toUpperCase().includes('A'))},
       D: {required: requiredIf((model) => this.countryFormat.require.toUpperCase().includes('D'))},
       C: {required: requiredIf((model) => this.countryFormat.require.toUpperCase().includes('C'))},
