@@ -116,6 +116,8 @@
       <adr-input v-model="abrAdr"
         :label="$t('request.abrAdr.label')"
         ref="abrAdr"
+        :v="$v.abrAdr"
+        @input="val => touch(val)"
         key="abrAdr"></adr-input>
       <scroll-up :key="$route.params.stage"></scroll-up>
     <section >
@@ -449,6 +451,20 @@ export default {
     AdrInput
   },
   computed: {
+    v () {
+      let r = this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryFormat ? this.$refs.abrAdr.countryFormat.require.toUpperCase() : false
+      let re = this.$refs.abrAdr ? this.$refs.abrAdr : false
+      return {
+        re: re,
+        r: r,
+        A: r ? r.includes('A') : false,
+        D: r ? r.includes('D') : false,
+        C: r ? r.includes('C') : false,
+        S: r ? r.includes('S') : false,
+        X: r ? r.includes('X') : false,
+        Z: r ? r.includes('Z') : false
+      }
+    },
     stateRules () {
       if (this.votAdr && this.votAdr.stateISO) {
         return this.allStateRules.find(x => x.iso.toLowerCase() === this.votAdr.stateISO.toLowerCase())
@@ -628,17 +644,27 @@ export default {
     }
   },
   methods: {
+    touch (val) {
+      console.log(val)
+      Object.keys(val).forEach(item => console.log(item))
+      this.delayTouch(this.$v.abrAdr)
+      // if (val) {
+      //   Object.keys(val).forEach(item => this.delayTouch(this.$v.abrAdr[item]))
+      // }
+    },
     focusName () {
       this.$refs.userinput.focus()
     },
     focusFirstErrorOrAdvance (nextPage) {
       switch (this.$route.params.stage) {
         case 'your-information':
+          // if (this.$refs.abrAdr) this.$refs.abrAdr.touch()
           this.$v.firstName.$touch()
           this.$v.lastName.$touch()
           this.$v.email.$touch()
           this.$v.tel.$touch()
           this.$v.abrAdr.$touch()
+          this.$v.abrAdr.A.$touch()
           break
         case 'voting-information':
           this.$v.votAdr.$touch()
@@ -672,12 +698,28 @@ export default {
           this.$refs.abrAdr.$refs.country.focus()
           break
         case this.stage.slug === 'your-information' && this.$v.abrAdr.A.$error:
-          this.$refs.abrAdr.$refs.address[0].focus()
+          this.$refs.abrAdr.$refs.A[0].focus()
           this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.A'}})
+          break
+        case this.stage.slug === 'your-information' && this.$v.abrAdr.D.$error:
+          this.$refs.abrAdr.$refs.D[0].focus()
+          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.D'}})
           break
         case this.stage.slug === 'your-information' && this.$v.abrAdr.C.$error:
           this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.C'}})
-          this.$refs.abrAdr.$refs.city.focus()
+          this.$refs.abrAdr.$refs.C[0].focus()
+          break
+        case this.stage.slug === 'your-information' && this.$v.abrAdr.S.$error:
+          this.$refs.abrAdr.$refs.S[0].focus()
+          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.S'}})
+          break
+        case this.stage.slug === 'your-information' && this.$v.abrAdr.X.$error:
+          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.X'}})
+          this.$refs.abrAdr.$refs.X[0].focus()
+          break
+        case this.stage.slug === 'your-information' && this.$v.abrAdr.Z.$error:
+          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.Z'}})
+          this.$refs.abrAdr.$refs.Z[0].focus()
           break
         case this.stage.slug === 'your-information' && this.$v.tel.$error:
           this.$refs.tel.$refs.input.focus()
@@ -755,8 +797,19 @@ export default {
       },
       abrAdr: {
         country: { required },
-        A: { required },
-        C: { required }
+        A: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryFormat ? this.$refs.abrAdr.countryFormat.require.toUpperCase().includes('A') : false) },
+        D: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryFormat ? this.$refs.abrAdr.countryFormat.require.toUpperCase().includes('D') : false) },
+        C: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryFormat ? this.$refs.abrAdr.countryFormat.require.toUpperCase().includes('C') : false) },
+        S: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryFormat ? this.$refs.abrAdr.countryFormat.require.toUpperCase().includes('S') : false) },
+        X: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryFormat ? this.$refs.abrAdr.countryFormat.require.toUpperCase().includes('X') : false) },
+        Z: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryFormat ? this.$refs.abrAdr.countryFormat.require.toUpperCase().includes('Z') : false) },
+        countryiso: {},
+        alt1: {},
+        alt2: {},
+        alt3: {},
+        alt4: {},
+        alt5: {},
+        usesAlternateFormat: {}
       },
       voterClass: {
         required

@@ -1,54 +1,60 @@
 <template>
   <div class="field">
-    <label for="country" class="label">{{ label }}<span v-if="toolTipTitle" @click="toolTipOpen = !toolTipOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span><transition name="fade"><span v-if="!value && !$v.$error" class="required"> {{required || required === '' ? 'Required' : 'Optional'}}</span></transition></label>
-    <!-- <b-field expanded label="country">
-      :for="this.$vnode.key"
-      <b-input placeholder="Country"></b-input>
-    </b-field> -->
-    <b-field expanded placeholder="Country">
-      <a :class="['button', 'control', 'is-outlined', 'is-inverted', 'is-paddingless']"
-        @click="$refs.country.focus()"
-        style="padding-left:0px;">
-        <span class="flag-container fa-stack">
-          <i :class="`fa-stack-2x flag-icon flag-icon-${userCountry || 'un'}`"></i>
-          <i class="fas fa-sort-down fa-stack-1x has-text-grey breathe" style="transform:translateY(0.7rem)"></i>
-        </span>
-      </a>
-      <b-autocomplete
-        :open-on-focus=true
-        keep-first
-        :placeholder="$t('request.abrAdr.placeholder')"
-        v-model="countrySearch"
-        :field="'name' || null"
-        :data="filteredCountries"
-        ref="country"
-        autocomplete="off"
-        :id="country"
-        @select="option => selectCountry(option)"
-        expanded>
-        <template slot-scope="props">
-          <span :class="`flag-icon flag-icon-${props.option.code.toLowerCase()}`"></span>{{ props.option.name }}
-        </template>
-      </b-autocomplete>
-      <p class="control">
-        <a class="button is-outlined is-borderless" @click="$refs.country.focus()">
-          <span class="icon is-small">
-            <i class="fas fa-angle-down"></i>
+    <div class="field">
+      <label for="country" class="label">{{ label }}<span v-if="toolTipTitle" @click="toolTipOpen = !toolTipOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span><transition name="fade"><span v-if="!value && !$v.$error" class="required"> {{required || required === '' ? 'Required' : 'Optional'}}</span></transition></label>
+      <!-- <b-field expanded label="country">
+        :for="this.$vnode.key"
+        <b-input placeholder="Country"></b-input>
+      </b-field> -->
+      <b-field expanded placeholder="Country" :type="v.country.$error ? is-danger : ''" >
+        <a :class="['button', 'control', 'is-outlined', 'is-inverted', 'is-paddingless']"
+          @click="$refs.country.focus()"
+          style="padding-left:0px;">
+          <span class="flag-container fa-stack">
+            <i :class="`fa-stack-2x flag-icon flag-icon-${userCountry || 'un'}`"></i>
+            <i class="fas fa-sort-down fa-stack-1x has-text-grey breathe" style="transform:translateY(0.7rem)"></i>
           </span>
         </a>
-      </p>
-        <!-- @input="val => countrySearch = val" -->
-        <!-- :value="countrySearch || getCountryName(userCountry) || ''" -->
+        <b-autocomplete
+          :open-on-focus=true
+          keep-first
+          :placeholder="$t('request.abrAdr.placeholder')"
+          v-model="countrySearch"
+          :field="'name' || null"
+          :data="filteredCountries"
+          @focus="$event.target.select()"
+          ref="country"
+          autocomplete="off"
+          :id="country"
+          @select="option => selectCountry(option)"
+          expanded>
+          <template slot-scope="props">
+            <span :class="`flag-icon flag-icon-${props.option.code.toLowerCase()}`"></span>{{ props.option.name }}
+          </template>
+        </b-autocomplete>
+        <p class="control">
+          <a class="button is-outlined is-borderless" @click="$refs.country.focus()">
+            <span class="icon is-small">
+              <i class="fas fa-angle-down"></i>
+            </span>
+          </a>
+        </p>
+          <!-- @input="val => countrySearch = val" -->
+          <!-- :value="countrySearch || getCountryName(userCountry) || ''" -->
 
-    </b-field>
+      </b-field>
+      <p v-if="v.country.$error" class="help is-danger">This email is invalid</p>
+    </div>
     <transition name="fade" mode="out-in">
       <div v-if="!usesAlternateFormat" key="formatted">
         <template v-for="item in fmt">
-          <b-field v-if="typeof item === 'string'" expanded :key="item">
+          <b-field v-if="typeof item === 'string'" expanded :key="item"
+            :type="v[item] && v[item]['$error'] ? 'is-danger' : ''"
+            :message="v[item] && v[item].$error ? 'please enter this field' : ''">
             <b-autocomplete v-if="item === 'A'"
                 :value="A"
                 :data="data"
-                ref="address"
+                ref="A"
                 keep-first
                 :placeholder="getPlaceholder(item)"
                 field="structured_formatting.main_text"
@@ -63,6 +69,7 @@
                 :key="item"
                 :autocomplete="getAutocomplete(item)"
                 :value="S"
+                ref="S"
                 @input="val => update({S: val})"
                 @select="opt => {if (opt) { update({S: opt.key}) }}"
                 :data="!S ? sOptions : sOptions.filter((opt) => opt.name.toLowerCase().includes(S.toLowerCase()) || opt.key.toLowerCase().includes(S.toLowerCase()))"
@@ -73,31 +80,37 @@
             <b-input :placeholder="getPlaceholder(item)"
               v-else
               :value="getValue(item)"
+              :ref="item"
               @input="val => update({[item]: val})"
               :autocomplete="getAutocomplete(item)">
             </b-input>
           </b-field>
-          <b-field v-else grouped group-multiline :key="item.join('-')">
-            <template v-for="subItem in item">
-              <b-autocomplete v-if="subItem === 'S'"
-                :key="subItem"
-                :autocomplete="getAutocomplete(item)"
-                :value="S"
-                @input="val => update({S: val})"
-                @select="opt => {if (opt) { update({S: opt.key}) }}"
-                :data="!S ? sOptions : sOptions.filter((opt) => opt.name.toLowerCase().includes(S.toLowerCase()) || opt.key.toLowerCase().includes(S.toLowerCase()))"
-                field="name"
-                keep-first
-                :placeholder="getPlaceholder(subItem)"
-                :open-on-focus=true></b-autocomplete>
-              <b-input v-else :key="subItem"
-                :value="getValue(subItem)"
-                @input="val => update({[subItem]: val})"
-                :expanded="subItem !== 'X' || subItem !== 'Z'"
-                :placeholder="getPlaceholder(subItem)"
-                :autocomplete="getAutocomplete(subItem)">
-              </b-input>
-            </template>
+          <b-field v-else :key="item.join('-')"
+            :type="item.filter(x => v[x].$error).length > 0 ? 'is-danger' : ''"
+            :message="item.filter(x => v[x].$error).length > 0 ? 'please enter this field' : ''">
+            <b-field grouped>
+              <b-field v-for="subItem in item" :expanded="subItem !== 'X' || subItem !== 'Z'" :key="subItem"
+                :type="v[subItem] && v[subItem]['$error'] ? 'is-danger' : ''"
+                :message="v[subItem] && v[subItem].$error ? 'please enter this field' : ''">
+                <b-autocomplete v-if="subItem === 'S'"
+                  :autocomplete="getAutocomplete(item)"
+                  :value="S"
+                  :ref="S"
+                  @input="val => update({S: val})"
+                  @select="opt => {if (opt) { update({S: opt.key}) }}"
+                  :data="!S ? sOptions : sOptions.filter((opt) => opt.name.toLowerCase().includes(S.toLowerCase()) || opt.key.toLowerCase().includes(S.toLowerCase()))"
+                  field="name"
+                  keep-first
+                  :placeholder="getPlaceholder(subItem)"
+                  :open-on-focus=true></b-autocomplete>
+                <b-input v-else :value="getValue(subItem)"
+                  @input="val => update({[subItem]: val})"
+                  :ref="subItem"
+                  :placeholder="getPlaceholder(subItem)"
+                  :autocomplete="getAutocomplete(subItem)">
+                </b-input>
+              </b-field>
+            </b-field>
           </b-field>
         </template>
       </div>
@@ -135,12 +148,14 @@
 </template>
 
 <script>
-import { required } from 'vuelidate/lib/validators'
+import { required, requiredIf } from 'vuelidate/lib/validators'
 import axios from 'axios'
 import debounce from 'lodash/debounce'
 const countrylist = require('~/assets/countries.json')
 const ZZ = require('~/data/postal/zz.json')
 const latinizeCharacters = require('~/assets/latinize.characters.json')
+
+const touchMap = new WeakMap()
 
 export default {
   name: 'AdrInput',
@@ -148,7 +163,8 @@ export default {
     'value',
     'label',
     'toolTipTitle',
-    'required'
+    'required',
+    'v'
   ],
   data () {
     return {
@@ -283,6 +299,7 @@ export default {
       this.countrySearch = option.name
     },
     update: async function (inputObj) {
+      // Object.keys(inputObj).forEach(item => this.delayTouch(this.$v[item]))
       if (inputObj.countryiso && this.value && this.value.countryiso && inputObj.countryiso !== this.value.countryiso) {
         await this.$emit('input', inputObj)
       } else {
@@ -303,7 +320,7 @@ export default {
         //     }
         //   })
         // let formatted = ft.replace('%A%n', '%A%n%B%n').replace(/%[N|O]%n/g, '').replace(/%([A|B|D|C|S|Z|X])([%n]?)/g, (match, p1, p2, offset, string) => p1 && newVal[p1] ? this.countryFormat.upper.includes([p1]) ? newVal[p1].toUpperCase() + p2 || '' : newVal[p1] + p2 || '' : '').concat(`%n${newVal.country.toUpperCase()}`).split('%n')
-        let formatted = ft.replace('%A%n', '%A%n%B%n').replace(/%[N|O]%n/g, '').split('%n').map(x => x.replace(/%([A|B|D|C|S|Z|X])/g, (match, p1) => p1 && newVal[p1] ? this.countryFormat.upper.includes(p1) ? newVal[p1].toUpperCase() : newVal[p1] : '')).concat(newVal.country ? newVal.country.toUpperCase() : null).filter(x => x)
+        let formatted = ft.replace('%A%n', '%A%n%B%n').replace(/%[N|O]%n/g, '').split('%n').map(x => x.replace(/%([A|B|D|C|S|Z|X])/g, (match, p1) => p1 && newVal[p1] ? this.countryFormat.upper.includes(p1) ? newVal[p1].toUpperCase() : newVal[p1] : '')).concat(newVal.country ? newVal.country.toUpperCase() === 'SINGAPORE' ? 'REPUBLIC OF SINGAPORE' : newVal.country.toUpperCase() : null).filter(x => x)
         // console.log('formatted', formatted)
         newVal.alt1 = inputObj.alt1 || formatted.length > 0 ? formatted[0] : null
         newVal.alt2 = inputObj.alt2 || formatted.length > 1 ? formatted[1] : null
@@ -418,33 +435,36 @@ export default {
         }, response => {
           this.isFetching = false
         })
-    }, 500)
+    }, 500),
+    delayTouch ($v) {
+      $v.$reset()
+      if (touchMap.has($v)) {
+        clearTimeout(touchMap.get($v))
+      }
+      touchMap.set($v, setTimeout($v.$touch, 1000))
+    }
+  },
+  validations () {
+    return {
+      userCountry: {required},
+      A: {required: requiredIf((model) => this.countryFormat.require.toUpperCase().includes('A'))},
+      D: {required: requiredIf((model) => this.countryFormat.require.toUpperCase().includes('D'))},
+      C: {required: requiredIf((model) => this.countryFormat.require.toUpperCase().includes('C'))},
+      S: {required: requiredIf((model) => this.countryFormat.require.toUpperCase().includes('S'))},
+      X: {required: requiredIf((model) => this.countryFormat.require.toUpperCase().includes('X'))},
+      Z: {required: requiredIf((model) => this.countryFormat.require.toUpperCase().includes('Z'))},
+      alt1: {required: requiredIf((model) => this.usesAlternateFormat)},
+      alt2: {required: requiredIf((model) => this.usesAlternateFormat)},
+      alt3: {},
+      alt4: {},
+      alt5: {}
+    }
   },
   mounted () {
     this.formats = Object.assign({}, ZZ)
     this.getFormatAndCall()
     this.countrySearch = this.value && this.value.country ? this.value.country : this.getCountryName(this.userCountry)
     // this.update({country: this.countrySearch, countryiso: this.userCountry})
-  },
-  validations: {
-    value: {
-      postOfficeBox: {},
-      extendedAddress: {},
-      streetAddress: {},
-      locality: {},
-      region: {},
-      postalCode: {},
-      countryName: {},
-      countryiso: {
-        required
-      },
-      usesAlternateFormat: {},
-      alt1: {},
-      alt2: {},
-      alt3: {},
-      alt4: {},
-      alt5: {}
-    }
   }
 }
 </script>
