@@ -6,7 +6,7 @@
         :for="this.$vnode.key"
         <b-input placeholder="Country"></b-input>
       </b-field> -->
-      <b-field expanded placeholder="Country" :type="v.country.$error ? is-danger : ''" >
+      <b-field expanded placeholder="Country" :type="v.country.$error ? 'is-danger' : ''" >
         <a :class="['button', 'control', 'is-outlined', 'is-inverted', 'is-paddingless']"
           @click="$refs.country.focus()"
           style="padding-left:0px;">
@@ -277,6 +277,7 @@ export default {
       this.getFormatAndCall()
       if (this.countrySearch !== this.getCountryName(val)) {
         this.countrySearch = this.getCountryName(val)
+        this.update({country: this.countrySearch, countryiso: val})
       }
       if (!this.countrySearch || this.oldVal === 'us') {
         this.countrySearch = this.getCountryName(val)

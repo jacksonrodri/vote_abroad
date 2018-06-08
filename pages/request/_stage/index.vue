@@ -201,7 +201,7 @@
       key="fax"
       :label="$t('request.fax.label')"
       :type="($v.fax.$error ? 'is-danger': '')"
-      :message="$v.fax.$error ? Object.keys($v.fax.$params).map(x => x) : '' "
+      :message="$v.fax.$error ? Object.keys($v.fax.$params) : [''] "
       v-if="recBallot === 'fax'"
       @input="$v.fax.$touch()"
       v-model="fax">
@@ -830,6 +830,7 @@ export default {
         tooYoung () { return new Date(2000, 10, 8) > new Date(this.dob) }
       },
       fax: {
+        required: requiredIf((model) => this.recBallot === 'fax')
       },
       tel: {
         async validPhone () { return this.tel && this.tel.rawInput ? this.tel.isValidPhone : true }

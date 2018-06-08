@@ -550,11 +550,11 @@ export default {
       let electionArr = []
       this.stateElections.forEach(election => Object.entries(election.rules).forEach(([ruleKey, ruleValue]) => ruleValue.forEach(item => electionArr.push({
         electionType: election.electionType,
-        electionDate: election.date.substr(0, 4) === '2018' ? new Date(election.date) : null,
+        electionDate: election && election.date && election.date.substr(0, 4) === '2018' ? new Date(election.date) : null,
         requestType: ruleKey,
         ruleType: item.rule,
         voterType: typeof item.voterType === 'string' ? item.voterType : 'All',
-        ruleDate: item.date.substr(0, 4) === '2018' ? new Date(item.date) : null
+        ruleDate: item && item.date && item.date.substr(0, 4) === '2018' ? new Date(item.date) : null
       }))))
       console.log(electionArr)
       let importantE
