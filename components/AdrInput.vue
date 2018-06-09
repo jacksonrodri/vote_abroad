@@ -339,7 +339,7 @@ export default {
         newVal.alt3 = inputObj.alt3 || formatted.length > 2 ? formatted[2] : null
         newVal.alt4 = inputObj.alt4 || formatted.length > 3 ? formatted[3] : null
         newVal.alt5 = inputObj.alt5 || formatted.length > 4 ? formatted.slice(4 - formatted.length).join(' ') : null
-        newVal.usesAlternateFormat = inputObj.usesAlternateFormat || false
+        newVal.usesAlternateFormat = inputObj.usesAlternateFormat || this.value.usesAlternateFormat || false
         if (newVal.D && newVal.B && newVal.D.toLowerCase() === newVal.B.toLowerCase()) {
           newVal.B = null
         }
