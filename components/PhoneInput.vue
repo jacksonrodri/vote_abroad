@@ -55,6 +55,7 @@
           ref="input"
           :maxlength="mustBeEmail && label && !(($v.$dirty && !$v.value.validEmailorPhone) || (mailCheckedEmail && mailCheckedEmail !== val.toLowerCase()))? 55 : ''"
           :autocomplete="autocomplete"
+          @blur="standardizePhone"
           @focus="setPlaceholder"
           @input.native="formatInput($event.target.value)"
           @keyup.native.enter="$emit('pressEnter')"
@@ -167,6 +168,11 @@ export default {
     }
   },
   methods: {
+    standardizePhone () {
+      if (this.value && this.value.isValidPhone) {
+        this.$emit('input', Object.assign({}, this.value, {rawInput: this.value.intNumber}))
+      }
+    },
     focusCountry () {
       // if (this.metadataLoaded) {
       this.setPlaceholder()

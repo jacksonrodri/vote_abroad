@@ -17,6 +17,7 @@
       icon="calendar"
       icon-pack="fas"
       :placeholder="$t('request.dob.placeholder')">
+      <span class="help is-primary">Select your birth year first, then selelect your birthdate.</span>
     </b-datepicker>
   </b-field>
   <b-message :title="tooltipTitle" type="is-info" has-icon :active.sync="toolTipOpen">
