@@ -54,13 +54,22 @@
       </p>
     </b-field>
     <transition name="fade">
-      <b-field v-if="isExistingDaMember" :label="$t('request.joinDa.accountEmail')">
+      <phone-input key="daEmail"
+        v-if="isExistingDaMember"
+        ref="daEmail"
+        :label="$t('request.joinDa.accountEmail')"
+        :required="false"
+        @input="(val) => joinValue = val"
+        :accepts="['email']"
+        v-model="daEmail">
+      </phone-input>
+      <!-- <b-field v-if="isExistingDaMember" :label="$t('request.joinDa.accountEmail')">
         <b-input
           placeholder="e.g. user@email.com"
           type="text"
           @input="(val) => joinValue = val"
           v-model="daEmail"></b-input>
-      </b-field>
+      </b-field> -->
       <!-- Please enter your account email address if you remember it so we can update your record -->
     </transition>
     <!-- <div class="field">
@@ -76,6 +85,8 @@
 </template>
 
 <script>
+import PhoneInput from '~/components/PhoneInput'
+
 export default {
   props: [
     'value',
@@ -87,6 +98,9 @@ export default {
     'joinTooltipTitle',
     'state'
   ],
+  components: {
+    PhoneInput
+  },
   data () {
     return {
       baseClass: {

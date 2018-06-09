@@ -767,27 +767,27 @@ export default {
           this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.country'}})
           this.$refs.abrAdr.$refs.country.focus()
           break
-        case this.stage.slug === 'your-information' && this.$v.abrAdr.A.$error:
+        case this.stage.slug === 'your-information' && this.$v.abrAdr.A.$error && !this.abrAdr.usesAlternateFormat:
           this.$refs.abrAdr.$refs.A[0].focus()
           this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.A'}})
           break
-        case this.stage.slug === 'your-information' && this.$v.abrAdr.D.$error:
+        case this.stage.slug === 'your-information' && this.$v.abrAdr.D.$error && !this.abrAdr.usesAlternateFormat:
           this.$refs.abrAdr.$refs.D[0].focus()
           this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.D'}})
           break
-        case this.stage.slug === 'your-information' && this.$v.abrAdr.C.$error:
+        case this.stage.slug === 'your-information' && this.$v.abrAdr.C.$error && !this.abrAdr.usesAlternateFormat:
           this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.C'}})
           this.$refs.abrAdr.$refs.C[0].focus()
           break
-        case this.stage.slug === 'your-information' && this.$v.abrAdr.S.$error:
+        case this.stage.slug === 'your-information' && this.$v.abrAdr.S.$error && !this.abrAdr.usesAlternateFormat:
           this.$refs.abrAdr.$refs.S[0].focus()
           this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.S'}})
           break
-        case this.stage.slug === 'your-information' && this.$v.abrAdr.X.$error:
+        case this.stage.slug === 'your-information' && this.$v.abrAdr.X.$error && !this.abrAdr.usesAlternateFormat:
           this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.X'}})
           this.$refs.abrAdr.$refs.X[0].focus()
           break
-        case this.stage.slug === 'your-information' && this.$v.abrAdr.Z.$error:
+        case this.stage.slug === 'your-information' && this.$v.abrAdr.Z.$error && !this.abrAdr.usesAlternateFormat:
           this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.Z'}})
           this.$refs.abrAdr.$refs.Z[0].focus()
           break

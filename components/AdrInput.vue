@@ -220,7 +220,7 @@ export default {
     alt5 () { return this.value && this.value.alt5 ? this.value.alt5 : null },
     usesAlternateFormat: {
       get () { return this.value && this.value.usesAlternateFormat ? this.value.usesAlternateFormat : false },
-      set (val) { this.update({usesAlternateFormat: val}) }
+      set (val) { this.update(Object.assign({}, this.value, {usesAlternateFormat: val})) }
     },
     defaultFormat () { return ZZ.ZZ },
     countryFormat () { return Object.assign({}, this.defaultFormat, this.formats[this.userCountry.toUpperCase() + '--en'] || this.formats[this.userCountry.toUpperCase()] || {}) },
@@ -308,7 +308,9 @@ export default {
     update: async function (inputObj) {
       console.log(inputObj, this.value)
       // Object.keys(inputObj).forEach(item => this.delayTouch(this.$v[item]))
-      if (inputObj.countryiso && this.value && inputObj.countryiso !== this.value.countryiso) {
+      if (Object.keys.length === 1 && (Object.keys(inputObj).includes('alt1') || Object.keys(inputObj).includes('alt2') || Object.keys(inputObj).includes('alt3') || Object.keys(inputObj).includes('alt4') || Object.keys(inputObj).includes('alt5'))) {
+        this.$emit('input', Object.assign({}, {alt1: this.value.alt1, alt2: this.value.alt2, alt3: this.value.alt3, alt4: this.value.alt4, alt5: this.value.alt5, usesAlternateFormat: true, country: this.value.country, countryiso: this.value.countryiso}, inputObj))
+      } else if (inputObj.countryiso && this.value && inputObj.countryiso !== this.value.countryiso) {
         this.countrySearch = this.getCountryName(inputObj.countryiso)
         this.$emit('input', {countryiso: inputObj.countryiso, country: this.getCountryName(inputObj.countryiso)})
         let countryiso = inputObj.countryiso
