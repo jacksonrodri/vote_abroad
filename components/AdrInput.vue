@@ -12,7 +12,7 @@
           @click="$refs.country.focus()"
           style="padding-left:0px;">
           <span class="flag-container fa-stack">
-            <i :class="`fa-stack-2x flag-icon flag-icon-${userCountry || 'un'}`"></i>
+            <i :class="`fa-stack-2x flag-icon flag-icon-${value && value.countryiso ? value.countryiso.toLowerCase() : userCountry || 'un'}`"></i>
             <i class="fas fa-sort-down fa-stack-1x has-text-grey breathe" style="transform:translateY(0.7rem)"></i>
           </span>
         </a>
@@ -25,7 +25,6 @@
           :data="filteredCountries"
           @focus="$event.target.select()"
           ref="country"
-          autocomplete="off"
           :id="country"
           @select="option => selectCountry(option)"
           expanded>
@@ -33,6 +32,7 @@
             <span :class="`flag-icon flag-icon-${props.option.code.toLowerCase()}`"></span>{{ props.option.name }}
           </template>
         </b-autocomplete>
+          <!-- autocomplete="off" -->
         <p class="control">
           <a class="button is-outlined is-borderless" @click="$refs.country.focus()">
             <span class="icon is-small">
@@ -60,15 +60,14 @@
                 :placeholder="getPlaceholder(item)"
                 field="structured_formatting.main_text"
                 :loading="isFetching"
-                autocomplete="address-line1"
                 @input="val => { update({A: val}); getAsyncData() }"
                 @select="option => fillData(option)">
                 <template slot-scope="props">{{ props.option.description }}</template>
                 <template slot="empty">No results found</template>
               </b-autocomplete>
+                <!-- autocomplete="address-line1" -->
               <b-autocomplete v-else-if="item === 'S' && sOptions"
                 :key="item"
-                :autocomplete="getAutocomplete(item)"
                 :value="S"
                 ref="S"
                 @input="val => update({S: val})"
@@ -78,13 +77,14 @@
                 keep-first
                 :placeholder="getPlaceholder(item)"
                 :open-on-focus=true></b-autocomplete>
+                <!-- :autocomplete="getAutocomplete(item)" -->
             <b-input :placeholder="getPlaceholder(item)"
               v-else
               :value="getValue(item)"
               :ref="item"
-              @input="val => update({[item]: val})"
-              :autocomplete="getAutocomplete(item)">
+              @input="val => update({[item]: val})">
             </b-input>
+              <!-- :autocomplete="getAutocomplete(item)" -->
           </b-field>
           <b-field v-else :key="item.join('-')"
             :type="item.filter(x => v[x].$error).length > 0 ? 'is-danger' : ''"
@@ -93,7 +93,6 @@
               <b-field v-for="subItem in item" :expanded="subItem !== 'X' || subItem !== 'Z'" :key="subItem"
                 :type="v[subItem] && v[subItem]['$error'] ? 'is-danger' : ''">
                 <b-autocomplete v-if="subItem === 'S'"
-                  :autocomplete="getAutocomplete(item)"
                   :value="S"
                   :ref="S"
                   @input="val => update({S: val})"
@@ -103,12 +102,13 @@
                   keep-first
                   :placeholder="getPlaceholder(subItem)"
                   :open-on-focus=true></b-autocomplete>
+                  <!-- :autocomplete="getAutocomplete(item)" -->
                 <b-input v-else :value="getValue(subItem)"
                   @input="val => update({[subItem]: val})"
                   :ref="subItem"
-                  :placeholder="getPlaceholder(subItem)"
-                  :autocomplete="getAutocomplete(subItem)">
+                  :placeholder="getPlaceholder(subItem)">
                 </b-input>
+                  <!-- :autocomplete="getAutocomplete(subItem)" -->
               </b-field>
             </b-field>
           </b-field>
@@ -212,7 +212,7 @@ export default {
     S () { return this.value && this.value.S ? this.value.S : null },
     Z () { return this.value && this.value.Z ? this.value.Z : null },
     X () { return this.value && this.value.X ? this.value.X : null },
-    countryiso () { return this.value === null ? this.userCountry : this.value.countryiso || null },
+    countryiso () { return this.value && this.value.countryiso ? this.value.countryiso : this.userCountry || null },
     alt1 () { return this.value && this.value.alt1 ? this.value.alt1 : null },
     alt2 () { return this.value && this.value.alt2 ? this.value.alt2 : null },
     alt3 () { return this.value && this.value.alt3 ? this.value.alt3 : null },
@@ -271,19 +271,19 @@ export default {
   watch: {
     value (val) {
       if (val && val.countryiso && !val.country) {
-        this.update({country: this.getCountryName(val.countryiso)})
+        // this.update(Object.assign({}, this.val, {country: this.getCountryName(val.countryiso)}))
+        console.log('needs country name')
       }
     },
     userCountry (val, oldVal) {
-      this.getFormatAndCall()
       if (this.countrySearch !== this.getCountryName(val)) {
         this.countrySearch = this.getCountryName(val)
         this.update({country: this.countrySearch, countryiso: val})
       }
-      if (!this.countrySearch || this.oldVal === 'us') {
-        this.countrySearch = this.getCountryName(val)
-        this.update({country: this.countrySearch, countryiso: val})
-      }
+      // if (!this.countrySearch) {
+      //   this.countrySearch = this.getCountryName(val)
+      //   this.update({country: this.countrySearch, countryiso: val})
+      // }
     }
   },
   methods: {
@@ -298,24 +298,27 @@ export default {
       let ctry = this.countries.find((country) => country.code.toLowerCase() === option.toLowerCase())
       return ctry ? ctry.name : option
     },
-    selectCountry: async function (option) {
+    selectCountry (option) {
       // this.countrySearch = option.name
-      console.log(option)
-      this.getFormatAndCall(() => { this.countrySearch = option.name; console.log(this.countrySearch) })
-      this.update({country: option.name, countryiso: option.code})
-      this.countrySearch = option.name
+      console.log('option', option)
+      if (option) {
+        this.update({country: option.name, countryiso: option.code})
+        this.getFormatAndCall(null, option.code || null)
+      }
+      // this.update({country: option.name, countryiso: option.code})
+      // this.countrySearch = option.name
     },
     update: async function (inputObj) {
-      console.log(inputObj, this.value)
+      // console.log(inputObj, this.value)
       // Object.keys(inputObj).forEach(item => this.delayTouch(this.$v[item]))
       if (Object.keys.length === 1 && (Object.keys(inputObj).includes('alt1') || Object.keys(inputObj).includes('alt2') || Object.keys(inputObj).includes('alt3') || Object.keys(inputObj).includes('alt4') || Object.keys(inputObj).includes('alt5'))) {
         this.$emit('input', Object.assign({}, {alt1: this.value.alt1, alt2: this.value.alt2, alt3: this.value.alt3, alt4: this.value.alt4, alt5: this.value.alt5, usesAlternateFormat: true, country: this.value.country, countryiso: this.value.countryiso}, inputObj))
       } else if (inputObj.countryiso && this.value && inputObj.countryiso !== this.value.countryiso) {
         this.countrySearch = this.getCountryName(inputObj.countryiso)
-        this.$emit('input', {countryiso: inputObj.countryiso, country: this.getCountryName(inputObj.countryiso)})
+        this.$emit('input', Object.assign({}, this.value, {countryiso: inputObj.countryiso, country: this.getCountryName(inputObj.countryiso)}))
         let countryiso = inputObj.countryiso
-        delete inputObj.countryiso
-        this.getFormatAndCall(() => this.update(inputObj), countryiso)
+        // delete inputObj.countryiso
+        this.getFormatAndCall(null, countryiso)
       } else {
         let ft = this.countryFormat.lfmt || this.countryFormat.fmt || '%A%n%B%n%C%n%S'
         // let fullFt = ft + '%country%countryiso%B'
@@ -341,7 +344,7 @@ export default {
         newVal.alt3 = inputObj.alt3 || formatted.length > 2 ? formatted[2] : null
         newVal.alt4 = inputObj.alt4 || formatted.length > 3 ? formatted[3] : null
         newVal.alt5 = inputObj.alt5 || formatted.length > 4 ? formatted.slice(4 - formatted.length).join(' ') : null
-        newVal.usesAlternateFormat = inputObj.usesAlternateFormat || this.value.usesAlternateFormat || false
+        newVal.usesAlternateFormat = inputObj.usesAlternateFormat || this.value ? this.value.usesAlternateFormat : false
         if (newVal.D && newVal.B && newVal.D.toLowerCase() === newVal.B.toLowerCase()) {
           newVal.B = null
         }
@@ -351,7 +354,9 @@ export default {
     },
     async getFormatAndCall (passedFunction, countryiso) {
       // if (countryiso) console.log(`has country format countryiso: ${countryiso}, userCountry: ${this.userCountry}`, !this.formats[countryiso.toUpperCase()])
-      if ((countryiso && !this.formats[countryiso.toUpperCase()]) || (!countryiso && this.userCountry && !this.formats[this.userCountry.toUpperCase()])) {
+      if ((countryiso && !this.formats[countryiso.toUpperCase()]) || (this.value && this.value.countryiso && !this.formats[this.value.countryiso.toUpperCase()]) || (this.userCountry && !this.formats[this.userCountry.toUpperCase()])) {
+        console.log('requesting country format: ', countryiso || this.value || this.userCountry)
+        // || (!countryiso && this.userCountry && !this.formats[this.userCountry.toUpperCase()]))
         let requestedFormat = await import(`~/data/postal/${countryiso ? countryiso.toLowerCase() : this.userCountry.toLowerCase()}.json`)
         this.formats = Object.assign({}, this.formats, await requestedFormat)
         if (passedFunction) { passedFunction() }

@@ -11,7 +11,6 @@
       :mobile-native="allowNative"
       :min-date="minDate"
       :max-date="maxDate"
-      autocomplete="bday"
       ref="dob"
       :focused-date="dob || new Date(new Date().getFullYear() - 18, 0, 1)"
       icon="calendar"
@@ -19,6 +18,7 @@
       :placeholder="$t('request.dob.placeholder')">
       <span class="help is-primary">Select your birth year first, then selelect your birthdate.</span>
     </b-datepicker>
+      <!-- autocomplete="bday" -->
   </b-field>
   <b-message :title="tooltipTitle" type="is-info" has-icon :active.sync="toolTipOpen">
     <slot name="tooltip"></slot>

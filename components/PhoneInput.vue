@@ -27,17 +27,17 @@
       v-model="countrySearch"
       ref="country"
       :disabled="mustBeEmail"
-      autocomplete="country-name"
       :icon="` flag-icon flag-icon-${userCountry ? userCountry.toLowerCase() : 'un'}`"
-      @focus="countryFocused = true"
+      @focus="$event.target.select(); countryFocused = true"
       @blur="countryFocused = false"
-      @select="option => { country = option.code; focusInput() }"
+      @select="option => selectCountry(option)"
       :expanded="countryFocused"
       :class="['control', {'shrink': !countryFocused}]">
       <template slot-scope="props">
         <span :class="`flag-icon flag-icon-${props.option.code.toLowerCase()}`"></span>{{ props.option.name + getPhoneCode(props.option.code) }}
       </template>
     </b-autocomplete>
+      <!-- autocomplete="country-name" -->
     <!-- <b-input
       :value="value.rawInput || null"
       :class="['control', {'is-expanded': !countryFocused}]"
@@ -54,13 +54,13 @@
           :id="this.$vnode.key"
           ref="input"
           :maxlength="mustBeEmail && label && !(($v.$dirty && !$v.value.validEmailorPhone) || (mailCheckedEmail && mailCheckedEmail !== val.toLowerCase()))? 55 : ''"
-          :autocomplete="autocomplete"
           @blur="standardizePhone"
           @focus="setPlaceholder"
           @input.native="formatInput($event.target.value)"
           @keyup.native.enter="$emit('pressEnter')"
           :placeholder="placeholder"></b-input>
       </b-field>
+          <!-- :autocomplete="autocomplete" -->
   </div>
   <p v-if="$v.$dirty && !$v.value.validEmailorPhone" class="help is-danger">Please enter a valid <span v-if="this.accepts.includes('phone')">phone number</span><span v-if="this.accepts.includes('phone') && this.accepts.includes('email')"> or </span><span v-if="this.accepts.includes('email')">email address</span>. <span v-if="mailCheckedEmail && mailCheckedEmail !== val.toLowerCase()">Did you mean <a @click="setEmail"><span class="has-text-primary">{{ mailCheckedEmail }}</span></a>?</span></p>
   <p v-else-if="mailCheckedEmail && mailCheckedEmail !== val.toLowerCase()" class="help is-vfa">Did you mean <a @click="setEmail"><span class="has-text-primary">{{ mailCheckedEmail }}</span></a>?</p>
@@ -124,7 +124,7 @@ export default {
             .indexOf(this.countrySearch.toLowerCase()) >= 0 || this.getPhoneCode(option.code).indexOf(this.countrySearch) > -1
         })
       } else if (this.userCountry) {
-        return this.countries.filter(country => country.code === this.userCountry).concat(this.countries)
+        return this.countries.filter(country => country.code === this.userCountry).concat(this.countries.filter(country => country.code !== this.userCountry))
       } else {
         return this.countries
       }
@@ -168,6 +168,12 @@ export default {
     }
   },
   methods: {
+    selectCountry (option) {
+      console.log(option)
+      this.countrySearch = option.name
+      this.country = option.code
+      this.focusInput()
+    },
     standardizePhone () {
       if (this.value && this.value.isValidPhone) {
         this.$emit('input', Object.assign({}, this.value, {rawInput: this.value.intNumber}))
@@ -319,11 +325,17 @@ export default {
         }
       }
     }
+  },
+  mounted () {
+    // console.log(process)
+    if (process.browser) {
+      // console.log(window)
+      window.onload = this.setPlaceholder()
+    }
+    if (!this.countrySearch) {
+      this.countrySearch = this.userCountry
+    }
   }
-  // ,
-  // mounted () {
-  //   this.setPlaceholder()
-  // }
 }
 </script>
 

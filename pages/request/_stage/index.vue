@@ -5,7 +5,7 @@
     <h3 class="has-text-centered subtitle is-4">{{ $t(`request.stages.stage${stage.order}`)}}</h3>
 <!-- your information -->
   <section v-if="stage.slug === 'your-information'">
-    <form id="your-information" key="your-information">
+    <form id="your-information" key="your-information" autocomplete="off">
       <!-- firstName -->
       <div class="field">
         <label class="label" for="firstName">{{ $t('request.firstName.label') }}<transition name="fade"><span v-if="!firstName && !$v.firstName.$error" class="required"> Required</span></transition></label>
@@ -13,9 +13,9 @@
           <b-input v-model="firstName"
             id="firstName"
             @input="delayTouch($v.firstName)"
-            autocomplete="given-name"
             ref="firstName"></b-input>
         </b-field>
+            <!-- autocomplete="given-name" -->
       </div>
 
       <!-- middleName -->
@@ -33,9 +33,9 @@
           <b-input v-model="lastName"
             id="lastName"
             @input="delayTouch($v.lastName)"
-            autocomplete="family-name"
             ref="lastName"></b-input>
         </b-field>
+            <!-- autocomplete="family-name" -->
       </div>
 
       <!-- suffix -->
@@ -130,7 +130,7 @@
 
 <!-- voting information -->
   <section v-if="stage.slug === 'voting-information'">
-    <form id="voting-information" key="voting-information">
+    <form id="voting-information" key="voting-information" autocomplete="off">
 
       <voting-address
         :label="$t('request.votAdr.label')"
@@ -281,7 +281,7 @@
   </section>
 
   <section v-if="stage.slug === 'id-and-contact-information'">
-    <form id="id-and-contact-information" key="id-and-contact-information">
+    <form id="id-and-contact-information" key="id-and-contact-information" autocomplete="off">
 <!-- identity and Contact information -->
       <!-- dob -->
       <!-- <birth-date
@@ -714,7 +714,7 @@ export default {
   methods: {
     touch (val) {
       // console.log(val)
-      Object.keys(val).forEach(item => console.log(item))
+      // Object.keys(val).forEach(item => console.log(item))
       this.delayTouch(this.$v.abrAdr)
       // if (val) {
       //   Object.keys(val).forEach(item => this.delayTouch(this.$v.abrAdr[item]))

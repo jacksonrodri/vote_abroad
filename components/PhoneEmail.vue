@@ -23,7 +23,6 @@
             :icon="' ' + 'flag-icon-' + countryCode.toLowerCase()"
             icon-pack="flag-icon"
             expanded
-            autocomplete="country-name"
             keep-first
             :size="size"
             :data="filteredCountries"
@@ -33,6 +32,7 @@
           <template slot-scope="props">
             <span :class="`flag-icon flag-icon-${props.option.code.toLowerCase()}`"></span>{{ props.option.name }} (+{{getPhoneCode(props.option.code)}})
           </template>
+            <!-- autocomplete="country-name" -->
         </b-autocomplete>
         <b-input
           id="emailOrPhone"
