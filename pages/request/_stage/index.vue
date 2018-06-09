@@ -326,27 +326,37 @@
       <party
         :label="$t('request.party.label')"
         v-model="party"
+        :join="joinDa"
+        :state="votAdr.stateISO"
+        @joinDA="val => joinDA = val"
         :tooltipTitle="$t('request.party.tooltipTitle')"
+        :joinTooltipTitle="$t('request.joinDa.tooltipTitle')"
+        :joinLabel="$t('request.joinDa.label')"
         :message="$v.party.$error ? Object.keys($v.party.$params).map(x => x) : '' "
         :type="($v.party.$error ? 'is-danger': '')">
         <div slot="tooltip">
           <p v-html="$options.filters.markdown($t('request.party.tooltip'))"></p>
           <!-- <vue-markdown>{{$t('request.party.tooltip')}}</vue-markdown> -->
         </div>
-      </party>
-
-      <transition name="fade">
-      <join-democratsabroad
-        v-model="joinDa"
-        v-if="party!=='Republican' && party && !$store.state.userauth.user.isDA"
-        :tooltipTitle="$t('request.joinDa.tooltipTitle')"
-        :label="$t('request.joinDa.label')">
-        <div slot="tooltip">
+        <div slot="joinTooltip">
           <p v-html="$options.filters.markdown($t('request.joinDa.tooltip'))"></p>
           <!-- <vue-markdown>{{$t('request.joinDa.tooltip')}}</vue-markdown> -->
         </div>
+      </party>
+
+      <!-- <transition name="fade">
+      <join-democratsabroad
+        v-model="joinDa"
+        :party="party"
+        :tooltipTitle="$t('request.joinDa.tooltipTitle')"
+        :label="$t('request.joinDa.label')">
+        <div slot="tooltip">
+          <p v-html="$options.filters.markdown($t('request.joinDa.tooltip'))"></p> -->
+          <!-- <vue-markdown>{{$t('request.joinDa.tooltip')}}</vue-markdown> -->
+        <!-- </div>
       </join-democratsabroad>
-      </transition>
+      </transition> -->
+        <!-- v-if="party!=='Republican' && party && !$store.state.userauth.user.isDA" -->
 
       <state-special
         :label="$t('request.stateSpecial.label', {state: stateRules && stateRules.state ? stateRules.state: 'State'})"

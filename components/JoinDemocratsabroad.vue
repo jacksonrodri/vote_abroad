@@ -1,5 +1,5 @@
 <template>
-<div class="field">
+<div v-if="showJoin || (party !== 'Republican' && party && !$store.state.userauth.user.isDA)" class="field">
   <span class="is-flex"><label class="label">{{ label }}</label><span @click.prevent="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
   <b-field grouped group-multiline :type="type">
     <p class="control">
@@ -47,6 +47,7 @@ export default {
     'value',
     'label',
     'type',
+    'party',
     'tooltipTitle'
   ],
   data () {
