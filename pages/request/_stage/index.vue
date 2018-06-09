@@ -143,7 +143,8 @@
           <p>{{ $t('request.votAdr.instructions') }}</p>
         </div>
         <div slot="tooltip">
-          <vue-markdown>{{$t('request.votAdr.tooltip')}}</vue-markdown>
+          <p v-html="$options.filters.markdown($t('request.votAdr.tooltip'))"></p>
+          <!-- <vue-markdown>{{$t('request.votAdr.tooltip')}}</vue-markdown> -->
         </div>
       </voting-address>
 
@@ -161,7 +162,8 @@
           <p>{{$t('request.jurisdiction.instructions')}}</p>
         </div>
         <div slot="tooltip">
-          <vue-markdown>{{$t('request.jurisdiction.tooltip')}}</vue-markdown>
+          <p v-html="$options.filters.markdown($t('request.jurisdiction.tooltip'))"></p>
+          <!-- <vue-markdown>{{$t('request.jurisdiction.tooltip')}}</vue-markdown> -->
         </div>
       </jurisdiction>
 
@@ -171,7 +173,8 @@
       @input="delayTouch($v.voterClass)"
       :toolTipTitle="$t('request.voterClass.tooltipTitle')">
       <div slot="tooltip">
-        <vue-markdown>{{$t('request.voterClass.tooltip')}}</vue-markdown>
+        <p v-html="$options.filters.markdown($t('request.voterClass.tooltip'))"></p>
+        <!-- <vue-markdown>{{$t('request.voterClass.tooltip')}}</vue-markdown> -->
       </div>
     </voter-class>
 
@@ -193,7 +196,8 @@
       :ballotReceiptOptions="stateRules ? stateRules.ballotReceiptOptions : ['Mail']"
       :toolTipTitle="$t('request.receiveBallot.tooltipTitle')">
       <div slot="tooltip">
-        <vue-markdown>{{$t('request.receiveBallot.tooltip')}}</vue-markdown>
+        <p v-html="$options.filters.markdown($t('request.receiveBallot.tooltip'))"></p>
+        <!-- <vue-markdown>{{$t('request.receiveBallot.tooltip')}}</vue-markdown> -->
       </div>
     </receive-ballot>
 
@@ -261,7 +265,8 @@
           <p>{{$t('request.fwdAdr.instructions')}}</p>
         </div>
         <div slot="tooltip">
-          <vue-markdown>{{$t('request.fwdAdr.tooltip')}}</vue-markdown>
+          <p v-html="$options.filters.markdown($t('request.fwdAdr.tooltip'))"></p>
+          <!-- <vue-markdown>{{$t('request.fwdAdr.tooltip')}}</vue-markdown> -->
         </div>
       </address-input>
 
@@ -295,7 +300,8 @@
         ref="dob"
         :validations="$v.dob">
         <div slot="tooltip">
-          <vue-markdown>{{$t('request.dob.tooltip')}}</vue-markdown>
+          <p v-html="$options.filters.markdown($t('request.dob.tooltip'))"></p>
+          <!-- <vue-markdown>{{$t('request.dob.tooltip')}}</vue-markdown> -->
         </div>
       </date-of-birth>
       <!-- <b-field label="Select a date">
@@ -311,7 +317,8 @@
         :tooltipTitle="$t('request.sex.tooltipTitle')"
         v-model="sex">
         <div slot="tooltip">
-          <vue-markdown>{{$t('request.sex.tooltip')}}</vue-markdown>
+          <p v-html="$options.filters.markdown($t('request.sex.tooltip'))"></p>
+          <!-- <vue-markdown>{{$t('request.sex.tooltip')}}</vue-markdown> -->
         </div>
       </gender>
 
@@ -323,7 +330,8 @@
         :message="$v.party.$error ? Object.keys($v.party.$params).map(x => x) : '' "
         :type="($v.party.$error ? 'is-danger': '')">
         <div slot="tooltip">
-          <vue-markdown>{{$t('request.party.tooltip')}}</vue-markdown>
+          <p v-html="$options.filters.markdown($t('request.party.tooltip'))"></p>
+          <!-- <vue-markdown>{{$t('request.party.tooltip')}}</vue-markdown> -->
         </div>
       </party>
 
@@ -334,7 +342,8 @@
         :tooltipTitle="$t('request.joinDa.tooltipTitle')"
         :label="$t('request.joinDa.label')">
         <div slot="tooltip">
-          <vue-markdown>{{$t('request.joinDa.tooltip')}}</vue-markdown>
+          <p v-html="$options.filters.markdown($t('request.joinDa.tooltip'))"></p>
+          <!-- <vue-markdown>{{$t('request.joinDa.tooltip')}}</vue-markdown> -->
         </div>
       </join-democratsabroad>
       </transition>
@@ -360,22 +369,38 @@
         :tooltipTitle="$t('request.id.tooltipTitle')"
         v-model="identification">
         <div slot="instructions">
-          <i18n v-if="stateRules && stateRules.id && stateRules.id.length === 0"
+          <p v-if="stateRules && stateRules.id && stateRules.id.length === 0"
+            v-html="$options.filters.markdown($t('request.id.instructionsOptional', { state: stateRules.state}))">
+          </p>
+          <p v-else-if="stateRules && stateRules.id && stateRules.id.length === 1"
+            v-html="$options.filters.markdown($t('request.id.instructionsReq1', { state: stateRules.state, id: $t(`request.id.${stateRules.id[0]}`), idType: $t(`request.id.${stateRules.id[0].indexOf('SSN') > -1 ? 'SSN' : stateRules.id[0]}`)}))">
+          </p>
+          <p v-else v-html="$options.filters.markdown($t('request.id.instructionsReq2', { state: stateRules.state, allButLastTypes: allButLastIdType, lastType: lastIdType }))">
+          </p>
+          <!-- <i18n v-if="stateRules && stateRules.id && stateRules.id.length === 0"
             path=request.id.instructionsOptional tag="vue-markdown" :places="{ state: stateRules.state}">
           </i18n>
           <i18n v-else-if="stateRules && stateRules.id && stateRules.id.length === 1" path=request.id.instructionsReq1 tag="vue-markdown" :places="{ state: stateRules.state, id: $t(`request.id.${stateRules.id[0]}`), idType: $t(`request.id.${stateRules.id[0].indexOf('SSN') > -1 ? 'SSN' : stateRules.id[0]}`)}">
-          </i18n>
-          <i18n v-else path=request.id.instructionsReq2 tag="vue-markdown" :places="{ state: stateRules.state, allButLastTypes: allButLastIdType, lastType: lastIdType }">
-          </i18n>
+          </i18n> -->
+          <!-- <i18n v-else path=request.id.instructionsReq2 tag="vue-markdown" :places="{ state: stateRules.state, allButLastTypes: allButLastIdType, lastType: lastIdType }">
+          </i18n> -->
         </div>
         <div slot="tooltip">
-          <i18n v-if="stateRules && stateRules.id && stateRules.id.length === 0"
+          <p v-if="stateRules && stateRules.id && stateRules.id.length === 0"
+            v-html="$options.filters.markdown($t('request.id.tooltipOptional', { state: stateRules.state}))">
+          </p>
+          <p v-else-if="stateRules && stateRules.id && stateRules.id.length === 1"
+            v-html="$options.filters.markdown($t('request.id.tooltipReq1', { state: stateRules.state, id: $t(`request.id.${stateRules.id[0]}`)}))">
+          </p>
+          <p v-else v-html="$options.filters.markdown($t('request.id.tooltipReq2', { state: stateRules.state, allButLastTypes: allButLastIdType, lastType: lastIdType }))">
+          </p>
+          <!-- <i18n v-if="stateRules && stateRules.id && stateRules.id.length === 0"
             path=request.id.tooltipOptional tag="vue-markdown" :places="{ state: stateRules.state}">
           </i18n>
           <i18n v-else-if="stateRules && stateRules.id && stateRules.id.length === 1" path=request.id.tooltipReq1 tag="vue-markdown" :places="{ state: stateRules.state, id: $t(`request.id.${stateRules.id[0]}`)}">
           </i18n>
           <i18n v-else path=request.id.tooltipReq2 tag="vue-markdown" :places="{ state: stateRules.state, allButLastTypes: allButLastIdType, lastType: lastIdType }">
-          </i18n>
+          </i18n> -->
         </div>
       </identification>
 
@@ -418,7 +443,8 @@ import ScrollUp from '~/components/ScrollUp'
 import Identification from '~/components/Identification'
 import PhoneInput from '~/components/PhoneInput'
 import AdrInput from '~/components/AdrInput'
-import VueMarkdown from 'vue-markdown'
+// import VueMarkdown from 'vue-markdown'
+import snarkdown from 'snarkdown'
 
 const optionalEmail = (value) => !helpers.req(value) || email(value)
 const touchMap = new WeakMap()
@@ -473,7 +499,7 @@ export default {
     StateSpecial,
     ScrollUp,
     Identification,
-    VueMarkdown,
+    // VueMarkdown,
     PhoneInput,
     AdrInput
   },
@@ -668,6 +694,11 @@ export default {
           message: 'you must add a country'
         }
       ]
+    }
+  },
+  filters: {
+    markdown: function (md) {
+      return snarkdown(md)
     }
   },
   methods: {

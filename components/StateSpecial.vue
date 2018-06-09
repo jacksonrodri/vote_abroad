@@ -4,7 +4,8 @@
     <div v-if="state === 'AK'">
       <span class="is-flex"><label class="label">{{ label }}</label><span @click.prevent="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
       <b-message title="Why am I being asked this?" type="is-info" has-icon :active.sync="isOpen">
-        <vue-markdown>{{$t('request.akRules.tooltip')}}</vue-markdown>
+        <p v-html="$options.filters.markdown($t('request.akRules.tooltip'))"></p>
+        <!-- <vue-markdown>{{$t('request.akRules.tooltip')}}</vue-markdown> -->
       </b-message>
       {{$t('request.akRules.resInstructions')}}
       <b-field :label="$t('request.akRules.label')">
@@ -18,7 +19,8 @@
     <div v-if="state === 'AZ' && isRegistering">
       <span class="is-flex"><label class="label">{{ label }}</label><span @click.prevent="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
       <b-message title="Why am I being asked this?" type="is-info" has-icon :active.sync="isOpen">
-        <vue-markdown>{{$t('request.azRules.tooltip')}}</vue-markdown>
+        <p v-html="$options.filters.markdown($t('request.azRules.tooltip'))"></p>
+        <!-- <vue-markdown>{{$t('request.azRules.tooltip')}}</vue-markdown> -->
       </b-message>
       {{$t('request.azRules.citInstructions')}}
       <b-field :label="$t('request.azRules.label')">
@@ -29,7 +31,8 @@
     <div v-if="state === 'OK' && isIndNoParty">
       <span class="is-flex"><label class="label">{{ label }}</label><span @click.prevent="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
       <b-message title="Why am I being asked this?" type="is-info" has-icon :active.sync="isOpen">
-        <vue-markdown>{{$t('request.okRules.tooltip')}}</vue-markdown>
+        <p v-html="$options.filters.markdown($t('request.okRules.tooltip'))"></p>
+        <!-- <vue-markdown>{{$t('request.okRules.tooltip')}}</vue-markdown> -->
       </b-message>
       {{$t('request.okRules.primaryInstructions')}}
       <b-field :label="$t('request.okRules.label')">
@@ -40,7 +43,8 @@
     <div v-if="state === 'PR'">
       <span class="is-flex"><label class="label">{{ label }}</label><span @click.prevent="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
       <b-message title="Why am I being asked this?" type="is-info" has-icon :active.sync="isOpen">
-        <vue-markdown>{{$t('request.prRules.tooltip')}}</vue-markdown>
+        <p v-html="$options.filters.markdown($t('request.prRules.tooltip'))"></p>
+        <!-- <vue-markdown>{{$t('request.prRules.tooltip')}}</vue-markdown> -->
       </b-message>
       {{ $t('request.prRules.parentsInstructions')}}
       <b-field>
@@ -51,7 +55,8 @@
     <div v-if="state === 'SC'">
       <span class="is-flex"><label class="label">{{ label }}</label><span @click.prevent="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
       <b-message title="Why am I being asked this?" type="is-info" has-icon :active.sync="isOpen">
-        <vue-markdown>{{$t('request.scRules.tooltip')}}</vue-markdown>
+        <p v-html="$options.filters.markdown($t('request.scRules.tooltip'))"></p>
+        <!-- <vue-markdown>{{$t('request.scRules.tooltip')}}</vue-markdown> -->
       </b-message>
       {{$t('request.scRules.raceInstructions')}} {{$t('request.scRules.prevRegInstructions')}}
       <b-field :label="$t('request.scRules.label')">
@@ -66,7 +71,8 @@
     <div v-if="state === 'VA' && isReturnUncertain">
       <span class="is-flex"><label class="label">{{ label }}</label><span @click.prevent="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
       <b-message title="Why am I being asked this?" type="is-info" has-icon :active.sync="isOpen">
-        <vue-markdown>{{$t('request.vaRules.tooltip')}}</vue-markdown>
+        <p v-html="$options.filters.markdown($t('request.vaRules.tooltip'))"></p>
+        <!-- <vue-markdown>{{$t('request.vaRules.tooltip')}}</vue-markdown> -->
       </b-message>
       <b-field :label="$t('request.vaRules.label')">
       <!-- {{$t('request.vaRules.employerInstructions')}} -->
@@ -81,13 +87,16 @@
         <b-input @input="val => setVal(val)"></b-input>
       </b-field>
       <b-message title="Why am I being asked this?" type="is-info" has-icon :active.sync="isOpen">
-        <vue-markdown>{{$t('request.vtRules.tooltip')}}</vue-markdown>
+        <p v-html="$options.filters.markdown($t('request.vtRules.tooltip'))"></p>
+        <!-- <vue-markdown>{{$t('request.vtRules.tooltip')}}</vue-markdown> -->
       </b-message>
     </div>
   </div>
 </template>
 
 <script>
+import snarkdown from 'snarkdown'
+
 export default {
   name: 'State-Special',
   props: {
@@ -131,6 +140,11 @@ export default {
       scRace: '',
       scPrev: '',
       isOpen: false
+    }
+  },
+  filters: {
+    markdown: function (md) {
+      return snarkdown(md)
     }
   },
   methods: {

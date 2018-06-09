@@ -143,14 +143,14 @@
 
 <script>
 import UserDashboard from '~/components/UserDashboard'
-import VueMarkdown from 'vue-markdown'
+// import VueMarkdown from 'vue-markdown'
 import RequestStage from '~/components/RequestStage'
 
 export default {
   name: 'User-Account',
   components: {
     UserDashboard,
-    VueMarkdown,
+    // VueMarkdown,
     RequestStage
   },
   data () {

@@ -23,12 +23,13 @@
       <div>
         <h1 class="has-text-centered title is-3">{{ $t('request.stages.step', {step: 5})}}</h1>
         <h3 class="has-text-centered subtitle is-4">{{ $t('request.stages.stage5')}}</h3>
-        <i18n path="request.stages.instructions5"
+        <span class="is-size-4" v-html="$t('request.stages.instructions5', {leo: `${leoName ? 'the ' + leoName : 'your local election official'}`, options: ballotReceiptOptionsString})"></span>
+        <!-- <i18n path="request.stages.instructions5"
           class="is-size-4"
-          tag="vue-markdown"
+          tag="span"
           :html="true"
           :places="{leo: `${leoName ? 'the ' + leoName : 'your local election official'}`, options: ballotReceiptOptionsString}">
-        </i18n>
+        </i18n> -->
       </div>
 
         <b-tabs type="is-toggle" expanded>
@@ -38,16 +39,18 @@
             <section v-if="!signStep" class="section">
               <article class="media">
                 <div class="media-content">
-                  <i18n path="request.stages.emailIntro"
+                  <p class="is-size-4">{{$t('request.stages.emailIntro') | markdown}}</p>
+                  <!-- <i18n path="request.stages.emailIntro"
                     class="is-size-4"
                     tag="vue-markdown"
                     :html="true">
-                  </i18n>
-                  <i18n path="request.stages.instructions"
+                  </i18n> -->
+                  <p class="subtitle is-5">{{$t('request.stages.instructions')}}</p>
+                  <!-- <i18n path="request.stages.instructions"
                     class="subtitle is-5"
                     tag="vue-markdown"
                     :html="true">
-                  </i18n>
+                  </i18n> -->
                   <article class="media">
                     <figure class="media-left">
                       <span class="icon is-large">
@@ -55,12 +58,13 @@
                       </span>
                     </figure>
                     <div class="media-content">
-                      <i18n tag="vue-markdown"
+                      <p class="is-size-6" v-html="$options.filters.markdown($t('request.stages.emailDigiSign'))"></p>
+                      <!-- <i18n tag="vue-markdown"
                         class="is-size-6"
                         path="request.stages.emailDigiSign"
                         :html="true">
                         <span place="device">Computer</span>
-                      </i18n>
+                      </i18n> -->
                       <a v-if="!signStep" class="button is-pulled-right is-primary" @click="signatureAgree"><b-icon icon="camera" size="is-small"></b-icon><span>{{$t('request.stages.sign')}}</span></a>
                       <br>
                     </div>
@@ -75,11 +79,12 @@
                       </span>
                     </figure>
                     <div class="media-content">
-                      <i18n path="request.stages.emailDownload"
+                      <p class="is-size-6" v-html="$options.filters.markdown($t('request.stages.emailDownload'))"></p>
+                      <!-- <i18n path="request.stages.emailDownload"
                         class="is-size-6"
                         tag="vue-markdown"
                         :html="true">
-                      </i18n>
+                      </i18n> -->
                       <button v-if="downloadAttrSupported" :href="pdf" :download="`${firstName}-${lastName}-2018-fpca.pdf`" :class="['button', 'is-pulled-right', 'is-primary', {'is-loading': !Boolean(pdf)}]" @click.prevent="finish"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
                       <button v-else class="button is-pulled-right is-primary" @click.prevent="openPdf"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
                     </div>
@@ -303,8 +308,9 @@ import MyBox from '~/components/MyBox.vue'
 import Sign4 from '~/components/sign4.vue'
 import { mapState } from 'vuex'
 import axios from 'axios'
-import VueMarkdown from 'vue-markdown'
+// import VueMarkdown from 'vue-markdown'
 import ScrollUp from '~/components/ScrollUp'
+import snarkdown from 'snarkdown'
 
 export default {
   name: 'SignAndSubmit',
@@ -313,7 +319,7 @@ export default {
     MyCanvas,
     MyBox,
     Sign4,
-    VueMarkdown,
+    // VueMarkdown,
     ScrollUp
   },
   async asyncData ({app, store}) {
@@ -370,7 +376,13 @@ export default {
         })
     }
   },
+  filters: {
+    markdown: function (md) {
+      return snarkdown(md)
+    }
+  },
   methods: {
+    md: function (md) { return snarkdown(md) },
     signatureAgree () {
       this.$store.dispatch('requests/recordAnalytics', {event: 'start digital signature'})
       this.$dialog.confirm({

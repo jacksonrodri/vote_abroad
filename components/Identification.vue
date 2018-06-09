@@ -11,7 +11,7 @@
       <b-input v-cleave="masks.ssn"
         :value="value ? value.ssnTyped : null"
         ref="ssn"
-        placeholder="XXX-XX-XXXX"
+        placeholder="e.g. 123-45-6789"
         @input="setVal"
         @input.native="val => setSSN(val.target._vCleave.getRawValue())">
       </b-input>
@@ -27,8 +27,8 @@
         placeholder="e.g. XXX-XX-1234"
         pattern="X{3}-X{2}-[0-9]{4}"
         required
-        @input="setVal"
-        @input.native="val => setSSN(val.target._vCleave.getRawValue())">
+        @focus="setVal"
+        @input.native="val => { setSSN(val.target._vCleave.getRawValue()); setVal() }">
       </b-input>
     </b-field>
 
@@ -149,9 +149,9 @@ export default {
     }
   },
   mounted () {
-    if (this.$refs.ssn4 && !(this.ssnTyped || this.ssn)) {
-      this.$emit('input', Object.assign({}, this.value, {ssnTyped: 'XXX-XX', ssn: 'XXX-XX'}))
-    }
+    // if (this.$refs.ssn4 && !(this.ssnTyped || this.ssn)) {
+    //   this.$emit('input', Object.assign({}, this.value, {ssnTyped: 'XXX-XX-', ssn: 'XXX-XX-'}))
+    // }
     // this.$refs.ssn4
   },
   methods: {

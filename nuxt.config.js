@@ -140,7 +140,8 @@ module.exports = {
       'mailcheck',
       'auth0-js',
       'libphonenumber-js/custom',
-      'vue-markdown'
+      // 'vue-markdown'
+      'snarkdown'
     ],
     babel: {
       presets: [
