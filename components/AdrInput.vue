@@ -19,15 +19,22 @@
         <b-autocomplete
           :open-on-focus=true
           keep-first
+          name="country"
+          autocomplete="section-abroad shipping country"
           :placeholder="$t('request.abrAdr.placeholder')"
           v-model="countrySearch"
           :field="'name' || null"
           :data="filteredCountries"
-          @focus="$event.target.select()"
+          type="search"
+          @focus="$event.target.select(); $event.target.setSelectionRange(0,99999)"
           ref="country"
           :id="country"
           @select="option => selectCountry(option)"
           expanded>
+          <template slot="header">
+            <span class="is-size-6 has-text-grey"> ... type to find your country.</span>
+          </template>
+          <template slot="empty">No results for {{countrySearch}}</template>
           <template slot-scope="props">
             <span :class="`flag-icon flag-icon-${props.option.code.toLowerCase()}`"></span>{{ props.option.name }}
           </template>
@@ -57,6 +64,7 @@
                 :data="data"
                 ref="A"
                 keep-first
+                autocomplete="section-abroad shipping street-address"
                 :placeholder="getPlaceholder(item)"
                 field="structured_formatting.main_text"
                 :loading="isFetching"
@@ -70,6 +78,7 @@
                 :key="item"
                 :value="S"
                 ref="S"
+                :autocomplete="getAutocomplete(item)"
                 @input="val => update({S: val})"
                 @select="opt => {if (opt) { update({S: opt.key}) }}"
                 :data="!S ? sOptions : sOptions.filter((opt) => opt.name.toLowerCase().includes(S.toLowerCase()) || opt.key.toLowerCase().includes(S.toLowerCase()))"
@@ -77,14 +86,13 @@
                 keep-first
                 :placeholder="getPlaceholder(item)"
                 :open-on-focus=true></b-autocomplete>
-                <!-- :autocomplete="getAutocomplete(item)" -->
             <b-input :placeholder="getPlaceholder(item)"
               v-else
               :value="getValue(item)"
               :ref="item"
+              :autocomplete="getAutocomplete(item)"
               @input="val => update({[item]: val})">
             </b-input>
-              <!-- :autocomplete="getAutocomplete(item)" -->
           </b-field>
           <b-field v-else :key="item.join('-')"
             :type="item.filter(x => v[x].$error).length > 0 ? 'is-danger' : ''"
@@ -100,15 +108,15 @@
                   :data="!S ? sOptions : sOptions.filter((opt) => opt.name.toLowerCase().includes(S.toLowerCase()) || opt.key.toLowerCase().includes(S.toLowerCase()))"
                   field="name"
                   keep-first
+                  :autocomplete="getAutocomplete(item)"
                   :placeholder="getPlaceholder(subItem)"
                   :open-on-focus=true></b-autocomplete>
-                  <!-- :autocomplete="getAutocomplete(item)" -->
                 <b-input v-else :value="getValue(subItem)"
                   @input="val => update({[subItem]: val})"
                   :ref="subItem"
+                  :autocomplete="getAutocomplete(item)"
                   :placeholder="getPlaceholder(subItem)">
                 </b-input>
-                  <!-- :autocomplete="getAutocomplete(subItem)" -->
               </b-field>
             </b-field>
           </b-field>
@@ -390,25 +398,25 @@ export default {
       }
     },
     getAutocomplete (item) {
-      return 'off'
-      // switch (item) {
-      //   case 'N':
-      //     return 'name'
-      //   case 'O':
-      //     return 'organization'
-      //   case 'A':
-      //     return 'address-line1'
-      //   case 'B':
-      //     return 'address-line2'
-      //   case 'D':
-      //     return 'address-level3'
-      //   case 'C':
-      //     return 'address-level2'
-      //   case 'S':
-      //     return 'address-level1'
-      //   case 'Z':
-      //     return 'postal-code'
-      // }
+      let base = 'section-abroad shipping'
+      switch (item) {
+        case 'N':
+          return `${base} name`
+        case 'O':
+          return `${base} organization`
+        case 'A':
+          return `${base} address-line1`
+        case 'B':
+          return `${base} address-line2`
+        case 'D':
+          return `${base} address-level3`
+        case 'C':
+          return `${base} address-level2`
+        case 'S':
+          return `${base} address-level1`
+        case 'Z':
+          return `${base} postal-code`
+      }
     },
     latinize (str) {
       if (typeof str === 'string') {

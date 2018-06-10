@@ -13,6 +13,8 @@
         :data="data"
         field="structured_formatting.main_text"
         v-model="street"
+        name="street-address"
+        autocomplete="section-abroad shipping street-address"
         :loading="isFetching"
         @keyup.native="suppressDropdown = false"
         @input="getAsyncData"
@@ -24,6 +26,8 @@
     <b-field>
       <b-input
         :placeholder="$t('request.votAdr.apt')"
+        autocomplete="section-voting shipping address-line2"
+        name="Apartment"
         v-model="apt"></b-input>
     </b-field>
     <div class="field is-horizontal">
@@ -37,6 +41,8 @@
             expanded
             field="structured_formatting.main_text"
             v-model="city"
+            name="city"
+            autocomplete="section-voting shipping address-level2"
             :loading="isFetchingCity"
             @keyup.native="suppressDropdown = false"
             @input="getAsyncDataCity"
@@ -50,6 +56,8 @@
           :type="(validations.stateISO.$error ? 'is-danger': '')">
           <b-select v-model="state"
             ref="state"
+            name="state"
+            autocomplete="section-voting shipping address-level1"
             expanded
             :placeholder="$t('request.votAdr.state')">
             <option
@@ -66,6 +74,8 @@
           <b-input
             :placeholder="$t('request.votAdr.zip')"
             ref="zip"
+            name="zip"
+            autocomplete="section-voting shipping postal-code"
             expanded
             v-model="zip"></b-input>
         </b-field>
@@ -74,6 +84,7 @@
     <b-field :label="$t('request.votAdr.county')">
       <b-input ref="county"
         :placeholder="$t('request.votAdr.county')"
+        name="county"
         :disabled="state === 'DC'"
         v-model="county"></b-input>
     </b-field>

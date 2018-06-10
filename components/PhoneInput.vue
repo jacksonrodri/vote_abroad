@@ -32,6 +32,7 @@
       @focus="$event.target.select(); countryFocused = true"
       @select="option => selectCountry(option)"
       :expanded="countryFocused"
+      autocomplete="country-name"
       :class="['control', {'shrink': !countryFocused}]">
       <template slot="header">
         <span class="is-size-6 has-text-grey"> ... type to find your country.</span>
@@ -41,7 +42,6 @@
         <span :class="`flag-icon flag-icon-${props.option.code.toLowerCase()}`"></span>{{ props.option.name + getPhoneCode(props.option.code) }}
       </template>
     </b-autocomplete>
-      <!-- autocomplete="country-name" -->
     <!-- <b-input
       :value="value.rawInput || null"
       :class="['control', {'is-expanded': !countryFocused}]"
@@ -61,10 +61,10 @@
           @blur="standardizePhone"
           @focus="setPlaceholder; countryFocused = false"
           @input.native="formatInput($event.target.value)"
+          :autocomplete="autocomplete"
           @keyup.native.enter="$emit('pressEnter')"
           :placeholder="placeholder"></b-input>
       </b-field>
-          <!-- :autocomplete="autocomplete" -->
   </div>
   <p v-if="$v.$dirty && !$v.value.validEmailorPhone" class="help is-danger">Please enter a valid <span v-if="this.accepts.includes('phone')">phone number</span><span v-if="this.accepts.includes('phone') && this.accepts.includes('email')"> or </span><span v-if="this.accepts.includes('email')">email address</span>. <span v-if="mailCheckedEmail && mailCheckedEmail !== val.toLowerCase()">Did you mean <a @click="setEmail"><span class="has-text-primary">{{ mailCheckedEmail }}</span></a>?</span></p>
   <p v-else-if="mailCheckedEmail && mailCheckedEmail !== val.toLowerCase()" class="help is-vfa">Did you mean <a @click="setEmail"><span class="has-text-primary">{{ mailCheckedEmail }}</span></a>?</p>
@@ -91,7 +91,6 @@ export default {
     return {
       country: '',
       countryFocused: false,
-      countryCode: 'HK',
       countrySearch: '',
       exampleNumber: '',
       metadataLoaded: false,
@@ -138,14 +137,14 @@ export default {
     mustBeEmail () { return !this.accepts.includes('phone') || (this.accepts.includes('email') && this.isEmail) },
     deviceType () { return this.$store.state.userauth.device.type },
     autocomplete () {
-      return 'home email'
-      // if (this.$vnode.key === 'fax') {
-      //   return 'fax tel'
-      // } else if (!(this.accepts.includes('phone')) || (this.deviceType === 'desktop' && this.accepts.includes('email'))) {
-      //   return 'home email'
-      // } else {
-      //   return 'mobile tel'
-      // }
+      // return 'home email'
+      if (this.$vnode.key === 'fax') {
+        return 'fax tel'
+      } else if (!(this.accepts.includes('phone')) || (this.deviceType === 'desktop' && this.accepts.includes('email'))) {
+        return 'home email'
+      } else {
+        return 'mobile tel'
+      }
     },
     type () {
       return 'email'

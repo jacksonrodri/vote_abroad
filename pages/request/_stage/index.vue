@@ -5,13 +5,14 @@
     <h3 class="has-text-centered subtitle is-4">{{ $t(`request.stages.stage${stage.order}`)}}</h3>
 <!-- your information -->
   <section v-if="stage.slug === 'your-information'">
-    <form id="your-information" key="your-information" autocomplete="off">
+    <form id="your-information" key="your-information">
       <!-- firstName -->
       <div class="field">
         <label class="label" for="firstName">{{ $t('request.firstName.label') }}<transition name="fade"><span v-if="!firstName && !$v.firstName.$error" class="required"> Required</span></transition></label>
         <b-field :type="($v.firstName.$error ? 'is-danger': '')" :message="$v.firstName.$error ? Object.keys($v.firstName.$params).map(x => $t(`request.firstName.messages.${x}`)) : '' ">
           <b-input v-model="firstName"
             id="firstName"
+            autocomplete="given-name"
             @input="delayTouch($v.firstName)"
             ref="firstName"></b-input>
         </b-field>
@@ -33,9 +34,9 @@
           <b-input v-model="lastName"
             id="lastName"
             @input="delayTouch($v.lastName)"
+            autocomplete="family-name"
             ref="lastName"></b-input>
         </b-field>
-            <!-- autocomplete="family-name" -->
       </div>
 
       <!-- suffix -->
@@ -56,7 +57,6 @@
         <div slot="tooltip">
           {{$t('request.previousName.tooltip')}}
         </div>
-        <!-- tooltipTitle="Why do you need my previous name?"         -->
       </previous-name>
 
       <!-- phone Number -->
@@ -130,14 +130,14 @@
 
 <!-- voting information -->
   <section v-if="stage.slug === 'voting-information'">
-    <form id="voting-information" key="voting-information" autocomplete="off">
+    <form id="voting-information" key="voting-information">
 
       <voting-address
         :label="$t('request.votAdr.label')"
         :validations=$v.votAdr
         ref="votAdr"
         @input="delayTouch($v.votAdr)"
-        autocomplete="off"
+
         :toolTipTitle="$t('request.votAdr.tooltipTitle')">
         <div slot="instructions">
           <p>{{ $t('request.votAdr.instructions') }}</p>
@@ -154,7 +154,7 @@
         :placeholder="$t('request.jurisdiction.placeholder')"
         :key="votAdr.stateISO"
         ref="jurisdiction"
-        autocomplete="off"
+
         @input="delayTouch($v.jurisdiction)"
         :validations="($v.jurisdiction)"
         :state="this.votAdr.stateISO">
@@ -281,7 +281,7 @@
   </section>
 
   <section v-if="stage.slug === 'id-and-contact-information'">
-    <form id="id-and-contact-information" key="id-and-contact-information" autocomplete="off">
+    <form id="id-and-contact-information" key="id-and-contact-information">
 <!-- identity and Contact information -->
       <!-- dob -->
       <!-- <birth-date
