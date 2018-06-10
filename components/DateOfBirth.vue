@@ -148,6 +148,10 @@ export default {
           return array.indexOf(date) === i
         })
         .map(function (time) { return new Date(time) })
+        .filter((date) => {
+          console.log(date.getFullYear())
+          return date.getFullYear() > 1890
+        })
       // console.log('dateChoices2', uniqueArray)
 
       if (dateChoices.length > 1) {
