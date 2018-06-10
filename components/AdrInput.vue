@@ -26,7 +26,7 @@
           :field="'name' || null"
           :data="filteredCountries"
           type="search"
-          @focus="$event.target.select(); $event.target.setSelectionRange(0,99999)"
+          @focus="$event.target.setSelectionRange(0,99999)"
           ref="country"
           :id="country"
           @select="option => selectCountry(option)"

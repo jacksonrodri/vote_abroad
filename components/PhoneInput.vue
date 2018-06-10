@@ -29,7 +29,7 @@
       ref="country"
       :disabled="mustBeEmail"
       :icon="` flag-icon flag-icon-${userCountry ? userCountry.toLowerCase() : 'un'}`"
-      @focus="$event.target.select(); countryFocused = true"
+      @focus="$event.target.setSelectionRange(0,99999); countryFocused = true"
       @select="option => selectCountry(option)"
       :expanded="countryFocused"
       autocomplete="country-name"
