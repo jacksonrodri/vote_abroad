@@ -24,15 +24,19 @@
       keep-first
       v-if="!accepts.includes('email') || !isEmail"
       :data="filteredCountries"
+      :field="'name' || null"
       v-model="countrySearch"
       ref="country"
       :disabled="mustBeEmail"
       :icon="` flag-icon flag-icon-${userCountry ? userCountry.toLowerCase() : 'un'}`"
       @focus="$event.target.select(); countryFocused = true"
-      @blur="countryFocused = false"
       @select="option => selectCountry(option)"
       :expanded="countryFocused"
       :class="['control', {'shrink': !countryFocused}]">
+      <template slot="header">
+        <span class="is-size-6 has-text-grey"> ... type to find your country.</span>
+      </template>
+      <template slot="empty">No results for {{countrySearch}}</template>
       <template slot-scope="props">
         <span :class="`flag-icon flag-icon-${props.option.code.toLowerCase()}`"></span>{{ props.option.name + getPhoneCode(props.option.code) }}
       </template>
@@ -113,7 +117,9 @@ export default {
     },
     userCountry () { return this.country.toUpperCase() || this.$store.state.userauth.user.country.toUpperCase() || null },
     filteredCountries () {
-      if (this.countrySearch && this.countrySearch.length > 0) {
+      if (this.countries.filter((option) => this.countrySearch.toLowerCase() === option.name.toLowerCase()).length === 1) {
+        return this.countries.filter((option) => this.countrySearch.toLowerCase() === option.name.toLowerCase()).concat(this.countries.filter((option) => this.countrySearch.toLowerCase() !== option.name.toLowerCase()))
+      } else if (this.countrySearch && this.countrySearch.length > 0) {
         return this.countries.filter((option) => {
           return option.name
             .toString()
@@ -170,9 +176,11 @@ export default {
   methods: {
     selectCountry (option) {
       console.log(option)
-      this.countrySearch = option.name
-      this.country = option.code
-      this.focusInput()
+      // this.countrySearch = option.name
+      if (option && option.code) {
+        this.country = option.code
+        this.focusInput()
+      }
     },
     standardizePhone () {
       if (this.value && this.value.isValidPhone) {
@@ -333,7 +341,8 @@ export default {
       window.onload = this.setPlaceholder()
     }
     if (!this.countrySearch) {
-      this.countrySearch = this.userCountry
+      let ctry = this.countries.find(country => country.code.toLowerCase() === this.userCountry.toLowerCase())
+      this.countrySearch = ctry ? ctry.name : null
     }
   }
 }
