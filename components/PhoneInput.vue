@@ -59,7 +59,7 @@
           ref="input"
           :maxlength="mustBeEmail && label && !(($v.$dirty && !$v.value.validEmailorPhone) || (mailCheckedEmail && mailCheckedEmail !== val.toLowerCase()))? 55 : ''"
           @blur="standardizePhone"
-          @focus="setPlaceholder"
+          @focus="setPlaceholder; countryFocused = false"
           @input.native="formatInput($event.target.value)"
           @keyup.native.enter="$emit('pressEnter')"
           :placeholder="placeholder"></b-input>
