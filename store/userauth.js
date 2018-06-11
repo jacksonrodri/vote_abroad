@@ -74,6 +74,7 @@ export const mutations = {
   },
   updateUser (state, userObj) {
     state.user = Object.assign({}, state.user, userObj)
+    this.$raven.setUserContext(state.user)
   },
   updateRedirectPath (state, path) {
     state.redirectPath = path
@@ -432,6 +433,10 @@ export const actions = {
         }
       })
     }
+    this.$raven.setUserContext({
+      email: state.user.emailAddress || null,
+      id: state.user.IdentityId || null
+    })
   },
   clearData ({ commit, dispatch }) {
     commit('updateGcToken', null)
@@ -451,6 +456,7 @@ export const actions = {
       region: null
     })
     commit('requests/clearRequests', null, { root: true })
+    this.$raven.setUserContext()
     dispatch('getUser')
   },
   async logout ({ app, dispatch }) {
