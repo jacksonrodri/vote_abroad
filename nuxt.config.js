@@ -40,7 +40,8 @@ module.exports = {
     placesUrl: process.env.PLACES_URL || '/',
     autocompleteEndpoint: process.env.AUTOCOMPLETE_ENDPOINT || 'api/place/autocomplete/json',
     detailsEndpoint: process.env.PLACES_ENDPOINT || 'api/place/details/json',
-    placesKey: process.env.PLACES_KEY || 'AIzaSyDK4AprF-iXbiX2-eU3SAQVyovB_8kIg20'
+    placesKey: process.env.PLACES_KEY || 'AIzaSyDK4AprF-iXbiX2-eU3SAQVyovB_8kIg20',
+    commitRef: process.env.COMMIT_REF || ''
   },
   modules: [
     '@nuxtjs/sentry',
@@ -76,7 +77,11 @@ module.exports = {
     }
   },
   sentry: {
-    dsn: 'https://7a6424adb4fd425d871eaf79e2a0afce@sentry.io/1223778'
+    dsn: 'https://7a6424adb4fd425d871eaf79e2a0afce@sentry.io/1223778',
+    config: {
+      release: process.env.COMMIT_REF || '',
+      environment: process.env.CONTEXT || 'development'
+    }
   },
   manifest: {
     name: 'Vote From Abroad',
