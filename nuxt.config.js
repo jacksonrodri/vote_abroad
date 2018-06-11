@@ -43,6 +43,7 @@ module.exports = {
     placesKey: process.env.PLACES_KEY || 'AIzaSyDK4AprF-iXbiX2-eU3SAQVyovB_8kIg20'
   },
   modules: [
+    '@nuxtjs/sentry',
     '@nuxtjs/pwa',
     ['nuxt-i18n', I18N],
     '@nuxtjs/proxy',
@@ -73,6 +74,9 @@ module.exports = {
         '^/api/mail': '/'
       }
     }
+  },
+  sentry: {
+    dsn: 'https://7a6424adb4fd425d871eaf79e2a0afce@sentry.io/1223778'
   },
   manifest: {
     name: 'Vote From Abroad',

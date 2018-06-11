@@ -1,8 +1,9 @@
 import { WebAuth } from 'auth0-js'
 import axios from 'axios'
-import { Dialog, Toast, LoadingProgrammatic } from 'buefy'
+import { Dialog, Toast, LoadingProgrammatic, ModalProgrammatic } from 'buefy'
 // Snackbar,
 import AWSExports from '../aws-exports'
+import AuthenticateCode from '~/components/AuthenticateCode'
 const jwtDecode = require('jwt-decode')
 // const redirectUri = `https://amplify-appsync--votefromabroad.netlify.com`
 // const redirectUri = `http://localhost:3000`
@@ -83,6 +84,32 @@ export const mutations = {
 }
 
 export const actions = {
+  launchModal ({ state, dispatch, commit }, loginType) {
+    let msg = loginType === 'sms' ? `An sms with the code has been sent to ${state.user.mobileIntFormat}.` : `We sent you a link and code to ${state.user.emailAddress}. Click the link in the email or enter the code here to sign in.`
+    ModalProgrammatic.open({
+      parent: window.$nuxt,
+      component: AuthenticateCode,
+      hasModalCard: true,
+      width: 360,
+      props: {
+        code: '',
+        email: state.user.emailAddress || null,
+        phone: state.user.mobileIntFormat || null,
+        msg
+      },
+      events: {
+        selectDate (date) { console.log(date) },
+        confirmCode: (value) => {
+          if (state.user.emailAddress) {
+            dispatch('loginEmailVerify', value)
+          } else if (state.user.mobileIntFormat) {
+            dispatch('loginSmsVerify', value)
+          }
+        },
+        startAuth: () => dispatch('authStart')
+      }
+    })
+  },
   sendEmailCode ({commit, state}) {
     return new Promise((resolve, reject) => {
       webAuth.passwordlessStart({

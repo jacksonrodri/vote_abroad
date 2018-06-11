@@ -31,6 +31,7 @@
     "@nuxtjs/axios": "^4.5.2",
     "@nuxtjs/proxy": "^1.1.4",
     "@nuxtjs/pwa": "^2.0.5",
+    "@nuxtjs/sentry": "^1.0.3",
     "auth0-js": "^9.6.0",
     "aws-amplify": "^0.3.4",
     "babel-polyfill": "^6.26.0",
