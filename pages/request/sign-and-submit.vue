@@ -37,20 +37,10 @@
             v-if="stateRules && stateRules.fpcaSubmitOptionsRequest.indexOf('Email') > -1"
             icon="at">
             <section v-if="!signStep" class="section">
-              <article class="media">
-                <div class="media-content">
-                  <p class="is-size-4">{{$t('request.stages.emailIntro') | markdown}}</p>
-                  <!-- <i18n path="request.stages.emailIntro"
-                    class="is-size-4"
-                    tag="vue-markdown"
-                    :html="true">
-                  </i18n> -->
-                  <p class="subtitle is-5">{{$t('request.stages.instructions')}}</p>
-                  <!-- <i18n path="request.stages.instructions"
-                    class="subtitle is-5"
-                    tag="vue-markdown"
-                    :html="true">
-                  </i18n> -->
+              <h3 class="subtitle is-4">{{$t('request.stages.emailIntro')}}</h3>
+              <div class="media">
+                <div class="media-content" style="width:100%;">
+                  <p class="title is-5">{{$t('request.stages.instructions')}}</p>
                   <article class="media">
                     <figure class="media-left">
                       <span class="icon is-large">
@@ -58,15 +48,10 @@
                       </span>
                     </figure>
                     <div class="media-content">
-                      <p class="is-size-6" v-html="$options.filters.markdown($t('request.stages.emailDigiSign'))"></p>
-                      <!-- <i18n tag="vue-markdown"
-                        class="is-size-6"
-                        path="request.stages.emailDigiSign"
-                        :html="true">
-                        <span place="device">Computer</span>
-                      </i18n> -->
-                      <a v-if="!signStep" class="button is-pulled-right is-primary" @click="signatureAgree"><b-icon icon="camera" size="is-small"></b-icon><span>{{$t('request.stages.sign')}}</span></a>
-                      <br>
+                      <div class="content">
+                        <p class="is-size-6" v-html="$options.filters.markdown($t('request.stages.emailDigiSign'))"></p>
+                        <a v-if="!signStep" class="button is-pulled-right is-primary" @click="signatureAgree"><b-icon icon="camera" size="is-small"></b-icon><span>{{$t('request.stages.sign')}}</span></a>
+                      </div>
                     </div>
                   </article>
                   <article class="media">
@@ -79,20 +64,14 @@
                       </span>
                     </figure>
                     <div class="media-content">
-                      <p class="is-size-6" v-html="$options.filters.markdown($t('request.stages.emailDownload'))"></p>
-                      <!-- <i18n path="request.stages.emailDownload"
-                        class="is-size-6"
-                        tag="vue-markdown"
-                        :html="true">
-                      </i18n> -->
-                      <button v-if="downloadAttrSupported && pdf" :href="pdf" :download="`${firstName}-${lastName}-2018-fpca.pdf`" :class="['button', 'is-pulled-right', 'is-primary', {'is-loading': !Boolean(pdf)}]" @click="finish"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
-                      <button v-else class="button is-pulled-right is-primary" @click="openPdf"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
-                      <button :class="['button', 'is-pulled-right', 'is-primary', {'is-loading': !Boolean(pdf)}]" @click="saveFile">Save File</button>
-                      <iframe v-if="pdf" class="is-pulled-right" ref="viewer" :src="pdf"></iframe>
+                      <div class="content">
+                        <p class="is-size-6" v-html="$options.filters.markdown($t('request.stages.emailDownload'))"></p>
+                        <button :class="['button', 'is-pulled-right', 'is-primary', {'is-loading': !Boolean(pdf)}]" @click="saveFile"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
+                      </div>
                     </div>
                   </article>
                 </div>
-              </article>
+              </div>
             </section>
             <section v-if="signStep" class="section">
               <sign4 v-model="signStep" :fpca="fpca" @sigcap="addSig">
@@ -387,6 +366,7 @@ export default {
   methods: {
     saveFile: function () {
       fileSaver.saveAs(this.msPdf, `${this.firstName}-${this.lastName}-2018-fpca.pdf`)
+      this.confirmPdfDownload()
     },
     md: function (md) { return snarkdown(md) },
     signatureAgree () {
