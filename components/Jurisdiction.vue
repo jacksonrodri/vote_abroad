@@ -29,7 +29,7 @@
             field="n"
             :placeholder="placeholder"
             @select="option => updateLeo(option)">
-            <template slot-scope="props"><strong>{{props.option.j}} {{props.option.j.toLowerCase().indexOf(props.option.t.toLowerCase()) > -1 ? '' : props.option.t}}</strong> - <small>{{props.option.n}}</small></template>
+            <template slot-scope="props"><strong>{{props.option.j}} {{props.option.j.toLowerCase().indexOf(props.option.t.toLowerCase()) > -1 ? '' : props.option.t}}</strong> - <small>{{props.option.n}}&nbsp;</small><span v-if="props.option.suggested" class="tag is-info">Suggested</span></template>
             </b-autocomplete>
             <p class="control">
                 <button class="button is-grey is-inverted is-outlined"
@@ -151,7 +151,7 @@ export default {
       //   }
       // })
       // console.log('types', arr)
-      return [].concat(villageLeos, townLeos, cityLeos, countyLeos)
+      return [].concat(villageLeos, townLeos, cityLeos, countyLeos).map(leo => { leo.suggested = true; return leo })
     },
     prioritizedLeos () {
       return [].concat(this.myLeos, this.leos)
@@ -193,6 +193,7 @@ export default {
           if (value[x]) leo[x] = value[x]
         })
       }
+      delete leo.suggested
       this.$store.commit('requests/update', {leo: leo})
     },
     updated: function () {

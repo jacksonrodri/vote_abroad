@@ -22,14 +22,13 @@
       :type="(validations.ssn.$error ? 'is-danger': '')"
       :label="$t('request.id.SSN4')">
       <b-input v-cleave="masks.ssn4"
-        :value="value ? value.ssnTyped : null"
+        :value="value && value.ssn ? value.ssn : ''"
         ref="ssn4"
         placeholder="e.g. XXX-XX-1234"
         pattern="X{3}-X{2}-[0-9]{4}"
-        required
-        @input="setVal"
-        @input.native="getRawValue"
-        @focus="setVal">
+        required>
+        <!-- @focus=initSSN
+        @input.native="getRawValue"> -->
         <!-- @input.native="val => { setSSN(val.target._vCleave.getRawValue()); setVal() }" -->
       </b-input>
     </b-field>
@@ -112,7 +111,14 @@ export default {
           numericOnly: true,
           prefix: 'XXXXX',
           noImmediatePrefix: false,
-          rawValueTrimPrefix: true
+          rawValueTrimPrefix: true,
+          onValueChanged: function (e) {
+            console.log('onValueChanged', e.target)
+            if (this.value) {
+              this.$emit('input', Object.assign({}, this.value, {ssn: e.target.rawValue, ssnTyped: e.target.value}))
+            }
+            // e.target = { value: '5000-1234', rawValue: '51001234' }
+          }
         }
       }
     }
@@ -136,6 +142,10 @@ export default {
         return null
       }
     },
+    ssn4: {
+      get () { return this.value && this.value.ssnTyped ? this.value.ssnTyped : '' },
+      set (val) { this.setVal() }
+    },
     stateIdLabel: function () {
       return !this.usesStateId
         ? this.$t('request.id.StateID')
@@ -157,8 +167,14 @@ export default {
     // this.$refs.ssn4
   },
   methods: {
-    setVal: function () {
-      let val = this.$refs.noId.newValue ? {noId: true, ssn: null, ssnTyped: null, stateId: null} : {noId: false, ssn: this.ssnclean, ssnTyped: this.ssn, stateId: this.$refs.stateId ? this.$refs.stateId.newValue || null : null}
+    initSSN: function () {
+      console.log('initializing')
+      if (!this.ssn4) {
+        this.ssn4 = 'XXX-XX-'
+      }
+    },
+    setVal: function (typed) {
+      let val = this.$refs.noId.newValue && !typed ? {noId: true, ssn: null, ssnTyped: null, stateId: null} : {noId: false, ssn: this.ssnclean, ssnTyped: this.ssn, stateId: this.$refs.stateId ? this.$refs.stateId.newValue || null : null}
       // if (this.$refs.noId.newValue) {
       //   this.$refs.ssn4.value = null
       // }
@@ -169,6 +185,7 @@ export default {
     },
     getRawValue (event) {
       this.ssnclean = event.target._vCleave.getRawValue()
+      // this.setVal()
     }
   }
 }

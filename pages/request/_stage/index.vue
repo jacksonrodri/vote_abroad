@@ -369,7 +369,8 @@
       </state-special>
 
       <!-- identification -->
-      <identification
+
+      <id-input
         v-if="stateRules"
         :label="$t('request.id.label')"
         :idOptions="stateRules && stateRules.id && stateRules.id.length > 0 ? stateRules.id : null"
@@ -387,13 +388,6 @@
           </p>
           <p v-else v-html="$options.filters.markdown($t('request.id.instructionsReq2', { state: stateRules.state, allButLastTypes: allButLastIdType, lastType: lastIdType }))">
           </p>
-          <!-- <i18n v-if="stateRules && stateRules.id && stateRules.id.length === 0"
-            path=request.id.instructionsOptional tag="vue-markdown" :places="{ state: stateRules.state}">
-          </i18n>
-          <i18n v-else-if="stateRules && stateRules.id && stateRules.id.length === 1" path=request.id.instructionsReq1 tag="vue-markdown" :places="{ state: stateRules.state, id: $t(`request.id.${stateRules.id[0]}`), idType: $t(`request.id.${stateRules.id[0].indexOf('SSN') > -1 ? 'SSN' : stateRules.id[0]}`)}">
-          </i18n> -->
-          <!-- <i18n v-else path=request.id.instructionsReq2 tag="vue-markdown" :places="{ state: stateRules.state, allButLastTypes: allButLastIdType, lastType: lastIdType }">
-          </i18n> -->
         </div>
         <div slot="tooltip">
           <p v-if="stateRules && stateRules.id && stateRules.id.length === 0"
@@ -404,15 +398,39 @@
           </p>
           <p v-else v-html="$options.filters.markdown($t('request.id.tooltipReq2', { state: stateRules.state, allButLastTypes: allButLastIdType, lastType: lastIdType }))">
           </p>
-          <!-- <i18n v-if="stateRules && stateRules.id && stateRules.id.length === 0"
-            path=request.id.tooltipOptional tag="vue-markdown" :places="{ state: stateRules.state}">
-          </i18n>
-          <i18n v-else-if="stateRules && stateRules.id && stateRules.id.length === 1" path=request.id.tooltipReq1 tag="vue-markdown" :places="{ state: stateRules.state, id: $t(`request.id.${stateRules.id[0]}`)}">
-          </i18n>
-          <i18n v-else path=request.id.tooltipReq2 tag="vue-markdown" :places="{ state: stateRules.state, allButLastTypes: allButLastIdType, lastType: lastIdType }">
-          </i18n> -->
         </div>
-      </identification>
+      </id-input>
+
+      <!-- <identification
+        v-if="stateRules"
+        :label="$t('request.id.label')"
+        :idOptions="stateRules && stateRules.id && stateRules.id.length > 0 ? stateRules.id : null"
+        :validations="($v.identification)"
+        ref="id"
+        @input="delayTouch($v.identification)"
+        :tooltipTitle="$t('request.id.tooltipTitle')"
+        v-model="identification">
+        <div slot="instructions">
+          <p v-if="stateRules && stateRules.id && stateRules.id.length === 0"
+            v-html="$options.filters.markdown($t('request.id.instructionsOptional', { state: stateRules.state}))">
+          </p>
+          <p v-else-if="stateRules && stateRules.id && stateRules.id.length === 1"
+            v-html="$options.filters.markdown($t('request.id.instructionsReq1', { state: stateRules.state, id: $t(`request.id.${stateRules.id[0]}`), idType: $t(`request.id.${stateRules.id[0].indexOf('SSN') > -1 ? 'SSN' : stateRules.id[0]}`)}))">
+          </p>
+          <p v-else v-html="$options.filters.markdown($t('request.id.instructionsReq2', { state: stateRules.state, allButLastTypes: allButLastIdType, lastType: lastIdType }))">
+          </p>
+        </div>
+        <div slot="tooltip">
+          <p v-if="stateRules && stateRules.id && stateRules.id.length === 0"
+            v-html="$options.filters.markdown($t('request.id.tooltipOptional', { state: stateRules.state}))">
+          </p>
+          <p v-else-if="stateRules && stateRules.id && stateRules.id.length === 1"
+            v-html="$options.filters.markdown($t('request.id.tooltipReq1', { state: stateRules.state, id: $t(`request.id.${stateRules.id[0]}`)}))">
+          </p>
+          <p v-else v-html="$options.filters.markdown($t('request.id.tooltipReq2', { state: stateRules.state, allButLastTypes: allButLastIdType, lastType: lastIdType }))">
+          </p>
+        </div>
+      </identification> -->
 
       <!-- fwabRequest -->
       <b-field :type="($v.fwabRequest.$error ? 'is-danger': '')"
@@ -451,6 +469,7 @@ import Gender from '~/components/Gender'
 import StateSpecial from '~/components/StateSpecial'
 import ScrollUp from '~/components/ScrollUp'
 import Identification from '~/components/Identification'
+import IdInput from '~/components/IdInput'
 import PhoneInput from '~/components/PhoneInput'
 import AdrInput from '~/components/AdrInput'
 // import VueMarkdown from 'vue-markdown'
@@ -509,7 +528,7 @@ export default {
     StateSpecial,
     ScrollUp,
     Identification,
-    // VueMarkdown,
+    IdInput,
     PhoneInput,
     AdrInput
   },
@@ -958,20 +977,32 @@ export default {
       identification: {
         ssn: {
           requiredIf: requiredIf((model) => {
+            if (!this.stateRules || !this.stateRules.id || (Array.isArray(this.stateRules.id) && this.stateRules.id.length === 0) || (this.ssn4 && this.ssn4.length === 4)) {
+              return false
+            }
+            return Boolean(this.stateRules.id.includes('SSN') && !this.identification.ssn4 && !this.identification.stateId && !this.identification.noId)
+          }),
+          correctLength () {
+            if (this.identification && this.identification.ssn && this.stateRules && this.stateRules.id && this.stateRules.id.length > 0) {
+              if (this.stateRules.id.includes('SSN')) {
+                return this.identification.ssn && this.identification.ssn.replace(/\D/g, '').length === 9
+              }
+            } else {
+              return true
+            }
+          }
+        },
+        ssn4: {
+          requiredIf: requiredIf((model) => {
             if (!this.stateRules || !this.stateRules.id || (Array.isArray(this.stateRules.id) && this.stateRules.id.length === 0)) {
               return false
             }
-            let needsSSN = Boolean(this.stateRules.id.indexOf('SSN') > -1 || this.stateRules.id.indexOf('SSN4') > -1)
-            return Boolean(needsSSN && !this.identification.stateId && !this.identification.noId)
+            return Boolean(this.stateRules.id.includes('SSN4') && !this.identification.ssn && !this.identification.stateId && !this.identification.noId)
           }),
           correctLength () {
-            if (this.identification.ssn && this.stateRules && this.stateRules.id && this.stateRules.id.length > 0) {
-              if (this.stateRules.id.includes('SSN4') && this.stateRules.id.includes('SSN')) {
-                return this.identification.ssn.length === 4 || this.identification.ssn.length === 9
-              } else if (this.stateRules.id.includes('SSN4')) {
-                return this.identification.ssn.length === 4
-              } else if (this.stateRules.id.indexOf('SSN') > -1) {
-                return this.identification.ssn.length === 9
+            if (this.identification && this.identification.ssn4 && this.stateRules && this.stateRules.id && this.stateRules.id.length > 0) {
+              if (this.stateRules.id.includes('SSN4')) {
+                return this.identification.ssn4 && this.identification.ssn4.replace(/\D/g, '').length === 4
               }
             } else {
               return true
@@ -984,7 +1015,7 @@ export default {
               return false
             }
             let needsStateId = Boolean(this.stateRules.id.filter(x => x !== 'SSN' || x !== 'SSN4').length > 0)
-            return Boolean(needsStateId && !this.identification.ssn && !this.identification.noId)
+            return Boolean(needsStateId && !this.identification.ssn && !this.identification.ssn4 && !this.identification.noId)
           })
         }
       },
