@@ -71,16 +71,21 @@ export const mutations = {
   },
   updateDevice (state, device) {
     state.device = Object.assign({}, state.device, device)
+    this.$raven.setUserContext()
+    this.$raven.setUserContext(Object.assign({}, {user: state.user}, {email: state.user.emailAddress}, {id: state.IdentityId}, {device: state.device}))
   },
   updateUser (state, userObj) {
     state.user = Object.assign({}, state.user, userObj)
-    this.$raven.setUserContext(state.user)
+    this.$raven.setUserContext()
+    this.$raven.setUserContext(Object.assign({}, {user: state.user}, {email: state.user.emailAddress}, {id: state.IdentityId}, {device: state.device}))
   },
   updateRedirectPath (state, path) {
     state.redirectPath = path
   },
   updateIdentityId (state, id) {
     state.IdentityId = id
+    this.$raven.setUserContext()
+    this.$raven.setUserContext(Object.assign({}, {user: state.user}, {email: state.user.emailAddress}, {id: state.IdentityId}, {device: state.device}))
   }
 }
 
