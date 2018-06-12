@@ -1,19 +1,19 @@
 <template>
 <div class="field">
   <div class="field">
-    <span class="is-flex"><label class="label">{{ label }}</label><span @click.prevent="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
+    <span class="is-flex"><label class="label">{{ label }}</label><span @click="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
     <b-field grouped group-multiline :type="type">
       <p class="control" v-for="(party, index) in Object.keys(partyChoices)" :key="index">
-        <button @click.prevent="thisValue = thisValue === party ? null : party" :class="[baseClass, {'is-success': partyChoices[party].aliases.indexOf(thisValue ? thisValue.toString().toLowerCase() : '') > -1}]">
+        <a @click="thisValue = thisValue === party ? null : party" :class="[baseClass, {'is-success': partyChoices[party].aliases.indexOf(thisValue ? thisValue.toString().toLowerCase() : '') > -1}]">
           <b-icon v-if="partyChoices[party].aliases.indexOf(thisValue ? thisValue.toString().toLowerCase() : '') > -1" icon="check"></b-icon>
           <span>{{$t(`request.party.${party.toLowerCase()}`)}}</span><span v-if="state === 'MN' && party.toLowerCase() === 'democratic'">&nbsp;(DFL)</span><span v-if="state === 'ND' && party.toLowerCase() === 'democratic'">&nbsp;(D-NPL)</span>
-        </button>
+        </a>
       </p>
       <p class="control">
-        <button @click.prevent="selectOther(!isOther)" :class="[baseClass, {'is-success': isOther}]">
+        <a @click="selectOther(!isOther)" :class="[baseClass, {'is-success': isOther}]">
           <b-icon v-if="isOther" icon="check"></b-icon>
           <span>{{$t('request.party.other')}}</span>
-        </button>
+        </a>
       </p>
     </b-field>
     <transition name="fade">
@@ -32,25 +32,25 @@
   </div>
   <transition name="fade">
   <div v-if="thisValue !== 'Republican' && !$store.state.userauth.user.isDA && (isOtherButNoValue || thisValue)" class="field">
-    <span class="is-flex"><label class="label">{{ joinLabel }}</label><span @click.prevent="joinToolTipIsOpen = !joinToolTipIsOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
+    <span class="is-flex"><label class="label">{{ joinLabel }}</label><span @click="joinToolTipIsOpen = !joinToolTipIsOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
     <b-field grouped group-multiline :type="type">
       <p class="control">
-        <button @click.prevent="joinValue = joinValue === true ? null : true; isExistingDaMember = false" :class="[baseClass, {'is-success': joinValue === true}]">
+        <a @click="joinValue = joinValue === true ? null : true; isExistingDaMember = false" :class="[baseClass, {'is-success': joinValue === true}]">
           <b-icon v-if="joinValue === true" icon="check"></b-icon>
           <span>{{$t('request.joinDa.yes')}}</span>
-        </button>
+        </a>
       </p>
       <p class="control">
-        <button @click.prevent="joinValue = joinValue === false? null : false; isExistingDaMember = false" :class="[baseClass, {'is-success': joinValue === false}]">
+        <a @click="joinValue = joinValue === false? null : false; isExistingDaMember = false" :class="[baseClass, {'is-success': joinValue === false}]">
           <b-icon v-if="joinValue === false" icon="check"></b-icon>
           <span>{{$t('request.joinDa.no')}}</span>
-        </button>
+        </a>
       </p>
       <p class="control">
-        <button @click.prevent="isExistingDaMember = !isExistingDaMember; joinValue = !isExistingDaMember ? null : daEmail || 'already a member'" :class="[baseClass, {'is-success': isExistingDaMember}]">
+        <a @click="isExistingDaMember = !isExistingDaMember; joinValue = !isExistingDaMember ? null : daEmail || 'already a member'" :class="[baseClass, {'is-success': isExistingDaMember}]">
           <b-icon v-if="isExistingDaMember" icon="check"></b-icon>
           <span>{{$t('request.joinDa.alreadyMember')}}</span>
-        </button>
+        </a>
       </p>
     </b-field>
     <transition name="fade">

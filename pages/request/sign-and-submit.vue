@@ -87,6 +87,7 @@
                       </i18n> -->
                       <button v-if="downloadAttrSupported && pdf" :href="pdf" :download="`${firstName}-${lastName}-2018-fpca.pdf`" :class="['button', 'is-pulled-right', 'is-primary', {'is-loading': !Boolean(pdf)}]" @click.prevent="finish"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
                       <button v-else class="button is-pulled-right is-primary" @click.prevent="openPdf"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
+                      <iframe v-if="pdf" class="is-pulled-right" ref="viewer" :src="pdf"></iframe>
                     </div>
                   </article>
                 </div>
@@ -403,7 +404,7 @@ export default {
     confirmPdfDownload () {
       this.$dialog.alert({
         title: this.$t('request.fpcaDownload.downloadedAlertTitle'),
-        message: this.$t('request.fpcaDownload.downloadedAlertMessage'),
+        message: this.md(this.$t('request.fpcaDownload.downloadedAlertMessage')),
         confirmText: this.$t('request.fpcaDownload.confirmButton'),
         type: 'is-danger',
         hasIcon: true,
@@ -415,7 +416,7 @@ export default {
     openPdf () {
       this.$dialog.alert({
         title: this.$t('request.fpcaDownload.downloadingAlertTitle'),
-        message: this.$t('request.fpcaDownload.downloadingAlertMessage'),
+        message: this.md(this.$t('request.fpcaDownload.downloadingAlertMessage')),
         confirmText: this.$t('request.fpcaDownload.confirmButton'),
         type: 'is-danger',
         hasIcon: true,
@@ -428,7 +429,7 @@ export default {
       if (window.navigator && window.navigator.msSaveOrOpenBlob) {
         window.navigator.msSaveOrOpenBlob(this.msPdf)
       } else {
-        window.open(this.pdf)
+        window.open(this.pdf, `${this.firstName}-${this.lastName}-2018-fpca.pdf`)
       }
       // if (this.needsMsSaveOrOpenBlob) {
       //   window.navigator.msSaveOrOpenBlob(this.msPdf, `${this.firstName}-${this.lastName}-2018-fpca.pdf`)
