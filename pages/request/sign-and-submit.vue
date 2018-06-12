@@ -85,8 +85,9 @@
                         tag="vue-markdown"
                         :html="true">
                       </i18n> -->
-                      <button v-if="downloadAttrSupported && pdf" :href="pdf" :download="`${firstName}-${lastName}-2018-fpca.pdf`" :class="['button', 'is-pulled-right', 'is-primary', {'is-loading': !Boolean(pdf)}]" @click.prevent="finish"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
-                      <button v-else class="button is-pulled-right is-primary" @click.prevent="openPdf"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
+                      <button v-if="downloadAttrSupported && pdf" :href="pdf" :download="`${firstName}-${lastName}-2018-fpca.pdf`" :class="['button', 'is-pulled-right', 'is-primary', {'is-loading': !Boolean(pdf)}]" @click="finish"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
+                      <button v-else class="button is-pulled-right is-primary" @click="openPdf"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
+                      <button :class="['button', 'is-pulled-right', 'is-primary', {'is-loading': !Boolean(pdf)}]" @click="saveFile">Save File</button>
                       <iframe v-if="pdf" class="is-pulled-right" ref="viewer" :src="pdf"></iframe>
                     </div>
                   </article>
@@ -312,6 +313,7 @@ import axios from 'axios'
 // import VueMarkdown from 'vue-markdown'
 import ScrollUp from '~/components/ScrollUp'
 import snarkdown from 'snarkdown'
+import fileSaver from 'file-saver'
 
 export default {
   name: 'SignAndSubmit',
@@ -383,6 +385,9 @@ export default {
     }
   },
   methods: {
+    saveFile: function () {
+      fileSaver.saveAs(this.msPdf, `${this.firstName}-${this.lastName}-2018-fpca.pdf`)
+    },
     md: function (md) { return snarkdown(md) },
     signatureAgree () {
       this.$store.dispatch('requests/recordAnalytics', {event: 'start digital signature'})
