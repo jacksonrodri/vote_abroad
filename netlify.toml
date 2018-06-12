@@ -1,5 +1,5 @@
 [build]
-  Command = "npm run generate && npm run updateReleaseOnSentry"
+  Command = "npm run updateReleaseOnSentry && npm run generate"
   Functions = "lambda"
   Publish = "dist"
 
