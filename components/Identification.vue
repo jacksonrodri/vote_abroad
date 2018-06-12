@@ -27,8 +27,10 @@
         placeholder="e.g. XXX-XX-1234"
         pattern="X{3}-X{2}-[0-9]{4}"
         required
-        @focus="setVal"
-        @input.native="val => { setSSN(val.target._vCleave.getRawValue()); setVal() }">
+        @input="setVal"
+        @input.native="getRawValue"
+        @focus="setVal">
+        <!-- @input.native="val => { setSSN(val.target._vCleave.getRawValue()); setVal() }" -->
       </b-input>
     </b-field>
 
@@ -165,8 +167,8 @@ export default {
     setSSN: function (val) {
       this.ssnclean = val
     },
-    getRawValue (val, event) {
-      this.rawValue = event.target._vCleave.getRawValue()
+    getRawValue (event) {
+      this.ssnclean = event.target._vCleave.getRawValue()
     }
   }
 }
