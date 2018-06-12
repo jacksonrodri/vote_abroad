@@ -872,7 +872,11 @@ export default {
           this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'dob'}})
           break
         case this.stage.slug === 'id-and-contact-information' && this.$v.identification.ssn.$error:
-          if (this.$refs.id) this.$refs.id.$refs.ssn ? this.$refs.id.$refs.ssn.focus() : this.$refs.id.$refs.ssn4.focus()
+          if (this.$refs.id.$refs.ssn) this.$refs.id.$refs.ssn.focus()
+          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'identification.ssn'}})
+          break
+        case this.stage.slug === 'id-and-contact-information' && this.$v.identification.ssn4.$error:
+          if (this.$refs.id.$refs.ssn4) this.$refs.id.$refs.ssn4.focus()
           this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'identification.ssn'}})
           break
         case this.stage.slug === 'id-and-contact-information' && this.$v.identification.stateId.$error:

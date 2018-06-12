@@ -11,6 +11,7 @@
         :type="(validations.ssn.$error ? 'is-danger': '')">
       <b-input
         id="ssn"
+        ref="ssn"
         v-model="ssn"
         type="tel"
         v-mask="'###-##-####'"
@@ -43,7 +44,7 @@
       label-for="stateId">
       <b-input id="stateId"
         v-model="stateId"
-        ref="stateId">
+        ref="StateId">
       </b-input>
     </b-field>
 
