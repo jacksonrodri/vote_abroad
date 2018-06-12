@@ -328,7 +328,7 @@
         v-model="party"
         :join="joinDa"
         :state="votAdr.stateISO"
-        @joinDA="val => joinDA = val"
+        @joinDA="val => joinDa = val"
         :tooltipTitle="$t('request.party.tooltipTitle')"
         :joinTooltipTitle="$t('request.joinDa.tooltipTitle')"
         :joinLabel="$t('request.joinDa.label')"
@@ -653,7 +653,7 @@ export default {
       set (value) { this.$store.commit('requests/update', {sex: value}) }
     },
     party: {
-      get () { return this.currentRequestObject ? this.currentRequestObject.party || '' : '' },
+      get () { return this.currentRequestObject ? this.currentRequestObject.party || null : null },
       set (value) { this.$store.commit('requests/update', {party: value}) }
     },
     fax: {
