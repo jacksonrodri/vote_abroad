@@ -165,10 +165,13 @@ export default {
     }
   },
   watch: {
-    value (val) {
-      if (val && val.rawInput && val.isValidEmail === null && val.isValidPhone === null) {
+    value (val, oldVal) {
+      if (val && typeof val === 'object' && !metadata) {
         this.loadMetadataAndCall()
           .then(() => this.formatInput(val.rawInput))
+      }
+      if (val && val.country && this.countries.find(x => x.code.toLowerCase() === val.country.toLowerCase()) && this.countrySearch !== this.countries.find(x => x.code.toLowerCase() === val.country.toLowerCase()).name) {
+        this.countrySearch = this.countries.find(x => x.code.toLowerCase() === val.country.toLowerCase()).name
       }
     }
   },
@@ -339,10 +342,9 @@ export default {
       // console.log(window)
       window.onload = this.setPlaceholder()
     }
-    if (!this.countrySearch) {
-      let ctry = this.countries.find(country => country.code.toLowerCase() === this.userCountry.toLowerCase())
-      this.countrySearch = ctry ? ctry.name : null
-    }
+    let ctry = this.value && this.value.country ? this.countries.find(country => country.code.toLowerCase() === this.value.country.toLowerCase()) : this.countries.find(country => country.code.toLowerCase() === this.userCountry.toLowerCase())
+    this.countrySearch = ctry ? ctry.name : null
+    this.country = ctry ? ctry.code : null
   }
 }
 </script>
