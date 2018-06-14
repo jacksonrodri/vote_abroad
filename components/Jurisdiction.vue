@@ -61,11 +61,178 @@ export default {
     'placeholder'
   ],
   async mounted () {
-    this.leos = await (
-      await import(
-        /* webpackChunkName: "leodata" */ `@/data/${this.state}-leos.json`
-      )
-    )
+    switch (this.state) {
+      case 'AL':
+        this.leos = await import(/* webpackChunkName: "leodataAL" */ `@/data/AL-leos.json`)
+        break
+      case 'AK':
+        this.leos = await import(/* webpackChunkName: "leodataAK" */ `@/data/AK-leos.json`)
+        break
+      case 'AS':
+        this.leos = await import(/* webpackChunkName: "leodataAS" */ `@/data/AS-leos.json`)
+        break
+      case 'AZ':
+        this.leos = await import(/* webpackChunkName: "leodataAZ" */ `@/data/AZ-leos.json`)
+        break
+      case 'AR':
+        this.leos = await import(/* webpackChunkName: "leodataAR" */ `@/data/AR-leos.json`)
+        break
+      case 'CA':
+        this.leos = await import(/* webpackChunkName: "leodataCA" */ `@/data/CA-leos.json`)
+        break
+      case 'CO':
+        this.leos = await import(/* webpackChunkName: "leodataCO" */ `@/data/CO-leos.json`)
+        break
+      case 'CT':
+        this.leos = await import(/* webpackChunkName: "leodataCT" */ `@/data/CT-leos.json`)
+        break
+      case 'DE':
+        this.leos = await import(/* webpackChunkName: "leodataDE" */ `@/data/DE-leos.json`)
+        break
+      case 'DC':
+        this.leos = await import(/* webpackChunkName: "leodataDC" */ `@/data/DC-leos.json`)
+        break
+      case 'FL':
+        this.leos = await import(/* webpackChunkName: "leodataFL" */ `@/data/FL-leos.json`)
+        break
+      case 'GA':
+        this.leos = await import(/* webpackChunkName: "leodataGA" */ `@/data/GA-leos.json`)
+        break
+      case 'GU':
+        this.leos = await import(/* webpackChunkName: "leodataGU" */ `@/data/GU-leos.json`)
+        break
+      case 'HI':
+        this.leos = await import(/* webpackChunkName: "leodataHI" */ `@/data/HI-leos.json`)
+        break
+      case 'ID':
+        this.leos = await import(/* webpackChunkName: "leodataID" */ `@/data/ID-leos.json`)
+        break
+      case 'IL':
+        this.leos = await import(/* webpackChunkName: "leodataIL" */ `@/data/IL-leos.json`)
+        break
+      case 'IN':
+        this.leos = await import(/* webpackChunkName: "leodataIN" */ `@/data/IN-leos.json`)
+        break
+      case 'IA':
+        this.leos = await import(/* webpackChunkName: "leodataIA" */ `@/data/IA-leos.json`)
+        break
+      case 'KS':
+        this.leos = await import(/* webpackChunkName: "leodataKS" */ `@/data/KS-leos.json`)
+        break
+      case 'KY':
+        this.leos = await import(/* webpackChunkName: "leodataKY" */ `@/data/KY-leos.json`)
+        break
+      case 'LA':
+        this.leos = await import(/* webpackChunkName: "leodataLA" */ `@/data/LA-leos.json`)
+        break
+      case 'ME':
+        this.leos = await import(/* webpackChunkName: "leodataME" */ `@/data/ME-leos.json`)
+        break
+      case 'MD':
+        this.leos = await import(/* webpackChunkName: "leodataMD" */ `@/data/MD-leos.json`)
+        break
+      case 'MA':
+        this.leos = await import(/* webpackChunkName: "leodataMA" */ `@/data/MA-leos.json`)
+        break
+      case 'MI':
+        this.leos = await import(/* webpackChunkName: "leodataMI" */ `@/data/MI-leos.json`)
+        break
+      case 'MN':
+        this.leos = await import(/* webpackChunkName: "leodataMN" */ `@/data/MN-leos.json`)
+        break
+      case 'MS':
+        this.leos = await import(/* webpackChunkName: "leodataMS" */ `@/data/MS-leos.json`)
+        break
+      case 'MO':
+        this.leos = await import(/* webpackChunkName: "leodataMO" */ `@/data/MO-leos.json`)
+        break
+      case 'MT':
+        this.leos = await import(/* webpackChunkName: "leodataMT" */ `@/data/MT-leos.json`)
+        break
+      case 'NE':
+        this.leos = await import(/* webpackChunkName: "leodataNE" */ `@/data/NE-leos.json`)
+        break
+      case 'NV':
+        this.leos = await import(/* webpackChunkName: "leodataNV" */ `@/data/NV-leos.json`)
+        break
+      case 'NH':
+        this.leos = await import(/* webpackChunkName: "leodataNH" */ `@/data/NH-leos.json`)
+        break
+      case 'NJ':
+        this.leos = await import(/* webpackChunkName: "leodataNJ" */ `@/data/NJ-leos.json`)
+        break
+      case 'NM':
+        this.leos = await import(/* webpackChunkName: "leodataNM" */ `@/data/NM-leos.json`)
+        break
+      case 'NY':
+        this.leos = await import(/* webpackChunkName: "leodataNY" */ `@/data/NY-leos.json`)
+        break
+      case 'NC':
+        this.leos = await import(/* webpackChunkName: "leodataNC" */ `@/data/NC-leos.json`)
+        break
+      case 'ND':
+        this.leos = await import(/* webpackChunkName: "leodataND" */ `@/data/ND-leos.json`)
+        break
+      case 'OH':
+        this.leos = await import(/* webpackChunkName: "leodataOH" */ `@/data/OH-leos.json`)
+        break
+      case 'OK':
+        this.leos = await import(/* webpackChunkName: "leodataOK" */ `@/data/OK-leos.json`)
+        break
+      case 'OR':
+        this.leos = await import(/* webpackChunkName: "leodataOR" */ `@/data/OR-leos.json`)
+        break
+      case 'PA':
+        this.leos = await import(/* webpackChunkName: "leodataPA" */ `@/data/PA-leos.json`)
+        break
+      case 'PR':
+        this.leos = await import(/* webpackChunkName: "leodataPR" */ `@/data/PR-leos.json`)
+        break
+      case 'RI':
+        this.leos = await import(/* webpackChunkName: "leodataRI" */ `@/data/RI-leos.json`)
+        break
+      case 'SC':
+        this.leos = await import(/* webpackChunkName: "leodataSC" */ `@/data/SC-leos.json`)
+        break
+      case 'SD':
+        this.leos = await import(/* webpackChunkName: "leodataSD" */ `@/data/SD-leos.json`)
+        break
+      case 'TN':
+        this.leos = await import(/* webpackChunkName: "leodataTN" */ `@/data/TN-leos.json`)
+        break
+      case 'TX':
+        this.leos = await import(/* webpackChunkName: "leodataTX" */ `@/data/TX-leos.json`)
+        break
+      case 'UT':
+        this.leos = await import(/* webpackChunkName: "leodataUT" */ `@/data/UT-leos.json`)
+        break
+      case 'VT':
+        this.leos = await import(/* webpackChunkName: "leodataVT" */ `@/data/VT-leos.json`)
+        break
+      case 'VI':
+        this.leos = await import(/* webpackChunkName: "leodataVI" */ `@/data/VI-leos.json`)
+        break
+      case 'VA':
+        this.leos = await import(/* webpackChunkName: "leodataVA" */ `@/data/VA-leos.json`)
+        break
+      case 'WA':
+        this.leos = await import(/* webpackChunkName: "leodataWA" */ `@/data/WA-leos.json`)
+        break
+      case 'WV':
+        this.leos = await import(/* webpackChunkName: "leodataWV" */ `@/data/WV-leos.json`)
+        break
+      case 'WI':
+        this.leos = await import(/* webpackChunkName: "leodataWI" */ `@/data/WI-leos.json`)
+        break
+      case 'WY':
+        this.leos = await import(/* webpackChunkName: "leodataWY" */ `@/data/WY-leos.json`)
+        break
+    }
+    // this.leos = await (
+    //   await import(
+    //     /* webpackChunkName: "leodata" */ `@/data/${this.state}-leos.json`
+    //   )
+    // )
     if (this.leos.length === 1) {
       this.isSingleLeoState = true
       this.updateLeo(this.leos[0])
