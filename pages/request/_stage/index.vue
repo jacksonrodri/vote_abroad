@@ -148,24 +148,26 @@
         </div>
       </voting-address>
 
-      <jurisdiction v-if="votAdr && votAdr.stateISO"
-        :label="$t('request.jurisdiction.label')"
-        :toolTipTitle="$t('request.jurisdiction.tooltipTitle')"
-        :placeholder="$t('request.jurisdiction.placeholder')"
-        :key="votAdr.stateISO"
-        ref="jurisdiction"
+      <no-ssr>
+        <jurisdiction v-if="votAdr && votAdr.stateISO"
+          :label="$t('request.jurisdiction.label')"
+          :toolTipTitle="$t('request.jurisdiction.tooltipTitle')"
+          :placeholder="$t('request.jurisdiction.placeholder')"
+          :key="votAdr.stateISO"
+          ref="jurisdiction"
 
-        @input="delayTouch($v.jurisdiction)"
-        :validations="($v.jurisdiction)"
-        :state="this.votAdr.stateISO">
-        <div slot="instructions">
-          <p>{{$t('request.jurisdiction.instructions')}}</p>
-        </div>
-        <div slot="tooltip">
-          <p v-html="$options.filters.markdown($t('request.jurisdiction.tooltip'))"></p>
-          <!-- <vue-markdown>{{$t('request.jurisdiction.tooltip')}}</vue-markdown> -->
-        </div>
-      </jurisdiction>
+          @input="delayTouch($v.jurisdiction)"
+          :validations="($v.jurisdiction)"
+          :state="this.votAdr.stateISO">
+          <div slot="instructions">
+            <p>{{$t('request.jurisdiction.instructions')}}</p>
+          </div>
+          <div slot="tooltip">
+            <p v-html="$options.filters.markdown($t('request.jurisdiction.tooltip'))"></p>
+            <!-- <vue-markdown>{{$t('request.jurisdiction.tooltip')}}</vue-markdown> -->
+          </div>
+        </jurisdiction>
+      </no-ssr>
 
     <voter-class v-model="voterClass"
       :allowsNeverResided="stateRules ? stateRules.allowsNeverResided : false"
