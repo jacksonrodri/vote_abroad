@@ -114,7 +114,7 @@ export default {
         return null
       }
     },
-    userCountry () { return this.country.toUpperCase() || this.$store.state.userauth.user.country.toUpperCase() || null },
+    userCountry () { return this.country ? this.country.toUpperCase() : this.$store.state.userauth.user.country.toUpperCase() || null },
     filteredCountries () {
       if (this.countries.filter((option) => this.countrySearch.toLowerCase() === option.name.toLowerCase()).length === 1) {
         return this.countries.filter((option) => this.countrySearch.toLowerCase() === option.name.toLowerCase()).concat(this.countries.filter((option) => this.countrySearch.toLowerCase() !== option.name.toLowerCase()))
