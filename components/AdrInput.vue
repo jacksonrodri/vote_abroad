@@ -108,13 +108,13 @@
                   :data="!S ? sOptions : sOptions.filter((opt) => opt.name.toLowerCase().includes(S.toLowerCase()) || opt.key.toLowerCase().includes(S.toLowerCase()))"
                   field="name"
                   keep-first
-                  :autocomplete="getAutocomplete(item)"
+                  :autocomplete="getAutocomplete(subItem)"
                   :placeholder="getPlaceholder(subItem)"
                   :open-on-focus=true></b-autocomplete>
                 <b-input v-else :value="getValue(subItem)"
                   @input="val => update({[subItem]: val})"
                   :ref="subItem"
-                  :autocomplete="getAutocomplete(item)"
+                  :autocomplete="getAutocomplete(subItem)"
                   :placeholder="getPlaceholder(subItem)">
                 </b-input>
               </b-field>
@@ -148,7 +148,6 @@
             :type="usesAlternateFormat ? 'is-success' : 'is-danger'">
             <b-icon :icon="!usesAlternateFormat ? 'edit' : 'align-justify'"></b-icon>
             <span>{{$t('request.abrAdr.changeFormat')}}</span>
-            <!-- <span>Change format</span> -->
           </b-radio-button>
         </b-field>
       </b-field>

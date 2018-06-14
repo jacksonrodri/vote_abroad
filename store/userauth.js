@@ -98,13 +98,12 @@ export const actions = {
       hasModalCard: true,
       width: 360,
       props: {
-        code: '',
         email: state.user.emailAddress || null,
         phone: state.user.mobileIntFormat || null,
+        isLoading: false,
         msg
       },
       events: {
-        selectDate (date) { console.log(date) },
         confirmCode: (value) => {
           if (state.user.emailAddress) {
             dispatch('loginEmailVerify', value)
@@ -179,6 +178,7 @@ export const actions = {
       await dispatch('sendSmsCode')
     }
     await dispatch('promptCode', loginType)
+    // await dispatch('launchModal', loginType)
   },
   promptCode ({ state, dispatch, commit }, loginType) {
     let msg = loginType === 'sms' ? `Enter the code we sent to ${state.user.mobileIntFormat}` : `Click the login link or enter the code we sent to ${state.user.emailAddress}.`

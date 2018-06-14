@@ -1,8 +1,11 @@
 <template>
   <form action="">
     <div class="modal-card" style="width: auto">
+        <figure class="image is-64x64 is-overlay" style="left:50%; transform: translate(-50%, 80%); z-index:41">
+          <img src="/icon.png" :style="isLoading ? 'animation: spinAround 3000ms infinite linear;' : ''">
+        </figure>
       <header class="modal-card-head">
-        <p class="modal-card-title">Authentication</p>
+        <!-- <p class="modal-card-title">Authentication</p> -->
       </header>
       <section class="modal-card-body">
         <section v-if="currently === 'enteringCode'" class="section">
@@ -17,28 +20,34 @@
                 size="is-medium"
                 max=999999
                 pattern="[0-9]{6}"
-                :value="code"
+                v-model="code"
                 required>
               </b-input>
             </b-field>
                 <!-- minlength=6
                 maxlength=6 -->
             <p class="control">
-              <button class="button is-primary is-medium">
+              <button @click="$emit('confirmCode', code)" class="button is-primary is-medium">
                 <span class="icon is-small">
                   <i class="fas fa-arrow-right"></i>
                 </span>
               </button>
             </p>
           </b-field>
-          <div class="block">
-              <p class="digit">{{ seconds }}</p>
-              <p class="text">Seconds</p>
-          </div>
 
           <div class="field is-grouped is-grouped-centered">
             <p class="control">
-              <a @click="currently = 'retrying'" class="button is-vfa is-inverted is-small">
+              <a v-show="seconds > 25" @click="currently = 'retrying'" class="button is-vfa is-inverted is-small">
+                Did not get the code?
+              </a>
+              <a v-show="seconds <= 25" class="button is-vfa is-inverted is-small" disabled>
+                Did not get the code? <span class="tag is-help">0:{{ 25 - parseInt(seconds) | two_digits }}</span>
+              </a>
+            </p>
+          </div>
+          <div class="field is-grouped is-grouped-centered">
+            <p class="control">
+              <a @click="currently = 'loading'" class="button is-vfa is-inverted is-small">
                 Did not get the code?
               </a>
             </p>
@@ -71,6 +80,11 @@
             </p>
           </div>
         </section>
+        <section v-if="currently === 'loading'" class="section">
+          <h3 class="title has-text-centered is-3">Authenticating...</h3>
+          <button class="button is-loading is-white is-large is-fullwidth" >Loading...</button>
+          <span class="help is-vfa">Did you know around 9 million Americans live abroad? </span>
+        </section>
 
       </section>
       <footer class="modal-card-foot">
@@ -86,12 +100,12 @@ import PhoneInput from '~/components/PhoneInput'
 
 export default {
   name: 'authentication-code',
-  props: ['code', 'msg', 'email', 'phone', 'startAuth'],
+  props: ['msg', 'email', 'phone', 'isLoading'],
   components: { PhoneInput },
   data () {
     return {
       localPhoneorEmail: null,
-      ncode: [],
+      code: null,
       currently: 'enteringCode',
       count: 1,
       now: Math.trunc((new Date()).getTime() / 1000),
@@ -107,11 +121,24 @@ export default {
       }
     },
     seconds () {
-      return (this.date - this.now) % 60
+      return (this.now - this.date)
+    }
+  },
+  filters: {
+    two_digits (value) {
+      if (value.toString().length <= 1) {
+        return '0' + value.toString()
+      }
+      return value.toString()
+    }
+  },
+  methods: {
+    resetDate () {
+      this.date = Math.trunc((new Date()).getTime() / 1000)
     }
   },
   mounted () {
-    this.date = Math.trunc((new Date()).getTime() / 1000)
+    this.resetDate()
     if (process.browser) {
       window.setInterval(() => {
         this.now = Math.trunc((new Date()).getTime() / 1000)
