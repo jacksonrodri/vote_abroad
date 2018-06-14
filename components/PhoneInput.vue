@@ -173,6 +173,9 @@ export default {
       if (val && val.country && this.countries.find(x => x.code.toLowerCase() === val.country.toLowerCase()) && this.countrySearch !== this.countries.find(x => x.code.toLowerCase() === val.country.toLowerCase()).name) {
         this.countrySearch = this.countries.find(x => x.code.toLowerCase() === val.country.toLowerCase()).name
       }
+      // if (val && val.country && val.intNumber && !val.intNumber.includes(getPhoneCode(val.country))) {
+      //   console.log(val, getPhoneCode(val.country))
+      // }
     }
   },
   methods: {
@@ -182,7 +185,13 @@ export default {
       if (option && option.code) {
         this.country = option.code
         this.focusInput()
+        // this.loadMetadataAndCall(() => {
+        console.log(this.getPhoneCode(option.code), this.value)
+        // )
       }
+      // if (option && option.code && this.value && this.value.intNumber && !this.value.intNumber.includes(getPhoneCode(option.code))) {
+      //   console.log('Number doesn\'t match', option.code, getPhoneCode(option.code))
+      // }
     },
     standardizePhone () {
       if (this.value && this.value.isValidPhone) {
@@ -344,7 +353,7 @@ export default {
     }
     let ctry = this.value && this.value.country ? this.countries.find(country => country.code.toLowerCase() === this.value.country.toLowerCase()) : this.countries.find(country => country.code.toLowerCase() === this.userCountry.toLowerCase())
     this.countrySearch = ctry ? ctry.name : null
-    this.country = ctry ? ctry.code : null
+    this.country = ctry && ctry.code.toLowerCase() !== 'us' ? ctry.code : null
   }
 }
 </script>
