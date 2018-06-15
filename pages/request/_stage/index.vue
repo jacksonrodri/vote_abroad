@@ -960,7 +960,7 @@ export default {
             let year = parseInt(this.dob.substr(0, 4))
             let month = parseInt(this.dob.substr(5, 2))
             let day = parseInt(this.dob.substr(8, 2))
-            return (year <= 2000 && month <= 11 && day <= 6)
+            return (year < 2000 || (year === 2000 && month < 11) || (year === 2000 && month === 11 && day <= 6))
           } else {
             return true
           }
