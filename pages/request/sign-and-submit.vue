@@ -375,7 +375,7 @@ export default {
       this.$store.dispatch('requests/recordAnalytics', {event: 'start digital signature'})
       this.$dialog.confirm({
         title: this.$t('request.sig.affirmation'),
-        message: `<h1 class="title is-5">I swear or affirm, under penalty of purjury that:</h1>
+        message: `<h1 class="title is-5">I swear or affirm, under penalty of perjury that:</h1>
         <div class="content">
         <ul>
           <li>The information on this form is true, accurate, and complete to the best of my knowledge. I understand that a material misstatement of fact in completion of this document may constitute grounds for conviction of perjury.</li>
