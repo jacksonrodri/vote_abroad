@@ -61,6 +61,7 @@
           @blur="standardizePhone"
           @focus="setPlaceholder; countryFocused = false"
           @input.native="formatInput($event.target.value)"
+          @input="setSelectionStart"
           :autocomplete="autocomplete"
           @keyup.native.enter="$emit('pressEnter')"
           :placeholder="placeholder"></b-input>
@@ -100,7 +101,8 @@ export default {
       isEmail: false,
       maxPhoneLength: 16,
       maxEmailLength: 40,
-      toolTipOpen: false
+      toolTipOpen: false,
+      selectionStart: null
     }
   },
   computed: {
@@ -169,9 +171,14 @@ export default {
       if (val && typeof val === 'object' && !metadata) {
         this.loadMetadataAndCall()
           .then(() => this.formatInput(val.rawInput))
+          // .then(() => this.setSelectionStart())
       }
       if (val && val.country && this.countries.find(x => x.code.toLowerCase() === val.country.toLowerCase()) && this.countrySearch !== this.countries.find(x => x.code.toLowerCase() === val.country.toLowerCase()).name) {
         this.countrySearch = this.countries.find(x => x.code.toLowerCase() === val.country.toLowerCase()).name
+      }
+      if (val && val.rawInput && this.selectionStart) {
+        // this.$refs.input.$refs.input.setSelectionRange(this.selectionStart, this.selectionStart)
+        // this.setSelectionStart()
       }
       // if (val && val.country && val.intNumber && !val.intNumber.includes(getPhoneCode(val.country))) {
       //   console.log(val, getPhoneCode(val.country))
@@ -179,6 +186,21 @@ export default {
     }
   },
   methods: {
+    getSelectionStart (val) {
+      if (val || (this.value && this.value.rawInput)) {
+        this.selectionStart = this.$refs.input.$refs.input.selectionStart
+        console.log(this.selectionStart, val || this.value.rawInput, val.charAt(this.selectionStart) || this.value.rawInput.charAt(this.selectionStart))
+      }
+    },
+    setSelectionStart () {
+      if (this.selectionStart) {
+        setTimeout(() => {
+          this.$refs.input.$refs.input.setSelectionRange(this.selectionStart, this.selectionStart)
+          console.log(`moved to ${this.selectionStart}`)
+          this.selectionStart = null
+        }, 5)
+      }
+    },
     selectCountry (option) {
       console.log(option)
       // this.countrySearch = option.name
@@ -296,6 +318,8 @@ export default {
           this.$emit('validEmail', validEmail)
           this.$emit('input', typed)
         }
+        // if (this.selectionStart) this.setSelectionStart()
+        this.getSelectionStart(val)
       }
     },
     verifyEmail: function () {
