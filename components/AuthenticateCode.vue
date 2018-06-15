@@ -80,10 +80,10 @@
             </p>
           </div>
         </section>
-        <section v-if="currently === 'loading'" class="section">
+        <section v-if="currently === 'loading'">
           <h3 class="title has-text-centered is-3">Authenticating...</h3>
           <button class="button is-loading is-white is-large is-fullwidth" >Loading...</button>
-          <span class="help is-vfa">Did you know around 9 million Americans live abroad? </span>
+          <span class="help is-vfa"> {{ didYouKnow[Math.floor(Math.random() * Math.floor(didYouKnow.length))]}}</span>
         </section>
 
       </section>
@@ -109,7 +109,12 @@ export default {
       currently: 'enteringCode',
       count: 1,
       now: Math.trunc((new Date()).getTime() / 1000),
-      date: Math.trunc((new Date()).getTime() / 1000)
+      date: Math.trunc((new Date()).getTime() / 1000),
+      didYouKnow: [
+        'Did you know around 9 million Americans live abroad?',
+        'Request your ballot every calendar year to get full Federal Protection for all federal elections each year.',
+        'Americans have been political abroad since Thomas Jefferson.  He wrote portions of xx while in Paris.'
+      ]
     }
   },
   computed: {

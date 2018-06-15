@@ -43,7 +43,7 @@ export default {
   data () {
     return {
       date: undefined,
-      maxDate: new Date(2000, 10, 7),
+      maxDate: new Date(2000, 10, 6),
       minDate: new Date(1900, 0, 1),
       toolTipOpen: false
     }

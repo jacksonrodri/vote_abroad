@@ -76,7 +76,7 @@
 </template>
 
 <script>
-import { format, parse, isValidNumber, getPhoneCode, asYouType as AsYouType } from 'libphonenumber-js/custom'
+import { format, parse, getNumberType, isValidNumber, getPhoneCode, asYouType as AsYouType } from 'libphonenumber-js/custom'
 // getPhoneCode, parse, , isValidNumber, asYouType as AsYouType
 import { requiredIf } from 'vuelidate/lib/validators'
 import Mailcheck from 'mailcheck'
@@ -313,7 +313,7 @@ export default {
         if (this.accepts.includes('phone') && !metadata) {
           this.loadMetadataAndCall(this.formatInput)
         } else if (this.accepts.includes('phone')) {
-          this.$emit('input', {rawInput: typed || null, country: this.userCountry, isValidEmail: validEmail, isValidPhone: validPhone, intNumber: intNumber})
+          this.$emit('input', {rawInput: typed || null, country: this.userCountry, isValidEmail: validEmail, isValidPhone: validPhone, intNumber: intNumber, type: getNumberType(parse(typed, this.country, metadata), metadata)})
         } else {
           this.$emit('validEmail', validEmail)
           this.$emit('input', typed)
