@@ -74,7 +74,7 @@
                 <template slot="empty">No results found</template>
               </b-autocomplete>
                 <!-- autocomplete="address-line1" -->
-              <b-autocomplete v-else-if="item === 'S' && sOptions"
+              <b-autocomplete v-else-if="item === 'S' && sOptions.length > 0"
                 :key="item"
                 :value="S"
                 ref="S"
@@ -96,11 +96,11 @@
           </b-field>
           <b-field v-else :key="item.join('-')"
             :type="item.filter(x => v && v[x] && v[x].$error).length > 0 ? 'is-danger' : ''"
-            :message="item.filter(x => v && v[x] && v[x].$error).length === 0 ? '' : item.filter(x => v && v[x] && v[x].$error).length === 1 ? `Please enter your ${getPlaceholder(item[0])}.` : `These fields are required: ${item.filter(x => v && v[x] && v[x].$error).map(x => getPlaceholder(x)).join(', ')}.`">
+            :message="item.filter(x => v && v[x] && v[x].$error).length === 0 ? '' : item.filter(x => v && v[x] && v[x].$error).length === 1 ? `Please enter your ${getPlaceholder(item.filter(x => v && v[x] && v[x].$error)[0])}.` : `These fields are required: ${item.filter(x => v && v[x] && v[x].$error).map(x => getPlaceholder(x)).join(', ')}.`">
             <b-field grouped>
               <b-field v-for="subItem in item" :expanded="subItem !== 'X' || subItem !== 'Z'" :key="subItem"
                 :type="v && v[subItem] && v[subItem]['$error'] ? 'is-danger' : ''">
-                <b-autocomplete v-if="subItem === 'S'"
+                <b-autocomplete v-if="subItem === 'S' && sOptions.length > 0"
                   :value="S"
                   :ref="S"
                   @input="val => update({S: val})"
@@ -237,7 +237,7 @@ export default {
         let subNames = this.countryFormat && this.countryFormat['sub_lnames'] ? this.countryFormat['sub_lnames'].split(/~+/g) : this.countryFormat['sub_names'].split(/~+/g)
         return subKeys.reduce((arr, k, i) => arr.concat({ key: k, name: subNames[i] }), [])
       } else {
-        return false
+        return []
       }
     },
     formatted () {
