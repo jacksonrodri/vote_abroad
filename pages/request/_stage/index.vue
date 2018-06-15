@@ -761,6 +761,7 @@ export default {
           this.$v.recBallot.$touch()
           this.$v.email.$touch()
           this.$v.fax.$touch()
+          if (this.recBallot === 'fax') { this.$refs.fax.$v.value.$touch() }
           this.$v.altEmail.$touch()
           break
         case 'id-and-contact-information':
@@ -958,7 +959,7 @@ export default {
       },
       fax: {
         required: () => {
-          if (this.recBallot !== 'fax' || this.fax.isValidPhone) {
+          if (this.recBallot !== 'fax' || (this.fax && this.fax.isValidPhone)) {
             return true
           } else { return false }
         }
