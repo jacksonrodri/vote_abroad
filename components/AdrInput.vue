@@ -234,7 +234,7 @@ export default {
     sOptions () {
       if (((this.countryFormat.lfmt && this.countryFormat.lfmt.includes('%S')) || (this.countryFormat.fmt && this.countryFormat.fmt.includes('%S'))) && this.countryFormat['sub_keys']) {
         let subKeys = this.countryFormat['sub_keys'].split(/~+/g)
-        let subNames = this.countryFormat && this.countryFormat['sub_lnames'] ? this.countryFormat['sub_lnames'].split(/~+/g) : this.countryFormat['sub_names'].split(/~+/g)
+        let subNames = this.countryFormat && this.countryFormat['sub_lnames'] ? this.countryFormat['sub_lnames'].split(/~+/g) : this.countryFormat['sub_names'] ? this.countryFormat['sub_names'].split(/~+/g) : this.countryFormat['sub_keys'].split(/~+/g)
         return subKeys.reduce((arr, k, i) => arr.concat({ key: k, name: subNames[i] }), [])
       } else {
         return []
