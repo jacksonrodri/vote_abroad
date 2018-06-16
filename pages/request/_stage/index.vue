@@ -889,8 +889,9 @@ export default {
             if (!this.$refs.altEmail && this.$v.altEmail.$error) this.altEmail = null
             if (!this.$refs.fax && this.$v.fax.$error) this.fax = null
           }
-          this.$store.dispatch('requests/recordAnalytics', {event: 'completed: ' + this.stage.slug})
+          console.log(nextPage)
           this.$router.push(nextPage)
+          this.$store.dispatch('requests/recordAnalytics', {event: 'completed: ' + this.stage.slug})
           this.$store.dispatch('requests/updateRequest', {status: 'completed: ' + this.stage.slug})
       }
     },

@@ -32,7 +32,7 @@ export default function ({ route, params, store, redirect }) {
     (route.name.indexOf('review') > -1 ||
     route.name.indexOf('sign-and-submit') > -1 ||
     route.name.indexOf('complete') > -1) &&
-    (!current.identification)
+    (!current.identification && !(current.votAdr.stateISO === 'WY' || current.votAdr.stateISO === 'CT' || current.votAdr.stateISO === 'IA' || current.votAdr.stateISO === 'KY' || current.votAdr.stateISO === 'MA' || current.votAdr.stateISO === 'NH' || current.votAdr.stateISO === 'WA'))
   ) {
     return redirect('/request/id-and-contact-information')
   }
