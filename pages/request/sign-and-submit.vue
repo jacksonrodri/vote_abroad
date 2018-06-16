@@ -316,6 +316,12 @@ export default {
         .getAll(),
       stateElections: (await app.$content('/elections').get('elections')).body
         .filter(election => election.state && state && election.state.toLowerCase() === state.toLowerCase())
+        .filter(x => new Date(x.date).getTime() > Date.now())
+        .sort(function (a, b) {
+          var dateA = new Date(a.date).getTime()
+          var dateB = new Date(b.date).getTime()
+          return dateA - dateB
+        })
     }
   },
   data () {
@@ -573,7 +579,7 @@ export default {
         electionType: election.electionType,
         electionDate: election && election.date && election.date.substr(0, 4) === '2018' ? new Date(election.date) : null,
         requestType: ruleKey,
-        ruleType: item.rule,
+        ruleType: typeof item.rule === 'string' && !item.rule.toLowerCase().includes('deadline') && !item.rule.toLowerCase().includes('required') ? item.rule : 'received by',
         voterType: typeof item.voterType === 'string' ? item.voterType : 'All',
         ruleDate: item && item.date && item.date.substr(0, 4) === '2018' ? new Date(item.date) : null
       }))))

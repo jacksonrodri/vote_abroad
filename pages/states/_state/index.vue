@@ -25,7 +25,7 @@
             <template slot-scope="props"><strong>{{props.option.j}} {{props.option.j.toLowerCase().indexOf(props.option.t.toLowerCase()) > -1 ? '' : props.option.t}}</strong> - <small>{{props.option.n}}</small></template>
           </b-autocomplete> -->
           <h1 class="title is-4">Elections Deadlines for {{state.state}} Voters Abroad</h1>
-          <b-table hoverable :data="elections">
+          <b-table hoverable :data="upcomingElections">
             <template slot-scope="props">
               <b-table-column label="Election Day">
                 <h1 class="title is-5">{{ props.row.electionType }}</h1>
@@ -68,7 +68,18 @@ export default {
   head: {
     title: 'Vote From Abroad - Absentee ballots for Americans Abroad.'
   },
-  layout: 'default'
+  layout: 'default',
+  computed: {
+    upcomingElections () {
+      return this.elections
+        .filter(x => new Date(x.date).getTime() > Date.now())
+        .sort(function (a, b) {
+          var dateA = new Date(a.date).getTime()
+          var dateB = new Date(b.date).getTime()
+          return dateA - dateB
+        })
+    }
+  }
 }
 </script>
 
