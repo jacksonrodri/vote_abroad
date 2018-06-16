@@ -68,7 +68,7 @@
                 :placeholder="getPlaceholder(item)"
                 field="structured_formatting.main_text"
                 :loading="isFetching"
-                @input="val => { update({A: val}); getAsyncData() }"
+                @input="val => getFormatAndCall(() => { update({A: val}); getAsyncData(val) }, countryiso || userCountry)"
                 @select="option => fillData(option)">
                 <template slot-scope="props">{{ props.option.description }}</template>
                 <template slot="empty">No results found</template>
@@ -320,12 +320,12 @@ export default {
       // Object.keys(inputObj).forEach(item => this.delayTouch(this.$v[item]))
       if (Object.keys.length === 1 && (Object.keys(inputObj).includes('alt1') || Object.keys(inputObj).includes('alt2') || Object.keys(inputObj).includes('alt3') || Object.keys(inputObj).includes('alt4') || Object.keys(inputObj).includes('alt5'))) {
         this.$emit('input', Object.assign({}, {alt1: this.value.alt1, alt2: this.value.alt2, alt3: this.value.alt3, alt4: this.value.alt4, alt5: this.value.alt5, usesAlternateFormat: true, country: this.value.country, countryiso: this.value.countryiso}, inputObj))
-      } else if (inputObj.countryiso && this.value && inputObj.countryiso !== this.value.countryiso) {
+      } else if (inputObj.countryiso && this.value && this.value.countryiso && inputObj.countryiso.toLowerCase() !== this.value.countryiso.toLowerCase()) {
         this.countrySearch = this.getCountryName(inputObj.countryiso)
         this.$emit('input', Object.assign({}, this.value, {countryiso: inputObj.countryiso, country: this.getCountryName(inputObj.countryiso)}))
         let countryiso = inputObj.countryiso
         // delete inputObj.countryiso
-        this.getFormatAndCall(null, countryiso)
+        this.getFormatAndCall(() => this.update(inputObj), countryiso)
       } else {
         let ft = this.countryFormat.lfmt || this.countryFormat.fmt || '%A%n%B%n%C%n%S'
         // let fullFt = ft + '%country%countryiso%B'
@@ -362,7 +362,7 @@ export default {
     async getFormatAndCall (passedFunction, countryiso) {
       // if (countryiso) console.log(`has country format countryiso: ${countryiso}, userCountry: ${this.userCountry}`, !this.formats[countryiso.toUpperCase()])
       if ((countryiso && !this.formats[countryiso.toUpperCase()]) || (this.value && this.value.countryiso && !this.formats[this.value.countryiso.toUpperCase()]) || (this.userCountry && !this.formats[this.userCountry.toUpperCase()])) {
-        console.log('requesting country format: ', countryiso || this.value || this.userCountry)
+        console.log('requesting country format: ', countryiso || this.value ? this.value.countryiso : this.userCountry)
         // || (!countryiso && this.userCountry && !this.formats[this.userCountry.toUpperCase()]))
         let requestedFormat = await import(`~/data/postal/${countryiso ? countryiso.toLowerCase() : this.userCountry.toLowerCase()}.json`)
         this.formats = Object.assign({}, this.formats, await requestedFormat)
@@ -459,10 +459,10 @@ export default {
           })
       }
     },
-    getAsyncData: debounce(function () {
+    getAsyncData: debounce(function (val) {
       this.data = []
       this.isFetching = true
-      axios.get(`${process.env.placesUrl + process.env.autocompleteEndpoint}?input=${this.A}&types=geocode&language=en${this.userCountry ? '&components=country:' + this.userCountry : ''}&key=${process.env.placesKey}`)
+      axios.get(`${process.env.placesUrl + process.env.autocompleteEndpoint}?input=${val}&types=geocode&language=en${this.userCountry || this.countryiso ? '&components=country:' + this.countryiso || this.userCountry : ''}&key=${process.env.placesKey}`)
         .then(({ data }) => {
           data.predictions.forEach((item) => this.data.push(item))
           this.isFetching = false
