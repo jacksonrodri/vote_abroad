@@ -67,6 +67,7 @@
                 autocomplete="section-abroad shipping street-address"
                 :placeholder="getPlaceholder(item)"
                 field="structured_formatting.main_text"
+                @focus="getFormatAndCall(null, countryiso || userCountry)"
                 :loading="isFetching"
                 @input="val => getFormatAndCall(() => { update({A: val}); getAsyncData(val) }, countryiso || userCountry)"
                 @select="option => fillData(option)">
@@ -278,7 +279,7 @@ export default {
   watch: {
     value (val) {
       if (val && val.countryiso && !val.country) {
-        // this.update(Object.assign({}, this.val, {country: this.getCountryName(val.countryiso)}))
+        this.update(Object.assign({}, this.val, {country: this.getCountryName(val.countryiso)}))
         console.log('needs country name')
       }
     },
@@ -286,6 +287,9 @@ export default {
       if (this.countrySearch !== this.getCountryName(val)) {
         this.countrySearch = this.getCountryName(val)
         this.update({country: this.countrySearch, countryiso: val})
+      }
+      if (val && (!oldVal || val !== oldVal)) {
+        this.getFormatAndCall(null, val)
       }
       // if (!this.countrySearch) {
       //   this.countrySearch = this.getCountryName(val)
@@ -362,7 +366,7 @@ export default {
     async getFormatAndCall (passedFunction, countryiso) {
       // if (countryiso) console.log(`has country format countryiso: ${countryiso}, userCountry: ${this.userCountry}`, !this.formats[countryiso.toUpperCase()])
       if ((countryiso && !this.formats[countryiso.toUpperCase()]) || (this.value && this.value.countryiso && !this.formats[this.value.countryiso.toUpperCase()]) || (this.userCountry && !this.formats[this.userCountry.toUpperCase()])) {
-        console.log('requesting country format: ', countryiso || this.value ? this.value.countryiso : this.userCountry)
+        // console.log('requesting country format: ', countryiso || this.value ? this.value.countryiso : this.userCountry)
         // || (!countryiso && this.userCountry && !this.formats[this.userCountry.toUpperCase()]))
         let requestedFormat = await import(`~/data/postal/${countryiso ? countryiso.toLowerCase() : this.userCountry.toLowerCase()}.json`)
         this.formats = Object.assign({}, this.formats, await requestedFormat)
@@ -495,8 +499,10 @@ export default {
   },
   mounted () {
     this.formats = Object.assign({}, ZZ)
-    this.getFormatAndCall()
+    // this.getFormatAndCall()ted
+    this.getFormatAndCall(null, this.countryiso || this.userCountry)
     this.countrySearch = this.value && this.value.country ? this.value.country : this.getCountryName(this.userCountry)
+    this.country = this.getCountryName(this.countryiso || this.userCountry)
     // this.update({country: this.countrySearch, countryiso: this.userCountry})
   }
 }

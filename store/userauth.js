@@ -438,6 +438,19 @@ export const actions = {
         }
       })
     }
+    if (!rootState.requests || rootState.requests.requests.length === 0) {
+      let newRequest = {}
+      if (state.user.mobileIntFormat && state.user.country) {
+        newRequest.tel = {isValidPhone: true, rawInput: state.user.mobileIntFormat, type: 'MOBILE', isValidEmail: false, intNumber: state.user.mobileIntFormat, country: state.user.country}
+      }
+      if (state.user.emailAddress) {
+        newRequest.email = state.user.emailAddress
+      }
+      if (state.user.country || (state.session && state.session.country)) {
+        newRequest.abrAdr = {countryiso: state.user.country || state.session.country}
+      }
+      commit('requests/update', newRequest, { root: true })
+    }
     this.$raven.setUserContext({
       email: state.user.emailAddress || null,
       id: state.user.IdentityId || null
