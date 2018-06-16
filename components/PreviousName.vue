@@ -94,7 +94,7 @@ export default {
     setUsesPreviousName: function (val) {
       this.$emit('input', {
         // previousName: val ? this.name || null : null,
-        previousName: this.pName,
+        previousName: val ? this.pName : '',
         usesPreviousName: val
       })
     }

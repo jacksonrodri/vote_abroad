@@ -525,7 +525,7 @@ export default {
         }
         return addlInfoText
       } else {
-        return ' '
+        return ''
       }
     },
     date () { return this.currentRequest && this.currentRequest.date ? this.currentRequest.date.toString() : ' ' },

@@ -202,11 +202,17 @@ collections:
                 widget: "object"
                 fields:
                   - {label: "Required", name: "required", widget: "string"}
+                  - {label: "Max Length (37)", name:"maxLength", widget: "string"}
           - label: "Middle Name(s)"
             name: "middleName"
             widget: "object"
             fields:
               - {label: "Field Label", name: "label", widget: "string"}
+              - label: "Messages"
+                name: "messages"
+                widget: "object"
+                fields:
+                  - {label: "Max Length (37)", name:"maxLength", widget: "string"}
           - label: "Last Name"
             name: "lastName"
             widget: "object"
@@ -217,11 +223,17 @@ collections:
                 widget: "object"
                 fields:
                   - {label: "Required", name: "required", widget: "string"}
+                  - {label: "Max Length (37)", name:"maxLength", widget: "string"}
           - label: "Suffix"
             name: "suffix"
             widget: "object"
             fields:
               - {label: "Field Label", name: "label", widget: "string"}
+              - label: "Messages"
+                name: "messages"
+                widget: "object"
+                fields:
+                  - {label: "Max Length (16)", name:"maxLength", widget: "string"}
           - label: "Previous Name"
             name: "previousName"
             widget: "object"
@@ -237,6 +249,7 @@ collections:
                 widget: "object"
                 fields:
                   - {label: "Required", name: "required", widget: "string"}
+                  - {label: "Max Length (29)", name:"maxLength", widget: "string"}
           - label: "Telephone"
             name: "tel"
             widget: "object"

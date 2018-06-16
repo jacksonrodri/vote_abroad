@@ -49,7 +49,7 @@
 
       <previous-name v-model="previousName"
         :type="($v.previousName.$error ? 'is-danger': '')"
-        :message="$v.previousName.$error ? Object.keys($v.previousName.$params).map(x => x) : '' "
+        :message="$v.previousName.$error ? Object.keys($v.previousName.previousName.$params).map(x => x) : '' "
         :label="$t('request.previousName.label')"
         :instructions="$t('request.previousName.instructions')"
         :tooltipTitle="$t('request.previousName.tooltipTitle')"
@@ -452,7 +452,7 @@
 </template>
 
 <script>
-import { required, requiredIf, helpers, email } from 'vuelidate/lib/validators'
+import { required, requiredIf, maxLength, helpers, email } from 'vuelidate/lib/validators'
 import AddressInput from '~/components/AddressInput'
 import Jurisdiction from '~/components/Jurisdiction'
 import VotingAddress from '~/components/VotingAddress'
@@ -912,16 +912,23 @@ export default {
         optionalEmail
       },
       firstName: {
-        required
+        required,
+        maxLength: maxLength(50)
       },
       middleName: {
+        maxLength: maxLength(50)
       },
       lastName: {
-        required
+        required,
+        maxLength: maxLength(50)
       },
       previousName: {
+        previousName: {
+          maxLength: maxLength(50)
+        }
       },
       suffix: {
+        maxLength: maxLength(16)
       },
       abrAdr: {
         country: { required },

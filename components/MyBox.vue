@@ -415,6 +415,12 @@ export default {
     sign()
 
     let fillText = () => {
+      let adjustFontAndFill = (field, threshold) => {
+        let multiplier = threshold / (this[field] && this[field].length > threshold ? this[field].length : threshold)
+        ctx.font = (this.calculated.fontSize * multiplier).toString() + 'px  monospace'
+        ctx.fillText(this[field] || '', this.calculated[field].x, this.calculated[field].y)
+        ctx.font = this.calculated.fontSize + 'px  Sans-Serif'
+      }
       ctx.fillStyle = '#000000'
       ctx.font = this.calculated.fontSize + 'px  monospace'
       ctx.textAlign = 'center'
@@ -436,11 +442,16 @@ export default {
       }
       // ctx.fillText(this.fax, this.calculated.fax.x, this.calculated.fax.y)
       ctx.textAlign = 'left'
-      ctx.fillText(this.lastName || '', this.calculated.lastName.x, this.calculated.lastName.y)
-      ctx.fillText(this.firstName || '', this.calculated.firstName.x, this.calculated.firstName.y)
-      ctx.fillText(this.middleName || '', this.calculated.middleName.x, this.calculated.middleName.y)
-      ctx.fillText(this.suffix || '', this.calculated.suffix.x, this.calculated.suffix.y)
-      ctx.fillText(this.previousName || '', this.calculated.previousName.x, this.calculated.previousName.y)
+      adjustFontAndFill('lastName', 28)
+      adjustFontAndFill('firstName', 28)
+      adjustFontAndFill('middleName', 28)
+      adjustFontAndFill('suffix', 13)
+      adjustFontAndFill('previousName', 23)
+      // ctx.fillText(this.lastName || '', this.calculated.lastName.x, this.calculated.lastName.y)
+      // ctx.fillText(this.firstName || '', this.calculated.firstName.x, this.calculated.firstName.y)
+      // ctx.fillText(this.middleName || '', this.calculated.middleName.x, this.calculated.middleName.y)
+      // ctx.fillText(this.suffix || '', this.calculated.suffix.x, this.calculated.suffix.y)
+      // ctx.fillText(this.previousName || '', this.calculated.previousName.x, this.calculated.previousName.y)
       ctx.fillText(this.birthMon || '', this.calculated.birthMon.x, this.calculated.birthMon.y)
       ctx.fillText(this.birthDay || '', this.calculated.birthDay.x, this.calculated.birthDay.y)
       ctx.fillText(this.birthYr || '', this.calculated.birthYr.x, this.calculated.birthYr.y)
@@ -468,13 +479,16 @@ export default {
       ctx.fillText(this.dateDay || '', this.calculated.dateDay.x, this.calculated.dateDay.y)
       ctx.fillText(this.dateMon || '', this.calculated.dateMon.x, this.calculated.dateMon.y)
       ctx.fillText(this.dateYr || '', this.calculated.dateYr.x, this.calculated.dateYr.y)
-      if ((this.email && this.email.length > 33) || (this.altEmail && this.altEmail.length > 33)) {
-        let multiplier = 33 / Math.max(this.email ? this.email.length : 0, this.altEmail ? this.altEmail.length : 0)
-        ctx.font = this.calculated.fontSize * multiplier + 'px  monospace'
-      }
-      ctx.fillText(this.email || '', this.calculated.email.x, this.calculated.email.y)
-      ctx.fillText(this.altEmail || '', this.calculated.altEmail.x, this.calculated.altEmail.y)
-      ctx.font = this.calculated.fontSize + 'px  Sans-Serif'
+      // if ((this.email && this.email.length > 33) || (this.altEmail && this.altEmail.length > 33)) {
+      //   let multiplier = 33 / Math.max(this.email ? this.email.length : 0, this.altEmail ? this.altEmail.length : 0)
+      //   ctx.font = this.calculated.fontSize * multiplier + 'px  monospace'
+      // }
+      // ctx.fillText(this.email || '', this.calculated.email.x, this.calculated.email.y)
+      // ctx.fillText(this.altEmail || '', this.calculated.altEmail.x, this.calculated.altEmail.y)
+      // ctx.font = this.calculated.fontSize + 'px  Sans-Serif'
+
+      adjustFontAndFill('email', 33)
+      adjustFontAndFill('altEmail', 33)
       ctx.fillText(this.isMale, this.calculated.isMale.x, this.calculated.isMale.y)
       ctx.fillText(this.isFemale, this.calculated.isFemale.x, this.calculated.isFemale.y)
       ctx.fillText(this.isReceiveBallotMail, this.calculated.isReceiveBallotMail.x, this.calculated.isReceiveBallotMail.y)
