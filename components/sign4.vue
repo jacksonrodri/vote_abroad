@@ -429,13 +429,14 @@ export default {
       var blob = dataURItoBlob(this.fpca)
       // console.log(blob)
       let data = new FormData()
-      data.append('from', 'VoteFromAbroad <mailer@votefromabroad.org>')
+      data.append('from', 'VoteFromAbroad <vote@mail.votefromabroad.org>')
       data.append('to', this.email)
       data.append('subject', this.subject)
       data.append('text', this.message)
       data.append('attachment', blob, '@file/fpca.png')
       data.append('inline', blob, 'file/fpca.png')
-      data.append('html', `<html>This message will be sent to ${this.leoEmail} ${this.leoName} in production:<br/><br/> ${this.message} <br/><br/><img src="cid:fpca.png" width="120" alt="FPCA"><br/></html>`)
+      data.append('html', `<html>This message will be sent to ${this.leoEmail} ${this.leoName} in production:<br/><br/> ${this.htmlMessage} <br/><br/><img src="cid:fpca.png" width="120" alt="FPCA"><br/></html>`)
+      data.append('o:tag', ['FPCA Submission', `LEO: ${this.leoName}`])
       let url = 'https://votefromabroad.netlify.com/api/mail'
       let config = { url: url, method: 'post', headers: { 'Content-Type': 'multipart/form-data' }, auth: { username: 'api', password: 'key-44903961cb823b645750fe64358dfc40' } }
       this.$axios.post(url, data, config)
@@ -469,6 +470,7 @@ export default {
     this.fromName = `${this.firstName} ${this.lastName}`
     this.subject = 'FPCA Submission'
     this.message = `Please find my FPCA form for the 2018 calendar year. Can you confirm receipt and also confirm that I do not need to send in the paper copy? \n\nThank you so much for everything you do - your work is much appreciated by Americans abroad! \n\n Sincerely, \n\n${this.firstName} ${this.lastName} \n\n${this.email} \n\n${this.tel}`
+    this.htmlMessage = `Please find my FPCA form for the 2018 calendar year. Can you confirm receipt and also confirm that I do not need to send in the paper copy? \n\nThank you so much for everything you do - your work is much appreciated by Americans abroad! <br/><br/> Sincerely, <br/><br/>${this.firstName} ${this.lastName} <br/><br/>${this.email} <br/><br/>${this.tel}`
   },
   beforeDestroy: function () {
     if (this.$refs.video) {
