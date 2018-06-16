@@ -436,7 +436,7 @@ export default {
       data.append('attachment', blob, '@file/fpca.png')
       data.append('inline', blob, 'file/fpca.png')
       data.append('html', `<html>This message will be sent to ${this.leoEmail} ${this.leoName} in production:<br/><br/> ${this.htmlMessage} <br/><br/><img src="cid:fpca.png" width="120" alt="FPCA"><br/></html>`)
-      data.append('o:tag', ['FPCA Submission', `LEO: ${this.leoName}`])
+      // data.append('o:tag', ['FPCA Submission', `LEO: ${this.leoName}`])
       let url = 'https://votefromabroad.netlify.com/api/mail'
       let config = { url: url, timeout: 8000, method: 'post', headers: { 'Content-Type': 'multipart/form-data' }, auth: { username: 'api', password: 'key-44903961cb823b645750fe64358dfc40' } }
       this.$axios.post(url, data, config)
