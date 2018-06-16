@@ -70,7 +70,7 @@ module.exports = {
       }
     },
     '/api/mail': {
-      target: 'https://api.mailgun.net/v3/mon.tg/messages',
+      target: 'https://api.mailgun.net/v3/mail.votefromabroad.org/messages',
       pathRewrite: {
         '^/api/mail': '/'
       }
