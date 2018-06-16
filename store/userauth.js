@@ -248,7 +248,7 @@ export const actions = {
         //   actionText: 'Retry',
         //   duration: 8000
         // })
-        alert('authResult', authResult)
+        // alert('authResult', authResult)
         // this.setSession(authResult)
         // Auth tokens in the result or an error
         resolve()
