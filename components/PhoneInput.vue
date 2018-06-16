@@ -176,6 +176,7 @@ export default {
       if (val && val.country && this.countries.find(x => x.code.toLowerCase() === val.country.toLowerCase()) && this.countrySearch !== this.countries.find(x => x.code.toLowerCase() === val.country.toLowerCase()).name) {
         this.countrySearch = this.countries.find(x => x.code.toLowerCase() === val.country.toLowerCase()).name
       }
+      console.log(this.selectionStart)
       // if (val && oldVal && oldVal.rawInput && val.rawInput && this.selectionStart && val.rawInput.includes(oldVal.rawInput)) {
       //   console.log(this.selectionStart)
       //   console.log(oldVal.rawInput.replace(/[ ]/g, '-'))
