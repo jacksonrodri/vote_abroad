@@ -61,7 +61,7 @@
           @blur="standardizePhone"
           @focus="setPlaceholder; countryFocused = false"
           @input.native="formatInput($event.target.value)"
-          @input="setSelectionStart"
+          @input="!mustBeEmail ? setSelectionStart() : ''"
           :autocomplete="autocomplete"
           @keyup.native.enter="$emit('pressEnter')"
           :placeholder="placeholder"></b-input>
@@ -187,28 +187,28 @@ export default {
   },
   methods: {
     getSelectionStart (val) {
-      if (val || (this.value && this.value.rawInput)) {
+      if ((val && typeof val === 'string') || (this.value && this.value.rawInput)) {
         this.selectionStart = this.$refs.input.$refs.input.selectionStart
-        console.log(this.selectionStart, val || this.value.rawInput, val.charAt(this.selectionStart) || this.value.rawInput.charAt(this.selectionStart))
+        // console.log(this.selectionStart, val || this.value.rawInput, val.charAt(this.selectionStart) || this.value.rawInput.charAt(this.selectionStart))
       }
     },
     setSelectionStart () {
       if (this.selectionStart) {
         setTimeout(() => {
           this.$refs.input.$refs.input.setSelectionRange(this.selectionStart, this.selectionStart)
-          console.log(`moved to ${this.selectionStart}`)
+          // console.log(`moved to ${this.selectionStart}`)
           this.selectionStart = null
         }, 5)
       }
     },
     selectCountry (option) {
-      console.log(option)
+      // console.log(option)
       // this.countrySearch = option.name
       if (option && option.code) {
         this.country = option.code
         this.focusInput()
         // this.loadMetadataAndCall(() => {
-        console.log(this.getPhoneCode(option.code), this.value)
+        // console.log(this.getPhoneCode(option.code), this.value)
         // )
       }
       // if (option && option.code && this.value && this.value.intNumber && !this.value.intNumber.includes(getPhoneCode(option.code))) {
@@ -256,9 +256,6 @@ export default {
         ])
       this.metadataLoaded = true
       if (passedFunction) { passedFunction() }
-    },
-    showChange (val) {
-      console.log('showChange', val)
     },
     formatInput (val) {
       this.mailCheckedEmail = undefined

@@ -136,9 +136,9 @@ export default {
     ssn () {
       if (this.currentRequest && this.currentRequest.identification) {
         if (this.currentRequest.identification.ssn) {
-          return this.currentRequest.identification.ssn.toString() || ' '
+          return this.currentRequest.identification.ssn.toString().replace(/[^0-9]/g, '') || ' '
         } else if (this.currentRequest.identification.ssn4 && typeof this.currentRequest.identification.ssn4 === 'string') {
-          return this.currentRequest.identification.ssn4.slice(-4) || ' '
+          return this.currentRequest.identification.ssn4.toString().replace(/[^0-9]/g, '').slice(-4) || ' '
         } else return ' '
       }
     },
