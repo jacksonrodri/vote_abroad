@@ -61,11 +61,11 @@
           @blur="standardizePhone"
           @focus="setPlaceholder; countryFocused = false"
           @input.native="formatInput($event.target.value)"
-          @input="!mustBeEmail ? setSelectionStart() : ''"
           :autocomplete="autocomplete"
           @keyup.native.enter="$emit('pressEnter')"
           :placeholder="placeholder"></b-input>
       </b-field>
+          <!-- @input="!mustBeEmail ? setSelectionStart() : ''" -->
   </div>
   <p v-if="$v.$dirty && !$v.value.validEmailorPhone" class="help is-danger">Please enter a valid <span v-if="this.accepts.includes('phone')">phone number</span><span v-if="this.accepts.includes('phone') && this.accepts.includes('email')"> or </span><span v-if="this.accepts.includes('email')">email address</span>. <span v-if="mailCheckedEmail && mailCheckedEmail !== val.toLowerCase()">Did you mean <a @click="setEmail"><span class="has-text-primary">{{ mailCheckedEmail }}</span></a>?</span></p>
   <p v-else-if="mailCheckedEmail && mailCheckedEmail !== val.toLowerCase()" class="help is-vfa">Did you mean <a @click="setEmail"><span class="has-text-primary">{{ mailCheckedEmail }}</span></a>?</p>
@@ -176,10 +176,20 @@ export default {
       if (val && val.country && this.countries.find(x => x.code.toLowerCase() === val.country.toLowerCase()) && this.countrySearch !== this.countries.find(x => x.code.toLowerCase() === val.country.toLowerCase()).name) {
         this.countrySearch = this.countries.find(x => x.code.toLowerCase() === val.country.toLowerCase()).name
       }
-      if (val && val.rawInput && this.selectionStart) {
-        // this.$refs.input.$refs.input.setSelectionRange(this.selectionStart, this.selectionStart)
-        // this.setSelectionStart()
-      }
+      // if (val && oldVal && oldVal.rawInput && val.rawInput && this.selectionStart && val.rawInput.includes(oldVal.rawInput)) {
+      //   console.log(this.selectionStart)
+      //   console.log(oldVal.rawInput.replace(/[ ]/g, '-'))
+      //   console.log(val.rawInput.replace(/[ ]/g, '-'))
+      //   console.log(val.rawInput.replace(/[ ]/g, '-').includes(oldVal.rawInput.replace(/[ ]/g, '-')))
+      //   // console.log('selectionstart', this.selectionStart, this.val[this.selectionStart - 1], val.rawInput, oldVal.rawInput, 'oldSpaces', oldSpaces, 'newSpaces', newSpaces)
+      //   setTimeout(() => {
+      //     this.$refs.input.$refs.input.setSelectionRange(this.selectionStart, this.selectionStart)
+      //     // console.log(`moved to ${this.selectionStart}`)
+      //     this.selectionStart = null
+      //   }, 5)
+      //   // this.$refs.input.$refs.input.setSelectionRange(this.selectionStart, this.selectionStart)
+      //   // this.setSelectionStart()
+      // }
       // if (val && val.country && val.intNumber && !val.intNumber.includes(getPhoneCode(val.country))) {
       //   console.log(val, getPhoneCode(val.country))
       // }
@@ -193,7 +203,8 @@ export default {
       }
     },
     setSelectionStart () {
-      if (this.selectionStart) {
+      if (this.selectionStart && this.val[this.selectionStart - 1] !== ' ') {
+        console.log('selectionstart', this.selectionStart, this.val[this.selectionStart - 1])
         setTimeout(() => {
           this.$refs.input.$refs.input.setSelectionRange(this.selectionStart, this.selectionStart)
           // console.log(`moved to ${this.selectionStart}`)
