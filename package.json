@@ -54,7 +54,8 @@
     "vue-markdown": "git+https://github.com/apmontgomery/vue-markdown.git",
     "vue-the-mask": "^0.11.1",
     "vuelidate": "^0.7.4",
-    "vuex-persist": "1.1.0"
+    "vuex-persist": "1.1.0",
+    "webrtc-adapter": "^6.2.1"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",

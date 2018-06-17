@@ -1,17 +1,25 @@
 <template>
-  <video autoplay playsinline controls="false"></video>
+  <video :autoplay="autoplay"
+              :playsinline="playsinline"
+              ref="video"></video>
+              <!-- :controls="controls" -->
+              <!-- @play="timerCallback()" -->
 </template>
 
-<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
-
 <script>
+require('webrtc-adapter')
 export default {
   data () {
-    return {}
+    return {
+      autoplay: 'autoplay',
+      playsinline: 'playsinline'
+      // controls: false
+    }
   },
   mounted () {
     console.log(this.$el)
     navigator.mediaDevices.enumerateDevices().then(devices => {
+      console.log('devices', devices)
       devices = devices.filter(v => (v.kind === 'videoinput'))
       console.log('Found ' + devices.length + ' video devices')
       let lastDevice = devices[devices.length - 1]
@@ -35,13 +43,20 @@ export default {
         audio: false,
         video: {
           deviceId: { ideal: device.deviceId },
-          width: { ideal: window.innerWidth },
-          height: { ideal: window.innerHeight }
+          facingMode: 'environment',
+          width: { ideal: 1280 },
+          height: { ideal: 720 }
         }
+        // video: true
+        // video: {
+        //   deviceId: { ideal: device.deviceId },
+        //   width: { ideal: window.innerWidth },
+        //   height: { ideal: window.innerHeight }
+        // }
       }
       navigator.mediaDevices.getUserMedia(constraints)
         .then(stream => {
-          if (!this.$el.srcObject) { this.$el.src = URL.createObjectURL(stream) } else { this.$el.srcObject = stream }
+          if (this.$el.srcObject) { this.$el.srcObject = stream } else { this.$el.src = URL.createObjectURL(stream) }
           // info.innerHTML+= "<pre>DONE</pre>";
           console.log('DONE')
         })
@@ -50,6 +65,7 @@ export default {
         })
     })
       .catch(err => {
+        console.error(err)
         console.log(err.name + ': ' + err.message)
       })
   }
