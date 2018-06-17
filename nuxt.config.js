@@ -57,6 +57,12 @@ module.exports = {
         '^/api/fpca': '/'
       }
     },
+    '/api-mail': {
+      target: 'https://api.mailgun.net/v3/mail.votefromabroad.org/messages',
+      pathRewrite: {
+        '^/api-mail': '/'
+      }
+    },
     '/api/*': {
       target: 'http://localhost:9000/',
       pathRewrite: {
@@ -67,12 +73,6 @@ module.exports = {
       target: 'https://maps.googleapis.com/maps/api/place',
       pathRewrite: {
         '^/api/place/': '/'
-      }
-    },
-    '/api/mail': {
-      target: 'https://api.mailgun.net/v3/mail.votefromabroad.org/messages',
-      pathRewrite: {
-        '^/api/mail': '/'
       }
     }
   },
