@@ -41,12 +41,13 @@ export default {
       let constraints =
       {
         audio: false,
-        video: {
-          deviceId: { ideal: device.deviceId }
-          // facingMode: 'environment',
-          // width: { ideal: 1280 },
-          // height: { ideal: 720 }
-        }
+        video: true
+        // {
+        //   deviceId: { ideal: device.deviceId }
+        //   // facingMode: 'environment',
+        //   // width: { ideal: 1280 },
+        //   // height: { ideal: 720 }
+        // }
         // video: true
         // video: {
         //   deviceId: { ideal: device.deviceId },
