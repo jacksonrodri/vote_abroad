@@ -427,7 +427,7 @@ export default {
         return new Blob([ab], { type: 'image/png' })
       }
       var blob = dataURItoBlob(this.fpca)
-      // console.log(blob)
+      console.log(blob)
       let data = new FormData()
       data.append('from', 'VoteFromAbroad <vote@mail.votefromabroad.org>')
       data.append('to', this.email)
@@ -435,10 +435,14 @@ export default {
       data.append('text', this.message)
       data.append('attachment', blob, '@file/fpca.png')
       data.append('inline', blob, 'file/fpca.png')
-      data.append('html', `<html>This message will be sent to ${this.leoEmail} ${this.leoName} in production:<br/><br/> ${this.htmlMessage} <br/><br/><img src="cid:fpca.png" width="120" alt="FPCA"><br/></html>`)
+      data.append('html', `<html>This message will be sent to ${this.leoEmail} ${this.leoName} in production:<br/><br/> ${this.message} <br/><br/><img src="cid:fpca.png" width="120" alt="FPCA"><br/></html>`)
+      console.log(data)
+      // data.append('html', `<html>This message will be sent to ${this.leoEmail} ${this.leoName} in production:<br/><br/> ${this.htmlMessage} <br/><br/><img src="cid:fpca.png" width="120" alt="FPCA"><br/></html>`)
       // data.append('o:tag', ['FPCA Submission', `LEO: ${this.leoName}`])
+      console.log(this)
+      // let url = 'http://localhost:3000/api/mail'
       let url = 'https://votefromabroad.netlify.com/api/mail'
-      let config = { url: url, timeout: 8000, method: 'post', headers: { 'Content-Type': 'multipart/form-data' }, auth: { username: 'api', password: 'key-44903961cb823b645750fe64358dfc40' } }
+      let config = { url: url, method: 'post', headers: { 'Content-Type': 'multipart/form-data' }, auth: { username: 'api', password: 'key-44903961cb823b645750fe64358dfc40' } }
       this.$axios.post(url, data, config)
         .then(response => {
           // console.log(response)
