@@ -51,6 +51,12 @@ module.exports = {
     'nuxtent'
   ],
   proxy: {
+    '/api/mailer': {
+      target: 'https://svj2ivekgi.execute-api.us-east-1.amazonaws.com/dev/mailer',
+      pathRewrite: {
+        '^/api/mailer': '/'
+      }
+    },
     '/api/fpca': {
       target: 'https://svj2ivekgi.execute-api.us-east-1.amazonaws.com/dev/fpca',
       pathRewrite: {

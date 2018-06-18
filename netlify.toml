@@ -16,6 +16,12 @@ status = 200
 force = false
 
 [[redirects]]
+from = "/api/mailer"
+to = "https://svj2ivekgi.execute-api.us-east-1.amazonaws.com/dev/mailer"
+status = 200
+force = false
+
+[[redirects]]
 from = "/api/mail"
 to = "https://api.mailgun.net/v3/mail.votefromabroad.org"
 status = 200

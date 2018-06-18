@@ -135,6 +135,7 @@
 
 <script>
 import { mapState } from 'vuex'
+import axios from 'axios'
 
 export default {
   data () {
@@ -417,42 +418,61 @@ export default {
     },
     sendEmail () {
       this.isMailing = true
-      function dataURItoBlob (dataURI) {
-        var byteString = atob(dataURI.split(',')[1])
-        var ab = new ArrayBuffer(byteString.length)
-        var ia = new Uint8Array(ab)
-        for (var i = 0; i < byteString.length; i++) {
-          ia[i] = byteString.charCodeAt(i)
-        }
-        return new Blob([ab], { type: 'image/png' })
-      }
-      var blob = dataURItoBlob(this.fpca)
-      console.log(blob)
-      let data = new FormData()
-      data.append('from', 'VoteFromAbroad <vote@mail.votefromabroad.org>')
-      data.append('to', this.email)
-      data.append('subject', this.subject)
-      data.append('text', this.message)
-      data.append('attachment', blob, '@file/fpca.png')
-      data.append('inline', blob, 'file/fpca.png')
-      data.append('html', `<html>This message will be sent to ${this.leoEmail} ${this.leoName} in production:<br/><br/> ${this.message} <br/><br/><img src="cid:fpca.png" width="120" alt="FPCA"><br/></html>`)
-      console.log(data)
+      // function dataURItoBlob (dataURI) {
+      //   var byteString = atob(dataURI.split(',')[1])
+      //   var ab = new ArrayBuffer(byteString.length)
+      //   var ia = new Uint8Array(ab)
+      //   for (var i = 0; i < byteString.length; i++) {
+      //     ia[i] = byteString.charCodeAt(i)
+      //   }
+      //   return new Blob([ab], { type: 'image/png' })
+      // }
+      // var blob = dataURItoBlob(this.fpca)
+      // console.log(blob)
+      // let data = new FormData()
+      // data.append('from', 'VoteFromAbroad <vote@mail.votefromabroad.org>')
+      // data.append('to', this.email)
+      // data.append('subject', this.subject)
+      // data.append('text', this.message)
+      // data.append('attachment', blob, '@file/fpca.png')
+      // data.append('inline', blob, 'file/fpca.png')
+      // data.append('html', `<html>This message will be sent to ${this.leoEmail} ${this.leoName} in production:<br/><br/> ${this.message} <br/><br/><img src="cid:fpca.png" width="120" alt="FPCA"><br/></html>`)
+      // console.log(data.getAll())
+      // for (var pair of data.entries()) {
+      //   console.log(pair[0] + ', ' + pair[1])
+      // }
       // data.append('html', `<html>This message will be sent to ${this.leoEmail} ${this.leoName} in production:<br/><br/> ${this.htmlMessage} <br/><br/><img src="cid:fpca.png" width="120" alt="FPCA"><br/></html>`)
       // data.append('o:tag', ['FPCA Submission', `LEO: ${this.leoName}`])
-      console.log(this)
-      // let url = 'http://localhost:3000/api/mail'
-      let url = 'https://votefromabroad.netlify.com/api/mail'
-      let config = { url: url, method: 'post', headers: { 'Content-Type': 'multipart/form-data' }, auth: { username: 'api', password: 'key-44903961cb823b645750fe64358dfc40' } }
-      this.$axios.post(url, data, config)
+      // console.log(this)
+      // this.$
+      let headers = {}
+      headers['Content-Type'] = 'application/json'
+      headers['Accept'] = 'application/json'
+      // headers['Access-Control-Allow-Origin'] = '*'
+      // headers['Access-Control-Allow-Methods'] = 'PUT,GET,POST,DELETE,OPTIONS'
+      // let allowHeaders = 'Referer,Accept,Origin,User-Agent,Content-Type'
+      // headers['Access-Control-Allow-Headers'] = allowHeaders
+      // : {
+      //   ['Content-Type']: 'application/json',
+      //   Accept: 'application/json'
+      // }
+      this.message = `********** \n This message will be sent to ${this.leoEmail} ${this.leoName} after VoteFromAbroad 3.0 is launched. \n\n We have NOT sent in your FPCA. \n ********** \n\n\n\n ${this.message}`
+      let body = {subject: this.subject, email: this.email, message: this.message, htmlMessage: this.htmlMessage, leoName: this.leoName, leoEmail: this.leoEmail, image: this.fpca.toString()}
+      console.log(typeof this.fpca)
+      axios.post('http://localhost:3000/api/mailer', body, {
+        headers: { 'Content-Type': 'application/json' }
+      })
         .then(response => {
-          // console.log(response)
+          console.log(response.data)
+          this.isMailing = false
           this.$toast.open({
             message: `Sent! Check your inbox for a copy (${this.email})`,
             type: 'is-success'
           })
           this.$router.push('/dashboard')
         })
-        .catch(errors => {
+        .catch(error => {
+          console.log(error)
           this.isMailing = false
           this.$dialog.alert({
             title: 'Error Sending',
@@ -463,8 +483,32 @@ export default {
             icon: 'error',
             iconPack: 'fas'
           })
-          // console.log(errors)
         })
+      // let url = 'http://localhost:3000/api/mail'
+      // let url = 'https://votefromabroad.netlify.com/api/mail'
+      // let config = { url: url, method: 'post', headers: { 'Content-Type': 'multipart/form-data' }, auth: { username: 'api', password: 'key-44903961cb823b645750fe64358dfc40' } }
+      // this.$axios.post(url, data, config)
+      //   .then(response => {
+      //     // console.log(response)
+      //     this.$toast.open({
+      //       message: `Sent! Check your inbox for a copy (${this.email})`,
+      //       type: 'is-success'
+      //     })
+      //     this.$router.push('/dashboard')
+      //   })
+      //   .catch(errors => {
+      //     this.isMailing = false
+      //     this.$dialog.alert({
+      //       title: 'Error Sending',
+      //       message: 'There was an error sending your email. Please try again or return to the last page and download a copy.',
+      //       confirmText: 'OK',
+      //       type: 'is-danger',
+      //       hasIcon: true,
+      //       icon: 'error',
+      //       iconPack: 'fas'
+      //     })
+      //     // console.log(errors)
+      //   })
     }
   },
   mounted: function () {
