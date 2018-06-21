@@ -653,7 +653,14 @@ export default {
     jurisdiction () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].leo : null },
     abrAdr: {
       get () { return this.requests[this.currentRequest] && this.requests[this.currentRequest].abrAdr ? this.requests[this.currentRequest].abrAdr : null },
-      set (value) { this.$store.commit('requests/update', {abrAdr: value}) }
+      set (value) {
+        // if (value.countryiso && /US|AS|VI|PR|GU/.test(value.countryiso)) {
+        //   // this.$store.commit('requests/update', { abrAdr: Object.assign({}, value, {countryiso: 'APO'}) })
+        //   this.alertAbrAdr(value)
+        // } else {
+        this.$store.commit('requests/update', {abrAdr: value})
+        // }
+      }
     },
     voterClass: {
       get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].voterClass : null },

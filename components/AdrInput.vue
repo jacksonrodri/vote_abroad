@@ -159,8 +159,8 @@
 import { requiredIf } from 'vuelidate/lib/validators'
 import axios from 'axios'
 import debounce from 'lodash/debounce'
-const countrylist = require('~/assets/countries.json')
 const ZZ = require('~/data/postal/zz.json')
+const countrylist = require('~/assets/countries.json')
 const latinizeCharacters = require('~/assets/latinize.characters.json')
 
 const touchMap = new WeakMap()
@@ -368,7 +368,73 @@ export default {
       if ((countryiso && !this.formats[countryiso.toUpperCase()]) || (this.value && this.value.countryiso && !this.formats[this.value.countryiso.toUpperCase()]) || (this.userCountry && !this.formats[this.userCountry.toUpperCase()])) {
         // console.log('requesting country format: ', countryiso || this.value ? this.value.countryiso : this.userCountry)
         // || (!countryiso && this.userCountry && !this.formats[this.userCountry.toUpperCase()]))
-        let requestedFormat = await import(`~/data/postal/${countryiso ? countryiso.toLowerCase() : this.userCountry.toLowerCase()}.json`)
+        let requestedFormat
+        let ctryiso = countryiso ? countryiso.toLowerCase() : this.userCountry.toLowerCase() || 'zz'
+        switch (ctryiso) {
+          case 'br':
+            requestedFormat = await import(/* webpackChunkName: "postalFormat_br" */ `~/data/postal/br.json`)
+            break
+          case 'cn':
+            requestedFormat = await import(/* webpackChunkName: "postalFormat_cn" */ `~/data/postal/cn.json`)
+            break
+          case 'tw':
+            requestedFormat = await import(/* webpackChunkName: "postalFormat_tw" */ `~/data/postal/tw.json`)
+            break
+          case 'kr':
+            requestedFormat = await import(/* webpackChunkName: "postalFormat_kr" */ `~/data/postal/kr.json`)
+            break
+          case 'hk':
+            requestedFormat = await import(/* webpackChunkName: "postalFormat_hk" */ `~/data/postal/hk.json`)
+            break
+          case 'cl':
+            requestedFormat = await import(/* webpackChunkName: "postalFormat_cl" */ `~/data/postal/cl.json`)
+            break
+          case 'ru':
+            requestedFormat = await import(/* webpackChunkName: "postalFormat_ru" */ `~/data/postal/ru.json`)
+            break
+          case 'es':
+            requestedFormat = await import(/* webpackChunkName: "postalFormat_es" */ `~/data/postal/es.json`)
+            break
+          case 'th':
+            requestedFormat = await import(/* webpackChunkName: "postalFormat_th" */ `~/data/postal/th.json`)
+            break
+          case 'it':
+            requestedFormat = await import(/* webpackChunkName: "postalFormat_it" */ `~/data/postal/it.json`)
+            break
+          case 'in':
+            requestedFormat = await import(/* webpackChunkName: "postalFormat_in" */ `~/data/postal/in.json`)
+            break
+          case 'ph':
+            requestedFormat = await import(/* webpackChunkName: "postalFormat_ph" */ `~/data/postal/ph.json`)
+            break
+          case 'us':
+            requestedFormat = await import(/* webpackChunkName: "postalFormat_us" */ `~/data/postal/us.json`)
+            break
+          case 'vn':
+            requestedFormat = await import(/* webpackChunkName: "postalFormat_vn" */ `~/data/postal/vn.json`)
+            break
+          case 'ua':
+            requestedFormat = await import(/* webpackChunkName: "postalFormat_ua" */ `~/data/postal/ua.json`)
+            break
+          case 'tr':
+            requestedFormat = await import(/* webpackChunkName: "postalFormat_tr" */ `~/data/postal/tr.json`)
+            break
+          case 'jp':
+            requestedFormat = await import(/* webpackChunkName: "postalFormat_jp" */ `~/data/postal/jp.json`)
+            break
+          case 'eg':
+            requestedFormat = await import(/* webpackChunkName: "postalFormat_eg" */ `~/data/postal/eg.json`)
+            break
+          case 'mx':
+            requestedFormat = await import(/* webpackChunkName: "postalFormat_mx" */ `~/data/postal/mx.json`)
+            break
+          case 'ca':
+            requestedFormat = await import(/* webpackChunkName: "postalFormat_ca" */ `~/data/postal/ca.json`)
+            break
+          default:
+            requestedFormat = await import(/* webpackChunkName: "postalFormat_small" */ `~/data/postal/${ctryiso}.json`)
+        }
+        // requestedFormat = await import(`~/data/postal/${countryiso ? countryiso.toLowerCase() : this.userCountry.toLowerCase()}.json`)
         this.formats = Object.assign({}, this.formats, await requestedFormat)
         if (passedFunction) { passedFunction() }
       } else {

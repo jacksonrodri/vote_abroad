@@ -85,7 +85,7 @@
       <b-input ref="county"
         :placeholder="$t('request.votAdr.county')"
         name="county"
-        :disabled="state === 'DC'"
+        :disabled="state === 'DC' || state === 'PR' || state === 'VI' || state === 'AS' || state === 'GU'"
         v-model="county"></b-input>
     </b-field>
   </div>
@@ -232,7 +232,7 @@ export default {
         this.isFetching = false
       }
       this.data = []
-      axios.get(`${process.env.placesUrl + process.env.autocompleteEndpoint}?input=${this.street}&types=geocode&language=en&components=country:US&key=${process.env.placesKey}`)
+      axios.get(`${process.env.placesUrl + process.env.autocompleteEndpoint}?input=${this.street}&types=geocode&language=en&components=country:us|country:pr|country:vi|country:gu|country:mp&key=${process.env.placesKey}`)
         .then(({ data }) => {
           data.predictions.forEach((item) => this.data.push(item))
           this.isFetching = false
@@ -244,8 +244,9 @@ export default {
       if (option && option.place_id) {
         axios.get(`${process.env.placesUrl + process.env.detailsEndpoint}?placeid=${option.place_id}&key=${process.env.placesKey}`)
           .then(({ data }) => {
-            this.state = data.result.address_components.filter(n => n.types.indexOf('administrative_area_level_1') > -1)[0].short_name
-            if (this.state !== 'DC') {
+            let ctry = data.result.address_components.filter(n => n.types.includes('country'))[0].short_name
+            this.state = ctry !== 'US' ? ctry : data.result.address_components.filter(n => n.types.indexOf('administrative_area_level_1') > -1)[0].short_name
+            if (this.state !== 'DC' && ctry === 'US') {
               this.county = data.result.address_components.filter(y => y.types.indexOf('administrative_area_level_2') > -1)[0].long_name
             }
             // console.log('adr_address', data.result.adr_address.split(/<span class="|">|<\/span>,?\s?/))
