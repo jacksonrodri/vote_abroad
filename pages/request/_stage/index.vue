@@ -491,7 +491,7 @@ export default {
   },
   watchQuery: ['query'],
   async fetch ({ app, store, query }) {
-    if (query.state) {
+    if (query.state === 'ca') {
       let state = await app.$content('/leos').get(query.state)
       console.log(state.body)
     }

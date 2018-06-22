@@ -25,7 +25,7 @@ export default {
   async asyncData ({ app, route }) {
     return {
       // leos: (await app.$content('/leos').getAll())[0].body
-      stateLeos: (await app.$content('/leos').get(route.params.state)).body
+      stateLeos: (await app.$content('/leos').get(route.params.state || 'ca')).body
     }
   },
   // computed: {
