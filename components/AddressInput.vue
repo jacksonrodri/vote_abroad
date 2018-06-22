@@ -28,7 +28,6 @@
                       :placeholder="$t('request.abrAdr.placeholder')"
                       ref="country"
                       :disabled="usOnly"
-                      keep-first
                       open-on-focus
                       expanded
                       :data="filteredCountries"
@@ -41,6 +40,7 @@
                       <span :class="`flag-icon flag-icon-${props.option.iso.toLowerCase()}`"></span>{{ props.option.label }}
                     </template>
                   </b-autocomplete>
+                      <!-- keep-first -->
                 </b-field>
               </b-field>
             </b-field>
