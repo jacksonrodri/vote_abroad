@@ -56,11 +56,11 @@ module.exports = {
     [
       'leos',
       {
-        page: '/leos/_state',
+        page: 'leos/_state',
+        permalink: 'leos/:slug',
         isPost: false,
         generate: [
-          'get',
-          'getAll'
+          'get'
         ]
       }
     ]
