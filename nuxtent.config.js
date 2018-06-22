@@ -56,7 +56,7 @@ module.exports = {
     [
       'leos',
       {
-        page: 'leos/_state',
+        page: '/leos/_state',
         isPost: false,
         generate: [
           'get',
