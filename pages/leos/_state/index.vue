@@ -23,7 +23,7 @@
 
 export default {
   async asyncData ({ app, route }) {
-    console.log(process)
+    // console.log(process)
     let state = await app.$content('/leos').get(`leos/ca`)
     return {
       // leos: (await app.$content('/leos').getAll())[0].body
