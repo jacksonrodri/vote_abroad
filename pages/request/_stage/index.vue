@@ -489,6 +489,13 @@ export default {
         .getAll()
     }
   },
+  watchQuery: ['query'],
+  async fetch ({ app, store, query }) {
+    if (query.state) {
+      let state = await app.$content('/leos').get(query.state)
+      console.log(state.body)
+    }
+  },
   data () {
     return {
       code: null,

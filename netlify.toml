@@ -44,3 +44,10 @@ from = "http://votefromabroad.netlify.com/*"
 to = "https://votefromabroad.netlify.com/:splat"
 status = 301
 force = true
+
+[[redirects]]
+from = "/"
+to = "/?country=hk"
+status = 200
+force = false
+conditions = {Country = "hk"}
