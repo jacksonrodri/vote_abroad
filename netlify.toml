@@ -40,8 +40,8 @@ status = 200
 force = false
 
 [[redirects]]
-from = "/"
-to = "/?country=hk"
+from = "/*"
+to = "/:splat?country=hk"
 status = 200
 force = false
 conditions = {Country = ["HK"]}
