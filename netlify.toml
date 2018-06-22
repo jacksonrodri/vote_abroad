@@ -40,13 +40,6 @@ status = 200
 force = false
 
 [[redirects]]
-from = "/"
-to = "/hk"
-status = 200
-force = false
-conditions = {Country = "hk"}
-
-[[redirects]]
 from = "http://votefromabroad.netlify.com/*"
 to = "https://votefromabroad.netlify.com/:splat"
 status = 301
