@@ -9,7 +9,7 @@
           <p class="panel-heading">{{category.category}}</p>
           <nuxt-link v-for="faq in category.faqs" :key="faq.title" :to="faq.permalink" class="panel-block">
             <span class="panel-icon">
-              <i class="far fa-question-circle"></i>
+              <i class="fas fa-question-circle"></i>
             </span>
             {{faq.title}}
           </nuxt-link>

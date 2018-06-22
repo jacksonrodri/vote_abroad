@@ -72,7 +72,7 @@
                 <div class="navbar-dropdown is-right">
                   <nuxt-link :to="localePath({ name: 'faqs-slug', params: { slug: faq.slug } })" v-for="(faq, index) in topFaqs" :key="index" class="navbar-item">
                     <span class="panel-icon">
-                      <i class="far fa-question-circle"></i>
+                      <i class="fas fa-question-circle"></i>
                     </span>
                     {{faq.title}}
                   </nuxt-link>

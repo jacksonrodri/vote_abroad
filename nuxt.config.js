@@ -17,7 +17,9 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'preconnect', href: 'https://cognito-identity.us-east-1.amazonaws.com' }
+      { rel: 'preconnect', href: 'https://cognito-identity.us-east-1.amazonaws.com' },
+      { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.1.0/css/solid.css', integrity: 'sha384-TbilV5Lbhlwdyc4RuIV/JhD8NR+BfMrvz4BL5QFa2we1hQu6wvREr3v6XSRfCTRp', 'crossorigin': 'anonymous' },
+      { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.1.0/css/fontawesome.css', integrity: 'sha384-ozJwkrqb90Oa3ZNb+yKFW2lToAWYdTiF1vt8JiH5ptTGHTGcN7qdoR1F95e0kYyG', 'crossorigin': 'anonymous' }
     ]
   },
   render: {
