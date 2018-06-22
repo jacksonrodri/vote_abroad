@@ -48,6 +48,6 @@ force = true
 [[redirects]]
 from = "/"
 to = "/?country=hk"
-status = 301
+status = 200
 force = false
 conditions = {Country = ["HK"]}
