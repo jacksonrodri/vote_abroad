@@ -289,7 +289,7 @@ export default {
         this.isFetchingCity = false
       }
       this.data = []
-      axios.get(`${process.env.placesUrl + process.env.autocompleteEndpoint}?input=${this.city}&types=(cities)&language=en&components=country:US&key=${process.env.placesKey}`)
+      axios.get(`${process.env.placesUrl + process.env.autocompleteEndpoint}?input=${this.city}&types=(cities)&language=en&components=country:us|country:pr|country:vi|country:gu|country:mp&key=${process.env.placesKey}`)
         .then(({ data }) => {
           data.predictions.forEach((item) => this.data.push(item))
           this.isFetchingCity = false

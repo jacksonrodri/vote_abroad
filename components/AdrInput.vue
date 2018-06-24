@@ -7,7 +7,7 @@
         :for="this.$vnode.key"
         <b-input placeholder="Country"></b-input>
       </b-field> -->
-      <b-field expanded placeholder="Country" :type="v && v.country && v.country.$error ? 'is-danger' : ''" >
+      <b-field expanded placeholder="Country" :type="v && v.country && userCountry === 'us' ? 'is-info' : v.country.$error ? 'is-danger' : ''" >
         <a :class="['button', 'control', 'is-outlined', 'is-inverted', 'is-paddingless']"
           @click="$refs.country.focus()"
           style="padding-left:0px;">
@@ -36,7 +36,7 @@
           </template>
           <template slot="empty">No results for {{countrySearch}}</template>
           <template slot-scope="props">
-            <span :class="`flag-icon flag-icon-${props.option.code.toLowerCase()}`"></span>{{ props.option.name }}
+            <span :class="`flag-icon flag-icon-${props.option.code.toLowerCase()}`"></span>{{ props.option.name }} &nbsp; <span v-if="props.option.name.toLowerCase() === 'united states'" class="tag is-info">APO/FPO/DPO</span>
           </template>
         </b-autocomplete>
           <!-- autocomplete="off" -->
@@ -51,7 +51,8 @@
           <!-- :value="countrySearch || getCountryName(userCountry) || ''" -->
 
       </b-field>
-      <p v-if="v && v.country && v.country.$error" class="help is-danger">Please select a country.</p>
+      <p v-if="v && v.country && userCountry === 'us'" class="help is-info">You should only select 'United States' if you are using a military or diplomatic address (APO/DPO/FPO). </p>
+      <p v-if="v && v.country && v.country.$error" class="help is-danger" @click="$refs.country.focus()">Please select a country.</p>
     </div>
     <transition name="fade" mode="out-in">
       <div v-if="!usesAlternateFormat" key="formatted">
@@ -111,7 +112,12 @@
                   keep-first
                   :autocomplete="getAutocomplete(subItem)"
                   :placeholder="getPlaceholder(subItem)"
-                  :open-on-focus=true></b-autocomplete>
+                  :open-on-focus=true>
+                    <template v-if="userCountry === 'us'" slot="header">
+                      <span class="is-size-7 has-text-info has-text-centered">Military/ Diplomatic Addresses only.</span>
+                    </template>
+                    <template slot="empty">No results for {{S}}</template>
+                  </b-autocomplete>
                 <b-input v-else :value="getValue(subItem)"
                   @input="val => update({[subItem]: val})"
                   :ref="subItem"
@@ -233,7 +239,9 @@ export default {
     defaultFormat () { return ZZ.ZZ },
     countryFormat () { return Object.assign({}, this.defaultFormat, this.formats[this.userCountry.toUpperCase() + '--en'] || this.formats[this.userCountry.toUpperCase()] || {}) },
     sOptions () {
-      if (((this.countryFormat.lfmt && this.countryFormat.lfmt.includes('%S')) || (this.countryFormat.fmt && this.countryFormat.fmt.includes('%S'))) && this.countryFormat['sub_keys']) {
+      if (this.userCountry && this.userCountry.toLowerCase() === 'us') {
+        return [{key: 'AA', name: 'AA'}, {key: 'AE', name: 'AE'}, {key: 'AP', name: 'AP'}]
+      } else if (((this.countryFormat.lfmt && this.countryFormat.lfmt.includes('%S')) || (this.countryFormat.fmt && this.countryFormat.fmt.includes('%S'))) && this.countryFormat['sub_keys']) {
         let subKeys = this.countryFormat['sub_keys'].split(/~+/g)
         let subNames = this.countryFormat && this.countryFormat['sub_lnames'] ? this.countryFormat['sub_lnames'].split(/~+/g) : this.countryFormat['sub_names'] ? this.countryFormat['sub_names'].split(/~+/g) : this.countryFormat['sub_keys'].split(/~+/g)
         return subKeys.reduce((arr, k, i) => arr.concat({ key: k, name: subNames[i] }), [])
@@ -259,6 +267,8 @@ export default {
     filteredCountries () {
       if (this.countries.filter((option) => this.countrySearch.toLowerCase() === option.name.toLowerCase()).length === 1) {
         return this.countries.filter((option) => this.countrySearch.toLowerCase() === option.name.toLowerCase()).concat(this.countries.filter((option) => this.countrySearch.toLowerCase() !== option.name.toLowerCase()))
+      } else if (/^apo|fpo|dpo$/.test(this.countrySearch.toLowerCase())) {
+        return this.countries.filter((option) => option.code.toLowerCase() === 'us').concat(this.countries.filter((option) => this.countrySearch.toLowerCase() !== option.name.toLowerCase()))
       } else if (this.countrySearch && this.countrySearch.length > 0) {
         return this.countries.filter((option) => {
           return option.name
@@ -267,7 +277,8 @@ export default {
             .indexOf(this.countrySearch.toLowerCase()) >= 0 || option.code
             .toString()
             .toLowerCase()
-            .indexOf(this.countrySearch.toLowerCase()) >= 0
+            .indexOf(this.countrySearch.toLowerCase()) >= 0 || (option.code
+            .toLowerCase() === 'us' && /^ap|fp|dp|apo|fpo|dpo$/.test(this.countrySearch.toLowerCase()))
         })
       } else if (this.userCountry) {
         return this.countries.filter(country => country.code === this.userCountry).concat(this.countries)
@@ -280,7 +291,7 @@ export default {
     value (val) {
       if (val && val.countryiso && !val.country) {
         this.update(Object.assign({}, this.val, {country: this.getCountryName(val.countryiso)}))
-        console.log('needs country name')
+        // console.log('needs country name')
       }
     },
     userCountry (val, oldVal) {
@@ -289,7 +300,7 @@ export default {
         this.countrySearch = this.getCountryName(val)
         this.update({country: this.countrySearch, countryiso: val})
       }
-      if (val && (!oldVal || val !== oldVal)) {
+      if (val && !Object.keys(this.formats).includes(val.toUpperCase())) {
         this.getFormatAndCall(null, val)
       }
       // if (!this.countrySearch) {
@@ -312,10 +323,9 @@ export default {
     },
     selectCountry (option) {
       // this.countrySearch = option.name
-      console.log('option', option)
+      // console.log('option', option)
       if (option) {
         this.update({country: option.name, countryiso: option.code})
-        this.getFormatAndCall(null, option.code || null)
       }
       // this.update({country: option.name, countryiso: option.code})
       // this.countrySearch = option.name
@@ -328,9 +338,10 @@ export default {
       } else if (inputObj.countryiso && this.value && this.value.countryiso && inputObj.countryiso.toLowerCase() !== this.value.countryiso.toLowerCase()) {
         this.countrySearch = this.getCountryName(inputObj.countryiso)
         this.$emit('input', Object.assign({}, this.value, {countryiso: inputObj.countryiso, country: this.getCountryName(inputObj.countryiso)}))
-        let countryiso = inputObj.countryiso
+        // let countryiso = inputObj.countryiso
         // delete inputObj.countryiso
-        this.getFormatAndCall(() => this.update(inputObj), countryiso)
+        // delete inputObj.country
+        this.getFormatAndCall(() => { this.update(inputObj) }, inputObj.countryiso)
       } else {
         let ft = this.countryFormat.lfmt || this.countryFormat.fmt || '%A%n%B%n%C%n%S'
         // let fullFt = ft + '%country%countryiso%B'
@@ -366,80 +377,92 @@ export default {
     },
     async getFormatAndCall (passedFunction, countryiso) {
       // if (countryiso) console.log(`has country format countryiso: ${countryiso}, userCountry: ${this.userCountry}`, !this.formats[countryiso.toUpperCase()])
-      if ((countryiso && !this.formats[countryiso.toUpperCase()]) || (this.value && this.value.countryiso && !this.formats[this.value.countryiso.toUpperCase()]) || (this.userCountry && !this.formats[this.userCountry.toUpperCase()])) {
+      // if ((countryiso && !this.formats[countryiso.toUpperCase()]) || (this.value && this.value.countryiso && !this.formats[this.value.countryiso.toUpperCase()]) || (this.userCountry && !this.formats[this.userCountry.toUpperCase()])) {
+      if (!Object.keys(this.formats).includes((countryiso || this.userCountry || 'ZZ').toUpperCase())) {
+        // console.log(Object.keys(this.formats))
         // console.log('requesting country format: ', countryiso || this.value ? this.value.countryiso : this.userCountry)
         // || (!countryiso && this.userCountry && !this.formats[this.userCountry.toUpperCase()]))
-        let requestedFormat
-        let ctryiso = countryiso ? countryiso.toLowerCase() : this.userCountry.toLowerCase() || 'zz'
-        switch (ctryiso) {
+        // let requestedFormat
+        // let ctryiso = (countryiso || this.userCountry || 'zz').toLowerCase()
+        switch ((countryiso || this.userCountry || 'zz').toLowerCase()) {
           case 'br':
-            requestedFormat = await import(/* webpackChunkName: "postalFormat_br" */ `~/data/postal/br.json`)
+            // requestedFormat = await import(/* webpackChunkName: "postalFormat_br" */ `~/data/postal/br.json`)
+            this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_br" */ `~/data/postal/br.json`))
+            // if (passedFunction) { passedFunction() }
             break
           case 'cn':
-            requestedFormat = await import(/* webpackChunkName: "postalFormat_cn" */ `~/data/postal/cn.json`)
+            this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_cn" */ `~/data/postal/cn.json`))
             break
           case 'tw':
-            requestedFormat = await import(/* webpackChunkName: "postalFormat_tw" */ `~/data/postal/tw.json`)
+            this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_tw" */ `~/data/postal/tw.json`))
             break
           case 'kr':
-            requestedFormat = await import(/* webpackChunkName: "postalFormat_kr" */ `~/data/postal/kr.json`)
+            this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_kr" */ `~/data/postal/kr.json`))
             break
           case 'hk':
-            requestedFormat = await import(/* webpackChunkName: "postalFormat_hk" */ `~/data/postal/hk.json`)
+            this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_hk" */ `~/data/postal/hk.json`))
             break
           case 'cl':
-            requestedFormat = await import(/* webpackChunkName: "postalFormat_cl" */ `~/data/postal/cl.json`)
+            this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_cl" */ `~/data/postal/cl.json`))
             break
           case 'ru':
-            requestedFormat = await import(/* webpackChunkName: "postalFormat_ru" */ `~/data/postal/ru.json`)
+            this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_ru" */ `~/data/postal/ru.json`))
             break
           case 'es':
-            requestedFormat = await import(/* webpackChunkName: "postalFormat_es" */ `~/data/postal/es.json`)
+            this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_es" */ `~/data/postal/es.json`))
             break
           case 'th':
-            requestedFormat = await import(/* webpackChunkName: "postalFormat_th" */ `~/data/postal/th.json`)
+            this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_th" */ `~/data/postal/th.json`))
             break
           case 'it':
-            requestedFormat = await import(/* webpackChunkName: "postalFormat_it" */ `~/data/postal/it.json`)
+            this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_it" */ `~/data/postal/it.json`))
             break
           case 'in':
-            requestedFormat = await import(/* webpackChunkName: "postalFormat_in" */ `~/data/postal/in.json`)
+            this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_in" */ `~/data/postal/in.json`))
             break
           case 'ph':
-            requestedFormat = await import(/* webpackChunkName: "postalFormat_ph" */ `~/data/postal/ph.json`)
+            this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_ph" */ `~/data/postal/ph.json`))
             break
           case 'us':
-            requestedFormat = await import(/* webpackChunkName: "postalFormat_us" */ `~/data/postal/us.json`)
+            this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_us" */ `~/data/postal/us.json`))
             break
           case 'vn':
-            requestedFormat = await import(/* webpackChunkName: "postalFormat_vn" */ `~/data/postal/vn.json`)
+            this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_vn" */ `~/data/postal/vn.json`))
             break
           case 'ua':
-            requestedFormat = await import(/* webpackChunkName: "postalFormat_ua" */ `~/data/postal/ua.json`)
+            this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_ua" */ `~/data/postal/ua.json`))
             break
           case 'tr':
-            requestedFormat = await import(/* webpackChunkName: "postalFormat_tr" */ `~/data/postal/tr.json`)
+            this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_tr" */ `~/data/postal/tr.json`))
             break
           case 'jp':
-            requestedFormat = await import(/* webpackChunkName: "postalFormat_jp" */ `~/data/postal/jp.json`)
+            this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_jp" */ `~/data/postal/jp.json`))
             break
           case 'eg':
-            requestedFormat = await import(/* webpackChunkName: "postalFormat_eg" */ `~/data/postal/eg.json`)
+            this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_eg" */ `~/data/postal/eg.json`))
             break
           case 'mx':
-            requestedFormat = await import(/* webpackChunkName: "postalFormat_mx" */ `~/data/postal/mx.json`)
+            this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_mx" */ `~/data/postal/mx.json`))
             break
           case 'ca':
-            requestedFormat = await import(/* webpackChunkName: "postalFormat_ca" */ `~/data/postal/ca.json`)
+            this.formats = await Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_ca" */ `~/data/postal/ca.json`))
             break
           default:
-            requestedFormat = await import(/* webpackChunkName: "postalFormat_small" */ `~/data/postal/${ctryiso}.json`)
+            this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_small" */ `~/data/postal/${(countryiso || this.userCountry || 'zz').toLowerCase()}.json`))
         }
         // requestedFormat = await import(`~/data/postal/${countryiso ? countryiso.toLowerCase() : this.userCountry.toLowerCase()}.json`)
-        this.formats = Object.assign({}, this.formats, await requestedFormat)
-        if (passedFunction) { passedFunction() }
+        // this.formats = Object.assign({}, this.formats, await requestedFormat)
+        if (passedFunction) {
+          setTimeout(() => {
+            passedFunction()
+          }, 5)
+        }
       } else {
-        if (passedFunction) { passedFunction() }
+        if (passedFunction) {
+          setTimeout(() => {
+            passedFunction()
+          }, 5)
+        }
       }
     },
     getPlaceholder (item) {
@@ -455,9 +478,9 @@ export default {
         case 'D':
           return this.countryFormat['sublocality_name_type'].replace(/^\w/, c => c.toUpperCase()) || 'City'
         case 'C':
-          return this.countryFormat['locality_name_type'].replace(/^\w/, c => c.toUpperCase()) || 'City'
+          return this.userCountry === 'us' ? 'APO / DPO / FPO' : this.countryFormat['locality_name_type'].replace(/^\w/, c => c.toUpperCase()) || 'City'
         case 'S':
-          return this.countryFormat['state_name_type'].replace(/^\w/, c => c.toUpperCase()) || 'State'
+          return this.userCountry === 'us' ? 'AA / AE / AP' : this.countryFormat['state_name_type'].replace(/^\w/, c => c.toUpperCase()) || 'State'
         case 'Z':
           return this.countryFormat['zip_name_type'].replace(/^\w/, c => c.toUpperCase()) || 'Postal Code'
         case 'X':
@@ -514,19 +537,33 @@ export default {
       // console.log('option', option)
       if (option && option.place_id) {
         axios.get(`${process.env.placesUrl + process.env.detailsEndpoint}?placeid=${option.place_id}&language=en&key=${process.env.placesKey}`)
-          .then(({ data: {result} }) => {
-            let ctry = result.address_components && result.address_components.filter(({types}) => types.includes('country')).length > 0 ? result.address_components.filter(({types}) => types.includes('country'))[0].short_name : null
-            let region = result.address_components && result.address_components.filter(({types}) => types.includes('administrative_area_level_1')).length > 0 ? result.address_components.filter(({types}) => types.includes('administrative_area_level_1'))[0].short_name : null
-            // console.log('placeid data', result.address_components.filter(({types}) => types.includes('country')))
-            // input.A = result.adr_address && result.adr_address.includes('street-address') ? this.latinize(result.adr_address.match('<span class="street-address">(.*?)</span>')[1]) : null
-            input.B = result.adr_address && result.adr_address.includes('extended-address') ? result.adr_address.match('<span class="extended-address">(.*?)</span>')[1] : null
-            input.D = result.address_components && result.address_components.filter(({types}) => types.includes('sublocality')).length > 0 ? result.address_components.filter(({types}) => types.includes('sublocality'))[0].long_name : null
-            input.C = result.adr_address && result.adr_address.includes('locality') ? result.adr_address.match('<span class="locality">(.*?)</span>')[1] : null
-            input.S = result.adr_address && result.adr_address.includes('region') ? result.adr_address.match('<span class="region">(.*?)</span>')[1] : region
-            input.Z = result.adr_address && result.adr_address.includes('postal-code') ? result.adr_address.match('<span class="postal-code">(.*?)</span>')[1] : null
-            input.country = this.getCountryName(ctry)
-            input.countryiso = ctry
-            this.update(input)
+          .then(({ data }) => {
+            if (data.status && data.status === 'NOT_FOUND') {
+              this.$toast.open({
+                message: 'Unable to retrieve address. Please enter manually.',
+                duration: 3500,
+                type: 'is-warning'
+              })
+            } else {
+              let result = data.result
+              let ctry = result.address_components && result.address_components.filter(({types}) => types.includes('country')).length > 0 ? result.address_components.filter(({types}) => types.includes('country'))[0].short_name : null
+              let region = result.address_components && result.address_components.filter(({types}) => types.includes('administrative_area_level_1')).length > 0 ? result.address_components.filter(({types}) => types.includes('administrative_area_level_1'))[0].short_name : null
+              // console.log('placeid data', result.address_components.filter(({types}) => types.includes('country')))
+              // input.A = result.adr_address && result.adr_address.includes('street-address') ? this.latinize(result.adr_address.match('<span class="street-address">(.*?)</span>')[1]) : null
+              if (ctry.toLowerCase() === 'jp') {
+                input.A = result.formatted_address.split(',')[0]
+                input.B = result.formatted_address.split(',')[1]
+              } else {
+                input.B = result.adr_address && result.adr_address.includes('extended-address') ? result.adr_address.match('<span class="extended-address">(.*?)</span>')[1] : null
+                input.D = result.address_components && result.address_components.filter(({types}) => types.includes('sublocality')).length > 0 ? result.address_components.filter(({types}) => types.includes('sublocality'))[0].long_name : null
+              }
+              input.C = result.adr_address && result.adr_address.includes('locality') ? result.adr_address.match('<span class="locality">(.*?)</span>')[1] : null
+              input.S = result.adr_address && result.adr_address.includes('region') ? result.adr_address.match('<span class="region">(.*?)</span>')[1] : region
+              input.Z = result.adr_address && result.adr_address.includes('postal-code') ? result.adr_address.match('<span class="postal-code">(.*?)</span>')[1] : null
+              input.country = this.getCountryName(ctry)
+              input.countryiso = ctry
+              this.update(input)
+            }
           })
       }
     },
@@ -566,7 +603,6 @@ export default {
   },
   mounted () {
     this.formats = Object.assign({}, ZZ)
-    // this.getFormatAndCall()ted
     this.getFormatAndCall(null, this.countryiso || this.userCountry)
     this.countrySearch = this.value && this.value.country ? this.value.country : this.getCountryName(this.userCountry)
     this.country = this.getCountryName(this.countryiso || this.userCountry)

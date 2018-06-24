@@ -575,14 +575,30 @@ export default {
     },
     nextDeadline () {
       let electionArr = []
-      this.stateElections.forEach(election => Object.entries(election.rules).forEach(([ruleKey, ruleValue]) => ruleValue.forEach(item => electionArr.push({
-        electionType: election.electionType,
-        electionDate: election && election.date && election.date.substr(0, 4) === '2018' ? new Date(election.date) : null,
-        requestType: ruleKey,
-        ruleType: typeof item.rule === 'string' && !item.rule.toLowerCase().includes('deadline') && !item.rule.toLowerCase().includes('required') ? item.rule : 'received by',
-        voterType: typeof item.voterType === 'string' ? item.voterType : 'All',
-        ruleDate: item && item.date && item.date.substr(0, 4) === '2018' ? new Date(item.date) : null
-      }))))
+      this.stateElections.forEach(election => Object.entries(election.rules).forEach(([ruleKey, ruleValue]) => ruleValue.forEach(item => {
+        let rt
+        let st = []
+        console.log(item.rule)
+        if (typeof item.rule === 'string') {
+          rt = ['postmarked by', 'received by', 'sent by', 'no deadline', 'not required', 'signed by', 'signed/postmarked by'].filter(x => item.rule.toLowerCase().includes(x))
+          rt = rt.includes('signed/postmarked by') ? 'signed/postmarked by' : rt[0]
+          if (/email/.test(item.rule.toLowerCase()) || !/mail|email|fax/.test(item.rule.toLowerCase())) st.push('email')
+          if (/fax/.test(item.rule.toLowerCase()) || !/mail|email|fax/.test(item.rule.toLowerCase())) st.push('fax')
+          if (/mail/.test(item.rule.toLowerCase()) || !/mail|email|fax/.test(item.rule.toLowerCase())) st.push('mail')
+        } else {
+          rt = 'received by'
+          st = ['mail', 'email', 'fax']
+        }
+        electionArr.push({
+          electionType: election.electionType,
+          electionDate: election && election.date && election.date.substr(0, 4) === '2018' ? new Date(election.date) : null,
+          requestType: ruleKey,
+          ruleType: rt,
+          submitType: st,
+          voterType: typeof item.voterType === 'string' ? item.voterType : 'All',
+          ruleDate: item && item.date && item.date.substr(0, 4) === '2018' ? new Date(item.date) : null
+        })
+      })))
       console.log(electionArr)
       let importantE
       if (this.voterClass && Boolean(this.voterClass === 'military' || this.voterClass === 'milSpouse' || this.voterClass === 'natGuard')) {
@@ -592,16 +608,24 @@ export default {
       }
       console.log(importantE.filter(({requestType}) => requestType !== 'Ballot Return').filter(x => x.ruleDate > new Date()).sort((a, b) => a.ruleDate - b.ruleDate).slice(0, 2))
       if (this.isRegistered === 'registered') {
-        importantE = importantE.filter(x => x.requestType === 'Ballot Request').filter(x => x.ruleDate > new Date()).sort((a, b) => a.ruleDate - b.ruleDate)[0]
-        return `IMPORTANT: As a registered voter, your form must be ${importantE.ruleType.toLowerCase()} ${importantE.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to be eligible to vote in the ${importantE.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} ${importantE.electionType}. See all your state deadlines at www.votefromabroad.org/states/${this.state}`
+        importantE = importantE.filter(x => x.requestType === 'Ballot Request').filter(x => x.ruleDate > new Date()).sort((a, b) => a.ruleDate - b.ruleDate)
+        console.log(importantE, importantE.length)
+        importantE = importantE[0]
+        return `IMPORTANT: As a registered voter, your form must be ${/deadline|required/.test(importantE.ruleType) ? 'received by election day ' : importantE.ruleType + ' ' + importantE.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to be eligible to vote in the ${importantE.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} ${importantE.electionType}. See all your state deadlines and submission options at www.votefromabroad.org/states/${this.state}`
       } else if (this.isRegistered === 'notRegistered') {
         importantE = importantE.filter(x => x.requestType === 'Registration').filter(x => x.ruleDate > new Date()).sort((a, b) => a.ruleDate - b.ruleDate)[0]
-        return `IMPORTANT: As a new voter, your form must be ${importantE.ruleType.toLowerCase()} ${importantE.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to be eligible to vote in the ${importantE.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} ${importantE.electionType}. See all your state deadlines at www.votefromabroad.org/states/${this.state}`
+        return `IMPORTANT: As a new voter, your form must be ${/deadline|required/.test(importantE.ruleType) ? 'received by election day ' : importantE.ruleType + ' ' + importantE.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to be eligible to vote in the ${importantE.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} ${importantE.electionType}. See all your state deadlines and submission options at www.votefromabroad.org/states/${this.state}`
       } else {
         importantE = importantE.filter(x => x.requestType !== 'Ballot Return') // .filter(x => x.ruleDate > new Date()).sort((a, b) => a.ruleDate - b.ruleDate).slice(0, 2)
         let reg = importantE.filter(x => x.requestType === 'Registration')[0]
         let req = importantE.filter(x => x.requestType === 'Ballot Request')[0]
-        return `IMPORTANT: If you are not yet a registered voter, your form must be ${reg.ruleType.toLowerCase()} ${reg.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to be eligible to vote in the ${reg.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} ${reg.electionType}. If you already are a registered voter, your form must be ${req.ruleType.toLowerCase()} ${req.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to receive a ballot for the ${req.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} ${req.electionType}. See all your state deadlines at www.votefromabroad.org/states/${this.state}`
+        if (/deadline|required/.test(reg.ruleType) && /deadline|required/.test(req.ruleType)) {
+          return `IMPORTANT: Your form must be received by election day ${req.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} ${req.electionType}.`
+        } else if (/deadline|required/.test(reg.ruleType)) {
+          return `IMPORTANT: There is no deadline for voter registration, but your ballot request must be ${/deadline|required/.test(req.ruleType) ? 'received by election day' : req.ruleType + ' ' + req.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to receive a ballot for the ${req.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} ${req.electionType}. See all your state deadlines and submission options at www.votefromabroad.org/states/${this.state}`
+        } else if (/deadline|required/.test(req.ruleType)) {
+          return `IMPORTANT: If you are not yet registered, your form must be ${reg.ruleType} ${reg.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})}. If you are already registered, there is no deadline for a ballot request, but we recommend sending your request early to receive a ballot for the ${req.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} ${req.electionType}. See all your state deadlines and submission options at www.votefromabroad.org/states/${this.state}`
+        } else return `IMPORTANT: If you are not yet registered, your form must be ${reg.ruleType} ${reg.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})}. If you are already registered, your ballot request must be ${req.ruleType} ${req.ruleDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'})} to receive a ballot for the ${req.electionDate.toLocaleDateString('en-US', {month: 'long', day: 'numeric'})} ${req.electionType}. See all your state deadlines and submission options at www.votefromabroad.org/states/${this.state}`
       }
     },
     ...mapState({
