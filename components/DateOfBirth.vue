@@ -89,7 +89,7 @@ export default {
       let yyyymmddRegex = /^(?:(?:(?:19)?\d{2})|(?:(?:20)?[0-2]\d))(\/|-|\.)(1[1-2]|0?[1-9])\1(1[1-2]|0?[1-9])$/g
       // console.log('yyyymmddRegex', yyyymmddRegex.test(input))
       // console.log('yyyymmddRegex', yyyymmddRegex.test(input))
-      let ddmmyyyyRegex = /^(?:1[1-2]|0?[1-9])(\/|-|\.)(1[1-2]|0?[1-9])\1(?:(?:(?:19)?\d{2})|(?:(?:20)?[0-2]\d))/g
+      let ddmmyyyyRegex = /^(?:1[0-2]|0?[1-9])(\/|-|\.)(1[1-2]|0?[1-9])\1(?:(?:(?:19)?\d{2})|(?:(?:20)?[0-2]\d))/g
       // console.log('ddmmyyyyRegex', ddmmyyyyRegex.test(input))
       // console.log('ddmmyyyyRegex', ddmmyyyyRegex.test(input))
       let looseDate = /^(?:(?:\d\d?)(\/|-|\.)(?:\d\d?)\1(?:(?:(?:19)?\d{2})|(?:(?:20)?[0-2]\d)))$|^(?:(?:(?:(?:19)?\d{2})|(?:(?:20)?[0-2]\d))(\/|-|\.)\d\d?\2\d\d?)$/g
@@ -105,7 +105,8 @@ export default {
         let year = inputArr[0]
         year = year.length === 4 ? year : parseInt(year) < currentYear - 2010 ? '20' + year : '19' + year
         dateChoices.push(new Date(year, parseInt(inputArr[1]) - 1, inputArr[2]))
-        if (parseInt(inputArr[1]) !== parseInt(inputArr[2])) {
+        if (parseInt(inputArr[1]) !== parseInt(inputArr[2]) && new Date(year, parseInt(inputArr[2]) - 1, inputArr[1]).getMonth() === parseInt(inputArr[2]) - 1) {
+          console.log('yyyymmddRegex', inputArr, new Date(year, parseInt(inputArr[2]) - 1, inputArr[1]))
           dateChoices.push(new Date(year, parseInt(inputArr[2]) - 1, inputArr[1]))
         }
         console.log('yymmdddatechoices', dateChoices)
@@ -117,6 +118,7 @@ export default {
         year = year.length === 4 ? year : parseInt(year) < currentYear - 2010 ? '20' + year : '19' + year
         dateChoices.push(new Date(year, parseInt(inputArr[0]) - 1, inputArr[1]))
         if (parseInt(inputArr[0]) !== parseInt(inputArr[1])) {
+          console.log('ddmmyyyyRegex', inputArr, new Date(year, parseInt(inputArr[0]) - 1, inputArr[1]))
           dateChoices.push(new Date(year, parseInt(inputArr[1]) - 1, inputArr[0]))
         }
       }
@@ -128,16 +130,25 @@ export default {
         if (parseInt(inputArr[0]) > 12 && parseInt(inputArr[0]) < 32) {
           let year = inputArr[2]
           year = year.length === 4 ? year : parseInt(year) < currentYear - 2010 ? '20' + year : '19' + year
-          dateChoices.push(new Date(year, parseInt(inputArr[1]) - 1, inputArr[0]))
+          if (new Date(year, parseInt(inputArr[1]) - 1, inputArr[0]).getMonth() === parseInt(inputArr[1]) - 1) {
+            console.log('looseDate1', inputArr, new Date(year, parseInt(inputArr[1]) - 1, inputArr[0]))
+            dateChoices.push(new Date(year, parseInt(inputArr[1]) - 1, inputArr[0]))
+          }
         } else if (parseInt(inputArr[2]) > 12 && parseInt(inputArr[2]) < 32) {
           let year = inputArr[0]
           year = year.length === 4 ? year : parseInt(year) < currentYear - 2010 ? '20' + year : '19' + year
-          dateChoices.push(new Date(year, parseInt(inputArr[1]) - 1, inputArr[2]))
+          if (new Date(year, parseInt(inputArr[1]) - 1, inputArr[2]).getMonth() === parseInt(inputArr[1]) - 1) {
+            console.log('looseDate2', inputArr, new Date(year, parseInt(inputArr[1]) - 1, inputArr[2]))
+            dateChoices.push(new Date(year, parseInt(inputArr[1]) - 1, inputArr[2]))
+          }
         } else if (inputArr[2].length === 2 && parseInt(inputArr[2]) > currentYear - 2010 && ((parseInt(inputArr[0]) < 32 && parseInt(inputArr[1]) < 13) || (parseInt(inputArr[1]) < 32 && parseInt(inputArr[0]) < 13))) {
           let year = parseInt(inputArr[2]) < currentYear - 2010 ? '20' + inputArr[2] : '19' + inputArr[2]
           let month = parseInt(inputArr[0]) > 12 ? parseInt(inputArr[1]) - 1 : parseInt(inputArr[0] - 1)
           let day = parseInt(inputArr[0]) > 12 ? parseInt(inputArr[0]) : parseInt(inputArr[1])
-          dateChoices.push(new Date(year, month, day))
+          if (new Date(year, month, day).getMonth() === month) {
+            console.log('looseDate3', inputArr, new Date(year, month, day))
+            dateChoices.push(new Date(year, month, day))
+          }
         }
       }
       // console.log(dateChoices.length, 'dateChoices', dateChoices)
@@ -157,10 +168,13 @@ export default {
       if (dateChoices.length > 1) {
         this.cardModal(dateChoices, input)
       } else if (dateChoices.length === 1) {
+        console.log('returning 1 choice')
         return dateChoices[0]
-      } else if (/^\d\d?(?:\/|-|\.)\d\d?$/.test(input)) {
+      } else if (/^\d\d?(?:\/|-|\.)\d\d?$/.test(input) || /^\d\d?\d?\d?(?:\/|-|\.)\d\d?(?:\/|-|\.)\d\d?\d?\d?$/.test(input)) {
+        console.log('returning null')
         return null
       } else {
+        console.log('returning 0 choices')
         return new Date(Date.parse(input))
       }
     }
