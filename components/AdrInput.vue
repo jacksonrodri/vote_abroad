@@ -303,6 +303,9 @@ export default {
       if (val && !Object.keys(this.formats).includes(val.toUpperCase())) {
         this.getFormatAndCall(null, val)
       }
+      if (val && /pr|as|vi|gu/.test(val)) {
+        this.$refs.country.setSelected({code: 'US', name: 'United States'})
+      }
       // if (!this.countrySearch) {
       //   this.countrySearch = this.getCountryName(val)
       //   this.update({country: this.countrySearch, countryiso: val})
@@ -325,7 +328,19 @@ export default {
       // this.countrySearch = option.name
       // console.log('option', option)
       if (option) {
-        this.update({country: option.name, countryiso: option.code})
+        if (option.code.toLowerCase() === 'us') {
+          this.$dialog.confirm({
+            title: 'Are you military or diplomatic personnel?',
+            message: `You must enter an address outside of the US.<br/><br/>You should only select 'United States' if you are military or diplomatic personnel and are using an APO, FPO or DPO address.`,
+            // cancelText: 'Cancel',
+            confirmText: `I'm using an APO/FPO/DPO address`,
+            type: 'is-success',
+            onConfirm: () => this.update({country: option.name, countryiso: option.code}),
+            onCancel: () => { this.countrySearch = ''; this.$refs.country.focus() }
+          })
+        } else {
+          this.update({country: option.name, countryiso: option.code})
+        }
       }
       // this.update({country: option.name, countryiso: option.code})
       // this.countrySearch = option.name

@@ -85,12 +85,39 @@
             <div class="columns">
               <div class="column">
                 <!-- <request-stage></request-stage> -->
-                <article class="message is-info">
+                <article class="message is-warning">
+                  <div @click="$router.push(`/states/${currentRequestObject.leo.s}`)" class="message-body" v-html="md(deadlineLanguage)">
+                    <!-- {{deadlineLanguage | markdown}} -->
+                  </div>
+                </article>
+                <article class="message is-success">
                   <div class="message-body">
-                    Thank you for using www.votefromabroad.org to generate your Voter Registration/Ballot Request form.
-                    (Text to be added with relevent instructions)
-                    If you need any help, contact our volunteer voter support team at: help@votefromabroad.org.
-                    Thanks for voting!
+                    <p>Thank you for using VoteFromAbroad to generate your Voter Registration/Ballot Request form. <strong>Be sure to submit your form</strong> to your Local Election Official before the deadline (see above). We also strongly recommend that you verify with you election official that they have received and processed your form.  You can reach your election official with the following:
+                    </p>
+                    <div class="box">
+                      <p>
+                      <span class="title is-5" v-if="currentRequestObject.leo.n"><strong>{{ currentRequestObject.leo.n }}</strong><br/><br/></span>
+                      <span v-if="currentRequestObject.leo.a1"><strong>{{ currentRequestObject.leo.a1 }}</strong><br/></span>
+                      <span v-if="currentRequestObject.leo.a2"><strong>{{ currentRequestObject.leo.a2 }}</strong><br/></span>
+                      <span v-if="currentRequestObject.leo.a3"><strong>{{ currentRequestObject.leo.a3 }}</strong><br/></span>
+                      <span><strong>{{ currentRequestObject.leo.c }}, </strong>
+                      <strong>{{ currentRequestObject.leo.s }} </strong>
+                      <strong>{{ currentRequestObject.leo.z }}</strong><br/></span>
+                      <span class="has-text-right"><strong>United States of America</strong><br/><br/></span></p>
+                      <p>
+                      <span v-if="currentRequestObject.leo.e">Email: <strong>{{ currentRequestObject.leo.e }}</strong><br/><br/></span>
+                      </p>
+                      <p>
+                      <span v-if="currentRequestObject.leo.p">Phone: <strong>+1 {{ currentRequestObject.leo.p }}</strong><br/><br/></span>
+                      </p>
+                      <p>
+                      <span v-if="currentRequestObject.leo.f">Fax: <strong>+1 {{ currentRequestObject.leo.f }}</strong><br/></span>
+                      </p>
+                    </div>
+                    <p>
+                      If you need any help, contact our volunteer voter support team at: help@votefromabroad.org.
+                      Thanks for voting!
+                    </p>
                   </div>
                 </article>
               </div>
@@ -145,6 +172,133 @@
 import UserDashboard from '~/components/UserDashboard'
 // import VueMarkdown from 'vue-markdown'
 import RequestStage from '~/components/RequestStage'
+import snarkdown from 'snarkdown'
+
+// Utility Functions for filtering rules
+
+// Filter Function to remove elections from other states
+function filterToMatchVotingState (election) {
+  return election.state && election.state.toLowerCase() === this.state.toLowerCase()
+}
+// Filter function to remove rules that don't apply to this voterClass
+function filterToMatchVoterType (rule) {
+  if (!(typeof rule.voterType === 'string') || !this.voterType) {
+    return true
+  } else if (this.voterType === 'military' || this.voterType === 'milSpouse' || this.voterType === 'natGuard') {
+    return !rule.voterType.includes('Citizen')
+  } else {
+    return !rule.voterType.includes('Uniformed')
+  }
+}
+
+function filterRuleToMatchSubmissionMethod (rule) {
+  if (!(/Mail|Email|Fax/.test(rule.rule)) || !this.submissionMethod) {
+    return true
+  } else if (this.submissionMethod.toLowerCase() === 'email') {
+    return /Email/.test(rule.rule)
+  } else if (this.submissionMethod.toLowerCase() === 'mail') {
+    return /Mail/.test(rule.rule)
+  } else if (this.submissionMethod.toLowerCase() === 'fax') {
+    return /Fax/.test(rule.rule)
+  }
+}
+
+// Compare function to sort elections chronolically
+function compareElectionDateToSort (a, b) {
+  return new Date(a.date).getTime() < new Date(b.date).getTime() ? -1 : 1
+}
+
+// Filter function accepting election && voterType && voterRegistrationStatus returning true if election rules match voterType and voterRegistrationStatus
+function filterForVoterTypeAndRegistrationStatus (election, i, arr) {
+  if (this.voterRegistrationStatus && this.voterRegistrationStatus.toLowerCase() === 'registered') {
+    return [...Object.assign({}, election).rules['Ballot Request']]
+      .filter(filterToMatchVoterType, {voterType: this.voterType})
+      .filter(filterRuleToMatchSubmissionMethod, {submissionMethod: this.submissionMethod})
+      .map(rule => new Date(typeof rule.date === 'string' ? rule.date : election.date).getTime())
+      .some(epochTimeStamp => !(epochTimeStamp < new Date().getTime()))
+  } else if (this.voterRegistrationStatus && this.voterRegistrationStatus.toLowerCase() === 'notregistered') {
+    return [...election.rules['Registration']]
+      .filter(filterToMatchVoterType, {voterType: this.voterType})
+      .filter(filterRuleToMatchSubmissionMethod, {submissionMethod: this.submissionMethod})
+      .map(rule => new Date(typeof rule.date === 'string' ? rule.date : election.date).getTime())
+      .some(epochTimeStamp => !(epochTimeStamp < new Date().getTime()))
+  } else {
+    return [...Object.assign({}, election).rules['Registration'], ...Object.assign({}, election).rules['Ballot Request']]
+      .filter(filterToMatchVoterType, {voterType: this.voterType})
+      .filter(filterRuleToMatchSubmissionMethod, {submissionMethod: this.submissionMethod})
+      .map(rule => new Date(typeof rule.date === 'string' ? rule.date : election.date).getTime())
+      .some(epochTimeStamp => !(epochTimeStamp < new Date().getTime()))
+  }
+}
+function removeRulesForOtherRegistrationStatus (election) {
+  let thisElection = Object.assign({}, election)
+  let rules = {}
+  if (this.voterRegistrationStatus && /notregistered/.test(this.voterRegistrationStatus.toLowerCase())) {
+    rules['Registration'] = thisElection.rules['Registration']
+  } else if (this.voterRegistrationStatus && /registered/.test(this.voterRegistrationStatus.toLowerCase())) {
+    rules['Ballot Request'] = thisElection.rules['Ballot Request']
+  }
+  if (!this.voterRegistrationStatus || /unsure/.test(this.voterRegistrationStatus.toLowerCase())) {
+    rules['Ballot Request'] = thisElection.rules['Ballot Request']
+    rules['Registration'] = thisElection.rules['Registration']
+  }
+  thisElection.rules = rules
+  return thisElection
+}
+
+// function accepting array of elections, voterRegistrationStatus, voterType, state, submissionMethod and returning a the next election where rules apply to voter
+function getNextEligibleRules (electionArr, state, voterRegistrationStatus, voterType, submissionMethod) {
+  return [ ...electionArr ] // work with a copy of array so we are not mutating original array
+    .filter(filterToMatchVotingState, {state}) // remove elections from other states
+    .filter(filterForVoterTypeAndRegistrationStatus, {voterType, voterRegistrationStatus, submissionMethod}) // remove elections with rules that for different voter type/registration status/ or past due
+    .map(removeRulesForOtherRegistrationStatus, {voterRegistrationStatus})
+    .sort(compareElectionDateToSort)
+}
+
+function getRuleLanguage (eligibleRules, type, voterRegistrationStatus) {
+  if (!eligibleRules || !type || !eligibleRules.rules || !eligibleRules.rules[type] || eligibleRules.rules[type].length === 0) {
+    return `There is no deadline for ${type.toLowerCase()}.`
+  } else if (eligibleRules && type && eligibleRules.rules[type] && eligibleRules.rules[type].length === 1) {
+    return `Your form must be ${getRuleType(eligibleRules.rules[type][0].rule)} ${getRuleDeadline(eligibleRules.rules[type][0].date)}.`
+  } else {
+    return eligibleRules.rules[type].map((rule, i) => `If you send your form by ${getRuleSubmissionOption(eligibleRules.rules[type][i].rule)}, it must be ${getRuleType(eligibleRules.rules[type][i].rule)} ${getRuleDeadline(eligibleRules.rules[type][i].date)}.`).join(voterRegistrationStatus && /registered/.test(voterRegistrationStatus.toLowerCase()) ? '\n- ' : ' - ')
+  }
+}
+
+function getRuleType (rule) {
+  if (rule && typeof rule === 'string') {
+    let rt = ['postmarked by', 'received by', 'sent by', 'no deadline', 'not required', 'signed by', 'signed/postmarked by'].filter(x => rule.toLowerCase().includes(x))
+    return rt.includes('signed/postmarked by') ? 'signed/postmarked by' : rt[0]
+  } else return 'received by'
+}
+function getRuleDeadline (date) {
+  return date && typeof date === 'string' && date.substr(0, 4) === new Date().getFullYear().toString() ? `${new Date(date).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}).toUpperCase()} at ${new Date(date).toLocaleTimeString('en-US', {hour: 'numeric'}).toUpperCase()}` : null
+}
+function getRuleSubmissionOption (rule) {
+  let st = []
+  if (/Email/.test(rule) || !/Mail|Email|Fax/.test(rule)) st.push('email')
+  if (/Fax/.test(rule) || !/Mail|Email|Fax/.test(rule)) st.push('fax')
+  if (/Mail/.test(rule) || !/Mail|Email|Fax/.test(rule)) st.push('postal mail')
+  return st.length === 3 ? `${st[0]}, ${st[1]} or ${st[2]}` : st.length === 2 ? `${st[0]} or ${st[1]}` : st[0]
+}
+
+function getDeadlineLanguage (electionArr, state, voterRegistrationStatus, voterType, submissionMethod) {
+  let applicableRules = getNextEligibleRules([...electionArr], state || '', voterRegistrationStatus, voterType, submissionMethod)
+  // console.log(applicableRules)
+  applicableRules = applicableRules[0]
+  if (!applicableRules) {
+    return `IMPORTANT: Your form must be received by your state deadline to be eligible to vote in the November 6 General Election.  \nYou can find your state deadlines at www.votefromabroad.org/states `
+  } else {
+    switch (voterRegistrationStatus) {
+      case 'notRegistered':
+        return `** IMPORTANT DEADLINES for new voters to vote in the ${new Date(applicableRules.date).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}).toUpperCase()} ${applicableRules.electionType} **\n- ${getRuleLanguage(applicableRules, 'Registration', voterRegistrationStatus)}\nSee all your states deadlines at www.votefromabroad.org/${applicableRules.state}`
+      case 'registered':
+        return `** IMPORTANT DEADLINES for registered voters to vote in the ${new Date(applicableRules.date).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}).toUpperCase()} ${applicableRules.electionType} **\n- ${getRuleLanguage(applicableRules, 'Ballot Request', voterRegistrationStatus)}\nSee all your states deadlines at www.votefromabroad.org/${applicableRules.state}`
+      default:
+        return `** IMPORTANT DEADLINES ** for the ${new Date(applicableRules.date).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}).toUpperCase()} ${applicableRules.electionType} -- NEW VOTERS - ${getRuleLanguage(applicableRules, 'Registration', voterRegistrationStatus)} REGISTERED VOTERS - ${getRuleLanguage(applicableRules, 'Ballot Request', voterRegistrationStatus)} - See all your states deadlines at www.votefromabroad.org/${applicableRules.state}`
+    }
+  }
+}
 
 export default {
   name: 'User-Account',
@@ -152,6 +306,30 @@ export default {
     UserDashboard,
     // VueMarkdown,
     RequestStage
+  },
+  async asyncData ({app, store}) {
+    let state = store.getters['requests/getCurrent'].leo.s || ''
+    let elections = (await app.$content('/elections').get('elections')).body
+    let voterRegistrationStatus = store.getters['requests/getCurrent'].isRegistered
+    let voterType = store.getters['requests/getCurrent'].voterClass
+    return {
+      registering: store.getters['requests/getCurrent'].isRegistered !== 'registered',
+      state: store.getters['requests/getCurrent'].leo.s,
+      submissionMethod: store.getters['requests/getCurrent'].recBallot,
+      allStateRules: await app.$content('rls')
+        .query({ exclude: ['anchors', 'body', 'meta', 'path', 'permalink'] })
+        .getAll(),
+      stateElections: (await app.$content('/elections').get('elections')).body
+        .filter(election => election.state && state && election.state.toLowerCase() === state.toLowerCase())
+        .filter(x => new Date(x.date).getTime() > Date.now())
+        .sort(function (a, b) {
+          var dateA = new Date(a.date).getTime()
+          var dateB = new Date(b.date).getTime()
+          return dateA - dateB
+        }),
+      elections: elections,
+      deadlineLanguage: getDeadlineLanguage(elections, state, voterRegistrationStatus, voterType, null)
+    }
   },
   data () {
     return {
@@ -196,10 +374,32 @@ export default {
     stage () { return this.currentRequestObject && this.currentRequestObject.status ? this.currentRequestObject.status : 'start' },
     states () { return new Set(this.requests.map(x => x.votAdr.stateISO)) },
     name () { return this.user && this.user.firstName ? this.user.firstName : this.requests && this.requests[0] && this.requests[0].firstName ? this.requests[0].firstName : '' },
-    isAuthenticated: function () { return this.$store.getters['userauth/isAuthenticated'] }
+    isAuthenticated: function () { return this.$store.getters['userauth/isAuthenticated'] },
+    leoAdr () {
+      let leo = this.currentRequest.leo
+      return `${leo.n ? leo.n + '\n' : ''}${leo.a1 ? leo.a1 + '\n' : ''}${leo.a2 ? leo.a2 + '\n' : ''}${leo.a3 ? leo.a3 + '\n' : ''}${leo.c ? leo.c + ', ' : ''}${leo.s ? leo.s + ' ' : ''}${leo.z ? leo.z + '\n' : '\n'}United States of America`
+    },
+    leoEmail () {
+      return this.currentRequest.leo && this.currentRequest.leo.e ? this.currentRequest.leo.e : ''
+    },
+    leoName () {
+      return this.currentRequest.leo && this.currentRequest.leo.n ? this.currentRequest.leo.n : ''
+    },
+    leoFax () {
+      return this.currentRequest.leo && this.currentRequest.leo.f ? '+1 ' + this.currentRequest.leo.f : ''
+    },
+    leoPhone () {
+      return this.currentRequest.leo && this.currentRequest.leo.p ? '+1 ' + this.currentRequest.leo.p : ''
+    }
     // currentRequestStage () { return this.currentRequest && this.currentRequest.stage ? this.currentRequest.stage : 'fill' }
   },
+  filters: {
+    markdown: function (md) {
+      return snarkdown(md)
+    }
+  },
   methods: {
+    md (md) { return snarkdown(md) },
     share () {
       this.$dialog.alert({
         title: 'Tell a friend about VoteFromAbroad',

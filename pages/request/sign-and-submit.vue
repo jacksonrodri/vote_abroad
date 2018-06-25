@@ -296,6 +296,132 @@ import ScrollUp from '~/components/ScrollUp'
 import snarkdown from 'snarkdown'
 import fileSaver from 'file-saver'
 
+// Utility Functions for filtering rules
+
+// Filter Function to remove elections from other states
+function filterToMatchVotingState (election) {
+  return election.state && election.state.toLowerCase() === this.state.toLowerCase()
+}
+// Filter function to remove rules that don't apply to this voterClass
+function filterToMatchVoterType (rule) {
+  if (!(typeof rule.voterType === 'string') || !this.voterType) {
+    return true
+  } else if (this.voterType === 'military' || this.voterType === 'milSpouse' || this.voterType === 'natGuard') {
+    return !rule.voterType.includes('Citizen')
+  } else {
+    return !rule.voterType.includes('Uniformed')
+  }
+}
+
+function filterRuleToMatchSubmissionMethod (rule) {
+  if (!(/Mail|Email|Fax/.test(rule.rule)) || !this.submissionMethod) {
+    return true
+  } else if (this.submissionMethod.toLowerCase() === 'email') {
+    return /Email/.test(rule.rule)
+  } else if (this.submissionMethod.toLowerCase() === 'mail') {
+    return /Mail/.test(rule.rule)
+  } else if (this.submissionMethod.toLowerCase() === 'fax') {
+    return /Fax/.test(rule.rule)
+  }
+}
+
+// Compare function to sort elections chronolically
+function compareElectionDateToSort (a, b) {
+  return new Date(a.date).getTime() < new Date(b.date).getTime() ? -1 : 1
+}
+
+// Filter function accepting election && voterType && voterRegistrationStatus returning true if election rules match voterType and voterRegistrationStatus
+function filterForVoterTypeAndRegistrationStatus (election, i, arr) {
+  if (this.voterRegistrationStatus && this.voterRegistrationStatus.toLowerCase() === 'registered') {
+    return [...Object.assign({}, election).rules['Ballot Request']]
+      .filter(filterToMatchVoterType, {voterType: this.voterType})
+      .filter(filterRuleToMatchSubmissionMethod, {submissionMethod: this.submissionMethod})
+      .map(rule => new Date(typeof rule.date === 'string' ? rule.date : election.date).getTime())
+      .some(epochTimeStamp => !(epochTimeStamp < new Date().getTime()))
+  } else if (this.voterRegistrationStatus && this.voterRegistrationStatus.toLowerCase() === 'notregistered') {
+    return [...election.rules['Registration']]
+      .filter(filterToMatchVoterType, {voterType: this.voterType})
+      .filter(filterRuleToMatchSubmissionMethod, {submissionMethod: this.submissionMethod})
+      .map(rule => new Date(typeof rule.date === 'string' ? rule.date : election.date).getTime())
+      .some(epochTimeStamp => !(epochTimeStamp < new Date().getTime()))
+  } else {
+    return [...Object.assign({}, election).rules['Registration'], ...Object.assign({}, election).rules['Ballot Request']]
+      .filter(filterToMatchVoterType, {voterType: this.voterType})
+      .filter(filterRuleToMatchSubmissionMethod, {submissionMethod: this.submissionMethod})
+      .map(rule => new Date(typeof rule.date === 'string' ? rule.date : election.date).getTime())
+      .some(epochTimeStamp => !(epochTimeStamp < new Date().getTime()))
+  }
+}
+function removeRulesForOtherRegistrationStatus (election) {
+  let thisElection = Object.assign({}, election)
+  let rules = {}
+  if (this.voterRegistrationStatus && /notregistered/.test(this.voterRegistrationStatus.toLowerCase())) {
+    rules['Registration'] = thisElection.rules['Registration']
+  } else if (this.voterRegistrationStatus && /registered/.test(this.voterRegistrationStatus.toLowerCase())) {
+    rules['Ballot Request'] = thisElection.rules['Ballot Request']
+  }
+  if (!this.voterRegistrationStatus || /unsure/.test(this.voterRegistrationStatus.toLowerCase())) {
+    rules['Ballot Request'] = thisElection.rules['Ballot Request']
+    rules['Registration'] = thisElection.rules['Registration']
+  }
+  thisElection.rules = rules
+  return thisElection
+}
+
+// function accepting array of elections, voterRegistrationStatus, voterType, state, submissionMethod and returning a the next election where rules apply to voter
+function getNextEligibleRules (electionArr, state, voterRegistrationStatus, voterType, submissionMethod) {
+  return [ ...electionArr ] // work with a copy of array so we are not mutating original array
+    .filter(filterToMatchVotingState, {state}) // remove elections from other states
+    .filter(filterForVoterTypeAndRegistrationStatus, {voterType, voterRegistrationStatus, submissionMethod}) // remove elections with rules that for different voter type/registration status/ or past due
+    .map(removeRulesForOtherRegistrationStatus, {voterRegistrationStatus})
+    .sort(compareElectionDateToSort)
+}
+
+function getRuleLanguage (eligibleRules, type, voterRegistrationStatus) {
+  if (!eligibleRules || !type || !eligibleRules.rules || !eligibleRules.rules[type] || eligibleRules.rules[type].length === 0) {
+    return `There is no deadline for ${type.toLowerCase()}.`
+  } else if (eligibleRules && type && eligibleRules.rules[type] && eligibleRules.rules[type].length === 1) {
+    return `Your form must be ${getRuleType(eligibleRules.rules[type][0].rule)} ${getRuleDeadline(eligibleRules.rules[type][0].date)}.`
+  } else {
+    return eligibleRules.rules[type].map((rule, i) => `If you send your form by ${getRuleSubmissionOption(eligibleRules.rules[type][i].rule)}, it must be ${getRuleType(eligibleRules.rules[type][i].rule)} ${getRuleDeadline(eligibleRules.rules[type][i].date)}.`).join(voterRegistrationStatus && /registered/.test(voterRegistrationStatus.toLowerCase()) ? '\n- ' : ' - ')
+  }
+}
+
+function getRuleType (rule) {
+  if (rule && typeof rule === 'string') {
+    let rt = ['postmarked by', 'received by', 'sent by', 'no deadline', 'not required', 'signed by', 'signed/postmarked by'].filter(x => rule.toLowerCase().includes(x))
+    return rt.includes('signed/postmarked by') ? 'signed/postmarked by' : rt[0]
+  } else return 'received by'
+}
+function getRuleDeadline (date) {
+  return date && typeof date === 'string' && date.substr(0, 4) === new Date().getFullYear().toString() ? `${new Date(date).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}).toUpperCase()} at ${new Date(date).toLocaleTimeString('en-US', {hour: 'numeric'}).toUpperCase()}` : null
+}
+function getRuleSubmissionOption (rule) {
+  let st = []
+  if (/Email/.test(rule) || !/Mail|Email|Fax/.test(rule)) st.push('email')
+  if (/Fax/.test(rule) || !/Mail|Email|Fax/.test(rule)) st.push('fax')
+  if (/Mail/.test(rule) || !/Mail|Email|Fax/.test(rule)) st.push('postal mail')
+  return st.length === 3 ? `${st[0]}, ${st[1]} or ${st[2]}` : st.length === 2 ? `${st[0]} or ${st[1]}` : st[0]
+}
+
+function getDeadlineLanguage (electionArr, state, voterRegistrationStatus, voterType, submissionMethod) {
+  let applicableRules = getNextEligibleRules([...electionArr], state || '', voterRegistrationStatus, voterType, submissionMethod)
+  // console.log(applicableRules)
+  applicableRules = applicableRules[0]
+  if (!applicableRules) {
+    return `IMPORTANT: Your form must be received by your state deadline to be eligible to vote in the November 6 General Election.  \nYou can find your state deadlines at www.votefromabroad.org/states `
+  } else {
+    switch (voterRegistrationStatus) {
+      case 'notRegistered':
+        return `** IMPORTANT DEADLINES for new voters to vote in the ${new Date(applicableRules.date).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}).toUpperCase()} ${applicableRules.electionType} **\n- ${getRuleLanguage(applicableRules, 'Registration', voterRegistrationStatus)}\nSee all your states deadlines at www.votefromabroad.org/${applicableRules.state}`
+      case 'registered':
+        return `** IMPORTANT DEADLINES for registered voters to vote in the ${new Date(applicableRules.date).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}).toUpperCase()} ${applicableRules.electionType} **\n- ${getRuleLanguage(applicableRules, 'Ballot Request', voterRegistrationStatus)}\nSee all your states deadlines at www.votefromabroad.org/${applicableRules.state}`
+      default:
+        return `** IMPORTANT DEADLINES ** for the ${new Date(applicableRules.date).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}).toUpperCase()} ${applicableRules.electionType} -- NEW VOTERS - ${getRuleLanguage(applicableRules, 'Registration', voterRegistrationStatus)} REGISTERED VOTERS - ${getRuleLanguage(applicableRules, 'Ballot Request', voterRegistrationStatus)} - See all your states deadlines at www.votefromabroad.org/${applicableRules.state}`
+    }
+  }
+}
+
 export default {
   name: 'SignAndSubmit',
   middleware: 'verify-request',
@@ -308,9 +434,13 @@ export default {
   },
   async asyncData ({app, store}) {
     let state = store.getters['requests/getCurrent'].leo.s || ''
+    let elections = (await app.$content('/elections').get('elections')).body
+    let voterRegistrationStatus = store.getters['requests/getCurrent'].isRegistered
+    let voterType = store.getters['requests/getCurrent'].voterClass
     return {
       registering: store.getters['requests/getCurrent'].isRegistered !== 'registered',
       state: store.getters['requests/getCurrent'].leo.s,
+      submissionMethod: store.getters['requests/getCurrent'].recBallot,
       allStateRules: await app.$content('rls')
         .query({ exclude: ['anchors', 'body', 'meta', 'path', 'permalink'] })
         .getAll(),
@@ -321,7 +451,9 @@ export default {
           var dateA = new Date(a.date).getTime()
           var dateB = new Date(b.date).getTime()
           return dateA - dateB
-        })
+        }),
+      elections: elections,
+      deadlineLanguage: getDeadlineLanguage(elections, state, voterRegistrationStatus, voterType, null)
     }
   },
   data () {
@@ -334,7 +466,6 @@ export default {
       isSigning: false,
       pdf: '',
       msPdf: '',
-      deadline: `IMPORTANT: If you are not yet a registered voter, your form must be received by XX to be eligible to vote in the November 6 General Election. If you already are a registered voter, your form must be received by XX to receive a ballot for the November 6 General Election.`,
       signStep: null,
       fpca: null
     }
@@ -358,7 +489,7 @@ export default {
             console.log(err.name + ': ' + err.message)
           })
       })
-      axios.get(encodeURI(`/api/fpca?firstName=${this.firstName || ''}&lastName=${this.lastName || ''}&middleName=${this.middleName || ''}&suffix=${this.suffix || ''}&ssn=${this.ssn || ''}&previousName=${this.previousName.previousName || ''}&dob=${this.dob || ''}&stateId=${this.stateId || ''}&votStreet=${this.votStreet || ''}&votApt=${this.votApt || ''}&votCity=${this.votCity || ''}&votState=${this.votState || ''}&votCounty=${this.votCounty || ''}&votZip=${this.votZip || ''}&abrAdr=${this.abrAdr && this.abrAdr.alt1 ? this.abrAdr.alt1 : ''}\n${this.abrAdr && this.abrAdr.alt2 ? this.abrAdr.alt2 : ''}\n${this.abrAdr && this.abrAdr.alt3 ? this.abrAdr.alt3 : ''}\n${this.abrAdr && this.abrAdr.alt4 ? this.abrAdr.alt4 : ''}\n${this.abrAdr && this.abrAdr.alt5 ? this.abrAdr.alt5 : ''}&fwdAdr=${this.fwdAdr && this.fwdAdr.alt1 ? this.fwdAdr.alt1 : ''}\n${this.fwdAdr && this.fwdAdr.alt2 ? this.fwdAdr.alt2 : ''}\n${this.fwdAdr && this.fwdAdr.alt3 ? this.fwdAdr.alt3 : ''}\n${this.fwdAdr && this.fwdAdr.alt4 ? this.fwdAdr.alt4 : ''}\n${this.fwdAdr && this.fwdAdr.alt5 ? this.fwdAdr.alt5 : ''}&email=${encodeURIComponent(this.email) || ''}&altEmail=${encodeURIComponent(this.altEmail) || ''}&tel=${this.tel ? encodeURIComponent(this.tel.replace(/\s/g, '')) : ''}&fax=${this.fax ? encodeURIComponent(this.fax.replace(/\s/g, '')) : ''}&party=${this.party || ''}&addlInfo=${this.addlInfo || ''}&date=${this.date || ''}&class=${this.voterClass || ''}&sex=${this.sex || ''}&recBallot=${this.recBallot || ''}&leoName=${this.leoName || ''}&leoAddress=${this.leoAdr || ''}&leoFax=${this.leoFax || ''}&leoEmail=${this.leoEmail || ''}&leoPhone=${this.leoPhone || ''}&transmitOpts=${this.stateRules.ballotReceiptOptions.join(',')}&deadline=${encodeURIComponent(this.nextDeadline)}`), {responseType: 'arraybuffer'})
+      axios.get(encodeURI(`/api/fpca?firstName=${this.firstName || ''}&lastName=${this.lastName || ''}&middleName=${this.middleName || ''}&suffix=${this.suffix || ''}&ssn=${this.ssn || ''}&previousName=${this.previousName.previousName || ''}&dob=${this.dob || ''}&stateId=${this.stateId || ''}&votStreet=${this.votStreet || ''}&votApt=${this.votApt || ''}&votCity=${this.votCity || ''}&votState=${this.votState || ''}&votCounty=${this.votCounty || ''}&votZip=${this.votZip || ''}&abrAdr=${this.abrAdr && this.abrAdr.alt1 ? this.abrAdr.alt1 : ''}\n${this.abrAdr && this.abrAdr.alt2 ? this.abrAdr.alt2 : ''}\n${this.abrAdr && this.abrAdr.alt3 ? this.abrAdr.alt3 : ''}\n${this.abrAdr && this.abrAdr.alt4 ? this.abrAdr.alt4 : ''}\n${this.abrAdr && this.abrAdr.alt5 ? this.abrAdr.alt5 : ''}&fwdAdr=${this.fwdAdr && this.fwdAdr.alt1 ? this.fwdAdr.alt1 : ''}\n${this.fwdAdr && this.fwdAdr.alt2 ? this.fwdAdr.alt2 : ''}\n${this.fwdAdr && this.fwdAdr.alt3 ? this.fwdAdr.alt3 : ''}\n${this.fwdAdr && this.fwdAdr.alt4 ? this.fwdAdr.alt4 : ''}\n${this.fwdAdr && this.fwdAdr.alt5 ? this.fwdAdr.alt5 : ''}&email=${encodeURIComponent(this.email) || ''}&altEmail=${encodeURIComponent(this.altEmail) || ''}&tel=${this.tel ? encodeURIComponent(this.tel.replace(/\s/g, '')) : ''}&fax=${this.fax ? encodeURIComponent(this.fax.replace(/\s/g, '')) : ''}&party=${this.party || ''}&addlInfo=${this.addlInfo || ''}&date=${this.date || ''}&class=${this.voterClass || ''}&sex=${this.sex || ''}&recBallot=${this.recBallot || ''}&leoName=${this.leoName || ''}&leoAddress=${this.leoAdr || ''}&leoFax=${this.leoFax || ''}&leoEmail=${this.leoEmail || ''}&leoPhone=${this.leoPhone || ''}&transmitOpts=${this.stateRules.ballotReceiptOptions.join(',')}&deadline=${encodeURIComponent(this.deadlineLanguage)}`), {responseType: 'arraybuffer'})
         .then((response) => {
           let blob = new Blob([response.data], {type: 'application/pdf'})
           this.msPdf = blob
@@ -435,7 +566,7 @@ export default {
       this.confirmPdfDownload()
     },
     getFPCA (method) {
-      axios.get(encodeURI(`/api/fpca?firstName=${this.firstName || ''}&lastName=${this.lastName || ''}&middleName=${this.middleName || ''}&suffix=${this.suffix || ''}&ssn=${this.ssn || ''}&previousName=${this.previousName.previousName || ''}&dob=${this.dob || ''}&stateId=${this.stateId || ''}&votStreet=${this.votStreet || ''}&votApt=${this.votApt || ''}&votCity=${this.votCity || ''}&votState=${this.votState || ''}&votCounty=${this.votCounty || ''}&votZip=${this.votZip || ''}&abrAdr=${this.abrAdr && this.abrAdr.alt ? this.abrAdr.alt1 : ''}\n${this.abrAdr && this.abrAdr.alt ? this.abrAdr.alt2 : ''}\n${this.abrAdr && this.abrAdr.alt ? this.abrAdr.alt3 : ''}\n${this.abrAdr && this.abrAdr.alt ? this.abrAdr.alt4 : ''}\n${this.abrAdr && this.abrAdr.alt ? this.abrAdr.alt5 : ''}&fwdAdr=${this.fwdAdr ? this.fwdAdr.alt1 : ''}\n${this.fwdAdr ? this.fwdAdr.alt2 : ''}\n${this.fwdAdr ? this.fwdAdr.alt3 : ''}\n${this.fwdAdr ? this.fwdAdr.alt4 : ''}\n${this.fwdAdr ? this.fwdAdr.alt5 : ''}&email=${encodeURIComponent(this.email) || ''}&altEmail=${encodeURIComponent(this.altEmail) || ''}&tel=${this.tel ? encodeURIComponent(this.tel.replace(/\s/g, '')) : ''}&fax=${this.fax ? encodeURIComponent(this.fax.replace(/\s/g, '')) : ''}&party=${this.party || ''}&addlInfo=${this.addlInfo || ''}&date=${this.date || ''}&leoAdr=${this.leoAdr}&class=${this.voterClass || ''}&sex=${this.sex || ''}&recBallot=${this.recBallot || ''}&leoName=${this.leoName || ''}&leoAddress=${this.leoAdr || ''}&leoFax=${this.leoFax || ''}&leoEmail=${this.leoEmail || ''}&leoPhone=${this.leoPhone || ''}&transmitOpts=${this.stateRules.ballotReceiptOptions.join(',')}&deadline=${encodeURIComponent(this.nextDeadline)}&method=${method}`), {responseType: 'arraybuffer'})
+      axios.get(encodeURI(`/api/fpca?firstName=${this.firstName || ''}&lastName=${this.lastName || ''}&middleName=${this.middleName || ''}&suffix=${this.suffix || ''}&ssn=${this.ssn || ''}&previousName=${this.previousName.previousName || ''}&dob=${this.dob || ''}&stateId=${this.stateId || ''}&votStreet=${this.votStreet || ''}&votApt=${this.votApt || ''}&votCity=${this.votCity || ''}&votState=${this.votState || ''}&votCounty=${this.votCounty || ''}&votZip=${this.votZip || ''}&abrAdr=${this.abrAdr && this.abrAdr.alt ? this.abrAdr.alt1 : ''}\n${this.abrAdr && this.abrAdr.alt ? this.abrAdr.alt2 : ''}\n${this.abrAdr && this.abrAdr.alt ? this.abrAdr.alt3 : ''}\n${this.abrAdr && this.abrAdr.alt ? this.abrAdr.alt4 : ''}\n${this.abrAdr && this.abrAdr.alt ? this.abrAdr.alt5 : ''}&fwdAdr=${this.fwdAdr ? this.fwdAdr.alt1 : ''}\n${this.fwdAdr ? this.fwdAdr.alt2 : ''}\n${this.fwdAdr ? this.fwdAdr.alt3 : ''}\n${this.fwdAdr ? this.fwdAdr.alt4 : ''}\n${this.fwdAdr ? this.fwdAdr.alt5 : ''}&email=${encodeURIComponent(this.email) || ''}&altEmail=${encodeURIComponent(this.altEmail) || ''}&tel=${this.tel ? encodeURIComponent(this.tel.replace(/\s/g, '')) : ''}&fax=${this.fax ? encodeURIComponent(this.fax.replace(/\s/g, '')) : ''}&party=${this.party || ''}&addlInfo=${this.addlInfo || ''}&date=${this.date || ''}&leoAdr=${this.leoAdr}&class=${this.voterClass || ''}&sex=${this.sex || ''}&recBallot=${this.recBallot || ''}&leoName=${this.leoName || ''}&leoAddress=${this.leoAdr || ''}&leoFax=${this.leoFax || ''}&leoEmail=${this.leoEmail || ''}&leoPhone=${this.leoPhone || ''}&transmitOpts=${this.stateRules.ballotReceiptOptions.join(',')}&deadline=${encodeURIComponent(this.deadlineLanguage)}&method=${method}`), {responseType: 'arraybuffer'})
         .then((response) => {
           // console.log(response)
           let blob = new Blob([response.data], {type: 'application/pdf'})
