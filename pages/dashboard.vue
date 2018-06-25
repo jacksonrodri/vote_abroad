@@ -308,10 +308,10 @@ export default {
     RequestStage
   },
   async asyncData ({app, store}) {
-    let state = store.getters['requests/getCurrent'].leo.s || ''
+    let state = store.getters['requests/getCurrent'] && store.getters['requests/getCurrent'].leo ? store.getters['requests/getCurrent'].leo.s : ''
     let elections = (await app.$content('/elections').get('elections')).body
-    let voterRegistrationStatus = store.getters['requests/getCurrent'].isRegistered
-    let voterType = store.getters['requests/getCurrent'].voterClass
+    let voterRegistrationStatus = store.getters['requests/getCurrent'].isRegistered || null
+    let voterType = store.getters['requests/getCurrent'].voterClass || null
     return {
       registering: store.getters['requests/getCurrent'].isRegistered !== 'registered',
       state: store.getters['requests/getCurrent'].leo.s,
