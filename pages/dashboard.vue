@@ -314,7 +314,7 @@ export default {
     let voterType = store.getters['requests/getCurrent'].voterClass || null
     return {
       registering: store.getters['requests/getCurrent'].isRegistered !== 'registered',
-      state: store.getters['requests/getCurrent'].leo.s,
+      state: store.getters['requests/getCurrent'] && store.getters['requests/getCurrent'].leo ? store.getters['requests/getCurrent'].leo.s : '',
       submissionMethod: store.getters['requests/getCurrent'].recBallot,
       allStateRules: await app.$content('rls')
         .query({ exclude: ['anchors', 'body', 'meta', 'path', 'permalink'] })
@@ -376,20 +376,20 @@ export default {
     name () { return this.user && this.user.firstName ? this.user.firstName : this.requests && this.requests[0] && this.requests[0].firstName ? this.requests[0].firstName : '' },
     isAuthenticated: function () { return this.$store.getters['userauth/isAuthenticated'] },
     leoAdr () {
-      let leo = this.currentRequest.leo
+      let leo = this.currentRequestObject.leo
       return `${leo.n ? leo.n + '\n' : ''}${leo.a1 ? leo.a1 + '\n' : ''}${leo.a2 ? leo.a2 + '\n' : ''}${leo.a3 ? leo.a3 + '\n' : ''}${leo.c ? leo.c + ', ' : ''}${leo.s ? leo.s + ' ' : ''}${leo.z ? leo.z + '\n' : '\n'}United States of America`
     },
     leoEmail () {
-      return this.currentRequest.leo && this.currentRequest.leo.e ? this.currentRequest.leo.e : ''
+      return this.currentRequestObject.leo && this.currentRequestObject.leo.e ? this.currentRequestObject.leo.e : ''
     },
     leoName () {
-      return this.currentRequest.leo && this.currentRequest.leo.n ? this.currentRequest.leo.n : ''
+      return this.currentRequestObject.leo && this.currentRequestObject.leo.n ? this.currentRequestObject.leo.n : ''
     },
     leoFax () {
-      return this.currentRequest.leo && this.currentRequest.leo.f ? '+1 ' + this.currentRequest.leo.f : ''
+      return this.currentRequestObject.leo && this.currentRequestObject.leo.f ? '+1 ' + this.currentRequestObject.leo.f : ''
     },
     leoPhone () {
-      return this.currentRequest.leo && this.currentRequest.leo.p ? '+1 ' + this.currentRequest.leo.p : ''
+      return this.currentRequestObject.leo && this.currentRequestObject.leo.p ? '+1 ' + this.currentRequestObject.leo.p : ''
     }
     // currentRequestStage () { return this.currentRequest && this.currentRequest.stage ? this.currentRequest.stage : 'fill' }
   },
