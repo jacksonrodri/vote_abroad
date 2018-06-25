@@ -86,7 +86,7 @@
               <div class="column">
                 <!-- <request-stage></request-stage> -->
                 <article class="message is-warning">
-                  <div @click="$router.push(`/states/${currentRequestObject.leo.s}`)" class="message-body" v-html="md(deadlineLanguage)">
+                  <div @click="$router.push(`/states/${currentRequestObject && currentRequestObject.leo && currentRequestObject.leo.s? currentRequestObject.leo.s : ''}`)" class="message-body" v-html="md(deadlineLanguage)">
                     <!-- {{deadlineLanguage | markdown}} -->
                   </div>
                 </article>
