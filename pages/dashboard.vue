@@ -97,21 +97,21 @@
                     <div class="box">
                       <p>
                       <span class="title is-5" v-if="currentRequestObject.leo.n"><strong>{{ currentRequestObject.leo.n }}</strong><br/><br/></span>
-                      <span v-if="currentRequestObject.leo.a1"><strong>{{ currentRequestObject.leo.a1 }}</strong><br/></span>
-                      <span v-if="currentRequestObject.leo.a2"><strong>{{ currentRequestObject.leo.a2 }}</strong><br/></span>
-                      <span v-if="currentRequestObject.leo.a3"><strong>{{ currentRequestObject.leo.a3 }}</strong><br/></span>
-                      <span><strong>{{ currentRequestObject.leo.c }}, </strong>
-                      <strong>{{ currentRequestObject.leo.s }} </strong>
-                      <strong>{{ currentRequestObject.leo.z }}</strong><br/></span>
+                      <span v-if="currentRequestObject.leo && currentRequestObject.leo.a1"><strong>{{ currentRequestObject.leo.a1 }}</strong><br/></span>
+                      <span v-if="currentRequestObject.leo && currentRequestObject.leo.a2"><strong>{{ currentRequestObject.leo.a2 }}</strong><br/></span>
+                      <span v-if="currentRequestObject.leo && currentRequestObject.leo.a3"><strong>{{ currentRequestObject.leo.a3 }}</strong><br/></span>
+                      <span><strong>{{ currentRequestObject.leo ? currentRequestObject.leo.c : '' }}, </strong>
+                      <strong>{{ currentRequestObject.leo ? currentRequestObject.leo.s : '' }} </strong>
+                      <strong>{{ currentRequestObject.leo ? currentRequestObject.leo.z : '' }}</strong><br/></span>
                       <span class="has-text-right"><strong>United States of America</strong><br/><br/></span></p>
                       <p>
-                      <span v-if="currentRequestObject.leo.e">Email: <strong>{{ currentRequestObject.leo.e }}</strong><br/><br/></span>
+                      <span v-if="currentRequestObject.leo && currentRequestObject.leo.e">Email: <strong>{{ currentRequestObject.leo.e }}</strong><br/><br/></span>
                       </p>
                       <p>
-                      <span v-if="currentRequestObject.leo.p">Phone: <strong>+1 {{ currentRequestObject.leo.p }}</strong><br/><br/></span>
+                      <span v-if="currentRequestObject.leo && currentRequestObject.leo.p">Phone: <strong>+1 {{ currentRequestObject.leo.p }}</strong><br/><br/></span>
                       </p>
                       <p>
-                      <span v-if="currentRequestObject.leo.f">Fax: <strong>+1 {{ currentRequestObject.leo.f }}</strong><br/></span>
+                      <span v-if="currentRequestObject.leo && currentRequestObject.leo.f">Fax: <strong>+1 {{ currentRequestObject.leo.f }}</strong><br/></span>
                       </p>
                     </div>
                     <p>
