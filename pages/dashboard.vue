@@ -96,7 +96,7 @@
                     </p>
                     <div class="box">
                       <p>
-                      <span class="title is-5" v-if="currentRequestObject.leo.n"><strong>{{ currentRequestObject.leo.n }}</strong><br/><br/></span>
+                      <span class="title is-5" v-if="currentRequestObject.leo && currentRequestObject.leo.n"><strong>{{ currentRequestObject.leo.n }}</strong><br/><br/></span>
                       <span v-if="currentRequestObject.leo && currentRequestObject.leo.a1"><strong>{{ currentRequestObject.leo.a1 }}</strong><br/></span>
                       <span v-if="currentRequestObject.leo && currentRequestObject.leo.a2"><strong>{{ currentRequestObject.leo.a2 }}</strong><br/></span>
                       <span v-if="currentRequestObject.leo && currentRequestObject.leo.a3"><strong>{{ currentRequestObject.leo.a3 }}</strong><br/></span>
