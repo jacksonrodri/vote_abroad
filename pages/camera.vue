@@ -31,6 +31,8 @@
           <h3 class="subtitle">Edit</h3>
           <a @click="increaseCompensation" class="button">Increase Threshold</a>
           <a @click="decreaseCompensation" class="button">Decrease Threshold</a>
+          <a @click="rotate(-1)" class="button">Rotate Left</a>
+          <a @click="rotate(1)" class="button">Rotate Right</a>
         </div>
         <!-- <a @click="increaseSize" class="button">Increase Size</a>
         <a @click="decreaseSize" class="button">Decrease Size</a> -->
@@ -63,6 +65,9 @@ export default {
     }
   },
   methods: {
+    rotate (val) {
+      this.croppedPic.rotate(val)
+    },
     increaseCompensation () {
       this.metadata = this.croppedPic.getMetadata()
       this.compensation = this.compensation + 1
