@@ -1,5 +1,5 @@
 <template>
-  <form action="">
+  <form v-on:submit.prevent>
     <div class="modal-card" style="width: auto">
         <figure class="image is-64x64 is-overlay" style="left:50%; transform: translate(-50%, 80%); z-index:41">
           <img src="/icon.png" :style="isLoading ? 'animation: spinAround 3000ms infinite linear;' : ''">
@@ -29,7 +29,7 @@
                 <!-- minlength=6
                 maxlength=6 -->
             <p class="control">
-              <button @click="confirmCode" class="button is-primary is-medium">
+              <button @click.stop.prevent="confirmCode" class="button is-primary is-medium">
                 <!-- $emit('confirmCode', code) -->
                 <span class="icon is-small">
                   <i class="fas fa-arrow-right"></i>
@@ -68,7 +68,7 @@
               v-model="phoneOrEmail">
             </phone-input>
             <p class="control">
-              <button class="button is-primary">
+              <button @click="startAuth" class="button is-primary">
                 <span class="icon is-small">
                   <i class="fas fa-arrow-right"></i>
                 </span>
@@ -91,8 +91,8 @@
 
       </section>
       <footer class="modal-card-foot">
-        <button class="button" type="button" @click="$parent.close()">Cancel</button>
-        <button class="button">Proceed without an account.</button>
+        <button class="button" type="button" @click.prevent="$parent.close()">Cancel</button>
+        <button @click.prevent="() => {$parent.close(); $router.push('/request/your-information/')}" class="button">Proceed without an account.</button>
       </footer>
     </div>
   </form>

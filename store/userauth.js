@@ -238,22 +238,22 @@ export const actions = {
           Analytics.record('_userauth.auth_fail')
           // loadingComponent.close()
           commit('updateAuthState', 'enteringCode')
-          Dialog.prompt({
-            title: 'Authentication',
-            message: `That code is incorrect, please try again. Enter the code we sent to ${state.user.emailAddress} or click the login link in that email.`,
-            inputAttrs: {
-              type: 'tel',
-              placeholder: 'Type the code.',
-              minlength: 6,
-              maxlength: 6,
-              autocomplete: 'off',
-              size: 6,
-              max: 999999,
-              pattern: '[0-9]{6}',
-              title: 'enter a 6 digit code'
-            },
-            onConfirm: (value) => dispatch('loginEmailVerify', value)
-          })
+          // Dialog.prompt({
+          //   title: 'Authentication',
+          //   message: `That code is incorrect, please try again. Enter the code we sent to ${state.user.emailAddress} or click the login link in that email.`,
+          //   inputAttrs: {
+          //     type: 'tel',
+          //     placeholder: 'Type the code.',
+          //     minlength: 6,
+          //     maxlength: 6,
+          //     autocomplete: 'off',
+          //     size: 6,
+          //     max: 999999,
+          //     pattern: '[0-9]{6}',
+          //     title: 'enter a 6 digit code'
+          //   },
+          //   onConfirm: (value) => dispatch('loginEmailVerify', value)
+          // })
           reject(err)
         }
         // loadingComponent.close()
@@ -265,9 +265,9 @@ export const actions = {
         //   duration: 8000
         // })
         // alert('authResult', authResult)
-        // this.setSession(authResult)
+        this.setSession(authResult)
         // Auth tokens in the result or an error
-        resolve()
+        resolve(authResult)
       })
     })
   },
@@ -341,6 +341,7 @@ export const actions = {
         }, async function (err, authResult) {
           if (err) {
             let id = await Auth.currentCredentials().then(x => x.data.IdentityId)
+            commit('updateAuthState', 'loggedOut')
             // console.log(id)
             // let name = state.user.firstName || Auth.credentials_source
             commit('updateIdentityId', id)
@@ -473,6 +474,7 @@ export const actions = {
       email: state.user.emailAddress || null,
       id: state.user.IdentityId || null
     })
+    commit('updateAuthState', 'loggedIn')
   },
   clearData ({ commit, dispatch }) {
     commit('updateGcToken', null)
