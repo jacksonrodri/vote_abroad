@@ -98,11 +98,12 @@ export default {
       console.log(file)
       let reader = new FileReader()
       reader.addEventListener('load', () => {
-        this.drawThresholdToCanvas(reader.result)
+        // this.drawThresholdToCanvas(reader.result)
+        console.log(reader)
       }, false)
       reader.readAsDataURL(file)
     },
-    drawThresholdToCanvas (imgUrl, w, h) {
+    drawThresholdToCanvas (imgUrl) {
       this.webCamPic = imgUrl || this.webCamPic
       getPixels(this.webCamPic, (err, pixels) => {
         if (err) {
