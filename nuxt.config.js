@@ -46,7 +46,7 @@ module.exports = {
     commitRef: process.env.COMMIT_REF || ''
   },
   modules: [
-    // '@nuxtjs/sentry',
+    '@nuxtjs/sentry',
     '@nuxtjs/pwa',
     ['nuxt-i18n', I18N],
     '@nuxtjs/proxy',
@@ -84,13 +84,13 @@ module.exports = {
       }
     }
   },
-  // sentry: {
-  //   dsn: 'https://7a6424adb4fd425d871eaf79e2a0afce@sentry.io/1223778',
-  //   config: {
-  //     release: process.env.COMMIT_REF || '',
-  //     environment: process.env.CONTEXT || 'development'
-  //   }
-  // },
+  sentry: {
+    dsn: 'https://7a6424adb4fd425d871eaf79e2a0afce@sentry.io/1223778',
+    config: {
+      release: process.env.COMMIT_REF || '',
+      environment: process.env.CONTEXT || 'development'
+    }
+  },
   manifest: {
     name: 'Vote From Abroad',
     short_name: 'Vote Abroad',

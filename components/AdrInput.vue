@@ -295,7 +295,8 @@ export default {
       }
     },
     userCountry (val, oldVal) {
-      this.$router.push({query: {country: val}})
+      console.log('routerobj', this.$router)
+      // this.$router.push({query: {country: val}})
       if (this.countrySearch !== this.getCountryName(val)) {
         this.countrySearch = this.getCountryName(val)
         this.update({country: this.countrySearch, countryiso: val})

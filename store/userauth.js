@@ -73,21 +73,21 @@ export const mutations = {
   },
   updateDevice (state, device) {
     state.device = Object.assign({}, state.device, device)
-    // this.$raven.setUserContext()
-    // this.$raven.setUserContext(Object.assign({}, {user: state.user}, {email: state.user.emailAddress}, {id: state.IdentityId}, {device: state.device}))
+    this.$raven.setUserContext()
+    this.$raven.setUserContext(Object.assign({}, {user: state.user}, {email: state.user.emailAddress}, {id: state.IdentityId}, {device: state.device}))
   },
   updateUser (state, userObj) {
     state.user = Object.assign({}, state.user, userObj)
-    // this.$raven.setUserContext()
-    // this.$raven.setUserContext(Object.assign({}, {user: state.user}, {email: state.user.emailAddress}, {id: state.IdentityId}, {device: state.device}))
+    this.$raven.setUserContext()
+    this.$raven.setUserContext(Object.assign({}, {user: state.user}, {email: state.user.emailAddress}, {id: state.IdentityId}, {device: state.device}))
   },
   updateRedirectPath (state, path) {
     state.redirectPath = path
   },
   updateIdentityId (state, id) {
     state.IdentityId = id
-    // this.$raven.setUserContext()
-    // this.$raven.setUserContext(Object.assign({}, {user: state.user}, {email: state.user.emailAddress}, {id: state.IdentityId}, {device: state.device}))
+    this.$raven.setUserContext()
+    this.$raven.setUserContext(Object.assign({}, {user: state.user}, {email: state.user.emailAddress}, {id: state.IdentityId}, {device: state.device}))
   },
   updateAuthState (state, authState) {
     state.authState = authState
@@ -112,7 +112,7 @@ export const actions = {
       },
       events: {
         confirmCode: (value) => {
-          alert(value)
+          // alert(value)
           if (state.user.emailAddress) {
             dispatch('loginEmailVerify', value)
           } else if (state.user.mobileIntFormat) {
@@ -469,10 +469,10 @@ export const actions = {
       }
       commit('requests/update', newRequest, { root: true })
     }
-    // this.$raven.setUserContext({
-    //   email: state.user.emailAddress || null,
-    //   id: state.user.IdentityId || null
-    // })
+    this.$raven.setUserContext({
+      email: state.user.emailAddress || null,
+      id: state.user.IdentityId || null
+    })
   },
   clearData ({ commit, dispatch }) {
     commit('updateGcToken', null)
@@ -492,7 +492,7 @@ export const actions = {
       region: null
     })
     commit('requests/clearRequests', null, { root: true })
-    // this.$raven.setUserContext()
+    this.$raven.setUserContext()
     dispatch('getUser')
   },
   async logout ({ app, dispatch }) {

@@ -45,8 +45,8 @@ export const mutations = {
   },
   update (state, {...args} = {}) {
     state.requests.splice(state.currentRequest, 1, Object.assign({}, state.requests[state.currentRequest], args))
-    // this.$raven.setExtraContext()
-    // this.$raven.setExtraContext(state.requests[state.currentRequest])
+    this.$raven.setExtraContext()
+    this.$raven.setExtraContext(state.requests[state.currentRequest])
   },
   toggle (state, todo) {
     todo.done = !todo.done
@@ -55,8 +55,8 @@ export const mutations = {
 
 export const actions = {
   ravenContext ({state}) {
-    // this.$raven.setExtraContext() // Clear all extra data from the context.
-    // this.$raven.setExtraContext(state.requests[state.currentRequest])
+    this.$raven.setExtraContext() // Clear all extra data from the context.
+    this.$raven.setExtraContext(state.requests[state.currentRequest])
   },
   recordAnalytics ({app}, payload) {
     // console.log(payload)

@@ -21,14 +21,16 @@
                 max=999999
                 pattern="[0-9]{6}"
                 v-model="code"
-                @pressEnter="$emit('confirmCode', code)"
+                @pressEnter="confirmCode"
                 required>
               </b-input>
+                <!-- @pressEnter="$emit('confirmCode', code)" -->
             </b-field>
                 <!-- minlength=6
                 maxlength=6 -->
             <p class="control">
-              <button @click="$emit('confirmCode', code)" class="button is-primary is-medium">
+              <button @click="confirmCode" class="button is-primary is-medium">
+                <!-- $emit('confirmCode', code) -->
                 <span class="icon is-small">
                   <i class="fas fa-arrow-right"></i>
                 </span>
@@ -155,6 +157,13 @@ export default {
     }
   },
   methods: {
+    confirmCode () {
+      if (this.$store.state.userauth.user.emailAddress) {
+        this.$store.dispatch('userauth/loginEmailVerify', this.code)
+      } else if (this.$store.state.user.mobileIntFormat) {
+        this.$store.dispatch('userauth/loginSmsVerify', this.code)
+      }
+    },
     resetDate () {
       this.date = Math.trunc((new Date()).getTime() / 1000)
     }
