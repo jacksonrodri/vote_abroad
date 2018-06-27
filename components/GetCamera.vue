@@ -77,7 +77,8 @@ export default {
           audio: false,
           video: {
             width: { ideal: 1280 },
-            height: { ideal: 720 }
+            height: { ideal: 720 },
+            facingMode: { ideal: 'environment' }
           }
           // video: true
         }
