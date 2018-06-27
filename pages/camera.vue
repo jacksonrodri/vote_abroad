@@ -20,6 +20,7 @@
           :width="320"
           :height="150"
           :quality="3"
+          @image-remove="webCamPic = null"
           @file-choose="drawThresholdToCanvas"
           @draw="onDraw"
           :initial-image="thresholdedPic"
