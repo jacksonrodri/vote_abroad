@@ -20,6 +20,7 @@
           :width="320"
           :height="150"
           :quality="3"
+          @file-choose="drawThresholdToCanvas"
           @draw="onDraw"
           :initial-image="thresholdedPic"
           initial-size="contain">

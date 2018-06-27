@@ -58,6 +58,7 @@ export default {
         console.log('Found ' + devices.length + ' video devices')
         let lastDevice = devices[devices.length - 1]
         devices = devices.filter(v => (v.label.indexOf('back') > 0))
+        console.log(devices)
         let device = null
         if (devices.length > 0) {
           console.log("Taking a 'back' camera")
