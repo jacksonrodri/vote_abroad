@@ -82,6 +82,7 @@ import { requiredIf } from 'vuelidate/lib/validators'
 import Mailcheck from 'mailcheck'
 const countrylist = require('~/assets/countries.json')
 let metadata, phoneExamples
+Mailcheck.defaultTopLevelDomains.push('com.au', 'ru', 'eu')
 
 const touchMap = new WeakMap()
 
@@ -96,7 +97,7 @@ export default {
       exampleNumber: '',
       metadataLoaded: false,
       typed: null,
-      mailCheckedEmail: undefined,
+      // mailCheckedEmail: undefined,
       vEmail: {},
       isEmail: false,
       maxPhoneLength: 16,
@@ -106,6 +107,22 @@ export default {
     }
   },
   computed: {
+    mailCheckedEmail () {
+      let suggest = ''
+      Mailcheck.run({
+        email: this.value && this.value.rawInput ? this.value.rawInput : this.value || null,
+        suggested: function (suggestion) {
+          // console.log(suggestion)
+          suggest = suggestion.full
+        },
+        empty: function () {
+          suggest = ''
+        }
+      })
+      if (suggest && suggest.split('@')[1].split('.').length > 1 && suggest.split('@')[1].split('.')[suggest.split('@')[1].split('.').length - 1].length > 1) {
+        return suggest
+      } else return ''
+    },
     countries () { return countrylist },
     val () {
       if (this.value && typeof this.value === 'string') {
@@ -270,7 +287,7 @@ export default {
       if (passedFunction) { passedFunction() }
     },
     formatInput (val) {
-      this.mailCheckedEmail = undefined
+      // this.mailCheckedEmail = undefined
       let validEmail = false
       let validPhone = false
       this.isEmail = false
@@ -332,23 +349,23 @@ export default {
       }
     },
     verifyEmail: function () {
-      this.mailCheckedEmail = undefined
+      // this.mailCheckedEmail = undefined
       let em = this.value && this.value.rawInput ? this.value.rawInput : this.value
-      let vm = this
+      // let vm = this
       Mailcheck.run({
         email: em,
         suggested: function (suggestion) {
           // console.log(suggestion)
-          vm.mailCheckedEmail = suggestion.full
+          // vm.mailCheckedEmail = suggestion.full
         },
         empty: function () {
-          vm.mailCheckedEmail = ''
+          // vm.mailCheckedEmail = ''
         }
       })
     },
     setEmail: function () {
       this.formatInput(this.mailCheckedEmail)
-      this.mailCheckedEmail = undefined
+      // this.mailCheckedEmail = undefined
     },
     delayTouch ($v) {
       $v.$reset()
@@ -357,7 +374,7 @@ export default {
       }
       if (touchMap.has(this.vEmail)) {
         clearTimeout(touchMap.get(this.vEmail))
-        this.mailCheckedEmail = undefined
+        // this.mailCheckedEmail = undefined
       }
       touchMap.set($v, setTimeout($v.$touch, 500))
       if (this.accepts.includes('email')) {

@@ -22,6 +22,8 @@ export const state = () => ({
   gcToken: null,
   IdentityId: null,
   redirectPath: null,
+  modal: null,
+  authState: 'enteringCode',
   user: {
     firstName: null,
     middleName: null,
@@ -86,6 +88,9 @@ export const mutations = {
     state.IdentityId = id
     // this.$raven.setUserContext()
     // this.$raven.setUserContext(Object.assign({}, {user: state.user}, {email: state.user.emailAddress}, {id: state.IdentityId}, {device: state.device}))
+  },
+  updateAuthState (state, authState) {
+    state.authState = authState
   }
 }
 
@@ -96,15 +101,18 @@ export const actions = {
       parent: window.$nuxt,
       component: AuthenticateCode,
       hasModalCard: true,
+      active: /inActive|loggedIn|loggedOut/.test(state.authState),
       width: 360,
       props: {
         email: state.user.emailAddress || null,
         phone: state.user.mobileIntFormat || null,
-        isLoading: false,
+        // isLoading: false,
+        // currently: state.authState,
         msg
       },
       events: {
         confirmCode: (value) => {
+          alert(value)
           if (state.user.emailAddress) {
             dispatch('loginEmailVerify', value)
           } else if (state.user.mobileIntFormat) {
@@ -137,6 +145,7 @@ export const actions = {
         email: state.user.emailAddress
       }, function (err, res) {
         if (err) {
+          commit('updateAuthState', 'retrying')
           reject(err)
         }
         resolve(`Sent login link to ${state.user.emailAddress}`)
@@ -151,6 +160,7 @@ export const actions = {
         phoneNumber: state.user.mobileIntFormat.replace(/\s/g, '')
       }, function (err, res) {
         if (err) {
+          commit('updateAuthState', 'retrying')
           reject(err)
         }
         resolve()
@@ -170,14 +180,17 @@ export const actions = {
   async authStart ({commit, state, dispatch}, redirectPath) {
     // commit('updateRedirectPath', redirectPath)
     let loginType
+    commit('updateAuthState', 'enteringCode')
     if (state.user.emailAddress) {
       loginType = 'email'
+      await dispatch('launchModal', loginType)
       await dispatch('sendEmailLink')
     } else if (state.user.mobileIntFormat) {
       loginType = 'sms'
+      await dispatch('launchModal', loginType)
       await dispatch('sendSmsCode')
     }
-    await dispatch('promptCode', loginType)
+    // await dispatch('promptCode', loginType)
     // await dispatch('launchModal', loginType)
   },
   promptCode ({ state, dispatch, commit }, loginType) {
@@ -211,7 +224,9 @@ export const actions = {
   },
   loginEmailVerify ({app, commit, dispatch, state}, code) {
     let Analytics = this.app.$Analytics
-    const loadingComponent = LoadingProgrammatic.open()
+    commit('updateAuthState', 'loading')
+    // dispatch('launchModal')
+    // const loadingComponent = LoadingProgrammatic.open()
     return new Promise((resolve, reject) => {
       webAuth.passwordlessVerify({
         connection: 'email',
@@ -221,7 +236,8 @@ export const actions = {
       }, (err, authResult) => {
         if (err) {
           Analytics.record('_userauth.auth_fail')
-          loadingComponent.close()
+          // loadingComponent.close()
+          commit('updateAuthState', 'enteringCode')
           Dialog.prompt({
             title: 'Authentication',
             message: `That code is incorrect, please try again. Enter the code we sent to ${state.user.emailAddress} or click the login link in that email.`,
@@ -240,7 +256,7 @@ export const actions = {
           })
           reject(err)
         }
-        loadingComponent.close()
+        // loadingComponent.close()
         // Snackbar.open({
         //   message: `${authResult}`,
         //   type: 'is-info',
@@ -302,6 +318,7 @@ export const actions = {
   },
   async setSession ({ state, rootState, commit, dispatch, app }) {
     // const loadingComponent = LoadingProgrammatic.open()
+    commit('updateAuthState', 'loading')
     this.app.Amplify.configure(AWSExports)
     function parseHash () {
       return new Promise((resolve, reject) => {
@@ -370,6 +387,7 @@ export const actions = {
       })
     }
     let hasHash = window.location.hash && window.location.hash.indexOf('access_token') > -1
+    if (hasHash) dispatch('launchModal')
     let authResult = hasHash ? await parseHash() : await checkSession()
     if (authResult.expiresIn * 1000 > Date.now()) {
       authResult = await renewAuth()

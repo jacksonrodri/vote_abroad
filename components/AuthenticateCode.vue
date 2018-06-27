@@ -21,6 +21,7 @@
                 max=999999
                 pattern="[0-9]{6}"
                 v-model="code"
+                @pressEnter="$emit('confirmCode', code)"
                 required>
               </b-input>
             </b-field>
@@ -45,13 +46,13 @@
               </a>
             </p>
           </div>
-          <div class="field is-grouped is-grouped-centered">
+          <!-- <div class="field is-grouped is-grouped-centered">
             <p class="control">
               <a @click="currently = 'loading'" class="button is-vfa is-inverted is-small">
                 Did not get the code?
               </a>
             </p>
-          </div>
+          </div> -->
         </section>
         <section v-if="currently === 'retrying'" class="section">
           <div class="content" v-if="count < 3">{{ msg }}</div>
@@ -100,13 +101,20 @@ import PhoneInput from '~/components/PhoneInput'
 
 export default {
   name: 'authentication-code',
-  props: ['msg', 'email', 'phone', 'isLoading'],
+  props: ['msg', 'email', 'phone'],
   components: { PhoneInput },
+  watch: {
+    currently (val) {
+      if (/inActive|loggedIn|loggedOut/.test(val)) {
+        this.$emit('close')
+      }
+    }
+  },
   data () {
     return {
       localPhoneorEmail: null,
       code: null,
-      currently: 'enteringCode',
+      // currently: 'enteringCode',
       count: 1,
       now: Math.trunc((new Date()).getTime() / 1000),
       date: Math.trunc((new Date()).getTime() / 1000),
@@ -118,6 +126,15 @@ export default {
     }
   },
   computed: {
+    currently: {
+      get () { return this.$store.state.userauth.authState },
+      set (val) { this.$store.commit('userauth/updateAuthState', val) }
+    },
+    isLoading () { return /loading/.test(this.currently) },
+    isActive: {
+      get () { return /inActive|loggedIn|loggedOut/.test(this.$store.state.userauth.authState) },
+      set (value) { this.$store.commit('userauth/updateAuthState', value) }
+    },
     phoneOrEmail: {
       get () { return this.localPhoneorEmail || this.email || this.phone },
       set (val) {

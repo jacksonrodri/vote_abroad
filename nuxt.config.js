@@ -134,7 +134,8 @@ module.exports = {
   plugins: [
     {src: '~/plugins/plugged', ssr: false },
     {src: '~/plugins/buefy'},
-    {src: '~/plugins/vuelidate'}
+    {src: '~/plugins/vuelidate'},
+    {src: '~/plugins/croppa'}
     // ,
     // {src: '~/plugins/intercom'}
   ],

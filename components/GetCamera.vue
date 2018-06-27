@@ -1,7 +1,11 @@
 <template>
   <video :autoplay="autoplay"
-              :playsinline="playsinline"
-              ref="video"></video>
+    :playsinline="playsinline"
+    class="bAndW"
+    @click="takePhoto"
+    @playing="getDimensions"
+    ref="video"></video>
+    <!-- @play="timerCallback()" -->
               <!-- :controls="controls" -->
               <!-- @play="timerCallback()" -->
 </template>
@@ -9,67 +13,153 @@
 <script>
 require('webrtc-adapter')
 export default {
+  props: ['isCapturing'],
   data () {
     return {
       autoplay: 'autoplay',
-      playsinline: 'playsinline'
+      playsinline: 'playsinline',
+      canvas: null,
+      image: null
       // controls: false
     }
   },
-  mounted () {
-    console.log(this.$el)
-    navigator.mediaDevices.enumerateDevices().then(devices => {
-      console.log('devices', devices)
-      devices = devices.filter(v => (v.kind === 'videoinput'))
-      console.log('Found ' + devices.length + ' video devices')
-      let lastDevice = devices[devices.length - 1]
-      devices = devices.filter(v => (v.label.indexOf('back') > 0))
-      let device = null
-      if (devices.length > 0) {
-        console.log("Taking a 'back' camera")
-        device = devices[devices.length - 1]
-      } else {
-        console.log('Taking last camera')
-        device = lastDevice
-      }
+  methods: {
+    getDimensions () {
+      console.log('dimensions', this.$el, this.$el.videoWidth, this.$el.videoHeight)
+      this.canvas.width = this.$el.videoWidth
+      this.canvas.height = this.$el.videoHeight
+    },
+    takePhoto () {
+      this.canvas.getContext('2d').drawImage(this.$el, 0, 0)
+      this.image.src = this.canvas.toDataURL()
+      this.$emit('updatePic', this.canvas.toDataURL(), this.canvas.width, this.canvas.height)
+    },
+    // step () {
+    //   if (!this.canvas) {
+    //     this.canvas = document.createElement('canvas')
+    //     this.canvas.width = this.$el.clientWidth
+    //     this.canvas.height = this.$el.clientHeight
+    //   }
+    //   if (this.canvas) {
+    //     this.canvas.getContext('2d').drawImage(this.$el, 0, 0)
+    //     this.image.src = this.canvas.toDataURL()
+    //     this.$emit('updatePic', this.image)
+    //   }
+    //   window.requestAnimationFrame(this.step)
+    // },
+    // timerCallback () {
+    //   window.requestAnimationFrame(this.step)
+    // },
+    startCapture () {
+      console.log(this.$el)
+      navigator.mediaDevices.enumerateDevices().then(devices => {
+        console.log('devices', devices)
+        devices = devices.filter(v => (v.kind === 'videoinput'))
+        console.log('Found ' + devices.length + ' video devices')
+        let lastDevice = devices[devices.length - 1]
+        devices = devices.filter(v => (v.label.indexOf('back') > 0))
+        let device = null
+        if (devices.length > 0) {
+          console.log("Taking a 'back' camera")
+          device = devices[devices.length - 1]
+        } else {
+          console.log('Taking last camera')
+          device = lastDevice
+        }
 
-      if (!device) {
-        console.log('No devices!')
-        return
-      }
+        if (!device) {
+          console.log('No devices!')
+          return
+        }
 
-      let constraints =
-      {
-        audio: false,
-        video: true
-        // {
-        //   deviceId: { ideal: device.deviceId }
-        //   // facingMode: 'environment',
-        //   // width: { ideal: 1280 },
-        //   // height: { ideal: 720 }
-        // }
-        // video: true
-        // video: {
-        //   deviceId: { ideal: device.deviceId },
-        //   width: { ideal: window.innerWidth },
-        //   height: { ideal: window.innerHeight }
-        // }
-      }
-      navigator.mediaDevices.getUserMedia(constraints)
-        .then(stream => {
-          if (this.$el.srcObject) { this.$el.srcObject = stream } else { this.$el.src = URL.createObjectURL(stream) }
-          // info.innerHTML+= "<pre>DONE</pre>";
-          console.log('DONE')
-        })
+        let constraints =
+        {
+          audio: false,
+          video: {
+            width: { ideal: 1280 },
+            height: { ideal: 720 }
+          }
+          // video: true
+        }
+        navigator.mediaDevices.getUserMedia(constraints)
+          .then(stream => {
+            if (this.$el.srcObject) { this.$el.srcObject = stream } else { this.$el.src = URL.createObjectURL(stream) }
+            this.canvas.width = this.$el.clientWidth
+            this.canvas.height = this.$el.clientHeight
+            console.log('width', this.canvas.width, 'height', this.canvas.height)
+            // info.innerHTML+= "<pre>DONE</pre>";
+            console.log('DONE')
+          })
+          .catch(err => {
+            console.log(err.name + ': ' + err.message)
+          })
+      })
         .catch(err => {
+          console.error(err)
           console.log(err.name + ': ' + err.message)
         })
-    })
-      .catch(err => {
-        console.error(err)
-        console.log(err.name + ': ' + err.message)
-      })
+    }
+  },
+  watch: {
+    isCapturing (val) {
+      if (val) {
+        this.startCapture()
+      } else {
+        this.$el.srcObject.getTracks()[0].stop()
+        this.$el.pause()
+      }
+    }
+  },
+  mounted: function () {
+    this.canvas = document.createElement('canvas')
+    this.image = new Image()
+  },
+  beforeDestroy: function () {
+    this.$el.pause()
+    this.$el.srcObject.getTracks()[0].stop()
   }
+  // mounted () {
+  //   console.log(this.$el)
+  //   navigator.mediaDevices.enumerateDevices().then(devices => {
+  //     console.log('devices', devices)
+  //     devices = devices.filter(v => (v.kind === 'videoinput'))
+  //     console.log('Found ' + devices.length + ' video devices')
+  //     let lastDevice = devices[devices.length - 1]
+  //     devices = devices.filter(v => (v.label.indexOf('back') > 0))
+  //     let device = null
+  //     if (devices.length > 0) {
+  //       console.log("Taking a 'back' camera")
+  //       device = devices[devices.length - 1]
+  //     } else {
+  //       console.log('Taking last camera')
+  //       device = lastDevice
+  //     }
+
+  //     if (!device) {
+  //       console.log('No devices!')
+  //       return
+  //     }
+
+  //     let constraints =
+  //     {
+  //       audio: false,
+  //       video: true
+  //     }
+  //     navigator.mediaDevices.getUserMedia(constraints)
+  //       .then(stream => {
+  //         if (this.$el.srcObject) { this.$el.srcObject = stream } else { this.$el.src = URL.createObjectURL(stream) }
+  //         // info.innerHTML+= "<pre>DONE</pre>";
+  //         console.log('DONE')
+  //       })
+  //       .catch(err => {
+  //         console.log(err.name + ': ' + err.message)
+  //       })
+  //   })
+  //     .catch(err => {
+  //       console.error(err)
+  //       console.log(err.name + ': ' + err.message)
+  //     })
+  // }
 }
 </script>
 
