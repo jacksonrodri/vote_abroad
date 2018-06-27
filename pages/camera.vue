@@ -95,6 +95,7 @@ export default {
       this.drawThresholdToCanvas()
     },
     drawFromFile (file) {
+      console.log(file)
       let reader = new FileReader()
       reader.addEventListener('load', () => {
         this.drawThresholdToCanvas(reader.result)
