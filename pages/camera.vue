@@ -14,14 +14,18 @@
         <signature-cropper
           v-show="!webCamCapture"
           v-model="croppedPic"
+          accept="image/*"
+          :zoom-speed="2"
           :input-attrs="{capture: true, class: 'file-input'}"
           placeholder="Click to choose a photo of your signature."
           :placeholder-font-size="24"
           :width="320"
+          :show-loading="true"
+          :replace-drop="true"
           :height="150"
           :quality="3"
           @image-remove="webCamPic = null"
-          @file-choose="drawThresholdToCanvas"
+          @file-choose="drawFromFile"
           @draw="onDraw"
           :initial-image="thresholdedPic"
           initial-size="contain">
@@ -89,6 +93,13 @@ export default {
       this.metadata = this.croppedPic.getMetadata()
       this.size = this.size - 1
       this.drawThresholdToCanvas()
+    },
+    drawFromFile (file) {
+      let reader = new FileReader()
+      reader.addEventListener('load', () => {
+        this.drawThresholdToCanvas(reader.result)
+      }, false)
+      reader.readAsDataURL(file)
     },
     drawThresholdToCanvas (imgUrl, w, h) {
       this.webCamPic = imgUrl || this.webCamPic
