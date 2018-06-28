@@ -5,7 +5,7 @@
       <div class="column is-half">
         <!-- <h3 class="title is-3">Upload a photo of your signature or <a class="button" @click="webCamCapture = !webCamCapture">click here</a> to use your device camera to scan your signature now.</h3> -->
         <h3 class="title is-3">Add your scanned signature.</h3>
-        <h3 class="subtitle is-4">You can upload a photo of your signature or <a class="has-text-primary" @click="webCamCapture = !webCamCapture">Click here</a> to use your device camera to capture it.</h3>
+        <h3 class="subtitle is-4">You can upload a photo of your signature or <a class="has-text-primary" @click="() => { thresholdedPic = null; webCamCapture = true }">Click here</a> to use your device camera to capture it.</h3>
         <!-- <h3 class="subtitle is-4">- or -</h3> 0-->
         <!-- <h3 class="subtitle is-4">or <a class="has-text-primary" @click="webCamCapture = !webCamCapture">Click here</a> to use your device camera to capture it.</h3> -->
         <!-- <div style="position:relative;"></div> -->
@@ -26,6 +26,7 @@
           :quality="3"
           @image-remove="webCamPic = null"
           @file-choose="drawFromFile"
+          @new-image="drawThresholdToCanvas"
           @draw="onDraw"
           :initial-image="thresholdedPic"
           initial-size="contain">
@@ -65,8 +66,12 @@ export default {
       sigLine: null,
       size: 7,
       compensation: 7,
+      inputCaptureSupported: false,
       metadata: null
     }
+  },
+  computed: {
+    device () { return this.$store.state.userauth.device }
   },
   methods: {
     rotate (val) {
@@ -74,12 +79,14 @@ export default {
     },
     increaseCompensation () {
       this.metadata = this.croppedPic.getMetadata()
+      this.thresholdedPic = null
       this.compensation = this.compensation + 1
       this.size = this.size + 1
       this.drawThresholdToCanvas(null)
     },
     decreaseCompensation () {
       this.metadata = this.croppedPic.getMetadata()
+      this.thresholdedPic = null
       this.compensation = this.compensation - 1
       this.size = this.size - 1
       this.drawThresholdToCanvas()
@@ -95,28 +102,31 @@ export default {
       this.drawThresholdToCanvas()
     },
     drawFromFile (file) {
+      this.thresholdedPic = null
       console.log(file)
       let reader = new FileReader()
       reader.onload = () => {
         console.log(reader.result)
         this.webCamPic = reader.result
-        this.drawThresholdToCanvas(reader.result)
+        // this.drawThresholdToCanvas(reader.result)
       }
       reader.readAsDataURL(file)
     },
     drawThresholdToCanvas (imgUrl) {
-      this.webCamCapture = false
-      this.webCamPic = imgUrl || this.webCamPic
-      getPixels(imgUrl || this.webCamPic, (err, pixels) => {
-        if (err) {
-          window.alert('Error.')
-          throw err
-        }
-        let thresholded = adaptiveThreshold(pixels, {size: this.size, compensation: this.compensation})
-        let cnv = savePixels(thresholded, 'canvas') // returns canvas element
-        this.thresholdedPic = cnv.toDataURL()
-        this.croppedPic.refresh()
-      })
+      if (!this.thresholdedPic) {
+        this.webCamCapture = false
+        this.webCamPic = imgUrl || this.webCamPic
+        getPixels(imgUrl || this.webCamPic, (err, pixels) => {
+          if (err) {
+            window.alert('Error.')
+            throw err
+          }
+          let thresholded = adaptiveThreshold(pixels, {size: this.size, compensation: this.compensation})
+          let cnv = savePixels(thresholded, 'canvas') // returns canvas element
+          this.thresholdedPic = cnv.toDataURL()
+          this.croppedPic.refresh()
+        })
+      }
     },
     onDraw: function (ctx) {
       // console.log(ctx.canvas)

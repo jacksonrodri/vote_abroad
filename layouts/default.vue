@@ -339,13 +339,19 @@ export default {
 
       var isMicrophoneAlreadyCaptured = false
       var isWebcamAlreadyCaptured = false
+
+      // check if device allows capture via the file input field
+      var i = document.createElement('input')
+      i.setAttribute('capture', true)
+      var inputCaptureSupported = !!i['capture']
       checkDeviceSupport(() => {
         this.$store.commit('userauth/updateDevice', {
           'hasWebCam': hasWebcam,
           'hasMicrophone': hasMicrophone,
           'hasSpeakers': hasSpeakers,
           'isMicrophoneAlreadyCaptured': isMicrophoneAlreadyCaptured,
-          'isWebcamAlreadyCaptured': isWebcamAlreadyCaptured
+          'isWebcamAlreadyCaptured': isWebcamAlreadyCaptured,
+          'inputCaptureSupported': inputCaptureSupported
         })
       })
       if (navigator.mediaDevices) {
