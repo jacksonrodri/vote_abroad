@@ -273,7 +273,8 @@ export const actions = {
   },
   loginSmsVerify ({app, commit, dispatch, state}, code) {
     let Analytics = this.app.$Analytics
-    const loadingComponent = LoadingProgrammatic.open()
+    // const loadingComponent = LoadingProgrammatic.open()
+    commit('updateAuthState', 'loading')
     return new Promise((resolve, reject) => {
       webAuth.passwordlessVerify({
         connection: 'sms',
@@ -283,26 +284,27 @@ export const actions = {
       }, (err, authResult) => {
         if (err) {
           Analytics.record('_userauth.auth_fail')
-          loadingComponent.close()
-          Dialog.prompt({
-            title: 'Authentication',
-            message: `That code is incorrect, please try again. Enter the code we sent to ${state.user.mobileIntFormat}`,
-            inputAttrs: {
-              type: 'tel',
-              placeholder: 'Type the code.',
-              minlength: 6,
-              maxlength: 6,
-              autocomplete: 'off',
-              size: 6,
-              max: 999999,
-              pattern: '[0-9]{6}',
-              title: 'enter a 6 digit code'
-            },
-            onConfirm: (value) => dispatch('loginSmsVerify', value)
-          })
+          // loadingComponent.close()
+          commit('updateAuthState', 'enteringCode')
+          // Dialog.prompt({
+          //   title: 'Authentication',
+          //   message: `That code is incorrect, please try again. Enter the code we sent to ${state.user.mobileIntFormat}`,
+          //   inputAttrs: {
+          //     type: 'tel',
+          //     placeholder: 'Type the code.',
+          //     minlength: 6,
+          //     maxlength: 6,
+          //     autocomplete: 'off',
+          //     size: 6,
+          //     max: 999999,
+          //     pattern: '[0-9]{6}',
+          //     title: 'enter a 6 digit code'
+          //   },
+          //   onConfirm: (value) => dispatch('loginSmsVerify', value)
+          // })
           reject(err)
         }
-        loadingComponent.close()
+        // loadingComponent.close()
         // Snackbar.open({
         //   message: `${authResult}`,
         //   type: 'is-info',
@@ -310,7 +312,7 @@ export const actions = {
         //   actionText: 'Retry',
         //   duration: 8000
         // })
-        // this.setSession(authResult)
+        this.setSession(authResult)
         // Auth tokens in the result or an error
         resolve()
       })
