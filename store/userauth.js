@@ -1,6 +1,7 @@
 import { WebAuth } from 'auth0-js'
 import axios from 'axios'
-import { Dialog, Toast, LoadingProgrammatic, ModalProgrammatic } from 'buefy'
+import { Dialog, Toast, ModalProgrammatic } from 'buefy'
+// LoadingProgrammatic,
 // Snackbar,
 import AWSExports from '../aws-exports'
 import AuthenticateCode from '~/components/AuthenticateCode'

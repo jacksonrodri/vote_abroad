@@ -97,10 +97,14 @@ export default {
     drawFromFile (file) {
       console.log(file)
       let reader = new FileReader()
-      reader.addEventListener('load', () => {
-        // this.drawThresholdToCanvas(reader.result)
-        console.log(reader)
-      }, false)
+      // reader.addEventListener('load', () => {
+      //   // this.drawThresholdToCanvas(reader.result)
+      //   console.log(reader)
+      // }, false)
+      reader.onload = () => {
+        console.log(reader.result)
+        this.drawThresholdToCanvas(reader.result)
+      }
       reader.readAsDataURL(file)
     },
     drawThresholdToCanvas (imgUrl) {
