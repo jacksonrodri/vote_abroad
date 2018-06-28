@@ -29,7 +29,7 @@
                 <!-- minlength=6
                 maxlength=6 -->
             <p class="control">
-              <button @click.stop.prevent="confirmCode" class="button is-primary is-medium">
+              <button @click.prevent="confirmCode" class="button is-primary is-medium">
                 <!-- $emit('confirmCode', code) -->
                 <span class="icon is-small">
                   <i class="fas fa-arrow-right"></i>
