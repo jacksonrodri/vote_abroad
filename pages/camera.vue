@@ -181,6 +181,7 @@ export default {
     this.sigLine = new Image()
     this.sigLine.src = '/lineOnly.png'
     this.mtd = true
+    this.croppedPic.refresh()
   }
 }
 </script>
