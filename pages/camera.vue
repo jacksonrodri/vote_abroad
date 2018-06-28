@@ -17,13 +17,11 @@
           accept="image/*"
           :zoom-speed="2"
           :input-attrs="{capture: true, class: 'file-input'}"
-          placeholder="Click to choose a photo of your signature."
-          :placeholder-font-size="24"
-          :width="320"
+          :width="device.type === 'mobile' && device.orientation === 'portrait' ? 320 : 640"
           :show-loading="true"
           :replace-drop="true"
-          :height="150"
-          :quality="3"
+          :height="device.type === 'mobile' && device.orientation === 'portrait' ? 150 : 300"
+          :quality="device.type === 'mobile' && device.orientation === 'portrait' ? 3 : 1.5"
           @image-remove="webCamPic = null"
           @file-choose="drawFromFile"
           @new-image="drawThresholdToCanvas"
@@ -32,6 +30,8 @@
           initial-size="contain">
           <img slot="intitial" :src="webCamPic" />
         </signature-cropper>
+          <!-- placeholder="Click to start."
+          :placeholder-font-size="device.type === 'mobile' ? 8 : 20" -->
         <div class="section">
           <h3 class="subtitle">Edit</h3>
           <a @click="increaseCompensation" class="button">Increase Threshold</a>
@@ -64,7 +64,7 @@ export default {
       thresholdedPic: null,
       webCamCapture: false,
       sigLine: null,
-      size: 7,
+      size: 24,
       compensation: 7,
       inputCaptureSupported: false,
       metadata: null
@@ -349,8 +349,9 @@ export default {
   filter: brightness(150%) contrast(130%) grayscale(100%)
 }
 .croppa-container {
-  max-width:480px;
-  max-height:150px;
+  /* max-width:480px;
+  max-height:150px; */
+  max-width: 100%;
   background: no-repeat url("/sigLine.png");
   background-color: transparent;
   border: 2px solid grey;
