@@ -2,7 +2,7 @@
   <section class="section">
     <!-- <get-camera></get-camera> -->
     <div class="columns is-centered">
-      <div class="column is-half">
+      <div v-if="mtd" class="column is-half">
         <!-- <h3 class="title is-3">Upload a photo of your signature or <a class="button" @click="webCamCapture = !webCamCapture">click here</a> to use your device camera to scan your signature now.</h3> -->
         <h3 class="title is-3">Add your scanned signature.</h3>
         <h3 class="subtitle is-4">You can upload a photo of your signature or <a class="has-text-primary" @click="() => { thresholdedPic = null; webCamCapture = true }">Click here</a> to use your device camera to capture it.</h3>
@@ -67,7 +67,8 @@ export default {
       size: 24,
       compensation: 7,
       inputCaptureSupported: false,
-      metadata: null
+      metadata: null,
+      mtd: false
     }
   },
   computed: {
@@ -179,6 +180,7 @@ export default {
   mounted () {
     this.sigLine = new Image()
     this.sigLine.src = '/lineOnly.png'
+    this.mtd = true
   }
 }
 </script>
