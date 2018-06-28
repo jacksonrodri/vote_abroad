@@ -97,20 +97,17 @@ export default {
     drawFromFile (file) {
       console.log(file)
       let reader = new FileReader()
-      // reader.addEventListener('load', () => {
-      //   // this.drawThresholdToCanvas(reader.result)
-      //   console.log(reader)
-      // }, false)
       reader.onload = () => {
         console.log(reader.result)
         this.webCamPic = reader.result
-        this.drawThresholdToCanvas()
+        this.drawThresholdToCanvas(reader.result)
       }
       reader.readAsDataURL(file)
     },
     drawThresholdToCanvas (imgUrl) {
+      this.webCamCapture = false
       this.webCamPic = imgUrl || this.webCamPic
-      getPixels(this.webCamPic, (err, pixels) => {
+      getPixels(imgUrl || this.webCamPic, (err, pixels) => {
         if (err) {
           window.alert('Error.')
           throw err
@@ -119,7 +116,6 @@ export default {
         let cnv = savePixels(thresholded, 'canvas') // returns canvas element
         this.thresholdedPic = cnv.toDataURL()
         this.croppedPic.refresh()
-        this.webCamCapture = false
       })
     },
     onDraw: function (ctx) {
