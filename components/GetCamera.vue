@@ -107,7 +107,7 @@ export default {
       if (val) {
         this.startCapture()
       } else {
-        this.$el.srcObject.getTracks()[0].stop()
+        if (this.$el && this.$el.srcObject) this.$el.srcObject.getTracks()[0].stop()
         this.$el.pause()
       }
     }
@@ -118,7 +118,7 @@ export default {
   },
   beforeDestroy: function () {
     this.$el.pause()
-    this.$el.srcObject.getTracks()[0].stop()
+    if (this.$el && this.$el.srcObject) this.$el.srcObject.getTracks()[0].stop()
   }
   // mounted () {
   //   console.log(this.$el)

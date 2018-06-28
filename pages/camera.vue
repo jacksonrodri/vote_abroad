@@ -102,9 +102,14 @@ export default {
       //   console.log(reader)
       // }, false)
       reader.onload = () => {
+        var img = new Image()
+        img.onload = e => {
+          this.webCamPic = img
+          this.drawThresholdToCanvas()
+        }
+        img.src = reader.result
         console.log(reader.result)
-        this.webCamPic = reader.result
-        this.drawThresholdToCanvas()
+        // this.webCamPic = reader.result
       }
       reader.readAsDataURL(file)
     },
