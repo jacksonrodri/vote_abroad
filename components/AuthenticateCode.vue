@@ -29,12 +29,12 @@
                 <!-- minlength=6
                 maxlength=6 -->
             <p class="control">
-              <button @click.prevent="confirmCode" class="button is-primary is-medium">
+              <a @click="confirmCode" class="button is-primary is-medium">
                 <!-- $emit('confirmCode', code) -->
                 <span class="icon is-small">
                   <i class="fas fa-arrow-right"></i>
                 </span>
-              </button>
+              </a>
             </p>
           </b-field>
 
@@ -160,7 +160,7 @@ export default {
     confirmCode () {
       if (this.$store.state.userauth.user.emailAddress) {
         this.$store.dispatch('userauth/loginEmailVerify', this.code)
-      } else if (this.$store.state.user.mobileIntFormat) {
+      } else if (this.$store.state.userauth.user.mobileIntFormat) {
         this.$store.dispatch('userauth/loginSmsVerify', this.code)
       }
     },
