@@ -8,8 +8,8 @@
         <!-- <p class="modal-card-title">Authentication</p> -->
       </header>
       <section class="modal-card-body">
-        <section v-if="currently === 'enteringCode'" class="section">
-          <div class="content">{{ msg }}</div>
+        <section v-if="currently === 'enteringCode' || currently === 'retryingCode'" class="section">
+          <div class="content"><span v-if="currently === 'retryingCode'">That code was incorrect.</span>{{ msg }}</div>
           <b-field>
             <b-field>
               <b-input placeholder="Type your code..."

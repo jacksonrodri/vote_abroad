@@ -237,7 +237,7 @@ export const actions = {
         if (err) {
           Analytics.record('_userauth.auth_fail')
           // loadingComponent.close()
-          commit('updateAuthState', 'enteringCode')
+          commit('updateAuthState', 'retryingCode')
           // Dialog.prompt({
           //   title: 'Authentication',
           //   message: `That code is incorrect, please try again. Enter the code we sent to ${state.user.emailAddress} or click the login link in that email.`,
@@ -285,7 +285,7 @@ export const actions = {
         if (err) {
           Analytics.record('_userauth.auth_fail')
           // loadingComponent.close()
-          commit('updateAuthState', 'enteringCode')
+          commit('updateAuthState', 'retryingCode')
           // Dialog.prompt({
           //   title: 'Authentication',
           //   message: `That code is incorrect, please try again. Enter the code we sent to ${state.user.mobileIntFormat}`,
