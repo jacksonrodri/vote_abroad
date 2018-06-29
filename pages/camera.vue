@@ -1,9 +1,11 @@
 <template>
-  <section :class="device && device.type !== 'mobile' ? 'section' : ''">
+  <section>
     <!-- <get-camera></get-camera> -->
     <div class="columns is-centered is-gapless">
-      <div :class="['column', {'is-narrow': device && device.type !== 'mobile'}]">
-        <div :style="device && device.type !== 'mobile' ? 'width:640px;' : ''">
+      <div class="column is-narrow">
+      <!-- <div :class="['column', {'is-narrow': device && device.type !== 'mobile'}]"> -->
+        <div>
+        <!-- <div :style="device && device.type !== 'mobile' ? 'width:640px;' : ''"> -->
           <!-- <h3 class="title is-3">Upload a photo of your signature or <a class="button" @click="webCamCapture = !webCamCapture">click here</a> to use your device camera to scan your signature now.</h3> -->
           <h3 class="title is-3">Add your scanned signature.</h3>
           <h3 class="subtitle is-4">You can upload a photo of your signature or <a class="has-text-primary" @click="() => { thresholdedPic = null; webCamCapture = true }">Click here</a> to use your device camera to capture it.</h3>
@@ -20,12 +22,11 @@
               ref="cp"
               accept="image/*"
               :zoom-speed="2"
+              :auto-sizing="true"
               :input-attrs="{capture: true, class: 'file-input'}"
-              :width="device.type === 'mobile' && device.orientation === 'portrait' ? 320 : 640"
               :show-loading="true"
               :disable-click-to-choose="device && device.inputCaptureSupported ? false : true"
               :replace-drop="true"
-              :height="device.type === 'mobile' && device.orientation === 'portrait' ? 150 : 300"
               :quality="device.type === 'mobile' && device.orientation === 'portrait' ? 3 : 1.5"
               @click="startCameraFilePicker"
               @init.once="$refs.cp.refresh()"
@@ -73,6 +74,9 @@
                 </div>
               </div>
             </signature-cropper>
+
+              <!-- :width="device.type === 'mobile' && device.orientation === 'portrait' ? 320 : 640"
+              :height="device.type === 'mobile' && device.orientation === 'portrait' ? 150 : 300" -->
             <div class="section">hi</div>
           <!-- </div> -->
             <!-- placeholder="Click to start."
@@ -98,6 +102,7 @@ import GetCamera from '~/components/GetCamera'
 const savePixels = require('save-pixels')
 const getPixels = require('get-pixels')
 const adaptiveThreshold = require('adaptive-threshold')
+// var blur = require('ndarray-gaussian-filter')
 
 export default {
   components: {
@@ -114,7 +119,7 @@ export default {
       compensation: 7,
       inputCaptureSupported: false,
       metadata: null,
-      mtd: false
+      blurred: null
     }
   },
   computed: {
@@ -179,8 +184,18 @@ export default {
             window.alert('Error.')
             throw err
           }
+          // this.blurred = this.blurred || blur(pixels, 1)
           let thresholded = adaptiveThreshold(pixels, {size: this.size, compensation: this.compensation})
+          // thresholded = blur(thresholded, 1)
           let cnv = savePixels(thresholded, 'canvas') // returns canvas element
+          let ctx = cnv.getContext('2d')
+          let imgData = ctx.getImageData(0, 0, cnv.width, cnv.height)
+          for (let x = 3; x < imgData.data.length; x += 4) {
+            imgData.data[x] = Math.abs(255 - imgData.data[x - 1])
+          }
+          // imgData.data = boxBlur(imgData.data, cnv.width, cnv.height, 5, 2)
+          ctx.putImageData(imgData, 0, 0)
+          console.log(imgData)
           this.thresholdedPic = cnv.toDataURL()
           this.croppedPic.refresh()
         })
@@ -195,7 +210,7 @@ export default {
       ctx.save()
       ctx.globalAlpha = 0.9
       // ctx.drawImage(this.sigLine, 0, 0, ctx.canvas.width, ctx.canvas.height, 0, 0, 480, 150)
-      ctx.drawImage(this.sigLine, 0, 0, ctx.canvas.width, ctx.canvas.height)
+      // ctx.drawImage(this.sigLine, 0, 0, ctx.canvas.width, ctx.canvas.height)
       ctx.restore()
       if (this.metadata) this.croppedPic.applyMetadata(this.metadata)
       this.metadata = null
@@ -411,9 +426,20 @@ export default {
 .croppa-container {
   /* max-width:480px;
   max-height:150px; */
-  max-width: 100%;
-  background: no-repeat url("/sigLine.png");
+  /* max-width: 100%;
   background-color: transparent;
-  border: 2px solid grey;
+  border: 2px solid grey; */
+  background: no-repeat url("/sigLine.png");
+  max-width: 640px;
+  width: 100%;
+  padding-bottom: 30%;
+  position: relative;
+}
+.croppa-container > canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
 </style>
