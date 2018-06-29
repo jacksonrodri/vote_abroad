@@ -1,47 +1,93 @@
 <template>
-  <section class="section">
+  <section :class="device && device.type !== 'mobile' ? 'section' : ''">
     <!-- <get-camera></get-camera> -->
-    <div class="columns is-centered">
-      <div v-if="mtd" class="column is-half">
-        <!-- <h3 class="title is-3">Upload a photo of your signature or <a class="button" @click="webCamCapture = !webCamCapture">click here</a> to use your device camera to scan your signature now.</h3> -->
-        <h3 class="title is-3">Add your scanned signature.</h3>
-        <h3 class="subtitle is-4">You can upload a photo of your signature or <a class="has-text-primary" @click="() => { thresholdedPic = null; webCamCapture = true }">Click here</a> to use your device camera to capture it.</h3>
-        <!-- <h3 class="subtitle is-4">- or -</h3> 0-->
-        <!-- <h3 class="subtitle is-4">or <a class="has-text-primary" @click="webCamCapture = !webCamCapture">Click here</a> to use your device camera to capture it.</h3> -->
-        <!-- <div style="position:relative;"></div> -->
+    <div class="columns is-centered is-gapless">
+      <div :class="['column', {'is-narrow': device && device.type !== 'mobile'}]">
+        <div :style="device && device.type !== 'mobile' ? 'width:640px;' : ''">
+          <!-- <h3 class="title is-3">Upload a photo of your signature or <a class="button" @click="webCamCapture = !webCamCapture">click here</a> to use your device camera to scan your signature now.</h3> -->
+          <h3 class="title is-3">Add your scanned signature.</h3>
+          <h3 class="subtitle is-4">You can upload a photo of your signature or <a class="has-text-primary" @click="() => { thresholdedPic = null; webCamCapture = true }">Click here</a> to use your device camera to capture it.</h3>
+          <!-- <h3 class="subtitle is-4">- or -</h3> 0-->
+          <!-- <h3 class="subtitle is-4">or <a class="has-text-primary" @click="webCamCapture = !webCamCapture">Click here</a> to use your device camera to capture it.</h3> -->
+          <!-- <div style="position:relative;"></div> -->
 
-        <get-camera :isCapturing="webCamCapture" v-show="webCamCapture" @updatePic="drawThresholdToCanvas"></get-camera>
-        <signature-cropper
-          v-show="!webCamCapture"
-          v-model="croppedPic"
-          accept="image/*"
-          :zoom-speed="2"
-          :input-attrs="{capture: true, class: 'file-input'}"
-          :width="device.type === 'mobile' && device.orientation === 'portrait' ? 320 : 640"
-          :show-loading="true"
-          :replace-drop="true"
-          :height="device.type === 'mobile' && device.orientation === 'portrait' ? 150 : 300"
-          :quality="device.type === 'mobile' && device.orientation === 'portrait' ? 3 : 1.5"
-          @image-remove="webCamPic = null"
-          @file-choose="drawFromFile"
-          @new-image="drawThresholdToCanvas"
-          @draw="onDraw"
-          :initial-image="thresholdedPic"
-          initial-size="contain">
-          <img slot="intitial" :src="webCamPic" />
-        </signature-cropper>
-          <!-- placeholder="Click to start."
-          :placeholder-font-size="device.type === 'mobile' ? 8 : 20" -->
-        <div class="section">
-          <h3 class="subtitle">Edit</h3>
-          <a @click="increaseCompensation" class="button">Increase Threshold</a>
-          <a @click="decreaseCompensation" class="button">Decrease Threshold</a>
-          <a @click="rotate(-1)" class="button">Rotate Left</a>
-          <a @click="rotate(1)" class="button">Rotate Right</a>
+          <nuxt-link to="/cam2">cam2</nuxt-link>
+          <!-- <div class="container"> -->
+            <get-camera :isCapturing="webCamCapture" v-show="webCamCapture" @updatePic="drawThresholdToCanvas"></get-camera>
+            <signature-cropper
+              v-show="!webCamCapture"
+              v-model="croppedPic"
+              ref="cp"
+              accept="image/*"
+              :zoom-speed="2"
+              :input-attrs="{capture: true, class: 'file-input'}"
+              :width="device.type === 'mobile' && device.orientation === 'portrait' ? 320 : 640"
+              :show-loading="true"
+              :disable-click-to-choose="true"
+              :replace-drop="true"
+              :height="device.type === 'mobile' && device.orientation === 'portrait' ? 150 : 300"
+              :quality="device.type === 'mobile' && device.orientation === 'portrait' ? 3 : 1.5"
+              @click="captureSignature"
+              @init.once="$refs.cp.refresh()"
+              @image-remove="webCamPic = null"
+              @file-choose="drawFromFile"
+              @new-image="drawThresholdToCanvas"
+              @draw="onDraw"
+              :initial-image="thresholdedPic"
+              initial-size="contain">
+              <img slot="intitial" :src="webCamPic" />
+              <div style="position:absolute" v-if="croppedPic && croppedPic.hasImage()" >
+                <div class="field has-addons">
+                  <p class="control is-expanded">
+                    <a @click="decreaseCompensation" :class="['button', 'is-fullwidth', {'is-small': device.type === 'mobile'}]">
+                      <span class="icon is-small">
+                        <i class="fas fa-minus"></i>
+                      </span>
+                      <span>Darker</span>
+                    </a>
+                  </p>
+                  <p class="control is-expanded">
+                    <a @click="increaseCompensation" :class="['button', 'is-fullwidth', {'is-small': device.type === 'mobile'}]">
+                      <span class="icon is-small">
+                        <i class="fas fa-plus"></i>
+                      </span>
+                      <span>Lighter</span>
+                    </a>
+                  </p>
+                  <p class="control is-expanded">
+                    <a @click="rotate(-1)" :class="['button', 'is-fullwidth', {'is-small': device.type === 'mobile'}]">
+                      <span class="icon is-small">
+                        <i class="fas fa-undo"></i>
+                      </span>
+                      <span>Rotate Left</span>
+                    </a>
+                  </p>
+                  <p class="control is-expanded">
+                    <a @click="rotate(1)" :class="['button', 'is-fullwidth', {'is-small': device.type === 'mobile'}]">
+                      <span class="icon is-small">
+                        <i class="fas fa-redo"></i>
+                      </span>
+                      <span>Rotate Right</span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </signature-cropper>
+            <div class="section">hi</div>
+          <!-- </div> -->
+            <!-- placeholder="Click to start."
+            :placeholder-font-size="device.type === 'mobile' ? 8 : 20" -->
+          <!-- <div class="section">
+            <h3 class="subtitle">Edit</h3>
+            <a @click="increaseCompensation" class="button">Increase Threshold</a>
+            <a @click="decreaseCompensation" class="button">Decrease Threshold</a>
+            <a @click="rotate(-1)" class="button">Rotate Left</a>
+            <a @click="rotate(1)" class="button">Rotate Right</a>
+          </div> -->
+          <!-- <a @click="increaseSize" class="button">Increase Size</a>
+          <a @click="decreaseSize" class="button">Decrease Size</a> -->
+          <!-- <div class="cover-container"></div> -->
         </div>
-        <!-- <a @click="increaseSize" class="button">Increase Size</a>
-        <a @click="decreaseSize" class="button">Decrease Size</a> -->
-        <!-- <div class="cover-container"></div> -->
       </div>
     </div>
   </section>
@@ -75,21 +121,24 @@ export default {
     device () { return this.$store.state.userauth.device }
   },
   methods: {
+    captureSignature () {
+      this.croppedPic.chooseFile()
+    },
     rotate (val) {
       this.croppedPic.rotate(val)
     },
     increaseCompensation () {
       this.metadata = this.croppedPic.getMetadata()
       this.thresholdedPic = null
-      this.compensation = this.compensation + 1
-      this.size = this.size + 1
+      this.compensation = this.compensation + 3
+      this.size = this.size + 3
       this.drawThresholdToCanvas(null)
     },
     decreaseCompensation () {
       this.metadata = this.croppedPic.getMetadata()
       this.thresholdedPic = null
-      this.compensation = this.compensation - 1
-      this.size = this.size - 1
+      this.compensation = this.compensation - 3
+      this.size = this.size - 3
       this.drawThresholdToCanvas()
     },
     increaseSize () {
@@ -180,8 +229,8 @@ export default {
   mounted () {
     this.sigLine = new Image()
     this.sigLine.src = '/lineOnly.png'
-    this.mtd = true
-    this.croppedPic.refresh()
+    // this.mtd = true
+    // this.croppedPic.refresh()
   }
 }
 </script>
