@@ -30,6 +30,7 @@ export default {
       this.canvas.height = this.$el.videoHeight
     },
     takePhoto () {
+      this.$el.pause()
       this.canvas.getContext('2d').drawImage(this.$el, 0, 0)
       this.image.src = this.canvas.toDataURL()
       this.$emit('updatePic', this.canvas.toDataURL(), this.canvas.width, this.canvas.height)

@@ -23,11 +23,11 @@
               :input-attrs="{capture: true, class: 'file-input'}"
               :width="device.type === 'mobile' && device.orientation === 'portrait' ? 320 : 640"
               :show-loading="true"
-              :disable-click-to-choose="true"
+              :disable-click-to-choose="device && device.inputCaptureSupported ? false : true"
               :replace-drop="true"
               :height="device.type === 'mobile' && device.orientation === 'portrait' ? 150 : 300"
               :quality="device.type === 'mobile' && device.orientation === 'portrait' ? 3 : 1.5"
-              @click="captureSignature"
+              @click="startCameraFilePicker"
               @init.once="$refs.cp.refresh()"
               @image-remove="webCamPic = null"
               @file-choose="drawFromFile"
@@ -121,6 +121,14 @@ export default {
     device () { return this.$store.state.userauth.device }
   },
   methods: {
+    startCameraFilePicker () {
+      if (!this.croppedPic.hasImage()) {
+        if (this.device && !this.device.inputCaptureSupported) {
+          this.thresholdedPic = null
+          this.webCamCapture = true
+        } else { this.captureSignature() }
+      }
+    },
     captureSignature () {
       this.croppedPic.chooseFile()
     },
