@@ -460,17 +460,17 @@ import VoterClass from '~/components/VoterClass'
 import IsRegistered from '~/components/IsRegistered'
 import ReceiveBallot from '~/components/ReceiveBallot'
 // import TelInput from '~/components/TelInput'
-import BirthDate from '~/components/BirthDate'
+// import BirthDate from '~/components/BirthDate'
 import DateOfBirth from '~/components/DateOfBirth'
 import Party from '~/components/Party'
-import JoinDemocratsabroad from '~/components/JoinDemocratsabroad'
+// import JoinDemocratsabroad from '~/components/JoinDemocratsabroad'
 import PreviousName from '~/components/PreviousName'
 import Gender from '~/components/Gender'
 import StateSpecial from '~/components/StateSpecial'
 import ScrollUp from '~/components/ScrollUp'
 import Identification from '~/components/Identification'
-import IdInput from '~/components/IdInput'
-import PhoneInput from '~/components/PhoneInput'
+// import IdInput from '~/components/IdInput'
+// import PhoneInput from '~/components/PhoneInput'
 import AdrInput from '~/components/AdrInput'
 // import VueMarkdown from 'vue-markdown'
 import snarkdown from 'snarkdown'
@@ -526,17 +526,17 @@ export default {
     IsRegistered,
     ReceiveBallot,
     // TelInput,
-    BirthDate,
+    // BirthDate,
     DateOfBirth,
     Party,
-    JoinDemocratsabroad,
+    // JoinDemocratsabroad,
     PreviousName,
     Gender,
     StateSpecial,
     ScrollUp,
     Identification,
-    IdInput,
-    PhoneInput,
+    // IdInput,
+    // PhoneInput,
     AdrInput
   },
   computed: {
