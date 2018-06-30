@@ -208,7 +208,7 @@ export default {
   async created () {
     this.countryList = await (
       await import(
-        /* webpackChunkName: "countrydata" */ `@/data/countries.json`
+        /* webpackChunkName: "countrydata" */ `@/data/countries/countries.json`
       )
     )
   },

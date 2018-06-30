@@ -47,6 +47,9 @@
                       <span>Darker</span>
                     </a>
                   </p>
+                  <p class="control">
+                    <input class="slider is-fullwidth" step="0.1" min="-1.6" max="1.6" value="1.1" type="range">
+                  </p>
                   <p class="control is-expanded">
                     <a @click="increaseCompensation" :class="['button', 'is-fullwidth', {'is-small': device.type === 'mobile'}]">
                       <span class="icon is-small">

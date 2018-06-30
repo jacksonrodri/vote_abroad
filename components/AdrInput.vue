@@ -165,7 +165,8 @@
 import { requiredIf } from 'vuelidate/lib/validators'
 import axios from 'axios'
 import debounce from 'lodash/debounce'
-const ZZ = require('~/data/postal/zz.json')
+const ZZ = {'ZZ': {'fmt': '%N%n%O%n%A%n%C', 'id': 'data/ZZ', 'locality_name_type': 'city', 'require': 'AC', 'state_name_type': 'province', 'sublocality_name_type': 'suburb', 'upper': 'C', 'zip_name_type': 'postal'}}
+// require('~/data/postal/zz.json')
 const countrylist = require('~/assets/countries.json')
 const latinizeCharacters = require('~/assets/latinize.characters.json')
 
@@ -402,7 +403,7 @@ export default {
         // let ctryiso = (countryiso || this.userCountry || 'zz').toLowerCase()
         switch ((countryiso || this.userCountry || 'zz').toLowerCase()) {
           case 'br':
-            // requestedFormat = await import(/* webpackChunkName: "postalFormat_br" */ `~/data/postal/br.json`)
+            // requestedFormat = await import(/* webpackChunkName: 'postalFormat_br" */ `~/data/postal/br.json`)
             this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_br" */ `~/data/postal/br.json`))
             // if (passedFunction) { passedFunction() }
             break

@@ -63,7 +63,7 @@ export default {
   async mounted () {
     this.leos = await (
       await import(
-        /* webpackChunkName: "leodata" */ `@/data/${this.state}-leos.json`
+        /* webpackChunkName: "leodata" */ `@/data/leos/${this.state}-leos.json`
       )
     )
     if (this.leos.length === 1) {
