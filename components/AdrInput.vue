@@ -401,72 +401,77 @@ export default {
         // || (!countryiso && this.userCountry && !this.formats[this.userCountry.toUpperCase()]))
         // let requestedFormat
         // let ctryiso = (countryiso || this.userCountry || 'zz').toLowerCase()
-        switch ((countryiso || this.userCountry || 'zz').toLowerCase()) {
-          case 'br':
-            // requestedFormat = await import(/* webpackChunkName: 'postalFormat_br" */ `~/data/postal/br.json`)
-            this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_br" */ `~/data/postal/br.json`))
-            // if (passedFunction) { passedFunction() }
-            break
-          case 'cn':
-            this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_cn" */ `~/data/postal/cn.json`))
-            break
-          case 'tw':
-            this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_tw" */ `~/data/postal/tw.json`))
-            break
-          case 'kr':
-            this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_kr" */ `~/data/postal/kr.json`))
-            break
-          case 'hk':
-            this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_hk" */ `~/data/postal/hk.json`))
-            break
-          case 'cl':
-            this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_cl" */ `~/data/postal/cl.json`))
-            break
-          case 'ru':
-            this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_ru" */ `~/data/postal/ru.json`))
-            break
-          case 'es':
-            this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_es" */ `~/data/postal/es.json`))
-            break
-          case 'th':
-            this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_th" */ `~/data/postal/th.json`))
-            break
-          case 'it':
-            this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_it" */ `~/data/postal/it.json`))
-            break
-          case 'in':
-            this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_in" */ `~/data/postal/in.json`))
-            break
-          case 'ph':
-            this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_ph" */ `~/data/postal/ph.json`))
-            break
-          case 'us':
-            this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_us" */ `~/data/postal/us.json`))
-            break
-          case 'vn':
-            this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_vn" */ `~/data/postal/vn.json`))
-            break
-          case 'ua':
-            this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_ua" */ `~/data/postal/ua.json`))
-            break
-          case 'tr':
-            this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_tr" */ `~/data/postal/tr.json`))
-            break
-          case 'jp':
-            this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_jp" */ `~/data/postal/jp.json`))
-            break
-          case 'eg':
-            this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_eg" */ `~/data/postal/eg.json`))
-            break
-          case 'mx':
-            this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_mx" */ `~/data/postal/mx.json`))
-            break
-          case 'ca':
-            this.formats = await Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_ca" */ `~/data/postal/ca.json`))
-            break
-          default:
-            this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_small" */ `~/data/postal/${(countryiso || this.userCountry || 'zz').toLowerCase()}.json`))
-        }
+        axios.get(`/postal/${(countryiso || this.userCountry || 'zz').toLowerCase()}.json`)
+          .then(({data}) => {
+            console.log(data)
+            this.formats = Object.assign({}, this.formats, data)
+          })
+        // switch ((countryiso || this.userCountry || 'zz').toLowerCase()) {
+        //   case 'br':
+        //     // requestedFormat = await import(/* webpackChunkName: 'postalFormat_br" */ `~/data/postal/br.json`)
+        //     this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_br" */ `~/data/postal/br.json`))
+        //     // if (passedFunction) { passedFunction() }
+        //     break
+        //   case 'cn':
+        //     this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_cn" */ `~/data/postal/cn.json`))
+        //     break
+        //   case 'tw':
+        //     this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_tw" */ `~/data/postal/tw.json`))
+        //     break
+        //   case 'kr':
+        //     this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_kr" */ `~/data/postal/kr.json`))
+        //     break
+        //   case 'hk':
+        //     this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_hk" */ `~/data/postal/hk.json`))
+        //     break
+        //   case 'cl':
+        //     this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_cl" */ `~/data/postal/cl.json`))
+        //     break
+        //   case 'ru':
+        //     this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_ru" */ `~/data/postal/ru.json`))
+        //     break
+        //   case 'es':
+        //     this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_es" */ `~/data/postal/es.json`))
+        //     break
+        //   case 'th':
+        //     this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_th" */ `~/data/postal/th.json`))
+        //     break
+        //   case 'it':
+        //     this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_it" */ `~/data/postal/it.json`))
+        //     break
+        //   case 'in':
+        //     this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_in" */ `~/data/postal/in.json`))
+        //     break
+        //   case 'ph':
+        //     this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_ph" */ `~/data/postal/ph.json`))
+        //     break
+        //   case 'us':
+        //     this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_us" */ `~/data/postal/us.json`))
+        //     break
+        //   case 'vn':
+        //     this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_vn" */ `~/data/postal/vn.json`))
+        //     break
+        //   case 'ua':
+        //     this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_ua" */ `~/data/postal/ua.json`))
+        //     break
+        //   case 'tr':
+        //     this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_tr" */ `~/data/postal/tr.json`))
+        //     break
+        //   case 'jp':
+        //     this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_jp" */ `~/data/postal/jp.json`))
+        //     break
+        //   case 'eg':
+        //     this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_eg" */ `~/data/postal/eg.json`))
+        //     break
+        //   case 'mx':
+        //     this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_mx" */ `~/data/postal/mx.json`))
+        //     break
+        //   case 'ca':
+        //     this.formats = await Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_ca" */ `~/data/postal/ca.json`))
+        //     break
+        //   default:
+        //     this.formats = Object.assign({}, this.formats, await import(/* webpackChunkName: "postalFormat_small" */ `~/data/postal/${(countryiso || this.userCountry || 'zz').toLowerCase()}.json`))
+        // }
         // requestedFormat = await import(`~/data/postal/${countryiso ? countryiso.toLowerCase() : this.userCountry.toLowerCase()}.json`)
         // this.formats = Object.assign({}, this.formats, await requestedFormat)
         if (passedFunction) {
