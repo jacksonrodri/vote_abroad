@@ -459,7 +459,7 @@ import VotingAddress from '~/components/VotingAddress'
 import VoterClass from '~/components/VoterClass'
 import IsRegistered from '~/components/IsRegistered'
 import ReceiveBallot from '~/components/ReceiveBallot'
-import TelInput from '~/components/TelInput'
+// import TelInput from '~/components/TelInput'
 import BirthDate from '~/components/BirthDate'
 import DateOfBirth from '~/components/DateOfBirth'
 import Party from '~/components/Party'
@@ -525,7 +525,7 @@ export default {
     VoterClass,
     IsRegistered,
     ReceiveBallot,
-    TelInput,
+    // TelInput,
     BirthDate,
     DateOfBirth,
     Party,
