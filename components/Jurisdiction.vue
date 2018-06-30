@@ -13,7 +13,10 @@
       <slot name="instructions"></slot>
       <!-- Jurisdiction: {{leos.length}} leos found -->
       <!-- <button class="button">Wake County</button> -->
-      <b-field
+      <b-field v-if="loading">
+        <b-input disabled>Loading...</b-input>
+      </b-field>
+      <b-field v-else
         :type="validations.$error ? 'is-danger' : ''"
         :message="validations.$error ? Object.keys(validations.$params).map(x => $t(`request.jurisdiction.messages.${x}`)) : '' ">
             <!-- v-model="typedJurisdiction" -->
@@ -47,6 +50,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 
 export default {
   name: 'Jurisdiction',
@@ -61,24 +65,29 @@ export default {
     'placeholder'
   ],
   async mounted () {
-    this.leos = await (
-      await import(
-        /* webpackChunkName: "leodata" */ `@/data/leos/${this.state}-leos.json`
-      )
-    )
+    this.loading = true
+    this.leos = (await axios.get(`/leos/${this.state}-leos.json`)).data
+    console.log(this.leos)
+    // this.leos = await (
+    //   await import(
+    //     /* webpackChunkName: "leodata" */ `@/data/leos/${this.state}-leos.json`
+    //   )
+    // )
     if (this.leos.length === 1) {
       this.isSingleLeoState = true
       this.updateLeo(this.leos[0])
     } else {
       this.isSingleLeoState = false
     }
+    this.loading = false
   },
   data () {
     return {
       leos: [],
       isSingleLeoState: false,
       typedJurisdiction: '',
-      isOpen: false
+      isOpen: false,
+      loading: true
     }
   },
   computed: {
