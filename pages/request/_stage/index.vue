@@ -16,7 +16,6 @@
             @input="delayTouch($v.firstName)"
             ref="firstName"></b-input>
         </b-field>
-            <!-- autocomplete="given-name" -->
       </div>
 
       <!-- middleName -->
@@ -60,58 +59,9 @@
       </previous-name>
 
       <!-- phone Number -->
-      <!-- <tel-input
-        key="tel"
-        :label="$t('request.tel.label')"
-        ref="tel"
-        autocomplete="mobile tel"
-        @input="delayTouch($v.tel)"
-        :type="($v.tel.$error ? 'is-danger': '')"
-        :message="$v.tel.$error ? Object.keys($v.tel.$params).map(x => x === 'validPhone' ? 'Please enter a valid phone number': x) : [] "
-        v-model="tel"></tel-input> -->
-
       <phone-input ref="tel" key="telephone" :label="$t('request.tel.label')" :accepts="['phone']" v-model="tel"></phone-input>
-      <!-- <phone-input key="phoneEmail"
-        required
-        :label="$t('homepage.loginInstructions')"
-        :accepts="['phone', 'email']"
-        toolTipTitle="What is this?"
-        v-model="email">
-        <div slot="tooltip">
-          {{ $t('homepage.tooltip')}}
-        </div>
-      </phone-input> -->
-      <!-- <phone-input key="phone" :label="$t('request.tel.label')" :accepts="['phone']" v-model="phoneTest"></phone-input> -->
+
       <phone-input key="email" ref="email" :label="$t('request.email.label')" :required="recBallot === 'email'" :accepts="['email']" v-model="email"></phone-input>
-
-        <!-- emailAddress -->
-      <!-- <b-field
-      :type="($v.email.$error ? 'is-danger': '')"
-      :message="$v.email.$error ? Object.keys($v.email.$params).map(x => $t(`request.email.messages.${x}`)) : '' "
-      :label="$t('request.email.label')">
-        <b-input v-model="email"
-          @input="delayTouch($v.email)"
-          autocomplete="email"
-          maxlength="40"
-          ref="email"></b-input>
-      </b-field> -->
-
-      <!-- countryName -->
-      <!-- <address-input
-        :label="$t('request.abrAdr.label')"
-        key="overseas"
-        ref="abrAdr"
-        v-model="abrAdr"
-        @input="delayTouch($v.abrAdr)"
-        :validations=$v.abrAdr
-        :toolTipTitle="$t('request.abrAdr.tooltipTitle')">
-        <div slot="instructions">
-          <p>{{$t('request.abrAdr.instructions')}}</p>
-        </div>
-        <div slot="tooltip">
-          <vue-markdown>{{$t('request.abrAdr.tooltip')}}</vue-markdown>
-        </div>
-      </address-input> -->
 
       <adr-input v-model="abrAdr"
         :label="$t('request.abrAdr.label')"
@@ -144,7 +94,6 @@
         </div>
         <div slot="tooltip">
           <p v-html="$options.filters.markdown($t('request.votAdr.tooltip'))"></p>
-          <!-- <vue-markdown>{{$t('request.votAdr.tooltip')}}</vue-markdown> -->
         </div>
       </voting-address>
 
@@ -163,7 +112,6 @@
         </div>
         <div slot="tooltip">
           <p v-html="$options.filters.markdown($t('request.jurisdiction.tooltip'))"></p>
-          <!-- <vue-markdown>{{$t('request.jurisdiction.tooltip')}}</vue-markdown> -->
         </div>
       </jurisdiction>
 
@@ -174,7 +122,6 @@
       :toolTipTitle="$t('request.voterClass.tooltipTitle')">
       <div slot="tooltip">
         <p v-html="$options.filters.markdown($t('request.voterClass.tooltip'))"></p>
-        <!-- <vue-markdown>{{$t('request.voterClass.tooltip')}}</vue-markdown> -->
       </div>
     </voter-class>
 
@@ -197,19 +144,9 @@
       :toolTipTitle="$t('request.receiveBallot.tooltipTitle')">
       <div slot="tooltip">
         <p v-html="$options.filters.markdown($t('request.receiveBallot.tooltip'))"></p>
-        <!-- <vue-markdown>{{$t('request.receiveBallot.tooltip')}}</vue-markdown> -->
       </div>
     </receive-ballot>
 
-    <!-- <tel-input
-      key="fax"
-      :label="$t('request.fax.label')"
-      :type="($v.fax.$error ? 'is-danger': '')"
-      :message="$v.fax.$error ? Object.keys($v.fax.$params) : [''] "
-      v-if="recBallot === 'fax'"
-      @input="$v.fax.$touch()"
-      v-model="fax">
-    </tel-input> -->
     <phone-input key="fax"
       ref="fax"
       :label="$t('request.fax.label')"
@@ -239,18 +176,6 @@
       v-model="altEmail">
     </phone-input>
 
-    <!-- <b-field
-      :type="($v.altEmail.$error ? 'is-danger': '')"
-      :message="$v.altEmail.$error ? Object.keys($v.altEmail.$params).map(x => $t(`request.email.messages.${x}`)) : '' "
-      v-if="recBallot === 'email'"
-      :label="$t('request.altEmail.label')">
-      <b-input v-model="altEmail"
-        ref="altEmail"
-        autocomplete="email"
-        maxlength="40"
-        @input="$v.altEmail.$touch()"></b-input>
-    </b-field> -->
-
       <!-- fwdAdr -->
       <address-input
         :label="$t('request.fwdAdr.label')"
@@ -266,7 +191,6 @@
         </div>
         <div slot="tooltip">
           <p v-html="$options.filters.markdown($t('request.fwdAdr.tooltip'))"></p>
-          <!-- <vue-markdown>{{$t('request.fwdAdr.tooltip')}}</vue-markdown> -->
         </div>
       </address-input>
 
@@ -284,15 +208,6 @@
     <form id="id-and-contact-information" key="id-and-contact-information">
 <!-- identity and Contact information -->
       <!-- dob -->
-      <!-- <birth-date
-        :validations="$v.dob"
-        ref="dob"
-        :tooltipTitle="$t('request.dob.tooltipTitle')"
-        @input="delayTouch($v.dob)">
-        <div slot="tooltip">
-          <vue-markdown>{{$t('request.dob.tooltip')}}</vue-markdown>
-        </div>
-      </birth-date> -->
 
       <date-of-birth v-model="dob"
         :tooltipTitle="$t('request.dob.tooltipTitle')"
@@ -301,15 +216,8 @@
         :validations="$v.dob">
         <div slot="tooltip">
           <p v-html="$options.filters.markdown($t('request.dob.tooltip'))"></p>
-          <!-- <vue-markdown>{{$t('request.dob.tooltip')}}</vue-markdown> -->
         </div>
       </date-of-birth>
-      <!-- <b-field label="Select a date">
-        <b-datepicker v-model="dob"
-          :date-formatter="(date) => date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })"
-          placeholder="Click to select...">
-        </b-datepicker>
-      </b-field> -->
 
       <!-- gender -->
       <gender
@@ -318,7 +226,6 @@
         v-model="sex">
         <div slot="tooltip">
           <p v-html="$options.filters.markdown($t('request.sex.tooltip'))"></p>
-          <!-- <vue-markdown>{{$t('request.sex.tooltip')}}</vue-markdown> -->
         </div>
       </gender>
 
@@ -336,27 +243,11 @@
         :type="($v.party.$error ? 'is-danger': '')">
         <div slot="tooltip">
           <p v-html="$options.filters.markdown($t('request.party.tooltip'))"></p>
-          <!-- <vue-markdown>{{$t('request.party.tooltip')}}</vue-markdown> -->
         </div>
         <div slot="joinTooltip">
           <p v-html="$options.filters.markdown($t('request.joinDa.tooltip'))"></p>
-          <!-- <vue-markdown>{{$t('request.joinDa.tooltip')}}</vue-markdown> -->
         </div>
       </party>
-
-      <!-- <transition name="fade">
-      <join-democratsabroad
-        v-model="joinDa"
-        :party="party"
-        :tooltipTitle="$t('request.joinDa.tooltipTitle')"
-        :label="$t('request.joinDa.label')">
-        <div slot="tooltip">
-          <p v-html="$options.filters.markdown($t('request.joinDa.tooltip'))"></p> -->
-          <!-- <vue-markdown>{{$t('request.joinDa.tooltip')}}</vue-markdown> -->
-        <!-- </div>
-      </join-democratsabroad>
-      </transition> -->
-        <!-- v-if="party!=='Republican' && party && !$store.state.userauth.user.isDA" -->
 
       <state-special
         :label="$t('request.stateSpecial.label', {state: stateRules && stateRules.state ? stateRules.state: 'State'})"
@@ -401,37 +292,6 @@
         </div>
       </id-input>
 
-      <!-- <identification
-        v-if="stateRules"
-        :label="$t('request.id.label')"
-        :idOptions="stateRules && stateRules.id && stateRules.id.length > 0 ? stateRules.id : null"
-        :validations="($v.identification)"
-        ref="id"
-        @input="delayTouch($v.identification)"
-        :tooltipTitle="$t('request.id.tooltipTitle')"
-        v-model="identification">
-        <div slot="instructions">
-          <p v-if="stateRules && stateRules.id && stateRules.id.length === 0"
-            v-html="$options.filters.markdown($t('request.id.instructionsOptional', { state: stateRules.state}))">
-          </p>
-          <p v-else-if="stateRules && stateRules.id && stateRules.id.length === 1"
-            v-html="$options.filters.markdown($t('request.id.instructionsReq1', { state: stateRules.state, id: $t(`request.id.${stateRules.id[0]}`), idType: $t(`request.id.${stateRules.id[0].indexOf('SSN') > -1 ? 'SSN' : stateRules.id[0]}`)}))">
-          </p>
-          <p v-else v-html="$options.filters.markdown($t('request.id.instructionsReq2', { state: stateRules.state, allButLastTypes: allButLastIdType, lastType: lastIdType }))">
-          </p>
-        </div>
-        <div slot="tooltip">
-          <p v-if="stateRules && stateRules.id && stateRules.id.length === 0"
-            v-html="$options.filters.markdown($t('request.id.tooltipOptional', { state: stateRules.state}))">
-          </p>
-          <p v-else-if="stateRules && stateRules.id && stateRules.id.length === 1"
-            v-html="$options.filters.markdown($t('request.id.tooltipReq1', { state: stateRules.state, id: $t(`request.id.${stateRules.id[0]}`)}))">
-          </p>
-          <p v-else v-html="$options.filters.markdown($t('request.id.tooltipReq2', { state: stateRules.state, allButLastTypes: allButLastIdType, lastType: lastIdType }))">
-          </p>
-        </div>
-      </identification> -->
-
       <!-- fwabRequest -->
       <b-field :type="($v.fwabRequest.$error ? 'is-danger': '')"
         :message="$v.fwabRequest.$error ? Object.keys($v.fwabRequest.$params).map(x => x) : '' "
@@ -459,20 +319,18 @@ import VotingAddress from '~/components/VotingAddress'
 import VoterClass from '~/components/VoterClass'
 import IsRegistered from '~/components/IsRegistered'
 import ReceiveBallot from '~/components/ReceiveBallot'
+import PhoneInput from '~/components/PhoneInput'
 // import TelInput from '~/components/TelInput'
 // import BirthDate from '~/components/BirthDate'
 import DateOfBirth from '~/components/DateOfBirth'
 import Party from '~/components/Party'
-// import JoinDemocratsabroad from '~/components/JoinDemocratsabroad'
 import PreviousName from '~/components/PreviousName'
 import Gender from '~/components/Gender'
 import StateSpecial from '~/components/StateSpecial'
 import ScrollUp from '~/components/ScrollUp'
-import Identification from '~/components/Identification'
-// import IdInput from '~/components/IdInput'
-// import PhoneInput from '~/components/PhoneInput'
+// import Identification from '~/components/Identification'
+import IdInput from '~/components/IdInput'
 import AdrInput from '~/components/AdrInput'
-// import VueMarkdown from 'vue-markdown'
 import snarkdown from 'snarkdown'
 
 const optionalEmail = (value) => !helpers.req(value) || email(value)
@@ -534,9 +392,9 @@ export default {
     Gender,
     StateSpecial,
     ScrollUp,
-    Identification,
-    // IdInput,
-    // PhoneInput,
+    // Identification,
+    IdInput,
+    PhoneInput,
     AdrInput
   },
   computed: {
