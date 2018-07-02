@@ -3,6 +3,16 @@
   Functions = "lambda"
   Publish = "dist"
 
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Link = '''
+    <https://use.fontawesome.com/releases/v5.1.0/css/fontawesome.css>; rel=preload; as=stylesheet, \
+    <https://use.fontawesome.com/releases/v5.1.0/css/solid.css>; rel=preload; as=stylesheet, \
+    <https://res.cloudinary.com/democratsabroad/image/upload/f_auto,q_auto/v1521002249/votefromabroad-bg.jpg>; rel=preload; as=image, \
+    </vfa_blue.svg>; rel=preload; as=image, \
+    </flags/4x3/us.svg>; rel=preload; as=image'''
+
 [[redirects]]
 from = "/api/countries/"
 to = "http://country.io/names.json"
