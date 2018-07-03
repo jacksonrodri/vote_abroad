@@ -24,6 +24,7 @@
       keep-first
       id="country"
       title="... type to find your country."
+      aria-label="type to find your country"
       placeholder="Country"
       v-if="!accepts.includes('email') || !isEmail"
       :data="filteredCountries"

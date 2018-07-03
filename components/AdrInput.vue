@@ -20,6 +20,7 @@
           :open-on-focus=true
           keep-first
           name="country"
+          aria-label="Country of Residence (outside of the US)"
           autocomplete="section-abroad shipping country"
           :placeholder="$t('request.abrAdr.placeholder')"
           v-model="countrySearch"
@@ -66,6 +67,7 @@
                 ref="A"
                 keep-first
                 autocomplete="section-abroad shipping street-address"
+                :aria-label="getPlaceholder(item)"
                 :placeholder="getPlaceholder(item)"
                 field="structured_formatting.main_text"
                 @focus="getFormatAndCall(null, countryiso || userCountry)"
@@ -87,12 +89,14 @@
                 field="name"
                 keep-first
                 :placeholder="getPlaceholder(item)"
+                :aria-label="getPlaceholder(item)"
                 :open-on-focus=true></b-autocomplete>
             <b-input :placeholder="getPlaceholder(item)"
               v-else
               :value="getValue(item)"
               :ref="item"
               :autocomplete="getAutocomplete(item)"
+              :aria-label="getPlaceholder(item)"
               @input="val => update({[item]: val})">
             </b-input>
           </b-field>
@@ -112,6 +116,7 @@
                   keep-first
                   :autocomplete="getAutocomplete(subItem)"
                   :placeholder="getPlaceholder(subItem)"
+                  :aria-label="getPlaceholder(subItem)"
                   :open-on-focus=true>
                     <template v-if="userCountry === 'us'" slot="header">
                       <span class="is-size-7 has-text-info has-text-centered">Military/ Diplomatic Addresses only.</span>
@@ -122,7 +127,8 @@
                   @input="val => update({[subItem]: val})"
                   :ref="subItem"
                   :autocomplete="getAutocomplete(subItem)"
-                  :placeholder="getPlaceholder(subItem)">
+                  :placeholder="getPlaceholder(subItem)"
+                  :aria-label="getPlaceholder(subItem)">
                 </b-input>
               </b-field>
             </b-field>
@@ -131,19 +137,19 @@
       </div>
       <div v-else key="altFormat">
         <b-field>
-          <b-input type="text" :value="alt1" @input="val => update({alt1: val})"></b-input>
+          <b-input type="text" :value="alt1" @input="val => update({alt1: val})" aria-label="Address Line 1" title="Address Line 1"></b-input>
         </b-field>
         <b-field >
-          <b-input type="text" :value="alt2" @input="val => update({alt2: val})"></b-input>
+          <b-input type="text" :value="alt2" @input="val => update({alt2: val})" aria-label="Address Line 2" title="Address Line 2"></b-input>
         </b-field>
         <b-field>
-          <b-input type="text" :value="alt3" @input="val => update({alt3: val})"></b-input>
+          <b-input type="text" :value="alt3" @input="val => update({alt3: val})" aria-label="Address Line 3" title="Address Line 3"></b-input>
         </b-field>
         <b-field>
-          <b-input type="text" :value="alt4" @input="val => update({alt4: val})"></b-input>
+          <b-input type="text" :value="alt4" @input="val => update({alt4: val})" aria-label="Address Line 4" title="Address Line 4"></b-input>
         </b-field>
         <b-field>
-          <b-input type="text" :value="alt5" @input="val => update({alt5: val})"></b-input>
+          <b-input type="text" :value="alt5" @input="val => update({alt5: val})" aria-label="Address Line 5" title="Address Line 5"></b-input>
         </b-field>
       </div>
     </transition>
