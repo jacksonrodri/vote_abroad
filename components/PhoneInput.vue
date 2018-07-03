@@ -22,6 +22,7 @@
     <b-autocomplete
       :open-on-focus=true
       keep-first
+      placeholder="Country"
       v-if="!accepts.includes('email') || !isEmail"
       :data="filteredCountries"
       :field="'name' || null"
