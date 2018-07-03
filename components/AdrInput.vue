@@ -23,6 +23,7 @@
           aria-label="Country of Residence (outside of the US)"
           autocomplete="section-abroad shipping country"
           :placeholder="$t('request.abrAdr.placeholder')"
+          :title="$t('request.abrAdr.placeholder')"
           v-model="countrySearch"
           :field="'name' || null"
           :data="filteredCountries"
@@ -69,6 +70,7 @@
                 autocomplete="section-abroad shipping street-address"
                 :aria-label="getPlaceholder(item)"
                 :placeholder="getPlaceholder(item)"
+                :title="getPlaceholder(item)"
                 field="structured_formatting.main_text"
                 @focus="getFormatAndCall(null, countryiso || userCountry)"
                 :loading="isFetching"
@@ -90,6 +92,7 @@
                 keep-first
                 :placeholder="getPlaceholder(item)"
                 :aria-label="getPlaceholder(item)"
+                :title="getPlaceholder(item)"
                 :open-on-focus=true></b-autocomplete>
             <b-input :placeholder="getPlaceholder(item)"
               v-else
@@ -97,6 +100,7 @@
               :ref="item"
               :autocomplete="getAutocomplete(item)"
               :aria-label="getPlaceholder(item)"
+              :title="getPlaceholder(item)"
               @input="val => update({[item]: val})">
             </b-input>
           </b-field>
@@ -117,6 +121,7 @@
                   :autocomplete="getAutocomplete(subItem)"
                   :placeholder="getPlaceholder(subItem)"
                   :aria-label="getPlaceholder(subItem)"
+                  :title="getPlaceholder(subItem)"
                   :open-on-focus=true>
                     <template v-if="userCountry === 'us'" slot="header">
                       <span class="is-size-7 has-text-info has-text-centered">Military/ Diplomatic Addresses only.</span>
@@ -128,7 +133,8 @@
                   :ref="subItem"
                   :autocomplete="getAutocomplete(subItem)"
                   :placeholder="getPlaceholder(subItem)"
-                  :aria-label="getPlaceholder(subItem)">
+                  :aria-label="getPlaceholder(subItem)"
+                  :title="getPlaceholder(subItem)">
                 </b-input>
               </b-field>
             </b-field>
