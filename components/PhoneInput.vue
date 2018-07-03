@@ -6,6 +6,7 @@
       v-if="mustBeEmail"
       :class="['button', 'is-static', 'control', {'shrink': !mustBeEmail}]">
       <b-icon
+        pack="fas"
         icon="at">
       </b-icon>
     </a>

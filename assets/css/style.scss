@@ -72,8 +72,12 @@ $speed-slower: 250ms;
 
 @import "~bulma";
 @import "~buefy/src/scss/buefy";
-// @import "./fa/fontawesome.scss";
-// @import "./fa/fa-solid.scss";
+// @import "./icons.scss";
+$fa-font-path: "~/assets/css/f1";
+@import "./fa/fontawesome.scss";
+// @import "https://use.fontawesome.com/releases/v5.1.0/css/solid";
+// @import "https://use.fontawesome.com/releases/v5.1.0/css/fontawesome";
+@import "./fa/fa-solid.scss";
 // @import "./fa/fa-regular.scss";
 // $flag-icon-css-path: '/flags';
 // @import '../../node_modules/flag-icon-css/sass/flag-icon.scss';

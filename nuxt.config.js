@@ -24,6 +24,7 @@ module.exports = {
       { rel: 'preload', as: 'image', href: 'https://res.cloudinary.com/democratsabroad/image/upload/f_auto,q_auto/v1521002249/votefromabroad-bg.jpg' },
       { rel: 'preload', as: 'image', href: '/vfa_blue.svg' },
       { rel: 'preload', as: 'image', href: '/flags/4x3/us.svg' }
+      // { rel: 'style', href: 'https://use.fontawesome.com/releases/v5.1.0/css/solid.css', integrity: 'sha384-TbilV5Lbhlwdyc4RuIV/JhD8NR+BfMrvz4BL5QFa2we1hQu6wvREr3v6XSRfCTRp', 'crossorigin': 'anonymous' }
     ]
   },
   render: {
