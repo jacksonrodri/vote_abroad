@@ -98,7 +98,8 @@ module.exports = {
   manifest: {
     name: 'Vote From Abroad',
     short_name: 'Vote Abroad',
-    lang: 'en'
+    lang: 'en',
+    theme_color: '#172559'
   },
   css: [
     // '@fortawesome/fontawesome/styles.css',
