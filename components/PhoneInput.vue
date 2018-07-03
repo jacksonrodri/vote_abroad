@@ -283,13 +283,15 @@ export default {
       }
     },
     async loadMetadataAndCall (passedFunction) {
-      [metadata, phoneExamples] =
-        await Promise.all([
-          import(/* webpackChunkName: "libphone" */ 'libphonenumber-js/metadata.full.json'),
-          import(/* webpackChunkName: "libphone" */ 'libphonenumber-js/examples.mobile.json')
-        ])
-      this.metadataLoaded = true
-      if (passedFunction) { passedFunction() }
+      if (process.browser) {
+        [metadata, phoneExamples] =
+          await Promise.all([
+            import(/* webpackChunkName: "libphone" */ 'libphonenumber-js/metadata.full.json'),
+            import(/* webpackChunkName: "libphone" */ 'libphonenumber-js/examples.mobile.json')
+          ])
+        this.metadataLoaded = true
+        if (passedFunction) { passedFunction() }
+      }
     },
     formatInput (val) {
       // this.mailCheckedEmail = undefined

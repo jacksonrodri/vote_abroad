@@ -206,11 +206,13 @@ export default {
     'toolTipTitle'
   ],
   async created () {
-    this.countryList = await (
-      await import(
-        /* webpackChunkName: "countrydata" */ `@/data/countries/countries.json`
+    if (process.browser) {
+      this.countryList = await (
+        await import(
+          /* webpackChunkName: "countrydata" */ `@/data/countries/countries.json`
+        )
       )
-    )
+    }
   },
   mounted () {
     // console.log(this.$refs)
