@@ -6,7 +6,7 @@
         <div class="container">
           <div class="navbar-brand">
             <span class="burger is-hidden-desktop"></span>
-            <nuxt-link to="/" class="navbar-item logo" exact>
+            <nuxt-link to="/" class="navbar-item logo" title="Vote From Abroad - Home Page" exact>
             </nuxt-link>
             <span :class="[{'is-active': isMobileMenuActive}, 'navbar-burger', 'burger']" @click="isMobileMenuActive = !isMobileMenuActive">
               <span></span>
