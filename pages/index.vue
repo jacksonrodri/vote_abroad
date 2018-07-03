@@ -12,9 +12,10 @@
                 <h2 class="subtitle is-1 is-size-3-mobile has-text-danger">
                   {{ $t('homepage.subtitle') }}
                 </h2>
-                <span class="is-flex"><label class="label">{{ $t('homepage.loginInstructions') }}</label><span @click="toolTipOpen = !toolTipOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
+                <!-- <span class="is-flex"><label class="label">{{ $t('homepage.loginInstructions') }}</label><span @click="toolTipOpen = !toolTipOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span> -->
                 <phone-input ref="pe"
                   key="pe"
+                  :label="$t('homepage.loginInstructions')"
                   :accepts="['phone', 'email']"
                   @input="val => $store.commit('userauth/updateUser', {emailAddress: val.isValidEmail ? val.rawInput : '', mobileIntFormat: val.intNumber})"
                   @pressEnter="startAuth"
