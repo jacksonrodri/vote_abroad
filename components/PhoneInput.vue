@@ -22,6 +22,7 @@
     <b-autocomplete
       :open-on-focus=true
       keep-first
+      id="country"
       placeholder="Country"
       v-if="!accepts.includes('email') || !isEmail"
       :data="filteredCountries"
@@ -36,7 +37,7 @@
       autocomplete="country-name"
       :class="['control', {'shrink': !countryFocused}]">
       <template slot="header">
-        <span class="is-size-6 has-text-grey"> ... type to find your country.</span>
+        <label for="country" class="is-size-6 has-text-grey"> ... type to find your country.</label>
       </template>
       <template slot="empty">No results for {{countrySearch}}</template>
       <template slot-scope="props">
