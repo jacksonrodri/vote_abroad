@@ -99,7 +99,8 @@ module.exports = {
     name: 'Vote From Abroad',
     short_name: 'Vote Abroad',
     lang: 'en',
-    theme_color: '#172559'
+    theme_color: '#172559',
+    background_color: '#172559'
   },
   css: [
     // '@fortawesome/fontawesome/styles.css',
