@@ -135,6 +135,7 @@
 
 <script>
 import GetCamera from '~/components/GetCamera'
+import ImageTools from '~/assets/imageTools.js'
 const savePixels = require('save-pixels')
 const getPixels = require('get-pixels')
 const adaptiveThreshold = require('adaptive-threshold')
@@ -205,8 +206,17 @@ export default {
       console.log(file)
       let reader = new FileReader()
       reader.onload = () => {
-        console.log(reader.result)
-        this.webCamPic = reader.result
+        ImageTools.resize(this.files[0], {
+          width: 320, // maximum width
+          height: 240 // maximum height
+        }, function (blob, didItResize) {
+          console.log('did it resize?', didItResize)
+          // didItResize will be true if it managed to resize it, otherwise false (and will return the original file as 'blob')
+          this.webCamPic = window.URL.createObjectURL(blob)
+          // you can also now upload this blob using an XHR.
+        })
+        // console.log(reader.result)
+        // this.webCamPic = reader.result
         // this.drawThresholdToCanvas(reader.result)
       }
       reader.readAsDataURL(file)
