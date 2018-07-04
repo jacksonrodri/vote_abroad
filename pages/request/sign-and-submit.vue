@@ -1,7 +1,7 @@
 <template>
   <div class="columns is-centered is-multiline">
     <div class="column is-10 is-8-desktop is-7-widescreen is-6-fullhd is-paddingless">
-      <div :class="['modal', {'is-active': pleaseRotate}]">
+      <!-- <div :class="['modal', {'is-active': pleaseRotate}]">
         <div class="modal-background"></div>
         <div class="modal-content">
           <div class="has-text-centered">
@@ -12,14 +12,12 @@
                 <span class="fa-stack fa-5x has-text-primary">
                   <i class="fas fa-mobile-alt fa-stack-2x"></i>
                   <i class="fas fa-redo fa-stack-1x shrink"></i>
-                  <!-- <span class="fa-stack-1x fa-inverse" style="margin-top: .3em;"><strong>27</strong></span> -->
                 </span>
               </span>
               </transition>
           </div>
         </div>
-        <!-- <button class="modal-close is-large" aria-label="close"></button> -->
-      </div>
+      </div> -->
       <div>
         <h1 class="has-text-centered title is-3">{{ $t('request.stages.step', {step: 5})}}</h1>
         <h3 class="has-text-centered subtitle is-4">{{ $t('request.stages.stage5')}}</h3>
