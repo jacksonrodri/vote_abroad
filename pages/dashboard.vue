@@ -86,7 +86,8 @@
               <div class="column">
                 <!-- <request-stage></request-stage> -->
                 <article class="message is-warning">
-                  <div @click="$router.push(`/states/${currentRequestObject && currentRequestObject.leo && currentRequestObject.leo.s? currentRequestObject.leo.s : ''}`)" class="message-body" v-html="md(deadlineLanguage)">
+                  <div class="message-body" v-html="md(deadlineLanguage)">
+                    <!-- @click="$router.push(`/states/${currentRequestObject && currentRequestObject.leo && currentRequestObject.leo.s? currentRequestObject.leo.s : ''}`)" -->
                     <!-- {{deadlineLanguage | markdown}} -->
                   </div>
                 </article>
@@ -105,13 +106,13 @@
                       <strong>{{ currentRequestObject.leo ? currentRequestObject.leo.z : '' }}</strong><br/></span>
                       <span class="has-text-right"><strong>United States of America</strong><br/><br/></span></p>
                       <p>
-                      <span v-if="currentRequestObject.leo && currentRequestObject.leo.e">Email: <strong>{{ currentRequestObject.leo.e }}</strong><br/><br/></span>
+                      <span v-if="currentRequestObject.leo && currentRequestObject.leo.e" v-html="md(`**Email:** [${ currentRequestObject.leo.e }](mailto:${ currentRequestObject.leo.e })`)"></span>
                       </p>
                       <p>
-                      <span v-if="currentRequestObject.leo && currentRequestObject.leo.p">Phone: <strong>+1 {{ currentRequestObject.leo.p }}</strong><br/><br/></span>
+                      <span v-if="currentRequestObject.leo && currentRequestObject.leo.p" v-html="md(`**Phone:** [${ '+1' + currentRequestObject.leo.p }](tel:${ ('+1' + currentRequestObject.leo.p).replace(/[()]/g, '-').replace(/ /g, '') })`)"><br/><br/></span>
                       </p>
                       <p>
-                      <span v-if="currentRequestObject.leo && currentRequestObject.leo.f">Fax: <strong>+1 {{ currentRequestObject.leo.f }}</strong><br/></span>
+                      <span v-if="currentRequestObject.leo && currentRequestObject.leo.f" v-html="md(`**Fax:** [${ '+1' + currentRequestObject.leo.f }](tel:${ ('+1' + currentRequestObject.leo.f).replace(/[()]/g, '-').replace(/ /g, '')  })`)"></span>
                       </p>
                     </div>
                     <p>
@@ -287,15 +288,15 @@ function getDeadlineLanguage (electionArr, state, voterRegistrationStatus, voter
   // console.log(applicableRules)
   applicableRules = applicableRules[0]
   if (!applicableRules) {
-    return `IMPORTANT: Your form must be received by your state deadline to be eligible to vote in the November 6 General Election.  \nYou can find your state deadlines at www.votefromabroad.org/states `
+    return `IMPORTANT: Your form must be received by your state deadline to be eligible to vote in the November 6 General Election.  \nYou can find your state deadlines at [www.votefromabroad.org/states](www.votefromabroad.org/states) `
   } else {
     switch (voterRegistrationStatus) {
       case 'notRegistered':
-        return `** IMPORTANT DEADLINES for new voters to vote in the ${new Date(applicableRules.date).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}).toUpperCase()} ${applicableRules.electionType} **\n- ${getRuleLanguage(applicableRules, 'Registration', voterRegistrationStatus)}\nSee all your states deadlines at www.votefromabroad.org/${applicableRules.state}`
+        return `** IMPORTANT DEADLINES for new voters to vote in the ${new Date(applicableRules.date).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}).toUpperCase()} ${applicableRules.electionType} **\n- ${getRuleLanguage(applicableRules, 'Registration', voterRegistrationStatus)}\nSee all your states deadlines at [www.votefromabroad.org/${applicableRules.state}](www.votefromabroad.org/${applicableRules.state})`
       case 'registered':
-        return `** IMPORTANT DEADLINES for registered voters to vote in the ${new Date(applicableRules.date).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}).toUpperCase()} ${applicableRules.electionType} **\n- ${getRuleLanguage(applicableRules, 'Ballot Request', voterRegistrationStatus)}\nSee all your states deadlines at www.votefromabroad.org/${applicableRules.state}`
+        return `** IMPORTANT DEADLINES for registered voters to vote in the ${new Date(applicableRules.date).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}).toUpperCase()} ${applicableRules.electionType} **\n- ${getRuleLanguage(applicableRules, 'Ballot Request', voterRegistrationStatus)}\nSee all your states deadlines at [www.votefromabroad.org/${applicableRules.state}](www.votefromabroad.org/${applicableRules.state})`
       default:
-        return `** IMPORTANT DEADLINES ** for the ${new Date(applicableRules.date).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}).toUpperCase()} ${applicableRules.electionType} -- NEW VOTERS - ${getRuleLanguage(applicableRules, 'Registration', voterRegistrationStatus)} REGISTERED VOTERS - ${getRuleLanguage(applicableRules, 'Ballot Request', voterRegistrationStatus)} - See all your states deadlines at www.votefromabroad.org/${applicableRules.state}`
+        return `** IMPORTANT DEADLINES ** for the ${new Date(applicableRules.date).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}).toUpperCase()} ${applicableRules.electionType} -- NEW VOTERS - ${getRuleLanguage(applicableRules, 'Registration', voterRegistrationStatus)} REGISTERED VOTERS - ${getRuleLanguage(applicableRules, 'Ballot Request', voterRegistrationStatus)} - See all your states deadlines at [www.votefromabroad.org/${applicableRules.state}](www.votefromabroad.org/${applicableRules.state})`
     }
   }
 }
