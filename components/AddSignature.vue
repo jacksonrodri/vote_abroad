@@ -28,7 +28,7 @@
               :disable-click-to-choose="device && device.inputCaptureSupported ? false : true"
               :replace-drop="true"
               :quality="device.type === 'mobile' && device.orientation === 'portrait' ? 3 : 1.5"
-              @click="startCameraFilePicker"
+              @click="() => { if (!croppedPic || !(croppedPic.hasImage())) { startCameraFilePicker() } }"
               @init.once="$refs.cp.refresh()"
               @image-remove="webCamPic = null"
               @file-choose="drawFromFile"
