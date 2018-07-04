@@ -74,6 +74,7 @@
             <section v-if="signStep" class="section">
               <!-- <sign4 v-model="signStep" :fpca="fpca" @sigcap="addSig">
               </sign4> -->
+              <signature-affirmation></signature-affirmation>
               <add-signature @sigcap="addSig"></add-signature>
               <compose-message :fpca="fpca"></compose-message>
             </section>
@@ -289,6 +290,7 @@
 import MyCanvas from '~/components/MyCanvas.vue'
 import MyBox from '~/components/MyBox.vue'
 import Sign4 from '~/components/sign4.vue'
+import SignatureAffirmation from '~/components/SignatureAffirmation.vue'
 import AddSignature from '~/components/AddSignature.vue'
 import ComposeMessage from '~/components/ComposeMessage.vue'
 import { mapState } from 'vuex'
@@ -433,6 +435,7 @@ export default {
     Sign4,
     AddSignature,
     ComposeMessage,
+    SignatureAffirmation,
     // VueMarkdown,
     ScrollUp
   },

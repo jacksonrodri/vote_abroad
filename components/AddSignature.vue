@@ -29,7 +29,7 @@
               :show-loading="true"
               :disable-click-to-choose="device && device.inputCaptureSupported ? false : true"
               :replace-drop="true"
-              :quality="device.type === 'mobile' && device.orientation === 'portrait' ? 3 : 1.5"
+              :quality="device.type === 'mobile' && device.orientation === 'portrait' ? 4 : 2"
               @click="() => { if (!croppedPic || !(croppedPic.hasImage())) { startCameraFilePicker() } }"
               @init.once="$refs.cp.refresh()"
               @image-remove="webCamPic = null"
@@ -166,7 +166,8 @@ export default {
   },
   methods: {
     useSignature () {
-      this.$emit('sigcap', this.thresholdedPic)
+      // let pic = this.croppedPic.getCanvas().toDataURL()
+      this.$emit('sigcap', this.croppedPic.generateDataUrl())
     },
     startCameraFilePicker () {
       if (!this.croppedPic.hasImage()) {
@@ -297,6 +298,7 @@ export default {
       }
     },
     onDraw: function (ctx) {
+      console.log('canvas style', this.croppedPic.getCanvas().style)
       // console.log(ctx.canvas)
       // console.log(ctx.getImageData(0, 0, ctx.canvas.width, ctx.canvas.height))
       // let sigImage = ctx.getImageData(0, 0, ctx.canvas.width, ctx.canvas.height)
@@ -519,16 +521,19 @@ export default {
   filter: brightness(150%) contrast(130%) grayscale(100%)
 }
 .croppa-container {
-  /* max-width:480px;
-  max-height:150px; */
-  /* max-width: 100%;
-  background-color: transparent;
-  border: 2px solid grey; */
-  background: no-repeat url("/sigLine.png");
+  /* background: no-repeat url("/sigLine.png");
   max-width: 640px;
   width: 100%;
-  padding-bottom: 30%;
+  padding-bottom: 20%;
+  position: relative; */
+  background: no-repeat url(/sigLine.png);
+  background-size: cover;
+  max-width: 640px;
+  width: 100%;
+  padding-bottom: 25%;
   position: relative;
+  /* background-position-y: -185px;
+  background-position-x: -109px; */
 }
 .croppa-container > canvas {
     position: absolute;

@@ -310,8 +310,8 @@ export default {
           y: percentWidthToPix(119.5, ctx)
         },
         signature: {
-          x: percentWidthToPix(20.2, ctx),
-          y: percentWidthToPix(113, ctx)
+          x: percentWidthToPix(16.5, ctx),
+          y: percentWidthToPix(115.2, ctx)
         },
         classification: {
           x: percentWidthToPix(60.3, ctx),
@@ -396,7 +396,8 @@ export default {
       let signature = new Image()
       signature.src = this.signature
       signature.onload = () => {
-        ctx.drawImage(signature, 0, 0, 1280, 720, this.calculated.signature.x, this.calculated.signature.y, 1152, 648)
+        console.log(signature.width, signature.height)
+        ctx.drawImage(signature, 0, 0, signature.width, signature.height, this.calculated.signature.x, this.calculated.signature.y, 1252, 313)
         // ctx.drawImage(signature, 43, 12, 427, 240, this.calculated.signature.x, this.calculated.signature.y, 1152, 648)
       }
     }
