@@ -8,7 +8,7 @@
         <!-- <div :style="device && device.type !== 'mobile' ? 'width:640px;' : ''"> -->
           <!-- <h3 class="title is-3">Upload a photo of your signature or <a class="button" @click="webCamCapture = !webCamCapture">click here</a> to use your device camera to scan your signature now.</h3> -->
           <h3 class="title is-3">Add your scanned signature.</h3>
-          <h3 class="subtitle is-4">You can upload a photo of your signature or <a class="has-text-primary" @click="() => { thresholdedPic = null; webCamCapture = true }">Click here</a> to use your device camera to capture it.</h3>
+          <h3 class="subtitle is-4">You can upload a photo of your signature or <a class="has-text-primary" @click="() => { thresholdedPic = null; webCamCapture = true }">Click here</a> to use your device camera to capture it. <a @click="croppedPic.chooseFile()">Upload file</a></h3>
           <!-- <h3 class="subtitle is-4">- or -</h3> 0-->
           <!-- <h3 class="subtitle is-4">or <a class="has-text-primary" @click="webCamCapture = !webCamCapture">Click here</a> to use your device camera to capture it.</h3> -->
           <!-- <div style="position:relative;"></div> -->
@@ -135,7 +135,7 @@
 
 <script>
 import GetCamera from '~/components/GetCamera'
-import ImageTools from '~/assets/imageTools.js'
+// import ImageTools from '~/assets/imageTools.js'
 const savePixels = require('save-pixels')
 const getPixels = require('get-pixels')
 const adaptiveThreshold = require('adaptive-threshold')
@@ -203,23 +203,67 @@ export default {
     },
     drawFromFile (file) {
       this.thresholdedPic = null
-      console.log(file)
+      // let vm = this
       let reader = new FileReader()
       reader.onload = () => {
-        ImageTools.resize(this.files[0], {
-          width: 320, // maximum width
-          height: 240 // maximum height
-        }, function (blob, didItResize) {
-          console.log('did it resize?', didItResize)
-          // didItResize will be true if it managed to resize it, otherwise false (and will return the original file as 'blob')
-          this.webCamPic = window.URL.createObjectURL(blob)
-          // you can also now upload this blob using an XHR.
-        })
         // console.log(reader.result)
+        let img = new Image()
+        img.onload = () => {
+          let maxWidth = 1280
+          let maxHeight = 720
+          // console.log(img)
+          let width = img.width
+          let height = img.height
+          let isTooLarge = false
+
+          if (width >= height && width > maxWidth) {
+            height *= maxWidth / width
+            width = maxWidth
+            isTooLarge = true
+          } else if (height > maxHeight) {
+            width *= maxHeight / height
+            height = maxHeight
+            isTooLarge = true
+          }
+
+          if (!isTooLarge) {
+            // return file here
+            this.webCamPic = reader.result
+            this.drawThresholdToCanvas(reader.result)
+          } else {
+            let canvas = document.createElement('canvas')
+            canvas.width = width
+            canvas.height = height
+            let ctx = canvas.getContext('2d')
+            ctx.drawImage(img, 0, 0, width, height)
+            this.drawThresholdToCanvas(canvas.toDataURL())
+          }
+        }
+        img.src = reader.result
         // this.webCamPic = reader.result
         // this.drawThresholdToCanvas(reader.result)
       }
+      // console.log(file)
       reader.readAsDataURL(file)
+      // ImageTools.resize(file, {
+      //   width: 320, // maximum width
+      //   height: 240 // maximum height
+      // }, function (blob, didItResize) {
+      //   console.log('blob', blob)
+      //   console.log('did it resize?', didItResize)
+      //   reader.readAsArrayBuffer(blob)
+      //   // didItResize will be true if it managed to resize it, otherwise false (and will return the original file as 'blob')
+      //   // this.webCamPic = window.URL.createObjectURL(blob)
+      //   // you can also now upload this blob using an XHR.
+      //   // reader.readAsDataURL(blob)
+      // })
+      // let reader = new FileReader()
+      // reader.onload = () => {
+      //   // console.log(reader.result)
+      //   // this.webCamPic = reader.result
+      //   // this.drawThresholdToCanvas(reader.result)
+      // }
+      // reader.readAsDataURL(file)
     },
     drawThresholdToCanvas (imgUrl) {
       if (!this.thresholdedPic) {
@@ -241,7 +285,7 @@ export default {
           }
           // imgData.data = boxBlur(imgData.data, cnv.width, cnv.height, 5, 2)
           ctx.putImageData(imgData, 0, 0)
-          console.log(imgData)
+          // console.log(imgData)
           this.thresholdedPic = cnv.toDataURL()
           this.croppedPic.refresh()
         })
@@ -263,17 +307,17 @@ export default {
     },
     editImg: function (imgData, canvasWidth, canvasHeight, lowerBound, upperBound) {
       var data = imgData.data.slice()
-      console.log(data)
+      // console.log(data)
       let monoData = []
       for (var i = 0; i < data.length; i += 4) {
         monoData[i / 4] = Math.floor((data[i] + data[i + 1] + data[i + 2]) / 3)
       }
-      console.log(monoData)
+      // console.log(monoData)
       let sorted = monoData.slice().sort()
-      console.log(sorted)
+      // console.log(sorted)
       let lowerBoundPix = sorted[Math.floor(lowerBound / 100 * monoData.length)]
       let upperBoundPix = sorted[Math.floor(upperBound / 100 * monoData.length)]
-      console.log(lowerBound, lowerBoundPix, upperBound, upperBoundPix)
+      // console.log(lowerBound, lowerBoundPix, upperBound, upperBoundPix)
 
       for (let i = 0; i < monoData.length; i++) {
         let adj
