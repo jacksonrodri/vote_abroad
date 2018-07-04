@@ -40,8 +40,8 @@
         :date="date"
         :classification="voterClass"
         :sex="sex"
-        :recBallot="recBallot"
-        :signature="signature"></my-box>
+        :recBallot="recBallot"></my-box>
+        <!-- :signature="signature" -->
     </my-canvas>
   </div>
   <div class="column is-10 is-8-desktop is-7-widescreen is-6-fullhd is-paddingless">
@@ -51,9 +51,9 @@
         <button @click="record(localePath({ name: 'request-stage', params: { stage: 'sign-and-submit'} }))" :to="localePath({ name: 'request-stage', params: { stage: 'sign-and-submit'} })" class="button is-primary is-medium is-pulled-right" exact ><span>{{$t('request.stages.submit')}}</span><b-icon pack="fas" icon="caret-right"></b-icon></button>
       <!-- </div> -->
 
-    <b-modal :active.sync="isSignatureModalActive" has-modal-card>
+    <!-- <b-modal :active.sync="isSignatureModalActive" has-modal-card>
       <sign @sigcap="addSig" />
-    </b-modal>
+    </b-modal> -->
   </div>
 </div>
 </template>
@@ -61,7 +61,7 @@
 <script>
 import MyCanvas from '~/components/MyCanvas.vue'
 import MyBox from '~/components/MyBox.vue'
-import Sign from '~/components/sign.vue'
+// import Sign from '~/components/sign.vue'
 import { mapState } from 'vuex'
 
 export default {
@@ -69,8 +69,8 @@ export default {
   middleware: 'verify-request',
   components: {
     MyCanvas,
-    MyBox,
-    Sign
+    MyBox
+    // Sign
   },
   async asyncData ({app}) {
     return {
@@ -81,8 +81,8 @@ export default {
   },
   data () {
     return {
-      isSignatureModalActive: false,
-      signature: ''
+      // isSignatureModalActive: false,
+      // signature: ''
     }
   },
   methods: {

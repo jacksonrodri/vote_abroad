@@ -74,8 +74,9 @@
               </div>
             </section>
             <section v-if="signStep" class="section">
-              <sign4 v-model="signStep" :fpca="fpca" @sigcap="addSig">
-              </sign4>
+              <!-- <sign4 v-model="signStep" :fpca="fpca" @sigcap="addSig">
+              </sign4> -->
+              <add-signature></add-signature>
             </section>
           </b-tab-item>
           <b-tab-item :label="$t('request.stages.fax')"
@@ -289,6 +290,7 @@
 import MyCanvas from '~/components/MyCanvas.vue'
 import MyBox from '~/components/MyBox.vue'
 import Sign4 from '~/components/sign4.vue'
+import AddSignature from '~/components/AddSignature.vue'
 import { mapState } from 'vuex'
 import axios from 'axios'
 // import VueMarkdown from 'vue-markdown'
@@ -429,6 +431,7 @@ export default {
     MyCanvas,
     MyBox,
     Sign4,
+    AddSignature,
     // VueMarkdown,
     ScrollUp
   },

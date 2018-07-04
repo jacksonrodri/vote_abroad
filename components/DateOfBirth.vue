@@ -134,6 +134,13 @@ export default {
             console.log('looseDate1', inputArr, new Date(year, parseInt(inputArr[1]) - 1, inputArr[0]))
             dateChoices.push(new Date(year, parseInt(inputArr[1]) - 1, inputArr[0]))
           }
+        } else if (parseInt(inputArr[1]) > 12 && parseInt(inputArr[1]) < 32) {
+          let year = inputArr[2]
+          year = year.length === 4 ? year : parseInt(year) < currentYear - 2010 ? '20' + year : '19' + year
+          if (new Date(year, parseInt(inputArr[0]) - 1, inputArr[1]).getMonth() === parseInt(inputArr[0]) - 1) {
+            console.log('looseDate1.5', inputArr, new Date(year, parseInt(inputArr[0]) - 1, inputArr[1]))
+            dateChoices.push(new Date(year, parseInt(inputArr[0]) - 1, inputArr[1]))
+          }
         } else if (parseInt(inputArr[2]) > 12 && parseInt(inputArr[2]) < 32) {
           let year = inputArr[0]
           year = year.length === 4 ? year : parseInt(year) < currentYear - 2010 ? '20' + year : '19' + year
