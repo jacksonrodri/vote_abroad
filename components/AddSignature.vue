@@ -40,7 +40,7 @@
               initial-size="contain">
               <img slot="intitial" :src="webCamPic" />
             </signature-cropper>
-
+            <button v-if="croppedPic && croppedPic.hasImage()" class="button" @click.prevent="useSignature">Add my Signature</button>
               <div class="box" v-if="croppedPic && croppedPic.hasImage()" >
                 <h3 class="subtitle is-5">Adjust</h3>
                 <div class="field is-horizontal">
@@ -165,6 +165,9 @@ export default {
     device () { return this.$store.state.userauth.device }
   },
   methods: {
+    useSignature () {
+      this.$emit('sigcap', this.thresholdedPic)
+    },
     startCameraFilePicker () {
       if (!this.croppedPic.hasImage()) {
         if (this.device && !this.device.inputCaptureSupported) {
