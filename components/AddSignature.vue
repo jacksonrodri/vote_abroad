@@ -238,10 +238,13 @@ export default {
             this.drawThresholdToCanvas(reader.result)
           } else {
             let canvas = document.createElement('canvas')
-            canvas.width = width
-            canvas.height = height
+            canvas.width = width > height ? width : height
+            canvas.height = width > height ? height : width
             let ctx = canvas.getContext('2d')
             ctx.drawImage(img, 0, 0, width, height)
+            if (width < height) {
+              ctx.rotate(-Math.PI / 2)
+            }
             this.drawThresholdToCanvas(canvas.toDataURL())
           }
         }
