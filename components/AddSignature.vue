@@ -8,7 +8,8 @@
         <!-- <div :style="device && device.type !== 'mobile' ? 'width:640px;' : ''"> -->
           <!-- <h3 class="title is-3">Upload a photo of your signature or <a class="button" @click="webCamCapture = !webCamCapture">click here</a> to use your device camera to scan your signature now.</h3> -->
           <h3 class="title is-3">Add your scanned signature.</h3>
-          <h3 class="subtitle is-4">You can upload a photo of your signature or <a class="has-text-primary" @click="() => { thresholdedPic = null; webCamCapture = true }">Click here</a> to use your device camera to capture it. <a @click="croppedPic.chooseFile()">Upload file</a></h3>
+          <!-- <h3 class="subtitle is-4">You can upload a photo of your signature or <a class="has-text-primary" @click="() => { thresholdedPic = null; webCamCapture = true }">Click here</a> to use your device camera to capture it. <a @click="croppedPic.chooseFile()">Upload file</a></h3> -->
+          <h3 class="subtitle is-4"><a class="has-text-primary" @click="() => {webCamPic = null; croppedPic.remove(); startCameraFilePicker()}">Click start</a> to scan your signature now<span> with your device camera</span>. Or <a @click="croppedPic.chooseFile()" class="has-text-primary">upload a file</a> from your computer.</h3>
           <!-- <h3 class="subtitle is-4">- or -</h3> 0-->
           <!-- <h3 class="subtitle is-4">or <a class="has-text-primary" @click="webCamCapture = !webCamCapture">Click here</a> to use your device camera to capture it.</h3> -->
           <!-- <div style="position:relative;"></div> -->
@@ -20,6 +21,7 @@
               v-show="!webCamCapture"
               v-model="croppedPic"
               ref="cp"
+              placeholder="Click to Start"
               accept="image/*"
               :zoom-speed="2"
               :auto-sizing="true"
