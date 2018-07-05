@@ -46,7 +46,7 @@ force = false
 [[redirects]]
 from = "/api/fpca"
 # to = "https://svj2ivekgi.execute-api.us-east-1.amazonaws.com/dev/fpca"
-to = "https://tydkselk93.execute-api.us-east-1.amazonaws.com/dev/fpca"
+to = "https://uf25owq668.execute-api.us-east-1.amazonaws.com/dev/pdf"
 status = 200
 force = false
 
