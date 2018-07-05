@@ -27,7 +27,7 @@ force = false
 [[redirects]]
 from = "/api/mailer"
 # to = "https://svj2ivekgi.execute-api.us-east-1.amazonaws.com/dev/mailer"
-to = "https://tydkselk93.execute-api.us-east-1.amazonaws.com/dev/mailer"
+to = "https://uf25owq668.execute-api.us-east-1.amazonaws.com/dev/mailer"
 status = 200
 force = false
 

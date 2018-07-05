@@ -59,13 +59,13 @@ module.exports = {
   ],
   proxy: {
     '/api/mailer': {
-      target: 'https://svj2ivekgi.execute-api.us-east-1.amazonaws.com/dev/mailer',
+      target: 'https://uf25owq668.execute-api.us-east-1.amazonaws.com/dev/mailer',
       pathRewrite: {
         '^/api/mailer': '/'
       }
     },
     '/api/fpca': {
-      target: 'https://svj2ivekgi.execute-api.us-east-1.amazonaws.com/dev/fpca',
+      target: 'https://uf25owq668.execute-api.us-east-1.amazonaws.com/dev/pdf',
       pathRewrite: {
         '^/api/fpca': '/'
       }
