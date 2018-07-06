@@ -9,14 +9,20 @@
           <!-- <h3 class="title is-3">Upload a photo of your signature or <a class="button" @click="webCamCapture = !webCamCapture">click here</a> to use your device camera to scan your signature now.</h3> -->
           <h3 class="title is-3">Add your scanned signature.</h3>
           <!-- <h3 class="subtitle is-4">You can upload a photo of your signature or <a class="has-text-primary" @click="() => { thresholdedPic = null; webCamCapture = true }">Click here</a> to use your device camera to capture it. <a @click="croppedPic.chooseFile()">Upload file</a></h3> -->
-          <h3 class="subtitle is-4"><a class="has-text-primary" @click="() => {webCamPic = null; croppedPic.remove(); startCameraFilePicker()}">Click start</a> to scan your signature now<span> with your device camera</span>. Or <a @click="croppedPic.chooseFile()" class="has-text-primary">upload a file</a> from your computer.</h3>
+          <h3 class="subtitle is-4"><a class="has-text-primary" @click="() => {webCamPic = null; croppedPic.remove(); startCameraFilePicker()}">Click start</a> to scan your signature now<span> with your device camera</span>. Or <a @click="croppedPic.chooseFile()" class="has-text-primary">upload a file</a> from your computer. </h3>
+          <article class="message is-info">
+            <div class="message-body">
+              After capturing your signature, you can edit it (drag to move, scroll to zoom).  When your signature is clear and on the red line, click 'Use This Signature' to add it to your form and compose a message to your election official.
+            </div>
+          </article>
+          <!-- <p class="has-text-info">After capturing your signature, you can edit it (drag to move, scroll to zoom).  When your signature is clear and on the red line, click 'Use This Signature' to add it to your form and compose a message to your election official.</p> -->
           <!-- <h3 class="subtitle is-4">- or -</h3> 0-->
           <!-- <h3 class="subtitle is-4">or <a class="has-text-primary" @click="webCamCapture = !webCamCapture">Click here</a> to use your device camera to capture it.</h3> -->
           <!-- <div style="position:relative;"></div> -->
 
           <!-- <nuxt-link to="/cam2">cam2</nuxt-link> -->
           <!-- <div class="container"> -->
-            <get-camera :isCapturing="webCamCapture" v-show="webCamCapture" @updatePic="drawThresholdToCanvas"></get-camera>
+            <get-camera ref="webcam" :isCapturing="webCamCapture" v-show="webCamCapture" @updatePic="drawThresholdToCanvas"></get-camera>
             <signature-cropper
               v-show="!webCamCapture"
               v-model="croppedPic"
@@ -37,12 +43,53 @@
               @new-image="drawThresholdToCanvas"
               @draw="onDraw"
               :initial-image="thresholdedPic"
-              initial-size="contain">
+              initial-size="cover">
               <img slot="intitial" :src="webCamPic" />
             </signature-cropper>
-            <button v-if="croppedPic && croppedPic.hasImage()" class="button" @click.prevent="useSignature">Add my Signature</button>
+            <b-field>
+              <b-field grouped>
+                <!-- <b-field>
+                  <button :class="['button', 'is-light', 'is-medium', {'is-loading': false}]" @click="$emit('input', null)">
+                    Cancel
+                  </button>
+                </b-field> -->
+                <b-field v-if="croppedPic && croppedPic.imageSet">
+                  <button :class="['button', 'is-light', 'is-medium', {'is-loading': false}]"
+                    @click.prevent="() => {webCamPic = null; croppedPic.remove();}"
+                    :disabled="!croppedPic || !croppedPic.imageSet">
+                    Clear Image
+                    <!-- {{$t('request.sig.sendEmail')}} -->
+                  </button>
+                </b-field>
+                <b-field expanded>
+                  <button :class="[buttonClass, 'is-fullwidth', {'is-loading': false}]"
+                    v-if="croppedPic && croppedPic.imageSet"
+                    @click.prevent="useSignature"
+                    :disabled="!croppedPic || !croppedPic.imageSet">
+                    Use This Signature
+                    <!-- {{$t('request.sig.sendEmail')}} -->
+                  </button>
+                  <button :class="[buttonClass, 'is-fullwidth', {'is-loading': false}]"
+                    @click="() => { if ($refs && $refs.webcam) $refs.webcam.takePhoto() }"
+                    v-else-if="webCamCapture">
+                    Take Photo
+                  </button>
+                  <button :class="[buttonClass, 'is-fullwidth', {'is-loading': false}]"
+                    v-else
+                    @click.prevent="() => {webCamPic = null; croppedPic.remove(); startCameraFilePicker()}">
+                    Start
+                  </button>
+                </b-field>
+              </b-field>
+            </b-field>
+            <!-- <button v-if="croppedPic && croppedPic.hasImage()" class="button" @click.prevent="useSignature">Add my Signature</button> -->
               <div class="box" v-if="croppedPic && croppedPic.hasImage()" >
-                <h3 class="subtitle is-5">Adjust</h3>
+                <h3 class="subtitle is-5">
+                  <span class="icon is-small">
+                    <i class="fas fa-sliders-h"></i>
+                  </span>
+                  &nbsp;&nbsp;Adjust Image
+                </h3>
                 <div class="field is-horizontal">
                   <div class="field-label">
                     <label class="label">Resize</label>
@@ -56,7 +103,7 @@
                     <label class="label">Move</label>
                   </div>
                   <div class="field-body">
-                    Drag to align your signature.
+                    Drag to place your signature on the red line next to the 'X'.
                   </div>
                 </div>
                 <div class="field is-horizontal">
@@ -147,6 +194,7 @@ export default {
   components: {
     GetCamera
   },
+  props: ['value'],
   data () {
     return {
       croppedPic: null,
@@ -158,7 +206,13 @@ export default {
       compensation: 7,
       inputCaptureSupported: false,
       metadata: null,
-      blurred: null
+      blurred: null,
+      buttonClass: {
+        button: true,
+        'is-primary': true,
+        'is-medium': true,
+        'is-fullwidth': true
+      }
     }
   },
   computed: {

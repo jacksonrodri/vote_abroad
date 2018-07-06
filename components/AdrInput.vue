@@ -25,6 +25,7 @@
           :placeholder="$t('request.abrAdr.placeholder')"
           :title="$t('request.abrAdr.placeholder')"
           v-model="countrySearch"
+          @blur=checkCountrySpelling
           :field="'name' || null"
           :data="filteredCountries"
           type="search"
@@ -327,6 +328,13 @@ export default {
     }
   },
   methods: {
+    checkCountrySpelling () {
+      setTimeout(() => {
+        if (!this.countries.some(e => e.name === this.countrySearch)) {
+          this.countrySearch = this.getCountryName(this.countryiso)
+        }
+      }, 250)
+    },
     decodeHtmlEntity (str) {
       return str.replace(/&#(\d+);/g, function (match, dec) {
         return String.fromCharCode(dec)

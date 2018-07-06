@@ -10,10 +10,10 @@
       </ul>
       <div class="field is-grouped">
         <p class="control is-expanded">
-          <button class="button is-fullwidth">Disagree</button>
+          <button @click.prevent="$emit('input', null)" class="button is-fullwidth">Disagree</button>
         </p>
         <p class="control is-expanded">
-          <button class="button is-success is-fullwidth">Agree</button>
+          <button @click.prevent="$emit('input', 'addSignature')" class="button is-success is-fullwidth">Agree</button>
         </p>
       </div>
     </div>
@@ -22,7 +22,7 @@
 
 <script>
 export default {
-
+  props: ['value']
 }
 </script>
 

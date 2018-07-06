@@ -85,15 +85,20 @@
             <div class="columns">
               <div class="column">
                 <!-- <request-stage></request-stage> -->
-                <article class="message is-warning">
+                <!-- <article class="message is-warning">
                   <div class="message-body" v-html="md(deadlineLanguage)">
-                    <!-- @click="$router.push(`/states/${currentRequestObject && currentRequestObject.leo && currentRequestObject.leo.s? currentRequestObject.leo.s : ''}`)" -->
-                    <!-- {{deadlineLanguage | markdown}} -->
                   </div>
-                </article>
-                <article class="message is-success">
-                  <div class="message-body">
-                    <p>Thank you for using VoteFromAbroad to generate your Voter Registration/Ballot Request form. <strong>Be sure to submit your form</strong> to your Local Election Official before the deadline (see above). We also strongly recommend that you verify with you election official that they have received and processed your form.  You can reach your election official with the following:
+                </article> -->
+                <section class="section">
+                  <div>
+                    <p class="subtitle is-4">Thank you for using VoteFromAbroad to generate your Voter Registration/Ballot Request form. <strong>Be sure to submit your form</strong> to your Local Election Official before the deadline.</p>
+                    <article class="message is-danger">
+                      <div class="message-body" v-html="md(deadlineLanguage)">
+                      </div>
+                    </article>
+
+                    <p class="subtitle is-4">
+                      We also strongly recommend that you verify with you election official that they have received and processed your form.  You can reach your election official with the following:
                     </p>
                     <div class="box">
                       <p>
@@ -115,12 +120,13 @@
                       <span v-if="currentRequestObject.leo && currentRequestObject.leo.f" v-html="md(`**Fax:** [${ '+1' + currentRequestObject.leo.f }](tel:${ ('+1' + currentRequestObject.leo.f).replace(/[()]/g, '-').replace(/ /g, '')  })`)"></span>
                       </p>
                     </div>
-                    <p>
-                      If you need any help, contact our volunteer voter support team at: help@votefromabroad.org.
+                    <p class="subtitle is-4">If you need to change anything on your form, <nuxt-link :to="localePath({ name: 'request-stage', params: {stage: 'your-information'} })" class="has-text-primary">click here</nuxt-link> to go back. If you are finished, please close the browser window to delete any information saved in this session. Or <a @click.prevent="logoutRestart" class="has-text-primary">Clear your information and start a new request.</a>.</p>
+                    <p class="subtitle is-4">
+                      If you need any help, contact our volunteer voter support team at: <a href="mailto:help@votefromabroad.org">help@votefromabroad.org</a>.
                       Thanks for voting!
                     </p>
                   </div>
-                </article>
+                </section>
               </div>
             </div>
 
@@ -400,6 +406,10 @@ export default {
     }
   },
   methods: {
+    logoutRestart () {
+      this.$store.dispatch('userauth/logout')
+      this.$router.push(this.localePath({ name: 'request-stage', params: {stage: 'your-information'} }))
+    },
     md (md) { return snarkdown(md) },
     share () {
       this.$dialog.alert({

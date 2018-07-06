@@ -9,7 +9,7 @@
       </b-message>
       {{$t('request.akRules.resInstructions')}}
       <b-field :label="$t('request.akRules.label')">
-        <b-input  @input="(val) => setVal(`I will provide the following proof of Alaska Residency: ${val}`)"></b-input>
+        <b-input v-model="scratch" @input="(val) => setVal(`I will provide the following proof of Alaska Residency: ${val}`)"></b-input>
       </b-field>
       <div v-if="isFWAB">
         {{$t('request.akRules.fwabWitness')}}
@@ -24,7 +24,7 @@
       </b-message>
       {{$t('request.azRules.citInstructions')}}
       <b-field :label="$t('request.azRules.label')">
-        <b-input  @input="(val) => setVal(`I will provide the following proof of citizenship: ${val}`)"></b-input>
+        <b-input v-model="scratch" @input="(val) => setVal(`I will provide the following proof of citizenship: ${val}`)"></b-input>
       </b-field>
     </div>
   <!-- OK -->
@@ -36,7 +36,7 @@
       </b-message>
       {{$t('request.okRules.primaryInstructions')}}
       <b-field :label="$t('request.okRules.label')">
-        <b-input @input="(val) => setVal(`I request to be able to vote in the following party primary: ${val}`)"></b-input>
+        <b-input v-model="scratch" @input="(val) => setVal(`I request to be able to vote in the following party primary: ${val}`)"></b-input>
       </b-field>
     </div>
   <!-- PR -->
@@ -48,7 +48,7 @@
       </b-message>
       {{ $t('request.prRules.parentsInstructions')}}
       <b-field>
-        <b-input @input="val => setVal(`My father and mother's first names: ${val}`)" :label="$t('request.prRules.parentsInstructions')"></b-input>
+        <b-input v-model="scratch" @input="val => setVal(`My father and mother's first names: ${val}`)" :label="$t('request.prRules.parentsInstructions')"></b-input>
       </b-field>
     </div>
   <!-- SC -->
@@ -76,7 +76,7 @@
       </b-message>
       <b-field :label="$t('request.vaRules.label')">
       <!-- {{$t('request.vaRules.employerInstructions')}} -->
-        <b-input  @input="(val) => setVal(`The name of your employer or the name of your spouse's or parent/guardian's employer: ${val}`)"></b-input>
+        <b-input v-model="scratch" @input="(val) => setVal(`The name of your employer or the name of your spouse's or parent/guardian's employer: ${val}`)"></b-input>
       </b-field>
     </div>
   <!-- VT -->
@@ -84,7 +84,7 @@
       <span class="is-flex"><label class="label">{{ label }}</label><span @click.prevent="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
       <b-field :label="$t('request.vtRules.label')">
         {{$t('request.vtRules.oathInstructions')}}
-        <b-input @input="val => setVal(val)"></b-input>
+        <b-input @input="val => setVal(val)" :value="value"></b-input>
       </b-field>
       <b-message title="Why am I being asked this?" type="is-info" has-icon :active.sync="isOpen">
         <p v-html="$options.filters.markdown($t('request.vtRules.tooltip'))"></p>
@@ -129,6 +129,36 @@ export default {
       default: false
     }
   },
+  mounted () {
+    if (this.value) {
+      switch (this.state.toLowerCase()) {
+        case 'vt':
+          this.scratch = this.value
+          break
+        case 'va':
+          this.scratch = this.value.length > 85 ? this.value.slice(86, this.value.length + 1) : ''
+          break
+        case 'sc':
+          this.scRace = /Race: (.*) -- /.test(this.value) ? /Race: (.*) -- /.exec(this.value)[1] : ''
+          this.scPrev = /I was formerly registered in: /.test(this.value) ? /I was formerly registered in: (.*)/.exec(this.value)[1] : ''
+          break
+        case 'pr':
+          this.scratch = this.value.length > 36 ? this.value.slice(37, this.value.length + 1) : ''
+          break
+        case 'ok':
+          this.scratch = this.value.length > 61 ? this.value.slice(62, this.value.length + 1) : ''
+          break
+        case 'az':
+          this.scratch = this.value.length > 51 ? this.value.slice(52, this.value.length + 1) : ''
+          break
+        case 'ak':
+          this.scratch = this.value.length > 56 ? this.value.slice(57, this.value.length + 1) : ''
+          break
+        default:
+          break
+      }
+    }
+  },
   computed: {
     scVal () {
       // return this.scRace ? `Race ${this.scRace}` : '' + this.scRace && this.scPrev ? ', ' : '' + this.scPrev ? `I was formerly registered in ${this.scPrev}` : ''
@@ -139,6 +169,7 @@ export default {
     return {
       scRace: '',
       scPrev: '',
+      scratch: '',
       isOpen: false
     }
   },

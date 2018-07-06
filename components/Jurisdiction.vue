@@ -32,7 +32,7 @@
             field="n"
             :placeholder="placeholder"
             @select="option => updateLeo(option)">
-            <template slot-scope="props"><strong>{{props.option.j}} {{props.option.j.toLowerCase().indexOf(props.option.t.toLowerCase()) > -1 ? '' : props.option.t}}</strong> - <small>{{props.option.n}}&nbsp;</small><span v-if="props.option.suggested" class="tag is-info">Suggested</span></template>
+            <template slot-scope="props"><strong>{{props.option.j}} {{props.option.j.toLowerCase().indexOf(props.option.t.toLowerCase()) > -1 ? '' : props.option.t}}</strong> - <small>{{decodeHtmlEntity(props.option.n)}}&nbsp;</small><span v-if="props.option.suggested" class="tag is-info">Suggested</span></template>
             </b-autocomplete>
             <p class="control">
                 <button class="button is-grey is-inverted is-outlined"
@@ -188,13 +188,19 @@ export default {
     },
     filteredLeos () {
       if (!this.typedJurisdiction) {
-        return this.prioritizedLeos
+        return this.prioritizedLeos.filter((e, i, a) => !(i < 6 && e.suggested && a.slice(0, i).map(x => x.i).includes(e.i)))
       }
       return this.leos.filter(leo => leo.n.toLowerCase().indexOf(this.typedJurisdiction.toLowerCase()) > -1 || leo.j.toLowerCase().indexOf(this.typedJurisdiction.toLowerCase()) > -1)
       // return this.prioritizedLeos.filter(leo => leo.n.toLowerCase().indexOf(this.typedJurisdiction.toLowerCase()) > -1 || leo.j.toLowerCase().indexOf(this.typedJurisdiction.toLowerCase()) > -1)
     }
   },
   methods: {
+    decodeHtmlEntity (str) {
+      str = str.replace(/&apos;/g, "'").replace(/&quot;/g, '"').replace(/&gt;/g, '>').replace(/&lt;/g, '<').replace(/&amp;/g, '&')
+      return str.replace(/&#(\d+);/g, function (match, dec) {
+        return String.fromCharCode(dec)
+      })
+    },
     updateLeo: function (value) {
       let leo = {}
       if (value) {

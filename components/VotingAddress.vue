@@ -203,9 +203,15 @@ export default {
     }
   },
   watch: {
-    state: function (newVal) {
+    state: function (newVal, oldVal) {
       if (this.leoState && this.leoState.toLowerCase() !== newVal.toLowerCase()) {
         this.$store.commit('requests/update', {leo: null})
+      }
+      if (!oldVal || newVal !== oldVal) {
+        this.$store.commit('requests/update', {
+          stateSpecial: null,
+          identification: null
+        })
       }
     }
   },

@@ -219,6 +219,18 @@ export default {
     }
   },
   methods: {
+    check () {
+      this.$v.value.$touch()
+      this.formatInput(this.value)
+    },
+    validatePhone (number) {
+      number = number || this.$store.getters['requests/getCurrent'].tel ? this.$store.getters['requests/getCurrent'].tel.rawInput : null
+      if (this.metadataLoaded) {
+        isValidNumber(number, metadata)
+      } else {
+        this.loadMetadataAndCall(isValidNumber(number, metadata))
+      }
+    },
     getSelectionStart (val) {
       if ((val && typeof val === 'string') || (this.value && this.value.rawInput)) {
         this.selectionStart = this.$refs.input.$refs.input.selectionStart

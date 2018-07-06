@@ -48,7 +48,7 @@
                     <div class="media-content">
                       <div class="content">
                         <p class="is-size-6" v-html="$options.filters.markdown($t('request.stages.emailDigiSign'))"></p>
-                        <a v-if="!signStep" class="button is-pulled-right is-primary" @click="signatureAgree"><b-icon icon="camera" size="is-small"></b-icon><span>{{$t('request.stages.sign')}}</span></a>
+                        <a v-if="!signStep" class="button is-pulled-right is-primary" @click="signStep = 'signatureAffirmation'"><b-icon icon="camera" size="is-small"></b-icon><span>{{$t('request.stages.sign')}}</span></a>
                       </div>
                     </div>
                   </article>
@@ -74,9 +74,15 @@
             <section v-if="signStep" class="section">
               <!-- <sign4 v-model="signStep" :fpca="fpca" @sigcap="addSig">
               </sign4> -->
-              <signature-affirmation></signature-affirmation>
-              <add-signature @sigcap="addSig"></add-signature>
-              <compose-message :fpca="fpca"></compose-message>
+              <transition name="fade">
+                <signature-affirmation v-model="signStep" v-if="signStep === 'signatureAffirmation'"></signature-affirmation>
+              </transition>
+              <transition name="fade">
+                <add-signature v-model="signStep" @sigcap="addSig" v-if="signStep === 'addSignature'"></add-signature>
+              </transition>
+              <transition name="fade">
+                <compose-message v-model="signStep" :fpca="fpca" :documentRequired="documentRequired" v-if="signStep === 'composeMessage'"></compose-message>
+              </transition>
             </section>
           </b-tab-item>
           <b-tab-item :label="$t('request.stages.fax')"
@@ -279,7 +285,8 @@
             :signature="signature"></my-box>
         </my-canvas>
       <section >
-        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'review'} })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>{{$t('request.stages.back')}}</span></nuxt-link>
+        <button v-if="signStep" @click.prevent="() => { signStep = null; scrollUp() }" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>{{$t('request.stages.back')}}</span></button>
+        <nuxt-link v-else :to="localePath({ name: 'request-stage', params: { stage: 'review'} })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>{{$t('request.stages.back')}}</span></nuxt-link>
     </section>
     </div>
   <scroll-up></scroll-up>
@@ -511,28 +518,29 @@ export default {
     }
   },
   methods: {
+    scrollUp () { window.scrollTo(0, 0) },
     saveFile: function () {
       fileSaver.saveAs(this.msPdf, `${this.firstName}-${this.lastName}-2018-fpca.pdf`)
       this.confirmPdfDownload()
     },
     md: function (md) { return snarkdown(md) },
-    signatureAgree () {
-      this.$store.dispatch('requests/recordAnalytics', {event: 'start digital signature'})
-      this.$dialog.confirm({
-        title: this.$t('request.sig.affirmation'),
-        message: `<h1 class="title is-5">I swear or affirm, under penalty of perjury that:</h1>
-        <div class="content">
-        <ul>
-          <li>The information on this form is true, accurate, and complete to the best of my knowledge. I understand that a material misstatement of fact in completion of this document may constitute grounds for conviction of perjury.</li>
-          <li>I am a U.S. citizen, at least 18 years of age (or will be by the day of the election), eligible to vote in the requested jurisdiction, and</li>
-          <li>I am not disqualified to vote due to having been convicted of a felony or other disqualifying offense, nor have I been adjudicated mentally incompetent; or if so, my voting rights have been reinstated; and</li>
-          <li>I am not registering, requesting a ballot, or voting in any other jurisdiction in the United States, except the jurisdiction cited in this voting form. </li><ul></div>`,
-        cancelText: this.$t('request.sig.disagree'),
-        confirmText: this.$t('request.sig.agree'),
-        type: 'is-success',
-        onConfirm: () => { this.signStep = 'instructions' }
-      })
-    },
+    // signatureAgree () { // unused
+    //   this.$store.dispatch('requests/recordAnalytics', {event: 'start digital signature'})
+    //   this.$dialog.confirm({
+    //     title: this.$t('request.sig.affirmation'),
+    //     message: `<h1 class="title is-5">I swear or affirm, under penalty of perjury that:</h1>
+    //     <div class="content">
+    //     <ul>
+    //       <li>The information on this form is true, accurate, and complete to the best of my knowledge. I understand that a material misstatement of fact in completion of this document may constitute grounds for conviction of perjury.</li>
+    //       <li>I am a U.S. citizen, at least 18 years of age (or will be by the day of the election), eligible to vote in the requested jurisdiction, and</li>
+    //       <li>I am not disqualified to vote due to having been convicted of a felony or other disqualifying offense, nor have I been adjudicated mentally incompetent; or if so, my voting rights have been reinstated; and</li>
+    //       <li>I am not registering, requesting a ballot, or voting in any other jurisdiction in the United States, except the jurisdiction cited in this voting form. </li><ul></div>`,
+    //     cancelText: this.$t('request.sig.disagree'),
+    //     confirmText: this.$t('request.sig.agree'),
+    //     type: 'is-success',
+    //     onConfirm: () => { this.signStep = 'instructions' }
+    //   })
+    // },
     confirmPdfDownload () {
       this.$dialog.alert({
         title: this.$t('request.fpcaDownload.downloadedAlertTitle'),
@@ -542,7 +550,7 @@ export default {
         hasIcon: true,
         icon: 'download',
         iconPack: 'fas',
-        onConfirm: () => this.$router.push('/dashboard')
+        onConfirm: () => this.$router.push(this.localePath('/dashboard'))
       })
     },
     openPdf () {
@@ -554,7 +562,7 @@ export default {
         hasIcon: true,
         icon: 'download',
         iconPack: 'fas',
-        onConfirm: () => { this.$router.push('/dashboard'); this.openPdfNewWindow() }
+        onConfirm: () => { this.$router.push(this.localePath('/dashboard')); this.openPdfNewWindow() }
       })
     },
     openPdfNewWindow () {
@@ -570,7 +578,7 @@ export default {
       // }
     },
     finish () {
-      this.$router.push('/dashboard')
+      this.$router.push(this.localePath('/dashboard'))
       this.confirmPdfDownload()
     },
     getFPCA (method) {
@@ -590,6 +598,7 @@ export default {
       var d = new Date()
       var today = `${d.getFullYear()}-${d.getMonth() < 9 ? '0' : ''}${d.getMonth() + 1}-${d.getDate() < 9 ? '0' : ''}${d.getDate()}`
       this.$store.commit('requests/update', { date: today })
+      this.signStep = 'composeMessage'
       // console.log('addsig', this.$refs.fpca.$refs['my-canvas'])
       setTimeout(() => {
         this.fpca = this.$refs.fpca.$refs['my-canvas'].toDataURL()
@@ -625,6 +634,16 @@ export default {
     }
   },
   computed: {
+    documentRequired () {
+      switch (this.state.toLowerCase()) {
+        case 'ak':
+          return 'proof of Alaska Residency'
+        case 'az':
+          return this.isRegistered === 'unsure' || this.isRegistered === 'notRegistered' ? 'proof of citizenship (for newly registered voters)' : null
+        default:
+          return null
+      }
+    },
     pleaseRotate () {
       // return this.signStep === 'instructions'
       return this.$store.state.userauth.device.type === 'mobile' && this.$store.state.userauth.device.orientation === 'portrait' && this.signStep === 'instructions'

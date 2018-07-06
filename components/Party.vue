@@ -17,13 +17,13 @@
       </p>
     </b-field>
     <transition name="fade">
-      <b-field v-if="isOther">
+      <b-field v-if="isOther || elapsedTime < 5">
         <b-input
           :placeholder="$t('request.party.placeholder')"
           type="text"
           :value="thisValue"
           ref="party"
-          @input="val => thisValue = val"></b-input>
+          @input="val => {thisValue = val; resetTimer()}"></b-input>
       </b-field>
     </transition>
     <b-message :title="tooltipTitle" type="is-info" has-icon :active.sync="isOpen">
@@ -31,7 +31,7 @@
     </b-message>
   </div>
   <transition name="fade">
-  <div v-if="thisValue !== 'Republican' && !$store.state.userauth.user.isDA && (isOtherButNoValue || thisValue)" class="field">
+  <div v-if="thisValue !== 'Republican' && !$store.state.userauth.user.isDA && (isOtherButNoValue || joinValue)" class="field">
     <span class="is-flex"><label class="label">{{ joinLabel }}</label><span @click="joinToolTipIsOpen = !joinToolTipIsOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
     <b-field grouped group-multiline :type="type">
       <p class="control">
@@ -47,21 +47,21 @@
         </a>
       </p>
       <p class="control">
-        <a @click="isExistingDaMember = !isExistingDaMember; joinValue = !isExistingDaMember ? null : daEmail || 'already a member'" :class="[baseClass, {'is-success': isExistingDaMember}]">
-          <b-icon v-if="isExistingDaMember" icon="check"></b-icon>
+        <a @click="isExistingDaMember = !isExistingDaMember; joinValue = !isExistingDaMember ? null : daEmail || 'already a member'" :class="[baseClass, {'is-success': isExistingDaMember || (joinValue !== true && joinValue !== false && joinValue)}]">
+          <b-icon v-if="isExistingDaMember || (joinValue !== true && joinValue !== false && joinValue)" icon="check"></b-icon>
           <span>{{$t('request.joinDa.alreadyMember')}}</span>
         </a>
       </p>
     </b-field>
     <transition name="fade">
       <phone-input key="daEmail"
-        v-if="isExistingDaMember"
+        v-if="isExistingDaMember || (joinValue !== true && joinValue !== false && joinValue)"
         ref="daEmail"
         :label="$t('request.joinDa.accountEmail')"
         :required="false"
         @input="(val) => joinValue = val"
         :accepts="['email']"
-        v-model="daEmail">
+        v-model="daEmailGetter">
       </phone-input>
       <!-- <b-field v-if="isExistingDaMember" :label="$t('request.joinDa.accountEmail')">
         <b-input
@@ -118,7 +118,9 @@ export default {
       },
       isOtherButNoValue: false,
       isExistingDaMember: false,
-      daEmail: ''
+      daEmail: '',
+      currentTime: Math.trunc((new Date()).getTime() / 1000),
+      setTime: Math.trunc((new Date()).getTime() / 1000) - 10
     }
   },
   computed: {
@@ -129,6 +131,10 @@ export default {
         this.$emit('input', value)
       }
     },
+    daEmailGetter: {
+      get () { return this.daEmail || (this.joinValue !== true && this.joinValue !== false && this.joinValue) ? this.joinValue : '' },
+      set (value) { this.daEmail = value }
+    },
     joinValue: {
       get () { return this.join },
       set (value) { this.$emit('joinDA', value) }
@@ -136,12 +142,24 @@ export default {
     isOther: {
       get () { return Boolean((Object.keys(this.partyChoices).map(x => this.partyChoices[x].aliases).reduce((a, b) => a.concat(b), [])).indexOf(this.thisValue ? this.thisValue.toString().toLowerCase() : '') === -1 && (this.thisValue || this.isOtherButNoValue)) }
     },
-    fromStore () { return this.$store.getters['requests/getCurrent'].party }
+    fromStore () { return this.$store.getters['requests/getCurrent'].party },
+    elapsedTime () { return this.currentTime - this.setTime }
   },
   methods: {
+    resetTimer () {
+      this.setTime = Math.trunc((new Date()).getTime() / 1000)
+    },
     selectOther (value) {
       this.thisValue = ''
       this.isOtherButNoValue = value
+    }
+  },
+  mounted () {
+    this.setTime = Math.trunc((new Date()).getTime() / 1000) - 10
+    if (process.browser) {
+      window.setInterval(() => {
+        this.currentTime = Math.trunc((new Date()).getTime() / 1000)
+      }, 1000)
     }
   }
 }

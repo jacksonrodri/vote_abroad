@@ -128,7 +128,7 @@
       <!-- isRegistered -->
     <is-registered
       v-if="votAdr && jurisdiction && jurisdiction.j && jurisdiction.t"
-      :label="$t('request.isRegistered.label', {jurisdiction: jurisdiction.t === 'All' ? jurisdiction.s : jurisdiction.j + ' ' + jurisdiction.t})"
+      :label="$t('request.isRegistered.label', {jurisdiction: jurisdiction.t === 'All' ? jurisdiction.s : `${jurisdiction.j} ${jurisdiction.j.includes(jurisdiction.t) ? '' : jurisdiction.t}`})"
       :validations="($v.isRegistered)"
       @input="delayTouch($v.isRegistered)"
       v-model="isRegistered">
@@ -150,7 +150,7 @@
     <phone-input key="fax"
       ref="fax"
       :label="$t('request.fax.label')"
-      v-if="recBallot === 'fax'"
+      v-if="recBallot === 'fax' || (fax && fax.rawInput)"
       @input="delayTouch($v.fax)"
       :required="recBallot === 'fax'"
       :accepts="['phone']"
@@ -168,7 +168,7 @@
     </phone-input>
 
     <phone-input key="altEmail"
-      v-if="recBallot === 'email'"
+      v-if="recBallot === 'email' || altEmail"
       ref="altEmail"
       :label="$t('request.altEmail.label')"
       :required="false"
@@ -181,7 +181,7 @@
         :label="$t('request.fwdAdr.label')"
         key="forwardingAddress"
         ref="fwdAdr"
-        v-if="recBallot === 'mail'"
+        v-if="recBallot === 'mail' || (fwdAdr && fwdAdr.alt1)"
         v-model="fwdAdr"
         @input="delayTouch($v.fwdAdr)"
         :validations=$v.fwdAdr
@@ -655,6 +655,7 @@ export default {
           this.$store.dispatch('requests/recordAnalytics', { event: 'Form Error', attributes: { field: 'lastName' } })
           break
         case this.stage.slug === 'your-information' && this.$v.email.$error:
+          this.$refs.email.check()
           this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'email'}})
           this.$refs.email.$refs.input.$el.scrollIntoView()
           this.$refs.email.$refs.input.focus()
@@ -695,6 +696,7 @@ export default {
           this.$refs.abrAdr.$refs.Z[0].focus()
           break
         case this.stage.slug === 'your-information' && this.$v.tel.$error:
+          this.$refs.tel.check()
           this.$refs.tel.$refs.input.$el.scrollIntoView()
           this.$refs.tel.$refs.input.focus()
           this.$store.dispatch('requests/recordAnalytics', { event: 'Form Error', attributes: { field: 'tel' } })
@@ -725,11 +727,13 @@ export default {
           this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'jurisdiction'}})
           break
         case this.stage.slug === 'voting-information' && this.$v.fax.$error:
+          this.$refs.fax.check()
           this.$refs.fax.$refs.input.$el.scrollIntoView()
           this.$refs.fax.$refs.input.focus()
           this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'fax'}})
           break
-        case this.stage.slug === 'voting-information' && this.$v.email.$error && this.$refs.email:
+        case this.stage.slug === 'voting-information' && this.$v.email.$error && this.recBallot === 'email':
+          this.$refs.email.check()
           this.$refs.email.$refs.input.$el.scrollIntoView()
           this.$refs.email.$refs.input.focus()
           this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'email'}})
@@ -855,7 +859,11 @@ export default {
         }
       },
       tel: {
-        async validPhone () { return this.tel && this.tel.rawInput ? this.tel.isValidPhone : true }
+        async validPhone () {
+          if (this.$refs && this.$refs.tel) {
+            return this.$refs.tel.validatePhone
+          } else return this.tel && this.tel.rawInput ? this.tel.isValidPhone : true
+        }
       },
       altEmail: {
         email
