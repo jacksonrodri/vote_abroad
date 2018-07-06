@@ -221,7 +221,7 @@ export default {
   methods: {
     check () {
       this.$v.value.$touch()
-      this.formatInput(this.value)
+      this.formatInput(this.value && this.value.rawInput ? this.value.rawInput : '')
     },
     validatePhone (number) {
       number = number || this.$store.getters['requests/getCurrent'].tel ? this.$store.getters['requests/getCurrent'].tel.rawInput : null

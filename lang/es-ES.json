@@ -190,7 +190,7 @@
       "messages": {
         "street-required": "Se requiere la calle y número",
         "city-required": "Se requiere la ciudad",
-        "State-required": "Se requiere el estado",
+        "state-required": "Se requiere el estado",
         "zip-required": "Se requiere el código postal"
       },
       "state": "Estado",

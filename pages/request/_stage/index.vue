@@ -82,6 +82,20 @@
   <section v-if="stage.slug === 'voting-information'">
     <form id="voting-information" key="voting-information">
 
+      <!-- <vot-adr
+        :label="$t('request.vAdr.label')"
+        :validations=$v.vAdr
+        ref="vAdr"
+        @input="delayTouch($v.vAdr)"
+        :toolTipTitle="$t('request.vAdr.tooltipTitle')">
+        <div slot="instructions">
+          <p v-html="$options.filters.markdown($t('request.vAdr.instructions'))"></p>
+        </div>
+        <div slot="tooltip">
+          <p v-html="$options.filters.markdown($t('request.vAdr.tooltip'))"></p>
+        </div>
+      </vot-adr> -->
+
       <voting-address
         :label="$t('request.votAdr.label')"
         :validations=$v.votAdr
@@ -90,7 +104,7 @@
 
         :toolTipTitle="$t('request.votAdr.tooltipTitle')">
         <div slot="instructions">
-          <p>{{ $t('request.votAdr.instructions') }}</p>
+          <p v-html="$options.filters.markdown($t('request.votAdr.instructions'))"></p>
         </div>
         <div slot="tooltip">
           <p v-html="$options.filters.markdown($t('request.votAdr.tooltip'))"></p>
@@ -316,6 +330,7 @@ import { required, requiredIf, maxLength, helpers, email } from 'vuelidate/lib/v
 import AddressInput from '~/components/AddressInput'
 import Jurisdiction from '~/components/Jurisdiction'
 import VotingAddress from '~/components/VotingAddress'
+// import VotAdr from '~/components/VotAdr'
 import VoterClass from '~/components/VoterClass'
 import IsRegistered from '~/components/IsRegistered'
 import ReceiveBallot from '~/components/ReceiveBallot'
@@ -334,6 +349,7 @@ import AdrInput from '~/components/AdrInput'
 import snarkdown from 'snarkdown'
 
 const optionalEmail = (value) => !helpers.req(value) || email(value)
+const usZip = helpers.regex('usZip', /^(\d{5})(?:[ -](\d{4}))?$/)
 const touchMap = new WeakMap()
 
 export default {
@@ -379,6 +395,7 @@ export default {
   components: {
     AddressInput,
     VotingAddress,
+    // VotAdr,
     Jurisdiction,
     VoterClass,
     IsRegistered,
@@ -514,6 +531,10 @@ export default {
       get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].votAdr : null },
       set (value) { this.$store.commit('requests/update', {votAdr: value}) }
     },
+    // vAdr: {
+    //   get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].vAdr : null },
+    //   set (value) { this.$store.commit('requests/update', {vAdr: value}) }
+    // },
     // jurisdiction () { return this.leo && this.leo.n ? this.leo.n : '' },
     jurisdiction () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].leo : null },
     abrAdr: {
@@ -617,6 +638,7 @@ export default {
     focusFirstErrorOrAdvance (nextPage) {
       switch (this.$route.params.stage) {
         case 'your-information':
+          this.$refs.tel.check()
           // if (this.$refs.abrAdr) this.$refs.abrAdr.touch()
           this.$v.firstName.$touch()
           this.$v.lastName.$touch()
@@ -627,6 +649,7 @@ export default {
           break
         case 'voting-information':
           this.$v.votAdr.$touch()
+          // this.$v.vAdr.$touch()
           this.$v.jurisdiction.$touch()
           this.$v.voterClass.$touch()
           this.$v.isRegistered.$touch()
@@ -696,7 +719,6 @@ export default {
           this.$refs.abrAdr.$refs.Z[0].focus()
           break
         case this.stage.slug === 'your-information' && this.$v.tel.$error:
-          this.$refs.tel.check()
           this.$refs.tel.$refs.input.$el.scrollIntoView()
           this.$refs.tel.$refs.input.focus()
           this.$store.dispatch('requests/recordAnalytics', { event: 'Form Error', attributes: { field: 'tel' } })
@@ -721,6 +743,26 @@ export default {
           this.$refs.votAdr.$refs.zip.focus()
           this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'votAdr.postalcode'}})
           break
+        // case this.stage.slug === 'voting-information' && this.$v.vAdr.A.$error:
+        //   this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'vAdr.A'}})
+        //   this.$refs.vAdr.$refs.A.$el.scrollIntoView()
+        //   this.$refs.vAdr.$refs.A.focus()
+        //   break
+        // case this.stage.slug === 'voting-information' && this.$v.vAdr.C.$error:
+        //   this.$refs.vAdr.$refs.C.$el.scrollIntoView()
+        //   this.$refs.vAdr.$refs.C.focus()
+        //   this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'vAdr.C'}})
+        //   break
+        // case this.stage.slug === 'voting-information' && this.$v.vAdr.S.$error:
+        //   this.$refs.vAdr.$refs.S.$el.scrollIntoView()
+        //   this.$refs.vAdr.$refs.S.focus()
+        //   this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'vAdr.S'}})
+        //   break
+        // case this.stage.slug === 'voting-information' && this.$v.vAdr.Z.$error:
+        //   this.$refs.vAdr.$refs.Z.$el.scrollIntoView()
+        //   this.$refs.vAdr.$refs.Z.focus()
+        //   this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'vAdr.Z'}})
+        //   break
         case this.stage.slug === 'voting-information' && this.$v.jurisdiction.$error:
           this.$refs.jurisdiction.$refs.jurisdiction.$el.scrollIntoView()
           this.$refs.jurisdiction.$refs.jurisdiction.focus()
@@ -830,8 +872,21 @@ export default {
         thoroughfare: { required },
         locality: { required },
         stateISO: { required },
-        postalcode: { required }
+        postalcode: {
+          required,
+          usZip
+        }
       },
+      // vAdr: {
+      //   A: { required },
+      //   C: { required },
+      //   S: { required },
+      //   Z: {
+      //     required,
+      //     usZip
+      //   },
+      //   Y: {}
+      // },
       jurisdiction: { required },
       recBallot: {
         required

@@ -109,7 +109,7 @@
     },
     "vaRules": {
       "label": "The name of your employer or the name of your spouse's or parent/guardian's employer",
-      "tooltip": "Only Virginia voters need to answer this question as per state law."
+      "tooltip": "If you don't provide employer you will receive only federal ballots. Only Virginia voters need to answer this question as per state law."
     },
     "isRegistered": {
       "label": "Are you already registered to vote in {jurisdiction}?",
@@ -188,18 +188,38 @@
     "votAdr": {
       "zip": "Zip",
       "street": "Street",
-      "tooltip": "Use the **residence address** of the last place you lived in the US. If you have never resided in the US, use the residence address of the last place your US parent(s) lived in the US. If your US parents last lived in the US in different locations, you may choose which one to use as your voting address.",
-      "instructions": "Input the last address where you lived in the US. If you have never lived in the US, use the last US address of your US citizen parent(s).",
+      "tooltip": "If you are unsure, use the **residence address** of the last place you lived in the US. If you have never resided in the US, use the residence address of the last place your US parent(s) lived in the US. If your US parents last lived in the US in different locations, you may choose which one to use as your voting address.",
+      "instructions": "Your voting address is _usually_ the last place you lived in the US. If you have never lived in the US, use the last US address of your US citizen parent(s).",
       "apt": "Apartment #",
       "county": "County",
       "city": "City",
       "messages": {
         "street-required": "Street address is required",
         "city-required": "City is required",
-        "State-required": "State is required",
-        "zip-required": "Zip is required"
+        "state-required": "State is required",
+        "zip-required": "Zip is required",
+        "zip-usZip": "Enter a valid US Zip Code (e.g. 95014 or 22162-1010)"
       },
       "state": "State",
+      "label": "Voting Address",
+      "tooltipTitle": "Your last US Address..."
+    },
+    "vAdr": {
+      "Z": "Zip",
+      "A": "Street",
+      "tooltip": "If you are unsure, use the **residence address** of the last place you lived in the US. If you have never resided in the US, use the residence address of the last place your US parent(s) lived in the US. If your US parents last lived in the US in different locations, you may choose which one to use as your voting address.",
+      "instructions": "Your voting address is _usually_ the last place you lived in the US. If you have never lived in the US, use the last US address of your US citizen parent(s).",
+      "B": "Apartment #",
+      "Y": "County",
+      "C": "City",
+      "messages": {
+        "A-required": "Street address is required",
+        "C-required": "City is required",
+        "S-required": "State is required",
+        "Z-required": "Zip is required",
+        "Z-usZip": "Enter a valid US Zip Code (e.g. 95014 or 22162-1010)"
+      },
+      "S": "State",
       "label": "Voting Address",
       "tooltipTitle": "Your last US Address..."
     },
