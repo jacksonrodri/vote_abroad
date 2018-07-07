@@ -317,7 +317,7 @@
       "TerritoryID": "Territory ID",
       "noid2": "I don't have the above identification",
       "tooltipReq1": "{state} voters must provide a {id}. \n\n\n\nIf you can't find your {id}, you can look (suggestions)\n\n \\*\\*'I don't have a {id}.'\\*\\*",
-      "tooltipReq2": "**_ONE_** of the following forms of identification is required for {state} voters:\n\n {allButLastTypes} or {lastType}. \n\n(todo: add suggestions on finding the number if forgotten) \n\nIf you don't have any of these, please select **'I don't have the above identification.'**",
+      "tooltipReq2": "**_ONE_** of the following forms of identification is required for {state} voters:\n\n {allButLastTypes} or {lastType}. \n\nIf you don't have any of these, please select **'I don't have the above identification.'**",
       "instructionsReq1": "{state} voters must provide the following ID: {id}  If you don't have a {idType}, please select **I don't have a {idType}.**",
       "instructionsReq2": "{state} voters must provide **ONE** of the following forms of identification: {allButLastTypes} or {lastType}. If you don't have any of these, please select **'I don't have the above identification.'**",
       "PassportNumber": "Passport Number",
