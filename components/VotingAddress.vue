@@ -226,7 +226,7 @@ export default {
   },
   methods: {
     updateAddress: function (field, value) {
-      this.$store.commit('requests/update', {votAdr: Object.assign({}, this.votAdr, {[field]: decodeHtmlEntity (value) || null})})
+      this.$store.commit('requests/update', {votAdr: Object.assign({}, this.votAdr, {[field]: this.decodeHtmlEntity(value) || null})})
       this.$emit('input')
     },
     decodeHtmlEntity (str) {
