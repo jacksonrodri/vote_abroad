@@ -9,7 +9,7 @@
       </header>
       <section class="modal-card-body">
         <section v-if="currently === 'enteringCode' || currently === 'retryingCode'" class="section">
-          <div class="content"><span v-if="currently === 'retryingCode'">That code was incorrect. </span>{{ msg }} -- valid email or mobile phone (where you can receive an SMS) </div>
+          <div class="content"><span v-if="currently === 'retryingCode'">That code was incorrect. </span>{{ msg }}</div>
           <b-field>
             <b-field>
               <b-input placeholder="Type your code..."
@@ -57,7 +57,7 @@
           </div> -->
         </section>
         <section v-if="currently === 'retrying'" class="section">
-          <div class="content" v-if="count < 3">{{ msg }}</div>
+          <div class="content" v-if="count < 3">{{ msg }}  -- Please enter a valid email or mobile phone (where you can receive an SMS) </div>
           <b-field>
             <phone-input ref="login"
               key="login"
