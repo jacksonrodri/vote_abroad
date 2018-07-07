@@ -12,7 +12,7 @@
 
       <b-field horizontal :label="$t('request.sig.from')">
         <b-input v-model="fromName" name="name" placeholder="Name" :disabled="isMailing === true" expanded></b-input>
-        <b-input v-model="formEmail" ref="userEmail" name="email" type="email" :placeholder="$t('request.email.label')" :disabled="!Boolean(email)" :required="Boolean(email)" expanded></b-input>
+        <b-input v-model="formEmail" ref="userEmail" name="email" type="email" :placeholder="$t('request.email.label')" :disabled="!!email" :required="Boolean(email)" expanded></b-input>
       </b-field>
 
       <b-field horizontal :label="$t('request.sig.to')">
@@ -158,5 +158,8 @@ export default {
 </script>
 
 <style>
-
+.input[disabled] {
+  background-color: #fcfcfc;
+  color: #111;
+}
 </style>
