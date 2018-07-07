@@ -198,7 +198,7 @@ export default {
       if (val && val.country && this.countries.find(x => x.code.toLowerCase() === val.country.toLowerCase()) && this.countrySearch !== this.countries.find(x => x.code.toLowerCase() === val.country.toLowerCase()).name) {
         this.countrySearch = this.countries.find(x => x.code.toLowerCase() === val.country.toLowerCase()).name
       }
-      console.log(this.selectionStart)
+      // console.log(this.selectionStart)
       // if (val && oldVal && oldVal.rawInput && val.rawInput && this.selectionStart && val.rawInput.includes(oldVal.rawInput)) {
       //   console.log(this.selectionStart)
       //   console.log(oldVal.rawInput.replace(/[ ]/g, '-'))
@@ -220,7 +220,13 @@ export default {
     userCountry (val) {
       if (val) this.setPlaceholder(val)
       if (val && this.value && this.value.country && val !== this.value.country && this.value.rawInput) {
-      let num = this.value.rawInput.charAt(0) === '+' ? this.value.rawInput.split(/\+|\s/).shift().shift() : this.value.rawInput
+      let num 
+      if (this.value.rawInput.charAt(0) === '+') {
+      num = this.value.rawInput.split(/\+|\s/)
+      num.shift()
+      num.shift()
+      num = num.join(' ')
+      } else num = this.value.rawInput
       this.formatInput(num)
       }
     }
