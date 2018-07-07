@@ -217,10 +217,10 @@ export default {
       //   console.log(val, getPhoneCode(val.country))
       // }
     },
-    country (val) {
-      if (val) this.setPlaceholder(val.toUpperCase())
-      if (val && this.value && this.value.country && val.toUpperCase() !== this.value.country.toUpperCase() && this.value.rawInput) {
-      let num = this.value.rawInput.charAt(0) === '+' ? this.value.rawInput.split(/\s/).shift() : this.value.rawInput
+    userCountry (val) {
+      if (val) this.setPlaceholder(val)
+      if (val && this.value && this.value.country && val !== this.value.country && this.value.rawInput) {
+      let num = this.value.rawInput.charAt(0) === '+' ? this.value.rawInput.split(/\+|\s/).shift().shift() : this.value.rawInput
       this.formatInput(num)
       }
     }
