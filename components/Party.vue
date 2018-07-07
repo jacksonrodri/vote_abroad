@@ -31,7 +31,7 @@
     </b-message>
   </div>
   <transition name="fade">
-  <div v-if="thisValue !== 'Republican' && !$store.state.userauth.user.isDA && (isOtherButNoValue || joinValue)" class="field">
+  <div v-if="!$store.state.userauth.user.isDA && (thisValue !== 'Republican' || isOtherButNoValue || joinValue)" class="field">
     <span class="is-flex"><label class="label">{{ joinLabel }}</label><span @click="joinToolTipIsOpen = !joinToolTipIsOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
     <b-field grouped group-multiline :type="type">
       <p class="control">
@@ -131,6 +131,7 @@ export default {
         this.$emit('input', value)
       }
     },
+    email () { return this.$store.getters['requests/getCurrent'].email },
     daEmailGetter: {
       get () { return this.daEmail || (this.joinValue !== true && this.joinValue !== false && this.joinValue) ? this.joinValue : '' },
       set (value) { this.daEmail = value }

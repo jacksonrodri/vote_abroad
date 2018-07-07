@@ -22,7 +22,7 @@
     </p>
   </b-field>
   <transition name="fade">
-    <b-field v-if="isExistingDaMember" :label="$t('request.joinDa.accountEmail')">
+    <b-field v-if="isExistingDaMember" :label="$t('request.joinDa.accountEmail', email)">
       <b-input
         placeholder="e.g. user@email.com"
         type="text"
@@ -66,7 +66,8 @@ export default {
     thisValue: {
       get () { return this.value },
       set (value) { this.$emit('input', value) }
-    }
+    },
+    email () { return this.$store.getters['requests/getCurrent'] }
   }
 }
 </script>
