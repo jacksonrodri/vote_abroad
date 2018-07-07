@@ -100,7 +100,7 @@
       "yes": "Yes",
       "no": "No",
       "alreadyMember": "Already a Member",
-      "accountEmail": "Please enter your account email address if you remember it so we can update your record.",
+      "accountEmail": "If you previously joined Democrats Abroad with an email address other than {email}, please enter it so we can update your record.",
       "tooltipTitle": "What is Democrats Abroad?",
       "tooltip": "Democrats Abroad is the official Democratic Party organization for the millions of Americans living outside the United States."
     },

@@ -4,7 +4,7 @@
     <span class="is-flex"><label class="label">{{ label }}</label><span @click="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
     <b-field grouped group-multiline :type="type">
       <p class="control" v-for="(party, index) in Object.keys(partyChoices)" :key="index">
-        <a @click="thisValue = thisValue === party ? null : party" :class="[baseClass, {'is-success': partyChoices[party].aliases.indexOf(thisValue ? thisValue.toString().toLowerCase() : '') > -1}]">
+        <a @click="thisValue = thisValue === party ? null : party; isOtherButNoValue = false" :class="[baseClass, {'is-success': partyChoices[party].aliases.indexOf(thisValue ? thisValue.toString().toLowerCase() : '') > -1}]">
           <b-icon v-if="partyChoices[party].aliases.indexOf(thisValue ? thisValue.toString().toLowerCase() : '') > -1" icon="check"></b-icon>
           <span>{{$t(`request.party.${party.toLowerCase()}`)}}</span><span v-if="state === 'MN' && party.toLowerCase() === 'democratic'">&nbsp;(DFL)</span><span v-if="state === 'ND' && party.toLowerCase() === 'democratic'">&nbsp;(D-NPL)</span>
         </a>
@@ -57,7 +57,7 @@
       <phone-input key="daEmail"
         v-if="isExistingDaMember || (joinValue !== true && joinValue !== false && joinValue)"
         ref="daEmail"
-        :label="$t('request.joinDa.accountEmail')"
+        :label="$t('request.joinDa.accountEmail', {email: email || 'the one you entered'})"
         :required="false"
         @input="(val) => joinValue = val"
         :accepts="['email']"
@@ -133,7 +133,7 @@ export default {
     },
     email () { return this.$store.getters['requests/getCurrent'].email },
     daEmailGetter: {
-      get () { return this.daEmail || (this.joinValue !== true && this.joinValue !== false && this.joinValue) ? this.joinValue : '' },
+      get () { return this.daEmail || (this.joinValue && this.joinValue !== true && this.joinValue !== false && this.joinValue !== 'already a member') ? this.joinValue : '' },
       set (value) { this.daEmail = value }
     },
     joinValue: {
