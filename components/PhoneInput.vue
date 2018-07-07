@@ -219,6 +219,10 @@ export default {
     },
     country (val) {
       if (val) this.setPlaceholder(val.toUpperCase())
+      if (val && this.value && this.value.country && val.toUpperCase() !== this.value.country.toUpperCase() && this.value.rawInput) {
+      let num = this.value.rawInput.charAt(0) === '+' ? this.value.rawInput.split(/\s/).shift() : this.value.rawInput
+      this.formatInput(num)
+      }
     }
   },
   methods: {
