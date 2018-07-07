@@ -226,8 +226,13 @@ export default {
   },
   methods: {
     updateAddress: function (field, value) {
-      this.$store.commit('requests/update', {votAdr: Object.assign({}, this.votAdr, {[field]: value || null})})
+      this.$store.commit('requests/update', {votAdr: Object.assign({}, this.votAdr, {[field]: decodeHtmlEntity (value) || null})})
       this.$emit('input')
+    },
+    decodeHtmlEntity (str) {
+      return str.replace(/&#(\d+);/g, function (match, dec) {
+        return String.fromCharCode(dec)
+      })
     },
     getAsyncData: debounce(function () {
       this.isFetching = true
