@@ -216,6 +216,9 @@ export default {
       // if (val && val.country && val.intNumber && !val.intNumber.includes(getPhoneCode(val.country))) {
       //   console.log(val, getPhoneCode(val.country))
       // }
+    },
+    country (val) {
+      if (val) this.setPlaceholder(val.toUpperCase())
     }
   },
   methods: {
@@ -277,9 +280,9 @@ export default {
       this.countryFocused = false
       this.$refs.input.focus()
     },
-    setPlaceholder () {
+    setPlaceholder (country) {
       if (this.metadataLoaded) {
-        this.exampleNumber = format(phoneExamples[this.userCountry], this.userCountry, 'International', metadata)
+        this.exampleNumber = format(phoneExamples[country || this.userCountry], this.userCountry, 'International', metadata)
       } else if (!this.mustBeEmail) {
         this.loadMetadataAndCall(this.setPlaceholder)
       } else {
