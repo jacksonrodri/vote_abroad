@@ -6,7 +6,7 @@
     :type="(validations.$error ? 'is-danger': '')">
     <b-datepicker v-model="dob"
       :date-formatter="(date) => date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })"
-      :date-parser="dateParser"
+      :date-parser="dateParser2"
       :readonly="false"
       :mobile-native="allowNative"
       :min-date="minDate"
@@ -28,6 +28,7 @@
 
 <script>
 import ModalDateSelector from '~/components/ModalDateSelector'
+import { returnArrayOfReasonableBirthDates } from '~/utils/helpers'
 
 export default {
   name: 'date-of-birth',
@@ -80,6 +81,14 @@ export default {
         }
       })
       return new Date()
+    },
+    dateParser2 (input) {
+      let choices = returnArrayOfReasonableBirthDates(input)
+      if (choices.length > 1) {
+        this.cardModal(choices, input)
+      } else if (choices.length === 1) {
+        return choices[0]
+      } else return null
     },
     dateParser (input) {
       // console.log('input', input.toString())

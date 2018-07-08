@@ -217,8 +217,17 @@ export default {
       //   console.log(val, getPhoneCode(val.country))
       // }
     },
-    country (val) {
-      if (val) this.setPlaceholder(val.toUpperCase())
+    country (val, oldVal) {
+      if (val) {
+        this.setPlaceholder(val.toUpperCase())
+        if (this.value && this.value.rawInput && metadata) {
+          console.log(this.value, getPhoneCode(val.toUpperCase(), metadata))
+          console.log(this.value.rawInput.indexOf(`+${getPhoneCode(oldVal.toUpperCase(), metadata)}`))
+          console.log(this.value.rawInput.split(/\+|\s/))
+        }
+        // getPhoneCode(val)
+        // this.formatInput(this.value)
+      }
     }
   },
   methods: {

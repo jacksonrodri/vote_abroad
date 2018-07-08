@@ -13,6 +13,51 @@ export const placesAutocomplete = debounce(function (val) {
     })
 }, 500)
 
+export const returnArrayOfReasonableBirthDates = function (dateString) {
+  let currentYear = new Date().getFullYear()
+  let dateArr = []
+  let dateRegexPatterns = {
+    YMD: /^(\d?\d?\d\d)(?:\/|-|\.)(\d?\d)(?:\/|-|\.)(\d?\d)$/g,
+    MDY: /^(\d?\d)(?:\/|-|\.)(\d?\d?\d\d)(?:\/|-|\.)(\d?\d)$/g,
+    DMY: /^(\d?\d)(?:\/|-|\.)(\d?\d)(?:\/|-|\.)(\d?\d?\d\d)$/g
+  }
+
+  if (/^\d+(?:\/|-|\.)\d+(?:\/|-|\.)\d+$/.test(dateString)) {
+    Object.entries(dateRegexPatterns).forEach(([regexName, dateRegex]) => {
+      let matchArr
+      let yPos = regexName.indexOf('Y') + 1
+      let mPos = regexName.indexOf('M') + 1
+      let dPos = regexName.indexOf('D') + 1
+      while ((matchArr = dateRegex.exec(dateString)) !== null) {
+        let validDate = formatDate(matchArr[yPos], matchArr[mPos], matchArr[dPos])
+        if (validDate) dateArr.push(validDate)
+      }
+    })
+  } else {
+    // dateArr.push(new Date(Date.parse(dateString)))
+    dateArr.push(new Date(Date.parse(dateString) - (new Date().getTimezoneOffset() * 60000)))
+  }
+  // console.log(new Date(Date.parse('june 1 82') + new Date().getTimezoneOffset() * 60000))
+  // console.log(new Date(Date.parse('june 1 82') - (new Date().getTimezoneOffset() * 60000)))
+  return dateArr
+    .map(function (date) { return date.getTime() })
+    .filter(function (date, i, array) {
+      // remove entries that are duplicates or before today
+      return array.indexOf(date) === i && date < new Date()
+    })
+    .map(function (time) { return new Date(time) })
+
+  function formatDate (y, m, d) {
+    let year = y.length === 4 ? y : parseInt(y) < currentYear - 2010 ? '20' + y : '19' + y
+    year = year < 1890 || year > currentYear ? null : year
+    let month = parseInt(m) - 1
+    let day = parseInt(d)
+    let parsedDate = new Date(Date.UTC(year, month, day))
+    if (!year || parsedDate.getUTCMonth() !== month) {
+    } else return parsedDate
+  }
+}
+
 // export const placesFillData = function (option) {
 //   let input = {}
 //   let currentCountry = this.countryiso !== undefined ? this.countryiso : 'US'
