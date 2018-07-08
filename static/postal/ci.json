@@ -1,1 +1,1 @@
-{"CI": {"fmt": "%N%n%O%n%X %A %C %X", "id": "data/CI", "key": "CI", "name": "COTE D'IVOIRE"}}
+{"CI": {"lfmt": "%N%n%O%n%A%n%C %X", "fmt": "%N%n%O%n%X %A %C %X", "id": "data/CI", "key": "CI", "name": "COTE D'IVOIRE"}}
