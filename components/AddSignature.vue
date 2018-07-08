@@ -177,6 +177,11 @@
           <a @click="decreaseSize" class="button">Decrease Size</a> -->
           <!-- <div class="cover-container"></div> -->
         </div>
+        <div class="box">
+          <!-- <p>inputCaptureSupported? {{ inputCaptureSupported }}</p> -->
+          <p>{{ JSON.stringify(device, null, 2)}} </p>
+          <p> {{ JSON.stringify(croppedPic, null, 2)}} </p>
+        </div>
       <!-- </div>
     </div> -->
   </section>
