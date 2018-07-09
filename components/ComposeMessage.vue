@@ -119,7 +119,7 @@ export default {
         headers['Content-Type'] = 'application/json'
         headers['Accept'] = 'application/json'
         this.message = `********** \n This message will be sent to ${this.leoEmail} ${this.leoName} after VoteFromAbroad 3.0 is launched. \n\n We have NOT sent in your FPCA. \n ********** \n\n\n\n ${this.message}`
-        let body = {subject: this.subject, email: this.formEmail, message: this.message, htmlMessage: this.htmlMessage, leoName: this.leoName, leoEmail: this.leoEmail, image: this.fpca.toString(), firstName: this.firstName, lastName: this.lastName}
+        let body = {subject: this.subject, email: this.formEmail, message: this.message, htmlMessage: this.htmlMessage, leoName: this.leoName, leoEmail: this.leoEmail, image: this.fpca ? this.fpca.toString() : null, firstName: this.firstName, lastName: this.lastName}
         console.log(typeof this.fpca)
         axios.post('https://votefromabroad.netlify.com/api/mailer', body, {
           headers: { 'Content-Type': 'application/json' }

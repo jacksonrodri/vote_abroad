@@ -138,7 +138,7 @@ export default {
         return null
       }
     },
-    userCountry () { return this.country ? this.country.toUpperCase() : this.$store.state.userauth.user.country.toUpperCase() || null },
+    userCountry () { return this.country ? this.country.toUpperCase() : this.$store.state.userauth.user && this.$store.state.userauth.user.country ? this.$store.state.userauth.user.country.toUpperCase() : null },
     filteredCountries () {
       if (this.countries.filter((option) => this.countrySearch.toLowerCase() === option.name.toLowerCase()).length === 1) {
         return this.countries.filter((option) => this.countrySearch.toLowerCase() === option.name.toLowerCase()).concat(this.countries.filter((option) => this.countrySearch.toLowerCase() !== option.name.toLowerCase()))
@@ -301,7 +301,9 @@ export default {
     },
     getPhoneCode (iso) {
       try {
-        return ` (+${getPhoneCode(iso.toUpperCase(), metadata)})`
+        if (this.metadataLoaded) {
+          return ` (+${getPhoneCode(iso.toUpperCase(), metadata)})`
+        } else return ''
       } catch (e) {
         // console.log(error)
         return ''

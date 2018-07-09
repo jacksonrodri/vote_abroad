@@ -12,6 +12,7 @@ module.exports = {
     ['en/pages', {
       page: '/_page',
       permalink: ':slug',
+      anchorLevel: 1,
       isPost: false,
       generate: [
         'get',
@@ -21,6 +22,7 @@ module.exports = {
     ['en/faqs', {
       page: 'faqs/_slug',
       permalink: 'faqs/:slug',
+      anchorLevel: 1,
       isPost: false,
       generate: [
         'get',

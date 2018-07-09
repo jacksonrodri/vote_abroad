@@ -6,7 +6,7 @@
         <div class="container">
           <div class="navbar-brand">
             <span class="burger is-hidden-desktop"></span>
-            <nuxt-link to="/" class="navbar-item logo" title="Vote From Abroad - Home Page" exact>
+            <nuxt-link :to="localePath('index')" class="navbar-item logo" title="Vote From Abroad - Home Page" exact>
             </nuxt-link>
             <span :class="[{'is-active': isMobileMenuActive}, 'navbar-burger', 'burger']" @click="isMobileMenuActive = !isMobileMenuActive">
               <span></span>
@@ -89,12 +89,12 @@
                     When will you send my ballot?
                   </a> -->
                   <hr class="navbar-divider">
-                  <nuxt-link to="/FAQs" class="navbar-item">More FAQ's</nuxt-link>
+                  <nuxt-link :to="localePath({ name: 'faqs' })" class="navbar-item">More FAQ's</nuxt-link>
                   <!-- <a class="navbar-item">
                     More FAQ's
                   </a> -->
                   <hr class="navbar-divider">
-                  <a class="navbar-item">Contact the helpdesk</a>
+                  <a @click="showIntercom" class="navbar-item">Contact the helpdesk</a>
                 </div>
               </div>
             </div>
@@ -177,13 +177,15 @@
     <div class="container">
       <nav class="level">
         <p class="level-item has-text-centered">
-          <nuxt-link to="/privacy" class="link has-text-vfalight">{{$t('menu.privacy')}}</nuxt-link>
+          <nuxt-link :to="localePath({ name: 'page', params: {page: 'privacy'}})" class="link has-text-vfalight">{{$t('menu.privacy')}}</nuxt-link>
+          <!-- <nuxt-link :to="`/${$i18n.locale !== 'en' ? $i18n.locale + '/' : ''}privacy`" class="link has-text-vfalight">{{$t('menu.privacy')}}</nuxt-link> -->
         </p>
         <p v-html="$t('menu.disclaimer')" class="level-item has-text-centered is-size-7 has-text-vfalight">
           <!-- {{$t('menu.disclaimer')}} -->
         </p>
         <p class="level-item has-text-centered">
-          <nuxt-link to="/terms-of-use" class="link has-text-vfalight">{{$t('menu.terms')}}</nuxt-link>
+          <!-- <nuxt-link :to="`/${$i18n.locale !== 'en' ? $i18n.locale + '/' : ''}terms-of-use`" class="link has-text-vfalight">{{$t('menu.terms')}}</nuxt-link> -->
+          <nuxt-link :to="localePath({ name: 'page', params: {page: 'terms-of-use'}})" class="link has-text-vfalight">{{$t('menu.terms')}}</nuxt-link>
         </p>
       </nav>
     </div>
@@ -242,6 +244,12 @@ export default {
       return this.$route.name
     },
     isAuthenticated: function () { return this.$store.getters['userauth/isAuthenticated'] }
+  },
+  methods: {
+    showIntercom () {
+      console.log(this.$intercom)
+      this.$intercom.show()
+    }
   },
   async mounted () {
     function checkDeviceSupport (callback) {
@@ -318,6 +326,12 @@ export default {
       })
     }
     if (process.browser) {
+      console.log('process.browser')
+      window.onNuxtReady((app) => {
+        console.log('booting intercom', app)
+        this.$intercom.boot()
+        // this.$intercom.show()
+      })
       if (navigator.mediaDevices && navigator.mediaDevices.enumerateDevices) {
         // Firefox 38+ seems having support of enumerateDevicesx
         navigator.enumerateDevices = function (callback) {
@@ -385,11 +399,6 @@ export default {
             orientation: window.innerWidth > window.innerHeight ? 'landscape' : 'portrait'
           })
         }
-      })
-      // console.log(device.default.tablet())
-      window.onNuxtReady((app) => {
-        this.$intercom.boot()
-        // this.$intercom.show()
       })
     }
   }

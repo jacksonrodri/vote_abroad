@@ -53,9 +53,9 @@ module.exports = {
   modules: [
     '@nuxtjs/sentry',
     '@nuxtjs/pwa',
+    'nuxtent',
     ['nuxt-i18n', I18N],
-    '@nuxtjs/proxy',
-    'nuxtent'
+    '@nuxtjs/proxy'
   ],
   proxy: {
     '/api/mailer': {
@@ -142,9 +142,8 @@ module.exports = {
     {src: '~/plugins/plugged', ssr: false },
     {src: '~/plugins/buefy'},
     {src: '~/plugins/vuelidate'},
-    {src: '~/plugins/croppa'}
-    // ,
-    // {src: '~/plugins/intercom'}
+    {src: '~/plugins/croppa'},
+    {src: '~/plugins/intercom'}
   ],
   /*
   ** Build configuration
