@@ -1,7 +1,7 @@
 <template>
   <div class="field"><br/>
   <!-- AK -->
-    <div v-if="state === 'AK'">
+    <div v-if="state === 'AK' && isRegistering"">
       <span class="is-flex"><label class="label">{{ label }}</label><span @click.prevent="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
       <b-message title="Why am I being asked this?" type="is-info" has-icon :active.sync="isOpen">
         <p v-html="$options.filters.markdown($t('request.akRules.tooltip'))"></p>
