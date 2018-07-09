@@ -275,9 +275,11 @@ export default {
       // }
     },
     standardizePhone () {
-      if (this.value && this.value.isValidPhone) {
-        this.$emit('input', Object.assign({}, this.value, {rawInput: this.value.intNumber}))
-      }
+      setTimeout(() => {
+        if (this.value && this.value.isValidPhone) {
+          this.$emit('input', Object.assign({}, this.value, {rawInput: this.value.intNumber}))
+        }
+      }, 30)
     },
     focusCountry () {
       // if (this.metadataLoaded) {

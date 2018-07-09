@@ -369,6 +369,9 @@ export default {
     },
     update: async function (inputObj) {
       // console.log(inputObj, this.value)
+      if (inputObj && inputObj.countryiso) {
+        inputObj.country = this.getCountryName(inputObj.countryiso)
+      } else if (inputObj && this.value && this.value.countryiso) inputObj.country = this.getCountryName(this.value.countryiso)
       // Object.keys(inputObj).forEach(item => this.delayTouch(this.$v[item]))
       if (Object.keys.length === 1 && (Object.keys(inputObj).includes('alt1') || Object.keys(inputObj).includes('alt2') || Object.keys(inputObj).includes('alt3') || Object.keys(inputObj).includes('alt4') || Object.keys(inputObj).includes('alt5'))) {
         this.$emit('input', Object.assign({}, {alt1: this.value.alt1, alt2: this.value.alt2, alt3: this.value.alt3, alt4: this.value.alt4, alt5: this.value.alt5, usesAlternateFormat: true, country: this.value.country, countryiso: this.value.countryiso}, inputObj))

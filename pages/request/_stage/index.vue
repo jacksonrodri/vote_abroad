@@ -168,6 +168,7 @@
       @input="delayTouch($v.fax)"
       :required="recBallot === 'fax'"
       :accepts="['phone']"
+      @keydown.native.enter.prevent="focusNextButton(3)"
       v-model="fax"></phone-input>
 
     <!-- altEmail -->
@@ -211,8 +212,8 @@
     <scroll-up :key="$route.params.stage"></scroll-up>
 
     <section >
-        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>{{$t('request.stages.back')}}</span></nuxt-link>
-        <button @click.prevent="focusFirstErrorOrAdvance(localePath({ name: 'request-stage', params: { stage: 'id-and-contact-information'} }))" class="button is-primary is-medium is-pulled-right" exact ><span> {{$t('request.stages.next')}} </span><b-icon pack="fas" icon="caret-right"></b-icon></button>
+        <nuxt-link ref="next1" :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>{{$t('request.stages.back')}}</span></nuxt-link>
+        <button ref="next3" @click.prevent="focusFirstErrorOrAdvance(localePath({ name: 'request-stage', params: { stage: 'id-and-contact-information'} }))" class="button is-primary is-medium is-pulled-right" exact ><span> {{$t('request.stages.next')}} </span><b-icon pack="fas" icon="caret-right"></b-icon></button>
     </section>
 
   </form>
@@ -538,7 +539,11 @@ export default {
     // jurisdiction () { return this.leo && this.leo.n ? this.leo.n : '' },
     jurisdiction () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].leo : null },
     abrAdr: {
-      get () { return this.requests[this.currentRequest] && this.requests[this.currentRequest].abrAdr ? this.requests[this.currentRequest].abrAdr : null },
+      get () {
+        if ((!this.requests[this.currentRequest] || !this.requests[this.currentRequest].abrAdr) && this.user && this.user.country) {
+          return {countryiso: this.user.country}
+        } else return this.requests[this.currentRequest] && this.requests[this.currentRequest].abrAdr ? this.requests[this.currentRequest].abrAdr : null
+      },
       set (value) {
         // if (value.countryiso && /US|AS|VI|PR|GU/.test(value.countryiso)) {
         //   // this.$store.commit('requests/update', { abrAdr: Object.assign({}, value, {countryiso: 'APO'}) })
@@ -624,6 +629,11 @@ export default {
     }
   },
   methods: {
+    focusNextButton (stage) {
+      if (typeof this.$refs[`next${stage}`].focus === 'function') {
+        this.$refs[`next${stage}`].focus()
+      } else this.$refs[`next${stage}`].$el.focus()
+    },
     touch (val) {
       // console.log(val)
       // Object.keys(val).forEach(item => console.log(item))
