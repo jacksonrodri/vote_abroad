@@ -208,6 +208,7 @@ export default {
         this.$store.commit('requests/update', {leo: null})
       }
       if (!oldVal || newVal !== oldVal) {
+        this.county = null
         this.$store.commit('requests/update', {
           stateSpecial: null,
           identification: null
