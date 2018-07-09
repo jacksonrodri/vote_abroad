@@ -64,7 +64,10 @@
       "female": "Female",
       "decline": "Decline to State",
       "tooltipTitle": "Why is this required?",
-      "tooltip": "Most states do not require gender information, but a few, like ID and SC, still do. If you decline to state a gender and your state requires it, your state must let you know that you need to fill in the missing information."
+      "tooltip": "Most states do not require gender information, but a few, like ID and SC, still do. If you decline to state a gender and your state requires it, your state must let you know that you need to fill in the missing information.",
+      "messages": {
+        "required": "This is required for {state} voters."
+      }
     },
     "party": {
       "tooltip": "Many states require voters to designate a political party to be eligible to vote in primary elections. Choosing a political party is optional.",

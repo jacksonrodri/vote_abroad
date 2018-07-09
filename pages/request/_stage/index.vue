@@ -237,8 +237,10 @@
       <!-- gender -->
       <gender
         :label="$t('request.sex.label')"
+        ref="sex"
         :tooltipTitle="$t('request.sex.tooltipTitle')"
-        v-model="sex">
+        v-model="sex"
+        :validations="$v.sex">
         <div slot="tooltip">
           <p v-html="$options.filters.markdown($t('request.sex.tooltip'))"></p>
         </div>
@@ -670,6 +672,8 @@ export default {
           this.$v.altEmail.$touch()
           break
         case 'id-and-contact-information':
+          this.$v.sex.$touch()
+          console.log(this.$v.sex)
           this.$v.dob.$touch()
           this.$v.identification.$touch()
           break
@@ -798,6 +802,11 @@ export default {
         case this.stage.slug === 'id-and-contact-information' && this.$v.dob.$error:
           this.$refs.dob.$refs.dob.$el.scrollIntoView()
           this.$refs.dob.$refs.dob.focus()
+          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'dob'}})
+          break
+        case this.stage.slug === 'id-and-contact-information' && this.$v.sex.$error:
+          this.$refs.sex.$el.scrollIntoView()
+          // this.$refs.sex.$refs.sex.focus()
           this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'dob'}})
           break
         case this.stage.slug === 'id-and-contact-information' && this.$v.identification.ssn.$error:
@@ -938,6 +947,9 @@ export default {
       party: {
       },
       sex: {
+        required: requiredIf((model) => {
+          return this.votAdr && this.votAdr.stateISO && this.votAdr.stateISO.toLowerCase() === 'id'
+        })
       },
       isRegistered: {
         required
