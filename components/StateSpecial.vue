@@ -133,10 +133,18 @@ export default {
     if (this.value) {
       switch (this.state.toLowerCase()) {
         case 'vt':
-          this.scratch = this.value
+          if (!this.isRegistering) {
+            this.setVal(null)
+          } else {
+            this.scratch = this.value
+          }
           break
         case 'va':
-          this.scratch = this.value.length > 85 ? this.value.slice(86, this.value.length + 1) : ''
+          if (!this.isRegistering) {
+            this.setVal(null)
+          } else {
+            this.scratch = this.value.length > 85 ? this.value.slice(86, this.value.length + 1) : ''
+          }
           break
         case 'sc':
           this.scRace = /Race: (.*) -- /.test(this.value) ? /Race: (.*) -- /.exec(this.value)[1] : ''
@@ -146,13 +154,19 @@ export default {
           this.scratch = this.value.length > 36 ? this.value.slice(37, this.value.length + 1) : ''
           break
         case 'ok':
-          this.scratch = this.value.length > 60 ? this.value.slice(61, this.value.length + 1) : ''
+          if (!this.isIndNoParty) {
+            this.setVal(null)
+          } else this.scratch = this.value.length > 60 ? this.value.slice(61, this.value.length + 1) : ''
           break
         case 'az':
-          this.scratch = this.value.length > 51 ? this.value.slice(52, this.value.length + 1) : ''
+          if (!this.isRegistering) {
+            this.setVal(null)
+          } else this.scratch = this.value.length > 51 ? this.value.slice(52, this.value.length + 1) : ''
           break
         case 'ak':
-          this.scratch = this.value.length > 56 ? this.value.slice(57, this.value.length + 1) : ''
+          if (!this.isRegistering) {
+            this.setVal(null)
+          } else this.scratch = this.value.length > 56 ? this.value.slice(57, this.value.length + 1) : ''
           break
         default:
           break
