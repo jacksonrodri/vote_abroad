@@ -146,7 +146,7 @@ export default {
           this.scratch = this.value.length > 36 ? this.value.slice(37, this.value.length + 1) : ''
           break
         case 'ok':
-          this.scratch = this.value.length > 61 ? this.value.slice(62, this.value.length + 1) : ''
+          this.scratch = this.value.length > 60 ? this.value.slice(61, this.value.length + 1) : ''
           break
         case 'az':
           this.scratch = this.value.length > 51 ? this.value.slice(52, this.value.length + 1) : ''
