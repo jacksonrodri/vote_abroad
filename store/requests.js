@@ -227,7 +227,7 @@ export const actions = {
     //   }
     // }
     let currentRequestState = Object.assign({}, state.requests[state.currentRequest])
-    if (currentRequestState.identification) delete currentRequestState.identification
+    delete currentRequestState.identification
     currentRequestState.status = payload.status
     const stateRequestInput = {input: currentRequestState}
     const newRequest = await API.graphql(graphqlOperation(CreateRequest, stateRequestInput))
