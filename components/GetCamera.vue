@@ -64,11 +64,9 @@ export default {
         if (devices.length > 0) {
           console.log("Taking a 'back' camera")
           device = devices[devices.length - 1]
-          console.log('device', device)
         } else {
           console.log('Taking last camera')
           device = lastDevice
-          console.log('device', device)
         }
 
         if (!device) {
@@ -79,17 +77,17 @@ export default {
         let constraints =
         {
           audio: false,
-          video: true
-          // {
-          //   width: { ideal: 1280 },
-          //   height: { ideal: 720 },
-          //   facingMode: { ideal: 'environment' }
-          // }
+          // video: true
+          video: {
+            width: { ideal: 1280 },
+            height: { ideal: 720 },
+            facingMode: { ideal: 'environment' }
+          }
           // video: true
         }
         navigator.mediaDevices.getUserMedia(constraints)
           .then(stream => {
-            console.log('stream', stream)
+            // console.log('stream', stream)
             if (this.$el.srcObject) { this.$el.srcObject = stream } else { this.$el.src = URL.createObjectURL(stream) }
             this.canvas.width = this.$el.clientWidth
             this.canvas.height = this.$el.clientHeight

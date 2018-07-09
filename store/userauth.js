@@ -266,7 +266,8 @@ export const actions = {
         //   duration: 8000
         // })
         // alert('authResult', authResult)
-        this.setSession(authResult)
+        dispatch('setSession', authResult)
+        // this.setSession(authResult)
         // Auth tokens in the result or an error
         resolve(authResult)
       })
@@ -313,7 +314,7 @@ export const actions = {
         //   actionText: 'Retry',
         //   duration: 8000
         // })
-        this.setSession(authResult)
+        dispatch('setSession', authResult)
         // Auth tokens in the result or an error
         resolve()
       })

@@ -9,7 +9,7 @@
           <!-- <h3 class="title is-3">Upload a photo of your signature or <a class="button" @click="webCamCapture = !webCamCapture">click here</a> to use your device camera to scan your signature now.</h3> -->
           <h3 class="title is-3">Add your scanned signature.</h3>
           <!-- <h3 class="subtitle is-4">You can upload a photo of your signature or <a class="has-text-primary" @click="() => { thresholdedPic = null; webCamCapture = true }">Click here</a> to use your device camera to capture it. <a @click="croppedPic.chooseFile()">Upload file</a></h3> -->
-          <h3 class="subtitle is-4"><a class="has-text-primary" @click="() => {webCamPic = null; if (croppedPic) croppedPic.remove(); startCameraFilePicker()}">Click start</a> to scan your signature now<span> with your device camera</span>. Or <a @click="croppedPic.chooseFile()" class="has-text-primary">upload a file</a> from your computer. </h3>
+          <h3 class="subtitle is-4"><a class="has-text-primary" @click="() => {webCamPic = null; croppedPic.remove(); startCameraFilePicker()}">Click start</a> to scan your signature now<span> with your device camera</span>. Or <a @click="croppedPic.chooseFile()" class="has-text-primary">upload a file</a> from your computer. </h3>
           <article class="message is-info">
             <div class="message-body">
               After capturing your signature, you can edit it (drag to move, scroll to zoom).  When your signature is clear and on the red line, click 'Use This Signature' to add it to your form and compose a message to your election official.
@@ -76,7 +76,7 @@
                   </button>
                   <button :class="[buttonClass, 'is-fullwidth', {'is-loading': false}]"
                     v-else
-                    @click.prevent="() => {webCamPic = null; if (croppedPic) croppedPic.remove(); startCameraFilePicker()}">
+                    @click.prevent="() => {webCamPic = null; croppedPic.remove(); startCameraFilePicker()}">
                     Start
                   </button>
                 </b-field>
@@ -177,11 +177,6 @@
           <a @click="decreaseSize" class="button">Decrease Size</a> -->
           <!-- <div class="cover-container"></div> -->
         </div>
-        <div class="box">
-          <!-- <p>inputCaptureSupported? {{ inputCaptureSupported }}</p> -->
-          <p>{{ device ? JSON.stringify(device, null, 2) : 'device not present'}}</p>
-          <p> {{ croppedPic ? JSON.stringify(croppedPic, null, 2) : 'cropped pic not initialized'}} </p>
-        </div>
       <!-- </div>
     </div> -->
   </section>
@@ -229,7 +224,7 @@ export default {
       this.$emit('sigcap', this.croppedPic.generateDataUrl())
     },
     startCameraFilePicker () {
-      console.log(this)
+      // console.log(this)
       if (!this.croppedPic || !this.croppedPic.hasImage()) {
         if (this.device && !this.device.inputCaptureSupported) {
           this.thresholdedPic = null
