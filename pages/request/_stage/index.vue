@@ -317,7 +317,7 @@
       <scroll-up :key="$route.params.stage"></scroll-up>
     <section >
       <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'voting-information'} })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>{{$t('request.stages.back')}}</span></nuxt-link>
-      <button @click.prevent="focusFirstErrorOrAdvance(localePath({ name: 'request-stage', params: { stage: 'review'} }))" class="button is-primary is-medium is-pulled-right" exact ><span> {{$t('request.stages.next')}} </span><b-icon pack="fas" icon="caret-right"></b-icon></button>
+      <button @click.prevent="focusFirstErrorOrAdvance(localePath({ name: 'request-review' }))" class="button is-primary is-medium is-pulled-right" exact ><span> {{$t('request.stages.next')}} </span><b-icon pack="fas" icon="caret-right"></b-icon></button>
     </section>
   </form>
   </section>

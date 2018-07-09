@@ -18,7 +18,7 @@ export const returnArrayOfReasonableBirthDates = function (dateString) {
   let dateArr = []
   let dateRegexPatterns = {
     YMD: /^(\d?\d?\d\d)(?:\/|-|\.)(\d?\d)(?:\/|-|\.)(\d?\d)$/g,
-    MDY: /^(\d?\d)(?:\/|-|\.)(\d?\d?\d\d)(?:\/|-|\.)(\d?\d)$/g,
+    MDY: /^(\d?\d)(?:\/|-|\.)(\d?\d)(?:\/|-|\.)(\d?\d?\d\d)$/g,
     DMY: /^(\d?\d)(?:\/|-|\.)(\d?\d)(?:\/|-|\.)(\d?\d?\d\d)$/g
   }
 

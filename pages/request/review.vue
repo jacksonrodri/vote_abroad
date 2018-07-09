@@ -94,36 +94,36 @@ export default {
     addSig (val) {
       this.signature = val
       // console.log(val)
-    },
-    sendEmail () {
-      let fpca = this.$refs.fpca.$refs['my-canvas'].toDataURL()
-      // console.log(fpca)
-      function dataURItoBlob (dataURI) {
-        var byteString = atob(dataURI.split(',')[1])
-        var ab = new ArrayBuffer(byteString.length)
-        var ia = new Uint8Array(ab)
-        for (var i = 0; i < byteString.length; i++) {
-          ia[i] = byteString.charCodeAt(i)
-        }
-        return new Blob([ab], { type: 'image/png' })
-      }
-      var blob = dataURItoBlob(fpca)
-      // console.log(blob)
-      let data = new FormData()
-      data.append('from', 'VoteFromAbroad <mailer@votefromabroad.org>')
-      data.append('to', 'alexpm@gmail.com')
-      data.append('subject', 'FPCA')
-      data.append('text', 'Your FPCA application')
-      data.append('attachment', blob, '@file/fpca.png')
-      data.append('inline', blob, 'file/fpca.png')
-      data.append('html', '<html>HTML version of the body<img src="cid:fpca.png" width="120" alt="FPCA"><br/></html>')
-      let url = 'https://votefromabroad.netlify.com/api/mail'
-      // let url = 'https://api.mailgun.net/v3/mon.tg/messages'
-      let config = { url: url, method: 'post', headers: { 'Content-Type': 'multipart/form-data' }, auth: { username: 'api', password: 'key-44903961cb823b645750fe64358dfc40' } }
-      this.$axios.post(url, data, config)
-        .then(response => console.log(response))
-        .catch(errors => console.log(errors))
     }
+    // sendEmail () {
+    //   let fpca = this.$refs.fpca.$refs['my-canvas'].toDataURL()
+    //   // console.log(fpca)
+    //   function dataURItoBlob (dataURI) {
+    //     var byteString = atob(dataURI.split(',')[1])
+    //     var ab = new ArrayBuffer(byteString.length)
+    //     var ia = new Uint8Array(ab)
+    //     for (var i = 0; i < byteString.length; i++) {
+    //       ia[i] = byteString.charCodeAt(i)
+    //     }
+    //     return new Blob([ab], { type: 'image/png' })
+    //   }
+    //   var blob = dataURItoBlob(fpca)
+    //   // console.log(blob)
+    //   let data = new FormData()
+    //   data.append('from', 'VoteFromAbroad <mailer@votefromabroad.org>')
+    //   data.append('to', 'alexpm@gmail.com')
+    //   data.append('subject', 'FPCA')
+    //   data.append('text', 'Your FPCA application')
+    //   data.append('attachment', blob, '@file/fpca.png')
+    //   data.append('inline', blob, 'file/fpca.png')
+    //   data.append('html', '<html>HTML version of the body<img src="cid:fpca.png" width="120" alt="FPCA"><br/></html>')
+    //   let url = 'https://votefromabroad.netlify.com/api/mail'
+    //   // let url = 'https://api.mailgun.net/v3/mon.tg/messages'
+    //   let config = { url: url, method: 'post', headers: { 'Content-Type': 'multipart/form-data' }, auth: { username: 'api', password: 'key-44903961cb823b645750fe64358dfc40' } }
+    //   this.$axios.post(url, data, config)
+    //     .then(response => console.log(response))
+    //     .catch(errors => console.log(errors))
+    // }
   },
   computed: {
     currentRequest () { return this.requests[this.currentRequestIndex] },

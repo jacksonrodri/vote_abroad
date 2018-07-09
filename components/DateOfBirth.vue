@@ -12,12 +12,14 @@
       :min-date="minDate"
       :max-date="maxDate"
       ref="dob"
+      @keydown.native.enter.prevent="addDate($event.target.value)"
       :focused-date="dob || new Date(new Date().getFullYear() - 18, 0, 1)"
       icon="calendar"
       icon-pack="fas"
       :placeholder="$t('request.dob.placeholder')">
       <span class="help is-primary">Select your birth year first, then selelect your birthdate.</span>
     </b-datepicker>
+      <!-- @keyup.native.enter.prevent -->
       <!-- autocomplete="bday" -->
   </b-field>
   <b-message :title="tooltipTitle" type="is-info" has-icon :active.sync="toolTipOpen">
@@ -66,6 +68,10 @@ export default {
     }
   },
   methods: {
+    addDate (date) {
+      console.log(date)
+      this.dob = this.dateParser2(date)
+    },
     cardModal (dateChoices, input) {
       let vm = this
       this.$modal.open({
