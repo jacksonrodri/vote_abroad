@@ -5,14 +5,15 @@
     <h3 class="has-text-centered subtitle is-4">{{ $t(`request.stages.stage${stage.order}`)}}</h3>
 <!-- your information -->
   <section v-if="stage.slug === 'your-information'">
-    <form id="your-information" key="your-information">
+    <form @submit.prevent id="your-information" key="your-information">
       <!-- firstName -->
       <div class="field">
         <label class="label" for="firstName">{{ $t('request.firstName.label') }}<transition name="fade"><span v-if="!firstName && !$v.firstName.$error" class="required"> Required</span></transition></label>
-        <b-field :type="($v.firstName.$error ? 'is-danger': '')" :message="$v.firstName.$error ? Object.keys($v.firstName.$params).map(x => $t(`request.firstName.messages.${x}`)) : '' ">
+        <b-field :type="($v.firstName.$error ? 'is-danger': '')" :message="$v.firstName.$error ? Object.entries($v.firstName).filter(([key, value]) => key.charAt(0) !== '$' && value === false).map(x => $t(`request.firstName.messages.${x[0]}`)) : '' ">
           <b-input v-model="firstName"
             id="firstName"
             autocomplete="given-name"
+            :maxlength="(firstName && !$v.firstName.$dirty) || $v.firstName.$error || (firstName && firstName.length > 44) ? 50 : ''"
             @input="delayTouch($v.firstName)"
             ref="firstName"></b-input>
         </b-field>
@@ -21,8 +22,13 @@
       <!-- middleName -->
       <div class="field">
         <label class="label" for="middleName">{{ $t('request.middleName.label') }}<transition name="fade"><span v-if="!middleName" class="required"> Optional</span></transition></label>
-        <b-field :type="($v.middleName.$error ? 'is-danger': '')" :message="$v.middleName.$error ? Object.keys($v.middleName.$params).map(x => x) : '' ">
-          <b-input v-model="middleName" id="middleName" @input="$v.middleName.$touch()" autocomplete="additional-name"></b-input>
+        <b-field :type="($v.middleName.$error ? 'is-danger': '')" :message="$v.middleName.$error ? Object.keys($v.middleName.$params).map(x => $t(`request.middleName.messages.${x}`)) : '' ">
+          <b-input
+            v-model="middleName"
+            id="middleName"
+            @input="$v.middleName.$touch()"
+            autocomplete="additional-name"
+            :maxlength="(middleName && !$v.middleName.$dirty) || $v.middleName.$error || (middleName && middleName.length > 44) ? 50 : ''"></b-input>
         </b-field>
       </div>
 
@@ -34,6 +40,7 @@
             id="lastName"
             @input="delayTouch($v.lastName)"
             autocomplete="family-name"
+            :maxlength="(lastName && !$v.lastName.$dirty) || $v.lastName.$error || (lastName && lastName.length > 44) ? 50 : ''"
             ref="lastName"></b-input>
         </b-field>
       </div>
@@ -41,8 +48,13 @@
       <!-- suffix -->
       <div class="field">
         <label class="label" for="suffix">{{ $t('request.suffix.label') }}<transition name="fade"><span v-if="!suffix" class="required"> Optional</span></transition></label>
-        <b-field :type="($v.suffix.$error ? 'is-danger': '')" :message="$v.suffix.$error ? Object.keys($v.suffix.$params).map(x => x) : '' ">
-          <b-input v-model="suffix" id="suffix" @input="$v.suffix.$touch()" autocomplete="honorific-suffix"></b-input>
+        <b-field :type="($v.suffix.$error ? 'is-danger': '')" :message="$v.suffix.$error ? Object.keys($v.suffix.$params).map(x => $t(`request.suffix.messages.${x}`)) : '' ">
+          <b-input
+            v-model="suffix"
+            id="suffix"
+            @input="$v.suffix.$touch()"
+            :maxlength="(suffix && !$v.suffix.$dirty) || $v.suffix.$error || (suffix && suffix.length > 8) ? 16 : ''"
+            autocomplete="honorific-suffix"></b-input>
         </b-field>
       </div>
 
@@ -59,6 +71,14 @@
       </previous-name>
 
       <!-- phone Number -->
+      <!-- <phone-two ref="pe"
+        key="pe"
+        :accepts="['phone', 'email']"
+        v-model="phoneTwo"
+        :label="$t('request.tel.label')"></phone-two> -->
+      <phone-four></phone-four>
+      <phone-three v-model="phoneThree" @input="delayTouch($v.phoneThree)"></phone-three>
+
       <phone-input ref="tel" key="telephone" :label="$t('request.tel.label')" :accepts="['phone']" v-model="tel"></phone-input>
 
       <phone-input key="email" ref="email" :label="$t('request.email.label')" :required="recBallot === 'email'" :accepts="['email']" v-model="email"></phone-input>
@@ -132,6 +152,7 @@
     <voter-class v-model="voterClass"
       :allowsNeverResided="stateRules ? stateRules.allowsNeverResided : false"
       :validations="($v.voterClass)"
+      ref="voterClass"
       @input="delayTouch($v.voterClass)"
       :toolTipTitle="$t('request.voterClass.tooltipTitle')">
       <div slot="tooltip">
@@ -145,6 +166,7 @@
       :label="$t('request.isRegistered.label', {jurisdiction: jurisdiction.t === 'All' ? jurisdiction.s : `${jurisdiction.j} ${jurisdiction.j.includes(jurisdiction.t) ? '' : jurisdiction.t}`})"
       :validations="($v.isRegistered)"
       @input="delayTouch($v.isRegistered)"
+      ref="isRegistered"
       v-model="isRegistered">
     </is-registered>
 
@@ -154,6 +176,7 @@
       :label="$t('request.receiveBallot.label')"
       :validations="$v.recBallot"
       @input="delayTouch($v.recBallot)"
+      ref="recBallot"
       :ballotReceiptOptions="stateRules ? stateRules.ballotReceiptOptions : ['Mail']"
       :toolTipTitle="$t('request.receiveBallot.tooltipTitle')">
       <div slot="tooltip">
@@ -281,7 +304,7 @@
       <id-input
         v-if="stateRules"
         :label="$t('request.id.label')"
-        :idOptions="stateRules && stateRules.id && stateRules.id.length > 0 ? stateRules.id : null"
+        :idOptions="idOptions"
         :validations="($v.identification)"
         ref="id"
         @input="delayTouch($v.identification)"
@@ -338,6 +361,9 @@ import VoterClass from '~/components/VoterClass'
 import IsRegistered from '~/components/IsRegistered'
 import ReceiveBallot from '~/components/ReceiveBallot'
 import PhoneInput from '~/components/PhoneInput'
+import PhoneTwo from '~/components/PhoneTwo'
+import PhoneThree from '~/components/PhoneThree'
+import PhoneFour from '~/components/PhoneFour'
 // import TelInput from '~/components/TelInput'
 // import BirthDate from '~/components/BirthDate'
 import DateOfBirth from '~/components/DateOfBirth'
@@ -388,6 +414,8 @@ export default {
       fwabRequest: '',
       isFwab: false,
       isOpen: false,
+      phoneTwo: '',
+      phoneFour: '',
       // joinDa: null,
       prty: '',
       phoneEmailTest: {},
@@ -415,9 +443,40 @@ export default {
     // Identification,
     IdInput,
     PhoneInput,
+    PhoneTwo,
+    PhoneThree,
+    PhoneFour,
     AdrInput
   },
+  provide () {
+    return {
+      validations: this.$v,
+      dTouch: this.delayTouch
+    }
+    // const validations = {}
+    // Object.keys(this.$v).forEach(key => {
+    //   Object.defineProperty(validations, key, {
+    //     enumerable: true,
+    //     get: () => this.$v[key]
+    //   })
+    // })
+    // Object.defineProperty(validations, 'delayTouch', {
+    //   enumerable: true,
+    //   get: () => this.delayTouch
+    // })
+    // return { validations }
+  },
   computed: {
+    phoneThree: {
+      get () { return this.$store.state.data.phone || '' },
+      set (val) { this.$store.dispatch('data/updatePhone', val) }
+    },
+    idOptions () {
+      let opts = this.stateRules && this.stateRules.id && this.stateRules.id.length > 0 ? this.stateRules.id : null
+      if (this.votAdr.stateISO === 'OK' && this.recBallot === 'email') {
+        return ['SSN', 'SSN4']
+      } else return opts
+    },
     v () {
       let r = this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryFormat ? this.$refs.abrAdr.countryFormat.require.toUpperCase() : false
       let re = this.$refs.abrAdr ? this.$refs.abrAdr : false
@@ -788,6 +847,18 @@ export default {
           this.$refs.fax.$refs.input.focus()
           this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'fax'}})
           break
+        case this.stage.slug === 'voting-information' && this.$v.voterClass.$error:
+          this.$refs.voterClass.$el.scrollIntoView()
+          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'voterClass'}})
+          break
+        case this.stage.slug === 'voting-information' && this.$v.isRegistered.$error:
+          this.$refs.isRegistered.$el.scrollIntoView()
+          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'isRegistered'}})
+          break
+        case this.stage.slug === 'voting-information' && this.$v.recBallot.$error:
+          this.$refs.recBallot.$el.scrollIntoView()
+          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'recBallot'}})
+          break
         case this.stage.slug === 'voting-information' && this.$v.email.$error && this.recBallot === 'email':
           this.$refs.email.check()
           this.$refs.email.$refs.input.$el.scrollIntoView()
@@ -822,10 +893,10 @@ export default {
           this.$refs.id.$refs.StateId.focus()
           break
         default:
-          if (this.stage.slug === 'voting-information') {
-            if (!this.$refs.altEmail && this.$v.altEmail.$error) this.altEmail = null
-            if (!this.$refs.fax && this.$v.fax.$error) this.fax = null
-          }
+          // if (this.stage.slug === 'voting-information') {
+          //   if (!this.$refs.altEmail && this.$v.altEmail.$error) this.altEmail = null
+          //   if (!this.$refs.fax && this.$v.fax.$error) this.fax = null
+          // }
           console.log(nextPage)
           this.$router.push(nextPage)
           this.$store.dispatch('requests/recordAnalytics', {event: 'completed: ' + this.stage.slug})
@@ -938,6 +1009,9 @@ export default {
             return this.$refs.tel.validatePhone
           } else return this.tel && this.tel.rawInput ? this.tel.isValidPhone : true
         }
+      },
+      phoneThree: {
+        required
       },
       altEmail: {
         email

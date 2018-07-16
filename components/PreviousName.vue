@@ -27,7 +27,7 @@
   </div>
   <b-field v-show="usesPreviousName" :type="type" :message="message" :label="label">
     <!-- <b-input :value="value && value.previousName ? value.previousName : ''" @input="val => setName(val)"></b-input> -->
-    <b-input v-model="pName"></b-input>
+    <b-input v-model="pName" :maxlength="50"></b-input>
   </b-field>
   <b-message :title="tooltipTitle" type="is-info" has-icon :active.sync="isOpen">
     <slot name="tooltip"></slot>
@@ -46,7 +46,8 @@ export default {
     'type',
     'message',
     'tooltipTitle',
-    'required'
+    'required',
+    'validations'
   ],
   computed: {
     name () {

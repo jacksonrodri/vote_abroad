@@ -247,7 +247,7 @@ export default {
   },
   methods: {
     showIntercom () {
-      console.log(this.$intercom)
+      // console.log(this.$intercom)
       this.$intercom.show()
     }
   },
@@ -329,7 +329,7 @@ export default {
       console.log('process.browser')
       window.onNuxtReady((app) => {
         console.log('booting intercom', app)
-        this.$intercom.boot()
+        app.$intercom.boot()
         // this.$intercom.show()
       })
       if (navigator.mediaDevices && navigator.mediaDevices.enumerateDevices) {

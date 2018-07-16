@@ -44,9 +44,41 @@
       </b-field>
   </section>
   <section class="section">
+    <b-field v-if="documentRequired" horizontal label="Attachments">
+      <b-upload
+        accept="image/jpeg,image/gif,image/png,application/pdf"
+        v-if="dropFiles.length === 0"
+        @input="attachReqDoc"
+        v-model="dropFiles"
+        drag-drop>
+        <section class="section">
+          <div class="content has-text-centered">
+            <p>
+              <b-icon
+                icon="upload"
+                size="is-large">
+              </b-icon>
+            </p>
+            <p>You are required to provide {{documentRequired}}. Drop your file here or click to upload. (jpg, png, gif or pdf)</p>
+          </div>
+        </section>
+      </b-upload>
+      <div v-if="dropFiles.length === 1" class="tags">
+        <span v-for="(file, index) in dropFiles"
+          :key="index"
+          class="tag is-primary is-large" >
+          {{file.name}}
+          <button class="delete is-small"
+            type="button"
+            @click="deleteDropFile(index)">
+          </button>
+        </span>
+      </div>
+    </b-field>
+
     <div class="field is-horizontal">
       <div class="field-label">
-        <label class="label">{{$t('request.sig.attachment')}}</label>
+        <label v-if="!documentRequired" class="label">{{$t('request.sig.attachment')}}</label>
       </div>
       <div class="field-body">
         <figure class="field image" style="border: gray solid;">
@@ -70,6 +102,9 @@ export default {
       subject: '',
       htmlMessage: '',
       isMailing: false,
+      dropFiles: [],
+      reqDoc: '',
+      sendWithoutDocs: false,
       buttonClass: {
         button: true,
         'is-primary': true,
@@ -108,8 +143,38 @@ export default {
     'documentRequired'
   ],
   methods: {
+    attachReqDoc (files) {
+      let vm = this
+      // console.log(files, files.length, /\.(jpe?g|png|gif|pdf)$/i.test(files[0].name))
+      if (files && files.length > 0 && files[0].name && /\.(jpe?g|png|gif|pdf)$/i.test(files[0].name)) {
+        var reader = new FileReader()
+
+        reader.addEventListener('load', function () {
+          console.log(reader, this)
+          vm.reqDoc = this.result
+          vm.sendWithoutDocs = false
+        }, false)
+
+        reader.readAsDataURL(files[0])
+      }
+    },
+    deleteDropFile (index) {
+      this.dropFiles = []
+      this.reqDoc = ''
+      this.sendWithoutDocs = false
+    },
     sendEmail () {
-      if (!(this.email.trim()) || !/(^$|^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$)/.test(this.customEmail)) {
+      if (this.documentRequired && !this.reqDoc && !this.sendWithoutDocs) {
+        this.$dialog.confirm({
+          title: this.documentRequired.toLocaleUpperCase(),
+          message: `You are required to provide ${this.documentRequired}. Click cancel to add a file to your email. Or you can send the message without attaching a file. Your election official may contact you to ask for appropriate documentation.`,
+          cancelText: 'Cancel',
+          confirmText: 'Send Anyway',
+          type: 'is-danger',
+          hasIcon: true,
+          onConfirm: () => { this.sendWithoutDocs = true; this.sendEmail() }
+        })
+      } else if (!(this.email.trim()) || !/(^$|^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$)/.test(this.customEmail)) {
         this.$refs.userEmail.checkHtml5Validity()
         console.log('email', this.email.trim(), 'validity', /(^$|^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$)/.test(this.customEmail))
         console.log(this.$refs.userEmail)
@@ -119,7 +184,7 @@ export default {
         headers['Content-Type'] = 'application/json'
         headers['Accept'] = 'application/json'
         this.message = `********** \n This message will be sent to ${this.leoEmail} ${this.leoName} after VoteFromAbroad 3.0 is launched. \n\n We have NOT sent in your FPCA. \n ********** \n\n\n\n ${this.message}`
-        let body = {subject: this.subject, email: this.formEmail, message: this.message, htmlMessage: this.htmlMessage, leoName: this.leoName, leoEmail: this.leoEmail, image: this.fpca ? this.fpca.toString() : null, firstName: this.firstName, lastName: this.lastName}
+        let body = {subject: this.subject, email: this.formEmail, message: this.message, htmlMessage: this.htmlMessage, leoName: this.leoName, leoEmail: this.leoEmail, image: this.fpca ? this.fpca.toString() : null, reqDoc: this.reqDoc ? this.reqDoc.toString() : null, firstName: this.firstName, lastName: this.lastName}
         console.log(typeof this.fpca)
         axios.post('https://votefromabroad.netlify.com/api/mailer', body, {
           headers: { 'Content-Type': 'application/json' }

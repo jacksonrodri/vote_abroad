@@ -259,7 +259,9 @@ export default {
             let ctry = data.result.address_components.filter(n => n.types.includes('country'))[0].short_name
             this.state = ctry !== 'US' ? ctry : data.result.address_components.filter(n => n.types.indexOf('administrative_area_level_1') > -1)[0].short_name
             if (this.state !== 'DC' && ctry === 'US') {
-              this.county = data.result.address_components.filter(y => y.types.indexOf('administrative_area_level_2') > -1)[0].long_name
+              setTimeout(() => {
+                this.county = data.result.address_components.filter(y => y.types.indexOf('administrative_area_level_2') > -1)[0].long_name
+              }, 50)
             }
             // console.log('adr_address', data.result.adr_address.split(/<span class="|">|<\/span>,?\s?/))
             data.result.adr_address

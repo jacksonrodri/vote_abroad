@@ -17,7 +17,37 @@
       icon="calendar"
       icon-pack="fas"
       :placeholder="$t('request.dob.placeholder')">
-      <span class="help is-primary">Select your birth year first, then selelect your birthdate.</span>
+      <div slot="header">
+        <div class="field is-centered">
+          <span class="help is-primary">Select your birth year first, then select your birthdate.</span>
+        </div>
+        <div class="pagination field is-centered">
+          <div class="pagination-list">
+            <b-field v-if="$refs.dob">
+              <b-select
+                :value="$refs.dob.focusedDateData.year"
+                @input="(val) => $refs.dob.focusedDateData.year = val">
+                <option
+                  v-for="year in $refs.dob.listOfYears"
+                  :value="year"
+                  :key="year">
+                  {{ year }}
+                </option>
+              </b-select>
+              <b-select
+                v-model="$refs.dob.focusedDateData.month">
+                <option
+                  v-for="(month, index) in monthNames"
+                  :value="index"
+                  :key="month">
+                  {{ month }}
+                </option>
+              </b-select>
+            </b-field>
+          </div>
+        </div>
+      </div>
+      <!-- <span class="help is-primary">Select your birth year first, then selelect your birthdate.</span> -->
     </b-datepicker>
       <!-- @keyup.native.enter.prevent -->
       <!-- autocomplete="bday" -->
@@ -48,10 +78,40 @@ export default {
       date: undefined,
       maxDate: new Date(2000, 10, 6),
       minDate: new Date(1900, 0, 1),
-      toolTipOpen: false
+      toolTipOpen: false,
+      monthNames: [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December'
+      ],
+      focusedDateData: {
+        month: (this.dob || new Date()).getMonth(),
+        year: (this.dob || new Date()).getFullYear()
+      }
     }
   },
   computed: {
+    listOfYears () {
+      const latestYear = this.maxDate
+        ? this.maxDate.getFullYear()
+        : (Math.max(new Date().getFullYear(), this.focusedDateData.year) + 3)
+      const earliestYear = this.minDate
+        ? this.minDate.getFullYear() : 1900
+      const arrayOfYears = []
+      for (let i = earliestYear; i <= latestYear; i++) {
+        arrayOfYears.push(i)
+      }
+      return arrayOfYears.reverse()
+    },
     dob: {
       get () {
         function createDateObj (d) { return new Date(d.substr(0, 4), d.substr(5, 2) - 1, d.substr(8, 2), 12) }
@@ -68,6 +128,7 @@ export default {
     }
   },
   methods: {
+    seeRefs (val) { console.log(val) },
     addDate (date) {
       console.log(date)
       this.dob = this.dateParser2(date)

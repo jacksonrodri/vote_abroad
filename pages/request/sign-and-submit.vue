@@ -389,7 +389,7 @@ function getNextEligibleRules (electionArr, state, voterRegistrationStatus, vote
 }
 
 function getRuleLanguage (eligibleRules, type, voterRegistrationStatus) {
-  if (!eligibleRules || !type || !eligibleRules.rules || !eligibleRules.rules[type] || eligibleRules.rules[type].length === 0) {
+  if (!eligibleRules || !type || !eligibleRules.rules || !eligibleRules.rules[type] || eligibleRules.rules[type].length === 0 || /(no deadline)|(not required)/gi.test(getRuleType(eligibleRules.rules[type][0].rule))) {
     return `There is no deadline for ${type.toLowerCase()}.`
   } else if (eligibleRules && type && eligibleRules.rules[type] && eligibleRules.rules[type].length === 1) {
     return `Your form must be ${getRuleType(eligibleRules.rules[type][0].rule)} ${getRuleDeadline(eligibleRules.rules[type][0].date)}.`

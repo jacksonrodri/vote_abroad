@@ -9,12 +9,30 @@
           <!-- <h3 class="title is-3">Upload a photo of your signature or <a class="button" @click="webCamCapture = !webCamCapture">click here</a> to use your device camera to scan your signature now.</h3> -->
           <h3 class="title is-3">Add your scanned signature.</h3>
           <!-- <h3 class="subtitle is-4">You can upload a photo of your signature or <a class="has-text-primary" @click="() => { thresholdedPic = null; webCamCapture = true }">Click here</a> to use your device camera to capture it. <a @click="croppedPic.chooseFile()">Upload file</a></h3> -->
-          <h3 class="subtitle is-4"><a class="has-text-primary" @click="() => {webCamPic = null; croppedPic.remove(); startCameraFilePicker()}">Click start</a> to scan your signature now<span> with your device camera</span>. Or <a @click="croppedPic.chooseFile()" class="has-text-primary">upload a file</a> from your computer. </h3>
-          <article class="message is-info">
-            <div class="message-body">
-              After capturing your signature, you can edit it (drag to move, scroll to zoom).  When your signature is clear and on the red line, click 'Use This Signature' to add it to your form and compose a message to your election official.
+          <h3 class="subtitle is-4"><a class="has-text-primary" @click="() => {webcamCaptureError = false; webCamPic = null; croppedPic.remove(); startCameraFilePicker()}">Click start</a> to scan your signature now<span> with your device camera</span>. Or <a @click="croppedPic.chooseFile()" class="has-text-primary">upload a file</a> from your computer. </h3>
+          <b-message :active="webcamCaptureError && !(croppedPic && croppedPic.imageSet)" :closable="false" title="Failed loading camera." type="is-danger">
+            We could not get access your device camera. (Either it is not connected/available or you have disallowed VoteFromAbroad.org from accessing it). You can still click <a @click="croppedPic.chooseFile()" class="has-text-primary">upload a file</a> to upload your signature from a file.
+          </b-message>
+          <b-message :active="!webCamCapture && (!croppedPic || !croppedPic.imageSet)" :closable="false" title="Instructions" type="is-info">
+            For best results, sign your name with a dark pen in large letters on a blank sheet of white paper. Then click 'Start'.
+          </b-message>
+          <b-message :active="webCamCapture && !webcamCaptureError" :closable="false" title="Instructions" type="is-info">
+            Move your signature in front of the camera so that it is in focus and takes up as much of the screen as possible.
+          </b-message>
+          <b-message :active="!webCamCapture && croppedPic && croppedPic.imageSet" :closable="false" title="Instructions" type="is-info">
+            - Align your signature with the red line. (drag to move, scroll to zoom).<br>- Adjust your signature with the 'Line Strength' buttons below so that the signature is clear and has minimal background noise<br>- If your signature is still unclear, you can click 'Clear Image' to try again.<br>- Click 'Use This Signature' to add it to your form and compose a message to your election official.
+          </b-message>
+          <!-- <article class="message is-info">
+            <div v-show="!webCamCapture && (!croppedPic || !croppedPic.imageSet)" class="message-body">
+              For best results, sign your name with a dark pen in large letters on a blank sheet of white paper.
             </div>
-          </article>
+            <div v-show="webCamCapture && !webcamCaptureError" class="message-body">
+              Move your signature in front of the camera so that it is in focus and takes up as much of the screen as possible.
+            </div>
+            <div v-show="!webCamCapture && croppedPic && croppedPic.imageSet" class="message-body">
+              Edit your signature so that it is clear, on the red line and has minimal background noise. (drag to move, scroll to zoom).  Click 'Use This Signature' to add it to your form and compose a message to your election official.
+            </div>
+          </article> -->
           <!-- <p class="has-text-info">After capturing your signature, you can edit it (drag to move, scroll to zoom).  When your signature is clear and on the red line, click 'Use This Signature' to add it to your form and compose a message to your election official.</p> -->
           <!-- <h3 class="subtitle is-4">- or -</h3> 0-->
           <!-- <h3 class="subtitle is-4">or <a class="has-text-primary" @click="webCamCapture = !webCamCapture">Click here</a> to use your device camera to capture it.</h3> -->
@@ -22,9 +40,11 @@
 
           <!-- <nuxt-link to="/cam2">cam2</nuxt-link> -->
           <!-- <div class="container"> -->
-            <get-camera ref="webcam" :isCapturing="webCamCapture" v-show="webCamCapture" @updatePic="drawThresholdToCanvas"></get-camera>
+            <get-camera ref="webcam" @captureError="captureError" :isCapturing="webCamCapture" v-show="webCamCapture" @updatePic="drawThresholdToCanvas"></get-camera>
+            <!-- <div :class="croppedPic && croppedPic.imageSet ? imageSetClass : imageNotSetClass"> -->
             <signature-cropper
               v-show="!webCamCapture"
+              :style="!croppedPic || !croppedPic.imageSet ? 'background: whitesmoke; background-image:none;': ''"
               v-model="croppedPic"
               ref="cp"
               placeholder="Click to Start"
@@ -46,6 +66,7 @@
               initial-size="cover">
               <img slot="intitial" :src="webCamPic" />
             </signature-cropper>
+            <!-- </div> -->
             <b-field>
               <b-field grouped>
                 <!-- <b-field>
@@ -71,9 +92,15 @@
                   </button>
                   <button :class="[buttonClass, 'is-fullwidth', {'is-loading': false}]"
                     @click="() => { if ($refs && $refs.webcam) $refs.webcam.takePhoto() }"
-                    v-else-if="webCamCapture">
+                    v-else-if="webCamCapture && !webcamCaptureError">
                     Take Photo
                   </button>
+                  <button :class="[buttonClass, 'is-fullwidth', {'is-loading': false}]"
+                    @click="croppedPic.chooseFile()"
+                    v-else-if="webcamCaptureError">
+                    Upload a File
+                  </button>
+                  <!-- <a @click="croppedPic.chooseFile()" class="has-text-primary">upload a file</a> -->
                   <button :class="[buttonClass, 'is-fullwidth', {'is-loading': false}]"
                     v-else
                     @click.prevent="() => {webCamPic = null; croppedPic.remove(); startCameraFilePicker()}">
@@ -205,8 +232,11 @@ export default {
       size: 24,
       compensation: 7,
       inputCaptureSupported: false,
+      webcamCaptureError: false,
       metadata: null,
       blurred: null,
+      imageNotSetClass: { background: 'whitesmoke', maxWidth: '640px', width: '100%', paddingBottom: '25%', position: 'relative' },
+      imageSetClass: { background: 'url(/sigLine.png) no-repeat cover', maxWidth: '640px', width: '100%', paddingBottom: '25%', position: 'relative' },
       buttonClass: {
         button: true,
         'is-primary': true,
@@ -219,6 +249,9 @@ export default {
     device () { return this.$store.state.userauth.device }
   },
   methods: {
+    captureError () {
+      this.webcamCaptureError = true
+    },
     useSignature () {
       // let pic = this.croppedPic.getCanvas().toDataURL()
       this.$emit('sigcap', this.croppedPic.generateDataUrl())
@@ -579,19 +612,12 @@ export default {
   filter: brightness(150%) contrast(130%) grayscale(100%)
 }
 .croppa-container {
-  /* background: no-repeat url("/sigLine.png");
-  max-width: 640px;
-  width: 100%;
-  padding-bottom: 20%;
-  position: relative; */
   background: no-repeat url(/sigLine.png);
   background-size: cover;
   max-width: 640px;
   width: 100%;
   padding-bottom: 25%;
   position: relative;
-  /* background-position-y: -185px;
-  background-position-x: -109px; */
 }
 .croppa-container > canvas {
     position: absolute;

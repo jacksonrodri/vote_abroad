@@ -31,7 +31,7 @@
     </b-message>
   </div>
   <transition name="fade">
-  <div v-if="!$store.state.userauth.user.isDA && ((thisValue && thisValue !== 'Republican') || isOtherButNoValue || joinValue)" class="field">
+  <div v-if="!$store.state.userauth.user.isDA && ((thisValue && !partyChoices.Republican.aliases.includes(thisValue.toLowerCase())) || (isOtherButNoValue && thisValue && !partyChoices.Republican.aliases.includes(thisValue.toLowerCase())) || joinValue)" class="field">
     <span class="is-flex"><label class="label">{{ joinLabel }}</label><span @click="joinToolTipIsOpen = !joinToolTipIsOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
     <b-field grouped group-multiline :type="type">
       <p class="control">

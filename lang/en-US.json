@@ -32,12 +32,16 @@
   },
   "request": {
     "middleName": {
-      "label": "Middle Name(s)"
+      "label": "Middle Name(s)",
+      "messages": {
+        "maxLength": "Maximum length: 50 characters"
+      }
     },
     "lastName": {
       "label": "Last Name",
       "messages": {
-        "required": "Your last name is required.  Please enter it here. "
+        "required": "Your last name is required.  Please enter it here. ",
+        "maxLength": "Maximum length: 50 characters"
       }
     },
     "jurisdiction": {
@@ -56,7 +60,10 @@
       "no": "No",
       "instructions": "Have you previously registered to vote under a different name?",
       "tooltipTitle": "Why is this needed?",
-      "tooltip": "If you have previously voted with a different name, your election official may need to look you up using your previous name."
+      "tooltip": "If you have previously voted with a different name, your election official may need to look you up using your previous name.",
+      "messages": {
+        "maxLength": "Maximum length: 50 characters"
+      }
     },
     "sex": {
       "label": "Sex",
@@ -183,7 +190,10 @@
       "rtcConfirm": "Allow access to my webcam"
     },
     "suffix": {
-      "label": "Suffix"
+      "label": "Suffix",
+      "messages": {
+        "maxLength": "Maximum length: 16 characters"
+      }
     },
     "altEmail": {
       "label": "If you have a second email address, add it here to ensure ballot delivery."
@@ -232,7 +242,7 @@
       "tooltip": "Only Puerto Rico voters need to answer this question as per territory law."
     },
     "stages": {
-      "emailDigiSign": "**If you have a camera** on this <span class='is-hidden-touch'>computer</span><span class='is-hidden-desktop is-hidden-mobile'>tablet</span><span class='is-hidden-tablet'>phone</span>, you can capture your signature and email your form straight from this website.",
+      "emailDigiSign": "**If you have a camera** on this <span class='is-hidden-touch'>computer</span><span class='is-hidden-desktop is-hidden-mobile'>tablet</span><span class='is-hidden-tablet'>phone</span>, you can capture your signature or upload an image and email your form straight from this website.",
       "faxDigiSign": "**If you have a camera** on this <span class='is-hidden-touch'>computer</span><span class='is-hidden-desktop is-hidden-mobile'>tablet</span><span class='is-hidden-tablet'>phone</span>, you can capture your signature and fax your form straight from this website.",
       "faxConfirm": "Confirm with your local election official that they received it.",
       "emailDownload": "**If you don't have a camera** on this <span class='is-hidden-touch'>computer</span><span class='is-hidden-desktop is-hidden-mobile'>tablet</span><span class='is-hidden-tablet'>phone</span>, you will need to download your form, print, sign, date and scan it.",
@@ -331,7 +341,8 @@
       "label": "First Name",
       "instructions": "Please enter your first name.",
       "messages": {
-        "required": "You must enter a first name."
+        "required": "You must enter a first name.",
+        "maxLength": "Maximum length: 50 characters"
       }
     },
     "fwdAdr": {

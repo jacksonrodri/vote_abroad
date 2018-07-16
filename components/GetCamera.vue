@@ -54,6 +54,7 @@ export default {
     startCapture () {
       console.log(this.$el)
       if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
+        this.$emit('captureError')
         console.log('bad browser - add user intervace here')
       } else {
         navigator.mediaDevices.enumerateDevices().then(devices => {
@@ -99,12 +100,16 @@ export default {
               console.log('DONE')
             })
             .catch(err => {
+              this.$emit('captureError')
               console.log(err.name + ': ' + err.message)
+              console.log('We could not get access your device camera. (Either it is not connected/available or you have disallowed VoteFromAbroad.org from accessing it). You can still click the \'upload a file\' button to upload your signature from a file.')
             })
         })
           .catch(err => {
+            this.$emit('captureError')
             console.error(err)
             console.log(err.name + ': ' + err.message)
+            console.log('We could not get access your device camera. (Either it is not connected/available or you have disallowed VoteFromAbroad.org from accessing it). You can still click the \'upload a file\' button to upload your signature from a file.')
           })
       }
     }

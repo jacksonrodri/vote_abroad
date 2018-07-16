@@ -268,7 +268,7 @@ export default {
     },
     fmt () {
       let ft = this.countryFormat.lfmt || this.countryFormat.fmt
-      return ft.replace('%A', '%A%n%B').replace(/%[N|O]%n/g, '').split('%n').map(x => x.length === 2 ? x : x.split(/(%[A-Z])/).filter(x => /%[A-Z]/.test(x)).map(x => typeof x === 'string' ? x.substr(-1) : x)).map(x => typeof x === 'string' ? x.substr(-1) : x)
+      return ft.replace('%A', '%A%n%B').replace(/%[N|O]%n/g, '').split('%n').map(x => x.length === 2 ? x : x.split(/(%[A-Z])/).filter(x => /%[A-Z]/.test(x)).map(x => typeof x === 'string' ? x.substr(-1) : x)).map(x => typeof x === 'string' ? x.substr(-1) : x).filter(x => x !== 'N')
     },
     subkeys () {
       if (this.countryFormat['sub_keys']) {
