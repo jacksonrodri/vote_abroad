@@ -1,4 +1,5 @@
 ---
+title: Alaska
 state: Alaska
 iso: AK
 allowsNeverResided: true
