@@ -224,7 +224,6 @@ function randomPresAddress () { return `${presidentaddresses[Math.floor(Math.ran
 
 export { placesAutocomplete, placeDetails, cleanString, returnArrayOfReasonableBirthDates, placesDetails, uuidv4, commonEmailDomains, randomPresAddress }
 
-
 // Old helpers.js
 // import axios from 'axios'
 // import debounce from 'lodash/debounce'
