@@ -76,7 +76,7 @@
         :accepts="['phone', 'email']"
         v-model="phoneTwo"
         :label="$t('request.tel.label')"></phone-two> -->
-      <phone-four></phone-four>
+      <!-- <phone-four></phone-four>
       <phone-three v-model="phoneThree" @input="delayTouch($v.phoneThree)"></phone-three>
 
       <phone-input ref="tel" key="telephone" :label="$t('request.tel.label')" :accepts="['phone']" v-model="tel"></phone-input>
@@ -89,7 +89,27 @@
         :v="$v.abrAdr"
         @input="val => touch(val)"
         key="abrAdr"></adr-input>
-      <scroll-up :key="$route.params.stage"></scroll-up>
+      <scroll-up :key="$route.params.stage"></scroll-up> -->
+      <tel-two
+        ref="tel"
+        key="tel"
+        fieldName="tel"
+        :v="$v.tel"
+        @delayTouch="delayTouch($v.tel)"></tel-two>
+
+      <email-input
+        ref="email"
+        key="email"
+        fieldName="email"
+        :v="$v.email"
+        @delayTouch="delayTouch($v.email)"></email-input>
+
+      <address-five
+        ref="abrAdr"
+        key="abrAdr"
+        fieldName="abrAdr"
+        :v="$v.abrAdr"
+        @delayTouch="(val) => delayTouch($v.abrAdr[val])"></address-five>
     <section >
         <nuxt-link :to="localePath({ name: 'index' })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>{{$t('request.stages.back')}}</span></nuxt-link>
         <button @click.prevent="focusFirstErrorOrAdvance(localePath({ name: 'request-stage', params: {stage: 'voting-information'} }))" class="button is-primary is-medium is-pulled-right" exact ><span> {{$t('request.stages.next')}} </span><b-icon pack="fas" icon="caret-right"></b-icon></button>
@@ -372,6 +392,9 @@ import PreviousName from '~/components/PreviousName'
 import Gender from '~/components/Gender'
 import StateSpecial from '~/components/StateSpecial'
 import ScrollUp from '~/components/ScrollUp'
+import EmailInput from '~/components/EmailInput'
+import TelTwo from '~/components/TelTwo'
+import AddressFive from '~/components/AddressFive'
 // import Identification from '~/components/Identification'
 import IdInput from '~/components/IdInput'
 import AdrInput from '~/components/AdrInput'
@@ -446,7 +469,10 @@ export default {
     PhoneTwo,
     PhoneThree,
     PhoneFour,
-    AdrInput
+    AdrInput,
+    EmailInput,
+    TelTwo,
+    AddressFive
   },
   provide () {
     return {
