@@ -131,16 +131,16 @@
         </div>
       </voting-address>
 
-      <jurisdiction v-if="votAdr && votAdr.stateISO"
+      <jurisdiction v-if="votAdr && votAdr.S"
         :label="$t('request.jurisdiction.label')"
         :toolTipTitle="$t('request.jurisdiction.tooltipTitle')"
         :placeholder="$t('request.jurisdiction.placeholder')"
-        :key="votAdr.stateISO"
+        :key="votAdr.S"
         ref="jurisdiction"
 
         @input="delayTouch($v.jurisdiction)"
         :validations="($v.jurisdiction)"
-        :state="this.votAdr.stateISO">
+        :state="this.votAdr.S">
         <div slot="instructions">
           <p>{{$t('request.jurisdiction.instructions')}}</p>
         </div>
@@ -172,7 +172,7 @@
 
     <!-- recBallot -->
     <receive-ballot v-model="recBallot"
-      v-if="votAdr && votAdr.stateISO"
+      v-if="votAdr && votAdr.S"
       :label="$t('request.receiveBallot.label')"
       :validations="$v.recBallot"
       @input="delayTouch($v.recBallot)"
@@ -274,7 +274,7 @@
         :label="$t('request.party.label')"
         v-model="party"
         :join="joinDa"
-        :state="votAdr.stateISO"
+        :state="votAdr.S"
         @joinDA="val => joinDa = val"
         :tooltipTitle="$t('request.party.tooltipTitle')"
         :joinTooltipTitle="$t('request.joinDa.tooltipTitle')"
@@ -292,7 +292,7 @@
       <state-special
         :label="$t('request.stateSpecial.label', {state: stateRules && stateRules.state ? stateRules.state: 'State'})"
         v-model="stateSpecial"
-        :state="votAdr && votAdr.stateISO ? votAdr.stateISO : ''"
+        :state="votAdr && votAdr.S ? votAdr.S : ''"
         :isFWAB="isFWAB"
         :isIndNoParty="party && (party.toLowerCase() === 'republican' || party.toLowerCase() === 'rep' || party.toLowerCase() === 'democrat' || party.toLowerCase() === 'dem') ? false : true"
         :isReturnUncertain="Boolean(voterClass === 'uncertainReturn')"
@@ -473,7 +473,7 @@ export default {
     },
     idOptions () {
       let opts = this.stateRules && this.stateRules.id && this.stateRules.id.length > 0 ? this.stateRules.id : null
-      if (this.votAdr.stateISO === 'OK' && this.recBallot === 'email') {
+      if (this.votAdr.S === 'OK' && this.recBallot === 'email') {
         return ['SSN', 'SSN4']
       } else return opts
     },
@@ -492,8 +492,8 @@ export default {
       }
     },
     stateRules () {
-      if (this.votAdr && this.votAdr.stateISO) {
-        return this.allStateRules.find(x => x.iso.toLowerCase() === this.votAdr.stateISO.toLowerCase())
+      if (this.votAdr && this.votAdr.S) {
+        return this.allStateRules.find(x => x.iso.toLowerCase() === this.votAdr.S.toLowerCase())
       } else {
         return undefined
       }
@@ -796,25 +796,25 @@ export default {
           this.$refs.tel.$refs.input.focus()
           this.$store.dispatch('requests/recordAnalytics', { event: 'Form Error', attributes: { field: 'tel' } })
           break
-        case this.stage.slug === 'voting-information' && this.$v.votAdr.thoroughfare.$error:
-          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'votAdr.thoroughfare'}})
-          this.$refs.votAdr.$refs.street.$el.scrollIntoView()
-          this.$refs.votAdr.$refs.street.focus()
+        case this.stage.slug === 'voting-information' && this.$v.votAdr.A.$error:
+          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'votAdr.A'}})
+          this.$refs.votAdr.$refs.A.$el.scrollIntoView()
+          this.$refs.votAdr.$refs.A.focus()
           break
-        case this.stage.slug === 'voting-information' && this.$v.votAdr.locality.$error:
-          this.$refs.votAdr.$refs.city.$el.scrollIntoView()
-          this.$refs.votAdr.$refs.city.focus()
-          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'votAdr.locality'}})
+        case this.stage.slug === 'voting-information' && this.$v.votAdr.C.$error:
+          this.$refs.votAdr.$refs.C.$el.scrollIntoView()
+          this.$refs.votAdr.$refs.C.focus()
+          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'votAdr.C'}})
           break
-        case this.stage.slug === 'voting-information' && this.$v.votAdr.stateISO.$error:
-          this.$refs.votAdr.$refs.state.$el.scrollIntoView()
-          this.$refs.votAdr.$refs.state.focus()
-          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'votAdr.stateISO'}})
+        case this.stage.slug === 'voting-information' && this.$v.votAdr.S.$error:
+          this.$refs.votAdr.$refs.S.$el.scrollIntoView()
+          this.$refs.votAdr.$refs.S.focus()
+          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'votAdr.S'}})
           break
-        case this.stage.slug === 'voting-information' && this.$v.votAdr.postalcode.$error:
-          this.$refs.votAdr.$refs.zip.$el.scrollIntoView()
-          this.$refs.votAdr.$refs.zip.focus()
-          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'votAdr.postalcode'}})
+        case this.stage.slug === 'voting-information' && this.$v.votAdr.Z.$error:
+          this.$refs.votAdr.$refs.Z.$el.scrollIntoView()
+          this.$refs.votAdr.$refs.Z.focus()
+          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'votAdr.Z'}})
           break
         // case this.stage.slug === 'voting-information' && this.$v.vAdr.A.$error:
         //   this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'vAdr.A'}})
@@ -959,10 +959,10 @@ export default {
         required
       },
       votAdr: {
-        thoroughfare: { required },
-        locality: { required },
-        stateISO: { required },
-        postalcode: {
+        A: { required },
+        C: { required },
+        S: { required },
+        Z: {
           required,
           usZip
         }
@@ -1022,7 +1022,7 @@ export default {
       },
       sex: {
         required: requiredIf((model) => {
-          return this.votAdr && this.votAdr.stateISO && this.votAdr.stateISO.toLowerCase() === 'id'
+          return this.votAdr && this.votAdr.S && this.votAdr.S.toLowerCase() === 'id'
         })
       },
       isRegistered: {
