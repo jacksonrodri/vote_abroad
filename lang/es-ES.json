@@ -180,20 +180,20 @@
       "instructions": ""
     },
     "votAdr": {
-      "zip": "Código postal",
-      "street": "Calle",
+      "Z": "Código postal",
+      "A": "Calle",
       "tooltip": "Use el último ** domicilio ** en donde vivió en los Estados Unidos. Si nunca ha residido en los Estados Unidos, utilice el último domicilio en el que su madre, padre o ambos vivieron en los Estados Unidos. Si su(s) padre(s) estadounidenses tuvieron su último domicilio en diferentes lugares de los Estados Unidos, puede elegir el que utilizará como domicilio de referencia para votar.",
       "instructions": "Escriba el último domicilio en donde vivió en los Estados Unidos. Si usted nunca ha residido en los Estados Unidos, use el último domicilio en los Estados Unidos de su madre o padre ciudadano de los Estados Unidos.",
-      "apt": "Apartamento #",
-      "county": "Condado",
-      "city": "Ciudad",
+      "B": "Apartamento #",
+      "Y": "Condado",
+      "C": "Ciudad",
       "messages": {
-        "street-required": "Se requiere la calle y número",
-        "city-required": "Se requiere la ciudad",
-        "state-required": "Se requiere el estado",
-        "zip-required": "Se requiere el código postal"
+        "A-required": "Se requiere la calle y número",
+        "C-required": "Se requiere la ciudad",
+        "S-required": "Se requiere el estado",
+        "Z-required": "Se requiere el código postal"
       },
-      "state": "Estado",
+      "S": "Estado",
       "label": "Domicilio electoral"
     },
     "prRules": {

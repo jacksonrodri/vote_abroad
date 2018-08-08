@@ -199,21 +199,21 @@
       "label": "If you have a second email address, add it here to ensure ballot delivery."
     },
     "votAdr": {
-      "zip": "Zip",
-      "street": "Street",
+      "Z": "Zip",
+      "A": "Street",
       "tooltip": "If you are unsure, use the **residence address** of the last place you lived in the US. If you have never resided in the US, use the residence address of the last place your US parent(s) lived in the US. If your US parents last lived in the US in different locations, you may choose which one to use as your voting address.",
       "instructions": "Your voting address is _usually_ the last place you lived in the US. If you have never lived in the US, use the last US address of your US citizen parent(s). (Do not enter a PO Box.)",
-      "apt": "Apartment #",
-      "county": "County",
-      "city": "City",
+      "B": "Apartment #",
+      "Y": "County",
+      "C": "City",
       "messages": {
-        "street-required": "Street address is required",
-        "city-required": "City is required",
-        "state-required": "State is required",
-        "zip-required": "Zip is required",
-        "zip-usZip": "Enter a valid US Zip Code (e.g. 95014 or 22162-1010)"
+        "A-required": "Street address is required",
+        "C-required": "City is required",
+        "S-required": "State is required",
+        "Z-required": "Zip is required",
+        "Z-usZip": "Enter a valid US Zip Code (e.g. 95014 or 22162-1010)"
       },
-      "state": "State",
+      "S": "State",
       "label": "Voting Address",
       "tooltipTitle": "Your last US Address..."
     },
