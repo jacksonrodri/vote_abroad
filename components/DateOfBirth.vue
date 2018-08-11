@@ -13,29 +13,30 @@
       :max-date="maxDate"
       ref="dob"
       @keydown.native.enter.prevent="addDate($event.target.value)"
-      :focused-date="dob || new Date(new Date().getFullYear() - 18, 0, 1)"
+      :focused-date="focusedDate"
       icon="calendar"
       icon-pack="fas"
       :placeholder="$t('request.dob.placeholder')">
       <div slot="header">
         <div class="field is-centered">
-          <span class="help is-primary">Select your birth year first, then select your birthdate.</span>
+          <span class="help is-primary is-size-6">Select your birth year first, then select your birthdate.</span>
         </div>
         <div class="pagination field is-centered">
           <div class="pagination-list">
-            <b-field v-if="$refs.dob">
+            <b-field v-if="$refs && $refs.dob">
               <b-select
-                :value="$refs.dob.focusedDateData.year"
-                @input="(val) => $refs.dob.focusedDateData.year = val">
+                :value="this.$refs.dob.focusedDateData.year"
+                @input="val => this.focusedDate = new Date(val, this.focusedDate.getMonth(), this.focusedDate.getDate())">
                 <option
-                  v-for="year in $refs.dob.listOfYears"
+                  v-for="year in this.listOfYears"
                   :value="year"
                   :key="year">
                   {{ year }}
                 </option>
               </b-select>
               <b-select
-                v-model="$refs.dob.focusedDateData.month">
+                :value="this.$refs.dob.focusedDateData.month"
+                @input="val => this.focusedDate = new Date(this.focusedDate.getFullYear(), val, this.focusedDate.getDate())">
                 <option
                   v-for="(month, index) in monthNames"
                   :value="index"
@@ -93,9 +94,11 @@ export default {
         'November',
         'December'
       ],
+      focusedDate: this.dob || new Date(new Date().getFullYear() - 18, 0, 1),
       focusedDateData: {
         month: (this.dob || new Date()).getMonth(),
-        year: (this.dob || new Date()).getFullYear()
+        year: this.dob || this.maxDate ? (this.dob || this.maxDate).getFullYearYear() : (new Date().getFullYear() - 18)
+        // (this.maxDate || new Date()).getFullYear()
       }
     }
   },
@@ -126,6 +129,22 @@ export default {
     allowNative () {
       return Boolean(!(this.$store.state.userauth.device.type === 'mobile' && this.$store.state.userauth.device.os === 'android'))
     }
+    // focusedYear: {
+    //   get () { return this.$refs.dob ? this.$refs.dob.focusedDateData.year : 2000 },
+    //   set (val) {
+    //     if (this.$refs.dob) {
+    //       this.$refs.dob.focusedDateData.year = parseInt(val)
+    //     }
+    //   }
+    // },
+    // focusedMonth: {
+    //   get () { return this.$refs.dob ? this.$refs.dob.focusedDateData.month : 2000 },
+    //   set (val) {
+    //     if (this.$refs.dob) {
+    //       this.$refs.dob.focusedDateData.month = parseInt(val)
+    //     }
+    //   }
+    // }
   },
   methods: {
     seeRefs (val) { console.log(val) },
@@ -261,6 +280,9 @@ export default {
         return new Date(Date.parse(input))
       }
     }
+  },
+  mounted () {
+    console.log(this.$refs.dob.focusedDateData.year)
   }
 }
 </script>

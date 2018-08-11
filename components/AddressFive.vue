@@ -133,6 +133,10 @@ export default {
     }
   },
   computed: {
+    formattedAddress () {
+      // return this.countryData && /%A|%B|/.replacethis.countryData.cfmt ? this.countryData.cfmt : ''
+      return this.countryData && this.countryData.cfmt ? this.countryData.cfmt.replace(/%([N|O|A|B|D|C|S|Z|X])/g, (match, p1, offset, string) => this.adr[p1] || '').split(/%n/g).filter(x => x) : ['']
+    },
     ctry () { return this.adr && this.adr.countryiso ? this.adr.countryiso : '' },
     usesAlternateFormat () { return this.adr && this.adr.usesAlternateFormat ? this.adr.usesAlternateFormat : false },
     countryData () {
@@ -168,7 +172,7 @@ export default {
     },
     adr: {
       get () { return this.getCurrent[this.fieldName] },
-      set (val) { this.update({[this.fieldName]: Object.assign({}, this.adr, val)}) }
+      set (val) { this.update({[this.fieldName]: Object.assign({}, this.adr, val, {formatted: this.formattedAddress})}) }
     },
     toolTipTitle () { return this.$te(`request.${this.fieldName}.tooltipTitle`) ? this.$t(`request.${this.fieldName}.tooltipTitle`) : null },
     toolTipContent () { return this.$te(`request.${this.fieldName}.tooltip`) ? snarkdown(this.$t(`request.${this.fieldName}.tooltip`)) : null },
@@ -220,7 +224,7 @@ export default {
           return obj
         }, {})
       // console.log('cleanAdr', cleanAdr)
-      this.update({[this.fieldName]: Object.assign({}, cleanAdr, {[addressPart]: cleanString(value) || null})})
+      this.update({[this.fieldName]: Object.assign({}, cleanAdr, {[addressPart]: cleanString(value) || null, formatted: this.formattedAddress})})
       this.$emit('delayTouch', addressPart)
     },
     ...mapActions('data', ['updateCountryData']),

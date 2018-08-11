@@ -13,7 +13,7 @@
     icon-pack="flag-icon"
     @blur="sendblur"
     @focus="select($event)"
-    @select="(option) => { if (option && option.code) {countrySearch = option.name; $emit('input', option.code)} }">
+    @select="(option) => { if (option && option.code) {countrySearch = option.name; $emit('input', option.code); $emit('newCountry')} }">
     <template slot="header">
       <label for="country" class="is-size-6 has-text-grey"> ... type to find your country.</label>
     </template>

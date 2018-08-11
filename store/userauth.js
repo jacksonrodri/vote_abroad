@@ -56,6 +56,9 @@ export const getters = {
   },
   isAuthenticated: state => {
     return Boolean(!state.isExpired && state.idToken)
+  },
+  userCountry: state => {
+    return state.session.country || state.session.country
   }
 }
 

@@ -10,7 +10,9 @@ export default function ({ route, params, store, redirect }) {
     (!current ||
     !current.firstName ||
     !current.lastName ||
-    !current.abrAdr.alt1)
+    !current.abrAdr ||
+    !current.abrAdr.formatted ||
+    current.abrAdr.formatted.length === 0)
   ) {
     return redirect('/request/your-information')
   } else if ((params.stage === 'id-and-contact-information' ||
@@ -18,10 +20,10 @@ export default function ({ route, params, store, redirect }) {
   route.name.indexOf('sign-and-submit') > -1 ||
   route.name.indexOf('complete') > -1) &&
     (!current.votAdr ||
-    !current.votAdr.thoroughfare ||
-    !current.votAdr.locality ||
-    !current.votAdr.stateISO ||
-    !current.votAdr.postalcode ||
+    !current.votAdr.A ||
+    !current.votAdr.C ||
+    !current.votAdr.S ||
+    !current.votAdr.Z ||
     // !current.leo ||
     !current.leo.a1 ||
     !current.voterClass ||

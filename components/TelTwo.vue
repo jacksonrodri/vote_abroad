@@ -20,10 +20,11 @@
           key="country"
           ref="country"
           :countryFocused="countryFocused"
+          @newCountry="newCountry"
           @blur="countryFocused = false"
-          :class="countryFocused ? 'wide' : 'shrink'"
           v-model="countryIso"
           phone></country-selector>
+          <!-- :class="countryFocused ? 'wide' : 'shrink'" -->
         <input
           key="input"
           :type="fieldType"
@@ -114,7 +115,7 @@ export default {
         if (!parsedText) {
           this.fieldValue = null
         } else if (/^\+\d\d?\d?/.test(parsedText) && !this.phoneMetadataHasAllCountriesForPrefix(parsedText)) {
-          console.log('need phone dat')
+          // console.log('need phone dat')
           this.fieldValue = parsedText
           this.getCountryIsoFromPhonePrefix(parsedText)
           return {text: parsedText, template: 'X'.repeat(parsedText.length)}
@@ -130,7 +131,10 @@ export default {
       let parse = (character, value) => {
         return DIGITS[character]
       }
-      let onChange = val => { console.log('val', val); this.pe = val }
+      let onChange = val => {
+        // console.log('val', val)
+        this.pe = val
+      }
       return {format, parse, onChange}
     },
     ...mapState('data', ['countries']),
@@ -138,10 +142,14 @@ export default {
   },
   methods: {
     selectField () {
-      console.log(this.$refs[this.fieldName])
+      // console.log(this.$refs[this.fieldName])
       this.countryFocused
         ? this.$refs.country.$el.querySelector('input').focus() /* this.$refs.country.$el.querySelector('input').setSelectionRange(0, 99999) */
-        : this.$refs[this.fieldName].$el.querySelector('input').focus()
+        : this.$refs[this.fieldName].focus()
+    },
+    newCountry () {
+      this.tempValue = this.exPhone ? this.exPhone.split(' ')[0] : ''
+      this.selectField()
     },
     ...mapActions('data', ['updateCountryData', 'getCountryIsoFromPhonePrefix'])
   },
@@ -166,11 +174,15 @@ export default {
       } else if (this.getPhoneIntFormat(this.tempValue, this.countryIso || null) !== val) {
         this.tempValue = val
       }
+      if (!this.countryIso) {
+        this.countryIso = (this.formattedNumber(this.fieldValue)).formatted.country
+      }
     }
   },
   mounted () {
     if (this.fieldValue) {
       this.tempValue = this.fieldValue
+      this.countryIso = (this.formattedNumber(this.fieldValue)).formatted.country
     }
   }
 }

@@ -362,7 +362,11 @@
       }
     },
     "fax": {
-      "label": "Enter the fax number you would like your ballot sent to."
+      "label": "Enter your fax number if you would like to receive your ballot by fax.",
+      "messages": {
+        "required": "Your must include a fax number if you choose to receive your ballot by fax.",
+        "invalid": "The number you typed is not a valid phone number.  Please check it and try again."
+      }
     },
     "azRules": {
       "label": "What proof will you provide? (You must also attach a photocopy with your submission)",

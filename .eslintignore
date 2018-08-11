@@ -4,6 +4,7 @@ assets/vendor/**
 static/**
 # dependencies
 node_modules
+node_modules/**
 # Nuxt build
 .nuxt
 # Nuxt generate
