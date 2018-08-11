@@ -182,7 +182,7 @@ export default {
   },
   methods: {
     focusCountry () {
-      console.log(this.$refs.ctry)
+      // console.log(this.$refs.ctry)
       this.$refs.ctry[0].focus()
       // this.$refs.ctry.$el.querySelector('input').focus()
     },
@@ -238,7 +238,7 @@ export default {
     //   }
     // },
     ctry (val, oldVal) {
-      console.log(val, 'ctry changed')
+      // console.log(val, 'ctry changed')
       if (val) {
         if (this.postalMetadataHasCountry(val)) {
           this.$nextTick()

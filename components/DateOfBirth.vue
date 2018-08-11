@@ -25,7 +25,7 @@
           <div class="pagination-list">
             <b-field v-if="$refs && $refs.dob">
               <b-select
-                :value="this.$refs.dob.focusedDateData.year"
+                :value="$refs.dob.focusedDateData.year"
                 @input="val => this.focusedDate = new Date(val, this.focusedDate.getMonth(), this.focusedDate.getDate())">
                 <option
                   v-for="year in this.listOfYears"
@@ -35,7 +35,7 @@
                 </option>
               </b-select>
               <b-select
-                :value="this.$refs.dob.focusedDateData.month"
+                :value="$refs.dob.focusedDateData.month"
                 @input="val => this.focusedDate = new Date(this.focusedDate.getFullYear(), val, this.focusedDate.getDate())">
                 <option
                   v-for="(month, index) in monthNames"
@@ -147,9 +147,8 @@ export default {
     // }
   },
   methods: {
-    seeRefs (val) { console.log(val) },
     addDate (date) {
-      console.log(date)
+      // console.log(date)
       this.dob = this.dateParser2(date)
     },
     cardModal (dateChoices, input) {
@@ -196,24 +195,24 @@ export default {
 
       if (yyyymmddRegex.test(input)) {
         let inputArr = input.split(/(?:\/|-|\.)/)
-        console.log('yyyymmdd', 'inputArr', inputArr)
+        // console.log('yyyymmdd', 'inputArr', inputArr)
         let year = inputArr[0]
         year = year.length === 4 ? year : parseInt(year) < currentYear - 2010 ? '20' + year : '19' + year
         dateChoices.push(new Date(year, parseInt(inputArr[1]) - 1, inputArr[2]))
         if (parseInt(inputArr[1]) !== parseInt(inputArr[2]) && new Date(year, parseInt(inputArr[2]) - 1, inputArr[1]).getMonth() === parseInt(inputArr[2]) - 1) {
-          console.log('yyyymmddRegex', inputArr, new Date(year, parseInt(inputArr[2]) - 1, inputArr[1]))
+          // console.log('yyyymmddRegex', inputArr, new Date(year, parseInt(inputArr[2]) - 1, inputArr[1]))
           dateChoices.push(new Date(year, parseInt(inputArr[2]) - 1, inputArr[1]))
         }
-        console.log('yymmdddatechoices', dateChoices)
+        // console.log('yymmdddatechoices', dateChoices)
       }
       if (ddmmyyyyRegex.test(input)) {
         let inputArr = input.split(/(?:\/|-|\.)/)
-        console.log('ddmmyyyy', 'inputArr', inputArr)
+        // console.log('ddmmyyyy', 'inputArr', inputArr)
         let year = inputArr[2]
         year = year.length === 4 ? year : parseInt(year) < currentYear - 2010 ? '20' + year : '19' + year
         dateChoices.push(new Date(year, parseInt(inputArr[0]) - 1, inputArr[1]))
         if (parseInt(inputArr[0]) !== parseInt(inputArr[1])) {
-          console.log('ddmmyyyyRegex', inputArr, new Date(year, parseInt(inputArr[0]) - 1, inputArr[1]))
+          // console.log('ddmmyyyyRegex', inputArr, new Date(year, parseInt(inputArr[0]) - 1, inputArr[1]))
           dateChoices.push(new Date(year, parseInt(inputArr[1]) - 1, inputArr[0]))
         }
       }
@@ -226,21 +225,21 @@ export default {
           let year = inputArr[2]
           year = year.length === 4 ? year : parseInt(year) < currentYear - 2010 ? '20' + year : '19' + year
           if (new Date(year, parseInt(inputArr[1]) - 1, inputArr[0]).getMonth() === parseInt(inputArr[1]) - 1) {
-            console.log('looseDate1', inputArr, new Date(year, parseInt(inputArr[1]) - 1, inputArr[0]))
+            // console.log('looseDate1', inputArr, new Date(year, parseInt(inputArr[1]) - 1, inputArr[0]))
             dateChoices.push(new Date(year, parseInt(inputArr[1]) - 1, inputArr[0]))
           }
         } else if (parseInt(inputArr[1]) > 12 && parseInt(inputArr[1]) < 32) {
           let year = inputArr[2]
           year = year.length === 4 ? year : parseInt(year) < currentYear - 2010 ? '20' + year : '19' + year
           if (new Date(year, parseInt(inputArr[0]) - 1, inputArr[1]).getMonth() === parseInt(inputArr[0]) - 1) {
-            console.log('looseDate1.5', inputArr, new Date(year, parseInt(inputArr[0]) - 1, inputArr[1]))
+            // console.log('looseDate1.5', inputArr, new Date(year, parseInt(inputArr[0]) - 1, inputArr[1]))
             dateChoices.push(new Date(year, parseInt(inputArr[0]) - 1, inputArr[1]))
           }
         } else if (parseInt(inputArr[2]) > 12 && parseInt(inputArr[2]) < 32) {
           let year = inputArr[0]
           year = year.length === 4 ? year : parseInt(year) < currentYear - 2010 ? '20' + year : '19' + year
           if (new Date(year, parseInt(inputArr[1]) - 1, inputArr[2]).getMonth() === parseInt(inputArr[1]) - 1) {
-            console.log('looseDate2', inputArr, new Date(year, parseInt(inputArr[1]) - 1, inputArr[2]))
+            // console.log('looseDate2', inputArr, new Date(year, parseInt(inputArr[1]) - 1, inputArr[2]))
             dateChoices.push(new Date(year, parseInt(inputArr[1]) - 1, inputArr[2]))
           }
         } else if (inputArr[2].length === 2 && parseInt(inputArr[2]) > currentYear - 2010 && ((parseInt(inputArr[0]) < 32 && parseInt(inputArr[1]) < 13) || (parseInt(inputArr[1]) < 32 && parseInt(inputArr[0]) < 13))) {
@@ -248,7 +247,7 @@ export default {
           let month = parseInt(inputArr[0]) > 12 ? parseInt(inputArr[1]) - 1 : parseInt(inputArr[0] - 1)
           let day = parseInt(inputArr[0]) > 12 ? parseInt(inputArr[0]) : parseInt(inputArr[1])
           if (new Date(year, month, day).getMonth() === month) {
-            console.log('looseDate3', inputArr, new Date(year, month, day))
+            // console.log('looseDate3', inputArr, new Date(year, month, day))
             dateChoices.push(new Date(year, month, day))
           }
         }
@@ -262,7 +261,7 @@ export default {
         })
         .map(function (time) { return new Date(time) })
         .filter((date) => {
-          console.log(date.getFullYear())
+          // console.log(date.getFullYear())
           return date.getFullYear() > 1890
         })
       // console.log('dateChoices2', uniqueArray)
@@ -270,19 +269,16 @@ export default {
       if (dateChoices.length > 1) {
         this.cardModal(dateChoices, input)
       } else if (dateChoices.length === 1) {
-        console.log('returning 1 choice')
+        // console.log('returning 1 choice')
         return dateChoices[0]
       } else if (/^\d\d?(?:\/|-|\.)\d\d?$/.test(input) || /^\d\d?\d?\d?(?:\/|-|\.)\d\d?(?:\/|-|\.)\d\d?\d?\d?$/.test(input)) {
-        console.log('returning null')
+        // console.log('returning null')
         return null
       } else {
-        console.log('returning 0 choices')
+        // console.log('returning 0 choices')
         return new Date(Date.parse(input))
       }
     }
-  },
-  mounted () {
-    console.log(this.$refs.dob.focusedDateData.year)
   }
 }
 </script>

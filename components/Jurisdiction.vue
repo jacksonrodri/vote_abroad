@@ -67,7 +67,7 @@ export default {
   async mounted () {
     this.loading = true
     this.leos = (await axios.get(`/leos/${this.state}-leos.json`)).data
-    console.log(this.leos)
+    // console.log(this.leos)
     // this.leos = await (
     //   await import(
     //     /* webpackChunkName: "leodata" */ `@/data/leos/${this.state}-leos.json`

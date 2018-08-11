@@ -46,7 +46,7 @@ export const getters = {
   postalDataForCountry: (state) => (countryCode) => { return countryCode ? state.postal[countryCode.toUpperCase()] : null },
   votingStates: (state, getters) => {
     let usData = getters.postalMetadataHasCountry('US') ? state.postal.US : null
-    console.log('usData', usData)
+    // console.log('usData', usData)
     return usData ? usData.sub_names.split('~').map((state, i) => ({name: state, key: usData.sub_keys.split('~')[i]})) : []
   },
   addressPartRequired: (state, getters) => (countryCode, addressPart) => { return getters.postalDataForCountry(countryCode) ? getters.postalDataForCountry(countryCode).require.includes(addressPart) : false },
@@ -139,7 +139,9 @@ export const getters = {
   },
   getPhoneIntFormat: (state) => (phone, country) => formatNumber({ country, phone }, 'International', state.phoneMetadata),
   isValidNumber: (state, getters) => (phone, country) => {
-    if (phone && phone.length > 2) console.log(getters.phoneMetadataHasCountry(country), getters.phoneMetadataHasAllCountriesForPrefix(phone))
+    if (phone && phone.length > 2) {
+      // console.log(getters.phoneMetadataHasCountry(country), getters.phoneMetadataHasAllCountriesForPrefix(phone))
+    }
     if (phone && phone.length > 7 && (getters.phoneMetadataHasCountry(country) || getters.phoneMetadataHasAllCountriesForPrefix(phone))) return country ? isValidNumber(phone, country, state.phoneMetadata) : isValidNumber(phone, state.phoneMetadata)
     else if (country === 'UN') {
       return false

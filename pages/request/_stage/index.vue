@@ -951,7 +951,7 @@ export default {
           this.$refs.id.$refs.StateId.focus()
           break
         default:
-          console.log('nextPage', nextPage)
+          // console.log('nextPage', nextPage)
           this.$router.push(nextPage)
           // this.$store.dispatch('requests/recordAnalytics', {event: 'completed: ' + this.stage.slug})
           // this.$store.dispatch('requests/updateRequest', {status: 'completed: ' + this.stage.slug})
