@@ -28,10 +28,10 @@
                   v-model="phoneOrEmail">
                 </phone-email> -->
                 <div class="buttons is-right is-marginless">
-                  <button @click="startAuth" :class="['button', 'is-large', 'is-danger', {'is-loading': authenticating}]">{{ $t('homepage.start') }}</button>
+                  <button @click.prevent="startAuth" :class="['button', 'is-large', 'is-danger', {'is-loading': authenticating}]">{{ $t('homepage.start') }}</button>
                 </div>
                 <div class="buttons is-right">
-                  <button @click="anonymousStart" class="button is-text has-text-black is-paddingless" exact ><span>{{ $t('homepage.anonymous') }}</span></button>
+                  <button @click.prevent="anonymousStart" class="button is-text has-text-black is-paddingless" exact ><span>{{ $t('homepage.anonymous') }}</span></button>
                   <span @click="toolTipOpen = !toolTipOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span>
                 </div>
                 <b-message title="What is this?" type="is-info" has-icon :active.sync="toolTipOpen">
@@ -43,7 +43,7 @@
                   <span class="has-text-grey-light">Welcome back, </span><span><strong>{{ name }}!</strong></span>
                 </h1>
                 <div class="buttons is-right">
-                  <button @click="$store.dispatch('userauth/logout')" class="button is-light">
+                  <button @click.prevent="$store.dispatch('userauth/logout')" class="button is-light">
                     <b-icon
                       pack="fas"
                       icon="sign-out-alt"
@@ -116,7 +116,7 @@ export default {
     },
     startAuth: function () {
       if (!this.phoneOrEmail.isValidEmail && !this.phoneOrEmail.isValidPhone) {
-        this.$refs.pe.$refs.emailOrPhone.focus()
+        this.$refs.pe.focusInput()
         return
       }
       this.authenticating = true

@@ -326,9 +326,9 @@ export default {
       })
     }
     if (process.browser) {
-      console.log('process.browser')
+      // console.log('process.browser')
       window.onNuxtReady((app) => {
-        console.log('booting intercom', app)
+        // console.log('booting intercom', app)
         app.$intercom.boot()
         // this.$intercom.show()
       })
