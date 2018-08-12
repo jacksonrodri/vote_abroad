@@ -21,6 +21,10 @@
                   @pressEnter="startAuth"
                   v-model="phoneOrEmail">
                 </phone-input>
+                <phone-five
+                  ref="tel"
+                  key="tel"
+                  fieldName="tel"></phone-five>
                 <!-- <phone-email
                   size="is-medium"
                   ref="pe"
@@ -64,6 +68,8 @@
 <script>
 // import PhoneEmail from '~/components/PhoneEmail.vue'
 import PhoneInput from '~/components/PhoneInput'
+import PhoneFive from '~/components/PhoneFive'
+
 import { mapActions } from 'vuex'
 
 export default {
@@ -75,7 +81,8 @@ export default {
   // },
   components: {
     // PhoneEmail,
-    PhoneInput
+    PhoneInput,
+    PhoneFive
   },
   // mounted () {
   //   if (process.browser) {
