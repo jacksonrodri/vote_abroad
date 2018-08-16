@@ -40,7 +40,9 @@
         :date="date"
         :classification="voterClass"
         :sex="sex"
-        :recBallot="recBallot"></my-box>
+        :recBallot="recBallot"
+        @isLoading="val => isLoading = val"></my-box>
+        <b-loading :is-full-page="false" :active.sync="isLoading" :can-cancel="true"></b-loading>
         <!-- :signature="signature" -->
     </my-canvas>
   </div>
@@ -81,6 +83,7 @@ export default {
   },
   data () {
     return {
+      isLoading: false
       // isSignatureModalActive: false,
       // signature: ''
     }
@@ -149,8 +152,8 @@ export default {
     votState () { return this.getCurrent.votAdr.S },
     votCounty () { return this.getCurrent.votAdr.Y },
     votZip () { return this.getCurrent.votAdr.Z },
-    abrAdr () { return this.currentRequest && this.currentRequest.abrAdr ? this.currentRequest.abrAdr : null },
-    fwdAdr () { return this.currentRequest && this.currentRequest.fwdAdr ? this.currentRequest.fwdAdr : null },
+    abrAdr () { return this.currentRequest && this.currentRequest.abrAdr ? this.currentRequest.abrAdr : {} },
+    fwdAdr () { return this.currentRequest && this.currentRequest.fwdAdr && (this.currentRequest.fwdAdr.A || this.currentRequest.fwdAdr.alt1) ? this.currentRequest.fwdAdr : {} },
     email () { return this.currentRequest && this.currentRequest.email ? this.currentRequest.email.toString() : ' ' },
     altEmail () { return this.currentRequest && this.currentRequest.altEmail ? this.currentRequest.altEmail.toString() : ' ' },
     // tel () { return this.currentRequest && this.currentRequest.tel ? this.currentRequest.tel : ' ' },

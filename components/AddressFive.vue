@@ -8,8 +8,8 @@
       <transition-group name="slide" tag="div" class="field">
         <template v-for="part in formatted">
           <b-field
-            :message="ctry === 'US' ? 'You should only select \'United States\' if you are using a military or diplomatic address (APO/DPO/FPO).' : ''"
-            :type="ctry === 'US' ? 'is-info' : ''"
+            :message="ctry === 'US' && fieldName === 'abrAdr' ? 'You should only select \'United States\' if you are using a military or diplomatic address (APO/DPO/FPO).' : ''"
+            :type="ctry === 'US' && fieldName === 'abrAdr' ? 'is-info' : ''"
             v-if="part.type === 'countryiso'"
             :key="part.type">
             <b-field :type="v.countryiso.$error ? 'is-danger' : ''">
@@ -54,7 +54,7 @@
               @focus="autocompleteFocused = true"
               @blur="autocompleteFocused = false" -->
             <b-select
-              v-else-if="part.options && part.options.length < 5"
+              v-else-if="part.options && part.options.length < 5  && part.options.length > 0"
               :placeholder="part.label"
               :value="adr[part.type] || null"
               @input="val => updateAddress(part.type, val)"
@@ -78,7 +78,7 @@
               @select="option => option ? updateAddress(part.type, option.name) : ''"></b-autocomplete>
             <b-input
               v-else
-              :value="adr[part.type]"
+              :value="adr[part.type] || ''"
               @input="val => updateAddress(part.type, val)"
               :placeholder="part.label"
               :type="part.displayType"
@@ -135,7 +135,7 @@ export default {
   computed: {
     formattedAddress () {
       // return this.countryData && /%A|%B|/.replacethis.countryData.cfmt ? this.countryData.cfmt : ''
-      return this.countryData && this.countryData.cfmt ? this.countryData.cfmt.replace(/%([N|O|A|B|D|C|S|Z|X])/g, (match, p1, offset, string) => this.adr[p1] || '').split(/%n/g).filter(x => x) : ['']
+      return this.countryData && this.countryData.cfmt ? this.countryData.cfmt.replace(/%([N|O|A|B|D|C|S|Z|X])/g, (match, p1, offset, string) => this.adr[p1] || '').split(/%n/g).filter(x => x).concat(this.countryData.name) : ['']
     },
     ctry () { return this.adr && this.adr.countryiso ? this.adr.countryiso : '' },
     usesAlternateFormat () { return this.adr && this.adr.usesAlternateFormat ? this.adr.usesAlternateFormat : false },
@@ -171,7 +171,7 @@ export default {
       } else return []
     },
     adr: {
-      get () { return this.getCurrent[this.fieldName] },
+      get () { return this.getCurrent[this.fieldName] || {} },
       set (val) { this.update({[this.fieldName]: Object.assign({}, this.adr, val, {formatted: this.formattedAddress})}) }
     },
     toolTipTitle () { return this.$te(`request.${this.fieldName}.tooltipTitle`) ? this.$t(`request.${this.fieldName}.tooltipTitle`) : null },
@@ -220,7 +220,7 @@ export default {
       let cleanAdr = !this.countryData || !this.formatted || !this.adr
         ? this.adr
         : Object.entries(this.adr).reduce((obj, [k, v]) => {
-          if (this.formatted.map(({type}) => type).includes(k)) obj[k] = v
+          if (this.countryFields.concat({type: 'usesAlternateFormat'}).map(({type}) => type).includes(k)) obj[k] = v
           return obj
         }, {})
       // console.log('cleanAdr', cleanAdr)

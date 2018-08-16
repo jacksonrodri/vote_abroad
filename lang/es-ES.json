@@ -256,7 +256,7 @@
       "label": "Su número de teléfono actual",
       "placeholder": "por ejemplo {example}",
       "messages": {
-        "invalid": "El número que ha escrito no es un número de teléfono válido.  Por favor, compruébelo y vuelva a intentarlo."
+        "validPhone": "El número que ha escrito no es un número de teléfono válido.  Por favor, compruébelo y vuelva a intentarlo."
       }
     },
     "okRules": {

@@ -130,6 +130,7 @@ collections:
               - {label: "Email Instructions", name: "emailInstructions", widget: "string"}
               - {label: "Email Instructions - Sign", name: "emailSign", widget: "markdown"}
               - {label: "Email Instructions - Capture Signature", name: "emailDigiSign", widget: "markdown"}
+              - {label: "Email Instructions - Upload Signature", name: "emailUploadSignature", widget: "markdown"}
               - {label: "Email Instructions - Download & Sign", name: "emailDownload", widget: "markdown"}
               - {label: "Email Instructions - Send Email", name: "emailSend", widget: "markdown"}
               - {label: "Email Instructions - Confirm", name: "emailConfirm", widget: "markdown"}
@@ -166,6 +167,7 @@ collections:
             name: "sig"
             widget: "object"
             fields:
+              - {label: "Add your sig", name: "title", widget: "string"}
               - {label: "Your must Read and Affirm:", name: "affirmation", widget: "string"}
               - {label: "Agree", name: "agree", widget: "string"}
               - {label: "Disagree", name: "disagree", widget: "string"}
@@ -191,6 +193,7 @@ collections:
               - {label: "Failure Title", name: "failureTitle", widget: "string"}
               - {label: "Failure Message", name: "failureMessage", widget: "string"}
               - {label: "Failure Confirm Text", name: "failureConfirm", widget: "string"}
+              - {label: "Signature Affirmation", name: "signatureAffirmation", widget: "markdown"}
           - label: "First Name"
             name: "firstName"
             widget: "object"
@@ -262,7 +265,7 @@ collections:
                 name: "messages"
                 widget: "object"
                 fields:
-                  - {label: "Invalid Number", name: "invalid", widget: "string"}
+                  - {label: "Invalid Number", name: "validPhone", widget: "string"}
           - label: "Email"
             name: "email"
             widget: "object"
@@ -292,8 +295,12 @@ collections:
                 widget: "object"
                 fields:
                   - {label: "Country Required", name: "country-required", widget: "string"}
-                  - {label: "Street Required", name: "thoroughfare-required", widget: "string"}
-                  - {label: "City Required", name: "locality-required", widget: "string"}
+                  - {label: "Street Required", name: "A-required", widget: "string"}
+                  - {label: "Dependent Locality Required", name: "D-required", widget: "string"}
+                  - {label: "City Required", name: "C-required", widget: "string"}
+                  - {label: "State/Province Required", name: "S-required", widget: "string"}
+                  - {label: "Zip Required", name: "Z-required", widget: "string"}
+                  - {label: "Sorting Code Required", name: "X-required", widget: "string"}
           - label: "Voting Address"
             name: "votAdr"
             widget: "object"
@@ -618,6 +625,9 @@ collections:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Subtitle", name: "subtitle", widget: "string"}
           - {label: "Todo", name: "todo", widget: "string"}
+          - {label: "Ballot Request Status", name: "ballotRequestStatus", widget: "string"}
+          - {label: "Next Steps...", name: "nextSteps", widget: "string"}
+          - {label: "thankYou", name: "thankYou", widget: "markdown"}
           - label: "Fill & Sign Request Stage"
             name: "fill"
             widget: "object"

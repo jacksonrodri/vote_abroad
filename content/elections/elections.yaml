@@ -449,8 +449,8 @@
         Registration:
             - {voterType: {}, rule: 'Not Required', date: '2018-10-07T00:00:00'}
         'Ballot Request':
-            - {voterType: 'Overseas Citizens', rule: 'Signed by*', date: '2018-10-07T00:00:00'}
-            - {voterType: 'Uniformed Services and eligible family members', rule: 'Signed by', date: '2018-10-27T00:00:00'}
+            - {voterType: 'Overseas Citizens', rule: 'Signed by*', date: '2018-10-09T00:00:00'}
+            - {voterType: 'Uniformed Services and eligible family members', rule: 'Signed by', date: '2018-10-29T00:00:00'}
         'Ballot Return':
             - {voterType: {}, rule: 'Signed/Postmarked by**', date: '2018-11-06T00:00:00'}
 -

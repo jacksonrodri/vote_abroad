@@ -193,9 +193,11 @@ const placesDetails = async function (option) {
 }
 
 function decodeHtmlEntity (str) {
-  return str.replace(/&#(\d+);/g, function (match, dec) {
-    return String.fromCharCode(dec)
-  })
+  return typeof str === 'string'
+    ? str.replace(/&#(\d+);/g, function (match, dec) {
+      return String.fromCharCode(dec)
+    })
+    : str
 }
 
 function latinize (str) {

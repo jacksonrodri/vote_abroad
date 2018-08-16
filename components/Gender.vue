@@ -25,7 +25,7 @@
           </span>
         </a>
       </p>
-      <p class="control">
+      <p class="control" v-if="state !== 'ID'">
         <a @click="() => value === 'decline' ? setVal(null) : setVal('decline')" :class="[baseClass, {'is-success': value === 'decline'}]">
           <span v-show="value === 'decline'" class="icon is-small">
             <i class="fas fa-check"></i>
@@ -49,6 +49,7 @@ export default {
   props: [
     'label',
     'value',
+    'state',
     'tooltipTitle',
     'validations'
   ],

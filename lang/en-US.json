@@ -59,7 +59,7 @@
       "instructions": "Type to find your local election official (county, city, town...)",
       "placeholder": "Click to find your voting jurisdiction",
       "tooltipTitle": "What is a voting jurisdiction?",
-      "tooltip": "All ballots are sent from your local election official in your town, city or county.  You must select the correct election official to receive a ballot.  (to be updated)",
+      "tooltip": "All ballots are sent from your local election official in your town, city or county.  You must select the correct election official to receive a ballot.",
       "messages": {
         "required": "You must select your local election official. "
       }
@@ -174,6 +174,7 @@
       "civilianType": "Civilian"
     },
     "sig": {
+      "title": "Add your scanned signature.",
       "selectInstructions": "Select the signature below that is the clearest.  Choose the version that has a white background with a completely visible signature.",
       "attachment": "Attachment",
       "successMessage": "Sent! Check your inbox for a copy.",
@@ -197,7 +198,8 @@
       "save": "Save",
       "failureMessage": "There was an error sending your {message}. Please try again or return to the last page and download a copy.",
       "disagree": "Disagree",
-      "rtcConfirm": "Allow access to my webcam"
+      "rtcConfirm": "Allow access to my webcam",
+      "signatureAffirmation": "### I swear or affirm, under penalty of perjury that: \n- The information on this form is true, accurate, and complete to the best of my knowledge. I understand that a material misstatement of fact in completion of this document may constitute grounds for conviction of perjury. \n- I am a U.S. citizen, at least 18 years of age (or will be by the day of the election), eligible to vote in the requested jurisdiction, and \n- I am not disqualified to vote due to having been convicted of a felony or other disqualifying offense, nor have I been adjudicated mentally incompetent; or if so, my voting rights have been reinstated; and \n- I am not registering, requesting a ballot, or voting in any other jurisdiction in the United States, except the jurisdiction cited in this voting form. "
     },
     "suffix": {
       "label": "Suffix",
@@ -206,7 +208,10 @@
       }
     },
     "altEmail": {
-      "label": "If you have a second email address, add it here to ensure ballot delivery."
+      "label": "If you have a second email address, add it here to ensure ballot delivery.",
+      "messages": {
+        "email": "That email address is invalid.  Please try again."
+      }
     },
     "votAdr": {
       "Z": "Zip",
@@ -252,7 +257,8 @@
       "tooltip": "Only Puerto Rico voters need to answer this question as per territory law."
     },
     "stages": {
-      "emailDigiSign": "**If you have a camera** on this <span class='is-hidden-touch'>computer</span><span class='is-hidden-desktop is-hidden-mobile'>tablet</span><span class='is-hidden-tablet'>phone</span>, you can capture your signature or upload an image and email your form straight from this website.",
+      "emailDigiSign": "**Capture your signature** with your device camera or **upload** a scan of your signature and email your form straight from this website.",
+      "emailUploadSignature": "**Upload a scan of your signature** and email your form straight from this website",
       "faxDigiSign": "**If you have a camera** on this <span class='is-hidden-touch'>computer</span><span class='is-hidden-desktop is-hidden-mobile'>tablet</span><span class='is-hidden-tablet'>phone</span>, you can capture your signature and fax your form straight from this website.",
       "faxConfirm": "Confirm with your local election official that they received it.",
       "emailDownload": "**If you don't have a camera** on this <span class='is-hidden-touch'>computer</span><span class='is-hidden-desktop is-hidden-mobile'>tablet</span><span class='is-hidden-tablet'>phone</span>, you will need to download your form, print, sign, date and scan it.",
@@ -313,7 +319,7 @@
       "label": "Your current phone number",
       "placeholder": "e.g. {example}",
       "messages": {
-        "invalid": "The number you typed is not a valid phone number.  Please check it and try again."
+        "validPhone": "The number you typed is not a valid phone number.  Please check it and try again."
       }
     },
     "okRules": {
@@ -341,8 +347,8 @@
       "noid2": "I don't have the above identification",
       "tooltipReq1": "{state} voters must provide a {id}. \n\n\n\nIf you can't find your {id}, you can look (suggestions)\n\n \\*\\*'I don't have a {id}.'\\*\\*",
       "tooltipReq2": "**_ONE_** of the following forms of identification is required for {state} voters:\n\n {allButLastTypes} or {lastType}. \n\nIf you don't have any of these, please select **'I don't have the above identification.'**",
-      "instructionsReq1": "{state} voters must provide the following ID: {id}  If you don't have a {idType}, please select **I don't have a {idType}.**",
-      "instructionsReq2": "{state} voters must provide **ONE** of the following forms of identification: {allButLastTypes} or {lastType}. If you don't have any of these, please select **'I don't have the above identification.'**",
+      "instructionsReq1": "{state} voters must provide the following ID: {id}.  If you don't have a {idType}, please select **I don't have a {idType}.**",
+      "instructionsReq2": "{state} voters must provide **ONE** of the following forms of identification: {allButLastTypes}, or your {lastType}. If you don't have any of these, please select **'I don't have the above identification.'**",
       "PassportNumber": "Passport Number",
       "TribalID": "Tribal ID",
       "NYDMVID": "NY DMV Issued ID"
@@ -389,8 +395,12 @@
       "changeFormat": "Change Format",
       "messages": {
         "country-required": "You must provide your country of residence. (Outside the United States)",
-        "thoroughfare-required": "You must provide your street address",
-        "locality-required": "City is required"
+        "A-required": "You must provide your {label}",
+        "C-required": "{label} is required",
+        "D-required": "{label} is required",
+        "S-required": "{label} is required",
+        "Z-required": "{label} is required",
+        "X-required": "{label} is required"
       },
       "unstructured-label": "I need to use a different format for my address.",
       "placeholder": "Country",
@@ -400,6 +410,9 @@
     }
   },
   "dashboard": {
+    "ballotRequestStatus": "Ballot Request Status",
+    "nextSteps": "Next Steps...",
+    "thankYou": "Thank you for using VoteFromAbroad to generate your Voter Registration/Ballot Request form. **Be sure to submit your form** to your Local Election Official before the deadline.",
     "fill": {
       "title": "Fill & Sign",
       "icon": "edit",

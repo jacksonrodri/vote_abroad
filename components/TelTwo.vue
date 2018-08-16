@@ -35,7 +35,7 @@
           :autocomplete="autoComplete"
           v-format="formatFunctions"
           :maxlength="maxLength"
-          @input="$emit('delayTouch', v)"
+          @input="$emit('delayTouch')"
           :ref="fieldName">
       </transition-group>
     </b-field>

@@ -3,7 +3,7 @@ state: Hawaii
 iso: HI
 allowsNeverResided: true
 id:
-  - SSN
+  - SSN4
   - StateID
 partyPrimary: true
 ballotReceiptOptions:

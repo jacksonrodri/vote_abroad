@@ -16,7 +16,7 @@ Most states also provide a website where you can check to verify your voter stat
 
 After Sept 22, add: 
 
-If you are concerned you may not receive your ballot in time to meet the deadline to return your voted ballot, you can vote now using the Federal Write-In Absentee Ballot (FWAB). Submitting a back-up ballot can be confusing, so we’ve set up a website with the steps the voters will need to follow:  www.democratsabroad.org/fwab [For states that require mail in only, you can use: www.democratsabroad.org/fwab_mail]
+If you are concerned you may not receive your ballot in time to meet the deadline to return your voted ballot, you can vote now using the Federal Write-In Absentee Ballot (FWAB). Submitting a back-up ballot can be confusing, so we’ve set up a website with the steps the voters will need to follow:  www.votefromabroad.org/fwab [For states that require mail in only, you can use: www.votefromabroad.org/fwab_mail]
 
 The FWAB is a ballot, so please follow the instructions carefully and be sure to keep an eye on the deadlines. The deadline information for your state will be in the Instructions that print out with your completed FWAB. Please be sure to allow enough time for mailing (or contacting the US Embassy or Consulate for placing in the diplomatic pouch).
 

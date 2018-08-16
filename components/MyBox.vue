@@ -389,6 +389,7 @@ export default {
   render () {
     // Since the parent canvas has to mount first, it's *possible* that the context may not be
     // injected by the time this render function runs the first time.
+    this.$emit('isLoading', true)
     if (!this.provider.context) return
     const ctx = this.provider.context
 
@@ -502,6 +503,7 @@ export default {
       ctx.fillText(this.isUncertainReturn, this.calculated.isUncertainReturn.x, this.calculated.isUncertainReturn.y)
       ctx.fillText(this.isNeverResided, this.calculated.isNeverResided.x, this.calculated.isNeverResided.y)
     }
+    this.$emit('isLoading', false)
   }
 }
 </script>

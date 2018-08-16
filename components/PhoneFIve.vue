@@ -1,8 +1,9 @@
 <template>
   <div class="field">
-    <basic-label :fieldName="fieldName" @toggleInfo="toggleInfo"></basic-label>
+    <!-- <basic-label :fieldName="fieldName" @toggleInfo="toggleInfo"></basic-label> -->
     <b-field
       :type="fieldType"
+      :label="$t('request.phoneOrEmail.label')"
       :message="fieldMessages">
       <transition-group name="slide" tag="div" @after-enter="selectField" class="field has-addons">
         <p class="control" key="flag" v-if="!countryFocused && !mustBeEmail">
@@ -45,7 +46,7 @@
           :class="[requiredClass, 'input', 'is-expanded']"
           :autocomplete="''"
           v-format="formatFunctions"
-          @input="$emit('delayTouch', v)"
+          @input="$emit('delayTouch', v); $emit('input', fieldValue)"
           :ref="fieldName">
       </transition-group>
     </b-field>
@@ -107,8 +108,8 @@ const DIGITS =
 }
 
 export default {
-  name: 'Tel',
-  props: ['v'],
+  name: 'PhoneOrEmail',
+  props: ['v', 'fieldName'],
   components: {
     CountrySelector,
     BasicLabel
@@ -133,7 +134,7 @@ export default {
       return this.v && this.v.$error ? 'is-danger' : ''
     },
     fieldMessages () { return this.v && this.v.$error ? Object.entries(this.v).filter(([key, value]) => key.charAt(0) !== '$' && value === false).map(x => this.$t(`request.${this.fieldName}.messages.${x[0]}`)) : '' },
-    toolTipTitle () { return this.$te(`request.${this.fieldName}.tooltipTitle`) ? this.$t(`request.${this.fieldName}.tooltipTitle`) : null },
+    tooltipTitle () { return this.$te(`request.${this.fieldName}.tooltipTitle`) ? this.$t(`request.${this.fieldName}.tooltipTitle`) : null },
     toolTipContent () { return this.$te(`request.${this.fieldName}.tooltip`) ? snarkdown(this.$t(`request.${this.fieldName}.tooltip`)) : null },
     mustBeEmail () {
       return this.fieldValue &&
@@ -196,6 +197,7 @@ export default {
       this.fieldValue = this.exPhone ? this.exPhone.split(' ')[0] : ''
       this.selectField()
     },
+    toggleInfo () { this.isInfoOpen = !this.isInfoOpen },
     ...mapActions('data', ['updateCountryData', 'getCountryIsoFromPhonePrefix'])
   },
   directives: {
@@ -203,7 +205,7 @@ export default {
       let format = binding.value.format
       let parse = binding.value.parse
       const input = el instanceof HTMLInputElement ? el : el.querySelector('input')
-      const onChangeHandler = () => { vnode.context.$emit('newVal', input.value) }
+      const onChangeHandler = () => { vnode.context.$emit('input', input.value) }
       input.onchange = (event) => onChange(event, input, parse, format, onChangeHandler)
       input.oncut = (event) => onCut(event, input, parse, format, onChangeHandler)
       input.onpaste = (event) => onPaste(event, input, parse, format, onChangeHandler)
@@ -222,6 +224,7 @@ export default {
       if (!this.countryIso) {
         this.countryIso = (this.formattedNumber(this.fieldValue)).formatted.country
       }
+      this.$emit('input', val)
     }
   },
   mounted () {

@@ -4,7 +4,7 @@
   <b-field
     v-if="typeof fieldValue === 'string' || fieldValue === null || fieldValue === undefined"
     :type="fieldType"
-    :messages="fieldMessages">
+    :message="fieldMessages">
     <!-- :message="v.$error ? Object.entries(v).filter(([key, value]) => key.charAt(0) !== '$' && value === false).map(x => $t(`request.${fieldName}.messages.${x[0]}`)) : '' "> -->
     <b-field
       :type="fieldType">

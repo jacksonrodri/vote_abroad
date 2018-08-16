@@ -21,7 +21,10 @@ const I18N = {
   loadLanguagesAsync: true,
   langDir: 'lang/',
   defaultLocale: 'en',
-  seo: false,
+  seo: true,
+  detectBrowserLanguage: true,
+  redirectCookieKey: 'redirected',
+  useRedirectCookie: true,
   // routes: require('./routes.js'),
   vueI18n: {
     messages: {
