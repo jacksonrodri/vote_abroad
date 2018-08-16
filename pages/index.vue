@@ -70,7 +70,7 @@
 
 <script>
 // import PhoneEmail from '~/components/PhoneEmail.vue'
-import PhoneInput from '~/components/PhoneInput'
+// import PhoneInput from '~/components/PhoneInput'
 import PhoneFive from '~/components/PhoneFive'
 
 import { mapActions, mapGetters, mapMutations } from 'vuex'
@@ -85,7 +85,7 @@ export default {
   // },
   components: {
     // PhoneEmail,
-    PhoneInput,
+    // PhoneInput,
     PhoneFive
   },
   // mounted () {
