@@ -115,6 +115,7 @@ export default {
   props: [
     'label',
     'value',
+    'state',
     'toolTipTitle',
     'allowsNeverResided',
     'validations'
@@ -151,6 +152,15 @@ export default {
     isIntendToReturn: function () { return this.value === 'intendToReturn' },
     isNeverResided: function () {
       return this.allowsNeverResided ? this.value === 'neverResided' : ''
+    }
+  },
+  watch: {
+    value: function (newVal, oldVal) {
+      if (this.state && this.state === 'VA' && newVal && newVal !== 'uncertainReturn') {
+        this.$store.commit('requests/update', {
+          stateSpecial: null
+        })
+      }
     }
   }
 }

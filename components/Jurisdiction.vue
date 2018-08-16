@@ -67,7 +67,7 @@ export default {
   async mounted () {
     this.loading = true
     this.leos = (await axios.get(`/leos/${this.state}-leos.json`)).data
-    console.log(this.leos)
+    // console.log(this.leos)
     // this.leos = await (
     //   await import(
     //     /* webpackChunkName: "leodata" */ `@/data/leos/${this.state}-leos.json`
@@ -110,26 +110,26 @@ export default {
           case 'all':
             break
           case 'village':
-            if (this.votAdr.locality && (x.n.toLowerCase().indexOf(this.votAdr.locality.toLowerCase().replace('village', '').trim()) > -1 || x.j.toLowerCase().indexOf(this.votAdr.locality.toLowerCase().replace('village', '').trim()) > -1)) {
+            if (this.votAdr.C && (x.n.toLowerCase().indexOf(this.votAdr.C.toLowerCase().replace('village', '').trim()) > -1 || x.j.toLowerCase().indexOf(this.votAdr.C.toLowerCase().replace('village', '').trim()) > -1)) {
               villageLeos.push(x)
             }
             break
           case 'town':
           case 'township':
-            if (this.votAdr.locality && (x.n.toLowerCase().indexOf(this.votAdr.locality.toLowerCase().replace('township', '').replace('town', '').trim()) > -1 || x.j.toLowerCase().indexOf(this.votAdr.locality.toLowerCase().replace('township', '').replace('town', '').trim()) > -1)) {
+            if (this.votAdr.C && (x.n.toLowerCase().indexOf(this.votAdr.C.toLowerCase().replace('township', '').replace('town', '').trim()) > -1 || x.j.toLowerCase().indexOf(this.votAdr.C.toLowerCase().replace('township', '').replace('town', '').trim()) > -1)) {
               townLeos.push(x)
             }
             break
           case 'parish':
           case 'borough':
           case 'city':
-            if (this.votAdr.locality && (x.n.toLowerCase().indexOf(this.votAdr.locality.toLowerCase().replace('parish', '').replace('borough', '').replace('city', '').trim()) > -1 || x.j.toLowerCase().indexOf(this.votAdr.locality.toLowerCase().replace('parish', '').replace('borough', '').replace('city', '').trim()) > -1)) {
+            if (this.votAdr.C && (x.n.toLowerCase().indexOf(this.votAdr.C.toLowerCase().replace('parish', '').replace('borough', '').replace('city', '').trim()) > -1 || x.j.toLowerCase().indexOf(this.votAdr.C.toLowerCase().replace('parish', '').replace('borough', '').replace('city', '').trim()) > -1)) {
               cityLeos.push(x)
             }
             break
           case 'county':
           case 'island':
-            if (this.votAdr.county && (x.n.toLowerCase().indexOf(this.votAdr.county.toLowerCase().replace('county', '').replace('island', '').trim()) > -1 || x.j.toLowerCase().indexOf(this.votAdr.county.toLowerCase().replace('county', '').replace('island', '').trim()) > -1)) {
+            if (this.votAdr.Y && (x.n.toLowerCase().indexOf(this.votAdr.Y.toLowerCase().replace('county', '').replace('island', '').trim()) > -1 || x.j.toLowerCase().indexOf(this.votAdr.Y.toLowerCase().replace('county', '').replace('island', '').trim()) > -1)) {
               countyLeos.push(x)
             }
             break
@@ -141,8 +141,8 @@ export default {
       //   switch (x.toLowerCase()) {
       //     case 'county':
       //     case 'island':
-      //       if (this.votAdr.county) {
-      //         arr.push(this.leos.filter(x => x.n.indexOf(this.votAdr.county) > -1))
+      //       if (this.votAdr.Y) {
+      //         arr.push(this.leos.filter(x => x.n.indexOf(this.votAdr.Y) > -1))
       //       }
       //       break
       //     case 'town':
@@ -151,8 +151,8 @@ export default {
       //     case 'parish':
       //     case 'township':
       //     case 'borough':
-      //       if (this.votAdr.locality) {
-      //         arr.unshift(this.leos.filter(x => x.n.indexOf(this.votAdr.locality) > -1)[0])
+      //       if (this.votAdr.C) {
+      //         arr.unshift(this.leos.filter(x => x.n.indexOf(this.votAdr.C) > -1)[0])
       //       }
       //       break
       //     default:
@@ -164,8 +164,8 @@ export default {
     },
     prioritizedLeos () {
       return [].concat(this.myLeos, this.leos)
-      // if (this.votAdr.county) {
-      //   let county = this.votAdr.county.toLowerCase().replace('county', '').trim()
+      // if (this.votAdr.Y) {
+      //   let county = this.votAdr.Y.toLowerCase().replace('county', '').trim()
       //   return this.leos.slice()
       //     .sort((a, b) => a.n - b.n)
       //     .sort((a, b) => {

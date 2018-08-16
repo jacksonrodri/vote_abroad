@@ -123,7 +123,7 @@ export default {
     currentRequest () { return this.requests[this.currentRequestIndex] },
     firstName () { return this.currentRequest && this.currentRequest.firstName ? this.currentRequest.firstName : ' ' },
     lastName () { return this.currentRequest && this.currentRequest.lastName ? this.currentRequest.lastName : ' ' },
-    email () { return this.currentRequest && this.currentRequest.email ? this.currentRequest.email.toString() : ' ' },
+    email () { return this.currentRequest && this.currentRequest.email ? this.currentRequest.email.toString() : '' },
     tel () { return this.currentRequest && this.currentRequest.tel && this.currentRequest.tel.intNumber ? this.currentRequest.tel.intNumber : '' },
     leoEmail () {
       return this.currentRequest.leo && this.currentRequest.leo.e ? this.currentRequest.leo.e : ''
@@ -174,9 +174,9 @@ export default {
           hasIcon: true,
           onConfirm: () => { this.sendWithoutDocs = true; this.sendEmail() }
         })
-      } else if (!(this.email.trim()) || !/(^$|^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$)/.test(this.customEmail)) {
+      } else if (!(this.formEmail.trim()) || !/(^$|^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$)/.test(this.customEmail)) {
         this.$refs.userEmail.checkHtml5Validity()
-        console.log('email', this.email.trim(), 'validity', /(^$|^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$)/.test(this.customEmail))
+        console.log('email', this.formEmail.trim(), 'validity', /(^$|^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$)/.test(this.customEmail))
         console.log(this.$refs.userEmail)
       } else {
         this.isMailing = true
@@ -196,7 +196,7 @@ export default {
               message: `Sent! Check your inbox for a copy (${this.formEmail})`,
               type: 'is-success'
             })
-            this.$router.push('/dashboard')
+            this.$router.push('dashboard')
           })
           .catch(error => {
             console.log(error)
@@ -216,8 +216,8 @@ export default {
   },
   mounted () {
     this.subject = 'FPCA Submission'
-    this.message = `Please find my FPCA form for the 2018 calendar year. Can you confirm receipt and also confirm that I do not need to send in the paper copy? \n\nThank you so much for everything you do - your work is much appreciated by Americans abroad! \n\n Sincerely, \n\n${this.firstName} ${this.lastName} \n\n${this.formEmail} \n\n${this.tel}`
-    this.htmlMessage = `Please find my FPCA form for the 2018 calendar year. Can you confirm receipt and also confirm that I do not need to send in the paper copy? \n\nThank you so much for everything you do - your work is much appreciated by Americans abroad! <br/><br/> Sincerely, <br/><br/>${this.firstName} ${this.lastName} <br/><br/>${this.formEmail} <br/><br/>${this.tel}`
+    this.message = `Please find my FPCA form for the 2018 calendar year. Can you confirm receipt and also confirm that I do not need to send in the paper copy? \n\nThank you so much for everything you do. Your work is much appreciated by Americans abroad! \n\n Sincerely, \n\n${this.firstName} ${this.lastName} \n\n${this.formEmail} \n\n${this.tel}`
+    this.htmlMessage = `Please find my FPCA form for the 2018 calendar year. Can you confirm receipt and also confirm that I do not need to send in the paper copy? \n\nThank you so much for everything you do. Your work is much appreciated by Americans abroad! <br/><br/> Sincerely, <br/><br/>${this.firstName} ${this.lastName} <br/><br/>${this.formEmail} <br/><br/>${this.tel}`
   }
 }
 </script>

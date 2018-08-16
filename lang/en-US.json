@@ -31,6 +31,16 @@
     "upcomingElections": "Upcoming Elections"
   },
   "request": {
+    "phoneOrEmail": {
+      "label": "Type your email address or mobile phone number to get started.",
+      "instructions": "Type to find your local election official (county, city, town...)",
+      "placeholder": "tel or email",
+      "tooltipTitle": "What is this?",
+      "tooltip": "Your email or number will create an account for you to use to easily sign in to votefromabroad and save your information from year to year. An anonymous session allows you to create an FPCA form and send it to your local election office, but will not save your information for you to return to in the future.",
+      "messages": {
+        "required": "You must enter a phone number or email address "
+      }
+    },
     "middleName": {
       "label": "Middle Name(s)",
       "messages": {
@@ -49,7 +59,7 @@
       "instructions": "Type to find your local election official (county, city, town...)",
       "placeholder": "Click to find your voting jurisdiction",
       "tooltipTitle": "What is a voting jurisdiction?",
-      "tooltip": "All ballots are sent from your local election official in your town, city or county.  You must select the correct election official to receive a ballot.  (to be updated)",
+      "tooltip": "All ballots are sent from your local election official in your town, city or county.  You must select the correct election official to receive a ballot.",
       "messages": {
         "required": "You must select your local election official. "
       }
@@ -164,6 +174,7 @@
       "civilianType": "Civilian"
     },
     "sig": {
+      "title": "Add your scanned signature.",
       "selectInstructions": "Select the signature below that is the clearest.  Choose the version that has a white background with a completely visible signature.",
       "attachment": "Attachment",
       "successMessage": "Sent! Check your inbox for a copy.",
@@ -187,7 +198,8 @@
       "save": "Save",
       "failureMessage": "There was an error sending your {message}. Please try again or return to the last page and download a copy.",
       "disagree": "Disagree",
-      "rtcConfirm": "Allow access to my webcam"
+      "rtcConfirm": "Allow access to my webcam",
+      "signatureAffirmation": "### I swear or affirm, under penalty of perjury that: \n- The information on this form is true, accurate, and complete to the best of my knowledge. I understand that a material misstatement of fact in completion of this document may constitute grounds for conviction of perjury. \n- I am a U.S. citizen, at least 18 years of age (or will be by the day of the election), eligible to vote in the requested jurisdiction, and \n- I am not disqualified to vote due to having been convicted of a felony or other disqualifying offense, nor have I been adjudicated mentally incompetent; or if so, my voting rights have been reinstated; and \n- I am not registering, requesting a ballot, or voting in any other jurisdiction in the United States, except the jurisdiction cited in this voting form. "
     },
     "suffix": {
       "label": "Suffix",
@@ -196,24 +208,27 @@
       }
     },
     "altEmail": {
-      "label": "If you have a second email address, add it here to ensure ballot delivery."
+      "label": "If you have a second email address, add it here to ensure ballot delivery.",
+      "messages": {
+        "email": "That email address is invalid.  Please try again."
+      }
     },
     "votAdr": {
-      "zip": "Zip",
-      "street": "Street",
+      "Z": "Zip",
+      "A": "Street",
       "tooltip": "If you are unsure, use the **residence address** of the last place you lived in the US. If you have never resided in the US, use the residence address of the last place your US parent(s) lived in the US. If your US parents last lived in the US in different locations, you may choose which one to use as your voting address.",
       "instructions": "Your voting address is _usually_ the last place you lived in the US. If you have never lived in the US, use the last US address of your US citizen parent(s). (Do not enter a PO Box.)",
-      "apt": "Apartment #",
-      "county": "County",
-      "city": "City",
+      "B": "Apartment #",
+      "Y": "County",
+      "C": "City",
       "messages": {
-        "street-required": "Street address is required",
-        "city-required": "City is required",
-        "state-required": "State is required",
-        "zip-required": "Zip is required",
-        "zip-usZip": "Enter a valid US Zip Code (e.g. 95014 or 22162-1010)"
+        "A-required": "Street address is required",
+        "C-required": "City is required",
+        "S-required": "State is required",
+        "Z-required": "Zip is required",
+        "Z-usZip": "Enter a valid US Zip Code (e.g. 95014 or 22162-1010)"
       },
-      "state": "State",
+      "S": "State",
       "label": "Voting Address",
       "tooltipTitle": "Your last US Address..."
     },
@@ -242,7 +257,8 @@
       "tooltip": "Only Puerto Rico voters need to answer this question as per territory law."
     },
     "stages": {
-      "emailDigiSign": "**If you have a camera** on this <span class='is-hidden-touch'>computer</span><span class='is-hidden-desktop is-hidden-mobile'>tablet</span><span class='is-hidden-tablet'>phone</span>, you can capture your signature or upload an image and email your form straight from this website.",
+      "emailDigiSign": "**Capture your signature** with your device camera or **upload** a scan of your signature and email your form straight from this website.",
+      "emailUploadSignature": "**Upload a scan of your signature** and email your form straight from this website",
       "faxDigiSign": "**If you have a camera** on this <span class='is-hidden-touch'>computer</span><span class='is-hidden-desktop is-hidden-mobile'>tablet</span><span class='is-hidden-tablet'>phone</span>, you can capture your signature and fax your form straight from this website.",
       "faxConfirm": "Confirm with your local election official that they received it.",
       "emailDownload": "**If you don't have a camera** on this <span class='is-hidden-touch'>computer</span><span class='is-hidden-desktop is-hidden-mobile'>tablet</span><span class='is-hidden-tablet'>phone</span>, you will need to download your form, print, sign, date and scan it.",
@@ -303,7 +319,7 @@
       "label": "Your current phone number",
       "placeholder": "e.g. {example}",
       "messages": {
-        "invalid": "The number you typed is not a valid phone number.  Please check it and try again."
+        "validPhone": "The number you typed is not a valid phone number.  Please check it and try again."
       }
     },
     "okRules": {
@@ -331,8 +347,8 @@
       "noid2": "I don't have the above identification",
       "tooltipReq1": "{state} voters must provide a {id}. \n\n\n\nIf you can't find your {id}, you can look (suggestions)\n\n \\*\\*'I don't have a {id}.'\\*\\*",
       "tooltipReq2": "**_ONE_** of the following forms of identification is required for {state} voters:\n\n {allButLastTypes} or {lastType}. \n\nIf you don't have any of these, please select **'I don't have the above identification.'**",
-      "instructionsReq1": "{state} voters must provide the following ID: {id}  If you don't have a {idType}, please select **I don't have a {idType}.**",
-      "instructionsReq2": "{state} voters must provide **ONE** of the following forms of identification: {allButLastTypes} or {lastType}. If you don't have any of these, please select **'I don't have the above identification.'**",
+      "instructionsReq1": "{state} voters must provide the following ID: {id}.  If you don't have a {idType}, please select **I don't have a {idType}.**",
+      "instructionsReq2": "{state} voters must provide **ONE** of the following forms of identification: {allButLastTypes}, or your {lastType}. If you don't have any of these, please select **'I don't have the above identification.'**",
       "PassportNumber": "Passport Number",
       "TribalID": "Tribal ID",
       "NYDMVID": "NY DMV Issued ID"
@@ -362,7 +378,11 @@
       }
     },
     "fax": {
-      "label": "Enter the fax number you would like your ballot sent to."
+      "label": "Enter your fax number if you would like to receive your ballot by fax.",
+      "messages": {
+        "required": "Your must include a fax number if you choose to receive your ballot by fax.",
+        "invalid": "The number you typed is not a valid phone number.  Please check it and try again."
+      }
     },
     "azRules": {
       "label": "What proof will you provide? (You must also attach a photocopy with your submission)",
@@ -375,8 +395,12 @@
       "changeFormat": "Change Format",
       "messages": {
         "country-required": "You must provide your country of residence. (Outside the United States)",
-        "thoroughfare-required": "You must provide your street address",
-        "locality-required": "City is required"
+        "A-required": "You must provide your {label}",
+        "C-required": "{label} is required",
+        "D-required": "{label} is required",
+        "S-required": "{label} is required",
+        "Z-required": "{label} is required",
+        "X-required": "{label} is required"
       },
       "unstructured-label": "I need to use a different format for my address.",
       "placeholder": "Country",
@@ -386,6 +410,9 @@
     }
   },
   "dashboard": {
+    "ballotRequestStatus": "Ballot Request Status",
+    "nextSteps": "Next Steps...",
+    "thankYou": "Thank you for using VoteFromAbroad to generate your Voter Registration/Ballot Request form. **Be sure to submit your form** to your Local Election Official before the deadline.",
     "fill": {
       "title": "Fill & Sign",
       "icon": "edit",

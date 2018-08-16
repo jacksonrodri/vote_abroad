@@ -9,6 +9,7 @@ partyPrimary: true
 ballotReceiptOptions:
   - Email
   - Mail
+  - Fax
 fpcaSubmitOptionsRegister:
   - Mail
 fpcaSubmitOptionsRequest:

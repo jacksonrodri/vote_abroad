@@ -13,14 +13,21 @@
                   {{ $t('homepage.subtitle') }}
                 </h2>
                 <!-- <span class="is-flex"><label class="label">{{ $t('homepage.loginInstructions') }}</label><span @click="toolTipOpen = !toolTipOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span> -->
-                <phone-input ref="pe"
+                <!-- <phone-input ref="pe"
                   key="pe"
                   :label="$t('homepage.loginInstructions')"
                   :accepts="['phone', 'email']"
                   @input="val => $store.commit('userauth/updateUser', {emailAddress: val.isValidEmail ? val.rawInput : '', mobileIntFormat: val.intNumber})"
                   @pressEnter="startAuth"
                   v-model="phoneOrEmail">
-                </phone-input>
+                </phone-input> -->
+                <phone-email-input
+                  ref="phoneOrEmail"
+                  key="phoneOrEmail"
+                  fieldName="phoneOrEmail"
+                  v-model="phoneOrEmail"
+                  :v="$v.phoneOrEmail"
+                  @delayTouch="delayTouch($v.phoneOrEmail)"></phone-email-input>
                 <!-- <phone-email
                   size="is-medium"
                   ref="pe"
@@ -28,10 +35,10 @@
                   v-model="phoneOrEmail">
                 </phone-email> -->
                 <div class="buttons is-right is-marginless">
-                  <button @click="startAuth" :class="['button', 'is-large', 'is-danger', {'is-loading': authenticating}]">{{ $t('homepage.start') }}</button>
+                  <button @click.prevent="startAuth" :class="['button', 'is-large', 'is-danger', {'is-loading': authenticating}]">{{ $t('homepage.start') }}</button>
                 </div>
                 <div class="buttons is-right">
-                  <button @click="anonymousStart" class="button is-text has-text-black is-paddingless" exact ><span>{{ $t('homepage.anonymous') }}</span></button>
+                  <button @click.prevent="anonymousStart" class="button is-text has-text-black is-paddingless" exact ><span>{{ $t('homepage.anonymous') }}</span></button>
                   <span @click="toolTipOpen = !toolTipOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span>
                 </div>
                 <b-message title="What is this?" type="is-info" has-icon :active.sync="toolTipOpen">
@@ -43,7 +50,7 @@
                   <span class="has-text-grey-light">Welcome back, </span><span><strong>{{ name }}!</strong></span>
                 </h1>
                 <div class="buttons is-right">
-                  <button @click="$store.dispatch('userauth/logout')" class="button is-light">
+                  <button @click.prevent="$store.dispatch('userauth/logout')" class="button is-light">
                     <b-icon
                       pack="fas"
                       icon="sign-out-alt"
@@ -63,8 +70,12 @@
 
 <script>
 // import PhoneEmail from '~/components/PhoneEmail.vue'
-import PhoneInput from '~/components/PhoneInput'
-import { mapActions } from 'vuex'
+// import PhoneInput from '~/components/PhoneInput'
+import PhoneEmailInput from '~/components/PhoneEmailInput'
+// import PhoneFive from '~/components/PhoneFive'
+
+import { mapActions, mapGetters, mapMutations } from 'vuex'
+const touchMap = new WeakMap()
 
 export default {
   layout: 'default',
@@ -75,7 +86,8 @@ export default {
   // },
   components: {
     // PhoneEmail,
-    PhoneInput
+    // PhoneInput,
+    PhoneEmailInput
   },
   // mounted () {
   //   if (process.browser) {
@@ -103,7 +115,8 @@ export default {
     isAuthenticated: function () { return this.$store.getters['userauth/isAuthenticated'] },
     user () { return this.$store.state.userauth.user },
     requests () { return this.$store.state.requests.requests },
-    name () { return this.user && this.user.firstName ? this.user.firstName : this.requests && this.requests[0] && this.requests[0].firstName ? this.requests[0].firstName : 'guest' }
+    name () { return this.user && this.user.firstName ? this.user.firstName : this.requests && this.requests[0] && this.requests[0].firstName ? this.requests[0].firstName : 'guest' },
+    ...mapGetters('data', ['isValidEmail', 'isValidNumber'])
   },
   methods: {
     anonymousStart: function () {
@@ -115,24 +128,48 @@ export default {
       this.$router.push(this.localePath({ name: 'request-stage', params: { stage: 'your-information' } }))
     },
     startAuth: function () {
-      if (!this.phoneOrEmail.isValidEmail && !this.phoneOrEmail.isValidPhone) {
-        this.$refs.pe.$refs.emailOrPhone.focus()
+      if (this.isValidNumber(this.phoneOrEmail)) {
+        this.updateUser({mobileIntFormat: this.phoneOrEmail})
+      }
+      if (this.isValidEmail(this.phoneOrEmail)) {
+        this.updateUser({emailAddress: this.phoneOrEmail})
+      }
+      if (!this.isValidNumber(this.phoneOrEmail) && !this.isValidEmail(this.phoneOrEmail)) {
+        console.log(this.isValidNumber(this.phoneOrEmail), this.isValidEmail(this.phoneOrEmail))
+        this.$refs.phoneOrEmail.$refs.phoneOrEmail.focus()
         return
       }
       this.authenticating = true
-      this.authStart('/request/your-information')
+      this.authStart(this.localePath({ name: 'request-stage', params: { stage: 'your-information' } }))
       setTimeout(() => {
         this.authenticating = false
       }, 5000)
     },
+    delayTouch ($v) {
+      $v.$reset()
+      if (touchMap.has($v)) {
+        clearTimeout(touchMap.get($v))
+      }
+      touchMap.set($v, setTimeout($v.$touch, 1000))
+    },
     ...mapActions('userauth', [
       'sendEmailCode',
       'sendEmailLink',
-      'sendEmailLink',
       'promptCode',
       'authStart'
-    ])
+    ]),
+    ...mapMutations('userauth', ['updateUser'])
   },
-  transition: 'test'
+  transition: 'test',
+  validations: {
+    phoneOrEmail: {
+      async validPhoneOrEmail () {
+        // if (this.$refs && this.$refs.tel) {
+        //   return this.$refs.tel.validatePhone
+        // } else return this.tel && this.tel.rawInput ? this.tel.isValidPhone : true
+        return this.isValidNumber(this.phoneOrEmail) || this.isValidEmail(this.phoneOrEmail)
+      }
+    }
+  }
 }
 </script>

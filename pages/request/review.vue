@@ -33,14 +33,16 @@
         :fwdAdr="fwdAdr"
         :email="email"
         :altEmail="altEmail"
-        :tel="telIntNumber"
+        :tel="tel"
         :fax="fax"
         :party="party"
         :addlInfo="addlInfo"
         :date="date"
         :classification="voterClass"
         :sex="sex"
-        :recBallot="recBallot"></my-box>
+        :recBallot="recBallot"
+        @isLoading="val => isLoading = val"></my-box>
+        <b-loading :is-full-page="false" :active.sync="isLoading" :can-cancel="true"></b-loading>
         <!-- :signature="signature" -->
     </my-canvas>
   </div>
@@ -62,7 +64,7 @@
 import MyCanvas from '~/components/MyCanvas.vue'
 import MyBox from '~/components/MyBox.vue'
 // import Sign from '~/components/sign.vue'
-import { mapState } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 
 export default {
   name: 'FPCAreview',
@@ -81,6 +83,7 @@ export default {
   },
   data () {
     return {
+      isLoading: false
       // isSignatureModalActive: false,
       // signature: ''
     }
@@ -143,19 +146,19 @@ export default {
       }
     },
     stateId () { return this.currentRequest && this.currentRequest.identification && this.currentRequest.identification.stateId ? this.currentRequest.identification.stateId.toString() : ' ' },
-    votStreet () { return this.currentRequest && this.currentRequest.votAdr && this.currentRequest.votAdr.thoroughfare ? this.currentRequest.votAdr.thoroughfare.toString() : ' ' },
-    votApt () { return this.currentRequest && this.currentRequest.votAdr && this.currentRequest.votAdr.premise ? this.currentRequest.votAdr.premise.toString() : ' ' },
-    votCity () { return this.currentRequest && this.currentRequest.votAdr && this.currentRequest.votAdr.locality ? this.currentRequest.votAdr.locality.toString() : ' ' },
-    votState () { return this.currentRequest && this.currentRequest.votAdr && this.currentRequest.votAdr.stateISO ? this.currentRequest.votAdr.stateISO.toString() : ' ' },
-    votCounty () { return this.currentRequest && this.currentRequest.votAdr && this.currentRequest.votAdr.county ? this.currentRequest.votAdr.county.toString() : ' ' },
-    votZip () { return this.currentRequest && this.currentRequest.votAdr && this.currentRequest.votAdr.postalcode ? this.currentRequest.votAdr.postalcode.toString() : ' ' },
-    abrAdr () { return this.currentRequest && this.currentRequest.abrAdr ? this.currentRequest.abrAdr : null },
-    fwdAdr () { return this.currentRequest && this.currentRequest.fwdAdr ? this.currentRequest.fwdAdr : null },
+    votStreet () { return this.getCurrent.votAdr.A },
+    votApt () { return this.getCurrent.votAdr.B },
+    votCity () { return this.getCurrent.votAdr.C },
+    votState () { return this.getCurrent.votAdr.S },
+    votCounty () { return this.getCurrent.votAdr.Y },
+    votZip () { return this.getCurrent.votAdr.Z },
+    abrAdr () { return this.currentRequest && this.currentRequest.abrAdr ? this.currentRequest.abrAdr : {} },
+    fwdAdr () { return this.currentRequest && this.currentRequest.fwdAdr && (this.currentRequest.fwdAdr.A || this.currentRequest.fwdAdr.alt1) ? this.currentRequest.fwdAdr : {} },
     email () { return this.currentRequest && this.currentRequest.email ? this.currentRequest.email.toString() : ' ' },
     altEmail () { return this.currentRequest && this.currentRequest.altEmail ? this.currentRequest.altEmail.toString() : ' ' },
-    tel () { return this.currentRequest && this.currentRequest.tel ? this.currentRequest.tel : ' ' },
-    telIntNumber () { return this.tel && this.tel.intNumber ? this.tel.intNumber : '' },
-    fax () { return this.currentRequest && this.currentRequest.fax && this.currentRequest.fax.intNumber ? this.currentRequest.fax.intNumber : ' ' },
+    // tel () { return this.currentRequest && this.currentRequest.tel ? this.currentRequest.tel : ' ' },
+    tel () { return this.getCurrent.tel || '' },
+    fax () { return this.getCurrent.fax || '' },
     party () { return this.currentRequest && this.currentRequest.party ? this.currentRequest.party.toString() : ' ' },
     stateRules () {
       if (this.votState) {
@@ -183,7 +186,8 @@ export default {
     ...mapState({
       currentRequestIndex: state => state.requests.currentRequest,
       requests: state => state.requests.requests
-    })
+    }),
+    ...mapGetters('requests', ['getCurrent'])
   }
 }
 </script>

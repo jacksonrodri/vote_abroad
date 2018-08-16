@@ -1,8 +1,8 @@
 <template>
 <div class="hero-head">
   <div>
-    <h1 class="has-text-centered title is-3">Ballot Request Status</h1>
-    <h3 class="has-text-centered subtitle is-4">Next Steps...</h3>
+    <h1 class="has-text-centered title is-3">{{$t('dashboard.ballotRequestStatus')}}</h1>
+    <h3 class="has-text-centered subtitle is-4">{{$t('dashboard.nextSteps')}}</h3>
   </div>
   <div class="hero-body columns is-centered">
     <div class="column is-12 is-8-desktop is-7-widescreen is-6-fullhd">
@@ -91,7 +91,8 @@
                 </article> -->
                 <section class="section">
                   <div>
-                    <p class="subtitle is-4">Thank you for using VoteFromAbroad to generate your Voter Registration/Ballot Request form. <strong>Be sure to submit your form</strong> to your Local Election Official before the deadline.</p>
+                    <p class="subtitle is-4" v-html="md($t('dashboard.thankYou'))"></p>
+                    <!-- <p class="subtitle is-4">Thank you for using VoteFromAbroad to generate your Voter Registration/Ballot Request form. <strong>Be sure to submit your form</strong> to your Local Election Official before the deadline.</p> -->
                     <article class="message is-danger">
                       <div class="message-body" v-html="md(deadlineLanguage)">
                       </div>
@@ -308,7 +309,7 @@ function getDeadlineLanguage (electionArr, state, voterRegistrationStatus, voter
 }
 
 export default {
-  name: 'User-Account',
+  name: 'dashboard',
   components: {
     UserDashboard,
     // VueMarkdown,

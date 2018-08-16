@@ -1,15 +1,15 @@
 <template>
   <div class="field">
-    <span class="is-flex"><label @click.prevent="$refs.street.focus()" class="label" style="cursor: pointer;">{{ label }} </label><span v-if="toolTipTitle" @click.prevent="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
+    <span class="is-flex"><label @click.prevent="$refs.A.focus()" class="label" style="cursor: pointer;">{{ label }} </label><span v-if="toolTipTitle" @click.prevent="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
     <slot name="instructions"></slot>
     <b-message v-if="toolTipTitle" :title="toolTipTitle" type="is-info" has-icon :active.sync="isOpen">
       <slot name="tooltip"></slot>
     </b-message>
     <b-field
-      :message="validations.thoroughfare.$error ? Object.keys(validations.thoroughfare.$params).map(x => $t(`request.votAdr.messages.street-${x}`)) : '' "
-      :type="(validations.thoroughfare.$error ? 'is-danger': '')">
-      <b-autocomplete ref="street"
-        :placeholder="$t('request.votAdr.street')"
+      :message="validations.A.$error ? Object.keys(validations.A.$params).map(x => $t(`request.votAdr.messages.A-${x}`)) : '' "
+      :type="(validations.A.$error ? 'is-danger': '')">
+      <b-autocomplete ref="A"
+        :placeholder="$t('request.votAdr.A')"
         :data="data"
         field="structured_formatting.main_text"
         v-model="street"
@@ -25,7 +25,7 @@
     </b-field>
     <b-field>
       <b-input
-        :placeholder="$t('request.votAdr.apt')"
+        :placeholder="$t('request.votAdr.B')"
         autocomplete="section-voting shipping address-line2"
         name="Apartment"
         v-model="apt"></b-input>
@@ -33,10 +33,10 @@
     <div class="field is-horizontal">
       <div class="field-body">
         <b-field
-          :message="validations.locality.$error ? Object.keys(validations.locality.$params).map(x => $t(`request.votAdr.messages.city-${x}`)) : '' "
-          :type="(validations.locality.$error ? 'is-danger': '')">
-          <b-autocomplete ref="city"
-            :placeholder="$t('request.votAdr.city')"
+          :message="validations.C.$error ? Object.keys(validations.C.$params).map(x => $t(`request.votAdr.messages.C-${x}`)) : '' "
+          :type="(validations.C.$error ? 'is-danger': '')">
+          <b-autocomplete ref="C"
+            :placeholder="$t('request.votAdr.C')"
             :data="data"
             expanded
             field="structured_formatting.main_text"
@@ -52,14 +52,14 @@
           </b-autocomplete>
         </b-field>
         <b-field
-          :message="validations.stateISO.$error ? Object.keys(validations.stateISO.$params).map(x => $t(`request.votAdr.messages.state-${x}`)) : '' "
-          :type="(validations.stateISO.$error ? 'is-danger': '')">
+          :message="validations.S.$error ? Object.keys(validations.S.$params).map(x => $t(`request.votAdr.messages.S-${x}`)) : '' "
+          :type="(validations.S.$error ? 'is-danger': '')">
           <b-select v-model="state"
-            ref="state"
+            ref="S"
             name="state"
             autocomplete="section-voting shipping address-level1"
             expanded
-            :placeholder="$t('request.votAdr.state')">
+            :placeholder="$t('request.votAdr.S')">
             <option
               v-for="state in states"
               :value="state.iso"
@@ -69,11 +69,11 @@
           </b-select>
         </b-field>
         <b-field
-          :message="validations.postalcode.$error ? Object.keys(validations.postalcode.$params).map(x => $t(`request.votAdr.messages.zip-${x}`)) : '' "
-          :type="(validations.postalcode.$error ? 'is-danger': '')">
+          :message="validations.Z.$error ? Object.keys(validations.Z.$params).map(x => $t(`request.votAdr.messages.Z-${x}`)) : '' "
+          :type="(validations.Z.$error ? 'is-danger': '')">
           <b-input
-            :placeholder="$t('request.votAdr.zip')"
-            ref="zip"
+            :placeholder="$t('request.votAdr.Z')"
+            ref="Z"
             name="zip"
             autocomplete="section-voting shipping postal-code"
             expanded
@@ -81,9 +81,9 @@
         </b-field>
       </div>
     </div>
-    <b-field :label="$t('request.votAdr.county')">
-      <b-input ref="county"
-        :placeholder="$t('request.votAdr.county')"
+    <b-field :label="$t('request.votAdr.Y')">
+      <b-input ref="Y"
+        :placeholder="$t('request.votAdr.Y')"
         name="county"
         :disabled="state === 'DC' || state === 'PR' || state === 'VI' || state === 'AS' || state === 'GU'"
         v-model="county"></b-input>
@@ -178,28 +178,28 @@ export default {
     leoState () { return this.currentRequest.leo && this.currentRequest.leo.s ? this.currentRequest.leo.s : null },
     votAdr () { return this.currentRequest.votAdr || {} },
     street: {
-      get () { return this.votAdr.thoroughfare || '' },
-      set (value) { this.updateAddress('thoroughfare', value) }
+      get () { return this.votAdr.A || null },
+      set (value) { this.updateAddress('A', value) }
     },
     apt: {
-      get () { return this.votAdr.premise || '' },
-      set (value) { this.updateAddress('premise', value) }
+      get () { return this.votAdr.B || null },
+      set (value) { this.updateAddress('B', value) }
     },
     city: {
-      get () { return this.votAdr.locality || '' },
-      set (value) { this.updateAddress('locality', value) }
+      get () { return this.votAdr.C || null },
+      set (value) { this.updateAddress('C', value) }
     },
     state: {
-      get () { return this.votAdr.stateISO || '' },
-      set (value) { this.updateAddress('stateISO', value) }
+      get () { return this.votAdr.S || null },
+      set (value) { this.updateAddress('S', value) }
     },
     zip: {
-      get () { return this.votAdr.postalcode || '' },
-      set (value) { this.updateAddress('postalcode', value) }
+      get () { return this.votAdr.Z || null },
+      set (value) { this.updateAddress('Z', value) }
     },
     county: {
-      get () { return this.votAdr.county || '' },
-      set (value) { this.updateAddress('county', value) }
+      get () { return this.votAdr.Y || null },
+      set (value) { this.updateAddress('Y', value) }
     }
   },
   watch: {
@@ -231,15 +231,17 @@ export default {
       this.$emit('input')
     },
     decodeHtmlEntity (str) {
-      return str.replace(/&#(\d+);/g, function (match, dec) {
-        return String.fromCharCode(dec)
-      })
+      return typeof str === 'string'
+        ? str.replace(/&#(\d+);/g, function (match, dec) {
+          return String.fromCharCode(dec)
+        })
+        : str
     },
     getAsyncData: debounce(function () {
       this.isFetching = true
       if (this.suppressDropdown) {
-        this.$refs.street.isActive = false
-        this.$refs.city.isActive = false
+        this.$refs.A.isActive = false
+        this.$refs.C.isActive = false
         this.suppressDropdown = false
         this.isFetching = false
       }
@@ -297,8 +299,8 @@ export default {
     getAsyncDataCity: debounce(function () {
       this.isFetchingCity = true
       if (this.suppressDropdown) {
-        this.$refs.street.isActive = false
-        this.$refs.city.isActive = false
+        this.$refs.A.isActive = false
+        this.$refs.C.isActive = false
         this.suppressDropdown = false
         this.isFetchingCity = false
       }

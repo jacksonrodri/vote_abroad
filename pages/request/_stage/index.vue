@@ -52,7 +52,7 @@
           <b-input
             v-model="suffix"
             id="suffix"
-            @input="$v.suffix.$touch()"
+            @input="delayTouch($v.suffix)"
             :maxlength="(suffix && !$v.suffix.$dirty) || $v.suffix.$error || (suffix && suffix.length > 8) ? 16 : ''"
             autocomplete="honorific-suffix"></b-input>
         </b-field>
@@ -64,7 +64,7 @@
         :label="$t('request.previousName.label')"
         :instructions="$t('request.previousName.instructions')"
         :tooltipTitle="$t('request.previousName.tooltipTitle')"
-        @input="$v.previousName.$touch()">
+        @input="delayTouch($v.previousName)">
         <div slot="tooltip">
           {{$t('request.previousName.tooltip')}}
         </div>
@@ -76,7 +76,7 @@
         :accepts="['phone', 'email']"
         v-model="phoneTwo"
         :label="$t('request.tel.label')"></phone-two> -->
-      <phone-four></phone-four>
+      <!-- <phone-four></phone-four>
       <phone-three v-model="phoneThree" @input="delayTouch($v.phoneThree)"></phone-three>
 
       <phone-input ref="tel" key="telephone" :label="$t('request.tel.label')" :accepts="['phone']" v-model="tel"></phone-input>
@@ -89,7 +89,27 @@
         :v="$v.abrAdr"
         @input="val => touch(val)"
         key="abrAdr"></adr-input>
-      <scroll-up :key="$route.params.stage"></scroll-up>
+      <scroll-up :key="$route.params.stage"></scroll-up> -->
+      <tel-two
+        ref="tel"
+        key="tel"
+        fieldName="tel"
+        :v="$v.tel"
+        @delayTouch="delayTouch($v.tel)"></tel-two>
+
+      <email-input
+        ref="email"
+        key="email"
+        fieldName="email"
+        :v="$v.email"
+        @delayTouch="delayTouch($v.email)"></email-input>
+
+      <address-five
+        ref="abrAdr"
+        key="abrAdr"
+        fieldName="abrAdr"
+        :v="$v.abrAdr"
+        @delayTouch="(val) => delayTouch($v.abrAdr[val])"></address-five>
     <section >
         <nuxt-link :to="localePath({ name: 'index' })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>{{$t('request.stages.back')}}</span></nuxt-link>
         <button @click.prevent="focusFirstErrorOrAdvance(localePath({ name: 'request-stage', params: {stage: 'voting-information'} }))" class="button is-primary is-medium is-pulled-right" exact ><span> {{$t('request.stages.next')}} </span><b-icon pack="fas" icon="caret-right"></b-icon></button>
@@ -131,16 +151,16 @@
         </div>
       </voting-address>
 
-      <jurisdiction v-if="votAdr && votAdr.stateISO"
+      <jurisdiction v-if="votAdr && votAdr.S"
         :label="$t('request.jurisdiction.label')"
         :toolTipTitle="$t('request.jurisdiction.tooltipTitle')"
         :placeholder="$t('request.jurisdiction.placeholder')"
-        :key="votAdr.stateISO"
+        :key="votAdr.S"
         ref="jurisdiction"
 
         @input="delayTouch($v.jurisdiction)"
         :validations="($v.jurisdiction)"
-        :state="this.votAdr.stateISO">
+        :state="this.votAdr.S">
         <div slot="instructions">
           <p>{{$t('request.jurisdiction.instructions')}}</p>
         </div>
@@ -153,6 +173,7 @@
       :allowsNeverResided="stateRules ? stateRules.allowsNeverResided : false"
       :validations="($v.voterClass)"
       ref="voterClass"
+      :state="this.votAdr.S"
       @input="delayTouch($v.voterClass)"
       :toolTipTitle="$t('request.voterClass.tooltipTitle')">
       <div slot="tooltip">
@@ -172,7 +193,7 @@
 
     <!-- recBallot -->
     <receive-ballot v-model="recBallot"
-      v-if="votAdr && votAdr.stateISO"
+      v-if="votAdr && votAdr.S"
       :label="$t('request.receiveBallot.label')"
       :validations="$v.recBallot"
       @input="delayTouch($v.recBallot)"
@@ -184,7 +205,7 @@
       </div>
     </receive-ballot>
 
-    <phone-input key="fax"
+    <!-- <phone-input key="fax"
       ref="fax"
       :label="$t('request.fax.label')"
       v-if="recBallot === 'fax' || (fax && fax.rawInput)"
@@ -192,10 +213,32 @@
       :required="recBallot === 'fax'"
       :accepts="['phone']"
       @keydown.native.enter.prevent="focusNextButton(3)"
-      v-model="fax"></phone-input>
+      v-model="fax"></phone-input> -->
+    <tel-two
+      v-if="recBallot === 'fax' || fax"
+      ref="fax"
+      key="fax"
+      fieldName="fax"
+      :v="$v.fax"
+      @delayTouch="delayTouch($v.fax)"></tel-two>
 
     <!-- altEmail -->
-    <phone-input v-if="recBallot === 'email' && (email === null || skippedEmail || $v.email.$error)"
+    <email-input v-if="recBallot === 'email' && (email === null || skippedEmail || $v.email.$error)"
+      ref="email"
+      key="email"
+      @input="skippedEmail = true"
+      fieldName="email"
+      :v="$v.email"
+      @delayTouch="delayTouch($v.email)"></email-input>
+
+    <email-input v-if="recBallot === 'email' || altEmail"
+      ref="altEmail"
+      key="altEmail"
+      fieldName="altEmail"
+      :v="$v.altEmail"
+      @delayTouch="delayTouch($v.altEmail)"></email-input>
+
+    <!-- <phone-input v-if="recBallot === 'email' && (email === null || skippedEmail || $v.email.$error)"
       key="email"
       ref="email"
       @input="skippedEmail = true"
@@ -212,10 +255,17 @@
       :required="false"
       :accepts="['email']"
       v-model="altEmail">
-    </phone-input>
+    </phone-input> -->
 
       <!-- fwdAdr -->
-      <address-input
+      <address-five
+        v-if="recBallot === 'mail' || (fwdAdr && (fwdAdr.alt1 || fwdAdr.A))"
+        ref="fwdAdr"
+        key="fwdAdr"
+        fieldName="fwdAdr"
+        :v="$v.fwdAdr"
+        @delayTouch="(val) => delayTouch($v.fwdAdr[val])"></address-five>
+      <!-- <address-input
         :label="$t('request.fwdAdr.label')"
         key="forwardingAddress"
         ref="fwdAdr"
@@ -230,7 +280,7 @@
         <div slot="tooltip">
           <p v-html="$options.filters.markdown($t('request.fwdAdr.tooltip'))"></p>
         </div>
-      </address-input>
+      </address-input> -->
 
     <scroll-up :key="$route.params.stage"></scroll-up>
 
@@ -261,6 +311,7 @@
       <gender
         :label="$t('request.sex.label')"
         ref="sex"
+        :state="votAdr.S"
         :tooltipTitle="$t('request.sex.tooltipTitle')"
         v-model="sex"
         :validations="$v.sex">
@@ -274,7 +325,7 @@
         :label="$t('request.party.label')"
         v-model="party"
         :join="joinDa"
-        :state="votAdr.stateISO"
+        :state="votAdr.S"
         @joinDA="val => joinDa = val"
         :tooltipTitle="$t('request.party.tooltipTitle')"
         :joinTooltipTitle="$t('request.joinDa.tooltipTitle')"
@@ -292,7 +343,7 @@
       <state-special
         :label="$t('request.stateSpecial.label', {state: stateRules && stateRules.state ? stateRules.state: 'State'})"
         v-model="stateSpecial"
-        :state="votAdr && votAdr.stateISO ? votAdr.stateISO : ''"
+        :state="votAdr && votAdr.S ? votAdr.S : ''"
         :isFWAB="isFWAB"
         :isIndNoParty="party && (party.toLowerCase() === 'republican' || party.toLowerCase() === 'rep' || party.toLowerCase() === 'democrat' || party.toLowerCase() === 'dem') ? false : true"
         :isReturnUncertain="Boolean(voterClass === 'uncertainReturn')"
@@ -333,12 +384,12 @@
       </id-input>
 
       <!-- fwabRequest -->
-      <b-field :type="($v.fwabRequest.$error ? 'is-danger': '')"
+      <!-- <b-field :type="($v.fwabRequest.$error ? 'is-danger': '')"
         :message="$v.fwabRequest.$error ? Object.keys($v.fwabRequest.$params).map(x => x) : '' "
         label="Do you want to register and request a ballot for all elections you are eligile to vote in?"
         v-if="isFwab">
         <b-input v-model="fwabRequest" @input="$v.fwabRequest.$touch()"></b-input>
-      </b-field>
+      </b-field> -->
 
       <scroll-up :key="$route.params.stage"></scroll-up>
     <section >
@@ -372,10 +423,14 @@ import PreviousName from '~/components/PreviousName'
 import Gender from '~/components/Gender'
 import StateSpecial from '~/components/StateSpecial'
 import ScrollUp from '~/components/ScrollUp'
+import EmailInput from '~/components/EmailInput'
+import TelTwo from '~/components/TelTwo'
+import AddressFive from '~/components/AddressFive'
 // import Identification from '~/components/Identification'
 import IdInput from '~/components/IdInput'
 import AdrInput from '~/components/AdrInput'
 import snarkdown from 'snarkdown'
+import { mapGetters } from 'vuex'
 
 const optionalEmail = (value) => !helpers.req(value) || email(value)
 const usZip = helpers.regex('usZip', /^(\d{5})(?:[ -](\d{4}))?$/)
@@ -392,13 +447,13 @@ export default {
         .getAll()
     }
   },
-  watchQuery: ['query'],
-  async fetch ({ app, store, query }) {
-    if (query.state === 'ca') {
-      let state = await app.$content('/leos').get(query.state)
-      console.log(state.body)
-    }
-  },
+  // watchQuery: ['query'],
+  // async fetch ({ app, store, query }) {
+  //   if (query.state === 'ca') {
+  //     let state = await app.$content('/leos').get(query.state)
+  //     // console.log(state.body)
+  //   }
+  // },
   data () {
     return {
       code: null,
@@ -409,8 +464,8 @@ export default {
       updatedAt: '',
       createdBy: '',
       emailOrPhone: '',
-      localDob: null,
-      localDate: null,
+      // localDob: null,
+      // localDate: null,
       fwabRequest: '',
       isFwab: false,
       isOpen: false,
@@ -446,7 +501,10 @@ export default {
     PhoneTwo,
     PhoneThree,
     PhoneFour,
-    AdrInput
+    AdrInput,
+    EmailInput,
+    TelTwo,
+    AddressFive
   },
   provide () {
     return {
@@ -473,7 +531,7 @@ export default {
     },
     idOptions () {
       let opts = this.stateRules && this.stateRules.id && this.stateRules.id.length > 0 ? this.stateRules.id : null
-      if (this.votAdr.stateISO === 'OK' && this.recBallot === 'email') {
+      if (this.votAdr.S === 'OK' && this.recBallot === 'email') {
         return ['SSN', 'SSN4']
       } else return opts
     },
@@ -492,8 +550,8 @@ export default {
       }
     },
     stateRules () {
-      if (this.votAdr && this.votAdr.stateISO) {
-        return this.allStateRules.find(x => x.iso.toLowerCase() === this.votAdr.stateISO.toLowerCase())
+      if (this.votAdr && this.votAdr.S) {
+        return this.allStateRules.find(x => x.iso.toLowerCase() === this.votAdr.S.toLowerCase())
       } else {
         return undefined
       }
@@ -578,8 +636,8 @@ export default {
       set (value) { this.$store.commit('requests/update', { suffix: value }) }
     },
     dob: {
-      get () { return this.requests[this.currentRequest] && this.requests[this.currentRequest].dob ? this.requests[this.currentRequest].dob : null },
-      set (value) { this.$store.commit('requests/update', { dob: value }) }
+      get () { return this.getCurrent.dob || null },
+      set (val) { this.$store.commit('requests/update', { dob: val }) }
     },
     date: {
       get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].date : null },
@@ -682,7 +740,9 @@ export default {
           message: 'you must add a country'
         }
       ]
-    }
+    },
+    ...mapGetters('data', ['isValidNumber']),
+    ...mapGetters('requests', ['getCurrent'])
   },
   filters: {
     markdown: function (md) {
@@ -709,7 +769,7 @@ export default {
     focusFirstErrorOrAdvance (nextPage) {
       switch (this.$route.params.stage) {
         case 'your-information':
-          this.$refs.tel.check()
+          // this.$refs.tel.check()
           // if (this.$refs.abrAdr) this.$refs.abrAdr.touch()
           this.$v.firstName.$touch()
           this.$v.lastName.$touch()
@@ -727,12 +787,13 @@ export default {
           this.$v.recBallot.$touch()
           this.$v.email.$touch()
           this.$v.fax.$touch()
-          if (this.recBallot === 'fax') { this.$refs.fax.$v.value.$touch() }
+          // if (this.recBallot === 'fax') { this.$refs.fax.$v.value.$touch() }
           this.$v.altEmail.$touch()
+          this.$v.fwdAdr.$touch()
           break
         case 'id-and-contact-information':
           this.$v.sex.$touch()
-          console.log(this.$v.sex)
+          // console.log(this.$v.sex)
           this.$v.dob.$touch()
           this.$v.identification.$touch()
           break
@@ -742,7 +803,7 @@ export default {
         case this.stage.slug === 'your-information' && this.$v.firstName.$error:
           this.$store.dispatch('requests/recordAnalytics', { event: 'Form Error', attributes: { field: 'firstName' } })
           this.$refs.firstName.$el.scrollIntoView()
-          console.log(this.$refs.firstName)
+          // console.log(this.$refs.firstName)
           this.$refs.firstName.focus()
           break
         case this.stage.slug === 'your-information' && this.$v.lastName.$error:
@@ -751,10 +812,10 @@ export default {
           this.$store.dispatch('requests/recordAnalytics', { event: 'Form Error', attributes: { field: 'lastName' } })
           break
         case this.stage.slug === 'your-information' && this.$v.email.$error:
-          this.$refs.email.check()
+          // this.$refs.email.check()
           this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'email'}})
-          this.$refs.email.$refs.input.$el.scrollIntoView()
-          this.$refs.email.$refs.input.focus()
+          this.$refs.email.$el.scrollIntoView()
+          this.$refs.email.$el.querySelector('input').focus()
           break
         case this.stage.slug === 'your-information' && this.$v.abrAdr.country && this.$v.abrAdr.country.$error:
           this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.country'}})
@@ -792,29 +853,29 @@ export default {
           this.$refs.abrAdr.$refs.Z[0].focus()
           break
         case this.stage.slug === 'your-information' && this.$v.tel.$error:
-          this.$refs.tel.$refs.input.$el.scrollIntoView()
-          this.$refs.tel.$refs.input.focus()
+          this.$refs.tel.$el.scrollIntoView()
+          this.$refs.tel.$el.querySelector('input').focus()
           this.$store.dispatch('requests/recordAnalytics', { event: 'Form Error', attributes: { field: 'tel' } })
           break
-        case this.stage.slug === 'voting-information' && this.$v.votAdr.thoroughfare.$error:
-          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'votAdr.thoroughfare'}})
-          this.$refs.votAdr.$refs.street.$el.scrollIntoView()
-          this.$refs.votAdr.$refs.street.focus()
+        case this.stage.slug === 'voting-information' && this.$v.votAdr.A.$error:
+          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'votAdr.A'}})
+          this.$refs.votAdr.$refs.A.$el.scrollIntoView()
+          this.$refs.votAdr.$refs.A.focus()
           break
-        case this.stage.slug === 'voting-information' && this.$v.votAdr.locality.$error:
-          this.$refs.votAdr.$refs.city.$el.scrollIntoView()
-          this.$refs.votAdr.$refs.city.focus()
-          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'votAdr.locality'}})
+        case this.stage.slug === 'voting-information' && this.$v.votAdr.C.$error:
+          this.$refs.votAdr.$refs.C.$el.scrollIntoView()
+          this.$refs.votAdr.$refs.C.focus()
+          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'votAdr.C'}})
           break
-        case this.stage.slug === 'voting-information' && this.$v.votAdr.stateISO.$error:
-          this.$refs.votAdr.$refs.state.$el.scrollIntoView()
-          this.$refs.votAdr.$refs.state.focus()
-          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'votAdr.stateISO'}})
+        case this.stage.slug === 'voting-information' && this.$v.votAdr.S.$error:
+          this.$refs.votAdr.$refs.S.$el.scrollIntoView()
+          this.$refs.votAdr.$refs.S.focus()
+          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'votAdr.S'}})
           break
-        case this.stage.slug === 'voting-information' && this.$v.votAdr.postalcode.$error:
-          this.$refs.votAdr.$refs.zip.$el.scrollIntoView()
-          this.$refs.votAdr.$refs.zip.focus()
-          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'votAdr.postalcode'}})
+        case this.stage.slug === 'voting-information' && this.$v.votAdr.Z.$error:
+          this.$refs.votAdr.$refs.Z.$el.scrollIntoView()
+          this.$refs.votAdr.$refs.Z.focus()
+          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'votAdr.Z'}})
           break
         // case this.stage.slug === 'voting-information' && this.$v.vAdr.A.$error:
         //   this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'vAdr.A'}})
@@ -842,9 +903,8 @@ export default {
           this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'jurisdiction'}})
           break
         case this.stage.slug === 'voting-information' && this.$v.fax.$error:
-          this.$refs.fax.check()
-          this.$refs.fax.$refs.input.$el.scrollIntoView()
-          this.$refs.fax.$refs.input.focus()
+          this.$refs.fax.$el.scrollIntoView()
+          this.$refs.fax.$el.querySelector('input').focus()
           this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'fax'}})
           break
         case this.stage.slug === 'voting-information' && this.$v.voterClass.$error:
@@ -870,15 +930,20 @@ export default {
           this.$refs.altEmail.$refs.input.focus()
           this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'altEmail'}})
           break
+        case this.stage.slug === 'voting-information' && this.$v.fwdAdr.$error && this.$refs.fwdAdr:
+          this.$refs.fwdAdr.$el.scrollIntoView()
+          this.$refs.fwdAdr.$el.querySelector('input').focus()
+          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'fwdAdr  '}})
+          break
         case this.stage.slug === 'id-and-contact-information' && this.$v.dob.$error:
-          this.$refs.dob.$refs.dob.$el.scrollIntoView()
-          this.$refs.dob.$refs.dob.focus()
+          this.$refs.dob.$el.scrollIntoView()
+          this.$refs.dob.$el.querySelector('input').focus()
           this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'dob'}})
           break
         case this.stage.slug === 'id-and-contact-information' && this.$v.sex.$error:
           this.$refs.sex.$el.scrollIntoView()
           // this.$refs.sex.$refs.sex.focus()
-          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'dob'}})
+          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'sex'}})
           break
         case this.stage.slug === 'id-and-contact-information' && this.$v.identification.ssn.$error:
           if (this.$refs.id.$refs.ssn) this.$refs.id.$refs.ssn.focus()
@@ -893,18 +958,13 @@ export default {
           this.$refs.id.$refs.StateId.focus()
           break
         default:
-          // if (this.stage.slug === 'voting-information') {
-          //   if (!this.$refs.altEmail && this.$v.altEmail.$error) this.altEmail = null
-          //   if (!this.$refs.fax && this.$v.fax.$error) this.fax = null
-          // }
-          console.log(nextPage)
+          // console.log('nextPage', nextPage)
           this.$router.push(nextPage)
-          this.$store.dispatch('requests/recordAnalytics', {event: 'completed: ' + this.stage.slug})
-          this.$store.dispatch('requests/updateRequest', {status: 'completed: ' + this.stage.slug})
+          // this.$store.dispatch('requests/recordAnalytics', {event: 'completed: ' + this.stage.slug})
+          // this.$store.dispatch('requests/updateRequest', {status: 'completed: ' + this.stage.slug})
       }
     },
     delayTouch ($v) {
-      // console.log($v, touchMap)
       $v.$reset()
       if (touchMap.has($v)) {
         clearTimeout(touchMap.get($v))
@@ -918,7 +978,7 @@ export default {
         required: requiredIf(function (model) {
           return this.recBallot === 'email'
         }),
-        optionalEmail
+        email: optionalEmail
       },
       firstName: {
         required,
@@ -940,14 +1000,15 @@ export default {
         maxLength: maxLength(16)
       },
       abrAdr: {
-        country: { required },
-        A: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryFormat ? this.$refs.abrAdr.countryFormat.require.toUpperCase().includes('A') : false) },
-        D: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryFormat ? this.$refs.abrAdr.countryFormat.require.toUpperCase().includes('D') : false) },
-        C: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryFormat ? this.$refs.abrAdr.countryFormat.require.toUpperCase().includes('C') : false) },
-        S: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryFormat ? this.$refs.abrAdr.countryFormat.require.toUpperCase().includes('S') : false) },
-        X: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryFormat ? this.$refs.abrAdr.countryFormat.require.toUpperCase().includes('X') : false) },
-        Z: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryFormat ? this.$refs.abrAdr.countryFormat.require.toUpperCase().includes('Z') : false) },
-        countryiso: {},
+        country: { },
+        A: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryData ? this.$refs.abrAdr.countryData.require.toUpperCase().includes('A') : false) },
+        B: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryData ? this.$refs.abrAdr.countryData.require.toUpperCase().includes('B') : false) },
+        D: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryData ? this.$refs.abrAdr.countryData.require.toUpperCase().includes('D') : false) },
+        C: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryData ? this.$refs.abrAdr.countryData.require.toUpperCase().includes('C') : false) },
+        S: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryData ? this.$refs.abrAdr.countryData.require.toUpperCase().includes('S') : false) },
+        X: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryData ? this.$refs.abrAdr.countryData.require.toUpperCase().includes('X') : false) },
+        Z: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryData ? this.$refs.abrAdr.countryData.require.toUpperCase().includes('Z') : false) },
+        countryiso: { required },
         alt1: {},
         alt2: {},
         alt3: {},
@@ -959,10 +1020,10 @@ export default {
         required
       },
       votAdr: {
-        thoroughfare: { required },
-        locality: { required },
-        stateISO: { required },
-        postalcode: {
+        A: { required },
+        C: { required },
+        S: { required },
+        Z: {
           required,
           usZip
         }
@@ -997,17 +1058,15 @@ export default {
         }
       },
       fax: {
-        required: () => {
-          if (this.recBallot !== 'fax' || (this.fax && this.fax.isValidPhone)) {
-            return true
-          } else { return false }
-        }
+        required: requiredIf((model) => this.recBallot === 'fax'),
+        validPhone () { return this.isValidNumber(this.fax) }
       },
       tel: {
-        async validPhone () {
-          if (this.$refs && this.$refs.tel) {
-            return this.$refs.tel.validatePhone
-          } else return this.tel && this.tel.rawInput ? this.tel.isValidPhone : true
+        validPhone () {
+          // if (this.$refs && this.$refs.tel) {
+          //   return this.$refs.tel.validatePhone
+          // } else return this.tel && this.tel.rawInput ? this.tel.isValidPhone : true
+          return this.isValidNumber(this.tel)
         }
       },
       phoneThree: {
@@ -1022,7 +1081,7 @@ export default {
       },
       sex: {
         required: requiredIf((model) => {
-          return this.votAdr && this.votAdr.stateISO && this.votAdr.stateISO.toLowerCase() === 'id'
+          return this.votAdr && this.votAdr.S && this.votAdr.S.toLowerCase() === 'id'
         })
       },
       isRegistered: {
@@ -1081,8 +1140,27 @@ export default {
       // },
       fwdAdr: {
         country: { },
-        thoroughfare: { },
-        locality: { }
+        A: { required: requiredIf((model) => this.fwdAdr && this.fwdAdr.A && this.$refs.fwdAdr && this.$refs.fwdAdr && this.$refs.fwdAdr.countryData ? this.$refs.fwdAdr.countryData.require.toUpperCase().includes('A') : false) },
+        B: { required: requiredIf((model) => this.fwdAdr && this.fwdAdr.A && this.$refs.fwdAdr && this.$refs.fwdAdr && this.$refs.fwdAdr.countryData ? this.$refs.fwdAdr.countryData.require.toUpperCase().includes('B') : false) },
+        D: { required: requiredIf((model) => this.fwdAdr && this.fwdAdr.A && this.$refs.fwdAdr && this.$refs.fwdAdr && this.$refs.fwdAdr.countryData ? this.$refs.fwdAdr.countryData.require.toUpperCase().includes('D') : false) },
+        C: { required: requiredIf((model) => this.fwdAdr && this.fwdAdr.A && this.$refs.fwdAdr && this.$refs.fwdAdr && this.$refs.fwdAdr.countryData ? this.$refs.fwdAdr.countryData.require.toUpperCase().includes('C') : false) },
+        S: { required: requiredIf((model) => this.fwdAdr && this.fwdAdr.A && this.$refs.fwdAdr && this.$refs.fwdAdr && this.$refs.fwdAdr.countryData ? this.$refs.fwdAdr.countryData.require.toUpperCase().includes('S') : false) },
+        X: { required: requiredIf((model) => this.fwdAdr && this.fwdAdr.A && this.$refs.fwdAdr && this.$refs.fwdAdr && this.$refs.fwdAdr.countryData ? this.$refs.fwdAdr.countryData.require.toUpperCase().includes('X') : false) },
+        Z: { required: requiredIf((model) => this.fwdAdr && this.fwdAdr.A && this.$refs.fwdAdr && this.$refs.fwdAdr && this.$refs.fwdAdr.countryData ? this.$refs.fwdAdr.countryData.require.toUpperCase().includes('Z') : false) },
+        // A: { },
+        // B: { },
+        // D: { },
+        // C: { },
+        // S: { },
+        // X: { },
+        // Z: { },
+        countryiso: {},
+        alt1: {},
+        alt2: {},
+        alt3: {},
+        alt4: {},
+        alt5: {},
+        usesAlternateFormat: {}
       },
       addlInfo: {
       },

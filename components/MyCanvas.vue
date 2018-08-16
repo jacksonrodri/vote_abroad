@@ -1,5 +1,6 @@
 <template>
   <div class="my-canvas-wrapper">
+    <b-loading></b-loading>
     <canvas class="fpca target" ref="my-canvas"></canvas>
     <slot></slot>
     <!-- <div></div> -->

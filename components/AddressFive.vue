@@ -1,0 +1,305 @@
+<template>
+  <div class="field">
+    <basic-label :fieldName="fieldName" @toggleInfo="toggleInfo"></basic-label>
+      <b-message v-if="toolTipContent" :title="toolTipTitle" type="is-info" has-icon :active.sync="isInfoOpen">
+      <p v-html="toolTipContent"></p>
+    </b-message>
+    <div class="field" v-if="v && formatted">
+      <transition-group name="slide" tag="div" class="field">
+        <template v-for="part in formatted">
+          <b-field
+            :message="ctry === 'US' && fieldName === 'abrAdr' ? 'You should only select \'United States\' if you are using a military or diplomatic address (APO/DPO/FPO).' : ''"
+            :type="ctry === 'US' && fieldName === 'abrAdr' ? 'is-info' : ''"
+            v-if="part.type === 'countryiso'"
+            :key="part.type">
+            <b-field :type="v.countryiso.$error ? 'is-danger' : ''">
+              <p class="control" key="flag">
+                <button :class="['button', 'control', 'is-outlined', 'is-inverted', 'is-paddingless']"
+                  @click.prevent="focusCountry"
+                  style="padding-left:0px;">
+                  <span class="flag-container fa-stack">
+                    <i :class="`fa-stack-2x flag-icon flag-icon-${ctry.toLowerCase() || 'un'}`"></i>
+                    <i class="fas fa-sort-down fa-stack-1x has-text-grey breathe" style="transform:translateY(45%)"></i>
+                  </span>
+                </button>
+              </p>
+              <country-selector
+                :type="fieldName"
+                :value="ctry"
+                :requiredClass="formatted[0].class"
+                :messageType="v.countryiso.$error ? 'is-danger' : ''"
+                ref="ctry"
+                @input="val => {if (val) updateAddress('countryiso', val)}"></country-selector>
+            </b-field>
+          </b-field>
+          <!-- <b-field v-if="part.type === 'countryiso' && ctry === 'US'" :key="part.type + 'US'">
+            <p class="control help">Only enter your xx</p>
+          </b-field> -->
+          <b-field v-else :key="part.type" :type="part.displayType" :message="part.messages">
+            <b-autocomplete
+              v-if="part.type === 'A'"
+              :data="data"
+              field="structured_formatting.main_text"
+              :value="adr[part.type]"
+              :placeholder="part.label"
+              :aria-label="part.label"
+              :title="part.label"
+              :class="part.class"
+              :loading="isFetching"
+              @input="(val) => { getAsyncData(val) }"
+              @select="option => fillData(option)">
+              <template slot-scope="props">{{ props.option.description }}</template>
+            </b-autocomplete>
+              <!-- @keydown="autocompleteFocused = true"
+              @focus="autocompleteFocused = true"
+              @blur="autocompleteFocused = false" -->
+            <b-select
+              v-else-if="part.options && part.options.length < 5  && part.options.length > 0"
+              :placeholder="part.label"
+              :value="adr[part.type] || null"
+              @input="val => updateAddress(part.type, val)"
+              :class="[part.class, 'req-select']"
+              expanded>
+              <option
+                v-for="option in part.options"
+                :value="option.key"
+                :key="option.key">
+                {{ option.name }}
+              </option></b-select>
+            <b-autocomplete
+              v-else-if="part.options && part.options.length > 4"
+              :data="adr[part.type] ? part.options.filter(x => x.name.includes(adr[part.type])): part.options"
+              field="name"
+              :placeholder="part.label"
+              open-on-focus
+              keep-first
+              :value="adr[part.type] || null"
+              @input="val => updateAddress(part.type, val)"
+              @select="option => option ? updateAddress(part.type, option.name) : ''"></b-autocomplete>
+            <b-input
+              v-else
+              :value="adr[part.type] || ''"
+              @input="val => updateAddress(part.type, val)"
+              :placeholder="part.label"
+              :type="part.displayType"
+              :class="part.class"></b-input>
+          </b-field>
+        </template>
+        <template v-if="formatted.length === 1">
+          <b-field v-for="n in ['A', 'B', 'C', 'S']" :key="n">
+            <b-input disabled :value="$t(`request.votAdr.${n}`) + (n === 'A' ? ' (Please select a country to continue)' : '')"></b-input>
+          </b-field>
+        </template>
+      </transition-group>
+    </div>
+    <b-field v-if="adr && v && formatted && formatted.length" :label="usesAlternateFormat ? $t(`request.${fieldName}.structured-label`) : $t(`request.${fieldName}.unstructured-label`)">
+      <b-field>
+        <b-radio-button
+          :value="usesAlternateFormat"
+          @input="val => update({[fieldName]: Object.assign({}, this.adr || {}, {usesAlternateFormat: !usesAlternateFormat})})"
+          :native-value="!usesAlternateFormat"
+          :type="usesAlternateFormat ? 'is-success' : 'is-danger'">
+          <b-icon :icon="!usesAlternateFormat ? 'edit' : 'align-justify'"></b-icon>
+          <span>{{$t(`request.${fieldName}.changeFormat`)}}</span>
+        </b-radio-button>
+      </b-field>
+    </b-field>
+  </div>
+</template>
+
+<script>
+import { mapMutations, mapGetters, mapActions } from 'vuex'
+import snarkdown from 'snarkdown'
+import BasicLabel from '~/components/BasicLabel'
+import CountrySelector from '~/components/CountrySelector'
+import { placesAutocomplete, placeDetails, uuidv4 } from '~/utils/helpers.js'
+import { cleanString } from '~/utils/helpers'
+
+export default {
+  name: 'AbroadAddress',
+  props: ['fieldName', 'v'],
+  components: {
+    BasicLabel,
+    CountrySelector
+  },
+  data () {
+    return {
+      isInfoOpen: false,
+      countryFields: [{help: '', type: 'countryiso', label: 'Country', required: true, length: 1}],
+      data: [],
+      sessionToken: '',
+      isFetching: false,
+      autocompleteFocused: false
+    }
+  },
+  computed: {
+    formattedAddress () {
+      // return this.countryData && /%A|%B|/.replacethis.countryData.cfmt ? this.countryData.cfmt : ''
+      return this.countryData && this.countryData.cfmt ? this.countryData.cfmt.replace(/%([N|O|A|B|D|C|S|Z|X])/g, (match, p1, offset, string) => this.adr[p1] || '').split(/%n/g).filter(x => x).concat(this.countryData.name) : ['']
+    },
+    ctry () { return this.adr && this.adr.countryiso ? this.adr.countryiso : '' },
+    usesAlternateFormat () { return this.adr && this.adr.usesAlternateFormat ? this.adr.usesAlternateFormat : false },
+    countryData () {
+      if (this.ctry && this.postalMetadataHasCountry(this.ctry)) {
+        return this.ctry === 'US' && this.fieldName === 'abrAdr'
+          ? {fmt: '%N%n%O%n%A%n%C, %S %Z', id: 'data/US', locality_name_type: 'city', require: 'ACSZ', state_name_type: 'state', sublocality_name_type: 'suburb', upper: 'CS', zip_name_type: 'zip', key: 'US', lang: 'en', languages: 'en', name: 'UNITED STATES', posturl: 'https://tools.usps.com/go/ZipLookupAction!input.action', sub_isoids: 'AA~AE~AP', sub_keys: 'AA~AE~AP', sub_names: 'Armed Forces (AA)~Armed Forces (AE)~Armed Forces (AP)', sub_zipexs: '34000,34099~09000,09999~96200,96699', sub_zips: '340~09~96[2-6]', zip: '(\\d{5})(?:[ \\-](\\d{4}))?', zipex: '95014,22162-1010', format: [{type: 'A', label: 'Address line 1', help: 'APO, DPO, FPO address', length: 1, required: true}, {type: 'B', label: 'Address line 2', help: '', length: 1, required: false}, {type: 'C', label: 'APO / DPO / FPO', help: null, length: 3, required: true}, {type: 'S', label: 'AA / AE / AP', help: null, length: 3, required: true, options: [{name: 'Armed Forces (AA)', key: 'AA', iso: null, zipRegex: '340', zipEx: '34000,34099', parentKey: 'US'}, {name: 'Armed Forces (AE)', key: 'AE', iso: null, zipRegex: '09', zipEx: '09000,09999', parentKey: 'US'}, {name: 'Armed Forces (AP)', key: 'AP', iso: null, zipRegex: '96[2-6]', zipEx: '96200,96699', parentKey: 'US'}, {name: 'Northern Mariana Islands', key: 'MP', iso: null, zipRegex: '9695[0-2]', zipEx: '96950,96952', parentKey: 'US'}]}, {type: 'Z', label: 'Zip', help: null, length: 3, required: true, example: '95014', regex: '(\\d{5})(?:[ \\-](\\d{4}))?'}], cfmt: '%N%n%A%n%B%n%C, %S %Z'}
+          : Object.assign({}, this.postalDataForCountry(this.ctry))
+      } else return null
+    },
+    requiredParts () {
+      return this.countryData && this.countryData.require
+        ? this.countryData.require.split('').concat(['alt1', 'countryiso'])
+        : ['A', 'C', 'alt1', 'countryiso']
+    },
+    formatted () {
+      if (this.countryFields && Array.isArray(this.countryFields)) {
+        return this.countryFields
+          .filter(({type}) => this.usesAlternateFormat
+            ? /alt|country/.test(type)
+            : /A|B|D|C|S|X|Z|country/.test(type))
+          .map(part => Object.assign({}, part, {
+            messages: this.v && this.v[part.type].$error
+              ? Object.entries(this.v[part.type]).filter(([key, value]) => key.charAt(0) !== '$' && value === false).map(x => this.$t(`request.${this.fieldName}.messages.${part.type}-${x[0]}`, { label: part.label, zipExample: part.example }))
+              : '',
+            displayType: this.v && this.v[part.type].$error ? 'is-danger' : '',
+            class: {
+              'is-required': this.requiredParts.includes(part.type),
+              'is-optional': !this.requiredParts.includes(part.type),
+              'hide': Boolean(this.adr && this.adr[part.type]) || (this.v && this.v[part.type].$error)
+            }
+          }))
+      } else return []
+    },
+    adr: {
+      get () { return this.getCurrent[this.fieldName] || {} },
+      set (val) { this.update({[this.fieldName]: Object.assign({}, this.adr, val, {formatted: this.formattedAddress})}) }
+    },
+    toolTipTitle () { return this.$te(`request.${this.fieldName}.tooltipTitle`) ? this.$t(`request.${this.fieldName}.tooltipTitle`) : null },
+    toolTipContent () { return this.$te(`request.${this.fieldName}.tooltip`) ? snarkdown(this.$t(`request.${this.fieldName}.tooltip`)) : null },
+    ...mapGetters('data', ['countriesWithPostalData', 'postalMetadataHasCountry', 'postalDataForCountry']),
+    ...mapGetters('requests', ['getCurrent']),
+    ...mapGetters('userauth', ['userCountry'])
+  },
+  methods: {
+    focusCountry () {
+      // console.log(this.$refs.ctry)
+      this.$refs.ctry[0].focus()
+      // this.$refs.ctry.$el.querySelector('input').focus()
+    },
+    getAsyncData (val) {
+      // if (this.autocompleteFocused)
+      this.updateAddress('A', val)
+      placesAutocomplete.call(this, val, this.ctry, 'abrAdr')
+    },
+    fillData (opt) {
+      this.autocompleteFocused = false
+      placeDetails.call(this, opt)
+    },
+    createFormattedAddress () {
+      this.countryFields = [1, 2, 3, 4, 5]
+        .map(x => ({help: '', label: `address line ${x}`, length: 1, required: x === 1, type: `alt${x}`}))
+        .concat({help: '', type: 'countryiso', label: 'Country', required: true, length: 1})
+        .concat(this.ctry && this.countryData
+          ? this.countryData.format
+          : [{help: '', label: 'Street Address', length: 1, required: true, type: 'A'}, {help: '', label: 'Apartment', length: 1, required: false, type: 'B'}, {help: '', label: 'City', length: 1, required: true, type: 'C'}, {help: '', label: 'Province', length: 1, required: false, type: 'S'}])
+        // .filter(({type}) => this.adr && this.adr.usesAlternateFormat ? /alt|country/.test(type) : /A|B|D|C|S|X|Z|country/.test(type))
+        // .map(part => Object.assign({}, part, {
+        //   messages: this.v && this.v[part.type].$error
+        //     ? Object.entries(this.v[part.type]).filter(([key, value]) => key.charAt(0) !== '$' && value === false).map(x => this.$t(`request.${this.fieldName}.messages.${part.type}-${x[0]}`, { label: part.label, zipExample: part.example }))
+        //     : '',
+        //   displayType: this.v && this.v[part.type].$error ? 'is-danger' : '',
+        //   class: {
+        //     'is-required': this.requiredParts.includes(part.type),
+        //     'is-optional': !this.requiredParts.includes(part.type),
+        //     'hide': Boolean(this.adr && this.adr[part.type]) || (this.v && this.v[part.type].$error)
+        //   }
+        // }))
+    },
+    toggleInfo () { this.isInfoOpen = !this.isInfoOpen },
+    updateAddress: function (addressPart, value) {
+      let cleanAdr = !this.countryData || !this.formatted || !this.adr
+        ? this.adr
+        : Object.entries(this.adr).reduce((obj, [k, v]) => {
+          if (this.countryFields.concat({type: 'usesAlternateFormat'}).map(({type}) => type).includes(k)) obj[k] = v
+          return obj
+        }, {})
+      // console.log('cleanAdr', cleanAdr)
+      this.update({[this.fieldName]: Object.assign({}, cleanAdr, {[addressPart]: cleanString(value) || null, formatted: this.formattedAddress})})
+      this.$emit('delayTouch', addressPart)
+    },
+    ...mapActions('data', ['updateCountryData']),
+    ...mapMutations('requests', ['update'])
+  },
+  watch: {
+    // countryData (val, oldVal) {
+    //   if (val && (!oldVal || val.key !== oldVal.key)) {
+    //     // this.createFormattedAddress()
+    //     this.updateAddress('countryiso', val.key)
+    //   }
+    // },
+    ctry (val, oldVal) {
+      // console.log(val, 'ctry changed')
+      if (val) {
+        if (this.postalMetadataHasCountry(val)) {
+          this.$nextTick()
+            .then(() => this.createFormattedAddress())
+        } else {
+          this.updateCountryData(val).then(() => {
+            this.$nextTick()
+              .then(() => this.createFormattedAddress())
+          })
+        }
+      }
+      // if (val && (!oldVal || val !== oldVal)) {
+      //   this.updateCountryData(val).then(() => {
+      //     this.createFormattedAddress()
+      //   })
+      // }
+    },
+    userCountry (val) {
+      if (!this.ctry && val) {
+        this.updateAddress('countryiso', val)
+      }
+    }
+  },
+  mounted () {
+    this.sessionToken = uuidv4()
+    if (this.ctry) {
+      this.updateCountryData(this.ctry)
+        .then(() => this.$nextTick()
+          .then(() => this.createFormattedAddress()))
+    }
+    if (!this.ctry && this.userCountry) {
+      this.updateAddress('countryiso', this.userCountry)
+      this.createFormattedAddress()
+    }
+    // if (process.browser) {
+    //   window.onNuxtReady(() => {
+    this.isInfoOpen = true
+    setTimeout(() => {
+      this.isInfoOpen = false
+    }, 50)
+    //   })
+    // }
+  }
+}
+</script>
+
+<style>
+.slide-item {
+  transition: all 1s;
+  display: inline-block;
+  margin-right: 10px;
+}
+.slide-enter, .slide-leave-to
+/* .list-complete-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.slide-leave-active {
+  position: absolute;
+}
+.slide-move {
+  transition: transform 1s;
+}
+</style>

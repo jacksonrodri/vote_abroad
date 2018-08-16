@@ -285,6 +285,11 @@
     "exPhone": "+53 5 1234567"
   },
   {
+    "name": "Curacao",
+    "code": "CW",
+    "exPhone": "+599 9 518 1234"
+  },
+  {
     "name": "Cyprus",
     "code": "CY",
     "exPhone": "+357 96 123456"
@@ -850,7 +855,7 @@
     "exPhone": "+680 620 1234"
   },
   {
-    "name": "Palestinian Territory, Occupied",
+    "name": "Palestine, State of",
     "code": "PS",
     "exPhone": "+970 599 123 456"
   },
@@ -938,6 +943,11 @@
     "name": "Saint Lucia",
     "code": "LC",
     "exPhone": "+1 758 284 5678"
+  },
+  {
+    "name": "Saint Martin",
+    "code": "MF",
+    "exPhone": "+590 690 00 12 34"
   },
   {
     "name": "Saint Pierre and Miquelon",

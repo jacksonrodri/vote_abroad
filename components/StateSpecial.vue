@@ -166,7 +166,7 @@ export default {
         case 'ak':
           if (!this.isRegistering) {
             this.setVal(null)
-          } else this.scratch = this.value.length > 56 ? this.value.slice(57, this.value.length + 1) : ''
+          } else this.scratch = this.value.length > 55 ? this.value.slice(56, this.value.length + 1) : ''
           break
         default:
           break

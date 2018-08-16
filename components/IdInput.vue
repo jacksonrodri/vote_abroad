@@ -32,7 +32,7 @@
         type="tel"
         ref="ssn4"
         v-model="ssn4"
-        placeholder="e.g. ✱✱✱-✱✱-6789" expanded></b-input>
+        placeholder="e.g. ✱✱✱-✱✱-1111" expanded></b-input>
     </b-field>
 
     <div class="has-text-centered"><strong>{{ $t('request.id.or')}}</strong></div>

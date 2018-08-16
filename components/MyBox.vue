@@ -72,7 +72,7 @@ export default {
     },
     abrAdr: {
       type: Object,
-      default: () => ({ alt1: '', alt2: '', alt3: '', alt4: '', alt5: '' })
+      default: () => ({ alt1: '', alt2: '', alt3: '', alt4: '', alt5: '', formatted: [''] })
     },
     fwdAdr: {
       type: Object,
@@ -389,6 +389,7 @@ export default {
   render () {
     // Since the parent canvas has to mount first, it's *possible* that the context may not be
     // injected by the time this render function runs the first time.
+    this.$emit('isLoading', true)
     if (!this.provider.context) return
     const ctx = this.provider.context
 
@@ -463,16 +464,16 @@ export default {
       ctx.fillText(this.votState || '', this.calculated.votState.x, this.calculated.votState.y)
       ctx.fillText(this.votCounty || '', this.calculated.votCounty.x, this.calculated.votCounty.y)
       ctx.fillText(this.votZip || '', this.calculated.votZip.x, this.calculated.votZip.y)
-      ctx.fillText(this.abrAdr && this.abrAdr.alt1 ? this.abrAdr.alt1 : '', this.calculated.abr1.x, this.calculated.abr1.y)
-      ctx.fillText(this.abrAdr && this.abrAdr.alt2 ? this.abrAdr.alt2 : '', this.calculated.abr2.x, this.calculated.abr2.y)
-      ctx.fillText(this.abrAdr && this.abrAdr.alt3 ? this.abrAdr.alt3 : '', this.calculated.abr3.x, this.calculated.abr3.y)
-      ctx.fillText(this.abrAdr && this.abrAdr.alt4 ? this.abrAdr.alt4 : '', this.calculated.abr4.x, this.calculated.abr4.y)
-      ctx.fillText(this.abrAdr && this.abrAdr.alt5 ? this.abrAdr.alt5 : '', this.calculated.abr5.x, this.calculated.abr5.y)
-      ctx.fillText(this.fwdAdr && this.fwdAdr.alt1 ? this.fwdAdr.alt1 : '', this.calculated.fwd[0].x, this.calculated.fwd[0].y)
-      ctx.fillText(this.fwdAdr && this.fwdAdr.alt2 && this.fwdAdr.alt1 ? this.fwdAdr.alt2 : '', this.calculated.fwd[1].x, this.calculated.fwd[1].y)
-      ctx.fillText(this.fwdAdr && this.fwdAdr.alt3 && this.fwdAdr.alt1 ? this.fwdAdr.alt3 : '', this.calculated.fwd[2].x, this.calculated.fwd[2].y)
-      ctx.fillText(this.fwdAdr && this.fwdAdr.alt4 && this.fwdAdr.alt1 ? this.fwdAdr.alt4 : '', this.calculated.fwd[3].x, this.calculated.fwd[3].y)
-      ctx.fillText(this.fwdAdr && this.fwdAdr.alt5 && this.fwdAdr.alt1 ? this.fwdAdr.alt5 : '', this.calculated.fwd[4].x, this.calculated.fwd[4].y)
+      ctx.fillText(this.abrAdr.formatted && this.abrAdr.formatted[0] ? this.abrAdr.formatted[0] : '', this.calculated.abr1.x, this.calculated.abr1.y)
+      ctx.fillText(this.abrAdr.formatted && this.abrAdr.formatted[1] ? this.abrAdr.formatted[1] : '', this.calculated.abr2.x, this.calculated.abr2.y)
+      ctx.fillText(this.abrAdr.formatted && this.abrAdr.formatted[2] ? this.abrAdr.formatted[2] : '', this.calculated.abr3.x, this.calculated.abr3.y)
+      ctx.fillText(this.abrAdr.formatted && this.abrAdr.formatted[3] ? this.abrAdr.formatted[3] : '', this.calculated.abr4.x, this.calculated.abr4.y)
+      ctx.fillText(this.abrAdr.formatted && this.abrAdr.formatted[4] ? this.abrAdr.formatted[4] : '', this.calculated.abr5.x, this.calculated.abr5.y)
+      ctx.fillText(this.fwdAdr.formatted && this.fwdAdr.formatted[0] ? this.fwdAdr.formatted[0] : '', this.calculated.fwd[0].x, this.calculated.fwd[0].y)
+      ctx.fillText(this.fwdAdr.formatted && this.fwdAdr.formatted[1] ? this.fwdAdr.formatted[1] : '', this.calculated.fwd[1].x, this.calculated.fwd[1].y)
+      ctx.fillText(this.fwdAdr.formatted && this.fwdAdr.formatted[2] ? this.fwdAdr.formatted[2] : '', this.calculated.fwd[2].x, this.calculated.fwd[2].y)
+      ctx.fillText(this.fwdAdr.formatted && this.fwdAdr.formatted[3] ? this.fwdAdr.formatted[3] : '', this.calculated.fwd[3].x, this.calculated.fwd[3].y)
+      ctx.fillText(this.fwdAdr.formatted && this.fwdAdr.formatted[4] ? this.fwdAdr.formatted[4] : '', this.calculated.fwd[4].x, this.calculated.fwd[4].y)
       ctx.fillText(this.party || '', this.calculated.party.x, this.calculated.party.y)
       ctx.fillText(this.addlComputed[0] || '', this.calculated.addlInfo[0].x, this.calculated.addlInfo[0].y)
       ctx.fillText(this.addlComputed[1] || '', this.calculated.addlInfo[1].x, this.calculated.addlInfo[1].y)
@@ -502,6 +503,7 @@ export default {
       ctx.fillText(this.isUncertainReturn, this.calculated.isUncertainReturn.x, this.calculated.isUncertainReturn.y)
       ctx.fillText(this.isNeverResided, this.calculated.isNeverResided.x, this.calculated.isNeverResided.y)
     }
+    this.$emit('isLoading', false)
   }
 }
 </script>

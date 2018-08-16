@@ -123,7 +123,7 @@ export default {
       didYouKnow: [
         'Did you know around 9 million Americans live abroad?',
         'Request your ballot every calendar year to get full Federal Protection for all federal elections each year.',
-        'Americans have been political abroad since Thomas Jefferson.  He wrote portions of xx while in Paris.'
+        'Americans have been political abroad since Thomas Jefferson.  He drafted the Bill of Rights while in Paris.'
       ]
     }
   },

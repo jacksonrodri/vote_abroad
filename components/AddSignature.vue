@@ -1,53 +1,35 @@
 <template>
   <section>
-    <!-- <get-camera></get-camera> -->
-    <!-- <div class="columns is-centered is-gapless">
-      <div class="column is-narrow"> -->
-      <!-- <div :class="['column', {'is-narrow': device && device.type !== 'mobile'}]"> -->
         <div>
-        <!-- <div :style="device && device.type !== 'mobile' ? 'width:640px;' : ''"> -->
-          <!-- <h3 class="title is-3">Upload a photo of your signature or <a class="button" @click="webCamCapture = !webCamCapture">click here</a> to use your device camera to scan your signature now.</h3> -->
-          <h3 class="title is-3">Add your scanned signature.</h3>
-          <!-- <h3 class="subtitle is-4">You can upload a photo of your signature or <a class="has-text-primary" @click="() => { thresholdedPic = null; webCamCapture = true }">Click here</a> to use your device camera to capture it. <a @click="croppedPic.chooseFile()">Upload file</a></h3> -->
-          <h3 class="subtitle is-4"><a class="has-text-primary" @click="() => {webcamCaptureError = false; webCamPic = null; croppedPic.remove(); startCameraFilePicker()}">Click start</a> to scan your signature now<span> with your device camera</span>. Or <a @click="croppedPic.chooseFile()" class="has-text-primary">upload a file</a> from your computer. </h3>
+          <h3 class="title is-3">{{ $t('request.sig.title') }}</h3>
+          <h3 v-if="canCaptureImage" class="subtitle is-4">
+            <a class="has-text-primary" @click="() => {webcamCaptureError = false; webCamPic = null; croppedPic.remove(); startCameraFilePicker()}">Click start</a> to scan your signature now<span> with your device camera</span>. Or <a @click="croppedPic.chooseFile()" class="has-text-primary">upload a file</a> from your computer.
+          </h3>
+          <h3 v-else class="subtitle is-4">
+            <a @click="croppedPic.chooseFile()" class="has-text-primary">Click to upload a scan of your signature</a> from your computer.
+          </h3>
           <b-message :active="webcamCaptureError && !(croppedPic && croppedPic.imageSet)" :closable="false" title="Failed loading camera." type="is-danger">
             We could not get access your device camera. (Either it is not connected/available or you have disallowed VoteFromAbroad.org from accessing it). You can still click <a @click="croppedPic.chooseFile()" class="has-text-primary">upload a file</a> to upload your signature from a file.
           </b-message>
-          <b-message :active="!webCamCapture && (!croppedPic || !croppedPic.imageSet)" :closable="false" title="Instructions" type="is-info">
+          <b-message :active="!webCamCapture && canCaptureImage && (!croppedPic || !croppedPic.imageSet)" :closable="false" title="Instructions" type="is-info">
             For best results, sign your name with a dark pen in large letters on a blank sheet of white paper. Then click 'Start'.
+          </b-message>
+          <b-message :active="!webCamCapture && !canCaptureImage && (!croppedPic || !croppedPic.imageSet)" :closable="false" title="Instructions" type="is-info">
+            For best results, sign your name with a dark pen in large letters on a blank sheet of white paper. Scan the file to your computer, then click 'Upload a File'.
           </b-message>
           <b-message :active="webCamCapture && !webcamCaptureError" :closable="false" title="Instructions" type="is-info">
             Move your signature in front of the camera so that it is in focus and takes up as much of the screen as possible.
           </b-message>
           <b-message :active="!webCamCapture && croppedPic && croppedPic.imageSet" :closable="false" title="Instructions" type="is-info">
-            - Align your signature with the red line. (drag to move, scroll to zoom).<br>- Adjust your signature with the 'Line Strength' buttons below so that the signature is clear and has minimal background noise<br>- If your signature is still unclear, you can click 'Clear Image' to try again.<br>- Click 'Use This Signature' to add it to your form and compose a message to your election official.
+            - Align your signature with the red line -- drag to move, scroll to zoom. If you don't see your signature, you may need to zoom out to get it back on the page.<br>- Adjust your signature with the 'Line Strength' buttons below so that the signature is clear and has minimal background noise<br>- If your signature is still unclear, you can click 'Clear Image' to try again.<br>- Click 'Use This Signature' to add it to your form and compose a message to your election official.
           </b-message>
-          <!-- <article class="message is-info">
-            <div v-show="!webCamCapture && (!croppedPic || !croppedPic.imageSet)" class="message-body">
-              For best results, sign your name with a dark pen in large letters on a blank sheet of white paper.
-            </div>
-            <div v-show="webCamCapture && !webcamCaptureError" class="message-body">
-              Move your signature in front of the camera so that it is in focus and takes up as much of the screen as possible.
-            </div>
-            <div v-show="!webCamCapture && croppedPic && croppedPic.imageSet" class="message-body">
-              Edit your signature so that it is clear, on the red line and has minimal background noise. (drag to move, scroll to zoom).  Click 'Use This Signature' to add it to your form and compose a message to your election official.
-            </div>
-          </article> -->
-          <!-- <p class="has-text-info">After capturing your signature, you can edit it (drag to move, scroll to zoom).  When your signature is clear and on the red line, click 'Use This Signature' to add it to your form and compose a message to your election official.</p> -->
-          <!-- <h3 class="subtitle is-4">- or -</h3> 0-->
-          <!-- <h3 class="subtitle is-4">or <a class="has-text-primary" @click="webCamCapture = !webCamCapture">Click here</a> to use your device camera to capture it.</h3> -->
-          <!-- <div style="position:relative;"></div> -->
-
-          <!-- <nuxt-link to="/cam2">cam2</nuxt-link> -->
-          <!-- <div class="container"> -->
             <get-camera ref="webcam" @captureError="captureError" :isCapturing="webCamCapture" v-show="webCamCapture" @updatePic="drawThresholdToCanvas"></get-camera>
-            <!-- <div :class="croppedPic && croppedPic.imageSet ? imageSetClass : imageNotSetClass"> -->
             <signature-cropper
               v-show="!webCamCapture"
               :style="!croppedPic || !croppedPic.imageSet ? 'background: whitesmoke; background-image:none;': ''"
               v-model="croppedPic"
               ref="cp"
-              placeholder="Click to Start"
+              :placeholder="canCaptureImage ? 'Click to Start' : 'Upload a File'"
               accept="image/*"
               :zoom-speed="2"
               :auto-sizing="true"
@@ -56,7 +38,7 @@
               :disable-click-to-choose="device && device.inputCaptureSupported ? false : true"
               :replace-drop="true"
               :quality="device.type === 'mobile' && device.orientation === 'portrait' ? 4 : 2"
-              @click="() => { if (!croppedPic || !(croppedPic.hasImage())) { startCameraFilePicker() } }"
+              @click="() => { if (!canCaptureImage) { croppedPic.chooseFile() } if (!croppedPic || !(croppedPic.hasImage())) { startCameraFilePicker() } }"
               @init.once="$refs.cp.refresh()"
               @image-remove="webCamPic = null"
               @file-choose="drawFromFile"
@@ -66,20 +48,13 @@
               initial-size="cover">
               <img slot="intitial" :src="webCamPic" />
             </signature-cropper>
-            <!-- </div> -->
             <b-field>
               <b-field grouped>
-                <!-- <b-field>
-                  <button :class="['button', 'is-light', 'is-medium', {'is-loading': false}]" @click="$emit('input', null)">
-                    Cancel
-                  </button>
-                </b-field> -->
                 <b-field v-if="croppedPic && croppedPic.imageSet">
                   <button :class="['button', 'is-light', 'is-medium', {'is-loading': false}]"
                     @click.prevent="() => {webCamPic = null; croppedPic.remove();}"
                     :disabled="!croppedPic || !croppedPic.imageSet">
                     Clear Image
-                    <!-- {{$t('request.sig.sendEmail')}} -->
                   </button>
                 </b-field>
                 <b-field expanded>
@@ -97,7 +72,7 @@
                   </button>
                   <button :class="[buttonClass, 'is-fullwidth', {'is-loading': false}]"
                     @click="croppedPic.chooseFile()"
-                    v-else-if="webcamCaptureError">
+                    v-else-if="webcamCaptureError || !canCaptureImage">
                     Upload a File
                   </button>
                   <!-- <a @click="croppedPic.chooseFile()" class="has-text-primary">upload a file</a> -->
@@ -190,27 +165,13 @@
                   </div>
                 </div>
               </div>
-          <!-- </div> -->
-            <!-- placeholder="Click to start."
-            :placeholder-font-size="device.type === 'mobile' ? 8 : 20" -->
-          <!-- <div class="section">
-            <h3 class="subtitle">Edit</h3>
-            <a @click="increaseCompensation" class="button">Increase Threshold</a>
-            <a @click="decreaseCompensation" class="button">Decrease Threshold</a>
-            <a @click="rotate(-1)" class="button">Rotate Left</a>
-            <a @click="rotate(1)" class="button">Rotate Right</a>
-          </div> -->
-          <!-- <a @click="increaseSize" class="button">Increase Size</a>
-          <a @click="decreaseSize" class="button">Decrease Size</a> -->
-          <!-- <div class="cover-container"></div> -->
         </div>
-      <!-- </div>
-    </div> -->
   </section>
 </template>
 
 <script>
 import GetCamera from '~/components/GetCamera'
+import { mapState } from 'vuex'
 // import ImageTools from '~/assets/imageTools.js'
 const savePixels = require('save-pixels')
 const getPixels = require('get-pixels')
@@ -246,7 +207,10 @@ export default {
     }
   },
   computed: {
-    device () { return this.$store.state.userauth.device }
+    device () { return this.$store.state.userauth.device },
+    ...mapState({
+      canCaptureImage: state => state.userauth.device.hasWebCam
+    })
   },
   methods: {
     captureError () {
@@ -337,30 +301,8 @@ export default {
           }
         }
         img.src = reader.result
-        // this.webCamPic = reader.result
-        // this.drawThresholdToCanvas(reader.result)
       }
-      // console.log(file)
       reader.readAsDataURL(file)
-      // ImageTools.resize(file, {
-      //   width: 320, // maximum width
-      //   height: 240 // maximum height
-      // }, function (blob, didItResize) {
-      //   console.log('blob', blob)
-      //   console.log('did it resize?', didItResize)
-      //   reader.readAsArrayBuffer(blob)
-      //   // didItResize will be true if it managed to resize it, otherwise false (and will return the original file as 'blob')
-      //   // this.webCamPic = window.URL.createObjectURL(blob)
-      //   // you can also now upload this blob using an XHR.
-      //   // reader.readAsDataURL(blob)
-      // })
-      // let reader = new FileReader()
-      // reader.onload = () => {
-      //   // console.log(reader.result)
-      //   // this.webCamPic = reader.result
-      //   // this.drawThresholdToCanvas(reader.result)
-      // }
-      // reader.readAsDataURL(file)
     },
     drawThresholdToCanvas (imgUrl) {
       if (!this.thresholdedPic) {
@@ -371,9 +313,7 @@ export default {
             window.alert('Error.')
             throw err
           }
-          // this.blurred = this.blurred || blur(pixels, 1)
           let thresholded = adaptiveThreshold(pixels, {size: this.size, compensation: this.compensation})
-          // thresholded = blur(thresholded, 1)
           let cnv = savePixels(thresholded, 'canvas') // returns canvas element
           let ctx = cnv.getContext('2d')
           let imgData = ctx.getImageData(0, 0, cnv.width, cnv.height)
