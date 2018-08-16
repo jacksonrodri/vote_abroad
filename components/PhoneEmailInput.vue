@@ -108,7 +108,7 @@ const DIGITS =
 }
 
 export default {
-  name: 'PhoneOrEmail',
+  name: 'PhoneEmailInput',
   props: ['v', 'fieldName'],
   components: {
     CountrySelector,

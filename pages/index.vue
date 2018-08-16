@@ -21,13 +21,13 @@
                   @pressEnter="startAuth"
                   v-model="phoneOrEmail">
                 </phone-input> -->
-                <phone-five
+                <phone-email-input
                   ref="phoneOrEmail"
                   key="phoneOrEmail"
                   fieldName="phoneOrEmail"
                   v-model="phoneOrEmail"
                   :v="$v.phoneOrEmail"
-                  @delayTouch="delayTouch($v.phoneOrEmail)"></phone-five>
+                  @delayTouch="delayTouch($v.phoneOrEmail)"></phone-email-input>
                 <!-- <phone-email
                   size="is-medium"
                   ref="pe"
@@ -71,7 +71,8 @@
 <script>
 // import PhoneEmail from '~/components/PhoneEmail.vue'
 // import PhoneInput from '~/components/PhoneInput'
-import PhoneFive from '~/components/PhoneFive'
+import PhoneEmailInput from '~/components/PhoneEmailInput'
+// import PhoneFive from '~/components/PhoneFive'
 
 import { mapActions, mapGetters, mapMutations } from 'vuex'
 const touchMap = new WeakMap()
@@ -86,7 +87,7 @@ export default {
   components: {
     // PhoneEmail,
     // PhoneInput,
-    PhoneFive
+    PhoneEmailInput
   },
   // mounted () {
   //   if (process.browser) {
