@@ -138,7 +138,8 @@ export default {
       return {format, parse, onChange}
     },
     ...mapState('data', ['countries']),
-    ...mapGetters('data', ['phoneMetadataHasAllCountriesForPrefix', 'formattedNumber', 'getPhoneFormatInfo', 'getPhoneIntFormat', 'isValidNumber', 'hasValidPhonePrefix'])
+    ...mapGetters('data', ['phoneMetadataHasAllCountriesForPrefix', 'formattedNumber', 'getPhoneFormatInfo', 'getPhoneIntFormat', 'isValidNumber', 'hasValidPhonePrefix']),
+    ...mapGetters('userauth', ['userCountry'])
   },
   methods: {
     selectField () {
@@ -177,12 +178,20 @@ export default {
       if (!this.countryIso) {
         this.countryIso = (this.formattedNumber(this.fieldValue)).formatted.country
       }
+    },
+    userCountry (val) {
+      if (val && !this.countryIso) {
+        this.countryIso = val
+      }
     }
   },
   mounted () {
     if (this.fieldValue) {
       this.tempValue = this.fieldValue
       this.countryIso = (this.formattedNumber(this.fieldValue)).formatted.country
+    }
+    if (this.userCountry && !this.countryIso) {
+      this.countryIso = this.userCountry
     }
   }
 }
