@@ -196,7 +196,7 @@ export default {
               message: `Sent! Check your inbox for a copy (${this.formEmail})`,
               type: 'is-success'
             })
-            this.$router.push('dashboard')
+            this.$router.push(this.localePath('dashboard'))
           })
           .catch(error => {
             console.log(error)
