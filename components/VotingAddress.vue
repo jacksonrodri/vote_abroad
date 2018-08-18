@@ -5,8 +5,9 @@
     <b-message v-if="toolTipTitle" :title="toolTipTitle" type="is-info" has-icon :active.sync="isOpen">
       <slot name="tooltip"></slot>
     </b-message>
+      <!-- :message="validations.A.$error ? Object.keys(validations.A.$params).map(x => $t(`request.votAdr.messages.A-${x}`)) : '' " -->
     <b-field
-      :message="validations.A.$error ? Object.keys(validations.A.$params).map(x => $t(`request.votAdr.messages.A-${x}`)) : '' "
+      :message="validations && validations.A.$error ? Object.entries(validations.A).filter(([key, value]) => key.charAt(0) !== '$' && value === false).map(x => $t(`request.votAdr.messages.A-${x[0]}`)) : ''"
       :type="(validations.A.$error ? 'is-danger': '')">
       <b-autocomplete ref="A"
         :placeholder="$t('request.votAdr.A')"

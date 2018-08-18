@@ -173,7 +173,7 @@
       :allowsNeverResided="stateRules ? stateRules.allowsNeverResided : false"
       :validations="($v.voterClass)"
       ref="voterClass"
-      :state="this.votAdr.S"
+      :state="votAdr && votAdr.S ? this.votAdr.S : null"
       @input="delayTouch($v.voterClass)"
       :toolTipTitle="$t('request.voterClass.tooltipTitle')">
       <div slot="tooltip">
@@ -780,6 +780,8 @@ export default {
           break
         case 'voting-information':
           this.$v.votAdr.$touch()
+          this.$v.votAdr.A.$touch()
+          this.$v.votAdr.C.$touch()
           // this.$v.vAdr.$touch()
           this.$v.jurisdiction.$touch()
           this.$v.voterClass.$touch()
@@ -817,13 +819,14 @@ export default {
           this.$refs.email.$el.scrollIntoView()
           this.$refs.email.$el.querySelector('input').focus()
           break
-        case this.stage.slug === 'your-information' && this.$v.abrAdr.country && this.$v.abrAdr.country.$error:
-          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.country'}})
-          this.$refs.abrAdr.$refs.country.$el.scrollIntoView()
-          this.$refs.abrAdr.$refs.country.focus()
-          break
+        // case this.stage.slug === 'your-information' && this.$v.abrAdr.country && this.$v.abrAdr.country.$error:
+        //   this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.country'}})
+        //   this.$refs.abrAdr.$refs.country.$el.scrollIntoView()
+        //   this.$refs.abrAdr.$refs.country.focus()
+        //   break
         case this.stage.slug === 'your-information' && this.$v.abrAdr.A && this.$v.abrAdr.A.$error && !this.abrAdr.usesAlternateFormat:
-          this.$refs.abrAdr.$refs.A[0].$el.scrollIntoView()
+          this.$refs.abrAdr.$el.scrollIntoView()
+          console.log(this.$refs.abrAdr.$refs)
           this.$refs.abrAdr.$refs.A[0].focus()
           this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.A'}})
           break
@@ -859,11 +862,11 @@ export default {
           break
         case this.stage.slug === 'voting-information' && this.$v.votAdr.A.$error:
           this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'votAdr.A'}})
-          this.$refs.votAdr.$refs.A.$el.scrollIntoView()
+          this.$refs.votAdr.$el.scrollIntoView()
           this.$refs.votAdr.$refs.A.focus()
           break
         case this.stage.slug === 'voting-information' && this.$v.votAdr.C.$error:
-          this.$refs.votAdr.$refs.C.$el.scrollIntoView()
+          this.$refs.votAdr.$el.scrollIntoView()
           this.$refs.votAdr.$refs.C.focus()
           this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'votAdr.C'}})
           break
@@ -920,9 +923,9 @@ export default {
           this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'recBallot'}})
           break
         case this.stage.slug === 'voting-information' && this.$v.email.$error && this.recBallot === 'email':
-          this.$refs.email.check()
-          this.$refs.email.$refs.input.$el.scrollIntoView()
-          this.$refs.email.$refs.input.focus()
+          // this.$refs.email.check()
+          this.$refs.email.$el.scrollIntoView()
+          this.$refs.email.$el.querySelector('input').focus()
           this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'email'}})
           break
         case this.stage.slug === 'voting-information' && this.$v.altEmail.$error && this.$refs.altEmail:

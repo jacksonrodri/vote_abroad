@@ -46,6 +46,7 @@
               :title="part.label"
               :class="part.class"
               :loading="isFetching"
+              :ref="part.type"
               @input="(val) => { getAsyncData(val) }"
               @select="option => fillData(option)">
               <template slot-scope="props">{{ props.option.description }}</template>
@@ -57,6 +58,7 @@
               v-else-if="part.options && part.options.length < 5  && part.options.length > 0"
               :placeholder="part.label"
               :value="adr[part.type] || null"
+              :ref="part.type"
               @input="val => updateAddress(part.type, val)"
               :class="[part.class, 'req-select']"
               expanded>
@@ -70,6 +72,7 @@
               v-else-if="part.options && part.options.length > 4"
               :data="adr[part.type] ? part.options.filter(x => x.name.includes(adr[part.type])): part.options"
               field="name"
+              :ref="part.type"
               :placeholder="part.label"
               open-on-focus
               keep-first
@@ -78,6 +81,7 @@
               @select="option => option ? updateAddress(part.type, option.name) : ''"></b-autocomplete>
             <b-input
               v-else
+              :ref="part.type"
               :value="adr[part.type] || ''"
               @input="val => updateAddress(part.type, val)"
               :placeholder="part.label"
