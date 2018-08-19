@@ -1,7 +1,7 @@
 <template>
   <div class="field">
   <span class="is-flex"><label class="label">{{ $t('request.dob.label') }}</label><span @click.prevent="toolTipOpen = !toolTipOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
-  <b-field label="Select a date"
+  <b-field
     :message="validations.$error ? Object.keys(validations.$params).map(x => $t(`request.dob.messages.${x}`)) : '' "
     :type="(validations.$error ? 'is-danger': '')">
     <b-datepicker v-model="dob"
@@ -19,13 +19,13 @@
       :placeholder="$t('request.dob.placeholder')">
       <div slot="header">
         <div class="field is-centered">
-          <span class="help is-primary is-size-6">Select your birth year first, then select your birthdate.</span>
+          <span class="help is-primary is-size-6">{{$t('request.dob.selectDate')}}</span>
         </div>
         <div class="pagination field is-centered">
           <div class="pagination-list">
-            <b-field v-if="$refs && $refs.dob">
+            <b-field>
               <b-select
-                :value="$refs.dob.focusedDateData.year"
+                :value="$refs && $refs.dob ? $refs.dob.focusedDateData.year : focusedDateData.year || 2000"
                 @input="val => this.focusedDate = new Date(val, this.focusedDate.getMonth(), this.focusedDate.getDate())">
                 <option
                   v-for="year in this.listOfYears"
@@ -35,7 +35,7 @@
                 </option>
               </b-select>
               <b-select
-                :value="$refs.dob.focusedDateData.month"
+                :value="$refs && $refs.dob ? $refs.dob.focusedDateData.month : focusedDateData.month || 0"
                 @input="val => this.focusedDate = new Date(this.focusedDate.getFullYear(), val, this.focusedDate.getDate())">
                 <option
                   v-for="(month, index) in monthNames"

@@ -434,6 +434,7 @@ collections:
             fields:
               - {label: "Field Label", name: "label", widget: "string"}
               - {label: "Placeholder", name: "placeholder", widget: "string"}
+              - {label: "Select a date", name: "selectDate", widget: "string"}
               - {label: "Tooltip Title", name: "tooltipTitle", widget: "string"}
               - {label: "Tooltip", name: "tooltip", widget: "markdown"}
               - label: "Messages"
