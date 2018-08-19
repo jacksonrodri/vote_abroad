@@ -412,7 +412,14 @@
   "dashboard": {
     "ballotRequestStatus": "Ballot Request Status",
     "nextSteps": "Next Steps...",
+    "phone": "Phone",
+    "email": "Email",
+    "fax": "Fax",
     "thankYou": "Thank you for using VoteFromAbroad to generate your Voter Registration/Ballot Request form. **Be sure to submit your form** to your Local Election Official before the deadline.",
+    "helpThanks": "If you need any help, contact our volunteer voter support team at: [help@votefromabroad.org](mailto:help@votefromabroad.org).\nThanks for voting!",
+    "verify": "We also strongly recommend that you verify with you election official that they have received and processed your form.  You can reach your election official with the following:",
+    "makeChanges": "If you need to change anything on your form, <a class='has-text-primary' href='{link}'>click here</a> to go back. If you are finished, please close the browser window to delete any information saved in this session. Or ",
+    "clearSession": "clear your information and start a new request.",
     "fill": {
       "title": "Fill & Sign",
       "icon": "edit",

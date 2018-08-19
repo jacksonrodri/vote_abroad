@@ -224,141 +224,131 @@ const presidentaddresses = ['George.W_32', 'John.A_35', 'Thomas.J_43', 'James.M_
 const commonEmailDomains = ['gmail.com', 'yahoo.com', 'hotmail.com', 'aol.com', 'mac.com', 'me.com', 'shaw.ca', 'msn.com', 'rogers.com', 'sympatico.ca', 'yahoo.co.uk', 'icloud.com', 'live.com', 'outlook.com', 'btinternet.com', 'yahoo.ca', 'gmx.de', 'democratsabroad.org', 'googlemail.com', 'telus.net', 't-online.de', 'wanadoo.fr', 'web.de', 'hotmail.co.uk', 'dems-dr.org', 'bluewin.ch', 'comcast.net', 'orange.fr', 'earthlink.net', 'yahoo.fr', 'cogeco.ca', 'sbcglobal.net', 'ymail.com', 'utoronto.ca', 'gmx.net', 'yahoo.de', 'free.fr', 'mail.mcgill.ca', 'nyu.edu', 'hotmail.fr', 'eircom.net', 'rocketmail.com', 'libero.it', 'online.no', 'bigpond.com', 'netvision.net.il', 'ntlworld.com', 'prodigy.net.mx', 'att.net', 'xs4all.nl', 'yahoo.com.au', 'blueyonder.co.uk', 'yahoo.es', 'bell.net', 'st-andrews.ac.uk', 'videotron.ca', 'eastlink.ca', 'yahoo.it', 'cam.ac.uk', 'yorku.ca', 'hotmail.de', 'alice.it', 'juno.com', 'mail.com', 'ualberta.ca', 'btopenworld.com', 'cornell.edu', 'post.harvard.edu', 'telia.com', 'umich.edu', 'aim.com', 'gol.com', 'otenet.gr', 'noos.fr', 'optusnet.com.au', 'skynet.be', 'umn.edu', 'lse.ac.uk', 'us.army.mil', 'mindspring.com', 'netscape.net', 'usa.net', 'bezeqint.net', 'columbia.edu', 'hotmail.it', 'bellsouth.net', 'tcd.ie', 'tiscali.it', 'uvic.ca', 'arcor.de', 'planet.nl', 'tin.it', 'fastmail.fm', 'sfu.ca', 'verizon.net', 'ns.sympatico.ca', 'bigpond.net.au', 'mcmaster.ca', 'live.co.uk', 'yahoo.com.mx']
 function randomPresAddress () { return `${presidentaddresses[Math.floor(Math.random() * presidentaddresses.length)]}@${commonEmailDomains[Math.floor(Math.random() * commonEmailDomains.length)]}` }
 
-export { placesAutocomplete, placeDetails, cleanString, returnArrayOfReasonableBirthDates, placesDetails, uuidv4, commonEmailDomains, randomPresAddress }
+// Utility Functions for filtering rules
 
-// Old helpers.js
-// import axios from 'axios'
-// import debounce from 'lodash/debounce'
+// Filter Function to remove elections from other states
+function filterToMatchVotingState (election) {
+  return election.state && election.state.toLowerCase() === this.state.toLowerCase()
+}
+// Filter function to remove rules that don't apply to this voterClass
+function filterToMatchVoterType (rule) {
+  if (!(typeof rule.voterType === 'string') || !this.voterClass) {
+    return true
+  } else if (this.voterClass === 'military' || this.voterClass === 'milSpouse' || this.voterClass === 'natGuard') {
+    return !rule.voterType.includes('Citizen')
+  } else {
+    return !rule.voterType.includes('Uniformed')
+  }
+}
 
-// export const placesAutocomplete = debounce(function (val) {
-//   this.data = []
-//   this.isFetching = true
-//   axios.get(`${process.env.placesUrl + process.env.autocompleteEndpoint}?input=${val}&types=geocode&language=en${this.userCountry || this.countryiso ? '&components=country:' + this.countryiso || this.userCountry : ''}&key=${process.env.placesKey}`)
-//     .then(({ data }) => {
-//       data.predictions.forEach((item) => this.data.push(item))
-//       this.isFetching = false
-//     }, response => {
-//       this.isFetching = false
-//     })
-// }, 500)
+function filterRuleToMatchSubmissionMethod (rule) {
+  if (!(/Mail|Email|Fax/.test(rule.rule)) || !this.submissionMethod) {
+    return true
+  } else if (this.submissionMethod.toLowerCase() === 'email') {
+    return /Email/.test(rule.rule)
+  } else if (this.submissionMethod.toLowerCase() === 'mail') {
+    return /Mail/.test(rule.rule)
+  } else if (this.submissionMethod.toLowerCase() === 'fax') {
+    return /Fax/.test(rule.rule)
+  }
+}
 
-// export const returnArrayOfReasonableBirthDates = function (dateString) {
-//   let currentYear = new Date().getFullYear()
-//   let dateArr = []
-//   let dateRegexPatterns = {
-//     YMD: /^(\d?\d?\d\d)(?:\/|-|\.)(\d?\d)(?:\/|-|\.)(\d?\d)$/g,
-//     MDY: /^(\d?\d)(?:\/|-|\.)(\d?\d)(?:\/|-|\.)(\d?\d?\d\d)$/g,
-//     DMY: /^(\d?\d)(?:\/|-|\.)(\d?\d)(?:\/|-|\.)(\d?\d?\d\d)$/g
-//   }
+// Compare function to sort elections chronolically
+function compareElectionDateToSort (a, b) {
+  return new Date(a.date).getTime() < new Date(b.date).getTime() ? -1 : 1
+}
 
-//   if (/^\d+(?:\/|-|\.)\d+(?:\/|-|\.)\d+$/.test(dateString)) {
-//     Object.entries(dateRegexPatterns).forEach(([regexName, dateRegex]) => {
-//       let matchArr
-//       let yPos = regexName.indexOf('Y') + 1
-//       let mPos = regexName.indexOf('M') + 1
-//       let dPos = regexName.indexOf('D') + 1
-//       while ((matchArr = dateRegex.exec(dateString)) !== null) {
-//         let validDate = formatDate(matchArr[yPos], matchArr[mPos], matchArr[dPos])
-//         if (validDate) dateArr.push(validDate)
-//       }
-//     })
-//   } else {
-//     // dateArr.push(new Date(Date.parse(dateString)))
-//     dateArr.push(new Date(Date.parse(dateString) - (new Date().getTimezoneOffset() * 60000)))
-//   }
-//   // console.log(new Date(Date.parse('june 1 82') + new Date().getTimezoneOffset() * 60000))
-//   // console.log(new Date(Date.parse('june 1 82') - (new Date().getTimezoneOffset() * 60000)))
-//   return dateArr
-//     .map(function (date) { return date.getTime() })
-//     .filter(function (date, i, array) {
-//       // remove entries that are duplicates or before today
-//       return array.indexOf(date) === i && date < new Date()
-//     })
-//     .map(function (time) { return new Date(time) })
+// Filter function accepting election && voterType && voterRegistrationStatus returning true if election rules match voterType and voterRegistrationStatus
+function filterForVoterTypeAndRegistrationStatus (election, i, arr) {
+  if (this.voterRegistrationStatus && this.voterRegistrationStatus.toLowerCase() === 'registered') {
+    return [...Object.assign({}, election).rules['Ballot Request']]
+      .filter(filterToMatchVoterType, {voterType: this.voterClass})
+      .filter(filterRuleToMatchSubmissionMethod, {submissionMethod: this.submissionMethod})
+      .map(rule => new Date(typeof rule.date === 'string' ? rule.date : election.date).getTime())
+      .some(epochTimeStamp => !(epochTimeStamp < new Date().getTime()))
+  // } else if (this.voterRegistrationStatus && this.voterRegistrationStatus.toLowerCase() === 'notregistered') {
+  //   return [...election.rules['Registration']]
+  //     .filter(filterToMatchVoterType, {voterType: this.voterClass})
+  //     .filter(filterRuleToMatchSubmissionMethod, {submissionMethod: this.submissionMethod})
+  //     .map(rule => new Date(typeof rule.date === 'string' ? rule.date : election.date).getTime())
+  //     .some(epochTimeStamp => !(epochTimeStamp < new Date().getTime()))
+  } else {
+    return [...Object.assign({}, election).rules['Registration'], ...Object.assign({}, election).rules['Ballot Request']]
+      .filter(filterToMatchVoterType, {voterType: this.voterClass})
+      .filter(filterRuleToMatchSubmissionMethod, {submissionMethod: this.submissionMethod})
+      .map(rule => new Date(typeof rule.date === 'string' ? rule.date : election.date).getTime())
+      .some(epochTimeStamp => !(epochTimeStamp < new Date().getTime()))
+  }
+}
+function removeRulesForOtherRegistrationStatus (election) {
+  let thisElection = Object.assign({}, election)
+  let rules = {}
+  // if (this.voterRegistrationStatus && /notregistered/.test(this.voterRegistrationStatus.toLowerCase())) {
+  //   rules['Registration'] = thisElection.rules['Registration']
+  // } else
+  if (this.voterRegistrationStatus && /registered/.test(this.voterRegistrationStatus.toLowerCase())) {
+    rules['Ballot Request'] = thisElection.rules['Ballot Request']
+  }
+  if (!this.voterRegistrationStatus || /unsure|notregistered/.test(this.voterRegistrationStatus.toLowerCase())) {
+    rules['Ballot Request'] = thisElection.rules['Ballot Request']
+    rules['Registration'] = thisElection.rules['Registration']
+  }
+  thisElection.rules = rules
+  return thisElection
+}
 
-//   function formatDate (y, m, d) {
-//     let year = y.length === 4 ? y : parseInt(y) < currentYear - 2010 ? '20' + y : '19' + y
-//     year = year < 1890 || year > currentYear ? null : year
-//     let month = parseInt(m) - 1
-//     let day = parseInt(d)
-//     let parsedDate = new Date(Date.UTC(year, month, day))
-//     if (!year || parsedDate.getUTCMonth() !== month) {
-//     } else return parsedDate
-//   }
-// }
+// function accepting array of elections, voterRegistrationStatus, voterType, state, submissionMethod and returning a the next election where rules apply to voter
+function getNextEligibleRules (electionArr, state, voterRegistrationStatus, voterType, submissionMethod) {
+  return [ ...electionArr ] // work with a copy of array so we are not mutating original array
+    .filter(filterToMatchVotingState, {state}) // remove elections from other states
+    .filter(filterForVoterTypeAndRegistrationStatus, {voterType, voterRegistrationStatus, submissionMethod}) // remove elections with rules that for different voter type/registration status/ or past due
+    .map(removeRulesForOtherRegistrationStatus, {voterRegistrationStatus})
+    .sort(compareElectionDateToSort)
+}
 
-// // export const placesFillData = function (option) {
-// //   let input = {}
-// //   let currentCountry = this.countryiso !== undefined ? this.countryiso : 'US'
-// //   if (option && option.place_id) {
-// //     axios.get(`${process.env.placesUrl + process.env.detailsEndpoint}?placeid=${option.place_id}&language=en&key=${process.env.placesKey}`)
-// //       .then(({ data }) => {
-// //         if (data.status && data.status === 'NOT_FOUND') {
-// //           this.$toast.open({
-// //             message: 'Unable to retrieve address. Please enter manually.',
-// //             duration: 3500,
-// //             type: 'is-warning'
-// //           })
-// //         } else {
-// //           let result = data.result
-// //           let ctry = components.filter(({types}) => types.includes('country')).length > 0 ? components.filter(({types}) => types.includes('country'))[0].short_name : null
-// //           let region = components.filter(({types}) => types.includes('administrative_area_level_1')).length > 0 ? components.filter(({types}) => types.includes('administrative_area_level_1'))[0].short_name : null
-// //           // console.log('placeid data', components.filter(({types}) => types.includes('country')))
-// //           // input.A = adrFormat.includes('street-address') ? this.latinize(adrFormat.match('<span class="street-address">(.*?)</span>')[1]) : null
-// //           if (ctry.toLowerCase() === 'jp') {
-// //             input.A = formatted.split(',')[0]
-// //             input.B = formatted.split(',')[1]
-// //           } else {
-// //             input.B = adrFormat.includes('extended-address') ? adrFormat.match('<span class="extended-address">(.*?)</span>')[1] : null
-// //             input.D = components.filter(({types}) => types.includes('sublocality')).length > 0 ? components.filter(({types}) => types.includes('sublocality'))[0].long_name : null
-// //           }
-// //           input.C = adrFormat.includes('locality') ? adrFormat.match('<span class="locality">(.*?)</span>')[1] : null
-// //           input.S = adrFormat.includes('region') ? adrFormat.match('<span class="region">(.*?)</span>')[1] : region
-// //           input.Z = adrFormat.includes('postal-code') ? adrFormat.match('<span class="postal-code">(.*?)</span>')[1] : null
-// //           if (this.Y !== undefined) input.Y = components.filter(y => y.types.indexOf('administrative_area_level_2') > -1)[0].long_name
-// //           if (this.countryiso !== undefined) input.country = this.getCountryName(ctry)
-// //           if (this.countryiso !== undefined) input.countryiso = ctry
-// //           this.update(input)
-// //           console.log(currentCountry, res)
-// //         }
-// //       })
-// //   }
-// // }
+function getRuleLanguage (eligibleRules, type, voterRegistrationStatus) {
+  if (!eligibleRules || !type || !eligibleRules.rules || !eligibleRules.rules[type] || eligibleRules.rules[type].length === 0 || /(no deadline)|(not required)/gi.test(getRuleType(eligibleRules.rules[type][0].rule))) {
+    return `There is no deadline for ${type.toLowerCase()}.`
+  } else if (eligibleRules && type && eligibleRules.rules[type] && eligibleRules.rules[type].length === 1) {
+    return `Your form must be ${getRuleType(eligibleRules.rules[type][0].rule)} ${getRuleDeadline(eligibleRules.rules[type][0].date)}.`
+  } else {
+    return eligibleRules.rules[type].map((rule, i) => `If you send your form by ${getRuleSubmissionOption(eligibleRules.rules[type][i].rule)}, it must be ${getRuleType(eligibleRules.rules[type][i].rule)} ${getRuleDeadline(eligibleRules.rules[type][i].date)}.`).join(voterRegistrationStatus && /registered/.test(voterRegistrationStatus.toLowerCase()) ? '\n- ' : ' - ')
+  }
+}
 
-// export const placesDetails = async function (option) {
-//   if (!option || !option.place_id) {
-//     return
-//   }
-//   try {
-//     let {data} = await axios.get(`${process.env.placesUrl + process.env.detailsEndpoint}?placeid=${option.place_id}&language=en&key=${process.env.placesKey}`)
-//     if (data.status && data.status === 'NOT_FOUND') {
-//       this.$toast.open({
-//         message: 'Unable to retrieve address. Please enter manually.',
-//         duration: 3500,
-//         type: 'is-warning'
-//       })
-//       throw new Error(`no place details found for: ${JSON.stringify(option, null, 2)}`)
-//     }
-//     let input = {}
-//     let {result: {address_components: components = [], formatted_address: formatted = '', adr_address: adrFormat = ''}} = data
-//     let {short_name: ctry = null} = (components.find(({types}) => types.includes('country')))
-//     let {short_name: region = null} = (components.find(({types}) => types.includes('administrative_area_level_1')))
-//     let B = adrFormat.includes('extended-address') ? adrFormat.match('<span class="extended-address">(.*?)</span>')[1] : null
-//     let {long_name: D = null} = (components.find(({types}) => types.includes('country')))
-//     let C = adrFormat.includes('locality') ? adrFormat.match('<span class="locality">(.*?)</span>')[1] : null
-//     let S = adrFormat.includes('region') ? adrFormat.match('<span class="region">(.*?)</span>')[1] : region
-//     let Z = adrFormat.includes('postal-code') ? adrFormat.match('<span class="postal-code">(.*?)</span>')[1] : null
-//     let {long_name: Y = null} = (components.find(({types}) => types.includes('administrative_area_level_2')))
-//     if (this.countryiso !== undefined) input.country = this.getCountryName(ctry)
-//     if (this.countryiso !== undefined) input.countryiso = ctry
-//     let A
-//     if (ctry.toLowerCase() === 'jp') {
-//       A = formatted.split(',')[0]
-//       B = formatted.split(',')[1]
-//     }
-//     this.update(input)
-//     console.log(A, B, C, D, S, Z, Y)
-//   } catch (error) {
-//     console.log(error)
-//   }
-// }
+function getRuleType (rule) {
+  if (rule && typeof rule === 'string') {
+    let rt = ['postmarked by', 'received by', 'sent by', 'no deadline', 'not required', 'signed by', 'signed/postmarked by'].filter(x => rule.toLowerCase().includes(x))
+    return rt.includes('signed/postmarked by') ? 'signed/postmarked by' : rt[0]
+  } else return 'received by'
+}
+function getRuleDeadline (date) {
+  return date && typeof date === 'string' && date.substr(0, 4) === new Date().getFullYear().toString() ? `${new Date(date).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}).toUpperCase()} at ${new Date(date).toLocaleTimeString('en-US', {hour: 'numeric'}).toUpperCase()}` : null
+}
+function getRuleSubmissionOption (rule) {
+  let st = []
+  if (/Email/.test(rule) || !/Mail|Email|Fax/.test(rule)) st.push('email')
+  if (/Fax/.test(rule) || !/Mail|Email|Fax/.test(rule)) st.push('fax')
+  if (/Mail/.test(rule) || !/Mail|Email|Fax/.test(rule)) st.push('postal mail')
+  return st.length === 3 ? `${st[0]}, ${st[1]} or ${st[2]}` : st.length === 2 ? `${st[0]} or ${st[1]}` : st[0]
+}
+
+function getDeadlineLanguage (electionArr, state, voterRegistrationStatus, voterType, submissionMethod) {
+  let applicableRules = getNextEligibleRules([...electionArr], state || '', voterRegistrationStatus, voterType, submissionMethod)
+  // console.log('applicableRules', applicableRules)
+  applicableRules = applicableRules[0]
+  if (!applicableRules) {
+    return `IMPORTANT: Your form must be received by your state deadline to be eligible to vote in the November 6 General Election.  \nYou can find your state deadlines at ${process.env.url}/states `
+  } else {
+    switch (voterRegistrationStatus) {
+      // case 'notRegistered':
+      //   return `** IMPORTANT DEADLINES for new voters to vote in the ${new Date(applicableRules.date).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}).toUpperCase()} ${applicableRules.electionType} **\n- ${getRuleLanguage(applicableRules, 'Registration', voterRegistrationStatus)}\nSee all your state deadlines at ${process.env.url}/states/${applicableRules.state}`
+      case 'registered':
+        return `IMPORTANT DEADLINES for registered voters to vote in the ${new Date(applicableRules.date).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}).toUpperCase()} ${applicableRules.electionType.replace(/\*/g, '')} \n- ${getRuleLanguage(applicableRules, 'Ballot Request', voterRegistrationStatus)}\n- See all your state deadlines at ${process.env.url}/states/${applicableRules.state}`
+      default:
+        return `IMPORTANT DEADLINES for the ${new Date(applicableRules.date).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}).toUpperCase()} ${applicableRules.electionType.replace(/\*/g, '')} \n**NEW VOTERS** ${getRuleLanguage(applicableRules, 'Registration', voterRegistrationStatus)} \n**REGISTERED VOTERS** ${getRuleLanguage(applicableRules, 'Ballot Request', voterRegistrationStatus)} \n- See all your state deadlines at ${process.env.url}/states/${applicableRules.state}`
+    }
+  }
+}
+
+export { getDeadlineLanguage, placesAutocomplete, placeDetails, cleanString, returnArrayOfReasonableBirthDates, placesDetails, uuidv4, commonEmailDomains, randomPresAddress }

@@ -627,7 +627,14 @@ collections:
           - {label: "Todo", name: "todo", widget: "string"}
           - {label: "Ballot Request Status", name: "ballotRequestStatus", widget: "string"}
           - {label: "Next Steps...", name: "nextSteps", widget: "string"}
+          - {label: "Leo Phone", name: "phone", widget: "string"}
+          - {label: "Leo Email", name: "email", widget: "string"}
+          - {label: "Leo Fax", name: "fax", widget: "string"}
+          - {label: "Help and Thanks", name: "helpThanks", widget: "markdown"}
+          - {label: "Edit your form", name: "makeChanges", widget: "markdown"}
+          - {label: "Start a new session", name: "clearSession", widget: "string"}
           - {label: "thankYou", name: "thankYou", widget: "markdown"}
+          - {label: "Verify with your LEO", name: "verify", widget: "markdown"}
           - label: "Fill & Sign Request Stage"
             name: "fill"
             widget: "object"

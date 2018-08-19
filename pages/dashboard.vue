@@ -85,22 +85,18 @@
             <div class="columns">
               <div class="column">
                 <!-- <request-stage></request-stage> -->
-                <!-- <article class="message is-warning">
-                  <div class="message-body" v-html="md(deadlineLanguage)">
-                  </div>
-                </article> -->
                 <section class="section">
                   <div>
                     <p class="subtitle is-4" v-html="md($t('dashboard.thankYou'))"></p>
-                    <!-- <p class="subtitle is-4">Thank you for using VoteFromAbroad to generate your Voter Registration/Ballot Request form. <strong>Be sure to submit your form</strong> to your Local Election Official before the deadline.</p> -->
                     <article class="message is-danger">
-                      <div class="message-body" v-html="md(deadlineLanguage)">
+                      <div class="message-header">
+                        <p v-html="md(deadlineLanguage.split('\n')[0])"></p>
+                      </div>
+                      <div class="message-body" v-html="md(deadlineLanguage.split('\n').slice(1).join('\n\n').replace(/(https?:\/\/[A-Za-z0-9\/:]*)/gi, '[$1]($1)'))">
                       </div>
                     </article>
 
-                    <p class="subtitle is-4">
-                      We also strongly recommend that you verify with you election official that they have received and processed your form.  You can reach your election official with the following:
-                    </p>
+                    <p class="subtitle is-4" v-html="md($t('dashboard.verify'))"></p>
                     <div class="box">
                       <p>
                       <span class="title is-5" v-if="currentRequestObject.leo && currentRequestObject.leo.n"><strong>{{ currentRequestObject.leo.n }}</strong><br/><br/></span>
@@ -112,20 +108,23 @@
                       <strong>{{ currentRequestObject.leo ? currentRequestObject.leo.z : '' }}</strong><br/></span>
                       <span class="has-text-right"><strong>United States of America</strong><br/><br/></span></p>
                       <p>
-                      <span v-if="currentRequestObject.leo && currentRequestObject.leo.e" v-html="md(`**Email:** [${ currentRequestObject.leo.e }](mailto:${ currentRequestObject.leo.e })`)"></span>
+                      <span v-if="currentRequestObject.leo && currentRequestObject.leo.e" v-html="md(`**${$t('dashboard.email')}:** [${ currentRequestObject.leo.e }](mailto:${ currentRequestObject.leo.e })`)"></span>
                       </p>
                       <p>
-                      <span v-if="currentRequestObject.leo && currentRequestObject.leo.p" v-html="md(`**Phone:** [${ '+1' + currentRequestObject.leo.p }](tel:${ ('+1' + currentRequestObject.leo.p).replace(/[()]/g, '-').replace(/ /g, '') })`)"><br/><br/></span>
+                      <span v-if="currentRequestObject.leo && currentRequestObject.leo.p" v-html="md(`**${$t('dashboard.phone')}:** [${ '+1' + currentRequestObject.leo.p }](tel:${ ('+1' + currentRequestObject.leo.p).replace(/[()]/g, '-').replace(/ /g, '') })`)"><br/><br/></span>
                       </p>
                       <p>
-                      <span v-if="currentRequestObject.leo && currentRequestObject.leo.f" v-html="md(`**Fax:** [${ '+1' + currentRequestObject.leo.f }](tel:${ ('+1' + currentRequestObject.leo.f).replace(/[()]/g, '-').replace(/ /g, '')  })`)"></span>
+                      <span v-if="currentRequestObject.leo && currentRequestObject.leo.f" v-html="md(`**${$t('dashboard.fax')}:** [${ '+1' + currentRequestObject.leo.f }](tel:${ ('+1' + currentRequestObject.leo.f).replace(/[()]/g, '-').replace(/ /g, '')  })`)"></span>
                       </p>
                     </div>
-                    <p class="subtitle is-4">If you need to change anything on your form, <nuxt-link :to="localePath({ name: 'request-stage', params: {stage: 'your-information'} })" class="has-text-primary">click here</nuxt-link> to go back. If you are finished, please close the browser window to delete any information saved in this session. Or <a @click.prevent="logoutRestart" class="has-text-primary">Clear your information and start a new request.</a>.</p>
                     <p class="subtitle is-4">
-                      If you need any help, contact our volunteer voter support team at: <a href="mailto:help@votefromabroad.org">help@votefromabroad.org</a>.
-                      Thanks for voting!
+                      <span class="content" v-html="md($t('dashboard.makeChanges', {link: localePath({ name: 'request-stage', params: {stage: 'your-information'} })}))"></span>
+                      <!-- <span>If you need to change anything on your form, </span>
+                      <nuxt-link :to="localePath({ name: 'request-stage', params: {stage: 'your-information'} })" class="has-text-primary">click here</nuxt-link>
+                      <span>to go back. If you are finished, please close the browser window to delete any information saved in this session. Or </span> -->
+                      <a @click.prevent="logoutRestart" class="has-text-primary"> {{$t('dashboard.clearSession')}}</a>
                     </p>
+                    <p class="subtitle is-4" v-html="md($t('dashboard.helpThanks'))"></p>
                   </div>
                 </section>
               </div>
@@ -143,8 +142,8 @@
                       </span>
                     </div>
                     <div class="media-content" style="overflow:hidden;">
-                      <p class="title is-3">Learn</p>
-                      <p class="subtitle is-6">about your rights as a voter abroad</p>
+                      <p class="title is-3">{{$t('dashboard.learn.title')}}</p>
+                      <p class="subtitle is-6">{{$t('dashboard.learn.content')}}</p>
                     </div>
                   </div>
                 </div>
@@ -161,8 +160,8 @@
                       </span>
                     </div>
                     <div class="media-content" style="overflow:hidden;">
-                      <p class="title is-3">Share</p>
-                      <p class="subtitle is-6">Ask your friends to vote from abroad</p>
+                      <p class="title is-3">{{$t('dashboard.share.title')}}</p>
+                      <p class="subtitle is-6">{{$t('dashboard.share.content')}}</p>
                     </div>
                   </div>
                 </div>
@@ -181,132 +180,7 @@ import UserDashboard from '~/components/UserDashboard'
 // import VueMarkdown from 'vue-markdown'
 import RequestStage from '~/components/RequestStage'
 import snarkdown from 'snarkdown'
-
-// Utility Functions for filtering rules
-
-// Filter Function to remove elections from other states
-function filterToMatchVotingState (election) {
-  return election.state && election.state.toLowerCase() === this.state.toLowerCase()
-}
-// Filter function to remove rules that don't apply to this voterClass
-function filterToMatchVoterType (rule) {
-  if (!(typeof rule.voterType === 'string') || !this.voterType) {
-    return true
-  } else if (this.voterType === 'military' || this.voterType === 'milSpouse' || this.voterType === 'natGuard') {
-    return !rule.voterType.includes('Citizen')
-  } else {
-    return !rule.voterType.includes('Uniformed')
-  }
-}
-
-function filterRuleToMatchSubmissionMethod (rule) {
-  if (!(/Mail|Email|Fax/.test(rule.rule)) || !this.submissionMethod) {
-    return true
-  } else if (this.submissionMethod.toLowerCase() === 'email') {
-    return /Email/.test(rule.rule)
-  } else if (this.submissionMethod.toLowerCase() === 'mail') {
-    return /Mail/.test(rule.rule)
-  } else if (this.submissionMethod.toLowerCase() === 'fax') {
-    return /Fax/.test(rule.rule)
-  }
-}
-
-// Compare function to sort elections chronolically
-function compareElectionDateToSort (a, b) {
-  return new Date(a.date).getTime() < new Date(b.date).getTime() ? -1 : 1
-}
-
-// Filter function accepting election && voterType && voterRegistrationStatus returning true if election rules match voterType and voterRegistrationStatus
-function filterForVoterTypeAndRegistrationStatus (election, i, arr) {
-  if (this.voterRegistrationStatus && this.voterRegistrationStatus.toLowerCase() === 'registered') {
-    return [...Object.assign({}, election).rules['Ballot Request']]
-      .filter(filterToMatchVoterType, {voterType: this.voterType})
-      .filter(filterRuleToMatchSubmissionMethod, {submissionMethod: this.submissionMethod})
-      .map(rule => new Date(typeof rule.date === 'string' ? rule.date : election.date).getTime())
-      .some(epochTimeStamp => !(epochTimeStamp < new Date().getTime()))
-  } else if (this.voterRegistrationStatus && this.voterRegistrationStatus.toLowerCase() === 'notregistered') {
-    return [...election.rules['Registration']]
-      .filter(filterToMatchVoterType, {voterType: this.voterType})
-      .filter(filterRuleToMatchSubmissionMethod, {submissionMethod: this.submissionMethod})
-      .map(rule => new Date(typeof rule.date === 'string' ? rule.date : election.date).getTime())
-      .some(epochTimeStamp => !(epochTimeStamp < new Date().getTime()))
-  } else {
-    return [...Object.assign({}, election).rules['Registration'], ...Object.assign({}, election).rules['Ballot Request']]
-      .filter(filterToMatchVoterType, {voterType: this.voterType})
-      .filter(filterRuleToMatchSubmissionMethod, {submissionMethod: this.submissionMethod})
-      .map(rule => new Date(typeof rule.date === 'string' ? rule.date : election.date).getTime())
-      .some(epochTimeStamp => !(epochTimeStamp < new Date().getTime()))
-  }
-}
-function removeRulesForOtherRegistrationStatus (election) {
-  let thisElection = Object.assign({}, election)
-  let rules = {}
-  if (this.voterRegistrationStatus && /notregistered/.test(this.voterRegistrationStatus.toLowerCase())) {
-    rules['Registration'] = thisElection.rules['Registration']
-  } else if (this.voterRegistrationStatus && /registered/.test(this.voterRegistrationStatus.toLowerCase())) {
-    rules['Ballot Request'] = thisElection.rules['Ballot Request']
-  }
-  if (!this.voterRegistrationStatus || /unsure/.test(this.voterRegistrationStatus.toLowerCase())) {
-    rules['Ballot Request'] = thisElection.rules['Ballot Request']
-    rules['Registration'] = thisElection.rules['Registration']
-  }
-  thisElection.rules = rules
-  return thisElection
-}
-
-// function accepting array of elections, voterRegistrationStatus, voterType, state, submissionMethod and returning a the next election where rules apply to voter
-function getNextEligibleRules (electionArr, state, voterRegistrationStatus, voterType, submissionMethod) {
-  return [ ...electionArr ] // work with a copy of array so we are not mutating original array
-    .filter(filterToMatchVotingState, {state}) // remove elections from other states
-    .filter(filterForVoterTypeAndRegistrationStatus, {voterType, voterRegistrationStatus, submissionMethod}) // remove elections with rules that for different voter type/registration status/ or past due
-    .map(removeRulesForOtherRegistrationStatus, {voterRegistrationStatus})
-    .sort(compareElectionDateToSort)
-}
-
-function getRuleLanguage (eligibleRules, type, voterRegistrationStatus) {
-  if (!eligibleRules || !type || !eligibleRules.rules || !eligibleRules.rules[type] || eligibleRules.rules[type].length === 0) {
-    return `There is no deadline for ${type.toLowerCase()}.`
-  } else if (eligibleRules && type && eligibleRules.rules[type] && eligibleRules.rules[type].length === 1) {
-    return `Your form must be ${getRuleType(eligibleRules.rules[type][0].rule)} ${getRuleDeadline(eligibleRules.rules[type][0].date)}.`
-  } else {
-    return eligibleRules.rules[type].map((rule, i) => `If you send your form by ${getRuleSubmissionOption(eligibleRules.rules[type][i].rule)}, it must be ${getRuleType(eligibleRules.rules[type][i].rule)} ${getRuleDeadline(eligibleRules.rules[type][i].date)}.`).join(voterRegistrationStatus && /registered/.test(voterRegistrationStatus.toLowerCase()) ? '\n- ' : ' - ')
-  }
-}
-
-function getRuleType (rule) {
-  if (rule && typeof rule === 'string') {
-    let rt = ['postmarked by', 'received by', 'sent by', 'no deadline', 'not required', 'signed by', 'signed/postmarked by'].filter(x => rule.toLowerCase().includes(x))
-    return rt.includes('signed/postmarked by') ? 'signed/postmarked by' : rt[0]
-  } else return 'received by'
-}
-function getRuleDeadline (date) {
-  return date && typeof date === 'string' && date.substr(0, 4) === new Date().getFullYear().toString() ? `${new Date(date).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}).toUpperCase()} at ${new Date(date).toLocaleTimeString('en-US', {hour: 'numeric'}).toUpperCase()}` : null
-}
-function getRuleSubmissionOption (rule) {
-  let st = []
-  if (/Email/.test(rule) || !/Mail|Email|Fax/.test(rule)) st.push('email')
-  if (/Fax/.test(rule) || !/Mail|Email|Fax/.test(rule)) st.push('fax')
-  if (/Mail/.test(rule) || !/Mail|Email|Fax/.test(rule)) st.push('postal mail')
-  return st.length === 3 ? `${st[0]}, ${st[1]} or ${st[2]}` : st.length === 2 ? `${st[0]} or ${st[1]}` : st[0]
-}
-
-function getDeadlineLanguage (electionArr, state, voterRegistrationStatus, voterType, submissionMethod) {
-  let applicableRules = getNextEligibleRules([...electionArr], state || '', voterRegistrationStatus, voterType, submissionMethod)
-  // console.log(applicableRules)
-  applicableRules = applicableRules[0]
-  if (!applicableRules) {
-    return `IMPORTANT: Your form must be received by your state deadline to be eligible to vote in the November 6 General Election.  \nYou can find your state deadlines at [www.votefromabroad.org/states](www.votefromabroad.org/states) `
-  } else {
-    switch (voterRegistrationStatus) {
-      case 'notRegistered':
-        return `** IMPORTANT DEADLINES for new voters to vote in the ${new Date(applicableRules.date).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}).toUpperCase()} ${applicableRules.electionType} **\n- ${getRuleLanguage(applicableRules, 'Registration', voterRegistrationStatus)}\nSee all your states deadlines at [www.votefromabroad.org/${applicableRules.state}](www.votefromabroad.org/${applicableRules.state})`
-      case 'registered':
-        return `** IMPORTANT DEADLINES for registered voters to vote in the ${new Date(applicableRules.date).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}).toUpperCase()} ${applicableRules.electionType} **\n- ${getRuleLanguage(applicableRules, 'Ballot Request', voterRegistrationStatus)}\nSee all your states deadlines at [www.votefromabroad.org/${applicableRules.state}](www.votefromabroad.org/${applicableRules.state})`
-      default:
-        return `** IMPORTANT DEADLINES ** for the ${new Date(applicableRules.date).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}).toUpperCase()} ${applicableRules.electionType} -- NEW VOTERS - ${getRuleLanguage(applicableRules, 'Registration', voterRegistrationStatus)} REGISTERED VOTERS - ${getRuleLanguage(applicableRules, 'Ballot Request', voterRegistrationStatus)} - See all your states deadlines at [www.votefromabroad.org/${applicableRules.state}](www.votefromabroad.org/${applicableRules.state})`
-    }
-  }
-}
+import { getDeadlineLanguage } from '~/utils/helpers'
 
 export default {
   name: 'dashboard',
@@ -318,11 +192,11 @@ export default {
   async asyncData ({app, store}) {
     let state = store.getters['requests/getCurrent'] && store.getters['requests/getCurrent'].leo ? store.getters['requests/getCurrent'].leo.s : ''
     let elections = (await app.$content('/elections').get('elections')).body
-    let voterRegistrationStatus = store.getters['requests/getCurrent'].isRegistered || null
-    let voterType = store.getters['requests/getCurrent'].voterClass || null
+    // let voterRegistrationStatus = store.getters['requests/getCurrent'].isRegistered || null
+    // let voterType = store.getters['requests/getCurrent'].voterClass || null
     return {
       registering: store.getters['requests/getCurrent'].isRegistered !== 'registered',
-      state: store.getters['requests/getCurrent'] && store.getters['requests/getCurrent'].leo ? store.getters['requests/getCurrent'].leo.s : '',
+      state: state,
       submissionMethod: store.getters['requests/getCurrent'].recBallot,
       allStateRules: await app.$content('rls')
         .query({ exclude: ['anchors', 'body', 'meta', 'path', 'permalink'] })
@@ -335,8 +209,8 @@ export default {
           var dateB = new Date(b.date).getTime()
           return dateA - dateB
         }),
-      elections: elections,
-      deadlineLanguage: getDeadlineLanguage(elections, state, voterRegistrationStatus, voterType, null)
+      elections: elections
+      // deadlineLanguage: getDeadlineLanguage(elections, state, voterRegistrationStatus, voterType, null)
     }
   },
   data () {
@@ -398,7 +272,12 @@ export default {
     },
     leoPhone () {
       return this.currentRequestObject.leo && this.currentRequestObject.leo.p ? '+1 ' + this.currentRequestObject.leo.p : ''
-    }
+    },
+    voterState () { return this.$store.getters['requests/getCurrent'] && this.$store.getters['requests/getCurrent'].leo ? this.$store.getters['requests/getCurrent'].leo.s : '' },
+    voterRegistrationStatus () { return this.$store.getters['requests/getCurrent'].isRegistered || null },
+    voterType () { return this.$store.getters['requests/getCurrent'].voterClass || null },
+    deadlineLanguage () { return getDeadlineLanguage(this.elections, this.voterState, this.voterRegistrationStatus, this.voterType, null) || '' }
+
     // currentRequestStage () { return this.currentRequest && this.currentRequest.stage ? this.currentRequest.stage : 'fill' }
   },
   filters: {
