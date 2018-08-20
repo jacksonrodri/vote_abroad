@@ -37,7 +37,7 @@
           v-model="countryIso"
           phone></country-selector>
           <!-- :class="countryFocused ? 'wide' : 'shrink'" -->
-        <input
+        <b-input
           key="input"
           :type="fieldType"
           :value="fieldValue"
@@ -47,7 +47,7 @@
           :autocomplete="''"
           v-format="formatFunctions"
           @input="$emit('delayTouch', v); $emit('input', fieldValue)"
-          :ref="fieldName">
+          :ref="fieldName"></b-input>
       </transition-group>
     </b-field>
     <b-message v-if="toolTipContent" :title="tooltipTitle" type="is-info" has-icon :active.sync="isInfoOpen">
@@ -147,6 +147,7 @@ export default {
         console.log('parsedText', parsedText)
         if (!parsedText) {
           this.fieldValue = null
+          return {text: ' ', template: 'X'}
         } else if (/^\+\d\d?\d?/.test(parsedText) && !this.phoneMetadataHasAllCountriesForPrefix(parsedText)) {
           // console.log('need phone dat')
           this.fieldValue = parsedText
@@ -169,6 +170,7 @@ export default {
       }
       let parse = (character, value) => {
         console.log('character', character, 'value', value)
+        if (!character && !value) return ''
         if (
           (/[A-Za-z@]/.test(character)) ||
           (/[A-Za-z@]/g.test(value) &&
