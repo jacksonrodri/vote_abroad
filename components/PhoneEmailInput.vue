@@ -148,12 +148,13 @@ export default {
         if (!parsedText) {
           this.fieldValue = null
           return {text: ' ', template: 'X'}
-        } else if (/^\+\d\d?\d?/.test(parsedText) && !this.phoneMetadataHasAllCountriesForPrefix(parsedText)) {
+        } else if (parsedText && /^\+\d\d?\d?/.test(parsedText) && !this.phoneMetadataHasAllCountriesForPrefix(parsedText)) {
           // console.log('need phone dat')
           this.fieldValue = parsedText
           this.getCountryIsoFromPhonePrefix(parsedText)
           return {text: parsedText, template: 'X'.repeat(parsedText.length)}
         } else if (
+          parsedText &&
           /[A-Za-z@]/g.test(parsedText) &&
           /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@?((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.?)+([a-zA-Z]{2,})?)?)$/.test(parsedText)
         ) {
@@ -191,6 +192,7 @@ export default {
   },
   methods: {
     selectField () {
+      console.log('selectField')
       // console.log(this.$refs[this.fieldName])
       this.countryFocused
         ? this.$refs.country.$el.querySelector('input').focus() /* this.$refs.country.$el.querySelector('input').setSelectionRange(0, 99999) */

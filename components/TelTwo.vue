@@ -154,6 +154,7 @@ export default {
   },
   methods: {
     selectField () {
+      console.log('selectField')
       // console.log(this.$refs[this.fieldName])
       this.countryFocused
         ? this.$refs.country.$el.querySelector('input').focus() /* this.$refs.country.$el.querySelector('input').setSelectionRange(0, 99999) */
