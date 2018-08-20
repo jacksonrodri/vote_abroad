@@ -43,7 +43,7 @@
           :value="fieldValue"
           :id="fieldName"
           :placeholder="$t(`request.tel.placeholder`, {example: exPhone})"
-          :class="[requiredClass, 'input', 'is-expanded']"
+          :class="[requiredClass, 'is-expanded']"
           :autocomplete="''"
           v-format="formatFunctions"
           @input="$emit('delayTouch', v); $emit('input', fieldValue)"
