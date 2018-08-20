@@ -4,7 +4,7 @@
     <b-field
       :type="fieldType"
       :message="fieldMessages">
-      <transition-group name="slide" tag="div"  class="field has-addons">
+      <transition-group name="slide" tag="div" @after-enter="selectField" class="field has-addons">
         <p class="control" key="flag" v-if="!countryFocused">
           <button :class="['button', 'control', 'is-outlined', 'is-inverted', 'is-paddingless']"
             style="padding-left:0px;"
@@ -25,18 +25,28 @@
           v-model="countryIso"
           phone></country-selector>
           <!-- :class="countryFocused ? 'wide' : 'shrink'" -->
-        <input
+
+          <!-- v-if="tempValue && tempValue.length > 1" -->
+        <b-input
           key="input"
           :type="fieldType"
           :value="tempValue"
           :id="fieldName"
           :placeholder="$t(`request.tel.placeholder`, {example: exPhone})"
-          :class="[requiredClass, 'input', 'is-expanded']"
+          :class="[requiredClass, 'is-expanded']"
           :autocomplete="autoComplete"
-          v-format="formatFunctions"
           :maxlength="maxLength"
           @input="$emit('delayTouch')"
-          :ref="fieldName">
+          v-format="formatFunctions"
+          :ref="fieldName"></b-input>
+        <!-- <b-input
+          v-else
+          key="inputEmpty"
+          :type="fieldType"
+          :placeholder="$t(`request.tel.placeholder`, {example: exPhone})"
+          :class="[requiredClass, 'input', 'is-expanded']"
+          :value="tempValue"
+          @input="val => { $emit('newVal', val); tempValue = val }"></b-input> -->
       </transition-group>
     </b-field>
     <b-message v-if="toolTipContent" :title="tooltipTitle" type="is-info" has-icon :active.sync="isInfoOpen">
@@ -112,16 +122,16 @@ export default {
     exPhone () { return this.countries.find(country => country.code === this.countryIso) ? this.countries.find(country => country.code === this.countryIso).exPhone : '+1 201 555 0123' },
     formatFunctions () {
       let format = (parsedText) => {
+        console.log('parsedText:', parsedText)
         if (!parsedText) {
-          this.fieldValue = ''
+          this.fieldValue = null
+          return {text: ' ', template: 'X'}
         } else if (/^\+\d\d?\d?/.test(parsedText) && !this.phoneMetadataHasAllCountriesForPrefix(parsedText)) {
-          // console.log('need phone dat')
           this.fieldValue = parsedText
           this.getCountryIsoFromPhonePrefix(parsedText)
           return {text: parsedText, template: 'X'.repeat(parsedText.length)}
         } else {
           let {text, formatted: {country, template}} = this.formattedNumber(parsedText, this.countryIso)
-          // console.log('formatted', text, country, template, this.getPhoneIntFormat(text, country))
           this.tempValue = text
           this.fieldValue = this.getPhoneIntFormat(text, country)
           if (country && this.countryIso !== country) this.countryIso = country
@@ -129,7 +139,8 @@ export default {
         }
       }
       let parse = (character, value) => {
-        return DIGITS[character]
+        console.log('parse:', 'char', character, 'value', value)
+        return (character || value) ? DIGITS[character] : ''
       }
       let onChange = val => {
         // console.log('val', val)
@@ -150,15 +161,17 @@ export default {
     },
     newCountry () {
       this.tempValue = this.exPhone ? this.exPhone.split(' ')[0] : ''
-      // this.selectField()
+      this.selectField()
     },
     ...mapActions('data', ['updateCountryData', 'getCountryIsoFromPhonePrefix'])
   },
   directives: {
     format: (el, binding, vnode) => {
+      // console.log('formatDirective')
       let format = binding.value.format
       let parse = binding.value.parse
       const input = el instanceof HTMLInputElement ? el : el.querySelector('input')
+      console.log('input', input)
       const onChangeHandler = () => { vnode.context.$emit('newVal', input.value) }
       input.onchange = (event) => onChange(event, input, parse, format, onChangeHandler)
       input.oncut = (event) => onCut(event, input, parse, format, onChangeHandler)
