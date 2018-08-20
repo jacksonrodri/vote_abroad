@@ -337,6 +337,8 @@ export default {
       // console.log('process.browser')
       window.onNuxtReady((app) => {
         // console.log('booting intercom', app)
+        let isIE = detectIE()
+        this.$store.commit('userauth/updateDevice', {isIE})
         app.$intercom.boot()
         // this.$intercom.show()
       })
@@ -366,7 +368,6 @@ export default {
       var i = document.createElement('input')
       i.setAttribute('capture', true)
       var inputCaptureSupported = !!i['capture']
-      let isIE = detectIE()
       checkDeviceSupport(() => {
         this.$store.commit('userauth/updateDevice', {
           'hasWebCam': hasWebcam,
@@ -374,8 +375,7 @@ export default {
           'hasSpeakers': hasSpeakers,
           'isMicrophoneAlreadyCaptured': isMicrophoneAlreadyCaptured,
           'isWebcamAlreadyCaptured': isWebcamAlreadyCaptured,
-          'inputCaptureSupported': inputCaptureSupported,
-          'isIE': isIE
+          'inputCaptureSupported': inputCaptureSupported
         })
       })
       if (navigator.mediaDevices) {

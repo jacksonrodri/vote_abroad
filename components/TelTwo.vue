@@ -4,7 +4,7 @@
     <b-field
       :type="fieldType"
       :message="fieldMessages">
-      <transition-group name="slide" tag="div" @after-enter="selectField" class="field has-addons">
+      <transition-group name="slide" tag="div"  class="field has-addons">
         <p class="control" key="flag" v-if="!countryFocused">
           <button :class="['button', 'control', 'is-outlined', 'is-inverted', 'is-paddingless']"
             style="padding-left:0px;"
@@ -113,7 +113,7 @@ export default {
     formatFunctions () {
       let format = (parsedText) => {
         if (!parsedText) {
-          this.fieldValue = null
+          this.fieldValue = ''
         } else if (/^\+\d\d?\d?/.test(parsedText) && !this.phoneMetadataHasAllCountriesForPrefix(parsedText)) {
           // console.log('need phone dat')
           this.fieldValue = parsedText
@@ -150,7 +150,7 @@ export default {
     },
     newCountry () {
       this.tempValue = this.exPhone ? this.exPhone.split(' ')[0] : ''
-      this.selectField()
+      // this.selectField()
     },
     ...mapActions('data', ['updateCountryData', 'getCountryIsoFromPhonePrefix'])
   },
@@ -170,12 +170,12 @@ export default {
   watch: {
     fieldValue (val) {
       // console.log(val)
-      if (!this.tempValue) {
+      if (val && !this.tempValue) {
         this.tempValue = val
       } else if (this.getPhoneIntFormat(this.tempValue, this.countryIso || null) !== val) {
         this.tempValue = val
       }
-      if (!this.countryIso) {
+      if (val && val.length > 3 && !this.countryIso) {
         this.countryIso = (this.formattedNumber(this.fieldValue)).formatted.country
       }
     },
