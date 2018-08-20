@@ -34,7 +34,60 @@
           <b-tab-item :label="$t('request.stages.email')"
             v-if="stateRules && stateRules.fpcaSubmitOptionsRequest.indexOf('Email') > -1"
             icon="at">
-            <section v-if="!signStep" class="section">
+            <section v-if="isIE" class="section">
+              <h3 class="subtitle is-4">{{$t('request.stages.emailIntro')}}</h3>
+              <div class="media">
+                <div class="media-content">
+                  <h3 class="title is-5">{{$t('request.stages.instructions')}}</h3>
+                  <article class="media">
+                    <figure class="media-left">
+                      <b-icon icon="download" size="is-medium"></b-icon>
+                    </figure>
+                    <div class="media-content">
+                      <p class="is-size-5">{{$t('request.stages.mailDownload')}}</p>
+                    </div>
+                    <div class="media-left">
+                      <button :class="['button', 'is-pulled-right', 'is-primary', {'is-loading': !Boolean(pdf)}]" @click="saveFile"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
+                      <!-- <a v-if="downloadAttrSupported" :href="pdf" :download="`${firstName}-${lastName}-2018-fpca.pdf`" :class="['button', 'is-pulled-right', 'is-primary', {'is-loading': !Boolean(pdf)}]" @click="finish"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></a>
+                      <a v-else class="button is-pulled-right is-primary" @click="openPdf"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></a> -->
+                    </div>
+                  </article>
+                  <article class="media">
+                    <figure class="media-left">
+                      <b-icon icon="pencil-alt" size="is-medium"></b-icon>
+                    </figure>
+                    <div class="media-content">
+                      <p v-html="$t('request.stages.emailSign')" class="is-size-5"></p>
+                    </div>
+                  </article>
+
+                  <article class="media">
+                    <figure class="media-left">
+                      <b-icon icon="fax" size="is-medium"></b-icon>
+                    </figure>
+                    <div class="media-content">
+                      <span class="is-size-5">
+                        Email your form to:
+                        <!-- {{$t('request.stages.mailPost')}} -->
+                      </span>
+                      <div class="box">
+                        <span v-if="currentRequest.leo.n"><strong>{{ currentRequest.leo.n }}</strong><br/></span>
+                        <span v-if="currentRequest.leo.f"><strong>+1 {{ currentRequest.leo.f }}</strong><br/></span>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="media">
+                    <figure class="media-left">
+                      <b-icon icon="check" size="is-medium"></b-icon>
+                    </figure>
+                    <div class="media-content">
+                      <p v-html="$t('request.stages.emailConfirm')" class="is-size-5"></p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </section>
+            <section v-else-if="!signStep" class="section">
               <h3 class="subtitle is-4">{{$t('request.stages.emailIntro')}}</h3>
               <div class="media">
                 <div class="media-content" style="width:100%;">
@@ -595,7 +648,8 @@ export default {
     ...mapState({
       currentRequestIndex: state => state.requests.currentRequest,
       requests: state => state.requests.requests,
-      canCaptureImage: state => state.userauth.device.hasWebCam
+      canCaptureImage: state => state.userauth.device.hasWebCam,
+      isIE: state => state.userauth.device.isIE
     }),
     ...mapGetters('requests', ['getCurrent'])
   }

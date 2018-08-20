@@ -200,6 +200,14 @@
 <script>
 import PhoneEmail from '~/components/PhoneEmail.vue'
 // import Login from '~/components/Login.vue'
+function detectIE () {
+  var ua = window.navigator.userAgent
+  var msie = ua.indexOf('MSIE ')
+  if (msie > 0) { return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10) } // IE 10 or older => return version number
+  var trident = ua.indexOf('Trident/')
+  if (trident > 0) { var rv = ua.indexOf('rv:'); return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10) }// IE 11 => return version number
+  return false
+}
 
 export default {
   data () {
@@ -358,6 +366,7 @@ export default {
       var i = document.createElement('input')
       i.setAttribute('capture', true)
       var inputCaptureSupported = !!i['capture']
+      let isIE = detectIE()
       checkDeviceSupport(() => {
         this.$store.commit('userauth/updateDevice', {
           'hasWebCam': hasWebcam,
@@ -365,7 +374,8 @@ export default {
           'hasSpeakers': hasSpeakers,
           'isMicrophoneAlreadyCaptured': isMicrophoneAlreadyCaptured,
           'isWebcamAlreadyCaptured': isWebcamAlreadyCaptured,
-          'inputCaptureSupported': inputCaptureSupported
+          'inputCaptureSupported': inputCaptureSupported,
+          'isIE': isIE
         })
       })
       if (navigator.mediaDevices) {

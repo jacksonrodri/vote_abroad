@@ -143,7 +143,8 @@ module.exports = {
     {src: '~/plugins/buefy'},
     {src: '~/plugins/vuelidate'},
     {src: '~/plugins/croppa'},
-    {src: '~/plugins/intercom'}
+    {src: '~/plugins/intercom'},
+    {src: '~/plugins/worker', ssr: false}
   ],
   /*
   ** Build configuration
