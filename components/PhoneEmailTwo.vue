@@ -49,6 +49,7 @@
           :maxlength="maxLength"
           :loading="loading"
           @input="$emit('delayTouch')"
+          @keyup.native.enter="$emit('pressEnter')"
           v-format="formatFunctions"
           :ref="fieldName"></b-input>
       </transition-group>

@@ -37,7 +37,6 @@ export const plugins = [vuexLocalPlugin]
 export const state = () => ({
   upcomingElections: [],
   currentRequestId: null,
-  language: null,
   isMenuOpen: false
 })
 

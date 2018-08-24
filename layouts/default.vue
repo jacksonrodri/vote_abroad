@@ -248,7 +248,7 @@ export default {
   computed: {
     upcomingElections: function () { return this.$store.state.upcomingElections },
     isBgImage: function () {
-      return this.$route.name && this.$route.name.indexOf('index') > -1
+      return this.$route.name && (this.$route.name.includes('index') || this.$route.name.includes('authenticating'))
     },
     test: function () {
       return this.$route.name

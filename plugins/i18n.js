@@ -7,5 +7,6 @@ export default function ({ store, app }) {
   app.i18n.onLanguageSwitched = (oldLocale, newLocale) => {
     // console.log(oldLocale, newLocale)
     store.dispatch('userauth/initializeWebAuth')
+    store.commit('userauth/updateUser', {language: newLocale})
   }
 }

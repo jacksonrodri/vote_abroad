@@ -1,28 +1,17 @@
 import { WebAuth } from 'auth0-js'
 import axios from 'axios'
 import { Dialog, Toast } from 'buefy'
-// LoadingProgrammatic,
-// Snackbar,, ModalProgrammatic
 import AWSExports from '../aws-exports'
-// import AuthenticateCode from '~/components/AuthenticateCode'
+
 const jwtDecode = require('jwt-decode')
-// const redirectUri = `https://amplify-appsync--votefromabroad.netlify.com`
-// const redirectUri = `http://localhost:3000`
 const redirectUri = process.env.url
 
 let webAuth = new WebAuth({
   domain: 'montg.auth0.com',
-  redirectUri: redirectUri + '/',
+  redirectUri: redirectUri + '/authenticating/',
   clientID: '0Wy4khZcuXefSfrUuYDUP0Udag4FqL2u',
   responseType: 'token id_token'
 })
-
-// const webAuth = new WebAuth({
-//   domain: 'montg.auth0.com',
-//   redirectUri: redirectUri + '/request/your-information/',
-//   clientID: '0Wy4khZcuXefSfrUuYDUP0Udag4FqL2u',
-//   responseType: 'token id_token'
-// })
 
 export const state = () => ({
   idToken: null,
@@ -36,6 +25,7 @@ export const state = () => ({
     middleName: null,
     lastName: null,
     emailAddress: null,
+    language: 'en',
     mobilePhone: null,
     mobileIntFormat: null,
     country: 'US',
@@ -102,56 +92,14 @@ export const mutations = {
 }
 
 export const actions = {
-  // launchModal ({ state, dispatch, commit }, loginType) {
-  //   let msg = loginType === 'sms' ? `An sms with the code has been sent to ${state.user.mobileIntFormat}.` : `We sent you a link and code to ${state.user.emailAddress}. Click the link in the email or enter the code here to sign in.`
-  //   ModalProgrammatic.open({
-  //     parent: window.$nuxt,
-  //     component: AuthenticateCode,
-  //     hasModalCard: true,
-  //     active: /inActive|loggedIn|loggedOut/.test(state.authState),
-  //     width: 360,
-  //     props: {
-  //       email: state.user.emailAddress || null,
-  //       phone: state.user.mobileIntFormat || null,
-  //       // isLoading: false,
-  //       // currently: state.authState,
-  //       msg
-  //     },
-  //     events: {
-  //       confirmCode: (value) => {
-  //         // alert(value)
-  //         if (state.user.emailAddress) {
-  //           dispatch('loginEmailVerify', value)
-  //         } else if (state.user.mobileIntFormat) {
-  //           dispatch('loginSmsVerify', value)
-  //         }
-  //       },
-  //       startAuth: () => dispatch('authStart')
-  //     }
-  //   })
-  // },
   initializeWebAuth () {
     webAuth = new WebAuth({
       domain: 'montg.auth0.com',
-      redirectUri: redirectUri + this.app.localePath('index'),
+      redirectUri: redirectUri + this.app.localePath('authenticating'),
       clientID: '0Wy4khZcuXefSfrUuYDUP0Udag4FqL2u',
       responseType: 'token id_token'
     })
     console.log('new redirecturi', redirectUri + this.app.localePath('index'))
-  },
-  sendEmailCode ({commit, state}) {
-    return new Promise((resolve, reject) => {
-      webAuth.passwordlessStart({
-        connection: 'email',
-        send: 'code',
-        email: state.user.emailAddress
-      }, function (err, res) {
-        if (err) {
-          reject(err)
-        }
-        resolve(`Sent code to ${state.user.emailAddress}`)
-      })
-    })
   },
   sendEmailLink ({commit, state}) {
     return new Promise((resolve, reject) => {
@@ -161,9 +109,10 @@ export const actions = {
         email: state.user.emailAddress
       }, function (err, res) {
         if (err) {
-          commit('updateAuthState', 'retrying')
+          commit('updateAuthState', 'loginStartFailed')
           reject(err)
         }
+        commit('updateAuthState', 'enteringCode')
         resolve(`Sent login link to ${state.user.emailAddress}`)
       })
     })
@@ -176,9 +125,10 @@ export const actions = {
         phoneNumber: state.user.mobileIntFormat.replace(/\s/g, '')
       }, function (err, res) {
         if (err) {
-          commit('updateAuthState', 'retrying')
+          commit('updateAuthState', 'loginStartFailed')
           reject(err)
         }
+        commit('updateAuthState', 'enteringCode')
         resolve()
       })
     })
@@ -193,56 +143,8 @@ export const actions = {
     await dispatch('getSessionGeo')
     commit('updateUser', {country: state.user.country !== 'US' && state.user.country ? state.user.country : state.session.country})
   },
-  // async authStart ({commit, state, dispatch}, redirectPath) {
-  //   // commit('updateRedirectPath', redirectPath)
-  //   // let loginType
-  //   commit('updateAuthState', 'enteringCode')
-  //   if (state.user.emailAddress) {
-  //     // loginType = 'email'
-  //     // await dispatch('launchModal', loginType)
-  //     await dispatch('sendEmailLink')
-  //   } else if (state.user.mobileIntFormat) {
-  //     // loginType = 'sms'
-  //     // await dispatch('launchModal', loginType)
-  //     await dispatch('sendSmsCode')
-  //   }
-  //   // await dispatch('promptCode', loginType)
-  //   // await dispatch('launchModal', loginType)
-  // },
-  // promptCode ({ state, dispatch, commit }, loginType) {
-  //   let msg = loginType === 'sms' ? `Enter the code we sent to ${state.user.mobileIntFormat}` : `Click the login link or enter the code we sent to ${state.user.emailAddress}.`
-  //   Dialog.prompt({
-  //     title: 'Authentication',
-  //     message: msg,
-  //     inputAttrs: {
-  //       type: 'tel',
-  //       placeholder: 'Type the code.',
-  //       minlength: 6,
-  //       maxlength: 6,
-  //       autocomplete: 'off',
-  //       size: 6,
-  //       max: 999999,
-  //       pattern: '[0-9]{6}',
-  //       title: 'enter a 6 digit code'
-  //     },
-  //     confirmText: 'Submit',
-  //     cancelText: 'Cancel',
-  //     // onCancel: () => commit('updateRedirectPath', null),
-  //     onConfirm: (value) => {
-  //       if (state.user.emailAddress) {
-  //         dispatch('loginEmailVerify', value)
-  //       } else if (state.user.mobileIntFormat) {
-  //         dispatch('loginSmsVerify', value)
-  //       }
-  //     },
-  //     onCancel: () => {}
-  //   })
-  // },
   loginEmailVerify ({app, commit, dispatch, state}, code) {
     let Analytics = this.app.$Analytics
-    commit('updateAuthState', 'loading')
-    // dispatch('launchModal')
-    // const loadingComponent = LoadingProgrammatic.open()
     return new Promise((resolve, reject) => {
       webAuth.passwordlessVerify({
         connection: 'email',
@@ -252,45 +154,17 @@ export const actions = {
       }, (err, authResult) => {
         if (err) {
           Analytics.record('_userauth.auth_fail')
-          // loadingComponent.close()
-          commit('updateAuthState', 'retryingCode')
-          // Dialog.prompt({
-          //   title: 'Authentication',
-          //   message: `That code is incorrect, please try again. Enter the code we sent to ${state.user.emailAddress} or click the login link in that email.`,
-          //   inputAttrs: {
-          //     type: 'tel',
-          //     placeholder: 'Type the code.',
-          //     minlength: 6,
-          //     maxlength: 6,
-          //     autocomplete: 'off',
-          //     size: 6,
-          //     max: 999999,
-          //     pattern: '[0-9]{6}',
-          //     title: 'enter a 6 digit code'
-          //   },
-          //   onConfirm: (value) => dispatch('loginEmailVerify', value)
-          // })
+          commit('updateAuthState', 'codeEnterFail')
           reject(err)
         }
-        // loadingComponent.close()
-        // Snackbar.open({
-        //   message: `${authResult}`,
-        //   type: 'is-info',
-        //   position: 'is-top',
-        //   actionText: 'Retry',
-        //   duration: 8000
-        // })
-        // alert('authResult', authResult)
+        commit('updateAuthState', 'authenticating')
         dispatch('setSession', authResult)
-        // this.setSession(authResult)
-        // Auth tokens in the result or an error
         resolve(authResult)
       })
     })
   },
   loginSmsVerify ({app, commit, dispatch, state}, code) {
     let Analytics = this.app.$Analytics
-    // const loadingComponent = LoadingProgrammatic.open()
     commit('updateAuthState', 'loading')
     return new Promise((resolve, reject) => {
       webAuth.passwordlessVerify({
@@ -301,43 +175,17 @@ export const actions = {
       }, (err, authResult) => {
         if (err) {
           Analytics.record('_userauth.auth_fail')
-          // loadingComponent.close()
-          commit('updateAuthState', 'retryingCode')
-          // Dialog.prompt({
-          //   title: 'Authentication',
-          //   message: `That code is incorrect, please try again. Enter the code we sent to ${state.user.mobileIntFormat}`,
-          //   inputAttrs: {
-          //     type: 'tel',
-          //     placeholder: 'Type the code.',
-          //     minlength: 6,
-          //     maxlength: 6,
-          //     autocomplete: 'off',
-          //     size: 6,
-          //     max: 999999,
-          //     pattern: '[0-9]{6}',
-          //     title: 'enter a 6 digit code'
-          //   },
-          //   onConfirm: (value) => dispatch('loginSmsVerify', value)
-          // })
+          commit('updateAuthState', 'codeEnterFail')
           reject(err)
         }
-        // loadingComponent.close()
-        // Snackbar.open({
-        //   message: `${authResult}`,
-        //   type: 'is-info',
-        //   position: 'is-top',
-        //   actionText: 'Retry',
-        //   duration: 8000
-        // })
+        commit('updateAuthState', 'authenticating')
         dispatch('setSession', authResult)
-        // Auth tokens in the result or an error
         resolve()
       })
     })
   },
   async setSession ({ state, rootState, commit, dispatch, app }) {
     dispatch('initializeWebAuth')
-    // const loadingComponent = LoadingProgrammatic.open()
     commit('updateAuthState', 'loading')
     this.app.Amplify.configure(AWSExports)
     function parseHash () {
@@ -345,9 +193,9 @@ export const actions = {
         webAuth.parseHash({ hash: window.location.hash }, function (err, authResult) {
           window.location.hash = ''
           if (err) {
+            commit('updateAuthState', 'loggedOut')
             reject(err)
           }
-          // console.log('authResult', authResult)
           resolve(authResult)
         })
       })
@@ -361,19 +209,9 @@ export const actions = {
         }, async function (err, authResult) {
           if (err) {
             let id = await Auth.currentCredentials().then(x => x.data.IdentityId)
-            commit('updateAuthState', 'loggedOut')
-            // console.log(id)
-            // let name = state.user.firstName || Auth.credentials_source
+            // commit('updateAuthState', 'loggedOut')
             commit('updateIdentityId', id)
-            // commit('updateUser', { firstName: name })
-            // let user = await Auth.currentAuthenticatedUser()
-            // let res = await Auth.updateUserAttributes(user, {
-            //   'email': 'me@anotherdomain.com',
-            //   'family_name': 'Lastname'
-            // })
-            // console.log('updateuserresult', res)
             Analytics.updateEndpoint({
-              // Customized userId
               UserId: id._identityId,
               // User attributes
               Attributes: {
@@ -385,10 +223,8 @@ export const actions = {
               // Custom user attributes
               UserAttributes: {
                 hobbies: ['piano', 'hiking']
-                // ...
               }
             })
-            // dispatch('clearData')
             return
           }
           resolve(authResult)
@@ -407,8 +243,7 @@ export const actions = {
         })
       })
     }
-    let hasHash = window.location.hash && window.location.hash.indexOf('access_token') > -1
-    // if (hasHash) dispatch('launchModal')
+    let hasHash = window.location.hash && window.location.hash.includes('access_token')
     let authResult = hasHash ? await parseHash() : await checkSession()
     if (authResult.expiresIn * 1000 > Date.now()) {
       authResult = await renewAuth()
@@ -419,7 +254,6 @@ export const actions = {
     if (state.redirectPath) {
       dispatch('redirect', state.redirectPath)
     }
-    // console.log('[https://demsabroad.org/user]', jwtDecode(idToken))
     commit('updateUser', {isDA: jwtDecode(idToken)['https://demsabroad.org/isDA'], da: jwtDecode(idToken)['https://demsabroad.org/user']})
     await this.app.$Auth.federatedSignIn(
       'montg.auth0.com',
@@ -433,29 +267,7 @@ export const actions = {
         email: jwtDecode(idToken)['https://demsabroad.org/isDA'] ? jwtDecode(idToken)['https://demsabroad.org/user'].email : ''
       }
     )
-    // .then(async (result) => {
-    //   let user = await this.app.$Auth.currentAuthenticatedUser()
-
-    //   Analytics.updateEndpoint({
-    //     UserId: user.id,
-    //     Attributes: {
-    //       country: state.user.country,
-    //       isDA: state.user.isDA,
-    //       email: user.email,
-    //       firstName: state.user.firstName
-    //     }
-    //     // },
-    //     // // Custom user attributes
-    //     // UserAttributes: {
-    //     //   hobbies: ['piano', 'hiking', 'logging in']
-    //     //   // ...
-    //     // }
-    //   })
-    // })
-    // loadingComponent.close()
     await dispatch('requests/loadRequests', null, { root: true })
-    // if (rootState.requests.requests[rootState.requests.currentRequest].)
-    // console.log('rootState.requests', rootState.requests)
     if (jwtDecode(idToken)['https://demsabroad.org/isDA'] && (!rootState.requests || rootState.requests.requests.length === 0 || !rootState.requests.requests[rootState.requests.currentRequest].lastName)) {
       console.log('jwtdata', jwtDecode(idToken)['https://demsabroad.org/user'])
       Dialog.confirm({
@@ -472,7 +284,6 @@ export const actions = {
             position: 'is-top',
             duration: 8000
           })
-          // dispatch('redirect', state.redirectPath || '/request/your-information')
         }
       })
     }
