@@ -1,30 +1,36 @@
 import { WebAuth } from 'auth0-js'
 import axios from 'axios'
-import { Dialog, Toast, ModalProgrammatic } from 'buefy'
+import { Dialog, Toast } from 'buefy'
 // LoadingProgrammatic,
-// Snackbar,
+// Snackbar,, ModalProgrammatic
 import AWSExports from '../aws-exports'
-import AuthenticateCode from '~/components/AuthenticateCode'
+// import AuthenticateCode from '~/components/AuthenticateCode'
 const jwtDecode = require('jwt-decode')
 // const redirectUri = `https://amplify-appsync--votefromabroad.netlify.com`
 // const redirectUri = `http://localhost:3000`
 const redirectUri = process.env.url
 
-const webAuth = new WebAuth({
+let webAuth = new WebAuth({
   domain: 'montg.auth0.com',
-  redirectUri: redirectUri + '/request/your-information/',
+  redirectUri: redirectUri + '/',
   clientID: '0Wy4khZcuXefSfrUuYDUP0Udag4FqL2u',
   responseType: 'token id_token'
 })
 
+// const webAuth = new WebAuth({
+//   domain: 'montg.auth0.com',
+//   redirectUri: redirectUri + '/request/your-information/',
+//   clientID: '0Wy4khZcuXefSfrUuYDUP0Udag4FqL2u',
+//   responseType: 'token id_token'
+// })
+
 export const state = () => ({
   idToken: null,
   expirationDate: null,
-  gcToken: null,
   IdentityId: null,
   redirectPath: null,
   modal: null,
-  authState: 'enteringCode',
+  authState: 'loggedOut',
   user: {
     firstName: null,
     middleName: null,
@@ -69,9 +75,6 @@ export const mutations = {
   updateExpirationDate (state, expirationDate) {
     state.expirationDate = expirationDate
   },
-  updateGcToken (state, gcToken) {
-    state.gcToken = gcToken
-  },
   updateSessionGeo (state, geo) {
     state.session = geo
   },
@@ -99,33 +102,42 @@ export const mutations = {
 }
 
 export const actions = {
-  launchModal ({ state, dispatch, commit }, loginType) {
-    let msg = loginType === 'sms' ? `An sms with the code has been sent to ${state.user.mobileIntFormat}.` : `We sent you a link and code to ${state.user.emailAddress}. Click the link in the email or enter the code here to sign in.`
-    ModalProgrammatic.open({
-      parent: window.$nuxt,
-      component: AuthenticateCode,
-      hasModalCard: true,
-      active: /inActive|loggedIn|loggedOut/.test(state.authState),
-      width: 360,
-      props: {
-        email: state.user.emailAddress || null,
-        phone: state.user.mobileIntFormat || null,
-        // isLoading: false,
-        // currently: state.authState,
-        msg
-      },
-      events: {
-        confirmCode: (value) => {
-          // alert(value)
-          if (state.user.emailAddress) {
-            dispatch('loginEmailVerify', value)
-          } else if (state.user.mobileIntFormat) {
-            dispatch('loginSmsVerify', value)
-          }
-        },
-        startAuth: () => dispatch('authStart')
-      }
+  // launchModal ({ state, dispatch, commit }, loginType) {
+  //   let msg = loginType === 'sms' ? `An sms with the code has been sent to ${state.user.mobileIntFormat}.` : `We sent you a link and code to ${state.user.emailAddress}. Click the link in the email or enter the code here to sign in.`
+  //   ModalProgrammatic.open({
+  //     parent: window.$nuxt,
+  //     component: AuthenticateCode,
+  //     hasModalCard: true,
+  //     active: /inActive|loggedIn|loggedOut/.test(state.authState),
+  //     width: 360,
+  //     props: {
+  //       email: state.user.emailAddress || null,
+  //       phone: state.user.mobileIntFormat || null,
+  //       // isLoading: false,
+  //       // currently: state.authState,
+  //       msg
+  //     },
+  //     events: {
+  //       confirmCode: (value) => {
+  //         // alert(value)
+  //         if (state.user.emailAddress) {
+  //           dispatch('loginEmailVerify', value)
+  //         } else if (state.user.mobileIntFormat) {
+  //           dispatch('loginSmsVerify', value)
+  //         }
+  //       },
+  //       startAuth: () => dispatch('authStart')
+  //     }
+  //   })
+  // },
+  initializeWebAuth () {
+    webAuth = new WebAuth({
+      domain: 'montg.auth0.com',
+      redirectUri: redirectUri + this.app.localePath('index'),
+      clientID: '0Wy4khZcuXefSfrUuYDUP0Udag4FqL2u',
+      responseType: 'token id_token'
     })
+    console.log('new redirecturi', redirectUri + this.app.localePath('index'))
   },
   sendEmailCode ({commit, state}) {
     return new Promise((resolve, reject) => {
@@ -181,51 +193,51 @@ export const actions = {
     await dispatch('getSessionGeo')
     commit('updateUser', {country: state.user.country !== 'US' && state.user.country ? state.user.country : state.session.country})
   },
-  async authStart ({commit, state, dispatch}, redirectPath) {
-    // commit('updateRedirectPath', redirectPath)
-    let loginType
-    commit('updateAuthState', 'enteringCode')
-    if (state.user.emailAddress) {
-      loginType = 'email'
-      await dispatch('launchModal', loginType)
-      await dispatch('sendEmailLink')
-    } else if (state.user.mobileIntFormat) {
-      loginType = 'sms'
-      await dispatch('launchModal', loginType)
-      await dispatch('sendSmsCode')
-    }
-    // await dispatch('promptCode', loginType)
-    // await dispatch('launchModal', loginType)
-  },
-  promptCode ({ state, dispatch, commit }, loginType) {
-    let msg = loginType === 'sms' ? `Enter the code we sent to ${state.user.mobileIntFormat}` : `Click the login link or enter the code we sent to ${state.user.emailAddress}.`
-    Dialog.prompt({
-      title: 'Authentication',
-      message: msg,
-      inputAttrs: {
-        type: 'tel',
-        placeholder: 'Type the code.',
-        minlength: 6,
-        maxlength: 6,
-        autocomplete: 'off',
-        size: 6,
-        max: 999999,
-        pattern: '[0-9]{6}',
-        title: 'enter a 6 digit code'
-      },
-      confirmText: 'Submit',
-      cancelText: 'Cancel',
-      // onCancel: () => commit('updateRedirectPath', null),
-      onConfirm: (value) => {
-        if (state.user.emailAddress) {
-          dispatch('loginEmailVerify', value)
-        } else if (state.user.mobileIntFormat) {
-          dispatch('loginSmsVerify', value)
-        }
-      },
-      onCancel: () => {}
-    })
-  },
+  // async authStart ({commit, state, dispatch}, redirectPath) {
+  //   // commit('updateRedirectPath', redirectPath)
+  //   // let loginType
+  //   commit('updateAuthState', 'enteringCode')
+  //   if (state.user.emailAddress) {
+  //     // loginType = 'email'
+  //     // await dispatch('launchModal', loginType)
+  //     await dispatch('sendEmailLink')
+  //   } else if (state.user.mobileIntFormat) {
+  //     // loginType = 'sms'
+  //     // await dispatch('launchModal', loginType)
+  //     await dispatch('sendSmsCode')
+  //   }
+  //   // await dispatch('promptCode', loginType)
+  //   // await dispatch('launchModal', loginType)
+  // },
+  // promptCode ({ state, dispatch, commit }, loginType) {
+  //   let msg = loginType === 'sms' ? `Enter the code we sent to ${state.user.mobileIntFormat}` : `Click the login link or enter the code we sent to ${state.user.emailAddress}.`
+  //   Dialog.prompt({
+  //     title: 'Authentication',
+  //     message: msg,
+  //     inputAttrs: {
+  //       type: 'tel',
+  //       placeholder: 'Type the code.',
+  //       minlength: 6,
+  //       maxlength: 6,
+  //       autocomplete: 'off',
+  //       size: 6,
+  //       max: 999999,
+  //       pattern: '[0-9]{6}',
+  //       title: 'enter a 6 digit code'
+  //     },
+  //     confirmText: 'Submit',
+  //     cancelText: 'Cancel',
+  //     // onCancel: () => commit('updateRedirectPath', null),
+  //     onConfirm: (value) => {
+  //       if (state.user.emailAddress) {
+  //         dispatch('loginEmailVerify', value)
+  //       } else if (state.user.mobileIntFormat) {
+  //         dispatch('loginSmsVerify', value)
+  //       }
+  //     },
+  //     onCancel: () => {}
+  //   })
+  // },
   loginEmailVerify ({app, commit, dispatch, state}, code) {
     let Analytics = this.app.$Analytics
     commit('updateAuthState', 'loading')
@@ -324,6 +336,7 @@ export const actions = {
     })
   },
   async setSession ({ state, rootState, commit, dispatch, app }) {
+    dispatch('initializeWebAuth')
     // const loadingComponent = LoadingProgrammatic.open()
     commit('updateAuthState', 'loading')
     this.app.Amplify.configure(AWSExports)
@@ -395,7 +408,7 @@ export const actions = {
       })
     }
     let hasHash = window.location.hash && window.location.hash.indexOf('access_token') > -1
-    if (hasHash) dispatch('launchModal')
+    // if (hasHash) dispatch('launchModal')
     let authResult = hasHash ? await parseHash() : await checkSession()
     if (authResult.expiresIn * 1000 > Date.now()) {
       authResult = await renewAuth()
@@ -403,7 +416,6 @@ export const actions = {
     let idToken = authResult.idToken
     commit('updateIdToken', idToken)
     commit('updateExpirationDate', jwtDecode(idToken).exp)
-    commit('updateGcToken', jwtDecode(idToken)['https://graph.cool/token'])
     if (state.redirectPath) {
       dispatch('redirect', state.redirectPath)
     }
@@ -484,7 +496,6 @@ export const actions = {
     commit('updateAuthState', 'loggedIn')
   },
   clearData ({ commit, dispatch }) {
-    commit('updateGcToken', null)
     commit('updateIdToken', null)
     commit('updateExpirationDate', null)
     commit('updateUser', {

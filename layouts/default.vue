@@ -198,7 +198,8 @@
 </template>
 
 <script>
-import PhoneEmail from '~/components/PhoneEmail.vue'
+// import PhoneEmail from '~/components/PhoneEmail.vue'
+// import AuthenticateCode from '~/components/AuthenticateCode'
 // import Login from '~/components/Login.vue'
 function detectIE () {
   var ua = window.navigator.userAgent
@@ -240,7 +241,8 @@ export default {
     }
   },
   components: {
-    PhoneEmail
+    // PhoneEmail,
+    // AuthenticateCode
     // Login
   },
   computed: {

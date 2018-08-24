@@ -16,6 +16,8 @@ $vfalight: lighten($vfa, 65%);
 $vfalight-invert: findColorInvert($vfalight);
 $semitransparent: hsla(0, 0%, 96%, 0.45);
 $semitransparent-invert: $black;
+$transparent: hsla(0, 0%, 0%, 0);
+$transparent-invert: $black;
 
 // Setup $colors to use as bulma classes (e.g. 'is-twitter')
 $colors: (
@@ -32,7 +34,8 @@ $colors: (
   "vfa": ($vfa, $vfa-invert),
   "vfalight": ($vfalight, $vfalight-invert),
   "secondary":($secondary, $secondary-invert),
-  "semitransparent": ($semitransparent, $semitransparent-invert)
+  "semitransparent": ($semitransparent, $semitransparent-invert),
+  "transparent": ($transparent, $transparent-invert)
 );
 
 // Links
@@ -490,6 +493,7 @@ $flag-icon-square-path: '/1x1' !default;
   margin-bottom: 0;
 }
 
+// start of transitions
 .test-enter-active, .test-leave-active {
   transition: opacity .4s;
 }
@@ -503,6 +507,24 @@ $flag-icon-square-path: '/1x1' !default;
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
+
+.slide-item {
+  transition: all 1s;
+  display: inline-block;
+  margin-right: 10px;
+}
+.slide-enter, .slide-leave-to
+/* .list-complete-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.slide-leave-active {
+  position: absolute;
+}
+.slide-move {
+  transition: transform 1s;
+}
+// end of transitions
 
 .bg-image {
   // background: #23569D url('~/assets/votefromabroad-bg.jpg') no-repeat center top;

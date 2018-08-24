@@ -144,7 +144,8 @@ module.exports = {
     {src: '~/plugins/vuelidate'},
     {src: '~/plugins/croppa'},
     {src: '~/plugins/intercom'},
-    {src: '~/plugins/worker', ssr: false}
+    {src: '~/plugins/worker', ssr: false},
+    { src: '~plugins/i18n.js' }
   ],
   /*
   ** Build configuration

@@ -1,32 +1,31 @@
 <template>
   <div class="field">
-    <!-- <basic-label :fieldName="fieldName" @toggleInfo="toggleInfo"></basic-label> -->
+    <basic-label :fieldName="fieldName" @toggleInfo="toggleInfo"></basic-label>
     <b-field
       :type="fieldType"
-      :label="$t('request.phoneOrEmail.label')"
       :message="fieldMessages">
       <transition-group name="slide" tag="div" @after-enter="selectField" class="field has-addons">
         <p class="control" key="flag" v-if="!countryFocused && !mustBeEmail">
-          <a :class="['button', 'control', 'is-outlined', 'is-inverted', 'is-paddingless']"
+          <button :class="['button', 'control', 'is-outlined', 'is-inverted', 'is-paddingless']"
+            :disabled="loading"
             style="padding-left:0px;"
-            @click="flipCountryFocused">
+            @click.prevent="countryFocused = !countryFocused">
             <span class="flag-container fa-stack">
               <i :class="`fa-stack-2x flag-icon flag-icon-${countryIso ? countryIso.toLowerCase() : 'un'}`"></i>
               <i class="fas fa-sort-down fa-stack-1x has-text-grey breathe" style="transform:translateY(50%)"></i>
             </span>
+          </button>
+        </p>
+        <p class="control" key="atSign" v-if="!countryFocused && mustBeEmail">
+          <a key="atSign"
+            :class="['button']"
+            @click="$refs[fieldName].focus()">
+            <b-icon
+              pack="fas"
+              icon="at">
+            </b-icon>
           </a>
         </p>
-        <!-- <p class="control" key="atSign" v-if="!countryFocused && mustBeEmail"> -->
-        <a key="atSign"
-          v-if="!countryFocused && mustBeEmail"
-          :class="['button', 'control']"
-          @click="$refs[fieldName].focus()">
-          <b-icon
-            pack="fas"
-            icon="at">
-          </b-icon>
-        </a>
-        <!-- </p> -->
         <country-selector
           v-if="countryFocused"
           key="country"
@@ -37,19 +36,24 @@
           v-model="countryIso"
           phone></country-selector>
           <!-- :class="countryFocused ? 'wide' : 'shrink'" -->
+
+          <!-- v-if="tempValue && tempValue.length > 1" -->
         <b-input
           key="input"
           :type="fieldType"
-          :value="fieldValue || ''"
+          :value="tempValue"
           :id="fieldName"
           :placeholder="$t(`request.tel.placeholder`, {example: exPhone})"
           :class="[requiredClass, 'is-expanded']"
+          :autocomplete="autoComplete"
+          :maxlength="maxLength"
+          :loading="loading"
           @input="$emit('delayTouch')"
           v-format="formatFunctions"
           :ref="fieldName"></b-input>
       </transition-group>
     </b-field>
-    <b-message v-if="toolTipContent" :title="tooltipTitle" type="is-info" has-icon :active.sync="isInfoOpen">
+    <b-message v-if="toolTipContent" type="is-info" has-icon :active.sync="isInfoOpen">
       <p v-html="toolTipContent"></p>
     </b-message>
   </div>
@@ -57,9 +61,8 @@
 
 <script>
 import { mapState, mapGetters, mapActions } from 'vuex'
+import fieldMixin from '~/mixins/fieldMixin.js'
 import CountrySelector from '~/components/CountrySelector'
-import BasicLabel from '~/components/BasicLabel'
-import snarkdown from 'snarkdown'
 const { onChange, onCut, onPaste, onKeyDown } = require('input-format/commonjs/input control')
 const DIGITS =
 {
@@ -107,78 +110,65 @@ const DIGITS =
 }
 
 export default {
-  name: 'PhoneEmailInput',
-  props: ['v', 'fieldName'],
+  name: 'PhoneOrEmail',
+  mixins: [fieldMixin],
+  props: ['loading'],
   components: {
-    CountrySelector,
-    BasicLabel
+    CountrySelector
   },
   data () {
     return {
       countryIso: '',
       countryFocused: false,
-      fieldValue: '',
-      isInfoOpen: false
+      tempValue: ''
     }
   },
   computed: {
-    requiredClass: function () {
-      return {
-        'hide': Boolean(this.fieldValue || (this.v && this.v.$error)),
-        'is-required': this.v && this.v.required !== undefined,
-        'is-optional': this.v && this.v.required === undefined
-      }
+    autoComplete () {
+      return this.mustBeEmail || this.deviceType === 'desktop' ? 'home email' : 'mobile tel'
     },
-    fieldType () {
-      return this.v && this.v.$error ? 'is-danger' : ''
-    },
-    fieldMessages () { return this.v && this.v.$error ? Object.entries(this.v).filter(([key, value]) => key.charAt(0) !== '$' && value === false).map(x => this.$t(`request.${this.fieldName}.messages.${x[0]}`)) : '' },
-    tooltipTitle () { return this.$te(`request.${this.fieldName}.tooltipTitle`) ? this.$t(`request.${this.fieldName}.tooltipTitle`) : null },
-    toolTipContent () { return this.$te(`request.${this.fieldName}.tooltip`) ? snarkdown(this.$t(`request.${this.fieldName}.tooltip`)) : null },
-    mustBeEmail () {
-      return this.fieldValue &&
-        /[A-Za-z@]/g.test(this.fieldValue) &&
-        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@?((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.?)+([a-zA-Z]{2,})?)?)$/.test(this.fieldValue)
-    },
+    deviceType () { return this.$store.state.userauth.device.type },
     exPhone () { return this.countries.find(country => country.code === this.countryIso) ? this.countries.find(country => country.code === this.countryIso).exPhone : '+1 201 555 0123' },
+    mustBeEmail () {
+      return Boolean(this.fieldValue &&
+        /[A-Za-z@]/g.test(this.fieldValue) &&
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@?((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.?)+([a-zA-Z]{2,})?)?)$/.test(this.fieldValue))
+    },
     formatFunctions () {
       let format = (parsedText) => {
-        console.log('format: parsedText', parsedText, 'fieldValue', this.fieldValue)
+        console.log('parsedText:', parsedText)
         if (!parsedText) {
-          console.log('no parsed text')
-          this.fieldValue = ''
-          return {text: '', template: 'X'}
-        } else if (parsedText && /^\+\d\d?\d?/.test(parsedText) && !this.phoneMetadataHasAllCountriesForPrefix(parsedText)) {
-          // console.log('need phone dat')
+          this.fieldValue = null
+          return {text: ' ', template: 'X'}
+        } else if (/^\+\d\d?\d?/.test(parsedText) && !this.phoneMetadataHasAllCountriesForPrefix(parsedText)) {
           this.fieldValue = parsedText
           this.getCountryIsoFromPhonePrefix(parsedText)
           return {text: parsedText, template: 'X'.repeat(parsedText.length)}
         } else if (
-          parsedText &&
           /[A-Za-z@]/g.test(parsedText) &&
           /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@?((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.?)+([a-zA-Z]{2,})?)?)$/.test(parsedText)
         ) {
           this.fieldValue = parsedText
-          return {text: parsedText, template: 'X'.repeat(parsedText.length)}
+          return {text: parsedText, template: 'X'.repeat(parsedText.length || 1)}
         } else {
           let {text, formatted: {country, template}} = this.formattedNumber(parsedText, this.countryIso)
-          // console.log('formatted', text, country, template, this.getPhoneIntFormat(text, country))
-          // this.fieldValue = text
+          this.tempValue = text
           this.fieldValue = this.getPhoneIntFormat(text, country)
           if (country && this.countryIso !== country) this.countryIso = country
           return {text, template}
         }
       }
       let parse = (character, value) => {
-        // console.log('character', character, 'value', value)
-        if (!character && !value) return ''
-        if (
-          (/[A-Za-z@]/.test(character)) ||
-          (/[A-Za-z@]/g.test(value) &&
-          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@?((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.?)+([a-zA-Z]{2,})?)?)$/.test(value))
-        ) {
-          return character
-        } else return DIGITS[character]
+        console.log('parse:', 'char', character, 'value', value)
+        if (character || value) {
+          if (
+            (/[A-Za-z@]/.test(character)) ||
+            (/[A-Za-z@]/g.test(value) &&
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@?((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.?)+([a-zA-Z]{2,})?)?)$/.test(value))
+          ) {
+            return character
+          } else return DIGITS[character]
+        } else return ''
       }
       let onChange = val => {
         // console.log('val', val)
@@ -191,11 +181,6 @@ export default {
     ...mapGetters('userauth', ['userCountry'])
   },
   methods: {
-    flipCountryFocused () {
-      console.log('previous Country Focused', this.countryFocused, 'mustBeEmail', this.mustBeEmail)
-      this.countryFocused = !this.countryFocused
-      console.log('now', this.countryFocused)
-    },
     selectField () {
       console.log('selectField')
       // console.log(this.$refs[this.fieldName])
@@ -204,70 +189,50 @@ export default {
         : this.$refs[this.fieldName].focus()
     },
     newCountry () {
-      console.log('newCountry')
-      this.fieldValue = this.exPhone ? this.exPhone.split(' ')[0] : ''
+      if (this.tempValue && this.exPhone) {
+        this.tempValue = this.tempValue.includes(this.exPhone.split(' ')[0]) ? this.tempValue : this.exPhone.split(' ')[0]
+      } else this.tempValue = ''
       this.selectField()
     },
-    toggleInfo () { this.isInfoOpen = !this.isInfoOpen },
     ...mapActions('data', ['updateCountryData', 'getCountryIsoFromPhonePrefix'])
   },
   directives: {
     format: (el, binding, vnode) => {
+      // console.log('formatDirective')
       let format = binding.value.format
       let parse = binding.value.parse
       const input = el instanceof HTMLInputElement ? el : el.querySelector('input')
-      const onChangeHandler = (val) => {
-        console.log('onchangehandlerVal', val, input.value, vnode)
-        vnode.context.$emit('input', input.value)
-      }
-      input.onchange = (event) => {
-        console.log('onchange', event)
-        return onChange(event, input, parse, format, onChangeHandler)
-      }
-      input.oncut = (event) => {
-        console.log('oncut', event)
-        return onCut(event, input, parse, format, onChangeHandler)
-      }
-      input.onpaste = (event) => {
-        console.log('onPaste', event)
-        return onPaste(event, input, parse, format, onChangeHandler)
-      }
-      input.onkeydown = (event) => {
-        console.log('onkeydown', event)
-        return onKeyDown(event, input, parse, format, onChangeHandler)
-      }
-      input.oninput = (event) => {
-        console.log('oninput', event, 'fieldValue', this)
-        if (event.target.value) {
-          return onChange(event, input, parse, format, onChangeHandler)
-        }
-      }
+      console.log('input', input)
+      const onChangeHandler = () => { vnode.context.$emit('newVal', input.value) }
+      input.onchange = (event) => onChange(event, input, parse, format, onChangeHandler)
+      input.oncut = (event) => onCut(event, input, parse, format, onChangeHandler)
+      input.onpaste = (event) => onPaste(event, input, parse, format, onChangeHandler)
+      input.onkeydown = (event) => onKeyDown(event, input, parse, format, onChangeHandler)
+      input.oninput = (event) => onChange(event, input, parse, format, onChangeHandler)
     }
   },
   watch: {
-    fieldValue (val, oldVal) {
-      console.log('fieldValue change', val, oldVal, 'mustBeEmail', this.mustBeEmail)
-      // if (!this.tempValue) {
-      //   this.tempValue = val
-      // } else if (this.getPhoneIntFormat(this.tempValue, this.countryIso || null) !== val) {
-      //   this.tempValue = val
-      // }
-      if (val && val.length > 2 && /^\+\d\d?\d?/.test(val) && (this.formattedNumber(this.fieldValue)).formatted.country) {
-        console.log('newCountryiso', (this.formattedNumber(this.fieldValue)).formatted)
+    fieldValue (val) {
+      // console.log(val)
+      if (val && !this.tempValue) {
+        this.tempValue = val
+      } else if (this.getPhoneIntFormat(this.tempValue, this.countryIso || null) !== val) {
+        this.tempValue = val
+      }
+      if (val && val.length > 3 && !this.countryIso) {
         this.countryIso = (this.formattedNumber(this.fieldValue)).formatted.country
       }
-      if (val !== oldVal) this.$emit('input', val)
+      this.$emit('input', val)
     },
     userCountry (val) {
-      console.log('userCountryChange', val)
       if (val && !this.countryIso) {
         this.countryIso = val
       }
     }
   },
   mounted () {
-    if (this.fieldValue && this.fieldValue.length > 2 && /^\+\d\d?\d?/.test(this.fieldValue)) {
-      // this.tempValue = this.fieldValue
+    if (this.fieldValue) {
+      this.tempValue = this.fieldValue
       this.countryIso = (this.formattedNumber(this.fieldValue)).formatted.country
     }
     if (this.userCountry && !this.countryIso) {

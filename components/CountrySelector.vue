@@ -65,21 +65,21 @@ export default {
     ])
   },
   watch: {
-    countryFocused (val) {
-      if (val) {
-        setTimeout(() => {
-          this.focusCountry()
-        }, 480)
-      }
-    },
+    // countryFocused (val) {
+    //   if (val) {
+    //     setTimeout(() => {
+    //       this.focusCountry()
+    //     }, 480)
+    //   }
+    // },
     value (val) {
       if (val) this.countrySearch = this.countries.find(x => x.code === val).name
       this.updateCountryData(val)
     }
   },
   methods: {
-    focusCountry () { this.$refs.input.focus() },
-    focus () { this.$refs.input.focus() },
+    // focusCountry () { this.$refs.input.focus() },
+    // focus () { this.$refs.input.focus() },
     select (event) {
       event.target.setSelectionRange(0, 9999)
       this.$emit('focus')
