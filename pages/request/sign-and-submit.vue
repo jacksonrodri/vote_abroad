@@ -47,7 +47,7 @@
                       <p class="is-size-5">{{$t('request.stages.mailDownload')}}</p>
                     </div>
                     <div class="media-left">
-                      <button :class="['button', 'is-pulled-right', 'is-primary', {'is-loading': !Boolean(pdf)}]" @click="saveFile"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
+                      <button :class="['button', 'is-pulled-right', 'is-primary', {'is-loading': !Boolean(msPdf)}]" @click="saveFile"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
                       <!-- <a v-if="downloadAttrSupported" :href="pdf" :download="`${firstName}-${lastName}-2018-fpca.pdf`" :class="['button', 'is-pulled-right', 'is-primary', {'is-loading': !Boolean(pdf)}]" @click="finish"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></a>
                       <a v-else class="button is-pulled-right is-primary" @click="openPdf"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></a> -->
                     </div>
@@ -72,7 +72,7 @@
                       </span>
                       <div class="box">
                         <span v-if="currentRequest.leo.n"><strong>{{ currentRequest.leo.n }}</strong><br/></span>
-                        <span v-if="currentRequest.leo.f"><strong>+1 {{ currentRequest.leo.f }}</strong><br/></span>
+                        <span v-if="currentRequest.leo.e"><strong><a :href="`mailto:${currentRequest.leo.e}`">{{ currentRequest.leo.e }}</a></strong><br/></span>
                       </div>
                     </div>
                   </article>
@@ -118,7 +118,7 @@
                     <div class="media-content">
                       <div class="content">
                         <p class="is-size-6" v-html="$options.filters.markdown($t('request.stages.emailDownload'))"></p>
-                        <button :class="['button', 'is-pulled-right', 'is-primary', {'is-loading': !Boolean(pdf)}]" @click="saveFile"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
+                        <button :class="['button', 'is-pulled-right', 'is-primary', {'is-loading': !Boolean(msPdf)}]" @click="saveFile"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
                       </div>
                     </div>
                   </article>
@@ -155,7 +155,7 @@
                       <p class="is-size-5">{{$t('request.stages.mailDownload')}}</p>
                     </div>
                     <div class="media-left">
-                      <button :class="['button', 'is-pulled-right', 'is-primary', {'is-loading': !Boolean(pdf)}]" @click="saveFile"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
+                      <button :class="['button', 'is-pulled-right', 'is-primary', {'is-loading': !Boolean(msPdf)}]" @click="saveFile"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
                       <!-- <a v-if="downloadAttrSupported" :href="pdf" :download="`${firstName}-${lastName}-2018-fpca.pdf`" :class="['button', 'is-pulled-right', 'is-primary', {'is-loading': !Boolean(pdf)}]" @click="finish"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></a>
                       <a v-else class="button is-pulled-right is-primary" @click="openPdf"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></a> -->
                     </div>
@@ -263,7 +263,7 @@
                       <p class="is-size-5">{{$t('request.stages.mailDownload')}}</p>
                     </div>
                     <div class="media-left">
-                      <button :class="['button', 'is-pulled-right', 'is-primary', {'is-loading': !Boolean(pdf)}]" @click="saveFile"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
+                      <button :class="['button', 'is-pulled-right', 'is-primary', {'is-loading': !Boolean(msPdf)}]" @click="saveFile"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></button>
                       <!-- <a v-if="downloadAttrSupported" :href="pdf" :download="`${firstName}-${lastName}-2018-fpca.pdf`" :class="['button', 'is-pulled-right', 'is-primary', {'is-loading': !Boolean(pdf)}]" @click="finish"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></a>
                       <a v-else class="button is-pulled-right is-primary" @click="openPdf"><b-icon icon="download"></b-icon><span>{{$t('request.stages.download')}}</span></a> -->
                     </div>
@@ -415,9 +415,17 @@ export default {
     }
   },
   mounted () {
-    console.log(this.localePath('dashboard'))
     let feat = this
     if (process.browser) {
+      console.log('starting to retrieve file')
+      axios.get(encodeURI(`/api/fpca?firstName=${this.firstName || ''}&lastName=${this.lastName || ''}&middleName=${this.middleName || ''}&suffix=${this.suffix || ''}&ssn=${this.ssn || ''}&previousName=${this.previousName.previousName || ''}&dob=${this.dob || ''}&stateId=${this.stateId || ''}&votStreet=${this.votStreet || ''}&votApt=${this.votApt || ''}&votCity=${this.votCity || ''}&votState=${this.votState || ''}&votCounty=${this.votCounty || ''}&votZip=${this.votZip || ''}&abrAdr=${this.abrAdr.formatted && this.abrAdr.formatted[0] ? this.abrAdr.formatted[0] : ''}\n${this.abrAdr.formatted && this.abrAdr.formatted[1] ? this.abrAdr.formatted[1] : ''}\n${this.abrAdr.formatted && this.abrAdr.formatted[2] ? this.abrAdr.formatted[2] : ''}\n${this.abrAdr.formatted && this.abrAdr.formatted[3] ? this.abrAdr.formatted[3] : ''}\n${this.abrAdr.formatted && this.abrAdr.formatted[4] ? this.abrAdr.formatted[4] : ''}&fwdAdr=${this.fwdAdr.formatted && this.fwdAdr.formatted[0] ? this.fwdAdr.formatted[0] : ''}\n${this.fwdAdr.formatted && this.fwdAdr.formatted[1] ? this.fwdAdr.formatted[1] : ''}\n${this.fwdAdr.formatted && this.fwdAdr.formatted[2] ? this.fwdAdr.formatted[2] : ''}\n${this.fwdAdr.formatted && this.fwdAdr.formatted[3] ? this.fwdAdr.formatted[3] : ''}\n${this.fwdAdr.formatted && this.fwdAdr.formatted[4] ? this.fwdAdr.formatted[4] : ''}&email=${encodeURIComponent(this.email) || ''}&altEmail=${encodeURIComponent(this.altEmail) || ''}&tel=${this.tel ? encodeURIComponent(this.tel.replace(/\s/g, '')) : ''}&fax=${this.fax ? encodeURIComponent(this.fax.replace(/\s/g, '')) : ''}&party=${this.party || ''}&addlInfo=${this.addlInfo || ''}&date=${this.date || ''}&class=${this.voterClass || ''}&sex=${this.sex || ''}&recBallot=${this.recBallot || ''}&leoName=${this.leoName || ''}&leoAddress=${this.leoAdr || ''}&leoFax=${this.leoFax || ''}&leoEmail=${this.leoEmail || ''}&leoPhone=${this.leoPhone || ''}&transmitOpts=${this.stateRules.ballotReceiptOptions.join(',')}&deadline=${encodeURIComponent(this.deadlineLanguage)}`), {responseType: 'arraybuffer'})
+        .then((response) => {
+          console.log('response', response)
+          let blob = new Blob([response.data], {type: 'application/pdf'})
+          console.log('blob', blob)
+          this.msPdf = blob
+          // this.pdf = window.URL.createObjectURL(blob)
+        })
       feat.downloadAttrSupported = ('download' in document.createElement('a'))
       feat.needsMsSaveOrOpenBlob = Boolean(window.navigator.msSaveOrOpenBlob)
       if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
@@ -431,12 +439,6 @@ export default {
         .catch(function (err) {
           feat.hasCamera = false
           console.log(err.name + ': ' + err.message)
-        })
-      axios.get(encodeURI(`/api/fpca?firstName=${this.firstName || ''}&lastName=${this.lastName || ''}&middleName=${this.middleName || ''}&suffix=${this.suffix || ''}&ssn=${this.ssn || ''}&previousName=${this.previousName.previousName || ''}&dob=${this.dob || ''}&stateId=${this.stateId || ''}&votStreet=${this.votStreet || ''}&votApt=${this.votApt || ''}&votCity=${this.votCity || ''}&votState=${this.votState || ''}&votCounty=${this.votCounty || ''}&votZip=${this.votZip || ''}&abrAdr=${this.abrAdr.formatted && this.abrAdr.formatted[0] ? this.abrAdr.formatted[0] : ''}\n${this.abrAdr.formatted && this.abrAdr.formatted[1] ? this.abrAdr.formatted[1] : ''}\n${this.abrAdr.formatted && this.abrAdr.formatted[2] ? this.abrAdr.formatted[2] : ''}\n${this.abrAdr.formatted && this.abrAdr.formatted[3] ? this.abrAdr.formatted[3] : ''}\n${this.abrAdr.formatted && this.abrAdr.formatted[4] ? this.abrAdr.formatted[4] : ''}&fwdAdr=${this.fwdAdr.formatted && this.fwdAdr.formatted[0] ? this.fwdAdr.formatted[0] : ''}\n${this.fwdAdr.formatted && this.fwdAdr.formatted[1] ? this.fwdAdr.formatted[1] : ''}\n${this.fwdAdr.formatted && this.fwdAdr.formatted[2] ? this.fwdAdr.formatted[2] : ''}\n${this.fwdAdr.formatted && this.fwdAdr.formatted[3] ? this.fwdAdr.formatted[3] : ''}\n${this.fwdAdr.formatted && this.fwdAdr.formatted[4] ? this.fwdAdr.formatted[4] : ''}&email=${encodeURIComponent(this.email) || ''}&altEmail=${encodeURIComponent(this.altEmail) || ''}&tel=${this.tel ? encodeURIComponent(this.tel.replace(/\s/g, '')) : ''}&fax=${this.fax ? encodeURIComponent(this.fax.replace(/\s/g, '')) : ''}&party=${this.party || ''}&addlInfo=${this.addlInfo || ''}&date=${this.date || ''}&class=${this.voterClass || ''}&sex=${this.sex || ''}&recBallot=${this.recBallot || ''}&leoName=${this.leoName || ''}&leoAddress=${this.leoAdr || ''}&leoFax=${this.leoFax || ''}&leoEmail=${this.leoEmail || ''}&leoPhone=${this.leoPhone || ''}&transmitOpts=${this.stateRules.ballotReceiptOptions.join(',')}&deadline=${encodeURIComponent(this.deadlineLanguage)}`), {responseType: 'arraybuffer'})
-        .then((response) => {
-          let blob = new Blob([response.data], {type: 'application/pdf'})
-          this.msPdf = blob
-          this.pdf = window.URL.createObjectURL(blob)
         })
     }
   },
@@ -464,46 +466,46 @@ export default {
         onConfirm: () => this.$router.push(this.localePath('dashboard'))
       })
     },
-    openPdf () {
-      this.$dialog.alert({
-        title: this.$t('request.fpcaDownload.downloadingAlertTitle'),
-        message: this.md(this.$t('request.fpcaDownload.downloadingAlertMessage')),
-        confirmText: this.$t('request.fpcaDownload.confirmButton'),
-        type: 'is-danger',
-        hasIcon: true,
-        icon: 'download',
-        iconPack: 'fas',
-        onConfirm: () => { this.$router.push(this.localePath('dashboard')); this.openPdfNewWindow() }
-      })
-    },
-    openPdfNewWindow () {
-      if (window.navigator && window.navigator.msSaveOrOpenBlob) {
-        window.navigator.msSaveOrOpenBlob(this.msPdf)
-      } else {
-        window.open(this.pdf, `${this.firstName}-${this.lastName}-2018-fpca.pdf`)
-      }
-      // if (this.needsMsSaveOrOpenBlob) {
-      //   window.navigator.msSaveOrOpenBlob(this.msPdf, `${this.firstName}-${this.lastName}-2018-fpca.pdf`)
-      // } else {
-      //   window.open(this.pdf, '_blank')
-      // }
-    },
-    finish () {
-      this.$router.push(this.localePath('dashboard'))
-      this.confirmPdfDownload()
-    },
-    getFPCA (method) {
-      axios.get(encodeURI(`/api/fpca?firstName=${this.firstName || ''}&lastName=${this.lastName || ''}&middleName=${this.middleName || ''}&suffix=${this.suffix || ''}&ssn=${this.ssn || ''}&previousName=${this.previousName.previousName || ''}&dob=${this.dob || ''}&stateId=${this.stateId || ''}&votStreet=${this.votStreet || ''}&votApt=${this.votApt || ''}&votCity=${this.votCity || ''}&votState=${this.votState || ''}&votCounty=${this.votCounty || ''}&votZip=${this.votZip || ''}&abrAdr=${this.abrAdr.formatted && this.abrAdr.formatted[0] ? this.abrAdr.formatted[0] : ''}\n${this.abrAdr.formatted && this.abrAdr.formatted[1] ? this.abrAdr.formatted[1] : ''}\n${this.abrAdr.formatted && this.abrAdr.formatted[2] ? this.abrAdr.formatted[2] : ''}\n${this.abrAdr.formatted && this.abrAdr.formatted[3] ? this.abrAdr.formatted[3] : ''}\n${this.abrAdr.formatted && this.abrAdr.formatted[4] ? this.abrAdr.formatted[4] : ''}&fwdAdr=${this.fwdAdr.formatted && this.fwdAdr.formatted[0] ? this.fwdAdr.formatted[0] : ''}\n${this.fwdAdr.formatted && this.fwdAdr.formatted[1] ? this.fwdAdr.formatted[1] : ''}\n${this.fwdAdr.formatted && this.fwdAdr.formatted[2] ? this.fwdAdr.formatted[2] : ''}\n${this.fwdAdr.formatted && this.fwdAdr.formatted[3] ? this.fwdAdr.formatted[3] : ''}\n${this.fwdAdr.formatted && this.fwdAdr.formatted[4] ? this.fwdAdr.formatted[4] : ''}&email=${encodeURIComponent(this.email) || ''}&altEmail=${encodeURIComponent(this.altEmail) || ''}&tel=${this.tel ? encodeURIComponent(this.tel.replace(/\s/g, '')) : ''}&fax=${this.fax ? encodeURIComponent(this.fax.replace(/\s/g, '')) : ''}&party=${this.party || ''}&addlInfo=${this.addlInfo || ''}&date=${this.date || ''}&leoAdr=${this.leoAdr}&class=${this.voterClass || ''}&sex=${this.sex || ''}&recBallot=${this.recBallot || ''}&leoName=${this.leoName || ''}&leoAddress=${this.leoAdr || ''}&leoFax=${this.leoFax || ''}&leoEmail=${this.leoEmail || ''}&leoPhone=${this.leoPhone || ''}&transmitOpts=${this.isRegistered === 'registered' ? this.stateRules.fpcaSubmitOptionsRegister.join('--') : this.stateRules.fpcaSubmitOptionsRequest.join('--')}&deadline=${encodeURIComponent(this.deadlineLanguage)}&method=${method}`), {responseType: 'arraybuffer'})
-        .then((response) => {
-          // console.log(response)
-          let blob = new Blob([response.data], {type: 'application/pdf'})
-          let link = document.createElement('a')
-          link.href = window.URL.createObjectURL(blob)
-          if (method === 'download') link.download = 'FPCA.pdf'
-          if (method === 'blank') link.target = '_blank'
-          link.click()
-        })
-    },
+    // openPdf () {
+    //   this.$dialog.alert({
+    //     title: this.$t('request.fpcaDownload.downloadingAlertTitle'),
+    //     message: this.md(this.$t('request.fpcaDownload.downloadingAlertMessage')),
+    //     confirmText: this.$t('request.fpcaDownload.confirmButton'),
+    //     type: 'is-danger',
+    //     hasIcon: true,
+    //     icon: 'download',
+    //     iconPack: 'fas',
+    //     onConfirm: () => { this.$router.push(this.localePath('dashboard')); this.openPdfNewWindow() }
+    //   })
+    // },
+    // openPdfNewWindow () {
+    //   if (window.navigator && window.navigator.msSaveOrOpenBlob) {
+    //     window.navigator.msSaveOrOpenBlob(this.msPdf)
+    //   } else {
+    //     window.open(this.pdf, `${this.firstName}-${this.lastName}-2018-fpca.pdf`)
+    //   }
+    //   // if (this.needsMsSaveOrOpenBlob) {
+    //   //   window.navigator.msSaveOrOpenBlob(this.msPdf, `${this.firstName}-${this.lastName}-2018-fpca.pdf`)
+    //   // } else {
+    //   //   window.open(this.pdf, '_blank')
+    //   // }
+    // },
+    // finish () {
+    //   this.$router.push(this.localePath('dashboard'))
+    //   this.confirmPdfDownload()
+    // },
+    // getFPCA (method) {
+    //   axios.get(encodeURI(`/api/fpca?firstName=${this.firstName || ''}&lastName=${this.lastName || ''}&middleName=${this.middleName || ''}&suffix=${this.suffix || ''}&ssn=${this.ssn || ''}&previousName=${this.previousName.previousName || ''}&dob=${this.dob || ''}&stateId=${this.stateId || ''}&votStreet=${this.votStreet || ''}&votApt=${this.votApt || ''}&votCity=${this.votCity || ''}&votState=${this.votState || ''}&votCounty=${this.votCounty || ''}&votZip=${this.votZip || ''}&abrAdr=${this.abrAdr.formatted && this.abrAdr.formatted[0] ? this.abrAdr.formatted[0] : ''}\n${this.abrAdr.formatted && this.abrAdr.formatted[1] ? this.abrAdr.formatted[1] : ''}\n${this.abrAdr.formatted && this.abrAdr.formatted[2] ? this.abrAdr.formatted[2] : ''}\n${this.abrAdr.formatted && this.abrAdr.formatted[3] ? this.abrAdr.formatted[3] : ''}\n${this.abrAdr.formatted && this.abrAdr.formatted[4] ? this.abrAdr.formatted[4] : ''}&fwdAdr=${this.fwdAdr.formatted && this.fwdAdr.formatted[0] ? this.fwdAdr.formatted[0] : ''}\n${this.fwdAdr.formatted && this.fwdAdr.formatted[1] ? this.fwdAdr.formatted[1] : ''}\n${this.fwdAdr.formatted && this.fwdAdr.formatted[2] ? this.fwdAdr.formatted[2] : ''}\n${this.fwdAdr.formatted && this.fwdAdr.formatted[3] ? this.fwdAdr.formatted[3] : ''}\n${this.fwdAdr.formatted && this.fwdAdr.formatted[4] ? this.fwdAdr.formatted[4] : ''}&email=${encodeURIComponent(this.email) || ''}&altEmail=${encodeURIComponent(this.altEmail) || ''}&tel=${this.tel ? encodeURIComponent(this.tel.replace(/\s/g, '')) : ''}&fax=${this.fax ? encodeURIComponent(this.fax.replace(/\s/g, '')) : ''}&party=${this.party || ''}&addlInfo=${this.addlInfo || ''}&date=${this.date || ''}&leoAdr=${this.leoAdr}&class=${this.voterClass || ''}&sex=${this.sex || ''}&recBallot=${this.recBallot || ''}&leoName=${this.leoName || ''}&leoAddress=${this.leoAdr || ''}&leoFax=${this.leoFax || ''}&leoEmail=${this.leoEmail || ''}&leoPhone=${this.leoPhone || ''}&transmitOpts=${this.isRegistered === 'registered' ? this.stateRules.fpcaSubmitOptionsRegister.join('--') : this.stateRules.fpcaSubmitOptionsRequest.join('--')}&deadline=${encodeURIComponent(this.deadlineLanguage)}&method=${method}`), {responseType: 'arraybuffer'})
+    //     .then((response) => {
+    //       // console.log(response)
+    //       let blob = new Blob([response.data], {type: 'application/pdf'})
+    //       let link = document.createElement('a')
+    //       link.href = window.URL.createObjectURL(blob)
+    //       if (method === 'download') link.download = 'FPCA.pdf'
+    //       if (method === 'blank') link.target = '_blank'
+    //       link.click()
+    //     })
+    // },
     addSig (val) {
       this.signature = val
       var d = new Date()
@@ -514,35 +516,35 @@ export default {
       setTimeout(() => {
         this.fpca = this.$refs.fpca.$refs['my-canvas'].toDataURL()
       }, 800)
-    },
-    sendEmail () {
-      let fpca = this.$refs.fpca.$refs['my-canvas'].toDataURL()
-      // console.log(fpca)
-      function dataURItoBlob (dataURI) {
-        var byteString = atob(dataURI.split(',')[1])
-        var ab = new ArrayBuffer(byteString.length)
-        var ia = new Uint8Array(ab)
-        for (var i = 0; i < byteString.length; i++) {
-          ia[i] = byteString.charCodeAt(i)
-        }
-        return new Blob([ab], { type: 'image/png' })
-      }
-      var blob = dataURItoBlob(fpca)
-      // console.log(blob)
-      let data = new FormData()
-      data.append('from', 'VoteFromAbroad <mailer@votefromabroad.org>')
-      data.append('to', 'alexpm@gmail.com')
-      data.append('subject', 'FPCA')
-      data.append('text', 'Your FPCA application')
-      data.append('attachment', blob, '@file/fpca.png')
-      data.append('inline', blob, 'file/fpca.png')
-      data.append('html', '<html>HTML version of the body<img src="cid:fpca.png" width="120" alt="FPCA"><br/></html>')
-      let url = '/api/mail'
-      let config = { url: url, method: 'post', headers: { 'Content-Type': 'multipart/form-data' }, auth: { username: 'api', password: 'key-44903961cb823b645750fe64358dfc40' } }
-      this.$axios.post(url, data, config)
-        .then(response => console.log(response))
-        .catch(errors => console.log(errors))
     }
+    // sendEmail () {
+    //   let fpca = this.$refs.fpca.$refs['my-canvas'].toDataURL()
+    //   // console.log(fpca)
+    //   function dataURItoBlob (dataURI) {
+    //     var byteString = atob(dataURI.split(',')[1])
+    //     var ab = new ArrayBuffer(byteString.length)
+    //     var ia = new Uint8Array(ab)
+    //     for (var i = 0; i < byteString.length; i++) {
+    //       ia[i] = byteString.charCodeAt(i)
+    //     }
+    //     return new Blob([ab], { type: 'image/png' })
+    //   }
+    //   var blob = dataURItoBlob(fpca)
+    //   // console.log(blob)
+    //   let data = new FormData()
+    //   data.append('from', 'VoteFromAbroad <mailer@votefromabroad.org>')
+    //   data.append('to', 'alexpm@gmail.com')
+    //   data.append('subject', 'FPCA')
+    //   data.append('text', 'Your FPCA application')
+    //   data.append('attachment', blob, '@file/fpca.png')
+    //   data.append('inline', blob, 'file/fpca.png')
+    //   data.append('html', '<html>HTML version of the body<img src="cid:fpca.png" width="120" alt="FPCA"><br/></html>')
+    //   let url = '/api/mail'
+    //   let config = { url: url, method: 'post', headers: { 'Content-Type': 'multipart/form-data' }, auth: { username: 'api', password: 'key-44903961cb823b645750fe64358dfc40' } }
+    //   this.$axios.post(url, data, config)
+    //     .then(response => console.log(response))
+    //     .catch(errors => console.log(errors))
+    // }
   },
   computed: {
     documentRequired () {
@@ -555,10 +557,10 @@ export default {
           return null
       }
     },
-    pleaseRotate () {
-      // return this.signStep === 'instructions'
-      return this.$store.state.userauth.device.type === 'mobile' && this.$store.state.userauth.device.orientation === 'portrait' && this.signStep === 'instructions'
-    },
+    // pleaseRotate () {
+    //   // return this.signStep === 'instructions'
+    //   return this.$store.state.userauth.device.type === 'mobile' && this.$store.state.userauth.device.orientation === 'portrait' && this.signStep === 'instructions'
+    // },
     currentRequest () { return this.requests[this.currentRequestIndex] },
     firstName () { return this.currentRequest && this.currentRequest.firstName ? this.currentRequest.firstName : ' ' },
     lastName () { return this.currentRequest && this.currentRequest.lastName ? this.currentRequest.lastName : ' ' },
