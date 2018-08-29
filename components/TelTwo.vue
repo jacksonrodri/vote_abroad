@@ -122,7 +122,7 @@ export default {
     exPhone () { return this.countries.find(country => country.code === this.countryIso) ? this.countries.find(country => country.code === this.countryIso).exPhone : '+1 201 555 0123' },
     formatFunctions () {
       let format = (parsedText) => {
-        console.log('parsedText:', parsedText)
+        // console.log('parsedText:', parsedText)
         if (!parsedText) {
           this.fieldValue = null
           return {text: ' ', template: 'X'}
@@ -139,7 +139,7 @@ export default {
         }
       }
       let parse = (character, value) => {
-        console.log('parse:', 'char', character, 'value', value)
+        // console.log('parse:', 'char', character, 'value', value)
         return (character || value) ? DIGITS[character] : ''
       }
       let onChange = val => {
@@ -154,7 +154,7 @@ export default {
   },
   methods: {
     selectField () {
-      console.log('selectField')
+      // console.log('selectField')
       // console.log(this.$refs[this.fieldName])
       this.countryFocused
         ? this.$refs.country.$el.querySelector('input').focus() /* this.$refs.country.$el.querySelector('input').setSelectionRange(0, 99999) */
@@ -172,7 +172,7 @@ export default {
       let format = binding.value.format
       let parse = binding.value.parse
       const input = el instanceof HTMLInputElement ? el : el.querySelector('input')
-      console.log('input', input)
+      // console.log('input', input)
       const onChangeHandler = () => { vnode.context.$emit('newVal', input.value) }
       input.onchange = (event) => onChange(event, input, parse, format, onChangeHandler)
       input.oncut = (event) => onCut(event, input, parse, format, onChangeHandler)

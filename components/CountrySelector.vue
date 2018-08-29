@@ -9,7 +9,7 @@
     keep-first
     expanded
     ref="input"
-    :icon="countryFocused ? `flag-icon flag-icon-${value ? value.toLowerCase() : 'un'}` : null"
+    :icon="`flag-icon flag-icon-${value ? value.toLowerCase() : 'un'}`"
     icon-pack="flag-icon"
     @blur="sendblur"
     @focus="select($event)"
@@ -33,7 +33,6 @@ export default {
   name: 'CountrySelector',
   props: {
     value: String,
-    countryFocused: Boolean,
     phone: Boolean,
     type: String,
     messageType: String,

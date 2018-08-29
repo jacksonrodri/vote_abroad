@@ -70,21 +70,21 @@ export const mutations = {
   },
   updateDevice (state, device) {
     state.device = Object.assign({}, state.device, device)
-    this.$raven.setUserContext()
-    this.$raven.setUserContext(Object.assign({}, {user: state.user}, {email: state.user.emailAddress}, {id: state.IdentityId}, {device: state.device}))
+    // this.$raven.setUserContext()
+    // this.$raven.setUserContext(Object.assign({}, {user: state.user}, {email: state.user.emailAddress}, {id: state.IdentityId}, {device: state.device}))
   },
   updateUser (state, userObj) {
     state.user = Object.assign({}, state.user, userObj)
-    this.$raven.setUserContext()
-    this.$raven.setUserContext(Object.assign({}, {user: state.user}, {email: state.user.emailAddress}, {id: state.IdentityId}, {device: state.device}))
+    // this.$raven.setUserContext()
+    // this.$raven.setUserContext(Object.assign({}, {user: state.user}, {email: state.user.emailAddress}, {id: state.IdentityId}, {device: state.device}))
   },
   updateRedirectPath (state, path) {
     state.redirectPath = path
   },
   updateIdentityId (state, id) {
     state.IdentityId = id
-    this.$raven.setUserContext()
-    this.$raven.setUserContext(Object.assign({}, {user: state.user}, {email: state.user.emailAddress}, {id: state.IdentityId}, {device: state.device}))
+    // this.$raven.setUserContext()
+    // this.$raven.setUserContext(Object.assign({}, {user: state.user}, {email: state.user.emailAddress}, {id: state.IdentityId}, {device: state.device}))
   },
   updateAuthState (state, authState) {
     state.authState = authState
@@ -99,7 +99,7 @@ export const actions = {
       clientID: '0Wy4khZcuXefSfrUuYDUP0Udag4FqL2u',
       responseType: 'token id_token'
     })
-    console.log('new redirecturi', redirectUri + this.app.localePath('index'))
+    // console.log('new redirecturi', redirectUri + this.app.localePath('index'))
   },
   sendEmailLink ({commit, state}) {
     return new Promise((resolve, reject) => {
@@ -209,7 +209,7 @@ export const actions = {
         }, async function (err, authResult) {
           if (err) {
             let id = await Auth.currentCredentials().then(x => x.data.IdentityId)
-            // commit('updateAuthState', 'loggedOut')
+            commit('updateAuthState', 'loggedOut')
             commit('updateIdentityId', id)
             Analytics.updateEndpoint({
               UserId: id._identityId,
@@ -237,7 +237,8 @@ export const actions = {
           usePostMessage: true
         }, (error, authResult) => {
           if (error) {
-            console.log(error)
+            // console.log(error)
+            commit('updateAuthState', 'loggedOut')
           }
           resolve(authResult)
         })
@@ -269,7 +270,7 @@ export const actions = {
     )
     await dispatch('requests/loadRequests', null, { root: true })
     if (jwtDecode(idToken)['https://demsabroad.org/isDA'] && (!rootState.requests || rootState.requests.requests.length === 0 || !rootState.requests.requests[rootState.requests.currentRequest].lastName)) {
-      console.log('jwtdata', jwtDecode(idToken)['https://demsabroad.org/user'])
+      // console.log('jwtdata', jwtDecode(idToken)['https://demsabroad.org/user'])
       Dialog.confirm({
         title: 'Democrats Abroad Members',
         message: `As an authenticated member of Democrats Abroad, you can prefill your form with your membership data. Would you like to?`,
@@ -300,10 +301,10 @@ export const actions = {
       }
       commit('requests/update', newRequest, { root: true })
     }
-    this.$raven.setUserContext({
-      email: state.user.emailAddress || null,
-      id: state.user.IdentityId || null
-    })
+    // this.$raven.setUserContext({
+    //   email: state.user.emailAddress || null,
+    //   id: state.user.IdentityId || null
+    // })
     commit('updateAuthState', 'loggedIn')
   },
   clearData ({ commit, dispatch }) {
@@ -323,7 +324,7 @@ export const actions = {
       region: null
     })
     commit('requests/clearRequests', null, { root: true })
-    this.$raven.setUserContext()
+    // this.$raven.setUserContext()
     dispatch('getUser')
   },
   async logout ({ app, dispatch }) {

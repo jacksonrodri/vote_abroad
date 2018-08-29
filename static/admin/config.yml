@@ -194,6 +194,32 @@ collections:
               - {label: "Failure Message", name: "failureMessage", widget: "string"}
               - {label: "Failure Confirm Text", name: "failureConfirm", widget: "string"}
               - {label: "Signature Affirmation", name: "signatureAffirmation", widget: "markdown"}
+          - label: "Login Phone or Email"
+            name: "phoneOrEmail"
+            widget: "object"
+            fields:
+              - {label: "Field Label", name: "label", widget: "string"}
+              - {label: "Instructions", name: "instructions", widget: "string"}
+              - label: "Messages"
+                name: "messages"
+                widget: "object"
+                fields:
+                  - {label: "Required", name: "required", widget: "string"}
+                  - {label: "Max Length (50)", name: "maxLength", widget: "string"}
+          - label: "Code"
+            name: "codeInput"
+            widget: "object"
+            fields:
+              - {label: "Field Label for SMS login", name: "label-sms", widget: "string"}
+              - {label: "Field Label for email login", name: "label-email", widget: "string"}
+              - {label: "Instructions", name: "instructions", widget: "string"}
+              - label: "Messages"
+                name: "messages"
+                widget: "object"
+                fields:
+                  - {label: "Required", name: "required", widget: "string"}
+                  - {label: "Max Length (6)", name: "maxLength", widget: "string"}
+                  - {label: "Min Length (6)", name: "minLength", widget: "string"}
           - label: "First Name"
             name: "firstName"
             widget: "object"

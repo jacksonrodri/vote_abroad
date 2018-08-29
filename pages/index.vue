@@ -15,6 +15,7 @@ import LogIn from '~/components/LogIn'
 
 export default {
   layout: 'default',
+  // middleware: 'account',
   // head: {
   //   script: [
   //     { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }

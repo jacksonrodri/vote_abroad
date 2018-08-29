@@ -51,7 +51,7 @@ module.exports = {
     commitRef: process.env.COMMIT_REF || ''
   },
   modules: [
-    '@nuxtjs/sentry',
+    // '@nuxtjs/sentry',
     '@nuxtjs/pwa',
     'nuxtent',
     ['nuxt-i18n', I18N],

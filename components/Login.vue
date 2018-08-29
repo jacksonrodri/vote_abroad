@@ -20,7 +20,7 @@
       </div>
     </div>
     <div v-else-if="authState === 'enteringCode'">
-      <b-field>
+      <!-- <b-field>
         <b-field>
           <b-input placeholder="Type your code..."
             type="tel"
@@ -34,17 +34,21 @@
             @keyup.native.enter="confirmCode"
             required>
           </b-input>
-            <!-- @pressEnter="$emit('confirmCode', code)" -->
         </b-field>
         <p class="control">
           <a @click="confirmCode" class="button is-primary is-medium">
-            <!-- $emit('confirmCode', code) -->
             <span class="icon is-small">
               <i class="fas fa-arrow-right"></i>
             </span>
           </a>
         </p>
-      </b-field>
+      </b-field> -->
+      <code-input
+        ref="codeInput"
+        key="codeInput"
+        fieldName="codeInput"
+        v-model="code"
+        :loading="authenticating"></code-input>
       <div class="field is-grouped is-grouped-centered">
         <p class="control">
           <a v-show="seconds > 25" @click="currently = 'retrying'" class="button is-vfa is-inverted is-small">
@@ -54,6 +58,19 @@
             Did not get the code? <span class="tag is-help">0:{{ 25 - parseInt(seconds) | two_digits }}</span>
           </a>
         </p>
+      </div>
+      <div class="buttons is-right is-marginless">
+        <button @click.prevent="confirmCode" :class="['button', 'is-large', 'is-danger', {'is-loading': authState === 'loading'}]">{{ $t('homepage.start') }}</button>
+      </div>
+      <div class="buttons is-right">
+        <button @click.prevent="anonymousStart" class="button is-text has-text-black is-paddingless" exact ><span>{{ $t('homepage.anonymous') }}</span></button>
+        <button @click.prevent="toggleInfo" class="button is-transparent is-small">
+          <span>
+            <b-icon
+              type="is-info"
+              icon="info-circle"></b-icon>
+          </span>
+        </button>
       </div>
     </div>
     <div v-else>
@@ -67,16 +84,10 @@
         v-model="phoneOrEmail"
         :v="$v.phoneOrEmail"
         @pressEnter="startAuth"
-        :loading="authenticating"
-        @delayTouch="delayTouch($v.phoneOrEmail)"></phone-email-two>
-      <code-input
-        ref="codeInput"
-        key="codeInput"
-        fieldName="codeInput"
-        v-model="code"
-        :loading="authenticating"></code-input>
+        :loading="authState === 'loading'"
+        @delayTouch="delayTouch"></phone-email-two>
       <div class="buttons is-right is-marginless">
-        <button @click.prevent="startAuth" :class="['button', 'is-large', 'is-danger', {'is-loading': authenticating}]">{{ $t('homepage.start') }}</button>
+        <button @click.prevent="startAuth" :class="['button', 'is-large', 'is-danger', {'is-loading': authState === 'loading'}]">{{ $t('homepage.start') }}</button>
       </div>
       <div class="buttons is-right">
         <button @click.prevent="anonymousStart" class="button is-text has-text-black is-paddingless" exact ><span>{{ $t('homepage.anonymous') }}</span></button>
@@ -157,14 +168,16 @@ export default {
     startAuth: function () {
       if (this.isValidNumber(this.phoneOrEmail)) {
         this.updateUser({mobileIntFormat: this.phoneOrEmail})
+        // console.log('sending sms')
         this.sendSmsCode()
       }
       if (this.isValidEmail(this.phoneOrEmail)) {
         this.updateUser({emailAddress: this.phoneOrEmail})
+        // console.log('sending email')
         this.sendEmailLink()
       }
       if (!this.isValidNumber(this.phoneOrEmail) && !this.isValidEmail(this.phoneOrEmail)) {
-        console.log(this.isValidNumber(this.phoneOrEmail), this.isValidEmail(this.phoneOrEmail))
+        // console.log(this.isValidNumber(this.phoneOrEmail), this.isValidEmail(this.phoneOrEmail))
         this.$refs.phoneOrEmail.$refs.phoneOrEmail.focus()
         return
       }
@@ -184,12 +197,12 @@ export default {
     resetDate () {
       this.date = Math.trunc((new Date()).getTime() / 1000)
     },
-    delayTouch ($v) {
-      $v.$reset()
-      if (touchMap.has($v)) {
-        clearTimeout(touchMap.get($v))
+    delayTouch () {
+      this.$v.phoneOrEmail.$reset()
+      if (touchMap.has(this.$v.phoneOrEmail)) {
+        clearTimeout(touchMap.get(this.$v.phoneOrEmail))
       }
-      touchMap.set($v, setTimeout($v.$touch, 1000))
+      touchMap.set(this.$v.phoneOrEmail, setTimeout(this.$v.phoneOrEmail.$touch, 1000))
     },
     ...mapActions('userauth', [
       'sendSmsCode',
@@ -210,9 +223,15 @@ export default {
   },
   validations: {
     phoneOrEmail: {
-      async validPhoneOrEmail () {
+      validPhoneOrEmail () {
         return this.isValidNumber(this.phoneOrEmail) || this.isValidEmail(this.phoneOrEmail)
       }
+      // validPhone () {
+      //   return this.isValidNumber(this.phoneOrEmail)
+      // },
+      // validEmail () {
+      //   return this.isValidEmail(this.phoneOrEmail)
+      // }
     }
   }
 

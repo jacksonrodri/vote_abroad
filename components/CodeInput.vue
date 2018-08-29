@@ -1,9 +1,13 @@
 <template>
   <div class="field">
-    <basic-label :fieldName="fieldName" @toggleInfo="toggleInfo"></basic-label>
+    <basic-label
+      :label="label"
+      :fieldName="fieldName"
+      @toggleInfo="toggleInfo"></basic-label>
     <b-field :type="fieldType" :message="fieldMessages">
       <b-input
         key="input"
+        icon="lock"
         :ref="fieldName"
         :id="fieldName"
         :placeholder="$t(`request.${fieldName}.placeholder`)"
@@ -26,6 +30,11 @@ export default {
     return {
       code: ''
     }
+  },
+  computed: {
+    email () { return this.$store.state.userauth.user.emailAddress || '' },
+    phone () { return this.$store.state.userauth.user.mobileIntFormat || '' },
+    label () { return this.phone ? this.$t(`request.codeInput.label-sms`, {phone: this.phone}) : this.$t(`request.codeInput.label-email`, {email: this.email}) }
   }
 }
 </script>

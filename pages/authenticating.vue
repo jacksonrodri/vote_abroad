@@ -24,6 +24,7 @@
 <script>
 import { mapState } from 'vuex'
 export default {
+  middleware: 'account',
   data () {
     return {
       didYouKnow: [
@@ -39,13 +40,13 @@ export default {
   watch: {
     authState (val, oldVal) {
       if (val === 'loggedIn') {
-        this.$router.push(this.localePath({ name: 'request-review' }))
+        this.$router.replace(this.localePath({ name: 'request-review' }))
       }
     }
   },
   mounted () {
-    if (this.authState === 'loggedIn') {
-      this.$router.push(this.localePath({ name: 'request-review' }))
+    if (this.authState === 'loggedIn' || !window.location.hash.includes('access_token')) {
+      this.$router.replace(this.localePath({ name: 'request-review' }))
     }
   }
 }

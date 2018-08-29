@@ -1,6 +1,6 @@
 <template>
   <label :for="fieldName" class="label">
-    {{$t(`request.${fieldName}.label`)}}
+    {{label ? label : $t(`request.${fieldName}.label`)}}
     <a v-if="$te(`request.${fieldName}.tooltip`)" @click="$emit('toggleInfo')" class="button is-transparent is-small">
       <span>
         <b-icon
@@ -17,6 +17,10 @@ export default {
     fieldName: {
       type: String,
       required: true
+    },
+    label: {
+      type: String,
+      required: false
     }
   }
 

@@ -5,18 +5,19 @@
       :type="fieldType"
       :message="fieldMessages">
       <transition-group name="slide" tag="div" @after-enter="selectField" class="field has-addons">
-        <p class="control" key="flag" v-if="!countryFocused && !mustBeEmail">
+        <p class="control" key="flag" v-if="!countryFocused">
           <button :class="['button', 'control', 'is-outlined', 'is-inverted', 'is-paddingless']"
-            :disabled="loading"
             style="padding-left:0px;"
-            @click.prevent="countryFocused = !countryFocused">
+            :disabled="loading"
+            @click.prevent="setCountryFocused">
             <span class="flag-container fa-stack">
               <i :class="`fa-stack-2x flag-icon flag-icon-${countryIso ? countryIso.toLowerCase() : 'un'}`"></i>
               <i class="fas fa-sort-down fa-stack-1x has-text-grey breathe" style="transform:translateY(50%)"></i>
             </span>
           </button>
+            <!-- :disabled="loading" -->
         </p>
-        <p class="control" key="atSign" v-if="!countryFocused && mustBeEmail">
+        <!-- <p class="control" key="atSign" v-show="!countryFocused && mustBeEmail">
           <a key="atSign"
             :class="['button']"
             @click="$refs[fieldName].focus()">
@@ -25,16 +26,17 @@
               icon="at">
             </b-icon>
           </a>
-        </p>
+        </p> -->
         <country-selector
-          v-if="countryFocused"
           key="country"
           ref="country"
-          :countryFocused="countryFocused"
           @newCountry="newCountry"
           @blur="countryFocused = false"
           v-model="countryIso"
+          :countryFocused="countryFocused"
+          v-if="countryFocused"
           phone></country-selector>
+
           <!-- :class="countryFocused ? 'wide' : 'shrink'" -->
 
           <!-- v-if="tempValue && tempValue.length > 1" -->
@@ -46,12 +48,12 @@
           :placeholder="$t(`request.tel.placeholder`, {example: exPhone})"
           :class="[requiredClass, 'is-expanded']"
           :autocomplete="autoComplete"
-          :maxlength="maxLength"
-          :loading="loading"
           @input="$emit('delayTouch')"
           @keyup.native.enter="$emit('pressEnter')"
           v-format="formatFunctions"
+          :loading="loading"
           :ref="fieldName"></b-input>
+          <!-- :maxlength="maxLength" -->
       </transition-group>
     </b-field>
     <b-message v-if="toolTipContent" type="is-info" has-icon :active.sync="isInfoOpen">
@@ -62,69 +64,87 @@
 
 <script>
 import { mapState, mapGetters, mapActions } from 'vuex'
-import fieldMixin from '~/mixins/fieldMixin.js'
+// import fieldMixin from '~/mixins/fieldMixin.js'
+import snarkdown from 'snarkdown'
+import BasicLabel from '~/components/BasicLabel'
 import CountrySelector from '~/components/CountrySelector'
 const { onChange, onCut, onPaste, onKeyDown } = require('input-format/commonjs/input control')
-const DIGITS =
-{
-  '+': '+',
-  '0': '0',
-  '1': '1',
-  '2': '2',
-  '3': '3',
-  '4': '4',
-  '5': '5',
-  '6': '6',
-  '7': '7',
-  '8': '8',
-  '9': '9',
-  '\uFF10': '0', // Fullwidth digit 0
-  '\uFF11': '1', // Fullwidth digit 1
-  '\uFF12': '2', // Fullwidth digit 2
-  '\uFF13': '3', // Fullwidth digit 3
-  '\uFF14': '4', // Fullwidth digit 4
-  '\uFF15': '5', // Fullwidth digit 5
-  '\uFF16': '6', // Fullwidth digit 6
-  '\uFF17': '7', // Fullwidth digit 7
-  '\uFF18': '8', // Fullwidth digit 8
-  '\uFF19': '9', // Fullwidth digit 9
-  '\u0660': '0', // Arabic-indic digit 0
-  '\u0661': '1', // Arabic-indic digit 1
-  '\u0662': '2', // Arabic-indic digit 2
-  '\u0663': '3', // Arabic-indic digit 3
-  '\u0664': '4', // Arabic-indic digit 4
-  '\u0665': '5', // Arabic-indic digit 5
-  '\u0666': '6', // Arabic-indic digit 6
-  '\u0667': '7', // Arabic-indic digit 7
-  '\u0668': '8', // Arabic-indic digit 8
-  '\u0669': '9', // Arabic-indic digit 9
-  '\u06F0': '0', // Eastern-Arabic digit 0
-  '\u06F1': '1', // Eastern-Arabic digit 1
-  '\u06F2': '2', // Eastern-Arabic digit 2
-  '\u06F3': '3', // Eastern-Arabic digit 3
-  '\u06F4': '4', // Eastern-Arabic digit 4
-  '\u06F5': '5', // Eastern-Arabic digit 5
-  '\u06F6': '6', // Eastern-Arabic digit 6
-  '\u06F7': '7', // Eastern-Arabic digit 7
-  '\u06F8': '8', // Eastern-Arabic digit 8
-  '\u06F9': '9' // Eastern-Arabic digit 9
-}
+// const DIGITS =
+// {
+//   '+': '+',
+//   '0': '0',
+//   '1': '1',
+//   '2': '2',
+//   '3': '3',
+//   '4': '4',
+//   '5': '5',
+//   '6': '6',
+//   '7': '7',
+//   '8': '8',
+//   '9': '9',
+//   '\uFF10': '0', // Fullwidth digit 0
+//   '\uFF11': '1', // Fullwidth digit 1
+//   '\uFF12': '2', // Fullwidth digit 2
+//   '\uFF13': '3', // Fullwidth digit 3
+//   '\uFF14': '4', // Fullwidth digit 4
+//   '\uFF15': '5', // Fullwidth digit 5
+//   '\uFF16': '6', // Fullwidth digit 6
+//   '\uFF17': '7', // Fullwidth digit 7
+//   '\uFF18': '8', // Fullwidth digit 8
+//   '\uFF19': '9', // Fullwidth digit 9
+//   '\u0660': '0', // Arabic-indic digit 0
+//   '\u0661': '1', // Arabic-indic digit 1
+//   '\u0662': '2', // Arabic-indic digit 2
+//   '\u0663': '3', // Arabic-indic digit 3
+//   '\u0664': '4', // Arabic-indic digit 4
+//   '\u0665': '5', // Arabic-indic digit 5
+//   '\u0666': '6', // Arabic-indic digit 6
+//   '\u0667': '7', // Arabic-indic digit 7
+//   '\u0668': '8', // Arabic-indic digit 8
+//   '\u0669': '9', // Arabic-indic digit 9
+//   '\u06F0': '0', // Eastern-Arabic digit 0
+//   '\u06F1': '1', // Eastern-Arabic digit 1
+//   '\u06F2': '2', // Eastern-Arabic digit 2
+//   '\u06F3': '3', // Eastern-Arabic digit 3
+//   '\u06F4': '4', // Eastern-Arabic digit 4
+//   '\u06F5': '5', // Eastern-Arabic digit 5
+//   '\u06F6': '6', // Eastern-Arabic digit 6
+//   '\u06F7': '7', // Eastern-Arabic digit 7
+//   '\u06F8': '8', // Eastern-Arabic digit 8
+//   '\u06F9': '9' // Eastern-Arabic digit 9
+// }
 
 export default {
   name: 'PhoneOrEmail',
-  mixins: [fieldMixin],
-  props: ['loading'],
+  // mixins: [fieldMixin],
+  props: ['loading', 'fieldName', 'v'],
   components: {
-    CountrySelector
+    CountrySelector,
+    BasicLabel
   },
   data () {
     return {
       countryIso: '',
       countryFocused: false,
-      tempValue: ''
+      tempValue: '',
+      fieldValue: '',
+      isInfoOpen: false
     }
   },
   computed: {
+    fieldType () {
+      return this.v && this.v.$error ? 'is-danger' : ''
+    },
+    fieldMessages () { return this.v && this.v.$error ? Object.entries(this.v).filter(([key, value]) => key.charAt(0) !== '$' && value === false).map(x => this.$t(`request.${this.fieldName}.messages.${x[0]}`)) : '' },
+    toolTipTitle () { return this.$te(`request.${this.fieldName}.tooltipTitle`) ? this.$t(`request.${this.fieldName}.tooltipTitle`) : null },
+    toolTipContent () { return this.$te(`request.${this.fieldName}.tooltip`) ? snarkdown(this.$t(`request.${this.fieldName}.tooltip`)) : null },
+    requiredClass: function () {
+      return {
+        'hide': Boolean(this.fieldValue || (this.v && this.v.$error)),
+        'is-required': this.v && this.v.required !== undefined,
+        'is-optional': this.v && this.v.required === undefined
+      }
+    },
     autoComplete () {
       return this.mustBeEmail || this.deviceType === 'desktop' ? 'home email' : 'mobile tel'
     },
@@ -137,21 +157,28 @@ export default {
     },
     formatFunctions () {
       let format = (parsedText) => {
-        console.log('parsedText:', parsedText)
+        // console.log('parsedText:', parsedText)
         if (!parsedText) {
+          // console.log('no parsed text')
+          this.tempValue = ''
           this.fieldValue = null
           return {text: ' ', template: 'X'}
         } else if (/^\+\d\d?\d?/.test(parsedText) && !this.phoneMetadataHasAllCountriesForPrefix(parsedText)) {
+          // console.log('country code check')
           this.fieldValue = parsedText
+          this.tempValue = parsedText
           this.getCountryIsoFromPhonePrefix(parsedText)
           return {text: parsedText, template: 'X'.repeat(parsedText.length)}
         } else if (
           /[A-Za-z@]/g.test(parsedText) &&
           /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@?((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.?)+([a-zA-Z]{2,})?)?)$/.test(parsedText)
         ) {
+          // console.log('format as email')
+          this.tempValue = parsedText
           this.fieldValue = parsedText
           return {text: parsedText, template: 'X'.repeat(parsedText.length || 1)}
         } else {
+          // console.log('format as phone')
           let {text, formatted: {country, template}} = this.formattedNumber(parsedText, this.countryIso)
           this.tempValue = text
           this.fieldValue = this.getPhoneIntFormat(text, country)
@@ -160,16 +187,17 @@ export default {
         }
       }
       let parse = (character, value) => {
-        console.log('parse:', 'char', character, 'value', value)
-        if (character || value) {
-          if (
-            (/[A-Za-z@]/.test(character)) ||
-            (/[A-Za-z@]/g.test(value) &&
-            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@?((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.?)+([a-zA-Z]{2,})?)?)$/.test(value))
-          ) {
-            return character
-          } else return DIGITS[character]
-        } else return ''
+        // console.log('parse:', 'char', character, 'value', value)
+        return character || ''
+        // if (character || value) {
+        //   if (
+        //     (/[A-Za-z@]/.test(character)) ||
+        //     (/[A-Za-z@]/g.test(value) &&
+        //     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@?((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.?)+([a-zA-Z]{2,})?)?)$/.test(value))
+        //   ) {
+        //     return character
+        //   } else return DIGITS[character]
+        // } else return ''
       }
       let onChange = val => {
         // console.log('val', val)
@@ -182,12 +210,17 @@ export default {
     ...mapGetters('userauth', ['userCountry'])
   },
   methods: {
+    toggleInfo () { this.isInfoOpen = !this.isInfoOpen },
     selectField () {
-      console.log('selectField')
+      // console.log('selectField')
       // console.log(this.$refs[this.fieldName])
       this.countryFocused
         ? this.$refs.country.$el.querySelector('input').focus() /* this.$refs.country.$el.querySelector('input').setSelectionRange(0, 99999) */
         : this.$refs[this.fieldName].focus()
+    },
+    setCountryFocused () {
+      // console.log('clicked ')
+      this.countryFocused = true
     },
     newCountry () {
       if (this.tempValue && this.exPhone) {
@@ -203,7 +236,7 @@ export default {
       let format = binding.value.format
       let parse = binding.value.parse
       const input = el instanceof HTMLInputElement ? el : el.querySelector('input')
-      console.log('input', input)
+      // console.log('input', input)
       const onChangeHandler = () => { vnode.context.$emit('newVal', input.value) }
       input.onchange = (event) => onChange(event, input, parse, format, onChangeHandler)
       input.oncut = (event) => onCut(event, input, parse, format, onChangeHandler)
@@ -229,9 +262,13 @@ export default {
       if (val && !this.countryIso) {
         this.countryIso = val
       }
+    },
+    countryFocused (val) {
+      // console.log('country focused is: ', val)
     }
   },
   mounted () {
+    // console.log('mounted with fieldValue: ', this.fieldValue, 'userCountry', this.userCountry, 'countryIso', this.countryIso)
     if (this.fieldValue) {
       this.tempValue = this.fieldValue
       this.countryIso = (this.formattedNumber(this.fieldValue)).formatted.country
