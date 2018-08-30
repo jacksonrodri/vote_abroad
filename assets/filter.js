@@ -21,7 +21,7 @@ WebGLImageFilter - MIT Licensed
       gl.compileShader(shader)
 
       if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
-        console.log(gl.getShaderInfoLog(shader))
+        // console.log(gl.getShaderInfoLog(shader))
         return null
       }
       return shader
@@ -39,7 +39,7 @@ WebGLImageFilter - MIT Licensed
     gl.linkProgram(this.id)
 
     if (!gl.getProgramParameter(this.id, gl.LINK_STATUS)) {
-      console.log(gl.getProgramInfoLog(this.id))
+      // console.log(gl.getProgramInfoLog(this.id))
     }
 
     gl.useProgram(this.id)

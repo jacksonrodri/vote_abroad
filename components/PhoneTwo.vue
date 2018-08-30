@@ -187,7 +187,7 @@ export default {
     country (val, oldVal) {
       if ((!oldVal || val !== oldVal) && val !== 'UN') {
         this.formatter = new AsYouType(val)
-        console.log(val, `+${this.formatter.country_phone_code}`, this.value.charAt(0))
+        // console.log(val, `+${this.formatter.country_phone_code}`, this.value.charAt(0))
         if (this.value.includes(`+${this.formatter.country_phone_code}`) || this.value.charAt(0) !== '+') {
           this.tel = this.formatter.input(this.value)
         } else {
@@ -196,7 +196,7 @@ export default {
       }
     },
     formatter (val) {
-      console.log(val.country)
+      // console.log(val.country)
       if (val.country && val.country !== this.country) {
         this.selectedCountry = val.country
       }

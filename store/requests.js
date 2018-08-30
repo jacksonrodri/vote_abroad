@@ -46,14 +46,14 @@ export const mutations = {
 }
 
 export const actions = {
-  ravenContext ({state}) {
-    // this.$raven.setExtraContext() // Clear all extra data from the context.
-    // this.$raven.setExtraContext(state.requests[state.currentRequest])
-  },
-  recordAnalytics ({app}, payload) {
-    console.log(payload)
-    // this.app.$Analytics.record(payload.event, payload.attributes || {}, payload.metrics || {})
-  },
+  // ravenContext ({state}) {
+  //   // this.$raven.setExtraContext() // Clear all extra data from the context.
+  //   // this.$raven.setExtraContext(state.requests[state.currentRequest])
+  // },
+  // recordAnalytics ({app}, payload) {
+  //   // console.log(payload)
+  //   // this.app.$Analytics.record(payload.event, payload.attributes || {}, payload.metrics || {})
+  // },
   async loadRequests ({commit, state, app}) {
     const API = this.app.$API
     const graphqlOperation = this.app.$graphqlOperation

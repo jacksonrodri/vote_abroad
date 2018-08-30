@@ -25,7 +25,7 @@ export default {
   },
   methods: {
     getDimensions () {
-      console.log('dimensions', this.$el, this.$el.videoWidth, this.$el.videoHeight)
+      // console.log('dimensions', this.$el, this.$el.videoWidth, this.$el.videoHeight)
       this.canvas.width = this.$el.videoWidth
       this.canvas.height = this.$el.videoHeight
     },
@@ -52,29 +52,29 @@ export default {
     //   window.requestAnimationFrame(this.step)
     // },
     startCapture () {
-      console.log(this.$el)
+      // console.log(this.$el)
       if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
         this.$emit('captureError')
-        console.log('bad browser - add user intervace here')
+        // console.log('bad browser - add user intervace here')
       } else {
         navigator.mediaDevices.enumerateDevices().then(devices => {
-          console.log('devices', devices)
+          // console.log('devices', devices)
           devices = devices.filter(v => (v.kind === 'videoinput'))
-          console.log('Found ' + devices.length + ' video devices')
+          // console.log('Found ' + devices.length + ' video devices')
           let lastDevice = devices[devices.length - 1]
           devices = devices.filter(v => (v.label.indexOf('back') > 0))
-          console.log(devices)
+          // console.log(devices)
           let device = null
           if (devices.length > 0) {
-            console.log("Taking a 'back' camera")
+            // console.log("Taking a 'back' camera")
             device = devices[devices.length - 1]
           } else {
-            console.log('Taking last camera')
+            // console.log('Taking last camera')
             device = lastDevice
           }
 
           if (!device) {
-            console.log('No devices!')
+            // console.log('No devices!')
             return
           }
 
@@ -95,21 +95,21 @@ export default {
               if (this.$el.srcObject) { this.$el.srcObject = stream } else { this.$el.src = URL.createObjectURL(stream) }
               this.canvas.width = this.$el.clientWidth
               this.canvas.height = this.$el.clientHeight
-              console.log('width', this.canvas.width, 'height', this.canvas.height)
+              // console.log('width', this.canvas.width, 'height', this.canvas.height)
               // info.innerHTML+= "<pre>DONE</pre>";
-              console.log('DONE')
+              // console.log('DONE')
             })
             .catch(err => {
               this.$emit('captureError')
               console.log(err.name + ': ' + err.message)
-              console.log('We could not get access your device camera. (Either it is not connected/available or you have disallowed VoteFromAbroad.org from accessing it). You can still click the \'upload a file\' button to upload your signature from a file.')
+              // console.log('We could not get access your device camera. (Either it is not connected/available or you have disallowed VoteFromAbroad.org from accessing it). You can still click the \'upload a file\' button to upload your signature from a file.')
             })
         })
           .catch(err => {
             this.$emit('captureError')
             console.error(err)
-            console.log(err.name + ': ' + err.message)
-            console.log('We could not get access your device camera. (Either it is not connected/available or you have disallowed VoteFromAbroad.org from accessing it). You can still click the \'upload a file\' button to upload your signature from a file.')
+            // console.log(err.name + ': ' + err.message)
+            // console.log('We could not get access your device camera. (Either it is not connected/available or you have disallowed VoteFromAbroad.org from accessing it). You can still click the \'upload a file\' button to upload your signature from a file.')
           })
       }
     }

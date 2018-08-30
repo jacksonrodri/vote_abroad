@@ -309,7 +309,7 @@ export default {
       }
     },
     userCountry (val, oldVal) {
-      console.log('routerobj', this.$router)
+      // console.log('routerobj', this.$router)
       // this.$router.push({query: {country: val}})
       if (this.countrySearch !== this.getCountryName(val)) {
         this.countrySearch = this.getCountryName(val)
@@ -426,7 +426,7 @@ export default {
         // let ctryiso = (countryiso || this.userCountry || 'zz').toLowerCase()
         axios.get(`/postal/${(countryiso || this.userCountry || 'zz').toLowerCase()}.json`)
           .then(({data}) => {
-            console.log(data)
+            // console.log(data)
             this.formats = Object.assign({}, this.formats, data)
           })
         // switch ((countryiso || this.userCountry || 'zz').toLowerCase()) {

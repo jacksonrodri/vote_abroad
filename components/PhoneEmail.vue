@@ -191,7 +191,7 @@ export default {
       try {
         return getPhoneCode(code, metadata)
       } catch (error) {
-        console.log(error)
+        // console.log(error)
         return ''
       }
     },

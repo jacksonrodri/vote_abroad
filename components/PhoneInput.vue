@@ -252,7 +252,7 @@ export default {
     },
     setSelectionStart () {
       if (this.selectionStart && this.val[this.selectionStart - 1] !== ' ') {
-        console.log('selectionstart', this.selectionStart, this.val[this.selectionStart - 1])
+        // console.log('selectionstart', this.selectionStart, this.val[this.selectionStart - 1])
         setTimeout(() => {
           this.$refs.input.$refs.input.setSelectionRange(this.selectionStart, this.selectionStart)
           // console.log(`moved to ${this.selectionStart}`)

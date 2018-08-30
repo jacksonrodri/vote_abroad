@@ -200,7 +200,7 @@ export default {
         this._stream = stream
         this._hasUserMedia = true
       }, (err) => {
-        console.log(err)
+        console.error(err)
       })
       // .then((stream) => {
       //   // console.log(stream)

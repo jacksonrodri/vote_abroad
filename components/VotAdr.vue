@@ -162,10 +162,10 @@ export default {
       placesAutocomplete.call(this)
     },
     getAsyncData (val) {
-      console.log(val)
+      // console.log(val)
     },
     getAsyncDataCity (val) {
-      console.log(val)
+      // console.log(val)
     }
   }
 

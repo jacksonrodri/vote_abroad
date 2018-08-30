@@ -122,7 +122,7 @@ export default {
   watch: {
     signStep (val) {
       if (val === 'instructions') {
-        console.log('instructions Step')
+        // console.log('instructions Step')
         this.cameraInstructions()
       }
     }
@@ -179,11 +179,11 @@ export default {
         // copy the copy of the top half row to the bottom half
         pixels.set(temp, bottomOffset)
       }
-      console.log(pixels)
+      // console.log(pixels)
       var sorted = pixels.slice().sort()
       var len = pixels.length
-      let thresholds = [1, 3, 5, 8, 11, 15]
-      console.log(thresholds)
+      // let thresholds = [1, 3, 5, 8, 11, 15]
+      // console.log(thresholds)
 
       function createImage (threshold) {
         let brightnessThreshold = Math.floor(len * threshold / 100)
@@ -244,7 +244,9 @@ export default {
           this.computeFrame()
           this.timerCallback()
         })
-      } else { console.log('video ended') }
+      } else {
+        // console.log('video ended')
+      }
     },
     computeFrame () {
       // let tracking = window.tracking
@@ -319,7 +321,7 @@ export default {
       this.isSigningActive = true
       this._refs = this.$refs
       this._video = this._refs.video
-      console.log('video: ', this._video)
+      // console.log('video: ', this._video)
 
       var md = this.getMediaDevices()
       md.getUserMedia({
@@ -333,13 +335,13 @@ export default {
       })
         .then((stream) => {
           this.src = stream
-          console.log('this from stream: ', this)
+          // console.log('this from stream: ', this)
           this._refs.video.srcObject = stream
           this._stream = stream
           this._hasUserMedia = true
-          console.log(this.paused)
+          // console.log(this.paused)
           this._refs.video.addEventListener('canplay', () => {
-            console.log('canplay', this._refs.video)
+            // console.log('canplay', this._refs.video)
             this.width = this._refs.video.videoWidth
             this.height = this._refs.video.videoHeight
             // this.width = 1280
@@ -349,7 +351,7 @@ export default {
             this._refs.video.play()
           })
         }, (err) => {
-          console.log(err)
+          console.error(err)
         })
     }
   },
@@ -360,7 +362,7 @@ export default {
       this.filter = new window.WebGLImageFilter()
     } catch (err) {
       // Handle browsers that don't support WebGL
-      console.log(err)
+      console.error(err)
     }
 
     // this.filter.addFilter('hue', 180)
@@ -454,7 +456,7 @@ export default {
     }
   },
   destroyed () {
-    console.log('Destroyed')
+    // console.log('Destroyed')
   }
 }
 </script>

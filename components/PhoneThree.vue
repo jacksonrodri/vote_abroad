@@ -44,7 +44,7 @@ export default {
   },
   watch: {
     tel (val, oldVal) {
-      console.log(oldVal.slice(0, this.cursorPos).replace(/[^0-9|+]/g, ''))
+      // console.log(oldVal.slice(0, this.cursorPos).replace(/[^0-9|+]/g, ''))
       let arr = [...Array(val.length).keys()]
       arr.forEach(i => {
         if (val.slice(0, i + 1).replace(/[^0-9|+]/g, '') === oldVal.slice(0, this.cursorPos).replace(/[^0-9|+]/g, '')) {

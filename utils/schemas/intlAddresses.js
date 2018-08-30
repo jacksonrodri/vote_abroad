@@ -69,6 +69,6 @@ const countryPostalAddressSchema = schema({
   }
 })
 
-console.log(countryPostalAddressSchema.parse(ca.CA))
+// console.log(countryPostalAddressSchema.parse(ca.CA))
 // console.log(countryPostalAddressSchema.parse(ac.AC))
 // console.log(ac)

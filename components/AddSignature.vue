@@ -304,7 +304,7 @@ export default {
             height = maxHeight
             isTooLarge = true
           }
-          console.log(width, ' x ', height, 'isTooLarge:', isTooLarge, 'needsRotation: ', needsRotation)
+          // console.log(width, ' x ', height, 'isTooLarge:', isTooLarge, 'needsRotation: ', needsRotation)
 
           if (!isTooLarge) {
             // return file here
@@ -316,13 +316,13 @@ export default {
             // canvas.height = width > height ? height : width
             canvas.width = width
             canvas.height = height
-            console.log(canvas.width, canvas.height)
+            // console.log(canvas.width, canvas.height)
             let ctx = canvas.getContext('2d')
             ctx.drawImage(img, 0, 0, width, height)
             if (width < height || needsRotation) {
               ctx.rotate(-Math.PI / 2)
             }
-            console.log(canvas.width, canvas.height)
+            // console.log(canvas.width, canvas.height)
             // console.log('resize done')
             // this.webCamPic = canvas.toDataURL()
             this.drawThresholdToCanvas(canvas.toDataURL())
@@ -346,14 +346,14 @@ export default {
             var canvas = document.createElement('canvas')
             canvas.width = img.width
             canvas.height = img.height
-            console.log('creating canvas', canvas.width, ' x ', canvas.height)
+            // console.log('creating canvas', canvas.width, ' x ', canvas.height)
             let ctx = canvas.getContext('2d')
             ctx.drawImage(img, 0, 0)
-            console.log('getting pixels')
+            // console.log('getting pixels')
             let pixels = ctx.getImageData(0, 0, img.width, img.height)
-            console.log('getting ndarray')
+            // console.log('getting ndarray')
             let arr = ndarray(new Uint8Array(pixels.data), [img.width, img.height, 4], [4, 4 * img.width, 1], 0)
-            console.log('finished getting arr, resolving promise')
+            // console.log('finished getting arr, resolving promise')
             resolve(arr)
           }
           img.onerror = function (err) { reject(err) }
@@ -363,19 +363,19 @@ export default {
       if (!this.thresholdedPic) {
         this.webCamCapture = false
         this.webCamPic = imgUrl || this.webCamPic
-        console.log('starting to get pixels')
+        // console.log('starting to get pixels')
         let pixels = await getPix(this.webCamPic)
-        console.log('finished getting pixels')
+        // console.log('finished getting pixels')
         // console.log('pixels: ', pixels)
         // console.log('start getPixels', 'size: ', this.size, 'compensation: ', this.compensation)
-        console.log('starting threshold operation')
+        // console.log('starting threshold operation')
         let thresholded = adaptiveThreshold(pixels, {size: this.size, compensation: this.compensation})
-        console.log('finished threshold operation')
+        // console.log('finished threshold operation')
         // console.log('thresholded', thresholded)
         let cnv = savePixels(thresholded, 'canvas') // returns canvas element
-        console.log('saved canvas')
+        // console.log('saved canvas')
         let ctx = cnv.getContext('2d')
-        console.log('start set transparency')
+        // console.log('start set transparency')
         let imgData = ctx.getImageData(0, 0, cnv.width, cnv.height)
         for (let x = 3; x < imgData.data.length; x += 4) {
           imgData.data[x] = Math.abs(255 - imgData.data[x - 1])

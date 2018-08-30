@@ -169,10 +169,10 @@ export default {
     },
     drawFromFile (file) {
       this.thresholdedPic = null
-      console.log(file)
+      // console.log(file)
       let reader = new FileReader()
       reader.onload = () => {
-        console.log(reader.result)
+        // console.log(reader.result)
         this.webCamPic = reader.result
         // this.drawThresholdToCanvas(reader.result)
       }
@@ -198,7 +198,7 @@ export default {
           }
           // imgData.data = boxBlur(imgData.data, cnv.width, cnv.height, 5, 2)
           ctx.putImageData(imgData, 0, 0)
-          console.log(imgData)
+          // console.log(imgData)
           this.thresholdedPic = cnv.toDataURL()
           this.croppedPic.refresh()
         })
@@ -220,17 +220,17 @@ export default {
     },
     editImg: function (imgData, canvasWidth, canvasHeight, lowerBound, upperBound) {
       var data = imgData.data.slice()
-      console.log(data)
+      // console.log(data)
       let monoData = []
       for (var i = 0; i < data.length; i += 4) {
         monoData[i / 4] = Math.floor((data[i] + data[i + 1] + data[i + 2]) / 3)
       }
-      console.log(monoData)
+      // console.log(monoData)
       let sorted = monoData.slice().sort()
-      console.log(sorted)
+      // console.log(sorted)
       let lowerBoundPix = sorted[Math.floor(lowerBound / 100 * monoData.length)]
       let upperBoundPix = sorted[Math.floor(upperBound / 100 * monoData.length)]
-      console.log(lowerBound, lowerBoundPix, upperBound, upperBoundPix)
+      // console.log(lowerBound, lowerBoundPix, upperBound, upperBoundPix)
 
       for (let i = 0; i < monoData.length; i++) {
         let adj

@@ -117,7 +117,7 @@ export default {
   },
   methods: {
     emitVal (val) {
-      console.log(val)
+      // console.log(val)
       if (val === 'Republican') {
         this.$store.commit('requests/update', {joinDa: null})
       }

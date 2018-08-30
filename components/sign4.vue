@@ -380,17 +380,17 @@ export default {
     },
     editImg: function (imgData, canvasWidth, canvasHeight, lowerBound, upperBound) {
       var data = imgData.data.slice()
-      console.log(data)
+      // console.log(data)
       let monoData = []
       for (var i = 0; i < data.length; i += 4) {
         monoData[i / 4] = Math.floor((data[i] + data[i + 1] + data[i + 2]) / 3)
       }
-      console.log(monoData)
+      // console.log(monoData)
       let sorted = monoData.slice().sort()
-      console.log(sorted)
+      // console.log(sorted)
       let lowerBoundPix = sorted[Math.floor(lowerBound / 100 * monoData.length)]
       let upperBoundPix = sorted[Math.floor(upperBound / 100 * monoData.length)]
-      console.log(lowerBound, lowerBoundPix, upperBound, upperBoundPix)
+      // console.log(lowerBound, lowerBoundPix, upperBound, upperBoundPix)
 
       for (let i = 0; i < monoData.length; i++) {
         let adj
@@ -458,12 +458,12 @@ export default {
       // }
       this.message = `********** \n This message will be sent to ${this.leoEmail} ${this.leoName} after VoteFromAbroad 3.0 is launched. \n\n We have NOT sent in your FPCA. \n ********** \n\n\n\n ${this.message}`
       let body = {subject: this.subject, email: this.email, message: this.message, htmlMessage: this.htmlMessage, leoName: this.leoName, leoEmail: this.leoEmail, image: this.fpca.toString(), firstName: this.firstName, lastName: this.lastName}
-      console.log(typeof this.fpca)
+      // console.log(typeof this.fpca)
       axios.post('https://votefromabroad.netlify.com/api/mailer', body, {
         headers: { 'Content-Type': 'application/json' }
       })
         .then(response => {
-          console.log(response.data)
+          // console.log(response.data)
           this.isMailing = false
           this.$toast.open({
             message: `Sent! Check your inbox for a copy (${this.email})`,
@@ -472,7 +472,7 @@ export default {
           this.$router.push('/dashboard')
         })
         .catch(error => {
-          console.log(error)
+          console.error(error)
           this.isMailing = false
           this.$dialog.alert({
             title: 'Error Sending',

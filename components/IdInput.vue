@@ -120,7 +120,7 @@ export default {
   },
   methods: {
     update (val) {
-      console.log(val)
+      // console.log(val)
       let newVal = Object.assign({}, this.value, val)
       if (Object.keys(val).includes('ssn')) { newVal.ssn4 = null; newVal.noId = false }
       if (Object.keys(val).includes('ssn4')) { newVal.ssn = null; newVal.noId = false }

@@ -144,7 +144,7 @@ export const actions = {
     commit('updateUser', {country: state.user.country !== 'US' && state.user.country ? state.user.country : state.session.country})
   },
   loginEmailVerify ({app, commit, dispatch, state}, code) {
-    let Analytics = this.app.$Analytics
+    // let Analytics = this.app.$Analytics
     return new Promise((resolve, reject) => {
       webAuth.passwordlessVerify({
         connection: 'email',
@@ -153,7 +153,7 @@ export const actions = {
         scope: 'openid profile email'
       }, (err, authResult) => {
         if (err) {
-          Analytics.record('_userauth.auth_fail')
+          // Analytics.record('_userauth.auth_fail')
           commit('updateAuthState', 'codeEnterFail')
           reject(err)
         }
@@ -164,7 +164,7 @@ export const actions = {
     })
   },
   loginSmsVerify ({app, commit, dispatch, state}, code) {
-    let Analytics = this.app.$Analytics
+    // let Analytics = this.app.$Analytics
     commit('updateAuthState', 'loading')
     return new Promise((resolve, reject) => {
       webAuth.passwordlessVerify({
@@ -174,7 +174,7 @@ export const actions = {
         scope: 'openid profile email'
       }, (err, authResult) => {
         if (err) {
-          Analytics.record('_userauth.auth_fail')
+          // Analytics.record('_userauth.auth_fail')
           commit('updateAuthState', 'codeEnterFail')
           reject(err)
         }
@@ -201,7 +201,7 @@ export const actions = {
       })
     }
     let Auth = this.app.$Auth
-    let Analytics = this.app.$Analytics
+    // let Analytics = this.app.$Analytics
     function checkSession () {
       return new Promise((resolve, reject) => {
         webAuth.checkSession({
@@ -211,20 +211,20 @@ export const actions = {
             let id = await Auth.currentCredentials().then(x => x.data.IdentityId)
             commit('updateAuthState', 'loggedOut')
             commit('updateIdentityId', id)
-            Analytics.updateEndpoint({
-              UserId: id._identityId,
-              // User attributes
-              Attributes: {
-                country: state.user.country,
-                isDA: state.user.isDA,
-                email: state.user.emailAddress,
-                firstName: state.user.firstName
-              },
-              // Custom user attributes
-              UserAttributes: {
-                hobbies: ['piano', 'hiking']
-              }
-            })
+            // Analytics.updateEndpoint({
+            //   UserId: id._identityId,
+            //   // User attributes
+            //   Attributes: {
+            //     country: state.user.country,
+            //     isDA: state.user.isDA,
+            //     email: state.user.emailAddress,
+            //     firstName: state.user.firstName
+            //   },
+            //   // Custom user attributes
+            //   UserAttributes: {
+            //     hobbies: ['piano', 'hiking']
+            //   }
+            // })
             return
           }
           resolve(authResult)
@@ -328,7 +328,7 @@ export const actions = {
     dispatch('getUser')
   },
   async logout ({ app, dispatch }) {
-    this.app.$Analytics.record('logout')
+    // this.app.$Analytics.record('logout')
     await webAuth.logout({
       returnTo: redirectUri,
       clientID: '0Wy4khZcuXefSfrUuYDUP0Udag4FqL2u'

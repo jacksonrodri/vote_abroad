@@ -1,10 +1,11 @@
 
-import Amplify, { Analytics, Auth, API, graphqlOperation } from 'aws-amplify'
+import Amplify, { Auth, API, graphqlOperation } from 'aws-amplify'
+// Analytics,
 
 export default ({ app }, inject) => {
   // Set `i18n` instance on `app`
   // This way we can use it in middleware and pages `asyncData`/`fetch`
-  app.$Analytics = Analytics
+  // app.$Analytics = Analytics
   app.Amplify = Amplify
   app.$API = API
   app.$Auth = Auth

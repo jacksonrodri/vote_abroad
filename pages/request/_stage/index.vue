@@ -803,7 +803,7 @@ export default {
 
       switch (true) {
         case this.stage.slug === 'your-information' && this.$v.firstName.$error:
-          this.$store.dispatch('requests/recordAnalytics', { event: 'Form Error', attributes: { field: 'firstName' } })
+          // this.$store.dispatch('requests/recordAnalytics', { event: 'Form Error', attributes: { field: 'firstName' } })
           this.$refs.firstName.$el.scrollIntoView()
           // console.log(this.$refs.firstName)
           this.$refs.firstName.focus()
@@ -811,11 +811,11 @@ export default {
         case this.stage.slug === 'your-information' && this.$v.lastName.$error:
           this.$refs.lastName.$el.scrollIntoView()
           this.$refs.lastName.focus()
-          this.$store.dispatch('requests/recordAnalytics', { event: 'Form Error', attributes: { field: 'lastName' } })
+          // this.$store.dispatch('requests/recordAnalytics', { event: 'Form Error', attributes: { field: 'lastName' } })
           break
         case this.stage.slug === 'your-information' && this.$v.email.$error:
           // this.$refs.email.check()
-          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'email'}})
+          // this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'email'}})
           this.$refs.email.$el.scrollIntoView()
           this.$refs.email.$el.querySelector('input').focus()
           break
@@ -826,59 +826,59 @@ export default {
         //   break
         case this.stage.slug === 'your-information' && this.$v.abrAdr.A && this.$v.abrAdr.A.$error && !this.abrAdr.usesAlternateFormat:
           this.$refs.abrAdr.$el.scrollIntoView()
-          console.log(this.$refs.abrAdr.$refs)
+          // console.log(this.$refs.abrAdr.$refs)
           this.$refs.abrAdr.$refs.A[0].focus()
-          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.A'}})
+          // this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.A'}})
           break
         case this.stage.slug === 'your-information' && this.$v.abrAdr.D && this.$v.abrAdr.D.$error && !this.abrAdr.usesAlternateFormat:
           this.$refs.abrAdr.$refs.D[0].$el.scrollIntoView()
           this.$refs.abrAdr.$refs.D[0].focus()
-          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.D'}})
+          // this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.D'}})
           break
         case this.stage.slug === 'your-information' && this.$v.abrAdr.C && this.$v.abrAdr.C.$error && !this.abrAdr.usesAlternateFormat:
-          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.C'}})
+          // this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.C'}})
           this.$refs.abrAdr.$refs.C[0].$el.scrollIntoView()
           this.$refs.abrAdr.$refs.C[0].focus()
           break
         case this.stage.slug === 'your-information' && this.$v.abrAdr.S && this.$v.abrAdr.S.$error && !this.abrAdr.usesAlternateFormat:
           this.$refs.abrAdr.$refs.S[0].$el.scrollIntoView()
           this.$refs.abrAdr.$refs.S[0].focus()
-          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.S'}})
+          // this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.S'}})
           break
         case this.stage.slug === 'your-information' && this.$v.abrAdr.X && this.$v.abrAdr.X.$error && !this.abrAdr.usesAlternateFormat:
-          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.X'}})
+          // this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.X'}})
           this.$refs.abrAdr.$refs.X[0].$el.scrollIntoView()
           this.$refs.abrAdr.$refs.X[0].focus()
           break
         case this.stage.slug === 'your-information' && this.$v.abrAdr.Z && this.$v.abrAdr.Z.$error && !this.abrAdr.usesAlternateFormat:
-          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.Z'}})
+          // this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.Z'}})
           this.$refs.abrAdr.$refs.Z[0].$el.scrollIntoView()
           this.$refs.abrAdr.$refs.Z[0].focus()
           break
         case this.stage.slug === 'your-information' && this.$v.tel.$error:
           this.$refs.tel.$el.scrollIntoView()
           this.$refs.tel.$el.querySelector('input').focus()
-          this.$store.dispatch('requests/recordAnalytics', { event: 'Form Error', attributes: { field: 'tel' } })
+          // this.$store.dispatch('requests/recordAnalytics', { event: 'Form Error', attributes: { field: 'tel' } })
           break
         case this.stage.slug === 'voting-information' && this.$v.votAdr.A.$error:
-          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'votAdr.A'}})
+          // this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'votAdr.A'}})
           this.$refs.votAdr.$el.scrollIntoView()
           this.$refs.votAdr.$refs.A.focus()
           break
         case this.stage.slug === 'voting-information' && this.$v.votAdr.C.$error:
           this.$refs.votAdr.$el.scrollIntoView()
           this.$refs.votAdr.$refs.C.focus()
-          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'votAdr.C'}})
+          // this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'votAdr.C'}})
           break
         case this.stage.slug === 'voting-information' && this.$v.votAdr.S.$error:
           this.$refs.votAdr.$refs.S.$el.scrollIntoView()
           this.$refs.votAdr.$refs.S.focus()
-          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'votAdr.S'}})
+          // this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'votAdr.S'}})
           break
         case this.stage.slug === 'voting-information' && this.$v.votAdr.Z.$error:
           this.$refs.votAdr.$refs.Z.$el.scrollIntoView()
           this.$refs.votAdr.$refs.Z.focus()
-          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'votAdr.Z'}})
+          // this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'votAdr.Z'}})
           break
         // case this.stage.slug === 'voting-information' && this.$v.vAdr.A.$error:
         //   this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'vAdr.A'}})
@@ -903,61 +903,61 @@ export default {
         case this.stage.slug === 'voting-information' && this.$v.jurisdiction.$error:
           this.$refs.jurisdiction.$refs.jurisdiction.$el.scrollIntoView()
           this.$refs.jurisdiction.$refs.jurisdiction.focus()
-          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'jurisdiction'}})
+          // this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'jurisdiction'}})
           break
         case this.stage.slug === 'voting-information' && this.$v.fax.$error:
           this.$refs.fax.$el.scrollIntoView()
           this.$refs.fax.$el.querySelector('input').focus()
-          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'fax'}})
+          // this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'fax'}})
           break
         case this.stage.slug === 'voting-information' && this.$v.voterClass.$error:
           this.$refs.voterClass.$el.scrollIntoView()
-          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'voterClass'}})
+          // this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'voterClass'}})
           break
         case this.stage.slug === 'voting-information' && this.$v.isRegistered.$error:
           this.$refs.isRegistered.$el.scrollIntoView()
-          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'isRegistered'}})
+          // this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'isRegistered'}})
           break
         case this.stage.slug === 'voting-information' && this.$v.recBallot.$error:
           this.$refs.recBallot.$el.scrollIntoView()
-          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'recBallot'}})
+          // this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'recBallot'}})
           break
         case this.stage.slug === 'voting-information' && this.$v.email.$error && this.recBallot === 'email':
           // this.$refs.email.check()
           this.$refs.email.$el.scrollIntoView()
           this.$refs.email.$el.querySelector('input').focus()
-          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'email'}})
+          // this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'email'}})
           break
         case this.stage.slug === 'voting-information' && this.$v.altEmail.$error && this.$refs.altEmail:
           this.$refs.altEmail.$refs.input.$el.scrollIntoView()
           this.$refs.altEmail.$refs.input.focus()
-          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'altEmail'}})
+          // this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'altEmail'}})
           break
         case this.stage.slug === 'voting-information' && this.$v.fwdAdr.$error && this.$refs.fwdAdr:
           this.$refs.fwdAdr.$el.scrollIntoView()
           this.$refs.fwdAdr.$el.querySelector('input').focus()
-          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'fwdAdr  '}})
+          // this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'fwdAdr  '}})
           break
         case this.stage.slug === 'id-and-contact-information' && this.$v.dob.$error:
           this.$refs.dob.$el.scrollIntoView()
           this.$refs.dob.$el.querySelector('input').focus()
-          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'dob'}})
+          // this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'dob'}})
           break
         case this.stage.slug === 'id-and-contact-information' && this.$v.sex.$error:
           this.$refs.sex.$el.scrollIntoView()
           // this.$refs.sex.$refs.sex.focus()
-          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'sex'}})
+          // this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'sex'}})
           break
         case this.stage.slug === 'id-and-contact-information' && this.$v.identification.ssn.$error:
           if (this.$refs.id.$refs.ssn) this.$refs.id.$refs.ssn.focus()
-          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'identification.ssn'}})
+          // this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'identification.ssn'}})
           break
         case this.stage.slug === 'id-and-contact-information' && this.$v.identification.ssn4.$error:
           if (this.$refs.id.$refs.ssn4) this.$refs.id.$refs.ssn4.focus()
-          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'identification.ssn'}})
+          // this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'identification.ssn'}})
           break
         case this.stage.slug === 'id-and-contact-information' && this.$v.identification.stateId.$error:
-          this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'identification.stateId'}})
+          // this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'identification.stateId'}})
           this.$refs.id.$refs.StateId.focus()
           break
         default:

@@ -150,7 +150,7 @@ export default {
         var reader = new FileReader()
 
         reader.addEventListener('load', function () {
-          console.log(reader, this)
+          // console.log(reader, this)
           vm.reqDoc = this.result
           vm.sendWithoutDocs = false
         }, false)
@@ -176,8 +176,8 @@ export default {
         })
       } else if (!(this.formEmail.trim()) || !/(^$|^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$)/.test(this.customEmail)) {
         this.$refs.userEmail.checkHtml5Validity()
-        console.log('email', this.formEmail.trim(), 'validity', /(^$|^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$)/.test(this.customEmail))
-        console.log(this.$refs.userEmail)
+        // console.log('email', this.formEmail.trim(), 'validity', /(^$|^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$)/.test(this.customEmail))
+        // console.log(this.$refs.userEmail)
       } else {
         this.isMailing = true
         let headers = {}
@@ -185,12 +185,12 @@ export default {
         headers['Accept'] = 'application/json'
         this.message = `********** \n This message will be sent to ${this.leoEmail} ${this.leoName} after VoteFromAbroad 3.0 is launched. \n\n We have NOT sent in your FPCA. \n ********** \n\n\n\n ${this.message}`
         let body = {subject: this.subject, email: this.formEmail, message: this.message, htmlMessage: this.htmlMessage, leoName: this.leoName, leoEmail: this.leoEmail, image: this.fpca ? this.fpca.toString() : null, reqDoc: this.reqDoc ? this.reqDoc.toString() : null, firstName: this.firstName, lastName: this.lastName}
-        console.log(typeof this.fpca)
+        // console.log(typeof this.fpca)
         axios.post('https://votefromabroad.netlify.com/api/mailer', body, {
           headers: { 'Content-Type': 'application/json' }
         })
           .then(response => {
-            console.log(response.data)
+            // console.log(response.data)
             this.isMailing = false
             this.$toast.open({
               message: `Sent! Check your inbox for a copy (${this.formEmail})`,

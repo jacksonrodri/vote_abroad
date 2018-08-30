@@ -301,7 +301,7 @@ export default {
   },
   watch: {
     regionCode: function (newVal, oldVal) {
-      console.log(`finding ${newVal}`)
+      // console.log(`finding ${newVal}`)
       let statesWithoutLeos = ['AA', 'AE', 'AP', 'AS', 'FM', 'GU', 'MH', 'MP', 'PW', 'PR', 'VI', 'WI']
       if (newVal !== oldVal && statesWithoutLeos.indexOf(newVal) === -1) {
         // console.log(this)
@@ -339,8 +339,8 @@ export default {
   },
   methods: {
     fillData (option) {
-      console.log('selected:', this.selected)
-      console.log('option', option)
+      // console.log('selected:', this.selected)
+      // console.log('option', option)
       if (option && option.place_id) {
         axios.get(`${process.env.placesUrl + process.env.detailsEndpoint}?placeid=${option.place_id}&key=${process.env.placesKey}`)
           .then(({ data }) => {
@@ -351,11 +351,11 @@ export default {
               .split(/<span class="|">|<\/span>,?\s?/)
               .filter(e => e)
               .forEach((item, index, arr) => {
-                console.log(index, item)
+                // console.log(index, item)
                 var myRe = /post-office-box|extended-address|street-address|locality|region|postal-code|country-name/g
                 if (index === 0 && !myRe.test(item)) {
                   this.extendedAddress = item
-                  console.log(`extended-address = ${item}`)
+                  // console.log(`extended-address = ${item}`)
                 } else if (item === 'country-name') {
                   data.result['address_components'].forEach(x => {
                     if (x.types[0] === 'country') {
@@ -383,7 +383,7 @@ export default {
                       this.postalCode = arr[index + 1]
                       break
                   }
-                  console.log(`${item} = ${arr[index + 1]}`)
+                  // console.log(`${item} = ${arr[index + 1]}`)
                 }
               })
           })
@@ -392,7 +392,7 @@ export default {
     getAsyncData: debounce(function () {
       this.data = []
       this.updateAddress()
-      console.log(this.streetAddress)
+      // console.log(this.streetAddress)
       this.isFetching = true
       axios.get(`${process.env.placesUrl + process.env.autocompleteEndpoint}?input=${this.streetAddress}&types=geocode&language=en${this.cCountryCode && this.cCountryCode !== 'un' ? '&components=country:' + this.cCountryCode : ''}&key=${process.env.placesKey}`)
         .then(({ data }) => {

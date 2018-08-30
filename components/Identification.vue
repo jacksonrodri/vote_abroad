@@ -113,7 +113,7 @@ export default {
           noImmediatePrefix: false,
           rawValueTrimPrefix: true,
           onValueChanged: function (e) {
-            console.log('onValueChanged', e.target)
+            // console.log('onValueChanged', e.target)
             if (this.value) {
               this.$emit('input', Object.assign({}, this.value, {ssn: e.target.rawValue, ssnTyped: e.target.value}))
             }
@@ -168,7 +168,7 @@ export default {
   },
   methods: {
     initSSN: function () {
-      console.log('initializing')
+      // console.log('initializing')
       if (!this.ssn4) {
         this.ssn4 = 'XXX-XX-'
       }

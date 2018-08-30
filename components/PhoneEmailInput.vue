@@ -143,9 +143,9 @@ export default {
     exPhone () { return this.countries.find(country => country.code === this.countryIso) ? this.countries.find(country => country.code === this.countryIso).exPhone : '+1 201 555 0123' },
     formatFunctions () {
       let format = (parsedText) => {
-        console.log('format: parsedText', parsedText, 'fieldValue', this.fieldValue)
+        // console.log('format: parsedText', parsedText, 'fieldValue', this.fieldValue)
         if (!parsedText) {
-          console.log('no parsed text')
+          // console.log('no parsed text')
           this.fieldValue = ''
           return {text: '', template: 'X'}
         } else if (parsedText && /^\+\d\d?\d?/.test(parsedText) && !this.phoneMetadataHasAllCountriesForPrefix(parsedText)) {
@@ -192,19 +192,19 @@ export default {
   },
   methods: {
     flipCountryFocused () {
-      console.log('previous Country Focused', this.countryFocused, 'mustBeEmail', this.mustBeEmail)
+      // console.log('previous Country Focused', this.countryFocused, 'mustBeEmail', this.mustBeEmail)
       this.countryFocused = !this.countryFocused
-      console.log('now', this.countryFocused)
+      // console.log('now', this.countryFocused)
     },
     selectField () {
-      console.log('selectField')
+      // console.log('selectField')
       // console.log(this.$refs[this.fieldName])
       this.countryFocused
         ? this.$refs.country.$el.querySelector('input').focus() /* this.$refs.country.$el.querySelector('input').setSelectionRange(0, 99999) */
         : this.$refs[this.fieldName].focus()
     },
     newCountry () {
-      console.log('newCountry')
+      // console.log('newCountry')
       this.fieldValue = this.exPhone ? this.exPhone.split(' ')[0] : ''
       this.selectField()
     },
@@ -217,27 +217,27 @@ export default {
       let parse = binding.value.parse
       const input = el instanceof HTMLInputElement ? el : el.querySelector('input')
       const onChangeHandler = (val) => {
-        console.log('onchangehandlerVal', val, input.value, vnode)
+        // console.log('onchangehandlerVal', val, input.value, vnode)
         vnode.context.$emit('input', input.value)
       }
       input.onchange = (event) => {
-        console.log('onchange', event)
+        // console.log('onchange', event)
         return onChange(event, input, parse, format, onChangeHandler)
       }
       input.oncut = (event) => {
-        console.log('oncut', event)
+        // console.log('oncut', event)
         return onCut(event, input, parse, format, onChangeHandler)
       }
       input.onpaste = (event) => {
-        console.log('onPaste', event)
+        // console.log('onPaste', event)
         return onPaste(event, input, parse, format, onChangeHandler)
       }
       input.onkeydown = (event) => {
-        console.log('onkeydown', event)
+        // console.log('onkeydown', event)
         return onKeyDown(event, input, parse, format, onChangeHandler)
       }
       input.oninput = (event) => {
-        console.log('oninput', event, 'fieldValue', this)
+        // console.log('oninput', event, 'fieldValue', this)
         if (event.target.value) {
           return onChange(event, input, parse, format, onChangeHandler)
         }
@@ -246,20 +246,20 @@ export default {
   },
   watch: {
     fieldValue (val, oldVal) {
-      console.log('fieldValue change', val, oldVal, 'mustBeEmail', this.mustBeEmail)
+      // console.log('fieldValue change', val, oldVal, 'mustBeEmail', this.mustBeEmail)
       // if (!this.tempValue) {
       //   this.tempValue = val
       // } else if (this.getPhoneIntFormat(this.tempValue, this.countryIso || null) !== val) {
       //   this.tempValue = val
       // }
       if (val && val.length > 2 && /^\+\d\d?\d?/.test(val) && (this.formattedNumber(this.fieldValue)).formatted.country) {
-        console.log('newCountryiso', (this.formattedNumber(this.fieldValue)).formatted)
+        // console.log('newCountryiso', (this.formattedNumber(this.fieldValue)).formatted)
         this.countryIso = (this.formattedNumber(this.fieldValue)).formatted.country
       }
       if (val !== oldVal) this.$emit('input', val)
     },
     userCountry (val) {
-      console.log('userCountryChange', val)
+      // console.log('userCountryChange', val)
       if (val && !this.countryIso) {
         this.countryIso = val
       }

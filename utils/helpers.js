@@ -16,7 +16,7 @@ const placesAutocomplete = debounce(function (val, country, addressType, searchT
       })
   } catch (e) {
     this.isFetching = false
-    console.log('placesAutocompleteError', e)
+    console.error('placesAutocompleteError', e)
     return []
   }
 }, 500)
@@ -59,7 +59,7 @@ const placeDetails = function fillData (option) {
             .forEach(x => {
               input[x] = typeof input[x] === 'string' ? decodeHtmlEntity(latinize(input[x])) : input[x]
             })
-          console.log('input', input)
+          // console.log('input', input)
           this.update({[this.fieldName]: Object.assign({}, this.adr, input)})
         }
       })
@@ -188,7 +188,7 @@ const placesDetails = async function (option) {
     this.update(input)
     console.log(A, B, C, D, S, Z, Y)
   } catch (error) {
-    console.log(error)
+    console.error(error)
   }
 }
 

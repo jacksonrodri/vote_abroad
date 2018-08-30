@@ -137,7 +137,9 @@ export default {
           this.computeFrame()
           this.timerCallback()
         })
-      } else { console.log('video ended') }
+      } else {
+        // console.log('video ended')
+      }
     },
     computeFrame () {
       let videoWidth = this.width
@@ -173,7 +175,7 @@ export default {
     this._video = this._refs.video
     this.ctx1 = this._refs.sigCanvas.getContext('2d')
     this.ctx2 = this._refs.edited.getContext('2d')
-    console.log('video: ', this._video)
+    // console.log('video: ', this._video)
 
     var md = this.getMediaDevices()
     md.getUserMedia({
@@ -190,9 +192,9 @@ export default {
         this._video.srcObject = stream
         this._stream = stream
         this._hasUserMedia = true
-        console.log(this.paused)
+        // console.log(this.paused)
         this._video.addEventListener('canplay', () => {
-          console.log('canplay', this._video)
+          // console.log('canplay', this._video)
           // this.width = this._video.videoWidth
           // this.height = this._video.videoHeight
           this.width = 1280
@@ -202,7 +204,7 @@ export default {
           this._video.play()
         })
       }, (err) => {
-        console.log(err)
+        console.error(err)
       })
   },
   beforeDestroy () {
@@ -211,7 +213,7 @@ export default {
     this._stream.getTracks()[0].stop()
   },
   destroyed () {
-    console.log('Destroyed')
+    // console.log('Destroyed')
   }
 }
 </script>

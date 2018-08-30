@@ -52,7 +52,7 @@ export default {
   },
   methods: {
     checkMetaForCountries (value) {
-      console.log('checking meta for countries', value)
+      // console.log('checking meta for countries', value)
       this.$store.dispatch('data/getCountryIsoFromPhonePrefix', value)
     }
   },
@@ -94,7 +94,7 @@ export default {
       //     return {value, template: 'x'.repeat(60)}
       //   }
       // }
-      console.log(el, binding, vnode)
+      // console.log(el, binding, vnode)
       const onChangeHandler = () => {
         vnode.elm.dispatchEvent(new CustomEvent('input'))
       }
