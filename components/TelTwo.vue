@@ -200,9 +200,11 @@ export default {
     }
   },
   mounted () {
-    if (this.fieldValue) {
+    if (this.fieldValue && typeof this.fieldValue === 'string') {
+      console.log('*************', this.fieldValue, typeof this.fieldValue)
       this.tempValue = this.fieldValue
       this.countryIso = (this.formattedNumber(this.fieldValue)).formatted.country
+      this.fieldValue = this.getPhoneIntFormat(this.tempValue, this.countryIso || null)
     }
     if (this.userCountry && !this.countryIso) {
       this.countryIso = this.userCountry

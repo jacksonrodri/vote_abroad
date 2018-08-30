@@ -644,7 +644,7 @@ export default {
       set (value) { this.$store.commit('requests/update', { date: value }) }
     },
     tel: {
-      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].tel : {} },
+      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].tel : '' },
       set (value) { this.$store.commit('requests/update', { tel: value }) }
     },
     votAdr: {

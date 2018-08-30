@@ -291,7 +291,7 @@ export const actions = {
     if (!rootState.requests || rootState.requests.requests.length === 0) {
       let newRequest = {}
       if (state.user.mobileIntFormat && state.user.country) {
-        newRequest.tel = {isValidPhone: true, rawInput: state.user.mobileIntFormat, type: 'MOBILE', isValidEmail: false, intNumber: state.user.mobileIntFormat, country: state.user.country}
+        newRequest.tel = state.user.mobileIntFormat
       }
       if (state.user.emailAddress) {
         newRequest.email = state.user.emailAddress
