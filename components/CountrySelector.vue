@@ -9,10 +9,10 @@
     keep-first
     expanded
     ref="input"
-    :icon="`flag-icon flag-icon-${value ? value.toLowerCase() : 'un'}`"
+    :icon="countryFocused && !type ? `flag-icon flag-icon-${value ? value.toLowerCase() : 'un'}` : null"
     icon-pack="flag-icon"
     @blur="sendblur"
-    @focus="select($event)"
+    @focus="countryFocused = true; select($event)"
     @select="(option) => { if (option && option.code) {countrySearch = option.name; $emit('input', option.code); $emit('newCountry')} }">
     <template slot="header">
       <label for="country" class="is-size-6 has-text-grey"> ... type to find your country.</label>
@@ -40,7 +40,8 @@ export default {
   },
   data () {
     return {
-      countrySearch: ''
+      countrySearch: '',
+      countryFocused: false
     }
   },
   computed: {
@@ -84,6 +85,7 @@ export default {
       this.$emit('focus')
     },
     sendblur () {
+      this.countryFocused = false
       setTimeout(() => {
         this.$emit('blur')
       }, 480)
