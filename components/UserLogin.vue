@@ -114,7 +114,7 @@ import { mapActions, mapGetters, mapMutations, mapState } from 'vuex'
 const touchMap = new WeakMap()
 
 export default {
-  name: 'LogIn',
+  name: 'UserLogin',
   components: {
     PhoneEmailTwo,
     CodeInput

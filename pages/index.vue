@@ -3,7 +3,7 @@
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-9 is-12-touch">
-          <log-in></log-in>
+          <user-login></user-login>
         </div>
       </div>
     </div>
@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import LogIn from '~/components/LogIn.vue'
+import UserLogin from '~/components/UserLogin'
 
 export default {
   layout: 'default',
@@ -22,7 +22,7 @@ export default {
   //   ]
   // },
   components: {
-    LogIn
+    UserLogin
   },
   // mounted () {
   //   if (process.browser) {
