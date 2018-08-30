@@ -10,9 +10,13 @@
         icon="lock"
         :ref="fieldName"
         :id="fieldName"
-        :placeholder="$t(`request.${fieldName}.placeholder`)"
+        :placeholder="loading ? 'sending code' : $t(`request.${fieldName}.placeholder`)"
         :maxlength="6"
         :minlength="6"
+        size="is-medium"
+        max=999999
+        pattern="[0-9]{6}"
+        type="tel"
         :loading="loading"
         @input="val => $emit('input', val)"
         @keyup.native.enter="$emit('pressEnter')"></b-input>

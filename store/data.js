@@ -138,14 +138,17 @@ export const getters = {
     return formatted
   },
   getPhoneIntFormat: (state) => (phone, country) => formatNumber({ country, phone }, 'International', state.phoneMetadata),
+  // isValidNumber: (state, getters) => (phone, country) => {
+  //   if (phone && phone.length > 2) {
+  //     // console.log(getters.phoneMetadataHasCountry(country), getters.phoneMetadataHasAllCountriesForPrefix(phone))
+  //   }
+  //   if (phone && phone.length > 7 && (getters.phoneMetadataHasCountry(country) || getters.phoneMetadataHasAllCountriesForPrefix(phone))) return country ? isValidNumber(phone, country, state.phoneMetadata) : isValidNumber(phone, state.phoneMetadata)
+  //   else if (country === 'UN') {
+  //     return false
+  //   } else return true
+  // },
   isValidNumber: (state, getters) => (phone, country) => {
-    if (phone && phone.length > 2) {
-      // console.log(getters.phoneMetadataHasCountry(country), getters.phoneMetadataHasAllCountriesForPrefix(phone))
-    }
-    if (phone && phone.length > 7 && (getters.phoneMetadataHasCountry(country) || getters.phoneMetadataHasAllCountriesForPrefix(phone))) return country ? isValidNumber(phone, country, state.phoneMetadata) : isValidNumber(phone, state.phoneMetadata)
-    else if (country === 'UN') {
-      return false
-    } else return true
+    if (phone && (getters.phoneMetadataHasCountry(country) || getters.phoneMetadataHasAllCountriesForPrefix(phone))) return country ? isValidNumber(phone, country, state.phoneMetadata) : isValidNumber(phone, state.phoneMetadata)
   },
   isMobileNumber: (state, getters) => (phone, country) => {
     if (phone && (getters.phoneMetadataHasCountry(country) || getters.phoneMetadataHasAllCountriesForPrefix(phone))) return getNumberType(phone, country, state.phoneMetadata)

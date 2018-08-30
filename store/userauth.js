@@ -26,7 +26,6 @@ export const state = () => ({
     lastName: null,
     emailAddress: null,
     language: 'en',
-    mobilePhone: null,
     mobileIntFormat: null,
     country: 'US',
     isDA: false,
@@ -314,6 +313,10 @@ export const actions = {
       country: null,
       emailAddress: null,
       isDA: false,
+      firstName: null,
+      middleName: null,
+      lastName: null,
+      mobileIntFormat: null,
       da: {}
     })
     commit('updateSessionGeo', {

@@ -241,6 +241,11 @@ export default {
     //     this.updateAddress('countryiso', val.key)
     //   }
     // },
+    adr (val) {
+      if (val && val.countryiso && val.A && (!val.formatted || val.formatted.length < 2)) {
+        this.update({[this.fieldName]: Object.assign({}, this.adr, {formatted: this.formattedAddress})})
+      }
+    },
     ctry (val, oldVal) {
       // console.log(val, 'ctry changed')
       if (val) {

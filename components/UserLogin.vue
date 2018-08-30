@@ -49,16 +49,51 @@
         fieldName="codeInput"
         v-model="code"
         :loading="authenticating"></code-input>
-      <div class="field is-grouped is-grouped-centered">
+      <!-- <div v-show="seconds <= 25" class="field is-grouped is-grouped-centered">
         <p class="control">
-          <a v-show="seconds > 25" @click="currently = 'retrying'" class="button is-vfa is-inverted is-small">
-            Did not get the code?
-          </a>
-          <a v-show="seconds <= 25" class="button is-vfa is-inverted is-small" disabled>
+          <a class="button is-vfa is-inverted is-small" disabled>
             Did not get the code? <span class="tag is-help">0:{{ 25 - parseInt(seconds) | two_digits }}</span>
           </a>
         </p>
-      </div>
+      </div> -->
+      <p class="has-text-centered help has-text-vfa">
+        <ul>
+          <li v-if="seconds > 25 && loginType === 'email'">
+            <b-icon
+              type="is-vfa"
+              icon="check"></b-icon>
+            Check your spam folder
+          </li>
+          <li v-if="seconds > 25 && loginType === 'email'">
+            <b-icon
+              type="is-vfa"
+              icon="check"></b-icon>
+            Did you enter your email correctly?
+          </li>
+          <li v-if="seconds > 25 && loginType === 'sms'">
+            <b-icon
+              type="is-vfa"
+              icon="check"></b-icon>
+            Can you receive SMS messages on {{ phoneOrEmail }}?
+          </li>
+          <li v-if="seconds > 25 && loginType === 'sms'">
+            <b-icon
+              type="is-vfa"
+              icon="check"></b-icon>
+            Did you enter your number correctly?
+          </li>
+          <li v-if="seconds > 25">
+            <a @click="retry" class="button is-vfa is-inverted is-small">
+              Did not get the code? Try again
+            </a>
+          </li>
+          <li v-if="seconds <= 25">
+            <a @click="retry" class="button is-vfa is-inverted is-small" disabled>
+              Did not get the code? <span class="tag is-help">0:{{ 25 - parseInt(seconds) | two_digits }}</span>
+            </a>
+          </li>
+        </ul>
+      </p>
       <div class="buttons is-right is-marginless">
         <button @click.prevent="confirmCode" :class="['button', 'is-large', 'is-danger', {'is-loading': authState === 'loading'}]">{{ $t('homepage.start') }}</button>
       </div>
@@ -99,7 +134,7 @@
           </span>
         </button>
       </div>
-      <b-message v-if="toolTipContent" type="is-info" has-icon :active.sync="isInfoOpen">
+      <b-message v-if="toolTipContent" type="is-info" has-icon :active.sync="toolTipOpen">
         <p v-html="toolTipContent"></p>
       </b-message>
     </div>
@@ -123,16 +158,19 @@ export default {
     return {
       phoneOrEmail: '',
       code: '',
-      now: Math.trunc((new Date()).getTime() / 1000),
-      date: Math.trunc((new Date()).getTime() / 1000),
       toolTipOpen: false,
-      isInfoOpen: false,
+      isInfoOpen: true,
       authenticating: false,
       didYouKnow: [
         'Did you know around 9 million Americans live abroad?',
         'Request your ballot every calendar year to get full Federal Protection for all federal elections each year.',
         'Americans have been political abroad since Thomas Jefferson.  He drafted the Bill of Rights while in Paris.'
-      ]
+      ],
+      now: 0,
+      date: 0,
+      loginType: null
+      // now: Math.trunc((new Date()).getTime() / 1000),
+      // date: Math.trunc((new Date()).getTime() / 1000)
     }
   },
   computed: {
@@ -156,7 +194,13 @@ export default {
     }
   },
   methods: {
-    toggleInfo () { this.isInfoOpen = !this.isInfoOpen },
+    retry () {
+      this.updateAuthState('loggedOut')
+      this.loginType = null
+    },
+    toggleInfo () {
+      this.toolTipOpen = !this.toolTipOpen
+    },
     anonymousStart: function () {
       this.$toast.open({
         message: 'You have started an anonymous session.  Please close this window when you are finished to delete all data.',
@@ -166,26 +210,27 @@ export default {
       this.$router.push(this.localePath({ name: 'request-stage', params: { stage: 'your-information' } }))
     },
     startAuth: function () {
-      if (this.isValidNumber(this.phoneOrEmail)) {
-        this.updateUser({mobileIntFormat: this.phoneOrEmail})
-        // console.log('sending sms')
-        this.sendSmsCode()
-      }
-      if (this.isValidEmail(this.phoneOrEmail)) {
-        this.updateUser({emailAddress: this.phoneOrEmail})
-        // console.log('sending email')
-        this.sendEmailLink()
-      }
-      if (!this.isValidNumber(this.phoneOrEmail) && !this.isValidEmail(this.phoneOrEmail)) {
-        // console.log(this.isValidNumber(this.phoneOrEmail), this.isValidEmail(this.phoneOrEmail))
+      this.authenticating = true
+      this.$v.$touch()
+      if (this.$v.$error) {
         this.$refs.phoneOrEmail.$refs.phoneOrEmail.focus()
         return
       }
-      this.authenticating = true
-      // this.authStart(this.localePath({ name: 'request-stage', params: { stage: 'your-information' } }))
-      setTimeout(() => {
-        this.authenticating = false
-      }, 5000)
+      if (this.isValidNumber(this.phoneOrEmail)) {
+        this.loginType = 'phone'
+        this.updateUser({mobileIntFormat: this.phoneOrEmail})
+        this.sendSmsCode()
+          .then(() => { this.authenticating = false })
+      }
+      if (this.isValidEmail(this.phoneOrEmail)) {
+        this.loginType = 'email'
+        this.updateUser({emailAddress: this.phoneOrEmail})
+        this.sendEmailLink()
+          .then(() => { this.authenticating = false })
+      }
+      // setTimeout(() => {
+      //   this.authenticating = false
+      // }, 5000)
     },
     confirmCode () {
       if (this.$store.state.userauth.user.emailAddress) {
@@ -221,16 +266,23 @@ export default {
       }, 1000)
     }
   },
+  watch: {
+    authState (val, oldVal) {
+      if (val !== oldVal) {
+        this.resetDate()
+      }
+    }
+  },
   validations: {
     phoneOrEmail: {
       validPhoneOrEmail () {
-        return this.isValidNumber(this.phoneOrEmail) || this.isValidEmail(this.phoneOrEmail)
+        return !this.phoneOrEmail ? false : this.isValidNumber(this.phoneOrEmail) || this.isValidEmail(this.phoneOrEmail)
       }
       // validPhone () {
-      //   return this.isValidNumber(this.phoneOrEmail)
+      //   return !this.phoneOrEmail ? false : this.isValidNumber(this.phoneOrEmail)
       // },
       // validEmail () {
-      //   return this.isValidEmail(this.phoneOrEmail)
+      //   return !this.phoneOrEmail ? false : this.isValidEmail(this.phoneOrEmail)
       // }
     }
   }
