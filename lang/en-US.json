@@ -314,7 +314,7 @@
       "label": "Date of Birth",
       "placeholder": "e.g. 01/31/1970",
       "tooltipTitle": "Why is this required?",
-      "selectDate": "Select your birth year first, then select your birthdate.",
+      "selectDate": "Type your birthdate in or select your birthdate (year first, then birthdate).",
       "tooltip": "You must be 18 years old by the time of the next General Election to register to vote.",
       "messages": {
         "required": "Your date of birth is required.",

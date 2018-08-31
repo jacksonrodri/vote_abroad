@@ -1062,14 +1062,14 @@ export default {
       },
       fax: {
         required: requiredIf((model) => this.recBallot === 'fax'),
-        validPhone () { return this.isValidNumber(this.fax) }
+        validPhone () { return this.fax ? this.isValidNumber(this.fax) : true }
       },
       tel: {
         validPhone () {
           // if (this.$refs && this.$refs.tel) {
           //   return this.$refs.tel.validatePhone
           // } else return this.tel && this.tel.rawInput ? this.tel.isValidPhone : true
-          return this.isValidNumber(this.tel)
+          return this.tel ? this.isValidNumber(this.tel) : true
         }
       },
       phoneThree: {

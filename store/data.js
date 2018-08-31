@@ -149,6 +149,7 @@ export const getters = {
   // },
   isValidNumber: (state, getters) => (phone, country) => {
     if (phone && (getters.phoneMetadataHasCountry(country) || getters.phoneMetadataHasAllCountriesForPrefix(phone))) return country ? isValidNumber(phone, country, state.phoneMetadata) : isValidNumber(phone, state.phoneMetadata)
+    else return false
   },
   isMobileNumber: (state, getters) => (phone, country) => {
     if (phone && (getters.phoneMetadataHasCountry(country) || getters.phoneMetadataHasAllCountriesForPrefix(phone))) return getNumberType(phone, country, state.phoneMetadata)
