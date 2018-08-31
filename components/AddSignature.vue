@@ -3,13 +3,13 @@
         <div>
           <h3 class="title is-3">{{ $t('request.sig.title') }}</h3>
           <h3 v-if="canCaptureImage" class="subtitle is-4">
-            <a class="has-text-primary" @click="() => {webcamCaptureError = false; webCamPic = null; croppedPic.remove(); startCameraFilePicker()}">Click start</a> to scan your signature now<span> with your device camera</span>. Or <a @click="croppedPic.chooseFile()" class="has-text-primary">upload a file</a> from your computer.
+            <a class="has-text-primary" @click="() => {webcamCaptureError = false; webCamPic = null; croppedPic.remove(); startCameraFilePicker()}">Click start</a> to scan your signature now<span> with your device camera</span>. Or <a @click="uploadPic" class="has-text-primary">upload a file</a> from your computer.
           </h3>
           <h3 v-else class="subtitle is-4">
             <a @click="croppedPic.chooseFile()" class="has-text-primary">Click to upload a scan of your signature</a> from your computer.
           </h3>
           <b-message :active="webcamCaptureError && !(croppedPic && croppedPic.imageSet)" :closable="false" title="Failed loading camera." type="is-danger">
-            We could not get access your device camera. (Either it is not connected/available or you have disallowed VoteFromAbroad.org from accessing it). You can still click <a @click="croppedPic.chooseFile()" class="has-text-primary">upload a file</a> to upload your signature from a file.
+            We could not get access your device camera. (Either it is not connected/available or you have disallowed VoteFromAbroad.org from accessing it). You can still click <a @click="uploadPic" class="has-text-primary">upload a file</a> to upload your signature from a file.
           </b-message>
           <b-message :active="!webCamCapture && canCaptureImage && (!croppedPic || !croppedPic.imageSet)" :closable="false" title="Instructions" type="is-info">
             For best results, sign your name with a dark pen in large letters on a blank sheet of white paper. Then click 'Start'.
@@ -23,13 +23,14 @@
           <b-message :active="!webCamCapture && croppedPic && croppedPic.imageSet" :closable="false" title="Instructions" type="is-info">
             - Align your signature with the red line -- drag to move, scroll to zoom. If you don't see your signature, you may need to zoom out to get it back on the page.<br>- Adjust your signature with the 'Line Strength' buttons below so that the signature is clear and has minimal background noise<br>- If your signature is still unclear, you can click 'Clear Image' to try again.<br>- Click 'Use This Signature' to add it to your form and compose a message to your election official.
           </b-message>
+            <h3 class="subtitle is-5 has-text-info has-text-centered" v-if="processingImage">Processing image.  Please wait...</h3>
             <get-camera ref="webcam" @captureError="captureError" :isCapturing="webCamCapture" v-show="webCamCapture" @updatePic="drawThresholdToCanvas"></get-camera>
             <signature-cropper
               v-show="!webCamCapture"
               :style="!croppedPic || !croppedPic.imageSet ? 'background: whitesmoke; background-image:none;': ''"
               v-model="croppedPic"
               ref="cp"
-              :placeholder="canCaptureImage ? 'Click to Start' : 'Upload a File'"
+              :placeholder="cropperPlaceholder"
               accept="image/*"
               :zoom-speed="2"
               :auto-sizing="true"
@@ -54,14 +55,14 @@
             <b-field>
               <b-field grouped>
                 <b-field v-if="croppedPic && croppedPic.imageSet">
-                  <button :class="['button', 'is-light', 'is-medium', {'is-loading': false}]"
-                    @click.prevent="() => {webCamPic = null; croppedPic.remove();}"
+                  <button :class="['button', 'is-light', 'is-medium', {'is-loading': processingImage}]"
+                    @click.prevent="clearImage"
                     :disabled="!croppedPic || !croppedPic.imageSet">
                     Clear Image
                   </button>
                 </b-field>
                 <b-field expanded>
-                  <button :class="[buttonClass, 'is-fullwidth', {'is-loading': false}]"
+                  <button :class="[buttonClass, 'is-fullwidth', {'is-loading': processingImage}]"
                     v-if="croppedPic && croppedPic.imageSet"
                     @click.prevent="useSignature"
                     :disabled="!croppedPic || !croppedPic.imageSet">
@@ -69,17 +70,17 @@
                     <!-- {{$t('request.sig.sendEmail')}} -->
                   </button>
                   <button :class="[buttonClass, 'is-fullwidth', {'is-loading': false}]"
-                    @click="() => { if ($refs && $refs.webcam) $refs.webcam.takePhoto() }"
+                    @click="captureWebcamImage"
                     v-else-if="webCamCapture && !webcamCaptureError">
                     Take Photo
                   </button>
                   <button :class="[buttonClass, 'is-fullwidth', {'is-loading': false}]"
-                    @click="croppedPic.chooseFile()"
+                    @click="uploadPic"
                     v-else-if="webcamCaptureError || !canCaptureImage">
                     Upload a File
                   </button>
                   <!-- <a @click="croppedPic.chooseFile()" class="has-text-primary">upload a file</a> -->
-                  <button :class="[buttonClass, 'is-fullwidth', {'is-loading': false}]"
+                  <button :class="[buttonClass, 'is-fullwidth', {'is-loading': processingImage}]"
                     v-else
                     @click.prevent="() => {webCamPic = null; croppedPic.remove(); startCameraFilePicker()}">
                     Start
@@ -191,6 +192,7 @@ export default {
   data () {
     return {
       croppedPic: null,
+      processingImage: false,
       webCamPic: null,
       thresholdedPic: null,
       webCamCapture: false,
@@ -212,12 +214,35 @@ export default {
     }
   },
   computed: {
+    cropperPlaceholder () {
+      if (this.processingImage) {
+        return '...'
+      } else return this.canCaptureImage ? 'Click to Start' : 'Upload a File'
+    },
     device () { return this.$store.state.userauth.device },
     ...mapState({
       canCaptureImage: state => state.userauth.device.hasWebCam
     })
   },
   methods: {
+    clearImage () {
+      this.webCamPic = null
+      this.thresholdedPic = null
+      this.croppedPic.remove()
+    },
+    uploadPic () {
+      this.clearImage()
+      this.croppedPic.chooseFile()
+    },
+    captureWebcamImage () {
+      this.processingImage = true
+      this.$nextTick()
+        .then(() => {
+          if (this.$refs && this.$refs.webcam) this.$refs.webcam.takePhoto()
+        })
+      // setTimeout(() => {
+      // }, 10)
+    },
     handleFileSizeExceed () {
       this.$dialog.alert({
         title: 'Image too large',
@@ -241,12 +266,14 @@ export default {
     },
     startCameraFilePicker () {
       // console.log(this)
+      // setTimeout(() => {
       if (!this.croppedPic || !this.croppedPic.hasImage()) {
         if (this.device && !this.device.inputCaptureSupported) {
           this.thresholdedPic = null
           this.webCamCapture = true
         } else { this.captureSignature() }
       }
+      // }, 30)
     },
     captureSignature () {
       this.croppedPic.chooseFile()
@@ -255,18 +282,26 @@ export default {
       this.croppedPic.rotate(val)
     },
     increaseCompensation () {
-      this.metadata = this.croppedPic.getMetadata()
-      this.thresholdedPic = null
-      this.compensation = this.compensation + 3
-      this.size = this.size + 3
-      this.drawThresholdToCanvas(null)
+      this.processingImage = true
+      this.$nextTick()
+        .then(() => {
+          this.metadata = this.croppedPic.getMetadata()
+          this.thresholdedPic = null
+          this.compensation = this.compensation + 3
+          this.size = this.size + 3
+          this.drawThresholdToCanvas(null)
+        })
     },
     decreaseCompensation () {
-      this.metadata = this.croppedPic.getMetadata()
-      this.thresholdedPic = null
-      this.compensation = this.compensation - 3
-      this.size = this.size - 3
-      this.drawThresholdToCanvas()
+      this.processingImage = true
+      this.$nextTick()
+        .then(() => {
+          this.metadata = this.croppedPic.getMetadata()
+          this.thresholdedPic = null
+          this.compensation = this.compensation - 3
+          this.size = this.size - 3
+          this.drawThresholdToCanvas(null)
+        })
     },
     increaseSize () {
       this.metadata = this.croppedPic.getMetadata()
@@ -279,64 +314,68 @@ export default {
     //   this.drawThresholdToCanvas()
     // },
     drawFromFile (file) {
-      let needsRotation
-      EXIF.getData(file, function () { needsRotation = (EXIF.getTag(this, 'Orientation')) > 4 })
-      this.thresholdedPic = null
-      // let vm = this
-      let reader = new FileReader()
-      reader.onload = () => {
-        // console.log(reader.result)
-        let img = new Image()
-        img.onload = () => {
-          let maxWidth = 1280
-          let maxHeight = 720
-          // console.log(img)
-          let width = img.width
-          let height = img.height
-          let isTooLarge = false
+      this.processingImage = true
+      this.$nextTick()
+        .then(() => {
+          let needsRotation
+          EXIF.getData(file, function () { needsRotation = (EXIF.getTag(this, 'Orientation')) > 4 })
+          this.thresholdedPic = null
+          // let vm = this
+          let reader = new FileReader()
+          reader.onload = () => {
+            // console.log(reader.result)
+            let img = new Image()
+            img.onload = () => {
+              let maxWidth = 1280
+              let maxHeight = 720
+              // console.log(img)
+              let width = img.width
+              let height = img.height
+              let isTooLarge = false
 
-          if (width >= height && width > maxWidth) {
-            height *= maxWidth / width
-            width = maxWidth
-            isTooLarge = true
-          } else if (height > maxHeight) {
-            width *= maxHeight / height
-            height = maxHeight
-            isTooLarge = true
-          }
-          // console.log(width, ' x ', height, 'isTooLarge:', isTooLarge, 'needsRotation: ', needsRotation)
+              if (width >= height && width > maxWidth) {
+                height *= maxWidth / width
+                width = maxWidth
+                isTooLarge = true
+              } else if (height > maxHeight) {
+                width *= maxHeight / height
+                height = maxHeight
+                isTooLarge = true
+              }
+              // console.log(width, ' x ', height, 'isTooLarge:', isTooLarge, 'needsRotation: ', needsRotation)
 
-          if (!isTooLarge) {
-            // return file here
-            this.webCamPic = reader.result
-            this.drawThresholdToCanvas(reader.result)
-          } else {
-            let canvas = document.createElement('canvas')
-            // canvas.width = width > height ? width : height
-            // canvas.height = width > height ? height : width
-            canvas.width = width
-            canvas.height = height
-            // console.log(canvas.width, canvas.height)
-            let ctx = canvas.getContext('2d')
-            ctx.drawImage(img, 0, 0, width, height)
-            if (width < height || needsRotation) {
-              ctx.rotate(-Math.PI / 2)
+              if (!isTooLarge) {
+                // return file here
+                this.webCamPic = reader.result
+                this.drawThresholdToCanvas(reader.result)
+              } else {
+                let canvas = document.createElement('canvas')
+                // canvas.width = width > height ? width : height
+                // canvas.height = width > height ? height : width
+                canvas.width = width
+                canvas.height = height
+                // console.log(canvas.width, canvas.height)
+                let ctx = canvas.getContext('2d')
+                ctx.drawImage(img, 0, 0, width, height)
+                if (width < height || needsRotation) {
+                  ctx.rotate(-Math.PI / 2)
+                }
+                // console.log(canvas.width, canvas.height)
+                // console.log('resize done')
+                // this.webCamPic = canvas.toDataURL()
+                this.drawThresholdToCanvas(canvas.toDataURL())
+                // if (width < height || needsRotation) {
+                //   setTimeout(() => {
+                //     console.log('rotating')
+                //     this.rotate(1)
+                //   }, 1500)
+                // }
+              }
             }
-            // console.log(canvas.width, canvas.height)
-            // console.log('resize done')
-            // this.webCamPic = canvas.toDataURL()
-            this.drawThresholdToCanvas(canvas.toDataURL())
-            // if (width < height || needsRotation) {
-            //   setTimeout(() => {
-            //     console.log('rotating')
-            //     this.rotate(1)
-            //   }, 1500)
-            // }
+            img.src = reader.result
           }
-        }
-        img.src = reader.result
-      }
-      reader.readAsDataURL(file)
+          reader.readAsDataURL(file)
+        })
     },
     async drawThresholdToCanvas (imgUrl) {
       function getPix (imgUrl) {
@@ -360,32 +399,40 @@ export default {
           img.src = imgUrl
         })
       }
-      if (!this.thresholdedPic) {
-        this.webCamCapture = false
-        this.webCamPic = imgUrl || this.webCamPic
-        // console.log('starting to get pixels')
-        let pixels = await getPix(this.webCamPic)
-        // console.log('finished getting pixels')
-        // console.log('pixels: ', pixels)
-        // console.log('start getPixels', 'size: ', this.size, 'compensation: ', this.compensation)
-        // console.log('starting threshold operation')
-        let thresholded = adaptiveThreshold(pixels, {size: this.size, compensation: this.compensation})
-        // console.log('finished threshold operation')
-        // console.log('thresholded', thresholded)
-        let cnv = savePixels(thresholded, 'canvas') // returns canvas element
-        // console.log('saved canvas')
-        let ctx = cnv.getContext('2d')
-        // console.log('start set transparency')
-        let imgData = ctx.getImageData(0, 0, cnv.width, cnv.height)
-        for (let x = 3; x < imgData.data.length; x += 4) {
-          imgData.data[x] = Math.abs(255 - imgData.data[x - 1])
-        }
-        ctx.putImageData(imgData, 0, 0)
-        // console.log('set thresholded pic')
-        this.thresholdedPic = cnv.toDataURL()
-        // console.log('start refresh pic')
-        this.croppedPic.refresh()
-      } else this.croppedPic.refresh()
+      this.processingImage = true
+      this.$nextTick()
+        .then(async () => {
+          if (!this.thresholdedPic) {
+            this.webCamCapture = false
+            this.webCamPic = imgUrl || this.webCamPic
+            // console.log('starting to get pixels')
+            let pixels = await getPix(this.webCamPic)
+            // console.log('finished getting pixels')
+            // console.log('pixels: ', pixels)
+            // console.log('start getPixels', 'size: ', this.size, 'compensation: ', this.compensation)
+            // console.log('starting threshold operation')
+            let thresholded = adaptiveThreshold(pixels, {size: this.size, compensation: this.compensation})
+            // console.log('finished threshold operation')
+            // console.log('thresholded', thresholded)
+            let cnv = savePixels(thresholded, 'canvas') // returns canvas element
+            // console.log('saved canvas')
+            let ctx = cnv.getContext('2d')
+            // console.log('start set transparency')
+            let imgData = ctx.getImageData(0, 0, cnv.width, cnv.height)
+            for (let x = 3; x < imgData.data.length; x += 4) {
+              imgData.data[x] = Math.abs(255 - imgData.data[x - 1])
+            }
+            ctx.putImageData(imgData, 0, 0)
+            // console.log('set thresholded pic')
+            this.thresholdedPic = cnv.toDataURL()
+            // console.log('start refresh pic')
+            this.croppedPic.refresh()
+            this.processingImage = false
+          } else {
+            this.croppedPic.refresh()
+            this.processingImage = false
+          }
+        })
     },
     onDraw: function (ctx) {
       // console.log('canvas style', this.croppedPic.getCanvas().style)
