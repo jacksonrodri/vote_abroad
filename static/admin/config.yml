@@ -36,6 +36,7 @@ collections:
           - {label: State, name: state, widget: string}
   - name: "pages" # Used in routes, e.g., /admin/collections/blog
     label: "Pages" # Used in the UI
+    label_singular: "Page"
     folder: "content/en/pages" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields for each document, usually in front matter
@@ -106,6 +107,7 @@ collections:
           - {label: Notes, name: notes, widget: string, hint: notes for this election rule.}
   - name: "faqs"
     label: "FAQs"
+    label_singular: "FAQ"
     folder: "content/en/faqs"
     create: true
     slug: "{{slug}}"
@@ -133,7 +135,7 @@ collections:
             searchFields: ["title"]
             valueField: slug
   - name: "rls"
-    label: "State Ballot Rules"
+    label: "State Info & Election Rules"
     folder: "content/rls"
     create: false
     slug: "{{iso}}"
@@ -156,6 +158,7 @@ collections:
     label: "Translation Strings"
     folder: "lang"
     create: false
+    delete: false
     extension: json
     format: json
     slug: "{{title}}.json"
