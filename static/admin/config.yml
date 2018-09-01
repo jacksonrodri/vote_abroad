@@ -15,7 +15,14 @@ collections:
           - label: "Top FAQs"
             name: "menuFaqs"
             widget: "list"
-            field:
+            fields:
+              - label: "Ranking"
+                name: "rank"
+                widget: "number"
+                valueType: "int"
+                min: 0
+                max: 5
+                hint: "enter a value between 0 and 5-- lower numbers will appear first in the menu"
               - label: "FAQ"
                 name: "faq"
                 widget: "relation"
