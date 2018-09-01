@@ -10,7 +10,7 @@ collections:
     files:
       - label: "Site Settings"
         name: "siteSettings"
-        file: "content/config.yml"
+        file: "content/config.json"
         fields:
           - label: "Top FAQs"
             name: "menuFaqs"
@@ -19,7 +19,7 @@ collections:
               - {label: FAQ, name: faq, widget: relation, collection: faqs, searchFields: ["title"], valueField: title}
       - label: "States"
         name: "states"
-        file: "content/states.yml"
+        file: "content/states.json"
         fields:
           - label: "States"
             name: "states"
