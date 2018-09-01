@@ -3,14 +3,14 @@
     <div class="columns is-centered">
       <div class="column is-10 is-8-desktop is-7-widescreen is-6-fullhd is-paddingless">
         <h1 class="title">
-          {{ state.state }}
+          {{ state.title }}
         </h1>
         <nuxtent-body class="content" :body="state.body" />
           <!-- <ul v-for="election in elections" :key="`${election.state} ${election.electionType}`">
             <li>{{ election.state }} - {{election.electionType }}</li>
             <li>{{ election.date }}</li>
           </ul> -->
-          <!-- <h1 class="title is-4">Find your local Election Official ({{state.state}})</h1>
+          <!-- <h1 class="title is-4">Find your local Election Official ({{state.title}})</h1>
           <b-autocomplete
             :value="typedJurisdiction || jurisdiction || ''"
             open-on-focus
@@ -24,7 +24,7 @@
             @select="option => updateLeo(option)">
             <template slot-scope="props"><strong>{{props.option.j}} {{props.option.j.toLowerCase().indexOf(props.option.t.toLowerCase()) > -1 ? '' : props.option.t}}</strong> - <small>{{props.option.n}}</small></template>
           </b-autocomplete> -->
-          <h1 class="title is-4">Elections Deadlines for {{state.state}} Voters Abroad</h1>
+          <h1 class="title is-4">Elections Deadlines for {{state.title}} Voters Abroad</h1>
           <b-table hoverable :data="upcomingElections">
             <template slot-scope="props">
               <b-table-column label="Election Day">
