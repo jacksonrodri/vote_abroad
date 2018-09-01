@@ -22,6 +22,7 @@ collections:
                 collection: "faqs"
                 searchFields:
                   - "title"
+                  - "iso"
                 displayFields:
                   - "title"
                 valueField: "title"
