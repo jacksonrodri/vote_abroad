@@ -101,6 +101,7 @@ collections:
     create: false
     slug: "{{iso}}"
     fields:
+      - {label: "State", name: "title", widget: "string"}
       - {label: "State", name: "state", widget: "string"}
       - {label: "ISO Code", name: "iso", widget: "string"}
       - {label: "Never Resideds are allowed to register", name: "allowsNeverResided", widget: "boolean"}
