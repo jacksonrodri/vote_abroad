@@ -26,6 +26,9 @@ export default {
   //   await this.$store.commit('requests/changeCurrent', 0)
   //   this.$store.commit('requests/changeCurrent', cur)
   // },
+  async fetch ({ store }) {
+    await store.dispatch('data/getElections')
+  },
   computed: {
     requests: function () {
       return this.$store.state.requests.requests ? this.$store.state.requests.requests : []

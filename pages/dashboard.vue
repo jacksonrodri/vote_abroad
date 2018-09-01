@@ -189,6 +189,9 @@ export default {
     // VueMarkdown,
     RequestStage
   },
+  async fetch ({ store }) {
+    await store.dispatch('data/getElections')
+  },
   async asyncData ({app, store}) {
     let state = store.getters['requests/getCurrent'] && store.getters['requests/getCurrent'].leo ? store.getters['requests/getCurrent'].leo.s : ''
     let elections = (await app.$content('/elections').get('elections')).body

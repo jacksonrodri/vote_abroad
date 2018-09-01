@@ -60,6 +60,7 @@ export const mutations = {
 
 export const actions = {
   async nuxtServerInit ({ commit }, { app }) {
+    console.log('aapp.content in nuxtSerVerInit', app.$content)
     let sortedElections = (await app.$content('/elections').get('elections')).body
       .filter(x => new Date(x.date).getTime() > Date.now())
       .sort(function (a, b) {

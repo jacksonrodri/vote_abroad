@@ -230,28 +230,32 @@ function randomPresAddress () { return `${presidentaddresses[Math.floor(Math.ran
 function filterToMatchVotingState (election) {
   return election.state && election.state.toLowerCase() === this.state.toLowerCase()
 }
-// Filter function to remove rules that don't apply to this voterClass
-function filterToMatchVoterType (rule) {
-  if (!(typeof rule.voterType === 'string') || !this.voterClass) {
-    return true
-  } else if (this.voterClass === 'military' || this.voterClass === 'milSpouse' || this.voterClass === 'natGuard') {
-    return !rule.voterType.includes('Citizen')
-  } else {
-    return !rule.voterType.includes('Uniformed')
-  }
-}
+// Filter function to remove rules that don't apply to this voterType
+// function filterToMatchVoterType (rule) {
+//   // console.log('rule', rule, rule.voterType, typeof rule.voterType, this.voterType)
+//   // if (typeof rule.voterType === 'object') {
+//   //   return false
+//   // } else if ((typeof rule.voterType !== 'string') || !this.voterType) {
+//   //   return true
+//   // } else
+//   if (typeof rule.voterType === 'string' && (this.voterType === 'military' || this.voterType === 'milSpouse' || this.voterType === 'natGuard')) {
+//     return !rule.voterType.includes('Citizen')
+//   } else if (typeof rule.voterType === 'string') {
+//     return !rule.voterType.includes('Uniformed')
+//   } else return true
+// }
 
-function filterRuleToMatchSubmissionMethod (rule) {
-  if (!(/Mail|Email|Fax/.test(rule.rule)) || !this.submissionMethod) {
-    return true
-  } else if (this.submissionMethod.toLowerCase() === 'email') {
-    return /Email/.test(rule.rule)
-  } else if (this.submissionMethod.toLowerCase() === 'mail') {
-    return /Mail/.test(rule.rule)
-  } else if (this.submissionMethod.toLowerCase() === 'fax') {
-    return /Fax/.test(rule.rule)
-  }
-}
+// function filterRuleToMatchSubmissionMethod (rule) {
+//   if (!(/Mail|Email|Fax/.test(rule.rule)) || !this.submissionMethod) {
+//     return true
+//   } else if (this.submissionMethod.toLowerCase() === 'email') {
+//     return /Email/.test(rule.rule)
+//   } else if (this.submissionMethod.toLowerCase() === 'mail') {
+//     return /Mail/.test(rule.rule)
+//   } else if (this.submissionMethod.toLowerCase() === 'fax') {
+//     return /Fax/.test(rule.rule)
+//   }
+// }
 
 // Compare function to sort elections chronolically
 function compareElectionDateToSort (a, b) {
@@ -259,50 +263,81 @@ function compareElectionDateToSort (a, b) {
 }
 
 // Filter function accepting election && voterType && voterRegistrationStatus returning true if election rules match voterType and voterRegistrationStatus
-function filterForVoterTypeAndRegistrationStatus (election, i, arr) {
-  if (this.voterRegistrationStatus && this.voterRegistrationStatus.toLowerCase() === 'registered') {
-    return [...Object.assign({}, election).rules['Ballot Request']]
-      .filter(filterToMatchVoterType, {voterType: this.voterClass})
-      .filter(filterRuleToMatchSubmissionMethod, {submissionMethod: this.submissionMethod})
-      .map(rule => new Date(typeof rule.date === 'string' ? rule.date : election.date).getTime())
-      .some(epochTimeStamp => !(epochTimeStamp < new Date().getTime()))
-  // } else if (this.voterRegistrationStatus && this.voterRegistrationStatus.toLowerCase() === 'notregistered') {
-  //   return [...election.rules['Registration']]
-  //     .filter(filterToMatchVoterType, {voterType: this.voterClass})
-  //     .filter(filterRuleToMatchSubmissionMethod, {submissionMethod: this.submissionMethod})
-  //     .map(rule => new Date(typeof rule.date === 'string' ? rule.date : election.date).getTime())
-  //     .some(epochTimeStamp => !(epochTimeStamp < new Date().getTime()))
-  } else {
-    return [...Object.assign({}, election).rules['Registration'], ...Object.assign({}, election).rules['Ballot Request']]
-      .filter(filterToMatchVoterType, {voterType: this.voterClass})
-      .filter(filterRuleToMatchSubmissionMethod, {submissionMethod: this.submissionMethod})
-      .map(rule => new Date(typeof rule.date === 'string' ? rule.date : election.date).getTime())
-      .some(epochTimeStamp => !(epochTimeStamp < new Date().getTime()))
-  }
-}
-function removeRulesForOtherRegistrationStatus (election) {
-  let thisElection = Object.assign({}, election)
-  let rules = {}
-  // if (this.voterRegistrationStatus && /notregistered/.test(this.voterRegistrationStatus.toLowerCase())) {
-  //   rules['Registration'] = thisElection.rules['Registration']
-  // } else
-  if (this.voterRegistrationStatus && /registered/.test(this.voterRegistrationStatus.toLowerCase())) {
-    rules['Ballot Request'] = thisElection.rules['Ballot Request']
-  }
-  if (!this.voterRegistrationStatus || /unsure|notregistered/.test(this.voterRegistrationStatus.toLowerCase())) {
-    rules['Ballot Request'] = thisElection.rules['Ballot Request']
-    rules['Registration'] = thisElection.rules['Registration']
-  }
-  thisElection.rules = rules
-  return thisElection
-}
+// function filterForVoterTypeAndRegistrationStatus (election, i, arr) {
+//   console.log('Registration', election.rules.Registration)
+//   console.log('Ballot Request', election.rules['Ballot Request'])
+//   if (this.voterRegistrationStatus && this.voterRegistrationStatus.toLowerCase() === 'registered') {
+//     return [...Object.assign({}, election).rules['Ballot Request']]
+//       .filter(filterToMatchVoterType, {voterType: this.voterType})
+//       // .filter(filterRuleToMatchSubmissionMethod, {submissionMethod: this.submissionMethod})
+//       .map(rule => new Date(typeof rule.date === 'string' ? rule.date : election.date).getTime())
+//       .some(epochTimeStamp => !(epochTimeStamp < new Date().getTime()))
+//   // } else if (this.voterRegistrationStatus && this.voterRegistrationStatus.toLowerCase() === 'notregistered') {
+//   //   return [...election.rules['Registration']]
+//   //     .filter(filterToMatchVoterType, {voterType: this.voterType})
+//   //     .filter(filterRuleToMatchSubmissionMethod, {submissionMethod: this.submissionMethod})
+//   //     .map(rule => new Date(typeof rule.date === 'string' ? rule.date : election.date).getTime())
+//   //     .some(epochTimeStamp => !(epochTimeStamp < new Date().getTime()))
+//   } else {
+//     return [...Object.assign({}, election).rules['Registration'], ...Object.assign({}, election).rules['Ballot Request']]
+//       .filter(filterToMatchVoterType, {voterType: this.voterType})
+//       // .filter(rule => typeof rule.voterType === 'string' ? rule.voterType.includes(/military|milSpouse|natGuard/i.test(this.voterType) ? 'Uniformed' : 'Citizen') : true)
+//       // .filter(filterRuleToMatchSubmissionMethod, {submissionMethod: this.submissionMethod})
+//       .map(rule => new Date(typeof rule.date === 'string' ? rule.date : election.date).getTime())
+//       .some(epochTimeStamp => !(epochTimeStamp < new Date().getTime()))
+//   }
+// }
+// function removeRulesForOtherRegistrationStatus (election) {
+//   let thisElection = Object.assign({}, election)
+//   let rules = {}
+//   // if (this.voterRegistrationStatus && /notregistered/.test(this.voterRegistrationStatus.toLowerCase())) {
+//   //   rules['Registration'] = thisElection.rules['Registration']
+//   // } else
+//   if (this.voterRegistrationStatus && /registered/.test(this.voterRegistrationStatus.toLowerCase())) {
+//     rules['Ballot Request'] = thisElection.rules['Ballot Request']
+//   }
+//   if (!this.voterRegistrationStatus || /unsure|notregistered/.test(this.voterRegistrationStatus.toLowerCase())) {
+//     rules['Ballot Request'] = thisElection.rules['Ballot Request']
+//     rules['Registration'] = thisElection.rules['Registration']
+//   }
+//   thisElection.rules = rules
+//   return thisElection
+// }
+
+// function removeRulesForOtherVoterTypes (election) {
+//   let thisElection = Object.assign({}, election)
+//   Object.keys(thisElection.rules).forEach((requestType) => {
+//     thisElection.rules[requestType] = thisElection.rules[requestType]
+//       .filter(rule => typeof rule.voterType === 'string'
+//         ? rule.voterType.includes(/military|milSpouse|natGuard/i.test(this.voterType)? 'Uniformed' : 'Civilian')
+//         : true)
+//   })
+//   console.log(thisElection)
+//   return thisElection
+// }
 
 // function accepting array of elections, voterRegistrationStatus, voterType, state, submissionMethod and returning a the next election where rules apply to voter
 function getNextEligibleRules (electionArr, state, voterRegistrationStatus, voterType, submissionMethod) {
   return [ ...electionArr ] // work with a copy of array so we are not mutating original array
     .filter(filterToMatchVotingState, {state}) // remove elections from other states
-    .filter(filterForVoterTypeAndRegistrationStatus, {voterType, voterRegistrationStatus, submissionMethod}) // remove elections with rules that for different voter type/registration status/ or past due
-    .map(removeRulesForOtherRegistrationStatus, {voterRegistrationStatus})
+    // .filter(filterForVoterTypeAndRegistrationStatus, {voterType, voterRegistrationStatus, submissionMethod}) // remove elections with rules that for different voter type/registration status/ or past due
+    // .map(removeRulesForOtherVoterTypes, {voterType})
+    .map(election => {
+      let newRules = {}
+      newRules['Ballot Request'] = election.rules['Ballot Request']
+        .filter(rule => typeof rule.voterType === 'string'
+          ? !rule.voterType.includes(/military|milSpouse|natGuard/i.test(voterType) ? 'Civilian' : 'Uniformed')
+          : true)
+      if (!/registered/i.test(voterRegistrationStatus)) {
+        newRules['Registration'] = election.rules.Registration
+          .filter(rule => typeof rule.voterType === 'string'
+            ? !rule.voterType.includes(/military|milSpouse|natGuard/i.test(voterType) ? 'Civilian' : 'Uniformed')
+            : true)
+      }
+      return Object.assign({}, election, {rules: newRules})
+    })
+    .filter(election => new Date(election.date).getTime() > new Date().getTime())
+    // .map(removeRulesForOtherRegistrationStatus, {voterRegistrationStatus})
     .sort(compareElectionDateToSort)
 }
 
@@ -312,6 +347,7 @@ function getRuleLanguage (eligibleRules, type, voterRegistrationStatus) {
   } else if (eligibleRules && type && eligibleRules.rules[type] && eligibleRules.rules[type].length === 1) {
     return `Your form must be ${getRuleType(eligibleRules.rules[type][0].rule)} ${getRuleDeadline(eligibleRules.rules[type][0].date)}.`
   } else {
+    // console.log(eligibleRules)
     return eligibleRules.rules[type].map((rule, i) => `If you send your form by ${getRuleSubmissionOption(eligibleRules.rules[type][i].rule)}, it must be ${getRuleType(eligibleRules.rules[type][i].rule)} ${getRuleDeadline(eligibleRules.rules[type][i].date)}.`).join(voterRegistrationStatus && /registered/.test(voterRegistrationStatus.toLowerCase()) ? '\n- ' : ' - ')
   }
 }
@@ -334,8 +370,9 @@ function getRuleSubmissionOption (rule) {
 }
 
 function getDeadlineLanguage (electionArr, state, voterRegistrationStatus, voterType, submissionMethod) {
+  // console.log(typeof electionArr, state, voterRegistrationStatus, voterType, submissionMethod)
   let applicableRules = getNextEligibleRules([...electionArr], state || '', voterRegistrationStatus, voterType, submissionMethod)
-  // console.log('applicableRules', applicableRules)
+  console.log('applicableRules', applicableRules)
   applicableRules = applicableRules[0]
   if (!applicableRules) {
     return `IMPORTANT: Your form must be received by your state deadline to be eligible to vote in the November 6 General Election.  \nYou can find your state deadlines at ${process.env.url}/states `
@@ -351,4 +388,26 @@ function getDeadlineLanguage (electionArr, state, voterRegistrationStatus, voter
   }
 }
 
-export { getDeadlineLanguage, placesAutocomplete, placeDetails, cleanString, returnArrayOfReasonableBirthDates, placesDetails, uuidv4, commonEmailDomains, randomPresAddress }
+function flattenRules (electionArr) {
+  return electionArr.map(x => Object.entries(x.rules).map(([k, v]) => v.map(r => {
+    return {
+      state: x.state,
+      electionDate: x.date,
+      electionType: x.electionType,
+      ruleType: k,
+      ruleDate: r.date,
+      rule: typeof r.rule === 'string'
+        ? ['postmarked by', 'received by', 'sent by', 'no deadline', 'not required', 'signed by', 'signed/postmarked by'].filter(x => r.rule.toLowerCase().includes(x)).includes('signed/postmarked by') ? 'signed/postmarked by' : ['postmarked by', 'received by', 'sent by', 'no deadline', 'not required', 'signed by', 'signed/postmarked by'].filter(x => r.rule.toLowerCase().includes(x))[0]
+        : 'Received By',
+      submissionOptions: ['Email', 'Fax', 'Mail'].filter(opt => {
+        let rule = r.rule === 'string' ? r.rule : ''
+        let re = new RegExp(opt)
+        return re.test(rule) || !/Mail|Email|Fax/.test(rule)
+      }).map(r => r.toLowerCase()),
+      voterType: typeof r.voterType === 'string' ? [/uniformed/i.test(r.voterType) ? 'Military' : 'Citizen'] : ['Citizen', 'Military'],
+      notes: typeof r.rule === 'string' ? /\*/.test(r.rule) : null
+    }
+  }))).reduce((acc, cur) => acc.concat(cur), []).reduce((acc, cur) => acc.concat(cur), [])
+}
+
+export { flattenRules, getDeadlineLanguage, placesAutocomplete, placeDetails, cleanString, returnArrayOfReasonableBirthDates, placesDetails, uuidv4, commonEmailDomains, randomPresAddress }

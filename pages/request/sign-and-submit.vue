@@ -360,7 +360,7 @@ import axios from 'axios'
 import ScrollUp from '~/components/ScrollUp'
 import snarkdown from 'snarkdown'
 import fileSaver from 'file-saver'
-import { getDeadlineLanguage } from '~/utils/helpers'
+import { getDeadlineLanguage, flattenRules } from '~/utils/helpers'
 
 export default {
   name: 'SignAndSubmit',
@@ -397,7 +397,8 @@ export default {
           return dateA - dateB
         }),
       elections: elections,
-      deadlineLanguage: getDeadlineLanguage(elections, state, voterRegistrationStatus, voterType, null)
+      deadlineLanguage: getDeadlineLanguage(elections, state, voterRegistrationStatus, voterType, null),
+      rules: flattenRules(elections)
     }
   },
   data () {

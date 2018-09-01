@@ -13,6 +13,59 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "elections"
+    label: "Elections"
+    label_singular: "election"
+    folder: "content/elec"
+    extension: "json"
+    format: "json"
+    slug: "{{slug}}"
+    create: true
+    fields:
+      - label: "Election Name"
+        name: "title"
+        widget: "string"
+        hint: "Year-State-ElectionType e.g. '2018-NC-CD8SpecialPrimary' - or - '2020-NY-General'"
+      - label: "Election Day"
+        name: "date"
+        widget: "date"
+      - label: "State"
+        name: "state"
+        widget: "select"
+        options: [ "AL", "AK", "AS", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FM", "FL", "GA", "GU", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MH", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "MP", "OH", "OK", "OR", "PW", "PA", "PR", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VI", "VA", "WA", "WV", "WI", "WY" ]
+      - label: "Top level Political Division Eligible (OCD ID)"
+        name: "ocdDivisionId"
+        widget: "string"
+        required: false
+        hint: "This helps us find eligible voters in the election. It should be the most general location.  For example, if the election is a special election for a CD, then use that CD.  If it is a full federal election, choose the state. You can search for an ocdId here: https://developers.google.com/civic-information/docs/v2/divisions/search"
+      - label: "Election Notes"
+        name: "notes"
+        widget: "string"
+        required: false
+        hint: "Notes about election including eligibilty, special notes, etc."
+      - label: "FVAP ID"
+        name: "fvapId"
+        widget: "string"
+        required: false
+        hint: "automatically generated"
+      - label: "Google Civic Info Id"
+        name: "googleCivicInfoId"
+        widget: "string"
+        required: false
+        hint: "the relavant id from Google Civic Info (https://developers.google.com/civic-information/docs/v2/elections/electionQuery)"
+      - label: "Rules"
+        name: "rules"
+        widget: "list"
+        fields:
+          - {label: deadline, name: date, widget: datetime}
+          - {label: Submission Options, name: submissionOptions, widget: list, default: ["email", "fax", "mail"]}
+          - {label: Rule, name: rule, widget: select, options: ["postmarked by", "received by", "sent by", "no deadline", "not required", "signed by", "signed/postmarked by"]}
+          - {label: Stage, name: stage, widget: select, options: ["Registration", "Ballot Request", "Ballot Return"]}
+          - label: "Voter Type"
+            name: "voterType"
+            widget: "list"
+            default: ["Citizen", "Military"]
+          - {label: Notes, name: notes, widget: string, hint: notes for this election rule.}
   - name: "faqs"
     label: "FAQs"
     folder: "content/en/faqs"

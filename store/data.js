@@ -168,7 +168,26 @@ export const getters = {
     empty: function () {
       return ''
     }
-  })
+  }),
+  flattenElectionRules: (state) => state.elections.length === 0 ? [] : state.elections.map(x => Object.entries(x.rules).map(([k, v]) => v.map(r => {
+    return {
+      state: x.state,
+      electionDate: x.date,
+      electionType: x.electionType,
+      ruleType: k,
+      ruleDate: r.date,
+      rule: typeof r.rule === 'string'
+        ? ['postmarked by', 'received by', 'sent by', 'no deadline', 'not required', 'signed by', 'signed/postmarked by'].filter(x => r.rule.toLowerCase().includes(x)).includes('signed/postmarked by') ? 'signed/postmarked by' : ['postmarked by', 'received by', 'sent by', 'no deadline', 'not required', 'signed by', 'signed/postmarked by'].filter(x => r.rule.toLowerCase().includes(x))[0]
+        : 'Received By',
+      submissionOptions: ['Email', 'Fax', 'Mail'].filter(opt => {
+        let rule = r.rule === 'string' ? r.rule : ''
+        let re = new RegExp(opt)
+        return re.test(rule) || !/Mail|Email|Fax/.test(rule)
+      }).map(r => r.toLowerCase()),
+      voterType: typeof r.voterType === 'string' ? [/uniformed/i.test(r.voterType) ? 'Military' : 'Citizen'] : ['Citizen', 'Military'],
+      notes: typeof r.rule === 'string' ? /\*/.test(r.rule) : null
+    }
+  }))).reduce((acc, cur) => acc.concat(cur), []).reduce((acc, cur) => acc.concat(cur), [])
 }
 
 export const mutations = {
@@ -180,6 +199,9 @@ export const mutations = {
   },
   updatePhone (state, number) {
     state.phone = number
+  },
+  updateElections (state, elections) {
+    state.elections = elections
   }
 }
 
@@ -216,6 +238,10 @@ export const actions = {
   updatePhone ({commit, dispatch, getters}, {val, countryIso}) {
     dispatch('getCountryIsoFromPhonePrefix', val)
     commit('updatePhone', getters.formattedNumber(val, countryIso))
+  },
+  async getElections ({commit}) {
+    let elections = await this.app.$content('/elections').get('elections')
+    commit('updateElections', elections.body)
   }
 }
 

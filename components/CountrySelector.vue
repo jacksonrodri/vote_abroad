@@ -94,7 +94,7 @@ export default {
   },
   mounted () {
     if (this.value) {
-      this.countrySearch = this.countries.find(x => x.code === this.value).name
+      this.countrySearch = this.countries && this.countries.find(x => x.code === this.value) ? this.countries.find(x => x.code === this.value).name : ''
       this.updateCountryData(this.value)
     }
   }

@@ -9,6 +9,16 @@ export const getters = {
   },
   getCurrent: (state) => {
     return state.requests.length ? state.requests[state.currentRequest] : {}
+  },
+  getCurrentDeadlines: (state, getters, rootState, rootGetters) => {
+    let currentRequest = getters.getCurrent
+    let voterState = currentRequest && currentRequest.votAdr ? currentRequest.votAdr.S : null
+    let voterType = currentRequest && currentRequest.voterClass ? (/military|milSpouse|natGuart/i.test(currentRequest.voterClass) ? 'Military' : 'Citizen') : null
+    // let registrationStatus = currentRequest && currentRequest.isRegistered ? currentRequest.isRegistered : null
+    return rootGetters['data/flattenElectionRules']
+      .filter(x => voterState ? x.state === voterState : true)
+      .filter(x => voterType ? x.voterType.includes(voterType) : true)
+      .filter(x => new Date(x.electionDate).getTime() > new Date().getTime())
   }
 }
 
