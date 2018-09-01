@@ -1,5 +1,6 @@
 ---
 title: Can I register to vote in a different state?
+slug: can I
 isInMenu: true
 categories:
   - category: Registration Process
