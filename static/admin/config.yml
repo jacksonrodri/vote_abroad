@@ -12,26 +12,23 @@ collections:
         name: "siteSettings"
         file: "content/config.json"
         fields:
+          - label: "FAQ"
+            name: "faq"
+            widget: "relationConfigFaqs"
+            collection: "faqs"
+            searchFields: ["title", "iso"]
+            displayFields: ["title"]
+            valueField: "title"
           - label: "Top FAQs"
             name: "menuFaqs"
             widget: "list"
-            fields:
-              - label: "Ranking"
-                name: "rank"
-                widget: "number"
-                valueType: "int"
-                min: 0
-                max: 5
-                hint: "enter a value between 0 and 5-- lower numbers will appear first in the menu"
+            field:
               - label: "FAQ"
                 name: "faq"
-                widget: "relation"
+                widget: "relationConfigFaqs"
                 collection: "faqs"
-                searchFields:
-                  - "title"
-                  - "iso"
-                displayFields:
-                  - "title"
+                searchFields: ["title", "iso"]
+                displayFields: ["title"]
                 valueField: "title"
       - label: "States"
         name: "states"
