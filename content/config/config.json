@@ -1,3 +1,20 @@
 {
-  "title": "config"
+  "title": "config",
+  "relatedFaqs": [
+    {}
+  ],
+  "states": [
+    {
+      "iso": "AL",
+      "state": "Alabama"
+    },
+    {
+      "iso": "AK",
+      "state": "Alaska"
+    },
+    {
+      "iso": "NC",
+      "state": "North Carolina"
+    }
+  ]
 }
