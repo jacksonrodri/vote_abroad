@@ -17,27 +17,22 @@ collections:
       preview: false
     fields:
       - {label: "Title", name: "title", widget: "hidden", default: "config"}
-      - label: "Top FAQs"
-        name: "menuFaqs"
-        widget: "list"
-        field:
-          - label: "FAQ"
-            name: "faq"
-            widget: "relation"
-            collection: "faqs"
-            searchFields: ["title", "category"]
-            displayFields: ["title"]
-            valueField: "title"
+      - label: Related FAQs
+        name: relatedFaqs
+        widget: list
+        fields:
+          - name: related
+            label: Type to search for another FAQ
+            widget: relation
+            collection: faqs
+            searchFields: ["title"]
+            valueField: slug
       - label: "States"
         name: "states"
         widget: "list"
         fields:
-          - label: "States"
-            name: "states"
-            widget: list
-            fields:
-              - {label: ISO Code, name: iso, widget: string}
-              - {label: State, name: state, widget: string}
+          - {label: ISO Code, name: iso, widget: string}
+          - {label: State, name: state, widget: string}
   - name: "pages" # Used in routes, e.g., /admin/collections/blog
     label: "Pages" # Used in the UI
     folder: "content/en/pages" # The path to the folder where the documents are stored
