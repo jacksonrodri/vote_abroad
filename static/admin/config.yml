@@ -8,8 +8,8 @@ collections:
   - name: "config"
     label: "Configuration Settings"
     folder: "content/config"
-    create: true
-    delete: true
+    create: false
+    delete: false
     extension: json
     format: json
     slug: "{{slug}}"
@@ -17,15 +17,16 @@ collections:
       preview: false
     fields:
       - {label: "Title", name: "title", widget: "hidden", default: "config"}
-      - label: Related FAQs
+      - label: Top FAQs
+        label_singular: FAQ
         name: relatedFaqs
         widget: list
         fields:
-          - name: related
-            label: Type to search for another FAQ
+          - name: FAQ to be included in menu
+            label: Type to search for a FAQ
             widget: relation
             collection: faqs
-            searchFields: ["title"]
+            searchFields: ["title", "slug"]
             displayFields: ["title"]
             valueField: "slug"
       - label: "States"
