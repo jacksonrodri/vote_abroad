@@ -113,6 +113,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Slug", name: "slug", widget: "string", required: true, pattern: ["[A-Za-z-_]+", "Can only include letters, numbers, dash (-), and underscore (_)"]}
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
       - {label: "Include in main menu?", name: "isInMenu", widget: "boolean"}
       - {label: "Body", name: "body", widget: "markdown"}
