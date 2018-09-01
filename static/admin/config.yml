@@ -23,9 +23,9 @@ collections:
         field:
           - label: "FAQ"
             name: "faq"
-            widget: "relationConfigFaqs"
+            widget: "relation"
             collection: "faqs"
-            searchFields: ["title", "iso"]
+            searchFields: ["title", "category"]
             displayFields: ["title"]
             valueField: "title"
       - label: "States"
