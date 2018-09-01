@@ -1,5 +1,5 @@
 ---
-state: Indiana
+title: Indiana
 iso: IN
 allowsNeverResided: false
 id:

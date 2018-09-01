@@ -1,5 +1,5 @@
 ---
-state: New Mexico
+title: New Mexico
 iso: NM
 allowsNeverResided: true
 id:

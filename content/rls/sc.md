@@ -1,5 +1,5 @@
 ---
-state: South Carolina
+title: South Carolina
 iso: SC
 allowsNeverResided: true
 id:

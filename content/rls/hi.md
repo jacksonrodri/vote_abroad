@@ -1,5 +1,5 @@
 ---
-state: Hawaii
+title: Hawaii
 iso: HI
 allowsNeverResided: true
 id:

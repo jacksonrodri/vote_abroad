@@ -1,5 +1,5 @@
 ---
-state: Delaware
+title: Delaware
 iso: DE
 allowsNeverResided: true
 id:

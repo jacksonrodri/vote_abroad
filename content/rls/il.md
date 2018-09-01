@@ -1,5 +1,5 @@
 ---
-state: Illinois
+title: Illinois
 iso: IL
 allowsNeverResided: false
 id:

@@ -1,5 +1,5 @@
 ---
-state: Iowa
+title: Iowa
 iso: IA
 allowsNeverResided: true
 id: []

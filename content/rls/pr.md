@@ -1,5 +1,5 @@
 ---
-state: Puerto Rico
+title: Puerto Rico
 iso: PR
 allowsNeverResided: true
 id:

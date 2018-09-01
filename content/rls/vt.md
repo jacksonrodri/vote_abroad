@@ -1,5 +1,5 @@
 ---
-state: Vermont
+title: Vermont
 iso: VT
 allowsNeverResided: true
 id:

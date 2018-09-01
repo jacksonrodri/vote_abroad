@@ -1,5 +1,5 @@
 ---
-state: Connecticut
+title: Connecticut
 iso: CT
 allowsNeverResided: true
 id: []

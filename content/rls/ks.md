@@ -1,5 +1,5 @@
 ---
-state: Kansas
+title: Kansas
 iso: KS
 allowsNeverResided: true
 id:

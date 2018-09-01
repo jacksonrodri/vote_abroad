@@ -1,5 +1,5 @@
 ---
-state: Nevada
+title: Nevada
 iso: NV
 allowsNeverResided: true
 id:

@@ -1,5 +1,5 @@
 ---
-state: New Jersey
+title: New Jersey
 iso: NJ
 allowsNeverResided: true
 id:

@@ -1,5 +1,5 @@
 ---
-state: New York
+title: New York
 iso: NY
 allowsNeverResided: true
 id:

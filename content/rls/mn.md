@@ -1,5 +1,5 @@
 ---
-state: Minnesota
+title: Minnesota
 iso: MN
 allowsNeverResided: true
 id:

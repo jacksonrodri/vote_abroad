@@ -1,5 +1,5 @@
 ---
-state: Pennsylvania
+title: Pennsylvania
 iso: PA
 allowsNeverResided: false
 id:

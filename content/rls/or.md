@@ -1,5 +1,5 @@
 ---
-state: Oregon
+title: Oregon
 iso: OR
 allowsNeverResided: true
 id:

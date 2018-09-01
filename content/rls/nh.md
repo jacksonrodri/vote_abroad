@@ -1,5 +1,5 @@
 ---
-state: New Hampshire
+title: New Hampshire
 iso: NH
 allowsNeverResided: true
 id: []

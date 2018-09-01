@@ -1,5 +1,5 @@
 ---
-state: Virginia
+title: Virginia
 iso: VA
 allowsNeverResided: true
 id:

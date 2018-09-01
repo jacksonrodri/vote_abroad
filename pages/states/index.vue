@@ -14,7 +14,7 @@
         v-for="state in states"
         :value="state.iso"
         :key="state.iso">
-        {{ state.state }}
+        {{ state.title }}
       </option>
     </b-select>
   </b-field>

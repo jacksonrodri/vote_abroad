@@ -341,7 +341,7 @@
       </party>
 
       <state-special
-        :label="$t('request.stateSpecial.label', {state: stateRules && stateRules.state ? stateRules.state: 'State'})"
+        :label="$t('request.stateSpecial.label', {state: stateRules && stateRules.title ? stateRules.title: 'State'})"
         v-model="stateSpecial"
         :state="votAdr && votAdr.S ? votAdr.S : ''"
         :isFWAB="isFWAB"
@@ -363,22 +363,22 @@
         v-model="identification">
         <div slot="instructions">
           <p v-if="stateRules && stateRules.id && stateRules.id.length === 0"
-            v-html="$options.filters.markdown($t('request.id.instructionsOptional', { state: stateRules.state}))">
+            v-html="$options.filters.markdown($t('request.id.instructionsOptional', { state: stateRules.title}))">
           </p>
           <p v-else-if="stateRules && stateRules.id && stateRules.id.length === 1"
-            v-html="$options.filters.markdown($t('request.id.instructionsReq1', { state: stateRules.state, id: $t(`request.id.${stateRules.id[0]}`), idType: $t(`request.id.${stateRules.id[0].indexOf('SSN') > -1 ? 'SSN' : stateRules.id[0]}`)}))">
+            v-html="$options.filters.markdown($t('request.id.instructionsReq1', { state: stateRules.title, id: $t(`request.id.${stateRules.id[0]}`), idType: $t(`request.id.${stateRules.id[0].indexOf('SSN') > -1 ? 'SSN' : stateRules.id[0]}`)}))">
           </p>
-          <p v-else v-html="$options.filters.markdown($t('request.id.instructionsReq2', { state: stateRules.state, allButLastTypes: allButLastIdType, lastType: lastIdType }))">
+          <p v-else v-html="$options.filters.markdown($t('request.id.instructionsReq2', { state: stateRules.title, allButLastTypes: allButLastIdType, lastType: lastIdType }))">
           </p>
         </div>
         <div slot="tooltip">
           <p v-if="stateRules && stateRules.id && stateRules.id.length === 0"
-            v-html="$options.filters.markdown($t('request.id.tooltipOptional', { state: stateRules.state}))">
+            v-html="$options.filters.markdown($t('request.id.tooltipOptional', { state: stateRules.title}))">
           </p>
           <p v-else-if="stateRules && stateRules.id && stateRules.id.length === 1"
-            v-html="$options.filters.markdown($t('request.id.tooltipReq1', { state: stateRules.state, id: $t(`request.id.${stateRules.id[0]}`)}))">
+            v-html="$options.filters.markdown($t('request.id.tooltipReq1', { state: stateRules.title, id: $t(`request.id.${stateRules.id[0]}`)}))">
           </p>
-          <p v-else v-html="$options.filters.markdown($t('request.id.tooltipReq2', { state: stateRules.state, allButLastTypes: allButLastIdType, lastType: lastIdType }))">
+          <p v-else v-html="$options.filters.markdown($t('request.id.tooltipReq2', { state: stateRules.title, allButLastTypes: allButLastIdType, lastType: lastIdType }))">
           </p>
         </div>
       </id-input>

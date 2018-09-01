@@ -1,5 +1,5 @@
 ---
-state: South Dakota
+title: South Dakota
 iso: SD
 allowsNeverResided: true
 id:

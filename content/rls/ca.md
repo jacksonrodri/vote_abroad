@@ -1,5 +1,5 @@
 ---
-state: California
+title: California
 iso: CA
 allowsNeverResided: true
 id:

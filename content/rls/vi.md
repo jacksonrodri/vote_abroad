@@ -1,5 +1,5 @@
 ---
-state: Virgin Islands
+title: Virgin Islands
 iso: VI
 allowsNeverResided: true
 id:

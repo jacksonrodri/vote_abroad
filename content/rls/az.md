@@ -1,5 +1,5 @@
 ---
-state: Arizona
+title: Arizona
 iso: AZ
 allowsNeverResided: true
 id:

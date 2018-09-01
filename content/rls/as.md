@@ -1,5 +1,5 @@
 ---
-state: American Samoa
+title: American Samoa
 iso: AS
 allowsNeverResided: true
 id:

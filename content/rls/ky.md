@@ -1,5 +1,5 @@
 ---
-state: Kentucky
+title: Kentucky
 iso: KY
 allowsNeverResided: true
 id: []

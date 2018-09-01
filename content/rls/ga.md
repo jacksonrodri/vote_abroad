@@ -1,5 +1,5 @@
 ---
-state: Georgia
+title: Georgia
 iso: GA
 allowsNeverResided: true
 id:

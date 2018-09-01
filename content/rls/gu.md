@@ -1,5 +1,5 @@
 ---
-state: Guam
+title: Guam
 iso: GU
 allowsNeverResided: true
 id:

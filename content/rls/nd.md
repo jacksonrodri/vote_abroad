@@ -1,5 +1,5 @@
 ---
-state: North Dakota
+title: North Dakota
 iso: ND
 allowsNeverResided: true
 id:

@@ -1,5 +1,5 @@
 ---
-state: Nebraska
+title: Nebraska
 iso: NE
 allowsNeverResided: true
 id:

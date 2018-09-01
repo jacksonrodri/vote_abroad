@@ -1,5 +1,5 @@
 ---
-state: Wisconsin
+title: Wisconsin
 iso: WI
 allowsNeverResided: true
 id:

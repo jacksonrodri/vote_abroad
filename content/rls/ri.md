@@ -1,5 +1,5 @@
 ---
-state: Rhode Island
+title: Rhode Island
 iso: RI
 allowsNeverResided: true
 id:

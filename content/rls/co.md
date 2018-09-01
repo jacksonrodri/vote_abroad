@@ -1,5 +1,5 @@
 ---
-state: Colorado
+title: Colorado
 iso: CO
 allowsNeverResided: true
 id:

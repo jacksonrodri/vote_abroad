@@ -1,5 +1,5 @@
 ---
-state: Idaho
+title: Idaho
 iso: ID
 allowsNeverResided: false
 id:

@@ -1,5 +1,5 @@
 ---
-state: Michigan
+title: Michigan
 iso: MI
 allowsNeverResided: true
 id:

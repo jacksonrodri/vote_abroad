@@ -1,5 +1,5 @@
 ---
-state: District of Columbia
+title: District of Columbia
 iso: DC
 allowsNeverResided: true
 id:

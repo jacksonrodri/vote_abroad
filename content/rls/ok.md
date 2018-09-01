@@ -1,5 +1,5 @@
 ---
-state: Oklahoma
+title: Oklahoma
 iso: OK
 allowsNeverResided: true
 id:

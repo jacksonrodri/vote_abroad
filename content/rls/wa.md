@@ -1,5 +1,5 @@
 ---
-state: Washington
+title: Washington
 iso: WA
 allowsNeverResided: true
 id: []

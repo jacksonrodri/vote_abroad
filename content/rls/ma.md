@@ -1,5 +1,5 @@
 ---
-state: Massachusetts
+title: Massachusetts
 iso: MA
 allowsNeverResided: true
 id: []

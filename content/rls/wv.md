@@ -1,5 +1,5 @@
 ---
-state: West Virginia
+title: West Virginia
 iso: WV
 allowsNeverResided: true
 id:

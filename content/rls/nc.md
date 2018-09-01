@@ -1,5 +1,5 @@
 ---
-state: North Carolina
+title: North Carolina
 iso: NC
 allowsNeverResided: true
 id:

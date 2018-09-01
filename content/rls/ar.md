@@ -1,5 +1,5 @@
 ---
-state: Arkansas
+title: Arkansas
 iso: AR
 allowsNeverResided: false
 id:

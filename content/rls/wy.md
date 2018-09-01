@@ -1,5 +1,5 @@
 ---
-state: Wyoming
+title: Wyoming
 iso: WY
 allowsNeverResided: true
 id: []
