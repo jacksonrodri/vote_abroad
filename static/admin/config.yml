@@ -5,6 +5,20 @@ publish_mode: editorial_workflow
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 collections:
+  - name: "config"
+    label: "Configuration Settings"
+    files:
+      - label: "States"
+        name: "states"
+        file: "content/states.yml"
+        fields:
+          - {label: States, name: title, hidden: true, widget: string, default: States}
+          - label: "States"
+            name: "states"
+            widget: list
+            fields:
+              - {label: ISO Code, name: iso, widget: string}
+              - {label: State, name: state, widget: string}
   - name: "pages" # Used in routes, e.g., /admin/collections/blog
     label: "Pages" # Used in the UI
     folder: "content/en/pages" # The path to the folder where the documents are stored
@@ -76,6 +90,7 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
+      - {label: "Include in main menu?", name: "isInMenu", widget: "boolean"}
       - {label: "Body", name: "body", widget: "markdown"}
       - label: Categories
         name: categories
