@@ -1,6 +1,6 @@
 ---
 title: Can I register to vote in a different state?
-slug: can I
+slug: can-i-register-to-vote-in-a-different-state
 isInMenu: true
 categories:
   - category: Registration Process
