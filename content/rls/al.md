@@ -1,4 +1,5 @@
 ---
+title: Alabama
 state: Alabama
 iso: AL
 allowsNeverResided: false
