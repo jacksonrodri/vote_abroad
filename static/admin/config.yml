@@ -26,6 +26,7 @@ collections:
             widget: relation
             collection: faqs
             searchFields: ["title"]
+            displayFields: ["title"]
             valueField: slug
       - label: "States"
         name: "states"
@@ -107,6 +108,7 @@ collections:
     label: "FAQs"
     folder: "content/en/faqs"
     create: true
+    slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
