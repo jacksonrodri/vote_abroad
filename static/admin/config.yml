@@ -8,11 +8,19 @@ collections:
   - name: "config"
     label: "Configuration Settings"
     files:
+      - label: "Site Settings"
+        name: "siteSettings"
+        file: "content/config.yml"
+        fields:
+          - label: "Top FAQs"
+            name: "menuFaqs"
+            widget: list
+            field:
+              - {label: FAQ, name: faq, widget: relation, collection: faqs, searchFields: ["title"], valueField: title}
       - label: "States"
         name: "states"
         file: "content/states.yml"
         fields:
-          - {label: States, name: title, hidden: true, widget: string, default: States}
           - label: "States"
             name: "states"
             widget: list
