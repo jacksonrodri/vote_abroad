@@ -1,5 +1,6 @@
 ---
 title: Can I register to vote in a different state?
+isInMenu: true
 categories:
   - category: Registration Process
 relatedFaqs:
