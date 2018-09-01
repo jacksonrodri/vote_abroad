@@ -14,9 +14,17 @@ collections:
         fields:
           - label: "Top FAQs"
             name: "menuFaqs"
-            widget: list
+            widget: "list"
             field:
-              - {label: FAQ, name: faq, widget: relation, collection: faqs, searchFields: ["title"], valueField: title}
+              - label: "FAQ"
+                name: "faq"
+                widget: "relation"
+                collection: "faqs"
+                searchFields:
+                  - "title"
+                displayFields:
+                  - "title"
+                valueField: "title"
       - label: "States"
         name: "states"
         file: "content/states.json"
@@ -83,13 +91,19 @@ collections:
         widget: "list"
         fields:
           - {label: deadline, name: date, widget: datetime}
-          - {label: Submission Options, name: submissionOptions, widget: list, default: ["email", "fax", "mail"]}
+          - label: "Submission Options"
+            name: "submissionOptions"
+            widget: "list"
+            default:
+              - "email"
           - {label: Rule, name: rule, widget: select, options: ["postmarked by", "received by", "sent by", "no deadline", "not required", "signed by", "signed/postmarked by"]}
           - {label: Stage, name: stage, widget: select, options: ["Registration", "Ballot Request", "Ballot Return"]}
           - label: "Voter Type"
             name: "voterType"
             widget: "list"
-            default: "Citizen, Military"
+            default:
+              - "Citizen"
+              - "Military"
           - {label: Notes, name: notes, widget: string, hint: notes for this election rule.}
   - name: "faqs"
     label: "FAQs"
