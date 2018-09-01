@@ -158,6 +158,7 @@ export default {
     if (this.usOnly !== undefined) {
       this.countryCode = 'US'
       this.countryName = 'United States'
+      console.log('hi')
     }
     // console.log('axios', this.$axios.defaults.baseURL)
     // let lolo = await (this.$store.app.$content('/leos').getAll())
