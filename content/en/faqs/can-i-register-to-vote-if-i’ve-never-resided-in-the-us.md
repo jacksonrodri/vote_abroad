@@ -1,5 +1,7 @@
 ---
 title: Can I register to vote if I've never resided in the US?
+slug: Can-I-register-to-vote-if-Ive-never-resided-in-the-US
+isInMenu: false
 categories:
   - category: US Citizens without Residency
 relatedFaqs:
