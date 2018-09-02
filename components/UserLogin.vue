@@ -48,6 +48,7 @@
         key="codeInput"
         fieldName="codeInput"
         v-model="code"
+        @pressEnter="confirmCode"
         :loading="authenticating"></code-input>
       <!-- <div v-show="seconds <= 25" class="field is-grouped is-grouped-centered">
         <p class="control">

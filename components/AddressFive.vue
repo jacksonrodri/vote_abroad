@@ -47,7 +47,7 @@
               :class="part.class"
               :loading="isFetching"
               :ref="part.type"
-              @input="(val) => { getAsyncData(val) }"
+              @input="(val) => { getAsyncData(val); updateAddress(part.type, val) }"
               @select="option => fillData(option)">
               <template slot-scope="props">{{ props.option.description }}</template>
             </b-autocomplete>

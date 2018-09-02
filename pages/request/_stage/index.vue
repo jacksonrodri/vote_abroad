@@ -6,7 +6,6 @@
 <!-- your information -->
   <section v-if="stage.slug === 'your-information'">
     <form @submit.prevent id="your-information" key="your-information">
-      <h3 class="subtitle is-5">{{deadlineLanguage}}</h3>
       <!-- firstName -->
       <div class="field">
         <label class="label" for="firstName">{{ $t('request.firstName.label') }}<transition name="fade"><span v-if="!firstName && !$v.firstName.$error" class="required"> Required</span></transition></label>
