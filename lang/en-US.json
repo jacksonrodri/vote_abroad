@@ -332,7 +332,7 @@
       "label": "Your current phone number",
       "placeholder": "e.g. {example}",
       "messages": {
-        "validPhone": "The number you typed is not a valid phone number.  Please check it and try again."
+        "validPhone": "The number you typed is not a valid phone number.  Please enter a valid number (starting with + and country code)"
       }
     },
     "okRules": {
