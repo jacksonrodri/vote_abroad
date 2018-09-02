@@ -11,7 +11,7 @@ For Nov 6 General Election:
 
 States are required to send out ballots to overseas voters 45 days before a scheduled election. If you’ve requested a ballot in 2018, your Nov 6 General Election ballot should be sent out by Sept 22, 2018.
 
-The most reliable way to check if you are on the voter rolls and will be receiving a ballot is to email or call your Local Election Official. You can look up the contact information for your Local Election Official here:  www.votefromabroad.org/election-officials
+The most reliable way to check if you are on the voter rolls and will be receiving a ballot is to email or call your Local Election Official. You can look up the contact information for your Local Election Official here:  www.votefromabroad.org/states
 
 Most states also provide a website where you can check to verify your voter status, but it is not always up to date. To find your state’s website, google “\[state] verify voter registration”
 
