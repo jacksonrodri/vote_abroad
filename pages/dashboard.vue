@@ -118,7 +118,7 @@
                       <span v-if="currentRequestObject.leo && currentRequestObject.leo.f" v-html="md(`**${$t('dashboard.fax')}:** [${ '+1' + currentRequestObject.leo.f }](tel:${ ('+1' + currentRequestObject.leo.f).replace(/[()]/g, '-').replace(/ /g, '')  })`)"></span>
                       </p>
                     </div>
-                    <p class="subtitle is-4" v-html="md(deadlineReceiveBallot + ' ' + deadlineBallotReturn)"></p>
+                    <p class="subtitle is-4" v-html="md(deadlineReceiveBallot + ' ' + deadlineBallotReturn.replace(/(https?:\/\/[A-Za-z0-9\/:]*)/gi, '[$1]($1)'))"></p>
                     <p class="subtitle is-4">
                       <span class="content" v-html="md($t('dashboard.makeChanges', {link: localePath({ name: 'request-stage', params: {stage: 'your-information'} })}))"></span>
                       <!-- <span>If you need to change anything on your form, </span>

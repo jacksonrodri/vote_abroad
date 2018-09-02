@@ -758,6 +758,9 @@ collections:
               - {label: "Two Options", name: "opt2", widget: "string"}
               - {label: "Three Options", name: "opt3", widget: "string"}
               - {label: "Four Options", name: "opt4", widget: "string"}
+              - {label: "Alaska Residency Proof", name: "akDocument", widget: "string"}
+              - {label: "AZ Proof of Citizenship", name: "azDocument", widget: "string"}
+              - {label: "Document is Required", name: "documentRequired", widget: "string"}
               - {label: "Submission method", name: "submissionMethod", widget: "string"}
               - {label: "alternate submission method", name: "alternateSubmissionMethod", widget: "string"}
               - {label: "new voters", name: "newVoters", widget: "string"}

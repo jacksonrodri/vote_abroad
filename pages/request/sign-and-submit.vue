@@ -596,7 +596,8 @@ export default {
         electionType: elections[0].electionType,
         note: elections[0].note || '',
         url: process.env.url,
-        state: elections[0].state
+        state: elections[0].state,
+        documentRequired: this.documentRequired && (this.state === 'AK' || this.state === 'AZ') ? this.$t(`request.deadlineLanguage.documentRequired`, {document: this.$t(`request.deadlineLanguage.${this.state.toLowerCase()}Document`)}) : ''
       }
     },
     registeredVoterDeadlineObject () {
@@ -644,7 +645,8 @@ export default {
         registeredVoterElectionType: electionsRegistered[0].electionType,
         registeredVoterNote: electionsRegistered[0].note || '',
         url: process.env.url,
-        state: electionsNew[0].state
+        state: electionsNew[0].state,
+        documentRequired: this.documentRequired && (this.state === 'AK' || this.state === 'AZ') ? this.$t(`request.deadlineLanguage.documentRequired`, {document: this.$t(`request.deadlineLanguage.${this.state.toLowerCase()}Document`)}) : ''
       }
     },
     ballotReturnDeadlineObject () {
