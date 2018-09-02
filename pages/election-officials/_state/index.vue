@@ -20,14 +20,15 @@
 </template>
 
 <script>
+import axios from 'axios'
 
 export default {
-  async asyncData ({ app, route }) {
+  async asyncData ({ app, params }) {
     // console.log(process)
-    let state = await app.$content('/leos').get(`leos/ca`)
+    // let state = await app.$content('/leos').get(`leos/ca`)
     return {
       // leos: (await app.$content('/leos').getAll())[0].body
-      stateLeos: state.body
+      stateLeos: (await axios.get(`${process.env.url}/leos/${params.state.toUpperCase()}-leos.json`)).data
     }
   },
   // computed: {
