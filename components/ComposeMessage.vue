@@ -11,8 +11,12 @@
       </b-field>
 
       <b-field horizontal :label="$t('request.sig.from')">
-        <b-input v-model="fromName" name="name" placeholder="Name" :disabled="isMailing === true" expanded></b-input>
-        <b-input v-model="formEmail" ref="userEmail" name="email" type="email" :placeholder="$t('request.email.label')" :disabled="!!email" :required="Boolean(email)" expanded></b-input>
+        <b-field>
+          <b-input v-model="fromName" name="name" placeholder="Name" :disabled="isMailing === true" expanded></b-input>
+        </b-field>
+        <b-field>
+          <b-input v-model="formEmail" ref="userEmail" name="email" type="email" :placeholder="$t('request.email.label')" :disabled="!!email" required expanded></b-input>
+        </b-field>
       </b-field>
 
       <b-field horizontal :label="$t('request.sig.to')">
