@@ -133,7 +133,8 @@ export default {
       data: [],
       sessionToken: '',
       isFetching: false,
-      autocompleteFocused: false
+      autocompleteFocused: false,
+      needsFormat: false
     }
   },
   computed: {
@@ -241,11 +242,11 @@ export default {
     //     this.updateAddress('countryiso', val.key)
     //   }
     // },
-    formattedAddress (val, oldVal) {
-      if (val && val !== oldVal && this.adr && val !== this.adr.formatted) {
-        this.update({[this.fieldName]: Object.assign({}, this.adr, {formatted: this.formattedAddress})})
-      }
-    },
+    // formattedAddress (val, oldVal) {
+    //   if (val && val !== oldVal && this.adr && val !== this.adr.formatted) {
+    //     this.update({[this.fieldName]: Object.assign({}, this.adr, {formatted: this.formattedAddress})})
+    //   }
+    // },
     ctry (val, oldVal) {
       // console.log(val, 'ctry changed')
       if (val) {
