@@ -303,7 +303,7 @@ collections:
                 widget: "object"
                 fields:
                   - {label: "Required", name: "required", widget: "string"}
-                  - {label: "Max Length (50)", name: "maxLength", widget: "string"}
+                  - {label: "Invalid Phone number or email address", name: "validPhoneOrEmail", widget: "string"}
           - label: "Code"
             name: "codeInput"
             widget: "object"

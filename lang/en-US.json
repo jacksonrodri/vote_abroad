@@ -38,7 +38,8 @@
       "tooltipTitle": "What is this?",
       "tooltip": "Your email or number will create an account for you to use to easily sign in to votefromabroad and save your information from year to year. An anonymous session allows you to create an FPCA form and send it to your local election office, but will not save your information for you to return to in the future.",
       "messages": {
-        "required": "You must enter a phone number or email address "
+        "required": "You must enter a phone number or email address ",
+        "validPhoneOrEmail": "That does note appear to be a correct phone number or email address. Please reenter."
       }
     },
     "codeInput": {
