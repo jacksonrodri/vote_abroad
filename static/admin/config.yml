@@ -551,7 +551,13 @@ collections:
                 name: "messages"
                 widget: "object"
                 fields:
-                  - {label: "Required", name: "required", widget: "string"}
+                  - {label: "Country Required", name: "country-required", widget: "string"}
+                  - {label: "Street Required", name: "A-required", widget: "string"}
+                  - {label: "Dependent Locality Required", name: "D-required", widget: "string"}
+                  - {label: "City Required", name: "C-required", widget: "string"}
+                  - {label: "State/Province Required", name: "S-required", widget: "string"}
+                  - {label: "Zip Required", name: "Z-required", widget: "string"}
+                  - {label: "Sorting Code Required", name: "X-required", widget: "string"}
           - label: "Date of Birth"
             name: "dob"
             widget: "object"

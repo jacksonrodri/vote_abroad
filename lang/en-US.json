@@ -382,6 +382,15 @@
       "question": "Would you like your ballot sent to a different address than your residential address?",
       "yes": "Yes",
       "no": "No",
+      "messages": {
+        "country-required": "You must provide your country of residence. (Outside the United States)",
+        "A-required": "You must provide your {label}",
+        "C-required": "{label} is required",
+        "D-required": "{label} is required",
+        "S-required": "{label} is required",
+        "Z-required": "{label} is required",
+        "X-required": "{label} is required"
+      },
       "changeFormat": "Change Format",
       "unstructured-label": "I need to use a different format for my address.",
       "structured-label": "Use the standard international format for my address."
