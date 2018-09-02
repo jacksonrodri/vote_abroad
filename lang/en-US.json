@@ -381,7 +381,10 @@
       "tooltip": "This is optional. Please provide a forwarding address only if you request your blank ballot be sent to you by mail and you do not want it mailed to your current residence address outside the US. If you are uncertain what your mailing address will be when ballots are due to be sent out, you may have your blank ballot sent to a reliable third-party, such as a University student office or postal box.",
       "question": "Would you like your ballot sent to a different address than your residential address?",
       "yes": "Yes",
-      "no": "No"
+      "no": "No",
+      "changeFormat": "Change Format",
+      "unstructured-label": "I need to use a different format for my address.",
+      "structured-label": "Use the standard international format for my address."
     },
     "email": {
       "label": "Your current email address",
@@ -405,7 +408,6 @@
     "abrAdr": {
       "tooltip": "You must provide your current residence address outside the US for informational purposes. Please provide your address outside the US even if you request your blank ballot be sent to you by email/online or fax.",
       "instructions": "Please add your international address",
-      "changeFormat": "Change Format",
       "messages": {
         "country-required": "You must provide your country of residence. (Outside the United States)",
         "A-required": "You must provide your {label}",
@@ -415,10 +417,11 @@
         "Z-required": "{label} is required",
         "X-required": "{label} is required"
       },
-      "unstructured-label": "I need to use a different format for my address.",
       "placeholder": "Country",
       "label": "Your current address abroad",
       "tooltipTitle": "Where do you live now?",
+      "changeFormat": "Change Format",
+      "unstructured-label": "I need to use a different format for my address.",
       "structured-label": "Use the standard international format for my address."
     },
     "deadlineLanguage": {
