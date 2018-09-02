@@ -192,6 +192,8 @@ export default {
           .then(response => {
             // console.log(response.data)
             this.isMailing = false
+            this.$store.commit('requests/update', {status: 'formEmailed'})
+            this.$store.dispatch('requests/updateRequest', {status: 'formEmailed'})
             this.$toast.open({
               message: `Sent! Check your inbox for a copy (${this.formEmail})`,
               type: 'is-success'

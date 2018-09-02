@@ -340,7 +340,7 @@
         </my-canvas>
       <section >
         <button v-if="signStep" @click.prevent="() => { signStep = null; scrollUp() }" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>{{$t('request.stages.back')}}</span></button>
-        <nuxt-link v-else :to="localePath({ name: 'request-stage', params: { stage: 'review'} })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>{{$t('request.stages.back')}}</span></nuxt-link>
+        <nuxt-link v-else :to="localePath({ name: 'request-review' })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>{{$t('request.stages.back')}}</span></nuxt-link>
     </section>
     </div>
   <scroll-up></scroll-up>
@@ -360,7 +360,7 @@ import axios from 'axios'
 import ScrollUp from '~/components/ScrollUp'
 import snarkdown from 'snarkdown'
 import fileSaver from 'file-saver'
-import { getDeadlineLanguage, flattenRules } from '~/utils/helpers'
+// import { getDeadlineLanguage, flattenRules } from '~/utils/helpers'
 
 export default {
   name: 'SignAndSubmit',
@@ -379,8 +379,8 @@ export default {
     let state = store.getters['requests/getCurrent'] && store.getters['requests/getCurrent'].leo ? store.getters['requests/getCurrent'].leo.s : ''
     // let state = store.getters['requests/getCurrent'].leo.s || ''
     let elections = (await app.$content('/elections').get('elections')).body
-    let voterRegistrationStatus = store.getters['requests/getCurrent'].isRegistered || null
-    let voterType = store.getters['requests/getCurrent'].voterClass || null
+    // let voterRegistrationStatus = store.getters['requests/getCurrent'].isRegistered || null
+    // let voterType = store.getters['requests/getCurrent'].voterClass || null
     return {
       registering: store.getters['requests/getCurrent'].isRegistered !== 'registered',
       state: store.getters['requests/getCurrent'].leo.s,
@@ -396,9 +396,9 @@ export default {
           var dateB = new Date(b.date).getTime()
           return dateA - dateB
         }),
-      elections: elections,
-      deadlineLanguage: getDeadlineLanguage(elections, state, voterRegistrationStatus, voterType, null),
-      rules: flattenRules(elections)
+      elections: elections
+      // deadlineLanguage: getDeadlineLanguage(elections, state, voterRegistrationStatus, voterType, null),
+      // rules: flattenRules(elections)
     }
   },
   data () {
@@ -419,7 +419,7 @@ export default {
     let feat = this
     if (process.browser) {
       // console.log('starting to retrieve file')
-      axios.get(encodeURI(`/api/fpca?firstName=${this.firstName || ''}&lastName=${this.lastName || ''}&middleName=${this.middleName || ''}&suffix=${this.suffix || ''}&ssn=${this.ssn || ''}&previousName=${this.previousName.previousName || ''}&dob=${this.dob || ''}&stateId=${this.stateId || ''}&votStreet=${this.votStreet || ''}&votApt=${this.votApt || ''}&votCity=${this.votCity || ''}&votState=${this.votState || ''}&votCounty=${this.votCounty || ''}&votZip=${this.votZip || ''}&abrAdr=${this.abrAdr.formatted && this.abrAdr.formatted[0] ? this.abrAdr.formatted[0] : ''}\n${this.abrAdr.formatted && this.abrAdr.formatted[1] ? this.abrAdr.formatted[1] : ''}\n${this.abrAdr.formatted && this.abrAdr.formatted[2] ? this.abrAdr.formatted[2] : ''}\n${this.abrAdr.formatted && this.abrAdr.formatted[3] ? this.abrAdr.formatted[3] : ''}\n${this.abrAdr.formatted && this.abrAdr.formatted[4] ? this.abrAdr.formatted[4] : ''}&fwdAdr=${this.fwdAdr.formatted && this.fwdAdr.formatted[0] ? this.fwdAdr.formatted[0] : ''}\n${this.fwdAdr.formatted && this.fwdAdr.formatted[1] ? this.fwdAdr.formatted[1] : ''}\n${this.fwdAdr.formatted && this.fwdAdr.formatted[2] ? this.fwdAdr.formatted[2] : ''}\n${this.fwdAdr.formatted && this.fwdAdr.formatted[3] ? this.fwdAdr.formatted[3] : ''}\n${this.fwdAdr.formatted && this.fwdAdr.formatted[4] ? this.fwdAdr.formatted[4] : ''}&email=${encodeURIComponent(this.email) || ''}&altEmail=${encodeURIComponent(this.altEmail) || ''}&tel=${this.tel ? encodeURIComponent(this.tel.replace(/\s/g, '')) : ''}&fax=${this.fax ? encodeURIComponent(this.fax.replace(/\s/g, '')) : ''}&party=${this.party || ''}&addlInfo=${this.addlInfo || ''}&date=${this.date || ''}&class=${this.voterClass || ''}&sex=${this.sex || ''}&recBallot=${this.recBallot || ''}&leoName=${this.leoName || ''}&leoAddress=${this.leoAdr || ''}&leoFax=${this.leoFax || ''}&leoEmail=${this.leoEmail || ''}&leoPhone=${this.leoPhone || ''}&transmitOpts=${this.stateRules.ballotReceiptOptions.join(',')}&deadline=${encodeURIComponent(this.deadlineLanguage)}`), {responseType: 'arraybuffer'})
+      axios.get(encodeURI(`/api/fpca?firstName=${this.firstName || ''}&lastName=${this.lastName || ''}&middleName=${this.middleName || ''}&suffix=${this.suffix || ''}&ssn=${this.ssn || ''}&previousName=${this.previousName.previousName || ''}&dob=${this.dob || ''}&stateId=${this.stateId || ''}&votStreet=${this.votStreet || ''}&votApt=${this.votApt || ''}&votCity=${this.votCity || ''}&votState=${this.votState || ''}&votCounty=${this.votCounty || ''}&votZip=${this.votZip || ''}&abrAdr=${this.abrAdr.formatted && this.abrAdr.formatted[0] ? this.abrAdr.formatted[0] : ''}\n${this.abrAdr.formatted && this.abrAdr.formatted[1] ? this.abrAdr.formatted[1] : ''}\n${this.abrAdr.formatted && this.abrAdr.formatted[2] ? this.abrAdr.formatted[2] : ''}\n${this.abrAdr.formatted && this.abrAdr.formatted[3] ? this.abrAdr.formatted[3] : ''}\n${this.abrAdr.formatted && this.abrAdr.formatted[4] ? this.abrAdr.formatted[4] : ''}&fwdAdr=${this.fwdAdr.formatted && this.fwdAdr.formatted[0] ? this.fwdAdr.formatted[0] : ''}\n${this.fwdAdr.formatted && this.fwdAdr.formatted[1] ? this.fwdAdr.formatted[1] : ''}\n${this.fwdAdr.formatted && this.fwdAdr.formatted[2] ? this.fwdAdr.formatted[2] : ''}\n${this.fwdAdr.formatted && this.fwdAdr.formatted[3] ? this.fwdAdr.formatted[3] : ''}\n${this.fwdAdr.formatted && this.fwdAdr.formatted[4] ? this.fwdAdr.formatted[4] : ''}&email=${encodeURIComponent(this.email) || ''}&altEmail=${encodeURIComponent(this.altEmail) || ''}&tel=${this.tel ? encodeURIComponent(this.tel.replace(/\s/g, '')) : ''}&fax=${this.fax ? encodeURIComponent(this.fax.replace(/\s/g, '')) : ''}&party=${this.party || ''}&addlInfo=${this.addlInfo || ''}&date=${this.date || ''}&class=${this.voterClass || ''}&sex=${this.sex || ''}&recBallot=${this.recBallot || ''}&leoName=${this.leoName || ''}&leoAddress=${this.leoAdr ? encodeURIComponent(this.leoAdr) : ''}&leoFax=${this.leoFax || ''}&leoEmail=${this.leoEmail || ''}&leoPhone=${this.leoPhone || ''}&transmitOpts=${this.transmitOpts}&transmitInstructions=${this.transmitInstructions ? encodeURIComponent(this.transmitInstructions) : ''}&deadline=${encodeURIComponent(this.deadlineLanguage)}`), {responseType: 'arraybuffer'})
         .then((response) => {
           // console.log('response', response)
           let blob = new Blob([response.data], {type: 'application/pdf'})
@@ -456,16 +456,24 @@ export default {
     },
     md: function (md) { return snarkdown(md) },
     confirmPdfDownload () {
-      this.$dialog.alert({
-        title: this.$t('request.fpcaDownload.downloadedAlertTitle'),
+      this.$store.dispatch('requests/updateRequest', {status: 'formDownloaded'})
+      this.$store.commit('requests/update', {status: 'formDownloaded'})
+      this.$toast.open({
         message: this.md(this.$t('request.fpcaDownload.downloadedAlertMessage')),
-        confirmText: this.$t('request.fpcaDownload.confirmButton'),
-        type: 'is-danger',
-        hasIcon: true,
-        icon: 'download',
-        iconPack: 'fas',
-        onConfirm: () => this.$router.push(this.localePath('dashboard'))
+        type: 'is-success',
+        duration: 7000
       })
+      this.$router.push(this.localePath('dashboard'))
+      // this.$dialog.alert({
+      //   title: this.$t('request.fpcaDownload.downloadedAlertTitle'),
+      //   message: this.md(this.$t('request.fpcaDownload.downloadedAlertMessage')),
+      //   confirmText: this.$t('request.fpcaDownload.confirmButton'),
+      //   type: 'is-danger',
+      //   hasIcon: true,
+      //   icon: 'download',
+      //   iconPack: 'fas',
+      //   onConfirm: () => this.$router.push(this.localePath('dashboard'))
+      // })
     },
     // openPdf () {
     //   this.$dialog.alert({
@@ -548,6 +556,140 @@ export default {
     // }
   },
   computed: {
+    transmitInstructions () {
+      return this.stateRules.ballotReceiptOptions.includes('Email')
+        ? this.$t(`request.deadlineLanguage.transmitInstructions`, {
+          leoName: this.leoName,
+          transmitOpts: this.transmitOpts
+        }) + ' ' + this.$t(`request.deadlineLanguage.emailSuggested`)
+        : this.$t(`request.deadlineLanguage.transmitInstructions`, {
+          leoName: this.leoName,
+          transmitOpts: this.transmitOpts
+        })
+    },
+    transmitOpts () {
+      switch (this.stateRules.ballotReceiptOptions.length) {
+        case 1:
+          return this.$t(`request.deadlineLanguage.${this.stateRules.ballotReceiptOptions[0]}`)
+        case 2:
+          return this.$t(`request.deadlineLanguage.opt2`, {item1: this.stateRules.ballotReceiptOptions[0], item2: this.stateRules.ballotReceiptOptions[1]})
+        case 3:
+          return this.$t(`request.deadlineLanguage.opt3`, {item1: this.stateRules.ballotReceiptOptions[0], item2: this.stateRules.ballotReceiptOptions[1], item3: this.stateRules.ballotReceiptOptions[2]})
+        case 4:
+          return this.$t(`request.deadlineLanguage.opt4`, {item1: this.stateRules.ballotReceiptOptions[0], item2: this.stateRules.ballotReceiptOptions[1], item3: this.stateRules.ballotReceiptOptions[2], item4: this.stateRules.ballotReceiptOptions[3]})
+        default:
+          return `mail, email or fax`
+      }
+    },
+    newVoterDeadlineLanguageObject () {
+      let elections = this.getCurrentDeadlines.filter(x => x.ruleType === 'Registration')
+      let rule = elections[0].rule
+      let deadline = new Date(elections[0].ruleDate)
+      let methods = elections.length < 2 || elections[0].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.submissionMethod`, {method: elections[0].submissionOptions.join('/')})
+      let altMethods = elections.length < 2 || elections[1].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.alternateSubmissionMethod`, {rule: this.$t(`request.deadlineLanguage.${elections[1].rule}`), deadline: new Date(elections[1].ruleDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}), method: elections[1].submissionOptions.join('/')})
+      return {
+        rule: this.$t(`request.deadlineLanguage.${rule}`),
+        deadline: deadline.toLocaleDateString('en-US', {month: 'short', day: 'numeric'}),
+        submissionMethod: methods,
+        alternateSubmissionMethod: altMethods,
+        electionDay: new Date(elections[0].electionDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}),
+        electionType: elections[0].electionType,
+        note: elections[0].note || '',
+        url: process.env.url,
+        state: elections[0].state
+      }
+    },
+    registeredVoterDeadlineObject () {
+      let elections = this.getCurrentDeadlines.filter(x => x.ruleType === 'Ballot Request')
+      let rule = elections[0].rule
+      let deadline = new Date(elections[0].ruleDate)
+      let methods = elections.length < 2 || elections[0].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.submissionMethod`, {method: elections[0].submissionOptions.join('/')})
+      let altMethods = elections.length < 2 || elections[1].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.alternateSubmissionMethod`, {rule: this.$t(`request.deadlineLanguage.${elections[1].rule}`), deadline: new Date(elections[1].ruleDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}), method: elections[1].submissionOptions.join('/')})
+      return {
+        rule: this.$t(`request.deadlineLanguage.${rule}`),
+        deadline: deadline.toLocaleDateString('en-US', {month: 'short', day: 'numeric'}),
+        submissionMethod: methods,
+        alternateSubmissionMethod: altMethods,
+        electionDay: new Date(elections[0].electionDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}),
+        electionType: elections[0].electionType,
+        note: elections[0].note || '',
+        url: process.env.url,
+        state: elections[0].state
+      }
+    },
+    unsureVoterDeadlineObject () {
+      let electionsNew = this.getCurrentDeadlines.filter(x => x.ruleType === 'Ballot Request')
+      let newVoterRule = electionsNew[0].rule
+      let newVoterDeadline = new Date(electionsNew[0].ruleDate)
+      let newVoterMethods = electionsNew.length < 2 || electionsNew[0].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.submissionMethod`, {method: electionsNew[0].submissionOptions.join('/')})
+      let newVoterAltMethods = electionsNew.length < 2 || electionsNew[1].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.alternateSubmissionMethod`, {rule: this.$t(`request.deadlineLanguage.${electionsNew[1].rule}`), deadline: new Date(electionsNew[1].ruleDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}), method: electionsNew[1].submissionOptions.join('/')})
+      let electionsRegistered = this.getCurrentDeadlines.filter(x => x.ruleType === 'Ballot Request')
+      let registeredVoterRule = electionsRegistered[0].rule
+      let registeredVoterDeadline = new Date(electionsRegistered[0].ruleDate)
+      let registeredVoterMethods = electionsRegistered.length < 2 || electionsRegistered[0].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.submissionMethod`, {method: electionsRegistered[0].submissionOptions.join('/')})
+      let registeredVoterAltMethods = electionsRegistered.length < 2 || electionsRegistered[1].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.alternateSubmissionMethod`, {rule: this.$t(`request.deadlineLanguage.${electionsRegistered[1].rule}`), deadline: new Date(electionsRegistered[1].ruleDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}), method: electionsRegistered[1].submissionOptions.join('/')})
+      return {
+        newVoterRule: this.$t(`request.deadlineLanguage.${newVoterRule}`),
+        newVoterDeadline: newVoterDeadline.toLocaleDateString('en-US', {month: 'short', day: 'numeric'}),
+        newVoterSubmissionMethod: newVoterMethods,
+        newVoterAlternateSubmissionMethod: newVoterAltMethods,
+        newVoterElectionDay: new Date(electionsNew[0].electionDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}),
+        newVoterElectionType: electionsNew[0].electionType,
+        newVoterNote: electionsNew[0].note || '',
+        registeredVoterRule: this.$t(`request.deadlineLanguage.${registeredVoterRule}`),
+        registeredVoterDeadline: registeredVoterDeadline.toLocaleDateString('en-US', {month: 'short', day: 'numeric'}),
+        registeredVoterSubmissionMethod: registeredVoterMethods,
+        registeredVoterAlternateSubmissionMethod: registeredVoterAltMethods,
+        registeredVoterElectionDay: new Date(electionsRegistered[0].electionDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}),
+        registeredVoterElectionType: electionsRegistered[0].electionType,
+        registeredVoterNote: electionsRegistered[0].note || '',
+        url: process.env.url,
+        state: electionsNew[0].state
+      }
+    },
+    ballotReturnDeadlineObject () {
+      let elections = this.getCurrentDeadlines.filter(x => x.ruleType === 'Ballot Return')
+      let rule = elections[0].rule
+      let deadline = new Date(elections[0].ruleDate)
+      let methods = elections.length < 2 || elections[0].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.submissionMethod`, {method: elections[0].submissionOptions.join('/')})
+      let altMethods = elections.length < 2 || elections[1].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.alternateSubmissionMethod`, {rule: this.$t(`request.deadlineLanguage.${elections[1].rule}`), deadline: new Date(elections[1].ruleDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}), method: elections[1].submissionOptions.join('/')})
+      return {
+        rule: this.$t(`request.deadlineLanguage.${rule}`),
+        deadline: deadline.toLocaleDateString('en-US', {month: 'short', day: 'numeric'}),
+        submissionMethod: methods,
+        alternateSubmissionMethod: altMethods,
+        electionDay: new Date(elections[0].electionDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}),
+        electionType: elections[0].electionType,
+        note: elections[0].note || '',
+        url: process.env.url,
+        state: elections[0].state
+      }
+    },
+    deadlineLanguage () {
+      switch (this.isRegistered) {
+        case 'notRegistered':
+          return this.$t('request.deadlineLanguage.newVoters', this.newVoterDeadlineLanguageObject)
+        case 'registered':
+          return this.$t('request.deadlineLanguage.registeredVoters', this.registeredVoterDeadlineObject)
+        default:
+          return this.$t('request.deadlineLanguage.unsureRegistrationVoters', this.unsureVoterDeadlineObject)
+      }
+    },
+    deadlineFormSubmitted () {
+      return this.$t('request.deadlineLanguage.formSubmitted', {
+        alsoVoterRegistration: this.isRegistered === 'registered' ? '' : this.$t('request.deadlineLanguage.alsoVoterRegistration')
+      })
+    },
+    deadlineFormConfirmation () {
+      return this.$t('request.deadlineLanguage.formConfirmation')
+    },
+    deadlineReceiveBallot () {
+      let daysToNextElection = Math.ceil((new Date(this.getCurrentDeadlines[0].electionDate).getTime() - new Date().getTime()) / (1000 * 3600 * 24))
+      return this.$t(`request.deadlineLanguage.${daysToNextElection > 44 ? 'sendBallot45days' : 'sendBallotLessThan45days'}`)
+    },
+    deadlineBallotReturn () {
+      return this.$t('request.deadlineLanguage.ballotReturn', this.ballotReturnDeadlineObject)
+    },
     documentRequired () {
       switch (this.state.toLowerCase()) {
         case 'ak':
@@ -654,7 +796,7 @@ export default {
       canCaptureImage: state => state.userauth.device.hasWebCam,
       isIE: state => state.userauth.device.isIE
     }),
-    ...mapGetters('requests', ['getCurrent'])
+    ...mapGetters('requests', ['getCurrent', 'getCurrentDeadlines'])
   }
 }
 </script>

@@ -742,6 +742,35 @@ collections:
                   - {label: "Full SSN Required", name: "fullSSNRequired", widget: "string"}
                   - {label: "Last 4 digits of SSN Required", name: "SSN4Required", widget: "string"}
                   - {label: "State (or other ID) Required", name: "stateIdRequired", widget: "string"}
+          - label: "Deadline Language"
+            name: "deadlineLanguage"
+            widget: "object"
+            fields:
+              - {label: "postmarked by", name: "postmarkedBy", widget: "string"}
+              - {label: "received by", name: "receivedBy", widget: "string"}
+              - {label: "sent by", name: "sentBy", widget: "string"}
+              - {label: "signed by", name: "signedBy", widget: "string"}
+              - {label: "signed/postmarked by", name: "signedPostmarkedBy", widget: "string"}
+              - {label: "email", name: "email", widget: "string"}
+              - {label: "postal mail", name: "mail", widget: "string"}
+              - {label: "fax", name: "fax", widget: "string"}
+              - {label: "online", name: "online", widget: "string"}
+              - {label: "Two Options", name: "opt2", widget: "string"}
+              - {label: "Three Options", name: "opt3", widget: "string"}
+              - {label: "Four Options", name: "opt4", widget: "string"}
+              - {label: "Submission method", name: "submissionMethod", widget: "string"}
+              - {label: "alternate submission method", name: "alternateSubmissionMethod", widget: "string"}
+              - {label: "new voters", name: "newVoters", widget: "string"}
+              - {label: "registered voters", name: "registeredVoters", widget: "string"}
+              - {label: "unsure registration voters", name: "unsureRegistrationVoters", widget: "string"}
+              - {label: "language if also serves as registration", name: "alsoVoterRegistration", widget: "string"}
+              - {label: "Form submitted", name: "formSubmitted", widget: "string"}
+              - {label: "leo confirmation", name: "formConfirmation", widget: "string"}
+              - {label: "ballots sent (if earlier than 45 days)", name: "sendBallot45days", widget: "string"}
+              - {label: "ballots sent (if less than 45 days)", name: "sendBallotLessThan45days", widget: "string"}
+              - {label: "ballot return deadline", name: "ballotReturn", widget: "string"}
+              - {label: "Transmit Instructions", name: "transmitInstructions", widget: "string"}
+              - {label: "Suggest to send by email", name: "emailSuggested", widget: "string"}
       - label: "Dashboard"
         name: "dashboard"
         widget: "object"
@@ -759,6 +788,8 @@ collections:
           - {label: "Edit your form", name: "makeChanges", widget: "markdown"}
           - {label: "Start a new session", name: "clearSession", widget: "string"}
           - {label: "thankYou", name: "thankYou", widget: "markdown"}
+          - {label: "Form Submitted", name: "formSubmitted", widget: "markdown"}
+          - {label: "Form Pending submission", name: "requiresSubmit", widget: "markdown"}
           - {label: "Verify with your LEO", name: "verify", widget: "markdown"}
           - label: "Fill & Sign Request Stage"
             name: "fill"

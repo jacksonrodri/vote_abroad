@@ -6,6 +6,7 @@
 <!-- your information -->
   <section v-if="stage.slug === 'your-information'">
     <form @submit.prevent id="your-information" key="your-information">
+      <h3 class="subtitle is-5">{{deadlineLanguage}}</h3>
       <!-- firstName -->
       <div class="field">
         <label class="label" for="firstName">{{ $t('request.firstName.label') }}<transition name="fade"><span v-if="!firstName && !$v.firstName.$error" class="required"> Required</span></transition></label>
@@ -525,6 +526,115 @@ export default {
     // return { validations }
   },
   computed: {
+    newVoterDeadlineLanguageObject () {
+      let elections = this.getCurrentDeadlines.filter(x => x.ruleType === 'Registration')
+      let rule = elections[0].rule
+      let deadline = new Date(elections[0].ruleDate)
+      let methods = elections.length < 2 || elections[0].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.submissionMethod`, {method: elections[0].submissionOptions.join('/')})
+      let altMethods = elections.length < 2 || elections[1].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.alternateSubmissionMethod`, {rule: this.$t(`request.deadlineLanguage.${elections[1].rule}`), deadline: new Date(elections[1].ruleDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}), method: elections[1].submissionOptions.join('/')})
+      return {
+        rule: this.$t(`request.deadlineLanguage.${rule}`),
+        deadline: deadline.toLocaleDateString('en-US', {month: 'short', day: 'numeric'}),
+        submissionMethod: methods,
+        alternateSubmissionMethod: altMethods,
+        electionDay: new Date(elections[0].electionDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}),
+        electionType: elections[0].electionType,
+        note: elections[0].note || '',
+        url: process.env.url,
+        state: elections[0].state
+      }
+    },
+    registeredVoterDeadlineObject () {
+      let elections = this.getCurrentDeadlines.filter(x => x.ruleType === 'Ballot Request')
+      let rule = elections[0].rule
+      let deadline = new Date(elections[0].ruleDate)
+      let methods = elections.length < 2 || elections[0].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.submissionMethod`, {method: elections[0].submissionOptions.join('/')})
+      let altMethods = elections.length < 2 || elections[1].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.alternateSubmissionMethod`, {rule: this.$t(`request.deadlineLanguage.${elections[1].rule}`), deadline: new Date(elections[1].ruleDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}), method: elections[1].submissionOptions.join('/')})
+      return {
+        rule: this.$t(`request.deadlineLanguage.${rule}`),
+        deadline: deadline.toLocaleDateString('en-US', {month: 'short', day: 'numeric'}),
+        submissionMethod: methods,
+        alternateSubmissionMethod: altMethods,
+        electionDay: new Date(elections[0].electionDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}),
+        electionType: elections[0].electionType,
+        note: elections[0].note || '',
+        url: process.env.url,
+        state: elections[0].state
+      }
+    },
+    unsureVoterDeadlineObject () {
+      let electionsNew = this.getCurrentDeadlines.filter(x => x.ruleType === 'Ballot Request')
+      let newVoterRule = electionsNew[0].rule
+      let newVoterDeadline = new Date(electionsNew[0].ruleDate)
+      let newVoterMethods = electionsNew.length < 2 || electionsNew[0].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.submissionMethod`, {method: electionsNew[0].submissionOptions.join('/')})
+      let newVoterAltMethods = electionsNew.length < 2 || electionsNew[1].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.alternateSubmissionMethod`, {rule: this.$t(`request.deadlineLanguage.${electionsNew[1].rule}`), deadline: new Date(electionsNew[1].ruleDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}), method: electionsNew[1].submissionOptions.join('/')})
+      let electionsRegistered = this.getCurrentDeadlines.filter(x => x.ruleType === 'Ballot Request')
+      let registeredVoterRule = electionsRegistered[0].rule
+      let registeredVoterDeadline = new Date(electionsRegistered[0].ruleDate)
+      let registeredVoterMethods = electionsRegistered.length < 2 || electionsRegistered[0].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.submissionMethod`, {method: electionsRegistered[0].submissionOptions.join('/')})
+      let registeredVoterAltMethods = electionsRegistered.length < 2 || electionsRegistered[1].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.alternateSubmissionMethod`, {rule: this.$t(`request.deadlineLanguage.${electionsRegistered[1].rule}`), deadline: new Date(electionsRegistered[1].ruleDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}), method: electionsRegistered[1].submissionOptions.join('/')})
+      return {
+        newVoterRule: this.$t(`request.deadlineLanguage.${newVoterRule}`),
+        newVoterDeadline: newVoterDeadline.toLocaleDateString('en-US', {month: 'short', day: 'numeric'}),
+        newVoterSubmissionMethod: newVoterMethods,
+        newVoterAlternateSubmissionMethod: newVoterAltMethods,
+        newVoterElectionDay: new Date(electionsNew[0].electionDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}),
+        newVoterElectionType: electionsNew[0].electionType,
+        newVoterNote: electionsNew[0].note || '',
+        registeredVoterRule: this.$t(`request.deadlineLanguage.${registeredVoterRule}`),
+        registeredVoterDeadline: registeredVoterDeadline.toLocaleDateString('en-US', {month: 'short', day: 'numeric'}),
+        registeredVoterSubmissionMethod: registeredVoterMethods,
+        registeredVoterAlternateSubmissionMethod: registeredVoterAltMethods,
+        registeredVoterElectionDay: new Date(electionsRegistered[0].electionDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}),
+        registeredVoterElectionType: electionsRegistered[0].electionType,
+        registeredVoterNote: electionsRegistered[0].note || '',
+        url: process.env.url,
+        state: electionsNew[0].state
+      }
+    },
+    ballotReturnDeadlineObject () {
+      let elections = this.getCurrentDeadlines.filter(x => x.ruleType === 'Ballot Return')
+      let rule = elections[0].rule
+      let deadline = new Date(elections[0].ruleDate)
+      let methods = elections.length < 2 || elections[0].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.submissionMethod`, {method: elections[0].submissionOptions.join('/')})
+      let altMethods = elections.length < 2 || elections[1].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.alternateSubmissionMethod`, {rule: this.$t(`request.deadlineLanguage.${elections[1].rule}`), deadline: new Date(elections[1].ruleDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}), method: elections[1].submissionOptions.join('/')})
+      return {
+        rule: this.$t(`request.deadlineLanguage.${rule}`),
+        deadline: deadline.toLocaleDateString('en-US', {month: 'short', day: 'numeric'}),
+        submissionMethod: methods,
+        alternateSubmissionMethod: altMethods,
+        electionDay: new Date(elections[0].electionDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}),
+        electionType: elections[0].electionType,
+        note: elections[0].note || '',
+        url: process.env.url,
+        state: elections[0].state
+      }
+    },
+    deadlineLanguage () {
+      switch (this.isRegistered) {
+        case 'notRegistered':
+          return this.$t('request.deadlineLanguage.newVoters', this.newVoterDeadlineLanguageObject)
+        case 'registered':
+          return this.$t('request.deadlineLanguage.registeredVoters', this.registeredVoterDeadlineObject)
+        default:
+          return this.$t('request.deadlineLanguage.unsureRegistrationVoters', this.unsureVoterDeadlineObject)
+      }
+    },
+    deadlineFormSubmitted () {
+      return this.$t('request.deadlineLanguage.formSubmitted', {
+        alsoVoterRegistration: this.isRegistered === 'registered' ? '' : this.$t('request.deadlineLanguage.alsoVoterRegistration')
+      })
+    },
+    deadlineFormConfirmation () {
+      return this.$t('request.deadlineLanguage.formConfirmation')
+    },
+    deadlineReceiveBallot () {
+      let daysToNextElection = Math.ceil((new Date(this.getCurrentDeadlines[0].electionDate).getTime() - new Date().getTime()) / (1000 * 3600 * 24))
+      return this.$t(`request.deadlineLanguage.${daysToNextElection > 44 ? 'sendBallot45days' : 'sendBallotLessThan45days'}`)
+    },
+    deadlineBallotReturn () {
+      return this.$t('request.deadlineLanguage.ballotReturn', this.ballotReturnDeadlineObject)
+    },
     phoneThree: {
       get () { return this.$store.state.data.phone || '' },
       set (val) { this.$store.dispatch('data/updatePhone', val) }
@@ -742,7 +852,7 @@ export default {
       ]
     },
     ...mapGetters('data', ['isValidNumber']),
-    ...mapGetters('requests', ['getCurrent'])
+    ...mapGetters('requests', ['getCurrent', 'getCurrentDeadlines'])
   },
   filters: {
     markdown: function (md) {

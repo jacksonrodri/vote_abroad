@@ -176,11 +176,16 @@ export const getters = {
       electionType: x.electionType,
       ruleType: k,
       ruleDate: r.date,
-      rule: typeof r.rule === 'string'
-        ? ['postmarked by', 'received by', 'sent by', 'no deadline', 'not required', 'signed by', 'signed/postmarked by'].filter(x => r.rule.toLowerCase().includes(x)).includes('signed/postmarked by') ? 'signed/postmarked by' : ['postmarked by', 'received by', 'sent by', 'no deadline', 'not required', 'signed by', 'signed/postmarked by'].filter(x => r.rule.toLowerCase().includes(x))[0]
-        : 'Received By',
+      rule: typeof r.rule === 'string' && !/received by|no deadline|not required/gi.test(r.rule)
+        ? ['postmarked by', 'sent by', 'signed by', 'signed/postmarked by'].filter(x => r.rule.toLowerCase().includes(x)).includes('signed/postmarked by') ? 'signedPostmarked' : ['postmarked', 'received', 'sent', 'signed'].filter(x => r.rule.toLowerCase().includes(x))[0] + 'By'
+        : 'receivedBy',
+      // submissionOptions: ['Email', 'Fax', 'Mail'].filter(opt => {
+      //   let rule = typeof r.rule === 'string' ? r.rule : ''
+      //   let re = new RegExp(opt)
+      //   return re.test(rule)
+      // }).map(r => r.toLowerCase()),
       submissionOptions: ['Email', 'Fax', 'Mail'].filter(opt => {
-        let rule = r.rule === 'string' ? r.rule : ''
+        let rule = typeof r.rule === 'string' ? r.rule : ''
         let re = new RegExp(opt)
         return re.test(rule) || !/Mail|Email|Fax/.test(rule)
       }).map(r => r.toLowerCase()),
