@@ -16,7 +16,7 @@ La mayoría de los estados también proporciona un sitio web donde usted puede v
 
 Después de 22 de septiembre, añadir:
 
-Si le preocupa la posibilidad de no recibir su boleta electoral en blanco a tiempo con el fin de poder cumplir con la fecha límite para regresarla con su voto, usted puede votar AHORA usando la Federal Write-In Absentee Ballot (FWAB o “boleta de respaldo”). El envío de una boleta de respaldo puede ser confuso, por lo que hemos creado un sitio web con los pasos que debe seguir: www.democratsabroad.org/fwab [o, para los estados que requieren que las boletas con el voto únicamente sean enviadas por correo postal, por favor vea: www.democratsabroad.org/fwab_mail]
+Si le preocupa la posibilidad de no recibir su boleta electoral en blanco a tiempo con el fin de poder cumplir con la fecha límite para regresarla con su voto, usted puede votar AHORA usando la Federal Write-In Absentee Ballot (FWAB o “boleta de respaldo”). El envío de una boleta de respaldo puede ser confuso, por lo que hemos creado un sitio web con los pasos que debe seguir: www.votefromabroad.org/fwab [o, para los estados que requieren que las boletas con el voto únicamente sean enviadas por correo postal, por favor vea: www.votefromabroad.org/fwab_mail]
 
 El FWAB es una boleta electoral, así que por favor siga las instrucciones cuidadosamente y asegúrese de estar pendiente de las fechas límite establecidas. La información sobre fechas límite de su estado estará especificada en las instrucciones que se imprimen con su FWAB lleno. Por favor asegúrese de reservar suficiente tiempo para el envío por correo postal (o comunicarse con la Embajada o Consulado de los Estados Unidos para enviar su boleta en la valija diplomática).
 
