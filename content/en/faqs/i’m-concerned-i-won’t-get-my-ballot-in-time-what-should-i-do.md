@@ -1,5 +1,7 @@
 ---
 title: 'I''m concerned I won''t get my ballot in time, what should I do?'
+slug: im-concerned-i-wont-get-my-ballot-in-time
+isInMenu: false
 categories:
   - category: FWAB - Emergency Write-in Ballot
 relatedFaqs:
