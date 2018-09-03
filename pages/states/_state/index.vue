@@ -51,7 +51,7 @@
               </b-table-column>
             </template>
           </b-table>
-          <h2 class="subtitle is-4">Election Officials</h2>
+          <h2 class="title is-5">Election Officials</h2>
           <b-field>
           <b-autocomplete
             v-model="typedLeo"

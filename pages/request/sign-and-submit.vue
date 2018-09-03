@@ -557,7 +557,7 @@ export default {
   },
   computed: {
     transmitInstructions () {
-      return this.stateRules.ballotReceiptOptions.includes('Email')
+      return this.stateRules.fpcaSubmitOptionsRegister.includes('Email')
         ? this.$t(`request.deadlineLanguage.transmitInstructions`, {
           leoName: this.leoName,
           transmitOpts: this.transmitOpts
@@ -568,15 +568,15 @@ export default {
         })
     },
     transmitOpts () {
-      switch (this.stateRules.ballotReceiptOptions.length) {
+      switch (this.stateRules.fpcaSubmitOptionsRegister.length) {
         case 1:
-          return this.$t(`request.deadlineLanguage.${this.stateRules.ballotReceiptOptions[0]}`)
+          return this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[0].toLowerCase()}`)
         case 2:
-          return this.$t(`request.deadlineLanguage.opt2`, {item1: this.stateRules.ballotReceiptOptions[0], item2: this.stateRules.ballotReceiptOptions[1]})
+          return this.$t(`request.deadlineLanguage.opt2`, {item1: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[0].toLowerCase()}`).toLowerCase(), item2: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[1].toLowerCase()}`).toLowerCase()})
         case 3:
-          return this.$t(`request.deadlineLanguage.opt3`, {item1: this.stateRules.ballotReceiptOptions[0], item2: this.stateRules.ballotReceiptOptions[1], item3: this.stateRules.ballotReceiptOptions[2]})
+          return this.$t(`request.deadlineLanguage.opt3`, {item1: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[0].toLowerCase()}`).toLowerCase(), item2: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[1].toLowerCase()}`).toLowerCase(), item3: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[2].toLowerCase()}`).toLowerCase()})
         case 4:
-          return this.$t(`request.deadlineLanguage.opt4`, {item1: this.stateRules.ballotReceiptOptions[0], item2: this.stateRules.ballotReceiptOptions[1], item3: this.stateRules.ballotReceiptOptions[2], item4: this.stateRules.ballotReceiptOptions[3]})
+          return this.$t(`request.deadlineLanguage.opt4`, {item1: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[0].toLowerCase()}`).toLowerCase(), item2: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[1].toLowerCase()}`).toLowerCase(), item3: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[2].toLowerCase()}`).toLowerCase(), item4: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[3].toLowerCase()}`).toLowerCase()})
         default:
           return `mail, email or fax`
       }

@@ -101,7 +101,7 @@
                     <label class="label">Resize</label>
                   </div>
                   <div class="field-body">
-                    Pinch or scroll on the image to resize it.
+                    Pinch or scroll with your mouse on the image to resize it.
                   </div>
                 </div>
                 <div class="field is-horizontal">
