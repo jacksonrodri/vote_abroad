@@ -48,7 +48,8 @@ module.exports = {
     autocompleteEndpoint: process.env.AUTOCOMPLETE_ENDPOINT || 'api/place/autocomplete/json',
     detailsEndpoint: process.env.PLACES_ENDPOINT || 'api/place/details/json',
     placesKey: process.env.PLACES_KEY || 'AIzaSyDK4AprF-iXbiX2-eU3SAQVyovB_8kIg20',
-    commitRef: process.env.COMMIT_REF || ''
+    commitRef: process.env.COMMIT_REF || '',
+    offline: process.env.OFFLINE || false
   },
   modules: [
     // '@nuxtjs/sentry',

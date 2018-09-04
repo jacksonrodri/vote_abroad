@@ -5,7 +5,7 @@
   "author": "Alex Montgomery <Alex@DemocratsAbroad.org>",
   "private": true,
   "scripts": {
-    "dev": "CONTEXT=development nuxt",
+    "dev": "CONTEXT=development OFFLINE=false nuxt",
     "getaddressdata": "rm -rf data/postal && svn export https://github.com/mirumee/google-i18n-address/trunk/i18naddress/data ./data/postal",
     "build": "nuxt build",
     "build:lambda": "netlify-lambda build src/lambda",
