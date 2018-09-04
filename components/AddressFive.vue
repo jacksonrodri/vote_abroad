@@ -139,8 +139,12 @@ export default {
   },
   computed: {
     formattedAddress () {
+      if (this.adr && this.adr.usesAlternateFormat) {
+        return ['alt1', 'alt2', 'alt3', 'alt4'].map(x => this.adr[x] || null).filter(x => x).concat(this.countryData.name)
+      } else {
+        return this.countryData && this.countryData.cfmt ? this.countryData.cfmt.replace(/%([N|O|A|B|D|C|S|Z|X])/g, (match, p1, offset, string) => this.adr[p1] || '').split(/%n/g).filter(x => x).concat(this.countryData.name) : ['']
+      }
       // return this.countryData && /%A|%B|/.replacethis.countryData.cfmt ? this.countryData.cfmt : ''
-      return this.countryData && this.countryData.cfmt ? this.countryData.cfmt.replace(/%([N|O|A|B|D|C|S|Z|X])/g, (match, p1, offset, string) => this.adr[p1] || '').split(/%n/g).filter(x => x).concat(this.countryData.name) : ['']
     },
     ctry () { return this.adr && this.adr.countryiso ? this.adr.countryiso : '' },
     usesAlternateFormat () { return this.adr && this.adr.usesAlternateFormat ? this.adr.usesAlternateFormat : false },

@@ -1042,7 +1042,8 @@ export default {
           this.$refs.altEmail.$refs.input.focus()
           // this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'altEmail'}})
           break
-        case this.stage.slug === 'voting-information' && this.$v.fwdAdr.$error && this.$refs.fwdAdr:
+        case this.stage.slug === 'voting-information' && this.$v.fwdAdr.$anyError && this.$refs.fwdAdr:
+          console.log('fwdAdr error')
           this.$refs.fwdAdr.$el.scrollIntoView()
           this.$refs.fwdAdr.$el.querySelector('input').focus()
           // this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'fwdAdr  '}})
