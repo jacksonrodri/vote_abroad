@@ -901,6 +901,7 @@ export default {
           // if (this.recBallot === 'fax') { this.$refs.fax.$v.value.$touch() }
           this.$v.altEmail.$touch()
           this.$v.fwdAdr.$touch()
+          this.$v.fwdAdr.A.$touch()
           break
         case 'id-and-contact-information':
           this.$v.sex.$touch()
@@ -1037,12 +1038,12 @@ export default {
           this.$refs.email.$el.querySelector('input').focus()
           // this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'email'}})
           break
-        case this.stage.slug === 'voting-information' && this.$v.altEmail.$error && this.$refs.altEmail:
-          this.$refs.altEmail.$refs.input.$el.scrollIntoView()
-          this.$refs.altEmail.$refs.input.focus()
+        case this.stage.slug === 'voting-information' && this.$v.altEmail.$error && !!this.$refs.altEmail:
+          this.$refs.altEmail.$el.scrollIntoView()
+          this.$refs.altEmail.$el.querySelector('input').focus()
           // this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'altEmail'}})
           break
-        case this.stage.slug === 'voting-information' && this.$v.fwdAdr.$anyError && this.$refs.fwdAdr:
+        case this.stage.slug === 'voting-information' && this.$v.fwdAdr.$anyError && !!this.$refs.fwdAdr:
           console.log('fwdAdr error')
           this.$refs.fwdAdr.$el.scrollIntoView()
           this.$refs.fwdAdr.$el.querySelector('input').focus()
