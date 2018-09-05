@@ -62,10 +62,9 @@ const placeDetails = function fillData (option) {
             input.S = result.adr_address && result.adr_address.includes('region') ? result.adr_address.match('<span class="region">(.*?)</span>')[1] : region
           }
           input.Z = result.adr_address && result.adr_address.includes('postal-code') ? result.adr_address.match('<span class="postal-code">(.*?)</span>')[1] : null
-          if (
-            this.fieldName === 'votAdr' &&
-            (data.result.address_components.filter(y => y.types.includes('administrative_area_level_2'))).length
-          ) input.Y = data.result.address_components.filter(y => y.types.includes('administrative_area_level_2'))[0].long_name.replace(/county/gi, '').trim()
+          if (this.fieldName === 'votAdr' && data.result.address_components.filter(y => y.types.includes('administrative_area_level_2')).length) {
+            input.Y = data.result.address_components.filter(y => y.types.includes('administrative_area_level_2'))[0].long_name.replace(/county/gi, '').trim()
+          }
           // input.country = this.getCountryName(ctry)
           input.countryiso = this.fieldName === 'votAdr' ? 'US' : ctry
           Object.keys(input)

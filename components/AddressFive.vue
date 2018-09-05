@@ -286,6 +286,7 @@ export default {
     }
   },
   mounted () {
+    this.tempA = this.adr.A || ''
     this.sessionToken = uuidv4()
     if (this.ctry) {
       this.updateCountryData(this.ctry)
