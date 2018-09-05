@@ -220,7 +220,7 @@ export default {
         this.$store.commit('requests/update', {leo: null})
       }
       if (!oldVal || newVal !== oldVal) {
-        this.county = ''
+        // this.county = ''
         this.$store.commit('requests/update', {
           stateSpecial: null,
           identification: null
@@ -236,15 +236,18 @@ export default {
   async mounted () {
     this.sessionToken = uuidv4()
     this.tempStreet = this.street
-    if (!this.county && this.state && this.city && this.state !== 'DC') {
-      let {data: { predictions }} = await axios.get(`${process.env.placesUrl + process.env.autocompleteEndpoint}?input=${this.street || ''}%20${this.city || ''}%20${this.state || ''}%20${this.zip || ''}&types=geocode&language=en&components=country:US&key=${process.env.placesKey}`)
-      if (predictions.length > 0) {
-        let {data: {result}} = await axios.get(`${process.env.placesUrl + process.env.detailsEndpoint}?placeid=${predictions[0].place_id}&key=${process.env.placesKey}`)
-        this.county = result.address_components.filter(y => y.types.indexOf('administrative_area_level_2') > -1)[0].long_name
-      }
-    }
+    this.findCounty()
   },
   methods: {
+    async findCounty () {
+      if (!this.county && this.state && this.city && this.state !== 'DC') {
+        let {data: { predictions }} = await axios.get(`${process.env.placesUrl + process.env.autocompleteEndpoint}?input=${this.street || ''}%20${this.city || ''}%20${this.state || ''}%20${this.zip || ''}&types=geocode&language=en&components=country:US&key=${process.env.placesKey}`)
+        if (predictions.length > 0) {
+          let {data: {result}} = await axios.get(`${process.env.placesUrl + process.env.detailsEndpoint}?placeid=${predictions[0].place_id}&key=${process.env.placesKey}`)
+          this.county = result.address_components.filter(y => y.types.includes('administrative_area_level_2'))[0].long_name
+        }
+      }
+    },
     updateAddress: function (field, value) {
       this.$store.commit('requests/update', {votAdr: Object.assign({}, this.votAdr, {[field]: this.decodeHtmlEntity(value) || null})})
       this.$emit('input')

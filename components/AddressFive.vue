@@ -42,7 +42,8 @@
               :data="data"
               field="structured_formatting.main_text"
               :placeholder="part.label"
-              v-model="tempA"
+              :value="tempA || adr[part.type]"
+              @input="val => {tempA = val; updateAddress(part.type, val)}"
               :aria-label="part.label"
               :title="part.label"
               :class="part.class"
@@ -244,11 +245,11 @@ export default {
     ...mapMutations('requests', ['update'])
   },
   watch: {
-    tempA: function (val, oldVal) {
-      if (val !== oldVal) {
-        this.updateAddress('A', val)
-      }
-    },
+    // tempA: function (val, oldVal) {
+    //   if (val) {
+    //     this.updateAddress('A', val)
+    //   }
+    // },
     // countryData (val, oldVal) {
     //   if (val && (!oldVal || val.key !== oldVal.key)) {
     //     // this.createFormattedAddress()
@@ -286,7 +287,6 @@ export default {
     }
   },
   mounted () {
-    this.tempA = this.adr.A || ''
     this.sessionToken = uuidv4()
     if (this.ctry) {
       this.updateCountryData(this.ctry)
@@ -303,6 +303,7 @@ export default {
     setTimeout(() => {
       this.isInfoOpen = false
     }, 50)
+    if (this.adr.A) this.tempA = this.adr.A || ''
     //   })
     // }
   }

@@ -44,6 +44,7 @@ const placeDetails = function fillData (option) {
           let region = result.address_components && result.address_components.filter(({types}) => types.includes('administrative_area_level_1')).length > 0 ? result.address_components.filter(({types}) => types.includes('administrative_area_level_1'))[0].short_name : null
           // console.log('placeid data', result.address_components.filter(({types}) => types.includes('country')))
           // input.A = result.adr_address && result.adr_address.includes('street-address') ? this.latinize(result.adr_address.match('<span class="street-address">(.*?)</span>')[1]) : null
+          if (this.fieldName !== 'votAdr') input.A = this.adr.A || this.tempA
           if (ctry.toLowerCase() === 'jp') {
             input.A = result.formatted_address.split(', ')[0]
             input.B = this.adr.B || result.formatted_address.split(', ')[1]
@@ -56,12 +57,13 @@ const placeDetails = function fillData (option) {
             input.D = result.address_components && result.address_components.filter(({types}) => types.includes('sublocality')).length > 0 ? result.address_components.filter(({types}) => types.includes('sublocality'))[0].long_name : null
           }
           input.C = result.adr_address && result.adr_address.includes('locality') ? result.adr_address.match('<span class="locality">(.*?)</span>')[1] : null
-          if (this.fieldName === 'votAdr' && /DC|PR|VI|AS|GU/.test(ctry)) {
+          if (this.fieldName === 'votAdr' && /PR|VI|AS|GU/.test(ctry)) {
             input.S = ctry
           } else {
             input.S = result.adr_address && result.adr_address.includes('region') ? result.adr_address.match('<span class="region">(.*?)</span>')[1] : region
           }
           input.Z = result.adr_address && result.adr_address.includes('postal-code') ? result.adr_address.match('<span class="postal-code">(.*?)</span>')[1] : null
+          console.log(this.fieldName, data.result.address_components.filter(y => y.types.includes('administrative_area_level_2')).length)
           if (this.fieldName === 'votAdr' && data.result.address_components.filter(y => y.types.includes('administrative_area_level_2')).length) {
             input.Y = data.result.address_components.filter(y => y.types.includes('administrative_area_level_2'))[0].long_name.replace(/county/gi, '').trim()
           }
