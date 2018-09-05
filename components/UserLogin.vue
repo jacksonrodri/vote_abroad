@@ -48,6 +48,7 @@
         key="codeInput"
         fieldName="codeInput"
         v-model="code"
+        :v="$v.code"
         @pressEnter="confirmCode"
         :loading="authenticating"></code-input>
       <!-- <div v-show="seconds <= 25" class="field is-grouped is-grouped-centered">
@@ -59,25 +60,34 @@
       </div> -->
       <p class="has-text-centered help has-text-vfa">
         <ul>
-          <li v-if="seconds > 25 && loginType === 'email'">
+          <li>
+            <h3 class="title is-7">Haven't received the <span v-if="loginType === 'email'">email</span><span v-if="loginType === 'sms'">sms</span>?</h3>
+          </li>
+          <li v-if="seconds > 10 && loginType === 'email'">
+            <b-icon
+              type="is-vfa"
+              icon="check"></b-icon>
+            It could take up to a minute to deliver.
+          </li>
+          <li v-if="seconds > 10 && loginType === 'email'">
             <b-icon
               type="is-vfa"
               icon="check"></b-icon>
             Check your spam folder
           </li>
-          <li v-if="seconds > 25 && loginType === 'email'">
+          <li v-if="seconds > 10 && loginType === 'email'">
             <b-icon
               type="is-vfa"
               icon="check"></b-icon>
             Did you enter your email correctly?
           </li>
-          <li v-if="seconds > 25 && loginType === 'sms'">
+          <li v-if="seconds > 10 && loginType === 'sms'">
             <b-icon
               type="is-vfa"
               icon="check"></b-icon>
             Can you receive SMS messages on {{ phoneOrEmail }}?
           </li>
-          <li v-if="seconds > 25 && loginType === 'sms'">
+          <li v-if="seconds > 10 && loginType === 'sms'">
             <b-icon
               type="is-vfa"
               icon="check"></b-icon>
@@ -85,12 +95,12 @@
           </li>
           <li v-if="seconds > 25">
             <a @click="retry" class="button is-vfa is-inverted is-small">
-              Did not get the code? Try again
+              Try again
             </a>
           </li>
           <li v-if="seconds <= 25">
             <a @click="retry" class="button is-vfa is-inverted is-small" disabled>
-              Did not get the code? <span class="tag is-help">0:{{ 25 - parseInt(seconds) | two_digits }}</span>
+              Try again<span class="tag is-help">0:{{ 25 - parseInt(seconds) | two_digits }}</span>
             </a>
           </li>
         </ul>
@@ -146,6 +156,7 @@
 import PhoneEmailTwo from '~/components/PhoneEmailTwo'
 import CodeInput from '~/components/CodeInput'
 import snarkdown from 'snarkdown'
+import { required, minLength, maxLength } from 'vuelidate/lib/validators'
 import { mapActions, mapGetters, mapMutations, mapState } from 'vuex'
 const touchMap = new WeakMap()
 
@@ -212,8 +223,8 @@ export default {
     },
     startAuth: function () {
       this.authenticating = true
-      this.$v.$touch()
-      if (this.$v.$error) {
+      this.$v.phoneOrEmail.$touch()
+      if (this.$v.phoneOrEmail.$error) {
         this.$refs.phoneOrEmail.$refs.phoneOrEmail.focus()
         return
       }
@@ -234,7 +245,10 @@ export default {
       // }, 5000)
     },
     confirmCode () {
-      if (this.$store.state.userauth.user.emailAddress) {
+      this.$v.code.$touch()
+      if (this.$v.code.$error) {
+        this.$refs.codeInput.$el.querySelector('input').focus()
+      } else if (this.$store.state.userauth.user.emailAddress) {
         this.$store.dispatch('userauth/loginEmailVerify', this.code)
       } else if (this.$store.state.userauth.user.mobileIntFormat) {
         this.$store.dispatch('userauth/loginSmsVerify', this.code)
@@ -275,7 +289,13 @@ export default {
     }
   },
   validations: {
+    code: {
+      required,
+      minLength,
+      maxLength
+    },
     phoneOrEmail: {
+      required,
       validPhoneOrEmail () {
         return !this.phoneOrEmail ? false : this.isValidNumber(this.phoneOrEmail) || this.isValidEmail(this.phoneOrEmail)
       }

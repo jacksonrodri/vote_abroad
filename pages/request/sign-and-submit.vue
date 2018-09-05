@@ -21,7 +21,7 @@
       <div>
         <h1 class="has-text-centered title is-3">{{ $t('request.stages.step', {step: 5})}}</h1>
         <h3 class="has-text-centered subtitle is-4">{{ $t('request.stages.stage5')}}</h3>
-        <span class="is-size-4" v-html="$t('request.stages.instructions5', {leo: `${leoName ? 'the ' + leoName : 'your local election official'}`, options: ballotReceiptOptionsString})"></span>
+        <span class="is-size-4" v-html="$t('request.stages.instructions5', {leo: `${leoName ? 'the ' + leoName : 'your local election official'}`, options: ballotReceiptOptionsString}) + ' ' + specialSubmissionRules"></span>
         <!-- <i18n path="request.stages.instructions5"
           class="is-size-4"
           tag="span"
@@ -122,6 +122,24 @@
                       </div>
                     </div>
                   </article>
+                  <article class="media" v-if="/AR|CT|NJ|NY|WY/.test(votState)">
+                    <figure class="media-left">
+                      <b-icon icon="envelope" size="is-medium"></b-icon>
+                    </figure>
+                    <div class="media-content">
+                      <span class="is-size-5">{{$t(`request.deadlineLanguage.${this.state.toLowerCase()}Special`)}}</span>
+                      <div class="box">
+                        <span v-if="currentRequest.leo.n"><strong>{{ currentRequest.leo.n }}</strong><br/></span>
+                        <span v-if="currentRequest.leo.a1"><strong>{{ currentRequest.leo.a1 }}</strong><br/></span>
+                        <span v-if="currentRequest.leo.a2"><strong>{{ currentRequest.leo.a2 }}</strong><br/></span>
+                        <span v-if="currentRequest.leo.a3"><strong>{{ currentRequest.leo.a3 }}</strong><br/></span>
+                        <span><strong>{{ currentRequest.leo.c }}, </strong>
+                        <strong>{{ currentRequest.leo.s }} </strong>
+                        <strong>{{ currentRequest.leo.z }}</strong><br/></span>
+                        <span class="has-text-right"><strong>United States of America</strong><br/></span>
+                      </div>
+                    </div>
+                  </article>
                 </div>
               </div>
             </section>
@@ -136,6 +154,9 @@
               </transition>
               <transition name="fade">
                 <compose-message v-model="signStep" :fpca="fpca" :documentRequired="documentRequired" v-if="signStep === 'composeMessage'"></compose-message>
+              </transition>
+              <transition name="fade">
+                <special-instructions v-model="signStep" :msPdf="msPdf" :state="votState" :firstName="firstName" :lastName="lastName" v-if="signStep === 'specialInstructions'"></special-instructions>
               </transition>
             </section>
           </b-tab-item>
@@ -181,6 +202,24 @@
                       <div class="box">
                         <span v-if="currentRequest.leo.n"><strong>{{ currentRequest.leo.n }}</strong><br/></span>
                         <span v-if="currentRequest.leo.f"><strong>+1 {{ currentRequest.leo.f }}</strong><br/></span>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="media" v-if="/AR|CT|NJ|NY|TX|VT|WY/.test(votState)">
+                    <figure class="media-left">
+                      <b-icon icon="envelope" size="is-medium"></b-icon>
+                    </figure>
+                    <div class="media-content">
+                      <span class="is-size-5">{{$t(`request.deadlineLanguage.${this.state.toLowerCase()}Special`)}}</span>
+                      <div class="box">
+                        <span v-if="currentRequest.leo.n"><strong>{{ currentRequest.leo.n }}</strong><br/></span>
+                        <span v-if="currentRequest.leo.a1"><strong>{{ currentRequest.leo.a1 }}</strong><br/></span>
+                        <span v-if="currentRequest.leo.a2"><strong>{{ currentRequest.leo.a2 }}</strong><br/></span>
+                        <span v-if="currentRequest.leo.a3"><strong>{{ currentRequest.leo.a3 }}</strong><br/></span>
+                        <span><strong>{{ currentRequest.leo.c }}, </strong>
+                        <strong>{{ currentRequest.leo.s }} </strong>
+                        <strong>{{ currentRequest.leo.z }}</strong><br/></span>
+                        <span class="has-text-right"><strong>United States of America</strong><br/></span>
                       </div>
                     </div>
                   </article>
@@ -354,6 +393,7 @@ import Sign4 from '~/components/sign4.vue'
 import SignatureAffirmation from '~/components/SignatureAffirmation.vue'
 import AddSignature from '~/components/AddSignature.vue'
 import ComposeMessage from '~/components/ComposeMessage.vue'
+import SpecialInstructions from '~/components/SpecialInstructions'
 import { mapState, mapGetters } from 'vuex'
 import axios from 'axios'
 // import VueMarkdown from 'vue-markdown'
@@ -372,6 +412,7 @@ export default {
     AddSignature,
     ComposeMessage,
     SignatureAffirmation,
+    SpecialInstructions,
     // VueMarkdown,
     ScrollUp
   },
@@ -561,11 +602,11 @@ export default {
         ? this.$t(`request.deadlineLanguage.transmitInstructions`, {
           leoName: this.leoName,
           transmitOpts: this.transmitOpts
-        }) + ' ' + this.$t(`request.deadlineLanguage.emailSuggested`)
+        }) + ' ' + this.$t(`request.deadlineLanguage.emailSuggested`) + ' ' + this.specialSubmissionRules
         : this.$t(`request.deadlineLanguage.transmitInstructions`, {
           leoName: this.leoName,
           transmitOpts: this.transmitOpts
-        })
+        }) + ' ' + this.specialSubmissionRules
     },
     transmitOpts () {
       switch (this.stateRules.fpcaSubmitOptionsRegister.length) {
@@ -666,6 +707,11 @@ export default {
         url: process.env.url,
         state: elections[0].state
       }
+    },
+    specialSubmissionRules () {
+      return /AR|CT|NJ|NY|TX|VT|WY/.test(this.state)
+        ? this.$t(`request.deadlineLanguage.${this.votState.toLowerCase()}Special`)
+        : ''
     },
     deadlineLanguage () {
       switch (this.isRegistered) {

@@ -6,11 +6,16 @@
       :message="fieldMessages">
       <transition-group name="slide" tag="div" @after-enter="selectField" class="field has-addons">
         <p class="control" key="flag" v-if="!countryFocused">
-          <button :class="['button', 'control', 'is-outlined', 'is-inverted', 'is-paddingless']"
-            style="padding-left:0px;"
+          <button :class="['button', 'control', 'is-outlined', 'is-inverted', {'is-paddingless': !mustBeEmail}]"
+            :style="mustBeEmail ? '' : 'padding-left:0px;'"
             :disabled="loading"
             @click.prevent="setCountryFocused">
-            <span class="flag-container fa-stack">
+            <b-icon
+              v-if="mustBeEmail"
+              pack="fas"
+              icon="at">
+            </b-icon>
+            <span class="flag-container fa-stack" v-else>
               <i :class="`fa-stack-2x flag-icon flag-icon-${countryIso ? countryIso.toLowerCase() : 'un'}`"></i>
               <i class="fas fa-sort-down fa-stack-1x has-text-grey breathe" style="transform:translateY(50%)"></i>
             </span>
@@ -45,7 +50,7 @@
           :type="fieldType"
           :value="tempValue"
           :id="fieldName"
-          :placeholder="$t(`request.tel.placeholder`, {example: exPhone})"
+          :placeholder="$t(`request.phoneOrEmail.placeholder`, {first: deviceType === 'desktop' ? 'yours@example.com' : exPhone, second: deviceType === 'desktop' ? exPhone : 'yours@example.com'})"
           :class="[requiredClass, 'is-expanded']"
           :autocomplete="autoComplete"
           @input="$emit('delayTouch')"
@@ -226,6 +231,7 @@ export default {
       if (this.tempValue && this.exPhone) {
         this.tempValue = this.tempValue.includes(this.exPhone.split(' ')[0]) ? this.tempValue : this.exPhone.split(' ')[0]
       } else this.tempValue = ''
+      this.fieldValue = this.tempValue
       this.selectField()
     },
     ...mapActions('data', ['updateCountryData', 'getCountryIsoFromPhonePrefix'])

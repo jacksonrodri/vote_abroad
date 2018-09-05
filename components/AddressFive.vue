@@ -35,19 +35,21 @@
           <!-- <b-field v-if="part.type === 'countryiso' && ctry === 'US'" :key="part.type + 'US'">
             <p class="control help">Only enter your xx</p>
           </b-field> -->
+              <!-- :value="adr[part.type]" -->
           <b-field v-else :key="part.type" :type="part.displayType" :message="part.messages">
             <b-autocomplete
               v-if="part.type === 'A'"
               :data="data"
               field="structured_formatting.main_text"
-              :value="adr[part.type]"
               :placeholder="part.label"
+              v-model="tempA"
               :aria-label="part.label"
               :title="part.label"
               :class="part.class"
               :loading="isFetching"
               :ref="part.type"
-              @input="(val) => { getAsyncData(val); updateAddress(part.type, val) }"
+              @keypress.native="getAsyncData"
+              @keyup.delete.native="getAsyncData"
               @select="option => fillData(option)">
               <template slot-scope="props">{{ props.option.description }}</template>
             </b-autocomplete>
@@ -77,7 +79,7 @@
               open-on-focus
               keep-first
               :value="adr[part.type] || null"
-              @input="val => updateAddress(part.type, val)"
+              @keyup.native="val => updateAddress(part.type, val)"
               @select="option => option ? updateAddress(part.type, option.name) : ''"></b-autocomplete>
             <b-input
               v-else
@@ -128,6 +130,7 @@ export default {
   },
   data () {
     return {
+      tempA: '',
       isInfoOpen: false,
       countryFields: [{help: '', type: 'countryiso', label: 'Country', required: true, length: 1}],
       data: [],
@@ -195,10 +198,11 @@ export default {
       this.$refs.ctry[0].focus()
       // this.$refs.ctry.$el.querySelector('input').focus()
     },
-    getAsyncData (val) {
+    async getAsyncData (val) {
       // if (this.autocompleteFocused)
-      this.updateAddress('A', val)
-      placesAutocomplete.call(this, val, this.ctry, 'abrAdr')
+      await this.$nextTick()
+      await this.$nextTick()
+      placesAutocomplete.call(this, this.tempA, this.ctry, 'abrAdr')
     },
     fillData (opt) {
       this.autocompleteFocused = false
@@ -240,6 +244,11 @@ export default {
     ...mapMutations('requests', ['update'])
   },
   watch: {
+    tempA: function (val, oldVal) {
+      if (val !== oldVal) {
+        this.updateAddress('A', val)
+      }
+    },
     // countryData (val, oldVal) {
     //   if (val && (!oldVal || val.key !== oldVal.key)) {
     //     // this.createFormattedAddress()

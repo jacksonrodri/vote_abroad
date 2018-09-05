@@ -88,6 +88,7 @@
                 <section class="section">
                   <div>
                     <p class="subtitle is-4" v-html="md($t('dashboard.thankYou') + ' ' + (this.stage === 'formEmailed' ? $t('dashboard.formSubmitted') : $t('dashboard.requiresSubmit')))"></p>
+                    <p class="subtitle is-4" v-if="/AR|CT|NJ|NY|TX|VT|WY/.test(state)" v-html="md(specialSubmissionRules)"></p>
                     <article class="message is-danger">
                       <div class="message-header">
                         <p v-html="md(deadlineLanguage.split('\n')[0])"></p>
@@ -255,6 +256,43 @@ export default {
     }
   },
   computed: {
+    specialSubmissionRules () {
+      return /AR|CT|NJ|NY|TX|VT|WY/.test(this.state)
+        ? this.$t(`request.deadlineLanguage.${this.state.toLowerCase()}Special`)
+        : ''
+    },
+    stateRules () {
+      if (this.state) {
+        return this.allStateRules.find(x => x.iso.toLowerCase() === this.state.toLowerCase())
+      } else {
+        return undefined
+      }
+    },
+    transmitInstructions () {
+      return this.stateRules.fpcaSubmitOptionsRegister.includes('Email')
+        ? this.$t(`request.deadlineLanguage.transmitInstructions`, {
+          leoName: this.leoName,
+          transmitOpts: this.transmitOpts
+        }) + ' ' + this.$t(`request.deadlineLanguage.emailSuggested`)
+        : this.$t(`request.deadlineLanguage.transmitInstructions`, {
+          leoName: this.leoName,
+          transmitOpts: this.transmitOpts
+        })
+    },
+    transmitOpts () {
+      switch (this.stateRules.fpcaSubmitOptionsRegister.length) {
+        case 1:
+          return this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[0].toLowerCase()}`)
+        case 2:
+          return this.$t(`request.deadlineLanguage.opt2`, {item1: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[0].toLowerCase()}`).toLowerCase(), item2: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[1].toLowerCase()}`).toLowerCase()})
+        case 3:
+          return this.$t(`request.deadlineLanguage.opt3`, {item1: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[0].toLowerCase()}`).toLowerCase(), item2: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[1].toLowerCase()}`).toLowerCase(), item3: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[2].toLowerCase()}`).toLowerCase()})
+        case 4:
+          return this.$t(`request.deadlineLanguage.opt4`, {item1: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[0].toLowerCase()}`).toLowerCase(), item2: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[1].toLowerCase()}`).toLowerCase(), item3: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[2].toLowerCase()}`).toLowerCase(), item4: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[3].toLowerCase()}`).toLowerCase()})
+        default:
+          return `mail, email or fax`
+      }
+    },
     newVoterDeadlineLanguageObject () {
       let elections = this.getCurrentDeadlines.filter(x => x.ruleType === 'Registration')
       let rule = elections[0].rule
@@ -270,7 +308,8 @@ export default {
         electionType: elections[0].electionType,
         note: elections[0].note || '',
         url: process.env.url,
-        state: elections[0].state
+        state: elections[0].state,
+        documentRequired: this.documentRequired && (this.state === 'AK' || this.state === 'AZ') ? this.$t(`request.deadlineLanguage.documentRequired`, {document: this.$t(`request.deadlineLanguage.${this.state.toLowerCase()}Document`)}) : ''
       }
     },
     registeredVoterDeadlineObject () {
@@ -318,7 +357,8 @@ export default {
         registeredVoterElectionType: electionsRegistered[0].electionType,
         registeredVoterNote: electionsRegistered[0].note || '',
         url: process.env.url,
-        state: electionsNew[0].state
+        state: electionsNew[0].state,
+        documentRequired: this.documentRequired && (this.state === 'AK' || this.state === 'AZ') ? this.$t(`request.deadlineLanguage.documentRequired`, {document: this.$t(`request.deadlineLanguage.${this.state.toLowerCase()}Document`)}) : ''
       }
     },
     ballotReturnDeadlineObject () {
@@ -349,6 +389,7 @@ export default {
           return this.$t('request.deadlineLanguage.unsureRegistrationVoters', this.unsureVoterDeadlineObject)
       }
     },
+    isRegistered () { return this.currentRequestObject ? this.currentRequestObject.isRegistered : null },
     deadlineFormSubmitted () {
       return this.$t('request.deadlineLanguage.formSubmitted', {
         alsoVoterRegistration: this.isRegistered === 'registered' ? '' : this.$t('request.deadlineLanguage.alsoVoterRegistration')
@@ -363,6 +404,16 @@ export default {
     },
     deadlineBallotReturn () {
       return this.$t('request.deadlineLanguage.ballotReturn', this.ballotReturnDeadlineObject)
+    },
+    documentRequired () {
+      switch (this.state.toLowerCase()) {
+        case 'ak':
+          return 'proof of Alaska Residency'
+        case 'az':
+          return this.isRegistered === 'unsure' || this.isRegistered === 'notRegistered' ? 'proof of citizenship (for newly registered voters)' : null
+        default:
+          return null
+      }
     },
     user () { return this.$store.state.userauth.user },
     requests () { return this.$store.state.requests.requests },

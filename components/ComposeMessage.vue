@@ -79,6 +79,24 @@
         </span>
       </div>
     </b-field>
+    <article class="media" v-if="/AR|CT|NJ|NY|TX|VT|WY/.test(currentRequest.leo.s)">
+      <figure class="media-left">
+        <b-icon icon="envelope" size="is-medium"></b-icon>
+      </figure>
+      <div class="media-content">
+        <span class="is-size-5">{{$t(`request.deadlineLanguage.${currentRequest.leo.s.toLowerCase()}Special`)}}</span>
+        <div class="box">
+          <span v-if="currentRequest.leo.n"><strong>{{ currentRequest.leo.n }}</strong><br/></span>
+          <span v-if="currentRequest.leo.a1"><strong>{{ currentRequest.leo.a1 }}</strong><br/></span>
+          <span v-if="currentRequest.leo.a2"><strong>{{ currentRequest.leo.a2 }}</strong><br/></span>
+          <span v-if="currentRequest.leo.a3"><strong>{{ currentRequest.leo.a3 }}</strong><br/></span>
+          <span><strong>{{ currentRequest.leo.c }}, </strong>
+          <strong>{{ currentRequest.leo.s }} </strong>
+          <strong>{{ currentRequest.leo.z }}</strong><br/></span>
+          <span class="has-text-right"><strong>United States of America</strong><br/></span>
+        </div>
+      </div>
+    </article>
 
     <div class="field is-horizontal">
       <div class="field-label">
@@ -198,11 +216,13 @@ export default {
             this.isMailing = false
             this.$store.commit('requests/update', {status: 'formEmailed'})
             this.$store.dispatch('requests/updateRequest', {status: 'formEmailed'})
+            // if (/AR|CT|NJ|NY|TX|VT/.test(this.state)) this.$emit('input', 'specialInstructions')
+            // else
+            this.$router.push(this.localePath('dashboard'))
             this.$toast.open({
               message: `Sent! Check your inbox for a copy (${this.formEmail})`,
               type: 'is-success'
             })
-            this.$router.push(this.localePath('dashboard'))
           })
           .catch(error => {
             console.log(error)

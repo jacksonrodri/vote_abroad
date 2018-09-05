@@ -12,13 +12,13 @@
             We could not get access your device camera. (Either it is not connected/available or you have disallowed VoteFromAbroad.org from accessing it). You can still click <a @click="uploadPic" class="has-text-primary">upload a file</a> to upload your signature from a file.
           </b-message>
           <b-message :active="!webCamCapture && canCaptureImage && (!croppedPic || !croppedPic.imageSet)" :closable="false" title="Instructions" type="is-info">
-            For best results, sign your name with a dark pen in large letters on a blank sheet of white paper. Then click 'Start'.
+            Sign your name with a dark pen in large letters on a blank sheet of white paper. Then click 'Start' to start your camera. You'll be able to adjust the picture after you take it.
           </b-message>
           <b-message :active="!webCamCapture && !canCaptureImage && (!croppedPic || !croppedPic.imageSet)" :closable="false" title="Instructions" type="is-info">
-            For best results, sign your name with a dark pen in large letters on a blank sheet of white paper. Scan the file to your computer, then click 'Upload a File'.
+            Sign your name with a dark pen in large letters on a blank sheet of white paper. Scan the file to your computer, then click 'Upload a File'. You'll be able to adjust the picture after you upload it.
           </b-message>
           <b-message :active="webCamCapture && !webcamCaptureError" :closable="false" title="Instructions" type="is-info">
-            Move your signature in front of the camera so that it is in focus and takes up as much of the screen as possible.
+            Move your signature in front of the camera so that it is in focus and takes up as much of the screen as possible. (You'll be able to adjust the picture after you take it.)
           </b-message>
           <b-message :active="!webCamCapture && croppedPic && croppedPic.imageSet" :closable="false" title="Instructions" type="is-info">
             - Align your signature with the red line -- drag to move, scroll to zoom. If you don't see your signature, you may need to zoom out to get it back on the page.<br>- Adjust your signature with the 'Line Strength' buttons below so that the signature is clear and has minimal background noise<br>- If your signature is still unclear, you can click 'Clear Image' to try again.<br>- Click 'Use This Signature' to add it to your form and compose a message to your election official.

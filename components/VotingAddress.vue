@@ -13,21 +13,23 @@
         :placeholder="$t('request.votAdr.A')"
         :data="data"
         field="structured_formatting.main_text"
-        v-model="street"
+        v-model="tempStreet"
         name="street-address"
         autocomplete="section-abroad shipping street-address"
         :loading="isFetching"
-        @keyup.native="suppressDropdown = false"
-        @input="getAsyncData"
+        @keypress.native="getAsyncData"
+        @keyup.delete.native="getAsyncData"
         @select="option => fillData(option)">
         <template slot-scope="props">{{ props.option.description }}</template>
         <template slot="empty">No results found</template>
       </b-autocomplete>
+        <!-- @input="getAsyncData" -->
     </b-field>
     <b-field>
       <b-input
         :placeholder="$t('request.votAdr.B')"
         autocomplete="section-voting shipping address-line2"
+        ref="B"
         name="Apartment"
         v-model="apt"></b-input>
     </b-field>
@@ -45,9 +47,8 @@
             name="city"
             autocomplete="section-voting shipping address-level2"
             :loading="isFetchingCity"
-            @keyup.native="suppressDropdown = false"
-            @input="getAsyncDataCity"
-            @select="option => fillDataCity(option)">
+            @keyup.native="getAsyncDataCity"
+            @select="option => option ? fillDataCity(option) : ''">
             <template slot-scope="props">{{ props.option.description.replace(', USA', '') }} </template>
             <template slot="empty">No results found</template>
           </b-autocomplete>
@@ -95,6 +96,8 @@
 <script>
 import axios from 'axios'
 import debounce from 'lodash/debounce'
+import { placesAutocomplete, placeDetails, uuidv4 } from '~/utils/helpers.js'
+import { mapMutations } from 'vuex'
 
 export default {
   name: 'Voting-Address',
@@ -107,6 +110,9 @@ export default {
   data () {
     return {
       isOpen: false,
+      sessionToken: '',
+      fieldName: 'votAdr',
+      tempStreet: '',
       states: [
         {'name': 'Alabama', 'iso': 'AL'},
         {'name': 'Alaska', 'iso': 'AK'},
@@ -170,7 +176,6 @@ export default {
       ],
       isFetching: false,
       isFetchingCity: false,
-      suppressDropdown: true,
       data: []
     }
   },
@@ -178,6 +183,7 @@ export default {
     currentRequest () { return this.$store.getters['requests/getCurrent'] || {} },
     leoState () { return this.currentRequest.leo && this.currentRequest.leo.s ? this.currentRequest.leo.s : null },
     votAdr () { return this.currentRequest.votAdr || {} },
+    adr () { return this.currentRequest.votAdr || {} },
     street: {
       get () { return this.votAdr.A || null },
       set (value) { this.updateAddress('A', value) }
@@ -204,6 +210,11 @@ export default {
     }
   },
   watch: {
+    tempStreet: function (val, oldVal) {
+      if (val !== oldVal) {
+        this.street = val
+      }
+    },
     state: function (newVal, oldVal) {
       if (this.leoState && this.leoState.toLowerCase() !== newVal.toLowerCase()) {
         this.$store.commit('requests/update', {leo: null})
@@ -215,9 +226,16 @@ export default {
           identification: null
         })
       }
+    },
+    street: function (val) {
+      if (val && this.tempStreet !== val) {
+        this.tempStreet = val
+      }
     }
   },
   async mounted () {
+    this.sessionToken = uuidv4()
+    this.tempStreet = this.street
     if (!this.county && this.state && this.city && this.state !== 'DC') {
       let {data: { predictions }} = await axios.get(`${process.env.placesUrl + process.env.autocompleteEndpoint}?input=${this.street || ''}%20${this.city || ''}%20${this.state || ''}%20${this.zip || ''}&types=geocode&language=en&components=country:US&key=${process.env.placesKey}`)
       if (predictions.length > 0) {
@@ -238,73 +256,73 @@ export default {
         })
         : str
     },
-    getAsyncData: debounce(function () {
-      this.isFetching = true
-      if (this.suppressDropdown) {
-        this.$refs.A.isActive = false
-        this.$refs.C.isActive = false
-        this.suppressDropdown = false
-        this.isFetching = false
-      }
-      this.data = []
-      axios.get(`${process.env.placesUrl + process.env.autocompleteEndpoint}?input=${this.street}&types=geocode&language=en&components=country:us|country:pr|country:vi|country:gu|country:mp&key=${process.env.placesKey}`)
-        .then(({ data }) => {
-          data.predictions.forEach((item) => this.data.push(item))
-          this.isFetching = false
-        }, response => {
-          this.isFetching = false
-        })
-    }, 500),
-    fillData (option) {
-      if (option && option.place_id) {
-        axios.get(`${process.env.placesUrl + process.env.detailsEndpoint}?placeid=${option.place_id}&key=${process.env.placesKey}`)
-          .then(({ data }) => {
-            let ctry = data.result.address_components.filter(n => n.types.includes('country'))[0].short_name
-            this.state = ctry !== 'US' ? ctry : data.result.address_components.filter(n => n.types.indexOf('administrative_area_level_1') > -1)[0].short_name
-            if (this.state !== 'DC' && ctry === 'US') {
-              setTimeout(() => {
-                this.county = data.result.address_components.filter(y => y.types.indexOf('administrative_area_level_2') > -1)[0].long_name
-              }, 50)
-            }
-            // console.log('adr_address', data.result.adr_address.split(/<span class="|">|<\/span>,?\s?/))
-            data.result.adr_address
-              .split(/<span class="|">|<\/span>,?\s?/)
-              .filter(e => e)
-              .forEach((item, index, arr) => {
-                var myRe = /post-office-box|extended-address|street-address|locality|region|postal-code|country-name/g
-                if (index === 0 && !myRe.test(item)) {
-                  this.extendedAddress = item
-                } else if (myRe.test(item)) {
-                  switch (item) {
-                    case 'post-office-box':
-                      // this.postOfficeBox = arr[index + 1]
-                      break
-                    case 'street-address':
-                      this.street = arr[index + 1]
-                      break
-                    case 'locality':
-                      this.city = arr[index + 1]
-                      break
-                    case 'region':
-                      this.state = arr[index + 1]
-                      break
-                    case 'postal-code':
-                      this.zip = arr[index + 1]
-                      break
-                  }
-                }
-              })
-          })
+    // getAsyncData: debounce(function () {
+    //   this.isFetching = true
+    //   this.data = []
+    //   axios.get(`${process.env.placesUrl + process.env.autocompleteEndpoint}?input=${this.street}&types=geocode&language=en&components=country:us|country:pr|country:vi|country:gu|country:mp&key=${process.env.placesKey}`)
+    //     .then(({ data }) => {
+    //       data.predictions.forEach((item) => this.data.push(item))
+    //       this.isFetching = false
+    //     }, response => {
+    //       this.isFetching = false
+    //     })
+    // }, 500),
+    async getAsyncData (val) {
+      await this.$nextTick()
+      await this.$nextTick()
+      placesAutocomplete.call(this, this.tempStreet, this.ctry, 'votAdr')
+    },
+    fillData (opt) {
+      if (opt) {
+        this.$refs.B.$el.querySelector('input').focus()
+        this.autocompleteFocused = false
+        placeDetails.call(this, opt)
       }
     },
+    // fillData (option) {
+    //   if (option && option.place_id) {
+    //     axios.get(`${process.env.placesUrl + process.env.detailsEndpoint}?placeid=${option.place_id}&key=${process.env.placesKey}`)
+    //       .then(({ data }) => {
+    //         let ctry = data.result.address_components.filter(n => n.types.includes('country'))[0].short_name
+    //         this.state = ctry !== 'US' ? ctry : data.result.address_components.filter(n => n.types.indexOf('administrative_area_level_1') > -1)[0].short_name
+    //         if (this.state !== 'DC' && ctry === 'US') {
+    //           setTimeout(() => {
+    //             this.county = data.result.address_components.filter(y => y.types.indexOf('administrative_area_level_2') > -1)[0].long_name
+    //           }, 50)
+    //         }
+    //         // console.log('adr_address', data.result.adr_address.split(/<span class="|">|<\/span>,?\s?/))
+    //         data.result.adr_address
+    //           .split(/<span class="|">|<\/span>,?\s?/)
+    //           .filter(e => e)
+    //           .forEach((item, index, arr) => {
+    //             var myRe = /post-office-box|extended-address|street-address|locality|region|postal-code|country-name/g
+    //             if (index === 0 && !myRe.test(item)) {
+    //               this.extendedAddress = item
+    //             } else if (myRe.test(item)) {
+    //               switch (item) {
+    //                 case 'post-office-box':
+    //                   // this.postOfficeBox = arr[index + 1]
+    //                   break
+    //                 case 'street-address':
+    //                   this.street = arr[index + 1]
+    //                   break
+    //                 case 'locality':
+    //                   this.city = arr[index + 1]
+    //                   break
+    //                 case 'region':
+    //                   this.state = arr[index + 1]
+    //                   break
+    //                 case 'postal-code':
+    //                   this.zip = arr[index + 1]
+    //                   break
+    //               }
+    //             }
+    //           })
+    //       })
+    //   }
+    // },
     getAsyncDataCity: debounce(function () {
       this.isFetchingCity = true
-      if (this.suppressDropdown) {
-        this.$refs.A.isActive = false
-        this.$refs.C.isActive = false
-        this.suppressDropdown = false
-        this.isFetchingCity = false
-      }
       this.data = []
       axios.get(`${process.env.placesUrl + process.env.autocompleteEndpoint}?input=${this.city}&types=(cities)&language=en&components=country:us|country:pr|country:vi|country:gu|country:mp&key=${process.env.placesKey}`)
         .then(({ data }) => {
@@ -349,7 +367,8 @@ export default {
               })
           })
       }
-    }
+    },
+    ...mapMutations('requests', ['update'])
   }
 }
 </script>

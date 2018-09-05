@@ -33,8 +33,7 @@
   "request": {
     "phoneOrEmail": {
       "label": "Type your email address or mobile phone number to get started.",
-      "instructions": "Type to find your local election official (county, city, town...)",
-      "placeholder": "tel or email",
+      "placeholder": "e.g. {first} or {second}",
       "tooltipTitle": "What is this?",
       "tooltip": "Your email or number will create an account for you to use to easily sign in to votefromabroad and save your information from year to year. An anonymous session allows you to create an FPCA form and send it to your local election office, but will not save your information for you to return to in the future.",
       "messages": {
@@ -45,12 +44,11 @@
     "codeInput": {
       "label-sms": "An SMS with the code has been sent to {phone}.",
       "label-email": "We sent you a link and code to {email}. Click the link in the email or enter the code here to sign in.",
-      "instructions": "Type to find your local election official (county, city, town...)",
       "placeholder": "Your code",
       "tooltipTitle": "What is this?",
       "tooltip": "Your email or number will create an account for you to use to easily sign in to votefromabroad and save your information from year to year. An anonymous session allows you to create an FPCA form and send it to your local election office, but will not save your information for you to return to in the future.",
       "messages": {
-        "required": "You must enter a phone number or email address "
+        "required": "Please enter the 6 digit code we sent you. "
       }
     },
     "middleName": {
@@ -188,6 +186,7 @@
     "sig": {
       "title": "Add your scanned signature.",
       "selectInstructions": "Select the signature below that is the clearest.  Choose the version that has a white background with a completely visible signature.",
+      "specialInstructions": "Special rules for {state} voters",
       "attachment": "Attachment",
       "successMessage": "Sent! Check your inbox for a copy.",
       "instructions": "1. Sign your name with a dark pen on a sheet of plain white paper.<br/> Click 'Allow access to my webcam' and accept the following prompt.<br/>3. Hold your signature up in front of the camera and align it above the red signature line, then click 'take photo'<br/>4. Select the clearest version of your signature<br/>5. Click 'Send' to send your signed form to your election official.",
@@ -448,6 +447,13 @@
       "opt4": "{item1}, {item2}, {item3} or {item4}",
       "akDocument": "proof of Alaska Residency",
       "azDocument": "proof of Citizenship",
+      "ctSpecial": "Connecticut voters: if you send in your form by email or fax you should also send in a signed copy by postal mail.",
+      "nySpecial": "New York voters: if you send in your form by email or fax you should also send in a signed copy by postal mail.",
+      "njSpecial": "New Jersey voters: if you send in your form by email or fax you should also send in a signed copy by postal mail.",
+      "wySpecial": "Wyoming voters: If you send in your form by email or fax you should also send in a signed copy by postal mail. (If you previously registered in-state you don't need to mail in your form)",
+      "arSpecial": "Arkansas voters: if you send in your form by email or fax, your county election official may also require an original signed copy by postal mail.",
+      "vtSpecial": "Vermont voters: if you send in your form by fax you should also send in a signed copy by postal mail.",
+      "txSpecial": "Texas voters: if you send in your form by fax you should also send in a signed copy by postal mail.",
       "documentRequired": " (New voters are required to provide {document}.)",
       "submissionMethod": " if sent by {method}",
       "alternateSubmissionMethod": " (it must be {rule} {deadline} if sent by {method})",

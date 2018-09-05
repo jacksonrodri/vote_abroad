@@ -29,7 +29,7 @@ import fieldMixin from '~/mixins/fieldMixin.js'
 export default {
   name: 'CodeInput',
   mixins: [fieldMixin],
-  props: ['loading'],
+  props: ['loading', 'v'],
   data () {
     return {
       code: ''

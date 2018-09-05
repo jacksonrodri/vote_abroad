@@ -14,7 +14,7 @@ $secondary-invert: findColorInvert($secondary);
 $red-invert: findColorInvert($red);
 $vfalight: lighten($vfa, 65%);
 $vfalight-invert: findColorInvert($vfalight);
-$semitransparent: hsla(0, 0%, 96%, 0.45);
+$semitransparent: hsla(0, 0%, 96%, 0.75);
 $semitransparent-invert: $black;
 $transparent: hsla(0, 0%, 0%, 0);
 $transparent-invert: $black;

@@ -8,7 +8,12 @@ const placesAutocomplete = debounce(function (val, country, addressType, searchT
   try {
     axios.get(`${process.env.placesUrl + process.env.autocompleteEndpoint}?input=${val}${options}&key=${process.env.placesKey}&session_token=${this.sessionToken}`)
       .then(({ data }) => {
-        data.predictions.forEach((item) => this.data.push(item))
+        data.predictions.forEach((item) => {
+          // console.log(item)
+          item.structured_formatting.main_text = latinize(item.structured_formatting.main_text)
+          item.description = latinize(item.description)
+          this.data.push(item)
+        })
         this.isFetching = false
         return data.predictions
       }, response => {
@@ -43,6 +48,7 @@ const placeDetails = function fillData (option) {
             input.A = result.formatted_address.split(', ')[0]
             input.B = this.adr.B || result.formatted_address.split(', ')[1]
           } else if (this.fieldName === 'votAdr') {
+            console.log('votadr', JSON.stringify(result, null, 2))
             input.A = result.adr_address && result.adr_address.includes('street-address') ? result.adr_address.match('<span class="street-address">(.*?)</span>')[1] : this.adr.A || null
             input.B = this.adr.B || (result.adr_address && result.adr_address.includes('extended-address') ? result.adr_address.match('<span class="extended-address">(.*?)</span>')[1] : null)
           } else {
@@ -50,16 +56,23 @@ const placeDetails = function fillData (option) {
             input.D = result.address_components && result.address_components.filter(({types}) => types.includes('sublocality')).length > 0 ? result.address_components.filter(({types}) => types.includes('sublocality'))[0].long_name : null
           }
           input.C = result.adr_address && result.adr_address.includes('locality') ? result.adr_address.match('<span class="locality">(.*?)</span>')[1] : null
-          input.S = result.adr_address && result.adr_address.includes('region') ? result.adr_address.match('<span class="region">(.*?)</span>')[1] : region
+          if (this.fieldName === 'votAdr' && /DC|PR|VI|AS|GU/.test(ctry)) {
+            input.S = ctry
+          } else {
+            input.S = result.adr_address && result.adr_address.includes('region') ? result.adr_address.match('<span class="region">(.*?)</span>')[1] : region
+          }
           input.Z = result.adr_address && result.adr_address.includes('postal-code') ? result.adr_address.match('<span class="postal-code">(.*?)</span>')[1] : null
-          if (this.fieldName === 'votAdr') input.Y = data.result.address_components.filter(y => y.types.indexOf('administrative_area_level_2') > -1)[0].long_name
+          if (
+            this.fieldName === 'votAdr' &&
+            (data.result.address_components.filter(y => y.types.includes('administrative_area_level_2'))).length
+          ) input.Y = data.result.address_components.filter(y => y.types.includes('administrative_area_level_2'))[0].long_name.replace(/county/gi, '').trim()
           // input.country = this.getCountryName(ctry)
           input.countryiso = this.fieldName === 'votAdr' ? 'US' : ctry
           Object.keys(input)
             .forEach(x => {
               input[x] = typeof input[x] === 'string' ? decodeHtmlEntity(latinize(input[x])) : input[x]
             })
-          // console.log('input', input)
+          console.log('input', input)
           this.update({[this.fieldName]: Object.assign({}, this.adr, input)})
         }
       })
