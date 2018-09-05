@@ -203,6 +203,7 @@ export const actions = {
     currentRequestState.tel = currentRequestState.tel || null
     currentRequestState.email = currentRequestState.email || null
     currentRequestState.status = payload.status
+    if (currentRequestState.party === '') currentRequestState.party = 'other'
     const stateRequestInput = {input: currentRequestState}
     const newRequest = await API.graphql(graphqlOperation(CreateRequest, stateRequestInput))
     commit('update', {id: newRequest.data.createRequest.id})
