@@ -21,8 +21,11 @@
       <div>
         <h1 class="has-text-centered title is-3">{{ $t('request.stages.step', {step: 5})}}</h1>
         <h3 class="has-text-centered subtitle is-4">{{ $t('request.stages.stage5')}}</h3>
-        <span class="is-size-5" v-html="md(transmitInstructions)"></span>
-        <span class="is-size-5" v-if="stateRules && stateRules.fpcaSubmitOptionsRequest.length > 1" v-html="md($t('request.stages.instructions5sub'))"></span>
+        <p class="is-size-5" v-html="md(transmitInstructions)"></p>
+        <b-message v-if="transmitRules" type="is-info" has-icon>
+          <span v-html="md(transmitRules)"></span>
+        </b-message>
+        <p class="is-size-5" v-if="stateRules && stateRules.fpcaSubmitOptionsRequest.length > 1" v-html="md($t('request.stages.instructions5sub'))"></p>
         <!-- <span
           class="is-size-4"
           v-html="$t('request.stages.instructions5', {leo: `${leoName ? 'the ' + leoName : 'your local election official'}`, options: ballotReceiptOptionsString})"></span> -->
@@ -127,12 +130,15 @@
                       </div>
                     </div>
                   </article>
-                  <article class="media" v-if="/AR|CT|NJ|NY|WY/.test(votState)">
+                  <b-message v-if="electronicTransmissionNote" type="is-warning" has-icon>
+                      {{electronicTransmissionNote.replace(/\*/g, '') | capitalizeFirstLetter}}
+                  </b-message>
+                  <!-- <article class="media" v-if="/AR|CT|NJ|NY|WY/.test(votState)">
                     <figure class="media-left">
                       <b-icon icon="envelope" size="is-medium"></b-icon>
                     </figure>
                     <div class="media-content">
-                      <span class="is-size-5">{{$t(`request.deadlineLanguage.${this.state.toLowerCase()}Special`)}}</span>
+                      <span class="is-size-5">{{$t(`request.deadlineLanguage.${this.state}Special`)}}</span>
                       <div class="box">
                         <span v-if="currentRequest.leo.n"><strong>{{ currentRequest.leo.n }}</strong><br/></span>
                         <span v-if="currentRequest.leo.a1"><strong>{{ currentRequest.leo.a1 }}</strong><br/></span>
@@ -144,7 +150,7 @@
                         <span class="has-text-right"><strong>United States of America</strong><br/></span>
                       </div>
                     </div>
-                  </article>
+                  </article> -->
                 </div>
               </div>
             </section>
@@ -210,7 +216,7 @@
                       </div>
                     </div>
                   </article>
-                  <article class="media" v-if="/AR|CT|NJ|NY|TX|VT|WY/.test(votState)">
+                  <!-- <article class="media" v-if="/AR|CT|NJ|NY|TX|VT|WY/.test(votState)">
                     <figure class="media-left">
                       <b-icon icon="envelope" size="is-medium"></b-icon>
                     </figure>
@@ -227,7 +233,7 @@
                         <span class="has-text-right"><strong>United States of America</strong><br/></span>
                       </div>
                     </div>
-                  </article>
+                  </article> -->
                   <article class="media">
                     <figure class="media-left">
                       <b-icon icon="check" size="is-medium"></b-icon>
@@ -236,6 +242,9 @@
                       <p v-html="$t('request.stages.mailConfirm')" class="is-size-5"></p>
                     </div>
                   </article>
+                  <b-message v-if="electronicTransmissionNote" type="is-warning" has-icon>
+                      {{electronicTransmissionNote.replace(/\*/g, '') | capitalizeFirstLetter}}
+                  </b-message>
                 </div>
               </div>
             </section>
@@ -465,7 +474,7 @@ export default {
     let feat = this
     if (process.browser) {
       // console.log('starting to retrieve file')
-      axios.get(encodeURI(`/api/fpca?firstName=${this.firstName || ''}&lastName=${this.lastName || ''}&middleName=${this.middleName || ''}&suffix=${this.suffix || ''}&ssn=${this.ssn || ''}&previousName=${this.previousName.previousName || ''}&dob=${this.dob || ''}&stateId=${this.stateId || ''}&votStreet=${this.votStreet || ''}&votApt=${this.votApt || ''}&votCity=${this.votCity || ''}&votState=${this.votState || ''}&votCounty=${this.votCounty || ''}&votZip=${this.votZip || ''}&abrAdr=${this.abrAdr.formatted && this.abrAdr.formatted[0] ? this.abrAdr.formatted[0] : ''}\n${this.abrAdr.formatted && this.abrAdr.formatted[1] ? this.abrAdr.formatted[1] : ''}\n${this.abrAdr.formatted && this.abrAdr.formatted[2] ? this.abrAdr.formatted[2] : ''}\n${this.abrAdr.formatted && this.abrAdr.formatted[3] ? this.abrAdr.formatted[3] : ''}\n${this.abrAdr.formatted && this.abrAdr.formatted[4] ? this.abrAdr.formatted[4] : ''}&fwdAdr=${this.fwdAdr.formatted && this.fwdAdr.formatted[0] ? this.fwdAdr.formatted[0] : ''}\n${this.fwdAdr.formatted && this.fwdAdr.formatted[1] ? this.fwdAdr.formatted[1] : ''}\n${this.fwdAdr.formatted && this.fwdAdr.formatted[2] ? this.fwdAdr.formatted[2] : ''}\n${this.fwdAdr.formatted && this.fwdAdr.formatted[3] ? this.fwdAdr.formatted[3] : ''}\n${this.fwdAdr.formatted && this.fwdAdr.formatted[4] ? this.fwdAdr.formatted[4] : ''}&email=${encodeURIComponent(this.email) || ''}&altEmail=${encodeURIComponent(this.altEmail) || ''}&tel=${this.tel ? encodeURIComponent(this.tel.replace(/\s/g, '')) : ''}&fax=${this.fax ? encodeURIComponent(this.fax.replace(/\s/g, '')) : ''}&party=${this.party || ''}&addlInfo=${this.addlInfo || ''}&date=${this.date || ''}&class=${this.voterClass || ''}&sex=${this.sex || ''}&recBallot=${this.recBallot || ''}&leoName=${this.leoName || ''}&leoAddress=${this.leoAdr ? encodeURIComponent(this.leoAdr) : ''}&leoFax=${this.leoFax || ''}&leoEmail=${this.leoEmail || ''}&leoPhone=${this.leoPhone || ''}&transmitOpts=${this.transmitOpts}&transmitInstructions=${this.transmitInstructions ? encodeURIComponent(this.transmitInstructions) : ''}&deadline=${encodeURIComponent(this.deadlineLanguage)}`), {responseType: 'arraybuffer'})
+      axios.get(encodeURI(`/api/fpca?firstName=${this.firstName || ''}&lastName=${this.lastName || ''}&middleName=${this.middleName || ''}&suffix=${this.suffix || ''}&ssn=${this.ssn || ''}&previousName=${this.previousName.previousName || ''}&dob=${this.dob || ''}&stateId=${this.stateId || ''}&votStreet=${this.votStreet || ''}&votApt=${this.votApt || ''}&votCity=${this.votCity || ''}&votState=${this.votState || ''}&votCounty=${this.votCounty || ''}&votZip=${this.votZip || ''}&abrAdr=${this.abrAdr.formatted && this.abrAdr.formatted[0] ? this.abrAdr.formatted[0] : ''}\n${this.abrAdr.formatted && this.abrAdr.formatted[1] ? this.abrAdr.formatted[1] : ''}\n${this.abrAdr.formatted && this.abrAdr.formatted[2] ? this.abrAdr.formatted[2] : ''}\n${this.abrAdr.formatted && this.abrAdr.formatted[3] ? this.abrAdr.formatted[3] : ''}\n${this.abrAdr.formatted && this.abrAdr.formatted[4] ? this.abrAdr.formatted[4] : ''}&fwdAdr=${this.fwdAdr.formatted && this.fwdAdr.formatted[0] ? this.fwdAdr.formatted[0] : ''}\n${this.fwdAdr.formatted && this.fwdAdr.formatted[1] ? this.fwdAdr.formatted[1] : ''}\n${this.fwdAdr.formatted && this.fwdAdr.formatted[2] ? this.fwdAdr.formatted[2] : ''}\n${this.fwdAdr.formatted && this.fwdAdr.formatted[3] ? this.fwdAdr.formatted[3] : ''}\n${this.fwdAdr.formatted && this.fwdAdr.formatted[4] ? this.fwdAdr.formatted[4] : ''}&email=${encodeURIComponent(this.email) || ''}&altEmail=${encodeURIComponent(this.altEmail) || ''}&tel=${this.tel ? encodeURIComponent(this.tel.replace(/\s/g, '')) : ''}&fax=${this.fax ? encodeURIComponent(this.fax.replace(/\s/g, '')) : ''}&party=${this.party || ''}&addlInfo=${this.addlInfo || ''}&date=${this.date || ''}&class=${this.voterClass || ''}&sex=${this.sex || ''}&recBallot=${this.recBallot || ''}&leoName=${this.leoName || ''}&leoAddress=${this.leoAdr ? encodeURIComponent(this.leoAdr) : ''}&leoFax=${this.leoFax || ''}&leoEmail=${this.leoEmail || ''}&leoPhone=${this.leoPhone || ''}&transmitOpts=${this.transmitOpts}&transmitInstructions=${this.pdfInstructions ? encodeURIComponent(this.pdfInstructions) : ''}&deadline=${encodeURIComponent(this.deadlineLanguage)}`), {responseType: 'arraybuffer'})
         .then((response) => {
           // console.log('response', response)
           let blob = new Blob([response.data], {type: 'application/pdf'})
@@ -492,6 +501,9 @@ export default {
   filters: {
     markdown: function (md) {
       return snarkdown(md)
+    },
+    capitalizeFirstLetter: function (string) {
+      return string.charAt(0).toUpperCase() + string.slice(1)
     }
   },
   methods: {
@@ -602,19 +614,48 @@ export default {
     // }
   },
   computed: {
+    instructionsObject () {
+      let votState = this.votState
+      return {
+        leoName: this.leoName || '',
+        transmitOpts: this.transmitOpts,
+        default: this.$t(`request.deadlineLanguage.transmitInstructions`, {
+          leoName: this.leoName,
+          transmitOpts: this.transmitOpts
+        }),
+        specialDeadline: this.$te(`request.deadlineLanguage.${votState}SpecialDeadline`) ? this.$t(`request.deadlineLanguage.${votState}SpecialDeadline`, {leoName: this.leoName}) : this.$t('request.deadlineLanguage.emailSuggested')
+      }
+    },
+    pdfInstructions () {
+      if (this.$te(`request.deadlineLanguage.${this.votState}Special`)) {
+        return this.$t(`request.deadlineLanguage.${this.votState}Special`, this.instructionsObject).replace(/\*{2}/gi, '*')
+      } else {
+        return this.$t(`request.deadlineLanguage.transmitInstructions`, {leoName: this.leoName, transmitOpts: this.transmitOpts}) + this.stateRules.fpcaSubmitOptionsRegister.includes('Email')
+          ? this.$t('request.deadlineLanguage.emailSuggested')
+          : ''
+      }
+    },
     transmitInstructions () {
-      return this.$te(`request.deadlineLanguage.${this.votState.toLowerCase()}Special`)
-        ? this.$t(`request.deadlineLanguage.${this.votState.toLowerCase()}Special`, {leoName: this.leoName, transmitOpts: this.transmitOpts})
-        : this.$t(`request.deadlineLanguage.transmitInstructions`, {leoName: this.leoName, transmitOpts: this.transmitOpts})
-      // return this.stateRules.fpcaSubmitOptionsRegister.includes('Email')
-      //   ? this.$t(`request.deadlineLanguage.transmitInstructions`, {
-      //     leoName: this.leoName,
-      //     transmitOpts: this.transmitOpts
-      //   }) + ' ' + this.$t(`request.deadlineLanguage.emailSuggested`) + ' ' + this.specialSubmissionRules
-      //   : this.$t(`request.deadlineLanguage.transmitInstructions`, {
-      //     leoName: this.leoName,
-      //     transmitOpts: this.transmitOpts
-      //   }) + ' ' + this.specialSubmissionRules
+      if (this.$te(`request.deadlineLanguage.${this.votState}SpecialDeadline`)) {
+        // return this.$t(`request.deadlineLanguage.${this.votState}Special`, this.instructionsObject)
+        return this.$t(`request.deadlineLanguage.transmitInstructions`, {leoName: this.leoName, transmitOpts: this.transmitOpts})
+      } else if (this.$te(`request.deadlineLanguage.${this.votState}Special`)) {
+        return this.$t(`request.deadlineLanguage.${this.votState}Special`, Object.assign({}, this.instructionsObject, {specialDeadline: ''}))
+      } else {
+        return this.$t(`request.deadlineLanguage.transmitInstructions`, {leoName: this.leoName, transmitOpts: this.transmitOpts})
+      }
+    },
+    transmitRules () {
+      if (this.$te(`request.deadlineLanguage.${this.votState}SpecialDeadline`)) {
+        return this.$t(`request.deadlineLanguage.${this.votState}Special`, Object.assign({}, this.instructionsObject, {default: ''}))
+      } else return this.stateRules && this.stateRules.fpcaSubmitOptionsRequest.includes('Email') ? this.$t('request.deadlineLanguage.emailSuggested') : ''
+    },
+    electronicTransmissionNote () {
+      if (this.$te(`request.deadlineLanguage.${this.votState}SpecialDeadline`)) {
+        return this.$t(`request.deadlineLanguage.${this.votState}SpecialDeadline`, {leoName: this.leoName})
+      } else if (this.$te(`request.deadlineLanguage.${this.votState}Special`)) {
+        return this.$t(`request.deadlineLanguage.${this.votState}Special`, {leoName: this.leoName})
+      } else return null
     },
     transmitOpts () {
       switch (this.stateRules.fpcaSubmitOptionsRegister.length) {

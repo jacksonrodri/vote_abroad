@@ -11,11 +11,9 @@ ballotReceiptOptions:
   - Fax
   - Mail
 fpcaSubmitOptionsRegister:
-  - Email
   - Fax
   - Mail
 fpcaSubmitOptionsRequest:
-  - Email
   - Fax
   - Mail
 canRegisterWithFwab: false

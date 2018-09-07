@@ -87,21 +87,18 @@
                 <!-- <request-stage></request-stage> -->
                 <section class="section">
                   <div>
-                    <p class="subtitle is-4" v-html="md($t('dashboard.thankYou') + ' ' + (stage === 'formEmailed' ? $t('dashboard.formSubmitted') : $t('dashboard.requiresSubmit')))"></p>
-                    <p class="subtitle is-4"
-                      v-if="$te(`request.deadlineLanguage.${state.toLowerCase()}Special`)"
+                    <p class="subtitle is-4" v-html="md($t('dashboard.thankYou'))"></p>
+                    <!-- + ' ' + (stage === 'formEmailed' ? $t('dashboard.formSubmitted') : $t('dashboard.requiresSubmit')))"></p> -->
+                    <p class="subtitle is-4" v-if="stage === 'formEmailed'" v-html="md(formSubmitted)"></p>
+                    <p class="subtitle is-4" v-if="stage !== 'formEmailed'" v-html="md(transmitInstructions)"></p>
+                    <b-message v-if="transmitRules && state !== 'formEmailed'" type="is-info" has-icon>
+                      <span v-html="md(transmitRules)"></span>
+                    </b-message>
+                    <p class="is-size-5"
+                      v-if="$te(`request.deadlineLanguage.${state.toLowerCase()}Special`) && stage !== 'formEmailed'"
                       v-html="md(specialSubmissionRules)"></p>
-                    <article class="message is-danger">
-                      <div class="message-header">
-                        <p v-html="md(deadlineLanguage.split('\n')[0])"></p>
-                      </div>
-                      <div class="message-body" v-html="md(deadlineLanguage.split('\n').slice(1).join('\n\n').replace(/(https?:\/\/[A-Za-z0-9\/:\.]*)/gi, '[$1]($1)'))">
-                      </div>
-                    </article>
 
-                    <p class="subtitle is-4" v-html="md(deadlineFormConfirmation)"></p>
-                    <!-- <p class="subtitle is-4" v-html="md($t('dashboard.verify'))"></p> -->
-                    <div class="box">
+                    <div class="box" v-if="stage !== 'formEmailed'">
                       <p>
                       <span class="title is-5" v-if="currentRequestObject.leo && currentRequestObject.leo.n"><strong>{{ currentRequestObject.leo.n }}</strong><br/><br/></span>
                       <span v-if="currentRequestObject.leo && currentRequestObject.leo.a1"><strong>{{ currentRequestObject.leo.a1 }}</strong><br/></span>
@@ -120,16 +117,46 @@
                       <p>
                       <span v-if="currentRequestObject.leo && currentRequestObject.leo.f" v-html="md(`**${$t('dashboard.fax')}:** [${ '+1' + currentRequestObject.leo.f }](tel:${ ('+1' + currentRequestObject.leo.f).replace(/[()]/g, '-').replace(/ /g, '')  })`)"></span>
                       </p>
-                    </div>
-                    <p class="subtitle is-4" v-html="md(deadlineReceiveBallot + ' ' + deadlineBallotReturn.replace(/(https?:\/\/[A-Za-z0-9\/:\.]*)/gi, '[$1]($1)'))"></p>
-                    <p class="subtitle is-4">
+                    </div><br/>
+                    <p class="subtitle is-4" v-if="stage !== 'formEmailed'" v-html="md($t('dashboard.requiresSubmit'))"></p>
+                    <article class="message is-danger" v-if="stage !== 'formEmailed'">
+                      <div class="message-header">
+                        <p v-html="md(deadlineLanguage.split('\n')[0])"></p>
+                      </div>
+                      <div class="message-body" v-html="md(deadlineLanguage.split('\n').slice(1).join('\n\n').replace(/(https?:\/\/[A-Za-z0-9\/:\.]*)/gi, '[$1]($1)'))">
+                      </div>
+                    </article>
+                    <p class="is-size-5" v-html="md(deadlineFormConfirmation)"></p>
+                    <!-- <p class="is-size-5" v-html="md($t('dashboard.verify'))"></p> -->
+                    <div class="box" v-if="stage === 'formEmailed'">
+                      <p>
+                      <span class="title is-5" v-if="currentRequestObject.leo && currentRequestObject.leo.n"><strong>{{ currentRequestObject.leo.n }}</strong><br/><br/></span>
+                      <span v-if="currentRequestObject.leo && currentRequestObject.leo.a1"><strong>{{ currentRequestObject.leo.a1 }}</strong><br/></span>
+                      <span v-if="currentRequestObject.leo && currentRequestObject.leo.a2"><strong>{{ currentRequestObject.leo.a2 }}</strong><br/></span>
+                      <span v-if="currentRequestObject.leo && currentRequestObject.leo.a3"><strong>{{ currentRequestObject.leo.a3 }}</strong><br/></span>
+                      <span><strong>{{ currentRequestObject.leo ? currentRequestObject.leo.c : '' }}, </strong>
+                      <strong>{{ currentRequestObject.leo ? currentRequestObject.leo.s : '' }} </strong>
+                      <strong>{{ currentRequestObject.leo ? currentRequestObject.leo.z : '' }}</strong><br/></span>
+                      <span class="has-text-right"><strong>United States of America</strong><br/><br/></span></p>
+                      <p>
+                      <span v-if="currentRequestObject.leo && currentRequestObject.leo.e" v-html="md(`**${$t('dashboard.email')}:** [${ currentRequestObject.leo.e }](mailto:${ currentRequestObject.leo.e })`)"></span>
+                      </p>
+                      <p>
+                      <span v-if="currentRequestObject.leo && currentRequestObject.leo.p" v-html="md(`**${$t('dashboard.phone')}:** [${ '+1' + currentRequestObject.leo.p }](tel:${ ('+1' + currentRequestObject.leo.p).replace(/[()]/g, '-').replace(/ /g, '') })`)"><br/><br/></span>
+                      </p>
+                      <p>
+                      <span v-if="currentRequestObject.leo && currentRequestObject.leo.f" v-html="md(`**${$t('dashboard.fax')}:** [${ '+1' + currentRequestObject.leo.f }](tel:${ ('+1' + currentRequestObject.leo.f).replace(/[()]/g, '-').replace(/ /g, '')  })`)"></span>
+                      </p>
+                    </div><br/>
+                    <p class="is-size-5" v-html="md(deadlineReceiveBallot + ' ' + deadlineBallotReturn.replace(/(https?:\/\/[A-Za-z0-9\/:\.]*)/gi, '[$1]($1)'))"></p><br/>
+                    <p class="is-size-5">
                       <span class="content" v-html="md($t('dashboard.makeChanges', {link: localePath({ name: 'request-stage', params: {stage: 'your-information'} })}))"></span>
                       <!-- <span>If you need to change anything on your form, </span>
                       <nuxt-link :to="localePath({ name: 'request-stage', params: {stage: 'your-information'} })" class="has-text-primary">click here</nuxt-link>
                       <span>to go back. If you are finished, please close the browser window to delete any information saved in this session. Or </span> -->
                       <a @click.prevent="logoutRestart" class="has-text-primary"> {{$t('dashboard.clearSession')}}</a>
-                    </p>
-                    <p class="subtitle is-4" v-html="md($t('dashboard.helpThanks'))"></p>
+                    </p><br/>
+                    <p class="is-size-5" v-html="md($t('dashboard.helpThanks'))"></p>
                   </div>
                 </section>
               </div>
@@ -258,28 +285,39 @@ export default {
     }
   },
   computed: {
-    specialSubmissionRules () {
-      return this.$te(`request.deadlineLanguage.${this.state.toLowerCase()}Special`)
-        ? this.$t(`request.deadlineLanguage.${this.state.toLowerCase()}Special`)
-        : ''
-    },
-    stateRules () {
-      if (this.state) {
-        return this.allStateRules.find(x => x.iso.toLowerCase() === this.state.toLowerCase())
-      } else {
-        return undefined
+    instructionsObject () {
+      let votState = this.votState
+      return {
+        leoName: this.leoName || '',
+        transmitOpts: this.transmitOpts,
+        default: this.$t(`request.deadlineLanguage.transmitInstructions`, {
+          leoName: this.leoName,
+          transmitOpts: this.transmitOpts
+        }),
+        specialDeadline: this.$te(`request.deadlineLanguage.${votState}SpecialDeadline`) ? this.$t(`request.deadlineLanguage.${votState}SpecialDeadline`, {leoName: this.leoName}) : this.$t('request.deadlineLanguage.emailSuggested')
       }
     },
     transmitInstructions () {
-      return this.stateRules.fpcaSubmitOptionsRegister.includes('Email')
-        ? this.$t(`request.deadlineLanguage.transmitInstructions`, {
-          leoName: this.leoName,
-          transmitOpts: this.transmitOpts
-        }) + ' ' + this.$t(`request.deadlineLanguage.emailSuggested`)
-        : this.$t(`request.deadlineLanguage.transmitInstructions`, {
-          leoName: this.leoName,
-          transmitOpts: this.transmitOpts
-        })
+      if (this.$te(`request.deadlineLanguage.${this.votState}SpecialDeadline`)) {
+        // return this.$t(`request.deadlineLanguage.${this.votState}Special`, this.instructionsObject)
+        return this.$t(`request.deadlineLanguage.transmitInstructions`, {leoName: this.leoName, transmitOpts: this.transmitOpts})
+      } else if (this.$te(`request.deadlineLanguage.${this.votState}Special`)) {
+        return this.$t(`request.deadlineLanguage.${this.votState}Special`, Object.assign({}, this.instructionsObject, {specialDeadline: ''}))
+      } else {
+        return this.$t(`request.deadlineLanguage.transmitInstructions`, {leoName: this.leoName, transmitOpts: this.transmitOpts})
+      }
+    },
+    transmitRules () {
+      if (this.$te(`request.deadlineLanguage.${this.votState}SpecialDeadline`)) {
+        return this.$t(`request.deadlineLanguage.${this.votState}Special`, Object.assign({}, this.instructionsObject, {default: ''}))
+      } else return this.stateRules && this.stateRules.fpcaSubmitOptionsRequest.includes('Email') ? this.$t('request.deadlineLanguage.emailSuggested') : ''
+    },
+    electronicTransmissionNote () {
+      if (this.$te(`request.deadlineLanguage.${this.votState}SpecialDeadline`)) {
+        return this.$t(`request.deadlineLanguage.${this.votState}SpecialDeadline`, {leoName: this.leoName})
+      } else if (this.$te(`request.deadlineLanguage.${this.votState}Special`)) {
+        return this.$t(`request.deadlineLanguage.${this.votState}Special`, {leoName: this.leoName})
+      } else return null
     },
     transmitOpts () {
       switch (this.stateRules.fpcaSubmitOptionsRegister.length) {
@@ -295,6 +333,46 @@ export default {
           return `mail, email or fax`
       }
     },
+    specialSubmissionRules () {
+      // return this.$te(`request.deadlineLanguage.${this.state.toLowerCase()}Special`)
+      //   ? this.$t(`request.deadlineLanguage.${this.state.toLowerCase()}Special`, {leoName: this.leoName})
+      //   : ''
+      return this.$te(`request.deadlineLanguage.${this.votState.toLowerCase()}Special`)
+        ? this.$t(`request.deadlineLanguage.${this.votState.toLowerCase()}Special`, {leoName: this.leoName, transmitOpts: this.transmitOpts})
+        : this.$t(`request.deadlineLanguage.transmitInstructions`, {leoName: this.leoName, transmitOpts: this.transmitOpts})
+    },
+    stateRules () {
+      if (this.state) {
+        return this.allStateRules.find(x => x.iso.toLowerCase() === this.state.toLowerCase())
+      } else {
+        return undefined
+      }
+    },
+    // transmitInstructions () {
+    //   return this.stateRules.fpcaSubmitOptionsRegister.includes('Email')
+    //     ? this.$t(`request.deadlineLanguage.transmitInstructions`, {
+    //       leoName: this.leoName,
+    //       transmitOpts: this.transmitOpts
+    //     }) + ' ' + this.$t(`request.deadlineLanguage.emailSuggested`)
+    //     : this.$t(`request.deadlineLanguage.transmitInstructions`, {
+    //       leoName: this.leoName,
+    //       transmitOpts: this.transmitOpts
+    //     })
+    // },
+    // transmitOpts () {
+    //   switch (this.stateRules.fpcaSubmitOptionsRegister.length) {
+    //     case 1:
+    //       return this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[0].toLowerCase()}`)
+    //     case 2:
+    //       return this.$t(`request.deadlineLanguage.opt2`, {item1: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[0].toLowerCase()}`).toLowerCase(), item2: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[1].toLowerCase()}`).toLowerCase()})
+    //     case 3:
+    //       return this.$t(`request.deadlineLanguage.opt3`, {item1: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[0].toLowerCase()}`).toLowerCase(), item2: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[1].toLowerCase()}`).toLowerCase(), item3: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[2].toLowerCase()}`).toLowerCase()})
+    //     case 4:
+    //       return this.$t(`request.deadlineLanguage.opt4`, {item1: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[0].toLowerCase()}`).toLowerCase(), item2: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[1].toLowerCase()}`).toLowerCase(), item3: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[2].toLowerCase()}`).toLowerCase(), item4: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[3].toLowerCase()}`).toLowerCase()})
+    //     default:
+    //       return `mail, email or fax`
+    //   }
+    // },
     newVoterDeadlineLanguageObject () {
       let elections = this.getCurrentDeadlines.filter(x => x.ruleType === 'Registration')
       let rule = elections[0].rule
@@ -392,9 +470,11 @@ export default {
       }
     },
     isRegistered () { return this.currentRequestObject ? this.currentRequestObject.isRegistered : null },
-    deadlineFormSubmitted () {
+    formSubmitted () {
       return this.$t('request.deadlineLanguage.formSubmitted', {
-        alsoVoterRegistration: this.isRegistered === 'registered' ? '' : this.$t('request.deadlineLanguage.alsoVoterRegistration')
+        alsoVoterRegistration: this.isRegistered === 'registered' ? '' : this.$t('request.deadlineLanguage.alsoVoterRegistration'),
+        leoName: this.leoName,
+        specialRules: this.$te(`request.deadlineLanguage.${this.votState}SpecialDeadline`) ? this.capitalizeFirstLetter(this.$t(`request.deadlineLanguage.${this.votState}SpecialDeadline`)) : ''
       })
     },
     deadlineFormConfirmation () {
@@ -441,7 +521,7 @@ export default {
     leoPhone () {
       return this.currentRequestObject.leo && this.currentRequestObject.leo.p ? '+1 ' + this.currentRequestObject.leo.p : ''
     },
-    voterState () { return this.$store.getters['requests/getCurrent'] && this.$store.getters['requests/getCurrent'].leo ? this.$store.getters['requests/getCurrent'].leo.s : '' },
+    votState () { return this.$store.getters['requests/getCurrent'] && this.$store.getters['requests/getCurrent'].leo ? this.$store.getters['requests/getCurrent'].leo.s : '' },
     voterRegistrationStatus () { return this.$store.getters['requests/getCurrent'].isRegistered || null },
     voterType () { return this.$store.getters['requests/getCurrent'].voterClass || null },
     ...mapGetters('requests', ['getCurrent', 'getCurrentDeadlines'])
@@ -455,6 +535,9 @@ export default {
     }
   },
   methods: {
+    capitalizeFirstLetter: function (string) {
+      return string.charAt(0).toUpperCase() + string.slice(1)
+    },
     logoutRestart () {
       this.$store.dispatch('userauth/logout')
       this.$router.push(this.localePath({ name: 'request-stage', params: {stage: 'your-information'} }))
