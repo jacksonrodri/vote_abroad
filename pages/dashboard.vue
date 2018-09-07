@@ -91,7 +91,7 @@
                     <!-- + ' ' + (stage === 'formEmailed' ? $t('dashboard.formSubmitted') : $t('dashboard.requiresSubmit')))"></p> -->
                     <p class="subtitle is-4" v-if="stage === 'formEmailed'" v-html="md(formSubmitted)"></p>
                     <p class="subtitle is-4" v-if="stage !== 'formEmailed'" v-html="md(transmitInstructions)"></p>
-                    <b-message v-if="transmitRules && state !== 'formEmailed'" type="is-info" has-icon>
+                    <b-message v-if="transmitRules && stage !== 'formEmailed'" type="is-info" has-icon>
                       <span v-html="md(transmitRules)"></span>
                     </b-message>
                     <p class="is-size-5"
