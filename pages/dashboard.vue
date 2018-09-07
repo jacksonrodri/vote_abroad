@@ -87,8 +87,10 @@
                 <!-- <request-stage></request-stage> -->
                 <section class="section">
                   <div>
-                    <p class="subtitle is-4" v-html="md($t('dashboard.thankYou') + ' ' + (this.stage === 'formEmailed' ? $t('dashboard.formSubmitted') : $t('dashboard.requiresSubmit')))"></p>
-                    <p class="subtitle is-4" v-if="/AR|CT|NJ|NY|TX|VT|WY/.test(state)" v-html="md(specialSubmissionRules)"></p>
+                    <p class="subtitle is-4" v-html="md($t('dashboard.thankYou') + ' ' + (stage === 'formEmailed' ? $t('dashboard.formSubmitted') : $t('dashboard.requiresSubmit')))"></p>
+                    <p class="subtitle is-4"
+                      v-if="$te(`request.deadlineLanguage.${state.toLowerCase()}Special`)"
+                      v-html="md(specialSubmissionRules)"></p>
                     <article class="message is-danger">
                       <div class="message-header">
                         <p v-html="md(deadlineLanguage.split('\n')[0])"></p>
@@ -257,7 +259,7 @@ export default {
   },
   computed: {
     specialSubmissionRules () {
-      return /AR|CT|NJ|NY|TX|VT|WY/.test(this.state)
+      return this.$te(`request.deadlineLanguage.${this.state.toLowerCase()}Special`)
         ? this.$t(`request.deadlineLanguage.${this.state.toLowerCase()}Special`)
         : ''
     },

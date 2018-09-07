@@ -31,7 +31,7 @@
               v-model="croppedPic"
               ref="cp"
               :placeholder="cropperPlaceholder"
-              accept="image/*"
+              accept="image/png, image/jpeg, image/jpg, image/gif"
               :zoom-speed="2"
               :auto-sizing="true"
               :input-attrs="{capture: true, class: 'file-input'}"
@@ -43,6 +43,7 @@
               @init.once="$refs.cp.refresh()"
               @image-remove="webCamPic = null"
               @file-choose="drawFromFile"
+              @file-type-mismatch="handleFileTypeMismatch"
               @new-image="drawThresholdToCanvas"
               @draw="onDraw"
               :initial-image="thresholdedPic"
@@ -225,6 +226,15 @@ export default {
     })
   },
   methods: {
+    handleFileTypeMismatch () {
+      this.$dialog.alert({
+        title: this.$t('request.sig.invalidImageTypeTitle'),
+        message: this.$t('request.sig.invalidImageTypeMessage'),
+        type: 'is-danger'
+      })
+      this.processingImage = false
+      this.clearImage()
+    },
     clearImage () {
       this.webCamPic = null
       this.thresholdedPic = null
@@ -247,13 +257,6 @@ export default {
       this.$dialog.alert({
         title: 'Image too large',
         message: 'That image is too large, please choose a smaller image.',
-        type: 'is-danger'
-      })
-    },
-    handleFileTypeMismatch () {
-      this.$dialog.alert({
-        title: 'Invalid image file format',
-        message: 'Please upload a \'.jpg\' or \'.png\' image file',
         type: 'is-danger'
       })
     },

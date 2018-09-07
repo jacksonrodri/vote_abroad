@@ -1172,7 +1172,7 @@ export default {
         }
       },
       fax: {
-        required: requiredIf((model) => this.recBallot === 'fax'),
+        required: requiredIf(function (model) { return this.recBallot === 'fax' }),
         validPhone () { return this.fax ? this.isValidNumber(this.fax) : true }
       },
       tel: {

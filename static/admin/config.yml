@@ -266,7 +266,11 @@ collections:
             widget: "object"
             fields:
               - {label: "Add your sig", name: "title", widget: "string"}
-              - {label: "Special State Submission rules (title)", name: "specialInstructions"}
+              - {label: "Special State Submission rules (title)", name: "specialInstructions", widget: "string"}
+              - {label: "Invalid Image Type Title", name: "invalidImageTypeTitle", widget: "string"}
+              - {label: "Invalid Image Type Message", name: "invalidImageTypeMessage", widget: "string"}
+              - {label: "Invalid Image Size Title", name: "invalidImageSizeMessage", widget: "string"}
+              - {label: "Invalid Image Type Message", name: "invalidImageSizeMessage", widget: "string"}
               - {label: "Your must Read and Affirm:", name: "affirmation", widget: "string"}
               - {label: "Agree", name: "agree", widget: "string"}
               - {label: "Disagree", name: "disagree", widget: "string"}

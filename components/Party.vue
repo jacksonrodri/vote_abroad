@@ -133,7 +133,7 @@ export default {
     },
     email () { return this.$store.getters['requests/getCurrent'].email },
     daEmailGetter: {
-      get () { return this.daEmail || (this.joinValue && this.joinValue !== true && this.joinValue !== false && this.joinValue !== 'already a member') ? this.joinValue : '' },
+      get () { return this.daEmail || (this.joinValue && this.joinValue !== true && this.joinValue !== false && this.joinValue !== 'already a member' && this.joinValue !== 'true' && this.joinValue !== 'false') ? this.joinValue : '' },
       set (value) { this.daEmail = value }
     },
     joinValue: {

@@ -21,7 +21,12 @@
       <div>
         <h1 class="has-text-centered title is-3">{{ $t('request.stages.step', {step: 5})}}</h1>
         <h3 class="has-text-centered subtitle is-4">{{ $t('request.stages.stage5')}}</h3>
-        <span class="is-size-4" v-html="$t('request.stages.instructions5', {leo: `${leoName ? 'the ' + leoName : 'your local election official'}`, options: ballotReceiptOptionsString}) + ' ' + specialSubmissionRules"></span>
+        <span class="is-size-5" v-html="md(transmitInstructions)"></span>
+        <span class="is-size-5" v-if="stateRules && stateRules.fpcaSubmitOptionsRequest.length > 1" v-html="md($t('request.stages.instructions5sub'))"></span>
+        <!-- <span
+          class="is-size-4"
+          v-html="$t('request.stages.instructions5', {leo: `${leoName ? 'the ' + leoName : 'your local election official'}`, options: ballotReceiptOptionsString})"></span> -->
+        <!-- <span class="is-size-4"> {{/AR|CT|NJ|NY|TX|VT|WY/.test(this.state) ? specialSubmissionRules : '' }}</span> -->
         <!-- <i18n path="request.stages.instructions5"
           class="is-size-4"
           tag="span"
@@ -32,7 +37,7 @@
 
         <b-tabs type="is-toggle" expanded>
           <b-tab-item :label="$t('request.stages.email')"
-            v-if="stateRules && stateRules.fpcaSubmitOptionsRequest.indexOf('Email') > -1"
+            v-if="stateRules && stateRules.fpcaSubmitOptionsRequest.includes('Email')"
             icon="at">
             <section v-if="isIE" class="section">
               <h3 class="subtitle is-4">{{$t('request.stages.emailIntro')}}</h3>
@@ -598,15 +603,18 @@ export default {
   },
   computed: {
     transmitInstructions () {
-      return this.stateRules.fpcaSubmitOptionsRegister.includes('Email')
-        ? this.$t(`request.deadlineLanguage.transmitInstructions`, {
-          leoName: this.leoName,
-          transmitOpts: this.transmitOpts
-        }) + ' ' + this.$t(`request.deadlineLanguage.emailSuggested`) + ' ' + this.specialSubmissionRules
-        : this.$t(`request.deadlineLanguage.transmitInstructions`, {
-          leoName: this.leoName,
-          transmitOpts: this.transmitOpts
-        }) + ' ' + this.specialSubmissionRules
+      return this.$te(`request.deadlineLanguage.${this.votState.toLowerCase()}Special`)
+        ? this.$t(`request.deadlineLanguage.${this.votState.toLowerCase()}Special`, {leoName: this.leoName, transmitOpts: this.transmitOpts})
+        : this.$t(`request.deadlineLanguage.transmitInstructions`, {leoName: this.leoName, transmitOpts: this.transmitOpts})
+      // return this.stateRules.fpcaSubmitOptionsRegister.includes('Email')
+      //   ? this.$t(`request.deadlineLanguage.transmitInstructions`, {
+      //     leoName: this.leoName,
+      //     transmitOpts: this.transmitOpts
+      //   }) + ' ' + this.$t(`request.deadlineLanguage.emailSuggested`) + ' ' + this.specialSubmissionRules
+      //   : this.$t(`request.deadlineLanguage.transmitInstructions`, {
+      //     leoName: this.leoName,
+      //     transmitOpts: this.transmitOpts
+      //   }) + ' ' + this.specialSubmissionRules
     },
     transmitOpts () {
       switch (this.stateRules.fpcaSubmitOptionsRegister.length) {
@@ -709,7 +717,7 @@ export default {
       }
     },
     specialSubmissionRules () {
-      return /AR|CT|NJ|NY|TX|VT|WY/.test(this.state)
+      return this.$te(`request.deadlineLanguage.${this.votState.toLowerCase()}Special`)
         ? this.$t(`request.deadlineLanguage.${this.votState.toLowerCase()}Special`)
         : ''
     },
