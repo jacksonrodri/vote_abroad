@@ -227,11 +227,11 @@ export default {
   },
   methods: {
     handleFileTypeMismatch () {
-      this.$dialog.alert({
-        title: this.$t('request.sig.invalidImageTypeTitle'),
-        message: this.$t('request.sig.invalidImageTypeMessage'),
-        type: 'is-danger'
-      })
+      // this.$dialog.alert({
+      //   title: this.$t('request.sig.invalidImageTypeTitle'),
+      //   message: this.$t('request.sig.invalidImageTypeMessage'),
+      //   type: 'is-danger'
+      // })
       this.processingImage = false
       this.clearImage()
     },

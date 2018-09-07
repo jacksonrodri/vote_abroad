@@ -630,9 +630,7 @@ export default {
       if (this.$te(`request.deadlineLanguage.${this.votState}Special`)) {
         return this.$t(`request.deadlineLanguage.${this.votState}Special`, this.instructionsObject).replace(/\*{2}/gi, '*')
       } else {
-        return this.$t(`request.deadlineLanguage.transmitInstructions`, {leoName: this.leoName, transmitOpts: this.transmitOpts}) + this.stateRules.fpcaSubmitOptionsRegister.includes('Email')
-          ? this.$t('request.deadlineLanguage.emailSuggested')
-          : ''
+        return (this.$t(`request.deadlineLanguage.transmitInstructions`, {leoName: this.leoName, transmitOpts: this.transmitOpts}).concat(this.stateRules.fpcaSubmitOptionsRegister.includes('Email') ? this.$t('request.deadlineLanguage.emailSuggested') : '')).replace(/\*{2}/gi, '*')
       }
     },
     transmitInstructions () {
