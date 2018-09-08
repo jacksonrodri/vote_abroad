@@ -906,7 +906,7 @@ export default {
           this.$v.identification.$touch()
           break
       }
-      console.log(JSON.stringify(this.$v, null, 2))
+      console.log(JSON.stringify(this.$v.fax, null, 2))
 
       switch (true) {
         case this.stage.slug === 'your-information' && this.$v.firstName.$error:

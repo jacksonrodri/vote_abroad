@@ -102,7 +102,8 @@ module.exports = {
     short_name: 'Vote Abroad',
     lang: 'en',
     theme_color: '#172559',
-    background_color: '#172559'
+    background_color: '#172559',
+    ogHost: process.env.DEPLOY_PRIME_URL
   },
   css: [
     // '@fortawesome/fontawesome/styles.css',
