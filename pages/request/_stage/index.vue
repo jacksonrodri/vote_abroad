@@ -878,8 +878,6 @@ export default {
     focusFirstErrorOrAdvance (nextPage) {
       switch (this.$route.params.stage) {
         case 'your-information':
-          // this.$refs.tel.check()
-          // if (this.$refs.abrAdr) this.$refs.abrAdr.touch()
           this.$v.firstName.$touch()
           this.$v.lastName.$touch()
           this.$v.email.$touch()
@@ -889,19 +887,17 @@ export default {
           break
         case 'voting-information':
           this.$v.votAdr.$touch()
-          this.$v.votAdr.A.$touch()
-          this.$v.votAdr.C.$touch()
-          // this.$v.vAdr.$touch()
+          // this.$v.votAdr.A.$touch()
+          // this.$v.votAdr.C.$touch()
           this.$v.jurisdiction.$touch()
           this.$v.voterClass.$touch()
           this.$v.isRegistered.$touch()
           this.$v.recBallot.$touch()
-          this.$v.email.$touch()
           this.$v.fax.$touch()
-          // if (this.recBallot === 'fax') { this.$refs.fax.$v.value.$touch() }
           this.$v.altEmail.$touch()
           this.$v.fwdAdr.$touch()
           this.$v.fwdAdr.A.$touch()
+          this.$v.email.$touch()
           break
         case 'id-and-contact-information':
           this.$v.sex.$touch()
@@ -910,6 +906,7 @@ export default {
           this.$v.identification.$touch()
           break
       }
+      console.log(JSON.stringify(this.$v, null, 2))
 
       switch (true) {
         case this.stage.slug === 'your-information' && this.$v.firstName.$error:
