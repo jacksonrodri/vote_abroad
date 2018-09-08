@@ -395,16 +395,15 @@ export default {
 
     let sign = () => {
       let signature = new Image()
-      signature.src = this.signature
       signature.onload = () => {
         // console.log(signature.width, signature.height)
         ctx.drawImage(signature, 0, 0, signature.width, signature.height, this.calculated.signature.x, this.calculated.signature.y, 1252, 313)
         // ctx.drawImage(signature, 43, 12, 427, 240, this.calculated.signature.x, this.calculated.signature.y, 1152, 648)
       }
+      if (this.signature) signature.src = this.signature
     }
 
     let drawing = new Image()
-    drawing.src = '/fpca-min.png'
     drawing.onload = () => {
       ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height)
       ctx.fillStyle = 'white'
@@ -413,6 +412,7 @@ export default {
       fillText()
       sign()
     }
+    drawing.src = '/fpca-min.png'
 
     sign()
 

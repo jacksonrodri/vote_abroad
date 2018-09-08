@@ -125,7 +125,7 @@ collections:
           - name: category
             label: Choose a category
             widget: select
-            options: [Addressing / Mailing Instructions, Ballot Related Issues, Dates and Deadlines, Eligibility / First Time Voter, FWAB - Emergency Write-in Ballot, Form Related Issues, Glossary - Terms, Other Related Issues, Party Affiliation Questions, Primary Elections, Registration Process, Security and Privacy, Technical Issues, US Citizens without Residency, Voter Account Issues, Voter ID]
+            options: [Addressing / Mailing Instructions, Ballot Related Issues, Dates and Deadlines, Eligibility / First Time Voter, FWAB - Emergency Write-in Ballot, Form Related Issues, Glossary - Terms, Other Related Issues, Party Affiliation Questions, Primary Elections, Registration Process, Security and Privacy, Technical Issues, US Citizens without Residency, Voter Account Issues, Voter ID, Voting as a U.S. Citizen Outside the U.S., How to Register to Vote and Get a Ballot, U.S. Citizens Who Have Never Resided in the U.S., Filling Out the Federal Post Card Application(FPCA), Returning a Voted Ballot, Using the Federal Write-in Absentee Ballot (FWAB), Federal And State Tax Implications]
       - label: Related FAQs
         name: relatedFaqs
         widget: list
