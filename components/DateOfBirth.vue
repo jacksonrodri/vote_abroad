@@ -102,9 +102,9 @@ export default {
         'November',
         'December'
       ],
-      focusedDate: this.dob || this.maxDate,
+      focusedDate: this.dob || this.maxDate || new Date(new Date().getFullYear() - 19, new Date().getMonth(), new Date().getDate()),
       focusedDateData: {
-        month: (this.dob || this.maxDate).getMonth(),
+        month: (this.dob || this.maxDate || new Date()).getMonth(),
         year: this.dob || this.maxDate ? (this.dob || this.maxDate).getFullYear() : (new Date().getFullYear() - 18)
         // (this.maxDate || new Date()).getFullYear()
       }
