@@ -113,11 +113,11 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Question", name: "title", widget: "string"}
       - {label: "Slug", name: "slug", hint: "The text used for the URL", widget: "string", required: true, pattern: ["[A-Za-z-_]+", "Can only include letters, numbers, dash (-), and underscore (_)"]}
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
       - {label: "Include in main menu?", name: "isInMenu", widget: "boolean"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Answer", name: "body", widget: "markdown"}
       - label: Categories
         name: categories
         widget: list
