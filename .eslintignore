@@ -11,4 +11,3 @@ node_modules/**
 dist
 # AWS files
 aws-exports.js
-aws-config.js

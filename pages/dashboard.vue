@@ -84,11 +84,9 @@
           <div class="column">
             <div class="columns">
               <div class="column">
-                <!-- <request-stage></request-stage> -->
                 <section class="section">
                   <div>
                     <p class="subtitle is-4" v-html="md($t('dashboard.thankYou'))"></p>
-                    <!-- + ' ' + (stage === 'formEmailed' ? $t('dashboard.formSubmitted') : $t('dashboard.requiresSubmit')))"></p> -->
                     <p class="subtitle is-4" v-if="stage === 'formEmailed'" v-html="md(formSubmitted)"></p>
                     <p class="subtitle is-4" v-if="stage !== 'formEmailed'" v-html="md(transmitInstructions)"></p>
                     <b-message v-if="transmitRules && stage !== 'formEmailed'" type="is-info" has-icon>
@@ -209,18 +207,13 @@
 
 <script>
 import UserDashboard from '~/components/UserDashboard'
-// import VueMarkdown from 'vue-markdown'
-import RequestStage from '~/components/RequestStage'
 import snarkdown from 'snarkdown'
 import { mapGetters } from 'vuex'
-// import { getDeadlineLanguage } from '~/utils/helpers'
 
 export default {
   name: 'dashboard',
   components: {
-    UserDashboard,
-    // VueMarkdown,
-    RequestStage
+    UserDashboard
   },
   async fetch ({ store }) {
     await store.dispatch('data/getElections')

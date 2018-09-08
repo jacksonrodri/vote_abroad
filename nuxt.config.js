@@ -1,9 +1,6 @@
 const { API_ROOT, I18N } = require('./config')
 const axios = require('axios')
 
-// remove following line after buefy updates to 0.6.5
-// global.HTMLElement = typeof window === 'undefined' ? Object : window.HTMLElement
-
 module.exports = {
   /*
   ** Headers of the page
@@ -18,13 +15,7 @@ module.exports = {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'preconnect', href: 'https://cognito-identity.us-east-1.amazonaws.com' },
-      // { rel: 'preload', as: 'style', href: 'https://use.fontawesome.com/releases/v5.1.0/css/solid.css', integrity: 'sha384-TbilV5Lbhlwdyc4RuIV/JhD8NR+BfMrvz4BL5QFa2we1hQu6wvREr3v6XSRfCTRp', 'crossorigin': 'anonymous' },
-      // { rel: 'preload', as: 'style', href: 'https://use.fontawesome.com/releases/v5.1.0/css/fontawesome.css', integrity: 'sha384-ozJwkrqb90Oa3ZNb+yKFW2lToAWYdTiF1vt8JiH5ptTGHTGcN7qdoR1F95e0kYyG', 'crossorigin': 'anonymous' },
-      { rel: 'preload', as: 'image', href: 'https://res.cloudinary.com/democratsabroad/image/upload/f_auto,q_auto/v1521002249/votefromabroad-bg.jpg' },
-      // { rel: 'preload', as: 'image', href: 'https://res.cloudinary.com/democratsabroad/image/upload/f_auto,q_auto/v1521002249/votefromabroad-bg.jpg' },
-      { rel: 'preload', as: 'image', href: '/vfa_blue.svg' },
-      { rel: 'preload', as: 'image', href: '/flags/4x3/us.svg' }
-      // { rel: 'style', href: 'https://use.fontawesome.com/releases/v5.1.0/css/solid.css', integrity: 'sha384-TbilV5Lbhlwdyc4RuIV/JhD8NR+BfMrvz4BL5QFa2we1hQu6wvREr3v6XSRfCTRp', 'crossorigin': 'anonymous' }
+      { rel: 'preload', as: 'image', href: 'https://res.cloudinary.com/democratsabroad/image/upload/f_auto,q_auto/v1521002249/votefromabroad-bg.jpg' }
     ]
   },
   render: {
@@ -77,12 +68,6 @@ module.exports = {
         '^/api/mail': '/'
       }
     },
-    // '/api/*': {
-    //   target: 'http://localhost:9000/',
-    //   pathRewrite: {
-    //     '^/api/': '/'
-    //   }
-    // },
     '/api/place/**': {
       target: 'https://maps.googleapis.com/maps/api/place',
       pathRewrite: {
@@ -106,7 +91,6 @@ module.exports = {
     ogHost: process.env.DEPLOY_PRIME_URL
   },
   css: [
-    // '@fortawesome/fontawesome/styles.css',
     {src: '@/assets/css/style.scss',
       lang: 'sass'}
   ],
@@ -119,21 +103,6 @@ module.exports = {
       collapseWhitespace: false
     },
     routes: ['request/your-information', 'request/canvas', 'request/voting-information', 'request/id-and-contact-information', 'privacy', 'terms-of-use']
-    // routes: ['/elections/AL', '/elections/AK', '/elections/AS', '/elections/AZ', '/elections/AR', '/elections/CA', '/elections/CO', '/elections/CT', '/elections/DE', '/elections/DC', '/elections/FL', '/elections/GA', '/elections/GU', '/elections/HI', '/elections/ID', '/elections/IL', '/elections/IN', '/elections/IA', '/elections/KS', '/elections/KY', '/elections/LA', '/elections/ME', '/elections/MD', '/elections/MA', '/elections/MI', '/elections/MN', '/elections/MS', '/elections/MO', '/elections/MT', '/elections/NE', '/elections/NV', '/elections/NH', '/elections/NJ', '/elections/NM', '/elections/NY', '/elections/NC', '/elections/ND', '/elections/OH', '/elections/OK', '/elections/OR', '/elections/PA', '/elections/undefined', '/elections/RI', '/elections/SC', '/elections/SD', '/elections/TN', '/elections/TX', '/elections/UT', '/elections/VT', '/elections/VI', '/elections/VA', '/elections/WA', '/elections/WV', '/elections/WI', '/elections/WY', '/request/', '/request/your-information/']
-    // routes: function () {
-    //   return axios.get('http://localhost:3000/content-api/elections/elections')
-    //   .then(({data}) => {
-    //     return data.body.map((election) => {
-    //       return `/elections/${election.state}`
-    //     })
-    //   })
-    //   .then(list => {
-    //     var routes = list.filter((v,i,a)=>a.indexOf(v)==i)
-    //     var esRoutes = routes.map(x => '/es'+x)
-    //     console.log(routes.concat(esRoutes))
-    //     return routes.concat(esRoutes)
-    //   })
-    // }
   },
   router: {
     linkActiveClass: 'is-active',
@@ -146,7 +115,6 @@ module.exports = {
     {src: '~/plugins/vuelidate'},
     {src: '~/plugins/croppa'},
     {src: '~/plugins/intercom'},
-    {src: '~/plugins/worker', ssr: false},
     { src: '~plugins/i18n.js' }
   ],
   /*
@@ -164,11 +132,9 @@ module.exports = {
     */
     vendor: [
       'babel-polyfill',
-      // '~/assets/countryaddresses.js',
       'mailcheck',
       'auth0-js',
       'libphonenumber-js/custom',
-      // 'vue-markdown'
       'snarkdown'
     ],
     babel: {
@@ -192,8 +158,6 @@ module.exports = {
       }
     },
     watch: [
-      // '~/lang/en-US.js',
-      // '~/lang/es-ES.js',
       './lang/',
       '~/config/index.js'
     ]

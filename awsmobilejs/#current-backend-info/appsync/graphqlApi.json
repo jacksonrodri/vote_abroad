@@ -1,9 +1,0 @@
-{
-	"name": "VFA3",
-	"apiId": "6fw3a4bbkjavhbkik4cdnixqtq",
-	"authenticationType": "AWS_IAM",
-	"arn": "arn:aws:appsync:us-east-1:823421797454:apis/6fw3a4bbkjavhbkik4cdnixqtq",
-	"uris": {
-		"GRAPHQL": "https://dm6oltcfj5dxraq6st7iyrcvby.appsync-api.us-east-1.amazonaws.com/graphql"
-	}
-}

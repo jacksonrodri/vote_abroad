@@ -54,27 +54,20 @@
       </p>
     </b-field>
     <transition name="fade">
-      <phone-input key="daEmail"
+      <b-field
         v-if="isExistingDaMember || (joinValue !== true && joinValue !== false && joinValue)"
+        key="daEmail"
         ref="daEmail"
         :label="$t('request.joinDa.accountEmail', {email: email || 'the one you entered'})"
-        :required="false"
-        @input="(val) => joinValue = val"
-        :accepts="['email']"
-        v-model="daEmailGetter">
-      </phone-input>
-      <!-- <b-field v-if="isExistingDaMember" :label="$t('request.joinDa.accountEmail')">
-        <b-input
-          placeholder="e.g. user@email.com"
-          type="text"
+        :type="$v.$error ? 'is-danger' : ''"
+        :message="$v.$error ? 'please enter a valid email address.' : ''">
+        <b-input type="email"
+          v-model="daEmailGetter"
           @input="(val) => joinValue = val"
-          v-model="daEmail"></b-input>
-      </b-field> -->
-      <!-- Please enter your account email address if you remember it so we can update your record -->
+          maxlength="30">
+        </b-input>
+      </b-field>
     </transition>
-    <!-- <div class="field">
-      <b-checkbox v-model="isExistingDaMember">I am already a member of Democrats Abroad.</b-checkbox>
-    </div> -->
     <b-message :title="joinTooltipTitle" type="is-info" has-icon :active.sync="joinToolTipIsOpen">
       <slot name="joinTooltip"></slot>
     </b-message>
@@ -85,7 +78,7 @@
 </template>
 
 <script>
-import PhoneInput from '~/components/PhoneInput'
+import { email } from 'vuelidate/lib/validators'
 
 export default {
   props: [
@@ -98,9 +91,6 @@ export default {
     'joinTooltipTitle',
     'state'
   ],
-  components: {
-    PhoneInput
-  },
   data () {
     return {
       baseClass: {
@@ -161,6 +151,11 @@ export default {
       window.setInterval(() => {
         this.currentTime = Math.trunc((new Date()).getTime() / 1000)
       }, 1000)
+    }
+  },
+  validations () {
+    return {
+      daEmailGetter: { email }
     }
   }
 }

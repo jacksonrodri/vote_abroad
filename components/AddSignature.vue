@@ -177,13 +177,11 @@
 <script>
 import GetCamera from '~/components/GetCamera'
 import { mapState } from 'vuex'
-// import ImageTools from '~/assets/imageTools.js'
 const savePixels = require('save-pixels')
 // const getPixels = require('get-pixels')
 const ndarray = require('ndarray')
 const adaptiveThreshold = require('adaptive-threshold')
 const EXIF = require('exif-js')
-// var blur = require('ndarray-gaussian-filter')
 
 export default {
   components: {

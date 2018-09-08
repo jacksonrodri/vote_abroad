@@ -70,26 +70,6 @@
         </div>
       </previous-name>
 
-      <!-- phone Number -->
-      <!-- <phone-two ref="pe"
-        key="pe"
-        :accepts="['phone', 'email']"
-        v-model="phoneTwo"
-        :label="$t('request.tel.label')"></phone-two> -->
-      <!-- <phone-four></phone-four>
-      <phone-three v-model="phoneThree" @input="delayTouch($v.phoneThree)"></phone-three>
-
-      <phone-input ref="tel" key="telephone" :label="$t('request.tel.label')" :accepts="['phone']" v-model="tel"></phone-input>
-
-      <phone-input key="email" ref="email" :label="$t('request.email.label')" :required="recBallot === 'email'" :accepts="['email']" v-model="email"></phone-input>
-
-      <adr-input v-model="abrAdr"
-        :label="$t('request.abrAdr.label')"
-        ref="abrAdr"
-        :v="$v.abrAdr"
-        @input="val => touch(val)"
-        key="abrAdr"></adr-input>
-      <scroll-up :key="$route.params.stage"></scroll-up> -->
       <tel-two
         ref="tel"
         key="tel"
@@ -121,20 +101,6 @@
 <!-- voting information -->
   <section v-if="stage.slug === 'voting-information'">
     <form id="voting-information" key="voting-information">
-
-      <!-- <vot-adr
-        :label="$t('request.vAdr.label')"
-        :validations=$v.vAdr
-        ref="vAdr"
-        @input="delayTouch($v.vAdr)"
-        :toolTipTitle="$t('request.vAdr.tooltipTitle')">
-        <div slot="instructions">
-          <p v-html="$options.filters.markdown($t('request.vAdr.instructions'))"></p>
-        </div>
-        <div slot="tooltip">
-          <p v-html="$options.filters.markdown($t('request.vAdr.tooltip'))"></p>
-        </div>
-      </vot-adr> -->
 
       <voting-address
         :label="$t('request.votAdr.label')"
@@ -205,15 +171,6 @@
       </div>
     </receive-ballot>
 
-    <!-- <phone-input key="fax"
-      ref="fax"
-      :label="$t('request.fax.label')"
-      v-if="recBallot === 'fax' || (fax && fax.rawInput)"
-      @input="delayTouch($v.fax)"
-      :required="recBallot === 'fax'"
-      :accepts="['phone']"
-      @keydown.native.enter.prevent="focusNextButton(3)"
-      v-model="fax"></phone-input> -->
     <tel-two
       v-if="recBallot === 'fax' || fax"
       ref="fax"
@@ -238,25 +195,6 @@
       :v="$v.altEmail"
       @delayTouch="delayTouch($v.altEmail)"></email-input>
 
-    <!-- <phone-input v-if="recBallot === 'email' && (email === null || skippedEmail || $v.email.$error)"
-      key="email"
-      ref="email"
-      @input="skippedEmail = true"
-      :label="$t('request.email.label')"
-      :required="recBallot === 'email'"
-      :accepts="['email']"
-      v-model="email">
-    </phone-input>
-
-    <phone-input key="altEmail"
-      v-if="recBallot === 'email' || altEmail"
-      ref="altEmail"
-      :label="$t('request.altEmail.label')"
-      :required="false"
-      :accepts="['email']"
-      v-model="altEmail">
-    </phone-input> -->
-
       <!-- fwdAdr -->
       <address-five
         v-if="recBallot === 'mail' || (fwdAdr && (fwdAdr.alt1 || fwdAdr.A))"
@@ -265,22 +203,6 @@
         fieldName="fwdAdr"
         :v="$v.fwdAdr"
         @delayTouch="(val) => delayTouch($v.fwdAdr[val])"></address-five>
-      <!-- <address-input
-        :label="$t('request.fwdAdr.label')"
-        key="forwardingAddress"
-        ref="fwdAdr"
-        v-if="recBallot === 'mail' || (fwdAdr && fwdAdr.alt1)"
-        v-model="fwdAdr"
-        @input="delayTouch($v.fwdAdr)"
-        :validations=$v.fwdAdr
-        :tooltipTitle="$t('request.fwdAdr.tooltipTitle')">
-        <div slot="instructions">
-          <p>{{$t('request.fwdAdr.instructions')}}</p>
-        </div>
-        <div slot="tooltip">
-          <p v-html="$options.filters.markdown($t('request.fwdAdr.tooltip'))"></p>
-        </div>
-      </address-input> -->
 
     <scroll-up :key="$route.params.stage"></scroll-up>
 
@@ -404,19 +326,11 @@
 
 <script>
 import { required, requiredIf, maxLength, helpers, email } from 'vuelidate/lib/validators'
-import AddressInput from '~/components/AddressInput'
 import Jurisdiction from '~/components/Jurisdiction'
 import VotingAddress from '~/components/VotingAddress'
-// import VotAdr from '~/components/VotAdr'
 import VoterClass from '~/components/VoterClass'
 import IsRegistered from '~/components/IsRegistered'
 import ReceiveBallot from '~/components/ReceiveBallot'
-import PhoneInput from '~/components/PhoneInput'
-import PhoneTwo from '~/components/PhoneTwo'
-import PhoneThree from '~/components/PhoneThree'
-import PhoneFour from '~/components/PhoneFour'
-// import TelInput from '~/components/TelInput'
-// import BirthDate from '~/components/BirthDate'
 import DateOfBirth from '~/components/DateOfBirth'
 import Party from '~/components/Party'
 import PreviousName from '~/components/PreviousName'
@@ -426,9 +340,7 @@ import ScrollUp from '~/components/ScrollUp'
 import EmailInput from '~/components/EmailInput'
 import TelTwo from '~/components/TelTwo'
 import AddressFive from '~/components/AddressFive'
-// import Identification from '~/components/Identification'
 import IdInput from '~/components/IdInput'
-import AdrInput from '~/components/AdrInput'
 import snarkdown from 'snarkdown'
 import { mapGetters } from 'vuex'
 
@@ -479,29 +391,18 @@ export default {
     }
   },
   components: {
-    AddressInput,
     VotingAddress,
-    // VotAdr,
     Jurisdiction,
     VoterClass,
     IsRegistered,
     ReceiveBallot,
-    // TelInput,
-    // BirthDate,
     DateOfBirth,
     Party,
-    // JoinDemocratsabroad,
     PreviousName,
     Gender,
     StateSpecial,
     ScrollUp,
-    // Identification,
     IdInput,
-    PhoneInput,
-    PhoneTwo,
-    PhoneThree,
-    PhoneFour,
-    AdrInput,
     EmailInput,
     TelTwo,
     AddressFive

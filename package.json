@@ -8,21 +8,11 @@
     "dev": "CONTEXT=development OFFLINE=false nuxt",
     "getaddressdata": "rm -rf data/postal && svn export https://github.com/mirumee/google-i18n-address/trunk/i18naddress/data ./data/postal",
     "build": "nuxt build",
-    "build:lambda": "netlify-lambda build src/lambda",
     "start": "nuxt start",
-    "start:lambda": "netlify-lambda serve src/lambda",
     "generate": "nuxt generate",
     "updateReleaseOnSentry": "bash ./sentry.sh",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint"
-  },
-  "proxy": {
-    "/.netlify/functions": {
-      "target": "http://localhost:9000",
-      "pathRewrite": {
-        "^/\\.netlify/functions": ""
-      }
-    }
   },
   "dependencies": {
     "@nuxtjs/axios": "^4.5.2",
@@ -34,7 +24,6 @@
     "aws-amplify": "^0.4.8",
     "babel-polyfill": "^6.26.0",
     "buefy": "^0.6.7",
-    "cleave.js": "^1.3.7",
     "current-device": "^0.7.8",
     "exif-js": "^2.3.0",
     "file-saver": "^1.3.8",
@@ -44,19 +33,14 @@
     "jwt-decode": "^2.2.0",
     "libphonenumber-js": "^1.2.21",
     "mailcheck": "^1.1.1",
-    "ndarray-gaussian-filter": "^1.0.0",
-    "netlify-lambda": "^0.2.0",
     "nuxt": "^1.4.1",
     "nuxt-i18n": "^2.10.0",
     "nuxtent": "^1.4.1",
     "save-pixels": "^2.3.4",
-    "schm": "^0.4.0",
     "snarkdown": "^1.2.2",
-    "tracking": "^1.1.3",
     "vue-croppa": "^1.3.6",
     "vue-intercom": "^1.0.12",
     "vue-the-mask": "^0.11.1",
-    "vue-worker": "^1.2.1",
     "vuelidate": "^0.7.4",
     "vuex-persist": "1.1.0",
     "webrtc-adapter": "^6.2.1"
