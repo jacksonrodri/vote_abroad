@@ -320,6 +320,9 @@ export default {
       } else return null
     },
     transmitOpts () {
+      if (!this.stateRules) {
+        return `mail, email or fax`
+      }
       switch (this.stateRules.fpcaSubmitOptionsRegister.length) {
         case 1:
           return this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[0].toLowerCase()}`)
