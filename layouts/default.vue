@@ -90,12 +90,12 @@
                       When will you send my ballot?
                     </a> -->
                     <hr class="navbar-divider">
-                    <nuxt-link :to="localePath({ name: 'faqs' })" class="navbar-item">More FAQ's</nuxt-link>
+                    <nuxt-link :to="localePath({ name: 'faqs' })" class="navbar-item">{{$t('menu.moreFAQs')}}</nuxt-link>
                     <!-- <a class="navbar-item">
                       More FAQ's
                     </a> -->
                     <hr class="navbar-divider">
-                    <a @click="showIntercom" class="navbar-item">Contact the helpdesk</a>
+                    <a @click="showIntercom" class="navbar-item">{{$t('menu.contactHelp')}}</a>
                   </div>
                 </div>
               </div>
@@ -192,13 +192,19 @@
       </div>
     </div>
   </section>
-  <!-- <b-modal :active.sync="isLoginModalActive" has-modal-card>
-    <login></login>
-  </b-modal> -->
 </div>
-<div v-else>
-  <h1 class="title has-text-danger">Site is offline</h1>
-</div>
+  <div class="hero is-fullheight" v-else>
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title has-text-danger">
+          {{$t('menu.offlineTitle')}}
+        </h1>
+        <h2 class="subtitle">
+          {{$t('menu.offlineSubtitle')}}
+        </h2>
+      </div>
+    </div>
+  </div>
 </div>
 </template>
 

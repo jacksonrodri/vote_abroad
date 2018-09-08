@@ -30,22 +30,28 @@
 <script>
 export default {
   asyncData: async ({ app, route }) => ({
-    faqs: await app.$content(app.i18n.locale + '/faqs').getAll()
+    faqs: {
+      es: await app.$content('es/faqs').getAll(),
+      en: await app.$content('en/faqs').getAll()
+    }
   }),
   computed: {
-    try: function () {
-      return this.faqs
-        .map(x => x.categories.map(y => y.category)[0])
-        .map(cat => ({
-          category: cat,
-          faqs: this.faqs.filter(x => x.categories.map(x => x.category).reduce((acc, cur) => cur === cat ? true : acc, false))
-        }))
+    lang () {
+      return this.$i18n.locale
     },
+    // try: function () {
+    //   return this.faqs
+    //     .map(x => x.categories.map(y => y.category)[0])
+    //     .map(cat => ({
+    //       category: cat,
+    //       faqs: this.faqs.filter(x => x.categories.map(x => x.category).reduce((acc, cur) => cur === cat ? true : acc, false))
+    //     }))
+    // },
     categories: function () {
-      return [...new Set(this.faqs.map(x => x.categories).reduce((acc, cur) => acc.concat(cur), []).map(x => x.category))]
+      return [...new Set(this.faqs[this.$i18n.locale].map(x => x.categories).reduce((acc, cur) => acc.concat(cur), []).map(x => x.category))]
         .map(subject => ({
           category: subject,
-          faqs: this.faqs.filter(x => x.categories.map(x => x.category).indexOf(subject) > -1)
+          faqs: this.faqs[this.$i18n.locale].filter(x => x.categories.map(x => x.category).indexOf(subject) > -1)
         }))
         .sort((a, b) => a.faqs.length > b.faqs.length ? 1 : -1)
     }

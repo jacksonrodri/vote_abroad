@@ -26,9 +26,12 @@
     "about": "About Us",
     "moreFAQs": "More FAQs",
     "helpfaq": "Voter Help Desk/ FAQ",
+    "contactHelp": "Contact the helpdesk",
     "allElections": "All Upcoming Elections",
     "disclaimer": "Public Service provided by Democratic Party Committee Abroad (DemocratsAbroad.org).<br/>This communication is not authorized by any candidate or candidate's committee.",
-    "upcomingElections": "Upcoming Elections"
+    "upcomingElections": "Upcoming Elections",
+    "offlineTitle": "Site is offline",
+    "offlineSubtitle": "Please come back later"
   },
   "request": {
     "phoneOrEmail": {
