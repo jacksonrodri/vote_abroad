@@ -13,7 +13,7 @@
           </b-field>
         </section>
         <footer class="modal-card-foot">
-          <button class="button" type="button" @click.prevent="$parent.close()">Cancel</button>
+          <button class="button" type="button" @click.prevent="$emit('selectDate', null); $parent.close()">Cancel</button>
         </footer>
       </div>
     </form>
