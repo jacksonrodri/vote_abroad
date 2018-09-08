@@ -104,7 +104,7 @@ export default {
       ],
       focusedDate: this.dob || this.maxDate,
       focusedDateData: {
-        month: (this.dob || this.maxDate || new Date()).getMonth(),
+        month: (this.dob || this.maxDate).getMonth(),
         year: this.dob || this.maxDate ? (this.dob || this.maxDate).getFullYear() : (new Date().getFullYear() - 18)
         // (this.maxDate || new Date()).getFullYear()
       }
