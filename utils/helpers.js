@@ -63,7 +63,7 @@ const placeDetails = function fillData (option) {
             input.S = result.adr_address && result.adr_address.includes('region') ? result.adr_address.match('<span class="region">(.*?)</span>')[1] : region
           }
           input.Z = result.adr_address && result.adr_address.includes('postal-code') ? result.adr_address.match('<span class="postal-code">(.*?)</span>')[1] : null
-          console.log(this.fieldName, data.result.address_components.filter(y => y.types.includes('administrative_area_level_2')).length)
+          // console.log(this.fieldName, data.result.address_components.filter(y => y.types.includes('administrative_area_level_2')).length)
           if (this.fieldName === 'votAdr' && data.result.address_components.filter(y => y.types.includes('administrative_area_level_2')).length) {
             input.Y = data.result.address_components.filter(y => y.types.includes('administrative_area_level_2'))[0].long_name.replace(/county/gi, '').trim()
           }
@@ -73,7 +73,7 @@ const placeDetails = function fillData (option) {
             .forEach(x => {
               input[x] = typeof input[x] === 'string' ? decodeHtmlEntity(latinize(input[x])) : input[x]
             })
-          console.log('input', input)
+          // console.log('input', input)
           this.update({[this.fieldName]: Object.assign({}, this.adr, input)})
         }
       })
@@ -103,6 +103,7 @@ const returnArrayOfReasonableBirthDates = function (dateString) {
       while ((matchArr = dateRegex.exec(dateString)) !== null) {
         let validDate = formatDate(matchArr[yPos], matchArr[mPos], matchArr[dPos])
         if (validDate) dateArr.push(validDate)
+        // console.log(validDate)
       }
     })
   } else {
@@ -386,7 +387,7 @@ function getRuleSubmissionOption (rule) {
 function getDeadlineLanguage (electionArr, state, voterRegistrationStatus, voterType, submissionMethod) {
   // console.log(typeof electionArr, state, voterRegistrationStatus, voterType, submissionMethod)
   let applicableRules = getNextEligibleRules([...electionArr], state || '', voterRegistrationStatus, voterType, submissionMethod)
-  console.log('applicableRules', applicableRules)
+  // console.log('applicableRules', applicableRules)
   applicableRules = applicableRules[0]
   if (!applicableRules) {
     return `IMPORTANT: Your form must be received by your state deadline to be eligible to vote in the November 6 General Election.  \nYou can find your state deadlines at ${process.env.url}/states `

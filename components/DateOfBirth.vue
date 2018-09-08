@@ -129,7 +129,7 @@ export default {
         return typeof this.value === 'string' ? createDateObj(this.value) : undefined
       },
       set (val) {
-        function createDateString (d) { return `${d.getFullYear()}-${d.getMonth() < 9 ? '0' : ''}${d.getMonth() + 1}-${d.getDate() < 9 ? '0' : ''}${d.getDate()}` }
+        function createDateString (d) { return `${d.getUTCFullYear()}-${d.getUTCMonth() < 9 ? '0' : ''}${d.getUTCMonth() + 1}-${d.getUTCDate() < 9 ? '0' : ''}${d.getUTCDate()}` }
         this.date = val instanceof Date ? createDateString(val) : null
         this.$emit('input', val instanceof Date ? createDateString(val) : null)
       }
@@ -195,8 +195,9 @@ export default {
       return new Date()
     },
     dateParser2 (input) {
+      // console.log(input)
       let choices = returnArrayOfReasonableBirthDates(input)
-      console.log('choices', choices)
+      // console.log('choices', choices)
       if (choices.length > 1) {
         this.cardModal(choices, input)
       } else if (choices.length === 1) {
