@@ -14,7 +14,7 @@
             <span class="panel-icon">
               <i class="fas fa-question-circle"></i>
             </span>
-            {{faq.title}}
+            {{faq.question || faq.title}}
           </nuxt-link>
         </nav>
         <!-- <h2 class="title is-4">{{category.category}}</h2>
