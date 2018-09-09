@@ -227,23 +227,23 @@ export default {
       topFaqs: [
         {
           title: 'I can\'t remember my last US address, how do I find it?',
-          slug: '14-i-can-t-remember-my-last-us-address-how-do-i-find-it'
+          slug: '1'
         },
         {
           title: 'I live outside the US, am I eligible to vote in US elections?',
-          slug: 'i-live-outside-the-us-am-i-eligible-to-vote-in-us-elections'
+          slug: '2'
         },
         {
           title: 'Can I register to vote in a different state?',
-          slug: '16-can-i-register-to-vote-in-a-different-state'
+          slug: '3'
         },
         {
           title: 'Why should I send in the form to request my ballot every calendar year?',
-          slug: '6-why-should-i-send-in-the-form-to-request-my-ballot-every-calendar-year'
+          slug: '5'
         },
         {
           title: 'Can I vote in midterm elections?',
-          slug: 'can-i-vote-in-midterm-elections'
+          slug: '6'
         }
       ]
     }

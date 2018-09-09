@@ -4,7 +4,7 @@
     <div>
       <ContentContainer>
         <div slot="lead" class="article-lead">
-          <h1 class="title is-4">{{ page.title }}</h1>
+          <h1 class="title is-4">{{ page.question }}</h1>
         </div>
         <section slot="content" class="content">
           <nuxtent-body class="content" :body="page.body" />
