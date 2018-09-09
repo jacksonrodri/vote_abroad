@@ -9,7 +9,7 @@
     <div class="columns is-multiline">
       <div v-for="(category, index) in categories" :key="index" class="column is-6">
         <nav class="panel">
-          <p class="panel-heading">{{category.category}}</p>
+          <p class="panel-heading">{{$t(`faq.${category.category}`)}}</p>
           <nuxt-link v-for="faq in category.faqs" :key="faq.title" :to="faq.permalink" class="panel-block">
             <span class="panel-icon">
               <i class="fas fa-question-circle"></i>
