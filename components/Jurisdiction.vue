@@ -14,7 +14,7 @@
       <!-- Jurisdiction: {{leos.length}} leos found -->
       <!-- <button class="button">Wake County</button> -->
       <b-field v-if="loading">
-        <b-input disabled>Loading...</b-input>
+        <b-input disabled>{{$t('request.jurisdiction.loading')}}</b-input>
       </b-field>
       <b-field v-else
         :type="validations.$error ? 'is-danger' : ''"
@@ -32,7 +32,7 @@
             field="n"
             :placeholder="placeholder"
             @select="option => updateLeo(option)">
-            <template slot-scope="props"><strong>{{props.option.j}} {{props.option.j.toLowerCase().indexOf(props.option.t.toLowerCase()) > -1 ? '' : props.option.t}}</strong> - <small>{{decodeHtmlEntity(props.option.n)}}&nbsp;</small><span v-if="props.option.suggested" class="tag is-info">Suggested</span></template>
+            <template slot-scope="props"><strong>{{props.option.j}} {{props.option.j.toLowerCase().indexOf(props.option.t.toLowerCase()) > -1 ? '' : props.option.t}}</strong> - <small>{{decodeHtmlEntity(props.option.n)}}&nbsp;</small><span v-if="props.option.suggested" class="tag is-info">{{$t('request.jurisdiction.suggested')}}</span></template>
             </b-autocomplete>
             <p class="control">
                 <button class="button is-grey is-inverted is-outlined"

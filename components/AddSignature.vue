@@ -2,28 +2,47 @@
   <section>
         <div>
           <h3 class="title is-3">{{ $t('request.sig.title') }}</h3>
-          <h3 v-if="canCaptureImage" class="subtitle is-4">
-            <a class="has-text-primary" @click="() => {webcamCaptureError = false; webCamPic = null; croppedPic.remove(); startCameraFilePicker()}">Click start</a> to scan your signature now<span> with your device camera</span>. Or <a @click="uploadPic" class="has-text-primary">upload a file</a> from your computer.
-          </h3>
-          <h3 v-else class="subtitle is-4">
+          <i18n path="request.sig.scanInstructions" tag="h3" class="subtitle is-4" v-if="canCaptureImage">
+            <a @click="() => {webcamCaptureError = false; webCamPic = null; croppedPic.remove(); startCameraFilePicker()}" class="has-text-primary">{{$t('request.sig.clickStart')}}</a>
+            <a @click="uploadPic" class="has-text-primary">{{$t('request.sig.uploadFile')}}</a>
+          </i18n>
+          <!-- <h3 v-if="canCaptureImage" class="subtitle is-4">
+            <a class="has-text-primary" @click="() => {webcamCaptureError = false; webCamPic = null; croppedPic.remove(); startCameraFilePicker()}">Click start</a> to scan your signature now with your device camera. Or <a @click="uploadPic" class="has-text-primary">upload a file</a> from your computer.
+          </h3> -->
+          <i18n v-else class="subtitle is-4" tag="h3" path="request.sig.uploadInstructions">
+            <a @click="croppedPic.chooseFile()" class="has-text-primary">{{$t('request.sig.clickToUpload')}}</a>
+          </i18n>
+          <!-- <h3 v-else class="subtitle is-4">
             <a @click="croppedPic.chooseFile()" class="has-text-primary">Click to upload a scan of your signature</a> from your computer.
-          </h3>
-          <b-message :active="webcamCaptureError && !(croppedPic && croppedPic.imageSet)" :closable="false" title="Failed loading camera." type="is-danger">
-            We could not get access your device camera. (Either it is not connected/available or you have disallowed VoteFromAbroad.org from accessing it). You can still click <a @click="uploadPic" class="has-text-primary">upload a file</a> to upload your signature from a file.
+          </h3> -->
+          <b-message :active="webcamCaptureError && !(croppedPic && croppedPic.imageSet)" :closable="false" :title="$t('request.sig.captureErrorTitle')" type="is-danger">
+            <i18n path="request.sig.captureErrorMessage" tag="span">
+              <a @click="uploadPic" class="has-text-primary">{{$t('request.sig.uploadFile')}}</a>
+            </i18n>
+            <!-- We could not get access your device camera. (Either it is not connected/available or you have disallowed VoteFromAbroad.org from accessing it). You can still click <a @click="uploadPic" class="has-text-primary">upload a file</a> to upload your signature from a file. -->
           </b-message>
-          <b-message :active="!webCamCapture && canCaptureImage && (!croppedPic || !croppedPic.imageSet)" :closable="false" title="Instructions" type="is-info">
-            Sign your name with a dark pen in large letters on a blank sheet of white paper. Then click 'Start' to start your camera. You'll be able to adjust the picture after you take it.
+          <b-message :active="!webCamCapture && canCaptureImage && (!croppedPic || !croppedPic.imageSet)" :closable="false" :title="$t('request.sig.instructionsLabel')" type="is-info">
+            {{$t('request.sig.captureSignInstructions')}}
+            <!-- Sign your name with a dark pen in large letters on a blank sheet of white paper. Then click 'Start' to start your camera. You'll be able to adjust the picture after you take it. -->
           </b-message>
-          <b-message :active="!webCamCapture && !canCaptureImage && (!croppedPic || !croppedPic.imageSet)" :closable="false" title="Instructions" type="is-info">
-            Sign your name with a dark pen in large letters on a blank sheet of white paper. Scan the file to your computer, then click 'Upload a File'. You'll be able to adjust the picture after you upload it.
+          <b-message :active="!webCamCapture && !canCaptureImage && (!croppedPic || !croppedPic.imageSet)" :closable="false" :title="$t('request.sig.instructionsLabel')" type="is-info">
+            {{$t('request.sig.captureUploadInstructions')}}
+            <!-- Sign your name with a dark pen in large letters on a blank sheet of white paper. Scan the file to your computer, then click 'Upload a File'. You'll be able to adjust the picture after you upload it. -->
           </b-message>
-          <b-message :active="webCamCapture && !webcamCaptureError" :closable="false" title="Instructions" type="is-info">
-            Move your signature in front of the camera so that it is in focus and takes up as much of the screen as possible. (You'll be able to adjust the picture after you take it.)
+          <b-message :active="webCamCapture && !webcamCaptureError" :closable="false" :title="$t('request.sig.instructionsLabel')" type="is-info">
+            {{$t('request.sig.sigPlacementInstructions')}}
+            <!-- Move your signature in front of the camera so that it is in focus and takes up as much of the screen as possible. (You'll be able to adjust the picture after you take it.) -->
           </b-message>
-          <b-message :active="!webCamCapture && croppedPic && croppedPic.imageSet" :closable="false" title="Instructions" type="is-info">
-            - Align your signature with the red line -- drag to move, scroll to zoom. If you don't see your signature, you may need to zoom out to get it back on the page.<br>- Adjust your signature with the 'Line Strength' buttons below so that the signature is clear and has minimal background noise<br>- If your signature is still unclear, you can click 'Clear Image' to try again.<br>- Click 'Use This Signature' to add it to your form and compose a message to your election official.
+          <b-message
+            :active="!webCamCapture && croppedPic && croppedPic.imageSet"
+            :closable="false"
+            :title="$t('request.sig.instructionsLabel')"
+            type="is-info"
+            v-html="md($t('request.sig.sigAdjustmentInstructions'))">
+            <!-- {{$t('request.sig.sigAdjustmentInstructions')}} -->
+            <!-- - Align your signature with the red line -- drag to move, scroll to zoom. If you don't see your signature, you may need to zoom out to get it back on the page.<br>- Adjust your signature with the 'Line Strength' buttons below so that the signature is clear and has minimal background noise<br>- If your signature is still unclear, you can click 'Clear Image' to try again.<br>- Click 'Use This Signature' to add it to your form and compose a message to your election official. -->
           </b-message>
-            <h3 class="subtitle is-5 has-text-info has-text-centered" v-if="processingImage">Processing image.  Please wait...</h3>
+            <h3 class="subtitle is-5 has-text-info has-text-centered" v-if="processingImage">{{$t('request.sig.pleaseWait')}}</h3>
             <get-camera ref="webcam" @captureError="captureError" :isCapturing="webCamCapture" v-show="webCamCapture" @updatePic="drawThresholdToCanvas"></get-camera>
             <signature-cropper
               v-show="!webCamCapture"
@@ -59,7 +78,8 @@
                   <button :class="['button', 'is-light', 'is-medium', {'is-loading': processingImage}]"
                     @click.prevent="clearImage"
                     :disabled="!croppedPic || !croppedPic.imageSet">
-                    Clear Image
+                    {{$t('request.sig.clearImage')}}
+                    <!-- Clear Image -->
                   </button>
                 </b-field>
                 <b-field expanded>
@@ -67,24 +87,28 @@
                     v-if="croppedPic && croppedPic.imageSet"
                     @click.prevent="useSignature"
                     :disabled="!croppedPic || !croppedPic.imageSet">
-                    Use This Signature
+                    {{$t('request.sig.useSignature')}}
+                    <!-- Use This Signature -->
                     <!-- {{$t('request.sig.sendEmail')}} -->
                   </button>
                   <button :class="[buttonClass, 'is-fullwidth', {'is-loading': false}]"
                     @click="captureWebcamImage"
                     v-else-if="webCamCapture && !webcamCaptureError">
-                    Take Photo
+                    {{$t('request.sig.takePhoto')}}
+                    <!-- Take Photo -->
                   </button>
                   <button :class="[buttonClass, 'is-fullwidth', {'is-loading': false}]"
                     @click="uploadPic"
                     v-else-if="webcamCaptureError || !canCaptureImage">
-                    Upload a File
+                    {{$t('request.sig.uploadFile')}}
+                    <!-- Upload a File -->
                   </button>
                   <!-- <a @click="croppedPic.chooseFile()" class="has-text-primary">upload a file</a> -->
                   <button :class="[buttonClass, 'is-fullwidth', {'is-loading': processingImage}]"
                     v-else
                     @click.prevent="() => {webCamPic = null; croppedPic.remove(); startCameraFilePicker()}">
-                    Start
+                    {{$t('request.sig.start')}}
+                    <!-- Start -->
                   </button>
                 </b-field>
               </b-field>
@@ -95,27 +119,30 @@
                   <span class="icon is-small">
                     <i class="fas fa-sliders-h"></i>
                   </span>
-                  &nbsp;&nbsp;Adjust Image
+                  {{$t('request.sig.adjustImage')}}
+                  <!-- &nbsp;&nbsp;Adjust Image -->
                 </h3>
                 <div class="field is-horizontal">
                   <div class="field-label">
-                    <label class="label">Resize</label>
+                    <label class="label">{{$t('request.sig.resizeLabel')}}</label>
                   </div>
                   <div class="field-body">
-                    Pinch or scroll with your mouse on the image to resize it.
+                    {{$t('request.sig.resizeInstructions')}}
+                    <!-- Pinch or scroll with your mouse on the image to resize it. -->
                   </div>
                 </div>
                 <div class="field is-horizontal">
                   <div class="field-label">
-                    <label class="label">Move</label>
+                    <label class="label">{{$t('request.sig.moveLabel')}}</label>
                   </div>
                   <div class="field-body">
-                    Drag to place your signature on the red line next to the 'X'.
+                    {{$t('request.sig.moveInstructions')}}
+                    <!-- Drag to place your signature on the red line next to the 'X'. -->
                   </div>
                 </div>
                 <div class="field is-horizontal">
                   <div class="field-label">
-                    <label class="label">Rotate</label>
+                    <label class="label">{{$t('request.sig.rotateLabel')}}</label>
                   </div>
                   <div class="field-body">
                     <div class="field">
@@ -124,7 +151,7 @@
                           <span class="icon is-small">
                             <i class="fas fa-undo"></i>
                           </span>
-                          <span>Rotate Left</span>
+                          <span>{{$t('request.sig.rotateLeft')}}</span>
                         </a>
                       </p>
                     </div>
@@ -134,7 +161,7 @@
                           <span class="icon is-small">
                             <i class="fas fa-redo"></i>
                           </span>
-                          <span>Rotate Right</span>
+                          <span>{{$t('request.sig.rotateRight')}}</span>
                         </a>
                       </p>
                     </div>
@@ -143,7 +170,7 @@
                 <div class="field is-horizontal">
                   <div class="field-label">
                     <label class="label">
-                      <span>Line Strength</span>
+                      <span>{{$t('request.sig.lineStrengthLabel')}}</span>
                     </label>
                   </div>
                   <div class="field-body">
@@ -153,7 +180,7 @@
                           <span class="icon is-small">
                             <i class="fas fa-minus"></i>
                           </span>
-                          <span>Lighter</span>
+                          <span>{{$t('request.sig.lighter')}}</span>
                         </a>
                       </p>
                     </div>
@@ -163,7 +190,7 @@
                           <span class="icon is-small">
                             <i class="fas fa-plus"></i>
                           </span>
-                          <span>Darker</span>
+                          <span>{{$t('request.sig.darker')}}</span>
                         </a>
                       </p>
                     </div>
@@ -177,6 +204,7 @@
 <script>
 import GetCamera from '~/components/GetCamera'
 import { mapState } from 'vuex'
+import snarkdown from 'snarkdown'
 const savePixels = require('save-pixels')
 // const getPixels = require('get-pixels')
 const ndarray = require('ndarray')
@@ -216,7 +244,7 @@ export default {
     cropperPlaceholder () {
       if (this.processingImage) {
         return '...'
-      } else return this.canCaptureImage ? 'Click to Start' : 'Upload a File'
+      } else return this.canCaptureImage ? this.$t('request.sig.clickToStart') : this.$t('request.sig.uploadAFile')
     },
     device () { return this.$store.state.userauth.device },
     ...mapState({
@@ -224,6 +252,7 @@ export default {
     })
   },
   methods: {
+    md (md) { return snarkdown(md) },
     handleFileTypeMismatch () {
       // this.$dialog.alert({
       //   title: this.$t('request.sig.invalidImageTypeTitle'),

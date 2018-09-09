@@ -9,13 +9,13 @@
     </header>
     <section class="modal-card-body">
       <section>
-        <h3 class="title has-text-vfa has-text-centered is-4">Authenticating...</h3>
-        <span class="subtitle has-text-centered is-5">Did you know: {{ didYouKnow[Math.floor(Math.random() * Math.floor(didYouKnow.length))]}}</span>
+        <h3 class="title has-text-vfa has-text-centered is-4">{{$t('auth.authenticating')}}</h3>
+        <span class="subtitle has-text-centered is-5">{{$t('auth.didYouKnow')}}{{didYouKnow}}</span>
       </section>
 
     </section>
     <footer class="modal-card-foot">
-      <nuxt-link :to="localePath({ name: 'request-stage', params: {stage: 'your-information'} })">Proceed without an account.</nuxt-link>
+      <nuxt-link :to="localePath({ name: 'request-stage', params: {stage: 'your-information'} })">{{$t('auth.anonymousStart')}}</nuxt-link>
     </footer>
   </div>
 </div>
@@ -27,11 +27,7 @@ export default {
   middleware: 'account',
   data () {
     return {
-      didYouKnow: [
-        'Did you know around 9 million Americans live abroad?',
-        'Request your ballot every calendar year to get full Federal Protection for all federal elections each year.',
-        'Americans have been political abroad since Thomas Jefferson.  He drafted the Bill of Rights while in Paris.'
-      ]
+      didYouKnow: ''
     }
   },
   computed: {
@@ -48,6 +44,8 @@ export default {
     if (this.authState === 'loggedIn' || !window.location.hash.includes('access_token')) {
       this.$router.replace(this.localePath({ name: 'request-stage', params: { stage: 'your-information' } }))
     }
+    let trivia = [this.$t('auth.trivia1'), this.$t('auth.trivia2'), this.$t('auth.trivia3')]
+    this.didYouKnow = trivia[Math.floor(Math.random() * Math.floor(trivia.length))]
   }
 }
 </script>

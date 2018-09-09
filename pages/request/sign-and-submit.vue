@@ -75,8 +75,8 @@
                     </figure>
                     <div class="media-content">
                       <span class="is-size-5">
-                        Email your form to:
-                        <!-- {{$t('request.stages.mailPost')}} -->
+                        <!-- Email your form to: -->
+                        {{$t('request.stages.emailForm')}}
                       </span>
                       <div class="box">
                         <span v-if="currentRequest.leo.n"><strong>{{ currentRequest.leo.n }}</strong><br/></span>
@@ -155,8 +155,6 @@
               </div>
             </section>
             <section v-if="signStep" class="section">
-              <!-- <sign4 v-model="signStep" :fpca="fpca" @sigcap="addSig">
-              </sign4> -->
               <transition name="fade">
                 <signature-affirmation v-model="signStep" v-if="signStep === 'signatureAffirmation'"></signature-affirmation>
               </transition>
@@ -207,8 +205,8 @@
                     </figure>
                     <div class="media-content">
                       <span class="is-size-5">
-                        Fax your form to:
-                        <!-- {{$t('request.stages.mailPost')}} -->
+                        <!-- Fax your form to: -->
+                        {{$t('request.stages.faxSend')}}
                       </span>
                       <div class="box">
                         <span v-if="currentRequest.leo.n"><strong>{{ currentRequest.leo.n }}</strong><br/></span>
@@ -403,7 +401,6 @@
 <script>
 import MyCanvas from '~/components/MyCanvas.vue'
 import MyBox from '~/components/MyBox.vue'
-import Sign4 from '~/components/sign4.vue'
 import SignatureAffirmation from '~/components/SignatureAffirmation.vue'
 import AddSignature from '~/components/AddSignature.vue'
 import ComposeMessage from '~/components/ComposeMessage.vue'
@@ -422,7 +419,6 @@ export default {
   components: {
     MyCanvas,
     MyBox,
-    Sign4,
     AddSignature,
     ComposeMessage,
     SignatureAffirmation,
@@ -788,9 +784,9 @@ export default {
     documentRequired () {
       switch (this.state.toLowerCase()) {
         case 'ak':
-          return 'proof of Alaska Residency'
+          return this.$t('request.deadlineLanguage.akDocument')
         case 'az':
-          return this.isRegistered === 'unsure' || this.isRegistered === 'notRegistered' ? 'proof of citizenship (for newly registered voters)' : null
+          return this.isRegistered === 'unsure' || this.isRegistered === 'notRegistered' ? this.$t('request.deadlineLanguage.azDocument') : null
         default:
           return null
       }

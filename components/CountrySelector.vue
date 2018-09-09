@@ -15,11 +15,11 @@
     @focus="countryFocused = true; select($event)"
     @select="(option) => { if (option && option.code) {countrySearch = option.name; $emit('input', option.code); $emit('newCountry')} }">
     <template slot="header">
-      <label for="country" class="is-size-6 has-text-grey"> ... type to find your country.</label>
+      <label for="country" class="is-size-6 has-text-grey">{{$t('request.abrAdr.countryHint')}}</label>
     </template>
     <!-- :expanded="countryFocused" -->
     <!-- :class="!countryFocused ? 'shrink' : ''" -->
-    <template slot="empty">No results for {{countrySearch}}</template>
+    <template slot="empty">$t('request.abrAdr.countryNoResults', {typed: countrySearch}</template>
     <template slot-scope="props">
       <span :class="`flag-icon flag-icon-${props.option.code.toLowerCase()}`"></span>{{ props.option.name }} <span v-if="phone">{{ props.option.exPhone ? props.option.exPhone.split(' ')[0] : '' }}</span>
     </template>

@@ -10,7 +10,7 @@
         icon="lock"
         :ref="fieldName"
         :id="fieldName"
-        :placeholder="loading ? 'sending code' : $t(`request.${fieldName}.placeholder`)"
+        :placeholder="loading ? $t('auth.sendingCode') : $t(`request.${fieldName}.placeholder`)"
         :maxlength="6"
         :minlength="6"
         size="is-medium"

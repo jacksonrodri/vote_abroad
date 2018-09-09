@@ -1,6 +1,6 @@
 <template>
   <div class="field">
-    <span class="is-flex"><label class="label">{{ label }}</label><span v-if="idOptions" class="has-text-weight-light">&nbsp;(required)</span><span v-else>&nbsp;(Optional)</span><span @click.prevent="toolTipOpen = !toolTipOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
+    <span class="is-flex"><label class="label">{{ label }}</label><span v-if="idOptions" class="has-text-weight-light">&nbsp;({{$t('request.field.req')}})</span><span v-else>&nbsp;({{$t('request.field.opt')}})</span><span @click.prevent="toolTipOpen = !toolTipOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
     <slot name="instructions"></slot>
     <br/>
 
@@ -15,7 +15,7 @@
         v-model="ssn"
         type="tel"
         v-mask="'###-##-####'"
-        placeholder="e.g. 123-45-6789">
+        :placeholder="$t('request.id.placeholder', {example: '123-45-6789'})">
       </b-input>
     </b-field>
 
@@ -32,7 +32,7 @@
         type="tel"
         ref="ssn4"
         v-model="ssn4"
-        placeholder="e.g. ✱✱✱-✱✱-1111" expanded></b-input>
+        :placeholder="$t('request.id.placeholder', {example: '✱✱✱-✱✱-1111'})" expanded></b-input>
     </b-field>
 
     <div class="has-text-centered"><strong>{{ $t('request.id.or')}}</strong></div>
@@ -111,7 +111,7 @@ export default {
           if (i === 0) {
             return label + this.$t(`request.id.${cur}`)
           } else if (i === arr.length - 1) {
-            return `${label} or ${this.$t(`request.id.${cur}`)}`
+            return `${label} ${this.$t('request.id.or')} ${this.$t(`request.id.${cur}`)}`
           } else {
             return `${label}, ${this.$t(`request.id.${cur}`)}`
           }

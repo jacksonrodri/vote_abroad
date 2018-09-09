@@ -2,7 +2,10 @@
 <div class="hero-body">
 <div class="columns is-centered">
   <div class="column is-10 is-8-desktop is-7-widescreen is-6-fullhd is-paddingless">
-    <h1 class="title">FAQs</h1>
+    <h1 class="title">{{$t('faq.title')}}</h1>
+    <i18n tag="h3" path="faq.intro" class="subtitle is-4">
+      <a class="has-text-primary" @click="launchIntercom">{{$t('faq.contact')}}</a>
+    </i18n>
     <div class="columns is-multiline">
       <div v-for="(category, index) in categories" :key="index" class="column is-6">
         <nav class="panel">
@@ -54,6 +57,11 @@ export default {
           faqs: this.faqs[this.$i18n.locale].filter(x => x.categories.map(x => x.category).indexOf(subject) > -1)
         }))
         .sort((a, b) => a.faqs.length > b.faqs.length ? 1 : -1)
+    }
+  },
+  methods: {
+    launchIntercom () {
+      this.$intercom.show()
     }
   }
 }

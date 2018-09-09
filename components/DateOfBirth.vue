@@ -89,18 +89,18 @@ export default {
       minDate: new Date(1900, 0, 1),
       toolTipOpen: false,
       monthNames: [
-        'January',
-        'February',
-        'March',
-        'April',
-        'May',
-        'June',
-        'July',
-        'August',
-        'September',
-        'October',
-        'November',
-        'December'
+        this.$t('request.dob.months.jan'),
+        this.$t('request.dob.months.feb'),
+        this.$t('request.dob.months.mar'),
+        this.$t('request.dob.months.apr'),
+        this.$t('request.dob.months.may'),
+        this.$t('request.dob.months.jun'),
+        this.$t('request.dob.months.jul'),
+        this.$t('request.dob.months.aug'),
+        this.$t('request.dob.months.sep'),
+        this.$t('request.dob.months.oct'),
+        this.$t('request.dob.months.nov'),
+        this.$t('request.dob.months.dec')
       ],
       focusedDate: this.dob || this.maxDate || new Date(new Date().getFullYear() - 19, new Date().getMonth(), new Date().getDate()),
       focusedDateData: {
@@ -137,22 +137,6 @@ export default {
     allowNative () {
       return Boolean(!(this.$store.state.userauth.device.type === 'mobile' && this.$store.state.userauth.device.os === 'android'))
     }
-    // focusedYear: {
-    //   get () { return this.$refs.dob ? this.$refs.dob.focusedDateData.year : 2000 },
-    //   set (val) {
-    //     if (this.$refs.dob) {
-    //       this.$refs.dob.focusedDateData.year = parseInt(val)
-    //     }
-    //   }
-    // },
-    // focusedMonth: {
-    //   get () { return this.$refs.dob ? this.$refs.dob.focusedDateData.month : 2000 },
-    //   set (val) {
-    //     if (this.$refs.dob) {
-    //       this.$refs.dob.focusedDateData.month = parseInt(val)
-    //     }
-    //   }
-    // }
   },
   methods: {
     changeMonth (month) {

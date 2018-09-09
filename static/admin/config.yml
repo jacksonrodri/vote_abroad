@@ -113,8 +113,9 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Question", name: "title", widget: "string"}
-      - {label: "Slug", name: "slug", hint: "The text used for the URL", widget: "string", required: true, pattern: ["[A-Za-z-_]+", "Can only include letters, numbers, dash (-), and underscore (_)"]}
+      - {label: "FAQ #", name: "title", widget: "string"}
+      - {label: "Slug", name: "slug", hint: "The text used for a memorable URL", widget: "string", required: true, pattern: ["[A-Za-z-_]+", "Can only include letters, numbers, dash (-), and underscore (_)"]}
+      - {label: "Question", name: "question", widget: "string" }
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
       - {label: "Include in main menu?", name: "isInMenu", widget: "boolean"}
       - {label: "Answer", name: "body", widget: "markdown"}
@@ -125,7 +126,14 @@ collections:
           - name: category
             label: Choose a category
             widget: select
-            options: [Addressing / Mailing Instructions, Ballot Related Issues, Dates and Deadlines, Eligibility / First Time Voter, FWAB - Emergency Write-in Ballot, Form Related Issues, Glossary - Terms, Other Related Issues, Party Affiliation Questions, Primary Elections, Registration Process, Security and Privacy, Technical Issues, US Citizens without Residency, Voter Account Issues, Voter ID, Voting as a U.S. Citizen Outside the U.S., How to Register to Vote and Get a Ballot, U.S. Citizens Who Have Never Resided in the U.S., Filling Out the Federal Post Card Application(FPCA), Returning a Voted Ballot, Using the Federal Write-in Absentee Ballot (FWAB), Federal And State Tax Implications]
+            options:
+              - {label: "Voting as a U.S. Citizen Outside the U.S.", value: "votingAbroad"}
+              - {label: "How to Register to Vote and Get a Ballot", value: "voterRegistration"}
+              - {label: "U.S. Citizens Who Have Never Resided in the U.S.", value: "neverResided"}
+              - {label: "Filling Out the Federal Post Card Application(FPCA)", value: "fpca"}
+              - {label: "Returning a Voted Ballot", value: "returningBallot"}
+              - {label: "Using the Federal Write-in Absentee Ballot (FWAB)", value: "fwab"}
+              - {label: "Federal And State Tax Implications", value: "taxImplications"}
       - label: Related FAQs
         name: relatedFaqs
         widget: list
@@ -134,8 +142,9 @@ collections:
             label: Type to search for another FAQ
             widget: relation
             collection: faqs
-            searchFields: ["title"]
-            valueField: slug
+            searchFields: ["title", "slug", "question"]
+            displayFields: ["title", "question"]
+            valueField: "title"
   - name: "rls"
     label: "State Info & Election Rules"
     folder: "content/rls"

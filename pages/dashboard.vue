@@ -11,7 +11,9 @@
         <div class="level-left">
           <span class="level-item">
             <h1 class="subtitle is-3">
-              <span class="has-text-grey-light">Hello </span><span><strong>{{ name }}</strong></span>
+              <i18n tag="span" path="dashboard.greeting" class="has-text-grey-light">
+                <span><strong>{{ name }}</strong></span>
+              </i18n>
             </h1>
           </span>
         </div>
@@ -206,15 +208,11 @@
 </template>
 
 <script>
-import UserDashboard from '~/components/UserDashboard'
 import snarkdown from 'snarkdown'
 import { mapGetters } from 'vuex'
 
 export default {
   name: 'dashboard',
-  components: {
-    UserDashboard
-  },
   async fetch ({ store }) {
     await store.dispatch('data/getElections')
   },

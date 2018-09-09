@@ -34,7 +34,7 @@ const placeDetails = function fillData (option) {
       .then(({ data }) => {
         if (data.status && data.status === 'NOT_FOUND') {
           this.$toast.open({
-            message: 'Unable to retrieve address. Please enter manually.',
+            message: this.$t('request.abrAdr.noAutocomplete'),
             duration: 3500,
             type: 'is-warning'
           })
@@ -177,7 +177,7 @@ const placesDetails = async function (option) {
     let {data} = await axios.get(`${process.env.placesUrl + process.env.detailsEndpoint}?placeid=${option.place_id}&language=en&key=${process.env.placesKey}&session_token=${this.sessionToken}`)
     if (data.status && data.status === 'NOT_FOUND') {
       this.$toast.open({
-        message: 'Unable to retrieve address. Please enter manually.',
+        message: this.$t('request.abrAdr.noAutocomplete'),
         duration: 3500,
         type: 'is-warning'
       })

@@ -1,13 +1,13 @@
 <template>
   <section class="section" v-show="showError">
     <h1 class="title">
-      {{ isChunkLoadingFailed ? 'Page Failed to Load' : error.statusCode }}
+      {{ isChunkLoadingFailed ? $t('error.failedLoading') : error.statusCode }}
     </h1>
     <h2 class="subtitle">
-      {{ isChunkLoadingFailed ? 'The page has just been updated and will be reloaded. If it is not automatically reloaded, please click refresh in your browser to manually reload.' : error.message }}
+      {{ isChunkLoadingFailed ? $t('error.chunkLoadingFailed') : error.message }}
     </h2>
     <nuxt-link class="button is-primary" to="/" v-if="error.statusCode === 404">
-      Back to main page
+      {{$t('error.back')}}
     </nuxt-link>
   </section>
 </template>

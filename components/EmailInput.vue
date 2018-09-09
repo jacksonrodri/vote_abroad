@@ -26,7 +26,10 @@
         :ref="fieldName"></b-input>
     </b-field>
   </b-field>
-  <span v-if="mailcheck && mailcheck !== fieldValue.toLowerCase()" class="help is-vfa">Did you mean <a @click="fieldValue = mailcheck"><span class="has-text-primary">{{ mailcheck }}</span></a>?</span>
+  <i18n tag="span" path="request.email.messages.didYouMean" v-if="mailcheck && mailcheck !== fieldValue.toLowerCase()" class="help is-vfa">
+    <a @click="fieldValue = mailcheck" class="has-text-primary">{{ mailcheck }}</a>
+  </i18n>
+  <!-- <span v-if="mailcheck && mailcheck !== fieldValue.toLowerCase()" class="help is-vfa">Did you mean <a @click="fieldValue = mailcheck"><span class="has-text-primary">{{ mailcheck }}</span></a>?</span> -->
 </div>
 </template>
 
@@ -39,7 +42,7 @@ export default {
   name: 'EmailInput',
   mixins: [fieldMixin],
   computed: {
-    placeholderAddress () { return `e.g. ${randomPresAddress()}` },
+    placeholderAddress () { return this.$t('request.email.placeholder', {example: randomPresAddress()}) },
     mailcheck () { return this.mailCheck(this.fieldValue) },
     ...mapGetters('requests', ['getCurrent']),
     ...mapGetters('data', ['mailCheck'])

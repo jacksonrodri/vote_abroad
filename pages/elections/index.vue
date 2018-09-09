@@ -1,3 +1,3 @@
 <template>
-  <div>elections</div>
+  <div>{{$t('election.elections')}}</div>
 </template>

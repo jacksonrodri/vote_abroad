@@ -24,10 +24,10 @@
             @select="option => updateLeo(option)">
             <template slot-scope="props"><strong>{{props.option.j}} {{props.option.j.toLowerCase().indexOf(props.option.t.toLowerCase()) > -1 ? '' : props.option.t}}</strong> - <small>{{props.option.n}}</small></template>
           </b-autocomplete> -->
-          <h1 class="title is-4">Elections Deadlines for {{state.title}} Voters Abroad</h1>
+          <h1 class="title is-4">{{$t('states.stateTitle', {state: state.title})}}</h1>
           <b-table hoverable :data="upcomingElections">
             <template slot-scope="props">
-              <b-table-column label="Election Day">
+              <b-table-column :label="$t('election.electionDay')">
                 <h1 class="title is-5">{{ props.row.electionType }}</h1>
               </b-table-column>
               <b-table-column>
@@ -51,7 +51,7 @@
               </b-table-column>
             </template>
           </b-table>
-          <h2 class="title is-5">Election Officials</h2>
+          <h2 class="title is-5">{{$t('states.electionOfficials')}}</h2>
           <b-field>
           <b-autocomplete
             v-model="typedLeo"
@@ -61,9 +61,9 @@
             ref="jurisdiction"
             :data="filteredLeos"
             field="n"
-            placeholder="Jurisdiction"
+            :placeholder="$t('request.jurisdiction.instructions')"
             @select="option => currentLeo = option">
-            <template slot-scope="props"><strong>{{props.option.j}} {{props.option.j.toLowerCase().indexOf(props.option.t.toLowerCase()) > -1 ? '' : props.option.t}}</strong> - <small>{{decodeHtmlEntity(props.option.n)}}&nbsp;</small><span v-if="props.option.suggested" class="tag is-info">Suggested</span></template>
+            <template slot-scope="props"><strong>{{props.option.j}} {{props.option.j.toLowerCase().indexOf(props.option.t.toLowerCase()) > -1 ? '' : props.option.t}}</strong> - <small>{{decodeHtmlEntity(props.option.n)}}&nbsp;</small><span v-if="props.option.suggested" class="tag is-info">{{$t('request.jurisdiction.suggested')}}</span></template>
             </b-autocomplete>
             <p class="control">
                 <button class="button is-grey is-inverted is-outlined"

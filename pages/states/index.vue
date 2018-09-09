@@ -6,15 +6,15 @@
     {{ page.title }}
   </h1>
   <nuxtent-body class="content" :body="page.body" />
-  <b-field label="Select the last State you resided in.">
-    <b-select placeholder="Select your state"
+  <b-field :label="$t('states.selectState')">
+    <b-select :placeholder="$t('states.select')"
       v-model="selectedState"
       @input="$router.push(localePath({ name: 'states-state', params: {state: selectedState} }))">
       <option
         v-for="state in states"
         :value="state.iso"
         :key="state.iso">
-        {{ state.title }}
+        {{ $t(`states.${state.iso}`) }}
       </option>
     </b-select>
   </b-field>

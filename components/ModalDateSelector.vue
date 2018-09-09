@@ -2,10 +2,13 @@
   <form action="">
       <div class="modal-card" style="width: auto">
         <header class="modal-card-head">
-          <p class="modal-card-title">Which did you mean?</p>
+          <p class="modal-card-title">{{$t('this.request.dob.disambiguationTitle')}}</p>
         </header>
         <section class="modal-card-body">
-          You typed <span class="is-italic">"{{ input }}"</span>. Which of the following did you mean?
+          <i18n tag="span" path="request.dob.disambiguationMessage">
+            <span class="is-italic">"{{ input }}"</span>
+          </i18n>
+          <!-- You typed <span class="is-italic">"{{ input }}"</span>. Which of the following did you mean? -->
           <b-field v-for="(date, i) in dateChoices" :key="i">
             <button @click.prevent="() => {$emit('selectDate', date); $parent.close()}" class="button is-primary is-fullwidth">
               {{ date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) }}
@@ -13,7 +16,7 @@
           </b-field>
         </section>
         <footer class="modal-card-foot">
-          <button class="button" type="button" @click.prevent="$emit('selectDate', null); $parent.close()">Cancel</button>
+          <button class="button" type="button" @click.prevent="$emit('selectDate', null); $parent.close()">{{$t('request.dob.cancel')}}</button>
         </footer>
       </div>
     </form>

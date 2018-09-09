@@ -3,7 +3,7 @@
   <!-- AK -->
     <div v-if="state === 'AK' && isRegistering">
       <span class="is-flex"><label class="label">{{ label }}</label><span @click.prevent="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
-      <b-message title="Why am I being asked this?" type="is-info" has-icon :active.sync="isOpen">
+      <b-message :title="$t('request.stateSpecial.tooltipTitle')" type="is-info" has-icon :active.sync="isOpen">
         <p v-html="$options.filters.markdown($t('request.akRules.tooltip'))"></p>
         <!-- <vue-markdown>{{$t('request.akRules.tooltip')}}</vue-markdown> -->
       </b-message>
@@ -18,7 +18,7 @@
   <!-- AZ -->
     <div v-if="state === 'AZ' && isRegistering">
       <span class="is-flex"><label class="label">{{ label }}</label><span @click.prevent="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
-      <b-message title="Why am I being asked this?" type="is-info" has-icon :active.sync="isOpen">
+      <b-message :title="$t('request.stateSpecial.tooltipTitle')" type="is-info" has-icon :active.sync="isOpen">
         <p v-html="$options.filters.markdown($t('request.azRules.tooltip'))"></p>
         <!-- <vue-markdown>{{$t('request.azRules.tooltip')}}</vue-markdown> -->
       </b-message>
@@ -30,7 +30,7 @@
   <!-- OK -->
     <div v-if="state === 'OK' && isIndNoParty">
       <span class="is-flex"><label class="label">{{ label }}</label><span @click.prevent="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
-      <b-message title="Why am I being asked this?" type="is-info" has-icon :active.sync="isOpen">
+      <b-message :title="$t('request.stateSpecial.tooltipTitle')" type="is-info" has-icon :active.sync="isOpen">
         <p v-html="$options.filters.markdown($t('request.okRules.tooltip'))"></p>
         <!-- <vue-markdown>{{$t('request.okRules.tooltip')}}</vue-markdown> -->
       </b-message>
@@ -42,7 +42,7 @@
   <!-- PR -->
     <div v-if="state === 'PR'">
       <span class="is-flex"><label class="label">{{ label }}</label><span @click.prevent="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
-      <b-message title="Why am I being asked this?" type="is-info" has-icon :active.sync="isOpen">
+      <b-message :title="$t('request.stateSpecial.tooltipTitle')" type="is-info" has-icon :active.sync="isOpen">
         <p v-html="$options.filters.markdown($t('request.prRules.tooltip'))"></p>
         <!-- <vue-markdown>{{$t('request.prRules.tooltip')}}</vue-markdown> -->
       </b-message>
@@ -54,7 +54,7 @@
   <!-- SC -->
     <div v-if="state === 'SC'">
       <span class="is-flex"><label class="label">{{ label }}</label><span @click.prevent="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
-      <b-message title="Why am I being asked this?" type="is-info" has-icon :active.sync="isOpen">
+      <b-message :title="$t('request.stateSpecial.tooltipTitle')" type="is-info" has-icon :active.sync="isOpen">
         <p v-html="$options.filters.markdown($t('request.scRules.tooltip'))"></p>
         <!-- <vue-markdown>{{$t('request.scRules.tooltip')}}</vue-markdown> -->
       </b-message>
@@ -70,7 +70,7 @@
   <!-- VA -->
     <div v-if="state === 'VA' && isReturnUncertain">
       <span class="is-flex"><label class="label">{{ label }}</label><span @click.prevent="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
-      <b-message title="Why am I being asked this?" type="is-info" has-icon :active.sync="isOpen">
+      <b-message :title="$t('request.stateSpecial.tooltipTitle')" type="is-info" has-icon :active.sync="isOpen">
         <p v-html="$options.filters.markdown($t('request.vaRules.tooltip'))"></p>
         <!-- <vue-markdown>{{$t('request.vaRules.tooltip')}}</vue-markdown> -->
       </b-message>
@@ -86,7 +86,7 @@
         {{$t('request.vtRules.oathInstructions')}}
         <b-input @input="val => setVal(val)" :value="value"></b-input>
       </b-field>
-      <b-message title="Why am I being asked this?" type="is-info" has-icon :active.sync="isOpen">
+      <b-message :title="$t('request.stateSpecial.tooltipTitle')" type="is-info" has-icon :active.sync="isOpen">
         <p v-html="$options.filters.markdown($t('request.vtRules.tooltip'))"></p>
         <!-- <vue-markdown>{{$t('request.vtRules.tooltip')}}</vue-markdown> -->
       </b-message>

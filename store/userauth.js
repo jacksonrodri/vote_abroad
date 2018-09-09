@@ -270,16 +270,18 @@ export const actions = {
     await dispatch('requests/loadRequests', null, { root: true })
     if (jwtDecode(idToken)['https://demsabroad.org/isDA'] && (!rootState.requests || rootState.requests.requests.length === 0 || !rootState.requests.requests[rootState.requests.currentRequest].lastName)) {
       // console.log('jwtdata', jwtDecode(idToken)['https://demsabroad.org/user'])
+      console.log(this.app.i18n.t('auth.daMembers'))
       Dialog.confirm({
-        title: 'Democrats Abroad Members',
-        message: `As an authenticated member of Democrats Abroad, you can prefill your form with your membership data. Would you like to?`,
-        cancelText: 'Start a new request',
-        confirmText: 'Prefill my data',
+        title: this.app.i18n.t('auth.daMembers'),
+        message: this.app.i18n.t('auth.daMemberMessage'),
+        cancelText: this.app.i18n.t('auth.daMemberCancel'),
+        confirmText: this.app.i18n.t('auth.daMemberConfirm'),
         type: 'is-success',
         onConfirm: () => {
           commit('requests/update', jwtDecode(idToken)['https://demsabroad.org/user'], { root: true })
           Toast.open({
-            message: `Your form has been pre-filled, please verify all information before submitting.`,
+            message: this.app.i18n.t('auth.prefilled'),
+            // message: `Your form has been pre-filled, please verify all information before submitting.`,
             type: 'is-success',
             position: 'is-top',
             duration: 8000

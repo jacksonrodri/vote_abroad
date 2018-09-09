@@ -4,9 +4,12 @@
       <span class="has-text-weight-semibold">{{ $t('homepage.title') }}</span>
     </h1>
     <div v-if="authState === 'loggedIn'">
-      <h1 class="subtitle is-1 is-size-3-mobile has-text-danger">
+      <i18n tag="h1" path="auth.welcomeBack" class="subtitle is-1 is-size-3-mobile has-text-grey-light">
+        <strong>{{ name }}!</strong>
+      </i18n>
+      <!-- <h1 class="subtitle is-1 is-size-3-mobile has-text-danger">
         <span class="has-text-grey-light">Welcome back, </span><span><strong>{{ name }}!</strong></span>
-      </h1>
+      </h1> -->
       <div class="buttons is-right">
         <button @click.prevent="$store.dispatch('userauth/logout')" class="button is-light">
           <b-icon
@@ -61,46 +64,51 @@
       <p class="has-text-centered help has-text-vfa">
         <ul>
           <li>
-            <h3 class="title is-7">Haven't received the <span v-if="loginType === 'email'">email</span><span v-if="loginType === 'sms'">sms</span>?</h3>
+            <h3 class="title is-7">{{$t('auth.notReceived', {type: $t(`auth.${loginType}`)})}}</h3>
           </li>
           <li v-if="seconds > 10 && loginType === 'email'">
             <b-icon
               type="is-vfa"
               icon="check"></b-icon>
-            It could take up to a minute to deliver.
+            {{$t('auth.emailDelay')}}
           </li>
           <li v-if="seconds > 10 && loginType === 'email'">
             <b-icon
               type="is-vfa"
               icon="check"></b-icon>
-            Check your spam folder
+              {{$t('auth.checkSpam')}}
+            <!-- Check your spam folder -->
           </li>
           <li v-if="seconds > 10 && loginType === 'email'">
             <b-icon
               type="is-vfa"
               icon="check"></b-icon>
-            Did you enter your email correctly?
+              {{$t('auth.correctEmail')}}
+            <!-- Did you enter your email correctly? -->
           </li>
           <li v-if="seconds > 10 && loginType === 'sms'">
             <b-icon
               type="is-vfa"
               icon="check"></b-icon>
-            Can you receive SMS messages on {{ phoneOrEmail }}?
+              {{$t('auth.notReceiveSms')}}
+            <!-- Can you receive SMS messages on {{ phoneOrEmail }}? -->
           </li>
           <li v-if="seconds > 10 && loginType === 'sms'">
             <b-icon
               type="is-vfa"
               icon="check"></b-icon>
-            Did you enter your number correctly?
+              {{$t('auth.correctNumber')}}
+            <!-- Did you enter your number correctly? -->
           </li>
           <li v-if="seconds > 25">
             <a @click="retry" class="button is-vfa is-inverted is-small">
-              Try again
+              {{$t('auth.tryAgain')}}
+              <!-- Try again -->
             </a>
           </li>
           <li v-if="seconds <= 25">
             <a @click="retry" class="button is-vfa is-inverted is-small" disabled>
-              Try again<span class="tag is-help">0:{{ 25 - parseInt(seconds) | two_digits }}</span>
+              {{$t('auth.tryAgain')}}<span class="tag is-help">0:{{ 25 - parseInt(seconds) | two_digits }}</span>
             </a>
           </li>
         </ul>
@@ -174,9 +182,9 @@ export default {
       isInfoOpen: true,
       authenticating: false,
       didYouKnow: [
-        'Did you know around 9 million Americans live abroad?',
-        'Request your ballot every calendar year to get full Federal Protection for all federal elections each year.',
-        'Americans have been political abroad since Thomas Jefferson.  He drafted the Bill of Rights while in Paris.'
+        this.$t('auth.trivia1'),
+        this.$t('auth.trivia2'),
+        this.$t('auth.trivia3')
       ],
       now: 0,
       date: 0,
@@ -190,7 +198,7 @@ export default {
     isAuthenticated: function () { return this.$store.getters['userauth/isAuthenticated'] },
     user () { return this.$store.state.userauth.user },
     requests () { return this.$store.state.requests.requests },
-    name () { return this.user && this.user.firstName ? this.user.firstName : this.requests && this.requests[0] && this.requests[0].firstName ? this.requests[0].firstName : 'guest' },
+    name () { return this.user && this.user.firstName ? this.user.firstName : this.requests && this.requests[0] && this.requests[0].firstName ? this.requests[0].firstName : this.$t('auth.voter') },
     seconds () {
       return (this.now - this.date)
     },
@@ -215,7 +223,7 @@ export default {
     },
     anonymousStart: function () {
       this.$toast.open({
-        message: 'You have started an anonymous session.  Please close this window when you are finished to delete all data.',
+        message: this.$t('auth.anonymousStartMessage'),
         type: 'is-success',
         duration: 8000
       })

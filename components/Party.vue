@@ -58,9 +58,16 @@
         v-if="isExistingDaMember || (joinValue !== true && joinValue !== false && joinValue)"
         key="daEmail"
         ref="daEmail"
-        :label="$t('request.joinDa.accountEmail', {email: email || 'the one you entered'})"
+        :label="$t('request.joinDa.accountEmail', {email: email || $t('request.joinDa.currentEmail')})"
         :type="$v.$error ? 'is-danger' : ''"
-        :message="$v.$error ? 'please enter a valid email address.' : ''">
+        :message="$v.$error ? $t('request.joinDa.messages.email') : ''">
+        <a @click.prevent="$el.querySelector('input').focus()"
+          :class="['button', 'is-static', 'control']">
+          <b-icon
+            pack="fas"
+            icon="at">
+          </b-icon>
+        </a>
         <b-input type="email"
           v-model="daEmailGetter"
           @input="(val) => joinValue = val"

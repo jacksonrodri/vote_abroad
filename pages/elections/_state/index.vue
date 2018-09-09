@@ -2,10 +2,10 @@
   <section class="section">
     <div class="columns is-centered">
       <div class="column is-8">
-          <h1 class="title is-3">{{$route.params.state.toUpperCase()}} Elections and Deadlines</h1>
+          <h1 class="title is-3">{{$t('election.title', {state: $route.params.state.toUpperCase()})}}</h1>
           <b-table hoverable :data="elections">
             <template slot-scope="props">
-              <b-table-column label="Election Day">
+              <b-table-column :label="$t('election.electionDay')">
                 <h1 class="title is-5">{{ props.row.electionType }}</h1>
               </b-table-column>
               <b-table-column>
@@ -21,7 +21,7 @@
                   <li v-for="(deadline, index) in rule"
                     :key="index.toString() + deadline.rule + deadline.voterType"
                     v-if="deadline.rule !== 'Not Required'">
-                    <strong>{{ typeof deadline.voterType === 'string' ? deadline.voterType : 'All Voters' }}</strong><br/><span class="tag is-success">{{ deadline.rule }}</span><br/>{{ new Date(deadline.date).toDateString() }}
+                    <strong>{{ typeof deadline.voterType === 'string' ? deadline.voterType : $t('election.allVoters') }}</strong><br/><span class="tag is-success">{{ deadline.rule }}</span><br/>{{ new Date(deadline.date).toDateString() }}
                     <hr v-if="index < rule.length - 1">
                   </li>
                   <li v-else><strong>{{ deadline.rule }}</strong></li>

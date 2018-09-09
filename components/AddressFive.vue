@@ -8,7 +8,7 @@
       <transition-group name="slide" tag="div" class="field">
         <template v-for="part in formatted">
           <b-field
-            :message="ctry === 'US' && fieldName === 'abrAdr' ? 'You should only select \'United States\' if you are using a military or diplomatic address (APO/DPO/FPO).' : ''"
+            :message="ctry === 'US' && fieldName === 'abrAdr' ? $t('request.abrAdr.messages.US-warning') : ''"
             :type="ctry === 'US' && fieldName === 'abrAdr' ? 'is-info' : ''"
             v-if="part.type === 'countryiso'"
             :key="part.type">
@@ -94,7 +94,7 @@
         </template>
         <template v-if="formatted.length === 1">
           <b-field v-for="n in ['A', 'B', 'C', 'S']" :key="n">
-            <b-input disabled :value="$t(`request.votAdr.${n}`) + (n === 'A' ? ' (Please select a country to continue)' : '')"></b-input>
+            <b-input disabled :value="$t(`request.votAdr.${n}`) + (n === 'A' ? $t('request.abrAdr.selectCountry') : '')"></b-input>
           </b-field>
         </template>
       </transition-group>

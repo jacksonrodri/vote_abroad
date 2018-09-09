@@ -8,7 +8,7 @@
     <form @submit.prevent id="your-information" key="your-information">
       <!-- firstName -->
       <div class="field">
-        <label class="label" for="firstName">{{ $t('request.firstName.label') }}<transition name="fade"><span v-if="!firstName && !$v.firstName.$error" class="required"> Required</span></transition></label>
+        <label class="label" for="firstName">{{ $t('request.firstName.label') }}<transition name="fade"><span v-if="!firstName && !$v.firstName.$error" class="required"> {{$t('request.field.req')}}</span></transition></label>
         <b-field :type="($v.firstName.$error ? 'is-danger': '')" :message="$v.firstName.$error ? Object.entries($v.firstName).filter(([key, value]) => key.charAt(0) !== '$' && value === false).map(x => $t(`request.firstName.messages.${x[0]}`)) : '' ">
           <b-input v-model="firstName"
             id="firstName"
@@ -21,7 +21,7 @@
 
       <!-- middleName -->
       <div class="field">
-        <label class="label" for="middleName">{{ $t('request.middleName.label') }}<transition name="fade"><span v-if="!middleName" class="required"> Optional</span></transition></label>
+        <label class="label" for="middleName">{{ $t('request.middleName.label') }}<transition name="fade"><span v-if="!middleName" class="required"> {{$t('request.field.opt')}}</span></transition></label>
         <b-field :type="($v.middleName.$error ? 'is-danger': '')" :message="$v.middleName.$error ? Object.keys($v.middleName.$params).map(x => $t(`request.middleName.messages.${x}`)) : '' ">
           <b-input
             v-model="middleName"
@@ -34,7 +34,7 @@
 
       <!-- lastName -->
       <div class="field">
-        <label class="label" for="lastName">{{ $t('request.lastName.label') }}<transition name="fade"><span v-if="!lastName && !$v.lastName.$error" class="required"> Required</span></transition></label>
+        <label class="label" for="lastName">{{ $t('request.lastName.label') }}<transition name="fade"><span v-if="!lastName && !$v.lastName.$error" class="required"> {{$t('request.field.req')}}</span></transition></label>
         <b-field :type="($v.lastName.$error ? 'is-danger': '')" :message="$v.lastName.$error ? Object.keys($v.lastName.$params).map(x => $t(`request.lastName.messages.${x}`)) : '' ">
           <b-input v-model="lastName"
             id="lastName"
@@ -47,7 +47,7 @@
 
       <!-- suffix -->
       <div class="field">
-        <label class="label" for="suffix">{{ $t('request.suffix.label') }}<transition name="fade"><span v-if="!suffix" class="required"> Optional</span></transition></label>
+        <label class="label" for="suffix">{{ $t('request.suffix.label') }}<transition name="fade"><span v-if="!suffix" class="required"> {{$t('request.field.opt')}}</span></transition></label>
         <b-field :type="($v.suffix.$error ? 'is-danger': '')" :message="$v.suffix.$error ? Object.keys($v.suffix.$params).map(x => $t(`request.suffix.messages.${x}`)) : '' ">
           <b-input
             v-model="suffix"
@@ -263,7 +263,7 @@
       </party>
 
       <state-special
-        :label="$t('request.stateSpecial.label', {state: stateRules && stateRules.title ? stateRules.title: 'State'})"
+        :label="$t('request.stateSpecial.label', {state: stateRules && stateRules.title ? stateRules.title : $t('request.stateSpecial.state')})"
         v-model="stateSpecial"
         :state="votAdr && votAdr.S ? votAdr.S : ''"
         :isFWAB="isFWAB"
@@ -741,15 +741,6 @@ export default {
     isFWAB: {
       get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].isFWAB : false },
       set (value) { this.$store.commit('requests/update', {isFWAB: value}) }
-    },
-    countryValidations: function () {
-      return [
-        {
-          field: 'country',
-          type: 'is-danger',
-          message: 'you must add a country'
-        }
-      ]
     },
     ...mapGetters('data', ['isValidNumber']),
     ...mapGetters('requests', ['getCurrent', 'getCurrentDeadlines'])

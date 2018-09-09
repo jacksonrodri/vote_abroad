@@ -12,7 +12,7 @@
 
       <b-field horizontal :label="$t('request.sig.from')">
         <b-field>
-          <b-input v-model="fromName" name="name" placeholder="Name" :disabled="isMailing === true" expanded></b-input>
+          <b-input v-model="fromName" name="name" :placeholder="$t('request.sig.name')" :disabled="isMailing === true" expanded></b-input>
         </b-field>
         <b-field>
           <b-input v-model="formEmail" ref="userEmail" name="email" type="email" :placeholder="$t('request.email.label')" :disabled="!!email" required expanded></b-input>
@@ -20,8 +20,8 @@
       </b-field>
 
       <b-field horizontal :label="$t('request.sig.to')">
-        <b-input :value="leoName" name="LeoName" placeholder="Name" disabled expanded></b-input>
-        <b-input :value="leoEmail" name="LeoEmail" type="email" placeholder="nobody@nowhere.com" disabled expanded></b-input>
+        <b-input :value="leoName" name="LeoName" :placeholder="$t('request.sig.to')" disabled expanded></b-input>
+        <b-input :value="leoEmail" name="LeoEmail" type="email" placeholder="election@example.com" disabled expanded></b-input>
       </b-field>
 
       <b-field horizontal :label="$t('request.sig.message')">
@@ -36,7 +36,7 @@
         <b-field grouped>
           <b-field>
             <button :class="['button', 'is-light', 'is-medium', {'is-loading': isMailing}]" @click="$emit('input', null)">
-              Cancel
+              {{$t('request.sig.cancel')}}
             </button>
           </b-field>
           <b-field expanded>
@@ -48,7 +48,7 @@
       </b-field>
   </section>
   <section class="section">
-    <b-field v-if="documentRequired" horizontal label="Attachments">
+    <b-field v-if="documentRequired" horizontal :label="$t('request.sig.attachments')">
       <b-upload
         accept="image/jpeg,image/gif,image/png,application/pdf"
         v-if="dropFiles.length === 0"
@@ -63,7 +63,10 @@
                 size="is-large">
               </b-icon>
             </p>
-            <p>You are required to provide {{documentRequired}}. Drop your file here or click to upload. (jpg, png, gif or pdf)</p>
+            <p>
+              {{$t('request.sig.attachmentInstructions', {document: documentRequired})}}
+              <!-- You are required to provide {{documentRequired}}. Drop your file here or click to upload. (jpg, png, gif or pdf) -->
+            </p>
           </div>
         </section>
       </b-upload>
@@ -189,9 +192,9 @@ export default {
       if (this.documentRequired && !this.reqDoc && !this.sendWithoutDocs) {
         this.$dialog.confirm({
           title: this.documentRequired.toLocaleUpperCase(),
-          message: `You are required to provide ${this.documentRequired}. Click cancel to add a file to your email. Or you can send the message without attaching a file. Your election official may contact you to ask for appropriate documentation.`,
-          cancelText: 'Cancel',
-          confirmText: 'Send Anyway',
+          message: this.$t('request.sig.attachmentRequiredAlertMessage', {document: this.documentRequired}),
+          cancelText: this.$t('request.sig.cancel'),
+          confirmText: this.$t('request.sig.attachmentRequiredConfirm'),
           type: 'is-danger',
           hasIcon: true,
           onConfirm: () => { this.sendWithoutDocs = true; this.sendEmail() }
@@ -220,7 +223,7 @@ export default {
             // else
             this.$router.push(this.localePath('dashboard'))
             this.$toast.open({
-              message: `Sent! Check your inbox for a copy (${this.formEmail})`,
+              message: this.$t('request.sig.successMessage', {email: this.formEmail}),
               type: 'is-success'
             })
           })
@@ -228,9 +231,9 @@ export default {
             console.log(error)
             this.isMailing = false
             this.$dialog.alert({
-              title: 'Error Sending',
-              message: 'There was an error sending your email. Please try again or return to the last page and download a copy.',
-              confirmText: 'OK',
+              title: this.$t('request.sig.failureTitle'),
+              message: this.$t('request.sig.failureMessage'),
+              confirmText: this.$t('request.sig.failureConfirm'),
               type: 'is-danger',
               hasIcon: true,
               icon: 'error',
