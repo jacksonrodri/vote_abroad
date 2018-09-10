@@ -571,7 +571,7 @@
     },
     "okRules": {
       "label": "Which Party Primary ballot are you requesting",
-      "primaryInstructions": "If your political party affiliation is listed as Independent/No Party, you may be able to request a ballot for a recognized political party's primary election. For specific information about recognized political parties in Oklahoma, please visit http://www.elections.ok.gov .",
+      "primaryInstructions": "If your political party affiliation is listed as Independent/No Party, you may be able to request a ballot for a recognized political party's primary election. For specific information about recognized political parties in Oklahoma, please visit [http://www.elections.ok.gov](http://www.elections.ok.gov).",
       "tooltip": "Only Oklahoma voters need to answer this question as per state law."
     },
     "id": {

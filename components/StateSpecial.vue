@@ -34,7 +34,7 @@
         <p v-html="$options.filters.markdown($t('request.okRules.tooltip'))"></p>
         <!-- <vue-markdown>{{$t('request.okRules.tooltip')}}</vue-markdown> -->
       </b-message>
-      {{$t('request.okRules.primaryInstructions')}}
+      <span v-html="md($t('request.okRules.primaryInstructions'))"></span>
       <b-field :label="$t('request.okRules.label')">
         <b-input v-model="scratch" @input="(val) => setVal(`I request to be able to vote in the following party primary: ${val}`)"></b-input>
       </b-field>
@@ -151,7 +151,7 @@ export default {
           this.scPrev = /I was formerly registered in: /.test(this.value) ? /I was formerly registered in: (.*)/.exec(this.value)[1] : ''
           break
         case 'pr':
-          this.scratch = this.value.length > 36 ? this.value.slice(37, this.value.length + 1) : ''
+          this.scratch = this.value.length > 35 ? this.value.slice(36, this.value.length + 1) : ''
           break
         case 'ok':
           if (!this.isIndNoParty) {
@@ -195,6 +195,9 @@ export default {
   methods: {
     setVal: function (val) {
       this.$emit('input', val)
+    },
+    md: function (md) {
+      return snarkdown(md)
     }
   }
 }

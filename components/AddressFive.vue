@@ -73,14 +73,14 @@
               </option></b-select>
             <b-autocomplete
               v-else-if="part.options && part.options.length > 4"
-              :data="adr[part.type] ? part.options.filter(x => x.name.includes(adr[part.type])): part.options"
+              :data="adr[part.type] ? part.options.filter(x => x.name.toLowerCase().includes(adr[part.type].toLowerCase())): part.options"
               field="name"
               :ref="part.type"
               :placeholder="part.label"
               open-on-focus
               keep-first
               :value="adr[part.type] || null"
-              @keyup.native="val => updateAddress(part.type, val)"
+              @input="val => updateAddress(part.type, val)"
               @select="option => option ? updateAddress(part.type, option.name) : ''"></b-autocomplete>
             <b-input
               v-else
