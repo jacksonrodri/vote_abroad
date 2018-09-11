@@ -86,6 +86,7 @@ const cleanString = function (str) {
 }
 
 const returnArrayOfReasonableBirthDates = function (dateString) {
+  console.log('dateString', dateString)
   let currentYear = new Date().getFullYear()
   let dateArr = []
   let dateRegexPatterns = {
@@ -108,7 +109,8 @@ const returnArrayOfReasonableBirthDates = function (dateString) {
     })
   } else {
     // dateArr.push(new Date(Date.parse(dateString)))
-    dateArr.push(new Date(Date.parse(dateString) - (new Date().getTimezoneOffset() * 60000)))
+    dateArr.push(new Date(Date.parse(dateString)))
+    // - (new Date().getTimezoneOffset() * 60000)
   }
   // console.log(new Date(Date.parse('june 1 82') + new Date().getTimezoneOffset() * 60000))
   // console.log(new Date(Date.parse('june 1 82') - (new Date().getTimezoneOffset() * 60000)))
@@ -125,8 +127,8 @@ const returnArrayOfReasonableBirthDates = function (dateString) {
     year = year < 1890 || year > currentYear ? null : year
     let month = parseInt(m) - 1
     let day = parseInt(d)
-    let parsedDate = new Date(Date.UTC(year, month, day))
-    if (!year || parsedDate.getUTCMonth() !== month) {
+    let parsedDate = new Date(year, month, day)
+    if (!year || parsedDate.getMonth() !== month) {
     } else return parsedDate
   }
 }

@@ -53,9 +53,9 @@
                   <div class="navbar-dropdown">
                     <nuxt-link v-for="(election, index) in upcomingElections" :key="`${election.state} ${election.electionType}`" :to="localePath({ name: 'elections-state', params: { state: election.state } })" :class="`navbar-item ${index > 3 ? 'is-hidden-touch' : ''}`">
                       <div class="calendar">
-                        <header class="calendar-month">{{new Date(election.date).toLocaleDateString('en-US', {month: 'short', timeZone: 'UTC'}) }}</header>
+                        <header class="calendar-month">{{new Date(election.date).toLocaleDateString('en-US', {month: 'short'}) }}</header>
                         <div class="calendar-date">
-                          {{ new Date(election.date).toLocaleDateString('en-US', {day: 'numeric', timeZone: 'UTC'}) }}
+                          {{ new Date(election.date).toLocaleDateString('en-US', {day: 'numeric'}) }}
                         </div>
                       </div>
                       <span class="is-size-6"><span class="has-text-weight-semibold">{{ election.state }}</span> - {{ election.electionType}}</span>

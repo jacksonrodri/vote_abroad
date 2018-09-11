@@ -5,7 +5,7 @@
     :message="validations.$error ? Object.keys(validations.$params).map(x => $t(`request.dob.messages.${x}`)) : '' "
     :type="(validations.$error ? 'is-danger': '')">
     <b-datepicker v-model="dob"
-      :date-formatter="(date) => date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' })"
+      :date-formatter="(date) => date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })"
       :date-parser="dateParser2"
       :readonly="false"
       :mobile-native="allowNative"
@@ -13,6 +13,7 @@
       :max-date="maxDate"
       :inline="!allowNative"
       ref="dob"
+      @input="val => showVal(val)"
       :focused-date="focusedDate && focusedDate.getTime() < maxDate.getTime() ? focusedDate : maxDate"
       @changeMonth="val => changeMonth(val)"
       @changeYear="val => changeYear(val)"
@@ -125,12 +126,16 @@ export default {
     },
     dob: {
       get () {
-        function createDateObj (d) { return new Date(d.substr(0, 4), d.substr(5, 2) - 1, d.substr(8, 2), 12) }
+        console.log('get', this.value)
+        function createDateObj (d) { return new Date(d.substr(0, 4), d.substr(5, 2) - 1, d.substr(8, 2)) }
         return typeof this.value === 'string' ? createDateObj(this.value) : undefined
       },
       set (val) {
-        function createDateString (d) { return `${d.getUTCFullYear()}-${d.getUTCMonth() < 9 ? '0' : ''}${d.getUTCMonth() + 1}-${d.getUTCDate() < 9 ? '0' : ''}${d.getUTCDate()}` }
+        // console.log('set', val.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }))
+        // console.log('ymd', val.getFullYear(), val.getMonth(), val.getDate())
+        function createDateString (d) { return `${d.getFullYear()}-${d.getMonth() < 9 ? '0' : ''}${d.getMonth() + 1}-${d.getDate() < 9 ? '0' : ''}${d.getDate()}` }
         this.date = val instanceof Date ? createDateString(val) : null
+        // console.log('set finished: ', createDateString(val))
         this.$emit('input', val instanceof Date ? createDateString(val) : null)
       }
     },
@@ -139,6 +144,9 @@ export default {
     }
   },
   methods: {
+    showVal (val) {
+      console.log(val)
+    },
     changeMonth (month) {
       this.focusedDate = this.focusedDate
         ? new Date(this.focusedDate.getFullYear(), month, this.focusedDate.getDate())
@@ -173,7 +181,10 @@ export default {
           input
         },
         events: {
-          selectDate (date) { if (date instanceof Date) vm.dob = date }
+          selectDate (date) {
+            console.log('modal', date)
+            if (date instanceof Date) vm.dob = date
+          }
         }
       })
       return new Date()
