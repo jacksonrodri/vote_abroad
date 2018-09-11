@@ -374,7 +374,7 @@ function getRuleType (rule) {
   } else return 'received by'
 }
 function getRuleDeadline (date) {
-  return date && typeof date === 'string' && date.substr(0, 4) === new Date().getFullYear().toString() ? `${new Date(date).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}).toUpperCase()} at ${new Date(date).toLocaleTimeString('en-US', {hour: 'numeric'}).toUpperCase()}` : null
+  return date && typeof date === 'string' && date.substr(0, 4) === new Date().getFullYear().toString() ? `${new Date(date).toLocaleDateString('en-US', {month: 'short', day: 'numeric', timeZone: 'UTC'}).toUpperCase()} at ${new Date(date).toLocaleTimeString('en-US', {hour: 'numeric'}).toUpperCase()}` : null
 }
 function getRuleSubmissionOption (rule) {
   let st = []
@@ -394,11 +394,11 @@ function getDeadlineLanguage (electionArr, state, voterRegistrationStatus, voter
   } else {
     switch (voterRegistrationStatus) {
       // case 'notRegistered':
-      //   return `** IMPORTANT DEADLINES for new voters to vote in the ${new Date(applicableRules.date).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}).toUpperCase()} ${applicableRules.electionType} **\n- ${getRuleLanguage(applicableRules, 'Registration', voterRegistrationStatus)}\nSee all your state deadlines at ${process.env.url}/states/${applicableRules.state}`
+      //   return `** IMPORTANT DEADLINES for new voters to vote in the ${new Date(applicableRules.date).toLocaleDateString('en-US', {month: 'short', day: 'numeric', timeZone: 'UTC'}).toUpperCase()} ${applicableRules.electionType} **\n- ${getRuleLanguage(applicableRules, 'Registration', voterRegistrationStatus)}\nSee all your state deadlines at ${process.env.url}/states/${applicableRules.state}`
       case 'registered':
-        return `IMPORTANT DEADLINES for registered voters to vote in the ${new Date(applicableRules.date).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}).toUpperCase()} ${applicableRules.electionType.replace(/\*/g, '')} \n- ${getRuleLanguage(applicableRules, 'Ballot Request', voterRegistrationStatus)}\n- See all your state deadlines at ${process.env.url}/states/${applicableRules.state}`
+        return `IMPORTANT DEADLINES for registered voters to vote in the ${new Date(applicableRules.date).toLocaleDateString('en-US', {month: 'short', day: 'numeric', timeZone: 'UTC'}).toUpperCase()} ${applicableRules.electionType.replace(/\*/g, '')} \n- ${getRuleLanguage(applicableRules, 'Ballot Request', voterRegistrationStatus)}\n- See all your state deadlines at ${process.env.url}/states/${applicableRules.state}`
       default:
-        return `IMPORTANT DEADLINES for the ${new Date(applicableRules.date).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}).toUpperCase()} ${applicableRules.electionType.replace(/\*/g, '')} \n**NEW VOTERS** ${getRuleLanguage(applicableRules, 'Registration', voterRegistrationStatus)} \n**REGISTERED VOTERS** ${getRuleLanguage(applicableRules, 'Ballot Request', voterRegistrationStatus)} \n- See all your state deadlines at ${process.env.url}/states/${applicableRules.state}`
+        return `IMPORTANT DEADLINES for the ${new Date(applicableRules.date).toLocaleDateString('en-US', {month: 'short', day: 'numeric', timeZone: 'UTC'}).toUpperCase()} ${applicableRules.electionType.replace(/\*/g, '')} \n**NEW VOTERS** ${getRuleLanguage(applicableRules, 'Registration', voterRegistrationStatus)} \n**REGISTERED VOTERS** ${getRuleLanguage(applicableRules, 'Ballot Request', voterRegistrationStatus)} \n- See all your state deadlines at ${process.env.url}/states/${applicableRules.state}`
     }
   }
 }

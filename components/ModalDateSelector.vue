@@ -11,7 +11,7 @@
           <!-- You typed <span class="is-italic">"{{ input }}"</span>. Which of the following did you mean? -->
           <b-field v-for="(date, i) in dateChoices" :key="i">
             <button @click.prevent="() => {$emit('selectDate', date); $parent.close()}" class="button is-primary is-fullwidth">
-              {{ date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) }}
+              {{ date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' }) }}
             </button>
           </b-field>
         </section>

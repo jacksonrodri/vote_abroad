@@ -10,9 +10,9 @@
               </b-table-column>
               <b-table-column>
                 <div class="calendar">
-                  <header class="calendar-month">{{new Date(props.row.date).toLocaleDateString('en-US', {month: 'short'}) }}</header>
+                  <header class="calendar-month">{{new Date(props.row.date).toLocaleDateString('en-US', {month: 'short', timeZone: 'UTC'}) }}</header>
                   <div class="calendar-date">
-                    {{ new Date(props.row.date).toLocaleDateString('en-US', {day: 'numeric'}) }}
+                    {{ new Date(props.row.date).toLocaleDateString('en-US', {day: 'numeric', timeZone: 'UTC'}) }}
                   </div>
                 </div>
               </b-table-column>

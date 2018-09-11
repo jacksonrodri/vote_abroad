@@ -5,7 +5,7 @@
     :message="validations.$error ? Object.keys(validations.$params).map(x => $t(`request.dob.messages.${x}`)) : '' "
     :type="(validations.$error ? 'is-danger': '')">
     <b-datepicker v-model="dob"
-      :date-formatter="(date) => date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })"
+      :date-formatter="(date) => date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' })"
       :date-parser="dateParser2"
       :readonly="false"
       :mobile-native="allowNative"
@@ -24,7 +24,7 @@
           <span class="help is-primary is-size-6" v-html="$t('request.dob.selectDate')"></span>
           <b-input
             v-if="!allowNative"
-            :value="(dob instanceof Date) ? dob.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : dob"
+            :value="(dob instanceof Date) ? dob.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' }) : dob"
             @change="val => dob = val"
             @blur="dob = dateParser2(dob)"
             :placeholder="$t('request.dob.placeholder')"></b-input>

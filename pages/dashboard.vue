@@ -372,13 +372,13 @@ export default {
       let rule = elections[0].rule
       let deadline = new Date(elections[0].ruleDate)
       let methods = elections.length < 2 || elections[0].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.submissionMethod`, {method: elections[0].submissionOptions.join('/')})
-      let altMethods = elections.length < 2 || elections[1].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.alternateSubmissionMethod`, {rule: this.$t(`request.deadlineLanguage.${elections[1].rule}`), deadline: new Date(elections[1].ruleDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}), method: elections[1].submissionOptions.join('/')})
+      let altMethods = elections.length < 2 || elections[1].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.alternateSubmissionMethod`, {rule: this.$t(`request.deadlineLanguage.${elections[1].rule}`), deadline: new Date(elections[1].ruleDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric', timeZone: 'UTC'}), method: elections[1].submissionOptions.join('/')})
       return {
         rule: this.$t(`request.deadlineLanguage.${rule}`),
-        deadline: deadline.toLocaleDateString('en-US', {month: 'short', day: 'numeric'}),
+        deadline: deadline.toLocaleDateString('en-US', {month: 'short', day: 'numeric', timeZone: 'UTC'}),
         submissionMethod: methods,
         alternateSubmissionMethod: altMethods,
-        electionDay: new Date(elections[0].electionDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}),
+        electionDay: new Date(elections[0].electionDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric', timeZone: 'UTC'}),
         electionType: elections[0].electionType,
         note: elections[0].note || '',
         url: process.env.url,
@@ -391,13 +391,13 @@ export default {
       let rule = elections[0].rule
       let deadline = new Date(elections[0].ruleDate)
       let methods = elections.length < 2 || elections[0].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.submissionMethod`, {method: elections[0].submissionOptions.join('/')})
-      let altMethods = elections.length < 2 || elections[1].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.alternateSubmissionMethod`, {rule: this.$t(`request.deadlineLanguage.${elections[1].rule}`), deadline: new Date(elections[1].ruleDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}), method: elections[1].submissionOptions.join('/')})
+      let altMethods = elections.length < 2 || elections[1].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.alternateSubmissionMethod`, {rule: this.$t(`request.deadlineLanguage.${elections[1].rule}`), deadline: new Date(elections[1].ruleDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric', timeZone: 'UTC'}), method: elections[1].submissionOptions.join('/')})
       return {
         rule: this.$t(`request.deadlineLanguage.${rule}`),
-        deadline: deadline.toLocaleDateString('en-US', {month: 'short', day: 'numeric'}),
+        deadline: deadline.toLocaleDateString('en-US', {month: 'short', day: 'numeric', timeZone: 'UTC'}),
         submissionMethod: methods,
         alternateSubmissionMethod: altMethods,
-        electionDay: new Date(elections[0].electionDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}),
+        electionDay: new Date(elections[0].electionDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric', timeZone: 'UTC'}),
         electionType: elections[0].electionType,
         note: elections[0].note || '',
         url: process.env.url,
@@ -409,25 +409,25 @@ export default {
       let newVoterRule = electionsNew[0].rule
       let newVoterDeadline = new Date(electionsNew[0].ruleDate)
       let newVoterMethods = electionsNew.length < 2 || electionsNew[0].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.submissionMethod`, {method: electionsNew[0].submissionOptions.join('/')})
-      let newVoterAltMethods = electionsNew.length < 2 || electionsNew[1].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.alternateSubmissionMethod`, {rule: this.$t(`request.deadlineLanguage.${electionsNew[1].rule}`), deadline: new Date(electionsNew[1].ruleDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}), method: electionsNew[1].submissionOptions.join('/')})
+      let newVoterAltMethods = electionsNew.length < 2 || electionsNew[1].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.alternateSubmissionMethod`, {rule: this.$t(`request.deadlineLanguage.${electionsNew[1].rule}`), deadline: new Date(electionsNew[1].ruleDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric', timeZone: 'UTC'}), method: electionsNew[1].submissionOptions.join('/')})
       let electionsRegistered = this.getCurrentDeadlines.filter(x => x.ruleType === 'Ballot Request')
       let registeredVoterRule = electionsRegistered[0].rule
       let registeredVoterDeadline = new Date(electionsRegistered[0].ruleDate)
       let registeredVoterMethods = electionsRegistered.length < 2 || electionsRegistered[0].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.submissionMethod`, {method: electionsRegistered[0].submissionOptions.join('/')})
-      let registeredVoterAltMethods = electionsRegistered.length < 2 || electionsRegistered[1].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.alternateSubmissionMethod`, {rule: this.$t(`request.deadlineLanguage.${electionsRegistered[1].rule}`), deadline: new Date(electionsRegistered[1].ruleDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}), method: electionsRegistered[1].submissionOptions.join('/')})
+      let registeredVoterAltMethods = electionsRegistered.length < 2 || electionsRegistered[1].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.alternateSubmissionMethod`, {rule: this.$t(`request.deadlineLanguage.${electionsRegistered[1].rule}`), deadline: new Date(electionsRegistered[1].ruleDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric', timeZone: 'UTC'}), method: electionsRegistered[1].submissionOptions.join('/')})
       return {
         newVoterRule: this.$t(`request.deadlineLanguage.${newVoterRule}`),
-        newVoterDeadline: newVoterDeadline.toLocaleDateString('en-US', {month: 'short', day: 'numeric'}),
+        newVoterDeadline: newVoterDeadline.toLocaleDateString('en-US', {month: 'short', day: 'numeric', timeZone: 'UTC'}),
         newVoterSubmissionMethod: newVoterMethods,
         newVoterAlternateSubmissionMethod: newVoterAltMethods,
-        newVoterElectionDay: new Date(electionsNew[0].electionDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}),
+        newVoterElectionDay: new Date(electionsNew[0].electionDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric', timeZone: 'UTC'}),
         newVoterElectionType: electionsNew[0].electionType,
         newVoterNote: electionsNew[0].note || '',
         registeredVoterRule: this.$t(`request.deadlineLanguage.${registeredVoterRule}`),
-        registeredVoterDeadline: registeredVoterDeadline.toLocaleDateString('en-US', {month: 'short', day: 'numeric'}),
+        registeredVoterDeadline: registeredVoterDeadline.toLocaleDateString('en-US', {month: 'short', day: 'numeric', timeZone: 'UTC'}),
         registeredVoterSubmissionMethod: registeredVoterMethods,
         registeredVoterAlternateSubmissionMethod: registeredVoterAltMethods,
-        registeredVoterElectionDay: new Date(electionsRegistered[0].electionDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}),
+        registeredVoterElectionDay: new Date(electionsRegistered[0].electionDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric', timeZone: 'UTC'}),
         registeredVoterElectionType: electionsRegistered[0].electionType,
         registeredVoterNote: electionsRegistered[0].note || '',
         url: process.env.url,
@@ -440,13 +440,13 @@ export default {
       let rule = elections[0].rule
       let deadline = new Date(elections[0].ruleDate)
       let methods = elections.length < 2 || elections[0].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.submissionMethod`, {method: elections[0].submissionOptions.join('/')})
-      let altMethods = elections.length < 2 || elections[1].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.alternateSubmissionMethod`, {rule: this.$t(`request.deadlineLanguage.${elections[1].rule}`), deadline: new Date(elections[1].ruleDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}), method: elections[1].submissionOptions.join('/')})
+      let altMethods = elections.length < 2 || elections[1].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.alternateSubmissionMethod`, {rule: this.$t(`request.deadlineLanguage.${elections[1].rule}`), deadline: new Date(elections[1].ruleDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric', timeZone: 'UTC'}), method: elections[1].submissionOptions.join('/')})
       return {
         rule: this.$t(`request.deadlineLanguage.${rule}`),
-        deadline: deadline.toLocaleDateString('en-US', {month: 'short', day: 'numeric'}),
+        deadline: deadline.toLocaleDateString('en-US', {month: 'short', day: 'numeric', timeZone: 'UTC'}),
         submissionMethod: methods,
         alternateSubmissionMethod: altMethods,
-        electionDay: new Date(elections[0].electionDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}),
+        electionDay: new Date(elections[0].electionDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric', timeZone: 'UTC'}),
         electionType: elections[0].electionType,
         note: elections[0].note || '',
         url: process.env.url,
