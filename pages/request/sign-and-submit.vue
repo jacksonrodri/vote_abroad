@@ -757,13 +757,17 @@ export default {
         : ''
     },
     deadlineLanguage () {
-      switch (this.isRegistered) {
-        case 'notRegistered':
-          return this.$t('request.deadlineLanguage.newVoters', this.newVoterDeadlineLanguageObject)
-        case 'registered':
-          return this.$t('request.deadlineLanguage.registeredVoters', this.registeredVoterDeadlineObject)
-        default:
-          return this.$t('request.deadlineLanguage.unsureRegistrationVoters', this.unsureVoterDeadlineObject)
+      if (this.getCurrentDeadlines.length === 0) {
+        return `There are no elections currently scheduled for ${this.votState}.  Voters should send in an FPCA every calendar year.`
+      } else {
+        switch (this.isRegistered) {
+          case 'notRegistered':
+            return this.$t('request.deadlineLanguage.newVoters', this.newVoterDeadlineLanguageObject)
+          case 'registered':
+            return this.$t('request.deadlineLanguage.registeredVoters', this.registeredVoterDeadlineObject)
+          default:
+            return this.$t('request.deadlineLanguage.unsureRegistrationVoters', this.unsureVoterDeadlineObject)
+        }
       }
     },
     deadlineFormSubmitted () {

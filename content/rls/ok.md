@@ -5,7 +5,6 @@ allowsNeverResided: true
 id:
   - SSN4
   - StateID
-  - SSN
 partyPrimary: true
 ballotReceiptOptions:
   - Email

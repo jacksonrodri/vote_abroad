@@ -454,13 +454,17 @@ export default {
       }
     },
     deadlineLanguage () {
-      switch (this.isRegistered) {
-        case 'notRegistered':
-          return this.$t('request.deadlineLanguage.newVoters', this.newVoterDeadlineLanguageObject)
-        case 'registered':
-          return this.$t('request.deadlineLanguage.registeredVoters', this.registeredVoterDeadlineObject)
-        default:
-          return this.$t('request.deadlineLanguage.unsureRegistrationVoters', this.unsureVoterDeadlineObject)
+      if (this.getCurrentDeadlines.length === 0) {
+        return `There are no elections currently scheduled for ${this.votState}.  Voters should send in an FPCA every calendar year.`
+      } else {
+        switch (this.isRegistered) {
+          case 'notRegistered':
+            return this.$t('request.deadlineLanguage.newVoters', this.newVoterDeadlineLanguageObject)
+          case 'registered':
+            return this.$t('request.deadlineLanguage.registeredVoters', this.registeredVoterDeadlineObject)
+          default:
+            return this.$t('request.deadlineLanguage.unsureRegistrationVoters', this.unsureVoterDeadlineObject)
+        }
       }
     },
     isRegistered () { return this.currentRequestObject ? this.currentRequestObject.isRegistered : null },
@@ -475,11 +479,19 @@ export default {
       return this.$t('request.deadlineLanguage.formConfirmation')
     },
     deadlineReceiveBallot () {
-      let daysToNextElection = Math.ceil((new Date(this.getCurrentDeadlines[0].electionDate).getTime() - new Date().getTime()) / (1000 * 3600 * 24))
-      return this.$t(`request.deadlineLanguage.${daysToNextElection > 44 ? 'sendBallot45days' : 'sendBallotLessThan45days'}`)
+      if (this.getCurrentDeadlines.length === 0) {
+        return ''
+      } else {
+        let daysToNextElection = Math.ceil((new Date(this.getCurrentDeadlines[0].electionDate).getTime() - new Date().getTime()) / (1000 * 3600 * 24))
+        return this.$t(`request.deadlineLanguage.${daysToNextElection > 44 ? 'sendBallot45days' : 'sendBallotLessThan45days'}`)
+      }
     },
     deadlineBallotReturn () {
-      return this.$t('request.deadlineLanguage.ballotReturn', this.ballotReturnDeadlineObject)
+      if (this.getCurrentDeadlines.length === 0) {
+        return ''
+      } else {
+        return this.$t('request.deadlineLanguage.ballotReturn', this.ballotReturnDeadlineObject)
+      }
     },
     documentRequired () {
       switch (this.state.toLowerCase()) {

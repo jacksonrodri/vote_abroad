@@ -306,6 +306,21 @@ export default {
     if (this.adr.A) this.tempA = this.adr.A || ''
     //   })
     // }
+  },
+  beforeDestroy () {
+    this.updateCountryData(this.ctry).then(() => {
+      this.$nextTick()
+        .then(() => {
+          this.createFormattedAddress()
+          let cleanAdr = !this.countryData || !this.formatted || !this.adr
+            ? this.adr
+            : Object.entries(this.adr).reduce((obj, [k, v]) => {
+              if (this.countryFields.concat({type: 'usesAlternateFormat'}).map(({type}) => type).includes(k)) obj[k] = v
+              return obj
+            }, {})
+          this.update({[this.fieldName]: Object.assign({}, cleanAdr, {formatted: this.formattedAddress})})
+        })
+    })
   }
 }
 </script>

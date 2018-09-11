@@ -37,7 +37,7 @@
 
     <div class="has-text-centered"><strong>{{ $t('request.id.or')}}</strong></div>
 
-    <b-field  v-if="!idOptions || (idOptions && idOptions.filter(x => x!== 'SSN' && x !== 'SSN4').length > 0)"
+    <b-field  v-if="!idOptions || (idOptions && idOptions.filter(x => x!== 'SSN' || x !== 'SSN4').length > 0)"
       :message="validations.stateId.$error ? $t(`request.id.messages.stateIdRequired`) : '' "
       :type="(validations.stateId.$error ? 'is-danger': '')"
       :label="stateIdLabel"

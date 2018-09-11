@@ -26,12 +26,13 @@
             open-on-focus
             keep-first
             expanded
-            @input="(val) => {this.typedJurisdiction = val; this.updated()}"
+            @input="(val) => {typedJurisdiction = val; updated()}"
             ref="jurisdiction"
             :data="filteredLeos"
             field="n"
             :placeholder="placeholder"
             @select="option => updateLeo(option)">
+            <template slot="empty">No results for {{ typedJurisdiction || jurisdiction }} <a class="button is-primary is-small" @click="() => { typedJurisdiction = ''; $refs.jurisdiction.focus() }">Show all</a></template>
             <template slot-scope="props"><strong>{{props.option.j}} {{props.option.j.toLowerCase().indexOf(props.option.t.toLowerCase()) > -1 ? '' : props.option.t}}</strong> - <small>{{decodeHtmlEntity(props.option.n)}}&nbsp;</small><span v-if="props.option.suggested" class="tag is-info">{{$t('request.jurisdiction.suggested')}}</span></template>
             </b-autocomplete>
             <p class="control">
