@@ -5,7 +5,7 @@
     </h1>
     <div v-if="authState === 'loggedIn'">
       <i18n tag="h1" path="auth.welcomeBack" class="subtitle is-1 is-size-3-mobile has-text-grey-light">
-        <strong>{{ name }}!</strong>
+        <strong>{{ name }}</strong>
       </i18n>
       <!-- <h1 class="subtitle is-1 is-size-3-mobile has-text-danger">
         <span class="has-text-grey-light">Welcome back, </span><span><strong>{{ name }}!</strong></span>

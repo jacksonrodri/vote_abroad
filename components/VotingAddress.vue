@@ -205,7 +205,7 @@ export default {
       set (value) { this.updateAddress('Z', value) }
     },
     county: {
-      get () { return this.votAdr.Y || null },
+      get () { return this.state === 'DC' || this.state === 'PR' || this.state === 'VI' || this.state === 'AS' || this.state === 'GU' ? '' : this.votAdr.Y || null },
       set (value) { this.updateAddress('Y', value) }
     }
   },
@@ -237,6 +237,11 @@ export default {
     this.sessionToken = uuidv4()
     this.tempStreet = this.street
     this.findCounty()
+  },
+  beforeDestroy () {
+    if (this.state === 'DC' || this.state === 'PR' || this.state === 'VI' || this.state === 'AS' || this.state === 'GU') {
+      this.county = ''
+    }
   },
   methods: {
     async findCounty () {

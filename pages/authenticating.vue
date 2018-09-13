@@ -40,12 +40,14 @@ export default {
       }
     }
   },
+  created () {
+    let trivia = [this.$t('auth.trivia1'), this.$t('auth.trivia2'), this.$t('auth.trivia3')]
+    this.didYouKnow = trivia[Math.floor(Math.random() * Math.floor(trivia.length))]
+  },
   mounted () {
     if (this.authState === 'loggedIn' || !window.location.hash.includes('access_token')) {
       this.$router.replace(this.localePath({ name: 'request-stage', params: { stage: 'your-information' } }))
     }
-    let trivia = [this.$t('auth.trivia1'), this.$t('auth.trivia2'), this.$t('auth.trivia3')]
-    this.didYouKnow = trivia[Math.floor(Math.random() * Math.floor(trivia.length))]
   }
 }
 </script>
