@@ -40,7 +40,8 @@
     "correctNumber": "Did you enter your number correctly?",
     "tryAgain": "Try again",
     "anonymousStart": "Proceed without an account.",
-    "anonymousStartMessage": "You have started an anonymous session.  Please close this window when you are finished to delete all data."
+    "anonymousStartMessage": "You have started an anonymous session.  Please close this window when you are finished to delete all data.",
+    "continueRequest": "Continue my request"
   },
   "faq": {
     "title": "Frequently Asked Questions",
@@ -55,7 +56,8 @@
     "fpca": "Filling Out the Federal Post Card Application(FPCA)",
     "returningBallot": "Returning a Voted Ballot",
     "fwab": "Using the Federal Write-in Absentee Ballot (FWAB)",
-    "taxImplications": "Federal And State Tax Implications"
+    "taxImplications": "Federal And State Tax Implications",
+    "studyAbroad": "Study Abroad Issues"
   },
   "envelopes": {
     "title": "Postage Paid Envelope Templates",
@@ -717,6 +719,7 @@
       "newVoters": "IMPORTANT DEADLINES for the {electionDay} {electionType}:\n- Your form serves as a both voter registration and ballot request.  It must be {rule} {deadline} {submissionMethod}{alternateSubmissionMethod} for you to be eligible to vote in the {electionDay} {electionType}. {note}\n- See all your state deadlines at {url}/states/{state} {documentRequired}",
       "registeredVoters": "IMPORTANT DEADLINES for the {electionDay} {electionType}:\n- Your ballot request must be {rule} {deadline} {submissionMethod}{alternateSubmissionMethod} for you to be eligible to vote in the {electionDay} {electionType}. {note}\n- See all your state deadlines at {url}/states/{state}",
       "unsureRegistrationVoters": "IMPORTANT DEADLINES for the {newVoterElectionDay} {newVoterElectionType}:\n- New Voters: Your form serves as a both voter registration and ballot request.  It must be {newVoterRule} {newVoterDeadline}{newVoterSubmissionMethod}{newVoterAlternateSubmissionMethod} for you to be eligible to vote in the {newVoterElectionDay} {newVoterElectionType}. {newVoterNote}{documentRequired}\n- Registered Voters: Your ballot request must be {registeredVoterRule} {registeredVoterDeadline}{registeredVoterSubmissionMethod}{registeredVoterAlternateSubmissionMethod} for you to be eligible to vote in the {registeredVoterElectionDay} {registeredVoterElectionType}. {registeredVoterNote}\n- See all your state deadlines at {url}/states/{state}",
+      "noElections": "There are no elections currently scheduled for {state}.  Voters should send in an FPCA every calendar year.",
       "alsoVoterRegistration": "Voter Registration/",
       "formSubmitted": "Your {alsoVoterRegistration}Ballot Request has been submitted by email to {leoName}. {specialRules}",
       "formConfirmation": "We also strongly recommend that you verify with your election official that they have received and processed your form.",
@@ -780,7 +783,8 @@
     "share": {
       "title": "Share",
       "icon": "share",
-      "content": "Ask your friends to vote from abroad"
+      "content": "Ask your friends to vote from abroad",
+      "message": "Tell a friend about VoteFromAbroad"
     }
   }
 }

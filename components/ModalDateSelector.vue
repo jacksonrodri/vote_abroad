@@ -1,5 +1,4 @@
 <template>
-  <form action="">
       <div class="modal-card" style="width: auto">
         <header class="modal-card-head">
           <p class="modal-card-title">{{$t('request.dob.disambiguationTitle')}}</p>
@@ -19,7 +18,6 @@
           <a class="button" type="button" @click="$emit('selectDate', null); $parent.close()">{{$t('request.dob.cancel')}}</a>
         </footer>
       </div>
-    </form>
 </template>
 
 <script>

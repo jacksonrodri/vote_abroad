@@ -243,36 +243,7 @@ export default {
   data () {
     return {
       isAdmin: false,
-      currentRequestStage: 'Fill & Sign',
-      requestStages: [
-        {
-          title: 'Fill & Sign',
-          icon: 'edit',
-          content: 'You must completely fill out your ballot request, sign and date it before sending it in.',
-          actionText: 'Edit my form',
-          faqs: ['What state can I vote in?', 'Do I have to do this every year?']
-        },
-        {
-          title: 'Send in Request',
-          icon: 'paper-plane',
-          content: 'You must submit your request to your local election official in your town, county or state.  blah blah blah',
-          actionText: 'Send Request electronically',
-          faqs: []
-        },
-        {
-          title: 'Receive Ballot',
-          icon: 'inbox',
-          content: 'States must send out ballots at least 45 days prior to an election.  We recomend confirming with your local election official that they have accepted your request.',
-          actionText: 'Email my election official'
-        },
-        {
-          title: 'Vote',
-          icon: 'check',
-          content: 'Be sure to send in your voted ballot by the deadline of.... ',
-          actionText: 'Check my deadlines',
-          completeText: 'I\'ve already voted'
-        }
-      ]
+      currentRequestStage: 'Fill & Sign'
     }
   },
   computed: {

@@ -25,7 +25,7 @@
           <span class="help is-primary is-size-6" v-html="$t('request.dob.selectDate')"></span>
           <b-input
             v-if="!allowNative"
-            :value="(dob instanceof Date) ? dob.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' }) : dob"
+            :value="(dob instanceof Date) ? dob.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : dob"
             @change="val => dob = val"
             @blur="dob = dateParser2(dob)"
             :placeholder="$t('request.dob.placeholder')"></b-input>
@@ -65,6 +65,27 @@
   <b-message :title="tooltipTitle" type="is-info" has-icon :active.sync="toolTipOpen">
     <slot name="tooltip"></slot>
   </b-message>
+  <b-modal :active.sync="isCardModalActive" :width="640" scroll="keep" has-modal-card>
+    <div class="modal-card" style="width: auto">
+      <header class="modal-card-head">
+        <p class="modal-card-title">{{$t('request.dob.disambiguationTitle')}}</p>
+      </header>
+      <section class="modal-card-body">
+        <i18n tag="span" path="request.dob.disambiguationMessage">
+          <span class="is-italic">"{{ inputText }}"</span>
+        </i18n>
+        <!-- You typed <span class="is-italic">"{{ input }}"</span>. Which of the following did you mean? -->
+        <b-field v-for="date in dateChoices" :key="date.getTime()">
+          <a @click="addDate(date)" class="button is-primary is-fullwidth">
+            {{ date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric'}) }}
+          </a>
+        </b-field>
+      </section>
+      <footer class="modal-card-foot">
+        <a class="button" type="button" @click="dob = null">{{$t('request.dob.cancel')}}</a>
+      </footer>
+    </div>
+  </b-modal>
 </div>
 </template>
 
@@ -89,6 +110,9 @@ export default {
       maxDate: new Date(2000, 10, 6),
       minDate: new Date(1900, 0, 1),
       toolTipOpen: false,
+      isCardModalActive: false,
+      dateChoices: [],
+      inputText: '',
       monthNames: [
         this.$t('request.dob.months.jan'),
         this.$t('request.dob.months.feb'),
@@ -103,11 +127,20 @@ export default {
         this.$t('request.dob.months.nov'),
         this.$t('request.dob.months.dec')
       ],
-      focusedDate: this.dob || this.maxDate || new Date(new Date().getFullYear() - 19, new Date().getMonth(), new Date().getDate()),
+      focusedDate: this.dob || this.maxDate || new Date((new Date().getFullYear() - 19), new Date().getMonth(), new Date().getDate()),
       focusedDateData: {
         month: (this.dob || this.maxDate || new Date()).getMonth(),
-        year: this.dob || this.maxDate ? (this.dob || this.maxDate).getFullYear() : (new Date().getFullYear() - 18)
+        year: this.dob || this.maxDate ? (this.dob || this.maxDate).getFullYear() : ((new Date().getFullYear()) - 18)
         // (this.maxDate || new Date()).getFullYear()
+      }
+    }
+  },
+  created () {
+    if (this.dob) {
+      this.focusedDate = this.dob
+      this.focusedDateData = {
+        month: this.dob.getMonth(),
+        year: this.dob.getFullYear()
       }
     }
   },
@@ -134,9 +167,10 @@ export default {
         // console.log('set', val.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }))
         // console.log('ymd', val.getFullYear(), val.getMonth(), val.getDate())
         function createDateString (d) { return `${d.getFullYear()}-${d.getMonth() < 9 ? '0' : ''}${d.getMonth() + 1}-${d.getDate() < 9 ? '0' : ''}${d.getDate()}` }
-        this.date = val instanceof Date ? createDateString(val) : null
+        let d = val instanceof Date ? createDateString(val) : null
+        this.date = d
         // console.log('set finished: ', createDateString(val))
-        this.$emit('input', val instanceof Date ? createDateString(val) : null)
+        this.$emit('input', d)
       }
     },
     allowNative () {
@@ -159,16 +193,24 @@ export default {
         : new Date(year, this.maxDate.getMonth(), this.maxDate.getDate())
       this.focusedDateData = Object.assign({}, this.focusedDateData, {year})
     },
-    resetFocusedDate () {
-      this.focusedDate = this.maxDate
-      this.focusedDateData = {
-        month: this.maxDate.getMonth(),
-        year: this.maxDate.getFullYear()
-      }
-    },
+    // resetFocusedDate () {
+    //   this.focusedDate = this.maxDate
+    //   this.focusedDateData = {
+    //     month: this.maxDate.getMonth(),
+    //     year: this.maxDate.getFullYear()
+    //   }
+    // },
     addDate (date) {
-      // console.log(date)
-      this.dob = this.dateParser2(date)
+      console.log(date, this)
+      this.inputText = ''
+      this.focusedDate = date
+      this.focusedDateData = {
+        month: date.getMonth(),
+        year: date.getFullYear()
+      }
+      this.dateChoices = []
+      this.isCardModalActive = false
+      this.dob = date
     },
     cardModal (dateChoices, input) {
       let vm = this
@@ -182,19 +224,29 @@ export default {
         },
         events: {
           selectDate (date) {
-            console.log('modal', date)
-            if (date instanceof Date) vm.dob = date
+            console.log('modal', date, date instanceof Date, vm)
+            if (date instanceof Date) {
+              // vm.resetFocusedDate()
+              vm.dob = null
+              vm.$nextTick()
+                .then(() => { vm.dob = date })
+              console.log(vm.dob)
+              // vm.$emit('input', vm.date)
+            }
           }
         }
       })
-      return new Date()
+      // return new Date()
     },
     dateParser2 (input) {
       // console.log(input)
       let choices = returnArrayOfReasonableBirthDates(input)
       // console.log('choices', choices)
       if (choices.length > 1) {
-        this.cardModal(choices, input)
+        this.inputText = input
+        this.dateChoices = choices
+        this.isCardModalActive = true
+        // this.cardModal(choices, input)
       } else if (choices.length === 1) {
         return choices[0]
       } else return null
@@ -203,12 +255,13 @@ export default {
   watch: {
     dob (val, oldVal) {
       if (val && val instanceof Date) {
+        console.log('dob change', val, oldVal)
         this.focusedDate = val
         this.focusedDateData = {
           month: val.getMonth(),
           year: val.getFullYear()
         }
-      } else this.resetFocusedDate()
+      }
     }
   }
   // dateParser (input) {

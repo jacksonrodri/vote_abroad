@@ -70,8 +70,7 @@
         </a>
         <b-input type="email"
           v-model="daEmailGetter"
-          @input="(val) => joinValue = val"
-          maxlength="30">
+          @input="(val) => joinValue = val">
         </b-input>
       </b-field>
     </transition>
