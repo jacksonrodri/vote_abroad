@@ -245,8 +245,8 @@ export default {
   },
   mounted () {
     this.subject = 'FPCA Submission'
-    this.message = `Please find my FPCA form for the 2018 calendar year. Can you confirm receipt and also confirm that I do not need to send in the paper copy? \n\nThank you so much for everything you do. Your work is much appreciated by Americans abroad! \n\n Sincerely, \n\n${this.firstName} ${this.lastName} \n\n${this.formEmail} \n\n${this.tel}`
-    this.htmlMessage = `Please find my FPCA form for the 2018 calendar year. Can you confirm receipt and also confirm that I do not need to send in the paper copy? \n\nThank you so much for everything you do. Your work is much appreciated by Americans abroad! <br/><br/> Sincerely, <br/><br/>${this.firstName} ${this.lastName} <br/><br/>${this.formEmail} <br/><br/>${this.tel}`
+    this.message = `Please see attached my FPCA form for the 2018 calendar year. Can you confirm receipt and also confirm that I do not need to send in the paper copy? \n\nThank you so much for everything you do. Your work is much appreciated by Americans abroad! \n\n Sincerely, \n\n${this.firstName} ${this.lastName} \n\n${this.formEmail} \n\n${this.tel}`
+    this.htmlMessage = `Please see attached my FPCA form for the 2018 calendar year. Can you confirm receipt and also confirm that I do not need to send in the paper copy? \n\nThank you so much for everything you do. Your work is much appreciated by Americans abroad! <br/><br/> Sincerely, <br/><br/>${this.firstName} ${this.lastName} <br/><br/>${this.formEmail} <br/><br/>${this.tel}`
   }
 }
 </script>

@@ -111,6 +111,14 @@
               {{$t('auth.tryAgain')}}<span class="tag is-help">0:{{ 25 - parseInt(seconds) | two_digits }}</span>
             </a>
           </li>
+          <li v-if="seconds > 25">
+            <b-icon
+              type="is-vfa"
+              icon="check"></b-icon>
+              <!-- {{$t('auth.correctNumber')}} -->
+              If you are still having trouble we recommend <a click="anonymousStart">starting without an account.</a>
+            <!-- Did you enter your number correctly? -->
+          </li>
         </ul>
       </p>
       <div class="buttons is-right is-marginless">
