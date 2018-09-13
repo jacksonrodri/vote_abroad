@@ -67,7 +67,11 @@ export default {
   ],
   async mounted () {
     this.loading = true
-    this.leos = (await axios.get(`/leos/${this.state}-leos.json`)).data
+    let leos = (await axios.get(`/leos/${this.state}-leos.json`)).data
+    if (this.state === 'NJ') {
+      leos = leos.filter(x => /FPCA/.test(x.n))
+    }
+    this.leos = leos
     // console.log(this.leos)
     // this.leos = await (
     //   await import(

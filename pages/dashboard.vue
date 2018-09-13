@@ -376,7 +376,7 @@ export default {
       }
     },
     unsureVoterDeadlineObject () {
-      let electionsNew = this.getCurrentDeadlines.filter(x => x.ruleType === 'Ballot Request')
+      let electionsNew = this.getCurrentDeadlines.filter(x => x.ruleType === 'Registration')
       let newVoterRule = electionsNew[0].rule
       let newVoterDeadline = new Date(electionsNew[0].ruleDate)
       let newVoterMethods = electionsNew.length < 2 || electionsNew[0].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.submissionMethod`, {method: electionsNew[0].submissionOptions.join('/')})

@@ -703,7 +703,7 @@ export default {
       }
     },
     unsureVoterDeadlineObject () {
-      let electionsNew = this.getCurrentDeadlines.filter(x => x.ruleType === 'Ballot Request')
+      let electionsNew = this.getCurrentDeadlines.filter(x => x.ruleType === 'Registration')
       let newVoterRule = electionsNew[0].rule
       let newVoterDeadline = new Date(electionsNew[0].ruleDate)
       let newVoterMethods = electionsNew.length < 2 || electionsNew[0].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.submissionMethod`, {method: electionsNew[0].submissionOptions.join('/')})
@@ -836,7 +836,7 @@ export default {
       if (this.currentRequest && (this.currentRequest.stateSpecial || (this.currentRequest.identification && this.currentRequest.identification.noId && this.stateRules && this.stateRules.id && this.stateRules.id.length > 0))) {
         addlInfoText = this.currentRequest && this.currentRequest.stateSpecial ? this.currentRequest.stateSpecial.toString() : ' '
         if ((this.currentRequest.identification && this.currentRequest.identification.noId && this.stateRules && this.stateRules.id && this.stateRules.id.length > 0)) {
-          addlInfoText = `I don't have the requested forms of identification. ` + addlInfoText
+          addlInfoText = `I do not have a Social Security Number or State issued ID number. ` + addlInfoText
         }
         return addlInfoText
       } else {
