@@ -4,7 +4,7 @@
     <slot name="instructions"></slot>
     <br/>
 
-    <b-field v-if="idOptions && idOptions.indexOf('SSN') > -1"
+    <b-field v-if="idOptions && idOptions.includes('SSN')"
         :label="$t('request.id.SSN')"
         label-for="ssn"
         :message="validations.ssn.$error ? $t(`request.id.messages.fullSSNRequired`) : '' "

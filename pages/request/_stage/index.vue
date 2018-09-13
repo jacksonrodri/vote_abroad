@@ -284,11 +284,11 @@
         :tooltipTitle="$t('request.id.tooltipTitle')"
         v-model="identification">
         <div slot="instructions">
-          <p v-if="stateRules && stateRules.id && stateRules.id.length === 0"
+          <p v-if="!idOptions || idOptions.length === 0"
             v-html="$options.filters.markdown($t('request.id.instructionsOptional', { state: stateRules.title}))">
           </p>
-          <p v-else-if="stateRules && stateRules.id && stateRules.id.length === 1"
-            v-html="$options.filters.markdown($t('request.id.instructionsReq1', { state: stateRules.title, id: $t(`request.id.${stateRules.id[0]}`), idType: $t(`request.id.${stateRules.id[0].indexOf('SSN') > -1 ? 'SSN' : stateRules.id[0]}`)}))">
+          <p v-else-if="idOptions.length === 1"
+            v-html="$options.filters.markdown($t('request.id.instructionsReq1', { state: stateRules.title, id: $t(`request.id.${idOptions[0]}`), idType: $t(`request.id.${idOptions[0].includes('SSN') ? 'SSN' : idOptions[0]}`)}))">
           </p>
           <p v-else v-html="$options.filters.markdown($t('request.id.instructionsReq2', { state: stateRules.title, allButLastTypes: allButLastIdType, lastType: lastIdType }))">
           </p>
@@ -542,7 +542,7 @@ export default {
     idOptions () {
       let opts = this.stateRules && this.stateRules.id && this.stateRules.id.length > 0 ? this.stateRules.id : null
       if (this.votAdr.S === 'OK' && this.recBallot === 'email') {
-        return ['SSN', 'SSN4']
+        return ['SSN', 'StateID']
       } else return opts
     },
     v () {
@@ -567,15 +567,16 @@ export default {
       }
     },
     allButLastIdType () {
-      return this.stateRules.id.length > 2
-        ? this.stateRules.id.slice(0, this.stateRules.id.length - 1).map(x => this.$t(`request.id.${x}`)).join(', ')
-        : this.$t(`request.id.${this.stateRules.id[0]}`)
+      if (!this.idOptions) return ''
+      return this.idOptions.length > 2
+        ? this.idOptions.slice(0, this.idOptions.length - 1).map(x => this.$t(`request.id.${x}`)).join(', ')
+        : this.$t(`request.id.${this.idOptions[0]}`)
     },
     lastIdType () {
-      return this.$t(`request.id.${this.stateRules.id.slice(-1)[0]}`)
+      return this.idOptions ? this.$t(`request.id.${this.idOptions.slice(-1)[0]}`) : ''
     },
     idTypesString () {
-      let arr = this.stateRules & this.stateRules.id.length > 0 ? this.stateRules.id : ['SSN4', 'StateID']
+      let arr = this.idOptions && this.idOptions.length > 0 ? this.stateRules.id : ['SSN4', 'StateID']
       return arr.map(x => this.$t(`request.id['${x}']`))
         .map((x, i, a) => {
           switch (a.length - i) {
