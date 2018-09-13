@@ -193,7 +193,9 @@ export default {
         this.countryIso = (this.formattedNumber(this.fieldValue)).formatted.country
       }
       if (val && val.length > 3 && !this.phoneMetadataHasAllCountriesForPrefix(val)) {
-        this.getCountryIsoFromPhonePrefix(val)
+        this.getCountryIsoFromPhonePrefix(val).then(() => {
+          this.countryIso = (this.formattedNumber(this.fieldValue)).formatted.country
+        })
       }
     },
     userCountry (val) {
