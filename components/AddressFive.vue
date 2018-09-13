@@ -231,6 +231,7 @@ export default {
     },
     toggleInfo () { this.isInfoOpen = !this.isInfoOpen },
     updateAddress: function (addressPart, value) {
+      // if (this.ctry || this.userCountry)
       let cleanAdr = !this.countryData || !this.formatted || !this.adr
         ? this.adr
         : Object.entries(this.adr).reduce((obj, [k, v]) => {
@@ -295,7 +296,10 @@ export default {
     }
     if (!this.ctry && this.userCountry) {
       this.updateAddress('countryiso', this.userCountry)
-      this.createFormattedAddress()
+      // this.createFormattedAddress()
+      this.updateCountryData(this.userCountry)
+        .then(() => this.$nextTick()
+          .then(() => this.createFormattedAddress()))
     }
     // if (process.browser) {
     //   window.onNuxtReady(() => {
