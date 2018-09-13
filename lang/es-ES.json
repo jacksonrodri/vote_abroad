@@ -644,7 +644,7 @@
       "label": "Ingrese su número de fax si desea recibir su boleta electoral por fax.",
       "messages": {
         "required": "Usted debe incluir un número de fax si elige recibir su boleta electoral por fax.",
-        "invalid": "El número que ingresó no es un número de teléfono válido.  Por favor, compruébelo y vuelva a intentarlo."
+        "validPhone": "El número que ingresó no es un número de teléfono válido.  Por favor, compruébelo y vuelva a intentarlo."
       }
     },
     "azRules": {

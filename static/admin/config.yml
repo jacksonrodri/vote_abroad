@@ -538,7 +538,7 @@ collections:
                 widget: "object"
                 fields:
                   - {label: "Required", name: "required", widget: "string"}
-                  - {label: "Invalid Number", name: "invalid", widget: "string"}
+                  - {label: "Invalid Number", name: "validPhone", widget: "string"}
           - label: "Alternate Email"
             name: "altEmail"
             widget: "object"
