@@ -1,4 +1,4 @@
 ---
-title: Estados
+title: estados
 ---
-Consulte las fechas límite de las elecciones primaria y general, así como las reglas para el envío de las boletas electorales; y manténgase informado de las votaciones en este año de elecciones.
+Look up your state's primary and general election deadlines, as well as its submission rules, find your local election officials, and stay on top of voting in this year's elections.

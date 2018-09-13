@@ -1,9 +1,9 @@
 ---
 title: Condiciones de uso
 ---
-VoteFromAbroad.org es una herramienta de registro de votantes no partidista provista como servicio público por Democrats Abroad.
+www.VoteFromAbroad.org es una herramienta de registro de votantes no partidista provista como servicio público por Democrats Abroad.
 
-Si bien Democrats Abroad realiza esfuerzos razonables para asegurar que la información de este sitio sea exacta y esté actualizada, nos reservamos el derecho de hacer correcciones. Democrats Abroad no será responsable por cualquier error o inexactitud de la información en este sitio, cualquier demora en la transmisión de esa información, o por cualquier acción tomada por usted al respecto. Este sitio y la información contenida en él, se ofrece sobre con base en las mejores intenciones.
+Si bien Democrats Abroad realiza esfuerzos razonables para asegurar que la información de este sitio sea exacta y esté actualizada, nos reservamos el derecho de hacer correcciones. Democrats Abroad no será responsable por cualquier error o inexactitud de la información en este sitio, cualquier demora en la transmisión de esa información, o por cualquier acción tomada por usted al respecto. Este sitio y la información contenida en él, se ofrece con base en las mejores intenciones.
 
 Democrats Abroad no ofrece ninguna garantía, expresa o implícita, con respecto a la exactitud, idoneidad u oportunidad de la información para cualquier propósito en particular. Los usuarios deben comunicarse con sus funcionarios electorales locales o estatales para verificar la información antes de tomar acción con base en ella, porque la información puede haber cambiado desde la última actualización del sitio.
 
