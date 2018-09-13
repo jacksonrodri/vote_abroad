@@ -95,7 +95,7 @@
                       <span v-html="md(transmitRules)"></span>
                     </b-message>
                     <p class="is-size-5"
-                      v-if="$te(`request.deadlineLanguage.${state.toLowerCase()}Special`) && stage !== 'formEmailed'"
+                      v-if="$te(`request.deadlineLanguage.${votState}Special`) && stage !== 'formEmailed'"
                       v-html="md(specialSubmissionRules)"></p>
 
                     <div class="box" v-if="stage !== 'formEmailed'">
@@ -302,8 +302,8 @@ export default {
       // return this.$te(`request.deadlineLanguage.${this.state.toLowerCase()}Special`)
       //   ? this.$t(`request.deadlineLanguage.${this.state.toLowerCase()}Special`, {leoName: this.leoName})
       //   : ''
-      return this.$te(`request.deadlineLanguage.${this.votState.toLowerCase()}Special`)
-        ? this.$t(`request.deadlineLanguage.${this.votState.toLowerCase()}Special`, {leoName: this.leoName, transmitOpts: this.transmitOpts})
+      return this.$te(`request.deadlineLanguage.${this.votState}Special`)
+        ? this.$t(`request.deadlineLanguage.${this.votState}Special`, {leoName: this.leoName, transmitOpts: this.transmitOpts})
         : this.$t(`request.deadlineLanguage.transmitInstructions`, {leoName: this.leoName, transmitOpts: this.transmitOpts})
     },
     stateRules () {

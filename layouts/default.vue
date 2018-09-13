@@ -141,8 +141,8 @@
         <nav class="tabs is-boxed is-fullwidth">
           <div class="container">
             <ul>
-              <li :class="{'is-active': $route.path === localePath({ name: 'faqs-slug', params: { slug: 'how-do-i-vote-as-a-us-citizen-living-abroad' } })}">
-                <nuxt-link :to="localePath({ name: 'faqs-slug', params: { slug: 'how-do-i-vote-as-a-us-citizen-living-abroad' } })">
+              <li :class="{'is-active': $route.path === localePath({ name: 'faqs-slug', params: { slug: '5' } })}">
+                <nuxt-link :to="localePath({ name: 'faqs-slug', params: { slug: '5' } })">
                   <!-- How to<span class="is-hidden-touch">&nbsp;Vote From Abroad</span> -->
                   {{$t('menu.howto')}}
                 </nuxt-link>

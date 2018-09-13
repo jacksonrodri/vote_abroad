@@ -123,7 +123,7 @@
               type="is-vfa"
               icon="check"></b-icon> -->
               <!-- {{$t('auth.correctNumber')}} -->
-              <i18n tag="h3" class="title is-7" path="trouble">
+              <i18n tag="h3" class="title is-7" path="auth.trouble">
                 <a click="anonymousStart">{{$t('auth.recommendation')}}</a>
               </i18n>
             <!-- Did you enter your number correctly? -->

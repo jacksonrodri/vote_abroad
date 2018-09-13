@@ -72,7 +72,7 @@
                 </button>
             </p>
           </b-field>
-          <div class="box">
+          <div class="box" v-if="currentLeo">
             <p>
             <span class="title is-5" v-if="currentLeo && currentLeo.n"><strong>{{ currentLeo.n }}</strong><br/><br/></span>
             <span v-if="currentLeo && currentLeo.a1"><strong>{{ currentLeo.a1 }}</strong><br/></span>

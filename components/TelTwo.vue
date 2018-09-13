@@ -186,13 +186,13 @@ export default {
       // console.log(val)
       if (val && !this.tempValue) {
         this.tempValue = val
-      } else if (this.getPhoneIntFormat(this.tempValue, this.countryIso || null) !== val) {
+      } else if (this.getPhoneIntFormat(this.tempValue.toString(), this.countryIso || null) !== val) {
         this.tempValue = val
       }
-      if (val && val.length > 3 && !this.countryIso) {
+      if (val && /^\+\d\d?\d?/.test(val) && !this.countryIso) {
         this.countryIso = (this.formattedNumber(this.fieldValue)).formatted.country
       }
-      if (val && val.length > 3 && !this.phoneMetadataHasAllCountriesForPrefix(val)) {
+      if (val && /^\+\d\d?\d?/.test(val) && !this.phoneMetadataHasAllCountriesForPrefix(val)) {
         this.getCountryIsoFromPhonePrefix(val).then(() => {
           this.countryIso = (this.formattedNumber(this.fieldValue)).formatted.country
         })

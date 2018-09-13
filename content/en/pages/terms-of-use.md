@@ -3,7 +3,7 @@ title: Terms of Use
 ---
 VoteFromAbroad.org is a nonpartisan voter registration tool provided as a public service by Democrats Abroad.
 
-While Democrats Abroad uses reasonable efforts to ensure that the information on this site is accurate and up to date, we reserve the right to make corrections. Democrats Abroad shall not be liable for any errors, or inaccuracies of the information on this Site, any delays in transmission of that information, or for any actions taken by you in reliance thereon. This site and the information therein is offered on a best intentions basis.
+While Democrats Abroad uses reasonable efforts to ensure that the information on this site is accurate and up to date, we reserve the right to make corrections. Democrats Abroad shall not be liable for any errors, or inaccuracies of the information on this site, any delays in transmission of that information, or for any actions taken by you in reliance thereon. This site and the information therein is offered on a best intentions basis.
 
 Democrats Abroad offers no warranty, express or implied, with respect to the accuracy, adequacy, or timeliness of the information for any particular purpose. Users should contact their local or state election officials to verify information before taking action in reliance on it, because information may have changed since the last update of the site. 
 
@@ -16,4 +16,5 @@ You may download, print, and store the Content and downloadable materials displa
 Democrats Abroad
 
 PO Box 15130
+
 Washington, DC 20003, USA

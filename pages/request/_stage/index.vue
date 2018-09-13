@@ -1070,7 +1070,9 @@ export default {
           // if (this.$refs && this.$refs.tel) {
           //   return this.$refs.tel.validatePhone
           // } else return this.tel && this.tel.rawInput ? this.tel.isValidPhone : true
-          return this.tel ? this.isValidNumber(this.tel) : true
+          return this.tel
+            ? /^\+\d\d?\d?/.test(this.tel) ? this.isValidNumber(this.tel) : false
+            : true
         }
       },
       phoneThree: {

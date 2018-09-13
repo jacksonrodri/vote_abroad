@@ -140,7 +140,7 @@ export default {
           }
           break
         case 'va':
-          if (!this.isRegistering) {
+          if (!this.isReturnUncertain) {
             this.setVal(null)
           } else {
             this.scratch = this.value.length > 85 ? this.value.slice(86, this.value.length + 1) : ''
