@@ -19,7 +19,7 @@
           </b-icon>
           <span>{{ $t('menu.logout')}}</span>
         </button>
-        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" class="button is-primary" exact >Continue my request</nuxt-link>
+        <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" class="button is-primary" exact >{{$t('auth.continueRequest')}}</nuxt-link>
       </div>
     </div>
     <div v-else-if="authState === 'enteringCode'">
@@ -100,6 +100,13 @@
               {{$t('auth.correctNumber')}}
             <!-- Did you enter your number correctly? -->
           </li>
+          <li v-if="seconds > 10 && loginType === 'sms' && /^\+91/.test(phoneOrEmail)">
+            <b-icon
+              type="is-vfa"
+              icon="check"></b-icon>
+              {{$t('auth.indiaAuth')}} <a href="http://www.nccptrai.gov.in/nccpregistry/" target="_blank">{{$t('auth.whiteList')}}</a>
+            <!-- Did you enter your number correctly? -->
+          </li>
           <li v-if="seconds > 25">
             <a @click="retry" class="button is-vfa is-inverted is-small">
               {{$t('auth.tryAgain')}}
@@ -112,11 +119,13 @@
             </a>
           </li>
           <li v-if="seconds > 25">
-            <b-icon
+            <!-- <b-icon
               type="is-vfa"
-              icon="check"></b-icon>
+              icon="check"></b-icon> -->
               <!-- {{$t('auth.correctNumber')}} -->
-              If you are still having trouble we recommend <a click="anonymousStart">starting without an account.</a>
+              <i18n tag="h3" class="title is-7" path="trouble">
+                <a click="anonymousStart">{{$t('auth.recommendation')}}</a>
+              </i18n>
             <!-- Did you enter your number correctly? -->
           </li>
         </ul>

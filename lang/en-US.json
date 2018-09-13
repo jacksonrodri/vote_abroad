@@ -38,10 +38,14 @@
     "correctEmail": "Did you enter your email correctly?",
     "notReceiveSms": "Can you receive SMS messages on {number}?",
     "correctNumber": "Did you enter your number correctly?",
+    "indiaAuth": "Is your number in India’s Do Not Call Registry?",
+    "whiteList": "White list us.",
     "tryAgain": "Try again",
     "anonymousStart": "Proceed without an account.",
     "anonymousStartMessage": "You have started an anonymous session.  Please close this window when you are finished to delete all data.",
-    "continueRequest": "Continue my request"
+    "continueRequest": "Continue my request",
+    "trouble": "If you are still having trouble we recommend {recommendation}.",
+    "recommendation": "starting without an account"
   },
   "faq": {
     "title": "Frequently Asked Questions",

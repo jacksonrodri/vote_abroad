@@ -191,7 +191,9 @@ export default {
       if (!this.typedJurisdiction) {
         return this.prioritizedLeos.filter((e, i, a) => !(i < 6 && e.suggested && a.slice(0, i).map(x => x.i).includes(e.i)))
       }
-      return this.leos.filter(leo => leo.n.toLowerCase().indexOf(this.typedJurisdiction.toLowerCase()) > -1 || leo.j.toLowerCase().indexOf(this.typedJurisdiction.toLowerCase()) > -1)
+      return this.leos.filter(leo => leo.n.toLowerCase().includes(this.typedJurisdiction.toLowerCase()) || leo.j.toLowerCase().includes(this.typedJurisdiction.toLowerCase())).length === 1
+        ? this.leos.filter(leo => leo.n.toLowerCase().includes(this.typedJurisdiction.toLowerCase()) || leo.j.toLowerCase().includes(this.typedJurisdiction.toLowerCase())).concat(this.prioritizedLeos.filter((e, i, a) => !(i < 6 && e.suggested && a.slice(0, i).map(x => x.i).includes(e.i))))
+        : this.leos.filter(leo => leo.n.toLowerCase().includes(this.typedJurisdiction.toLowerCase()) || leo.j.toLowerCase().includes(this.typedJurisdiction.toLowerCase()))
       // return this.prioritizedLeos.filter(leo => leo.n.toLowerCase().indexOf(this.typedJurisdiction.toLowerCase()) > -1 || leo.j.toLowerCase().indexOf(this.typedJurisdiction.toLowerCase()) > -1)
     }
   },
