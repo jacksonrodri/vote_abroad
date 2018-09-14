@@ -88,6 +88,10 @@
               :value="adr[part.type] || ''"
               @input="val => updateAddress(part.type, val)"
               :placeholder="part.label"
+              maxlength="40"
+              :has-counter="adr[part.type] && hasFocus === part.type"
+              @focus="hasFocus = part.type"
+              @blur="hasFocus = ''"
               :type="part.displayType"
               :class="part.class"></b-input>
           </b-field>
@@ -138,7 +142,8 @@ export default {
       sessionToken: '',
       isFetching: false,
       autocompleteFocused: false,
-      needsFormat: false
+      needsFormat: false,
+      hasFocus: ''
     }
   },
   computed: {
