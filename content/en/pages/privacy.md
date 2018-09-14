@@ -3,7 +3,7 @@ title: Privacy Policy
 ---
 VoteFromAbroad.org is a nonpartisan voter registration tool provided as a public service by Democrats Abroad.
 
-Democrats Abroad is committed to protecting your privacy online. Democrats Abroad does not retain any sensitive personally identifiable information such as your social security number, driverâs license number, or passport number. Democrats Abroad maintains aggregate data for statistical purposes. Democrats Abroad will not use any information provided to us here for any other purpose unless we first obtain your consent.
+Democrats Abroad is committed to protecting your privacy online. Democrats Abroad does not retain any sensitive personally identifiable information such as your social security number, driver's license number, or passport number. Democrats Abroad maintains aggregate data for statistical purposes. Democrats Abroad will not use any information provided to us here for any other purpose unless we first obtain your consent.
 
 Democrats Abroad will hold any information you provide us here with the utmost care and will only use it in ways to which you have consented: for preparation of the voter registration materials in all cases; and, according to your expressed consent, for voting reminders and information, for contact from Democratic candidates, or for membership in Democrats Abroad, as the case may be.
 
@@ -13,7 +13,7 @@ Democrats Abroad does not share member information with Democratic candidates or
 
 Like any other voter in the U.S., once you mail in your voter registration application form to your local or state election officials, it becomes a matter of public record and is available for inspection and use by legitimate candidates for public office and their campaign organizations as well as by others who satisfy the requirements of the State law governing its use.
 
-Any information that you provide will be collected and maintained directly on servers located in the xx and operated by Democrats Abroad. If you are located outside the United States, any information you provide will be transferred to the United States. Democrats Abroad is committed to maintaining your information with all legally required protections. You should know, however, that the general level of protection for personal information in the United States may not be the same as that provided in other countries.
+Any information that you provide will be collected and maintained directly on servers located in the United States and operated by Democrats Abroad. If you are located outside the United States, any information you provide will be transferred to the United States. Democrats Abroad is committed to maintaining your information with all legally required protections. You should know, however, that the general level of protection for personal information in the United States may not be the same as that provided in other countries.
 
 If you have any questions about our privacy policy, the information we have collected from you online, the practices of this site, or your interaction with this website, send email to: Help@votefromabroad.org or contact us by postal mail at:
 
