@@ -32,20 +32,20 @@
     "daMemberConfirm": "Prellenar mis datos",
     "prefilled": "Su formulario ha sido prellenado, verifique toda la información antes de enviarla.",
     "email": "correo electrónico",
-    "phone": "sms",
+    "phone": "Mensaje de texto (sms)",
     "emailDelay": "Podría tomar hasta un minuto para entregar.",
     "checkSpam": "Revise su carpeta de correo basura (spam)",
     "correctEmail": "¿Ingresó su email correctamente?",
     "notReceiveSms": "¿Puede usted recibir mensajes SMS en {number}?",
     "correctNumber": "¿Ingresó su número de teléfono correctamente?",
-    "indiaAuth": "Is your number in India’s Do Not Call Registry?",
-    "whiteList": "White list us.",
+    "indiaAuth": "¿Está su número en el RegistroNo Llamar de la India?",
+    "whiteList": "Agrégenos a su lista de contactos aprobados (white list).",
     "tryAgain": "Vuelva a intentarlo",
     "anonymousStart": "Proceda sin una cuenta.",
     "anonymousStartMessage": "Usted ha iniciado una sesión anónima.  Por favor cierre esta ventana cuando termine de borrar todos los datos.",
-    "continueRequest": "Continue my request",
-    "trouble": "If you are still having trouble we recommend {0}.",
-    "recommendation": "starting without an account"
+    "continueRequest": "Continuar con mi solicitud",
+    "trouble": "Si usted sigue teniendo problemas le recomendamos {0}.",
+    "recommendation": "iniciar sin tener una cuenta"
   },
   "faq": {
     "title": "Preguntas frecuentes",
@@ -61,7 +61,7 @@
     "returningBallot": "Devolución de una boleta con voto",
     "fwab": "Uso de la Boleta Federal de Voto Ausente o Federal Write-in Absentee Ballot (FWAB)",
     "taxImplications": "Implicaciones de impuestos federales y estatales",
-    "studyAbroad": "Study Abroad Issues"
+    "studyAbroad": "Aspectos de estudios en el extranjero"
   },
   "envelopes": {
     "title": "Plantillas en sobre con franqueo pagado",
@@ -577,7 +577,7 @@
     },
     "okRules": {
       "label": "¿De qué elección primaria es la boleta electoral que está usted solicitando?",
-      "primaryInstructions": "If your political party affiliation is listed as Independent/No Party, you may be able to request a ballot for a recognized political party's primary election. For specific information about recognized political parties in Oklahoma, please visit [http://www.elections.ok.gov](http://www.elections.ok.gov).",
+      "primaryInstructions": "Si su afiliación de partido político aparece como Independiente/Ningún Partido, puede solicitar una boleta para la elección primaria de un partido político reconocido. Para obtener información específica acerca de los partidos políticos reconocidos en Oklahoma, por favor visite [http://www.elections.ok.gov] (http://www.elections.ok.gov).",
       "tooltip": "Conforme a la ley estatal, solo los votantes de Oklahoma necesitan responder a esta pregunta."
     },
     "id": {
@@ -650,7 +650,7 @@
       "label": "Ingrese su número de fax si desea recibir su boleta electoral por fax.",
       "messages": {
         "required": "Usted debe incluir un número de fax si elige recibir su boleta electoral por fax.",
-        "validPhone": "The number you typed is not a valid phone number.  Please check it and try again."
+        "validPhone": "El número que ingresó no es un número de teléfono válido.  Por favor, compruébelo y vuelva a intentarlo."
       }
     },
     "azRules": {
@@ -723,7 +723,7 @@
       "newVoters": "FECHAS LÍMITE IMPORTANTES para el {electionDay} {electionType}:\n- Su formulario sirve tanto como registro electoral y como solicitud de boleta electoral. Tiene que {rule} {deadline} {submissionMethod}{alternateSubmissionMethod} para que usted sea elegible para votar en el {electionDay} {electionType}. {note}\n- Consulte todas sus fechas límite estatales en {url}/states/{state} {documentRequired}",
       "registeredVoters": "FECHAS LÍMITE IMPORTANTES para el {electionDay} {electionType}:\n- Su solicitud de boleta electoral debe {rule} {deadline} {submissionMethod}{alternateSubmissionMethod} para que usted sea elegible para votar el {electionDay} {electionType}. {note}\n- Consulte todas sus fechas límite estatales en {url}/states/{state}",
       "unsureRegistrationVoters": "FECHAS importantes para el {newVoterElectionDay} {newVoterElectionType}:\n- Votantes Nuevos: su formulario sirve tanto como registro electoral y como solicitud de boleta electoral.  Debe ser {newVoterRule} {newVoterDeadline}{newVoterSubmissionMethod}{newVoterAlternateSubmissionMethod} para que usted pueda ser elegible para votar en el {newVoterElectionDay} {newVoterElectionType}. {newVoterNote}{documentRequired}\n- Votantes Registrados: su solicitud de boleta debe ser {registeredVoterRule} {registeredVoterDeadline}{registeredVoterSubmissionMethod}{registeredVoterAlternateSubmissionMethod} para que usted pueda ser elegible para votar en {registeredVoterElectionDay} {registeredVoterElectionType}. {registeredVoterNote}\n- Consulte todas sus fechas límite estatales en {url}/states/{state}",
-      "noElections": "There are no elections currently scheduled for {state}.  Voters should send in an FPCA every calendar year.",
+      "noElections": "En la actualidad no hay elecciones programadas para {state}.  Las y los votantes deben enviar una Tarjeta Postal Federal de Solicitud o formulario FPCA (Federal Post Card Application) cada año de calendario.",
       "alsoVoterRegistration": "Registro electoral/",
       "formSubmitted": "Su solicitud de boleta electoral {alsoVoterRegistration} ha sido enviada por correo electrónico a {leoName}. {specialRules}",
       "formConfirmation": "Nosotros también recomendamos encarecidamente que verifique con su funcionario electoral que han recibido y procesado su formulario.",
@@ -745,7 +745,7 @@
     "requiresSubmit": "**Asegúrese de enviar su formulario** a su funcionario electoral local antes de la fecha límite.",
     "helpThanks": "Si usted necesita ayuda respecto a la votación, comuníquese con nuestro equipo de voluntrios de apoyo a votantes en: [help@votefromabroad.org] (mailto:help@votefromabroad.org).\n¡Gracias por votar!",
     "verify": "Nosotros también recomendamos que verifique con su funcionario electoral si ha recibido y procesado su formulario.  Se puede entrar en contacto con su funcionario electoral con lo siguiente:",
-    "makeChanges": "If you discover a mistake and need to change anything on your form, <a class='has-text-primary' href='{link}'>click here</a> to go back. If you are finished, please close the browser window to delete any information saved in this session. Or ",
+    "makeChanges": "Si usted descubre que hay un error y necesita cambiar algo en su formulario, <a class='has-text-primary' href='{link}'>seleccione aquí</a> para regresar. Si usted ha terminado, por favor cierre la ventana del navegador para borrar cualquier información guardada en esta sesión. O ",
     "clearSession": "borre su información y empiece una nueva solicitud.",
     "fill": {
       "title": "Llene y firme",
@@ -788,7 +788,7 @@
       "title": "Compartir",
       "icon": "compartir",
       "content": "Pida a sus amigos que voten desde el extranjero",
-      "message": "Tell a friend about VoteFromAbroad"
+      "message": "Comente con una amistad acerca de VoteFromAbroad"
     }
   }
 }
