@@ -21,6 +21,9 @@ export default {
     label: {
       type: String,
       required: false
+    },
+    required: {
+      type: Boolean
     }
   }
 

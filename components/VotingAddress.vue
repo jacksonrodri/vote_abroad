@@ -235,8 +235,8 @@ export default {
   },
   async mounted () {
     this.sessionToken = uuidv4()
-    this.tempStreet = this.street
-    this.findCounty()
+    if (this.street) this.tempStreet = this.street
+    if (this.street || this.city) this.findCounty()
   },
   beforeDestroy () {
     if (this.state === 'DC' || this.state === 'PR' || this.state === 'VI' || this.state === 'AS' || this.state === 'GU') {
@@ -249,7 +249,9 @@ export default {
         let {data: { predictions }} = await axios.get(`${process.env.placesUrl + process.env.autocompleteEndpoint}?input=${this.street || ''}%20${this.city || ''}%20${this.state || ''}%20${this.zip || ''}&types=geocode&language=en&components=country:US&key=${process.env.placesKey}`)
         if (predictions.length > 0) {
           let {data: {result}} = await axios.get(`${process.env.placesUrl + process.env.detailsEndpoint}?placeid=${predictions[0].place_id}&key=${process.env.placesKey}`)
-          this.county = result.address_components.filter(y => y.types.includes('administrative_area_level_2'))[0].long_name
+          let Y = result.address_components.filter(y => y.types.includes('administrative_area_level_2'))[0].long_name
+          console.log('Y', Y)
+          this.$store.commit('requests/update', {votAdr: Object.assign({}, this.votAdr, {Y: this.decodeHtmlEntity(Y) || null})})
         }
       }
     },

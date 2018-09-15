@@ -1,9 +1,10 @@
 <template>
   <div class="field">
   <span class="is-flex"><label class="label">{{ $t('request.dob.label') }}</label><span @click.prevent="toolTipOpen = !toolTipOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
+    <!-- :message="v.$error ? Object.keys(v.$params).map(x => $t(`request.dob.messages.${x}`)) : '' " -->
   <b-field
-    :message="validations.$error ? Object.keys(validations.$params).map(x => $t(`request.dob.messages.${x}`)) : '' "
-    :type="(validations.$error ? 'is-danger': '')">
+    :message="v.$error ? Object.entries(v).filter(([key, value]) => key.charAt(0) !== '$' && value === false).map(x => $t(`request.dob.messages.${x[0]}`)) : '' "
+    :type="(v.$error ? 'is-danger': '')">
     <b-datepicker v-model="date"
       :date-formatter="(date) => date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })"
       :date-parser="dateParser2"
@@ -98,7 +99,7 @@ export default {
   props: [
     'value',
     'message',
-    'validations',
+    'v',
     'tooltipTitle'
   ],
   components: {
@@ -279,6 +280,8 @@ export default {
     date (val) {
       if (val instanceof Date) {
         this.dob = val
+      } else {
+        this.dob = null
       }
     }
   }

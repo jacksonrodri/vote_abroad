@@ -223,7 +223,7 @@
         :tooltipTitle="$t('request.dob.tooltipTitle')"
         @input="delayTouch($v.dob)"
         ref="dob"
-        :validations="$v.dob">
+        :v="$v.dob">
         <div slot="tooltip">
           <p v-html="$options.filters.markdown($t('request.dob.tooltip'))"></p>
         </div>
@@ -346,6 +346,16 @@ import { mapGetters } from 'vuex'
 
 const optionalEmail = (value) => !helpers.req(value) || email(value)
 const usZip = helpers.regex('usZip', /^(\d{5})(?:[ -](\d{4}))?$/)
+const tooOld = (minAge) =>
+  helpers.withParams(
+    { type: 'tooOld', value: minAge },
+    (value) => !helpers.req(value) || minAge < new Date(value)
+  )
+const tooYoung = (nextElectionDate) =>
+  helpers.withParams(
+    { type: 'tooYoung', value: new Date(nextElectionDate.getFullYear(), nextElectionDate.getMonth(), nextElectionDate.getDate()) },
+    (value) => !helpers.req(value) || new Date(nextElectionDate.getFullYear() - 18, nextElectionDate.getMonth(), nextElectionDate.getDate()) >= new Date(value.substr(0, 4), parseInt(value.substr(5, 2)) - 1, value.substr(8, 2))
+  )
 const touchMap = new WeakMap()
 
 export default {
@@ -1048,18 +1058,20 @@ export default {
       },
       dob: {
         required,
-        tooOld () { return new Date(1900, 0, 1) < new Date(this.dob) },
-        tooYoung () {
-          if (this.dob) {
-            let year = parseInt(this.dob.substr(0, 4))
-            let month = parseInt(this.dob.substr(5, 2))
-            let day = parseInt(this.dob.substr(8, 2))
-            return (year < 2000 || (year === 2000 && month < 11) || (year === 2000 && month === 11 && day <= 6))
-          } else {
-            return true
-          }
-          // return new Date(2000, 10, 8) > new Date(this.dob)
-        }
+        tooOld: tooOld(new Date(1900, 0, 1)),
+        // function () { return new Date(1900, 0, 1) < new Date(this.dob) },
+        tooYoung: tooYoung(new Date(2018, 10, 6))
+        // function () {
+        //   if (this.dob) {
+        //     let year = parseInt(this.dob.substr(0, 4))
+        //     let month = parseInt(this.dob.substr(5, 2))
+        //     let day = parseInt(this.dob.substr(8, 2))
+        //     return (year < 2000 || (year === 2000 && month < 11) || (year === 2000 && month === 11 && day <= 6))
+        //   } else {
+        //     return true
+        //   }
+        //   // return new Date(2000, 10, 8) > new Date(this.dob)
+        // }
       },
       fax: {
         required: requiredIf(function (model) { return this.recBallot === 'fax' }),

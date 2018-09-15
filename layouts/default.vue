@@ -46,9 +46,9 @@
                   </nuxt-link>
                 </span>
                 <div class="navbar-item has-dropdown is-hoverable" style="order:-1;">
-                  <a class="navbar-link">
+                  <nuxt-link :to="localePath('states')" class="navbar-link">
                     {{$t('menu.upcomingElections')}}
-                  </a>
+                  </nuxt-link>
 
                   <div class="navbar-dropdown">
                     <nuxt-link v-for="(election, index) in upcomingElections" :key="`${election.state} ${election.electionType}`" :to="localePath({ name: 'elections-state', params: { state: election.state } })" :class="`navbar-item ${index > 3 ? 'is-hidden-touch' : ''}`">
@@ -66,9 +66,9 @@
                   </div>
                 </div>
                 <div class="navbar-item has-dropdown is-hoverable" style="order:-1;">
-                  <a class="navbar-link">
+                  <nuxt-link :to="localePath('faqs')" class="navbar-link">
                     {{$t('menu.help')}}
-                  </a>
+                  </nuxt-link>
 
                   <div class="navbar-dropdown is-right">
                     <nuxt-link :to="localePath({ name: 'faqs-slug', params: { slug: faq.slug } })" v-for="(faq, index) in topFaqs" :key="index" class="navbar-item">

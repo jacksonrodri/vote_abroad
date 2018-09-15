@@ -200,8 +200,8 @@ export default {
   },
   methods: {
     focusCountry () {
-      // console.log(this.$refs.ctry)
-      this.$refs.ctry[0].focus()
+      // console.log(this.$refs.ctry[0].$el)
+      this.$refs.ctry[0].$refs.input.focus()
       // this.$refs.ctry.$el.querySelector('input').focus()
     },
     async getAsyncData (val) {
