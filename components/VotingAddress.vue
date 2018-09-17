@@ -70,9 +70,10 @@
             </option>
           </b-select>
         </b-field>
+          <!-- :message="validations.Z.$anyError ? Object.keys(validations.Z.$params).map(x => $t(`request.votAdr.messages.Z-${x}`)) : '' " -->
         <b-field
-          :message="validations.Z.$error ? Object.keys(validations.Z.$params).map(x => $t(`request.votAdr.messages.Z-${x}`)) : '' "
-          :type="(validations.Z.$error ? 'is-danger': '')">
+          :message="validations.Z.$anyError ? Object.entries(validations.Z).filter(([key, value]) => key.charAt(0) !== '$' && value === false).map(([k, v]) => $t(`request.votAdr.messages.Z-${k}`, {state: $t(`states.${state || 'US'}`), example1: zipEx[0], example2: zipEx[1]})) : '' "
+          :type="(validations.Z.$anyError ? 'is-danger': '')">
           <b-input
             :placeholder="$t('request.votAdr.Z')"
             ref="Z"
@@ -97,7 +98,7 @@
 import axios from 'axios'
 import debounce from 'lodash/debounce'
 import { placesAutocomplete, placeDetails, uuidv4 } from '~/utils/helpers.js'
-import { mapMutations } from 'vuex'
+import { mapMutations, mapState } from 'vuex'
 
 export default {
   name: 'Voting-Address',
@@ -204,10 +205,16 @@ export default {
       get () { return this.votAdr.Z || null },
       set (value) { this.updateAddress('Z', value) }
     },
+    zipEx () {
+      return !this.state
+        ? ['95014', '22162-1010']
+        : this.postal.US['sub_zipexs'].split('~')[this.postal.US['sub_keys'].split('~').findIndex(x => x === this.state)].split(',')
+    },
     county: {
       get () { return this.state === 'DC' || this.state === 'PR' || this.state === 'VI' || this.state === 'AS' || this.state === 'GU' ? '' : this.votAdr.Y || null },
       set (value) { this.updateAddress('Y', value) }
-    }
+    },
+    ...mapState('data', ['postal'])
   },
   watch: {
     tempStreet: function (val, oldVal) {
@@ -258,6 +265,7 @@ export default {
     updateAddress: function (field, value) {
       this.$store.commit('requests/update', {votAdr: Object.assign({}, this.votAdr, {[field]: this.decodeHtmlEntity(value) || null})})
       this.$emit('input')
+      this.$emit('delayTouch', field)
     },
     decodeHtmlEntity (str) {
       return typeof str === 'string'

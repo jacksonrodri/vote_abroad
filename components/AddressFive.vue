@@ -83,12 +83,12 @@
               @input="val => updateAddress(part.type, val)"
               @select="option => option ? updateAddress(part.type, option.name) : ''"></b-autocomplete>
             <b-input
-              v-else
+              v-else-if="part.type !== 'alt5'"
               :ref="part.type"
               :value="adr[part.type] || ''"
               @input="val => updateAddress(part.type, val)"
               :placeholder="part.label"
-              maxlength="40"
+              :maxlength="adr[part.type] && hasFocus === part.type ? 40 : ''"
               :has-counter="adr[part.type] && hasFocus === part.type"
               @focus="hasFocus = part.type"
               @blur="hasFocus = ''"

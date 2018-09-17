@@ -107,9 +107,9 @@
         :label="$t('request.votAdr.label')"
         :validations=$v.votAdr
         ref="votAdr"
-        @input="delayTouch($v.votAdr)"
-
+        @delayTouch="(val) => addressDelayTouch('votAdr', val)"
         :toolTipTitle="$t('request.votAdr.tooltipTitle')">
+        <!-- @input="delayTouch($v.votAdr)" -->
         <div slot="instructions">
           <p v-html="$options.filters.markdown($t('request.votAdr.instructions'))"></p>
         </div>
@@ -346,7 +346,22 @@ import snarkdown from 'snarkdown'
 import { mapGetters, mapState } from 'vuex'
 
 const optionalEmail = (value) => !helpers.req(value) || email(value)
-const usZip = helpers.regex('usZip', /^(\d{5})(?:[ -](\d{4}))?$/)
+// const usZip = helpers.regex('usZip', /^(\d{5})(?:[ -](\d{4}))?$/)
+const usZip = (state) =>
+  helpers.withParams(
+    { type: 'usZip', value: state },
+    function (value, model) {
+      console.log('usZip', value, model, this)
+      const genericZipRegex = /^(\d{5})(?:[ -](\d{4}))?$/
+      if (!model.state && !state && !this.postal.US) {
+        return genericZipRegex.test(value)
+      } else {
+        let stateZipRegex = new RegExp(this.postal.US['sub_zips'].split('~')[this.postal.US['sub_keys'].split('~').findIndex(x => x === (model.state || state))])
+        console.log(stateZipRegex)
+        return genericZipRegex.test(value) && stateZipRegex.test(value)
+      }
+    }
+  )
 const tooOld = (minAge) =>
   helpers.withParams(
     { type: 'tooOld', value: minAge },
@@ -368,18 +383,11 @@ const addressPartRequired = (addressPart) =>
   helpers.withParams(
     { type: 'addressPartRequired', value: addressPart },
     function (value, model) {
-      // if (addressPart === 'B') {
-      //   console.log('B', value, model, this.postal[model.countryiso].require)
-      // }
       if (!model.countryiso) return true
       let regexp = new RegExp(addressPart)
       if (this.postal[model.countryiso]) return value || !regexp.test(this.postal[model.countryiso].require)
       else {
         return true
-        // return new Promise((resolve, reject) => {
-        //   this.$store.dispatch('data/updateCountryData', model.countryiso)
-        //     .then((data) => resolve(value || !data.require.includes(addressPart)))
-        // })
       }
     }
   )
@@ -837,7 +845,7 @@ export default {
           this.$v.identification.$touch()
           break
       }
-      console.log(JSON.stringify(this.$v.fax, null, 2))
+      // console.log(JSON.stringify(this.$v.fax, null, 2))
 
       switch (true) {
         case this.stage.slug === 'your-information' && this.$v.firstName.$error:
@@ -892,6 +900,11 @@ export default {
           // this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.Z'}})
           this.$refs.abrAdr.$refs.Z[0].$el.scrollIntoView()
           this.$refs.abrAdr.$refs.Z[0].focus()
+          break
+        case this.stage.slug === 'your-information' && this.$v.abrAdr.alt1 && this.$v.abrAdr.alt1.$error && this.abrAdr.usesAlternateFormat:
+          // this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.Z'}})
+          this.$refs.abrAdr.$refs.alt1[0].$el.scrollIntoView()
+          this.$refs.abrAdr.$refs.alt1[0].focus()
           break
         case this.stage.slug === 'your-information' && this.$v.tel.$error:
           this.$refs.tel.$el.scrollIntoView()
@@ -1064,7 +1077,7 @@ export default {
         // X: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryData ? this.$refs.abrAdr.countryData.require.toUpperCase().includes('X') : false) },
         // Z: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryData ? this.$refs.abrAdr.countryData.require.toUpperCase().includes('Z') : false) },
         countryiso: { required },
-        alt1: {},
+        alt1: { required: requiredIf('usesAlternateFormat') },
         alt2: {},
         alt3: {},
         alt4: {},
@@ -1080,7 +1093,7 @@ export default {
         S: { required },
         Z: {
           required,
-          usZip
+          usZip: usZip(this.votAdr ? this.votAdr.S : null)
         }
       },
       // vAdr: {
@@ -1115,14 +1128,11 @@ export default {
         // }
       },
       fax: {
-        required: requiredIf(function (model) { return this.recBallot === 'fax' }),
+        required: requiredIf(function (model) { return model.recBallot === 'fax' }),
         validPhone () { return this.fax ? this.isValidNumber(this.fax) : true }
       },
       tel: {
         validPhone () {
-          // if (this.$refs && this.$refs.tel) {
-          //   return this.$refs.tel.validatePhone
-          // } else return this.tel && this.tel.rawInput ? this.tel.isValidPhone : true
           return this.tel
             ? /^\+\d\d?\d?/.test(this.tel) ? this.isValidNumber(this.tel) : false
             : true
@@ -1140,7 +1150,7 @@ export default {
       },
       sex: {
         required: requiredIf((model) => {
-          return this.votAdr && this.votAdr.S && this.votAdr.S.toLowerCase() === 'id'
+          return model.votAdr && model.votAdr.S && model.votAdr.S.toLowerCase() === 'id'
         })
       },
       isRegistered: {
@@ -1188,20 +1198,28 @@ export default {
       // },
       fwdAdr: {
         country: { },
-        A: { required: requiredIf((model) => this.fwdAdr && this.fwdAdr.A && this.$refs.fwdAdr && this.$refs.fwdAdr && this.$refs.fwdAdr.countryData ? this.$refs.fwdAdr.countryData.require.toUpperCase().includes('A') : false) },
-        B: { required: requiredIf((model) => this.fwdAdr && this.fwdAdr.A && this.$refs.fwdAdr && this.$refs.fwdAdr && this.$refs.fwdAdr.countryData ? this.$refs.fwdAdr.countryData.require.toUpperCase().includes('B') : false) },
-        D: { required: requiredIf((model) => this.fwdAdr && this.fwdAdr.A && this.$refs.fwdAdr && this.$refs.fwdAdr && this.$refs.fwdAdr.countryData ? this.$refs.fwdAdr.countryData.require.toUpperCase().includes('D') : false) },
-        C: { required: requiredIf((model) => this.fwdAdr && this.fwdAdr.A && this.$refs.fwdAdr && this.$refs.fwdAdr && this.$refs.fwdAdr.countryData ? this.$refs.fwdAdr.countryData.require.toUpperCase().includes('C') : false) },
-        S: { required: requiredIf((model) => this.fwdAdr && this.fwdAdr.A && this.$refs.fwdAdr && this.$refs.fwdAdr && this.$refs.fwdAdr.countryData ? this.$refs.fwdAdr.countryData.require.toUpperCase().includes('S') : false) },
-        X: { required: requiredIf((model) => this.fwdAdr && this.fwdAdr.A && this.$refs.fwdAdr && this.$refs.fwdAdr && this.$refs.fwdAdr.countryData ? this.$refs.fwdAdr.countryData.require.toUpperCase().includes('X') : false) },
-        Z: { required: requiredIf((model) => this.fwdAdr && this.fwdAdr.A && this.$refs.fwdAdr && this.$refs.fwdAdr && this.$refs.fwdAdr.countryData ? this.$refs.fwdAdr.countryData.require.toUpperCase().includes('Z') : false) },
-        // A: { },
-        // B: { },
-        // D: { },
-        // C: { },
-        // S: { },
-        // X: { },
-        // Z: { },
+        A: { required: addressPartRequired('A') },
+        B: { required: addressPartRequired('B') },
+        D: { required: addressPartRequired('D') },
+        C: { required: addressPartRequired('C') },
+        S: { required: addressPartRequired('S') },
+        X: { required: addressPartRequired('X') },
+        Z: { required: addressPartRequired('Z') },
+        // B: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryData ? this.$refs.abrAdr.countryData.require.toUpperCase().includes('B') : false) },
+        // D: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryData ? this.$refs.abrAdr.countryData.require.toUpperCase().includes('D') : false) },
+        // C: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryData ? this.$refs.abrAdr.countryData.require.toUpperCase().includes('C') : false) },
+        // S: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryData ? this.$refs.abrAdr.countryData.require.toUpperCase().includes('S') : false) },
+        // X: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryData ? this.$refs.abrAdr.countryData.require.toUpperCase().includes('X') : false) },
+        // Z: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryData ? this.$refs.abrAdr.countryData.require.toUpperCase().includes('Z') : false) },
+        // countryiso: { required },
+        // alt1: { required: requiredIf('usesAlternateFormat') },
+        // A: { required: requiredIf((model) => this.fwdAdr && this.fwdAdr.A && this.$refs.fwdAdr && this.$refs.fwdAdr && this.$refs.fwdAdr.countryData ? this.$refs.fwdAdr.countryData.require.toUpperCase().includes('A') : false) },
+        // B: { required: requiredIf((model) => this.fwdAdr && this.fwdAdr.A && this.$refs.fwdAdr && this.$refs.fwdAdr && this.$refs.fwdAdr.countryData ? this.$refs.fwdAdr.countryData.require.toUpperCase().includes('B') : false) },
+        // D: { required: requiredIf((model) => this.fwdAdr && this.fwdAdr.A && this.$refs.fwdAdr && this.$refs.fwdAdr && this.$refs.fwdAdr.countryData ? this.$refs.fwdAdr.countryData.require.toUpperCase().includes('D') : false) },
+        // C: { required: requiredIf((model) => this.fwdAdr && this.fwdAdr.A && this.$refs.fwdAdr && this.$refs.fwdAdr && this.$refs.fwdAdr.countryData ? this.$refs.fwdAdr.countryData.require.toUpperCase().includes('C') : false) },
+        // S: { required: requiredIf((model) => this.fwdAdr && this.fwdAdr.A && this.$refs.fwdAdr && this.$refs.fwdAdr && this.$refs.fwdAdr.countryData ? this.$refs.fwdAdr.countryData.require.toUpperCase().includes('S') : false) },
+        // X: { required: requiredIf((model) => this.fwdAdr && this.fwdAdr.A && this.$refs.fwdAdr && this.$refs.fwdAdr && this.$refs.fwdAdr.countryData ? this.$refs.fwdAdr.countryData.require.toUpperCase().includes('X') : false) },
+        // Z: { required: requiredIf((model) => this.fwdAdr && this.fwdAdr.A && this.$refs.fwdAdr && this.$refs.fwdAdr && this.$refs.fwdAdr.countryData ? this.$refs.fwdAdr.countryData.require.toUpperCase().includes('Z') : false) },
         countryiso: {},
         alt1: {},
         alt2: {},

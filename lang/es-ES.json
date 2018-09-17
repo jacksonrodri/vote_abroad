@@ -117,6 +117,7 @@
   "states": {
     "selectState": "Seleccione el último estado en donde residió.",
     "select": "Seleccione su estado",
+    "US": "Estados Unidos",
     "AL": "Alabama",
     "AK": "Alaska",
     "AS": "Samoa Americana",
@@ -459,7 +460,7 @@
         "C-required": "Se requiere la ciudad",
         "S-required": "Se requiere el estado",
         "Z-required": "Se requiere el código postal",
-        "Z-usZip": "Ingrese un código postal válido de Estados Unidos (ej., 95014 o 22162-1010)"
+        "Z-usZip": "Ingrese un código postal válido de {state} (ej., {example1} o {example2})"
       },
       "S": "Estado",
       "label": "Domicilio electoral",
@@ -724,7 +725,7 @@
       "alternateSubmissionMethod": " (debe ser {rule} {deadline} si se envía por {method})",
       "newVoters": "FECHAS LÍMITE IMPORTANTES para el {electionDay} {electionType}:\n- Su formulario sirve tanto como registro electoral y como solicitud de boleta electoral. Tiene que {rule} {deadline} {submissionMethod}{alternateSubmissionMethod} para que usted sea elegible para votar en el {electionDay} {electionType}. {note}\n- Consulte todas sus fechas límite estatales en {url}/states/{state} {documentRequired}",
       "registeredVoters": "FECHAS LÍMITE IMPORTANTES para el {electionDay} {electionType}:\n- Su solicitud de boleta electoral debe {rule} {deadline} {submissionMethod}{alternateSubmissionMethod} para que usted sea elegible para votar el {electionDay} {electionType}. {note}\n- Consulte todas sus fechas límite estatales en {url}/states/{state}",
-      "unsureRegistrationVoters": "FECHAS importantes para el {newVoterElectionDay} {newVoterElectionType}:\n- Votantes Nuevos: su formulario sirve tanto como registro electoral y como solicitud de boleta electoral.  Debe ser {newVoterRule} {newVoterDeadline}{newVoterSubmissionMethod}{newVoterAlternateSubmissionMethod} para que usted pueda ser elegible para votar en el {newVoterElectionDay} {newVoterElectionType}. {newVoterNote}{documentRequired}\n- Votantes Registrados: su solicitud de boleta debe ser {registeredVoterRule} {registeredVoterDeadline}{registeredVoterSubmissionMethod}{registeredVoterAlternateSubmissionMethod} para que usted pueda ser elegible para votar en {registeredVoterElectionDay} {registeredVoterElectionType}. {registeredVoterNote}\n- Consulte todas sus fechas límite estatales en {url}/states/{state}",
+      "unsureRegistrationVoters": "FECHAS importantes para el {newVoterElectionDay} {newVoterElectionType}:\n- Votantes Nuevos: su formulario sirve como registro electoral y como solicitud de boleta electoral.  Debe ser {newVoterRule} {newVoterDeadline}{newVoterSubmissionMethod}{newVoterAlternateSubmissionMethod} para que usted pueda ser elegible para votar en el {newVoterElectionDay} {newVoterElectionType}. {newVoterNote}{documentRequired}\n- Votantes Registrados: su solicitud de boleta debe ser {registeredVoterRule} {registeredVoterDeadline}{registeredVoterSubmissionMethod}{registeredVoterAlternateSubmissionMethod} para que usted pueda ser elegible para votar en {registeredVoterElectionDay} {registeredVoterElectionType}. {registeredVoterNote}\n- Consulte todas sus fechas límite estatales en {url}/states/{state}",
       "noElections": "En la actualidad no hay elecciones programadas para {state}.  Las y los votantes deben enviar una Tarjeta Postal Federal de Solicitud o formulario FPCA (Federal Post Card Application) cada año de calendario.",
       "alsoVoterRegistration": "Registro electoral/",
       "formSubmitted": "Su solicitud de boleta electoral {alsoVoterRegistration} ha sido enviada por correo electrónico a {leoName}. {specialRules}",
