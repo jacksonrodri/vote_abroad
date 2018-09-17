@@ -588,9 +588,11 @@
       "SSN4": "los últimos 4 dígitos de su número de Seguro Social",
       "MilitaryID": "Identificación militar",
       "messages": {
-        "fullSSNRequired": "Usted debe proporcionar su número de Seguro Social completo si usted tiene uno",
-        "SSN4Required": "Usted debe proporcionar los últimos 4 dígitos de su número de Seguro Social si usted tiene uno",
-        "stateIdRequired": "Usted debe proporcionar al menos UNA forma válida de identificación (de la lista anterior) si la tiene.  "
+        "ssn-required": "Usted debe proporcionar su número de Seguro Social completo si usted tiene uno",
+        "ssn-correctLength": "Usted debe proporcionar su número de Seguro Social completo si usted tiene uno",
+        "ssn4-required": "Usted debe proporcionar los últimos 4 dígitos de su número de Seguro Social si usted tiene uno",
+        "ssn4-correctLength": "Usted debe proporcionar los últimos 4 dígitos de su número de Seguro Social si usted tiene uno",
+        "stateId-required": "Usted debe proporcionar al menos UNA forma válida de identificación (de la lista anterior) si la tiene.  "
       },
       "StateID": "Identificación del estado",
       "SSN": "Número de seguro social",

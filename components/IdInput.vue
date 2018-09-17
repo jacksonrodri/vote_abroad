@@ -4,11 +4,12 @@
     <slot name="instructions"></slot>
     <br/>
 
+        <!-- :message="validations.ssn.$anyError ? $t(`request.id.messages.fullSSNRequired`) : '' " -->
     <b-field v-if="idOptions && idOptions.includes('SSN')"
         :label="$t('request.id.SSN')"
         label-for="ssn"
-        :message="validations.ssn.$error ? $t(`request.id.messages.fullSSNRequired`) : '' "
-        :type="(validations.ssn.$error ? 'is-danger': '')">
+      :message="validations.ssn.$anyError ? Object.entries(validations.ssn).filter(([key, value]) => key.charAt(0) !== '$' && value === false).map(x => $t(`request.messages.messages.ssn-${x[0]}`)) : '' "
+        :type="(validations.ssn.$anyError ? 'is-danger': '')">
       <b-input
         id="ssn"
         ref="ssn"
@@ -21,9 +22,10 @@
 
     <div v-if="idOptions && idOptions.includes('SSN') && idOptions.includes('SSN4')" class="has-text-centered"><strong>{{ $t('request.id.or')}}</strong></div>
 
+      <!-- :message="validations.ssn4.$anyError ? $t(`request.id.messages.SSN4Required`) : '' " -->
     <b-field v-if="!idOptions || (idOptions && idOptions.indexOf('SSN4') > -1)"
-      :message="validations.ssn4.$error ? $t(`request.id.messages.SSN4Required`) : '' "
-      :type="(validations.ssn4.$error ? 'is-danger': '')"
+      :message="validations.ssn4.$anyError ? Object.entries(validations.ssn4).filter(([key, value]) => key.charAt(0) !== '$' && value === false).map(x => $t(`request.messages.messages.ssn4-${x[0]}`)) : '' "
+      :type="(validations.ssn4.$anyError ? 'is-danger': '')"
       :label="$t('request.id.SSN4')"
       label-for="ssn4">
       <b-input
@@ -37,9 +39,10 @@
 
     <div class="has-text-centered"><strong>{{ $t('request.id.or')}}</strong></div>
 
+      <!-- :message="validations.stateId.$anyError ? $t(`request.id.messages.stateIdRequired`) : '' " -->
     <b-field  v-if="!idOptions || (idOptions && idOptions.filter(x => x!== 'SSN' || x !== 'SSN4').length > 0)"
-      :message="validations.stateId.$error ? $t(`request.id.messages.stateIdRequired`) : '' "
-      :type="(validations.stateId.$error ? 'is-danger': '')"
+      :message="validations.stateId.$anyError ? Object.entries(validations.stateId).filter(([key, value]) => key.charAt(0) !== '$' && value === false).map(x => $t(`request.messages.messages.stateId-${x[0]}`)) : '' "
+      :type="(validations.stateId.$anyError ? 'is-danger': '')"
       :label="stateIdLabel"
       label-for="stateId">
       <b-input id="stateId"

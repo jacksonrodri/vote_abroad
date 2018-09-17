@@ -89,7 +89,8 @@
         key="abrAdr"
         fieldName="abrAdr"
         :v="$v.abrAdr"
-        @delayTouch="(val) => delayTouch($v.abrAdr[val])"></address-five>
+        @delayTouch="(val) => addressDelayTouch('abrAdr', val)"></address-five>
+        <!-- @delayTouch="(val) => delayTouch($v.abrAdr[val])" -->
     <section >
         <nuxt-link :to="localePath({ name: 'index' })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>{{$t('request.stages.back')}}</span></nuxt-link>
         <button @click.prevent="focusFirstErrorOrAdvance(localePath({ name: 'request-stage', params: {stage: 'voting-information'} }))" class="button is-primary is-medium is-pulled-right" exact ><span> {{$t('request.stages.next')}} </span><b-icon pack="fas" icon="caret-right"></b-icon></button>
@@ -342,7 +343,7 @@ import TelTwo from '~/components/TelTwo'
 import AddressFive from '~/components/AddressFive'
 import IdInput from '~/components/IdInput'
 import snarkdown from 'snarkdown'
-import { mapGetters } from 'vuex'
+import { mapGetters, mapState } from 'vuex'
 
 const optionalEmail = (value) => !helpers.req(value) || email(value)
 const usZip = helpers.regex('usZip', /^(\d{5})(?:[ -](\d{4}))?$/)
@@ -355,6 +356,32 @@ const tooYoung = (nextElectionDate) =>
   helpers.withParams(
     { type: 'tooYoung', value: new Date(nextElectionDate.getFullYear(), nextElectionDate.getMonth(), nextElectionDate.getDate()) },
     (value) => !helpers.req(value) || new Date(nextElectionDate.getFullYear() - 18, nextElectionDate.getMonth(), nextElectionDate.getDate()) >= new Date(value.substr(0, 4), parseInt(value.substr(5, 2)) - 1, value.substr(8, 2))
+  )
+const fullLengthSsn = (idOpts) =>
+  helpers.withParams(
+    { type: 'correctLength', value: 9 },
+    (value, m) => {
+      return !helpers.req(value) || value.replace(/\D/g, '').length === 9
+    }
+  )
+const addressPartRequired = (addressPart) =>
+  helpers.withParams(
+    { type: 'addressPartRequired', value: addressPart },
+    function (value, model) {
+      // if (addressPart === 'B') {
+      //   console.log('B', value, model, this.postal[model.countryiso].require)
+      // }
+      if (!model.countryiso) return true
+      let regexp = new RegExp(addressPart)
+      if (this.postal[model.countryiso]) return value || !regexp.test(this.postal[model.countryiso].require)
+      else {
+        return true
+        // return new Promise((resolve, reject) => {
+        //   this.$store.dispatch('data/updateCountryData', model.countryiso)
+        //     .then((data) => resolve(value || !data.require.includes(addressPart)))
+        // })
+      }
+    }
   )
 const touchMap = new WeakMap()
 
@@ -550,9 +577,9 @@ export default {
       set (val) { this.$store.dispatch('data/updatePhone', val) }
     },
     idOptions () {
-      let opts = this.stateRules && this.stateRules.id && this.stateRules.id.length > 0 ? this.stateRules.id : null
-      if (this.votAdr.S === 'OK' && this.recBallot === 'email') {
-        return ['SSN', 'StateID']
+      let opts = this.stateRules && this.stateRules.id && this.stateRules.id.length > 0 ? this.stateRules.id : []
+      if (this.votAdr && this.votAdr.S === 'OK' && this.recBallot === 'email') {
+        return ['SSN4']
       } else return opts
     },
     v () {
@@ -577,13 +604,13 @@ export default {
       }
     },
     allButLastIdType () {
-      if (!this.idOptions) return ''
+      if (!this.idOptions || this.idOptions.length === 0) return ''
       return this.idOptions.length > 2
         ? this.idOptions.slice(0, this.idOptions.length - 1).map(x => this.$t(`request.id.${x}`)).join(', ')
         : this.$t(`request.id.${this.idOptions[0]}`)
     },
     lastIdType () {
-      return this.idOptions ? this.$t(`request.id.${this.idOptions.slice(-1)[0]}`) : ''
+      return this.idOptions.length > 0 ? this.$t(`request.id.${this.idOptions.slice(-1)[0]}`) : ''
     },
     idTypesString () {
       let arr = this.idOptions && this.idOptions.length > 0 ? this.stateRules.id : ['SSN4', 'StateID']
@@ -754,7 +781,8 @@ export default {
       set (value) { this.$store.commit('requests/update', {isFWAB: value}) }
     },
     ...mapGetters('data', ['isValidNumber']),
-    ...mapGetters('requests', ['getCurrent', 'getCurrentDeadlines'])
+    ...mapGetters('requests', ['getCurrent', 'getCurrentDeadlines']),
+    ...mapState('data', ['postal'])
   },
   filters: {
     markdown: function (md) {
@@ -978,6 +1006,15 @@ export default {
           // this.$store.dispatch('requests/updateRequest', {status: 'completed: ' + this.stage.slug})
       }
     },
+    addressDelayTouch (type, val) {
+      if (val === 'countryiso' || (this[type].countryiso && !this.postal[this[type].countryiso])) {
+        this.$store.dispatch('data/updateCountryData', this[type].countryiso)
+          .then(() => {
+            this.$nextTick()
+              .then(this.delayTouch(this.$v[type][val]))
+          })
+      } else this.delayTouch(this.$v[type][val])
+    },
     delayTouch ($v) {
       $v.$reset()
       if (touchMap.has($v)) {
@@ -989,9 +1026,7 @@ export default {
   validations () {
     return {
       email: {
-        required: requiredIf(function (model) {
-          return this.recBallot === 'email'
-        }),
+        required: requiredIf(function (model) { return model.recBallot === 'email' }),
         email: optionalEmail
       },
       firstName: {
@@ -1015,13 +1050,19 @@ export default {
       },
       abrAdr: {
         country: { },
-        A: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryData ? this.$refs.abrAdr.countryData.require.toUpperCase().includes('A') : false) },
-        B: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryData ? this.$refs.abrAdr.countryData.require.toUpperCase().includes('B') : false) },
-        D: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryData ? this.$refs.abrAdr.countryData.require.toUpperCase().includes('D') : false) },
-        C: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryData ? this.$refs.abrAdr.countryData.require.toUpperCase().includes('C') : false) },
-        S: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryData ? this.$refs.abrAdr.countryData.require.toUpperCase().includes('S') : false) },
-        X: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryData ? this.$refs.abrAdr.countryData.require.toUpperCase().includes('X') : false) },
-        Z: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryData ? this.$refs.abrAdr.countryData.require.toUpperCase().includes('Z') : false) },
+        A: { required: addressPartRequired('A') },
+        B: { required: addressPartRequired('B') },
+        D: { required: addressPartRequired('D') },
+        C: { required: addressPartRequired('C') },
+        S: { required: addressPartRequired('S') },
+        X: { required: addressPartRequired('X') },
+        Z: { required: addressPartRequired('Z') },
+        // B: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryData ? this.$refs.abrAdr.countryData.require.toUpperCase().includes('B') : false) },
+        // D: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryData ? this.$refs.abrAdr.countryData.require.toUpperCase().includes('D') : false) },
+        // C: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryData ? this.$refs.abrAdr.countryData.require.toUpperCase().includes('C') : false) },
+        // S: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryData ? this.$refs.abrAdr.countryData.require.toUpperCase().includes('S') : false) },
+        // X: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryData ? this.$refs.abrAdr.countryData.require.toUpperCase().includes('X') : false) },
+        // Z: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryData ? this.$refs.abrAdr.countryData.require.toUpperCase().includes('Z') : false) },
         countryiso: { required },
         alt1: {},
         alt2: {},
@@ -1107,28 +1148,14 @@ export default {
       },
       identification: {
         ssn: {
-          requiredIf: requiredIf((model) => {
-            if (!this.stateRules || !this.stateRules.id || (Array.isArray(this.stateRules.id) && this.stateRules.id.length === 0) || (this.ssn4 && this.ssn4.length === 4)) {
-              return false
-            }
-            return Boolean(this.stateRules.id.includes('SSN') && !this.identification.ssn4 && !this.identification.stateId && !this.identification.noId)
+          required: requiredIf(function (model) {
+            return !model.stateId && !model.ssn4 && !model.noId && this.idOptions.includes('SSN')
           }),
-          correctLength () {
-            if (this.identification && this.identification.ssn && this.stateRules && this.stateRules.id && this.stateRules.id.length > 0) {
-              if (this.stateRules.id.includes('SSN')) {
-                return this.identification.ssn && this.identification.ssn.replace(/\D/g, '').length === 9
-              }
-            } else {
-              return true
-            }
-          }
+          correctLength: fullLengthSsn(this.idOptions)
         },
         ssn4: {
-          requiredIf: requiredIf((model) => {
-            if (!this.stateRules || !this.stateRules.id || (Array.isArray(this.stateRules.id) && this.stateRules.id.length === 0)) {
-              return false
-            }
-            return Boolean(this.stateRules.id.includes('SSN4') && !this.identification.ssn && !this.identification.stateId && !this.identification.noId)
+          required: requiredIf(function (model) {
+            return !model.stateId && !model.ssn && !model.noId && this.idOptions.includes('SSN4')
           }),
           correctLength () {
             if (this.identification && this.identification.ssn4 && this.stateRules && this.stateRules.id && this.stateRules.id.length > 0) {
@@ -1141,13 +1168,16 @@ export default {
           }
         },
         stateId: {
-          requiredIf: requiredIf((model) => {
-            if (!this.stateRules || !this.stateRules.id) {
-              return false
-            }
-            let needsStateId = Boolean(this.stateRules.id.filter(x => x !== 'SSN' || x !== 'SSN4').length > 0)
-            return Boolean(needsStateId && !this.identification.ssn && !this.identification.ssn4 && !this.identification.noId)
+          required: requiredIf(function (model) {
+            return !model.ssn4 && !model.ssn && !model.noId && this.idOptions.filter(x => !/SSN/.test(x)).length > 0
           })
+          // requiredIf: requiredIf((model) => {
+          //   if (!this.stateRules || !this.stateRules.id) {
+          //     return false
+          //   }
+          //   let needsStateId = Boolean(this.stateRules.id.filter(x => x !== 'SSN' || x !== 'SSN4').length > 0)
+          //   return Boolean(needsStateId && !this.identification.ssn && !this.identification.ssn4 && !this.identification.noId)
+          // })
         }
       },
       // ssn: {

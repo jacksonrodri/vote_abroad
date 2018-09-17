@@ -588,9 +588,11 @@
       "SSN4": "the last 4 digits of your Social Security Number",
       "MilitaryID": "Military ID",
       "messages": {
-        "fullSSNRequired": "You must provide your full Social Security Number if you have one",
-        "SSN4Required": "You must provide the last 4 digits of your Social Security Number if you have one",
-        "stateIdRequired": "You must provide at least ONE of valid form of ID (from the list above) if you have it.  "
+        "ssn-required": "You must provide your full Social Security Number if you have one",
+        "ssn-correctLength": "You must provide your full Social Security Number if you have one",
+        "ssn4-required": "You must provide the last 4 digits of your Social Security Number if you have one",
+        "ssn4-correctLength": "You must provide the last 4 digits of your Social Security Number if you have one",
+        "stateId-required": "You must provide at least ONE of valid form of ID (from the list above) if you have it.  "
       },
       "StateID": "State ID",
       "SSN": "Social Security Number",
