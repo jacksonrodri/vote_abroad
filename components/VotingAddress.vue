@@ -66,13 +66,13 @@
               v-for="state in states"
               :value="state.iso"
               :key="state.iso">
-              {{ state.name }}
+              {{ $t(`states.${state.iso}` }}
             </option>
           </b-select>
         </b-field>
           <!-- :message="validations.Z.$anyError ? Object.keys(validations.Z.$params).map(x => $t(`request.votAdr.messages.Z-${x}`)) : '' " -->
         <b-field
-          :message="validations.Z.$anyError ? Object.entries(validations.Z).filter(([key, value]) => key.charAt(0) !== '$' && value === false).map(([k, v]) => $t(`request.votAdr.messages.Z-${k}`, {state: $t(`states.${state || 'US'}`), example1: zipEx[0], example2: zipEx[1]})) : '' "
+          :message="validations.$anyError && validations.Z.$anyError ? Object.entries(validations.Z).filter(([key, value]) => key.charAt(0) !== '$' && value === false).map(([k, v]) => $t(`request.votAdr.messages.Z-${k}`, {state: $t(`states.${state || 'US'}`), example1: zipEx[0], example2: zipEx[1]})) : '' "
           :type="(validations.Z.$anyError ? 'is-danger': '')">
           <b-input
             :placeholder="$t('request.votAdr.Z')"
