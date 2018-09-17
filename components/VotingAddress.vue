@@ -66,7 +66,7 @@
               v-for="state in states"
               :value="state.iso"
               :key="state.iso">
-              {{ $t(`states.${state.iso}` }}
+              {{ $t(`states.${state.iso}`) }}
             </option>
           </b-select>
         </b-field>
