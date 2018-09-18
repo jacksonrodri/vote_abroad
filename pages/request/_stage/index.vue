@@ -828,8 +828,9 @@ export default {
           break
         case 'voting-information':
           this.$v.votAdr.$touch()
-          // this.$v.votAdr.A.$touch()
-          // this.$v.votAdr.C.$touch()
+          this.$v.votAdr.A.$touch()
+          this.$v.votAdr.C.$touch()
+          this.$v.votAdr.Z.$touch()
           this.$v.jurisdiction.$touch()
           this.$v.voterClass.$touch()
           this.$v.isRegistered.$touch()

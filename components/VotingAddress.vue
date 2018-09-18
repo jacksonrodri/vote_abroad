@@ -223,6 +223,7 @@ export default {
       }
     },
     state: function (newVal, oldVal) {
+      this.$emit('delayTouch', 'Z')
       if (this.leoState && this.leoState.toLowerCase() !== newVal.toLowerCase()) {
         this.$store.commit('requests/update', {leo: null})
       }
