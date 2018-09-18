@@ -353,11 +353,10 @@ const usZip = (state) =>
     function (value, model) {
       console.log('usZip', value, model, this)
       const genericZipRegex = /^(\d{5})(?:[ -](\d{4}))?$/
-      if (!model.state && !state && !this.postal.US) {
+      if (!model.S && !state && !this.postal.US) {
         return genericZipRegex.test(value)
       } else {
-        let stateZipRegex = new RegExp(this.postal.US['sub_zips'].split('~')[this.postal.US['sub_keys'].split('~').findIndex(x => x === (model.state || state))])
-        console.log(stateZipRegex)
+        let stateZipRegex = new RegExp(this.postal.US['sub_zips'].split('~')[this.postal.US['sub_keys'].split('~').findIndex(x => x === (model.S || state))])
         return genericZipRegex.test(value) && stateZipRegex.test(value)
       }
     }
@@ -411,6 +410,9 @@ export default {
   //     // console.log(state.body)
   //   }
   // },
+  fetch ({store}) {
+    store.dispatch('data/updateCountryData', 'US')
+  },
   data () {
     return {
       code: null,

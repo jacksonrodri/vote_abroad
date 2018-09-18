@@ -72,7 +72,7 @@
         </b-field>
           <!-- :message="validations.Z.$anyError ? Object.keys(validations.Z.$params).map(x => $t(`request.votAdr.messages.Z-${x}`)) : '' " -->
         <b-field
-          :message="validations.$anyError && validations.Z.$anyError ? Object.entries(validations.Z).filter(([key, value]) => key.charAt(0) !== '$' && value === false).map(([k, v]) => $t(`request.votAdr.messages.Z-${k}`, {state: $t(`states.${state || 'US'}`), example1: zipEx[0], example2: zipEx[1]})) : '' "
+          :message="validations.Z.$anyError ? Object.entries(validations.Z).filter(([key, value]) => key.charAt(0) !== '$' && value === false).map(([k, v]) => $t(`request.votAdr.messages.Z-${k}`, {state: $t(`states.${state || 'US'}`), example1: zipEx[0], example2: zipEx[1]})) : '' "
           :type="(validations.Z.$anyError ? 'is-danger': '')">
           <b-input
             :placeholder="$t('request.votAdr.Z')"
@@ -208,7 +208,7 @@ export default {
     zipEx () {
       return !this.state
         ? ['95014', '22162-1010']
-        : this.postal.US['sub_zipexs'].split('~')[this.postal.US['sub_keys'].split('~').findIndex(x => x === this.state)].split(',')
+        : this.postal.US['sub_zipexs'].split('~')[this.postal.US['sub_keys'].split('~').findIndex(x => x === this.state)].split(',').map((x, i) => i === 1 ? x + '-1010' : x)
     },
     county: {
       get () { return this.state === 'DC' || this.state === 'PR' || this.state === 'VI' || this.state === 'AS' || this.state === 'GU' ? '' : this.votAdr.Y || null },
