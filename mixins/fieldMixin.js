@@ -1,13 +1,6 @@
 import { mapMutations, mapGetters } from 'vuex'
 import snarkdown from 'snarkdown'
-import BasicLabel from '~/components/BasicLabel'
-// const convertToPascalCase = function (str) {
-//   return str.match(/[a-z]+/gi)
-//     .map(function (word) {
-//       return word.charAt(0).toUpperCase() + word.substr(1).toLowerCase()
-//     })
-//     .join('')
-// }
+import VfaBasicLabel from '~/components/VfaBasicLabel'
 
 export default {
   props: {
@@ -18,7 +11,7 @@ export default {
     v: { }
   },
   components: {
-    BasicLabel
+    VfaBasicLabel
   },
   data () {
     return {
@@ -50,16 +43,6 @@ export default {
     fieldValue: {
       get () {
         return this.getCurrent ? this.getCurrent[this.fieldName] : ''
-        // if (this.fieldValueType) {
-        //   switch (this.fieldValueType) {
-        //     case 'string':
-        //       return this.getCurrent[this.fieldName] || ''
-        //     case 'StringOrBoolean':
-        //       return typeof this.getCurrent[this.fieldName] === 'string' ? this.getCurrent[this.fieldName] || '' : false
-        //     default:
-        //       return this.getCurrent[this.fieldName]
-        //   }
-        // } else return this.getCurrent[this.fieldName]
       },
       set (val) { this.update({ [this.fieldName]: val || null }) }
     },
@@ -84,7 +67,4 @@ export default {
       return snarkdown(md)
     }
   }
-  // mounted () {
-  //   console.log(this.v.$error)
-  // }
 }

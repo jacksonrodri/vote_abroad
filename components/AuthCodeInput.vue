@@ -1,9 +1,9 @@
 <template>
   <div class="field">
-    <basic-label
+    <vfa-basic-label
       :label="label"
       :fieldName="fieldName"
-      @toggleInfo="toggleInfo"></basic-label>
+      @toggleInfo="toggleInfo"></vfa-basic-label>
     <b-field :type="fieldType" :message="fieldMessages">
       <b-input
         key="input"

@@ -1,6 +1,6 @@
 <template>
   <div class="field">
-    <basic-label :fieldName="fieldName" @toggleInfo="toggleInfo"></basic-label>
+    <vfa-basic-label :fieldName="fieldName" @toggleInfo="toggleInfo"></vfa-basic-label>
       <b-message v-if="toolTipContent" :title="toolTipTitle" type="is-info" has-icon :active.sync="isInfoOpen">
       <p v-html="toolTipContent"></p>
     </b-message>
@@ -23,19 +23,15 @@
                   </span>
                 </button>
               </p>
-              <country-selector
+              <vfa-country-selector
                 :type="fieldName"
                 :value="ctry"
                 :requiredClass="formatted[0].class"
                 :messageType="v.countryiso.$error ? 'is-danger' : ''"
                 ref="ctry"
-                @input="val => {if (val) updateAddress('countryiso', val)}"></country-selector>
+                @input="val => {if (val) updateAddress('countryiso', val)}"></vfa-country-selector>
             </b-field>
           </b-field>
-          <!-- <b-field v-if="part.type === 'countryiso' && ctry === 'US'" :key="part.type + 'US'">
-            <p class="control help">Only enter your xx</p>
-          </b-field> -->
-              <!-- :value="adr[part.type]" -->
           <b-field v-else :key="part.type" :type="part.displayType" :message="part.messages">
             <b-autocomplete
               v-if="part.type === 'A'"
@@ -96,7 +92,7 @@
               :class="part.class"></b-input>
           </b-field>
         </template>
-        <template v-if="formatted.length === 1">
+        <template v-if="formatted && formatted.length === 1">
           <b-field v-for="n in ['A', 'B', 'C', 'S']" :key="n">
             <b-input disabled :value="$t(`request.votAdr.${n}`) + (n === 'A' ? $t('request.abrAdr.selectCountry') : '')"></b-input>
           </b-field>
@@ -119,10 +115,10 @@
 </template>
 
 <script>
-import { mapMutations, mapGetters, mapActions } from 'vuex'
+import { mapMutations, mapGetters, mapActions, mapState } from 'vuex'
 import snarkdown from 'snarkdown'
-import BasicLabel from '~/components/BasicLabel'
-import CountrySelector from '~/components/CountrySelector'
+import VfaBasicLabel from '~/components/VfaBasicLabel'
+import VfaCountrySelector from '~/components/VfaCountrySelector'
 import { placesAutocomplete, placeDetails, uuidv4 } from '~/utils/helpers.js'
 import { cleanString } from '~/utils/helpers'
 
@@ -130,8 +126,8 @@ export default {
   name: 'AbroadAddress',
   props: ['fieldName', 'v'],
   components: {
-    BasicLabel,
-    CountrySelector
+    VfaBasicLabel,
+    VfaCountrySelector
   },
   data () {
     return {
@@ -177,7 +173,7 @@ export default {
             : /A|B|D|C|S|X|Z|country/.test(type))
           .map(part => Object.assign({}, part, {
             messages: this.v && this.v[part.type].$error
-              ? Object.entries(this.v[part.type]).filter(([key, value]) => key.charAt(0) !== '$' && value === false).map(x => this.$t(`request.${this.fieldName}.messages.${part.type}-${x[0]}`, { label: part.label, zipExample: part.example }))
+              ? Object.entries(this.v[part.type]).filter(([key, value]) => key.charAt(0) !== '$' && value === false).map(([k, v]) => this.$t(`request.${this.fieldName}.messages.${part.type}-${k}`, { label: part.label, zipExample: part.example }))
               : '',
             displayType: this.v && this.v[part.type].$error ? 'is-danger' : '',
             class: {
@@ -186,7 +182,7 @@ export default {
               'hide': Boolean(this.adr && this.adr[part.type]) || (this.v && this.v[part.type].$error)
             }
           }))
-      } else return []
+      } else return ['']
     },
     adr: {
       get () { return this.getCurrent[this.fieldName] || {} },
@@ -196,16 +192,14 @@ export default {
     toolTipContent () { return this.$te(`request.${this.fieldName}.tooltip`) ? snarkdown(this.$t(`request.${this.fieldName}.tooltip`)) : null },
     ...mapGetters('data', ['countriesWithPostalData', 'postalMetadataHasCountry', 'postalDataForCountry']),
     ...mapGetters('requests', ['getCurrent']),
-    ...mapGetters('userauth', ['userCountry'])
+    ...mapGetters('userauth', ['userCountry']),
+    ...mapState('data', ['postal'])
   },
   methods: {
     focusCountry () {
-      // console.log(this.$refs.ctry[0].$el)
       this.$refs.ctry[0].$refs.input.focus()
-      // this.$refs.ctry.$el.querySelector('input').focus()
     },
     async getAsyncData (val) {
-      // if (this.autocompleteFocused)
       await this.$nextTick()
       await this.$nextTick()
       placesAutocomplete.call(this, this.tempA, this.ctry, 'abrAdr')
@@ -215,76 +209,42 @@ export default {
       placeDetails.call(this, opt)
     },
     createFormattedAddress () {
+      console.log('creatingFormattedaddress')
       this.countryFields = [1, 2, 3, 4, 5]
         .map(x => ({help: '', label: `address line ${x}`, length: 1, required: x === 1, type: `alt${x}`}))
         .concat({help: '', type: 'countryiso', label: 'Country', required: true, length: 1})
         .concat(this.ctry && this.countryData
           ? this.countryData.format
           : [{help: '', label: 'Street Address', length: 1, required: true, type: 'A'}, {help: '', label: 'Apartment', length: 1, required: false, type: 'B'}, {help: '', label: 'City', length: 1, required: true, type: 'C'}, {help: '', label: 'Province', length: 1, required: false, type: 'S'}])
-        // .filter(({type}) => this.adr && this.adr.usesAlternateFormat ? /alt|country/.test(type) : /A|B|D|C|S|X|Z|country/.test(type))
-        // .map(part => Object.assign({}, part, {
-        //   messages: this.v && this.v[part.type].$error
-        //     ? Object.entries(this.v[part.type]).filter(([key, value]) => key.charAt(0) !== '$' && value === false).map(x => this.$t(`request.${this.fieldName}.messages.${part.type}-${x[0]}`, { label: part.label, zipExample: part.example }))
-        //     : '',
-        //   displayType: this.v && this.v[part.type].$error ? 'is-danger' : '',
-        //   class: {
-        //     'is-required': this.requiredParts.includes(part.type),
-        //     'is-optional': !this.requiredParts.includes(part.type),
-        //     'hide': Boolean(this.adr && this.adr[part.type]) || (this.v && this.v[part.type].$error)
-        //   }
-        // }))
     },
     toggleInfo () { this.isInfoOpen = !this.isInfoOpen },
-    updateAddress: function (addressPart, value) {
-      // if (this.ctry || this.userCountry)
+    updateAddress: async function (addressPart, value) {
       let cleanAdr = !this.countryData || !this.formatted || !this.adr
         ? this.adr
         : Object.entries(this.adr).reduce((obj, [k, v]) => {
           if (this.countryFields.concat({type: 'usesAlternateFormat'}).map(({type}) => type).includes(k)) obj[k] = v
           return obj
         }, {})
-      // console.log('cleanAdr', cleanAdr)
-      this.update({[this.fieldName]: Object.assign({}, cleanAdr, {[addressPart]: cleanString(value) || null, formatted: this.formattedAddress})})
+      await this.update({[this.fieldName]: Object.assign({}, cleanAdr, {[addressPart]: cleanString(value) || null, formatted: this.formattedAddress})})
       this.$emit('delayTouch', addressPart)
     },
     ...mapActions('data', ['updateCountryData']),
     ...mapMutations('requests', ['update'])
   },
   watch: {
-    // tempA: function (val, oldVal) {
-    //   if (val) {
-    //     this.updateAddress('A', val)
-    //   }
-    // },
-    // countryData (val, oldVal) {
-    //   if (val && (!oldVal || val.key !== oldVal.key)) {
-    //     // this.createFormattedAddress()
-    //     this.updateAddress('countryiso', val.key)
-    //   }
-    // },
-    // formattedAddress (val, oldVal) {
-    //   if (val && val !== oldVal && this.adr && val !== this.adr.formatted) {
-    //     this.update({[this.fieldName]: Object.assign({}, this.adr, {formatted: this.formattedAddress})})
-    //   }
-    // },
-    ctry (val, oldVal) {
-      // console.log(val, 'ctry changed')
+    postal: function (val) {
+      this.createFormattedAddress()
+    },
+    ctry: async function (val, oldVal) {
       if (val) {
         if (this.postalMetadataHasCountry(val)) {
-          this.$nextTick()
-            .then(() => this.createFormattedAddress())
+          this.createFormattedAddress()
         } else {
-          this.updateCountryData(val).then(() => {
-            this.$nextTick()
-              .then(() => this.createFormattedAddress())
-          })
+          await this.updateCountryData(val)
+          // await this.$nextTick()
+          this.createFormattedAddress()
         }
       }
-      // if (val && (!oldVal || val !== oldVal)) {
-      //   this.updateCountryData(val).then(() => {
-      //     this.createFormattedAddress()
-      //   })
-      // }
     },
     userCountry (val) {
       if (!this.ctry && val) {
@@ -292,44 +252,42 @@ export default {
       }
     }
   },
-  mounted () {
+  mounted: async function () {
     this.sessionToken = uuidv4()
     if (this.ctry) {
-      this.updateCountryData(this.ctry)
-        .then(() => this.$nextTick()
-          .then(() => this.createFormattedAddress()))
+      await this.updateCountryData(this.ctry)
+      await this.$nextTick()
+      this.createFormattedAddress()
     }
     if (!this.ctry && this.userCountry) {
       this.updateAddress('countryiso', this.userCountry)
-      // this.createFormattedAddress()
-      this.updateCountryData(this.userCountry)
-        .then(() => this.$nextTick()
-          .then(() => this.createFormattedAddress()))
+      await this.updateCountryData(this.userCountry)
+      await this.$nextTick()
+      this.createFormattedAddress()
     }
-    // if (process.browser) {
-    //   window.onNuxtReady(() => {
-    this.isInfoOpen = true
-    setTimeout(() => {
-      this.isInfoOpen = false
-    }, 50)
+    if (process.browser) {
+      // window.onNuxtReady(() => {
+      this.isInfoOpen = true
+      setTimeout(() => {
+        this.isInfoOpen = false
+      }, 10)
+      // })
+    }
     if (this.adr.A) this.tempA = this.adr.A || ''
     //   })
     // }
   },
-  beforeDestroy () {
-    this.updateCountryData(this.ctry).then(() => {
-      this.$nextTick()
-        .then(() => {
-          this.createFormattedAddress()
-          let cleanAdr = !this.countryData || !this.formatted || !this.adr
-            ? this.adr
-            : Object.entries(this.adr).reduce((obj, [k, v]) => {
-              if (this.countryFields.concat({type: 'usesAlternateFormat'}).map(({type}) => type).includes(k)) obj[k] = v
-              return obj
-            }, {})
-          this.update({[this.fieldName]: Object.assign({}, cleanAdr, {formatted: this.formattedAddress})})
-        })
-    })
+  beforeDestroy: async function () {
+    await this.updateCountryData(this.ctry)
+    await this.$nextTick()
+    this.createFormattedAddress()
+    let cleanAdr = !this.countryData || !this.formatted || !this.adr
+      ? this.adr
+      : Object.entries(this.adr).reduce((obj, [k, v]) => {
+        if (this.countryFields.concat({type: 'usesAlternateFormat'}).map(({type}) => type).includes(k)) obj[k] = v
+        return obj
+      }, {})
+    this.update({[this.fieldName]: Object.assign({}, cleanAdr, {formatted: this.formattedAddress})})
   }
 }
 </script>

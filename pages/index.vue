@@ -3,7 +3,7 @@
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-9 is-12-touch">
-          <user-login></user-login>
+          <auth-user-login></auth-user-login>
         </div>
       </div>
     </div>
@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import UserLogin from '~/components/UserLogin'
+import AuthUserLogin from '~/components/AuthUserLogin'
 
 export default {
   layout: 'default',
@@ -22,7 +22,7 @@ export default {
   //   ]
   // },
   components: {
-    UserLogin
+    AuthUserLogin
   },
   // mounted () {
   //   if (process.browser) {

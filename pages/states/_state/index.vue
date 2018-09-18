@@ -6,24 +6,6 @@
           {{ state.title }}
         </h1>
         <nuxtent-body class="content" :body="state.body" />
-          <!-- <ul v-for="election in elections" :key="`${election.state} ${election.electionType}`">
-            <li>{{ election.state }} - {{election.electionType }}</li>
-            <li>{{ election.date }}</li>
-          </ul> -->
-          <!-- <h1 class="title is-4">Find your local Election Official ({{state.title}})</h1>
-          <b-autocomplete
-            :value="typedJurisdiction || jurisdiction || ''"
-            open-on-focus
-            keep-first
-            expanded
-            @input="updated"
-            ref="jurisdiction"
-            :data="filteredLeos"
-            field="n"
-            placeholder="Start typing to find your jurisdiction"
-            @select="option => updateLeo(option)">
-            <template slot-scope="props"><strong>{{props.option.j}} {{props.option.j.toLowerCase().indexOf(props.option.t.toLowerCase()) > -1 ? '' : props.option.t}}</strong> - <small>{{props.option.n}}</small></template>
-          </b-autocomplete> -->
           <h1 class="title is-4">{{$t('states.stateTitle', {state: state.title})}}</h1>
           <b-table hoverable :data="upcomingElections">
             <template slot-scope="props">
@@ -110,7 +92,6 @@ export default {
       elections: (await app.$content('/elections').get('elections')).body.filter(election => election.state && params.state && election.state.toLowerCase() === params.state.toLowerCase()),
       state: (await app.$content('/rls').get(`states/${params.state.toLowerCase()}`)),
       stateLeos
-      // (await axios.get(`${process.env.url}/leos/${params.state.toUpperCase()}-leos.json`)).data
     }
   },
   head: {

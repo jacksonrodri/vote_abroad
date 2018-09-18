@@ -223,7 +223,7 @@ export default {
       }
     },
     state: function (newVal, oldVal) {
-      this.$emit('delayTouch', 'Z')
+      if (newVal) this.$emit('delayTouch', 'Z')
       if (this.leoState && this.leoState.toLowerCase() !== newVal.toLowerCase()) {
         this.$store.commit('requests/update', {leo: null})
       }
@@ -275,17 +275,6 @@ export default {
         })
         : str
     },
-    // getAsyncData: debounce(function () {
-    //   this.isFetching = true
-    //   this.data = []
-    //   axios.get(`${process.env.placesUrl + process.env.autocompleteEndpoint}?input=${this.street}&types=geocode&language=en&components=country:us|country:pr|country:vi|country:gu|country:mp&key=${process.env.placesKey}`)
-    //     .then(({ data }) => {
-    //       data.predictions.forEach((item) => this.data.push(item))
-    //       this.isFetching = false
-    //     }, response => {
-    //       this.isFetching = false
-    //     })
-    // }, 500),
     async getAsyncData (val) {
       await this.$nextTick()
       await this.$nextTick()
@@ -298,48 +287,6 @@ export default {
         placeDetails.call(this, opt)
       }
     },
-    // fillData (option) {
-    //   if (option && option.place_id) {
-    //     axios.get(`${process.env.placesUrl + process.env.detailsEndpoint}?placeid=${option.place_id}&key=${process.env.placesKey}`)
-    //       .then(({ data }) => {
-    //         let ctry = data.result.address_components.filter(n => n.types.includes('country'))[0].short_name
-    //         this.state = ctry !== 'US' ? ctry : data.result.address_components.filter(n => n.types.indexOf('administrative_area_level_1') > -1)[0].short_name
-    //         if (this.state !== 'DC' && ctry === 'US') {
-    //           setTimeout(() => {
-    //             this.county = data.result.address_components.filter(y => y.types.indexOf('administrative_area_level_2') > -1)[0].long_name
-    //           }, 50)
-    //         }
-    //         // console.log('adr_address', data.result.adr_address.split(/<span class="|">|<\/span>,?\s?/))
-    //         data.result.adr_address
-    //           .split(/<span class="|">|<\/span>,?\s?/)
-    //           .filter(e => e)
-    //           .forEach((item, index, arr) => {
-    //             var myRe = /post-office-box|extended-address|street-address|locality|region|postal-code|country-name/g
-    //             if (index === 0 && !myRe.test(item)) {
-    //               this.extendedAddress = item
-    //             } else if (myRe.test(item)) {
-    //               switch (item) {
-    //                 case 'post-office-box':
-    //                   // this.postOfficeBox = arr[index + 1]
-    //                   break
-    //                 case 'street-address':
-    //                   this.street = arr[index + 1]
-    //                   break
-    //                 case 'locality':
-    //                   this.city = arr[index + 1]
-    //                   break
-    //                 case 'region':
-    //                   this.state = arr[index + 1]
-    //                   break
-    //                 case 'postal-code':
-    //                   this.zip = arr[index + 1]
-    //                   break
-    //               }
-    //             }
-    //           })
-    //       })
-    //   }
-    // },
     getAsyncDataCity: debounce(function () {
       this.isFetchingCity = true
       this.data = []

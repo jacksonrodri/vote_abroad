@@ -202,9 +202,6 @@ export const mutations = {
   addCountryPostalMetadata (state, payload) {
     state.postal = {...state.postal, ...payload}
   },
-  updatePhone (state, number) {
-    state.phone = number
-  },
   updateElections (state, elections) {
     state.elections = elections
   }
@@ -239,10 +236,6 @@ export const actions = {
         }
       }
     } else return ({ok: true, result: 'no country codes found'})
-  },
-  updatePhone ({commit, dispatch, getters}, {val, countryIso}) {
-    dispatch('getCountryIsoFromPhonePrefix', val)
-    commit('updatePhone', getters.formattedNumber(val, countryIso))
   },
   async getElections ({commit}) {
     let elections = await this.app.$content('/elections').get('elections')

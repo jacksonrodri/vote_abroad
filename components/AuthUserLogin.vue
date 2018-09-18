@@ -23,44 +23,14 @@
       </div>
     </div>
     <div v-else-if="authState === 'enteringCode'">
-      <!-- <b-field>
-        <b-field>
-          <b-input placeholder="Type your code..."
-            type="tel"
-            icon="lock"
-            expanded
-            autocomplete="off"
-            size="is-medium"
-            max=999999
-            pattern="[0-9]{6}"
-            v-model="code"
-            @keyup.native.enter="confirmCode"
-            required>
-          </b-input>
-        </b-field>
-        <p class="control">
-          <a @click="confirmCode" class="button is-primary is-medium">
-            <span class="icon is-small">
-              <i class="fas fa-arrow-right"></i>
-            </span>
-          </a>
-        </p>
-      </b-field> -->
-      <code-input
+      <auth-code-input
         ref="codeInput"
         key="codeInput"
         fieldName="codeInput"
         v-model="code"
         :v="$v.code"
         @pressEnter="confirmCode"
-        :loading="authenticating"></code-input>
-      <!-- <div v-show="seconds <= 25" class="field is-grouped is-grouped-centered">
-        <p class="control">
-          <a class="button is-vfa is-inverted is-small" disabled>
-            Did not get the code? <span class="tag is-help">0:{{ 25 - parseInt(seconds) | two_digits }}</span>
-          </a>
-        </p>
-      </div> -->
+        :loading="authenticating"></auth-code-input>
       <p class="has-text-centered help has-text-vfa">
         <ul>
           <li>
@@ -119,10 +89,6 @@
             </a>
           </li>
           <li v-if="seconds > 25">
-            <!-- <b-icon
-              type="is-vfa"
-              icon="check"></b-icon> -->
-              <!-- {{$t('auth.correctNumber')}} -->
               <i18n tag="h3" class="title is-7" path="auth.trouble">
                 <a click="anonymousStart">{{$t('auth.recommendation')}}</a>
               </i18n>
@@ -148,7 +114,7 @@
       <h2 class="subtitle is-1 is-size-3-mobile has-text-danger">
         {{ $t('homepage.subtitle') }}
       </h2>
-      <phone-email-two
+      <auth-phone-email-input
         ref="phoneOrEmail"
         key="phoneOrEmail"
         fieldName="phoneOrEmail"
@@ -156,7 +122,7 @@
         :v="$v.phoneOrEmail"
         @pressEnter="startAuth"
         :loading="authState === 'loading'"
-        @delayTouch="delayTouch"></phone-email-two>
+        @delayTouch="delayTouch"></auth-phone-email-input>
       <div class="buttons is-right is-marginless">
         <button @click.prevent="startAuth" :class="['button', 'is-large', 'is-danger', {'is-loading': authState === 'loading'}]">{{ $t('homepage.start') }}</button>
       </div>
@@ -178,8 +144,8 @@
 </template>
 
 <script>
-import PhoneEmailTwo from '~/components/PhoneEmailTwo'
-import CodeInput from '~/components/CodeInput'
+import AuthPhoneEmailInput from '~/components/AuthPhoneEmailInput'
+import AuthCodeInput from '~/components/AuthCodeInput'
 import snarkdown from 'snarkdown'
 import { required, minLength, maxLength } from 'vuelidate/lib/validators'
 import { mapActions, mapGetters, mapMutations, mapState } from 'vuex'
@@ -188,8 +154,8 @@ const touchMap = new WeakMap()
 export default {
   name: 'UserLogin',
   components: {
-    PhoneEmailTwo,
-    CodeInput
+    AuthPhoneEmailInput,
+    AuthCodeInput
   },
   data () {
     return {

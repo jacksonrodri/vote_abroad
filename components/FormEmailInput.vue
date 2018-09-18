@@ -1,6 +1,6 @@
 <template>
 <div class="field">
-  <basic-label :fieldName="fieldName"></basic-label>
+  <vfa-basic-label :fieldName="fieldName"></vfa-basic-label>
   <b-field
     v-if="typeof fieldValue === 'string' || fieldValue === null || fieldValue === undefined"
     :type="fieldType"

@@ -5,7 +5,7 @@
   <b-field grouped
     group-multiline>
     <p class="control">
-      <button @click.prevent="value === 'registered' ? setVal(null) : setVal('registered')" :class="[baseClass, {'is-success': registered}]">
+      <button @click.prevent="isRegistered = 'registered'" :class="[baseClass, {'is-success': registered}]">
         <span v-show="registered" class="icon is-small">
           <i class="fas fa-check"></i>
         </span>
@@ -15,7 +15,7 @@
       </button>
     </p>
     <p class="control">
-      <button @click.prevent="value === 'notRegistered' ? setVal(null) : setVal('notRegistered')" :class="[baseClass, {'is-success': notRegistered}]">
+      <button @click.prevent="isRegistered = 'notRegistered'" :class="[baseClass, {'is-success': notRegistered}]">
         <span v-show="notRegistered" class="icon is-small">
           <i class="fas fa-check"></i>
         </span>
@@ -25,7 +25,7 @@
       </button>
     </p>
     <p class="control">
-      <button @click.prevent="value === 'unsure' ? setVal(null) : setVal('unsure')" :class="[baseClass, {'is-success': unsure}]">
+      <button @click.prevent="isRegistered = 'unsure'" :class="[baseClass, {'is-success': unsure}]">
         <span v-show="unsure" class="icon is-small">
           <i class="fas fa-check"></i>
         </span>
@@ -39,6 +39,7 @@
 </template>
 
 <script>
+import { mapGetters, mapMutations } from 'vuex'
 export default {
   name: 'Is-Registered',
   props: [
@@ -58,14 +59,20 @@ export default {
     }
   },
   methods: {
-    setVal: function (val) {
-      this.$emit('input', val)
-    }
+    ...mapMutations('requests', ['update'])
   },
   computed: {
-    registered: function () { return this.value === 'registered' },
-    notRegistered: function () { return this.value === 'notRegistered' },
-    unsure: function () { return this.value === 'unsure' }
+    isRegistered: {
+      get () { return this.getCurrent.isRegistered },
+      set (val) {
+        this.update({isRegistered: this.isRegistered === val ? null : val})
+        this.$emit('delayTouch')
+      }
+    },
+    registered: function () { return this.isRegistered === 'registered' },
+    notRegistered: function () { return this.isRegistered === 'notRegistered' },
+    unsure: function () { return this.isRegistered === 'unsure' },
+    ...mapGetters('requests', ['getCurrent'])
   }
 }
 </script>

@@ -219,8 +219,6 @@ export default {
   async asyncData ({app, store}) {
     let state = store.getters['requests/getCurrent'] && store.getters['requests/getCurrent'].leo ? store.getters['requests/getCurrent'].leo.s : ''
     let elections = (await app.$content('/elections').get('elections')).body
-    // let voterRegistrationStatus = store.getters['requests/getCurrent'].isRegistered || null
-    // let voterType = store.getters['requests/getCurrent'].voterClass || null
     return {
       registering: store.getters['requests/getCurrent'].isRegistered !== 'registered',
       state: state,
@@ -237,7 +235,6 @@ export default {
           return dateA - dateB
         }),
       elections: elections
-      // deadlineLanguage: getDeadlineLanguage(elections, state, voterRegistrationStatus, voterType, null)
     }
   },
   data () {
@@ -261,7 +258,6 @@ export default {
     },
     transmitInstructions () {
       if (this.$te(`request.deadlineLanguage.${this.votState}SpecialDeadline`)) {
-        // return this.$t(`request.deadlineLanguage.${this.votState}Special`, this.instructionsObject)
         return this.$t(`request.deadlineLanguage.transmitInstructions`, {leoName: this.leoName, transmitOpts: this.transmitOpts})
       } else if (this.$te(`request.deadlineLanguage.${this.votState}Special`)) {
         return this.$t(`request.deadlineLanguage.${this.votState}Special`, Object.assign({}, this.instructionsObject, {specialDeadline: ''}))
@@ -299,9 +295,6 @@ export default {
       }
     },
     specialSubmissionRules () {
-      // return this.$te(`request.deadlineLanguage.${this.state.toLowerCase()}Special`)
-      //   ? this.$t(`request.deadlineLanguage.${this.state.toLowerCase()}Special`, {leoName: this.leoName})
-      //   : ''
       return this.$te(`request.deadlineLanguage.${this.votState}Special`)
         ? this.$t(`request.deadlineLanguage.${this.votState}Special`, {leoName: this.leoName, transmitOpts: this.transmitOpts})
         : this.$t(`request.deadlineLanguage.transmitInstructions`, {leoName: this.leoName, transmitOpts: this.transmitOpts})
@@ -313,31 +306,6 @@ export default {
         return undefined
       }
     },
-    // transmitInstructions () {
-    //   return this.stateRules.fpcaSubmitOptionsRegister.includes('Email')
-    //     ? this.$t(`request.deadlineLanguage.transmitInstructions`, {
-    //       leoName: this.leoName,
-    //       transmitOpts: this.transmitOpts
-    //     }) + ' ' + this.$t(`request.deadlineLanguage.emailSuggested`)
-    //     : this.$t(`request.deadlineLanguage.transmitInstructions`, {
-    //       leoName: this.leoName,
-    //       transmitOpts: this.transmitOpts
-    //     })
-    // },
-    // transmitOpts () {
-    //   switch (this.stateRules.fpcaSubmitOptionsRegister.length) {
-    //     case 1:
-    //       return this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[0].toLowerCase()}`)
-    //     case 2:
-    //       return this.$t(`request.deadlineLanguage.opt2`, {item1: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[0].toLowerCase()}`).toLowerCase(), item2: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[1].toLowerCase()}`).toLowerCase()})
-    //     case 3:
-    //       return this.$t(`request.deadlineLanguage.opt3`, {item1: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[0].toLowerCase()}`).toLowerCase(), item2: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[1].toLowerCase()}`).toLowerCase(), item3: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[2].toLowerCase()}`).toLowerCase()})
-    //     case 4:
-    //       return this.$t(`request.deadlineLanguage.opt4`, {item1: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[0].toLowerCase()}`).toLowerCase(), item2: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[1].toLowerCase()}`).toLowerCase(), item3: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[2].toLowerCase()}`).toLowerCase(), item4: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[3].toLowerCase()}`).toLowerCase()})
-    //     default:
-    //       return `mail, email or fax`
-    //   }
-    // },
     newVoterDeadlineLanguageObject () {
       let elections = this.getCurrentDeadlines.filter(x => x.ruleType === 'Registration')
       let rule = elections[0].rule
@@ -502,14 +470,6 @@ export default {
     voterRegistrationStatus () { return this.$store.getters['requests/getCurrent'].isRegistered || null },
     voterType () { return this.$store.getters['requests/getCurrent'].voterClass || null },
     ...mapGetters('requests', ['getCurrent', 'getCurrentDeadlines'])
-    // deadlineLanguage () { return getDeadlineLanguage(this.elections, this.voterState, this.voterRegistrationStatus, this.voterType, null) || '' }
-
-    // currentRequestStage () { return this.currentRequest && this.currentRequest.stage ? this.currentRequest.stage : 'fill' }
-  },
-  filters: {
-    markdown: function (md) {
-      return snarkdown(md)
-    }
   },
   methods: {
     capitalizeFirstLetter: function (string) {

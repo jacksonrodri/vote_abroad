@@ -6,8 +6,8 @@
     :type="(validations.$error ? 'is-danger': '')">
     <b-field grouped group-multiline>
       <p class="control">
-        <a @click="() => value === 'female' ? setVal(null) : setVal('female')" :class="[baseClass, {'is-success': value === 'female'}]">
-          <span v-show="value === 'female'" class="icon is-small">
+        <a @click="() => {sex = (sex === 'female' ? null : 'female')}" :class="[baseClass, {'is-success': sex === 'female'}]">
+          <span v-show="sex === 'female'" class="icon is-small">
             <i class="fas fa-check"></i>
           </span>
           <span>
@@ -16,8 +16,8 @@
         </a>
       </p>
       <p class="control">
-        <a @click="() => value === 'male' ? setVal(null) : setVal('male')" :class="[baseClass, {'is-success': value === 'male'}]">
-          <span v-show="value === 'male'" class="icon is-small">
+        <a @click="() => {sex = (value === 'male' ? null : 'male')}" :class="[baseClass, {'is-success': sex === 'male'}]">
+          <span v-show="sex === 'male'" class="icon is-small">
             <i class="fas fa-check"></i>
           </span>
           <span>
@@ -26,8 +26,8 @@
         </a>
       </p>
       <p class="control" v-if="state !== 'ID'">
-        <a @click="() => value === 'decline' ? setVal(null) : setVal('decline')" :class="[baseClass, {'is-success': value === 'decline'}]">
-          <span v-show="value === 'decline'" class="icon is-small">
+        <a @click="() => {sex = (sex === 'decline' ? null : 'decline')}" :class="[baseClass, {'is-success': sex === 'decline'}]">
+          <span v-show="sex === 'decline'" class="icon is-small">
             <i class="fas fa-check"></i>
           </span>
           <span>
@@ -44,6 +44,8 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'Gender',
   props: [
@@ -63,9 +65,17 @@ export default {
       isOpen: false
     }
   },
+  computed: {
+    sex: {
+      get () { return this.getCurrent.sex || null },
+      set (value) { this.$store.commit('requests/update', {sex: value}) }
+    },
+    ...mapGetters('requests', ['getCurrent'])
+  },
   methods: {
     setVal: function (val) {
-      this.$emit('input', val)
+      // this.$emit('input', val)
+      this.$store.commit('requests/update', {sex: val})
     }
   }
 }

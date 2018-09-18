@@ -11,9 +11,9 @@
       <b-field :label="$t('request.akRules.label')">
         <b-input v-model="scratch" @input="(val) => setVal(`I will provide the following proof of Alaska Residency: ${val}`)"></b-input>
       </b-field>
-      <div v-if="isFWAB">
+      <!-- <div v-if="isFWAB">
         {{$t('request.akRules.fwabWitness')}}
-      </div>
+      </div> -->
     </div>
   <!-- AZ -->
     <div v-if="state === 'AZ' && isRegistering">
@@ -112,10 +112,10 @@ export default {
       type: String,
       default: ''
     },
-    isFWAB: {
-      type: Boolean,
-      default: false
-    },
+    // isFWAB: {
+    //   type: Boolean,
+    //   default: false
+    // },
     isIndNoParty: {
       type: Boolean,
       default: false

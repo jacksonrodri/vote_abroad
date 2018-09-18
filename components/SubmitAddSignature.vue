@@ -43,7 +43,7 @@
             <!-- - Align your signature with the red line -- drag to move, scroll to zoom. If you don't see your signature, you may need to zoom out to get it back on the page.<br>- Adjust your signature with the 'Line Strength' buttons below so that the signature is clear and has minimal background noise<br>- If your signature is still unclear, you can click 'Clear Image' to try again.<br>- Click 'Use This Signature' to add it to your form and compose a message to your election official. -->
           </b-message>
             <h3 class="subtitle is-5 has-text-info has-text-centered" v-if="processingImage">{{$t('request.sig.pleaseWait')}}</h3>
-            <get-camera ref="webcam" @captureError="captureError" :isCapturing="webCamCapture" v-show="webCamCapture" @updatePic="drawThresholdToCanvas"></get-camera>
+            <submit-get-camera ref="webcam" @captureError="captureError" :isCapturing="webCamCapture" v-show="webCamCapture" @updatePic="drawThresholdToCanvas"></submit-get-camera>
             <signature-cropper
               v-show="!webCamCapture"
               :style="!croppedPic || !croppedPic.imageSet ? 'background: whitesmoke; background-image:none;': ''"
@@ -202,7 +202,7 @@
 </template>
 
 <script>
-import GetCamera from '~/components/GetCamera'
+import SubmitGetCamera from '~/components/SubmitGetCamera'
 import { mapState } from 'vuex'
 import snarkdown from 'snarkdown'
 const savePixels = require('save-pixels')
@@ -213,7 +213,7 @@ const EXIF = require('exif-js')
 
 export default {
   components: {
-    GetCamera
+    SubmitGetCamera
   },
   props: ['value'],
   data () {
@@ -254,11 +254,6 @@ export default {
   methods: {
     md (md) { return snarkdown(md) },
     handleFileTypeMismatch () {
-      // this.$dialog.alert({
-      //   title: this.$t('request.sig.invalidImageTypeTitle'),
-      //   message: this.$t('request.sig.invalidImageTypeMessage'),
-      //   type: 'is-danger'
-      // })
       this.processingImage = false
       this.clearImage()
     },
@@ -277,8 +272,6 @@ export default {
         .then(() => {
           if (this.$refs && this.$refs.webcam) this.$refs.webcam.takePhoto()
         })
-      // setTimeout(() => {
-      // }, 10)
     },
     handleFileSizeExceed () {
       this.$dialog.alert({
@@ -291,19 +284,15 @@ export default {
       this.webcamCaptureError = true
     },
     useSignature () {
-      // let pic = this.croppedPic.getCanvas().toDataURL()
       this.$emit('sigcap', this.croppedPic.generateDataUrl())
     },
     startCameraFilePicker () {
-      // console.log(this)
-      // setTimeout(() => {
       if (!this.croppedPic || !this.croppedPic.hasImage()) {
         if (this.device && !this.device.inputCaptureSupported) {
           this.thresholdedPic = null
           this.webCamCapture = true
         } else { this.captureSignature() }
       }
-      // }, 30)
     },
     captureSignature () {
       this.croppedPic.chooseFile()
@@ -338,11 +327,6 @@ export default {
       this.size = this.size + 1
       this.drawThresholdToCanvas()
     },
-    // decreaseSize () {
-    //   this.metadata = this.croppedPic.getMetadata()
-    //   this.size = this.size - 1
-    //   this.drawThresholdToCanvas()
-    // },
     drawFromFile (file) {
       this.processingImage = true
       this.$nextTick()
@@ -350,15 +334,12 @@ export default {
           let needsRotation
           EXIF.getData(file, function () { needsRotation = (EXIF.getTag(this, 'Orientation')) > 4 })
           this.thresholdedPic = null
-          // let vm = this
           let reader = new FileReader()
           reader.onload = () => {
-            // console.log(reader.result)
             let img = new Image()
             img.onload = () => {
               let maxWidth = 1280
               let maxHeight = 720
-              // console.log(img)
               let width = img.width
               let height = img.height
               let isTooLarge = false
@@ -372,7 +353,6 @@ export default {
                 height = maxHeight
                 isTooLarge = true
               }
-              // console.log(width, ' x ', height, 'isTooLarge:', isTooLarge, 'needsRotation: ', needsRotation)
 
               if (!isTooLarge) {
                 // return file here
@@ -380,26 +360,14 @@ export default {
                 this.drawThresholdToCanvas(reader.result)
               } else {
                 let canvas = document.createElement('canvas')
-                // canvas.width = width > height ? width : height
-                // canvas.height = width > height ? height : width
                 canvas.width = width
                 canvas.height = height
-                // console.log(canvas.width, canvas.height)
                 let ctx = canvas.getContext('2d')
                 ctx.drawImage(img, 0, 0, width, height)
                 if (width < height || needsRotation) {
                   ctx.rotate(-Math.PI / 2)
                 }
-                // console.log(canvas.width, canvas.height)
-                // console.log('resize done')
-                // this.webCamPic = canvas.toDataURL()
                 this.drawThresholdToCanvas(canvas.toDataURL())
-                // if (width < height || needsRotation) {
-                //   setTimeout(() => {
-                //     console.log('rotating')
-                //     this.rotate(1)
-                //   }, 1500)
-                // }
               }
             }
             img.src = reader.result
@@ -415,14 +383,10 @@ export default {
             var canvas = document.createElement('canvas')
             canvas.width = img.width
             canvas.height = img.height
-            // console.log('creating canvas', canvas.width, ' x ', canvas.height)
             let ctx = canvas.getContext('2d')
             ctx.drawImage(img, 0, 0)
-            // console.log('getting pixels')
             let pixels = ctx.getImageData(0, 0, img.width, img.height)
-            // console.log('getting ndarray')
             let arr = ndarray(new Uint8Array(pixels.data), [img.width, img.height, 4], [4, 4 * img.width, 1], 0)
-            // console.log('finished getting arr, resolving promise')
             resolve(arr)
           }
           img.onerror = function (err) { reject(err) }
@@ -435,27 +399,16 @@ export default {
           if (!this.thresholdedPic) {
             this.webCamCapture = false
             this.webCamPic = imgUrl || this.webCamPic
-            // console.log('starting to get pixels')
             let pixels = await getPix(this.webCamPic)
-            // console.log('finished getting pixels')
-            // console.log('pixels: ', pixels)
-            // console.log('start getPixels', 'size: ', this.size, 'compensation: ', this.compensation)
-            // console.log('starting threshold operation')
             let thresholded = adaptiveThreshold(pixels, {size: this.size, compensation: this.compensation})
-            // console.log('finished threshold operation')
-            // console.log('thresholded', thresholded)
             let cnv = savePixels(thresholded, 'canvas') // returns canvas element
-            // console.log('saved canvas')
             let ctx = cnv.getContext('2d')
-            // console.log('start set transparency')
             let imgData = ctx.getImageData(0, 0, cnv.width, cnv.height)
             for (let x = 3; x < imgData.data.length; x += 4) {
               imgData.data[x] = Math.abs(255 - imgData.data[x - 1])
             }
             ctx.putImageData(imgData, 0, 0)
-            // console.log('set thresholded pic')
             this.thresholdedPic = cnv.toDataURL()
-            // console.log('start refresh pic')
             this.croppedPic.refresh()
             this.processingImage = false
           } else {
@@ -465,33 +418,21 @@ export default {
         })
     },
     onDraw: function (ctx) {
-      // console.log('canvas style', this.croppedPic.getCanvas().style)
-      // console.log(ctx.canvas)
-      // console.log(ctx.getImageData(0, 0, ctx.canvas.width, ctx.canvas.height))
-      // let sigImage = ctx.getImageData(0, 0, ctx.canvas.width, ctx.canvas.height)
-      // let edited1 = this.editImg(sigImage, ctx.canvas.width, ctx.canvas.height, 0, 20)
-      // ctx.putImageData(edited1, 0, 0)
       ctx.save()
       ctx.globalAlpha = 0.9
-      // ctx.drawImage(this.sigLine, 0, 0, ctx.canvas.width, ctx.canvas.height, 0, 0, 480, 150)
-      // ctx.drawImage(this.sigLine, 0, 0, ctx.canvas.width, ctx.canvas.height)
       ctx.restore()
       if (this.metadata) this.croppedPic.applyMetadata(this.metadata)
       this.metadata = null
     },
     editImg: function (imgData, canvasWidth, canvasHeight, lowerBound, upperBound) {
       var data = imgData.data.slice()
-      // console.log(data)
       let monoData = []
       for (var i = 0; i < data.length; i += 4) {
         monoData[i / 4] = Math.floor((data[i] + data[i + 1] + data[i + 2]) / 3)
       }
-      // console.log(monoData)
       let sorted = monoData.slice().sort()
-      // console.log(sorted)
       let lowerBoundPix = sorted[Math.floor(lowerBound / 100 * monoData.length)]
       let upperBoundPix = sorted[Math.floor(upperBound / 100 * monoData.length)]
-      // console.log(lowerBound, lowerBoundPix, upperBound, upperBoundPix)
 
       for (let i = 0; i < monoData.length; i++) {
         let adj
@@ -516,8 +457,6 @@ export default {
   mounted () {
     this.sigLine = new Image()
     this.sigLine.src = '/lineOnly.png'
-    // this.mtd = true
-    // this.croppedPic.refresh()
   }
 }
 </script>

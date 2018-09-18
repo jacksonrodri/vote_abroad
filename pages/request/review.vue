@@ -8,8 +8,8 @@
       </div>
   </div>
   <div class="column is-12 is-10-desktop is-8-widescreen is-7-fullhd is-paddingless">
-    <my-canvas class="canvas" ref="fpca">
-      <my-box
+    <review-canvas class="canvas" ref="fpca">
+      <review-canvas-renderer
         :lastName="lastName"
         :firstName="firstName"
         :middleName="middleName"
@@ -36,9 +36,9 @@
         :classification="voterClass"
         :sex="sex"
         :recBallot="recBallot"
-        @isLoading="val => isLoading = val"></my-box>
+        @isLoading="val => isLoading = val"></review-canvas-renderer>
         <b-loading :is-full-page="false" :active.sync="isLoading" :can-cancel="true"></b-loading>
-    </my-canvas>
+    </review-canvas>
   </div>
   <div class="column is-10 is-8-desktop is-7-widescreen is-6-fullhd is-paddingless">
 
@@ -50,16 +50,16 @@
 </template>
 
 <script>
-import MyCanvas from '~/components/MyCanvas.vue'
-import MyBox from '~/components/MyBox.vue'
+import ReviewCanvas from '~/components/ReviewCanvas.vue'
+import ReviewCanvasRenderer from '~/components/ReviewCanvasRenderer.vue'
 import { mapState, mapGetters } from 'vuex'
 
 export default {
   name: 'FPCAreview',
   middleware: 'verify-request',
   components: {
-    MyCanvas,
-    MyBox
+    ReviewCanvas,
+    ReviewCanvasRenderer
   },
   async asyncData ({app}) {
     return {

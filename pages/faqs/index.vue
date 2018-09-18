@@ -17,12 +17,6 @@
             {{faq.question || faq.title}}
           </nuxt-link>
         </nav>
-        <!-- <h2 class="title is-4">{{category.category}}</h2>
-        <ul>
-          <li v-for="(faq, index) in category.faqs" :key="faq.title">
-            <nuxt-link :to="faq.permalink">{{faq.title}}</nuxt-link>
-          </li>
-        </ul> -->
       </div>
     </div>
   </div>
@@ -42,14 +36,6 @@ export default {
     lang () {
       return this.$i18n.locale
     },
-    // try: function () {
-    //   return this.faqs
-    //     .map(x => x.categories.map(y => y.category)[0])
-    //     .map(cat => ({
-    //       category: cat,
-    //       faqs: this.faqs.filter(x => x.categories.map(x => x.category).reduce((acc, cur) => cur === cat ? true : acc, false))
-    //     }))
-    // },
     categories: function () {
       return [...new Set(this.faqs[this.$i18n.locale].map(x => x.categories).reduce((acc, cur) => acc.concat(cur), []).map(x => x.category))]
         .map(subject => ({

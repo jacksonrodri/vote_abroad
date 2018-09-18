@@ -4,7 +4,7 @@
   <p v-if="validations.$error" class="help is-danger">{{ $t(`request.receiveBallot.messages.required`) }}</p>
   <b-field grouped group-multiline>
     <p class="control" v-if="ballotReceiptOptions.indexOf('Email') > -1">
-      <button @click.prevent="setVal('email')" :class="[baseClass, {'is-success': email}]">
+      <button @click.prevent="recBallot = 'email'" :class="[baseClass, {'is-success': email}]">
         <span v-show="email" class="icon is-small">
           <i class="fas fa-check"></i>
         </span>
@@ -14,7 +14,7 @@
       </button>
     </p>
     <p class="control" v-if="ballotReceiptOptions.indexOf('Mail') > -1">
-      <button @click.prevent="setVal('mail')" :class="[baseClass, {'is-success': mail}]">
+      <button @click.prevent="recBallot = 'mail'" :class="[baseClass, {'is-success': mail}]">
         <span v-show="mail" class="icon is-small">
           <i class="fas fa-check"></i>
         </span>
@@ -24,7 +24,7 @@
       </button>
     </p>
     <p class="control" v-if="ballotReceiptOptions.indexOf('Fax') > -1">
-      <button @click.prevent="setVal('fax')" :class="[baseClass, {'is-success': fax}]">
+      <button @click.prevent="recBallot = 'fax'" :class="[baseClass, {'is-success': fax}]">
         <span v-show="fax" class="icon is-small">
           <i class="fas fa-check"></i>
         </span>
@@ -41,6 +41,7 @@
 </template>
 
 <script>
+import { mapGetters, mapMutations } from 'vuex'
 export default {
   name: 'Receive-Ballot',
   props: [
@@ -61,14 +62,17 @@ export default {
     }
   },
   methods: {
-    setVal: function (val) {
-      this.$emit('input', val)
-    }
+    ...mapMutations('requests', ['update'])
   },
   computed: {
+    recBallot: {
+      get () { return this.getCurrent.recBallot },
+      set (val) { this.update({recBallot: this.recBallot === val ? null : val}) }
+    },
     email: function () { return this.value === 'email' },
     mail: function () { return this.value === 'mail' },
-    fax: function () { return this.value === 'fax' }
+    fax: function () { return this.value === 'fax' },
+    ...mapGetters('requests', ['getCurrent'])
   }
 }
 </script>

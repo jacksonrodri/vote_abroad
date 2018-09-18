@@ -1,6 +1,6 @@
 <template>
   <div class="field">
-    <basic-label :fieldName="fieldName" @toggleInfo="toggleInfo"></basic-label>
+    <vfa-basic-label :fieldName="fieldName" @toggleInfo="toggleInfo"></vfa-basic-label>
     <b-field
       :type="fieldType"
       :message="fieldMessages">
@@ -15,7 +15,7 @@
             </span>
           </button>
         </p>
-        <country-selector
+        <vfa-country-selector
           v-if="countryFocused"
           key="country"
           ref="country"
@@ -23,7 +23,7 @@
           @newCountry="newCountry"
           @blur="countryFocused = false"
           v-model="countryIso"
-          phone></country-selector>
+          phone></vfa-country-selector>
           <!-- :class="countryFocused ? 'wide' : 'shrink'" -->
 
           <!-- v-if="tempValue && tempValue.length > 1" -->
@@ -58,7 +58,7 @@
 <script>
 import { mapState, mapGetters, mapActions } from 'vuex'
 import fieldMixin from '~/mixins/fieldMixin.js'
-import CountrySelector from '~/components/CountrySelector'
+import VfaCountrySelector from '~/components/VfaCountrySelector'
 const { onChange, onCut, onPaste, onKeyDown } = require('input-format/commonjs/input control')
 const DIGITS =
 {
@@ -109,7 +109,7 @@ export default {
   name: 'Tel',
   mixins: [fieldMixin],
   components: {
-    CountrySelector
+    VfaCountrySelector
   },
   data () {
     return {

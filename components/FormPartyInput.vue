@@ -4,8 +4,8 @@
     <span class="is-flex"><label class="label">{{ label }}</label><span @click="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
     <b-field grouped group-multiline :type="type">
       <p class="control" v-for="(party, index) in Object.keys(partyChoices)" :key="index">
-        <a @click="thisValue = thisValue === party ? null : party; isOtherButNoValue = false" :class="[baseClass, {'is-success': partyChoices[party].aliases.indexOf(thisValue ? thisValue.toString().toLowerCase() : '') > -1}]">
-          <b-icon v-if="partyChoices[party].aliases.indexOf(thisValue ? thisValue.toString().toLowerCase() : '') > -1" icon="check"></b-icon>
+        <a @click="() => {selectedParty = (selectedParty === party ? null : party); isOtherButNoValue = false}" :class="[baseClass, {'is-success': partyChoices[party].aliases.indexOf(selectedParty ? selectedParty.toString().toLowerCase() : '') > -1}]">
+          <b-icon v-if="partyChoices[party].aliases.indexOf(selectedParty ? selectedParty.toString().toLowerCase() : '') > -1" icon="check"></b-icon>
           <span>{{$t(`request.party.${party.toLowerCase()}`)}}</span><span v-if="state === 'MN' && party.toLowerCase() === 'democratic'">&nbsp;(DFL)</span><span v-if="state === 'ND' && party.toLowerCase() === 'democratic'">&nbsp;(D-NPL)</span>
         </a>
       </p>
@@ -21,9 +21,9 @@
         <b-input
           :placeholder="$t('request.party.placeholder')"
           type="text"
-          :value="thisValue"
+          :value="selectedParty"
           ref="party"
-          @input="val => {if (val) {isOtherButNoValue = false}; thisValue = val; resetTimer()}"></b-input>
+          @input="val => {if (val) {isOtherButNoValue = false}; selectedParty = val; resetTimer()}"></b-input>
       </b-field>
     </transition>
     <b-message :title="tooltipTitle" type="is-info" has-icon :active.sync="isOpen">
@@ -31,17 +31,17 @@
     </b-message>
   </div>
   <transition name="fade">
-  <div v-if="!$store.state.userauth.user.isDA && ((thisValue && !partyChoices.Republican.aliases.includes(thisValue.toLowerCase())) || isOtherButNoValue || (isOtherButNoValue && thisValue && !partyChoices.Republican.aliases.includes(thisValue.toLowerCase())) || joinValue)" class="field">
+  <div v-if="!$store.state.userauth.user.isDA && ((selectedParty && !partyChoices.Republican.aliases.includes(selectedParty.toLowerCase())) || isOtherButNoValue || (isOtherButNoValue && selectedParty && !partyChoices.Republican.aliases.includes(selectedParty.toLowerCase())) || joinValue)" class="field">
     <span class="is-flex"><label class="label">{{ joinLabel }}</label><span @click="joinToolTipIsOpen = !joinToolTipIsOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
     <b-field grouped group-multiline :type="type">
       <p class="control">
-        <a @click="joinValue = joinValue === true ? null : true; isExistingDaMember = false" :class="[baseClass, {'is-success': joinValue === true}]">
+        <a @click="() => {joinValue = (joinValue === true ? null : true); isExistingDaMember = false}" :class="[baseClass, {'is-success': joinValue === true}]">
           <b-icon v-if="joinValue === true" icon="check"></b-icon>
           <span>{{$t('request.joinDa.yes')}}</span>
         </a>
       </p>
       <p class="control">
-        <a @click="joinValue = joinValue === false? null : false; isExistingDaMember = false" :class="[baseClass, {'is-success': joinValue === false}]">
+        <a @click="() => {joinValue = (joinValue === false ? null : false); isExistingDaMember = false}" :class="[baseClass, {'is-success': joinValue === false}]">
           <b-icon v-if="joinValue === false" icon="check"></b-icon>
           <span>{{$t('request.joinDa.no')}}</span>
         </a>
@@ -61,17 +61,20 @@
         :label="$t('request.joinDa.accountEmail', {email: email || $t('request.joinDa.currentEmail')})"
         :type="$v.$error ? 'is-danger' : ''"
         :message="$v.$error ? $t('request.joinDa.messages.email') : ''">
-        <a @click.prevent="$el.querySelector('input').focus()"
-          :class="['button', 'is-static', 'control']">
-          <b-icon
-            pack="fas"
-            icon="at">
-          </b-icon>
-        </a>
-        <b-input type="email"
-          v-model="daEmailGetter"
-          @input="(val) => joinValue = val">
-        </b-input>
+        <b-field>
+          <a @click.prevent="$el.querySelector('input').focus()"
+            :class="['button', 'is-static', 'control']">
+            <b-icon
+              pack="fas"
+              icon="at">
+            </b-icon>
+          </a>
+          <b-input type="email"
+            v-model="daEmailGetter"
+            expanded
+            @input="(val) => joinValue = val">
+          </b-input>
+        </b-field>
       </b-field>
     </transition>
     <b-message :title="joinTooltipTitle" type="is-info" has-icon :active.sync="joinToolTipIsOpen">
@@ -85,6 +88,7 @@
 
 <script>
 import { email } from 'vuelidate/lib/validators'
+import { mapGetters } from 'vuex'
 
 export default {
   props: [
@@ -120,34 +124,47 @@ export default {
     }
   },
   computed: {
-    thisValue: {
-      get () { return this.value },
+    // thisValue: {
+    //   get () { return this.value },
+    //   set (value) {
+    //     if (value === 'Republican') this.$store.commit('requests/update', {joinDa: null})
+    //     this.$emit('input', value)
+    //   }
+    // },
+    selectedParty: {
+      get () { return this.getCurrent.party },
       set (value) {
         if (value === 'Republican') this.$store.commit('requests/update', {joinDa: null})
-        this.$emit('input', value)
+        this.$store.commit('requests/update', {party: value})
       }
     },
-    email () { return this.$store.getters['requests/getCurrent'].email },
+    email () { return this.getCurrent.email },
     daEmailGetter: {
       get () { return this.daEmail || (this.joinValue && this.joinValue !== true && this.joinValue !== false && this.joinValue !== 'already a member' && this.joinValue !== 'true' && this.joinValue !== 'false') ? this.joinValue : '' },
       set (value) { this.daEmail = value }
     },
     joinValue: {
-      get () { return this.join },
-      set (value) { this.$emit('joinDA', value) }
+      get () {
+        return this.getCurrent.joinDa
+        // return this.join
+      },
+      set (value) {
+        // this.$emit('joinDA', value)
+        this.$store.commit('requests/update', {joinDa: value})
+      }
     },
     isOther: {
-      get () { return Boolean((Object.keys(this.partyChoices).map(x => this.partyChoices[x].aliases).reduce((a, b) => a.concat(b), [])).indexOf(this.thisValue ? this.thisValue.toString().toLowerCase() : '') === -1 && (this.thisValue || this.isOtherButNoValue)) }
+      get () { return Boolean((Object.keys(this.partyChoices).map(x => this.partyChoices[x].aliases).reduce((a, b) => a.concat(b), [])).indexOf(this.selectedParty ? this.selectedParty.toString().toLowerCase() : '') === -1 && (this.selectedParty || this.isOtherButNoValue)) }
     },
-    fromStore () { return this.$store.getters['requests/getCurrent'].party },
-    elapsedTime () { return this.currentTime - this.setTime }
+    elapsedTime () { return this.currentTime - this.setTime },
+    ...mapGetters('requests', ['getCurrent'])
   },
   methods: {
     resetTimer () {
       this.setTime = Math.trunc((new Date()).getTime() / 1000)
     },
     selectOther (value) {
-      this.thisValue = ''
+      this.selectedParty = ''
       this.isOtherButNoValue = value
     }
   },

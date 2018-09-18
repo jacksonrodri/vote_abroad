@@ -5,7 +5,7 @@
         :message="!isCivilianType && !isMilitaryType  && validations.$error ? $t(`request.voterClass.messages.typeRequired`) : ''">
         <b-field grouped group-multiline>
           <p class="control">
-            <button @click.prevent="setVal('civilianType')" :class="[baseClass, {'is-success': isCivilianType}]">
+            <button @click.prevent="voterClass = 'civilianType'" :class="[baseClass, {'is-success': isCivilianType}]">
               <span v-show="isCivilianType" class="icon is-small">
                 <i class="fas fa-check"></i>
               </span>
@@ -15,7 +15,7 @@
             </button>
           </p>
           <p class="control">
-            <button @click.prevent="setVal('militaryType')" :class="[baseClass, {'is-success': isMilitaryType}]">
+            <button @click.prevent="voterClass = 'militaryType'" :class="[baseClass, {'is-success': isMilitaryType}]">
               <span v-show="isMilitaryType" class="icon is-small">
                 <i class="fas fa-check"></i>
               </span>
@@ -41,7 +41,7 @@
       <!-- <b-field disabled :label="isMilitaryType ? 'What type of military voter are you?' : 'Which best describes you?'"> -->
         <b-field grouped group-multiline>
           <p class="control" v-show="isMilitaryType">
-            <button @click.prevent="setVal('military')" :class="[baseClass, {'is-success': isMilitary}]">
+            <button @click.prevent="voterClass = 'military'" :class="[baseClass, {'is-success': isMilitary}]">
               <span v-show="isMilitary" class="icon is-small">
                 <i class="fas fa-check"></i>
               </span>
@@ -51,7 +51,7 @@
             </button>
           </p>
           <p class="control" v-show="isMilitaryType">
-            <button @click.prevent="setVal('milSpouse')" :class="[baseClass, {'is-success': isMilSpouse}]">
+            <button @click.prevent="voterClass = 'milSpouse'" :class="[baseClass, {'is-success': isMilSpouse}]">
               <span v-show="isMilSpouse" class="icon is-small">
                 <i class="fas fa-check"></i>
               </span>
@@ -61,7 +61,7 @@
             </button>
           </p>
           <p class="control" v-show="isMilitaryType">
-            <button @click.prevent="setVal('natGuard')" :class="[baseClass, {'is-success': isNatGuard}]">
+            <button @click.prevent="voterClass = 'natGuard'" :class="[baseClass, {'is-success': isNatGuard}]">
               <span v-show="isNatGuard" class="icon is-small">
                 <i class="fas fa-check"></i>
               </span>
@@ -71,7 +71,7 @@
             </button>
           </p>
           <p class="control" v-show="!isMilitaryType">
-            <button @click.prevent="setVal('uncertainReturn')" :class="[baseClass, {'is-success': isUncertainReturn}]">
+            <button @click.prevent="voterClass = 'uncertainReturn'" :class="[baseClass, {'is-success': isUncertainReturn}]">
               <span v-show="isUncertainReturn" class="icon is-small">
                 <i class="fas fa-check"></i>
               </span>
@@ -81,7 +81,7 @@
             </button>
           </p>
           <p class="control" v-show="!isMilitaryType">
-            <button @click.prevent="setVal('intendToReturn')" :class="[baseClass, {'is-success': isIntendToReturn}]">
+            <button @click.prevent="voterClass = 'intendToReturn'" :class="[baseClass, {'is-success': isIntendToReturn}]">
               <span v-show="isIntendToReturn" class="icon is-small">
                 <i class="fas fa-check"></i>
               </span>
@@ -91,7 +91,7 @@
             </button>
           </p>
           <p class="control" v-show="!isMilitaryType" v-if="allowsNeverResided">
-            <button @click.prevent="setVal('neverResided')" :class="[baseClass, {'is-success': isNeverResided}]">
+            <button @click.prevent="voterClass = 'neverResided'" :class="[baseClass, {'is-success': isNeverResided}]">
               <span v-show="isNeverResided" class="icon is-small">
                 <i class="fas fa-check"></i>
               </span>
@@ -110,6 +110,7 @@
 </template>
 
 <script>
+import { mapGetters, mapMutations } from 'vuex'
 export default {
   name: 'Voter-Class',
   props: [
@@ -132,32 +133,35 @@ export default {
     }
   },
   methods: {
-    setVal: function (val) {
-      // console.log('val', val)
-      if (val === 'civilianType' || val === 'militaryType') {
-        this.milOrCiv = val
-        this.$emit('input', '')
-      } else {
-        this.$emit('input', val)
-      }
-    }
+    ...mapMutations('requests', ['update'])
   },
   computed: {
+    voterClass: {
+      get () { return this.getCurrent.voterClass },
+      set (val) {
+        if (/civilianType|militaryType/.test(val)) {
+          this.milOrCiv = val
+          this.$emit('delayTouch')
+          this.update({voterClass: ''})
+        } else this.update({voterClass: val})
+      }
+    },
     isMilitaryType: function () { return this.isMilitary || this.isMilSpouse || this.isNatGuard || this.milOrCiv === 'militaryType' },
     isCivilianType: function () { return this.isUncertainReturn || this.isIntendToReturn || this.isNeverResided || this.milOrCiv === 'civilianType' },
-    isMilitary: function () { return this.value === 'military' },
-    isMilSpouse: function () { return this.value === 'milSpouse' },
-    isNatGuard: function () { return this.value === 'natGuard' },
-    isUncertainReturn: function () { return this.value === 'uncertainReturn' },
-    isIntendToReturn: function () { return this.value === 'intendToReturn' },
+    isMilitary: function () { return this.voterClass === 'military' },
+    isMilSpouse: function () { return this.voterClass === 'milSpouse' },
+    isNatGuard: function () { return this.voterClass === 'natGuard' },
+    isUncertainReturn: function () { return this.voterClass === 'uncertainReturn' },
+    isIntendToReturn: function () { return this.voterClass === 'intendToReturn' },
     isNeverResided: function () {
-      return this.allowsNeverResided ? this.value === 'neverResided' : ''
-    }
+      return this.allowsNeverResided ? this.voterClass === 'neverResided' : ''
+    },
+    ...mapGetters('requests', ['getCurrent'])
   },
   watch: {
-    value: function (newVal, oldVal) {
+    voterClass: function (newVal, oldVal) {
       if (this.state && this.state === 'VA' && newVal && newVal !== 'uncertainReturn') {
-        this.$store.commit('requests/update', {
+        this.update({
           stateSpecial: null
         })
       }

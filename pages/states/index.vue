@@ -1,7 +1,6 @@
 <template>
 <div class="columns is-centered is-multiline">
 <div class="column is-10 is-8-desktop is-7-widescreen is-6-fullhd is-paddingless">
-  <!-- <h1 class="title">Voting from abroad in your State</h1> -->
   <h1 class="title">
     {{ page.title }}
   </h1>

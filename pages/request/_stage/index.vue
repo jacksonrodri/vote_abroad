@@ -26,7 +26,7 @@
           <b-input
             v-model="middleName"
             id="middleName"
-            @input="$v.middleName.$touch()"
+            @input="delayTouch($v.middleName)"
             autocomplete="additional-name"
             :maxlength="(middleName && !$v.middleName.$dirty) || $v.middleName.$error || (middleName && middleName.length > 44) ? 50 : ''"></b-input>
         </b-field>
@@ -58,7 +58,7 @@
         </b-field>
       </div>
 
-      <previous-name v-model="previousName"
+      <form-previous-name-input v-model="previousName"
         :type="($v.previousName.$error ? 'is-danger': '')"
         :message="$v.previousName.$error ? Object.keys($v.previousName.previousName.$params).map(x => x) : '' "
         :label="$t('request.previousName.label')"
@@ -68,28 +68,28 @@
         <div slot="tooltip">
           {{$t('request.previousName.tooltip')}}
         </div>
-      </previous-name>
+      </form-previous-name-input>
 
-      <tel-two
+      <form-phone-input
         ref="tel"
         key="tel"
         fieldName="tel"
         :v="$v.tel"
-        @delayTouch="delayTouch($v.tel)"></tel-two>
+        @delayTouch="delayTouch($v.tel)"></form-phone-input>
 
-      <email-input
+      <form-email-input
         ref="email"
         key="email"
         fieldName="email"
         :v="$v.email"
-        @delayTouch="delayTouch($v.email)"></email-input>
+        @delayTouch="delayTouch($v.email)"></form-email-input>
 
-      <address-five
+      <form-international-address-input
         ref="abrAdr"
         key="abrAdr"
         fieldName="abrAdr"
         :v="$v.abrAdr"
-        @delayTouch="(val) => addressDelayTouch('abrAdr', val)"></address-five>
+        @delayTouch="(val) => addressDelayTouch('abrAdr', val)"></form-international-address-input>
         <!-- @delayTouch="(val) => delayTouch($v.abrAdr[val])" -->
     <section >
         <nuxt-link :to="localePath({ name: 'index' })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>{{$t('request.stages.back')}}</span></nuxt-link>
@@ -103,7 +103,7 @@
   <section v-if="stage.slug === 'voting-information'">
     <form id="voting-information" key="voting-information">
 
-      <voting-address
+      <form-voting-address-input
         :label="$t('request.votAdr.label')"
         :validations=$v.votAdr
         ref="votAdr"
@@ -111,14 +111,14 @@
         :toolTipTitle="$t('request.votAdr.tooltipTitle')">
         <!-- @input="delayTouch($v.votAdr)" -->
         <div slot="instructions">
-          <p v-html="$options.filters.markdown($t('request.votAdr.instructions'))"></p>
+          <p v-html="md($t('request.votAdr.instructions'))"></p>
         </div>
         <div slot="tooltip">
-          <p v-html="$options.filters.markdown($t('request.votAdr.tooltip'))"></p>
+          <p v-html="md($t('request.votAdr.tooltip'))"></p>
         </div>
-      </voting-address>
+      </form-voting-address-input>
 
-      <jurisdiction v-if="votAdr && votAdr.S"
+      <form-jurisdiction-input v-if="votAdr && votAdr.S"
         :label="$t('request.jurisdiction.label')"
         :toolTipTitle="$t('request.jurisdiction.tooltipTitle')"
         :placeholder="$t('request.jurisdiction.placeholder')"
@@ -132,34 +132,36 @@
           <p>{{$t('request.jurisdiction.instructions')}}</p>
         </div>
         <div slot="tooltip">
-          <p v-html="$options.filters.markdown($t('request.jurisdiction.tooltip'))"></p>
+          <p v-html="md($t('request.jurisdiction.tooltip'))"></p>
         </div>
-      </jurisdiction>
+      </form-jurisdiction-input>
 
-    <voter-class v-model="voterClass"
+    <form-voter-class-radio-button v-model="voterClass"
       :allowsNeverResided="stateRules ? stateRules.allowsNeverResided : false"
       :validations="($v.voterClass)"
       ref="voterClass"
       :state="votAdr && votAdr.S ? this.votAdr.S : null"
-      @input="delayTouch($v.voterClass)"
+      @delayTouch="delayTouch($v.voterClass)"
       :toolTipTitle="$t('request.voterClass.tooltipTitle')">
       <div slot="tooltip">
-        <p v-html="$options.filters.markdown($t('request.voterClass.tooltip'))"></p>
+        <p v-html="md($t('request.voterClass.tooltip'))"></p>
       </div>
-    </voter-class>
+    </form-voter-class-radio-button>
+
+      <!-- @input="delayTouch($v.voterClass)" -->
 
       <!-- isRegistered -->
-    <is-registered
+    <form-is-voter-registered-radio-button
       v-if="votAdr && jurisdiction && jurisdiction.j && jurisdiction.t"
       :label="$t('request.isRegistered.label', {jurisdiction: jurisdiction.t === 'All' ? jurisdiction.s : `${jurisdiction.j} ${jurisdiction.j.includes(jurisdiction.t) ? '' : jurisdiction.t}`})"
       :validations="($v.isRegistered)"
       @input="delayTouch($v.isRegistered)"
       ref="isRegistered"
       v-model="isRegistered">
-    </is-registered>
+    </form-is-voter-registered-radio-button>
 
     <!-- recBallot -->
-    <receive-ballot v-model="recBallot"
+    <form-receive-ballot-radio-button v-model="recBallot"
       v-if="votAdr && votAdr.S"
       :label="$t('request.receiveBallot.label')"
       :validations="$v.recBallot"
@@ -168,44 +170,44 @@
       :ballotReceiptOptions="stateRules ? stateRules.ballotReceiptOptions : ['Mail']"
       :toolTipTitle="$t('request.receiveBallot.tooltipTitle')">
       <div slot="tooltip">
-        <p v-html="$options.filters.markdown($t('request.receiveBallot.tooltip'))"></p>
+        <p v-html="md($t('request.receiveBallot.tooltip'))"></p>
       </div>
-    </receive-ballot>
+    </form-receive-ballot-radio-button>
 
-    <tel-two
+    <form-phone-input
       v-if="recBallot === 'fax' || fax"
       ref="fax"
       key="fax"
       fieldName="fax"
       :v="$v.fax"
-      @delayTouch="delayTouch($v.fax)"></tel-two>
+      @delayTouch="delayTouch($v.fax)"></form-phone-input>
 
     <!-- altEmail -->
-    <email-input v-if="recBallot === 'email' && (email === null || skippedEmail || $v.email.$error)"
+    <form-email-input v-if="recBallot === 'email' && (email === null || skippedEmail || $v.email.$error)"
       ref="email"
       key="email"
       @input="skippedEmail = true"
       fieldName="email"
       :v="$v.email"
-      @delayTouch="delayTouch($v.email)"></email-input>
+      @delayTouch="delayTouch($v.email)"></form-email-input>
 
-    <email-input v-if="recBallot === 'email' || altEmail"
+    <form-email-input v-if="recBallot === 'email' || altEmail"
       ref="altEmail"
       key="altEmail"
       fieldName="altEmail"
       :v="$v.altEmail"
-      @delayTouch="delayTouch($v.altEmail)"></email-input>
+      @delayTouch="delayTouch($v.altEmail)"></form-email-input>
 
       <!-- fwdAdr -->
-      <address-five
+      <form-international-address-input
         v-if="recBallot === 'mail' || (fwdAdr && (fwdAdr.alt1 || fwdAdr.A))"
         ref="fwdAdr"
         key="fwdAdr"
         fieldName="fwdAdr"
         :v="$v.fwdAdr"
-        @delayTouch="(val) => delayTouch($v.fwdAdr[val])"></address-five>
+        @delayTouch="(val) => delayTouch($v.fwdAdr[val])"></form-international-address-input>
 
-    <scroll-up :key="$route.params.stage"></scroll-up>
+    <vfa-scroll-up :key="$route.params.stage"></vfa-scroll-up>
 
     <section >
         <nuxt-link ref="next1" :to="localePath({ name: 'request-stage', params: { stage: 'your-information'} })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>{{$t('request.stages.back')}}</span></nuxt-link>
@@ -220,18 +222,18 @@
 <!-- identity and Contact information -->
       <!-- dob -->
 
-      <date-of-birth v-model="dob"
+      <form-date-of-birth-input v-model="dob"
         :tooltipTitle="$t('request.dob.tooltipTitle')"
         @input="delayTouch($v.dob)"
         ref="dob"
         :v="$v.dob">
         <div slot="tooltip">
-          <p v-html="$options.filters.markdown($t('request.dob.tooltip'))"></p>
+          <p v-html="md($t('request.dob.tooltip'))"></p>
         </div>
-      </date-of-birth>
+      </form-date-of-birth-input>
 
       <!-- gender -->
-      <gender
+      <form-gender-radio-button
         :label="$t('request.sex.label')"
         ref="sex"
         :state="votAdr.S"
@@ -239,43 +241,43 @@
         v-model="sex"
         :validations="$v.sex">
         <div slot="tooltip">
-          <p v-html="$options.filters.markdown($t('request.sex.tooltip'))"></p>
+          <p v-html="md($t('request.sex.tooltip'))"></p>
         </div>
-      </gender>
+      </form-gender-radio-button>
 
       <!-- party -->
-      <party
+      <form-party-input
         :label="$t('request.party.label')"
         v-model="party"
         :join="joinDa"
         :state="votAdr.S"
-        @joinDA="val => joinDa = val"
         :tooltipTitle="$t('request.party.tooltipTitle')"
         :joinTooltipTitle="$t('request.joinDa.tooltipTitle')"
         :joinLabel="$t('request.joinDa.label')"
         :message="$v.party.$error ? Object.keys($v.party.$params).map(x => x) : '' "
         :type="($v.party.$error ? 'is-danger': '')">
+
+        <!-- @joinDA="val => joinDa = val" -->
         <div slot="tooltip">
-          <p v-html="$options.filters.markdown($t('request.party.tooltip'))"></p>
+          <p v-html="md($t('request.party.tooltip'))"></p>
         </div>
         <div slot="joinTooltip">
-          <p v-html="$options.filters.markdown($t('request.joinDa.tooltip'))"></p>
+          <p v-html="md($t('request.joinDa.tooltip'))"></p>
         </div>
-      </party>
+      </form-party-input>
 
-      <state-special
+      <form-state-special-input
         :label="$t('request.stateSpecial.label', {state: stateRules && stateRules.title ? stateRules.title : $t('request.stateSpecial.state')})"
         v-model="stateSpecial"
         :state="votAdr && votAdr.S ? votAdr.S : ''"
-        :isFWAB="isFWAB"
         :isIndNoParty="party && (party.toLowerCase() === 'republican' || party.toLowerCase() === 'rep' || party.toLowerCase() === 'democrat' || party.toLowerCase() === 'dem') ? false : true"
         :isReturnUncertain="Boolean(voterClass === 'uncertainReturn')"
         :isRegistering="Boolean(isRegistered === 'notRegistered' || isRegistered === 'unsure')">
-      </state-special>
+      </form-state-special-input>
 
       <!-- identification -->
 
-      <id-input
+      <form-identification-input
         v-if="stateRules"
         :label="$t('request.id.label')"
         :idOptions="idOptions"
@@ -286,35 +288,27 @@
         v-model="identification">
         <div slot="instructions">
           <p v-if="!idOptions || idOptions.length === 0"
-            v-html="$options.filters.markdown($t('request.id.instructionsOptional', { state: stateRules.title}))">
+            v-html="md($t('request.id.instructionsOptional', { state: stateRules.title}))">
           </p>
           <p v-else-if="idOptions.length === 1"
-            v-html="$options.filters.markdown($t('request.id.instructionsReq1', { state: stateRules.title, id: $t(`request.id.${idOptions[0]}`), idType: $t(`request.id.${idOptions[0].includes('SSN') ? 'SSN' : idOptions[0]}`)}))">
+            v-html="md($t('request.id.instructionsReq1', { state: stateRules.title, id: $t(`request.id.${idOptions[0]}`), idType: $t(`request.id.${idOptions[0].includes('SSN') ? 'SSN' : idOptions[0]}`)}))">
           </p>
-          <p v-else v-html="$options.filters.markdown($t('request.id.instructionsReq2', { state: stateRules.title, allButLastTypes: allButLastIdType, lastType: lastIdType }))">
+          <p v-else v-html="md($t('request.id.instructionsReq2', { state: stateRules.title, allButLastTypes: allButLastIdType, lastType: lastIdType }))">
           </p>
         </div>
         <div slot="tooltip">
           <p v-if="stateRules && stateRules.id && stateRules.id.length === 0"
-            v-html="$options.filters.markdown($t('request.id.tooltipOptional', { state: stateRules.title}))">
+            v-html="md($t('request.id.tooltipOptional', { state: stateRules.title}))">
           </p>
           <p v-else-if="stateRules && stateRules.id && stateRules.id.length === 1"
-            v-html="$options.filters.markdown($t('request.id.tooltipReq1', { state: stateRules.title, id: $t(`request.id.${stateRules.id[0]}`)}))">
+            v-html="md($t('request.id.tooltipReq1', { state: stateRules.title, id: $t(`request.id.${stateRules.id[0]}`)}))">
           </p>
-          <p v-else v-html="$options.filters.markdown($t('request.id.tooltipReq2', { state: stateRules.title, allButLastTypes: allButLastIdType, lastType: lastIdType }))">
+          <p v-else v-html="md($t('request.id.tooltipReq2', { state: stateRules.title, allButLastTypes: allButLastIdType, lastType: lastIdType }))">
           </p>
         </div>
-      </id-input>
+      </form-identification-input>
 
-      <!-- fwabRequest -->
-      <!-- <b-field :type="($v.fwabRequest.$error ? 'is-danger': '')"
-        :message="$v.fwabRequest.$error ? Object.keys($v.fwabRequest.$params).map(x => x) : '' "
-        label="Do you want to register and request a ballot for all elections you are eligile to vote in?"
-        v-if="isFwab">
-        <b-input v-model="fwabRequest" @input="$v.fwabRequest.$touch()"></b-input>
-      </b-field> -->
-
-      <scroll-up :key="$route.params.stage"></scroll-up>
+      <vfa-scroll-up :key="$route.params.stage"></vfa-scroll-up>
     <section >
       <nuxt-link :to="localePath({ name: 'request-stage', params: { stage: 'voting-information'} })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>{{$t('request.stages.back')}}</span></nuxt-link>
       <a @click="focusFirstErrorOrAdvance(localePath({ name: 'request-review' }))" class="button is-primary is-medium is-pulled-right" exact ><span> {{$t('request.stages.next')}} </span><b-icon pack="fas" icon="caret-right"></b-icon></a>
@@ -327,23 +321,23 @@
 
 <script>
 import { required, requiredIf, maxLength, helpers, email } from 'vuelidate/lib/validators'
-import Jurisdiction from '~/components/Jurisdiction'
-import VotingAddress from '~/components/VotingAddress'
-import VoterClass from '~/components/VoterClass'
-import IsRegistered from '~/components/IsRegistered'
-import ReceiveBallot from '~/components/ReceiveBallot'
-import DateOfBirth from '~/components/DateOfBirth'
-import Party from '~/components/Party'
-import PreviousName from '~/components/PreviousName'
-import Gender from '~/components/Gender'
-import StateSpecial from '~/components/StateSpecial'
-import ScrollUp from '~/components/ScrollUp'
-import EmailInput from '~/components/EmailInput'
-import TelTwo from '~/components/TelTwo'
-import AddressFive from '~/components/AddressFive'
-import IdInput from '~/components/IdInput'
+import FormPreviousNameInput from '~/components/FormPreviousNameInput'
+import FormPhoneInput from '~/components/FormPhoneInput'
+import FormEmailInput from '~/components/FormEmailInput'
+import FormInternationalAddressInput from '~/components/FormInternationalAddressInput'
+import FormVotingAddressInput from '~/components/FormVotingAddressInput'
+import FormJurisdictionInput from '~/components/FormJurisdictionInput'
+import FormVoterClassRadioButton from '~/components/FormVoterClassRadioButton'
+import FormIsVoterRegisteredRadioButton from '~/components/FormIsVoterRegisteredRadioButton'
+import FormReceiveBallotRadioButton from '~/components/FormReceiveBallotRadioButton'
+import FormDateOfBirthInput from '~/components/FormDateOfBirthInput'
+import FormGenderRadioButton from '~/components/FormGenderRadioButton'
+import FormPartyInput from '~/components/FormPartyInput'
+import FormStateSpecialInput from '~/components/FormStateSpecialInput'
+import FormIdentificationInput from '~/components/FormIdentificationInput'
+import VfaScrollUp from '~/components/VfaScrollUp'
 import snarkdown from 'snarkdown'
-import { mapGetters, mapState } from 'vuex'
+import { mapGetters, mapState, mapMutations } from 'vuex'
 
 const optionalEmail = (value) => !helpers.req(value) || email(value)
 // const usZip = helpers.regex('usZip', /^(\d{5})(?:[ -](\d{4}))?$/)
@@ -351,12 +345,11 @@ const usZip = (state) =>
   helpers.withParams(
     { type: 'usZip', value: state },
     function (value, model) {
-      console.log('usZip', value, model, this)
       const genericZipRegex = /^(\d{5})(?:[ -](\d{4}))?$/
-      if (!model.S && !state && !this.postal.US) {
+      if (!state || !this.postal.US) {
         return genericZipRegex.test(value)
       } else {
-        let stateZipRegex = new RegExp(this.postal.US['sub_zips'].split('~')[this.postal.US['sub_keys'].split('~').findIndex(x => x === (model.S || state))])
+        let stateZipRegex = new RegExp(this.postal.US['sub_zips'].split('~')[this.postal.US['sub_keys'].split('~').findIndex(x => x === state)])
         return genericZipRegex.test(value) && stateZipRegex.test(value)
       }
     }
@@ -378,10 +371,11 @@ const fullLengthSsn = (idOpts) =>
       return !helpers.req(value) || value.replace(/\D/g, '').length === 9
     }
   )
-const addressPartRequired = (addressPart) =>
+const addressPartRequired = (addressPart, addressType) =>
   helpers.withParams(
     { type: 'addressPartRequired', value: addressPart },
     function (value, model) {
+      if (addressType === 'fwdAdr' && (!model || !model.A)) return true
       if (!model.countryiso) return true
       let regexp = new RegExp(addressPart)
       if (this.postal[model.countryiso]) return value || !regexp.test(this.postal[model.countryiso].require)
@@ -415,196 +409,32 @@ export default {
   },
   data () {
     return {
-      code: null,
-      pendingVerification: null,
-      type: 'email',
-      emailOrPhoneLink: null,
-      createdAt: '',
-      updatedAt: '',
-      createdBy: '',
-      emailOrPhone: '',
-      // localDob: null,
-      // localDate: null,
-      fwabRequest: '',
-      isFwab: false,
-      isOpen: false,
-      phoneTwo: '',
-      phoneFour: '',
-      // joinDa: null,
-      prty: '',
-      phoneEmailTest: {},
-      phoneTest: {},
       skippedEmail: false
     }
   },
   components: {
-    VotingAddress,
-    Jurisdiction,
-    VoterClass,
-    IsRegistered,
-    ReceiveBallot,
-    DateOfBirth,
-    Party,
-    PreviousName,
-    Gender,
-    StateSpecial,
-    ScrollUp,
-    IdInput,
-    EmailInput,
-    TelTwo,
-    AddressFive
-  },
-  provide () {
-    return {
-      validations: this.$v,
-      dTouch: this.delayTouch
-    }
-    // const validations = {}
-    // Object.keys(this.$v).forEach(key => {
-    //   Object.defineProperty(validations, key, {
-    //     enumerable: true,
-    //     get: () => this.$v[key]
-    //   })
-    // })
-    // Object.defineProperty(validations, 'delayTouch', {
-    //   enumerable: true,
-    //   get: () => this.delayTouch
-    // })
-    // return { validations }
+    FormPreviousNameInput,
+    FormEmailInput,
+    FormPhoneInput,
+    FormInternationalAddressInput,
+    FormVotingAddressInput,
+    FormJurisdictionInput,
+    FormVoterClassRadioButton,
+    FormIsVoterRegisteredRadioButton,
+    FormReceiveBallotRadioButton,
+    FormDateOfBirthInput,
+    FormGenderRadioButton,
+    FormPartyInput,
+    FormStateSpecialInput,
+    FormIdentificationInput,
+    VfaScrollUp
   },
   computed: {
-    newVoterDeadlineLanguageObject () {
-      let elections = this.getCurrentDeadlines.filter(x => x.ruleType === 'Registration')
-      let rule = elections[0].rule
-      let deadline = new Date(elections[0].ruleDate)
-      let methods = elections.length < 2 || elections[0].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.submissionMethod`, {method: elections[0].submissionOptions.join('/')})
-      let altMethods = elections.length < 2 || elections[1].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.alternateSubmissionMethod`, {rule: this.$t(`request.deadlineLanguage.${elections[1].rule}`), deadline: new Date(elections[1].ruleDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric', timeZone: 'UTC'}), method: elections[1].submissionOptions.join('/')})
-      return {
-        rule: this.$t(`request.deadlineLanguage.${rule}`),
-        deadline: deadline.toLocaleDateString('en-US', {month: 'short', day: 'numeric', timeZone: 'UTC'}),
-        submissionMethod: methods,
-        alternateSubmissionMethod: altMethods,
-        electionDay: new Date(elections[0].electionDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric', timeZone: 'UTC'}),
-        electionType: elections[0].electionType,
-        note: elections[0].note || '',
-        url: process.env.url,
-        state: elections[0].state
-      }
-    },
-    registeredVoterDeadlineObject () {
-      let elections = this.getCurrentDeadlines.filter(x => x.ruleType === 'Ballot Request')
-      let rule = elections[0].rule
-      let deadline = new Date(elections[0].ruleDate)
-      let methods = elections.length < 2 || elections[0].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.submissionMethod`, {method: elections[0].submissionOptions.join('/')})
-      let altMethods = elections.length < 2 || elections[1].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.alternateSubmissionMethod`, {rule: this.$t(`request.deadlineLanguage.${elections[1].rule}`), deadline: new Date(elections[1].ruleDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric', timeZone: 'UTC'}), method: elections[1].submissionOptions.join('/')})
-      return {
-        rule: this.$t(`request.deadlineLanguage.${rule}`),
-        deadline: deadline.toLocaleDateString('en-US', {month: 'short', day: 'numeric', timeZone: 'UTC'}),
-        submissionMethod: methods,
-        alternateSubmissionMethod: altMethods,
-        electionDay: new Date(elections[0].electionDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric', timeZone: 'UTC'}),
-        electionType: elections[0].electionType,
-        note: elections[0].note || '',
-        url: process.env.url,
-        state: elections[0].state
-      }
-    },
-    unsureVoterDeadlineObject () {
-      let electionsNew = this.getCurrentDeadlines.filter(x => x.ruleType === 'Ballot Request')
-      let newVoterRule = electionsNew[0].rule
-      let newVoterDeadline = new Date(electionsNew[0].ruleDate)
-      let newVoterMethods = electionsNew.length < 2 || electionsNew[0].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.submissionMethod`, {method: electionsNew[0].submissionOptions.join('/')})
-      let newVoterAltMethods = electionsNew.length < 2 || electionsNew[1].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.alternateSubmissionMethod`, {rule: this.$t(`request.deadlineLanguage.${electionsNew[1].rule}`), deadline: new Date(electionsNew[1].ruleDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric', timeZone: 'UTC'}), method: electionsNew[1].submissionOptions.join('/')})
-      let electionsRegistered = this.getCurrentDeadlines.filter(x => x.ruleType === 'Ballot Request')
-      let registeredVoterRule = electionsRegistered[0].rule
-      let registeredVoterDeadline = new Date(electionsRegistered[0].ruleDate)
-      let registeredVoterMethods = electionsRegistered.length < 2 || electionsRegistered[0].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.submissionMethod`, {method: electionsRegistered[0].submissionOptions.join('/')})
-      let registeredVoterAltMethods = electionsRegistered.length < 2 || electionsRegistered[1].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.alternateSubmissionMethod`, {rule: this.$t(`request.deadlineLanguage.${electionsRegistered[1].rule}`), deadline: new Date(electionsRegistered[1].ruleDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric', timeZone: 'UTC'}), method: electionsRegistered[1].submissionOptions.join('/')})
-      return {
-        newVoterRule: this.$t(`request.deadlineLanguage.${newVoterRule}`),
-        newVoterDeadline: newVoterDeadline.toLocaleDateString('en-US', {month: 'short', day: 'numeric', timeZone: 'UTC'}),
-        newVoterSubmissionMethod: newVoterMethods,
-        newVoterAlternateSubmissionMethod: newVoterAltMethods,
-        newVoterElectionDay: new Date(electionsNew[0].electionDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric', timeZone: 'UTC'}),
-        newVoterElectionType: electionsNew[0].electionType,
-        newVoterNote: electionsNew[0].note || '',
-        registeredVoterRule: this.$t(`request.deadlineLanguage.${registeredVoterRule}`),
-        registeredVoterDeadline: registeredVoterDeadline.toLocaleDateString('en-US', {month: 'short', day: 'numeric', timeZone: 'UTC'}),
-        registeredVoterSubmissionMethod: registeredVoterMethods,
-        registeredVoterAlternateSubmissionMethod: registeredVoterAltMethods,
-        registeredVoterElectionDay: new Date(electionsRegistered[0].electionDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric', timeZone: 'UTC'}),
-        registeredVoterElectionType: electionsRegistered[0].electionType,
-        registeredVoterNote: electionsRegistered[0].note || '',
-        url: process.env.url,
-        state: electionsNew[0].state
-      }
-    },
-    ballotReturnDeadlineObject () {
-      let elections = this.getCurrentDeadlines.filter(x => x.ruleType === 'Ballot Return')
-      let rule = elections[0].rule
-      let deadline = new Date(elections[0].ruleDate)
-      let methods = elections.length < 2 || elections[0].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.submissionMethod`, {method: elections[0].submissionOptions.join('/')})
-      let altMethods = elections.length < 2 || elections[1].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.alternateSubmissionMethod`, {rule: this.$t(`request.deadlineLanguage.${elections[1].rule}`), deadline: new Date(elections[1].ruleDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric', timeZone: 'UTC'}), method: elections[1].submissionOptions.join('/')})
-      return {
-        rule: this.$t(`request.deadlineLanguage.${rule}`),
-        deadline: deadline.toLocaleDateString('en-US', {month: 'short', day: 'numeric', timeZone: 'UTC'}),
-        submissionMethod: methods,
-        alternateSubmissionMethod: altMethods,
-        electionDay: new Date(elections[0].electionDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric', timeZone: 'UTC'}),
-        electionType: elections[0].electionType,
-        note: elections[0].note || '',
-        url: process.env.url,
-        state: elections[0].state
-      }
-    },
-    deadlineLanguage () {
-      switch (this.isRegistered) {
-        case 'notRegistered':
-          return this.$t('request.deadlineLanguage.newVoters', this.newVoterDeadlineLanguageObject)
-        case 'registered':
-          return this.$t('request.deadlineLanguage.registeredVoters', this.registeredVoterDeadlineObject)
-        default:
-          return this.$t('request.deadlineLanguage.unsureRegistrationVoters', this.unsureVoterDeadlineObject)
-      }
-    },
-    deadlineFormSubmitted () {
-      return this.$t('request.deadlineLanguage.formSubmitted', {
-        alsoVoterRegistration: this.isRegistered === 'registered' ? '' : this.$t('request.deadlineLanguage.alsoVoterRegistration')
-      })
-    },
-    deadlineFormConfirmation () {
-      return this.$t('request.deadlineLanguage.formConfirmation')
-    },
-    deadlineReceiveBallot () {
-      let daysToNextElection = Math.ceil((new Date(this.getCurrentDeadlines[0].electionDate).getTime() - new Date().getTime()) / (1000 * 3600 * 24))
-      return this.$t(`request.deadlineLanguage.${daysToNextElection > 44 ? 'sendBallot45days' : 'sendBallotLessThan45days'}`)
-    },
-    deadlineBallotReturn () {
-      return this.$t('request.deadlineLanguage.ballotReturn', this.ballotReturnDeadlineObject)
-    },
-    phoneThree: {
-      get () { return this.$store.state.data.phone || '' },
-      set (val) { this.$store.dispatch('data/updatePhone', val) }
-    },
     idOptions () {
       let opts = this.stateRules && this.stateRules.id && this.stateRules.id.length > 0 ? this.stateRules.id : []
       if (this.votAdr && this.votAdr.S === 'OK' && this.recBallot === 'email') {
         return ['SSN4']
       } else return opts
-    },
-    v () {
-      let r = this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryFormat ? this.$refs.abrAdr.countryFormat.require.toUpperCase() : false
-      let re = this.$refs.abrAdr ? this.$refs.abrAdr : false
-      return {
-        re: re,
-        r: r,
-        A: r ? r.includes('A') : false,
-        D: r ? r.includes('D') : false,
-        C: r ? r.includes('C') : false,
-        S: r ? r.includes('S') : false,
-        X: r ? r.includes('X') : false,
-        Z: r ? r.includes('Z') : false
-      }
     },
     stateRules () {
       if (this.votAdr && this.votAdr.S) {
@@ -622,20 +452,6 @@ export default {
     lastIdType () {
       return this.idOptions.length > 0 ? this.$t(`request.id.${this.idOptions.slice(-1)[0]}`) : ''
     },
-    idTypesString () {
-      let arr = this.idOptions && this.idOptions.length > 0 ? this.stateRules.id : ['SSN4', 'StateID']
-      return arr.map(x => this.$t(`request.id['${x}']`))
-        .map((x, i, a) => {
-          switch (a.length - i) {
-            case 1:
-              return x
-            case 2:
-              return `${x} or `
-            default:
-              return `${x}, `
-          }
-        })
-    },
     stage () {
       switch (this.$route.params.stage) {
         case 'your-information':
@@ -648,173 +464,117 @@ export default {
           return {order: 4, name: 'unknown stage', slug: this.$route.params.stage}
       }
     },
-    currentRequest () {
-      return this.$store.state.requests.currentRequest
-    },
-    currentRequestObject () {
-      return this.$store.getters['requests/getCurrent']
-    },
-    requests: function () {
-      return this.$store.state.requests.requests
-    },
-    isAuthenticated: function () {
-      return this.$store.getters['userauth/isAuthenticated']
-    },
     user: function () {
       return this.$store.state.userauth.user
     },
     email: {
-      // get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].email : null },
-      get () { return this.currentRequestObject.email || null },
-      set (value) { this.$store.commit('requests/update', { email: value || null }) }
+      get () { return this.getCurrent.email || null },
+      set (value) { this.update({email: value || null}) }
     },
     firstName: {
-      // get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].firstName : null },
-      get () { return this.currentRequestObject.firstName || null },
-      set (value) { this.$store.commit('requests/update', { firstName: value }) }
+      get () { return this.getCurrent.firstName || null },
+      set (value) { this.update({ firstName: value }) }
     },
     middleName: {
-      // get () { return this.requests[this.currentRequest] && this.requests[this.currentRequest].middleName ? this.requests[this.currentRequest].middleName : null },
-      get () { return this.currentRequestObject.middleName || null },
-      set (value) { this.$store.commit('requests/update', { middleName: value }) }
+      get () { return this.getCurrent.middleName || null },
+      set (value) { this.update({ middleName: value }) }
     },
     lastName: {
-      // get () { return this.requests[this.currentRequest] && this.requests[this.currentRequest].lastName ? this.requests[this.currentRequest].lastName : null },
-      get () { return this.currentRequestObject.lastName || null },
-      set (value) { this.$store.commit('requests/update', { lastName: value }) }
+      get () { return this.getCurrent.lastName || null },
+      set (value) { this.update({ lastName: value }) }
     },
     previousName: {
-      // get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].previousName : {usesPreviousName: false, previousName: null} },
-      get () { return this.currentRequestObject.previousName || null },
-      set (value) { this.$store.commit('requests/update', { previousName: value }) }
+      get () { return this.getCurrent.previousName || null },
+      set (value) { this.update({ previousName: value }) }
     },
     suffix: {
-      // get () { return this.requests[this.currentRequest] && this.requests[this.currentRequest].suffix ? this.requests[this.currentRequest].suffix : null },
-      get () { return this.currentRequestObject.suffix || null },
-      set (value) { this.$store.commit('requests/update', { suffix: value }) }
+      get () { return this.getCurrent.suffix || null },
+      set (value) { this.update({ suffix: value }) }
     },
     dob: {
       get () { return this.getCurrent.dob || null },
-      set (val) { this.$store.commit('requests/update', { dob: val }) }
-    },
-    date: {
-      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].date : null },
-      set (value) { this.$store.commit('requests/update', { date: value }) }
+      set (val) { this.update({ dob: val }) }
     },
     tel: {
-      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].tel : '' },
-      set (value) { this.$store.commit('requests/update', { tel: value }) }
+      get () { return this.getCurrent.tel || '' },
+      set (value) { this.update({ tel: value }) }
     },
     votAdr: {
-      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].votAdr : null },
-      set (value) { this.$store.commit('requests/update', {votAdr: value}) }
+      get () { return this.getCurrent.votAdr || null },
+      set (value) { this.update({votAdr: value}) }
     },
-    // vAdr: {
-    //   get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].vAdr : null },
-    //   set (value) { this.$store.commit('requests/update', {vAdr: value}) }
-    // },
-    // jurisdiction () { return this.leo && this.leo.n ? this.leo.n : '' },
-    jurisdiction () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].leo : null },
+    jurisdiction () { return this.getCurrent.leo || null },
     abrAdr: {
       get () {
-        if ((!this.requests[this.currentRequest] || !this.requests[this.currentRequest].abrAdr) && this.user && this.user.country) {
+        if ((!this.getCurrent.abrAdr) && this.user && this.user.country) {
           return {countryiso: this.user.country}
-        } else return this.requests[this.currentRequest] && this.requests[this.currentRequest].abrAdr ? this.requests[this.currentRequest].abrAdr : null
+        } else return this.getCurrent.abrAdr || null
       },
-      set (value) {
-        // if (value.countryiso && /US|AS|VI|PR|GU/.test(value.countryiso)) {
-        //   // this.$store.commit('requests/update', { abrAdr: Object.assign({}, value, {countryiso: 'APO'}) })
-        //   this.alertAbrAdr(value)
-        // } else {
-        this.$store.commit('requests/update', {abrAdr: value})
-        // }
-      }
+      set (value) { this.update({abrAdr: value}) }
     },
     voterClass: {
-      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].voterClass : null },
-      set (value) { this.$store.commit('requests/update', {voterClass: value}) }
+      get () { return this.getCurrent.voterClass || null },
+      set (value) { this.update({voterClass: value}) }
     },
     identification: {
-      get () { return this.requests[this.currentRequest] && this.requests[this.currentRequest].identification ? this.requests[this.currentRequest].identification : {noId: false, ssn: null, ssnTyped: null, stateId: null} },
-      set (value) { this.$store.commit('requests/update', {identification: value}) }
+      get () { return this.getCurrent.identification || {noId: false, ssn: null, ssnTyped: null, stateId: null} },
+      set (value) { this.update({identification: value}) }
     },
     ssn: {
-      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].ssn : null },
-      set (value) { this.$store.commit('requests/update', {ssn: value}) }
+      get () { return this.getCurrent.ssn || null },
+      set (value) { this.update({ssn: value}) }
     },
     sex: {
-      get () { return this.requests[this.currentRequest] && this.requests[this.currentRequest].sex ? this.requests[this.currentRequest].sex : null },
-      set (value) { this.$store.commit('requests/update', {sex: value}) }
+      get () { return this.getCurrent.sex || null },
+      set (value) { this.update({sex: value}) }
     },
     party: {
-      get () { return this.currentRequestObject ? this.currentRequestObject.party || null : null },
-      set (value) { this.$store.commit('requests/update', {party: value}) }
+      get () { return this.getCurrent.party || null },
+      set (value) { this.update({party: value}) }
     },
     fax: {
-      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].fax : null },
-      set (value) { this.$store.commit('requests/update', {fax: value}) }
+      get () { return this.getCurrent.fax || null },
+      set (value) { this.update({fax: value}) }
     },
     altEmail: {
-      get () { return this.requests[this.currentRequest] && this.requests[this.currentRequest].altEmail ? this.requests[this.currentRequest].altEmail : null },
-      set (value) { this.$store.commit('requests/update', {altEmail: value}) }
+      get () { return this.getCurrent.altEmail || null },
+      set (value) { this.update({altEmail: value}) }
     },
     isRegistered: {
-      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].isRegistered : null },
-      set (value) { this.$store.commit('requests/update', {isRegistered: value}) }
+      get () { return this.getCurrent.isRegistered || null },
+      set (value) { this.update({isRegistered: value}) }
     },
     recBallot: {
-      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].recBallot : null },
-      set (value) { this.$store.commit('requests/update', {recBallot: value}) }
+      get () { return this.getCurrent.recBallot || null },
+      set (value) { this.update({recBallot: value}) }
     },
     stateId: {
-      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].stateId : null },
-      set (value) { this.$store.commit('requests/update', {stateId: value}) }
+      get () { return this.getCurrent.stateId || null },
+      set (value) { this.update({stateId: value}) }
     },
     fwdAdr: {
-      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].fwdAdr : null },
-      set (value) { this.$store.commit('requests/update', {fwdAdr: value}) }
+      get () { return this.getCurrent.fwdAdr || null },
+      set (value) { this.update({fwdAdr: value}) }
     },
     addlInfo: {
-      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].addlInfo : null },
-      set (value) { this.$store.commit('requests/update', {addlInfo: value}) }
+      get () { return this.getCurrent.addlInfo || null },
+      set (value) { this.update({addlInfo: value}) }
     },
     stateSpecial: {
-      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].stateSpecial : null },
-      set (value) { this.$store.commit('requests/update', {stateSpecial: value}) }
+      get () { return this.getCurrent.stateSpecial || null },
+      set (value) { this.update({stateSpecial: value}) }
     },
     joinDa: {
-      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].joinDa : null },
-      set (value) { this.$store.commit('requests/update', {joinDa: value}) }
-    },
-    isFWAB: {
-      get () { return this.requests[this.currentRequest] ? this.requests[this.currentRequest].isFWAB : false },
-      set (value) { this.$store.commit('requests/update', {isFWAB: value}) }
+      get () { return this.getCurrent.joinDa || null },
+      set (value) { this.update({joinDa: value}) }
     },
     ...mapGetters('data', ['isValidNumber']),
-    ...mapGetters('requests', ['getCurrent', 'getCurrentDeadlines']),
+    ...mapGetters('requests', ['getCurrent']),
     ...mapState('data', ['postal'])
   },
-  filters: {
-    markdown: function (md) {
-      return snarkdown(md)
-    }
-  },
   methods: {
-    focusNextButton (stage) {
-      if (typeof this.$refs[`next${stage}`].focus === 'function') {
-        this.$refs[`next${stage}`].focus()
-      } else this.$refs[`next${stage}`].$el.focus()
-    },
-    touch (val) {
-      // console.log(val)
-      // Object.keys(val).forEach(item => console.log(item))
-      this.delayTouch(this.$v.abrAdr)
-      // if (val) {
-      //   Object.keys(val).forEach(item => this.delayTouch(this.$v.abrAdr[item]))
-      // }
-    },
-    focusName () {
-      this.$refs.userinput.focus()
+    md (md) {
+      return snarkdown(md)
     },
     focusFirstErrorOrAdvance (nextPage) {
       switch (this.$route.params.stage) {
@@ -843,7 +603,6 @@ export default {
           break
         case 'id-and-contact-information':
           this.$v.sex.$touch()
-          // console.log(this.$v.sex)
           this.$v.dob.$touch()
           this.$v.identification.$touch()
           break
@@ -863,19 +622,12 @@ export default {
           // this.$store.dispatch('requests/recordAnalytics', { event: 'Form Error', attributes: { field: 'lastName' } })
           break
         case this.stage.slug === 'your-information' && this.$v.email.$error:
-          // this.$refs.email.check()
           // this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'email'}})
           this.$refs.email.$el.scrollIntoView()
           this.$refs.email.$el.querySelector('input').focus()
           break
-        // case this.stage.slug === 'your-information' && this.$v.abrAdr.country && this.$v.abrAdr.country.$error:
-        //   this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.country'}})
-        //   this.$refs.abrAdr.$refs.country.$el.scrollIntoView()
-        //   this.$refs.abrAdr.$refs.country.focus()
-        //   break
         case this.stage.slug === 'your-information' && this.$v.abrAdr.A && this.$v.abrAdr.A.$error && !this.abrAdr.usesAlternateFormat:
           this.$refs.abrAdr.$el.scrollIntoView()
-          // console.log(this.$refs.abrAdr.$refs)
           this.$refs.abrAdr.$refs.A[0].focus()
           // this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'abrAdr.A'}})
           break
@@ -934,26 +686,6 @@ export default {
           this.$refs.votAdr.$refs.Z.focus()
           // this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'votAdr.Z'}})
           break
-        // case this.stage.slug === 'voting-information' && this.$v.vAdr.A.$error:
-        //   this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'vAdr.A'}})
-        //   this.$refs.vAdr.$refs.A.$el.scrollIntoView()
-        //   this.$refs.vAdr.$refs.A.focus()
-        //   break
-        // case this.stage.slug === 'voting-information' && this.$v.vAdr.C.$error:
-        //   this.$refs.vAdr.$refs.C.$el.scrollIntoView()
-        //   this.$refs.vAdr.$refs.C.focus()
-        //   this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'vAdr.C'}})
-        //   break
-        // case this.stage.slug === 'voting-information' && this.$v.vAdr.S.$error:
-        //   this.$refs.vAdr.$refs.S.$el.scrollIntoView()
-        //   this.$refs.vAdr.$refs.S.focus()
-        //   this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'vAdr.S'}})
-        //   break
-        // case this.stage.slug === 'voting-information' && this.$v.vAdr.Z.$error:
-        //   this.$refs.vAdr.$refs.Z.$el.scrollIntoView()
-        //   this.$refs.vAdr.$refs.Z.focus()
-        //   this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'vAdr.Z'}})
-        //   break
         case this.stage.slug === 'voting-information' && this.$v.jurisdiction.$error:
           this.$refs.jurisdiction.$refs.jurisdiction.$el.scrollIntoView()
           this.$refs.jurisdiction.$refs.jurisdiction.focus()
@@ -977,7 +709,6 @@ export default {
           // this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'recBallot'}})
           break
         case this.stage.slug === 'voting-information' && this.$v.email.$error && this.recBallot === 'email':
-          // this.$refs.email.check()
           this.$refs.email.$el.scrollIntoView()
           this.$refs.email.$el.querySelector('input').focus()
           // this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'email'}})
@@ -1000,7 +731,6 @@ export default {
           break
         case this.stage.slug === 'id-and-contact-information' && this.$v.sex.$error:
           this.$refs.sex.$el.scrollIntoView()
-          // this.$refs.sex.$refs.sex.focus()
           // this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'sex'}})
           break
         case this.stage.slug === 'id-and-contact-information' && this.$v.identification.ssn.$error:
@@ -1016,18 +746,18 @@ export default {
           this.$refs.id.$refs.StateId.focus()
           break
         default:
-          // console.log('nextPage', nextPage)
           this.$router.push(nextPage)
           // this.$store.dispatch('requests/recordAnalytics', {event: 'completed: ' + this.stage.slug})
           // this.$store.dispatch('requests/updateRequest', {status: 'completed: ' + this.stage.slug})
       }
     },
     addressDelayTouch (type, val) {
+      console.log('type', type, 'val', val)
       if (val === 'countryiso' || (this[type].countryiso && !this.postal[this[type].countryiso])) {
         this.$store.dispatch('data/updateCountryData', this[type].countryiso)
           .then(() => {
             this.$nextTick()
-              .then(this.delayTouch(this.$v[type][val]))
+              .then(() => this.delayTouch(this.$v[type][val]))
           })
       } else this.delayTouch(this.$v[type][val])
     },
@@ -1037,7 +767,8 @@ export default {
         clearTimeout(touchMap.get($v))
       }
       touchMap.set($v, setTimeout($v.$touch, 1000))
-    }
+    },
+    ...mapMutations('requests', ['update'])
   },
   validations () {
     return {
@@ -1073,12 +804,6 @@ export default {
         S: { required: addressPartRequired('S') },
         X: { required: addressPartRequired('X') },
         Z: { required: addressPartRequired('Z') },
-        // B: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryData ? this.$refs.abrAdr.countryData.require.toUpperCase().includes('B') : false) },
-        // D: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryData ? this.$refs.abrAdr.countryData.require.toUpperCase().includes('D') : false) },
-        // C: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryData ? this.$refs.abrAdr.countryData.require.toUpperCase().includes('C') : false) },
-        // S: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryData ? this.$refs.abrAdr.countryData.require.toUpperCase().includes('S') : false) },
-        // X: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryData ? this.$refs.abrAdr.countryData.require.toUpperCase().includes('X') : false) },
-        // Z: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryData ? this.$refs.abrAdr.countryData.require.toUpperCase().includes('Z') : false) },
         countryiso: { required },
         alt1: { required: requiredIf('usesAlternateFormat') },
         alt2: {},
@@ -1094,21 +819,12 @@ export default {
         A: { required },
         C: { required },
         S: { required },
+        Y: {},
         Z: {
           required,
           usZip: usZip(this.votAdr ? this.votAdr.S : null)
         }
       },
-      // vAdr: {
-      //   A: { required },
-      //   C: { required },
-      //   S: { required },
-      //   Z: {
-      //     required,
-      //     usZip
-      //   },
-      //   Y: {}
-      // },
       jurisdiction: { required },
       recBallot: {
         required
@@ -1116,19 +832,7 @@ export default {
       dob: {
         required,
         tooOld: tooOld(new Date(1900, 0, 1)),
-        // function () { return new Date(1900, 0, 1) < new Date(this.dob) },
         tooYoung: tooYoung(new Date(2018, 10, 6))
-        // function () {
-        //   if (this.dob) {
-        //     let year = parseInt(this.dob.substr(0, 4))
-        //     let month = parseInt(this.dob.substr(5, 2))
-        //     let day = parseInt(this.dob.substr(8, 2))
-        //     return (year < 2000 || (year === 2000 && month < 11) || (year === 2000 && month === 11 && day <= 6))
-        //   } else {
-        //     return true
-        //   }
-        //   // return new Date(2000, 10, 8) > new Date(this.dob)
-        // }
       },
       fax: {
         required: requiredIf(function (model) { return model.recBallot === 'fax' }),
@@ -1141,13 +845,8 @@ export default {
             : true
         }
       },
-      phoneThree: {
-        required
-      },
       altEmail: {
         email
-      },
-      fwabRequest: {
       },
       party: {
       },
@@ -1184,45 +883,17 @@ export default {
           required: requiredIf(function (model) {
             return !model.ssn4 && !model.ssn && !model.noId && this.idOptions.filter(x => !/SSN/.test(x)).length > 0
           })
-          // requiredIf: requiredIf((model) => {
-          //   if (!this.stateRules || !this.stateRules.id) {
-          //     return false
-          //   }
-          //   let needsStateId = Boolean(this.stateRules.id.filter(x => x !== 'SSN' || x !== 'SSN4').length > 0)
-          //   return Boolean(needsStateId && !this.identification.ssn && !this.identification.ssn4 && !this.identification.noId)
-          // })
         }
       },
-      // ssn: {
-      //   required
-      // },
-      // stateId: {
-      //   required
-      // },
       fwdAdr: {
         country: { },
-        A: { required: addressPartRequired('A') },
-        B: { required: addressPartRequired('B') },
-        D: { required: addressPartRequired('D') },
-        C: { required: addressPartRequired('C') },
-        S: { required: addressPartRequired('S') },
-        X: { required: addressPartRequired('X') },
-        Z: { required: addressPartRequired('Z') },
-        // B: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryData ? this.$refs.abrAdr.countryData.require.toUpperCase().includes('B') : false) },
-        // D: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryData ? this.$refs.abrAdr.countryData.require.toUpperCase().includes('D') : false) },
-        // C: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryData ? this.$refs.abrAdr.countryData.require.toUpperCase().includes('C') : false) },
-        // S: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryData ? this.$refs.abrAdr.countryData.require.toUpperCase().includes('S') : false) },
-        // X: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryData ? this.$refs.abrAdr.countryData.require.toUpperCase().includes('X') : false) },
-        // Z: { required: requiredIf((model) => this.$refs.abrAdr && this.$refs.abrAdr && this.$refs.abrAdr.countryData ? this.$refs.abrAdr.countryData.require.toUpperCase().includes('Z') : false) },
-        // countryiso: { required },
-        // alt1: { required: requiredIf('usesAlternateFormat') },
-        // A: { required: requiredIf((model) => this.fwdAdr && this.fwdAdr.A && this.$refs.fwdAdr && this.$refs.fwdAdr && this.$refs.fwdAdr.countryData ? this.$refs.fwdAdr.countryData.require.toUpperCase().includes('A') : false) },
-        // B: { required: requiredIf((model) => this.fwdAdr && this.fwdAdr.A && this.$refs.fwdAdr && this.$refs.fwdAdr && this.$refs.fwdAdr.countryData ? this.$refs.fwdAdr.countryData.require.toUpperCase().includes('B') : false) },
-        // D: { required: requiredIf((model) => this.fwdAdr && this.fwdAdr.A && this.$refs.fwdAdr && this.$refs.fwdAdr && this.$refs.fwdAdr.countryData ? this.$refs.fwdAdr.countryData.require.toUpperCase().includes('D') : false) },
-        // C: { required: requiredIf((model) => this.fwdAdr && this.fwdAdr.A && this.$refs.fwdAdr && this.$refs.fwdAdr && this.$refs.fwdAdr.countryData ? this.$refs.fwdAdr.countryData.require.toUpperCase().includes('C') : false) },
-        // S: { required: requiredIf((model) => this.fwdAdr && this.fwdAdr.A && this.$refs.fwdAdr && this.$refs.fwdAdr && this.$refs.fwdAdr.countryData ? this.$refs.fwdAdr.countryData.require.toUpperCase().includes('S') : false) },
-        // X: { required: requiredIf((model) => this.fwdAdr && this.fwdAdr.A && this.$refs.fwdAdr && this.$refs.fwdAdr && this.$refs.fwdAdr.countryData ? this.$refs.fwdAdr.countryData.require.toUpperCase().includes('X') : false) },
-        // Z: { required: requiredIf((model) => this.fwdAdr && this.fwdAdr.A && this.$refs.fwdAdr && this.$refs.fwdAdr && this.$refs.fwdAdr.countryData ? this.$refs.fwdAdr.countryData.require.toUpperCase().includes('Z') : false) },
+        A: { required: addressPartRequired('A', 'fwdAdr') },
+        B: { required: addressPartRequired('B', 'fwdAdr') },
+        D: { required: addressPartRequired('D', 'fwdAdr') },
+        C: { required: addressPartRequired('C', 'fwdAdr') },
+        S: { required: addressPartRequired('S', 'fwdAdr') },
+        X: { required: addressPartRequired('X', 'fwdAdr') },
+        Z: { required: addressPartRequired('Z', 'fwdAdr') },
         countryiso: {},
         alt1: {},
         alt2: {},
@@ -1232,8 +903,7 @@ export default {
         usesAlternateFormat: {}
       },
       addlInfo: {
-      },
-      date: ''
+      }
     }
   }
 }
