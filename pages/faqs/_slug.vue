@@ -22,10 +22,16 @@
 import ContentContainer from '~/components/ContentContainer'
 export default {
   asyncData: async ({ app, route }) => ({
-    page: await app.$content(`${app.i18n.locale}/faqs`).get(`${app.i18n.locale !== app.i18n.defaultLocale ? app.i18n.locale + '/' : ''}faqs/${route.params.slug}`)
+    pages: {
+      en: await app.$content(`en/faqs`).get(`faqs/${route.params.slug}`),
+      es: await app.$content(`es/faqs`).get(`es/faqs/${route.params.slug}`)
+    }
   }),
   components: {
     ContentContainer
+  },
+  computed: {
+    page () { return this.pages[this.$i18n.locale] }
   }
 }
 </script>

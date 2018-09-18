@@ -75,7 +75,7 @@
                       <span class="panel-icon">
                         <i class="fas fa-question-circle"></i>
                       </span>
-                      {{faq.title}}
+                      {{faq[`title${$i18n.locale.toUpperCase()}`]}}
                     </nuxt-link>
                     <!-- <a class="navbar-item">
                       I can't remember or find my exact street address - what do I do?
@@ -226,24 +226,29 @@ export default {
       // isLoginModalActive: false,
       topFaqs: [
         {
-          title: 'I can\'t remember my last US address, how do I find it?',
-          slug: '1'
-        },
-        {
-          title: 'I live outside the US, am I eligible to vote in US elections?',
+          titleEN: 'Can I vote in midterm (non-presidential) and primary elections?',
+          titleES: 'Can I vote in midterm (non-presidential) and primary elections?',
           slug: '2'
         },
         {
-          title: 'Can I register to vote in a different state?',
+          titleEN: 'Can I vote in state and local elections?',
+          titleES: 'Can I vote in state and local elections?',
           slug: '3'
         },
         {
-          title: 'Why should I send in the form to request my ballot every calendar year?',
+          titleEN: 'How do I register to vote or request a ballot as a U.S. Citizen living abroad?',
+          titleES: 'How do I register to vote or request a ballot as a U.S. Citizen living abroad?',
           slug: '5'
         },
         {
-          title: 'Can I vote in midterm elections?',
-          slug: '6'
+          titleEN: 'Can I register to vote if I\'ve never resided in the U.S.?',
+          titleES: '¿Puedo registrarme para votar si nunca he vivido en los Estados Unidos?',
+          slug: '10'
+        },
+        {
+          titleEN: 'It\'s getting close to the election and I haven\'t received my blank ballot yet; what should I do?',
+          titleES: 'It\'s getting close to the election and I haven\'t received my blank ballot yet; what should I do?',
+          slug: '24'
         }
       ]
     }
