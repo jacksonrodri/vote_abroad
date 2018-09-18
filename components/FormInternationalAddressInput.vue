@@ -43,6 +43,8 @@
               :aria-label="part.label"
               :title="part.label"
               :class="part.class"
+              :maxlength="adr[part.type] && hasFocus === part.type ? 40 : ''"
+              :has-counter="adr[part.type] && hasFocus === part.type"
               :loading="isFetching"
               :ref="part.type"
               @keypress.native="getAsyncData"

@@ -457,6 +457,7 @@
       "C": "City",
       "messages": {
         "A-required": "Street address is required",
+        "A-maxLength": "Maximum length: 40 characters",
         "C-required": "City is required",
         "S-required": "State is required",
         "Z-required": "Zip is required",
@@ -630,6 +631,7 @@
       "messages": {
         "country-required": "You must provide your country of residence. (Outside the United States)",
         "A-required": "You must provide your {label}",
+        "A-maxLength": "Maximum length: 40 characters",
         "C-required": "{label} is required",
         "D-required": "{label} is required",
         "S-required": "{label} is required",
@@ -667,6 +669,7 @@
       "messages": {
         "country-required": "You must provide your country of residence. (Outside the United States)",
         "A-required": "You must provide your {label}",
+        "A-maxLength": "Maximum length: 40 characters",
         "C-required": "{label} is required",
         "D-required": "{label} is required",
         "S-required": "{label} is required",

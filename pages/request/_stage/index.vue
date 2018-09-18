@@ -797,7 +797,10 @@ export default {
       },
       abrAdr: {
         country: { },
-        A: { required: addressPartRequired('A') },
+        A: {
+          required: addressPartRequired('A'),
+          maxLength: maxLength(40)
+        },
         B: { required: addressPartRequired('B') },
         D: { required: addressPartRequired('D') },
         C: { required: addressPartRequired('C') },
@@ -816,7 +819,10 @@ export default {
         required
       },
       votAdr: {
-        A: { required },
+        A: {
+          required,
+          maxLength: maxLength(40)
+        },
         C: { required },
         S: { required },
         Y: {},
@@ -887,7 +893,10 @@ export default {
       },
       fwdAdr: {
         country: { },
-        A: { required: addressPartRequired('A', 'fwdAdr') },
+        A: {
+          required: addressPartRequired('A', 'fwdAdr'),
+          maxLength: maxLength(40)
+        },
         B: { required: addressPartRequired('B', 'fwdAdr') },
         D: { required: addressPartRequired('D', 'fwdAdr') },
         C: { required: addressPartRequired('C', 'fwdAdr') },
