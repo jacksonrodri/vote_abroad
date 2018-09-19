@@ -258,7 +258,7 @@ export default {
         if (predictions.length > 0) {
           let {data: {result}} = await axios.get(`${process.env.placesUrl + process.env.detailsEndpoint}?placeid=${predictions[0].place_id}&key=${process.env.placesKey}`)
           let Y = result.address_components.filter(y => y.types.includes('administrative_area_level_2'))[0].long_name
-          console.log('Y', Y)
+          // console.log('Y', Y)
           this.$store.commit('requests/update', {votAdr: Object.assign({}, this.votAdr, {Y: this.decodeHtmlEntity(Y) || null})})
         }
       }

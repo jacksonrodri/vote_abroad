@@ -211,7 +211,7 @@ export default {
       placeDetails.call(this, opt)
     },
     createFormattedAddress () {
-      console.log('creatingFormattedaddress')
+      // console.log('creatingFormattedaddress')
       this.countryFields = [1, 2, 3, 4, 5]
         .map(x => ({help: '', label: `address line ${x}`, length: 1, required: x === 1, type: `alt${x}`}))
         .concat({help: '', type: 'countryiso', label: 'Country', required: true, length: 1})

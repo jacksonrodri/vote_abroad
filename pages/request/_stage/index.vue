@@ -349,7 +349,8 @@ const usZip = (state) =>
       if (!state || !this.postal.US) {
         return genericZipRegex.test(value)
       } else {
-        let stateZipRegex = new RegExp(this.postal.US['sub_zips'].split('~')[this.postal.US['sub_keys'].split('~').findIndex(x => x === state)])
+        let stateZipRegex = new RegExp(this.postal.US['sub_zips'].split('~')[this.postal.US['sub_keys'].split('~').findIndex(x => x === model.S)])
+        console.log(value, model.S, stateZipRegex, genericZipRegex.test(value), stateZipRegex.test(value))
         return genericZipRegex.test(value) && stateZipRegex.test(value)
       }
     }

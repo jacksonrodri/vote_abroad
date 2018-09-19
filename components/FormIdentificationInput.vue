@@ -37,10 +37,11 @@
         :placeholder="$t('request.id.placeholder', {example: '✱✱✱-✱✱-1111'})" expanded></b-input>
     </b-field>
 
-    <div class="has-text-centered"><strong>{{ $t('request.id.or')}}</strong></div>
+    <div class="has-text-centered"
+      v-if="!idOptions || (idOptions && idOptions.filter(x => !/SSN/.test(x)).length > 0)"><strong>{{ $t('request.id.or')}}</strong></div>
 
       <!-- :message="validations.stateId.$anyError ? $t(`request.id.messages.stateIdRequired`) : '' " -->
-    <b-field  v-if="!idOptions || (idOptions && idOptions.filter(x => x!== 'SSN' || x !== 'SSN4').length > 0)"
+    <b-field v-if="!idOptions || (idOptions && idOptions.filter(x => !/SSN/.test(x)).length > 0)"
       :message="validations.stateId.$anyError ? Object.entries(validations.stateId).filter(([key, value]) => key.charAt(0) !== '$' && value === false).map(x => $t(`request.messages.messages.stateId-${x[0]}`)) : '' "
       :type="(validations.stateId.$anyError ? 'is-danger': '')"
       :label="stateIdLabel"
