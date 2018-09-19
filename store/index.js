@@ -38,7 +38,7 @@ export const state = () => ({
   upcomingElections: [],
   currentRequestId: null,
   isMenuOpen: false,
-  isStudentSite: false
+  isStudentSite: true
 })
 
 export const strict = false
