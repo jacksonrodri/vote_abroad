@@ -23,7 +23,7 @@
     <div v-if="idOptions && idOptions.includes('SSN') && idOptions.includes('SSN4')" class="has-text-centered"><strong>{{ $t('request.id.or')}}</strong></div>
 
       <!-- :message="validations.ssn4.$anyError ? $t(`request.id.messages.SSN4Required`) : '' " -->
-    <b-field v-if="!idOptions || (idOptions && idOptions.indexOf('SSN4') > -1)"
+    <b-field v-if="!idOptions || (idOptions && (idOptions.length === 0 || idOptions.includes('SSN4')))"
       :message="validations.ssn4.$anyError ? Object.entries(validations.ssn4).filter(([key, value]) => key.charAt(0) !== '$' && value === false).map(x => $t(`request.messages.messages.ssn4-${x[0]}`)) : '' "
       :type="(validations.ssn4.$anyError ? 'is-danger': '')"
       :label="$t('request.id.SSN4')"
@@ -38,10 +38,10 @@
     </b-field>
 
     <div class="has-text-centered"
-      v-if="!idOptions || (idOptions && idOptions.filter(x => !/SSN/.test(x)).length > 0)"><strong>{{ $t('request.id.or')}}</strong></div>
+      v-if="!idOptions || (idOptions && (idOptions.length === 0 || idOptions.filter(x => !/SSN/.test(x)).length > 0))"><strong>{{ $t('request.id.or')}}</strong></div>
 
       <!-- :message="validations.stateId.$anyError ? $t(`request.id.messages.stateIdRequired`) : '' " -->
-    <b-field v-if="!idOptions || (idOptions && idOptions.filter(x => !/SSN/.test(x)).length > 0)"
+    <b-field v-if="!idOptions || (idOptions && (idOptions.length === 0 || idOptions.filter(x => !/SSN/.test(x)).length > 0))"
       :message="validations.stateId.$anyError ? Object.entries(validations.stateId).filter(([key, value]) => key.charAt(0) !== '$' && value === false).map(x => $t(`request.messages.messages.stateId-${x[0]}`)) : '' "
       :type="(validations.stateId.$anyError ? 'is-danger': '')"
       :label="stateIdLabel"
