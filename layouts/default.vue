@@ -227,17 +227,17 @@ export default {
       topFaqs: [
         {
           titleEN: 'Can I vote in midterm (non-presidential) and primary elections?',
-          titleES: 'Can I vote in midterm (non-presidential) and primary elections?',
+          titleES: '¿Puedo votar en las elecciones (no presidenciales) de mitad de período?',
           slug: '2'
         },
         {
           titleEN: 'Can I vote in state and local elections?',
-          titleES: 'Can I vote in state and local elections?',
+          titleES: '¿Puedo votar en las elecciones locales y estatales?',
           slug: '3'
         },
         {
           titleEN: 'How do I register to vote or request a ballot as a U.S. Citizen living abroad?',
-          titleES: 'How do I register to vote or request a ballot as a U.S. Citizen living abroad?',
+          titleES: '¿Cómo me registro como votante o cómo solicito una boleta electoral en mi condición de ciudadano de los Estados Unidos que vive en el extranjero?',
           slug: '5'
         },
         {
@@ -247,7 +247,7 @@ export default {
         },
         {
           titleEN: 'It\'s getting close to the election and I haven\'t received my blank ballot yet; what should I do?',
-          titleES: 'It\'s getting close to the election and I haven\'t received my blank ballot yet; what should I do?',
+          titleES: 'Se acercan las elecciones y aún no he recibido mi boleta electoral en blanco. ¿Qué debo hacer?',
           slug: '24'
         }
       ]
