@@ -125,9 +125,6 @@ export default {
       customEmail: '',
       message: '',
       subject: '',
-      htmlMessage: '',
-      leoMessage: '',
-      leoHtmlMessage: '',
       isMailing: false,
       dropFiles: [],
       reqDoc: '',
@@ -142,6 +139,8 @@ export default {
   },
   computed: {
     isStudentSite () { return this.$store.state.isStudentSite },
+    voterMessage () { return this.$t('email.voterEmail') + this.message },
+    testMessage () { return this.$t('email.testEmail') + this.message },
     formEmail: {
       get () { return this.email || this.customEmail },
       set (value) {
@@ -211,10 +210,10 @@ export default {
         let headers = {}
         headers['Content-Type'] = 'application/json'
         headers['Accept'] = 'application/json'
-        this.message = this.isStudentSite
-          ? `********** \n This is a copy of your FPCA request. Your original request was sent to ${this.leoName} (${this.leoEmail}). \n\n ********** \n\n\n\n ${this.message}`
-          : `********** \n This message will be sent to ${this.leoEmail} ${this.leoName} after VoteFromAbroad 3.0 is launched. \n\n We have NOT sent in your FPCA. \n ********** \n\n\n\n ${this.message}`
-        let body = {subject: this.subject, email: this.formEmail, message: this.message, htmlMessage: this.htmlMessage, leoName: this.leoName, leoEmail: this.leoEmail, image: this.fpca ? this.fpca.toString() : null, reqDoc: this.reqDoc ? this.reqDoc.toString() : null, firstName: this.firstName, lastName: this.lastName}
+        let voterMessage = this.isStudentSite
+          ? this.voterMessage
+          : this.testMessage
+        let body = {subject: this.subject, voterEmail: this.formEmail, voterMessage: voterMessage, leoName: this.leoName, leoEmail: this.leoEmail, image: this.fpca ? this.fpca.toString() : null, reqDoc: this.reqDoc ? this.reqDoc.toString() : null, firstName: this.firstName, lastName: this.lastName}
         if (this.isStudentSite) {
           body = Object.assign({}, body, {leoMessage: this.leoMessage})
         }
@@ -254,8 +253,6 @@ export default {
   mounted () {
     this.subject = 'FPCA Submission'
     this.message = `Please see attached my FPCA form for the 2018 calendar year. Can you confirm receipt and also confirm that I do not need to send in the paper copy? \n\nThank you so much for everything you do. Your work is much appreciated by Americans abroad! \n\n Sincerely, \n\n${this.firstName} ${this.lastName} \n\n${this.formEmail} \n\n${this.tel}`
-    this.leoMessage = `Please see attached my FPCA form for the 2018 calendar year. Can you confirm receipt and also confirm that I do not need to send in the paper copy? \n\nThank you so much for everything you do. Your work is much appreciated by Americans abroad! \n\n Sincerely, \n\n${this.firstName} ${this.lastName} \n\n${this.formEmail} \n\n${this.tel}`
-    this.htmlMessage = `Please see attached my FPCA form for the 2018 calendar year. Can you confirm receipt and also confirm that I do not need to send in the paper copy? \n\nThank you so much for everything you do. Your work is much appreciated by Americans abroad! <br/><br/> Sincerely, <br/><br/>${this.firstName} ${this.lastName} <br/><br/>${this.formEmail} <br/><br/>${this.tel}`
   }
 }
 </script>
