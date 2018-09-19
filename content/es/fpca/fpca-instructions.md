@@ -1,27 +1,27 @@
-Thank you for using www.votefromabroad.org to generate your Voter Registration/Ballot Request form. Below are the instructions to submit your completed form. If you need any help, contact our volunteer voter support team at: help@votefromabroad.org. Thanks for voting!
+Gracias por usar www.votefromabroad.org para generar su registro electoral/formulario de solicitud de boleta electoral. Enseguida están las instrucciones para enviar su formulario lleno. Si necesita ayuda comuníquese con nuestro equipo voluntario de apoyo a votantes en: help@votefromabroad.org. ¡Gracias por votar!
 
-# Voting Instructions
+# Instrucciones para votar
 
-1. Review Your Completed Form Verify all the information on your form is correct. If any changes are needed, please use the "BACK" button on the website or make changes on the printed form
-2. Print, Sign and Date Your Form Your form must contain BOTH your signature and the date.
-3. Send Your Form to Your Election Official You must send your Signed and Dated form to your local election official. We recommend sending your form by either email or fax, if available, to avoid possible postal delays.
+1. Revise su formulario lleno. Verifique que toda la información en su formulario es correcta. Si se necesita algún cambio, por favor use el botón "ANTERIOR" en el sitio web o aplique los cambios en el formulario impreso
+2. Imprima, firme y feche su formulario. Su formulario debe contener TANTO su firma como la fecha.
+3. Envíe su formulario a su funcionario electoral. Usted debe enviar su formulario firmado y fechado a su funcionario electoral local. Le recomendamos enviar su formulario ya sea por correo electrónico o fax, si están disponibles, para evitar posibles retrasos en el correo postal.
     
-    Email: Find your local election official's contact information at www.votefromabroad.org/states Fax: Postal Mail:
+    Correo electrónico: Encuentre la información de contacto de su funcionario electoral local en www.votefromabroad.org/states Fax: Correo Postal:
     
-    You can mail your form postage free from the US or by US military mail/diplomatic pouch via US Embassies or Consulates. To do so, download a "postage paid" envelope template from www.votefromabroad.org/envelope. IMPORTANT: Your form must be received by your state deadline to be eligible to vote in the November 6 General Election. You can find your state deadlines at www.votefromabroad.org/states
+    Usted puede enviar por correo su formulario con gastos de envío gratis desde los Estados Unidos o por correo del ejército de los Estados Unidos/ o valija diplomática vía las embajadas o consulados de los Estados Unidos. Para hacerlo, descargue una plantilla de sobre con "porte pagado" de www.votefromabroad.org/envelope. IMPORTANTE: El formulario debe ser recibido a más tardar en la fecha límite establecida por su estado para que sea elegible para votar en las elecciones generales del 6 de noviembre. Usted puede encontrar ls fechas límite de su estado en www.votefromabroad.org/states
 
-4. Confirm You Will Receive a Ballot We recommend you contact your local election official after you send in your form to confirm it was received and that you will be receiving your ballots throughout the year. You can find their contact information at www.votefromabroad.org/states Email: Find your local election official's contact information at www.votefromabroad.org/states Phone:
+4. Confirme que usted recibirá una boleta electoral. Le recomendamos comunicarse con su funcionario electoral local despúes de enviarle su formulario para confirmar que fue recibido y que usted estará recibiendo sus boletas electorales a lo largo del año. Usted puede encontrar la información de contacto de su funcionario electoral en www.votefromabroad.org/states correo electrónico: encuentre la información de contacto ade su funcionario electoral local en www.votefromabroad.org/states teléfono:
 
-5. Mark Your Calendar for Your Ballot / Prepare to Use a Backup Ballot Ballots must be sent out to overseas voters at least 45 days before the election. If you do not receive your ballot at least 30 days before the election, go to www.fvap.gov to prepare a Federal Write-In Absentee Ballot(FWAB)
+5. Anote en su calendario para su boleta electoral / Prepárese para usar una boleta electoral de respaldo. Las boletas electorales deben enviarse a votantes en el extranjero por lo menos 45 días antes de las elecciones. Si usted no recibe su boleta al menos 30 días antes de las elecciones, consulte el sitio www.fvap.gov para preparar una Boleta Federal de Voto Ausente o Federal Write-in Absentee Ballot (FWAB)
 
-Email, Fax or Mail Your Form to Your Election Official.
+Envíe el formulario a su funcionario electoral por correo electrónico, Fax o correo postal.
 
-You must send your Signed and Dated form to your local election official. We recommend sending your form by either email or fax, if available, to avoid possible postal delays.
+Usted debe enviar su formulario firmado y fechado a su funcionario electoral local. Le recomendamos enviar su formulario ya sea por correo electrónico o fax, si están disponibles, para evitar posibles retrasos en el correo postal.
 
-N/A (Not Applicable)
+N/A (no aplicable)
 
-We recommend you contact your local election official after you send in your form to confirm it was received and that you will be receiving your ballots throughout the year. You can reach your local election official by email or phone at:
+Le recomendamos comunicarse con su funcionario electoral local despúes de enviarle su formulario para confirmar que fue recibido y que usted estará recibiendo sus boletas electorales a lo largo del año. Usted puede comunicarse con su funcionario electoral local por correo electrónico o telefono a:
 
-Ballots must be sent out to overseas voters at least 45 days before the election. If you do not receive your ballot at least 30 days before the election, go to www.fvap.gov to prepare a Federal Write-In Absentee Ballot (FWAB).
+Las boletas electorales deben enviarse a votantes en el extranjero al menos 45 días antes de las elecciones. Si usted no recibe su boleta al menos 30 días antes de las elecciones, consulte el sitio www.fvap.gov para preparar una Boleta Federal de Voto Ausente o Federal Write-in Absentee Ballot (FWAB).
 
-See section 6
+Ver la sección 6
