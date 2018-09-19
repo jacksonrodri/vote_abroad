@@ -9,10 +9,11 @@ const redirectUri = 'https://votefromabroad.netlify.com'
 
 let webAuth = new WebAuth({
   domain: 'montg.auth0.com',
-  redirectUri: redirectUri + '/authenticating/',
+  redirectUri: 'https://votefromabroad.netlify.com/authenticating/',
   clientID: '0Wy4khZcuXefSfrUuYDUP0Udag4FqL2u',
   responseType: 'token id_token'
 })
+// redirectUri: redirectUri + '/authenticating/',
 
 export const state = () => ({
   idToken: null,
