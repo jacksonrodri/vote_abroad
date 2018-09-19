@@ -37,7 +37,8 @@ export const plugins = [vuexLocalPlugin]
 export const state = () => ({
   upcomingElections: [],
   currentRequestId: null,
-  isMenuOpen: false
+  isMenuOpen: false,
+  isStudentSite: true
 })
 
 export const strict = false

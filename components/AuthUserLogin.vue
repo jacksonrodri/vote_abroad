@@ -115,6 +115,7 @@
         {{ $t('homepage.subtitle') }}
       </h2>
       <auth-phone-email-input
+        v-if="!isStudentSite"
         ref="phoneOrEmail"
         key="phoneOrEmail"
         fieldName="phoneOrEmail"
@@ -123,10 +124,13 @@
         @pressEnter="startAuth"
         :loading="authState === 'loading'"
         @delayTouch="delayTouch"></auth-phone-email-input>
-      <div class="buttons is-right is-marginless">
+      <div v-if="!isStudentSite" class="buttons is-right is-marginless">
         <button @click.prevent="startAuth" :class="['button', 'is-large', 'is-danger', {'is-loading': authState === 'loading'}]">{{ $t('homepage.start') }}</button>
       </div>
-      <div class="buttons is-right">
+      <div class="buttons is-right" v-if="isStudentSite">
+        <button @click.prevent="anonymousStart" :class="['button', 'is-large', 'is-danger']">{{ $t('homepage.start') }}</button>
+      </div>
+      <div class="buttons is-right" v-if="!isStudentSite">
         <button @click.prevent="anonymousStart" class="button is-text has-text-black is-paddingless" exact ><span>{{ $t('homepage.anonymous') }}</span></button>
         <button @click.prevent="toggleInfo" class="button is-transparent is-small">
           <span>
@@ -177,6 +181,7 @@ export default {
     }
   },
   computed: {
+    isStudentSite () { return this.$store.state.isStudentSite },
     toolTipContent () { return this.$te(`request.phoneOrEmail.tooltip`) ? snarkdown(this.$t(`request.phoneOrEmail.tooltip`)) : null },
     isAuthenticated: function () { return this.$store.getters['userauth/isAuthenticated'] },
     user () { return this.$store.state.userauth.user },
