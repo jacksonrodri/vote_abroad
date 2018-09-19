@@ -218,11 +218,13 @@ export default {
       // console.log('country focused is: ', val)
     }
   },
-  mounted () {
+  async mounted () {
     // console.log('mounted with fieldValue: ', this.fieldValue, 'userCountry', this.userCountry, 'countryIso', this.countryIso)
     if (this.fieldValue) {
       this.tempValue = this.fieldValue
+      await this.getCountryIsoFromPhonePrefix(this.fieldValue)
       this.countryIso = (this.formattedNumber(this.fieldValue)).formatted.country
+      this.fieldValue = this.getPhoneIntFormat(this.tempValue, this.countryIso || null)
     }
     if (this.userCountry && !this.countryIso) {
       this.countryIso = this.userCountry
