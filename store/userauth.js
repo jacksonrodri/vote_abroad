@@ -4,16 +4,14 @@ import { Dialog, Toast } from 'buefy'
 import AWSExports from '../aws-exports'
 
 const jwtDecode = require('jwt-decode')
-const redirectUri = 'https://votefromabroad.netlify.com'
-// const redirectUri = process.env.url
+const redirectUri = process.env.url
 
 let webAuth = new WebAuth({
   domain: 'montg.auth0.com',
-  redirectUri: 'https://votefromabroad.netlify.com/authenticating/',
+  redirectUri: redirectUri + '/authenticating/',
   clientID: '0Wy4khZcuXefSfrUuYDUP0Udag4FqL2u',
   responseType: 'token id_token'
 })
-// redirectUri: redirectUri + '/authenticating/',
 
 export const state = () => ({
   idToken: null,
@@ -96,11 +94,10 @@ export const actions = {
   initializeWebAuth () {
     webAuth = new WebAuth({
       domain: 'montg.auth0.com',
-      redirectUri: `https://votefromabroad.netlify.com/${this.$i18n.locale === 'es' ? 'es/' : ''}authenticating`,
+      redirectUri: redirectUri + this.app.localePath('authenticating'),
       clientID: '0Wy4khZcuXefSfrUuYDUP0Udag4FqL2u',
       responseType: 'token id_token'
     })
-    // redirectUri + this.app.localePath('authenticating')
     // console.log('new redirecturi', redirectUri + this.app.localePath('index'))
   },
   sendEmailLink ({commit, state}) {
