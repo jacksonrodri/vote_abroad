@@ -4,7 +4,8 @@ import { Dialog, Toast } from 'buefy'
 import AWSExports from '../aws-exports'
 
 const jwtDecode = require('jwt-decode')
-const redirectUri = process.env.url
+const redirectUri = 'https://votefromabroad.netlify.com'
+// const redirectUri = process.env.url
 
 let webAuth = new WebAuth({
   domain: 'montg.auth0.com',
