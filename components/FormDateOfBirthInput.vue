@@ -196,6 +196,7 @@ export default {
     },
     dateParser2 (input) {
       let choices = returnArrayOfReasonableBirthDates(input)
+      console.log('date choices', choices)
       if (choices.length > 1) {
         this.inputText = input
         this.dateChoices = choices
