@@ -78,7 +78,7 @@
         </b-field>
       </section>
       <footer class="modal-card-foot">
-        <a class="button" type="button" @click="dob = null">{{$t('request.dob.cancel')}}</a>
+        <a class="button" type="button" @click="closeModal">{{$t('request.dob.cancel')}}</a>
       </footer>
     </div>
   </b-modal>
@@ -169,6 +169,10 @@ export default {
     }
   },
   methods: {
+    closeModal () {
+      this.dob = null
+      this.isCardModalActive = false
+    },
     showVal (val) {
       console.log(val)
     },
@@ -179,7 +183,7 @@ export default {
       this.focusedDate = this.$refs.focusedDate
     },
     addDate (date) {
-      console.log(date, this)
+      console.log('date', date, this)
       this.$nextTick()
         .then(() => {
           this.dob = date
