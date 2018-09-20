@@ -385,12 +385,13 @@ export default {
       })
       this.$router.push(this.localePath('dashboard'))
     },
-    addSig (val) {
+    async addSig (val) {
       this.signature = val
       var d = new Date()
       var today = `${d.getFullYear()}-${d.getMonth() < 9 ? '0' : ''}${d.getMonth() + 1}-${d.getDate() < 9 ? '0' : ''}${d.getDate()}`
       this.$store.commit('requests/update', { date: today })
       this.signStep = 'composeMessage'
+      await this.$nextTick()
       setTimeout(() => {
         this.fpca = this.$refs.fpca.$refs['my-canvas'].toDataURL()
       }, 800)
