@@ -5,7 +5,7 @@
     :message="v.$error ? Object.entries(v).filter(([key, value]) => key.charAt(0) !== '$' && value === false).map(x => $t(`request.dob.messages.${x[0]}`)) : '' "
     :type="(v.$error ? 'is-danger': '')">
     <b-datepicker v-model="date"
-      :date-formatter="(date) => date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })"
+      :date-formatter="dateFormatter"
       :date-parser="dateParser2"
       :readonly="false"
       :mobile-native="allowNative"
@@ -204,6 +204,10 @@ export default {
       } else if (choices.length === 1) {
         return choices[0]
       } else return null
+    },
+    dateFormatter (d) {
+      let ahead2HoursDate = new Date(d.getFullYear(), d.getMonth(), d.getDate(), 2)
+      return ahead2HoursDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
     }
   },
   watch: {
