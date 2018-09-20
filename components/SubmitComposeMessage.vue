@@ -82,12 +82,13 @@
         </span>
       </div>
     </b-field>
-    <article class="media" v-if="/AR|CT|NJ|NY|TX|VT|WY/.test(currentRequest.leo.s)">
+    <article class="media" v-if="/AR|CT|NJ|NY|WY/.test(currentRequest.leo.s)">
+    <!-- TX|VT| -->
       <figure class="media-left">
         <b-icon icon="envelope" size="is-medium"></b-icon>
       </figure>
       <div class="media-content">
-        <span class="is-size-5">{{$t(`request.deadlineLanguage.${currentRequest.leo.s.toUpperCase()}Special`)}}</span>
+        <span class="is-size-5" v-html="md($t(`request.deadlineLanguage.${currentRequest.leo.s.toUpperCase()}Special`, instructionsObject))"></span>
         <div class="box">
           <span v-if="currentRequest.leo.n"><strong>{{ currentRequest.leo.n }}</strong><br/></span>
           <span v-if="currentRequest.leo.a1"><strong>{{ currentRequest.leo.a1 }}</strong><br/></span>
@@ -118,6 +119,7 @@
 <script>
 import { mapState } from 'vuex'
 import axios from 'axios'
+import snarkdown from 'snarkdown'
 
 export default {
   data () {
@@ -159,7 +161,7 @@ export default {
       return this.currentRequest.leo && this.currentRequest.leo.n ? this.currentRequest.leo.n : ''
     },
     leoPhone () {
-      return this.currentRequest.leo && this.currentRequest.leo.p ? `+1 {this.currentRequest.leo.p}` : ''
+      return this.currentRequest.leo && this.currentRequest.leo.p ? `+1 ${this.currentRequest.leo.p}` : ''
     },
     fromName () { return `${this.firstName} ${this.lastName}` },
     ...mapState({
@@ -170,9 +172,11 @@ export default {
   props: [
     'value',
     'fpca',
-    'documentRequired'
+    'documentRequired',
+    'instructionsObject'
   ],
   methods: {
+    md: function (md) { return snarkdown(md) },
     attachReqDoc (files) {
       let vm = this
       // console.log(files, files.length, /\.(jpe?g|png|gif|pdf)$/i.test(files[0].name))
