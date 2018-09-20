@@ -3,13 +3,18 @@
   "home": "Página de inicio",
   "posts": "Mensajes",
   "homepage": {
+    "titleStudents": "Study abroad? Vote from abroad.",
     "title": "Vote desde el extranjero",
-    "subtitle": "Solicite ahora una boleta electoral",
+    "subtitle": "Request a ballot now!",
     "loginInstructions": "Escriba su dirección de correo electrónico o número de teléfono móvil para comenzar.",
     "start": "Inicio",
     "homeTitle": "Vote desde el extranjero",
     "anonymous": "o inicie una sesión anónima",
     "tooltip": "Su correo electrónico o número telefónico creará una cuenta para que usted pueda ingresar fácilmente a www. VoteFromAbroad. org y guardar la información de un año año a otro. Una sesión anónima le permite crear una Tarjeta Postal Federal de Solicitud o formulario FPCA (Federal Post Card Application) y enviarlo a la oficina de elecciones locales, pero no guardará su información para ser utilizada en el futuro."
+  },
+  "email": {
+    "voterEmail": "Thanks for sending in your FPCA form to your local election office. Here is a copy for your records. If you don't receive a confirmation of receipt, please do get back in touch with your local election official: \n\n {leoName} \n\n Email: {leoEmail} \n\n Phone: {leoPhone} \n\n If you need any help, contact our volunteer voter support team at help@votefromabroad.org. \n\n --------",
+    "testEmail": "********** \n This message will be sent to {leoEmail} {leoName} after VoteFromAbroad 3.0 is launched. \n\n We have NOT sent in your FPCA. \n ********** \n\n\n\n"
   },
   "error": {
     "failedLoading": "Hubo un error al cargar esta página",
@@ -59,7 +64,7 @@
     "neverResided": "Ciudadanos estadounidenses que nunca han residido en los Estados Unidos.",
     "fpca": "Llenado de la Tarjeta Postal Federal de Solicitud o formulario FPCA (Federal Post Card Application)",
     "returningBallot": "Devolución de una boleta con voto",
-    "fwab": "Uso de la Boleta Federal de Voto Ausente o Federal Write-in Absentee Ballot (FWAB)",
+    "fwab": "Uso de la Boleta Federal de Inscripción para Votación en Ausencia o Federal Write-in Absentee Ballot (FWAB)",
     "taxImplications": "Implicaciones de impuestos federales y estatales",
     "studyAbroad": "Aspectos de estudios en el extranjero"
   },
@@ -70,8 +75,8 @@
     "usSize": "Sobre tamaño estándar de Estados Unidos (#10)",
     "euSize": "Sobre tamaño estándar de Europa (C4)",
     "fpcaEnvelope": "Sobre de devolución con franqueo pagado de la Tarjeta Postal Federal de Solicitud o formulario FPCA (Federal Post Card Application)",
-    "ballotReturnEnvelope": "Devolución de boleta y Boleta Federal de Voto Ausente o Federal Write-in Absentee Ballot (FWAB) con franqueo pagado",
-    "securityEnvelope": "Devolución de boleta y Boleta Federal de Voto Ausente o Federal Write-in Absentee Ballot (FWAB) en sobre de seguridad"
+    "ballotReturnEnvelope": "Devolución de boleta y Boleta Federal de Inscripción para Votación en Ausencia o Federal Write-in Absentee Ballot (FWAB) con franqueo pagado",
+    "securityEnvelope": "Devolución de boleta y Boleta Federal de Inscripción para Votación en Ausencia o Federal Write-in Absentee Ballot (FWAB) en sobre de seguridad"
   },
   "election": {
     "title": "Elecciones y fechas límite en {state}",
@@ -457,6 +462,7 @@
       "C": "Ciudad",
       "messages": {
         "A-required": "Se requiere la calle y número",
+        "A-maxLength": "Maximum length: 40 characters",
         "C-required": "Se requiere la ciudad",
         "S-required": "Se requiere el estado",
         "Z-required": "Se requiere el código postal",
@@ -553,7 +559,7 @@
         "nov": "Noviembre",
         "dec": "Diciembre"
       },
-      "selectDate": "Escriba su fecha de nacimiento en o seleccione su fecha de nacimiento <br/>(primero el año, luego el mes y la fecha).",
+      "selectDate": "Escriba su fecha de nacimiento o seleccione su fecha de nacimiento <br/>(primero el año, luego el mes y el día).",
       "tooltip": "Usted debe tener 18 años de edad en el momento de la próxima Elección General para registrarse y votar.",
       "disambiguationTitle": "¿A cuál opción se refiere?",
       "disambiguationMessage": "Escribió {0}. ¿A cuál de las siguientes opciones se refiere?",
@@ -630,6 +636,7 @@
       "messages": {
         "country-required": "Usted debe proporcionar su país de residencia. (Fuera de los Estados Unidos)",
         "A-required": "Usted debe indicar su {label}",
+        "A-maxLength": "Maximum length: 40 characters",
         "C-required": "Se requiere {label}",
         "D-required": "Se requiere {label}",
         "S-required": "Se requiere {label}",
@@ -653,7 +660,7 @@
       "label": "Ingrese su número de fax si desea recibir su boleta electoral por fax.",
       "messages": {
         "required": "Usted debe incluir un número de fax si elige recibir su boleta electoral por fax.",
-        "validPhone": "El número que ingresó no es un número de teléfono válido.  Por favor, compruébelo y vuelva a intentarlo."
+        "validPhone": "The number you typed is not a valid phone number.  Please enter a valid number (starting with + and country code)."
       }
     },
     "azRules": {
@@ -667,6 +674,7 @@
       "messages": {
         "country-required": "Usted debe proporcionar su país de residencia. (Fuera de los Estados Unidos)",
         "A-required": "Usted debe indicar su {label}",
+        "A-maxLength": "Maximum length: 40 characters",
         "C-required": "Se requiere {label}",
         "D-required": "Se requiere {label}",
         "S-required": "Se requiere {label}",

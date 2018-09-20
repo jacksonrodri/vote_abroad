@@ -1,19 +1,19 @@
 ---
-title: VOTE WITH A FEDERAL WRITE-IN BALLOT - MAIL ONLY
+title: VOTAR CON UNA BOLETA FEDERAL DE INSCRIPCIÓN PARA VOTACIÓN EN AUSENCIA (FWAB) - SOLO CORREO POSTAL
 ---
-## (Mail In Only)
+## (Solamente correo postal)
 
-If you haven't received your official Ballot yet, you should vote using a Back-up Ballot (also called the Federal Write-In Absentee Ballot or "FWAB") right away!
+Si usted no ha recibido su boleta electoral oficial, debe votar inmediatamente usando una boleta de respaldo (también llamada Boleta Federal de Inscripción para Votación en Ausencia o Federal Write-in Absentee Ballot (FWAB))!
 
-1. Go to this website and follow the prompts to [Fill in the Back-up Ballot](https://www.fvap.gov/fwab-privacy-notice)
-2. The Back-up Ballot should fill in the candidates for you to choose. But if it does not, you can write in the candidate’s name or just write in “Democrat”. (For a Primary Election, you must write in the candidate's name).   
+1. Vaya a este sitio web y siga las instrucciones para el [llenado de la boleta de respaldo](https://www.fvap.gov/fwab-privacy-notice)
+2. La boleta de respaldo debe presentarle los candidatos para que usted elija. Pero si no lo hace, usteed puede escribir en el nombre del candidato o bastará con escribir "Demócrata". (Para una elección primaria, usted debe escribir en el nombre de la o el candidato).   
       
-    You can look up your Sample Ballot here: https://ballotpedia.org/Sample_Ballot_Lookup (Note: you do NOT need to provide an email address). Your Sample Ballot will show the races you are eligible to vote in and the candidates for each race.
-3. Download the PDF Package containing your completed Back-up Ballot and Instructions.
-4. Print out the completed Back-up Ballot, then sign and date it and MAIL it to your Local Election Official.
-5. If you already sent in your form to Register to Vote and/or Request an Absentee Ballot, contact your Local Election Official to verify if they received it. (You also can try to find out why you didn’t receive your official Ballot, so you don’t have the same problem next time).
-6. If your Local Election Official did not receive your form to Register to Vote and/or Request an Absentee Ballot--or if you haven’t sent one in yet, please submit the form right away! Just go to: VoteFromAbroad.org Follow the prompts, then print out and sign the completed form.
+    Usted puede ver su boleta de muestra aquí: https://ballotpedia.org/Sample_Ballot_Lookup (Nota: NO necesita proporcionar una dirección de correo electrónico). Su boleta de muestra le presentará las elecciones en las que usted es elegible para votar, así como los candidatos en cada elección.
+3. Descargue el paquete PDF que contiene su boleta electoral de respaldo llena y las instrucciones correspondientes.
+4. Imprima la boleta de respaldo completa, luego fírmela y escriba la fecha y envíela por correo postal a su funcionario electoral local.
+5. Si usted ya envió el formulario para registrarse para votar y/o solicitar una boleta de votación en ausencia, póngase en contacto con su funcionario electoral local para verificar si la recibieron. (Usted también puede tratar de averiguar la razón por la que no recibió su boleta oficial, para que no tenga el mismo problema la próxima vez).
+6. Si su funcionario electoral local no recibió el formulario para registrarse para votar o solicitar una Boleta Federal de Inscripción para Votación en Ausencia --o si usted no lo ha enviado todavía, por favor envíe el formulario ¡inmediatamente! Solamente tiene que ir a: VoteFromAbroad.org, seguir las instrucciones, para luego imprimir y firmar el formulario completado.
 
-\*If you receive your official Ballot after submitting the Back-up Ballot, you should complete and return your official Ballot as well. It’s okay - only one ballot per person will be counted.
+\*Si usted recibe su boleta electoral oficial después de haber enviado la boleta de respaldo, también debe completar y devolver la boleta oficial. Esto es correcto -se contará sólo una boleta por persona.
 
-QUESTIONS? Email us at help@votefromabroad.org We’ll get back to you right away!
+¿PREGUNTAS? ¡Envíenos un correo electrónico a help@votefromabroad.org ¡Nosotros le responderemos enseguida!

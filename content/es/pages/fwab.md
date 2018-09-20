@@ -1,7 +1,7 @@
 ---
-title: HOW TO VOTE USING THE BACK-UP BALLOT
+title: CÓMO VOTAR USANDO LA BOLETA DE RESPALDO
 ---
-## (Email, Fax or Mail In)
+## (Correo electrónico, Fax o correo postal)
 
 If you haven’t received your official Ballot yet, you should vote using a Back-up Ballot (also called the Federal Write-In Absentee Ballot or “FWAB”) right away!
 

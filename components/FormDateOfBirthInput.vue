@@ -73,7 +73,7 @@
         </i18n>
         <b-field v-for="date in dateChoices" :key="date.getTime()">
           <a @click="() => { addDate(date) }" class="button is-primary is-fullwidth">
-            {{ date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric'}) }}
+            {{ dateFormatter(date) }}
           </a>
         </b-field>
       </section>

@@ -1,4 +1,4 @@
 ---
-title: Election Officials
+title: Funcionarios Electorales
 ---
-Look up your state's primary and general election deadlines, as well as its submission rules, find your local election officials, and stay on top of voting in this year's elections.
+Consulte las fechas límite de las elecciones primaria y general, así como las reglas para el envío de las boletas electorales; localice a sus funcionarios electorales locales y esté pendiente de votar en las elecciones de este año.

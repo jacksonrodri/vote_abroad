@@ -12,7 +12,7 @@ Gracias por usar www.votefromabroad.org para generar su registro electoral/formu
 
 4. Confirme que usted recibirá una boleta electoral. Le recomendamos comunicarse con su funcionario electoral local despúes de enviarle su formulario para confirmar que fue recibido y que usted estará recibiendo sus boletas electorales a lo largo del año. Usted puede encontrar la información de contacto de su funcionario electoral en www.votefromabroad.org/states correo electrónico: encuentre la información de contacto ade su funcionario electoral local en www.votefromabroad.org/states teléfono:
 
-5. Anote en su calendario para su boleta electoral / Prepárese para usar una boleta electoral de respaldo. Las boletas electorales deben enviarse a votantes en el extranjero por lo menos 45 días antes de las elecciones. Si usted no recibe su boleta al menos 30 días antes de las elecciones, consulte el sitio www.fvap.gov para preparar una Boleta Federal de Voto Ausente o Federal Write-in Absentee Ballot (FWAB)
+5. Anote en su calendario para su boleta electoral / Prepárese para usar una boleta electoral de respaldo. Las boletas electorales deben enviarse a votantes en el extranjero por lo menos 45 días antes de las elecciones. Si usted no recibe su boleta al menos 30 días antes de las elecciones, consulte el sitio www.fvap.gov para preparar una Boleta Federal de Inscripción para Votación en Ausencia o Federal Write-in Absentee Ballot (FWAB)
 
 Envíe el formulario a su funcionario electoral por correo electrónico, Fax o correo postal.
 
@@ -22,6 +22,6 @@ N/A (no aplicable)
 
 Le recomendamos comunicarse con su funcionario electoral local despúes de enviarle su formulario para confirmar que fue recibido y que usted estará recibiendo sus boletas electorales a lo largo del año. Usted puede comunicarse con su funcionario electoral local por correo electrónico o telefono a:
 
-Las boletas electorales deben enviarse a votantes en el extranjero al menos 45 días antes de las elecciones. Si usted no recibe su boleta al menos 30 días antes de las elecciones, consulte el sitio www.fvap.gov para preparar una Boleta Federal de Voto Ausente o Federal Write-in Absentee Ballot (FWAB).
+Las boletas electorales deben enviarse a votantes en el extranjero al menos 45 días antes de las elecciones. Si usted no recibe su boleta al menos 30 días antes de las elecciones, consulte el sitio www.fvap.gov para preparar una Boleta Federal de Inscripción para Votación en Ausencia o Federal Write-in Absentee Ballot (FWAB).
 
 Ver la sección 6
