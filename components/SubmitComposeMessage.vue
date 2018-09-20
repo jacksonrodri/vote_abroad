@@ -87,7 +87,7 @@
         <b-icon icon="envelope" size="is-medium"></b-icon>
       </figure>
       <div class="media-content">
-        <span class="is-size-5">{{$t(`request.deadlineLanguage.${currentRequest.leo.s.toLowerCase()}Special`)}}</span>
+        <span class="is-size-5">{{$t(`request.deadlineLanguage.${currentRequest.leo.s.toUpperCase()}Special`)}}</span>
         <div class="box">
           <span v-if="currentRequest.leo.n"><strong>{{ currentRequest.leo.n }}</strong><br/></span>
           <span v-if="currentRequest.leo.a1"><strong>{{ currentRequest.leo.a1 }}</strong><br/></span>
