@@ -139,8 +139,8 @@ export default {
   },
   computed: {
     isStudentSite () { return this.$store.state.isStudentSite },
-    voterMessage () { return this.$t('email.voterEmail') + this.message },
-    testMessage () { return this.$t('email.testEmail') + this.message },
+    voterMessage () { return this.$t('email.voterEmail', {leoEmail: this.leoEmail, leoName: this.leoName, leoPhone: this.leoPhone}) + this.message },
+    testMessage () { return this.$t('email.testEmail', {leoEmail: this.leoEmail, leoName: this.leoName}) + this.message },
     formEmail: {
       get () { return this.email || this.customEmail },
       set (value) {
@@ -157,6 +157,9 @@ export default {
     },
     leoName () {
       return this.currentRequest.leo && this.currentRequest.leo.n ? this.currentRequest.leo.n : ''
+    },
+    leoPhone () {
+      return this.currentRequest.leo && this.currentRequest.leo.p ? `+1 {this.currentRequest.leo.p}` : ''
     },
     fromName () { return `${this.firstName} ${this.lastName}` },
     ...mapState({
