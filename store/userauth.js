@@ -94,11 +94,11 @@ export const actions = {
   initializeWebAuth () {
     webAuth = new WebAuth({
       domain: 'montg.auth0.com',
-      redirectUri: process.browser ? `${window.location.hostname}` : redirectUri + this.app.localePath('authenticating'),
+      redirectUri: redirectUri + this.app.localePath('authenticating'),
       clientID: '0Wy4khZcuXefSfrUuYDUP0Udag4FqL2u',
       responseType: 'token id_token'
     })
-    // redirectUri: redirectUri + this.app.localePath('authenticating'),
+    redirectUri: process.browser ? `https://${window.location.hostname}` : redirectUri + this.app.localePath('authenticating'),
     // console.log('new redirecturi', redirectUri + this.app.localePath('index'))
   },
   sendEmailLink ({commit, state}) {
