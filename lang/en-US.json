@@ -641,7 +641,8 @@
         "D-required": "{label} is required",
         "S-required": "{label} is required",
         "Z-required": "{label} is required",
-        "X-required": "{label} is required"
+        "X-required": "{label} is required",
+        "alt1-required": "Your full street address is required"
       },
       "changeFormat": "Change Format",
       "unstructured-label": "I need to use a different format for my address.",
@@ -680,7 +681,8 @@
         "S-required": "{label} is required",
         "Z-required": "{label} is required",
         "X-required": "{label} is required",
-        "US-warning": "You should only select 'United States' if you are using a military or diplomatic address (APO/DPO/FPO)."
+        "US-warning": "You should only select 'United States' if you are using a military or diplomatic address (APO/DPO/FPO).",
+        "alt1-required": "Your full street address is required"
       },
       "placeholder": "Country",
       "selectCountry": " (Please select a country to continue)",
