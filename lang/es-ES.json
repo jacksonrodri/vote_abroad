@@ -3,9 +3,9 @@
   "home": "Página de inicio",
   "posts": "Mensajes",
   "homepage": {
-    "titleStudents": "Study abroad? Vote from abroad.",
+    "titleStudents": "¿Estudia en el extranjero? Vote desde el extranjero.",
     "title": "Vote desde el extranjero",
-    "subtitle": "Request a ballot now!",
+    "subtitle": "¡Solicite ahora una boleta electoral!",
     "loginInstructions": "Escriba su dirección de correo electrónico o número de teléfono móvil para comenzar.",
     "start": "Inicio",
     "homeTitle": "Vote desde el extranjero",
@@ -13,8 +13,8 @@
     "tooltip": "Su correo electrónico o número telefónico creará una cuenta para que usted pueda ingresar fácilmente a www. VoteFromAbroad. org y guardar la información de un año año a otro. Una sesión anónima le permite crear una Tarjeta Postal Federal de Solicitud o formulario FPCA (Federal Post Card Application) y enviarlo a la oficina de elecciones locales, pero no guardará su información para ser utilizada en el futuro."
   },
   "email": {
-    "voterEmail": "Thanks for sending in your FPCA form to your local election office. Here is a copy for your records. If you don't receive a confirmation of receipt, please do get back in touch with your local election official: \n\n {leoName} \n\n Email: {leoEmail} \n\n Phone: {leoPhone} \n\n If you need any help, contact our volunteer voter support team at help@votefromabroad.org. \n\n --------",
-    "testEmail": "********** \n This message will be sent to {leoEmail} {leoName} after VoteFromAbroad 3.0 is launched. \n\n We have NOT sent in your FPCA. \n ********** \n\n\n\n"
+    "voterEmail": "Gracias por enviar la Tarjeta Postal Federal de Solicitud o formulario FPCA (Federal Post Card Application) a su oficina local de elecciones. Aquí está una copia para sus registros. Si usted no recibe un acuse de recibo, por favor vuelva a comunicarse con su funcionario electoral local: \n\n {leoName} \n\n correo electrónico: {leoEmail} \n\n teléfono: {leoPhone} \n\nSi necesita ayuda, comuníquese con nuestro equipo de voluntarios de apoyo a votantes en: help@votefromabroad.org. \n\n---",
+    "testEmail": "Este mensaje se enviará a {leoEmail} {leoName} después del lanzamiento de VoteFromAbroad 3.0. \n\n NO hemos enviado su Tarjeta Postal Federal de Solicitud o formulario FPCA (Federal Post Card Application). \n *** \n\n\n\n"
   },
   "error": {
     "failedLoading": "Hubo un error al cargar esta página",
@@ -83,12 +83,12 @@
     "elections": "Elecciones",
     "electionDay": "Día de las elecciones",
     "allVoters": "Todos los votantes",
-    "postmarkedby": "Matasellado por",
-    "receivedby": "Recibido por",
-    "sentby": "Enviado por",
+    "postmarkedby": "Matasellada a más tardar el",
+    "receivedby": "Recibida a más tardar el",
+    "sentby": "Enviada a más tardar el",
     "nodeadline": "No hay fecha límite",
-    "signedby": "Firmado por",
-    "signedpostmarkedby": "firmado/matasellado por",
+    "signedby": "Firmada a más tardar el",
+    "signedpostmarkedby": "firmada/matasellada a más tardar el",
     "notrequired": "no es necesario",
     "federal": "Federal",
     "state": "Estado",
@@ -462,7 +462,7 @@
       "C": "Ciudad",
       "messages": {
         "A-required": "Se requiere la calle y número",
-        "A-maxLength": "Maximum length: 40 characters",
+        "A-maxLength": "Longitud máxima: 40 caracteres",
         "C-required": "Se requiere la ciudad",
         "S-required": "Se requiere el estado",
         "Z-required": "Se requiere el código postal",
@@ -636,7 +636,7 @@
       "messages": {
         "country-required": "Usted debe proporcionar su país de residencia. (Fuera de los Estados Unidos)",
         "A-required": "Usted debe indicar su {label}",
-        "A-maxLength": "Maximum length: 40 characters",
+        "A-maxLength": "Longitud máxima: 40 caracteres",
         "C-required": "Se requiere {label}",
         "D-required": "Se requiere {label}",
         "S-required": "Se requiere {label}",
@@ -660,7 +660,7 @@
       "label": "Ingrese su número de fax si desea recibir su boleta electoral por fax.",
       "messages": {
         "required": "Usted debe incluir un número de fax si elige recibir su boleta electoral por fax.",
-        "validPhone": "The number you typed is not a valid phone number.  Please enter a valid number (starting with + and country code)."
+        "validPhone": "El número que ingresó no es un número de teléfono válido.  Por favor, ingrese un número válido (iniciando con el signo + y código de país)."
       }
     },
     "azRules": {
@@ -674,7 +674,7 @@
       "messages": {
         "country-required": "Usted debe proporcionar su país de residencia. (Fuera de los Estados Unidos)",
         "A-required": "Usted debe indicar su {label}",
-        "A-maxLength": "Maximum length: 40 characters",
+        "A-maxLength": "Longitud máxima: 40 caracteres",
         "C-required": "Se requiere {label}",
         "D-required": "Se requiere {label}",
         "S-required": "Se requiere {label}",
@@ -754,7 +754,7 @@
     "thankYou": "Gracias por usar VoteFromAbroad para generar su Registro electoral/Formulario de solicitud de boleta electoral.",
     "formSubmitted": "Su formulario ha sido enviado por correo electrónico a su funcionario electoral.",
     "requiresSubmit": "**Asegúrese de enviar su formulario** a su funcionario electoral local antes de la fecha límite.",
-    "helpThanks": "Si usted necesita ayuda respecto a la votación, comuníquese con nuestro equipo de voluntrios de apoyo a votantes en: [help@votefromabroad.org] (mailto:help@votefromabroad.org).\n¡Gracias por votar!",
+    "helpThanks": "Si usted necesita ayuda respecto a la votación, comuníquese con nuestro equipo de voluntarios de apoyo a votantes en: [help@votefromabroad.org] (mailto:help@votefromabroad.org).\n¡Gracias por votar!",
     "verify": "Nosotros también recomendamos que verifique con su funcionario electoral si ha recibido y procesado su formulario.  Se puede entrar en contacto con su funcionario electoral con lo siguiente:",
     "makeChanges": "Si usted descubre que hay un error y necesita cambiar algo en su formulario, <a class='has-text-primary' href='{link}'>seleccione aquí</a> para regresar. Si usted ha terminado, por favor cierre la ventana del navegador para borrar cualquier información guardada en esta sesión. O ",
     "clearSession": "borre su información y empiece una nueva solicitud.",
