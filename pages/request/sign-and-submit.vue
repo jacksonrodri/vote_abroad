@@ -114,7 +114,13 @@
                 <submit-add-signature v-model="signStep" @sigcap="addSig" v-if="signStep === 'addSignature'"></submit-add-signature>
               </transition>
               <transition name="fade">
-                <submit-compose-message v-model="signStep" :fpca="fpca" :documentRequired="documentRequired" v-if="signStep === 'composeMessage'"></submit-compose-message>
+                <submit-compose-message
+                  :instructionsObject="instructionsObject"
+                  v-model="signStep"
+                  :fpca="fpca"
+                  :documentRequired="documentRequired"
+                  v-if="signStep === 'composeMessage'">
+                </submit-compose-message>
               </transition>
               <transition name="fade">
                 <submit-special-instructions v-model="signStep" :msPdf="msPdf" :state="votState" :firstName="firstName" :lastName="lastName" v-if="signStep === 'specialInstructions'"></submit-special-instructions>
