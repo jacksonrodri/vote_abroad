@@ -6,12 +6,13 @@ import AWSExports from '../aws-exports'
 const jwtDecode = require('jwt-decode')
 const redirectUri = process.env.url
 
-let webAuth = new WebAuth({
-  domain: 'montg.auth0.com',
-  redirectUri: redirectUri + '/authenticating/',
-  clientID: '0Wy4khZcuXefSfrUuYDUP0Udag4FqL2u',
-  responseType: 'token id_token'
-})
+let webAuth
+// let webAuth = new WebAuth({
+//   domain: 'montg.auth0.com',
+//   redirectUri: redirectUri + '/authenticating/',
+//   clientID: '0Wy4khZcuXefSfrUuYDUP0Udag4FqL2u',
+//   responseType: 'token id_token'
+// })
 
 export const state = () => ({
   idToken: null,
@@ -94,7 +95,7 @@ export const actions = {
   initializeWebAuth () {
     webAuth = new WebAuth({
       domain: 'montg.auth0.com',
-      redirectUri: process.browser ? `https://${window.location.hostname}` : redirectUri + this.app.localePath('authenticating'),
+      redirectUri: process.browser ? `${window.location.protocol}//${window.location.host}${this.app.localePath('authenticating')}` : redirectUri + this.app.localePath('authenticating'),
       clientID: '0Wy4khZcuXefSfrUuYDUP0Udag4FqL2u',
       responseType: 'token id_token'
     })
@@ -185,7 +186,7 @@ export const actions = {
     })
   },
   async setSession ({ state, rootState, commit, dispatch, app }) {
-    dispatch('initializeWebAuth')
+    await dispatch('initializeWebAuth')
     commit('updateAuthState', 'loading')
     this.app.Amplify.configure(AWSExports)
     function parseHash () {
