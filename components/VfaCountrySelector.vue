@@ -19,7 +19,7 @@
     </template>
     <!-- :expanded="countryFocused" -->
     <!-- :class="!countryFocused ? 'shrink' : ''" -->
-    <template slot="empty">$t('request.abrAdr.countryNoResults', {typed: countrySearch}</template>
+    <template slot="empty">{{$t('request.abrAdr.countryNoResults', {typed: countrySearch})}}</template>
     <template slot-scope="props">
       <span :class="`flag-icon flag-icon-${props.option.code.toLowerCase()}`"></span>{{ props.option.name }} <span v-if="phone">{{ props.option.exPhone ? props.option.exPhone.split(' ')[0] : '' }}</span>
     </template>

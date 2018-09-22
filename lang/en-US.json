@@ -21,6 +21,18 @@
     "chunkLoadingFailed": "The page has just been updated and will be reloaded. If it is not automatically reloaded, please click refresh in your browser to manually reload.",
     "back": "Back to Main Page"
   },
+  "addressPart": {
+    "streetAddress1": "Street Address 1",
+    "streetAddress2": "Street Address 2",
+    "postal": "Postal",
+    "city": "City",
+    "province": "Province",
+    "department": "Department",
+    "address": "Address",
+    "districto": "Districto",
+    "canton": "Canton",
+    "state": "State"
+  },
   "auth": {
     "sendingCode": "sendingCode",
     "voter": "voter",
@@ -609,9 +621,10 @@
       "noid1": "I don't have a {id}",
       "TerritoryID": "Territory ID",
       "noid2": "I don't have the above identification",
-      "tooltipReq1": "{state} voters must provide a {id}. \n\n\n\nIf you can't find your {id}, you can look (suggestions)\n\n \\*\\*'I don't have a {id}.'\\*\\*",
-      "tooltipReq2": "**_ONE_** of the following forms of identification is required for {state} voters:\n\n {allButLastTypes} or {lastType}. \n\nIf you don't have any of these, please select **'I don't have the above identification.'**",
-      "instructionsReq1": "{state} voters must provide the following ID: {id}.  If you don't have a {idType}, please select **I don't have a {idType}.**",
+      "tooltipReq1": "{state} voters must provide a {id}. \n\n\n\nIf you can't find your {id}, please select \n\n \\*\\*'I don't have a {id}.'\\*\\*. Your local election official will follow up with you if they require more information.",
+      "tooltipReq2": "**_ONE_** of the following forms of identification is required for {state} voters:\n\n {allButLastTypes} or {lastType}. \n\nIf you don't have any of these, please select **'I don't have the above identification.'** Your local election official will follow up with you if they require more information.",
+      "tooltipOkEmail": "Oklahoma voters must provide the last 4 digits of your Social Security Number if you choose to receive your ballot by email. \n\n If you don't have a Social Security Number or you can't find it, please select **\"I don't have a Social Security Number.\"** Your local election official will follow up with you if they require more information.",
+      "instructionsReq1": "{state} voters must provide the following ID: {id}.  If you don't have a {idType}, please select: **I don't have a {idType}.**",
       "instructionsReq2": "{state} voters must provide **ONE** of the following forms of identification: {allButLastTypes}, or your {lastType}. If you don't have any of these, please select **'I don't have the above identification.'**",
       "PassportNumber": "Passport Number",
       "TribalID": "Tribal ID",

@@ -37,11 +37,11 @@
               v-if="part.type === 'A'"
               :data="data"
               field="structured_formatting.main_text"
-              :placeholder="part.label"
+              :placeholder="localizeLabel(part.label)"
               :value="tempA || adr[part.type]"
               @input="val => {tempA = val; updateAddress(part.type, val)}"
-              :aria-label="part.label"
-              :title="part.label"
+              :aria-label="localizeLabel(part.label)"
+              :title="localizeLabel(part.label)"
               :class="part.class"
               :maxlength="adr[part.type] && hasFocus === part.type ? 40 : ''"
               :has-counter="adr[part.type] && hasFocus === part.type"
@@ -57,7 +57,7 @@
               @blur="autocompleteFocused = false" -->
             <b-select
               v-else-if="part.options && part.options.length < 5  && part.options.length > 0"
-              :placeholder="part.label"
+              :placeholder="localizeLabel(part.label)"
               :value="adr[part.type] || null"
               :ref="part.type"
               @input="val => updateAddress(part.type, val)"
@@ -74,7 +74,7 @@
               :data="adr[part.type] ? part.options.filter(x => x.name.toLowerCase().includes(adr[part.type].toLowerCase())): part.options"
               field="name"
               :ref="part.type"
-              :placeholder="part.label"
+              :placeholder="localizeLabel(part.label)"
               open-on-focus
               keep-first
               :value="adr[part.type] || null"
@@ -85,7 +85,7 @@
               :ref="part.type"
               :value="adr[part.type] || ''"
               @input="val => updateAddress(part.type, val)"
-              :placeholder="part.label"
+              :placeholder="localizeLabel(part.label)"
               :maxlength="adr[part.type] && hasFocus === part.type ? 40 : ''"
               :has-counter="adr[part.type] && hasFocus === part.type"
               @focus="hasFocus = part.type"
@@ -121,8 +121,7 @@ import { mapMutations, mapGetters, mapActions, mapState } from 'vuex'
 import snarkdown from 'snarkdown'
 import VfaBasicLabel from '~/components/VfaBasicLabel'
 import VfaCountrySelector from '~/components/VfaCountrySelector'
-import { placesAutocomplete, placeDetails, uuidv4 } from '~/utils/helpers.js'
-import { cleanString } from '~/utils/helpers'
+import { placesAutocomplete, placeDetails, uuidv4, cleanString } from '~/utils/helpers.js'
 
 export default {
   name: 'AbroadAddress',
@@ -175,7 +174,7 @@ export default {
             : /A|B|D|C|S|X|Z|country/.test(type))
           .map(part => Object.assign({}, part, {
             messages: this.v && this.v[part.type].$error
-              ? Object.entries(this.v[part.type]).filter(([key, value]) => key.charAt(0) !== '$' && value === false).map(([k, v]) => this.$t(`request.${this.fieldName}.messages.${part.type}-${k}`, { label: part.label, zipExample: part.example }))
+              ? Object.entries(this.v[part.type]).filter(([key, value]) => key.charAt(0) !== '$' && value === false).map(([k, v]) => this.$t(`request.${this.fieldName}.messages.${part.type}-${k}`, { label: this.localizeLabel(part.label), zipExample: part.example }))
               : '',
             displayType: this.v && this.v[part.type].$error ? 'is-danger' : '',
             class: {
@@ -198,6 +197,17 @@ export default {
     ...mapState('data', ['postal'])
   },
   methods: {
+    camelize (str) {
+      return str.replace(/(?:^\w|[A-Z]|\b\w|\s+)/g, function (match, index) {
+        if (+match === 0) return '' // or if (/\s+/.test(match)) for white spaces
+        return index === 0 ? match.toLowerCase() : match.toUpperCase()
+      })
+    },
+    localizeLabel (label) {
+      return this.$te(`addressPart.${this.camelize(label)}`)
+        ? this.$t(`addressPart.${this.camelize(label)}`)
+        : label
+    },
     focusCountry () {
       this.$refs.ctry[0].$refs.input.focus()
     },

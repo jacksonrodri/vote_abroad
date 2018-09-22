@@ -14,9 +14,9 @@
               </b-table-column>
               <b-table-column>
                 <div class="calendar">
-                  <header class="calendar-month">{{new Date(props.row.date).toLocaleDateString('en-US', {month: 'short', timeZone: 'UTC'}) }}</header>
+                  <header class="calendar-month">{{new Date(props.row.date).toLocaleDateString(dateFormat, {month: 'short', timeZone: 'UTC'}) }}</header>
                   <div class="calendar-date">
-                    {{ new Date(props.row.date).toLocaleDateString('en-US', {day: 'numeric', timeZone: 'UTC'}) }}
+                    {{ new Date(props.row.date).toLocaleDateString(dateFormat, {day: 'numeric', timeZone: 'UTC'}) }}
                   </div>
                 </div>
               </b-table-column>
@@ -25,7 +25,7 @@
                   <li v-for="(deadline, index) in rule"
                     :key="index.toString() + deadline.rule + deadline.voterType"
                     v-if="deadline.rule !== 'Not Required'">
-                    <strong>{{ typeof deadline.voterType === 'string' ? deadline.voterType : 'All Voters' }}</strong><br/><span class="tag is-success">{{ deadline.rule }}</span><br/>{{ new Date(deadline.date).toDateString() }}
+                    <strong>{{ typeof deadline.voterType === 'string' ? deadline.voterType : 'All Voters' }}</strong><br/><span class="tag is-success">{{ deadline.rule }}</span><br/>{{ new Date(deadline.date).toLocaleDateString(dateFormat, {year: 'numeric', month: 'short', day: 'numeric'}) }}
                     <hr v-if="index < rule.length - 1">
                   </li>
                   <li v-else><strong>{{ deadline.rule }}</strong></li>
@@ -105,6 +105,9 @@ export default {
     }
   },
   computed: {
+    dateFormat () {
+      return this.$i18n.locale === 'en' ? 'en-US' : 'es-ES'
+    },
     filteredLeos () {
       return this.stateLeos.filter(leo => leo.n.toLowerCase().includes(this.typedLeo.toLowerCase()) || leo.j.toLowerCase().includes(this.typedLeo.toLowerCase()))
     },

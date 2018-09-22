@@ -54,7 +54,7 @@
 
     <div class="field">
       <b-checkbox v-model="noId" ref="noId">
-        <span v-if="idOptions && idOptions.length === 1">{{$t('request.id.noid1', {id: $t(`request.id.${idOptions[0]}`)})}}</span>
+        <span v-if="idOptions && idOptions.length === 1">{{$t('request.id.noid1', {id: $t(`request.id.${idOptions[0].includes('SSN') ? 'SSN' : idOptions[0]}`)})}}</span>
         <span v-else>{{$t('request.id.noid2')}}</span>
       </b-checkbox>
     </div>

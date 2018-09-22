@@ -51,16 +51,18 @@
                   </nuxt-link>
 
                   <div class="navbar-dropdown">
-                    <nuxt-link v-for="(election, index) in upcomingElections" :key="`${election.state} ${election.electionType}`" :to="localePath({ name: 'elections-state', params: { state: election.state } })" :class="`navbar-item ${index > 3 ? 'is-hidden-touch' : ''}`">
+                    <nuxt-link v-for="(election, index) in upcomingElections" :key="`${election.state} ${localizeElectionType(election.electionType)}`" :to="localePath({ name: 'elections-state', params: { state: election.state } })" :class="`navbar-item ${index > 3 ? 'is-hidden-touch' : ''}`">
                       <div class="calendar">
-                        <header class="calendar-month">{{new Date(election.date).toLocaleDateString('en-US', {month: 'short'}) }}</header>
+                        <header class="calendar-month">{{new Date(election.date).toLocaleDateString(dateFormat, {month: 'short'}) }}</header>
                         <div class="calendar-date">
-                          {{ new Date(election.date).toLocaleDateString('en-US', {day: 'numeric'}) }}
+                          {{ new Date(election.date).toLocaleDateString(dateFormat, {day: 'numeric'}) }}
                         </div>
                       </div>
-                      <span class="is-size-6"><span class="has-text-weight-semibold">{{ election.state }}</span> - {{ election.electionType}}</span>
+                      <span class="is-size-6"><span class="has-text-weight-semibold">{{ election.state }}</span> - {{ localizeElectionType(election.electionType) }}</span>
                       <!-- </span> - {{ $t(`elections.electionTypes['${election.electionType}']`) }}</span> -->
                     </nuxt-link>
+                    <hr class="navbar-divider">
+                    <nuxt-link :to="localePath({ name: 'elections' })" class="navbar-item">{{$t('menu.allElections')}}</nuxt-link>
                     <!-- <hr class="navbar-divider">
                     <nuxt-link :to="localePath({ name: 'elections' })" class="navbar-item" exact >... All upcoming elections</nuxt-link> -->
                   </div>
@@ -254,6 +256,9 @@ export default {
     }
   },
   computed: {
+    dateFormat () {
+      return this.$i18n.locale === 'en' ? 'en-US' : 'es-ES'
+    },
     offline () {
       return process.env.offline && process.env.offline !== 'false'
     },
@@ -270,6 +275,17 @@ export default {
     showIntercom () {
       // console.log(this.$intercom)
       this.$intercom.show()
+    },
+    camelize (str) {
+      return str.replace(/(?:^\w|[A-Z]|\b\w|\s+)/g, function (match, index) {
+        if (+match === 0) return '' // or if (/\s+/.test(match)) for white spaces
+        return index === 0 ? match.toLowerCase() : match.toUpperCase()
+      })
+    },
+    localizeElectionType (electionType) {
+      return this.$te(`election.${this.camelize(electionType)}`)
+        ? this.$t(`election.${this.camelize(electionType)}`)
+        : electionType
     }
   },
   async mounted () {

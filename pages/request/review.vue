@@ -126,7 +126,7 @@ export default {
       if (this.currentRequest && (this.currentRequest.stateSpecial || (this.currentRequest.identification && this.currentRequest.identification.noId && this.stateRules && this.stateRules.id && this.stateRules.id.length > 0))) {
         addlInfoText = this.currentRequest && this.currentRequest.stateSpecial ? this.currentRequest.stateSpecial.toString() : ' '
         if ((this.currentRequest.identification && this.currentRequest.identification.noId && this.stateRules && this.stateRules.id && this.stateRules.id.length > 0)) {
-          addlInfoText = `I do not have a Social Security Number or State issued ID number. ` + addlInfoText
+          addlInfoText = `I do not have a Social Security Number${this.votState === 'OK' && this.recBallot === 'email' ? '' : 'or State issued ID number'}. ${addlInfoText}`
         }
         return addlInfoText
       } else {

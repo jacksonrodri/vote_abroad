@@ -21,6 +21,18 @@
     "chunkLoadingFailed": "La página se ha actualizado y se volverá a cargar. Si esto no ocurre automáticamente, por favor seleccione 'actualizar' en su navegador para volver a cargarla manualmente.",
     "back": "Volver a página principal"
   },
+  "addressPart": {
+    "streetAddress1": "Street Address 1",
+    "streetAddress2": "Street Address 2",
+    "postal": "Código Postal",
+    "city": "Ciudad",
+    "province": "Province",
+    "department": "Department",
+    "address": "Dirección",
+    "districto": "Distrito",
+    "canton": "Cantón",
+    "state": "Estado"
+  },
   "auth": {
     "sendingCode": "sendingCode",
     "voter": "votante",
@@ -609,9 +621,10 @@
       "noid1": "No tengo un(a) {id}",
       "TerritoryID": "Identificación del territorio",
       "noid2": "No tengo la identificación indicada anteriormente",
-      "tooltipReq1": "los votantes de {state} deben proporcionar un(a) {id}.     \n\n\n\nSi no puede encontrar su {id}, usted puede mirar (sugerencias) \\*\\*'No tengo {id}.' \\*\\*",
-      "tooltipReq2": "**_UNA_** de las siguientes formas de identificación se requiere para los votantes de {state}:\n\n {allButLastTypes} o {lastType}. \n\nSi usted no tiene alguna de estas formas de identificación, por favor seleccione **'No tengo la identificación mencionada.'**",
-      "instructionsReq1": "Los votantes de {state} deben proporcionar  la siguiente identificación: {id}.  Si no tiene {idType} por favor seleccione ** no tengo {idType}. **",
+      "tooltipReq1": "{state} voters must provide a {id}. \n\n\n\nIf you can't find your {id}, please select \n\n \\*\\*'I don't have a {id}.'\\*\\*. Your local election official will follow up with you if they require more information.",
+      "tooltipReq2": "**_ONE_** of the following forms of identification is required for {state} voters:\n\n {allButLastTypes} or {lastType}. \n\nIf you don't have any of these, please select **'I don't have the above identification.'** Your local election official will follow up with you if they require more information.",
+      "tooltipOkEmail": "Oklahoma voters must provide the last 4 digits of your Social Security Number if you choose to receive your ballot by email. \n\n If you don't have a Social Security Number or you can't find it, please select **\"I don't have a Social Security Number.\"** Your local election official will follow up with you if they require more information.",
+      "instructionsReq1": "{state} voters must provide the following ID: {id}.  If you don't have a {idType}, please select: **I don't have a {idType}.**",
       "instructionsReq2": "Los votantes de {state} deben proporcionar **_UNA_** de las siguientes formas de identificación:\n {allButLastTypes} o su {lastType}. Si usted no tiene alguna de estas formas de identificación, por favor seleccione **'No tengo la identificación mencionada.'**",
       "PassportNumber": "Número de pasaporte",
       "TribalID": "Identificación tribal",
@@ -641,7 +654,8 @@
         "D-required": "Se requiere {label}",
         "S-required": "Se requiere {label}",
         "Z-required": "Se requiere {label}",
-        "X-required": "Se requiere {label}"
+        "X-required": "Se requiere {label}",
+        "alt1-required": "Your full street address is required"
       },
       "changeFormat": "Cambiar formato",
       "unstructured-label": "Necesito utilizar un formato diferente para mi domicilio.",
@@ -680,7 +694,8 @@
         "S-required": "Se requiere {label}",
         "Z-required": "Se requiere {label}",
         "X-required": "Se requiere {label}",
-        "US-warning": "Solo debe seleccionar 'Estados Unidos' si usted está usando una dirección militar o diplomática (Oficina Postal del Ejército, Marina o Sede Diplomática)."
+        "US-warning": "Solo debe seleccionar 'Estados Unidos' si usted está usando una dirección militar o diplomática (Oficina Postal del Ejército, Marina o Sede Diplomática).",
+        "alt1-required": "Your full street address is required"
       },
       "placeholder": "País",
       "selectCountry": " (Por favor seleccione un país para continuar)",
