@@ -337,7 +337,7 @@ export const actions = {
   async logout ({ app, dispatch }) {
     // this.app.$Analytics.record('logout')
     await webAuth.logout({
-      returnTo: process.browser ? `${window.location.protocol}//${window.location.host}${this.app.localePath('authenticating')}` : redirectUri + this.app.localePath('authenticating'),
+      returnTo: process.browser ? `//${window.location.host}` : redirectUri,
       // returnTo: redirectUri,
       clientID: '0Wy4khZcuXefSfrUuYDUP0Udag4FqL2u'
     })
