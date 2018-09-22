@@ -168,11 +168,9 @@ export default {
   },
   directives: {
     format: (el, binding, vnode) => {
-      // console.log('formatDirective')
       let format = binding.value.format
       let parse = binding.value.parse
       const input = el instanceof HTMLInputElement ? el : el.querySelector('input')
-      // console.log('input', input)
       const onChangeHandler = () => { vnode.context.$emit('newVal', input.value) }
       input.onchange = (event) => onChange(event, input, parse, format, onChangeHandler)
       input.oncut = (event) => onCut(event, input, parse, format, onChangeHandler)

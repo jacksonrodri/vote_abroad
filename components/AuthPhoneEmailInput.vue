@@ -183,11 +183,9 @@ export default {
   },
   directives: {
     format: (el, binding, vnode) => {
-      // console.log('formatDirective')
       let format = binding.value.format
       let parse = binding.value.parse
       const input = el instanceof HTMLInputElement ? el : el.querySelector('input')
-      // console.log('input', input)
       const onChangeHandler = () => { vnode.context.$emit('newVal', input.value) }
       input.onchange = (event) => onChange(event, input, parse, format, onChangeHandler)
       input.oncut = (event) => onCut(event, input, parse, format, onChangeHandler)
@@ -204,23 +202,28 @@ export default {
       } else if (this.getPhoneIntFormat(this.tempValue, this.countryIso || null) !== val) {
         this.tempValue = val
       }
-      if (val && val.length > 3 && !this.countryIso) {
+      if (val && /^\+\d\d?\d?/.test(val) && !this.countryIso) {
         this.countryIso = (this.formattedNumber(this.fieldValue)).formatted.country
       }
-      this.$emit('input', val)
+      if (val && /^\+\d\d?\d?/.test(val) && !this.phoneMetadataHasAllCountriesForPrefix(val)) {
+        this.getCountryIsoFromPhonePrefix(val).then(() => {
+          this.countryIso = (this.formattedNumber(this.fieldValue)).formatted.country
+        })
+      }
+      // this.$emit('input', val)
     },
     userCountry (val) {
       if (val && !this.countryIso) {
         this.countryIso = val
       }
-    },
-    countryFocused (val) {
-      // console.log('country focused is: ', val)
     }
+    // countryFocused (val) {
+    //   // console.log('country focused is: ', val)
+    // }
   },
   async mounted () {
     // console.log('mounted with fieldValue: ', this.fieldValue, 'userCountry', this.userCountry, 'countryIso', this.countryIso)
-    if (this.fieldValue) {
+    if (this.fieldValue && typeof this.fieldValue === 'string') {
       this.tempValue = this.fieldValue
       await this.getCountryIsoFromPhonePrefix(this.fieldValue)
       this.countryIso = (this.formattedNumber(this.fieldValue)).formatted.country
