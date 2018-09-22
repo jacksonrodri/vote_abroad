@@ -27,6 +27,7 @@
         ref="codeInput"
         key="codeInput"
         fieldName="codeInput"
+        :loginType="loginType"
         v-model="code"
         :v="$v.code"
         @pressEnter="confirmCode"

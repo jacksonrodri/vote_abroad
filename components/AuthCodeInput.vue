@@ -29,7 +29,7 @@ import fieldMixin from '~/mixins/fieldMixin.js'
 export default {
   name: 'CodeInput',
   mixins: [fieldMixin],
-  props: ['loading', 'v'],
+  props: ['loading', 'v', 'loginType'],
   data () {
     return {
       code: ''
@@ -38,7 +38,7 @@ export default {
   computed: {
     email () { return this.$store.state.userauth.user.emailAddress || '' },
     phone () { return this.$store.state.userauth.user.mobileIntFormat || '' },
-    label () { return this.phone ? this.$t(`request.codeInput.label-sms`, {phone: this.phone}) : this.$t(`request.codeInput.label-email`, {email: this.email}) }
+    label () { return this.loginType === 'sms' ? this.$t(`request.codeInput.label-sms`, {phone: this.phone}) : this.$t(`request.codeInput.label-email`, {email: this.email}) }
   }
 }
 </script>

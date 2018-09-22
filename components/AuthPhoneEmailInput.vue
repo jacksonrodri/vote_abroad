@@ -45,7 +45,7 @@
           :autocomplete="autoComplete"
           @input="$emit('delayTouch')"
           @blur="formatNumber"
-          @keyup.native.enter="$emit('pressEnter')"
+          @keyup.native.enter="pressEnter"
           :loading="loading"
           :ref="fieldName"></b-input>
         <b-input
@@ -176,13 +176,17 @@ export default {
     ...mapGetters('userauth', ['userCountry'])
   },
   methods: {
-    formatNumber () {
+    async pressEnter () {
+      await this.formatNumber()
+      this.$emit('pressEnter')
+    },
+    async formatNumber () {
       this.tempValue = this.formattedNumber(this.tempValue, this.countryIso).text || this.tempValue
-      console.log(this.formattedNumber(this.tempValue, this.countryIso))
-      console.log(this.getPhoneIntFormat(this.tempValue, this.countryIso || null))
       this.fieldValue = this.formattedNumber(this.tempValue, this.countryIso).text
-        ? this.getPhoneIntFormat(this.tempValue, this.countryIso || null)
+        ? await this.getPhoneIntFormat(this.tempValue, this.countryIso || null)
         : this.tempValue
+      await this.$nextTick()
+      return this.fieldValue
     },
     toggleInfo () { this.isInfoOpen = !this.isInfoOpen },
     selectField () {
