@@ -168,7 +168,7 @@ export default {
       }
     },
     allowNative () {
-      return Boolean(!(this.$store.state.userauth.device.type === 'mobile' && this.$store.state.userauth.device.os === 'android'))
+      return Boolean(!(/mobile|tablet/i.test(this.$store.state.userauth.device.type) && this.$store.state.userauth.device.os === 'android'))
     }
   },
   methods: {
