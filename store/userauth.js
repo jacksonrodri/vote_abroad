@@ -134,10 +134,13 @@ export const actions = {
       })
     })
   },
-  async getSessionGeo ({commit, state}) {
+  async getSessionGeo ({commit, state, dispatch}) {
     if (!state.session.country) {
       let res = await axios.get('https://ipinfo.io/geo')
       commit('updateSessionGeo', res.data)
+      if (res.data.country) {
+        dispatch('data/updateCountryData', res.data.country.toUpperCase(), {root: true})
+      }
     }
   },
   async getUser ({commit, state, dispatch}) {
