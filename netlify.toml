@@ -3,6 +3,8 @@
   Functions = "lambda"
   Publish = "dist"
 
+[context.production]
+  environment = { CONTEXT = "prod" }
 # [[headers]]
 #   for = "/*"
 #   [headers.values]
