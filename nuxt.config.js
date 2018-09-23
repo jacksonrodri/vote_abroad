@@ -45,11 +45,15 @@ module.exports = {
   },
   modules: [
     // '@nuxtjs/sentry',
+    '@nuxtjs/google-analytics',
     '@nuxtjs/pwa',
     'nuxtent',
     ['nuxt-i18n', I18N],
     '@nuxtjs/proxy'
   ],
+  'google-analytics': {
+    id: 'UA-126220374-1'
+  },
   proxy: {
     '/api/mailer': {
       target: 'https://uf25owq668.execute-api.us-east-1.amazonaws.com/dev/mailer',
