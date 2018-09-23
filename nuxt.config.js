@@ -52,7 +52,10 @@ module.exports = {
     '@nuxtjs/proxy'
   ],
   'google-analytics': {
-    id: 'UA-126220374-1'
+    id: 'UA-126220374-1',
+    debug: {
+      sendHitTask: process.env.CONTEXT !== 'development'
+    }
   },
   proxy: {
     '/api/mailer': {
