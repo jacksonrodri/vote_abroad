@@ -224,6 +224,7 @@ export default {
         let body = {subject: this.subject, voterEmail: this.formEmail, voterMessage: voterMessage, leoName: this.leoName, leoEmail: this.leoEmail, image: this.fpca ? this.fpca.toString() : null, reqDoc: this.reqDoc ? this.reqDoc.toString() : null, firstName: this.firstName, lastName: this.lastName}
         // if (this.isStudentSite || process.env.CONTEXT === 'prod') {
         body = Object.assign({}, body, {leoMessage: this.message})
+        console.log('body', body)
         // }
         // console.log(typeof this.fpca)
         axios.post('/api/mailer', body, {
