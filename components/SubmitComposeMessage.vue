@@ -217,13 +217,14 @@ export default {
         let headers = {}
         headers['Content-Type'] = 'application/json'
         headers['Accept'] = 'application/json'
-        let voterMessage = this.isStudentSite || process.env.CONTEXT === 'prod'
-          ? this.voterMessage
-          : this.testMessage
+        let voterMessage = this.voterMessage
+        // this.isStudentSite || process.env.CONTEXT === 'prod'
+        //   ? this.voterMessage
+        //   : this.testMessage
         let body = {subject: this.subject, voterEmail: this.formEmail, voterMessage: voterMessage, leoName: this.leoName, leoEmail: this.leoEmail, image: this.fpca ? this.fpca.toString() : null, reqDoc: this.reqDoc ? this.reqDoc.toString() : null, firstName: this.firstName, lastName: this.lastName}
-        if (this.isStudentSite || process.env.CONTEXT === 'prod') {
-          body = Object.assign({}, body, {leoMessage: this.message})
-        }
+        // if (this.isStudentSite || process.env.CONTEXT === 'prod') {
+        body = Object.assign({}, body, {leoMessage: this.message})
+        // }
         // console.log(typeof this.fpca)
         axios.post('/api/mailer', body, {
           headers: { 'Content-Type': 'application/json' }
