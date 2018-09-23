@@ -628,7 +628,8 @@
       "instructionsReq2": "{state} voters must provide **ONE** of the following forms of identification: {allButLastTypes}, or your {lastType}. If you don't have any of these, please select **'I don't have the above identification.'**",
       "PassportNumber": "Passport Number",
       "TribalID": "Tribal ID",
-      "NYDMVID": "NY DMV Issued ID"
+      "NYDMVID": "NY DMV Issued ID",
+      "DCID": "District-issued ID number"
     },
     "firstName": {
       "label": "First Name",

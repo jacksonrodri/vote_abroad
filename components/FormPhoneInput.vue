@@ -28,7 +28,7 @@
 
           <!-- v-if="tempValue && tempValue.length > 1" -->
         <b-input
-          v-if="deviceOs !== 'android'"
+          v-if="deviceOs === 'android'"
           key="dumbInput"
           :type="fieldType"
           v-model="tempValue"
