@@ -1,7 +1,8 @@
 import { WebAuth } from 'auth0-js'
 import axios from 'axios'
 import { Dialog, Toast } from 'buefy'
-import AWSExports from '../aws-exports'
+// import AWSExportsDev from '../aws-exports-dev'
+import AWSExportsProd from '../aws-exports-prod'
 
 const jwtDecode = require('jwt-decode')
 const redirectUri = process.env.url
@@ -92,15 +93,23 @@ export const mutations = {
 }
 
 export const actions = {
+  // Dev webAuth
+  // initializeWebAuth () {
+  //   webAuth = new WebAuth({
+  //     domain: 'montg.auth0.com',
+  //     redirectUri: process.browser ? `${window.location.protocol}//${window.location.host}${this.app.localePath('authenticating')}` : redirectUri + this.app.localePath('authenticating'),
+  //     clientID: '0Wy4khZcuXefSfrUuYDUP0Udag4FqL2u',
+  //     responseType: 'token id_token'
+  //   })
+  // Production WebAuth
   initializeWebAuth () {
+    console.log('ctx', process.env.stage)
     webAuth = new WebAuth({
-      domain: 'montg.auth0.com',
+      domain: 'votefromabroad.auth0.com',
       redirectUri: process.browser ? `${window.location.protocol}//${window.location.host}${this.app.localePath('authenticating')}` : redirectUri + this.app.localePath('authenticating'),
-      clientID: '0Wy4khZcuXefSfrUuYDUP0Udag4FqL2u',
+      clientID: 'Kwfswc0R3zV4Zw6hPOR1hibG4IKxztjU',
       responseType: 'token id_token'
     })
-    // redirectUri: redirectUri + this.app.localePath('authenticating'),
-    // console.log('new redirecturi', redirectUri + this.app.localePath('index'))
   },
   sendEmailLink ({commit, state}) {
     return new Promise((resolve, reject) => {
@@ -191,7 +200,8 @@ export const actions = {
   async setSession ({ state, rootState, commit, dispatch, app }) {
     await dispatch('initializeWebAuth')
     commit('updateAuthState', 'loading')
-    this.app.Amplify.configure(AWSExports)
+    this.app.Amplify.configure(AWSExportsProd)
+    // this.app.Amplify.configure(AWSExports)
     function parseHash () {
       return new Promise((resolve, reject) => {
         webAuth.parseHash({ hash: window.location.hash }, function (err, authResult) {
@@ -261,7 +271,8 @@ export const actions = {
     }
     commit('updateUser', {isDA: jwtDecode(idToken)['https://demsabroad.org/isDA'], da: jwtDecode(idToken)['https://demsabroad.org/user']})
     await this.app.$Auth.federatedSignIn(
-      'montg.auth0.com',
+      'votefromabroad.auth0.com',
+      // 'montg.auth0.com', // development auth
       {
         token: idToken,
         expires_at: jwtDecode(idToken).exp
@@ -342,7 +353,10 @@ export const actions = {
     await webAuth.logout({
       returnTo: process.browser ? window.location.origin : redirectUri,
       // returnTo: redirectUri,
-      clientID: '0Wy4khZcuXefSfrUuYDUP0Udag4FqL2u'
+      // Dev client ID
+      // clientID: '0Wy4khZcuXefSfrUuYDUP0Udag4FqL2u'
+      // Prod client ID
+      clientID: 'Kwfswc0R3zV4Zw6hPOR1hibG4IKxztjU'
     })
     dispatch('clearData')
   },

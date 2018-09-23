@@ -27,15 +27,16 @@ force = false
 [[redirects]]
 from = "/api/mailer"
 # to = "https://svj2ivekgi.execute-api.us-east-1.amazonaws.com/dev/mailer"
-to = "https://uf25owq668.execute-api.us-east-1.amazonaws.com/dev/mailer"
+to = "https://37aze90rvd.execute-api.us-east-1.amazonaws.com/prod/mailer" # prod
+# to = "https://uf25owq668.execute-api.us-east-1.amazonaws.com/dev/mailer" # dev
 status = 200
 force = false
 
-[[redirects]]
-from = "/api/mail"
-to = "https://api.mailgun.net/v3/mail.votefromabroad.org"
-status = 200
-force = false
+# [[redirects]]
+# from = "/api/mail"
+# to = "https://api.mailgun.net/v3/mail.votefromabroad.org"
+# status = 200
+# force = false
 
 # [[redirects]]
 # from = "/functions/*"
@@ -46,16 +47,17 @@ force = false
 [[redirects]]
 from = "/api/fpca"
 # to = "https://svj2ivekgi.execute-api.us-east-1.amazonaws.com/dev/fpca"
-to = "https://uf25owq668.execute-api.us-east-1.amazonaws.com/dev/pdf"
+to = "https://37aze90rvd.execute-api.us-east-1.amazonaws.com/prod/pdf" # production
+# to = "https://uf25owq668.execute-api.us-east-1.amazonaws.com/dev/pdf" # dev
 status = 200
 force = false
 
-[[redirects]]
-from = "/*"
-to = "/:splat?country=hk"
-status = 200
-force = false
-conditions = {Country = ["HK"]}
+# [[redirects]]
+# from = "/*"
+# to = "/:splat?country=hk"
+# status = 200
+# force = false
+# conditions = {Country = ["HK"]}
 
 # [[redirects]]
 # from = "/*"

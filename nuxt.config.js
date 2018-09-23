@@ -40,7 +40,8 @@ module.exports = {
     detailsEndpoint: process.env.PLACES_ENDPOINT || 'api/place/details/json',
     placesKey: process.env.PLACES_KEY || 'AIzaSyDK4AprF-iXbiX2-eU3SAQVyovB_8kIg20',
     commitRef: process.env.COMMIT_REF || '',
-    offline: process.env.OFFLINE || false
+    offline: process.env.OFFLINE || false,
+    stage: process.env.CONTEXT
   },
   modules: [
     // '@nuxtjs/sentry',
@@ -62,12 +63,12 @@ module.exports = {
         '^/api/fpca': '/'
       }
     },
-    '/api/mail': {
-      target: 'https://api.mailgun.net/v3/mail.votefromabroad.org/messages',
-      pathRewrite: {
-        '^/api/mail': '/'
-      }
-    },
+    // '/api/mail': {
+    //   target: 'https://api.mailgun.net/v3/mail.votefromabroad.org/messages',
+    //   pathRewrite: {
+    //     '^/api/mail': '/'
+    //   }
+    // },
     '/api/place/**': {
       target: 'https://maps.googleapis.com/maps/api/place',
       pathRewrite: {

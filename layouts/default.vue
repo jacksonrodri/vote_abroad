@@ -289,6 +289,13 @@ export default {
     }
   },
   async mounted () {
+    this.$snackbar.open({
+      message: 'This beta site is now live.  If you submit an FPCA it will be sent to your Election Official.',
+      type: 'is-warning',
+      position: 'is-top',
+      actionText: 'I Understand',
+      indefinite: true
+    })
     function checkDeviceSupport (callback) {
       if (!canEnumerate) {
         return
