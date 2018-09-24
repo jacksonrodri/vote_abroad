@@ -158,7 +158,7 @@ export default {
         return typeof this.value === 'string' ? createDateObj(this.value) : undefined
       },
       set (val) {
-        function createDateString (d) { return `${d.getFullYear()}-${d.getMonth() < 9 ? '0' : ''}${d.getMonth() + 1}-${d.getDate() < 9 ? '0' : ''}${d.getDate()}` }
+        function createDateString (d) { return `${d.getFullYear()}-${d.getMonth() < 10 ? '0' : ''}${d.getMonth() + 1}-${d.getDate() < 10 ? '0' : ''}${d.getDate()}` }
         let d = val instanceof Date ? createDateString(val) : null
         this.$store.commit('requests/update', { dob: d })
         if (val instanceof Date) {
