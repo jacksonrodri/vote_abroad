@@ -356,7 +356,7 @@ export const actions = {
       // Dev client ID
       // clientID: '0Wy4khZcuXefSfrUuYDUP0Udag4FqL2u'
       // Prod client ID
-      clientID: 'Kwfswc0R3zV4Zw6hPOR1hibG4IKxztjU'
+      clientID: process.env.auth0clientID
     })
     dispatch('clearData')
   },
