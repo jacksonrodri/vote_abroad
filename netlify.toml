@@ -5,27 +5,13 @@
 
 [context.production]
   environment = { CONTEXT = "prod" }
-# [[headers]]
-#   for = "/*"
-#   [headers.values]
-#     Link = [
-#     "<https://res.cloudinary.com/democratsabroad/image/upload/f_auto,q_auto/v1521002249/votefromabroad-bg.jpg>; rel=preload; as=image",
-#     "</vfa_blue.svg>; rel=preload; as=image",
-#     "</flags/4x3/us.svg>; rel=preload; as=image"
-#     ]
 
 [context.dev.environment]
   CONTEXT = "dev"
-  
+
 [context.students.environment]
   CONTEXT = "prod"
   IS_STUDENT_SITE = true
-
-# [[redirects]]
-# from = "/api/countries/"
-# to = "http://country.io/names.json"
-# status = 200
-# force = false
 
 [[redirects]]
 from = "/api/place/*"
@@ -41,18 +27,6 @@ to = "https://37aze90rvd.execute-api.us-east-1.amazonaws.com/prod/mailer" # prod
 status = 200
 force = false
 
-# [[redirects]]
-# from = "/api/mail"
-# to = "https://api.mailgun.net/v3/mail.votefromabroad.org"
-# status = 200
-# force = false
-
-# [[redirects]]
-# from = "/functions/*"
-# to = "https://feat-functions--votefromabroad.netlify.com/.netlify/functions/:splat"
-# status = 200
-# force = false
-
 [[redirects]]
 from = "/api/fpca"
 # to = "https://svj2ivekgi.execute-api.us-east-1.amazonaws.com/dev/fpca"
@@ -61,18 +35,21 @@ to = "https://37aze90rvd.execute-api.us-east-1.amazonaws.com/prod/pdf" # product
 status = 200
 force = false
 
-# [[redirects]]
-# from = "/*"
-# to = "/:splat?country=hk"
-# status = 200
-# force = false
-# conditions = {Country = ["HK"]}
+[[redirects]]
+from = "/api/mailer/dev"
+# to = "https://svj2ivekgi.execute-api.us-east-1.amazonaws.com/dev/mailer"
+# to = "https://37aze90rvd.execute-api.us-east-1.amazonaws.com/prod/mailer" # prod
+to = "https://uf25owq668.execute-api.us-east-1.amazonaws.com/dev/mailer" # dev
+status = 200
+force = false
 
-# [[redirects]]
-# from = "/*"
-# to = "/:splat"
-# status = 301
-# force = true
+[[redirects]]
+from = "/api/fpca/dev"
+# to = "https://svj2ivekgi.execute-api.us-east-1.amazonaws.com/dev/fpca"
+# to = "https://37aze90rvd.execute-api.us-east-1.amazonaws.com/prod/pdf" # production
+to = "https://uf25owq668.execute-api.us-east-1.amazonaws.com/dev/pdf" # dev
+status = 200
+force = false
 
 [[redirects]]
   from = "/*"

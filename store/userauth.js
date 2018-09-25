@@ -1,7 +1,7 @@
 import { WebAuth } from 'auth0-js'
 import axios from 'axios'
 import { Dialog, Toast } from 'buefy'
-// import AWSExportsDev from '../aws-exports-dev'
+import AWSExportsDev from '../aws-exports-dev'
 import AWSExportsProd from '../aws-exports-prod'
 
 const jwtDecode = require('jwt-decode')
@@ -200,7 +200,7 @@ export const actions = {
   async setSession ({ state, rootState, commit, dispatch, app }) {
     await dispatch('initializeWebAuth')
     commit('updateAuthState', 'loading')
-    this.app.Amplify.configure(AWSExportsProd)
+    this.app.Amplify.configure(process.env.stage === 'prod' ? AWSExportsProd : AWSExportsDev)
     // this.app.Amplify.configure(AWSExports)
     function parseHash () {
       return new Promise((resolve, reject) => {

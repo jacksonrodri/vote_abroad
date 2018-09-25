@@ -182,7 +182,7 @@ export default {
     }
   },
   computed: {
-    isStudentSite () { return this.$store.state.isStudentSite },
+    isStudentSite () { return process.env.isStudentSite === 'true' },
     toolTipContent () { return this.$te(`request.phoneOrEmail.tooltip`) ? snarkdown(this.$t(`request.phoneOrEmail.tooltip`)) : null },
     isAuthenticated: function () { return this.$store.getters['userauth/isAuthenticated'] },
     user () { return this.$store.state.userauth.user },
