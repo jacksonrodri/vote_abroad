@@ -14,6 +14,13 @@
 #     "</flags/4x3/us.svg>; rel=preload; as=image"
 #     ]
 
+[context.dev.environment]
+  CONTEXT = "dev"
+  
+[context.students.environment]
+  CONTEXT = "prod"
+  IS_STUDENT_SITE = true
+
 # [[redirects]]
 # from = "/api/countries/"
 # to = "http://country.io/names.json"

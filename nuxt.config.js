@@ -41,7 +41,8 @@ module.exports = {
     placesKey: process.env.PLACES_KEY || 'AIzaSyDK4AprF-iXbiX2-eU3SAQVyovB_8kIg20',
     commitRef: process.env.COMMIT_REF || '',
     offline: process.env.OFFLINE || false,
-    stage: process.env.CONTEXT
+    stage: process.env.CONTEXT || 'dev',
+    isStudentSite: process.env.IS_STUDENT_SITE || false
   },
   modules: [
     // '@nuxtjs/sentry',
