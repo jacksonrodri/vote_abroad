@@ -135,7 +135,7 @@
                           class="button"
                           @click="decreaseCompensation">
                           <span class="icon is-small">
-                            <i class="fas fa-plus"></i>
+                            <i class="fas fa-minus"></i>
                           </span>
                         </button>
                       </b-tooltip>
@@ -146,7 +146,7 @@
                           class="button"
                           @click="increaseCompensation">
                           <span class="icon is-small">
-                            <i class="fas fa-minus"></i>
+                            <i class="fas fa-plus"></i>
                           </span>
                         </button>
                       </b-tooltip>
