@@ -1,17 +1,19 @@
 import { WebAuth } from 'auth0-js'
 import axios from 'axios'
 import { Dialog, Toast } from 'buefy'
-import AWSExports from '../aws-exports'
+import AWSExportsDev from '../aws-exports-dev'
+import AWSExportsProd from '../aws-exports-prod'
 
 const jwtDecode = require('jwt-decode')
 const redirectUri = process.env.url
 
-let webAuth = new WebAuth({
-  domain: 'montg.auth0.com',
-  redirectUri: redirectUri + '/authenticating/',
-  clientID: '0Wy4khZcuXefSfrUuYDUP0Udag4FqL2u',
-  responseType: 'token id_token'
-})
+let webAuth
+// let webAuth = new WebAuth({
+//   domain: 'montg.auth0.com',
+//   redirectUri: redirectUri + '/authenticating/',
+//   clientID: '0Wy4khZcuXefSfrUuYDUP0Udag4FqL2u',
+//   responseType: 'token id_token'
+// })
 
 export const state = () => ({
   idToken: null,
@@ -91,15 +93,23 @@ export const mutations = {
 }
 
 export const actions = {
+  // Dev webAuth
+  // initializeWebAuth () {
+  //   webAuth = new WebAuth({
+  //     domain: 'montg.auth0.com',
+  //     redirectUri: process.browser ? `${window.location.protocol}//${window.location.host}${this.app.localePath('authenticating')}` : redirectUri + this.app.localePath('authenticating'),
+  //     clientID: '0Wy4khZcuXefSfrUuYDUP0Udag4FqL2u',
+  //     responseType: 'token id_token'
+  //   })
+  // Production WebAuth
   initializeWebAuth () {
+    console.log('ctx', process.env.stage)
     webAuth = new WebAuth({
-      domain: 'montg.auth0.com',
-      redirectUri: redirectUri + this.app.localePath('authenticating'),
-      clientID: '0Wy4khZcuXefSfrUuYDUP0Udag4FqL2u',
+      domain: 'votefromabroad.auth0.com',
+      redirectUri: process.browser ? `${window.location.protocol}//${window.location.host}${this.app.localePath('authenticating')}` : redirectUri + this.app.localePath('authenticating'),
+      clientID: process.env.auth0clientID,
       responseType: 'token id_token'
     })
-    // redirectUri: process.browser ? `https://${window.location.hostname}` : redirectUri + this.app.localePath('authenticating'),
-    // console.log('new redirecturi', redirectUri + this.app.localePath('index'))
   },
   sendEmailLink ({commit, state}) {
     return new Promise((resolve, reject) => {
@@ -133,10 +143,13 @@ export const actions = {
       })
     })
   },
-  async getSessionGeo ({commit, state}) {
+  async getSessionGeo ({commit, state, dispatch}) {
     if (!state.session.country) {
       let res = await axios.get('https://ipinfo.io/geo')
       commit('updateSessionGeo', res.data)
+      if (res.data.country) {
+        dispatch('data/updateCountryData', res.data.country.toUpperCase(), {root: true})
+      }
     }
   },
   async getUser ({commit, state, dispatch}) {
@@ -185,9 +198,10 @@ export const actions = {
     })
   },
   async setSession ({ state, rootState, commit, dispatch, app }) {
-    dispatch('initializeWebAuth')
+    await dispatch('initializeWebAuth')
     commit('updateAuthState', 'loading')
-    this.app.Amplify.configure(AWSExports)
+    this.app.Amplify.configure(process.env.stage === 'prod' ? AWSExportsProd : AWSExportsDev)
+    // this.app.Amplify.configure(AWSExports)
     function parseHash () {
       return new Promise((resolve, reject) => {
         webAuth.parseHash({ hash: window.location.hash }, function (err, authResult) {
@@ -257,7 +271,8 @@ export const actions = {
     }
     commit('updateUser', {isDA: jwtDecode(idToken)['https://demsabroad.org/isDA'], da: jwtDecode(idToken)['https://demsabroad.org/user']})
     await this.app.$Auth.federatedSignIn(
-      'montg.auth0.com',
+      'votefromabroad.auth0.com',
+      // 'montg.auth0.com', // development auth
       {
         token: idToken,
         expires_at: jwtDecode(idToken).exp
@@ -336,8 +351,12 @@ export const actions = {
   async logout ({ app, dispatch }) {
     // this.app.$Analytics.record('logout')
     await webAuth.logout({
-      returnTo: redirectUri,
-      clientID: '0Wy4khZcuXefSfrUuYDUP0Udag4FqL2u'
+      returnTo: process.browser ? window.location.origin : redirectUri,
+      // returnTo: redirectUri,
+      // Dev client ID
+      // clientID: '0Wy4khZcuXefSfrUuYDUP0Udag4FqL2u'
+      // Prod client ID
+      clientID: 'Kwfswc0R3zV4Zw6hPOR1hibG4IKxztjU'
     })
     dispatch('clearData')
   },

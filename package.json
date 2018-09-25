@@ -5,7 +5,8 @@
   "author": "Alex Montgomery <Alex@DemocratsAbroad.org>",
   "private": true,
   "scripts": {
-    "dev": "CONTEXT=development OFFLINE=false nuxt",
+    "dev": "DEVSTAGE='dev' OFFLINE=false nuxt",
+    "student": "DEVSTAGE='dev' IS_STUDENT_SITE=true nuxt",
     "getaddressdata": "rm -rf data/postal && svn export https://github.com/mirumee/google-i18n-address/trunk/i18naddress/data ./data/postal",
     "build": "nuxt build",
     "start": "nuxt start",
@@ -16,6 +17,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^4.5.2",
+    "@nuxtjs/google-analytics": "^2.0.2",
     "@nuxtjs/proxy": "^1.1.4",
     "@nuxtjs/pwa": "^2.0.5",
     "@nuxtjs/sentry": "^1.1.0",

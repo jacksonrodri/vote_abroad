@@ -39,33 +39,50 @@ module.exports = {
     autocompleteEndpoint: process.env.AUTOCOMPLETE_ENDPOINT || 'api/place/autocomplete/json',
     detailsEndpoint: process.env.PLACES_ENDPOINT || 'api/place/details/json',
     placesKey: process.env.PLACES_KEY || 'AIzaSyDK4AprF-iXbiX2-eU3SAQVyovB_8kIg20',
+    auth0clientID: process.env.DEVSTAGE === 'prod' ? 'Kwfswc0R3zV4Zw6hPOR1hibG4IKxztjU' : 'Xi6eTv0isfdJVpPfFphHFl2RRbsVd3Zh',
     commitRef: process.env.COMMIT_REF || '',
-    offline: process.env.OFFLINE || false
+    offline: process.env.OFFLINE || false,
+    stage: process.env.DEVSTAGE || 'dev',
+    isStudentSite: process.env.IS_STUDENT_SITE || false
   },
   modules: [
     // '@nuxtjs/sentry',
+    '@nuxtjs/google-analytics',
     '@nuxtjs/pwa',
     'nuxtent',
     ['nuxt-i18n', I18N],
     '@nuxtjs/proxy'
   ],
+  'google-analytics': {
+    id: 'UA-126220374-1',
+    debug: {
+      sendHitTask: process.env.DEVSTAGE !== 'dev'
+    }
+  },
   proxy: {
-    '/api/mailer': {
+    '/api/mailer/dev': {
       target: 'https://uf25owq668.execute-api.us-east-1.amazonaws.com/dev/mailer',
+      pathRewrite: {
+        '^/api/mailer/dev': '/'
+      }
+    },
+    '/api/fpca/dev': {
+      target: 'https://uf25owq668.execute-api.us-east-1.amazonaws.com/dev/pdf',
+      pathRewrite: {
+        '^/api/fpca/dev': '/'
+      }
+    },
+    '/api/mailer': {
+      target: 'https://37aze90rvd.execute-api.us-east-1.amazonaws.com/prod/mailer',
+      // target: 'https://uf25owq668.execute-api.us-east-1.amazonaws.com/dev/mailer',
       pathRewrite: {
         '^/api/mailer': '/'
       }
     },
     '/api/fpca': {
-      target: 'https://uf25owq668.execute-api.us-east-1.amazonaws.com/dev/pdf',
+      target: 'https://37aze90rvd.execute-api.us-east-1.amazonaws.com/prod/pdf',
       pathRewrite: {
         '^/api/fpca': '/'
-      }
-    },
-    '/api/mail': {
-      target: 'https://api.mailgun.net/v3/mail.votefromabroad.org/messages',
-      pathRewrite: {
-        '^/api/mail': '/'
       }
     },
     '/api/place/**': {

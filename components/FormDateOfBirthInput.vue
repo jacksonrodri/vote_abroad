@@ -25,7 +25,7 @@
           <span class="help is-primary is-size-6" v-html="$t('request.dob.selectDate')"></span>
           <b-input
             v-if="!allowNative"
-            :value="(dob instanceof Date) ? dob.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : dob"
+            :value="(dob instanceof Date) ? dob.toLocaleDateString(dateFormat, { year: 'numeric', month: 'long', day: 'numeric' }) : dob"
             @change="val => dob = val"
             @blur="dob = dateParser2(dob)"
             :placeholder="$t('request.dob.placeholder')"></b-input>
@@ -136,6 +136,9 @@ export default {
       })
   },
   computed: {
+    dateFormat () {
+      return this.$i18n.locale === 'en' ? 'en-US' : 'es-ES'
+    },
     listOfYears () {
       const latestYear = this.maxDate
         ? this.maxDate.getFullYear()
@@ -155,7 +158,7 @@ export default {
         return typeof this.value === 'string' ? createDateObj(this.value) : undefined
       },
       set (val) {
-        function createDateString (d) { return `${d.getFullYear()}-${d.getMonth() < 9 ? '0' : ''}${d.getMonth() + 1}-${d.getDate() < 9 ? '0' : ''}${d.getDate()}` }
+        function createDateString (d) { return `${d.getFullYear()}-${d.getMonth() < 9 ? '0' : ''}${d.getMonth() + 1}-${d.getDate() < 10 ? '0' : ''}${d.getDate()}` }
         let d = val instanceof Date ? createDateString(val) : null
         this.$store.commit('requests/update', { dob: d })
         if (val instanceof Date) {
@@ -165,7 +168,7 @@ export default {
       }
     },
     allowNative () {
-      return Boolean(!(this.$store.state.userauth.device.type === 'mobile' && this.$store.state.userauth.device.os === 'android'))
+      return Boolean(!(/mobile|tablet/i.test(this.$store.state.userauth.device.type) && this.$store.state.userauth.device.os === 'android'))
     }
   },
   methods: {
@@ -207,7 +210,7 @@ export default {
     },
     dateFormatter (d) {
       let ahead2HoursDate = new Date(d.getFullYear(), d.getMonth(), d.getDate(), 2)
-      return ahead2HoursDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
+      return ahead2HoursDate.toLocaleDateString(this.dateFormat, { year: 'numeric', month: 'long', day: 'numeric' })
     }
   },
   watch: {

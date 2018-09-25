@@ -2,7 +2,7 @@
   <section class="section">
     <div class="columns is-centered">
       <div class="column is-8">
-          <h1 class="title is-3">{{$t('election.title', {state: $route.params.state.toUpperCase()})}}</h1>
+          <h1 class="title is-3">{{$t('election.title', {state: $t(`states.${$route.params.state.toUpperCase()}`) })}}</h1>
           <b-table hoverable :data="elections">
             <template slot-scope="props">
               <b-table-column :label="$t('election.electionDay')">
@@ -10,9 +10,9 @@
               </b-table-column>
               <b-table-column>
                 <div class="calendar">
-                  <header class="calendar-month">{{new Date(props.row.date).toLocaleDateString('en-US', {month: 'short', timeZone: 'UTC'}) }}</header>
+                  <header class="calendar-month">{{new Date(props.row.date).toLocaleDateString(dateFormat, {month: 'short', timeZone: 'UTC'}) }}</header>
                   <div class="calendar-date">
-                    {{ new Date(props.row.date).toLocaleDateString('en-US', {day: 'numeric', timeZone: 'UTC'}) }}
+                    {{ new Date(props.row.date).toLocaleDateString(dateFormat, {day: 'numeric', timeZone: 'UTC'}) }}
                   </div>
                 </div>
               </b-table-column>
@@ -46,6 +46,11 @@ export default {
   },
   head: {
     title: 'Vote From Abroad - Absentee ballots for Americans Abroad.'
+  },
+  computed: {
+    dateFormat () {
+      return this.$i18n.locale === 'en' ? 'en-US' : 'es-ES'
+    }
   },
   transition: 'test'
 }

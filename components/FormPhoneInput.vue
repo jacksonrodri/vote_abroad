@@ -28,6 +28,22 @@
 
           <!-- v-if="tempValue && tempValue.length > 1" -->
         <b-input
+          v-if="deviceOs === 'android'"
+          key="dumbInput"
+          :type="fieldType"
+          v-model="tempValue"
+          :id="fieldName"
+          :placeholder="$t(`request.tel.placeholder`, {example: exPhone})"
+          :class="[requiredClass, 'is-expanded']"
+          :autocomplete="autoComplete"
+          :maxlength="maxLength"
+          @input="$emit('delayTouch')"
+          @blur="formatNumber"
+          @keyup.native.enter="pressEnter"
+          :loading="loading"
+          :ref="fieldName"></b-input>
+        <b-input
+          v-else
           key="input"
           :type="fieldType"
           :value="tempValue"
@@ -120,6 +136,8 @@ export default {
   },
   computed: {
     exPhone () { return this.countries.find(country => country.code === this.countryIso) ? this.countries.find(country => country.code === this.countryIso).exPhone : '+1 201 555 0123' },
+    deviceType () { return this.$store.state.userauth.device.type },
+    deviceOs () { return this.$store.state.userauth.device.os },
     formatFunctions () {
       let format = (parsedText) => {
         // console.log('parsedText:', parsedText)
@@ -153,6 +171,14 @@ export default {
     ...mapGetters('userauth', ['userCountry'])
   },
   methods: {
+    async formatNumber () {
+      this.tempValue = this.formattedNumber(this.tempValue, this.countryIso).text || this.tempValue
+      this.fieldValue = this.formattedNumber(this.tempValue, this.countryIso).text
+        ? await this.getPhoneIntFormat(this.tempValue, this.countryIso || null)
+        : this.tempValue
+      await this.$nextTick()
+      return this.fieldValue
+    },
     selectField () {
       // console.log('selectField')
       // console.log(this.$refs[this.fieldName])
@@ -168,11 +194,9 @@ export default {
   },
   directives: {
     format: (el, binding, vnode) => {
-      // console.log('formatDirective')
       let format = binding.value.format
       let parse = binding.value.parse
       const input = el instanceof HTMLInputElement ? el : el.querySelector('input')
-      // console.log('input', input)
       const onChangeHandler = () => { vnode.context.$emit('newVal', input.value) }
       input.onchange = (event) => onChange(event, input, parse, format, onChangeHandler)
       input.oncut = (event) => onCut(event, input, parse, format, onChangeHandler)

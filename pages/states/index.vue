@@ -1,24 +1,24 @@
 <template>
-<div class="columns is-centered is-multiline">
-<div class="column is-10 is-8-desktop is-7-widescreen is-6-fullhd is-paddingless">
-  <h1 class="title">
-    {{ page.title }}
-  </h1>
-  <nuxtent-body class="content" :body="page.body" />
-  <b-field :label="$t('states.selectState')">
-    <b-select :placeholder="$t('states.select')"
-      v-model="selectedState"
-      @input="$router.push(localePath({ name: 'states-state', params: {state: selectedState} }))">
-      <option
-        v-for="state in states"
-        :value="state.iso"
-        :key="state.iso">
-        {{ $t(`states.${state.iso}`) }}
-      </option>
-    </b-select>
-  </b-field>
-</div>
-</div>
+  <div class="columns is-centered is-multiline">
+    <div class="column is-10 is-8-desktop is-7-widescreen is-6-fullhd is-paddingless">
+      <h1 class="title">
+        {{ page.title }}
+      </h1>
+      <nuxtent-body class="content" :body="page.body" />
+      <b-field :label="$t('states.selectState')">
+        <b-select :placeholder="$t('states.select')"
+          v-model="selectedState"
+          @input="$router.push(localePath({ name: 'states-state', params: {state: selectedState} }))">
+          <option
+            v-for="state in states"
+            :value="state.iso"
+            :key="state.iso">
+            {{ $t(`states.${state.iso}`) }}
+          </option>
+        </b-select>
+      </b-field>
+    </div>
+  </div>
 </template>
 <script>
 export default {

@@ -44,6 +44,146 @@
           </b-message>
             <h3 class="subtitle is-5 has-text-info has-text-centered" v-if="processingImage">{{$t('request.sig.pleaseWait')}}</h3>
             <submit-get-camera ref="webcam" @captureError="captureError" :isCapturing="webCamCapture" v-show="webCamCapture" @updatePic="drawThresholdToCanvas"></submit-get-camera>
+            <nav class="level" v-if="croppedPic && croppedPic.hasImage()">
+              <div class="level-item has-text-centered">
+                <div>
+                  <p class="heading">Zoom</p>
+                  <b-field>
+                    <p class="control">
+                      <b-tooltip label="Zoom In">
+                        <button
+                          class="button"
+                          @click="zoom('in')">
+                          <span class="icon is-small">
+                            <i class="fas fa-search-plus"></i>
+                          </span>
+                        </button>
+                      </b-tooltip>
+                    </p>
+                    <p class="control">
+                      <b-tooltip label="Zoom Out">
+                        <button
+                          class="button"
+                          @click="zoom('out')">
+                          <span class="icon is-small">
+                            <i class="fas fa-search-minus"></i>
+                          </span>
+                        </button>
+                      </b-tooltip>
+                    </p>
+                  </b-field>
+                </div>
+              </div>
+              <div class="level-item has-text-centered">
+                <div>
+                  <p class="heading">Position</p>
+                  <b-field>
+                    <p class="control">
+                      <b-tooltip label="Move Left">
+                        <button
+                          class="button"
+                          @click="move('left')">
+                          <span class="icon is-small">
+                            <i class="fas fa-chevron-left"></i>
+                          </span>
+                        </button>
+                      </b-tooltip>
+                    </p>
+                    <p class="control">
+                      <b-tooltip label="Move up">
+                        <button
+                          class="button"
+                          @click="move('up')">
+                          <span class="icon is-small">
+                            <i class="fas fa-chevron-up"></i>
+                          </span>
+                        </button>
+                      </b-tooltip>
+                    </p>
+                    <p class="control">
+                      <b-tooltip label="Move Down">
+                        <button
+                          class="button"
+                          @click="move('down')">
+                          <span class="icon is-small">
+                            <i class="fas fa-chevron-down"></i>
+                          </span>
+                        </button>
+                      </b-tooltip>
+                    </p>
+                    <p class="control">
+                      <b-tooltip label="Move Right">
+                        <button
+                          class="button"
+                          @click="move('right')">
+                          <span class="icon is-small">
+                            <i class="fas fa-chevron-right"></i>
+                          </span>
+                        </button>
+                      </b-tooltip>
+                    </p>
+                  </b-field>
+                </div>
+              </div>
+              <div class="level-item has-text-centered">
+                <div>
+                  <p class="heading">Brightness</p>
+                  <b-field>
+                    <p class="control">
+                      <b-tooltip label="Darker">
+                        <button
+                          class="button"
+                          @click="decreaseCompensation">
+                          <span class="icon is-small">
+                            <i class="fas fa-plus"></i>
+                          </span>
+                        </button>
+                      </b-tooltip>
+                    </p>
+                    <p class="control">
+                      <b-tooltip label="Lighter">
+                        <button
+                          class="button"
+                          @click="increaseCompensation">
+                          <span class="icon is-small">
+                            <i class="fas fa-minus"></i>
+                          </span>
+                        </button>
+                      </b-tooltip>
+                    </p>
+                  </b-field>
+                </div>
+              </div>
+              <div class="level-item has-text-centered">
+                <div>
+                  <p class="heading">Rotate</p>
+                  <b-field>
+                    <p class="control">
+                      <b-tooltip label="Rotate Left">
+                        <button
+                          class="button"
+                          @click="rotate(-1)">
+                          <span class="icon is-small">
+                            <i class="fas fa-undo"></i>
+                          </span>
+                        </button>
+                      </b-tooltip>
+                    </p>
+                    <p class="control">
+                      <b-tooltip label="Rotate Right">
+                        <button
+                          class="button"
+                          @click="rotate(1)">
+                          <span class="icon is-small">
+                            <i class="fas fa-redo"></i>
+                          </span>
+                        </button>
+                      </b-tooltip>
+                    </p>
+                  </b-field>
+                </div>
+              </div>
+            </nav>
             <signature-cropper
               v-show="!webCamCapture"
               :style="!croppedPic || !croppedPic.imageSet ? 'background: whitesmoke; background-image:none;': ''"
@@ -299,6 +439,33 @@ export default {
     },
     rotate (val) {
       this.croppedPic.rotate(val)
+    },
+    move (dir) {
+      let speed = 10
+      switch (dir) {
+        case 'up':
+          this.croppedPic.moveUpwards(speed)
+          break
+        case 'down':
+          this.croppedPic.moveDownwards(speed)
+          break
+        case 'left':
+          this.croppedPic.moveLeftwards(speed)
+          break
+        case 'right':
+          this.croppedPic.moveRightwards(speed)
+          break
+      }
+    },
+    zoom (dir) {
+      switch (dir) {
+        case 'in':
+          this.croppedPic.zoomIn()
+          break
+        case 'out':
+          this.croppedPic.zoomOut()
+          break
+      }
     },
     increaseCompensation () {
       this.processingImage = true

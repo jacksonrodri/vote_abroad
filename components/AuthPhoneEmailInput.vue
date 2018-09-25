@@ -35,6 +35,21 @@
 
           <!-- v-if="tempValue && tempValue.length > 1" -->
         <b-input
+          v-if="deviceOs === 'android'"
+          key="dumbInput"
+          :type="fieldType"
+          v-model="tempValue"
+          :id="fieldName"
+          :placeholder="$t(`request.phoneOrEmail.placeholder`, {first: deviceType === 'desktop' ? 'yours@example.com' : exPhone, second: deviceType === 'desktop' ? exPhone : 'yours@example.com'})"
+          :class="[requiredClass, 'is-expanded']"
+          :autocomplete="autoComplete"
+          @input="$emit('delayTouch')"
+          @blur="formatNumber"
+          @keyup.native.enter="pressEnter"
+          :loading="loading"
+          :ref="fieldName"></b-input>
+        <b-input
+          v-else
           key="input"
           :type="fieldType"
           :value="tempValue"
@@ -99,6 +114,7 @@ export default {
       return this.mustBeEmail || this.deviceType === 'desktop' ? 'home email' : 'mobile tel'
     },
     deviceType () { return this.$store.state.userauth.device.type },
+    deviceOs () { return this.$store.state.userauth.device.os },
     exPhone () { return this.countries.find(country => country.code === this.countryIso) ? this.countries.find(country => country.code === this.countryIso).exPhone : '+1 201 555 0123' },
     mustBeEmail () {
       return Boolean(this.fieldValue &&
@@ -160,6 +176,18 @@ export default {
     ...mapGetters('userauth', ['userCountry'])
   },
   methods: {
+    async pressEnter () {
+      await this.formatNumber()
+      this.$emit('pressEnter')
+    },
+    async formatNumber () {
+      this.tempValue = this.formattedNumber(this.tempValue, this.countryIso).text || this.tempValue
+      this.fieldValue = this.formattedNumber(this.tempValue, this.countryIso).text
+        ? await this.getPhoneIntFormat(this.tempValue, this.countryIso || null)
+        : this.tempValue
+      await this.$nextTick()
+      return this.fieldValue
+    },
     toggleInfo () { this.isInfoOpen = !this.isInfoOpen },
     selectField () {
       // console.log('selectField')
@@ -183,13 +211,18 @@ export default {
   },
   directives: {
     format: (el, binding, vnode) => {
-      // console.log('formatDirective')
       let format = binding.value.format
       let parse = binding.value.parse
       const input = el instanceof HTMLInputElement ? el : el.querySelector('input')
-      // console.log('input', input)
-      const onChangeHandler = () => { vnode.context.$emit('newVal', input.value) }
-      input.onchange = (event) => onChange(event, input, parse, format, onChangeHandler)
+      const onChangeHandler = () => {
+        console.log(vnode.context)
+        vnode.context.$emit('newVal', input.value)
+      }
+      input.onchange = (event) => {
+        setTimeout(() => {
+          return onChange(event, input, parse, format, onChangeHandler)
+        }, 10)
+      }
       input.oncut = (event) => onCut(event, input, parse, format, onChangeHandler)
       input.onpaste = (event) => onPaste(event, input, parse, format, onChangeHandler)
       input.onkeydown = (event) => onKeyDown(event, input, parse, format, onChangeHandler)
@@ -204,8 +237,13 @@ export default {
       } else if (this.getPhoneIntFormat(this.tempValue, this.countryIso || null) !== val) {
         this.tempValue = val
       }
-      if (val && val.length > 3 && !this.countryIso) {
+      if (val && /^\+\d\d?\d?/.test(val) && !this.countryIso) {
         this.countryIso = (this.formattedNumber(this.fieldValue)).formatted.country
+      }
+      if (val && /^\+\d\d?\d?/.test(val) && !this.phoneMetadataHasAllCountriesForPrefix(val)) {
+        this.getCountryIsoFromPhonePrefix(val).then(() => {
+          this.countryIso = (this.formattedNumber(this.fieldValue)).formatted.country
+        })
       }
       this.$emit('input', val)
     },
@@ -213,14 +251,14 @@ export default {
       if (val && !this.countryIso) {
         this.countryIso = val
       }
-    },
-    countryFocused (val) {
-      // console.log('country focused is: ', val)
     }
+    // countryFocused (val) {
+    //   // console.log('country focused is: ', val)
+    // }
   },
   async mounted () {
     // console.log('mounted with fieldValue: ', this.fieldValue, 'userCountry', this.userCountry, 'countryIso', this.countryIso)
-    if (this.fieldValue) {
+    if (this.fieldValue && typeof this.fieldValue === 'string') {
       this.tempValue = this.fieldValue
       await this.getCountryIsoFromPhonePrefix(this.fieldValue)
       this.countryIso = (this.formattedNumber(this.fieldValue)).formatted.country

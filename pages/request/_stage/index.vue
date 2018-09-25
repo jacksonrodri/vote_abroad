@@ -297,13 +297,20 @@
           </p>
         </div>
         <div slot="tooltip">
-          <p v-if="stateRules && stateRules.id && stateRules.id.length === 0"
+          <p
+            v-if="votAdr && votAdr.S === 'OK' && recBallot === 'email'"
+            v-html="md($t('request.id.tooltipOkEmail'))"></p>
+          <p
+            v-else-if="stateRules && stateRules.id && stateRules.id.length === 0"
             v-html="md($t('request.id.tooltipOptional', { state: stateRules.title}))">
           </p>
-          <p v-else-if="stateRules && stateRules.id && stateRules.id.length === 1"
+          <p
+            v-else-if="stateRules && stateRules.id && stateRules.id.length === 1"
             v-html="md($t('request.id.tooltipReq1', { state: stateRules.title, id: $t(`request.id.${stateRules.id[0]}`)}))">
           </p>
-          <p v-else v-html="md($t('request.id.tooltipReq2', { state: stateRules.title, allButLastTypes: allButLastIdType, lastType: lastIdType }))">
+          <p
+            v-else
+            v-html="md($t('request.id.tooltipReq2', { state: stateRules.title, allButLastTypes: allButLastIdType, lastType: lastIdType }))">
           </p>
         </div>
       </form-identification-input>
