@@ -289,6 +289,7 @@ export default {
     }
   },
   async mounted () {
+    console.log('process.env.stage:', process.env.stage)
     this.$snackbar.open({
       message: process.env.stage === 'dev' ? 'You are on the SANDBOX site. Messages will only be sent to your address (Your LEO will NOT receive your FPCA.)' : 'This beta site is now live.  If you submit an FPCA it will be sent to your Election Official.',
       type: 'is-warning',
