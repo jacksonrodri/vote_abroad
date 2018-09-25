@@ -4,13 +4,13 @@
   Publish = "dist"
 
 [context.production]
-  environment = { CONTEXT = "prod" }
+  environment = { DEVSTAGE = "prod" }
 
 [context.dev.environment]
-  CONTEXT = "dev"
+  DEVSTAGE = "dev"
 
 [context.students.environment]
-  CONTEXT = "prod"
+  DEVSTAGE = "prod"
   IS_STUDENT_SITE = "true"
 
 [[redirects]]

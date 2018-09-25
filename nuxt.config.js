@@ -41,7 +41,7 @@ module.exports = {
     placesKey: process.env.PLACES_KEY || 'AIzaSyDK4AprF-iXbiX2-eU3SAQVyovB_8kIg20',
     commitRef: process.env.COMMIT_REF || '',
     offline: process.env.OFFLINE || false,
-    stage: process.env.CONTEXT || 'dev',
+    stage: process.env.DEVSTAGE || 'dev',
     isStudentSite: process.env.IS_STUDENT_SITE || false
   },
   modules: [
@@ -55,7 +55,7 @@ module.exports = {
   'google-analytics': {
     id: 'UA-126220374-1',
     debug: {
-      sendHitTask: process.env.CONTEXT !== 'development'
+      sendHitTask: process.env.DEVSTAGE !== 'dev'
     }
   },
   proxy: {
