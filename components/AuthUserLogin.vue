@@ -179,6 +179,7 @@ export default {
       loginType: null
       // now: Math.trunc((new Date()).getTime() / 1000),
       // date: Math.trunc((new Date()).getTime() / 1000)
+      // dev
     }
   },
   computed: {
