@@ -2,11 +2,20 @@
 
 > VoteFromAbroad.org -- Absentee Ballots for US Citizens Abroad
 
+## About
+Nuxt server rendered Vue app with
+- Auth0 authentication
+  - rule during authentication pulls in DA account
+  - after auth client makes federated auth call to aws cognito identity to gain access to graphql api
+- AWS cognito identity pool IAM
+  - Authenticated role for users logged in with Auth0 federated identity gives access to requests created with the same identity
+  - Unauthenticated identity created for anonymous users to gain access to graphql api
+
 ## Build Setup
 
 ``` bash
 # install dependencies
-$ npm install # Or yarn install
+$ npm install
 
 # serve with hot reload at localhost:3000
 $ npm run dev
