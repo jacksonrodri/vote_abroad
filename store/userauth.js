@@ -107,7 +107,7 @@ export const actions = {
     webAuth = new WebAuth({
       domain: 'votefromabroad.auth0.com',
       redirectUri: process.browser ? `${window.location.protocol}//${window.location.host}${this.app.localePath('authenticating')}` : redirectUri + this.app.localePath('authenticating'),
-      clientID: 'Kwfswc0R3zV4Zw6hPOR1hibG4IKxztjU',
+      clientID: process.env.auth0clientID,
       responseType: 'token id_token'
     })
   },

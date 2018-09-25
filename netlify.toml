@@ -3,8 +3,8 @@
   Functions = "lambda"
   Publish = "dist"
 
-[context.production]
-  environment = { DEVSTAGE = "prod" }
+[context.production.environment]
+  DEVSTAGE = "prod"
 
 [context.dev.environment]
   DEVSTAGE = "dev"
