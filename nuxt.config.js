@@ -39,7 +39,7 @@ module.exports = {
     autocompleteEndpoint: process.env.AUTOCOMPLETE_ENDPOINT || 'api/place/autocomplete/json',
     detailsEndpoint: process.env.PLACES_ENDPOINT || 'api/place/details/json',
     placesKey: process.env.PLACES_KEY || 'AIzaSyDK4AprF-iXbiX2-eU3SAQVyovB_8kIg20',
-    auth0clientID: process.env.DEVSTAGE === 'prod' ? 'Kwfswc0R3zV4Zw6hPOR1hibG4IKxztjU' : 'Xi6eTv0isfdJVpPfFphHFl2RRbsVd3Zh',
+    auth0clientID: process.env.DEVSTAGE === 'prod' ? 'Kwfswc0R3zV4Zw6hPOR1hibG4IKxztjU' : '0Wy4khZcuXefSfrUuYDUP0Udag4FqL2u',
     commitRef: process.env.COMMIT_REF || '',
     offline: process.env.OFFLINE || false,
     stage: process.env.DEVSTAGE || 'dev',

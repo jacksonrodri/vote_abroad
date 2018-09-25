@@ -105,7 +105,7 @@ export const actions = {
   initializeWebAuth () {
     console.log('ctx', process.env.stage)
     webAuth = new WebAuth({
-      domain: 'votefromabroad.auth0.com',
+      domain: process.env.stage === 'prod' ? 'votefromabroad.auth0.com' : 'montg.auth0.com',
       redirectUri: process.browser ? `${window.location.protocol}//${window.location.host}${this.app.localePath('authenticating')}` : redirectUri + this.app.localePath('authenticating'),
       clientID: process.env.auth0clientID,
       responseType: 'token id_token'
@@ -271,7 +271,7 @@ export const actions = {
     }
     commit('updateUser', {isDA: jwtDecode(idToken)['https://demsabroad.org/isDA'], da: jwtDecode(idToken)['https://demsabroad.org/user']})
     await this.app.$Auth.federatedSignIn(
-      'votefromabroad.auth0.com',
+      process.env.stage === 'prod' ? 'votefromabroad.auth0.com' : 'montg.auth0.com',
       // 'montg.auth0.com', // development auth
       {
         token: idToken,
