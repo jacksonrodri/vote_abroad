@@ -11,7 +11,7 @@
 
 [context.students.environment]
   CONTEXT = "prod"
-  IS_STUDENT_SITE = true
+  IS_STUDENT_SITE = "true"
 
 [[redirects]]
 from = "/api/place/*"
