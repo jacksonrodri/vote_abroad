@@ -49,7 +49,7 @@
     "daMemberConfirm": "Prefill my data",
     "prefilled": "Your form has been pre-filled, please verify all information before submitting.",
     "email": "email",
-    "phone": "sms",
+    "sms": "sms",
     "emailDelay": "It could take up to a minute to deliver.",
     "checkSpam": "Check your spam folder",
     "correctEmail": "Did you enter your email correctly?",

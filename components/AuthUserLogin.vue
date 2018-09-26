@@ -62,7 +62,7 @@
             <b-icon
               type="is-vfa"
               icon="check"></b-icon>
-              {{$t('auth.notReceiveSms')}}
+              {{$t('auth.notReceiveSms', {number: phoneOrEmail})}}
             <!-- Can you receive SMS messages on {{ phoneOrEmail }}? -->
           </li>
           <li v-if="seconds > 10 && loginType === 'sms'">
@@ -86,7 +86,7 @@
             </a>
           </li>
           <li v-if="seconds <= 25">
-            <a @click="retry" class="button is-vfa is-inverted is-small" disabled>
+            <a class="button is-vfa is-inverted is-small" disabled>
               {{$t('auth.tryAgain')}}<span class="tag is-help">0:{{ 25 - parseInt(seconds) | two_digits }}</span>
             </a>
           </li>
@@ -228,7 +228,7 @@ export default {
         return
       }
       if (this.isValidNumber(this.phoneOrEmail)) {
-        this.loginType = 'phone'
+        this.loginType = 'sms'
         this.updateUser({mobileIntFormat: this.phoneOrEmail})
         this.sendSmsCode()
           .then(() => { this.authenticating = false })
@@ -247,9 +247,11 @@ export default {
       this.$v.code.$touch()
       if (this.$v.code.$error) {
         this.$refs.codeInput.$el.querySelector('input').focus()
-      } else if (this.$store.state.userauth.user.emailAddress) {
+      } else if (this.loginType === 'email') {
+      // } else if (this.$store.state.userauth.user.emailAddress) {
         this.$store.dispatch('userauth/loginEmailVerify', this.code)
-      } else if (this.$store.state.userauth.user.mobileIntFormat) {
+      // } else if (this.$store.state.userauth.user.mobileIntFormat) {
+      } else if (this.loginType === 'sms') {
         this.$store.dispatch('userauth/loginSmsVerify', this.code)
       }
     },

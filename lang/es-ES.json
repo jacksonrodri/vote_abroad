@@ -49,7 +49,7 @@
     "daMemberConfirm": "Prellenar mis datos",
     "prefilled": "Su formulario ha sido prellenado, verifique toda la información antes de enviarla.",
     "email": "correo electrónico",
-    "phone": "Mensaje de texto (sms)",
+    "sms": "Mensaje de texto (sms)",
     "emailDelay": "Podría tomar hasta un minuto para entregar.",
     "checkSpam": "Revise su carpeta de correo basura (spam)",
     "correctEmail": "¿Ingresó su email correctamente?",
