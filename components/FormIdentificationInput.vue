@@ -152,7 +152,7 @@ export default {
       //   newVal.stateId = null
       // }
       // if (Object.keys(val).includes('noId') && val.noId === false && this.temp) { newVal = Object.assign({}, this.temp); this.temp = undefined }
-      console.log('fin', newVal)
+      // console.log('fin', newVal)
       this.$emit('input', newVal)
     }
   }
