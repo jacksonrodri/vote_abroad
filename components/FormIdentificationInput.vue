@@ -142,9 +142,9 @@ export default {
     update (val) {
       // console.log(val)
       let newVal = Object.assign({}, this.value, val)
-      if (Object.keys(val).includes('ssn')) { newVal.ssn4 = null; newVal.noId = false }
-      if (Object.keys(val).includes('ssn4')) { newVal.ssn = null; newVal.noId = false }
-      if (Object.keys(val).includes('stateId')) { newVal.ssn = null; newVal.noId = false }
+      if (Object.keys(val).includes('ssn') && val.ssn) { newVal.ssn4 = null; newVal.noId = false }
+      if (Object.keys(val).includes('ssn4') && val.ssn4) { newVal.ssn = null; newVal.noId = false }
+      if (Object.keys(val).includes('stateId') && val.stateId) { newVal.ssn = null; newVal.noId = false }
       // if (val.noId) {
       //   this.temp = this.value
       //   newVal.ssn4 = null
@@ -152,7 +152,7 @@ export default {
       //   newVal.stateId = null
       // }
       // if (Object.keys(val).includes('noId') && val.noId === false && this.temp) { newVal = Object.assign({}, this.temp); this.temp = undefined }
-      // console.log('fin', newVal)
+      console.log('fin', newVal)
       this.$emit('input', newVal)
     }
   }
