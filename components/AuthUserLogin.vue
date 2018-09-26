@@ -26,6 +26,7 @@
       <auth-code-input
         ref="codeInput"
         key="codeInput"
+        :phoneOrEmail="phoneOrEmail"
         fieldName="codeInput"
         :loginType="loginType"
         v-model="code"
