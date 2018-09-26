@@ -23,6 +23,7 @@
           type="text"
           :value="selectedParty"
           ref="party"
+          maxlength="25"
           @input="val => {if (val) {isOtherButNoValue = false}; selectedParty = val; resetTimer()}"></b-input>
       </b-field>
     </transition>
