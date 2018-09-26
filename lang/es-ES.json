@@ -22,12 +22,12 @@
     "back": "Volver a página principal"
   },
   "addressPart": {
-    "streetAddress1": "Street Address 1",
-    "streetAddress2": "Street Address 2",
+    "streetAddress1": "Dirección Calle 1",
+    "streetAddress2": "Dirección Calle 2",
     "postal": "Código Postal",
     "city": "Ciudad",
-    "province": "Province",
-    "department": "Department",
+    "province": "Provincia",
+    "department": "Departamento",
     "address": "Dirección",
     "districto": "Distrito",
     "canton": "Cantón",
@@ -233,7 +233,7 @@
     },
     "codeInput": {
       "label-sms": "Un mensaje de texto (SMS) con el código ha sido enviado a {phone}.",
-      "label-email": "Le enviamos un enlace y un código a {email}. Seleccione el vínculo en el correo electrónico o ingrese el código aquí para ingresar.",
+      "label-email": "Le enviamos un enlace y un código a {email}. Seleccione el enlace en el correo electrónico o ingrese el código aquí para ingresar.",
       "placeholder": "Su código",
       "tooltipTitle": "¿Qué es esto?",
       "tooltip": "Su correo electrónico o número telefónico creará una cuenta para que usted pueda ingresar fácilmente a www. VoteFromAbroad. org y guardar la información de un año año a otro. Una sesión anónima le permite crear una Tarjeta Postal Federal de Solicitud o formulario FPCA (Federal Post Card Application) y enviarlo a la oficina de elecciones locales, pero no guardará su información para ser utilizada en el futuro.",
@@ -621,10 +621,10 @@
       "noid1": "No tengo un(a) {id}",
       "TerritoryID": "Identificación del territorio",
       "noid2": "No tengo la identificación indicada anteriormente",
-      "tooltipReq1": "{state} voters must provide a {id}. \n\n\n\nIf you can't find your {id}, please select \n\n \\*\\*'I don't have a {id}.'\\*\\*. Your local election official will follow up with you if they require more information.",
-      "tooltipReq2": "**_ONE_** of the following forms of identification is required for {state} voters:\n\n {allButLastTypes} or {lastType}. \n\nIf you don't have any of these, please select **'I don't have the above identification.'** Your local election official will follow up with you if they require more information.",
-      "tooltipOkEmail": "Oklahoma voters must provide the last 4 digits of your Social Security Number if you choose to receive your ballot by email. \n\n If you don't have a Social Security Number or you can't find it, please select **\"I don't have a Social Security Number.\"** Your local election official will follow up with you if they require more information.",
-      "instructionsReq1": "{state} voters must provide the following ID: {id}.  If you don't have a {idType}, please select: **I don't have a {idType}.**",
+      "tooltipReq1": "los votantes {state} deben proporcionar un {id}. \n\n\n\nsi no puede encontrar su {id}, por favor, seleccione \n\n \\*\\*'I no tengo un(a) {id}.' \\*\\*. Su funcionario electoral local se comunicará con usted si ellos necesitan más información.",
+      "tooltipReq2": "**_UNA_** de las siguientes formas de identificación se requiere para los votantes de {state}:\n\n {allButLastTypes} o {lastType}. \n\nSi usted no tiene alguna de estas formas de identificación, por favor seleccione **'No tengo la identificación mencionada.'** Su funcionario electoral local se comunicará con usted si ellos necesitan más información.",
+      "tooltipOkEmail": "Si usted elige recibir su boleta por correo electrónicoLos, tomen en cuenta que los votantes de Oklahoma deben proporcionar los últimos 4 dígitos de su número de Seguro Social. \n\nSi usted no tiene un número de Seguro Social o no lo encuentra, por favor seleccione ** \"No tengo número de Seguro Social\". ** Su funcionario electoral local se comunicará con usted si ellos necesitan más información.",
+      "instructionsReq1": "Los votantes de {state} deben proporcionar  la siguiente identificación: {id}.  Si no tiene {idType} por favor seleccione ** no tengo {idType}.**",
       "instructionsReq2": "Los votantes de {state} deben proporcionar **_UNA_** de las siguientes formas de identificación:\n {allButLastTypes} o su {lastType}. Si usted no tiene alguna de estas formas de identificación, por favor seleccione **'No tengo la identificación mencionada.'**",
       "PassportNumber": "Número de pasaporte",
       "TribalID": "Identificación tribal",
@@ -655,7 +655,7 @@
         "S-required": "Se requiere {label}",
         "Z-required": "Se requiere {label}",
         "X-required": "Se requiere {label}",
-        "alt1-required": "Your full street address is required"
+        "alt1-required": "Se necesita la dirección completa de su calle"
       },
       "changeFormat": "Cambiar formato",
       "unstructured-label": "Necesito utilizar un formato diferente para mi domicilio.",
@@ -695,7 +695,7 @@
         "Z-required": "Se requiere {label}",
         "X-required": "Se requiere {label}",
         "US-warning": "Solo debe seleccionar 'Estados Unidos' si usted está usando una dirección militar o diplomática (Oficina Postal del Ejército, Marina o Sede Diplomática).",
-        "alt1-required": "Your full street address is required"
+        "alt1-required": "Se necesita la dirección completa de su calle"
       },
       "placeholder": "País",
       "selectCountry": " (Por favor seleccione un país para continuar)",

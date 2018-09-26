@@ -1,4 +1,4 @@
 ---
-title: How to Vote from Abroad
+title: Cómo votar desde el extranjero
 ---
-Placeholder for the how to vote from abroad page
+Marcador de posición para la página de cómo votar desde el extranjero
