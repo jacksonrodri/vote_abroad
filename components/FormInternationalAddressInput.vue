@@ -53,7 +53,7 @@
               <template slot-scope="props">{{ props.option.description }}</template>
               <template slot="header">
                 <div class="buttons has-addons is-right">
-                    <a @click="focusNext" class="delete is-small"></a>
+                    <a @click="closeAutocomplete" class="delete is-small"></a>
                 </div>
               </template>
             </b-autocomplete>
@@ -216,7 +216,7 @@ export default {
     focusCountry () {
       this.$refs.ctry[0].$refs.input.focus()
     },
-    focusNext () {
+    closeAutocomplete () {
       this.$refs.A[0].isActive = false
     },
     async getAsyncData (val) {
