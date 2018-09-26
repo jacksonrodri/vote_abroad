@@ -82,7 +82,8 @@ export default {
   ],
   data () {
     return {
-      toolTipOpen: false
+      toolTipOpen: false,
+      temp: undefined
     }
   },
   computed: {
@@ -130,6 +131,14 @@ export default {
       if (Object.keys(val).includes('ssn')) { newVal.ssn4 = null; newVal.noId = false }
       if (Object.keys(val).includes('ssn4')) { newVal.ssn = null; newVal.noId = false }
       if (Object.keys(val).includes('stateId')) { newVal.ssn = null; newVal.noId = false }
+      if (val.noId) {
+        this.temp = this.value
+        newVal.ssn4 = null
+        newVal.ssn = null
+        newVal.stateId = null
+      }
+      if (Object.keys(val).includes('noId') && val.noId === false && this.temp) { newVal = Object.assign({}, this.temp); this.temp = undefined }
+      // console.log('fin', newVal)
       this.$emit('input', newVal)
     }
   }
