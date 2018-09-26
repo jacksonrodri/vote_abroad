@@ -10,6 +10,10 @@ Nuxt server rendered Vue app with
 - AWS cognito identity pool IAM
   - Authenticated role for users logged in with Auth0 federated identity gives access to requests created with the same identity
   - Unauthenticated identity created for anonymous users to gain access to graphql api
+- AppSync Graphql API with IAM access management. 
+- NetlifyCMS content management (md && YAML files saved in content folder)
+- localization: nuxt-18n es/en
+- pages: each .vue in the pages dir is a unique page
 
 ## Build Setup
 
