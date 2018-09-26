@@ -13,7 +13,7 @@
     "tooltip": "Your email or number will create an account for you to use to easily sign in to votefromabroad and save your information from year to year. An anonymous session allows you to create an FPCA form and send it to your local election office, but will not save your information for you to return to in the future."
   },
   "email": {
-    "voterEmail": "Thanks for sending in your FPCA form to your local election office. Here is a copy for your records. If you don't receive a confirmation of receipt, please do get back in touch with your local election official: \n\n {leoName} \n\n Email: {leoEmail} \n\n Phone: {leoPhone} \n\n If you need any help, contact our volunteer voter support team at help@votefromabroad.org. \n\n --------",
+    "voterEmail": "Thanks for sending in your FPCA form to your local election office. Here is a copy for your records. If you don't receive a confirmation of receipt, please do get back in touch with your local election official: \n\n {leoName} \n\n Email: {leoEmail} \n\n Phone: {leoPhone} \n\n If you need any help, contact our volunteer voter support team at help@votefromabroad.org. \n\n --------\n\n",
     "testEmail": "********** \n This message will be sent to {leoEmail} {leoName} after VoteFromAbroad 3.0 is launched. \n\n We have NOT sent in your FPCA. \n ********** \n\n\n\n"
   },
   "error": {
