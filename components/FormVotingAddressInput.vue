@@ -258,7 +258,7 @@ export default {
   },
   methods: {
     closeAutocomplete () {
-      this.$refs.A[0].isActive = false
+      this.$refs.A.isActive = false
     },
     async findCounty () {
       if (!this.county && this.state && this.city && this.state !== 'DC') {
