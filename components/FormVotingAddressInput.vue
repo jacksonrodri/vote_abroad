@@ -22,6 +22,11 @@
         @select="option => fillData(option)">
         <template slot-scope="props">{{ props.option.description }}</template>
         <template slot="empty">No results found</template>
+        <template slot="header">
+          <div class="buttons has-addons is-right">
+              <a @click="closeAutocomplete" class="delete is-small"></a>
+          </div>
+        </template>
       </b-autocomplete>
         <!-- @input="getAsyncData" -->
     </b-field>
@@ -252,6 +257,9 @@ export default {
     }
   },
   methods: {
+    closeAutocomplete () {
+      this.$refs.A[0].isActive = false
+    },
     async findCounty () {
       if (!this.county && this.state && this.city && this.state !== 'DC') {
         let {data: { predictions }} = await axios.get(`${process.env.placesUrl + process.env.autocompleteEndpoint}?input=${this.street || ''}%20${this.city || ''}%20${this.state || ''}%20${this.zip || ''}&types=geocode&language=en&components=country:US&key=${process.env.placesKey}`)
