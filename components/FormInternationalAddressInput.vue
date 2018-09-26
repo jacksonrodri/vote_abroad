@@ -51,6 +51,11 @@
               @keyup.delete.native="getAsyncData"
               @select="option => fillData(option)">
               <template slot-scope="props">{{ props.option.description }}</template>
+              <template slot="header">
+                <div class="buttons has-addons is-right">
+                    <a @click="focusNext" class="delete is-small"></a>
+                </div>
+              </template>
             </b-autocomplete>
               <!-- @keydown="autocompleteFocused = true"
               @focus="autocompleteFocused = true"
@@ -210,6 +215,9 @@ export default {
     },
     focusCountry () {
       this.$refs.ctry[0].$refs.input.focus()
+    },
+    focusNext () {
+      this.$refs.A[0].isActive = false
     },
     async getAsyncData (val) {
       await this.$nextTick()
