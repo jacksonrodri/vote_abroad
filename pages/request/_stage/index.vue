@@ -525,7 +525,7 @@ export default {
       set (value) { this.update({voterClass: value}) }
     },
     identification: {
-      get () { return this.getCurrent.identification || {noId: false, ssn: null, ssnTyped: null, stateId: null} },
+      get () { return this.getCurrent.identification || {noId: false, ssn: null, ssn4: null, stateId: null} },
       set (value) { this.update({identification: value}) }
     },
     ssn: {
@@ -875,7 +875,7 @@ export default {
       identification: {
         ssn: {
           required: requiredIf(function (model) {
-            return !model.stateId && !model.ssn4 && !model.noId && this.idOptions.includes('SSN')
+            return this.idOptions.includes('SSN') && !model.stateId && !model.ssn4 && !model.noId
           }),
           correctLength: fullLengthSsn(this.idOptions)
         },

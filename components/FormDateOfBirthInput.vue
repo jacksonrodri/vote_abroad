@@ -25,9 +25,9 @@
           <span class="help is-primary is-size-6" v-html="$t('request.dob.selectDate')"></span>
           <b-input
             v-if="!allowNative"
-            :value="(dob instanceof Date) ? dob.toLocaleDateString(dateFormat, { year: 'numeric', month: 'long', day: 'numeric' }) : dob"
-            @change="val => dob = val"
-            @blur="dob = dateParser2(dob)"
+            v-model="dateNoNative"
+            @keyup.enter="dob = dateParser2(dateNoNative)"
+            @blur="dob = dateParser2(dateNoNative)"
             :placeholder="$t('request.dob.placeholder')"></b-input>
         </div>
         <div class="pagination field is-centered" v-if="componentLoaded">
@@ -99,6 +99,7 @@ export default {
   data () {
     return {
       date: undefined,
+      dateNoNative: '',
       maxDate: new Date(2000, 10, 6),
       minDate: new Date(1900, 0, 1),
       toolTipOpen: false,
@@ -161,9 +162,10 @@ export default {
         function createDateString (d) { return `${d.getFullYear()}-${d.getMonth() < 9 ? '0' : ''}${d.getMonth() + 1}-${d.getDate() < 10 ? '0' : ''}${d.getDate()}` }
         let d = val instanceof Date ? createDateString(val) : null
         this.$store.commit('requests/update', { dob: d })
-        if (val instanceof Date) {
+        if (val && val instanceof Date) {
           this.focusedDate = val
           this.date = val
+          this.dateNoNative = this.dateFormatter(val)
         }
       }
     },

@@ -8,7 +8,7 @@
     <b-field v-if="idOptions && idOptions.includes('SSN')"
         :label="$t('request.id.SSN')"
         label-for="ssn"
-      :message="validations.ssn.$anyError ? Object.entries(validations.ssn).filter(([key, value]) => key.charAt(0) !== '$' && value === false).map(x => $t(`request.messages.messages.ssn-${x[0]}`)) : '' "
+      :message="validations.ssn.$anyError ? Object.entries(validations.ssn).filter(([key, value]) => key.charAt(0) !== '$' && value === false).map(x => $t(`request.id.messages.ssn-${x[0]}`)) : '' "
         :type="(validations.ssn.$anyError ? 'is-danger': '')">
       <b-input
         id="ssn"
@@ -24,7 +24,7 @@
 
       <!-- :message="validations.ssn4.$anyError ? $t(`request.id.messages.SSN4Required`) : '' " -->
     <b-field v-if="!idOptions || (idOptions && (idOptions.length === 0 || idOptions.includes('SSN4')))"
-      :message="validations.ssn4.$anyError ? Object.entries(validations.ssn4).filter(([key, value]) => key.charAt(0) !== '$' && value === false).map(x => $t(`request.messages.messages.ssn4-${x[0]}`)) : '' "
+      :message="validations.ssn4.$anyError ? Object.entries(validations.ssn4).filter(([key, value]) => key.charAt(0) !== '$' && value === false).map(x => $t(`request.id.messages.ssn4-${x[0]}`)) : '' "
       :type="(validations.ssn4.$anyError ? 'is-danger': '')"
       :label="$t('request.id.SSN4')"
       label-for="ssn4">
@@ -42,12 +42,13 @@
 
       <!-- :message="validations.stateId.$anyError ? $t(`request.id.messages.stateIdRequired`) : '' " -->
     <b-field v-if="!idOptions || (idOptions && (idOptions.length === 0 || idOptions.filter(x => !/SSN/.test(x)).length > 0))"
-      :message="validations.stateId.$anyError ? Object.entries(validations.stateId).filter(([key, value]) => key.charAt(0) !== '$' && value === false).map(x => $t(`request.messages.messages.stateId-${x[0]}`)) : '' "
+      :message="validations.stateId.$anyError ? Object.entries(validations.stateId).filter(([key, value]) => key.charAt(0) !== '$' && value === false).map(x => $t(`request.id.messages.stateId-${x[0]}`)) : '' "
       :type="(validations.stateId.$anyError ? 'is-danger': '')"
       :label="stateIdLabel"
       label-for="stateId">
       <b-input id="stateId"
         v-model="stateId"
+        maxlength="25"
         ref="StateId">
       </b-input>
     </b-field>
@@ -81,7 +82,8 @@ export default {
   ],
   data () {
     return {
-      toolTipOpen: false
+      toolTipOpen: false,
+      temp: undefined
     }
   },
   computed: {
@@ -99,7 +101,21 @@ export default {
     },
     noId: {
       get () { return this.value && this.value.noId ? this.value.noId : false },
-      set (val) { this.update({noId: val}) }
+      set (val) {
+        if (val) {
+          this.temp = this.value
+          this.$emit('input', {
+            ssn: null,
+            ssn4: null,
+            stateId: null,
+            noId: true
+          })
+        } else {
+          this.$emit('input', this.temp)
+          this.temp = undefined
+        }
+        // this.update({noId: val})
+      }
     },
     usesStateId: function () { return Boolean(this.stateIDTypes && this.stateIDTypes.length > 0) },
     stateIDTypes: function () {
@@ -129,6 +145,14 @@ export default {
       if (Object.keys(val).includes('ssn')) { newVal.ssn4 = null; newVal.noId = false }
       if (Object.keys(val).includes('ssn4')) { newVal.ssn = null; newVal.noId = false }
       if (Object.keys(val).includes('stateId')) { newVal.ssn = null; newVal.noId = false }
+      // if (val.noId) {
+      //   this.temp = this.value
+      //   newVal.ssn4 = null
+      //   newVal.ssn = null
+      //   newVal.stateId = null
+      // }
+      // if (Object.keys(val).includes('noId') && val.noId === false && this.temp) { newVal = Object.assign({}, this.temp); this.temp = undefined }
+      // console.log('fin', newVal)
       this.$emit('input', newVal)
     }
   }
