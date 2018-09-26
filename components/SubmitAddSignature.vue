@@ -15,30 +15,56 @@
           <!-- <h3 v-else class="subtitle is-4">
             <a @click="croppedPic.chooseFile()" class="has-text-primary">Click to upload a scan of your signature</a> from your computer.
           </h3> -->
-          <b-message :active="webcamCaptureError && !(croppedPic && croppedPic.imageSet)" :closable="false" :title="$t('request.sig.captureErrorTitle')" type="is-danger">
+          <b-message
+            class="content"
+            :active="webcamCaptureError && !(croppedPic && croppedPic.imageSet)"
+            :closable="false"
+            :title="$t('request.sig.captureErrorTitle')"
+            type="is-danger">
             <i18n path="request.sig.captureErrorMessage" tag="span">
               <a @click="uploadPic" class="has-text-primary">{{$t('request.sig.uploadFile')}}</a>
             </i18n>
             <!-- We could not get access your device camera. (Either it is not connected/available or you have disallowed VoteFromAbroad.org from accessing it). You can still click <a @click="uploadPic" class="has-text-primary">upload a file</a> to upload your signature from a file. -->
           </b-message>
-          <b-message :active="!webCamCapture && canCaptureImage && (!croppedPic || !croppedPic.imageSet)" :closable="false" :title="$t('request.sig.instructionsLabel')" type="is-info">
+          <b-message
+            class="content"
+            :active="!webCamCapture && canCaptureImage && (!croppedPic || !croppedPic.imageSet)"
+            :closable="false"
+            :title="$t('request.sig.instructionsLabel')"
+            type="is-info">
             {{$t('request.sig.captureSignInstructions')}}
             <!-- Sign your name with a dark pen in large letters on a blank sheet of white paper. Then click 'Start' to start your camera. You'll be able to adjust the picture after you take it. -->
           </b-message>
-          <b-message :active="!webCamCapture && !canCaptureImage && (!croppedPic || !croppedPic.imageSet)" :closable="false" :title="$t('request.sig.instructionsLabel')" type="is-info">
+          <b-message
+            class="content"
+            :active="!webCamCapture && !canCaptureImage && (!croppedPic || !croppedPic.imageSet)"
+            :closable="false"
+            :title="$t('request.sig.instructionsLabel')"
+            type="is-info">
             {{$t('request.sig.captureUploadInstructions')}}
             <!-- Sign your name with a dark pen in large letters on a blank sheet of white paper. Scan the file to your computer, then click 'Upload a File'. You'll be able to adjust the picture after you upload it. -->
           </b-message>
-          <b-message :active="webCamCapture && !webcamCaptureError" :closable="false" :title="$t('request.sig.instructionsLabel')" type="is-info">
+          <b-message
+            class="content"
+            :active="webCamCapture && !webcamCaptureError"
+            :closable="false"
+            :title="$t('request.sig.instructionsLabel')"
+            type="is-info">
             {{$t('request.sig.sigPlacementInstructions')}}
             <!-- Move your signature in front of the camera so that it is in focus and takes up as much of the screen as possible. (You'll be able to adjust the picture after you take it.) -->
           </b-message>
           <b-message
             :active="!webCamCapture && croppedPic && croppedPic.imageSet"
             :closable="false"
+            class="content"
             :title="$t('request.sig.instructionsLabel')"
-            type="is-info"
-            v-html="md($t('request.sig.sigAdjustmentInstructions'))">
+            type="is-info">
+            <ul>
+              <li>{{$t('request.sig.resizeInstructions')}}</li>
+              <li>{{$t('request.sig.moveInstructions')}}</li>
+              <li>{{$t('request.sig.useSignatureInstructions')}}</li>
+            </ul>
+            <!-- v-html="md($t('request.sig.sigAdjustmentInstructions'))"> -->
             <!-- {{$t('request.sig.sigAdjustmentInstructions')}} -->
             <!-- - Align your signature with the red line -- drag to move, scroll to zoom. If you don't see your signature, you may need to zoom out to get it back on the page.<br>- Adjust your signature with the 'Line Strength' buttons below so that the signature is clear and has minimal background noise<br>- If your signature is still unclear, you can click 'Clear Image' to try again.<br>- Click 'Use This Signature' to add it to your form and compose a message to your election official. -->
           </b-message>
@@ -47,10 +73,10 @@
             <nav class="level" v-if="croppedPic && croppedPic.hasImage()">
               <div class="level-item has-text-centered">
                 <div>
-                  <p class="heading">Zoom</p>
+                  <p class="heading">{{$t('request.sig.resizeLabel')}}</p>
                   <b-field>
                     <p class="control">
-                      <b-tooltip label="Zoom In">
+                      <b-tooltip :label="$t('request.sig.zoomIn')">
                         <button
                           class="button"
                           @click="zoom('in')">
@@ -61,7 +87,7 @@
                       </b-tooltip>
                     </p>
                     <p class="control">
-                      <b-tooltip label="Zoom Out">
+                      <b-tooltip :label="$t('request.sig.zoomOut')">
                         <button
                           class="button"
                           @click="zoom('out')">
@@ -76,10 +102,10 @@
               </div>
               <div class="level-item has-text-centered">
                 <div>
-                  <p class="heading">Position</p>
+                  <p class="heading">{{$t('request.sig.positionLabel')}}</p>
                   <b-field>
                     <p class="control">
-                      <b-tooltip label="Move Left">
+                      <b-tooltip :label="$t('request.sig.moveLeft')">
                         <button
                           class="button"
                           @click="move('left')">
@@ -90,7 +116,7 @@
                       </b-tooltip>
                     </p>
                     <p class="control">
-                      <b-tooltip label="Move up">
+                      <b-tooltip :label="$t('request.sig.moveUp')">
                         <button
                           class="button"
                           @click="move('up')">
@@ -101,7 +127,7 @@
                       </b-tooltip>
                     </p>
                     <p class="control">
-                      <b-tooltip label="Move Down">
+                      <b-tooltip :label="$t('request.sig.moveDown')">
                         <button
                           class="button"
                           @click="move('down')">
@@ -112,7 +138,7 @@
                       </b-tooltip>
                     </p>
                     <p class="control">
-                      <b-tooltip label="Move Right">
+                      <b-tooltip :label="$t('request.sig.moveRight')">
                         <button
                           class="button"
                           @click="move('right')">
@@ -127,10 +153,10 @@
               </div>
               <div class="level-item has-text-centered">
                 <div>
-                  <p class="heading">Brightness</p>
+                  <p class="heading">{{$t('request.sig.brightnessLabel')}}</p>
                   <b-field>
                     <p class="control">
-                      <b-tooltip label="Darker">
+                      <b-tooltip :label="$t('request.sig.darker')">
                         <button
                           class="button"
                           @click="decreaseCompensation">
@@ -141,7 +167,7 @@
                       </b-tooltip>
                     </p>
                     <p class="control">
-                      <b-tooltip label="Lighter">
+                      <b-tooltip :label="$t('request.sig.lighter')">
                         <button
                           class="button"
                           @click="increaseCompensation">
@@ -156,10 +182,10 @@
               </div>
               <div class="level-item has-text-centered">
                 <div>
-                  <p class="heading">Rotate</p>
+                  <p class="heading">{{$t('request.sig.rotateLabel')}}</p>
                   <b-field>
                     <p class="control">
-                      <b-tooltip label="Rotate Left">
+                      <b-tooltip :label="$t('request.sig.rotateLeft')">
                         <button
                           class="button"
                           @click="rotate(-1)">
@@ -170,7 +196,7 @@
                       </b-tooltip>
                     </p>
                     <p class="control">
-                      <b-tooltip label="Rotate Right">
+                      <b-tooltip :label="$t('request.sig.rotateRight')">
                         <button
                           class="button"
                           @click="rotate(1)">
@@ -254,13 +280,12 @@
               </b-field>
             </b-field>
             <!-- <button v-if="croppedPic && croppedPic.hasImage()" class="button" @click.prevent="useSignature">Add my Signature</button> -->
-              <div class="box" v-if="croppedPic && croppedPic.hasImage()" >
+              <!-- <div class="box" v-if="croppedPic && croppedPic.hasImage()" >
                 <h3 class="subtitle is-5">
                   <span class="icon is-small">
                     <i class="fas fa-sliders-h"></i>
                   </span>
                   {{$t('request.sig.adjustImage')}}
-                  <!-- &nbsp;&nbsp;Adjust Image -->
                 </h3>
                 <div class="field is-horizontal">
                   <div class="field-label">
@@ -268,7 +293,6 @@
                   </div>
                   <div class="field-body">
                     {{$t('request.sig.resizeInstructions')}}
-                    <!-- Pinch or scroll with your mouse on the image to resize it. -->
                   </div>
                 </div>
                 <div class="field is-horizontal">
@@ -277,7 +301,6 @@
                   </div>
                   <div class="field-body">
                     {{$t('request.sig.moveInstructions')}}
-                    <!-- Drag to place your signature on the red line next to the 'X'. -->
                   </div>
                 </div>
                 <div class="field is-horizontal">
@@ -336,7 +359,7 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
         </div>
   </section>
 </template>
