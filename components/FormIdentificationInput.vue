@@ -101,7 +101,21 @@ export default {
     },
     noId: {
       get () { return this.value && this.value.noId ? this.value.noId : false },
-      set (val) { this.update({noId: val}) }
+      set (val) {
+        if (val) {
+          this.temp = this.value
+          this.$emit('input', {
+            ssn: null,
+            ssn4: null,
+            stateId: null,
+            noId: true
+          })
+        } else {
+          this.$emit('input', this.temp)
+          this.temp = undefined
+        }
+        // this.update({noId: val})
+      }
     },
     usesStateId: function () { return Boolean(this.stateIDTypes && this.stateIDTypes.length > 0) },
     stateIDTypes: function () {
@@ -131,13 +145,13 @@ export default {
       if (Object.keys(val).includes('ssn')) { newVal.ssn4 = null; newVal.noId = false }
       if (Object.keys(val).includes('ssn4')) { newVal.ssn = null; newVal.noId = false }
       if (Object.keys(val).includes('stateId')) { newVal.ssn = null; newVal.noId = false }
-      if (val.noId) {
-        this.temp = this.value
-        newVal.ssn4 = null
-        newVal.ssn = null
-        newVal.stateId = null
-      }
-      if (Object.keys(val).includes('noId') && val.noId === false && this.temp) { newVal = Object.assign({}, this.temp); this.temp = undefined }
+      // if (val.noId) {
+      //   this.temp = this.value
+      //   newVal.ssn4 = null
+      //   newVal.ssn = null
+      //   newVal.stateId = null
+      // }
+      // if (Object.keys(val).includes('noId') && val.noId === false && this.temp) { newVal = Object.assign({}, this.temp); this.temp = undefined }
       // console.log('fin', newVal)
       this.$emit('input', newVal)
     }
