@@ -179,6 +179,7 @@ export const getters = {
       rule: typeof r.rule === 'string' && !/received by|no deadline|not required/gi.test(r.rule)
         ? ['postmarked by', 'sent by', 'signed by', 'signed/postmarked by'].filter(x => r.rule.toLowerCase().includes(x)).includes('signed/postmarked by') ? 'signedPostmarked' : ['postmarked', 'received', 'sent', 'signed'].filter(x => r.rule.toLowerCase().includes(x))[0] + 'By'
         : 'receivedBy',
+      note: r.note || null,
       // submissionOptions: ['Email', 'Fax', 'Mail'].filter(opt => {
       //   let rule = typeof r.rule === 'string' ? r.rule : ''
       //   let re = new RegExp(opt)
