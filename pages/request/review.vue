@@ -133,7 +133,11 @@ export default {
         return ' '
       }
     },
-    date () { return this.currentRequest && this.currentRequest.date ? this.currentRequest.date.toString() : ' ' },
+    date () {
+      let d = new Date()
+      return this.getCurrent.date || `${d.getFullYear()}-${d.getMonth() < 9 ? '0' : ''}${d.getMonth() + 1}-${d.getDate() < 10 ? '0' : ''}${d.getDate()}`
+    },
+    // date () { return this.currentRequest && this.currentRequest.date ? this.currentRequest.date.toString() : ' ' },
     voterClass () { return this.currentRequest && this.currentRequest.voterClass ? this.currentRequest.voterClass.toString() : ' ' },
     sex () { return this.currentRequest && this.currentRequest.sex && this.currentRequest.sex !== 'decline' ? this.currentRequest.sex.toString() : ' ' },
     recBallot () { return this.currentRequest && this.currentRequest.recBallot ? this.currentRequest.recBallot.toString() : ' ' },
