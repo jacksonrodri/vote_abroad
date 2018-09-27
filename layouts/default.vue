@@ -73,11 +73,16 @@
                   </nuxt-link>
 
                   <div class="navbar-dropdown is-right">
-                    <nuxt-link :to="localePath({ name: 'faqs-slug', params: { slug: faq.slug } })" v-for="(faq, index) in topFaqs" :key="index" class="navbar-item">
+                    <nuxt-link
+                      :to="localePath({ name: 'faqs-slug', params: { slug: faq.slug } })"
+                      v-for="(faq, index) in topFaqs"
+                      :key="index"
+                      :title="faq[`title${$i18n.locale.toUpperCase()}`]"
+                      class="navbar-item">
                       <span class="panel-icon">
                         <i class="fas fa-question-circle"></i>
                       </span>
-                      {{faq[`title${$i18n.locale.toUpperCase()}`]}}
+                      {{faq[`title${$i18n.locale.toUpperCase()}`] | truncate(100)}}
                     </nuxt-link>
                     <!-- <a class="navbar-item">
                       I can't remember or find my exact street address - what do I do?
@@ -270,6 +275,11 @@ export default {
       return this.$route.name
     },
     isAuthenticated: function () { return this.$store.getters['userauth/isAuthenticated'] }
+  },
+  filters: {
+    truncate: function (text, stop, clamp) {
+      return text.slice(0, stop) + (stop < text.length ? clamp || '...' : '')
+    }
   },
   methods: {
     showIntercom () {

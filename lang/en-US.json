@@ -584,7 +584,7 @@
         "nov": "November",
         "dec": "December"
       },
-      "selectDate": "Type your birthdate in or select your birthdate <br/>(year first, then month and date).",
+      "selectDate": "Type your birthdate in or select your birthdate <br/>(select year first, then month and date).",
       "tooltip": "You must be 18 years old by the time of the next General Election to register to vote.",
       "disambiguationTitle": "Which did you mean?",
       "disambiguationMessage": "You typed {0}. Which of the following did you mean?",

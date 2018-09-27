@@ -150,7 +150,7 @@
                       </b-tooltip>
                     </p>
                     <p class="control">
-                      <b-tooltip :label="$t('request.sig.moveRight')">
+                      <b-tooltip :label="$t('request.sig.moveRignt')">
                         <button
                           class="button"
                           @click="move('right')">
