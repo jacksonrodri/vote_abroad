@@ -1,4 +1,5 @@
 <template>
+<!-- empty note -->
 <div class="hero-head">
   <div>
     <h1 class="has-text-centered title is-3">{{$t('dashboard.ballotRequestStatus')}}</h1>
