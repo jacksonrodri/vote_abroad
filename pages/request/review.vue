@@ -135,7 +135,8 @@ export default {
     },
     date () {
       let d = new Date()
-      return this.getCurrent.date || `${d.getFullYear()}-${d.getMonth() < 9 ? '0' : ''}${d.getMonth() + 1}-${d.getDate() < 10 ? '0' : ''}${d.getDate()}`
+      // this.getCurrent.date ||
+      return `${d.getFullYear()}-${d.getMonth() < 9 ? '0' : ''}${d.getMonth() + 1}-${d.getDate() < 10 ? '0' : ''}${d.getDate()}`
     },
     // date () { return this.currentRequest && this.currentRequest.date ? this.currentRequest.date.toString() : ' ' },
     voterClass () { return this.currentRequest && this.currentRequest.voterClass ? this.currentRequest.voterClass.toString() : ' ' },
