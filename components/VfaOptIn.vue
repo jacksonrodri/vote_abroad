@@ -6,21 +6,21 @@
         grouped
         position="is-centered">
         <b-checkbox :class="isDirty && !tos ? 'has-text-danger  has-text-weight-semibold' : ''" v-model="tos" required type="is-vfa">Terms of Service</b-checkbox>
-        <button class="button is-vfa is-inverted is-small">
+        <nuxt-link :to="tosPage" class="button is-vfa is-inverted is-small">
           (Read)
-        </button>
+        </nuxt-link>
       </b-field>
       <b-field grouped position="is-centered">
         <b-checkbox :class="isDirty && !privacy ? 'has-text-danger  has-text-weight-semibold' : ''" v-model="privacy" required type="is-vfa">Privacy Policy</b-checkbox>
-        <button class="button is-vfa is-inverted is-small">
+        <nuxt-link :to="privacyPage" class="button is-vfa is-inverted is-small">
           (Read)
-        </button>
+        </nuxt-link>
       </b-field>
       <b-field grouped position="is-centered">
         <b-checkbox :class="isDirty && !cookie ? 'has-text-danger  has-text-weight-semibold' : ''" v-model="cookie" required type="is-vfa">Cookie Policy</b-checkbox>
-        <button class="button is-vfa is-inverted is-small">
+        <nuxt-link :to="cookiePage" class="button is-vfa is-inverted is-small">
           (Read)
-        </button>
+        </nuxt-link>
       </b-field>
 
       <p v-if="isError" class="help has-text-centered has-text-danger">You must agree to the terms to use VoteFromAbroad.</p>
@@ -38,6 +38,7 @@
 <script>
 
 export default {
+  props: ['privacyPage', 'cookiePage', 'tosPage'],
   data () {
     return {
       privacy: false,

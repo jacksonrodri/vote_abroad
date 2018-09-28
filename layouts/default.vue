@@ -216,7 +216,11 @@
     :active="!optedIn && !privacyRoute"
     :canCancel="false"
     has-modal-card>
-    <vfa-opt-in @optIn="optIn"></vfa-opt-in>
+    <vfa-opt-in
+      @optIn="optIn"
+      :privacyPage="localePath({ name: 'page', params: {page: 'privacy'}})"
+      :cookiePage="localePath({ name: 'page', params: {page: 'cookie-policy'}})"
+      :tosPage="localePath({ name: 'page', params: {page: 'terms-of-use'}})"></vfa-opt-in>
   </b-modal>
 </div>
 </template>
