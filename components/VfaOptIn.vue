@@ -1,8 +1,8 @@
 <template>
   <div class="card">
     <div class="card-content">
-      <h3 class="subtitle is-5">Vote From Abroad helps US citizens register to vote quickly and easily, but to do so we need to collect your personal information. Your data privacy is our top concern, so please read and accept our: </h3>
-      <b-field
+      <h3 class="subtitle is-5">Vote From Abroad helps US citizens register to vote quickly and easily, but to do so we need to collect your personal information. Your data privacy is our top concern, so please read and accept our <nuxt-link :to="privacyPage" class="has-text-primary">privacy policy</nuxt-link>, <nuxt-link :to="cookiePage" class="has-text-primary">cookie policy</nuxt-link> and <nuxt-link :to="tosPage" class="has-text-primary">terms of service.</nuxt-link> </h3>
+      <!-- <b-field
         grouped
         position="is-centered">
         <b-checkbox :class="isDirty && !tos ? 'has-text-danger  has-text-weight-semibold' : ''" v-model="tos" required type="is-vfa">Terms of Service</b-checkbox>
@@ -23,11 +23,11 @@
         </nuxt-link>
       </b-field>
 
-      <p v-if="isError" class="help has-text-centered has-text-danger">You must agree to the terms to use VoteFromAbroad.</p>
+      <p v-if="isError" class="help has-text-centered has-text-danger">You must agree to the terms to use VoteFromAbroad.</p> -->
       <b-field grouped position="is-right">
           <p class="control">
               <button
-                @click="optIn"
+                @click="$emit('optIn')"
                 class="button is-vfa">I agree</button>
           </p>
       </b-field>

@@ -912,9 +912,9 @@
     electionType: 'General Election'
     rules:
         Registration:
-            - {voterType: {}, rule: 'Received by', date: '2018-10-12T00:00:00', note: 'If you submit your FPCA electronically, you must also mail in the original copy by Nov 5, 2018.'}
+            - {voterType: {}, rule: 'Received by', date: '2018-10-12T00:00:00', note: 'If you submit your FPCA electronically, must ALSO send in the original signed copy by postal mail and it must be postmarked by Election Day and reach NY by Nov 19..'}
         'Ballot Request':
-            - {voterType: {}, rule: 'Received by', date: '2018-10-30T00:00:00', note: 'If you submit your FPCA electronically, you must also mail in the original copy by Nov 5, 2018.'}
+            - {voterType: {}, rule: 'Received by', date: '2018-10-30T00:00:00', note: 'If you submit your FPCA electronically, you must ALSO send in the original signed copy by postal mail and it must be postmarked by Election Day and reach NY by Nov 19..'}
         'Ballot Return':
             - {voterType: {}, rule: 'Postmarked by**', date: '2018-11-05T00:00:00', note: 'Ballots sent by postal mail must be received by Nov 19, 2018.'}
 -

@@ -1,6 +1,24 @@
 <template>
 <div>
   <div v-if="!offline">
+    <transition name="fade">
+    <div v-if="!optedIn && !privacyRoute" class="notices is-top">
+      <div class="snackbar is-warning is-top">
+        <p class="text">Vote From Abroad helps US citizens register to vote quickly and easily, but to do so we need to collect your personal information. Your data privacy is our top concern, so please read and accept our <nuxt-link :to="localePath({ name: 'page', params: {page: 'privacy'}})" class="has-text-warning">privacy policy</nuxt-link>, <nuxt-link :to="localePath({ name: 'page', params: {page: 'cookie-policy'}})" class="has-text-warning">cookie policy</nuxt-link> and <nuxt-link :to="localePath({ name: 'page', params: {page: 'terms-of-use'}})" class="has-text-warning">terms of service.</nuxt-link></p>
+        <div class="action is-warning"><button @click="optIn" class="button is-dark">I Agree</button></div>
+        <!-- <article class="message is-dark">
+          <div class="message-body">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+          </div>
+        </article>
+        <vfa-opt-in
+          @optIn="optIn"
+          :privacyPage="localePath({ name: 'page', params: {page: 'privacy'}})"
+          :cookiePage="localePath({ name: 'page', params: {page: 'cookie-policy'}})"
+          :tosPage="localePath({ name: 'page', params: {page: 'terms-of-use'}})"></vfa-opt-in> -->
+      </div>
+    </div>
+    </transition>
   <div :class="['hero', 'is-fullheight', 'bg', {'bg-image': isBgImage}]">
       <div class="hero-head">
         <header :class="`navbar ${isBgImage ? 'is-vfa' : 'is-light'}`">
@@ -212,7 +230,7 @@
       </div>
     </div>
   </div>
-  <b-modal
+  <!-- <b-modal
     :active="!optedIn && !privacyRoute"
     :canCancel="false"
     has-modal-card>
@@ -221,7 +239,7 @@
       :privacyPage="localePath({ name: 'page', params: {page: 'privacy'}})"
       :cookiePage="localePath({ name: 'page', params: {page: 'cookie-policy'}})"
       :tosPage="localePath({ name: 'page', params: {page: 'terms-of-use'}})"></vfa-opt-in>
-  </b-modal>
+  </b-modal> -->
 </div>
 </template>
 
@@ -324,15 +342,22 @@ export default {
   async mounted () {
     if (!this.$cookie.get('vfaOptIn')) {
       this.optedIn = false
+      // this.$snackbar.open({
+      //   message: `Please read and accept our <a href="/terms-of-service">terms of service</a>, cookies and privacy policies`,
+      //   type: 'is-warning',
+      //   position: 'is-top',
+      //   actionText: 'I Understand',
+      //   indefinite: true
+      // })
     }
     console.log('process.env.stage:', process.env.stage)
-    this.$snackbar.open({
-      message: process.env.stage === 'dev' ? 'You are on the SANDBOX site. Messages will only be sent to your address (Your LEO will NOT receive your FPCA.)' : 'This beta site is now live.  If you submit an FPCA it will be sent to your Election Official.',
-      type: 'is-warning',
-      position: 'is-top',
-      actionText: 'I Understand',
-      indefinite: true
-    })
+    // this.$snackbar.open({
+    //   message: process.env.stage === 'dev' ? 'You are on the SANDBOX site. Messages will only be sent to your address (Your LEO will NOT receive your FPCA.)' : 'This beta site is now live.  If you submit an FPCA it will be sent to your Election Official.',
+    //   type: 'is-warning',
+    //   position: 'is-top',
+    //   actionText: 'I Understand',
+    //   indefinite: true
+    // })
     function checkDeviceSupport (callback) {
       if (!canEnumerate) {
         return
@@ -487,3 +512,13 @@ export default {
   }
 }
 </script>
+
+<style>
+is-optin {
+  align-items: flex-start;
+  max-width: 960px;
+  margin: 2% auto;
+  left: 0;
+  right: 0;
+}
+</style>
