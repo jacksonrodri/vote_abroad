@@ -132,7 +132,8 @@ module.exports = {
     {src: '~/plugins/vuelidate'},
     {src: '~/plugins/croppa'},
     {src: '~/plugins/intercom'},
-    { src: '~plugins/i18n.js' }
+    { src: '~plugins/i18n.js' },
+    {src: '~plugins/vue-cookie', ssr: false, injectAs: 'cookie'}
   ],
   /*
   ** Build configuration

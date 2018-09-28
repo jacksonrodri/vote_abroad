@@ -212,10 +212,18 @@
       </div>
     </div>
   </div>
+  <b-modal
+    :active="!optedIn && !privacyRoute"
+    :canCancel="false"
+    has-modal-card>
+    <vfa-opt-in @optIn="optIn"></vfa-opt-in>
+  </b-modal>
 </div>
 </template>
 
 <script>
+import VfaOptIn from '~/components/VfaOptIn'
+
 function detectIE () {
   var ua = window.navigator.userAgent
   var msie = ua.indexOf('MSIE ')
@@ -226,9 +234,13 @@ function detectIE () {
 }
 
 export default {
+  components: {
+    VfaOptIn
+  },
   data () {
     return {
       isMobileMenuActive: false,
+      optedIn: true,
       device: {},
       // isLoginModalActive: false,
       topFaqs: [
@@ -261,6 +273,9 @@ export default {
     }
   },
   computed: {
+    privacyRoute () {
+      return !/request|index|dashboard/i.test(this.$route.name)
+    },
     dateFormat () {
       return this.$i18n.locale === 'en' ? 'en-US' : 'es-ES'
     },
@@ -282,6 +297,10 @@ export default {
     }
   },
   methods: {
+    optIn () {
+      this.$cookie.set('vfaOptIn', true, 1)
+      this.optedIn = true
+    },
     showIntercom () {
       // console.log(this.$intercom)
       this.$intercom.show()
@@ -299,6 +318,9 @@ export default {
     }
   },
   async mounted () {
+    if (!this.$cookie.get('vfaOptIn')) {
+      this.optedIn = false
+    }
     console.log('process.env.stage:', process.env.stage)
     this.$snackbar.open({
       message: process.env.stage === 'dev' ? 'You are on the SANDBOX site. Messages will only be sent to your address (Your LEO will NOT receive your FPCA.)' : 'This beta site is now live.  If you submit an FPCA it will be sent to your Election Official.',
