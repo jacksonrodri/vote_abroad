@@ -1,6 +1,24 @@
 <template>
 <div>
   <div v-if="!offline">
+    <transition name="fade">
+    <div v-if="!optedIn && !privacyRoute" class="notices is-top">
+      <div class="snackbar is-warning is-top">
+        <p class="text">Vote From Abroad helps US citizens register to vote quickly and easily, but to do so we need to collect your personal information. Your data privacy is our top concern, so please read and accept our <nuxt-link :to="localePath({ name: 'page', params: {page: 'privacy'}})" class="has-text-warning">privacy policy</nuxt-link>, <nuxt-link :to="localePath({ name: 'page', params: {page: 'cookie-policy'}})" class="has-text-warning">cookie policy</nuxt-link> and <nuxt-link :to="localePath({ name: 'page', params: {page: 'terms-of-use'}})" class="has-text-warning">terms of service.</nuxt-link></p>
+        <div class="action is-warning"><button @click="optIn" class="button is-dark">I Agree</button></div>
+        <!-- <article class="message is-dark">
+          <div class="message-body">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+          </div>
+        </article>
+        <vfa-opt-in
+          @optIn="optIn"
+          :privacyPage="localePath({ name: 'page', params: {page: 'privacy'}})"
+          :cookiePage="localePath({ name: 'page', params: {page: 'cookie-policy'}})"
+          :tosPage="localePath({ name: 'page', params: {page: 'terms-of-use'}})"></vfa-opt-in> -->
+      </div>
+    </div>
+    </transition>
   <div :class="['hero', 'is-fullheight', 'bg', {'bg-image': isBgImage}]">
       <div class="hero-head">
         <header :class="`navbar ${isBgImage ? 'is-vfa' : 'is-light'}`">
@@ -73,11 +91,16 @@
                   </nuxt-link>
 
                   <div class="navbar-dropdown is-right">
-                    <nuxt-link :to="localePath({ name: 'faqs-slug', params: { slug: faq.slug } })" v-for="(faq, index) in topFaqs" :key="index" class="navbar-item">
+                    <nuxt-link
+                      :to="localePath({ name: 'faqs-slug', params: { slug: faq.slug } })"
+                      v-for="(faq, index) in topFaqs"
+                      :key="index"
+                      :title="faq[`title${$i18n.locale.toUpperCase()}`]"
+                      class="navbar-item">
                       <span class="panel-icon">
                         <i class="fas fa-question-circle"></i>
                       </span>
-                      {{faq[`title${$i18n.locale.toUpperCase()}`]}}
+                      {{faq[`title${$i18n.locale.toUpperCase()}`] | truncate(100)}}
                     </nuxt-link>
                     <!-- <a class="navbar-item">
                       I can't remember or find my exact street address - what do I do?
@@ -207,10 +230,22 @@
       </div>
     </div>
   </div>
+  <!-- <b-modal
+    :active="!optedIn && !privacyRoute"
+    :canCancel="false"
+    has-modal-card>
+    <vfa-opt-in
+      @optIn="optIn"
+      :privacyPage="localePath({ name: 'page', params: {page: 'privacy'}})"
+      :cookiePage="localePath({ name: 'page', params: {page: 'cookie-policy'}})"
+      :tosPage="localePath({ name: 'page', params: {page: 'terms-of-use'}})"></vfa-opt-in>
+  </b-modal> -->
 </div>
 </template>
 
 <script>
+import VfaOptIn from '~/components/VfaOptIn'
+
 function detectIE () {
   var ua = window.navigator.userAgent
   var msie = ua.indexOf('MSIE ')
@@ -221,9 +256,13 @@ function detectIE () {
 }
 
 export default {
+  components: {
+    VfaOptIn
+  },
   data () {
     return {
       isMobileMenuActive: false,
+      optedIn: true,
       device: {},
       // isLoginModalActive: false,
       topFaqs: [
@@ -256,6 +295,9 @@ export default {
     }
   },
   computed: {
+    privacyRoute () {
+      return !/request|index|dashboard/i.test(this.$route.name)
+    },
     dateFormat () {
       return this.$i18n.locale === 'en' ? 'en-US' : 'es-ES'
     },
@@ -271,7 +313,16 @@ export default {
     },
     isAuthenticated: function () { return this.$store.getters['userauth/isAuthenticated'] }
   },
+  filters: {
+    truncate: function (text, stop, clamp) {
+      return text.slice(0, stop) + (stop < text.length ? clamp || '...' : '')
+    }
+  },
   methods: {
+    optIn () {
+      this.$cookie.set('vfaOptIn', true, 1)
+      this.optedIn = true
+    },
     showIntercom () {
       // console.log(this.$intercom)
       this.$intercom.show()
@@ -289,11 +340,21 @@ export default {
     }
   },
   async mounted () {
+    if (!this.$cookie.get('vfaOptIn')) {
+      this.optedIn = false
+      // this.$snackbar.open({
+      //   message: `Please read and accept our <a href="/terms-of-service">terms of service</a>, cookies and privacy policies`,
+      //   type: 'is-warning',
+      //   position: 'is-top',
+      //   actionText: 'I Understand',
+      //   indefinite: true
+      // })
+    }
     console.log('process.env.stage:', process.env.stage)
     this.$snackbar.open({
       message: process.env.stage === 'dev' ? 'You are on the SANDBOX site. Messages will only be sent to your address (Your LEO will NOT receive your FPCA.)' : 'This beta site is now live.  If you submit an FPCA it will be sent to your Election Official.',
       type: 'is-warning',
-      position: 'is-top',
+      position: this.optedIn ? 'is-top' : 'is-bottom',
       actionText: 'I Understand',
       indefinite: true
     })
@@ -451,3 +512,13 @@ export default {
   }
 }
 </script>
+
+<style>
+is-optin {
+  align-items: flex-start;
+  max-width: 960px;
+  margin: 2% auto;
+  left: 0;
+  right: 0;
+}
+</style>

@@ -15,7 +15,7 @@
           <b-tab-item :label="$t('request.stages.email')"
             v-if="stateRules && stateRules.fpcaSubmitOptionsRequest.includes('Email')"
             icon="at">
-            <section v-if="isIE" class="section">
+            <section v-if="isIE || /AR|CT|NJ|NY|WY/.test(currentRequest.leo.s)" class="section">
               <h3 class="subtitle is-4">{{$t('request.stages.emailIntro')}}</h3>
               <div class="media">
                 <div class="media-content">
@@ -42,7 +42,7 @@
 
                   <article class="media">
                     <figure class="media-left">
-                      <b-icon icon="fax" size="is-medium"></b-icon>
+                      <b-icon icon="at" size="is-medium"></b-icon>
                     </figure>
                     <div class="media-content">
                       <span class="is-size-5">
@@ -51,6 +51,19 @@
                       <div class="box">
                         <span v-if="currentRequest.leo.n"><strong>{{ currentRequest.leo.n }}</strong><br/></span>
                         <span v-if="currentRequest.leo.e"><strong><a :href="`mailto:${currentRequest.leo.e}`">{{ currentRequest.leo.e }}</a></strong><br/></span>
+                      </div>
+                      <b-message v-if="electronicTransmissionNote" type="is-warning" has-icon>
+                        {{electronicTransmissionNote.replace(/\*/g, '') | capitalizeFirstLetter}}
+                      </b-message>
+                      <div class="box">
+                        <span v-if="currentRequest.leo.n"><strong>{{ currentRequest.leo.n }}</strong><br/></span>
+                        <span v-if="currentRequest.leo.a1"><strong>{{ currentRequest.leo.a1 }}</strong><br/></span>
+                        <span v-if="currentRequest.leo.a2"><strong>{{ currentRequest.leo.a2 }}</strong><br/></span>
+                        <span v-if="currentRequest.leo.a3"><strong>{{ currentRequest.leo.a3 }}</strong><br/></span>
+                        <span><strong>{{ currentRequest.leo.c }}, </strong>
+                        <strong>{{ currentRequest.leo.s }} </strong>
+                        <strong>{{ currentRequest.leo.z }}</strong><br/></span>
+                        <span class="has-text-right"><strong>United States of America</strong><br/></span>
                       </div>
                     </div>
                   </article>
@@ -637,7 +650,7 @@ export default {
     },
     date () {
       let d = new Date()
-      return this.getCurrent.date || `${d.getFullYear()}-${d.getMonth() < 9 ? '0' : ''}${d.getMonth() + 1}-${d.getDate() < 9 ? '0' : ''}${d.getDate()}`
+      return this.getCurrent.date || `${d.getFullYear()}-${d.getMonth() < 9 ? '0' : ''}${d.getMonth() + 1}-${d.getDate() < 10 ? '0' : ''}${d.getDate()}`
     },
     voterClass () { return this.currentRequest && this.currentRequest.voterClass ? this.currentRequest.voterClass.toString() : ' ' },
     sex () { return this.currentRequest && this.currentRequest.sex && this.currentRequest.sex !== 'decline' ? this.currentRequest.sex.toString() : ' ' },
