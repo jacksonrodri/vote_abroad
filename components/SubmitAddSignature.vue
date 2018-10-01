@@ -442,9 +442,11 @@ export default {
       this.inputAttrs = {class: 'file-input'}
       // await this.$nextTick()
       this.clearImage()
+      this.croppedPic.refresh()
       this.croppedPic.chooseFile()
       setTimeout(() => {
         this.inputAttrs = {capture: true, class: 'file-input'}
+        this.croppedPic.refresh()
       }, 50)
     },
     captureWebcamImage () {
