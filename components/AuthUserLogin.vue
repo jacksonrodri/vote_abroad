@@ -241,34 +241,36 @@ export default {
       this.$router.push(this.localePath({ name: 'request-stage', params: { stage: 'your-information' } }))
     },
     startAuth: function () {
-      this.authenticating = true
-      this.$v.phoneOrEmail.$touch()
-      if (this.$v.phoneOrEmail.$error) {
-        this.$refs.phoneOrEmail.$refs.phoneOrEmail.focus()
-      } else {
-        if (!this.$cookie.get('vfaOptIn')) {
-          this.optedIn = false
-          this.togglePrivacyModalActiveState(true)
+      if (!this.authenticating) {
+        this.authenticating = true
+        this.$v.phoneOrEmail.$touch()
+        if (this.$v.phoneOrEmail.$error) {
+          this.$refs.phoneOrEmail.$refs.phoneOrEmail.focus()
         } else {
-          this.optedIn = true
-          this.togglePrivacyModalActiveState(false)
-          if (this.isValidNumber(this.phoneOrEmail)) {
-            this.loginType = 'sms'
-            this.updateUser({mobileIntFormat: this.phoneOrEmail})
-            this.sendSmsCode()
-              .then(() => { this.authenticating = false })
-          }
-          if (this.isValidEmail(this.phoneOrEmail)) {
-            this.loginType = 'email'
-            this.updateUser({emailAddress: this.phoneOrEmail})
-            this.sendEmailLink()
-              .then(() => { this.authenticating = false })
+          if (!this.$cookie.get('vfaOptIn')) {
+            this.optedIn = false
+            this.togglePrivacyModalActiveState(true)
+          } else {
+            this.optedIn = true
+            this.togglePrivacyModalActiveState(false)
+            if (this.isValidNumber(this.phoneOrEmail)) {
+              this.loginType = 'sms'
+              this.updateUser({mobileIntFormat: this.phoneOrEmail})
+              this.sendSmsCode()
+                .then(() => { this.authenticating = false })
+            }
+            if (this.isValidEmail(this.phoneOrEmail)) {
+              this.loginType = 'email'
+              this.updateUser({emailAddress: this.phoneOrEmail})
+              this.sendEmailLink()
+                .then(() => { this.authenticating = false })
+            }
           }
         }
+        // setTimeout(() => {
+        //   this.authenticating = false
+        // }, 5000)
       }
-      // setTimeout(() => {
-      //   this.authenticating = false
-      // }, 5000)
     },
     confirmCode () {
       this.$v.code.$touch()

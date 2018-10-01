@@ -69,7 +69,7 @@
             - {voterType: {}, rule: 'Request Mail Ballot: Received by', date: '2018-10-27T00:00:00'}
             - {voterType: {}, rule: 'Request Email/Online or Fax Ballot: Received by', date: '2018-11-05T17:00:00'}
         'Ballot Return':
-            - {voterType: {}, rule: 'Return by Mail: Postmarked by**', date: '2018-11-06T00:00:00', note: 'Ballots sent by postal mail must be received by 8pm on Tue, Nov 6, 2018.'}
+            - {voterType: {}, rule: 'Return by Mail: Postmarked by**', date: '2018-11-06T00:00:00', note: 'Ballots sent by postal mail must be received by 8pm on Wed, Nov 21, 2018.'}
             - {voterType: {}, rule: 'Return by Fax: Received by', date: '2018-11-06T20:00:00', note: 'Ballot can only be returned by fax if it was requested to be sent by Email/Online or Fax.'}
 -
     state: AS

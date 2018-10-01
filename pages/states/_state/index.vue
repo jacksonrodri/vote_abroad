@@ -21,9 +21,9 @@
               </b-table-column>
               <b-table-column>
                 <div class="calendar">
-                  <header class="calendar-month">{{new Date(props.row.date).toLocaleDateString(dateFormat, {month: 'short', timeZone: 'UTC'}) }}</header>
+                  <header class="calendar-month">{{new Date(props.row.date).toLocaleDateString(dateFormat, {month: 'short'}) }}</header>
                   <div class="calendar-date">
-                    {{ new Date(props.row.date).toLocaleDateString(dateFormat, {day: 'numeric', timeZone: 'UTC'}) }}
+                    {{ new Date(props.row.date).toLocaleDateString(dateFormat, {day: 'numeric'}) }}
                   </div>
                 </div>
               </b-table-column>
