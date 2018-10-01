@@ -85,6 +85,12 @@ module.exports = {
         '^/api/fpca': '/'
       }
     },
+    '/api/fpcaByEmail': {
+      target: 'https://uf25owq668.execute-api.us-east-1.amazonaws.com/dev/fpcaByEmail',
+      pathRewrite: {
+        '^/api/fpcaByEmail': '/'
+      }
+    },
     '/api/place/**': {
       target: 'https://maps.googleapis.com/maps/api/place',
       pathRewrite: {

@@ -5,21 +5,21 @@
   "homepage": {
     "titleStudents": "¿Estudia en el extranjero? Vote desde el extranjero.",
     "title": "Vote desde el extranjero",
-    "subtitle": "¡Solicite ahora una boleta electoral!",
+    "subtitle": "¡Solicite ahora una boleta electoral ahora!",
     "loginInstructions": "Escriba su dirección de correo electrónico o número de teléfono móvil para comenzar.",
     "start": "Inicio",
-    "homeTitle": "Vote desde el extranjero",
+    "homeTitle": "Vote desde el extranjero - Página de inicio",
     "anonymous": "o inicie una sesión anónima",
-    "tooltip": "Su correo electrónico o número telefónico creará una cuenta para que usted pueda ingresar fácilmente a www. VoteFromAbroad. org y guardar la información de un año año a otro. Una sesión anónima le permite crear una Tarjeta Postal Federal de Solicitud o formulario FPCA (Federal Post Card Application) y enviarlo a la oficina de elecciones locales, pero no guardará su información para ser utilizada en el futuro."
+    "tooltip": "Su correo electrónico o número telefónico creará una cuenta para que usted pueda ingresar fácilmente a www. VoteFromAbroad. org y guardar la información de un año a otro. Una sesión anónima le permite crear una Tarjeta Postal Federal de Solicitud o formulario FPCA (Federal Post Card Application) y enviarlo a la oficina de elecciones locales, pero no guardará su información para ser utilizada en el futuro."
   },
   "email": {
-    "voterEmail": "Gracias por enviar la Tarjeta Postal Federal de Solicitud o formulario FPCA (Federal Post Card Application) a su oficina local de elecciones. Aquí está una copia para sus registros. Si usted no recibe un acuse de recibo, por favor vuelva a comunicarse con su funcionario electoral local: \n\n {leoName} \n\n correo electrónico: {leoEmail} \n\n teléfono: {leoPhone} \n\nSi necesita ayuda, comuníquese con nuestro equipo de voluntarios de apoyo a votantes en: help@votefromabroad.org. \n\n---\n\n",
+    "voterEmail": "Gracias por enviar la Tarjeta Postal Federal de Solicitud o formulario FPCA (Federal Post Card Application) a su oficina electoral local. Aquí hay una copia para sus registros. \n\n**Por favor, tome en cuenta que este es un mensaje de correo electrónico generado automáticamente desde Vote From Abroad y no representa una confirmación de su oficina electoral local.**\n\nSi usted no recibe un acuse de recibo, por favor vuelva a comunicarse con su funcionario electoral local: \n\n {leoName} \n\n correo electrónico: {leoEmail} \n\n teléfono: {leoPhone} \n\nSi necesita ayuda, comuníquese con nuestro equipo de voluntarios de apoyo a votantes en: help@votefromabroad.org. \n\n---\n\n",
     "testEmail": "Este mensaje se enviará a {leoEmail} {leoName} después del lanzamiento de VoteFromAbroad 3.0. \n\n NO hemos enviado su Tarjeta Postal Federal de Solicitud o formulario FPCA (Federal Post Card Application). \n *** \n\n\n\n"
   },
   "error": {
     "failedLoading": "Hubo un error al cargar esta página",
     "chunkLoadingFailed": "La página se ha actualizado y se volverá a cargar. Si esto no ocurre automáticamente, por favor seleccione 'actualizar' en su navegador para volver a cargarla manualmente.",
-    "back": "Volver a página principal"
+    "back": "Volver a la página principal"
   },
   "addressPart": {
     "streetAddress1": "Dirección Calle 1",
@@ -38,7 +38,7 @@
     "voter": "votante",
     "didYouKnow": "Sabía usted: ",
     "trivia1": "Alrededor de 9 millones de estadounidenses viven en el extranjero.",
-    "trivia2": "Solicite su boleta electoral cada año calendario para conseguir Protección Federal completa en todas las elecciones federales de ese año.",
+    "trivia2": "Solicite su boleta electoral cada año calendario para conseguir protección federal completa en todas las elecciones federales de ese año.",
     "trivia3": "Los estadounidenses han ejercido sus derechos políticos en el extranjero desde Thomas Jefferson. Él bosquejó la Carta de Derechos de los Estados Unidos mientras estaba en París.",
     "authenticating": "Autentificando...",
     "welcomeBack": "Bienvenido de regreso, {0}!",
@@ -50,13 +50,13 @@
     "prefilled": "Su formulario ha sido prellenado, verifique toda la información antes de enviarla.",
     "email": "correo electrónico",
     "sms": "mensaje de texto (sms)",
-    "emailDelay": "Podría tomar hasta un minuto para entregar.",
+    "emailDelay": "La entrega podría tomar hasta un minuto.",
     "checkSpam": "Revise su carpeta de correo basura (spam)",
     "correctEmail": "¿Ingresó su email correctamente?",
     "notReceiveSms": "¿Puede usted recibir mensajes SMS en {number}?",
     "correctNumber": "¿Ingresó su número de teléfono correctamente?",
-    "indiaAuth": "¿Está su número en el RegistroNo Llamar de la India?",
-    "whiteList": "Agrégenos a su lista de contactos aprobados (white list).",
+    "indiaAuth": "¿Está su número en el Registro No Llamar de la India?",
+    "whiteList": "Agrégenos a su lista blanca de contactos aprobados (white list).",
     "tryAgain": "Vuelva a intentarlo",
     "anonymousStart": "Proceda sin una cuenta.",
     "anonymousStartMessage": "Usted ha iniciado una sesión anónima.  Por favor cierre esta ventana cuando termine de borrar todos los datos.",
@@ -66,7 +66,7 @@
   },
   "faq": {
     "title": "Preguntas frecuentes",
-    "intro": "Estas son las preguntas que recibimos con mayor frecuencia mientras ayudamos a los votantes en el exterior a registrarse y solicitar su boleta electoral. Si usted tiene alguna pregunta que no hemos respondido aquí, por favor {0} con nosotros a través de helpdesk@votefromabroad.org. ¡Nos encantaría saber de usted!",
+    "intro": "These are the questions we hear most as we help voters abroad register and request their ballot. If you have a question that isn't answered here, please {intercom} with us at {emailLink}. We'd love to hear from you!",
     "contact": "comuníquese",
     "question": "Pregunta",
     "answer": "Respuesta",
@@ -82,7 +82,7 @@
   },
   "envelopes": {
     "title": "Plantillas en sobre con franqueo pagado",
-    "intro": "Usted puede enviar por correo su formulario con gastos de envío gratis desde los Estados Unidos o por correo del ejército de los Estados Unidos/ o valija diplomática vía las embajadas o consulados de los Estados Unidos. Descargue e imprima una de estas plantillas en sobre y luego envíe su sobre desde los Estados Unidos o por correo del ejército de los Estados Unidos/ o valija diplomática en las embajadas o consulados de los Estados Unidos.",
+    "intro": "Usted puede enviar su formulario por correo libre de gastos de envío desde los Estados Unidos o por correo del ejército de los Estados Unidos/ o valija diplomática vía las embajadas o consulados de los Estados Unidos. Descargue e imprima una de estas plantillas en sobre y luego envíe su sobre desde los Estados Unidos o por correo del ejército de los Estados Unidos/ o valija diplomática en las embajadas o consulados de los Estados Unidos.",
     "help": "Asegúrese de configurar las opciones de impresora para el tamaño de los sobres.",
     "usSize": "Sobre tamaño estándar de Estados Unidos (#10)",
     "euSize": "Sobre tamaño estándar de Europa (C4)",
@@ -261,7 +261,7 @@
       "loading": "Cargando...",
       "suggested": "Sugerido",
       "tooltipTitle": "¿Qué es una jurisdicción electoral?",
-      "tooltip": "Todas las boletas electorales son enviadas por el funcionario electoral local en su pueblo, ciudad o condado.  Debe seleccionar al funcionario electoral correcto para recibir una boleta electoral.",
+      "tooltip": "Todas las boletas electorales son enviadas por el funcionario electoral local en su poblado, ciudad o condado.  Debe seleccionar al funcionario electoral correcto para recibir una boleta electoral.",
       "messages": {
         "required": "Debe seleccionar a su funcionario electoral local. "
       }
@@ -272,7 +272,7 @@
       "no": "No",
       "instructions": "¿Usted ha votado previamente con un nombre diferente?",
       "tooltipTitle": "¿Por qué es esto necesario?",
-      "tooltip": "Si previamente ha votado con un nombre diferente, puede ser necesario que su funcionario electoral local requiera ver su nombre anterior.",
+      "tooltip": "Si previamente ha votado con un nombre diferente, puede ser necesario que su funcionario electoral local necesite buscarle usando su nombre anterior.",
       "messages": {
         "maxLength": "Longitud máxima: 50 caracteres"
       }
@@ -291,7 +291,7 @@
     "party": {
       "tooltip": "Muchos estados solicitan a los votantes que designen un partido político para poder votar en las elecciones primarias. Elegir un partido político es opcional.",
       "republican": "Republicano",
-      "other": "Otros",
+      "other": "Otro",
       "placeholder": "Su partido político",
       "label": "Su partido político",
       "tooltipTitle": "¿Para qué es esto?",
@@ -362,7 +362,7 @@
       "downloadingAlertMessage": "Al seleccionar 'Aceptar' se abrirá una nueva ventana con su formulario lleno. Usted debe ** FIRMAR, FECHAR y ENVIAR ** a su funcionario electoral."
     },
     "voterClass": {
-      "tooltip": "Los votantes pueden elegir ** Tengo intención de retornar** si van a volver al estado en el que se están registrando para votar. La \"intención\" es suficiente, no es necesario tener una fecha fija de retorno o planes definitivos. Registrarse como ** Tengo intención de retornar** debería hacerle elegible para votar en las elecciones estatales y locales. Sin embargo, también puede hacerle responsable de pagar impuestos estatales sobre la renta (si son aplicables en su estado). \n\nLos votantes pueden elegir ** Mi retorno es incierto ** si no tienen una intención actual para volver al estado en el que se están registrando para votar. Los votantes tienen derecho a recibir una boleta electoral para cargos federales y, dependiendo de su estado, también pueden recibir una boleta electoral para cargos estatales y locales.",
+      "tooltip": "Los votantes pueden elegir ** Tengo intención de retornar** si van a volver al estado en el que se están registrando para votar. La \"intención\" es suficiente, no es necesario tener una fecha fija de retorno o planes definitivos. Registrarse como ** Tengo intención de retornar** debería hacerle elegible para votar en las elecciones estatales y locales. Sin embargo, también puede hacerle responsable de pagar impuestos sobre la renta estatales (si son aplicables en su estado). \n\nLos votantes pueden elegir ** Mi retorno es incierto ** si no tienen una intención actual para volver al estado en el que se están registrando para votar. Los votantes tienen derecho a recibir una boleta electoral para cargos federales y, dependiendo de su estado, también pueden recibir una boleta electoral para votar por cargos estatales y locales.",
       "natGuard": "Guardia Nacional",
       "milSpouse": "Cónyuge o dependiente de militar elegible",
       "whatCivType": "¿Está en el extranjero temporal o indefinidamente?",
@@ -374,7 +374,7 @@
         "militaryRequired": "Por favor, seleccione su estatus militar"
       },
       "military": "Servicio militar activo",
-      "neverResided": "Nunca ha sido residente",
+      "neverResided": "Nunca he sido residente",
       "civilianOrMilitary": "¿Es usted un(a) votante civil o militar?",
       "tooltipTitle": "Intención de retornar vs Retorno incierto",
       "intendToReturn": "Tengo intención de retornar",
@@ -383,19 +383,19 @@
     },
     "sig": {
       "title": "Agregue su firma escaneada.",
-      "scanInstructions": "{0} para escanear su firma ahora con la cámara del dispositivo. O {1} para subir su firma desde un archivo.",
+      "scanInstructions": "{0} para escanear su firma ahora con la cámara del dispositivo. O {1} para cargar su firma desde un archivo.",
       "clickStart": "Seleccione Inicio",
       "instructionsLabel": "Instrucciones",
-      "uploadFile": "subir un archivo",
+      "uploadFile": "cargar un archivo",
       "uploadInstructions": "{0} desde su computadora",
-      "clickToUpload": "Seleccione para subir una imagen escaneada de su firma",
+      "clickToUpload": "Seleccione para cargar una imagen escaneada de su firma",
       "captureErrorTitle": "Falló la carga de la cámara",
       "signName": "Firme su nombre con un bolígrafo de tinta oscura y letras grandes en una hoja de papel blanco.",
-      "adjustAfterTake": "Usted podrá ajustal la imagen una vez que tome la fotografía.",
-      "adjustAfterUpload": "Usted podrá ajustal la imagendespués de que tome la cargue en línea.",
-      "captureErrorMessage": "No pudimoss obtener acceso a la cámara del dispositivo. (No está conectada/disponible o usted ha desautorizado que VoteFromAbroad.org tenga acceso a ella). Todavía puede seleccionar {0} para subir su firma desde un archivo.",
+      "adjustAfterTake": "Usted podrá ajustar la imagen una vez que tome la fotografía.",
+      "adjustAfterUpload": "Usted podrá ajustar la imagen después de que la cargue en línea.",
+      "captureErrorMessage": "No pudimoss obtener acceso a la cámara del dispositivo. (No está conectada/disponible o usted ha desautorizado que VoteFromAbroad.org tenga acceso a ella). Todavía puede seleccionar {0} para cargar su firma desde un archivo.",
       "captureSignInstructions": "Escriba su nombre con un bolígrafo de tinta oscura con letras grandes en una hoja limpia de papel blanco. Seleccione 'Inicio' para activar su cámara. Usted podrá ajustar la imagen después de tomarla.",
-      "captureUploadInstructions": "Escriba su nombre con un bolígrafo de tinta oscura con letras grandes en una hoja limpia de papel blanco. Escanee el archivo en tu computadora, luego selecciones 'Subir un archivo'. Usted podrá ajustar la imagen después de subirla.",
+      "captureUploadInstructions": "Escriba su nombre con un bolígrafo de tinta oscura con letras grandes en una hoja limpia de papel blanco. Escanee el archivo en tu computadora, luego selecciones 'Cargar un archivo'. Usted podrá ajustar la imagen después de subirla.",
       "sigPlacementInstructions": "Mueva su firma frente a la cámara para que se enfoque y capte tanto de la pantalla como sea posible. (Usted podrá ajustar la imagen después de tomarla)",
       "sigAdjustmentInstructions": "Alinee su firma con la línea roja (arrastre la imagen con el puntero del ratón o con el dedo si usa una pantalla táctil para posicionarla correctamente), y use la rueda del ratón para acercar o alejar la imagen). Si no aparece su firma, puede que necesite alejar la imagen para que reaparezca en la página.\n- Ajuste su firma con los botones de 'Grosor de línea' siguientes para que la firma se vea claramente y tenga un 'ruido de fondo' mínimo\n- Si su firma todavía carece de la claridad adecuada, puede seleccionar 'Borrar imagen' para intentarlo de nuevo.\n- Seleccione 'Usar esta firma' para añadirla al formulario y escriba un mensaje dirigido a su funcionario electoral.",
       "pleaseWait": "Procesando la imagen.  Por favor, espere...",
@@ -428,7 +428,7 @@
       "uploadAFile": "Subir un archivo",
       "tooLargeTitle": "Imagen demasiado grande",
       "tooLargeMessage": "Esa imagen es demasiado grande, por favor, elija una imagen más pequeña.",
-      "selectInstructions": "Seleccione la firma abajo que sea la más definida.  Elija la versión que tenga un fondo blanco con una firma totalmente visible.",
+      "selectInstructions": "Seleccione entre las firmas siguientes la que esté más claramente definida.  Elija la versión que tenga un fondo blanco con una firma totalmente visible.",
       "specialInstructions": "Reglas especiales para los votantes de {state}",
       "invalidImageTypeTitle": "Error de formato de archivo",
       "invalidImageTypeMessage": "No pudimos procesar ese tipo de archivo. Por favor, suba un archivo de imagen '.jpg' o '.png'",
@@ -444,7 +444,7 @@
       "name": "Nombre",
       "subject": "Asunto",
       "agree": "Estoy de acuerdo",
-      "sendInstructions": "Escriba un mensaje para incluir con su correo electrónico a su funcionario electoral local. Nosotros le anexaremos el formulario llenado, firmado y fechado. Seleccione 'Enviar'. También enviaremos una copia a su dirección de correo electrónico para sus archivos.",
+      "sendInstructions": "Escriba un mensaje dirigido a su funcionario electoral local para incluirlo con su correo electrónico. Nosotros le anexaremos el formulario llenado, firmado y fechado. Seleccione 'Enviar'. También enviaremos una copia a su dirección de correo electrónico para sus archivos.",
       "failureTitle": "Error en el envío",
       "sendTitle": "Envíar a su funcionario electoral local",
       "affirmation": "Usted debe leer y ratificar:",
@@ -457,7 +457,7 @@
       "save": "Guardar",
       "cancel": "Cancelar",
       "attachments": "Archivos adjuntos",
-      "attachmentInstructions": "Es necesario que proporcione su {document}. Arrastre y suelte su archivo aquí o seleccione subir un archivo. (jpg, png, gif o pdf)",
+      "attachmentInstructions": "Es necesario que proporcione su {document}. Arrastre y suelte su archivo aquí o seleccione cargar un archivo. (jpg, png, gif o pdf)",
       "attachmentRequiredAlertMessage": "Es necesario que proporcione su {document}. Seleccione Cancelar para adjuntar un archivo a su correo electrónico. O puede enviar el mensaje sin adjuntar un archivo. Su funcionario electoral podría comunicarse con usted para solocitarle la documentación apropiada.",
       "attachmentRequiredConfirm": "Enviar de todas formas",
       "failureMessage": "Hubo un error al enviar su correo electrónico. Por favor vuelva a intentarlo o regrese a la última página y descargue una copia.",
@@ -480,7 +480,7 @@
     "votAdr": {
       "Z": "Código postal",
       "A": "Calle",
-      "tooltip": "Si no está seguro(a) use el último ** domicilio ** en donde vivió en los Estados Unidos. Si nunca ha residido en los Estados Unidos, utilice el último domicilio en el que su madre, padre o ambos vivieron en los Estados Unidos. Si su(s) padre(s) estadounidenses tuvieron su último domicilio en diferentes lugares de los Estados Unidos, puede elegir el que utilizará como domicilio de referencia para votar.",
+      "tooltip": "Si no está seguro(a) use el último ** domicilio ** en donde vivió en los Estados Unidos. Si nunca ha residido en los Estados Unidos, utilice el último domicilio en el que su madre, padre o ambos vivieron en los Estados Unidos. Si su(s) padre(s) estadounidenses tuvieron su último domicilio en diferentes lugares de los Estados Unidos, puede elegir entre esos lugares el que utilizará como domicilio de referencia para votar.",
       "instructions": "Su domicilio electoral es _usualmente_ el último lugar en donde vivió en los Estados Unidos. Si usted nunca ha vivido en los Estados Unidos, utilice la última dirección en los Estados Unidos de su padre o madre que sea ciudadano de los Estados Unidos. (No ingrese un apartado postal)",
       "B": "Departamento #",
       "Y": "Condado",
@@ -500,7 +500,7 @@
     "vAdr": {
       "Z": "Código postal",
       "A": "Calle",
-      "tooltip": "Si no está seguro(a) use el último ** domicilio ** en donde vivió en los Estados Unidos. Si nunca ha residido en los Estados Unidos, utilice el último domicilio en el que su madre, padre o ambos vivieron en los Estados Unidos. Si su(s) padre(s) estadounidenses tuvieron su último domicilio en diferentes lugares de los Estados Unidos, puede elegir el que utilizará como domicilio de referencia para votar.",
+      "tooltip": "Si no está seguro(a) use el último ** domicilio ** en donde vivió en los Estados Unidos. Si nunca ha residido en los Estados Unidos, utilice el último domicilio en el que su madre, padre o ambos vivieron en los Estados Unidos. Si su(s) padre(s) estadounidenses tuvieron su último domicilio en diferentes lugares de los Estados Unidos, puede elegir entre esos lugares el que utilizará como domicilio de referencia para votar.",
       "instructions": "Su domicilio electoral es _usualmente_ el último lugar en donde vivió en los Estados Unidos. Si usted nunca ha vivido en los Estados Unidos, utilice la última dirección en los Estados Unidos de su padre o madre que sea ciudadano de los Estados Unidos.",
       "B": "Departamento #",
       "Y": "Condado",
@@ -522,21 +522,21 @@
       "tooltip": "Según la ley del territorio, solo los votantes de Puerto Rico necesitan responder a esta pregunta."
     },
     "stages": {
-      "emailDigiSign": "** Capture su firma ** con la cámara del dispositivo o ** suba ** una imagen escaneada de su firma y envíe por correo electrónico su formulario directamente desde este sitio web.",
-      "emailUploadSignature": "** Suba una imagen escaneada de su firma ** y envíe por correo electrónico el formulario directamente desde este sitio web",
-      "faxDigiSign": "** Si tiene una cámara ** en esta <span class='is-hidden-touch'>computadora</span><span class='is-hidden-desktop is-hidden-mobile'>tableta</span><span class='is-hidden-tablet'>teléfono</span>, puede capturar su firma y enviar su formulario directamente de la pagina web por fax.",
+      "emailDigiSign": "** Capture su firma ** con la cámara del dispositivo o ** cargue** una imagen escaneada de su firma y envíe por correo electrónico su formulario directamente desde este sitio web.",
+      "emailUploadSignature": "** Cargue una imagen escaneada de su firma ** y envíe por correo electrónico el formulario directamente desde este sitio web",
+      "faxDigiSign": "** Si tiene una cámara ** en esta <span class='is-hidden-touch'>computadora</span><span class='is-hidden-desktop is-hidden-mobile'>tableta</span><span class='is-hidden-tablet'>teléfono</span>, puede capturar su firma y enviar su formulario directamente de la página web por fax.",
       "faxConfirm": "Confirme con su funcionario electoral local que lo recibió.",
       "emailDownload": "** Si no tiene una cámara ** en esta <span class='is-hidden-touch'>computadora</span><span class='is-hidden-desktop is-hidden-mobile'>tableta</span><span class='is-hidden-tablet'>teléfono</span>, usted tendrá que descargar su formulario, imprimirlo, firmarlo, fecharlo y escanearlo.",
       "emailSend": "Envíe su formulario a {leoEmail}",
       "digiSign": "Capture su firma",
-      "emailConfirm": "<strong class='has-text-danger'>Confirme</strong> con su funcionario electoral local que lo recibió.",
+      "emailConfirm": "<strong class='has-text-danger'>Confirme</strong> con su funcionario electoral local que recibió su formulario.",
       "faxSend": "Envíe su formulario por fax a:",
       "emailForm": "Envíe su formulario por correo electrónico a: ",
       "instructions": "Instrucciones:",
       "faxDownload": "** Si no tiene una cámara ** en esta <span class='is-hidden-touch'>computadora</span><span class='is-hidden-de escritorio is-hidden-mobile'>tableta</span><span class='is-hidden-tablet'>teléfono</span>, usted tendrá que descargar su formulario, imprimirlo, firmarlo y fecharlo antes de enviarlo por fax.",
       "back": "Atrás",
       "download": "Descargar ahora",
-      "mailConfirm": "<strong class='has-text-danger'>Confirme</strong> con su funcionario electoral local que lo recibió.",
+      "mailConfirm": "<strong class='has-text-danger'>Confirme</strong> con su funcionario electoral local que recibió su formulario.",
       "step": "Paso {step} de 5",
       "faxIntro": "Firme y envíe el formulario por fax",
       "instructions4": "Confirme que la siguiente información es correcta. Si usted necesita corregir algo, seleccione 'Atrás'. Cuando todo esté correcto seleccione 'Siguiente' para obtener instrucciones sobre cómo firmar y enviar el formulario a su funcionario electoral local.",
@@ -584,7 +584,7 @@
         "nov": "Noviembre",
         "dec": "Diciembre"
       },
-      "selectDate": "Escriba su fecha de nacimiento o seleccione su fecha de nacimiento <br/>(primero el año, luego el mes y el día).",
+      "selectDate": "Escriba su fecha de nacimiento o seleccione su fecha de nacimiento en el calendario <br/>(primero el año, luego el mes y el día).",
       "tooltip": "Usted debe tener 18 años de edad en el momento de la próxima Elección General para registrarse y votar.",
       "disambiguationTitle": "¿A cuál opción se refiere?",
       "disambiguationMessage": "Escribió {0}. ¿A cuál de las siguientes opciones se refiere?",
@@ -597,7 +597,7 @@
     },
     "vtRules": {
       "label": "Juramento Electoral de Vermont",
-      "oathInstructions": "Si usted no se ha registrado previamente en el estado de Vermont, debe tomar un juramento autoadministrado o que pueda ser administrado por personas mayores de 18 años. El Juramento de los electores de Vermont dice: ** <br> * \"Usted jura (o protesta) solemnemente que cada vez que otorgue su voto o sufragio, relacionado con cualquier tema que se refiera al estado de Vermont, usted lo hará tal y como su conciencia juzgue que conducirá al mejor bien del mismo, según lo establece la Constitución, sin temor o favor de persona alguna\". * <br> Una vez que haya leído el juramento del elector, escriba lo siguiente: \"Yo juro o afirmo que he hecho el Juramento Electoral de VT\".",
+      "oathInstructions": "Si usted no se ha registrado previamente en el estado de Vermont, debe tomar un juramento autoadministrado o que pueda ser administrado por personas mayores de 18 años. El Juramento de los electores de Vermont dice: ** <br> * \"Usted jura (o protesta) solemnemente que cada vez que otorgue su voto o sufragio, relacionado con cualquier asunto que se refiera al estado de Vermont, usted lo hará tal y como su conciencia juzgue que conducirá al mejor bien del mismo, según lo establece la Constitución, sin temor o favor de persona alguna\". * <br> Una vez que haya leído el juramento del elector, escriba lo siguiente: \"Yo juro o afirmo que he hecho el Juramento Electoral de VT\".",
       "tooltip": "Conforme a la ley estatal, solo los votantes de Vermont necesitan responder a esta pregunta."
     },
     "tel": {
@@ -608,7 +608,7 @@
       }
     },
     "okRules": {
-      "label": "¿De qué elección primaria es la boleta electoral que está usted solicitando?",
+      "label": "¿La boleta electoral que está solicitando a cuál elección primaria de partido corresponde?",
       "primaryInstructions": "Si su afiliación de partido político aparece como Independiente/Ningún Partido, puede solicitar una boleta para la elección primaria de un partido político reconocido. Para obtener información específica acerca de los partidos políticos reconocidos en Oklahoma, por favor visite [http://www.elections.ok.gov] (http://www.elections.ok.gov).",
       "tooltip": "Conforme a la ley estatal, solo los votantes de Oklahoma necesitan responder a esta pregunta."
     },
@@ -634,9 +634,9 @@
       "noid1": "No tengo un(a) {id}",
       "TerritoryID": "Identificación del territorio",
       "noid2": "No tengo la identificación indicada anteriormente",
-      "tooltipReq1": "los votantes {state} deben proporcionar un {id}. \n\n\n\nsi no puede encontrar su {id}, por favor, seleccione \n\n \\*\\*'I no tengo un(a) {id}.' \\*\\*. Su funcionario electoral local se comunicará con usted si ellos necesitan más información.",
-      "tooltipReq2": "**_UNA_** de las siguientes formas de identificación se requiere para los votantes de {state}:\n\n {allButLastTypes} o {lastType}. \n\nSi usted no tiene alguna de estas formas de identificación, por favor seleccione **'No tengo la identificación mencionada.'** Su funcionario electoral local se comunicará con usted si ellos necesitan más información.",
-      "tooltipOkEmail": "Si usted elige recibir su boleta por correo electrónicoLos, tomen en cuenta que los votantes de Oklahoma deben proporcionar los últimos 4 dígitos de su número de Seguro Social. \n\nSi usted no tiene un número de Seguro Social o no lo encuentra, por favor seleccione ** \"No tengo número de Seguro Social\". ** Su funcionario electoral local se comunicará con usted si ellos necesitan más información.",
+      "tooltipReq1": "Los votantes de {state} deben proporcionar un {id}. \n\n\n\nSi no puede encontrar su {id}, por favor, seleccione \n\n \\*\\*'I no tengo un(a) {id}.' \\*\\*. Su funcionario electoral local se comunicará con usted si necesita más información.",
+      "tooltipReq2": "**_UNA_** de las siguientes formas de identificación se requiere para los votantes de {state}:\n\n {allButLastTypes} o {lastType}. \n\nSi usted no tiene alguna de estas formas de identificación, por favor seleccione **'No tengo la identificación mencionada.'** Su funcionario electoral local se comunicará con usted si necesita más información.",
+      "tooltipOkEmail": "Si usted elige recibir su boleta por correo electrónico, tome en cuenta que los votantes de Oklahoma deben proporcionar los últimos 4 dígitos de su número de Seguro Social. \n\nSi usted no tiene un número de Seguro Social o no lo encuentra, por favor seleccione ** \"No tengo número de Seguro Social\". ** Su funcionario electoral local se comunicará con usted si necesita más información.",
       "instructionsReq1": "Los votantes de {state} deben proporcionar  la siguiente identificación: {id}.  Si no tiene {idType} por favor seleccione ** no tengo {idType}.**",
       "instructionsReq2": "Los votantes de {state} deben proporcionar **_UNA_** de las siguientes formas de identificación:\n {allButLastTypes} o su {lastType}. Si usted no tiene alguna de estas formas de identificación, por favor seleccione **'No tengo la identificación mencionada.'**",
       "PassportNumber": "Número de pasaporte",
@@ -653,10 +653,10 @@
       }
     },
     "fwdAdr": {
-      "label": "Dirección de destino (opcional)",
+      "label": "OPTIONAL: Mail Forwarding Address",
       "instructions": "Si desea que su boleta electoral sea enviada a una dirección diferente como un apartado postal o dirección de destino, ingrésela aquí.",
       "tooltipTitle": "Opcional.",
-      "tooltip": "Esto es opcional. Por favor proporcione una dirección de destino solo si usted solicita que su boleta electoral en blanco se le envíe por correo postal y no desea que se le envíe a su domicilio actual de residencia fuera de los Estados Unidos. Si no tiene seguridad de cuál será su dirección de correo postal cuando las boletas electorales deban ser enviadas, usted puede solicitar que su boleta en blanco sea enviada a un tercero confiable, como una oficina del estudiante en una Universidad o en un apartado postal.",
+      "tooltip": "Esto es opcional. Por favor proporcione una dirección de destino solo si usted solicita que su boleta electoral en blanco se le envíe por correo postal y no desea que se le envíe a su domicilio actual de residencia fuera de los Estados Unidos. Si no tiene seguridad de cuál será su dirección de correo postal cuando las boletas electorales deban ser enviadas, usted puede solicitar que su boleta en blanco sea enviada a un tercero confiable, como una oficina del estudiante en una Universidad o a un apartado postal.",
       "question": "¿Quisiera que su boleta electoral sea enviada a una dirección diferente de su domicilio actual?",
       "yes": "Sí",
       "no": "No",
@@ -685,9 +685,9 @@
       }
     },
     "fax": {
-      "label": "Ingrese su número de fax si desea recibir su boleta electoral por fax.",
+      "label": "Ingrese su número de fax si desea recibir su boleta electoral por ese medio.",
       "messages": {
-        "required": "Usted debe incluir un número de fax si elige recibir su boleta electoral por fax.",
+        "required": "Usted debe incluir un número de fax si elige recibir su boleta electoral por ese medio.",
         "validPhone": "El número que ingresó no es un número de teléfono válido.  Por favor, ingrese un número válido (iniciando con el signo + y código de país)."
       }
     },
@@ -737,25 +737,25 @@
       "opt4": "{item1}, {item2}, {item3} o {item4}",
       "akDocument": "comprobante de domicilio en Alaska",
       "azDocument": "prueba de ciudadanía",
-      "CTSpecial": "{default}Recomendamos enviar su Tarjeta Postal Federal de Solicitud o formulario FPCA (Federal Post Card Application) electrónicamente para asegurarse que usted está en las listas de votantes y que recibirá una boleta electoral. Si usted envía el formulario por correo electrónico o fax {specialDeadline}",
-      "CTSpecialDeadline": "usted también debe enviar la copia original firmada por correo postal y esta debe haberse recibido en Connecticut antes del cierre de las urnas el Día de la Elección.",
-      "NYSpecial": "{default}Recomendamos enviar su Tarjeta Postal Federal de Solicitud o formulario FPCA (Federal Post Card Application) electrónicamente para asegurarse que usted está en las listas de votantes y que recibirá una boleta electoral. Si usted envía el formulario por correo electrónico o fax {specialDeadline}",
-      "NYSpecialDeadline": "usted también debe enviar la copia original firmada por correo postal y debe ser matasellada antes del Día de la Elección y llegar a NY a más tardar 19 de Nov.",
-      "NJSpecial": "{default}Recomendamos enviar su Tarjeta Postal Federal de Solicitud o formulario FPCA (Federal Post Card Application) electrónicamente para asegurarse que usted está en las listas de votantes y que recibirá una boleta electoral. Si usted envía el formulario por correo electrónico o fax {specialDeadline}",
-      "NJSpecialDeadline": "usted también debe enviar al mismo tiempo la copia firmada original por correo postal.",
-      "WYSpecial": "Si previamente se registró en el estado puede enviar su formulario **firmado y fechado** por correo electrónico, fax o correo postal al {leoName}. Si se está registrando para votar o si se registró previamente para votar usando la Tarjeta Postal Federal de Solicitud o formulario FPCA (Federal Post Card Application), debe enviar el formulario original firmado por correo postal dentro del plazo para inscribirse para votar. {specialDeadline}",
-      "ARSpecial": "{default}le recomendamos, de ser posible, enviar su solicitud de boleta electoral por correo electrónico para evitar posibles retrasos en el correo postal. Si usted envía el formulario por correo electrónico o fax, {specialDeadline}",
-      "ARSpecialDeadline": "usted también debe verificar con la/el {leoName} para determinar si también necesitan recibir la copia original firmada por correo postal. ",
+      "CTSpecial": "{default}Le recomendamos enviar su Tarjeta Postal Federal de Solicitud o formulario FPCA (Federal Post Card Application) electrónicamente para asegurarse que usted está en las listas de votantes y que recibirá una boleta electoral. Si usted envía el formulario por correo electrónico o fax {specialDeadline}",
+      "CTSpecialDeadline": "you must ALSO send in the original signed copy by postal mail and it must be received in Connecticut by the close of polls on Election Day.",
+      "NYSpecial": "{default}Le recomendamos enviar su Tarjeta Postal Federal de Solicitud o formulario FPCA (Federal Post Card Application) electrónicamente para asegurarse que usted está en las listas de votantes y que recibirá una boleta electoral. Si usted envía el formulario por correo electrónico o fax {specialDeadline}",
+      "NYSpecialDeadline": "you must ALSO send in the original signed copy by postal mail and it must be postmarked by Election Day and reach NY by Nov 19.",
+      "NJSpecial": "{default}Le recomendamos enviar su Tarjeta Postal Federal de Solicitud o formulario FPCA (Federal Post Card Application) electrónicamente para asegurarse que usted está en las listas de votantes y que recibirá una boleta electoral. Si usted envía el formulario por correo electrónico o fax {specialDeadline}",
+      "NJSpecialDeadline": "you should ALSO send in the original signed copy by postal mail at the same time.",
+      "WYSpecial": "Si previamente se registró en el estado puede enviar su formulario firmado y fechado por correo electrónico, fax o correo postal a {leoName}. Si se está registrando para votar o si se registró previamente para votar usando la Tarjeta Postal Federal de Solicitud o formulario FPCA (Federal Post Card Application), debe enviar el formulario original firmado por correo postal dentro del plazo establecido para registrarse como votante. {specialDeadline}",
+      "ARSpecial": "{default}le recomendamos que, de ser posible, envíe su solicitud de boleta electoral por correo electrónico para evitar posibles retrasos en el correo postal. Si usted envía el formulario por correo electrónico o fax, {specialDeadline}",
+      "ARSpecialDeadline": "you should ALSO check with the {leoName} to determine if they also require the original signed copy by postal mail. ",
       "VTSpecial": "{default} {specialDeadline}",
-      "VTSpecialDeadline": "Si usted envía su formulario electrónicamente, le recomendamos enviar el formulario por correo electrónico. Si envía el formulario por fax, usted debe también enviar la copia original firmada por correo postal, misma que debe ser recibida en Vermont antes del cierre de las urnas el Día de la Elección.",
+      "VTSpecialDeadline": "If you submit your form electronically, we recommend sending in your form by email. If you send in your form by fax, you must ALSO send in the original signed copy by postal mail and it must be received in Vermont by the close of polls on Election Day.",
       "TXSpecial": "{default} {specialDeadline}",
-      "TXSpecialDeadline": "Si usted envía su formulario electrónicamente, le recomendamos enviar el formulario por correo electrónico. Si envía el formulario por fax, usted debe también enviar la copia original firmada por correo postal, misma que debe ser recibida en Texas por para el (4°) cuarto día hábil posterior al envío del fax.",
-      "FLSpecial": "Si usted se está registrando para votar, debe enviar su formulario original *firmado y fechado* por correo postal al {leoName}. Si ya está registrado(a) para votar, usted puede enviar su formulario por correo electrónico, fax o correo postal. {specialDeadline}",
-      "IDSpecial": "Si usted se está registrando para votar, debe enviar su formulario original *firmado y fechado* por correo postal al {leoName}. Si ya está registrado(a) para votar, usted puede enviar su formulario por correo electrónico, fax o correo postal. {specialDeadline}",
-      "MDSpecial": "Si usted se está registrando para votar, debe enviar su formulario original *firmado y fechado* por correo postal al {leoName}. Si ya está registrado(a) para votar, usted puede enviar su formulario por correo electrónico, fax o correo postal. {specialDeadline}",
+      "TXSpecialDeadline": "If you submit your form electronically, we recommend sending in your form by email. If you send in your form by fax, you must ALSO send in the original signed copy by postal mail and it must be received in Texas by the fourth (4th) business day after the fax.",
+      "FLSpecial": "Si usted se está registrando para votar, debe enviar su formulario original *firmado y fechado* por correo postal a {leoName}. Si ya está registrado(a) para votar, usted puede enviar su formulario por correo electrónico, fax o correo postal. {specialDeadline}",
+      "IDSpecial": "Si usted se está registrando para votar, debe enviar su formulario original *firmado y fechado* por correo postal a {leoName}. Si ya está registrado(a) para votar, usted puede enviar su formulario por correo electrónico, fax o correo postal. {specialDeadline}",
+      "MDSpecial": "Si usted se está registrando para votar, debe enviar su formulario original *firmado y fechado* por correo postal a {leoName}. Si ya está registrado(a) para votar, usted puede enviar su formulario por correo electrónico, fax o correo postal. {specialDeadline}",
       "ORSpecial": "Si usted se está registrando para votar, debe enviar su formulario original *firmado y fechado* por correo postal al {leoName}. Si ya está registrado(a) para votar, usted puede enviar su formulario por correo electrónico, fax o correo postal. {specialDeadline}",
-      "SDSpecial": "Si usted se está registrando para votar, debe enviar su formulario original *firmado y fechado* por correo postal al {leoName}. Si ya está registrado(a) para votar, usted puede enviar su formulario por correo electrónico, fax o correo postal. {specialDeadline}",
-      "WISpecial": "Si usted se está registrando para votar, debe enviar su formulario original *firmado y fechado* por correo postal al {leoName}. Si ya está registrado(a) para votar, usted puede enviar su formulario por correo electrónico, fax o correo postal. {specialDeadline}",
+      "SDSpecial": "Si usted se está registrando para votar, debe enviar su formulario original *firmado y fechado* por correo postal a {leoName}. Si ya está registrado(a) para votar, usted puede enviar su formulario por correo electrónico, fax o correo postal. {specialDeadline}",
+      "WISpecial": "Si usted se está registrando para votar, debe enviar su formulario original *firmado y fechado* por correo postal a {leoName}. Si ya está registrado(a) para votar, usted puede enviar su formulario por correo electrónico, fax o correo postal. {specialDeadline}",
       "CASpecial": "Si usted se está registrando para votar, tiene que enviar su formulario original *firmado y fechado* por fax o correo postal a {leoName}. Si ya está registrado(a) para votar, usted puede enviar su formulario por correo electrónico, fax o correo postal. {specialDeadline}",
       "documentRequired": " (Las y los nuevos votantes deben proporcionar {document}.)",
       "submissionMethod": " si se envía por {method}",
@@ -766,11 +766,11 @@
       "noElections": "En la actualidad no hay elecciones programadas para {state}.  Las y los votantes deben enviar una Tarjeta Postal Federal de Solicitud o formulario FPCA (Federal Post Card Application) cada año de calendario.",
       "alsoVoterRegistration": "Registro electoral/",
       "formSubmitted": "Su solicitud de boleta electoral {alsoVoterRegistration} ha sido enviada por correo electrónico a {leoName}. {specialRules}",
-      "formConfirmation": "Nosotros también recomendamos encarecidamente que verifique con su funcionario electoral que han recibido y procesado su formulario.",
+      "formConfirmation": "Nosotros también recomendamos encarecidamente que verifique con su funcionario electoral si ha recibido y procesado su formulario.",
       "sendBallot45days": "Las autoridades electorales deben, conforme a la Ley Federal, enviar las boletas para votantes en el extranjero por lo menos 45 días antes de las elecciones. ",
       "sendBallotLessThan45days": "Su funcionario electoral ya debe haber comenzado a enviar boletas a los votantes en el extranjero.",
       "ballotReturn": "Asegúrese de regresar a tiempo su boleta electoral con su voto. Su boleta electoral debe {rule} {deadline}{submissionMethod}{alternateSubmissionMethod} para que su voto sea contado el {electionDay} {electionType}. {note}\n- Consulte todas sus fechas límite estatales en {url}/states/{state}",
-      "transmitInstructions": "Usted debe {transmitOpts} su solicitud de boleta electoral ** firmada y fechada ** al {leoName}. ",
+      "transmitInstructions": "Usted debe {transmitOpts} su solicitud de boleta electoral ** firmada y fechada ** a {leoName}. ",
       "emailSuggested": "Le recomendamos, de ser posible, enviar su solicitud de boleta electoral por correo electrónico para evitar posibles retrasos en el correo postal."
     }
   },
