@@ -440,6 +440,7 @@ export default {
     },
     async uploadPic () {
       this.inputAttrs = {capture: false, class: 'file-input'}
+      await this.$nextTick()
       this.clearImage()
       this.croppedPic.chooseFile()
       this.inputAttrs = {capture: true, class: 'file-input'}

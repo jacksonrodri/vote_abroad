@@ -743,7 +743,7 @@
       "NYSpecialDeadline": "you must ALSO send in the original signed copy by postal mail and it must be postmarked by Election Day and reach NY by Nov 19.",
       "NJSpecial": "{default}We recommend sending in your FPCA electronically to make sure you are on the voter rolls and will get a ballot.  If you send in your form by email or fax {specialDeadline}",
       "NJSpecialDeadline": "you should ALSO send in the original signed copy by postal mail at the same time.",
-      "WYSpecial": "If you previously registered in state you may email, fax or mail your signed form to the {leoName}. If you are registering to vote or previously registered to vote using the FPCA, you must send in your original signed form by postal mail by the deadline to register to vote. {specialDeadline}",
+      "WYSpecial": "If you previously registered in state you may email, fax or mail your signed form to the {leoName}. If you are registering to vote or previously registered to vote using the FPCA, you MUST send in your original signed form by POSTAL MAIL by the deadline to register to vote. {specialDeadline}",
       "ARSpecial": "{default}We recommend sending your ballot request by email if possible to avoid possible postal delays. If you send in your form by email or fax, {specialDeadline}",
       "ARSpecialDeadline": "you should ALSO check with the {leoName} to determine if they also require the original signed copy by postal mail. ",
       "VTSpecial": "{default} {specialDeadline}",
