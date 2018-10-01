@@ -246,10 +246,12 @@ export default {
         this.$v.phoneOrEmail.$touch()
         if (this.$v.phoneOrEmail.$error) {
           this.$refs.phoneOrEmail.$refs.phoneOrEmail.focus()
+          this.authenticating = false
         } else {
           if (!this.$cookie.get('vfaOptIn')) {
             this.optedIn = false
             this.togglePrivacyModalActiveState(true)
+            this.authenticating = false
           } else {
             this.optedIn = true
             this.togglePrivacyModalActiveState(false)
