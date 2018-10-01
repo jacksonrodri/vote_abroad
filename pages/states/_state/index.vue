@@ -2,6 +2,13 @@
   <section class="section">
     <div class="columns is-centered">
       <div class="column is-10 is-8-desktop is-7-widescreen is-6-fullhd is-paddingless">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+          <ul>
+            <li><nuxt-link :to="localePath('index')">{{$t('home')}}</nuxt-link></li>
+            <li><nuxt-link :to="localePath('states')">{{$t('menu.stateGuide')}}</nuxt-link></li>
+            <li class="is-active"><a href="#" aria-current="page">{{ state.title }}</a></li>
+          </ul>
+        </nav>
         <h1 class="title">
           {{ state.title }}
         </h1>
@@ -14,9 +21,9 @@
               </b-table-column>
               <b-table-column>
                 <div class="calendar">
-                  <header class="calendar-month">{{new Date(props.row.date).toLocaleDateString(dateFormat, {month: 'short', timeZone: 'UTC'}) }}</header>
+                  <header class="calendar-month">{{new Date(props.row.date).toLocaleDateString(dateFormat, {month: 'short'}) }}</header>
                   <div class="calendar-date">
-                    {{ new Date(props.row.date).toLocaleDateString(dateFormat, {day: 'numeric', timeZone: 'UTC'}) }}
+                    {{ new Date(props.row.date).toLocaleDateString(dateFormat, {day: 'numeric'}) }}
                   </div>
                 </div>
               </b-table-column>

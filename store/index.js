@@ -38,7 +38,12 @@ export const state = () => ({
   upcomingElections: [],
   currentRequestId: null,
   isMenuOpen: false,
+<<<<<<< HEAD
   isStudentSite: true
+=======
+  isStudentSite: false,
+  isPrivacyOptInModalActive: false
+>>>>>>> dev
 })
 
 export const strict = false
@@ -56,6 +61,9 @@ export const mutations = {
   },
   toggleNav (state) {
     state.isMenuOpen = !state.isMenuOpen
+  },
+  togglePrivacyModalActiveState (state, newBool) {
+    state.isPrivacyOptInModalActive = (newBool === false || newBool) ? newBool : !state.isPrivacyOptInModalActive
   }
 }
 

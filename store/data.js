@@ -2,6 +2,7 @@ import { AsYouType, formatNumber, isValidNumber, getNumberType } from 'libphonen
 import Mailcheck from 'mailcheck'
 import { helpers } from 'vuelidate/lib/validators'
 import { commonEmailDomains } from '~/utils/helpers'
+const topLevelDomains = ['com', 'net', 'org', 'me', 'de', 'uk', 'ca', 'fr', 'ch', 'edu', 'it', 'no', 'il', 'mx', 'nl', 'au', 'es', 'gr', 'be', 'mil', 'edu', 'ie']
 
 // Mailcheck.defaultDomains.push(commonEmailDomains)
 const md = require('~/data/phoneMeta/bareMeta.json')
@@ -158,6 +159,7 @@ export const getters = {
   isValidEmail: (state) => (email) => /(^$|^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$)/.test(email),
   mailCheck: (state) => (email) => Mailcheck.run({
     domains: commonEmailDomains,
+    topLevelDomains: topLevelDomains,
     email: email,
     suggested: function (suggestion) {
       // console.log(suggestion)

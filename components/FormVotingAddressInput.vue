@@ -68,7 +68,7 @@
             expanded
             :placeholder="$t('request.votAdr.S')">
             <option
-              v-for="state in states"
+              v-for="state in statesSortedLocalized"
               :value="state.iso"
               :key="state.iso">
               {{ $t(`states.${state.iso}`) }}
@@ -190,6 +190,11 @@ export default {
     leoState () { return this.currentRequest.leo && this.currentRequest.leo.s ? this.currentRequest.leo.s : null },
     votAdr () { return this.currentRequest.votAdr || {} },
     adr () { return this.currentRequest.votAdr || {} },
+    statesSortedLocalized () {
+      return this.states
+        .map(x => ({iso: x.iso, name: this.$t(`states.${x.iso}`)}))
+        .sort((a, b) => a.name.localeCompare(b.name))
+    },
     street: {
       get () { return this.votAdr.A || null },
       set (value) { this.updateAddress('A', value) }

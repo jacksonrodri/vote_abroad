@@ -323,6 +323,17 @@
   </form>
   </section>
 </section>
+
+  <b-modal
+    :active="!optedIn && isPrivacyOptInModalActive"
+    :canCancel="false"
+    has-modal-card>
+    <vfa-opt-in
+      @optIn="optIn"
+      :privacyPage="localePath({ name: 'page', params: {page: 'privacy'}})"
+      :cookiePage="localePath({ name: 'page', params: {page: 'cookie-policy'}})"
+      :tosPage="localePath({ name: 'page', params: {page: 'terms-of-use'}})"></vfa-opt-in>
+  </b-modal>
 </div>
 </template>
 
@@ -343,6 +354,7 @@ import FormPartyInput from '~/components/FormPartyInput'
 import FormStateSpecialInput from '~/components/FormStateSpecialInput'
 import FormIdentificationInput from '~/components/FormIdentificationInput'
 import VfaScrollUp from '~/components/VfaScrollUp'
+import VfaOptIn from '~/components/VfaOptIn'
 import snarkdown from 'snarkdown'
 import { mapGetters, mapState, mapMutations } from 'vuex'
 
@@ -417,7 +429,8 @@ export default {
   },
   data () {
     return {
-      skippedEmail: false
+      skippedEmail: false,
+      optedIn: true
     }
   },
   components: {
@@ -435,7 +448,8 @@ export default {
     FormPartyInput,
     FormStateSpecialInput,
     FormIdentificationInput,
-    VfaScrollUp
+    VfaScrollUp,
+    VfaOptIn
   },
   computed: {
     idOptions () {
@@ -578,9 +592,15 @@ export default {
     },
     ...mapGetters('data', ['isValidNumber']),
     ...mapGetters('requests', ['getCurrent']),
-    ...mapState('data', ['postal'])
+    ...mapState('data', ['postal']),
+    ...mapState(['isPrivacyOptInModalActive'])
   },
   methods: {
+    optIn () {
+      this.$cookie.set('vfaOptIn', true, 1)
+      this.optedIn = true
+      this.togglePrivacyModalActiveState(false)
+    },
     md (md) {
       return snarkdown(md)
     },
@@ -776,7 +796,17 @@ export default {
       }
       touchMap.set($v, setTimeout($v.$touch, 1000))
     },
-    ...mapMutations('requests', ['update'])
+    ...mapMutations('requests', ['update']),
+    ...mapMutations(['togglePrivacyModalActiveState'])
+  },
+  mounted () {
+    if (!this.$cookie.get('vfaOptIn')) {
+      this.optedIn = false
+      this.togglePrivacyModalActiveState(true)
+    } else {
+      this.optedIn = true
+      this.togglePrivacyModalActiveState(false)
+    }
   },
   validations () {
     return {

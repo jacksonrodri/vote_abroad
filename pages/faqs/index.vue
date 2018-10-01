@@ -2,9 +2,16 @@
 <div class="hero-body">
 <div class="columns is-centered">
   <div class="column is-10 is-8-desktop is-7-widescreen is-6-fullhd is-paddingless">
+    <nav class="breadcrumb" aria-label="breadcrumbs">
+      <ul>
+        <li><nuxt-link :to="localePath('index')">{{$t('home')}}</nuxt-link></li>
+        <li class="is-active"><a href="#" aria-current="page">{{$t('menu.helpfaq')}}</a></li>
+      </ul>
+    </nav>
     <h1 class="title">{{$t('faq.title')}}</h1>
     <i18n tag="h3" path="faq.intro" class="subtitle is-4">
-      <a class="has-text-primary" @click="launchIntercom">{{$t('faq.contact')}}</a>
+      <a place="emailLink" class="has-text-primary" href="mailto:helpdesk@votefromabroad.org">helpdesk@votefromabroad.org</a>
+      <a place="intercom" class="has-text-primary" @click="launchIntercom">{{$t('faq.contact')}}</a>
     </i18n>
     <div class="columns is-multiline">
       <div v-for="(category, index) in categories" :key="index" class="column is-6">

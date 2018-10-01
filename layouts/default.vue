@@ -2,201 +2,128 @@
 <div>
   <div v-if="!offline">
     <transition name="fade">
-    <div v-if="!optedIn && !privacyRoute" class="notices is-top">
-      <div class="snackbar is-warning is-top">
-        <p class="text">Vote From Abroad helps US citizens register to vote quickly and easily, but to do so we need to collect your personal information. Your data privacy is our top concern, so please read and accept our <nuxt-link :to="localePath({ name: 'page', params: {page: 'privacy'}})" class="has-text-warning">privacy policy</nuxt-link>, <nuxt-link :to="localePath({ name: 'page', params: {page: 'cookie-policy'}})" class="has-text-warning">cookie policy</nuxt-link> and <nuxt-link :to="localePath({ name: 'page', params: {page: 'terms-of-use'}})" class="has-text-warning">terms of service.</nuxt-link></p>
-        <div class="action is-warning"><button @click="optIn" class="button is-dark">I Agree</button></div>
-        <!-- <article class="message is-dark">
-          <div class="message-body">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
-          </div>
-        </article>
-        <vfa-opt-in
-          @optIn="optIn"
-          :privacyPage="localePath({ name: 'page', params: {page: 'privacy'}})"
-          :cookiePage="localePath({ name: 'page', params: {page: 'cookie-policy'}})"
-          :tosPage="localePath({ name: 'page', params: {page: 'terms-of-use'}})"></vfa-opt-in> -->
+      <div v-if="!optedIn && !privacyRoute && !isPrivacyOptInModalActive" class="notices is-top">
+        <div class="snackbar is-warning is-top">
+          <p class="text">Vote From Abroad helps US citizens register to vote quickly and easily, but to do so we need to collect your personal information. Your data privacy is our top concern, so please read and accept our <nuxt-link :to="localePath({ name: 'page', params: {page: 'privacy'}})" class="has-text-warning">privacy policy</nuxt-link>, <nuxt-link :to="localePath({ name: 'page', params: {page: 'cookie-policy'}})" class="has-text-warning">cookie policy</nuxt-link> and <nuxt-link :to="localePath({ name: 'page', params: {page: 'terms-of-use'}})" class="has-text-warning">terms of service.</nuxt-link></p>
+          <div class="action is-warning"><button @click="optIn" class="button is-dark">I Agree</button></div>
+          <!-- <vfa-opt-in
+            @optIn="optIn"
+            :privacyPage="localePath({ name: 'page', params: {page: 'privacy'}})"
+            :cookiePage="localePath({ name: 'page', params: {page: 'cookie-policy'}})"
+            :tosPage="localePath({ name: 'page', params: {page: 'terms-of-use'}})"></vfa-opt-in> -->
+        </div>
       </div>
-    </div>
     </transition>
   <div :class="['hero', 'is-fullheight', 'bg', {'bg-image': isBgImage}]">
-      <div class="hero-head">
-        <header :class="`navbar ${isBgImage ? 'is-vfa' : 'is-light'}`">
-          <div class="container">
-            <div class="navbar-brand">
-              <span class="burger is-hidden-desktop"></span>
-              <nuxt-link :to="localePath('index')" class="navbar-item logo" :title="$t('homepage.homeTitle')" exact>
-              </nuxt-link>
-              <span :class="[{'is-active': isMobileMenuActive}, 'navbar-burger', 'burger']" @click="isMobileMenuActive = !isMobileMenuActive">
-                <span></span>
-                <span></span>
-                <span></span>
+    <div class="hero-head">
+      <header :class="`navbar ${isBgImage ? 'is-vfa' : 'is-light'}`">
+        <div class="container">
+          <div class="navbar-brand">
+            <span class="burger is-hidden-desktop"></span>
+            <nuxt-link :to="localePath('index')" class="navbar-item logo" :title="$t('homepage.homeTitle')" exact>
+            </nuxt-link>
+            <span :class="[{'is-active': isMobileMenuActive}, 'navbar-burger', 'burger']" @click="isMobileMenuActive = !isMobileMenuActive">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+          <div id="navbarMenuHeroC" :class="[{'is-active': isMobileMenuActive},'navbar-menu', 'is-paddingless']">
+            <div class="navbar-end">
+              <span class="navbar-tabs">
+                <a v-if="isAuthenticated"
+                  class="navbar-item is-expanded has-text-centered"
+                  @click="$store.dispatch('userauth/logout')">
+                  <b-icon
+                    pack="fas"
+                    icon="sign-out-alt"
+                    size="is-small">
+                  </b-icon>
+                  <span>{{ $t('menu.logout')}}</span>
+                </a>
+                <nuxt-link v-for="(locale, index) in $i18n.locales"
+                  :key="index"
+                  :exact="true"
+                  :class="['navbar-item', 'is-tab', {'is-active': locale.code === $i18n.locale}]"
+                  :to="switchLocalePath(locale.code)"><span class="is-hidden-desktop">{{ locale.name }}</span><span class="is-hidden-touch">{{ locale.code.toUpperCase() }}</span>
+                </nuxt-link>
               </span>
-            </div>
-            <div id="navbarMenuHeroC" :class="[{'is-active': isMobileMenuActive},'navbar-menu', 'is-paddingless']">
-              <div class="navbar-end">
-                <span class="navbar-tabs">
-                  <a v-if="isAuthenticated"
-                    class="navbar-item is-expanded has-text-centered"
-                    @click="$store.dispatch('userauth/logout')">
-                    <b-icon
-                      pack="fas"
-                      icon="sign-out-alt"
-                      size="is-small">
-                    </b-icon>
-                    <span>{{ $t('menu.logout')}}</span>
-                  </a>
-                  <!-- <a v-else
-                    class="navbar-item is-expanded has-text-centered"
-                    @click="isLoginModalActive = true">
-                    <b-icon
-                      pack="fas"
-                      icon="user"
-                      size="is-small">
-                    </b-icon>
-                    &nbsp;Login
-                  </a> -->
-                  <nuxt-link v-for="(locale, index) in $i18n.locales"
-                    :key="index"
-                    :exact="true"
-                    :class="['navbar-item', 'is-tab', {'is-active': locale.code === $i18n.locale}]"
-                    :to="switchLocalePath(locale.code)"><span class="is-hidden-desktop">{{ locale.name }}</span><span class="is-hidden-touch">{{ locale.code.toUpperCase() }}</span>
-                  </nuxt-link>
-                </span>
-                <div class="navbar-item has-dropdown is-hoverable" style="order:-1;">
-                  <nuxt-link :to="localePath('states')" class="navbar-link">
-                    {{$t('menu.upcomingElections')}}
-                  </nuxt-link>
+              <div class="navbar-item has-dropdown is-hoverable" style="order:-1;">
+                <nuxt-link :to="localePath('states')" class="navbar-link">
+                  {{$t('menu.upcomingElections')}}
+                </nuxt-link>
 
-                  <div class="navbar-dropdown">
-                    <nuxt-link v-for="(election, index) in upcomingElections" :key="`${election.state} ${localizeElectionType(election.electionType)}`" :to="localePath({ name: 'elections-state', params: { state: election.state } })" :class="`navbar-item ${index > 3 ? 'is-hidden-touch' : ''}`">
-                      <div class="calendar">
-                        <header class="calendar-month">{{new Date(election.date).toLocaleDateString(dateFormat, {month: 'short'}) }}</header>
-                        <div class="calendar-date">
-                          {{ new Date(election.date).toLocaleDateString(dateFormat, {day: 'numeric'}) }}
-                        </div>
+                <div class="navbar-dropdown">
+                  <nuxt-link v-for="(election, index) in upcomingElections" :key="`${election.state} ${localizeElectionType(election.electionType)}`" :to="localePath({ name: 'elections-state', params: { state: election.state } })" :class="`navbar-item ${index > 3 ? 'is-hidden-touch' : ''}`">
+                    <div class="calendar">
+                      <header class="calendar-month">{{new Date(election.date).toLocaleDateString(dateFormat, {month: 'short'}) }}</header>
+                      <div class="calendar-date">
+                        {{ new Date(election.date).toLocaleDateString(dateFormat, {day: 'numeric'}) }}
                       </div>
-                      <span class="is-size-6"><span class="has-text-weight-semibold">{{ election.state }}</span> - {{ localizeElectionType(election.electionType) }}</span>
-                      <!-- </span> - {{ $t(`elections.electionTypes['${election.electionType}']`) }}</span> -->
-                    </nuxt-link>
-                    <hr class="navbar-divider">
-                    <nuxt-link :to="localePath({ name: 'elections' })" class="navbar-item">{{$t('menu.allElections')}}</nuxt-link>
-                    <!-- <hr class="navbar-divider">
-                    <nuxt-link :to="localePath({ name: 'elections' })" class="navbar-item" exact >... All upcoming elections</nuxt-link> -->
-                  </div>
-                </div>
-                <div class="navbar-item has-dropdown is-hoverable" style="order:-1;">
-                  <nuxt-link :to="localePath('faqs')" class="navbar-link">
-                    {{$t('menu.help')}}
+                    </div>
+                    <span class="is-size-6"><span class="has-text-weight-semibold">{{ election.state }}</span> - {{ localizeElectionType(election.electionType) }}</span>
                   </nuxt-link>
+                  <hr class="navbar-divider">
+                  <nuxt-link :to="localePath({ name: 'elections' })" class="navbar-item">{{$t('menu.allElections')}}</nuxt-link>
+                </div>
+              </div>
+              <div class="navbar-item has-dropdown is-hoverable" style="order:-1;">
+                <nuxt-link :to="localePath('faqs')" class="navbar-link">
+                  {{$t('menu.help')}}
+                </nuxt-link>
 
-                  <div class="navbar-dropdown is-right">
-                    <nuxt-link
-                      :to="localePath({ name: 'faqs-slug', params: { slug: faq.slug } })"
-                      v-for="(faq, index) in topFaqs"
-                      :key="index"
-                      :title="faq[`title${$i18n.locale.toUpperCase()}`]"
-                      class="navbar-item">
-                      <span class="panel-icon">
-                        <i class="fas fa-question-circle"></i>
-                      </span>
-                      {{faq[`title${$i18n.locale.toUpperCase()}`] | truncate(100)}}
-                    </nuxt-link>
-                    <!-- <a class="navbar-item">
-                      I can't remember or find my exact street address - what do I do?
-                    </a>
-                    <a class="navbar-item">
-                      Why do I need an exact address?
-                    </a>
-                    <a class="navbar-item">
-                      How do I request my ballot?
-                    </a>
-                    <a class="navbar-item">
-                      When will you send my ballot?
-                    </a> -->
-                    <hr class="navbar-divider">
-                    <nuxt-link :to="localePath({ name: 'faqs' })" class="navbar-item">{{$t('menu.moreFAQs')}}</nuxt-link>
-                    <!-- <a class="navbar-item">
-                      More FAQ's
-                    </a> -->
-                    <hr class="navbar-divider">
-                    <a @click="showIntercom" class="navbar-item">{{$t('menu.contactHelp')}}</a>
-                  </div>
+                <div class="navbar-dropdown is-right">
+                  <nuxt-link
+                    :to="localePath({ name: 'faqs-slug', params: { slug: faq.slug } })"
+                    v-for="(faq, index) in topFaqs"
+                    :key="index"
+                    :title="faq[`title${$i18n.locale.toUpperCase()}`]"
+                    class="navbar-item">
+                    <span class="panel-icon">
+                      <i class="fas fa-question-circle"></i>
+                    </span>
+                    {{faq[`title${$i18n.locale.toUpperCase()}`] | truncate(100)}}
+                  </nuxt-link>
+                  <hr class="navbar-divider">
+                  <nuxt-link :to="localePath({ name: 'faqs' })" class="navbar-item">{{$t('menu.moreFAQs')}}</nuxt-link>
+                  <hr class="navbar-divider">
+                  <a @click="showIntercom" class="navbar-item">{{$t('menu.contactHelp')}}</a>
                 </div>
               </div>
             </div>
           </div>
-        </header>
-        <!-- nav level -->
-        <!-- <nav class="level is-mobile is-hidden-desktop is-vfa">
-          <div class="level-left">
-          </div>
-          <div class="level-right">
-            <a class="level-item has-text-white"
-              v-if="isAuthenticated"
-              @click="$store.dispatch('userauth/logout')">
-              <b-icon
-                pack="fas"
-                icon="sign-out-alt"
-                size="is-small">
-              </b-icon>
-              &nbsp;Logout
-            </a>
-            <a class="level-item has-text-white"
-              v-else
-              @click="isLoginModalActive = true">
-              <b-icon
-                pack="fas"
-                icon="user"
-                size="is-small">
-              </b-icon>
-              &nbsp;Login
-            </a>
-            <div class="level-item"><span>&nbsp;</span></div>
-            <div class="level-item">
-              <nuxt-link :to="switchLocalePath('es')" class="button is-info is-outlined is-small" v-show="$i18n.locale === 'en'">Español</nuxt-link>
-              <nuxt-link :to="switchLocalePath('en')" class="button is-info is-outlined is-small" v-show="$i18n.locale === 'es'">English</nuxt-link>
-            </div>
-            <div class="level-item"><span>&nbsp;</span></div>
-          </div>
-        </nav> -->
         </div>
-        <nuxt/>
-      <div class="hero-foot">
-        <nav class="tabs is-boxed is-fullwidth">
-          <div class="container">
-            <ul>
-              <li :class="{'is-active': $route.path === localePath({ name: 'faqs-slug', params: { slug: '5' } })}">
-                <nuxt-link :to="localePath({ name: 'faqs-slug', params: { slug: '5' } })">
-                  <!-- How to<span class="is-hidden-touch">&nbsp;Vote From Abroad</span> -->
-                  {{$t('menu.howto')}}
-                </nuxt-link>
-                <!-- <a>How to<span class="is-hidden-touch">&nbsp;Vote From Abroad</span></a> -->
-              </li>
-              <li :class="{'is-active': $route.path === localePath('faqs')}">
-                <nuxt-link :to="localePath('faqs')">
-                  {{$t('menu.helpfaq')}}
-                  <!-- <span class="is-hidden-touch">Voter Help Desk/</span>FAQ -->
-                </nuxt-link>
-              </li>
-              <li :class="{'is-active': $route.path === localePath({ name: 'page', params: {page: 'about-us'}})}">
-                <nuxt-link :to="localePath({ name: 'page', params: {page: 'about-us'}})">
-                  {{$t('menu.about')}}
-                  <!-- About Us -->
-                </nuxt-link>
-                <!-- <a>About Us</a> -->
-              </li>
-              <li :class="{'is-active': $route.path === localePath('states')}">
-                <nuxt-link :to="localePath('states')">
-                  {{$t('menu.stateGuide')}}
-                  <!-- State Voting Guide -->
-                </nuxt-link>
-                <!-- <a>Election Official Directory</a> -->
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
+      </header>
+    </div>
+    <nuxt/>
+    <div class="hero-foot">
+      <nav class="tabs is-boxed is-fullwidth">
+        <div class="container">
+          <ul>
+            <li :class="{'is-active': $route.path === localePath({ name: 'faqs-slug', params: { slug: '5' } })}">
+              <nuxt-link :to="localePath({ name: 'faqs-slug', params: { slug: '5' } })">
+                {{$t('menu.howto')}}
+              </nuxt-link>
+            </li>
+            <li :class="{'is-active': $route.path === localePath('faqs')}">
+              <nuxt-link :to="localePath('faqs')">
+                {{$t('menu.helpfaq')}}
+              </nuxt-link>
+            </li>
+            <li :class="{'is-active': $route.path === localePath({ name: 'page', params: {page: 'about-us'}})}">
+              <nuxt-link :to="localePath({ name: 'page', params: {page: 'about-us'}})">
+                {{$t('menu.about')}}
+              </nuxt-link>
+            </li>
+            <li :class="{'is-active': $route.path === localePath('states')}">
+              <nuxt-link :to="localePath('states')">
+                {{$t('menu.stateGuide')}}
+              </nuxt-link>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   </div>
   <section class="hero is-vfa">
     <div class="hero-body">
@@ -204,13 +131,10 @@
         <nav class="level">
           <p class="level-item has-text-centered">
             <nuxt-link :to="localePath({ name: 'page', params: {page: 'privacy'}})" class="link has-text-vfalight">{{$t('menu.privacy')}}</nuxt-link>
-            <!-- <nuxt-link :to="`/${$i18n.locale !== 'en' ? $i18n.locale + '/' : ''}privacy`" class="link has-text-vfalight">{{$t('menu.privacy')}}</nuxt-link> -->
           </p>
           <p v-html="$t('menu.disclaimer')" class="level-item has-text-centered is-size-7 has-text-vfalight">
-            <!-- {{$t('menu.disclaimer')}} -->
           </p>
           <p class="level-item has-text-centered">
-            <!-- <nuxt-link :to="`/${$i18n.locale !== 'en' ? $i18n.locale + '/' : ''}terms-of-use`" class="link has-text-vfalight">{{$t('menu.terms')}}</nuxt-link> -->
             <nuxt-link :to="localePath({ name: 'page', params: {page: 'terms-of-use'}})" class="link has-text-vfalight">{{$t('menu.terms')}}</nuxt-link>
           </p>
         </nav>
@@ -218,7 +142,8 @@
     </div>
   </section>
 </div>
-  <div class="hero is-fullheight" v-else>
+<!-- </div> -->
+  <!-- <div class="hero is-fullheight" v-else>
     <div class="hero-body">
       <div class="container">
         <h1 class="title has-text-danger">
@@ -229,22 +154,13 @@
         </h2>
       </div>
     </div>
-  </div>
-  <!-- <b-modal
-    :active="!optedIn && !privacyRoute"
-    :canCancel="false"
-    has-modal-card>
-    <vfa-opt-in
-      @optIn="optIn"
-      :privacyPage="localePath({ name: 'page', params: {page: 'privacy'}})"
-      :cookiePage="localePath({ name: 'page', params: {page: 'cookie-policy'}})"
-      :tosPage="localePath({ name: 'page', params: {page: 'terms-of-use'}})"></vfa-opt-in>
-  </b-modal> -->
+  </div> -->
 </div>
 </template>
 
 <script>
 import VfaOptIn from '~/components/VfaOptIn'
+import { mapState, mapMutations } from 'vuex'
 
 function detectIE () {
   var ua = window.navigator.userAgent
@@ -263,8 +179,8 @@ export default {
     return {
       isMobileMenuActive: false,
       optedIn: true,
+      isModalPrivacyOptInActive: false,
       device: {},
-      // isLoginModalActive: false,
       topFaqs: [
         {
           titleEN: 'Can I vote in midterm (non-presidential) and primary elections?',
@@ -311,7 +227,16 @@ export default {
     test: function () {
       return this.$route.name
     },
-    isAuthenticated: function () { return this.$store.getters['userauth/isAuthenticated'] }
+    isAuthenticated: function () { return this.$store.getters['userauth/isAuthenticated'] },
+    ...mapState(['isPrivacyOptInModalActive'])
+  },
+  watch: {
+    isPrivacyOptInModalActive (val) {
+      console.log(this.$cookie.get('vfaOptIn'))
+      if (!this.$cookie.get('vfaOptIn')) {
+        this.optedIn = false
+      } else this.optedIn = true
+    }
   },
   filters: {
     truncate: function (text, stop, clamp) {
@@ -324,7 +249,6 @@ export default {
       this.optedIn = true
     },
     showIntercom () {
-      // console.log(this.$intercom)
       this.$intercom.show()
     },
     camelize (str) {
@@ -337,18 +261,12 @@ export default {
       return this.$te(`election.${this.camelize(electionType)}`)
         ? this.$t(`election.${this.camelize(electionType)}`)
         : electionType
-    }
+    },
+    ...mapMutations(['togglePrivacyModalActiveState'])
   },
   async mounted () {
     if (!this.$cookie.get('vfaOptIn')) {
       this.optedIn = false
-      // this.$snackbar.open({
-      //   message: `Please read and accept our <a href="/terms-of-service">terms of service</a>, cookies and privacy policies`,
-      //   type: 'is-warning',
-      //   position: 'is-top',
-      //   actionText: 'I Understand',
-      //   indefinite: true
-      // })
     }
     console.log('process.env.stage:', process.env.stage)
     this.$snackbar.open({
@@ -432,13 +350,10 @@ export default {
       })
     }
     if (process.browser) {
-      // console.log('process.browser')
       window.onNuxtReady((app) => {
-        // console.log('booting intercom', app)
         let isIE = detectIE()
         this.$store.commit('userauth/updateDevice', {isIE})
         app.$intercom.boot()
-        // this.$intercom.show()
       })
       if (navigator.mediaDevices && navigator.mediaDevices.enumerateDevices) {
         // Firefox 38+ seems having support of enumerateDevicesx
@@ -479,7 +394,6 @@ export default {
       if (navigator.mediaDevices) {
         navigator.mediaDevices.ondevicechange = () => {
           checkDeviceSupport((event) => {
-            // console.log('device change event', event)
             this.$store.commit('userauth/updateDevice', {
               'hasWebCam': hasWebcam,
               'hasMicrophone': hasMicrophone,
@@ -491,17 +405,11 @@ export default {
         }
       }
       await import('current-device').then(({default: device}) => {
-        // console.log(device)
         this.$store.commit('userauth/updateDevice', {
           type: device.type,
           os: device.os,
           orientation: device.orientation
         })
-        // window.addEventListener('orientationchange', () => {
-        //   this.$store.commit('userauth/updateDevice', {
-        //     orientation: device.orientation
-        //   })
-        // })
         window.onresize = () => {
           this.$store.commit('userauth/updateDevice', {
             orientation: window.innerWidth > window.innerHeight ? 'landscape' : 'portrait'

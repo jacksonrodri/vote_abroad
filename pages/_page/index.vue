@@ -1,6 +1,12 @@
 <template>
   <div class="columns is-centered">
     <div class="column is-10 is-8-desktop is-7-widescreen is-6-fullhd is-paddingless">
+      <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+          <li><nuxt-link :to="localePath('index')">{{$t('home')}}</nuxt-link></li>
+          <li class="is-active"><a href="#" aria-current="page">{{ page.title }}</a></li>
+        </ul>
+      </nav>
       <div class="article-lead">
         <h1 class="article-title">{{ page.title }}</h1>
       </div>

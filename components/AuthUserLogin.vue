@@ -80,13 +80,13 @@
             <!-- Did you enter your number correctly? -->
           </li>
           <li v-if="seconds > 25">
-            <a @click="retry" class="button is-vfa is-inverted is-small">
+            <a @click="retry" class="button is-primary is-inverted">
               {{$t('auth.tryAgain')}}
               <!-- Try again -->
             </a>
           </li>
           <li v-if="seconds <= 25">
-            <a class="button is-vfa is-inverted is-small" disabled>
+            <a class="button is-vfa is-inverted" disabled>
               {{$t('auth.tryAgain')}}<span class="tag is-help">0:{{ 25 - parseInt(seconds) | two_digits }}</span>
             </a>
           </li>
@@ -124,8 +124,8 @@
         v-model="phoneOrEmail"
         :v="$v.phoneOrEmail"
         @pressEnter="startAuth"
-        :loading="authState === 'loading'"
-        @delayTouch="delayTouch"></auth-phone-email-input>
+        :loading="authState === 'loading'"></auth-phone-email-input>
+        <!-- @delayTouch="delayTouch" -->
       <div v-if="!isStudentSite" class="buttons is-right is-marginless">
         <button @click.prevent="startAuth" :class="['button', 'is-large', 'is-danger', {'is-loading': authState === 'loading'}]">{{ $t('homepage.start') }}</button>
       </div>
@@ -146,12 +146,23 @@
         <p v-html="toolTipContent"></p>
       </b-message>
     </div>
+    <b-modal
+      :active="!optedIn && isPrivacyOptInModalActive"
+      :canCancel="false"
+      has-modal-card>
+      <vfa-opt-in
+        @optIn="optIn"
+        :privacyPage="localePath({ name: 'page', params: {page: 'privacy'}})"
+        :cookiePage="localePath({ name: 'page', params: {page: 'cookie-policy'}})"
+        :tosPage="localePath({ name: 'page', params: {page: 'terms-of-use'}})"></vfa-opt-in>
+    </b-modal>
   </div>
 </template>
 
 <script>
 import AuthPhoneEmailInput from '~/components/AuthPhoneEmailInput'
 import AuthCodeInput from '~/components/AuthCodeInput'
+import VfaOptIn from '~/components/VfaOptIn'
 import snarkdown from 'snarkdown'
 import { required, minLength, maxLength } from 'vuelidate/lib/validators'
 import { mapActions, mapGetters, mapMutations, mapState } from 'vuex'
@@ -161,10 +172,12 @@ export default {
   name: 'UserLogin',
   components: {
     AuthPhoneEmailInput,
-    AuthCodeInput
+    AuthCodeInput,
+    VfaOptIn
   },
   data () {
     return {
+      optedIn: false,
       phoneOrEmail: '',
       code: '',
       toolTipOpen: false,
@@ -194,7 +207,8 @@ export default {
       return (this.now - this.date)
     },
     ...mapGetters('data', ['isValidEmail', 'isValidNumber']),
-    ...mapState('userauth', ['authState'])
+    ...mapState('userauth', ['authState']),
+    ...mapState(['isPrivacyOptInModalActive'])
   },
   filters: {
     two_digits (value) {
@@ -205,6 +219,12 @@ export default {
     }
   },
   methods: {
+    optIn () {
+      this.$cookie.set('vfaOptIn', true, 1)
+      this.optedIn = true
+      this.togglePrivacyModalActiveState(false)
+      this.startAuth()
+    },
     retry () {
       this.updateAuthState('loggedOut')
       this.loginType = null
@@ -221,27 +241,38 @@ export default {
       this.$router.push(this.localePath({ name: 'request-stage', params: { stage: 'your-information' } }))
     },
     startAuth: function () {
-      this.authenticating = true
-      this.$v.phoneOrEmail.$touch()
-      if (this.$v.phoneOrEmail.$error) {
-        this.$refs.phoneOrEmail.$refs.phoneOrEmail.focus()
-        return
+      if (!this.authenticating) {
+        this.authenticating = true
+        this.$v.phoneOrEmail.$touch()
+        if (this.$v.phoneOrEmail.$error) {
+          this.$refs.phoneOrEmail.$refs.phoneOrEmail.focus()
+          this.authenticating = false
+        } else {
+          if (!this.$cookie.get('vfaOptIn')) {
+            this.optedIn = false
+            this.togglePrivacyModalActiveState(true)
+            this.authenticating = false
+          } else {
+            this.optedIn = true
+            this.togglePrivacyModalActiveState(false)
+            if (this.isValidNumber(this.phoneOrEmail)) {
+              this.loginType = 'sms'
+              this.updateUser({mobileIntFormat: this.phoneOrEmail})
+              this.sendSmsCode()
+                .then(() => { this.authenticating = false })
+            }
+            if (this.isValidEmail(this.phoneOrEmail)) {
+              this.loginType = 'email'
+              this.updateUser({emailAddress: this.phoneOrEmail})
+              this.sendEmailLink()
+                .then(() => { this.authenticating = false })
+            }
+          }
+        }
+        // setTimeout(() => {
+        //   this.authenticating = false
+        // }, 5000)
       }
-      if (this.isValidNumber(this.phoneOrEmail)) {
-        this.loginType = 'sms'
-        this.updateUser({mobileIntFormat: this.phoneOrEmail})
-        this.sendSmsCode()
-          .then(() => { this.authenticating = false })
-      }
-      if (this.isValidEmail(this.phoneOrEmail)) {
-        this.loginType = 'email'
-        this.updateUser({emailAddress: this.phoneOrEmail})
-        this.sendEmailLink()
-          .then(() => { this.authenticating = false })
-      }
-      // setTimeout(() => {
-      //   this.authenticating = false
-      // }, 5000)
     },
     confirmCode () {
       this.$v.code.$touch()
@@ -269,7 +300,11 @@ export default {
       'sendSmsCode',
       'sendEmailLink'
     ]),
-    ...mapMutations('userauth', ['updateUser', 'updateAuthState'])
+    ...mapMutations('userauth', ['updateUser', 'updateAuthState']),
+    ...mapMutations(['togglePrivacyModalActiveState'])
+  },
+  created () {
+    this.togglePrivacyModalActiveState(false)
   },
   mounted () {
     this.resetDate()
