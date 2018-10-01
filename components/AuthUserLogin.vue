@@ -80,13 +80,13 @@
             <!-- Did you enter your number correctly? -->
           </li>
           <li v-if="seconds > 25">
-            <a @click="retry" class="button is-vfa is-inverted is-small">
+            <a @click="retry" class="button is-primary is-inverted">
               {{$t('auth.tryAgain')}}
               <!-- Try again -->
             </a>
           </li>
           <li v-if="seconds <= 25">
-            <a class="button is-vfa is-inverted is-small" disabled>
+            <a class="button is-vfa is-inverted" disabled>
               {{$t('auth.tryAgain')}}<span class="tag is-help">0:{{ 25 - parseInt(seconds) | two_digits }}</span>
             </a>
           </li>

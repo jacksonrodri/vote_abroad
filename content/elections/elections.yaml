@@ -853,11 +853,9 @@
     electionType: 'General Election'
     rules:
         Registration:
-            - {voterType: {}, rule: 'By Mail: Received by', date: '2018-10-07T00:00:00'}
-            - {voterType: {}, rule: 'By Email or Fax: Received by', date: '2018-10-16T00:00:00'}
+            - {voterType: {}, rule: 'Received by', date: '2018-10-16T00:00:00', note: 'If you request your ballot to be sent by postal mail, your request must be received by Sun, Oct 7, 2018.'}
         'Ballot Request':
-            - {voterType: {}, rule: 'By Mail: Received by', date: '2018-10-07T00:00:00'}
-            - {voterType: {}, rule: 'By Email or Fax: Received by', date: '2018-11-02T00:00:00'}
+            - {voterType: {}, rule: 'Received by', date: '2018-11-02T00:00:00', note: 'If you request your ballot to be sent by postal mail, your request must be received by Sun, Oct 7, 2018.'}
         'Ballot Return':
             - {voterType: {}, rule: 'Received by', date: '2018-11-06T20:00:00'}
 -
