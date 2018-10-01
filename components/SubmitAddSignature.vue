@@ -228,10 +228,9 @@
               v-model="croppedPic"
               ref="cp"
               :placeholder="cropperPlaceholder"
-              accept="image/png, image/jpeg, image/jpg, image/gif"
+              accept="image/*"
               :zoom-speed="2"
               :auto-sizing="true"
-              :input-attrs="inputAttrs"
               :show-loading="true"
               :disable-click-to-choose="device && device.inputCaptureSupported ? false : true"
               :replace-drop="true"
@@ -247,6 +246,7 @@
               initial-size="cover">
               <img slot="intitial" :src="webCamPic" />
             </signature-cropper>
+              <!-- :input-attrs="inputAttrs" -->
               <!-- :file-size-limit="1000000"
               @file-size-exceed="handleFileSizeExceed"
               @file-type-mismatch="handleFileTypeMismatch" -->
