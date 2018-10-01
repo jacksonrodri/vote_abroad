@@ -1,6 +1,13 @@
 <template>
 <div class="columns is-centered">
   <div class="column is-10 is-8-desktop is-7-widescreen is-6-fullhd is-paddingless">
+    <nav class="breadcrumb" aria-label="breadcrumbs">
+      <ul>
+        <li><nuxt-link :to="localePath('index')">{{$t('home')}}</nuxt-link></li>
+        <li><nuxt-link :to="localePath({name: 'faqs'})">{{$t('menu.helpfaq')}}</nuxt-link></li>
+        <li class="is-active"><a href="#" aria-current="page">{{ page.question | truncate(50) }}</a></li>
+      </ul>
+    </nav>
     <div>
       <vfa-content-container>
         <div slot="lead" class="article-lead">
@@ -32,6 +39,11 @@ export default {
   },
   computed: {
     page () { return this.pages[this.$i18n.locale] }
+  },
+  filters: {
+    truncate: function (text, stop, clamp) {
+      return text.slice(0, stop) + (stop < text.length ? clamp || '...' : '')
+    }
   }
 }
 </script>

@@ -157,8 +157,8 @@
                       <span>to go back. If you are finished, please close the browser window to delete any information saved in this session. Or </span> -->
                       <a @click.prevent="logoutRestart" class="has-text-primary"> {{$t('dashboard.clearSession')}}</a>
                     </p><br/>
-                    <a @click="logoutRestart" class="button is-primary">{{$t('dashboard.clearSession')}}</a>
-                    <p class="is-size-5" v-html="md($t('dashboard.helpThanks'))"></p>
+                    <p class="is-size-5" v-html="md($t('dashboard.helpThanks'))"></p><br/>
+                    <a @click="logoutRestart" class="button is-primary is-medium is-fullwidth is-capitalized">{{$t('dashboard.clearSession').replace('.', '')}}</a>
                   </div>
                 </section>
               </div>

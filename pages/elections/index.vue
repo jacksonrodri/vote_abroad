@@ -1,8 +1,15 @@
 <template>
   <div class="columns is-centered is-multiline">
     <div class="column is-10 is-8-desktop is-7-widescreen is-6-fullhd is-paddingless">
+      <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+          <li><nuxt-link :to="localePath('index')">{{$t('home')}}</nuxt-link></li>
+          <li class="is-active"><a href="#" aria-current="page">{{$t('election.elections')}}</a></li>
+        </ul>
+      </nav>
       <h1 class="title">
-        {{ page.title }}
+        <!-- {{ page.title }} -->
+        {{$t('election.elections')}}
       </h1>
       <nuxtent-body class="content" :body="page.body" />
         <!-- {{$t('election.elections')}} -->

@@ -2,6 +2,13 @@
   <section class="section">
     <div class="columns is-centered">
       <div class="column is-8">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+          <ul>
+            <li><nuxt-link :to="localePath('index')">{{$t('home')}}</nuxt-link></li>
+            <li><nuxt-link :to="localePath('states')">{{$t('election.elections')}}</nuxt-link></li>
+            <li class="is-active"><a href="#" aria-current="page">{{ $t(`states.${$route.params.state.toUpperCase()}`) }}</a></li>
+          </ul>
+        </nav>
           <h1 class="title is-3">{{$t('election.title', {state: $t(`states.${$route.params.state.toUpperCase()}`) })}}</h1>
           <b-table hoverable :data="elections">
             <template slot-scope="props">
