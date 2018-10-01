@@ -350,6 +350,7 @@ export const actions = {
   },
   async logout ({ app, dispatch }) {
     // this.app.$Analytics.record('logout')
+    this.app.$cookie.delete('vfaOptIn')
     await webAuth.logout({
       returnTo: process.browser ? window.location.origin : redirectUri,
       // returnTo: redirectUri,

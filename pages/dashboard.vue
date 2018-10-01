@@ -8,7 +8,7 @@
   <div class="hero-body columns is-centered">
     <div class="column is-12 is-8-desktop is-7-widescreen is-6-fullhd">
       <!-- level menu -->
-      <div v-if="isAuthenticated" class="level is-mobile">
+      <div class="level is-mobile">
         <div class="level-left">
           <span class="level-item">
             <h1 class="subtitle is-3">
@@ -29,12 +29,12 @@
               <option>2020</option>
             </select>
           </div>
-          <div class="level-item button" @click="$store.dispatch('userauth/logout')">
+          <div class="level-item button" @click="logoutRestart">
             <h1 class="subtitle is-5 has-text-grey">
               <span class="icon">
                 <i class="fas fa-sign-out-alt"></i>
               </span>
-              Logout
+              {{ isAuthenticated ? $t('menu.logout') : $t('dashboard.clearSession') }}
             </h1>
           </div>
         </div>
@@ -157,6 +157,7 @@
                       <span>to go back. If you are finished, please close the browser window to delete any information saved in this session. Or </span> -->
                       <a @click.prevent="logoutRestart" class="has-text-primary"> {{$t('dashboard.clearSession')}}</a>
                     </p><br/>
+                    <a @click="logoutRestart" class="button is-primary">{{$t('dashboard.clearSession')}}</a>
                     <p class="is-size-5" v-html="md($t('dashboard.helpThanks'))"></p>
                   </div>
                 </section>
