@@ -231,7 +231,7 @@
               accept="image/png, image/jpeg, image/jpg, image/gif"
               :zoom-speed="2"
               :auto-sizing="true"
-              :input-attrs="{capture: true, class: 'file-input'}"
+              :input-attrs="inputAttrs"
               :show-loading="true"
               :disable-click-to-choose="device && device.inputCaptureSupported ? false : true"
               :replace-drop="true"
@@ -405,6 +405,7 @@ export default {
       webcamCaptureError: false,
       metadata: null,
       blurred: null,
+      inputAttrs: {capture: true, class: 'file-input'},
       imageNotSetClass: { background: 'whitesmoke', maxWidth: '640px', width: '100%', paddingBottom: '25%', position: 'relative' },
       imageSetClass: { background: 'url(/sigLine.png) no-repeat cover', maxWidth: '640px', width: '100%', paddingBottom: '25%', position: 'relative' },
       buttonClass: {
@@ -437,9 +438,11 @@ export default {
       this.thresholdedPic = null
       this.croppedPic.remove()
     },
-    uploadPic () {
+    async uploadPic () {
+      this.inputAttrs = {capture: false, class: 'file-input'}
       this.clearImage()
       this.croppedPic.chooseFile()
+      this.inputAttrs = {capture: true, class: 'file-input'}
     },
     captureWebcamImage () {
       this.processingImage = true
