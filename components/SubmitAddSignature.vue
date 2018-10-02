@@ -291,87 +291,6 @@
                 </b-field>
               </b-field>
             </b-field>
-            <!-- <button v-if="croppedPic && croppedPic.hasImage()" class="button" @click.prevent="useSignature">Add my Signature</button> -->
-              <!-- <div class="box" v-if="croppedPic && croppedPic.hasImage()" >
-                <h3 class="subtitle is-5">
-                  <span class="icon is-small">
-                    <i class="fas fa-sliders-h"></i>
-                  </span>
-                  {{$t('request.sig.adjustImage')}}
-                </h3>
-                <div class="field is-horizontal">
-                  <div class="field-label">
-                    <label class="label">{{$t('request.sig.resizeLabel')}}</label>
-                  </div>
-                  <div class="field-body">
-                    {{$t('request.sig.resizeInstructions')}}
-                  </div>
-                </div>
-                <div class="field is-horizontal">
-                  <div class="field-label">
-                    <label class="label">{{$t('request.sig.moveLabel')}}</label>
-                  </div>
-                  <div class="field-body">
-                    {{$t('request.sig.moveInstructions')}}
-                  </div>
-                </div>
-                <div class="field is-horizontal">
-                  <div class="field-label">
-                    <label class="label">{{$t('request.sig.rotateLabel')}}</label>
-                  </div>
-                  <div class="field-body">
-                    <div class="field">
-                      <p class="control is-expanded">
-                        <a @click="rotate(-1)" :class="['button', 'is-fullwidth', {'is-small': device.type === 'mobile'}]">
-                          <span class="icon is-small">
-                            <i class="fas fa-undo"></i>
-                          </span>
-                          <span>{{$t('request.sig.rotateLeft')}}</span>
-                        </a>
-                      </p>
-                    </div>
-                    <div class="field">
-                      <p class="control is-expanded">
-                        <a @click="rotate(1)" :class="['button', 'is-fullwidth', {'is-small': device.type === 'mobile'}]">
-                          <span class="icon is-small">
-                            <i class="fas fa-redo"></i>
-                          </span>
-                          <span>{{$t('request.sig.rotateRight')}}</span>
-                        </a>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="field is-horizontal">
-                  <div class="field-label">
-                    <label class="label">
-                      <span>{{$t('request.sig.lineStrengthLabel')}}</span>
-                    </label>
-                  </div>
-                  <div class="field-body">
-                    <div class="field">
-                      <p class="control is-expanded">
-                        <a @click="increaseCompensation" :class="['button', 'is-fullwidth', {'is-small': device.type === 'mobile'}]">
-                          <span class="icon is-small">
-                            <i class="fas fa-minus"></i>
-                          </span>
-                          <span>{{$t('request.sig.lighter')}}</span>
-                        </a>
-                      </p>
-                    </div>
-                    <div class="field">
-                      <p class="control is-expanded">
-                        <a @click="decreaseCompensation" :class="['button', 'is-fullwidth', {'is-small': device.type === 'mobile'}]">
-                          <span class="icon is-small">
-                            <i class="fas fa-plus"></i>
-                          </span>
-                          <span>{{$t('request.sig.darker')}}</span>
-                        </a>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div> -->
         </div>
   </section>
 </template>
@@ -455,6 +374,7 @@ export default {
         .then(() => {
           if (this.$refs && this.$refs.webcam) this.$refs.webcam.takePhoto()
         })
+        .catch(e => { console.log('captureWebcamImage error', e) })
     },
     handleFileSizeExceed () {
       this.$dialog.alert({
@@ -520,6 +440,7 @@ export default {
           this.size = this.size + 3
           this.drawThresholdToCanvas(null)
         })
+        .catch(e => { console.log('increaseCompensation error', e) })
     },
     decreaseCompensation () {
       this.processingImage = true
@@ -531,6 +452,7 @@ export default {
           this.size = this.size - 3
           this.drawThresholdToCanvas(null)
         })
+        .catch(e => { console.log('decreaseCompensationError', e) })
     },
     increaseSize () {
       this.metadata = this.croppedPic.getMetadata()
@@ -584,6 +506,7 @@ export default {
           }
           reader.readAsDataURL(file)
         })
+        .catch(e => { console.log('drawFromFileError', e) })
     },
     async drawThresholdToCanvas (imgUrl) {
       function getPix (imgUrl) {
@@ -599,7 +522,10 @@ export default {
             let arr = ndarray(new Uint8Array(pixels.data), [img.width, img.height, 4], [4, 4 * img.width, 1], 0)
             resolve(arr)
           }
-          img.onerror = function (err) { reject(err) }
+          img.onerror = function (err) {
+            console.log('img.onload error')
+            reject(err)
+          }
           img.src = imgUrl
         })
       }
@@ -626,6 +552,7 @@ export default {
             this.processingImage = false
           }
         })
+        .catch(e => { console.log('nextTick adaptiveThreshold error', e) })
     },
     onDraw: function (ctx) {
       ctx.save()
