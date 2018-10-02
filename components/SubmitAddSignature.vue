@@ -500,6 +500,8 @@ export default {
                   ctx.rotate(-Math.PI / 2)
                 }
                 this.drawThresholdToCanvas(canvas.toDataURL())
+                ctx = null
+                canvas = null
               }
             }
             img.src = reader.result
@@ -520,10 +522,12 @@ export default {
             ctx.drawImage(img, 0, 0)
             let pixels = ctx.getImageData(0, 0, img.width, img.height)
             let arr = ndarray(new Uint8Array(pixels.data), [img.width, img.height, 4], [4, 4 * img.width, 1], 0)
+            ctx = null
+            canvas = null
             resolve(arr)
           }
           img.onerror = function (err) {
-            console.log('img.onload error')
+            console.log('img.onload error', err)
             reject(err)
           }
           img.src = imgUrl
@@ -545,6 +549,8 @@ export default {
             }
             ctx.putImageData(imgData, 0, 0)
             this.thresholdedPic = cnv.toDataURL()
+            ctx = null
+            cnv = null
             this.croppedPic.refresh()
             this.processingImage = false
           } else {
