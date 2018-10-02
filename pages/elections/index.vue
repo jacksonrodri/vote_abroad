@@ -18,7 +18,7 @@
           v-model="selectedState"
           @input="$router.push(localePath({ name: 'elections-state', params: {state: selectedState} }))">
           <option
-            v-for="state in states"
+            v-for="state in statesSortedLocalized"
             :value="state.iso"
             :key="state.iso">
             {{ $t(`states.${state.iso}`) }}
@@ -124,11 +124,16 @@ export default {
           if (a.date === b.date) return 0
           else return 1
         })
+    },
+    statesSortedLocalized () {
+      return this.states
+        .map(x => ({iso: x.iso, name: this.$t(`states.${x.iso}`)}))
+        .sort((a, b) => a.name.localeCompare(b.name))
     }
   },
   data () {
     return {
-      selectedState: '',
+      selectedState: null,
       states: [
         {'name': 'Alabama', 'iso': 'AL'},
         {'name': 'Alaska', 'iso': 'AK'},
