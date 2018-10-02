@@ -374,7 +374,7 @@ export default {
         .then(() => {
           if (this.$refs && this.$refs.webcam) this.$refs.webcam.takePhoto()
         })
-        .catch(e => { console.log('captureWebcamImage error', e) })
+        .catch(e => { console.error('captureWebcamImage error', e) })
     },
     handleFileSizeExceed () {
       this.$dialog.alert({
@@ -440,7 +440,7 @@ export default {
           this.size = this.size + 3
           this.drawThresholdToCanvas(null)
         })
-        .catch(e => { console.log('increaseCompensation error', e) })
+        .catch(e => { console.error('increaseCompensation error', e) })
     },
     decreaseCompensation () {
       this.processingImage = true
@@ -452,7 +452,7 @@ export default {
           this.size = this.size - 3
           this.drawThresholdToCanvas(null)
         })
-        .catch(e => { console.log('decreaseCompensationError', e) })
+        .catch(e => { console.error('decreaseCompensationError', e) })
     },
     increaseSize () {
       this.metadata = this.croppedPic.getMetadata()
@@ -508,7 +508,7 @@ export default {
           }
           reader.readAsDataURL(file)
         })
-        .catch(e => { console.log('drawFromFileError', e) })
+        .catch(e => { console.error('drawFromFileError', e) })
     },
     async drawThresholdToCanvas (imgUrl) {
       function getPix (imgUrl) {
@@ -527,7 +527,7 @@ export default {
             resolve(arr)
           }
           img.onerror = function (err) {
-            console.log('img.onload error', err)
+            console.error('img.onload error', err)
             reject(err)
           }
           img.src = imgUrl
@@ -539,7 +539,12 @@ export default {
           if (!this.thresholdedPic) {
             this.webCamCapture = false
             this.webCamPic = imgUrl || this.webCamPic
-            let pixels = await getPix(this.webCamPic)
+            let pixels
+            try {
+              pixels = await getPix(this.webCamPic)
+            } catch (e) {
+              console.error('await getPixels', e)
+            }
             let thresholded = adaptiveThreshold(pixels, {size: this.size, compensation: this.compensation})
             let cnv = savePixels(thresholded, 'canvas') // returns canvas element
             let ctx = cnv.getContext('2d')
@@ -558,7 +563,7 @@ export default {
             this.processingImage = false
           }
         })
-        .catch(e => { console.log('nextTick adaptiveThreshold error', e) })
+        .catch(e => { console.error('nextTick adaptiveThreshold error', e) })
     },
     onDraw: function (ctx) {
       ctx.save()
