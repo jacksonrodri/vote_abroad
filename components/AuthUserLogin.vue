@@ -99,7 +99,7 @@
         </ul>
       </p>
       <div class="buttons is-right is-marginless">
-        <button @click.prevent="confirmCode" :class="['button', 'is-large', 'is-danger', {'is-loading': authState === 'loading'}]">{{ $t('homepage.start') }}</button>
+        <button @click.prevent="confirmCode" :class="['button', 'is-large', 'is-danger', {'is-loading': authState === 'loading'}]">{{ $t('request.stages.next') }}</button>
       </div>
       <div class="buttons is-right">
         <button @click.prevent="anonymousStart" class="button is-text has-text-black is-paddingless" exact ><span>{{ $t('homepage.anonymous') }}</span></button>

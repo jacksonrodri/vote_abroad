@@ -4,8 +4,9 @@
       <div class="section">
         <h1 class="has-text-centered title is-3">{{ $t('request.stages.step', {step: 4})}}</h1>
         <h3 class="has-text-centered subtitle is-4">{{ $t('request.stages.stage4')}}</h3>
-        <p class="is-size-5">{{ $t('request.stages.instructions4')}}</p>
+        <p class="is-size-5">{{ $t('request.stages.instructions4') }}</p>
       </div>
+      <p v-if="'es' === $i18n.locale" class="help is-size-5 has-text-danger">{{ $t('request.stages.instructions4es') }}</p>
   </div>
   <div class="column is-12 is-10-desktop is-8-widescreen is-7-fullhd is-paddingless">
     <review-canvas class="canvas" ref="fpca">

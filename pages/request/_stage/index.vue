@@ -369,7 +369,7 @@ const usZip = (state) =>
         return genericZipRegex.test(value)
       } else {
         let stateZipRegex = new RegExp(this.postal.US['sub_zips'].split('~')[this.postal.US['sub_keys'].split('~').findIndex(x => x === model.S)])
-        console.log(value, model.S, stateZipRegex, genericZipRegex.test(value), stateZipRegex.test(value))
+        // console.log(value, model.S, stateZipRegex, genericZipRegex.test(value), stateZipRegex.test(value))
         return genericZipRegex.test(value) && stateZipRegex.test(value)
       }
     }
@@ -780,7 +780,7 @@ export default {
       }
     },
     addressDelayTouch (type, val) {
-      console.log('type', type, 'val', val)
+      // console.log('type', type, 'val', val)
       if (val === 'countryiso' || (this[type].countryiso && !this.postal[this[type].countryiso])) {
         this.$store.dispatch('data/updateCountryData', this[type].countryiso)
           .then(() => {

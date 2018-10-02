@@ -49,7 +49,7 @@ const placeDetails = function fillData (option) {
             input.A = result.formatted_address.split(', ')[0]
             input.B = this.adr.B || result.formatted_address.split(', ')[1]
           } else if (this.fieldName === 'votAdr') {
-            console.log('votadr', JSON.stringify(result, null, 2))
+            // console.log('votadr', JSON.stringify(result, null, 2))
             input.A = result.adr_address && result.adr_address.includes('street-address') ? result.adr_address.match('<span class="street-address">(.*?)</span>')[1] : this.adr.A || null
             input.B = this.adr.B || (result.adr_address && result.adr_address.includes('extended-address') ? result.adr_address.match('<span class="extended-address">(.*?)</span>')[1] : null)
           } else {
@@ -86,7 +86,7 @@ const cleanString = function (str) {
 }
 
 const returnArrayOfReasonableBirthDates = function (dateString) {
-  console.log('dateString', dateString)
+  // console.log('dateString', dateString)
   let currentYear = new Date().getFullYear()
   let dateArr = []
   let dateRegexPatterns = {

@@ -228,16 +228,14 @@
               v-model="croppedPic"
               ref="cp"
               :placeholder="cropperPlaceholder"
-              accept="image/png, image/jpeg, image/jpg, image/gif"
+              accept="image/*"
               :zoom-speed="2"
               :auto-sizing="true"
-              :input-attrs="inputAttrs"
               :show-loading="true"
               :disable-click-to-choose="device && device.inputCaptureSupported ? false : true"
               :replace-drop="true"
               :quality="device.type === 'mobile' && device.orientation === 'portrait' ? 4 : 2"
               @click="() => { if (!canCaptureImage) { croppedPic.chooseFile() } if (!croppedPic || !(croppedPic.hasImage())) { startCameraFilePicker() } }"
-              @init.once="$refs.cp.refresh()"
               @image-remove="webCamPic = null"
               @file-choose="drawFromFile"
               @file-type-mismatch="handleFileTypeMismatch"
@@ -247,6 +245,8 @@
               initial-size="cover">
               <img slot="intitial" :src="webCamPic" />
             </signature-cropper>
+              <!-- @init.once="$refs.cp.refresh()" -->
+              <!-- :input-attrs="inputAttrs" -->
               <!-- :file-size-limit="1000000"
               @file-size-exceed="handleFileSizeExceed"
               @file-type-mismatch="handleFileTypeMismatch" -->
@@ -291,87 +291,6 @@
                 </b-field>
               </b-field>
             </b-field>
-            <!-- <button v-if="croppedPic && croppedPic.hasImage()" class="button" @click.prevent="useSignature">Add my Signature</button> -->
-              <!-- <div class="box" v-if="croppedPic && croppedPic.hasImage()" >
-                <h3 class="subtitle is-5">
-                  <span class="icon is-small">
-                    <i class="fas fa-sliders-h"></i>
-                  </span>
-                  {{$t('request.sig.adjustImage')}}
-                </h3>
-                <div class="field is-horizontal">
-                  <div class="field-label">
-                    <label class="label">{{$t('request.sig.resizeLabel')}}</label>
-                  </div>
-                  <div class="field-body">
-                    {{$t('request.sig.resizeInstructions')}}
-                  </div>
-                </div>
-                <div class="field is-horizontal">
-                  <div class="field-label">
-                    <label class="label">{{$t('request.sig.moveLabel')}}</label>
-                  </div>
-                  <div class="field-body">
-                    {{$t('request.sig.moveInstructions')}}
-                  </div>
-                </div>
-                <div class="field is-horizontal">
-                  <div class="field-label">
-                    <label class="label">{{$t('request.sig.rotateLabel')}}</label>
-                  </div>
-                  <div class="field-body">
-                    <div class="field">
-                      <p class="control is-expanded">
-                        <a @click="rotate(-1)" :class="['button', 'is-fullwidth', {'is-small': device.type === 'mobile'}]">
-                          <span class="icon is-small">
-                            <i class="fas fa-undo"></i>
-                          </span>
-                          <span>{{$t('request.sig.rotateLeft')}}</span>
-                        </a>
-                      </p>
-                    </div>
-                    <div class="field">
-                      <p class="control is-expanded">
-                        <a @click="rotate(1)" :class="['button', 'is-fullwidth', {'is-small': device.type === 'mobile'}]">
-                          <span class="icon is-small">
-                            <i class="fas fa-redo"></i>
-                          </span>
-                          <span>{{$t('request.sig.rotateRight')}}</span>
-                        </a>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="field is-horizontal">
-                  <div class="field-label">
-                    <label class="label">
-                      <span>{{$t('request.sig.lineStrengthLabel')}}</span>
-                    </label>
-                  </div>
-                  <div class="field-body">
-                    <div class="field">
-                      <p class="control is-expanded">
-                        <a @click="increaseCompensation" :class="['button', 'is-fullwidth', {'is-small': device.type === 'mobile'}]">
-                          <span class="icon is-small">
-                            <i class="fas fa-minus"></i>
-                          </span>
-                          <span>{{$t('request.sig.lighter')}}</span>
-                        </a>
-                      </p>
-                    </div>
-                    <div class="field">
-                      <p class="control is-expanded">
-                        <a @click="decreaseCompensation" :class="['button', 'is-fullwidth', {'is-small': device.type === 'mobile'}]">
-                          <span class="icon is-small">
-                            <i class="fas fa-plus"></i>
-                          </span>
-                          <span>{{$t('request.sig.darker')}}</span>
-                        </a>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div> -->
         </div>
   </section>
 </template>
@@ -440,14 +359,14 @@ export default {
     },
     async uploadPic () {
       this.inputAttrs = {class: 'file-input'}
-      // await this.$nextTick()
       this.clearImage()
       this.croppedPic.refresh()
+      // await this.$nextTick()
       this.croppedPic.chooseFile()
       setTimeout(() => {
         this.inputAttrs = {capture: true, class: 'file-input'}
         this.croppedPic.refresh()
-      }, 50)
+      }, 500)
     },
     captureWebcamImage () {
       this.processingImage = true
@@ -455,6 +374,7 @@ export default {
         .then(() => {
           if (this.$refs && this.$refs.webcam) this.$refs.webcam.takePhoto()
         })
+        .catch(e => { console.error('captureWebcamImage error', e) })
     },
     handleFileSizeExceed () {
       this.$dialog.alert({
@@ -520,6 +440,7 @@ export default {
           this.size = this.size + 3
           this.drawThresholdToCanvas(null)
         })
+        .catch(e => { console.error('increaseCompensation error', e) })
     },
     decreaseCompensation () {
       this.processingImage = true
@@ -531,6 +452,7 @@ export default {
           this.size = this.size - 3
           this.drawThresholdToCanvas(null)
         })
+        .catch(e => { console.error('decreaseCompensationError', e) })
     },
     increaseSize () {
       this.metadata = this.croppedPic.getMetadata()
@@ -578,12 +500,15 @@ export default {
                   ctx.rotate(-Math.PI / 2)
                 }
                 this.drawThresholdToCanvas(canvas.toDataURL())
+                ctx = null
+                canvas = null
               }
             }
             img.src = reader.result
           }
           reader.readAsDataURL(file)
         })
+        .catch(e => { console.error('drawFromFileError', e) })
     },
     async drawThresholdToCanvas (imgUrl) {
       function getPix (imgUrl) {
@@ -597,9 +522,14 @@ export default {
             ctx.drawImage(img, 0, 0)
             let pixels = ctx.getImageData(0, 0, img.width, img.height)
             let arr = ndarray(new Uint8Array(pixels.data), [img.width, img.height, 4], [4, 4 * img.width, 1], 0)
+            ctx = null
+            canvas = null
             resolve(arr)
           }
-          img.onerror = function (err) { reject(err) }
+          img.onerror = function (err) {
+            console.error('img.onload error', err)
+            reject(err)
+          }
           img.src = imgUrl
         })
       }
@@ -609,7 +539,12 @@ export default {
           if (!this.thresholdedPic) {
             this.webCamCapture = false
             this.webCamPic = imgUrl || this.webCamPic
-            let pixels = await getPix(this.webCamPic)
+            let pixels
+            try {
+              pixels = await getPix(this.webCamPic)
+            } catch (e) {
+              console.error('await getPixels', e)
+            }
             let thresholded = adaptiveThreshold(pixels, {size: this.size, compensation: this.compensation})
             let cnv = savePixels(thresholded, 'canvas') // returns canvas element
             let ctx = cnv.getContext('2d')
@@ -619,6 +554,8 @@ export default {
             }
             ctx.putImageData(imgData, 0, 0)
             this.thresholdedPic = cnv.toDataURL()
+            ctx = null
+            cnv = null
             this.croppedPic.refresh()
             this.processingImage = false
           } else {
@@ -626,6 +563,7 @@ export default {
             this.processingImage = false
           }
         })
+        .catch(e => { console.error('nextTick adaptiveThreshold error', e) })
     },
     onDraw: function (ctx) {
       ctx.save()
