@@ -236,7 +236,6 @@
               :replace-drop="true"
               :quality="device.type === 'mobile' && device.orientation === 'portrait' ? 4 : 2"
               @click="() => { if (!canCaptureImage) { croppedPic.chooseFile() } if (!croppedPic || !(croppedPic.hasImage())) { startCameraFilePicker() } }"
-              @init.once="$refs.cp.refresh()"
               @image-remove="webCamPic = null"
               @file-choose="drawFromFile"
               @file-type-mismatch="handleFileTypeMismatch"
@@ -246,6 +245,7 @@
               initial-size="cover">
               <img slot="intitial" :src="webCamPic" />
             </signature-cropper>
+              <!-- @init.once="$refs.cp.refresh()" -->
               <!-- :input-attrs="inputAttrs" -->
               <!-- :file-size-limit="1000000"
               @file-size-exceed="handleFileSizeExceed"
