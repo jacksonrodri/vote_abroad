@@ -304,7 +304,7 @@ export default {
     let cleanAdr = !this.countryData || !this.formatted || !this.adr
       ? this.adr
       : Object.entries(this.adr).reduce((obj, [k, v]) => {
-        if (this.countryFields.concat({type: 'usesAlternateFormat'}).map(({type}) => type).includes(k)) obj[k] = v
+        if (this.countryFields.concat({type: 'usesAlternateFormat'}).map(({type}) => type).includes(k)) obj[k] = v && typeof v === 'string' ? v.trim() : v
         return obj
       }, {})
     this.update({[this.fieldName]: Object.assign({}, cleanAdr, {formatted: this.formattedAddress})})
