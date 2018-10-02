@@ -34,7 +34,7 @@
               <span class="icon">
                 <i class="fas fa-sign-out-alt"></i>
               </span>
-              {{ isAuthenticated ? $t('menu.logout') : $t('dashboard.clearSession') }}
+              <span class="is-uppercase is-size-7">{{ isAuthenticated ? $t('menu.logout') : $t('dashboard.clearSession').replace('.', '') }}</span>
             </h1>
           </div>
         </div>
@@ -95,9 +95,9 @@
                     <b-message v-if="transmitRules && stage !== 'formEmailed'" type="is-info" has-icon>
                       <span v-html="md(transmitRules)"></span>
                     </b-message>
-                    <p class="is-size-5"
+                    <!-- <p class="is-size-5"
                       v-if="$te(`request.deadlineLanguage.${votState}Special`) && stage !== 'formEmailed'"
-                      v-html="md(specialSubmissionRules)"></p>
+                      v-html="md(specialSubmissionRules)"></p> -->
 
                     <div class="box" v-if="stage !== 'formEmailed'">
                       <p>
@@ -301,7 +301,11 @@ export default {
     },
     specialSubmissionRules () {
       return this.$te(`request.deadlineLanguage.${this.votState}Special`)
-        ? this.$t(`request.deadlineLanguage.${this.votState}Special`, {leoName: this.leoName, transmitOpts: this.transmitOpts})
+        ? this.$t(`request.deadlineLanguage.${this.votState}Special`, {
+          leoName: this.leoName,
+          transmitOpts: this.transmitOpts,
+          specialDeadline: this.$te(`request.deadlineLanguage.${this.votState}SpecialDeadline`) ? this.$t(`request.deadlineLanguage.${this.votState}SpecialDeadline`) : ''
+        })
         : this.$t(`request.deadlineLanguage.transmitInstructions`, {leoName: this.leoName, transmitOpts: this.transmitOpts})
     },
     stateRules () {
@@ -324,7 +328,7 @@ export default {
         alternateSubmissionMethod: altMethods,
         electionDay: new Date(elections[0].electionDate).toLocaleDateString(this.dateFormat, {month: 'short', day: 'numeric'}),
         electionType: elections[0].electionType,
-        note: elections[0].note || '',
+        note: elections[0].note ? this.$t(`request.deadlineLanguage.notes.${elections[0].note}`) : '',
         url: process.env.url,
         state: elections[0].state,
         documentRequired: this.documentRequired && (this.state === 'AK' || this.state === 'AZ') ? this.$t(`request.deadlineLanguage.documentRequired`, {document: this.$t(`request.deadlineLanguage.${this.state.toLowerCase()}Document`)}) : ''
@@ -343,7 +347,7 @@ export default {
         alternateSubmissionMethod: altMethods,
         electionDay: new Date(elections[0].electionDate).toLocaleDateString(this.dateFormat, {month: 'short', day: 'numeric'}),
         electionType: elections[0].electionType,
-        note: elections[0].note || '',
+        note: elections[0].note ? this.$t(`request.deadlineLanguage.notes.${elections[0].note}`) : '',
         url: process.env.url,
         state: elections[0].state
       }
@@ -366,14 +370,14 @@ export default {
         newVoterAlternateSubmissionMethod: newVoterAltMethods,
         newVoterElectionDay: new Date(electionsNew[0].electionDate).toLocaleDateString(this.dateFormat, {month: 'short', day: 'numeric'}),
         newVoterElectionType: electionsNew[0].electionType,
-        newVoterNote: electionsNew[0].note || '',
+        newVoterNote: electionsNew[0].note ? this.$t(`request.deadlineLanguage.notes.${electionsNew[0].note}`) : '',
         registeredVoterRule: this.$t(`request.deadlineLanguage.${registeredVoterRule}`),
         registeredVoterDeadline: registeredVoterDeadline.toLocaleDateString(this.dateFormat, {month: 'short', day: 'numeric'}),
         registeredVoterSubmissionMethod: registeredVoterMethods,
         registeredVoterAlternateSubmissionMethod: registeredVoterAltMethods,
         registeredVoterElectionDay: new Date(electionsRegistered[0].electionDate).toLocaleDateString(this.dateFormat, {month: 'short', day: 'numeric'}),
         registeredVoterElectionType: electionsRegistered[0].electionType,
-        registeredVoterNote: electionsRegistered[0].note || '',
+        registeredVoterNote: electionsRegistered[0].note ? this.$t(`request.deadlineLanguage.notes.${electionsRegistered[0].note}`) : '',
         url: process.env.url,
         state: electionsNew[0].state,
         documentRequired: this.documentRequired && (this.state === 'AK' || this.state === 'AZ') ? this.$t(`request.deadlineLanguage.documentRequired`, {document: this.$t(`request.deadlineLanguage.${this.state.toLowerCase()}Document`)}) : ''
@@ -392,7 +396,7 @@ export default {
         alternateSubmissionMethod: altMethods,
         electionDay: new Date(elections[0].electionDate).toLocaleDateString(this.dateFormat, {month: 'short', day: 'numeric'}),
         electionType: elections[0].electionType,
-        note: elections[0].note || '',
+        note: elections[0].note ? this.$t(`request.deadlineLanguage.notes.${elections[0].note}`) : '',
         url: process.env.url,
         state: elections[0].state
       }
