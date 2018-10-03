@@ -1,7 +1,12 @@
 <template>
   <div class="card">
     <div class="card-content">
-      <h3 class="subtitle is-5">Vote From Abroad helps US citizens register to vote quickly and easily, but to do so we need to collect your personal information. Your data privacy is our top concern, so please read and accept our <nuxt-link :to="privacyPage" class="has-text-primary">privacy policy</nuxt-link>, <nuxt-link :to="cookiePage" class="has-text-primary">cookie policy</nuxt-link> and <nuxt-link :to="tosPage" class="has-text-primary">terms of service.</nuxt-link> </h3>
+      <!-- <h3 class="subtitle is-5">Vote From Abroad helps US citizens register to vote quickly and easily, but to do so we need to collect your personal information. Your data privacy is our top concern, so please read and accept our <nuxt-link :to="privacyPage" class="has-text-primary">privacy policy</nuxt-link>, <nuxt-link :to="cookiePage" class="has-text-primary">cookie policy</nuxt-link> and <nuxt-link :to="tosPage" class="has-text-primary">terms of service.</nuxt-link> </h3> -->
+      <i-18n path="optIn.optIn" tag="h3" class="subtitle is-5">
+        <nuxt-link place="privacyPolicy" :to="localePath({ name: 'page', params: {page: 'privacy'}})" class="has-text-warning">{{$t('optIn.privacyPolicy')}}</nuxt-link>
+        <nuxt-link place="cookiePolicy" :to="localePath({ name: 'page', params: {page: 'cookie-policy'}})" class="has-text-warning">{{ $t('optIn.cookiePolicy') }}</nuxt-link>
+        <nuxt-link place="termsOfUse" :to="localePath({ name: 'page', params: {page: 'terms-of-use'}})" class="has-text-warning">{{ $t('optIn.termsOfUse') }}</nuxt-link>
+      </i-18n>
       <!-- <b-field
         grouped
         position="is-centered">
@@ -28,7 +33,7 @@
           <p class="control">
               <button
                 @click="$emit('optIn')"
-                class="button is-vfa">I agree</button>
+                class="button is-vfa">{{ $t('optIn.agree') }}</button>
           </p>
       </b-field>
     </div>
