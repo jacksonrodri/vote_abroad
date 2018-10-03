@@ -1112,7 +1112,8 @@
     electionType: 'General Election'
     rules:
         Registration:
-            - {voterType: {}, rule: {}, date: '2018-10-07T00:00:00'}
+            - {voterType: {}, rule: 'By Mail: Postmarked by', date: '2018-10-07T00:00:00'}
+            - {voterType: {}, rule: 'By Email or Fax: Received by', date: '2018-10-07T00:00:00'}
         'Ballot Request':
             - {voterType: {}, rule: 'Received by**', date: '2018-10-16T16:00:00'}
         'Ballot Return':

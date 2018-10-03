@@ -10,7 +10,10 @@
           </ul>
         </nav>
           <h1 class="title is-3">{{$t('election.title', {state: $t(`states.${$route.params.state.toUpperCase()}`) })}}</h1>
-          <b-table hoverable :data="elections">
+          <b-table
+            hoverable
+            :data="elections">
+            <!-- detailed> -->
             <template slot-scope="props">
               <b-table-column :label="$t('election.electionDay')">
                 <h1 class="title is-5">{{ localizeIfAvailable(props.row.electionType) }}</h1>
@@ -34,6 +37,11 @@
                   <li v-else><strong>{{ localizeIfAvailable(deadline.rule) }}</strong></li>
                 </ul>
               </b-table-column>
+            </template>
+            <template slot="detail" slot-scope="props">
+              <p
+                class="help"
+                v-if="props.row.note">{{ $t(`request.deadlineLanguage.notes.${note}`) }}</p>
             </template>
           </b-table>
         <!-- </section> -->

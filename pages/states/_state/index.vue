@@ -134,6 +134,9 @@ export default {
   },
   methods: {
     localizeIfAvailable (str) {
+      if (typeof str !== 'string') {
+        return str
+      }
       return this.$te(`election.${this.camelize(str)}`)
         ? this.$t(`election.${this.camelize(str)}`)
         : this.$te(`election.${str.toLowerCase().replace(/\s/gi, '')}`)
