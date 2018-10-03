@@ -388,13 +388,13 @@ const tooYoung = (nextElectionDate) =>
     { type: 'tooYoung', value: new Date(nextElectionDate.getFullYear(), nextElectionDate.getMonth(), nextElectionDate.getDate()) },
     (value) => !helpers.req(value) || new Date(nextElectionDate.getFullYear() - 18, nextElectionDate.getMonth(), nextElectionDate.getDate()) >= new Date(value.substr(0, 4), parseInt(value.substr(5, 2)) - 1, value.substr(8, 2))
   )
-const fullLengthSsn = (idOpts) =>
-  helpers.withParams(
-    { type: 'correctLength', value: 9 },
-    (value, m) => {
-      return !helpers.req(value) || value.replace(/\D/g, '').length === 9
-    }
-  )
+// const fullLengthSsn = (idOpts) =>
+//   helpers.withParams(
+//     { type: 'correctLength', value: 9 },
+//     (value, m) => {
+//       return !helpers.req(value) || value.replace(/\D/g, '').length === 9
+//     }
+//   )
 const addressPartRequired = (addressPart, addressType) =>
   helpers.withParams(
     { type: 'addressPartRequired', value: addressPart },
@@ -780,6 +780,7 @@ export default {
           // this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'fwdAdr  '}})
           break
         case this.stage.slug === 'id-and-contact-information' && this.$v.dob.$error:
+          console.log(this.dob, this.$v.dob, this.$refs.dob.$el)
           this.$refs.dob.$el.scrollIntoView()
           this.$refs.dob.$el.querySelector('input').focus()
           this.$ga.event('formAction', 'fieldError', 'dob')
@@ -939,21 +940,13 @@ export default {
           required: requiredIf(function (model) {
             return this.idOptions.includes('SSN') && !model.stateId && !model.ssn4 && !model.noId
           }),
-          correctLength: fullLengthSsn(this.idOptions)
+          correctLength: (value) => !helpers.req(value) || value.replace(/[^\d]/gi, '').length === 9
         },
         ssn4: {
           required: requiredIf(function (model) {
             return !model.stateId && !model.ssn && !model.noId && this.idOptions.includes('SSN4')
           }),
-          correctLength () {
-            if (this.identification && this.identification.ssn4 && this.stateRules && this.stateRules.id && this.stateRules.id.length > 0) {
-              if (this.stateRules.id.includes('SSN4')) {
-                return this.identification.ssn4 && this.identification.ssn4.replace(/\D/g, '').length === 4
-              }
-            } else {
-              return true
-            }
-          }
+          correctLength: (value) => !helpers.req(value) || value.replace(/[^\d]/gi, '').length === 4
         },
         stateId: {
           required: requiredIf(function (model) {

@@ -88,6 +88,7 @@
 
 <script>
 import { returnArrayOfReasonableBirthDates } from '~/utils/helpers'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'date-of-birth',
@@ -163,14 +164,15 @@ export default {
     },
     dob: {
       get () {
-        console.log('get', this.value)
+        let dob = this.getCurrent.dob
         function createDateObj (d) { return new Date(d.substr(0, 4), d.substr(5, 2) - 1, d.substr(8, 2)) }
-        return typeof this.value === 'string' ? createDateObj(this.value) : undefined
+        return typeof dob === 'string' ? createDateObj(dob) : undefined
       },
       set (val) {
         function createDateString (d) { return `${d.getFullYear()}-${d.getMonth() < 9 ? '0' : ''}${d.getMonth() + 1}-${d.getDate() < 10 ? '0' : ''}${d.getDate()}` }
         let d = val instanceof Date ? createDateString(val) : null
         this.$store.commit('requests/update', { dob: d })
+        this.$emit('input', d)
         if (val && val instanceof Date) {
           this.focusedDate = val
           this.tempDate = val
@@ -180,7 +182,8 @@ export default {
     },
     allowNative () {
       return Boolean(!(/mobile|tablet/i.test(this.$store.state.userauth.device.type) && this.$store.state.userauth.device.os === 'android'))
-    }
+    },
+    ...mapGetters('requests', ['getCurrent'])
   },
   methods: {
     focusDate () {
