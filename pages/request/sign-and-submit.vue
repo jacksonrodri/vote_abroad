@@ -592,7 +592,7 @@ export default {
           case 'registered':
             return this.$t('request.deadlineLanguage.registeredVoters', this.registeredVoterDeadlineObject)
           default:
-            return this.$t('request.deadlineLanguage.unsureRegistrationVoters', this.unsureVoterDeadlineObject).replace('\n- ', ' ')
+            return this.$t('request.deadlineLanguage.unsureRegistrationVoters', this.unsureVoterDeadlineObject).replace(/\n- /g, ' ')
         }
       }
     },
