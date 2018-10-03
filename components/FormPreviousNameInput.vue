@@ -25,7 +25,12 @@
         </p>
       </b-field>
   </div>
-  <b-field v-show="usesPreviousName" :type="type" :message="message" :label="label">
+  <b-field
+    v-show="usesPreviousName"
+    :type="type"
+    v-ga.focus="$ga.commands.trackFormAction.bind(this, 'previousName')"
+    :message="message"
+    :label="label">
     <!-- <b-input :value="value && value.previousName ? value.previousName : ''" @input="val => setName(val)"></b-input> -->
     <b-input v-model="pName" :maxlength="50"></b-input>
   </b-field>

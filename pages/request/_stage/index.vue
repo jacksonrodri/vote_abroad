@@ -12,6 +12,7 @@
         <b-field :type="($v.firstName.$error ? 'is-danger': '')" :message="$v.firstName.$error ? Object.entries($v.firstName).filter(([key, value]) => key.charAt(0) !== '$' && value === false).map(x => $t(`request.firstName.messages.${x[0]}`)) : '' ">
           <b-input v-model="firstName"
             id="firstName"
+            v-ga.focus="$ga.commands.trackFormAction.bind(this, 'firstName')"
             autocomplete="given-name"
             :maxlength="(firstName && !$v.firstName.$dirty) || $v.firstName.$error || (firstName && firstName.length > 44) ? 50 : ''"
             @input="delayTouch($v.firstName)"
@@ -26,6 +27,7 @@
           <b-input
             v-model="middleName"
             id="middleName"
+            v-ga.focus="$ga.commands.trackFormAction.bind(this, 'middleName')"
             @input="delayTouch($v.middleName)"
             autocomplete="additional-name"
             :maxlength="(middleName && !$v.middleName.$dirty) || $v.middleName.$error || (middleName && middleName.length > 44) ? 50 : ''"></b-input>
@@ -39,6 +41,7 @@
           <b-input v-model="lastName"
             id="lastName"
             @input="delayTouch($v.lastName)"
+            v-ga.focus="$ga.commands.trackFormAction.bind(this, 'lastName')"
             autocomplete="family-name"
             :maxlength="(lastName && !$v.lastName.$dirty) || $v.lastName.$error || (lastName && lastName.length > 44) ? 50 : ''"
             ref="lastName"></b-input>
@@ -53,6 +56,7 @@
             v-model="suffix"
             id="suffix"
             @input="delayTouch($v.suffix)"
+            v-ga.focus="$ga.commands.trackFormAction.bind(this, 'suffix')"
             :maxlength="(suffix && !$v.suffix.$dirty) || $v.suffix.$error || (suffix && suffix.length > 8) ? 16 : ''"
             autocomplete="honorific-suffix"></b-input>
         </b-field>

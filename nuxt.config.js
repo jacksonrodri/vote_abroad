@@ -62,6 +62,11 @@ module.exports = {
     debug: {
       sendHitTask: process.env.DEVSTAGE !== 'dev',
       enabled: true
+    },
+    commands: {
+      trackFormAction (fieldName = 'unknown') {
+        this.$ga.event('formAction', 'focus/select', 'field', fieldName)
+      }
     }
   },
   proxy: {
