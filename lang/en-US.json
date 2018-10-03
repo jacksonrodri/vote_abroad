@@ -69,7 +69,9 @@
     "anonymousStartMessage": "You have started an anonymous session.  Please close this window when you are finished to delete all data.",
     "continueRequest": "Continue my request",
     "trouble": "If you are still having trouble we recommend {0}.",
-    "recommendation": "starting without an account"
+    "recommendation": "starting without an account",
+    "verificationEmail": "Your Verification code is: {code}. \n -OR- \n Click and confirm that you want to sign in to VoteFromAbroad.org \n Sign in to VoteFromAbroad.org \n You will be automatically redirected and authenticated. This link/code can only be used once and expires in five minutes. If you are having any issues with your account, please don't hesitate to contact us by replying to this mail. Thanks, VoteFromAbroad \n If you did not make this request, please contact us by replying to this mail.",
+    "verificationSMS": "Your verification code is: {password} – votefromabroad.org – (This code can only be used once and expires in 5 minutes.)"
   },
   "faq": {
     "title": "Frequently Asked Questions",
