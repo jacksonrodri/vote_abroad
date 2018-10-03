@@ -17,18 +17,6 @@
   DEVSTAGE = "prod"
 
 [[redirects]]
-  from = "/"
-  to = "/es"
-  status = 301
-  conditions = {Language = ["es"]}
-
-[[redirects]]
-  from = "/envelope/"
-  to = "/envelope/es"
-  status = 301
-  conditions = {Language = ["es"]}
-
-[[redirects]]
 from = "/api/place/*"
 to = "https://maps.googleapis.com/maps/api/place/:splat"
 status = 200
@@ -65,6 +53,13 @@ from = "/api/fpca/dev"
 to = "https://uf25owq668.execute-api.us-east-1.amazonaws.com/dev/pdf" # dev
 status = 200
 force = false
+
+[[redirects]]
+  from = "/*"
+  to = "/es/:splat"
+  status = 302
+  force = true
+  conditions = {Language = ["es"]}
 
 [[redirects]]
   from = "/*"
