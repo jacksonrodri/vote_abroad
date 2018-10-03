@@ -60,7 +60,8 @@ module.exports = {
       { field: 'Branch', value: process.env.BRANCH || 'dev' }
     ],
     debug: {
-      sendHitTask: process.env.DEVSTAGE !== 'dev'
+      sendHitTask: process.env.DEVSTAGE !== 'dev',
+      enabled: true
     }
   },
   proxy: {
