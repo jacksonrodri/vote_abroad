@@ -43,7 +43,8 @@ module.exports = {
     commitRef: process.env.COMMIT_REF || '',
     offline: process.env.OFFLINE || false,
     stage: process.env.DEVSTAGE || 'dev',
-    isStudentSite: process.env.IS_STUDENT_SITE || false
+    isStudentSite: process.env.IS_STUDENT_SITE || false,
+    branch: process.env.BRANCH || 'dev'
   },
   modules: [
     // '@nuxtjs/sentry',
@@ -55,6 +56,9 @@ module.exports = {
   ],
   'google-analytics': {
     id: 'UA-126220374-1',
+    set: [
+      { field: 'Branch', value: process.env.BRANCH || 'dev' }
+    ],
     debug: {
       sendHitTask: process.env.DEVSTAGE !== 'dev'
     }
