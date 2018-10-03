@@ -1101,7 +1101,7 @@
     electionType: 'State Primary'
     rules:
         Registration:
-            - {voterType: {}, rule: {}, date: '2018-08-13T00:00:00'}
+            - {voterType: {}, rule: 'Received by', date: '2018-08-13T00:00:00'}
         'Ballot Request':
             - {voterType: {}, rule: 'Received by*', date: '2018-08-22T16:00:00'}
         'Ballot Return':
