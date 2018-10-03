@@ -55,10 +55,57 @@ status = 200
 force = false
 
 [[redirects]]
-  from = "/*"
-  to = "/es/:splat"
+  from = "/"
+  to = "/es"
   status = 302
-  force = true
+  conditions = {Language = ["es"]}
+
+[[redirects]]
+  from = "/faqs/*"
+  to = "/es/faqs/:splat"
+  status = 302
+  conditions = {Language = ["es"]}
+
+[[redirects]]
+  from = "/elections/*"
+  to = "/es/elections/:splat"
+  status = 302
+  conditions = {Language = ["es"]}
+
+[[redirects]]
+  from = "/states/*"
+  to = "/es/states/:splat"
+  status = 302
+  conditions = {Language = ["es"]}
+
+[[redirects]]
+  from = "/about-us"
+  to = "/es/about-us"
+  status = 302
+  conditions = {Language = ["es"]}
+
+[[redirects]]
+  from = "/privacy"
+  to = "/es/privacy"
+  status = 302
+  conditions = {Language = ["es"]}
+
+[[redirects]]
+  from = "/terms-of-use"
+  to = "/es/terms-of-use"
+  status = 302
+  conditions = {Language = ["es"]}
+
+[[redirects]]
+  from = "/cookie-policy"
+  to = "/es/cookie-policy"
+  status = 302
+  conditions = {Language = ["es"]}
+
+[[redirects]]
+  from = "/envelope"
+  to = "/es/envelope"
+  status = 302
   conditions = {Language = ["es"]}
 
 [[redirects]]
