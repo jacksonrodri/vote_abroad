@@ -19,7 +19,8 @@
         :loading="isFetching"
         @keypress.native="getAsyncData"
         @keyup.delete.native="getAsyncData"
-        @select="option => fillData(option)">
+        @select="option => fillData(option)"
+        @focus="$ga.event('formAction', 'focus/select', 'votAdr.A')">
         <template slot-scope="props">{{ props.option.description }}</template>
         <template slot="empty">No results found</template>
         <template slot="header">
@@ -36,7 +37,8 @@
         autocomplete="section-voting shipping address-line2"
         ref="B"
         name="Apartment"
-        v-model="apt"></b-input>
+        v-model="apt"
+        @focus="$ga.event('formAction', 'focus/select', 'votAdr.B')"></b-input>
     </b-field>
     <div class="field is-horizontal">
       <div class="field-body">
@@ -53,7 +55,8 @@
             autocomplete="section-voting shipping address-level2"
             :loading="isFetchingCity"
             @keyup.native="getAsyncDataCity"
-            @select="option => option ? fillDataCity(option) : ''">
+            @select="option => option ? fillDataCity(option) : ''"
+            @focus="$ga.event('formAction', 'focus/select', 'votAdr.C')">
             <template slot-scope="props">{{ props.option.description.replace(', USA', '') }} </template>
             <template slot="empty">No results found</template>
           </b-autocomplete>
@@ -66,7 +69,8 @@
             name="state"
             autocomplete="section-voting shipping address-level1"
             expanded
-            :placeholder="$t('request.votAdr.S')">
+            :placeholder="$t('request.votAdr.S')"
+            @focus="$ga.event('formAction', 'focus/select', 'votAdr.S')">
             <option
               v-for="state in statesSortedLocalized"
               :value="state.iso"
@@ -85,7 +89,8 @@
             name="zip"
             autocomplete="section-voting shipping postal-code"
             expanded
-            v-model="zip"></b-input>
+            v-model="zip"
+            @focus="$ga.event('formAction', 'focus/select', 'votAdr.Z')"></b-input>
         </b-field>
       </div>
     </div>
@@ -94,7 +99,8 @@
         :placeholder="$t('request.votAdr.Y')"
         name="county"
         :disabled="state === 'DC' || state === 'PR' || state === 'VI' || state === 'AS' || state === 'GU'"
-        v-model="county"></b-input>
+        v-model="county"
+        @focus="$ga.event('formAction', 'focus/select', 'votAdr.Y')"></b-input>
     </b-field>
   </div>
 </template>
@@ -233,6 +239,7 @@ export default {
       }
     },
     state: function (newVal, oldVal) {
+      this.$ga.set('dimension2', newVal)
       if (newVal) this.$emit('delayTouch', 'Z')
       if (this.leoState && this.leoState.toLowerCase() !== newVal.toLowerCase()) {
         this.$store.commit('requests/update', {leo: null})

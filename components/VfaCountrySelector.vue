@@ -75,6 +75,7 @@ export default {
     value (val) {
       if (val) this.countrySearch = this.countries.find(x => x.code === val).name
       this.updateCountryData(val)
+      this.$ga.event('formAction', `${this.type} Country Selected`, val)
     }
   },
   methods: {

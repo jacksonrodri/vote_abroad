@@ -5,7 +5,9 @@
   <b-field grouped
     group-multiline>
     <p class="control">
-      <button @click.prevent="isRegistered = 'registered'" :class="[baseClass, {'is-success': registered}]">
+      <button
+        @click.prevent="isRegistered = 'registered'"
+        :class="[baseClass, {'is-success': registered}]">
         <span v-show="registered" class="icon is-small">
           <i class="fas fa-check"></i>
         </span>
@@ -15,7 +17,9 @@
       </button>
     </p>
     <p class="control">
-      <button @click.prevent="isRegistered = 'notRegistered'" :class="[baseClass, {'is-success': notRegistered}]">
+      <button
+        @click.prevent="isRegistered = 'notRegistered'; $ga.event('formAction', 'focus/select', 'isRegistered')"
+        :class="[baseClass, {'is-success': notRegistered}]">
         <span v-show="notRegistered" class="icon is-small">
           <i class="fas fa-check"></i>
         </span>
@@ -25,7 +29,9 @@
       </button>
     </p>
     <p class="control">
-      <button @click.prevent="isRegistered = 'unsure'" :class="[baseClass, {'is-success': unsure}]">
+      <button
+        @click.prevent="isRegistered = 'unsure'; $ga.event('formAction', 'focus/select', 'isRegistered')"
+        :class="[baseClass, {'is-success': unsure}]">
         <span v-show="unsure" class="icon is-small">
           <i class="fas fa-check"></i>
         </span>

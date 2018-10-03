@@ -4,13 +4,17 @@
     <span class="is-flex"><label class="label">{{ label }}</label><span @click="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
     <b-field grouped group-multiline :type="type">
       <p class="control" v-for="(party, index) in Object.keys(partyChoices)" :key="index">
-        <a @click="() => {selectedParty = (selectedParty === party ? null : party); isOtherButNoValue = false}" :class="[baseClass, {'is-success': partyChoices[party].aliases.indexOf(selectedParty ? selectedParty.toString().toLowerCase() : '') > -1}]">
+        <a
+          @click="() => {selectedParty = (selectedParty === party ? null : party); isOtherButNoValue = false; $ga.event('formAction', 'focus/select', 'party')}"
+          :class="[baseClass, {'is-success': partyChoices[party].aliases.indexOf(selectedParty ? selectedParty.toString().toLowerCase() : '') > -1}]">
           <b-icon v-if="partyChoices[party].aliases.indexOf(selectedParty ? selectedParty.toString().toLowerCase() : '') > -1" icon="check"></b-icon>
           <span>{{$t(`request.party.${party.toLowerCase()}`)}}</span><span v-if="state === 'MN' && party.toLowerCase() === 'democratic'">&nbsp;(DFL)</span><span v-if="state === 'ND' && party.toLowerCase() === 'democratic'">&nbsp;(D-NPL)</span>
         </a>
       </p>
       <p class="control">
-        <a @click="selectOther(!isOther)" :class="[baseClass, {'is-success': isOther}]">
+        <a
+          @click="selectOther(!isOther); $ga.event('formAction', 'focus/select', 'party')"
+          :class="[baseClass, {'is-success': isOther}]">
           <b-icon v-if="isOther" icon="check"></b-icon>
           <span>{{$t('request.party.other')}}</span>
         </a>
@@ -125,7 +129,7 @@ export default {
     }
   },
   computed: {
-    isStudentSite () { return this.$store.state.isStudentSite },
+    isStudentSite () { return process.env.isStudentSite === 'true' },
     // thisValue: {
     //   get () { return this.value },
     //   set (value) {
@@ -177,6 +181,10 @@ export default {
         this.currentTime = Math.trunc((new Date()).getTime() / 1000)
       }, 1000)
     }
+  },
+  beforeDestroy () {
+    if (this.value) this.$ga.set('dimension4', this.value)
+    this.$ga.set('dimension5', Boolean(this.joinValue))
   },
   validations () {
     return {

@@ -38,7 +38,6 @@ export const state = () => ({
   upcomingElections: [],
   currentRequestId: null,
   isMenuOpen: false,
-  isStudentSite: true,
   isPrivacyOptInModalActive: false
 })
 

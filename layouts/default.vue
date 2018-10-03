@@ -10,7 +10,11 @@
             <nuxt-link place="cookiePolicy" :to="localePath({ name: 'page', params: {page: 'cookie-policy'}})" class="has-text-warning">{{ $t('optIn.cookiePolicy') }}</nuxt-link>
             <nuxt-link place="termsOfUse" :to="localePath({ name: 'page', params: {page: 'terms-of-use'}})" class="has-text-warning">{{ $t('optIn.termsOfUse') }}</nuxt-link>
           </i-18n>
-          <div class="action is-warning"><button @click="optIn" class="button is-dark">{{ $t('optIn.agree') }}</button></div>
+          <div class="action is-warning">
+            <button
+              @click="optIn"
+              class="button is-dark">{{ $t('optIn.agree') }}</button>
+          </div>
           <!-- <vfa-opt-in
             @optIn="optIn"
             :privacyPage="localePath({ name: 'page', params: {page: 'privacy'}})"

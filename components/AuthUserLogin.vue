@@ -238,6 +238,7 @@ export default {
         type: 'is-success',
         duration: 8000
       })
+      this.$ga.event('Auth', 'anonymousStart')
       this.$router.push(this.localePath({ name: 'request-stage', params: { stage: 'your-information' } }))
     },
     startAuth: function () {
@@ -246,6 +247,7 @@ export default {
         this.$v.phoneOrEmail.$touch()
         if (this.$v.phoneOrEmail.$error) {
           this.$refs.phoneOrEmail.$refs.phoneOrEmail.focus()
+          this.$ga.event('Auth', 'authInvalid', 'loginType', 'sms')
           this.authenticating = false
         } else {
           if (!this.$cookie.get('vfaOptIn')) {
@@ -258,12 +260,14 @@ export default {
             if (this.isValidNumber(this.phoneOrEmail)) {
               this.loginType = 'sms'
               this.updateUser({mobileIntFormat: this.phoneOrEmail})
+              this.$ga.event('Auth', 'authStart', 'loginType', 'sms')
               this.sendSmsCode()
                 .then(() => { this.authenticating = false })
             }
             if (this.isValidEmail(this.phoneOrEmail)) {
               this.loginType = 'email'
               this.updateUser({emailAddress: this.phoneOrEmail})
+              this.$ga.event('Auth', 'authStart', 'loginType', 'email')
               this.sendEmailLink()
                 .then(() => { this.authenticating = false })
             }

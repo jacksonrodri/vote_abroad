@@ -49,7 +49,8 @@
               :ref="part.type"
               @keypress.native="getAsyncData"
               @keyup.delete.native="getAsyncData"
-              @select="option => fillData(option)">
+              @select="option => fillData(option)"
+              @focus="$ga.event('formAction', 'focus/select', `${fieldName}.${part.type}`)">
               <template slot-scope="props">{{ props.option.description }}</template>
               <template slot="header">
                 <div class="buttons has-addons is-right">
@@ -66,6 +67,7 @@
               :value="adr[part.type] || null"
               :ref="part.type"
               @input="val => updateAddress(part.type, val)"
+              @focus="$ga.event('formAction', 'focus/select', `${fieldName}.${part.type}`)"
               :class="[part.class, 'req-select']"
               expanded>
               <option
@@ -84,7 +86,8 @@
               keep-first
               :value="adr[part.type] || null"
               @input="val => updateAddress(part.type, val)"
-              @select="option => option ? updateAddress(part.type, option.name) : ''"></b-autocomplete>
+              @select="option => option ? updateAddress(part.type, option.name) : ''"
+              @focus="$ga.event('formAction', 'focus/select', `${fieldName}.${part.type}`)"></b-autocomplete>
             <b-input
               v-else-if="part.type !== 'alt5'"
               :ref="part.type"
@@ -93,7 +96,7 @@
               :placeholder="localizeLabel(part.label)"
               :maxlength="adr[part.type] && hasFocus === part.type ? 40 : ''"
               :has-counter="adr[part.type] && hasFocus === part.type"
-              @focus="hasFocus = part.type"
+              @focus="hasFocus = part.type; $ga.event('formAction', 'focus/select', `${fieldName}.${part.type}`)"
               @blur="hasFocus = ''"
               :type="part.displayType"
               :class="part.class"></b-input>
@@ -101,7 +104,9 @@
         </template>
         <template v-if="formatted && formatted.length === 1">
           <b-field v-for="n in ['A', 'B', 'C', 'S']" :key="n">
-            <b-input disabled :value="$t(`request.votAdr.${n}`) + (n === 'A' ? $t('request.abrAdr.selectCountry') : '')"></b-input>
+            <b-input
+              disabled
+              :value="$t(`request.votAdr.${n}`) + (n === 'A' ? $t('request.abrAdr.selectCountry') : '')"></b-input>
           </b-field>
         </template>
       </transition-group>
@@ -111,6 +116,7 @@
         <b-radio-button
           :value="usesAlternateFormat"
           @input="val => update({[fieldName]: Object.assign({}, this.adr || {}, {usesAlternateFormat: !usesAlternateFormat})})"
+          @click="$ga.event('formAction', 'focus/select', `${fieldName}.usesAlternateFormat`)"
           :native-value="!usesAlternateFormat"
           :type="usesAlternateFormat ? 'is-success' : 'is-danger'">
           <b-icon :icon="!usesAlternateFormat ? 'edit' : 'align-justify'"></b-icon>
@@ -256,6 +262,7 @@ export default {
       this.createFormattedAddress()
     },
     ctry: async function (val, oldVal) {
+      if (this.fieldName === 'abrAdr') this.$ga.set('dimension3', val)
       if (val) {
         if (this.postalMetadataHasCountry(val)) {
           this.createFormattedAddress()

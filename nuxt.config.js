@@ -57,10 +57,14 @@ module.exports = {
   'google-analytics': {
     id: 'UA-126220374-1',
     set: [
-      { field: 'Branch', value: process.env.BRANCH || 'dev' }
+      { field: 'dimension1', value: process.env.BRANCH || 'dev' }
     ],
     debug: {
-      sendHitTask: process.env.DEVSTAGE !== 'dev'
+      sendHitTask: process.env.DEVSTAGE !== 'dev',
+      enabled: process.env.DEVSTAGE === 'dev'
+    },
+    commands: {
+      trackFormAction: function trackFormAction (fieldName = 'unknown') { this.$ga.event('formAction', 'focus/select', 'field', fieldName) }
     }
   },
   proxy: {

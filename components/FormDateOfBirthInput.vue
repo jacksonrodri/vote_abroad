@@ -13,7 +13,7 @@
       :max-date="maxDate"
       :inline="!allowNative"
       ref="dob"
-      @input="val => showVal(val)"
+      @input="val => {showVal(val); $ga.event('formAction', 'focus/select', 'dob')}"
       :focused-date="focusedDate"
       @changeMonth="val => changeMonth(val)"
       @changeYear="val => changeYear(val)"

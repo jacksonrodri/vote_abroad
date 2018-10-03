@@ -5,7 +5,9 @@
         :message="!isCivilianType && !isMilitaryType  && validations.$error ? $t(`request.voterClass.messages.typeRequired`) : ''">
         <b-field grouped group-multiline>
           <p class="control">
-            <button @click.prevent="voterClass = 'civilianType'" :class="[baseClass, {'is-success': isCivilianType}]">
+            <button
+              @click.prevent="voterClass = 'civilianType'"
+              :class="[baseClass, {'is-success': isCivilianType}]">
               <span v-show="isCivilianType" class="icon is-small">
                 <i class="fas fa-check"></i>
               </span>
@@ -15,7 +17,9 @@
             </button>
           </p>
           <p class="control">
-            <button @click.prevent="voterClass = 'militaryType'" :class="[baseClass, {'is-success': isMilitaryType}]">
+            <button
+              @click.prevent="voterClass = 'militaryType'"
+              :class="[baseClass, {'is-success': isMilitaryType}]">
               <span v-show="isMilitaryType" class="icon is-small">
                 <i class="fas fa-check"></i>
               </span>
@@ -32,7 +36,10 @@
           <label class="label">
             {{ isMilitaryType ? $t('request.voterClass.whatMilType') : $t('request.voterClass.whatCivType') }}
           </label>
-          <span @click.prevent="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;">
+          <span
+            @click.prevent="isOpen = !isOpen; $ga.event('formAction', 'focus/select', 'voterClass')"
+            class="icon has-text-info"
+            style="cursor: pointer;">
             <i class="fas fa-info-circle"></i>
           </span>
         </span>
@@ -41,7 +48,9 @@
       <!-- <b-field disabled :label="isMilitaryType ? 'What type of military voter are you?' : 'Which best describes you?'"> -->
         <b-field grouped group-multiline>
           <p class="control" v-show="isMilitaryType">
-            <button @click.prevent="voterClass = 'military'" :class="[baseClass, {'is-success': isMilitary}]">
+            <button
+              @click.prevent="voterClass = 'military'; $ga.event('formAction', 'focus/select', 'voterClass')"
+              :class="[baseClass, {'is-success': isMilitary}]">
               <span v-show="isMilitary" class="icon is-small">
                 <i class="fas fa-check"></i>
               </span>
@@ -51,7 +60,9 @@
             </button>
           </p>
           <p class="control" v-show="isMilitaryType">
-            <button @click.prevent="voterClass = 'milSpouse'" :class="[baseClass, {'is-success': isMilSpouse}]">
+            <button
+              @click.prevent="voterClass = 'milSpouse'; $ga.event('formAction', 'focus/select', 'voterClass')"
+              :class="[baseClass, {'is-success': isMilSpouse}]">
               <span v-show="isMilSpouse" class="icon is-small">
                 <i class="fas fa-check"></i>
               </span>
@@ -61,7 +72,9 @@
             </button>
           </p>
           <p class="control" v-show="isMilitaryType">
-            <button @click.prevent="voterClass = 'natGuard'" :class="[baseClass, {'is-success': isNatGuard}]">
+            <button
+              @click.prevent="voterClass = 'natGuard'; $ga.event('formAction', 'focus/select', 'voterClass')"
+              :class="[baseClass, {'is-success': isNatGuard}]">
               <span v-show="isNatGuard" class="icon is-small">
                 <i class="fas fa-check"></i>
               </span>
@@ -71,7 +84,9 @@
             </button>
           </p>
           <p class="control" v-show="!isMilitaryType">
-            <button @click.prevent="voterClass = 'uncertainReturn'" :class="[baseClass, {'is-success': isUncertainReturn}]">
+            <button
+              @click.prevent="voterClass = 'uncertainReturn'; $ga.event('formAction', 'focus/select', 'voterClass')"
+              :class="[baseClass, {'is-success': isUncertainReturn}]">
               <span v-show="isUncertainReturn" class="icon is-small">
                 <i class="fas fa-check"></i>
               </span>
@@ -81,7 +96,9 @@
             </button>
           </p>
           <p class="control" v-show="!isMilitaryType">
-            <button @click.prevent="voterClass = 'intendToReturn'" :class="[baseClass, {'is-success': isIntendToReturn}]">
+            <button
+              @click.prevent="voterClass = 'intendToReturn'; $ga.event('formAction', 'focus/select', 'voterClass')"
+              :class="[baseClass, {'is-success': isIntendToReturn}]">
               <span v-show="isIntendToReturn" class="icon is-small">
                 <i class="fas fa-check"></i>
               </span>
@@ -91,7 +108,9 @@
             </button>
           </p>
           <p class="control" v-show="!isMilitaryType" v-if="allowsNeverResided">
-            <button @click.prevent="voterClass = 'neverResided'" :class="[baseClass, {'is-success': isNeverResided}]">
+            <button
+              @click.prevent="voterClass = 'neverResided'; $ga.event('formAction', 'focus/select', 'voterClass')"
+              :class="[baseClass, {'is-success': isNeverResided}]">
               <span v-show="isNeverResided" class="icon is-small">
                 <i class="fas fa-check"></i>
               </span>

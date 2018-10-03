@@ -140,7 +140,7 @@ export default {
     }
   },
   computed: {
-    isStudentSite () { return this.$store.state.isStudentSite },
+    isStudentSite () { return process.env.isStudentSite === 'true' },
     voterMessage () { return this.$t('email.voterEmail', {leoEmail: this.leoEmail, leoName: this.leoName, leoPhone: this.leoPhone}) + this.message },
     testMessage () { return this.$t('email.testEmail', {leoEmail: this.leoEmail, leoName: this.leoName}) + this.message },
     formEmail: {
@@ -238,6 +238,7 @@ export default {
             this.$store.dispatch('requests/updateRequest', {status: 'formEmailed'})
             // if (/AR|CT|NJ|NY|TX|VT/.test(this.state)) this.$emit('input', 'specialInstructions')
             // else
+            this.$ga.event('formAction', 'completed', 'email')
             this.$router.push(this.localePath('dashboard'))
             this.$toast.open({
               message: this.$t('request.sig.successMessage', {email: this.formEmail}),
