@@ -57,7 +57,7 @@ module.exports = {
   'google-analytics': {
     id: 'UA-126220374-1',
     set: [
-      { field: 'Branch', value: process.env.BRANCH || 'dev' }
+      { field: 'dimension1', value: process.env.BRANCH || 'dev' }
     ],
     debug: {
       sendHitTask: process.env.DEVSTAGE !== 'dev',
