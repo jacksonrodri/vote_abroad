@@ -64,9 +64,7 @@ module.exports = {
       enabled: true
     },
     commands: {
-      trackFormAction (fieldName = 'unknown') {
-        this.$ga.event('formAction', 'focus/select', 'field', fieldName)
-      }
+      trackFormAction: function trackFormAction (fieldName = 'unknown') { this.$ga.event('formAction', 'focus/select', 'field', fieldName) }
     }
   },
   proxy: {

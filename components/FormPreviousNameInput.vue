@@ -1,7 +1,7 @@
 <template>
 <div>
   <div class="field">
-    <span class="is-flex"><label class="label">{{ instructions }}<span @click="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span><transition name="fade"><span v-if="!name" class="required"> {{required || required === '' ? $t('request.field.req') : $t('request.field.opt')}}</span></transition></label></span>
+    <span class="is-flex"><label class="label">{{ instructions }}<span @click="isOpen = !isOpen; $ga.event('formAction', 'info/help', 'previousName')" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span><transition name="fade"><span v-if="!name" class="required"> {{required || required === '' ? $t('request.field.req') : $t('request.field.opt')}}</span></transition></label></span>
       <b-field grouped>
         <p class="control">
           <button @click.prevent="setUsesPreviousName(true)" :class="[baseClass, {'is-success': usesPreviousName}]">
@@ -28,7 +28,7 @@
   <b-field
     v-show="usesPreviousName"
     :type="type"
-    v-ga.focus="$ga.commands.trackFormAction.bind(this, 'previousName')"
+    @focus="$ga.event('formAction', 'focus/select', 'previousName')"
     :message="message"
     :label="label">
     <!-- <b-input :value="value && value.previousName ? value.previousName : ''" @input="val => setName(val)"></b-input> -->

@@ -14,6 +14,7 @@
         <b-tabs type="is-toggle" expanded>
           <b-tab-item :label="$t('request.stages.email')"
             v-if="stateRules && stateRules.fpcaSubmitOptionsRequest.includes('Email')"
+            @click="$ga.event('formAction', 'submitTypeSelected', 'email')"
             icon="at">
             <section v-if="isIE || /AR|CT|NJ|NY|WY/.test(currentRequest.leo.s)" class="section">
               <h3 class="subtitle is-4">{{$t('request.stages.emailIntro')}}</h3>
@@ -93,7 +94,12 @@
                       <div class="content">
                         <p v-if="canCaptureImage" class="is-size-6" v-html="$options.filters.markdown($t('request.stages.emailDigiSign'))"></p>
                         <p v-else class="is-size-6" v-html="$options.filters.markdown($t('request.stages.emailUploadSignature'))"></p>
-                        <a v-if="!signStep" class="button is-pulled-right is-primary" @click="signStep = 'signatureAffirmation'"><b-icon icon="camera" size="is-small"></b-icon><span>{{$t('request.stages.sign')}}</span></a>
+                        <a v-if="!signStep"
+                          class="button is-pulled-right is-primary"
+                          @click="signStep = 'signatureAffirmation'">
+                          <b-icon icon="camera" size="is-small"></b-icon>
+                          <span>{{$t('request.stages.sign')}}</span>
+                        </a>
                       </div>
                     </div>
                   </article>
@@ -140,7 +146,9 @@
               </transition>
             </section>
           </b-tab-item>
-          <b-tab-item :label="$t('request.stages.fax')"
+          <b-tab-item
+            :label="$t('request.stages.fax')"
+            @click="$ga.event('formAction', 'submitTypeSelected', 'fax')"
             v-if="stateRules && stateRules.fpcaSubmitOptionsRequest.indexOf('Fax') > -1"
             icon="fax">
             <section class="section">
@@ -197,7 +205,9 @@
               </div>
             </section>
           </b-tab-item>
-          <b-tab-item :label="$t('request.stages.mail')"
+          <b-tab-item
+            :label="$t('request.stages.mail')"
+            @click="$ga.event('formAction', 'submitTypeSelected', 'mail')"
             v-if="stateRules && stateRules.fpcaSubmitOptionsRequest.indexOf('Mail') > -1"
             icon="envelope-open">
             <section class="section">
@@ -399,6 +409,7 @@ export default {
     confirmPdfDownload () {
       this.$store.dispatch('requests/updateRequest', {status: 'formDownloaded'})
       this.$store.commit('requests/update', {status: 'formDownloaded'})
+      this.$ga.event('formAction', 'completed', 'download')
       this.$toast.open({
         message: this.md(this.$t('request.fpcaDownload.downloadedAlertMessage')),
         type: 'is-success',
@@ -416,6 +427,11 @@ export default {
       setTimeout(() => {
         this.fpca = this.$refs.fpca.$refs['my-canvas'].toDataURL()
       }, 800)
+    }
+  },
+  watch: {
+    signStep (val) {
+      this.$ga.event('formAction', 'sigCapture', val)
     }
   },
   computed: {

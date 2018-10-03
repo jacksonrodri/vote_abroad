@@ -238,6 +238,7 @@ export default {
             this.$store.dispatch('requests/updateRequest', {status: 'formEmailed'})
             // if (/AR|CT|NJ|NY|TX|VT/.test(this.state)) this.$emit('input', 'specialInstructions')
             // else
+            this.$ga.event('formAction', 'completed', 'email')
             this.$router.push(this.localePath('dashboard'))
             this.$toast.open({
               message: this.$t('request.sig.successMessage', {email: this.formEmail}),

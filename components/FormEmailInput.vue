@@ -23,6 +23,7 @@
         :autocomplete="autoComplete"
         :maxlength="maxLength"
         @input="() => { $emit('input'); $emit('delayTouch', v) }"
+        @focus="$ga.event('formAction', 'focus/select', fieldName)"
         :ref="fieldName"></b-input>
     </b-field>
   </b-field>

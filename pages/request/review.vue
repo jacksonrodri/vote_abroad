@@ -43,7 +43,16 @@
   </div>
   <div class="column is-10 is-8-desktop is-7-widescreen is-6-fullhd is-paddingless">
 
-        <nuxt-link :to="localePath({ name: 'request-stage', params: {stage: 'id-and-contact-information'} })" class="button is-light is-medium is-pulled-left" exact ><b-icon pack="fas" icon="caret-left"></b-icon><span>{{$t('request.stages.back')}}</span></nuxt-link>
+        <nuxt-link
+          :to="localePath({ name: 'request-stage', params: {stage: 'id-and-contact-information'} })"
+          class="button is-light is-medium is-pulled-left"
+          exact>
+          <b-icon
+            pack="fas"
+            icon="caret-left">
+          </b-icon>
+          <span>{{$t('request.stages.back')}}</span>
+        </nuxt-link>
 
         <button @click="record(localePath({ name: 'request-stage', params: { stage: 'sign-and-submit'} }))" :to="localePath({ name: 'request-stage', params: { stage: 'sign-and-submit'} })" class="button is-primary is-medium is-pulled-right" exact ><span>{{$t('request.stages.submit')}}</span><b-icon pack="fas" icon="caret-right"></b-icon></button>
   </div>
