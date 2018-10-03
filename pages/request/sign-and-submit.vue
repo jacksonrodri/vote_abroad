@@ -366,6 +366,9 @@ export default {
     }
   },
   mounted () {
+    if (this.joinDa && !this.$store.state.userauth.user.isDA) {
+      this.$ga.event('formAction', 'joinDa')
+    }
     let feat = this
     if (process.browser) {
       let encodedAbrAdr = encodeURIComponent(`${this.abrAdr.formatted && this.abrAdr.formatted[0] ? this.abrAdr.formatted[0] : ''}\n${this.abrAdr.formatted && this.abrAdr.formatted[1] ? this.abrAdr.formatted[1] : ''}\n${this.abrAdr.formatted && this.abrAdr.formatted[2] ? this.abrAdr.formatted[2] : ''}\n${this.abrAdr.formatted && this.abrAdr.formatted[3] ? this.abrAdr.formatted[3] : ''}\n${this.abrAdr.formatted && this.abrAdr.formatted[4] ? this.abrAdr.formatted[4] : ''}`)
@@ -674,6 +677,7 @@ export default {
     sex () { return this.currentRequest && this.currentRequest.sex && this.currentRequest.sex !== 'decline' ? this.currentRequest.sex.toString() : ' ' },
     recBallot () { return this.currentRequest && this.currentRequest.recBallot ? this.currentRequest.recBallot.toString() : ' ' },
     isRegistered () { return this.currentRequest ? this.currentRequest.isRegistered : null },
+    joinDa () { return this.currentRequest ? Boolean(this.currentRequest.joinDa) : false },
     stateRules () {
       if (this.votState) {
         return this.allStateRules.find(x => x.iso.toLowerCase() === this.votState.toLowerCase())

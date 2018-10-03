@@ -137,10 +137,14 @@ export default {
       if (typeof str !== 'string') {
         return str
       }
-      return this.$te(`election.${this.camelize(str)}`)
-        ? this.$t(`election.${this.camelize(str)}`)
-        : this.$te(`election.${str.toLowerCase().replace(/\s/gi, '')}`)
-          ? this.$t(`election.${str.toLowerCase().replace(/\s/gi, '')}`)
+      let newStr = str
+      if (str.includes('*')) {
+        newStr = str.replace(/\*/g, '')
+      }
+      return this.$te(`election.${this.camelize(newStr)}`)
+        ? this.$t(`election.${this.camelize(newStr)}`) + str.replace(/[^*]/g, '')
+        : this.$te(`election.${newStr.toLowerCase().replace(/\s/gi, '')}`)
+          ? this.$t(`election.${newStr.toLowerCase().replace(/\s/gi, '')}`) + str.replace(/[^*]/g, '')
           : str
     },
     camelize (str) {
