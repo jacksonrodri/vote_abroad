@@ -12,6 +12,13 @@
     "anonymous": "or start an anonymous session",
     "tooltip": "Your email or number will create an account for you to use to easily sign in to votefromabroad and save your information from year to year. An anonymous session allows you to create an FPCA form and send it to your local election office, but will not save your information for you to return to in the future."
   },
+  "optIn": {
+    "optIn": "Vote From Abroad is a non-partisan platform that helps US citizens vote from abroad by producing the necessary Federal forms. In using this site, only the information necessary for filling out Federal forms related to voting as US citizen overseas is collected. Your data privacy is our top concern. Please read and accept our {privacyPolicy}, {cookiePolicy} and {termsOfUse}.",
+    "privacyPolicy": "Privacy Policy",
+    "cookiePolicy": "Cookie Policy",
+    "termsOfUse": "Terms of Service",
+    "agree": "I Agree"
+  },
   "email": {
     "voterEmail": "Thanks for sending in your FPCA form to your local election office. Here is a copy for your records. \n\n**Please note this is an automated email from Vote From Abroad and not confirmation from your local election office.**\n\nIf you do not receive a confirmation of receipt from your local election office within 2 business days, please follow up with them directly: \n\n {leoName} \n\n Email: {leoEmail} \n\n Phone: {leoPhone} \n\n If you need any help, contact our volunteer voter support team at help@votefromabroad.org. \n\n --------\n\n",
     "testEmail": "********** \nThis message will be sent to {leoEmail} {leoName} after VoteFromAbroad 3.0 is launched. \n\n We have NOT sent in your FPCA. \n ********** \n\n\n\n"
