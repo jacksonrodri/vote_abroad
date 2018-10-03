@@ -6,18 +6,22 @@
           <ul>
             <li><nuxt-link :to="localePath('index')">{{$t('home')}}</nuxt-link></li>
             <li><nuxt-link :to="localePath('states')">{{$t('menu.stateGuide')}}</nuxt-link></li>
-            <li class="is-active"><a href="#" aria-current="page">{{ state.title }}</a></li>
+            <li class="is-active"><a href="#" aria-current="page">{{ $t(`states.${state.iso}`) }}</a></li>
           </ul>
         </nav>
         <h1 class="title">
-          {{ state.title }}
+          {{ $t(`states.${state.iso}`) }}
         </h1>
-        <nuxtent-body class="content" :body="state.body" />
-          <h1 class="title is-4">{{$t('states.stateTitle', {state: state.title})}}</h1>
+        <!-- <nuxtent-body class="content" :body="state.body" /> -->
+        <i-18n path="states.stateBody" tag="p" v-if="$te('states.stateBody')">
+          <nuxt-link :to="localePath('index')" class="has-text-primary">{{$t('states.clickHere')}}</nuxt-link>
+        </i-18n>
+        <br/>
+          <h1 class="title is-4">{{$t('states.stateTitle', {state: $t(`states.${state.iso}`)})}}</h1>
           <b-table hoverable :data="upcomingElections">
             <template slot-scope="props">
               <b-table-column :label="$t('election.electionDay')">
-                <h1 class="title is-5">{{ props.row.electionType }}</h1>
+                <h1 class="title is-5">{{ localizeIfAvailable(props.row.electionType) }}</h1>
               </b-table-column>
               <b-table-column>
                 <div class="calendar">
@@ -27,15 +31,15 @@
                   </div>
                 </div>
               </b-table-column>
-              <b-table-column v-for="(rule, key) in props.row.rules" :key="key" :label="key">
+              <b-table-column v-for="(rule, key) in props.row.rules" :key="key" :label=" localizeIfAvailable(key) ">
                 <ul>
                   <li v-for="(deadline, index) in rule"
                     :key="index.toString() + deadline.rule + deadline.voterType"
                     v-if="deadline.rule !== 'Not Required'">
-                    <strong>{{ typeof deadline.voterType === 'string' ? deadline.voterType : 'All Voters' }}</strong><br/><span class="tag is-success">{{ deadline.rule }}</span><br/>{{ new Date(deadline.date).toLocaleDateString(dateFormat, {year: 'numeric', month: 'short', day: 'numeric'}) }}
+                    <strong>{{ typeof deadline.voterType === 'string' ? localizeIfAvailable(deadline.voterType) : localizeIfAvailable('All Voters') }}</strong><br/><span class="tag is-success">{{ localizeIfAvailable(deadline.rule) }}</span><br/>{{ new Date(deadline.date).toLocaleDateString(dateFormat, {year: 'numeric', month: 'short', day: 'numeric'}) }}
                     <hr v-if="index < rule.length - 1">
                   </li>
-                  <li v-else><strong>{{ deadline.rule }}</strong></li>
+                  <li v-else><strong>{{ localizeIfAvailable(deadline.rule) }}</strong></li>
                 </ul>
               </b-table-column>
             </template>
@@ -129,6 +133,19 @@ export default {
     }
   },
   methods: {
+    localizeIfAvailable (str) {
+      return this.$te(`election.${this.camelize(str)}`)
+        ? this.$t(`election.${this.camelize(str)}`)
+        : this.$te(`election.${str.toLowerCase().replace(/\s/gi, '')}`)
+          ? this.$t(`election.${str.toLowerCase().replace(/\s/gi, '')}`)
+          : str
+    },
+    camelize (str) {
+      return str.replace(/(?:^\w|[A-Z]|\b\w|\s+)/g, function (match, index) {
+        if (+match === 0) return '' // or if (/\s+/.test(match)) for white spaces
+        return index === 0 ? match.toLowerCase() : match.toUpperCase()
+      })
+    },
     decodeHtmlEntity (str) {
       str = str.replace(/&apos;/g, "'").replace(/&quot;/g, '"').replace(/&gt;/g, '>').replace(/&lt;/g, '<').replace(/&amp;/g, '&')
       return str.replace(/&#(\d+);/g, function (match, dec) {

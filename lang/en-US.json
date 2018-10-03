@@ -202,6 +202,8 @@
     "WI": "Wisconsin",
     "WY": "Wyoming",
     "stateTitle": "Elections & Deadlines for {state} Voters Abroad",
+    "stateBody": "Remember that you need to request a ballot each calendar year that you’d like to vote in. Check below for your primary and general deadlines. {0} to start your ballot request now.",
+    "clickHere": "Click here",
     "electionOfficials": "Election Officials"
   },
   "menu": {

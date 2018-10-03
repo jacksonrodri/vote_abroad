@@ -13,7 +13,7 @@
           <b-table hoverable :data="elections">
             <template slot-scope="props">
               <b-table-column :label="$t('election.electionDay')">
-                <h1 class="title is-5">{{ props.row.electionType }}</h1>
+                <h1 class="title is-5">{{ localizeIfAvailable(props.row.electionType) }}</h1>
               </b-table-column>
               <b-table-column>
                 <div class="calendar">
@@ -23,15 +23,15 @@
                   </div>
                 </div>
               </b-table-column>
-              <b-table-column v-for="(rule, key) in props.row.rules" :key="key" :label="key">
+              <b-table-column v-for="(rule, key) in props.row.rules" :key="key" :label="localizeIfAvailable(key)">
                 <ul>
                   <li v-for="(deadline, index) in rule"
                     :key="index.toString() + deadline.rule + deadline.voterType"
                     v-if="deadline.rule !== 'Not Required'">
-                    <strong>{{ typeof deadline.voterType === 'string' ? deadline.voterType : $t('election.allVoters') }}</strong><br/><span class="tag is-success">{{ deadline.rule }}</span><br/>{{ new Date(deadline.date).toDateString() }}
+                    <strong>{{ typeof deadline.voterType === 'string' ? localizeIfAvailable(deadline.voterType) : $t('election.allVoters') }}</strong><br/><span class="tag is-success">{{ localizeIfAvailable(deadline.rule) }}</span><br/>{{ new Date(deadline.date).toLocaleDateString(dateFormat, {year: 'numeric', month: 'short', day: 'numeric'}) }}
                     <hr v-if="index < rule.length - 1">
                   </li>
-                  <li v-else><strong>{{ deadline.rule }}</strong></li>
+                  <li v-else><strong>{{ localizeIfAvailable(deadline.rule) }}</strong></li>
                 </ul>
               </b-table-column>
             </template>
@@ -57,6 +57,21 @@ export default {
   computed: {
     dateFormat () {
       return this.$i18n.locale === 'en' ? 'en-US' : 'es-ES'
+    }
+  },
+  methods: {
+    localizeIfAvailable (str) {
+      return this.$te(`election.${this.camelize(str)}`)
+        ? this.$t(`election.${this.camelize(str)}`)
+        : this.$te(`election.${str.toLowerCase().replace(/\s/gi, '')}`)
+          ? this.$t(`election.${str.toLowerCase().replace(/\s/gi, '')}`)
+          : str
+    },
+    camelize (str) {
+      return str.replace(/(?:^\w|[A-Z]|\b\w|\s+)/g, function (match, index) {
+        if (+match === 0) return '' // or if (/\s+/.test(match)) for white spaces
+        return index === 0 ? match.toLowerCase() : match.toUpperCase()
+      })
     }
   },
   transition: 'test'
