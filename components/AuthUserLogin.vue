@@ -117,7 +117,7 @@
         {{ $t('homepage.subtitle') }}
       </h2>
       <auth-phone-email-input
-        v-if="!isStudentSite"
+        v-if="!isAuthDisabled"
         ref="phoneOrEmail"
         key="phoneOrEmail"
         fieldName="phoneOrEmail"
@@ -126,13 +126,13 @@
         @pressEnter="startAuth"
         :loading="authState === 'loading'"></auth-phone-email-input>
         <!-- @delayTouch="delayTouch" -->
-      <div v-if="!isStudentSite" class="buttons is-right is-marginless">
+      <div v-if="!isAuthDisabled" class="buttons is-right is-marginless">
         <button @click.prevent="startAuth" :class="['button', 'is-large', 'is-danger', {'is-loading': authState === 'loading'}]">{{ $t('homepage.start') }}</button>
       </div>
-      <div class="buttons is-right" v-if="isStudentSite">
+      <div class="buttons is-right" v-if="isAuthDisabled">
         <button @click.prevent="anonymousStart" :class="['button', 'is-large', 'is-danger']">{{ $t('homepage.start') }}</button>
       </div>
-      <div class="buttons is-right" v-if="!isStudentSite">
+      <div class="buttons is-right" v-if="!isAuthDisabled">
         <button @click.prevent="anonymousStart" class="button is-text has-text-black is-paddingless" exact ><span>{{ $t('homepage.anonymous') }}</span></button>
         <button @click.prevent="toggleInfo" class="button is-transparent is-small">
           <span>
@@ -198,6 +198,13 @@ export default {
   },
   computed: {
     isStudentSite () { return process.env.isStudentSite === 'true' },
+    isVrSite () { return process.env.isVrSite === 'true' },
+    isAuthDisabled () { return this.isStudentSite || this.isVrSite },
+    title () {
+      return this.isStudentSite
+        ? this.$t('homepage.titleStudents')
+        : this.$t('homepage.title')
+    },
     toolTipContent () { return this.$te(`request.phoneOrEmail.tooltip`) ? snarkdown(this.$t(`request.phoneOrEmail.tooltip`)) : null },
     isAuthenticated: function () { return this.$store.getters['userauth/isAuthenticated'] },
     user () { return this.$store.state.userauth.user },

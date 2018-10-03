@@ -13,6 +13,11 @@
   DEVSTAGE = "prod"
   IS_STUDENT_SITE = "true"
 
+[context.vr.environment]
+  DEVSTAGE = "prod"
+  IS_STUDENT_SITE = "false"
+  IS_VR_SITE = "true"
+
 [context.es.environment]
   DEVSTAGE = "prod"
 

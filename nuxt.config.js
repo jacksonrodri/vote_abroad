@@ -44,6 +44,7 @@ module.exports = {
     offline: process.env.OFFLINE || false,
     stage: process.env.DEVSTAGE || 'dev',
     isStudentSite: process.env.IS_STUDENT_SITE || false,
+    isVrSite: process.env.IS_VR_SITE || false,
     branch: process.env.BRANCH || 'dev'
   },
   modules: [
