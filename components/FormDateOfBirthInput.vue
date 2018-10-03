@@ -4,7 +4,7 @@
   <b-field
     :message="v.$error ? Object.entries(v).filter(([key, value]) => key.charAt(0) !== '$' && value === false).map(x => $t(`request.dob.messages.${x[0]}`)) : '' "
     :type="(v.$error ? 'is-danger': '')">
-    <b-datepicker v-model="date"
+    <b-datepicker v-model="tempDate"
       :date-formatter="dateFormatter"
       :date-parser="dateParser2"
       :readonly="false"
@@ -17,6 +17,7 @@
       :focused-date="focusedDate"
       @changeMonth="val => changeMonth(val)"
       @changeYear="val => changeYear(val)"
+      @focus="focusDate"
       icon="calendar"
       icon-pack="fas"
       :placeholder="$t('request.dob.placeholder')">
@@ -34,8 +35,8 @@
           <div class="pagination-list">
             <b-field>
               <b-select
-                :value="$refs.dob.focusedDateData.year"
-                @input="val => focusedDate = new Date(val, $refs.dob.focusedDateData.month, $refs.dob.focusedDate.getDate())">
+                :value="focusedDateData.year"
+                @input="val => changeYear(val)">
                 <option
                   v-for="year in listOfYears"
                   :value="year"
@@ -44,8 +45,8 @@
                 </option>
               </b-select>
               <b-select
-                :value="$refs.dob.focusedDateData.month"
-                @input="val => focusedDate = new Date($refs.dob.focusedDateData.year, val, $refs.dob.focusedDate.getDate())">
+                :value="focusedDateData.month"
+                @input="val => changeMonth(val)">
                 <option
                   v-for="(month, index) in monthNames"
                   :value="index"
@@ -98,7 +99,7 @@ export default {
   ],
   data () {
     return {
-      date: undefined,
+      tempDate: null,
       dateNoNative: '',
       maxDate: new Date(2000, 10, 6),
       minDate: new Date(1900, 0, 1),
@@ -121,13 +122,21 @@ export default {
         this.$t('request.dob.months.nov'),
         this.$t('request.dob.months.dec')
       ],
-      focusedDate: new Date(2000, 10, 5)
+      focusedDate: new Date(2000, 10, 5),
+      focusedDateData: {
+        month: 10,
+        year: 2000
+      }
     }
   },
   created () {
     if (this.dob) {
       this.focusedDate = this.dob
-      this.date = this.dob
+      this.focusedDateData = {
+        month: this.dob.getMonth(),
+        year: this.dob.getFullYear()
+      }
+      this.tempDate = this.dob
     }
   },
   mounted () {
@@ -164,7 +173,7 @@ export default {
         this.$store.commit('requests/update', { dob: d })
         if (val && val instanceof Date) {
           this.focusedDate = val
-          this.date = val
+          this.tempDate = val
           this.dateNoNative = this.dateFormatter(val)
         }
       }
@@ -174,6 +183,17 @@ export default {
     }
   },
   methods: {
+    focusDate () {
+      if (this.dob) {
+        this.focusedDate = this.dob
+        this.focusedDateData = {
+          month: this.dob.getMonth(),
+          year: this.dob.getFullYear()
+        }
+      } else {
+        this.focusedDate = new Date(this.focusedDateData.year || 2000, this.focusedDateData.month || 10)
+      }
+    },
     closeModal () {
       this.dob = null
       this.isCardModalActive = false
@@ -182,17 +202,19 @@ export default {
       console.log(val)
     },
     changeMonth (month) {
-      this.focusedDate = this.$refs.focusedDate
+      this.focusedDateData = Object.assign({}, this.focusedDateData, {month})
+      this.focusedDate = new Date(this.focusedDateData.year, this.focusedDateData.month)
     },
     changeYear (year) {
-      this.focusedDate = this.$refs.focusedDate
+      this.focusedDateData = Object.assign({}, this.focusedDateData, {year})
+      this.focusedDate = new Date(this.focusedDateData.year, this.focusedDateData.month)
     },
     addDate (date) {
-      console.log('date', date, this)
+      // console.log('date', date, this)
       this.$nextTick()
         .then(() => {
           this.dob = date
-          this.date = date
+          this.tempDate = date
           this.$nextTick()
             .then(() => {
               this.isCardModalActive = false
@@ -201,7 +223,7 @@ export default {
     },
     dateParser2 (input) {
       let choices = returnArrayOfReasonableBirthDates(input)
-      console.log('date choices', choices)
+      // console.log('date choices', choices)
       if (choices.length > 1) {
         this.inputText = input
         this.dateChoices = choices
@@ -216,7 +238,7 @@ export default {
     }
   },
   watch: {
-    date (val) {
+    tempDate (val) {
       if (val instanceof Date) {
         this.dob = val
       } else {
