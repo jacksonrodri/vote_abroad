@@ -353,11 +353,11 @@ export const actions = {
     // this.$raven.setUserContext()
     dispatch('getUser')
   },
-  async logout ({ app, dispatch }) {
+  async logout ({ app, state, dispatch }) {
     // this.app.$Analytics.record('logout')
     this.app.$cookie.delete('vfaOptIn')
     await webAuth.logout({
-      returnTo: process.browser ? window.location.origin : redirectUri,
+      returnTo: process.browser ? window.location.origin + (state.user.language === 'es' ? '/es' : '') : redirectUri,
       // returnTo: redirectUri,
       // Dev client ID
       // clientID: '0Wy4khZcuXefSfrUuYDUP0Udag4FqL2u'
