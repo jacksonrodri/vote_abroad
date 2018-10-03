@@ -61,7 +61,7 @@ module.exports = {
     ],
     debug: {
       sendHitTask: process.env.DEVSTAGE !== 'dev',
-      enabled: true
+      enabled: process.env.DEVSTAGE === 'dev'
     },
     commands: {
       trackFormAction: function trackFormAction (fieldName = 'unknown') { this.$ga.event('formAction', 'focus/select', 'field', fieldName) }

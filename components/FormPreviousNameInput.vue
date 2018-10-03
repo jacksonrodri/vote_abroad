@@ -28,11 +28,13 @@
   <b-field
     v-show="usesPreviousName"
     :type="type"
-    @focus="$ga.event('formAction', 'focus/select', 'previousName')"
     :message="message"
     :label="label">
     <!-- <b-input :value="value && value.previousName ? value.previousName : ''" @input="val => setName(val)"></b-input> -->
-    <b-input v-model="pName" :maxlength="50"></b-input>
+    <b-input
+      v-model="pName"
+      :maxlength="50"
+      @focus="$ga.event('formAction', 'focus/select', 'previousName')"></b-input>
   </b-field>
   <b-message :title="tooltipTitle" type="is-info" has-icon :active.sync="isOpen">
     <slot name="tooltip"></slot>

@@ -262,6 +262,7 @@ export default {
       this.createFormattedAddress()
     },
     ctry: async function (val, oldVal) {
+      if (this.fieldName === 'abrAdr') this.$ga.set('dimension3', val)
       if (val) {
         if (this.postalMetadataHasCountry(val)) {
           this.createFormattedAddress()

@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Dialog, Toast } from 'buefy'
 import AWSExportsDev from '../aws-exports-dev'
 import AWSExportsProd from '../aws-exports-prod'
+import { set } from 'vue-analytics'
 
 const jwtDecode = require('jwt-decode')
 const redirectUri = process.env.url
@@ -223,6 +224,8 @@ export const actions = {
         }, async function (err, authResult) {
           if (err) {
             let id = await Auth.currentCredentials().then(x => x.data.IdentityId)
+            // console.log('id', id)
+            if (id) set('userId', id)
             commit('updateAuthState', 'loggedOut')
             commit('updateIdentityId', id)
             // Analytics.updateEndpoint({
@@ -322,6 +325,8 @@ export const actions = {
     //   email: state.user.emailAddress || null,
     //   id: state.user.IdentityId || null
     // })
+    console.log('state', state)
+    set('userId', state.IdentityId)
     commit('updateAuthState', 'loggedIn')
   },
   clearData ({ commit, dispatch }) {

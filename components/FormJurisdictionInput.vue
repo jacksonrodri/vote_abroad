@@ -217,6 +217,7 @@ export default {
       }
       delete leo.suggested
       this.$store.commit('requests/update', {leo: leo})
+      this.$ga.event('formAction', 'LEO Selected', leo.j)
     },
     updated: function () {
       this.$emit('input')

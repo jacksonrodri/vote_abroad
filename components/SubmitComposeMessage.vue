@@ -140,7 +140,7 @@ export default {
     }
   },
   computed: {
-    isStudentSite () { return this.$store.state.isStudentSite },
+    isStudentSite () { return process.env.isStudentSite === 'true' },
     voterMessage () { return this.$t('email.voterEmail', {leoEmail: this.leoEmail, leoName: this.leoName, leoPhone: this.leoPhone}) + this.message },
     testMessage () { return this.$t('email.testEmail', {leoEmail: this.leoEmail, leoName: this.leoName}) + this.message },
     formEmail: {

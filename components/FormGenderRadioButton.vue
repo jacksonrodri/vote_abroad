@@ -6,7 +6,9 @@
     :type="(validations.$error ? 'is-danger': '')">
     <b-field grouped group-multiline>
       <p class="control">
-        <a @click="() => {sex = (sex === 'female' ? null : 'female')}" :class="[baseClass, {'is-success': sex === 'female'}]">
+        <a
+          @click="() => {sex = (sex === 'female' ? null : 'female'); $ga.event('formAction', 'focus/select', 'sex')}"
+          :class="[baseClass, {'is-success': sex === 'female'}]">
           <span v-show="sex === 'female'" class="icon is-small">
             <i class="fas fa-check"></i>
           </span>
@@ -16,7 +18,8 @@
         </a>
       </p>
       <p class="control">
-        <a @click="() => {sex = (value === 'male' ? null : 'male')}" :class="[baseClass, {'is-success': sex === 'male'}]">
+        <a
+          @click="() => {sex = (value === 'male' ? null : 'male'); $ga.event('formAction', 'focus/select', 'sex')}" :class="[baseClass, {'is-success': sex === 'male'}]">
           <span v-show="sex === 'male'" class="icon is-small">
             <i class="fas fa-check"></i>
           </span>
@@ -26,7 +29,7 @@
         </a>
       </p>
       <p class="control" v-if="state !== 'ID'">
-        <a @click="() => {sex = (sex === 'decline' ? null : 'decline')}" :class="[baseClass, {'is-success': sex === 'decline'}]">
+        <a @click="() => {sex = (sex === 'decline' ? null : 'decline'); $ga.event('formAction', 'focus/select', 'sex')}" :class="[baseClass, {'is-success': sex === 'decline'}]">
           <span v-show="sex === 'decline'" class="icon is-small">
             <i class="fas fa-check"></i>
           </span>
