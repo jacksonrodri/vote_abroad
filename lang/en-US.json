@@ -396,7 +396,7 @@
       "clickStart": "Click start",
       "instructionsLabel": "Instructions",
       "uploadFile": "upload a file",
-      "uploadInstructions": "{0} from your computer",
+      "uploadInstructions": "{0} from your device",
       "clickToUpload": "Click to upload a scan of your signature",
       "captureErrorTitle": "Failed loading camera",
       "signName": "Sign your name with a dark pen in large letters on a blank sheet of white paper.",
