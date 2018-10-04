@@ -5,7 +5,8 @@
   "author": "Alex Montgomery <Alex@DemocratsAbroad.org>",
   "private": true,
   "scripts": {
-    "dev": "cross-env DEVSTAGE='dev' OFFLINE=false NODE_ENV=development HOST=10.0.1.12 PORT=3000 nuxt",
+    "dev-mobile": "cross-env DEVSTAGE='dev' OFFLINE=false NODE_ENV=development HOST=10.0.1.12 PORT=3000 nuxt",
+    "dev": "DEVSTAGE='dev' OFFLINE=false nuxt",
     "student": "DEVSTAGE='dev' IS_STUDENT_SITE=true nuxt",
     "getaddressdata": "rm -rf data/postal && svn export https://github.com/mirumee/google-i18n-address/trunk/i18naddress/data ./data/postal",
     "build": "nuxt build",

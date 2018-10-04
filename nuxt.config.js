@@ -7,9 +7,9 @@ module.exports = {
   */
   head: {
     title: 'Vote from Abroad',
-    script: [
-      {src: 'http://10.0.1.12:8098'}
-    ],
+    // script: [
+    //   {src: 'http://10.0.1.12:8098'}
+    // ],
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
