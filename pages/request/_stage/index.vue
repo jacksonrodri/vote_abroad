@@ -413,6 +413,13 @@ const touchMap = new WeakMap()
 export default {
   transition: 'test',
   scrollToTop: true,
+  // head () {
+  //   return {
+  //     script: [
+  //       {src: 'http://10.0.1.12:8098'}
+  //     ]
+  //   }
+  // },
   middleware: 'verify-request',
   async asyncData ({app}) {
     return {

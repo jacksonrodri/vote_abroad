@@ -169,6 +169,7 @@ export default {
         return typeof dob === 'string' ? createDateObj(dob) : undefined
       },
       set (val) {
+        this.$emit('test', val.getDate())
         function createDateString (d) { return `${d.getFullYear()}-${d.getMonth() < 9 ? '0' : ''}${d.getMonth() + 1}-${d.getDate() < 10 ? '0' : ''}${d.getDate()}` }
         let d = val instanceof Date ? createDateString(val) : null
         this.$store.commit('requests/update', { dob: d })
@@ -181,7 +182,8 @@ export default {
       }
     },
     allowNative () {
-      return Boolean(!(/mobile|tablet/i.test(this.$store.state.userauth.device.type) && this.$store.state.userauth.device.os === 'android'))
+      return Boolean(!(/mobile|tablet/i.test(this.$store.state.userauth.device.type)))
+      // return Boolean(!(/mobile|tablet/i.test(this.$store.state.userauth.device.type) && this.$store.state.userauth.device.os === 'android'))
     },
     ...mapGetters('requests', ['getCurrent'])
   },
@@ -225,6 +227,7 @@ export default {
         })
     },
     dateParser2 (input) {
+      this.$emit('dateParser', input)
       let choices = returnArrayOfReasonableBirthDates(input)
       // console.log('date choices', choices)
       if (choices.length > 1) {
@@ -243,6 +246,7 @@ export default {
   watch: {
     tempDate (val) {
       if (val instanceof Date) {
+        this.$emit('tempDate', val)
         this.dob = val
       } else {
         this.dob = null
