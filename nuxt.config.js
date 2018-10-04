@@ -7,6 +7,9 @@ module.exports = {
   */
   head: {
     title: 'Vote from Abroad',
+    script: [
+      {src: 'http://10.0.1.12:8098'}
+    ],
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -48,6 +51,7 @@ module.exports = {
   },
   modules: [
     // '@nuxtjs/sentry',
+    // '@nuxtjs/localtunnel',
     '@nuxtjs/google-analytics',
     '@nuxtjs/pwa',
     'nuxtent',
@@ -146,7 +150,8 @@ module.exports = {
     {src: '~/plugins/vuelidate'},
     {src: '~/plugins/croppa'},
     {src: '~/plugins/intercom'},
-    { src: '~plugins/i18n.js' },
+    { src: '~/plugins/i18n.js' },
+    // { src: '~/plugins/devtools', ssr: false },
     {src: '~plugins/vue-cookie', ssr: false, injectAs: 'cookie'}
   ],
   /*
