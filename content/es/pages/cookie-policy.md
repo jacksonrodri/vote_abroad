@@ -1,58 +1,58 @@
 ---
-title: Cookie Policy
+title: Política de Cookies Informáticas
 ---
-## **VOTE FROM ABROAD COOKIE POLICY**
+## **POLÍTICA DE COOKIES INFORMÁTICAS DE VOTE FROM ABROAD (VFA)**
 
-The Democratic Party Committee Abroad, doing business as Democrats Abroad, ("we", “us” and “our”) uses cookies and similar technologies to distinguish you from other users on our VoteFromAbroad.org website (VFA or the VFA website). This helps us to provide you with a better experience when you access the VFA website. This policy explains how we use cookies and the choices you have. Except as otherwise stated in this policy, our Vote From Abroad Privacy Policy will apply to our processing of the data that we collect via cookies.
+El Comité del Partido Demócrata en el Extranjero, que opera como Democrats Abroad (al que nos referimos como "nosotros" y "nuestro" en este documento) utiliza cookies informáticas y tecnologías similares para distinguirle a usted de otros usuarios en nuestro sitio web VoteFromAbroad.org (VFA o sitio web de VFA). Esto nos ayuda a brindarle una mejor experiencia cuando accede al sitio web de VFA. Esta política explica cómo utilizamos las cookies informáticas y las opciones que tiene. Salvo que se indique de otra forma en esta política, nuestra Política de Privacidad de Vote From Abroad se aplicará a nuestro procesamiento de los datos que recolectamos a través de cookies informáticas.
 
-***What are cookies?***
+***¿Qué son las cookies informáticas?***
 
-Cookies are small data files of text that are downloaded onto your PC, phone or other device when you visit the VFA website. Cookies generally contain a site name and a unique user ID. Once the cookie is on your device, the VFA website "knows" that you have been there before and can then use that knowledge to tailor the experience that you have.
+Las cookies informáticas son pequeños archivos de datos de texto que se descargan en su PC, teléfono u otro dispositivo cuando visita el sitio web de VFA. Las cookies informáticas generalmente contienen un nombre de sitio y una identificación de usuario única. Una vez que la cookie está en su dispositivo, el sitio web de VFA "sabe" que ha estado allí antes y, con base en esa información puede adaptar el sitio para mejorar la experiencia que usted tiene al usarlo.
 
-***Why do we use cookies?***
+***¿Por qué utilizamos cookies informáticas?***
 
-Without cookies, it would be very difficult for a website to allow a visitor to, for example, remember the user's preferences or registration details for a future visit. Among other things, cookies help us improve our sites and your experience. We may also use cookies and other technologies to provide you with personalized messaging like saving your name and email address when you use the help desk chat. If you wish to block, erase, or be warned of cookies, please refer to your browser's help section to learn about these functions. However, if you choose to remove or reject cookies, this could affect certain features on our website.
+Sin las cookies informáticas, sería muy difícil para un sitio web permitir que, por ejemplo, un visitante recuerde las preferencias del usuario o los detalles de registro para una visita futura. Entre otras cosas, las cookies informáticas nos ayudan a mejorar nuestros sitios y su experiencia como usuario de ellos. También podemos usar cookies informáticas y otras tecnologías para proporcionarle mensajes personalizados, como tener disponible su nombre y dirección de correo electrónico cuando utilice el servicio de asistencia al usuario. Si desea bloquear, borrar o recibir avisos relacionados con las cookies informáticas, consulte la sección de ayuda de su navegador para obtener más información sobre estas funciones. Sin embargo, si elige eliminar o rechazar las cookies informáticas, esto podría afectar ciertas características de nuestro sitio web.
 
-***Different types of cookies***
+***Diferentes tipos de cookies informáticas***
 
-The different types of cookies that we may use on the VFA website fall into the categories described below. These descriptions can help you determine if and how you would like to interact with our Websites:
+Los diferentes tipos de cookies informáticas que podemos usar en el sitio web de VFA están contenidas en las categorías que se describen a continuación. Estas descripciones pueden ayudarlo a determinar si le gustaría interactuar con nuestros sitios web y cómo hacerlo:
 
 * *
 
-***(a) Required cookies***
+***(a) Cookies informáticas requeridas***
 
-Required cookies enable basic site functionality and follow your progress through the Website. These essential cookies have to be enabled in order for you to browse our Websites and move between pages. We are unable to identify you personally by using these types of cookies.
+Las cookies informáticas requeridas permiten la funcionalidad básica del sitio y dan seguimiento al uso que usted hace del sitio web. Estas cookies informáticas esenciales deben estar habilitadas para que usted pueda navegar por nuestros sitios web y moverse entre sus páginas. Es importante señalar que nosotros no podemos identificarlo personalmente al utilizar estos tipos de cookies informáticas.
 
 * ***_ _**
 
-***(b) Anonymous visitor statistics cookies***
+***(b) Cookies informáticas de estadísticas de los visitantes anónimos***
 
-We use cookies to compile visitor statistics such as how many people have visited our Websites, what type of operating system is being used (e.g. Mac or Windows) so that we can identify when our Website isn't working as it should, how long you spend on the site, what pages are viewed etc. This helps us to continuously improve our Websites. These "analytics" cookies also provide anonymous information about how you reached the site.
+Utilizamos cookies informáticas para recolectar estadísticas de visitantes, como la cantidad de personas que han visitado nuestros sitios web, qué tipo de sistema operativo están utilizando (por ejemplo, Mac o Windows) para poder identificar cuando nuestro sitio web no funciona como debería, por cuánto tiempo utiliza el sitio, qué páginas se visitan, etc. Esto nos ayuda a mejorar continuamente nuestros sitios web. Estas cookies informáticas "analíticas" también proporcionan información anónima sobre cómo llegó al sitio.
 
 * ***_ _**
 
-***(c) Social networking and third-party function cookies***
+***(c) Redes sociales y cookies informáticas funcionales de terceros***
 
-The VFA website interacts with social networking websites so that you can easily "Like" or share our content on websites such as Facebook, Twitter, LinkedIn, GooglePlus, Pintrest, etc. You should refer to the privacy policies of these social networking websites to understand how they use your personal information.
-
-* *
-
-***(d) Site improvement cookies***
-
-From time to time, we may test new designs or website features on the VFA website. We may do this by showing slightly different versions of our website to different people and anonymously monitoring how our site visitors respond to these different versions. Ultimately this helps us to offer you a better website.
+El sitio web de VFA interactúa con los sitios web de redes sociales para que pueda indicar "me gusta" o compartir fácilmente nuestro contenido en sitios web como Facebook, Twitter, LinkedIn, GooglePlus, Pinterest, etc. Ustd debe consultar las políticas de privacidad de estos sitios web de redes sociales para comprender cómo utilizan su información personal.
 
 * *
 
-***(e) Advertising and remarketing cookies***
+***(d) Cookies informáticas para mejorar el sitio***
 
-Cookies are used widely for online advertising. Neither we or our advertising partners can obtain data that can personally identify you from these cookies. We only work with advertising partners who work to accepted privacy standards. You may notice that sometimes after visiting our Websites or other websites, that you see increased numbers of advertisements from the site you visited. This is because advertisers, including ourselves, pay for these advertisements, which are known as "remarketing cookies" during your visit. We use these advertisements to tailor offers that encourage you to come back to our Website.
+Ocasionalmente podemos probar nuevos diseños o características en el sitio web de VFA. Podemos hacer esto mostrando diferentes versiones de nuestro sitio web a diferentes personas y monitoreando anónimamente cómo los visitantes de nuestro sitio responden a estas diferentes versiones. En última instancia, esto nos ayuda a ofrecerle un mejor sitio web.
 
-***Turning cookies off***
+* *
 
-***You can change how cookies are stored on your machine by clicking on the "Tools" menu in your internet browser for your device. You can also learn more about cookies by visiting the third-party website***[ www.allaboutcookies.org](http://www.allaboutcookies.org/)**_ which includes additional information on cookies and how to block cookies using different types of browser. For more information about these controls, visit your browser or device's help material. Certain parts of the VFA website may not work properly if you have disabled browser cookie use._**
+***(e) Cookies informáticas publicitarias y de mercadeo dirigido a usuarios (remarketing)***
+
+Las cookies informáticas se utilizan ampliamente para la publicidad en línea. Ni nosotros ni nuestros socios publicitarios pueden obtener datos que lo identifiquen personalmente a partir de estas cookies informáticas. Solo trabajamos con socios publicitarios que trabajan con estándares de privacidad aceptados. Es posible que, algunas veces, después de visitar nuestros sitios web u otros sitios web, usted observe que hay un mayor número de anuncios en el sitio que visitó. Esto se debe a que los anunciantes, incluidos nosotros mismos, pagamos estos anuncios, que se conocen como "cookies informáticas de mercadeo dirigido a usuarios (que nos habían visitado anateriormente)" durante su nueva visita. Utilizamos estos anuncios para adaptar las ofertas que lo alientan a regresar a nuestro sitio web.
+
+***Desactivación de las cookies informáticas***
+
+***Puede cambiar la forma en que se almacenan las cookies informáticas en su computadora seleccionando el menú "Herramientas" en el navegador de Internet para su dispositivo. También puede obtener más información sobre las cookies informáticas visitando el sitio web de terceros***[ www.allaboutcookies.org](http://www.allaboutcookies.org/)**_que incluye información adicional sobre las cookies informáticas y cómo bloquearlas usando diferentes tipos de navegador. Para obtener más información sobre estos controles, consulte el material de ayuda del navegador o el de su dispositivo. Es posible que ciertas partes del sitio web de VFA no funcionen correctamente si ha deshabilitado el uso de cookies informáticas del navegador._**
 
 **_ _**
 
-Looking for more information about cookies? Visit[ https://aboutcookies.org/](https://www.aboutcookies.org/)
+¿Busca más información sobre las cookies informáticas? Visite[ https://aboutcookies.org/](https://www.aboutcookies.org/)
 
-View the Vote From Abroad Privacy Policy here: https://beta.votefromabroad.org/privacy/
+Consulte la Política de Privacidad de Vote From Abroad aquí: https://beta.votefromabroad.org/privacy/
