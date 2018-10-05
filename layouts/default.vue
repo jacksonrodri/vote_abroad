@@ -2,8 +2,8 @@
 <div>
   <div v-if="!offline">
     <transition name="fade">
-      <div v-if="!optedIn && !privacyRoute && !isPrivacyOptInModalActive" class="notices is-top">
-        <div class="snackbar is-warning is-top">
+      <div v-if="!optedIn && !privacyRoute && !isPrivacyOptInModalActive" class="notices is-top ">
+        <div :class="['snackbar', 'is-warning', 'is-top', 'is-inline-mobile', {'is-hidden-mobile': /index/.test($route.name)}]">
           <!-- <p class="text">Vote From Abroad helps US citizens register to vote quickly and easily, but to do so we need to collect your personal information. Your data privacy is our top concern, so please read and accept our <nuxt-link :to="localePath({ name: 'page', params: {page: 'privacy'}})" class="has-text-warning">privacy policy</nuxt-link>, <nuxt-link :to="localePath({ name: 'page', params: {page: 'cookie-policy'}})" class="has-text-warning">cookie policy</nuxt-link> and <nuxt-link :to="localePath({ name: 'page', params: {page: 'terms-of-use'}})" class="has-text-warning">terms of service.</nuxt-link></p> -->
           <i-18n path="optIn.optIn" tag="p" class="text">
             <nuxt-link place="privacyPolicy" :to="localePath({ name: 'page', params: {page: 'privacy'}})" class="has-text-warning">{{$t('optIn.privacyPolicy')}}</nuxt-link>
