@@ -175,7 +175,7 @@ export const actions = {
     })
     return 'done'
   },
-  async updateRequest ({commit, state, app}, payload) {
+  async updateRequest ({commit, state, rootState, app}, payload) {
     // console.log('payload', payload)
     const API = this.app.$API
     const graphqlOperation = this.app.$graphqlOperation
@@ -203,6 +203,7 @@ export const actions = {
     currentRequestState.tel = currentRequestState.tel || null
     currentRequestState.email = currentRequestState.email || null
     currentRequestState.status = payload.status
+    currentRequestState.sub = rootState.userauth.sub || null
     if (currentRequestState.party === '') currentRequestState.party = 'other'
     const stateRequestInput = {input: currentRequestState}
     const newRequest = await API.graphql(graphqlOperation(CreateRequest, stateRequestInput))

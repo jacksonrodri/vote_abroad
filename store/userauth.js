@@ -18,6 +18,7 @@ let webAuth
 
 export const state = () => ({
   idToken: null,
+  sub: null,
   expirationDate: null,
   IdentityId: null,
   redirectPath: null,
@@ -63,6 +64,9 @@ export const getters = {
 export const mutations = {
   updateIdToken (state, idToken) {
     state.idToken = idToken
+  },
+  updateSub (state, sub) {
+    state.sub = sub
   },
   updateExpirationDate (state, expirationDate) {
     state.expirationDate = expirationDate
@@ -267,6 +271,8 @@ export const actions = {
       authResult = await renewAuth()
     }
     let idToken = authResult.idToken
+    // console.log(JSON.stringify(authResult.idTokenPayload.sub, null, 2))
+    commit('updateSub', authResult.idTokenPayload.sub)
     commit('updateIdToken', idToken)
     commit('updateExpirationDate', jwtDecode(idToken).exp)
     if (state.redirectPath) {
@@ -331,6 +337,7 @@ export const actions = {
   },
   clearData ({ commit, dispatch }) {
     commit('updateIdToken', null)
+    commit('updateSub', null)
     commit('updateExpirationDate', null)
     commit('updateUser', {
       country: null,
