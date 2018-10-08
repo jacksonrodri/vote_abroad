@@ -41,6 +41,7 @@
     "mailcheck": "^1.1.1",
     "mailgun-js": "^0.21.0",
     "nuxt": "^1.4.1",
+    "nuxt-facebook-pixel-module": "^1.0.1",
     "nuxt-i18n": "^2.10.0",
     "nuxtent": "^1.4.1",
     "save-pixels": "^2.3.4",

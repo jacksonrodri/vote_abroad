@@ -54,6 +54,12 @@ module.exports = {
     // '@nuxtjs/sentry',
     // '@nuxtjs/localtunnel',
     '@nuxtjs/google-analytics',
+    ['nuxt-facebook-pixel-module', {
+      /* module options */
+      track: 'PageView',
+      pixelId: '744840838985070',
+      disabled: false
+    }],
     '@nuxtjs/pwa',
     'nuxtent',
     ['nuxt-i18n', I18N],
