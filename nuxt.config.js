@@ -67,6 +67,7 @@ module.exports = {
   ],
   'google-analytics': {
     id: 'UA-126220374-1',
+    linkers: ['beta.votefromabroad.org', 'students.votefromabroad.org', 'es.votefromabroad.org', 'vr.votefromabroad.org'],
     set: [
       { field: 'dimension1', value: process.env.BRANCH || 'dev' }
     ],
