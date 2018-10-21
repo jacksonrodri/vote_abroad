@@ -7,3 +7,5 @@
 /privacy  /es/privacy  302  Language=es
 /terms-of-use  /es/terms-of-use  302  Language=es
 /cookie-policy  /es/cookie-policy  302  Language=es
+
+https://vr-votefromabroad.netlify.com/* https://vr.votefromabroad.org/:splat 301!
