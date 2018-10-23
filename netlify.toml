@@ -22,7 +22,7 @@
   DEVSTAGE = "prod"
 
 [[redirects]]
-from = "https://www.votefromabroad.org/vote/eod"
+from = "/vote/eod"
 to = "/states"
 status = 301
 force = true
