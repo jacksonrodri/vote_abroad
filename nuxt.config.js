@@ -131,7 +131,7 @@ module.exports = {
     lang: 'en',
     theme_color: '#172559',
     background_color: '#172559',
-    ogHost: process.env.DEPLOY_PRIME_URL
+    ogHost: process.env.URL
   },
   css: [
     {src: '@/assets/css/style.scss',
