@@ -76,6 +76,10 @@ export default {
       if (val) this.countrySearch = this.countries.find(x => x.code === val).name
       this.updateCountryData(val)
       this.$ga.event('formAction', `${this.type} Country Selected`, val)
+      if (this.type === 'abrAdr') {
+        this.$ga.event('voterSegment', 'abroadCountry', val)
+        this.$ga.set('dimension3', val)
+      }
     }
   },
   methods: {

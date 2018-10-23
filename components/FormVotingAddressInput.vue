@@ -218,6 +218,7 @@ export default {
       set (value) {
         this.updateAddress('S', value)
         this.$ga.event('voterSegment', 'votingState', value)
+        this.$ga.set('dimension2', value)
       }
     },
     zip: {

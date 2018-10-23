@@ -93,12 +93,12 @@
 <script>
 import axios from 'axios'
 import snarkdown from 'snarkdown'
-
+// `${window.location.protocol}//${window.location.host}${this.app.localePath('authenticating')}`
 export default {
   async asyncData ({ app, params }) {
     let stateLeos = (process.static && process.server)
       ? await import(`~/static/leos/${params.state.toUpperCase()}-leos.json`)
-      : (await axios.get(`${process.env.url}/leos/${params.state.toUpperCase()}-leos.json`)).data
+      : (await axios.get(`${window.location.protocol}//${window.location.host}/leos/${params.state.toUpperCase()}-leos.json`)).data
     return {
       elections: (await app.$content('/elections').get('elections')).body.filter(election => election.state && params.state && election.state.toLowerCase() === params.state.toLowerCase()),
       state: (await app.$content('/rls').get(`states/${params.state.toLowerCase()}`)),
