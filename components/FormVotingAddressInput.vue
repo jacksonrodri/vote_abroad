@@ -215,7 +215,10 @@ export default {
     },
     state: {
       get () { return this.votAdr.S || null },
-      set (value) { this.updateAddress('S', value) }
+      set (value) {
+        this.updateAddress('S', value)
+        this.$ga.event('voterSegment', 'votingState', value)
+      }
     },
     zip: {
       get () { return this.votAdr.Z || null },
