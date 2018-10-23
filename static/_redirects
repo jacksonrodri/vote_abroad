@@ -8,4 +8,9 @@
 /terms-of-use  /es/terms-of-use  302  Language=es
 /cookie-policy  /es/cookie-policy  302  Language=es
 
+# Redirect default Netlify subdomain to primary domain
+https://es-votefromabroad.netlify.com/* https://es.votefromabroad.org/:splat 301!
 https://vr-votefromabroad.netlify.com/* https://vr.votefromabroad.org/:splat 301!
+https://vfa-students.netlify.com/* https://students.votefromabroad.org/:splat 301!
+https://votefromabroad.netlify.com/* https://beta.votefromabroad.org/:splat 301!
+https://vfa-sandbox.netlify.com/* https://sandbox.votefromabroad.org/:splat 301!

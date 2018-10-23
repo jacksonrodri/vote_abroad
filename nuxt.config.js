@@ -54,6 +54,12 @@ module.exports = {
     // '@nuxtjs/sentry',
     // '@nuxtjs/localtunnel',
     '@nuxtjs/google-analytics',
+    ['nuxt-facebook-pixel-module', {
+      /* module options */
+      track: 'PageView',
+      pixelId: '744840838985070',
+      disabled: false
+    }],
     '@nuxtjs/pwa',
     'nuxtent',
     ['nuxt-i18n', I18N],
@@ -61,6 +67,7 @@ module.exports = {
   ],
   'google-analytics': {
     id: 'UA-126220374-1',
+    linkers: ['beta.votefromabroad.org', 'students.votefromabroad.org', 'es.votefromabroad.org', 'vr.votefromabroad.org'],
     set: [
       { field: 'dimension1', value: process.env.BRANCH || 'dev' }
     ],
