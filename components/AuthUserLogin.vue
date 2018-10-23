@@ -145,6 +145,8 @@
       <b-message v-if="toolTipContent" type="is-info" has-icon :active.sync="toolTipOpen">
         <p v-html="toolTipContent"></p>
       </b-message>
+
+      <p class="has-text-centered">Need an emergency ballot? <nuxt-link :to="localePath({ name: 'page', params: { page: 'fwab' } })">Use a Federal Write-in Absentee Ballot.</nuxt-link></p>
     </div>
     <b-modal
       :active="!optedIn && isPrivacyOptInModalActive"
