@@ -11,7 +11,7 @@ If you vote in **AZ, CO, ME, MN, MS, MT, OR, SC, UT **or **WA,** you can skip th
 
 * If your LEO has sent out your official ballot, but you are concerned you won't receive it in time to meet the deadline to vote, send in a FWAB to preserve your vote. (**Go to Step II)**. _You should also find out why you didn’t receive your official ballot in time, so you don’t have this problem next election.
   _
-* If your LEO **hasn't** received your ballot request form--or you haven't sent it in yet--go to [www.votefromabroad.org](https://www.votefromabroad.org/) to fill out your form and send it to your LEO right away. _The deadline for the Ballot Request form is earlier than the deadline to submit a FWAB, but most states will accept it by Email or Fax._ 
+* If your LEO **hasn't** received your ballot request form--or you haven't sent it in yet--go to [www.votefromabroad.org](https://www.votefromabroad.org/) to fill out your form and send it to your LEO right away. Then go to **Step II.** _The deadline for the Ballot Request form is earlier than the deadline to submit a FWAB, but most states will accept it by Email or Fax._ 
 
 .
 
