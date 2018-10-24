@@ -40,4 +40,4 @@ __
 
 **\*IMPORTANT: If you receive your official ballot after submitting your FWAB, you should complete and return your official ballot as well.** 
 
-It’s okay--only one ballot per person will be counted. If both your FWAB and your official ballot arrive before the deadline, your FWAB will be discarded and only your official ballot will be counted,
+It’s okay--only one ballot per person will be counted. If both your FWAB and your official ballot arrive before the deadline, your FWAB will be discarded and only your official ballot will be counted.
