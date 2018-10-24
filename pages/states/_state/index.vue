@@ -86,34 +86,33 @@
             </p>
           </div>
           <h2 class="title is-5">Additional Resources</h2>
-          <p>
+          <p v-if="state.amIRegistered">
             <a
-              v-if="state.amIRegistered"
-              class="button is-primary"
+              class="is-size-5 has-text-primary"
               target="blank"
               :href="state.amIRegistered">
               Am I Registered?
             </a>
-            <br>
+          </p>
+          <p v-if="state.whereIsMyBallot">
             <a
-              v-if="state.whereIsMyBallot"
-              class="button is-primary"
+              class="is-size-5 has-text-primary"
               target="blank"
               :href="state.whereIsMyBallot">
               Where Is My Ballot?
             </a>
-            <br>
+          </p>
+          <p v-if="state.sampleBallot">
             <a
-              v-if="state.sampleBallot"
-              class="button is-primary"
+              class="is-size-5 has-text-primary"
               target="blank"
               :href="state.sampleBallot">
               Sample Ballot
             </a>
-            <br>
+          </p>
+          <p v-if="state.uocavaVoters">
             <a
-              v-if="state.uocavaVoters"
-              class="button is-primary"
+              class="is-size-5 has-text-primary"
               target="blank"
               :href="state.uocavaVoters">
               State Page For Military And Overseas Voters
