@@ -23,6 +23,12 @@ fwabSubmitOptions:
   - Fax
   - Mail
 ---
-Remember that you need to request a ballot each calendar year you'd like to vote in. Check below for primary and general deadlines, organized by your delivery options. 
+Alaska voters abroad need to request a ballot each calendar year you'd like to vote in. Check below for your delivery methods and deadlines, and to find your local election office contact information..  
 
 [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
+
+### Delivery Methods
+
+* Registration: email/online, fax or postal mail
+* Ballot Request: email, fax or postal mail
+* Ballot Return: fax or postal mail
