@@ -33,4 +33,4 @@ Check below for your delivery methods and deadlines, and to find your local elec
 * Ballot Request: email, fax or postal mail
 * Ballot Return: email, fax, postal mail, or online upload~
 
-~Voters must receive prior authorization from their local election official to use the online upload system
+~Voters must receive prior authorization from their local election official to use the online upload system.
