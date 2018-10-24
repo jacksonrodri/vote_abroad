@@ -12,13 +12,19 @@
         <h1 class="title">
           {{ $t(`states.${state.iso}`) }}
         </h1>
-        <!-- <nuxtent-body class="content" :body="state.body" /> -->
-        <i-18n path="states.stateBody" tag="p" v-if="$te('states.stateBody')">
+        <nuxtent-body class="content" :body="state.body" />
+        <i-18n path="states.stateBody" tag="p" v-if="$te('states.stateBody') && $i18n.locale !== 'en'">
           <nuxt-link :to="localePath('index')" class="has-text-primary">{{$t('states.clickHere')}}</nuxt-link>
         </i-18n>
         <br/>
           <h1 class="title is-4">{{$t('states.stateTitle', {state: $t(`states.${state.iso}`)})}}</h1>
-          <b-table hoverable :data="upcomingElections">
+          <b-table
+            hoverable
+            :data="upcomingElections"
+            detailed
+            :has-detailed-visible="() => false"
+            detail-key="date"
+            :opened-detailed="JSON.stringify(upcomingElections).includes('note') ? ['2018-11-06T00:00:00'] : []">
             <template slot-scope="props">
               <b-table-column :label="$t('election.electionDay')">
                 <h1 class="title is-5">{{ localizeIfAvailable(props.row.electionType) }}</h1>
@@ -36,12 +42,23 @@
                   <li v-for="(deadline, index) in rule"
                     :key="index.toString() + deadline.rule + deadline.voterType"
                     v-if="deadline.rule !== 'Not Required'">
-                    <strong>{{ typeof deadline.voterType === 'string' ? localizeIfAvailable(deadline.voterType) : localizeIfAvailable('All Voters') }}</strong><br/><span class="tag is-success">{{ localizeIfAvailable(deadline.rule) }}</span><br/>{{ new Date(deadline.date).toLocaleDateString(dateFormat, {year: 'numeric', month: 'short', day: 'numeric'}) }}
+                    <strong>{{ typeof deadline.voterType === 'string' ? localizeIfAvailable(deadline.voterType) : localizeIfAvailable('All Voters') }}</strong>
+                    <sup v-if="deadline.note">{{deadline.note.replace(/[A-Z]/g, '')}}</sup>
+                    <br/>
+                    <span class="tag is-success">{{ localizeIfAvailable(deadline.rule) }}</span>
+                    <br/>
+                    {{ new Date(deadline.date).toLocaleDateString(dateFormat, {year: 'numeric', month: 'short', day: 'numeric'}) }}
                     <hr v-if="index < rule.length - 1">
                   </li>
                   <li v-else><strong>{{ localizeIfAvailable(deadline.rule) }}</strong></li>
                 </ul>
               </b-table-column>
+            </template>
+            <template slot="detail" slot-scope="props">
+              <p
+                class="help"
+                v-for="note of rowNotes(props.row)"
+                :key="note">{{note.replace(/[A-Z]/g, '')}}: {{$t(`request.deadlineLanguage.notes.${note}`)}}</p>
             </template>
           </b-table>
           <h2 class="title is-5">{{$t('states.electionOfficials')}}</h2>
@@ -85,6 +102,39 @@
             <span v-if="currentLeo && currentLeo.f" v-html="md(`**${$t('dashboard.fax')}:** [${ '+1' + currentLeo.f }](tel:${ ('+1' + currentLeo.f).replace(/[()]/g, '-').replace(/ /g, '')  })`)"></span>
             </p>
           </div>
+          <h2 class="title is-5">Additional Resources</h2>
+          <p v-if="state.amIRegistered">
+            <a
+              class="is-size-5 has-text-primary"
+              target="blank"
+              :href="state.amIRegistered">
+              Am I Registered?
+            </a>
+          </p>
+          <p v-if="state.whereIsMyBallot">
+            <a
+              class="is-size-5 has-text-primary"
+              target="blank"
+              :href="state.whereIsMyBallot">
+              Where Is My Ballot?
+            </a>
+          </p>
+          <p v-if="state.sampleBallot">
+            <a
+              class="is-size-5 has-text-primary"
+              target="blank"
+              :href="state.sampleBallot">
+              Sample Ballot
+            </a>
+          </p>
+          <p v-if="state.uocavaVoters">
+            <a
+              class="is-size-5 has-text-primary"
+              target="blank"
+              :href="state.uocavaVoters">
+              State Page For Military And Overseas Voters
+            </a>
+          </p>
       </div>
     </div>
   </section>
@@ -133,6 +183,13 @@ export default {
     }
   },
   methods: {
+    rowNotes (row) {
+      return Object.entries(row.rules)
+        .filter(([k, v]) => v.reduce((bool, cur) => cur.note || bool, false))
+        .map(([k, v]) => v.reduce((acc, cur) => cur.note ? acc.concat(cur.note) : acc, []))
+        .reduce((acc, cur) => acc.concat(cur), [])
+        .reduce((acc, cur) => acc.includes(cur) ? acc : acc.concat(cur), [])
+    },
     localizeIfAvailable (str) {
       if (typeof str !== 'string') {
         return str
@@ -142,10 +199,11 @@ export default {
         newStr = str.replace(/\*/g, '')
       }
       return this.$te(`election.${this.camelize(newStr)}`)
-        ? this.$t(`election.${this.camelize(newStr)}`) + str.replace(/[^*]/g, '')
+        // ? this.$t(`election.${this.camelize(newStr)}`) + str.replace(/[^*]/g, '')
+        ? this.$t(`election.${this.camelize(newStr)}`)
         : this.$te(`election.${newStr.toLowerCase().replace(/\s/gi, '')}`)
-          ? this.$t(`election.${newStr.toLowerCase().replace(/\s/gi, '')}`) + str.replace(/[^*]/g, '')
-          : str
+          ? this.$t(`election.${newStr.toLowerCase().replace(/\s/gi, '')}`)
+          : newStr
     },
     camelize (str) {
       return str.replace(/(?:^\w|[A-Z]|\b\w|\s+)/g, function (match, index) {

@@ -23,5 +23,17 @@ fwabSubmitOptions:
   - Email
   - Fax
   - Mail
+amIRegistered: 'http://elections.delaware.gov/voter_tools.shtml'
+whereIsMyBallot: 'http://elections.delaware.gov/voter_tools.shtml'
+sampleBallot: 'https://ivote.de.gov/voterballotsample.aspx'
+uocavaVoters: ''
 ---
-Remember that you need to request a ballot each calendar year that you'd like to vote in. Check below for your primary and general deadlines. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
+Delaware voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
+
+Check below for your delivery methods and deadlines, and to find your local election office contact information.
+
+### Delivery Methods
+
+* Registration: email, fax, postal mail, or online
+* Ballot Request: email, fax, postal mail, or online
+* Ballot Return: email, fax or postal mail
