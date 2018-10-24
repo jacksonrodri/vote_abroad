@@ -22,4 +22,12 @@ canRegisterWithFwab: false
 fwabSubmitOptions:
   - Mail
 ---
-Remember that you need to request a ballot each calendar year that you'd like to vote in. Check below for your primary and general deadlines. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
+Illinois voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
+
+Check below for your delivery methods and deadlines, and to find your local election office contact information.
+
+### Delivery Methods
+
+* Registration: not required
+* Ballot Request: email, fax, postal mail, or online
+* Ballot Return: postal mail
