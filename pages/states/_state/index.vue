@@ -13,7 +13,7 @@
           {{ $t(`states.${state.iso}`) }}
         </h1>
         <nuxtent-body class="content" :body="state.body" />
-        <i-18n path="states.stateBody" tag="p" v-if="$te('states.stateBody')">
+        <i-18n path="states.stateBody" tag="p" v-if="$te('states.stateBody') && $i18n.locale !== 'en'">
           <nuxt-link :to="localePath('index')" class="has-text-primary">{{$t('states.clickHere')}}</nuxt-link>
         </i-18n>
         <br/>
@@ -85,6 +85,41 @@
             <span v-if="currentLeo && currentLeo.f" v-html="md(`**${$t('dashboard.fax')}:** [${ '+1' + currentLeo.f }](tel:${ ('+1' + currentLeo.f).replace(/[()]/g, '-').replace(/ /g, '')  })`)"></span>
             </p>
           </div>
+          <h2 class="title is-5">State Lookup Tools</h2>
+          <p>
+            <a
+              v-if="state.amIRegistered"
+              class="button is-primary"
+              target="blank"
+              :href="state.amIRegistered">
+              Am I Registered?
+            </a>
+            <br>
+            <a
+              v-if="state.whereIsMyBallot"
+              class="button is-primary"
+              target="blank"
+              :href="state.whereIsMyBallot">
+              Where Is My Ballot?
+            </a>
+            <br>
+            <a
+              v-if="state.sampleBallot"
+              class="button is-primary"
+              target="blank"
+              :href="state.sampleBallot">
+              Sample Ballot
+            </a>
+            <br>
+            <a
+              v-if="state.uocavaVoters"
+              class="button is-primary"
+              target="blank"
+              :href="state.uocavaVoters">
+              State Page For Military And Overseas Voters
+            </a>
+          </p>
+          <!-- <a :href="state."></a> -->
       </div>
     </div>
   </section>
@@ -142,10 +177,11 @@ export default {
         newStr = str.replace(/\*/g, '')
       }
       return this.$te(`election.${this.camelize(newStr)}`)
-        ? this.$t(`election.${this.camelize(newStr)}`) + str.replace(/[^*]/g, '')
+        // ? this.$t(`election.${this.camelize(newStr)}`) + str.replace(/[^*]/g, '')
+        ? this.$t(`election.${this.camelize(newStr)}`)
         : this.$te(`election.${newStr.toLowerCase().replace(/\s/gi, '')}`)
-          ? this.$t(`election.${newStr.toLowerCase().replace(/\s/gi, '')}`) + str.replace(/[^*]/g, '')
-          : str
+          ? this.$t(`election.${newStr.toLowerCase().replace(/\s/gi, '')}`)
+          : newStr
     },
     camelize (str) {
       return str.replace(/(?:^\w|[A-Z]|\b\w|\s+)/g, function (match, index) {
