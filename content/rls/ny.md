@@ -23,7 +23,18 @@ fwabSubmitOptions:
   - Mail
 amIRegistered: 'https://voterlookup.elections.state.ny.us/'
 whereIsMyBallot: ''
-sampleBallot: 'https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage'
+sampleBallot: >-
+  https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage
 uocavaVoters: ''
 ---
-Remember that you need to request a ballot each calendar year that you'd like to vote in. Check below for your primary and general deadlines. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
+New York voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
+
+Check below for your delivery methods and deadlines, and to find your local election office contact information.
+
+### Delivery Methods
+
+* Registration: email, fax, or postal mail
+* Ballot Request: email, fax or postal mail
+* Ballot Return: postal mail~
+
+~NY voters may submit registration or ballot requests by email or fax to meet these deadlines, but must also postal mail an original to NY
