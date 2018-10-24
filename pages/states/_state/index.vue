@@ -24,7 +24,7 @@
             detailed
             :has-detailed-visible="() => false"
             detail-key="date"
-            :opened-detailed="['2018-11-06T00:00:00']">
+            :opened-detailed="JSON.stringify(upcomingElections).includes('note') ? ['2018-11-06T00:00:00'] : []">
             <template slot-scope="props">
               <b-table-column :label="$t('election.electionDay')">
                 <h1 class="title is-5">{{ localizeIfAvailable(props.row.electionType) }}</h1>
