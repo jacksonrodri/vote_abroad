@@ -1,7 +1,9 @@
 ---
 title: HOW TO VOTE USING THE BACK-UP BALLOT
 ---
-**Haven’t received your official Ballot yet? Overseas voters can VOTE NOW using the Federal Write-In Absentee Ballot ("FWAB" or Back-up Ballot)!**
+**Haven’t received your official Ballot yet? Concerned your official ballot won't get to you in time to meet the ballot return deadlines?**
+
+**Overseas voters can VOTE NOW using the Federal Write-In Absentee Ballot ("FWAB" or Back-up Ballot)!**
 
 **STEP I. **Did You Send in Your Ballot Request Form (the Federal Post Card Application) for 2018?
 
@@ -13,7 +15,7 @@ If you vote in **AZ, CO, ME, MN, MS, MT, OR, SC, UT **or **WA,** you can skip th
   _
 * If your LEO **hasn't** received your ballot request form--or you haven't sent it in yet--go to [www.votefromabroad.org](https://www.votefromabroad.org/) to fill out your form and send it to your LEO right away. Then go to **Step II.** _The deadline for the Ballot Request form is earlier than the deadline to submit a FWAB, but most states will accept it by Email or Fax._ 
 
-****
+- - -
 
 **STEP II.** Fill out and Send in Your FWAB: 
 
