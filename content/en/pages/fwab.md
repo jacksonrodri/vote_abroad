@@ -32,10 +32,10 @@ If you vote in **AZ, CO, ME, MN, MS, MT, OR, SC, UT **or **WA,** you can skip th
 * If your state only allows return by Fax (not Email) and you don’t have access to a fax machine, you can find free apps that will convert an email attachment to a fax. Search for "free fax apps for Android/Iphone"
 * Or you can use the DoD Fax service through the Federal Voting Assistance Program (FVAP). Email your ballot and any required supporting materials (including the transmission cover sheet) to [**fax@fvap.gov**](fax@fvap.gov). FVAP will then fax your election materials to your LEO.
 
-**Return by Mail: **If you choose--or if your state requires you--to return your FWAB by postal mail, you can download envelope templates for the "Ballot Security Envelope" (to hold your filled out ballot) and the "Mailing Envelope" (to hold the ballot separate from the supporting materials)._ If you have your original Ballot Request form, include it in the "Mailing Envelope"._
+**Return by Mail: **If you choose--or if your state requires you--to return your FWAB by postal mail, please follow the instructions carefully. Two envelopes will be required: a "Ballot Security Envelope" (to hold your completed FWAB ballot) and the "Mailing Envelope" (to hold the supporting materials as well as the sealed Ballot Security envelope). If you wish, you can follow the instructions to download envelope templates to affix to blank envelopes._ If you have your original Ballot Request form, include it in the "Mailing Envelope"._
 
 __
 
 **\*IMPORTANT: If you receive your official ballot after submitting your FWAB, you should complete and return your official ballot as well.** 
 
-It’s okay--only one ballot per person will be counted. If both your FWAB and your official ballot arrive before the deadline, only your official ballot will be counted; your FWAB will be discarded.
+It’s okay--only one ballot per person will be counted. If both your FWAB and your official ballot arrive before the deadline, your FWAB will be discarded and only your official ballot will be counted,
