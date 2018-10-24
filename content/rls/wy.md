@@ -17,6 +17,11 @@ fpcaSubmitOptionsRequest:
 canRegisterWithFwab: true
 fwabSubmitOptions:
   - Mail
+amIRegistered: ''
+whereIsMyBallot: ''
+sampleBallot: >-
+  https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage
+uocavaVoters: ''
 ---
 Wyoming voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
 

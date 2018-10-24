@@ -27,7 +27,7 @@
             :opened-detailed="JSON.stringify(upcomingElections).includes('note') ? ['2018-11-06T00:00:00'] : []">
             <template slot-scope="props">
               <b-table-column :label="$t('election.electionDay')">
-                <h1 class="title is-5">{{ localizeIfAvailable(props.row.electionType) }}</h1>
+                <h1 class="title is-6">{{ localizeIfAvailable(props.row.electionType) }}</h1>
               </b-table-column>
               <b-table-column>
                 <div class="calendar">
