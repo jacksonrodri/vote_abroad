@@ -31,11 +31,11 @@ export default {
   asyncData: async ({ app }) => ({
     page: await app.$content(`${app.i18n.locale}/pages`).get(`${app.i18n.locale !== app.i18n.defaultLocale ? app.i18n.locale + '/' : ''}states`),
     states: (await app.$content('/rls').getAll())
-      .sort((a, b) => {
-        if (a.title.toUpperCase() < b.title.toUpperCase()) { return -1 }
-        if (a.title.toUpperCase() > b.title.toUpperCase()) { return 1 }
-        return 0
-      })
+    // .sort((a, b) => {
+    //   if (a.title.toUpperCase() < b.title.toUpperCase()) { return -1 }
+    //   if (a.title.toUpperCase() > b.title.toUpperCase()) { return 1 }
+    //   return 0
+    // })
   }),
   data () {
     return {
