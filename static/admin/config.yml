@@ -164,10 +164,10 @@ collections:
       - {label: "FPCA Submit Options for REGISTERED voters", name: "fpcaSubmitOptionsRequest", widget: "list"}
       - {label: "Voters Can use the FWAB to register/request a ballto?", name: "canRegisterWithFwab", widget: "boolean"}
       - {label: "FWAB Submit Options", name: "fwabSubmitOptions", widget: "list"}
-      - {label: "Am I registered -- State Page", name: "amIRegistered", widget: "string"}
-      - {label: "Where is my ballot -- State Page", name: "whereIsMyBallot", widget: "string"}
-      - {label: "Sample Ballot -- State Page", name: "sampleBallot", widget: "string"}
-      - {label: "UOCAVA voters -- State Page", name: "uocavaVoters", widget: "string"}
+      - {label: "Am I registered -- State Page", name: "amIRegistered", widget: "string", required: false}
+      - {label: "Where is my ballot -- State Page", name: "whereIsMyBallot", widget: "string", required: false}
+      - {label: "Sample Ballot -- State Page", name: "sampleBallot", widget: "string", required: false}
+      - {label: "UOCAVA voters -- State Page", name: "uocavaVoters", widget: "string", required: false}
       - {label: "State Introduction Text", name: "body", widget: "markdown"}
   - name: "lang"
     label: "Translation Strings"
