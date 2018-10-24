@@ -21,6 +21,10 @@ fpcaSubmitOptionsRequest:
 canRegisterWithFwab: false
 fwabSubmitOptions:
   - Mail
+amIRegistered: 'https://www.voterview.ar-nova.org/VoterView/Home.do'
+whereIsMyBallot: ''
+sampleBallot: 'http://vote-ar.org/forvoters.aspx?state=ar'
+uocavaVoters: ''
 ---
 Arkansas voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
 
