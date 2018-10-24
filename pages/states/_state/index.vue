@@ -18,7 +18,13 @@
         </i-18n>
         <br/>
           <h1 class="title is-4">{{$t('states.stateTitle', {state: $t(`states.${state.iso}`)})}}</h1>
-          <b-table hoverable :data="upcomingElections">
+          <b-table
+            hoverable
+            :data="upcomingElections"
+            detailed
+            :has-detailed-visible="() => false"
+            detail-key="date"
+            :opened-detailed="['2018-11-06T00:00:00']">
             <template slot-scope="props">
               <b-table-column :label="$t('election.electionDay')">
                 <h1 class="title is-5">{{ localizeIfAvailable(props.row.electionType) }}</h1>
@@ -36,12 +42,23 @@
                   <li v-for="(deadline, index) in rule"
                     :key="index.toString() + deadline.rule + deadline.voterType"
                     v-if="deadline.rule !== 'Not Required'">
-                    <strong>{{ typeof deadline.voterType === 'string' ? localizeIfAvailable(deadline.voterType) : localizeIfAvailable('All Voters') }}</strong><br/><span class="tag is-success">{{ localizeIfAvailable(deadline.rule) }}</span><br/>{{ new Date(deadline.date).toLocaleDateString(dateFormat, {year: 'numeric', month: 'short', day: 'numeric'}) }}
+                    <strong>{{ typeof deadline.voterType === 'string' ? localizeIfAvailable(deadline.voterType) : localizeIfAvailable('All Voters') }}</strong>
+                    <sup v-if="deadline.note">{{deadline.note.replace(/[A-Z]/g, '')}}</sup>
+                    <br/>
+                    <span class="tag is-success">{{ localizeIfAvailable(deadline.rule) }}</span>
+                    <br/>
+                    {{ new Date(deadline.date).toLocaleDateString(dateFormat, {year: 'numeric', month: 'short', day: 'numeric'}) }}
                     <hr v-if="index < rule.length - 1">
                   </li>
                   <li v-else><strong>{{ localizeIfAvailable(deadline.rule) }}</strong></li>
                 </ul>
               </b-table-column>
+            </template>
+            <template slot="detail" slot-scope="props">
+              <p
+                class="help"
+                v-for="note of rowNotes(props.row)"
+                :key="note">{{note.replace(/[A-Z]/g, '')}}: {{$t(`request.deadlineLanguage.notes.${note}`)}}</p>
             </template>
           </b-table>
           <h2 class="title is-5">{{$t('states.electionOfficials')}}</h2>
@@ -118,7 +135,6 @@
               State Page For Military And Overseas Voters
             </a>
           </p>
-          <!-- <a :href="state."></a> -->
       </div>
     </div>
   </section>
@@ -167,6 +183,13 @@ export default {
     }
   },
   methods: {
+    rowNotes (row) {
+      return Object.entries(row.rules)
+        .filter(([k, v]) => v.reduce((bool, cur) => cur.note || bool, false))
+        .map(([k, v]) => v.reduce((acc, cur) => cur.note ? acc.concat(cur.note) : acc, []))
+        .reduce((acc, cur) => acc.concat(cur), [])
+        .reduce((acc, cur) => acc.includes(cur) ? acc : acc.concat(cur), [])
+    },
     localizeIfAvailable (str) {
       if (typeof str !== 'string') {
         return str
