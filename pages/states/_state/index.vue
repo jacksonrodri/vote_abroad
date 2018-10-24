@@ -12,7 +12,7 @@
         <h1 class="title">
           {{ $t(`states.${state.iso}`) }}
         </h1>
-        <!-- <nuxtent-body class="content" :body="state.body" /> -->
+        <nuxtent-body class="content" :body="state.body" />
         <i-18n path="states.stateBody" tag="p" v-if="$te('states.stateBody')">
           <nuxt-link :to="localePath('index')" class="has-text-primary">{{$t('states.clickHere')}}</nuxt-link>
         </i-18n>
