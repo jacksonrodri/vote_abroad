@@ -13,7 +13,7 @@ If you vote in **AZ, CO, ME, MN, MS, MT, OR, SC, UT **or **WA,** you can skip th
   _
 * If your LEO **hasn't** received your ballot request form--or you haven't sent it in yet--go to [www.votefromabroad.org](https://www.votefromabroad.org/) to fill out your form and send it to your LEO right away. Then go to **Step II.** _The deadline for the Ballot Request form is earlier than the deadline to submit a FWAB, but most states will accept it by Email or Fax._ 
 
-
+****
 
 **STEP II.** Fill out and Send in Your FWAB: 
 
