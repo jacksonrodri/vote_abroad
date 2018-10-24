@@ -25,7 +25,7 @@ fwabSubmitOptions:
 amIRegistered: 'https://myvoterinformation.alaska.gov/'
 whereIsMyBallot: 'https://myvoterinformation.alaska.gov/'
 sampleBallot: 'http://www.elections.alaska.gov/ei_sb.php'
-uocavaVoters: ' '
+uocavaVoters: ''
 ---
 Alaska voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
 
