@@ -23,7 +23,7 @@ fwabSubmitOptions:
   - Fax
   - Mail
 ---
-Alaska voters abroad need to request a ballot each calendar year you'd like to vote in. Check below for your delivery methods and deadlines, and to find your local election office contact information..  
+Alaska voters abroad need to request a ballot each calendar year you'd like to vote in. Check below for your delivery methods and deadlines, and to find your local election office contact information.
 
 [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
 
