@@ -27,17 +27,15 @@ title: HOW TO VOTE USING THE BACK-UP BALLOT
 
 4 Print out the completed FWAB, then follow the instructions carefully to **SUBMIT **the required materials to your LEO. 
 
-* Return by Fax or Email: The Instructions will indicate if you may opt to send in your FWAB by Email or Fax. _We recommend you do so to ensure it will be received by the deadline. _
+**Return by Fax or Email:** The Instructions will indicate if you may opt to send in your FWAB by Email or Fax. _We recommend you do so to ensure it will be received by the deadline. _
 
-If your state only allows return by Fax (not Email) and you don’t have access to a fax machine, you can find free apps that will convert an email attachment to a fax. Search for "free fax apps for Android/Iphone"
+* If your state only allows return by Fax (not Email) and you don’t have access to a fax machine, you can find free apps that will convert an email attachment to a fax. Search for "free fax apps for Android/Iphone"
+* Or you can use the DoD Fax service through the Federal Voting Assistance Program (FVAP). Email your ballot and any required supporting materials (including the transmission cover sheet) to [**fax@fvap.gov**](fax@fvap.gov). FVAP will then fax your election materials to your LEO.
 
-Or you can use the DoD Fax service through the Federal Voting Assistance Program (FVAP). Email your ballot and any required supporting materials (including the transmission cover sheet) to [**fax@fvap.gov**](fax@fvap.gov). FVAP will then fax your election materials to your LEO.
-
-* Return by Mail: If you choose--or if your state requires you--to return your FWAB by postal mail, you can download envelope templates for the "Ballot Security Envelope" (to hold your filled out ballot) and the "Mailing Envelope" (to hold the ballot separate from the supporting materials)._ If you have your original Ballot Request form, include it in the "Mailing Envelope"._
+**Return by Mail: **If you choose--or if your state requires you--to return your FWAB by postal mail, you can download envelope templates for the "Ballot Security Envelope" (to hold your filled out ballot) and the "Mailing Envelope" (to hold the ballot separate from the supporting materials)._ If you have your original Ballot Request form, include it in the "Mailing Envelope"._
 
 __
 
 **\*IMPORTANT: If you receive your official ballot after submitting your FWAB, you should complete and return your official ballot as well.** 
 
-It’s okay--only one ballot per person will be counted.
- If both your FWAB and your official ballot arrive before the deadline, only your official ballot will be counted; your FWAB will be discarded.
+It’s okay--only one ballot per person will be counted. If both your FWAB and your official ballot arrive before the deadline, only your official ballot will be counted; your FWAB will be discarded.
