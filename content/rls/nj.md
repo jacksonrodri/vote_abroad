@@ -21,6 +21,10 @@ fpcaSubmitOptionsRequest:
 canRegisterWithFwab: false
 fwabSubmitOptions:
   - Mail
+amIRegistered: 'https://voter.njsvrs.com/PublicAccess/servlet/com.saber.publicaccess.control.PublicAccessNavigationServlet?USERPROCESS=PublicSearch'
+whereIsMyBallot: ''
+sampleBallot: 'https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage'
+uocavaVoters: ''
 ---
 New Jersey voters abroad can register, request their ballots and return their ballots by **email, fax or postal mail**. Deadlines for each are listed below. 
 

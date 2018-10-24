@@ -22,7 +22,7 @@ fwabSubmitOptions:
   - Mail
 amIRegistered: 'http://www.mvp.sos.ga.gov'
 whereIsMyBallot: 'http://www.mvp.sos.ga.gov'
-sampleBallot: 'https://www.mvp.sos.ga.gov/MVP/mvp.do'
+sampleBallot: 'https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage'
 uocavaVoters: ''
 ---
 Georgia voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.

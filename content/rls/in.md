@@ -23,6 +23,10 @@ fwabSubmitOptions:
   - Email
   - Fax
   - Mail
+amIRegistered: 'https://indianavoters.in.gov/'
+whereIsMyBallot: 'https://indianavoters.in.gov/'
+sampleBallot: 'https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage'
+uocavaVoters: ''
 ---
 Indiana voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
 
