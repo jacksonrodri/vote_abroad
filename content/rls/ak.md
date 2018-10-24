@@ -23,4 +23,6 @@ fwabSubmitOptions:
   - Fax
   - Mail
 ---
-Remember that you need to request a ballot each calendar year that you'd like to vote in (really). Check below for your primary and general deadlines. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
+Remember that you need to request a ballot each calendar year you'd like to vote in. Check below for primary and general deadlines, organized by your delivery options. 
+
+[**Click here**](https://www.votefromabroad.org) to start your ballot request now.
