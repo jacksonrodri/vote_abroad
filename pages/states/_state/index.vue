@@ -85,7 +85,7 @@
             <span v-if="currentLeo && currentLeo.f" v-html="md(`**${$t('dashboard.fax')}:** [${ '+1' + currentLeo.f }](tel:${ ('+1' + currentLeo.f).replace(/[()]/g, '-').replace(/ /g, '')  })`)"></span>
             </p>
           </div>
-          <h2 class="title is-5">State Lookup Tools</h2>
+          <h2 class="title is-5">Additional Resources</h2>
           <p>
             <a
               v-if="state.amIRegistered"
