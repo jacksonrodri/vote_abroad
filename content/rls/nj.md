@@ -22,8 +22,8 @@ canRegisterWithFwab: false
 fwabSubmitOptions:
   - Mail
 ---
-Remember that you need to request a ballot each calendar year you'd like to vote in. 
+New Jersey voters abroad can register, request their ballots and return their ballots by email, fax or postal mail. Deadlines for each are listed below. 
 
-Note that NJ voters can register, request their ballots and return their ballots by **email, fax **or **postal mail**. Deadlines below.
+Do you need to find where to send your forms? Start typing your US county into the \[election official] search box below.
 
 [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
