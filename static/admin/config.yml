@@ -170,7 +170,7 @@ collections:
       - {label: "UOCAVA voters -- State Page", name: "uocavaVoters", widget: "string", required: false}
       - {label: "State Introduction Text", name: "body", widget: "markdown"}
   - name: "lang"
-    label: "Translation Strings"
+    label: "Translation Strings [do not edit- contact Alex for changes]"
     folder: "lang"
     create: false
     delete: false
