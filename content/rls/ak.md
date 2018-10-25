@@ -24,7 +24,8 @@ fwabSubmitOptions:
   - Mail
 amIRegistered: 'https://myvoterinformation.alaska.gov/'
 whereIsMyBallot: 'https://myvoterinformation.alaska.gov/'
-sampleBallot: 'https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage'
+sampleBallot: >-
+  https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage
 uocavaVoters: 'http://www.elections.alaska.gov/Core/militaryandoverseasvoters.php'
 ---
 Alaska voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
