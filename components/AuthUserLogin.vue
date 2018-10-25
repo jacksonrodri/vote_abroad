@@ -146,7 +146,7 @@
         <p v-html="toolTipContent"></p>
       </b-message>
 
-      <p class="has-text-centered">Need an emergency ballot? <nuxt-link :to="localePath({ name: 'page', params: { page: 'fwab' } })">Use a Federal Write-in Absentee Ballot.</nuxt-link></p>
+      <p class="has-text-centered is-size-5">Due to timing please consider <nuxt-link :to="localePath({ name: 'page', params: { page: 'fwab' } })">submitting a write-in ballot</nuxt-link> along with your ballot request or registration. </p>
     </div>
     <b-modal
       :active="!optedIn && isPrivacyOptInModalActive"
