@@ -1,11 +1,11 @@
 <template>
 <!-- empty note -->
-<div class="hero-head">
+<div>
   <div>
     <h1 class="has-text-centered title is-3">{{$t('dashboard.ballotRequestStatus')}}</h1>
     <h3 class="has-text-centered subtitle is-4">{{$t('dashboard.nextSteps')}}</h3>
   </div>
-  <div class="hero-body columns is-centered">
+  <div class="columns is-centered">
     <div class="column is-12 is-8-desktop is-7-widescreen is-6-fullhd">
       <!-- level menu -->
       <div class="level is-mobile">

@@ -16,16 +16,22 @@
             <!-- detailed> -->
             <template slot-scope="props">
               <b-table-column :label="$t('election.electionDay')">
-                <h1 class="title is-5">{{ localizeIfAvailable(props.row.electionType) }}</h1>
-              </b-table-column>
-              <b-table-column>
-                <div class="calendar">
+                <h1 class="title is-6">{{ localizeIfAvailable(props.row.electionType) }}</h1>
+                <div class="calendar" style="margin: 0">
                   <header class="calendar-month">{{new Date(props.row.date).toLocaleDateString(dateFormat, {month: 'short'}) }}</header>
                   <div class="calendar-date">
                     {{ new Date(props.row.date).toLocaleDateString(dateFormat, {day: 'numeric'}) }}
                   </div>
                 </div>
               </b-table-column>
+              <!-- <b-table-column>
+                <div class="calendar">
+                  <header class="calendar-month">{{new Date(props.row.date).toLocaleDateString(dateFormat, {month: 'short'}) }}</header>
+                  <div class="calendar-date">
+                    {{ new Date(props.row.date).toLocaleDateString(dateFormat, {day: 'numeric'}) }}
+                  </div>
+                </div>
+              </b-table-column> -->
               <b-table-column v-for="(rule, key) in props.row.rules" :key="key" :label="localizeIfAvailable(key)">
                 <ul>
                   <li v-for="(deadline, index) in rule"

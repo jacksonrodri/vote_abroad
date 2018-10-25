@@ -1,5 +1,5 @@
 <template>
-  <div class="columns is-centered is-multiline">
+  <div class="hero-body columns is-centered is-multiline">
     <div class="column is-10 is-8-desktop is-7-widescreen is-6-fullhd is-paddingless">
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul>
