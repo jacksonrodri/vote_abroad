@@ -5,36 +5,36 @@ publish_mode: editorial_workflow
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 collections:
-  - name: "config"
-    label: "Configuration Settings"
-    folder: "static/config"
-    create: false
-    delete: false
-    extension: json
-    format: json
-    slug: "{{slug}}"
-    editor:
-      preview: false
-    fields:
-      - {label: "Title", name: "title", widget: "hidden", default: "config"}
-      - label: Top FAQs
-        label_singular: FAQ
-        name: relatedFaqs
-        widget: list
-        fields:
-          - name: FAQ to be included in menu
-            label: Type to search for a FAQ
-            widget: relation
-            collection: faqs
-            searchFields: ["title", "slug"]
-            displayFields: ["title"]
-            valueField: "slug"
-      - label: "States"
-        name: "states"
-        widget: "list"
-        fields:
-          - {label: ISO Code, name: iso, widget: string}
-          - {label: State, name: state, widget: string}
+  # - name: "config"
+  #   label: "Configuration Settings"
+  #   folder: "static/config"
+  #   create: false
+  #   delete: false
+  #   extension: json
+  #   format: json
+  #   slug: "{{slug}}"
+  #   editor:
+  #     preview: false
+  #   fields:
+  #     - {label: "Title", name: "title", widget: "hidden", default: "config"}
+  #     - label: Top FAQs
+  #       label_singular: FAQ
+  #       name: relatedFaqs
+  #       widget: list
+  #       fields:
+  #         - name: FAQ to be included in menu
+  #           label: Type to search for a FAQ
+  #           widget: relation
+  #           collection: faqs
+  #           searchFields: ["title", "slug"]
+  #           displayFields: ["title"]
+  #           valueField: "slug"
+  #     - label: "States"
+  #       name: "states"
+  #       widget: "list"
+  #       fields:
+  #         - {label: ISO Code, name: iso, widget: string}
+  #         - {label: State, name: state, widget: string}
   - name: "pages" # Used in routes, e.g., /admin/collections/blog
     label: "Pages" # Used in the UI
     label_singular: "Page"
