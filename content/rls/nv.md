@@ -36,7 +36,7 @@ Check below for your delivery methods and deadlines, and to find your local elec
 ### Delivery Methods
 
 * Registration: email, fax, postal mail, or online~
-* Ballot Request: email, fax or postal mail
+* Ballot Request: email, fax, postal mail, or online~
 * Ballot Return: email, fax or postal mail
 
 ~[Effective Absentee System for Elections (EASE) program](https://www.nvease.gov/)
