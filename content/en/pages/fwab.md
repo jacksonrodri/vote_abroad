@@ -5,15 +5,7 @@ title: HOW TO VOTE USING THE BACK-UP BALLOT
 
 **Overseas voters can VOTE NOW using the Federal Write-In Absentee Ballot ("FWAB" or Back-up Ballot)!**
 
-<<<<<<< HEAD
-1. Go to this website and follow the prompts to [Fill in the Back-up Ballot](https://www.fvap.gov/fwab-privacy-notice)
-2. The Back-up Ballot should fill in the candidates for you to choose. But if it does not, you can write in the candidate’s name or just write in the party of the candidate you are selecting. (If you are using the FWAB to vote in a Primary Election, you must write in the candidate's name).
-   You can look up your Sample Ballot here: <https://ballotpedia.org/Sample_Ballot_Lookup> (Note: you do NOT need to provide an email address). Your Sample Ballot will show the races you are eligible to vote in and the candidates for each race.
-3. Download the PDF Package containing your completed Back-up Ballot and Instructions.
-4. Print out the completed Back-up Ballot, then sign and date it and return it to your Local Election Official.
-=======
 **STEP I. **Did You Send in Your Ballot Request Form (the Federal Post Card Application) for 2018?
->>>>>>> master
 
 If you vote in **AZ, CO, ME, MN, MS, MT, OR, SC, UT **or **WA,** you can skip this step. On the FWAB, you can check the box to submit your Ballot Request at the same time. (**Go to Step II**). 
 
