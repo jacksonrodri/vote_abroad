@@ -36,4 +36,6 @@ Check below for your delivery methods and deadlines, and to find your local elec
 
 * Registration: email/online, fax or postal mail
 * Ballot Request: email, fax or postal mail
-* Ballot Return: fax or postal mail
+* Ballot Return: fax or postal mail~
+
+_~ Fax ballot return only available if voter requests their ballot be sent to them by Email/Online or Fax_
