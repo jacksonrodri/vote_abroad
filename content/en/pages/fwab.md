@@ -5,9 +5,9 @@ title: HOW TO VOTE USING THE BACK-UP BALLOT
 
 **Overseas voters can VOTE NOW using the Federal Write-In Absentee Ballot ("FWAB" or Back-up Ballot)!**
 
-**STEP I. **Did You Send in Your Ballot Request Form (the Federal Post Card Application) for 2018?
+**STEP I.** Did You Send in Your Ballot Request Form (the Federal Post Card Application) for 2018?
 
-If you vote in **AZ, CO, ME, MN, MS, MT, OR, SC, UT **or **WA,** you can skip this step. On the FWAB, you can check the box to submit your Ballot Request at the same time. (**Go to Step II**). 
+If you vote in **AZ, CO, ME, MN, MS, MT, OR, SC, UT** or **WA,** you can skip this step. On the FWAB, you can check the box to submit your Ballot Request at the same time. (**Go to Step II**). 
 
 **All other voters:** Verify with your Local Election Official (LEO) that they received your Ballot Request form for 2018 and have sent out your official ballot. You can find the contact information on the State Voting Guide:  [**www.votefromabroad.org/states**](https://www.votefromabroad.org/states)
 
@@ -27,14 +27,14 @@ If you vote in **AZ, CO, ME, MN, MS, MT, OR, SC, UT **or **WA,** you can skip th
 
 3 Download the PDF Package containing your completed FWAB and Instructions.
 
-4 Print out the completed FWAB, then follow the instructions carefully to **SUBMIT **the required materials to your LEO. 
+4 Print out the completed FWAB, then follow the instructions carefully to **SUBMIT** the required materials to your LEO. 
 
-**Return by Fax or Email:** The Instructions will indicate if you may opt to send in your FWAB by Email or Fax. _We recommend you do so to ensure it will be received by the deadline. _
+**Return by Fax or Email:** The Instructions will indicate if you may opt to send in your FWAB by Email or Fax. _We recommend you do so to ensure it will be received by the deadline._
 
 * If your state only allows return by Fax (not Email) and you don’t have access to a fax machine, you can find free apps that will convert an email attachment to a fax. Search for "free fax apps for Android/Iphone"
 * Or you can use the DoD Fax service through the Federal Voting Assistance Program (FVAP). Email your ballot and any required supporting materials (including the transmission cover sheet) to [**fax@fvap.gov**](fax@fvap.gov). FVAP will then fax your election materials to your LEO.
 
-**Return by Mail: **If you choose--or if your state requires you--to return your FWAB by postal mail, please follow the instructions carefully. Two envelopes will be required: a "Ballot Security Envelope" (to hold your completed FWAB ballot) and the "Mailing Envelope" (to hold the supporting materials as well as the sealed Ballot Security envelope). If you wish, you can follow the instructions to download envelope templates to affix to blank envelopes._ If you have your original Ballot Request form, include it in the "Mailing Envelope"._
+**Return by Mail:** If you choose--or if your state requires you--to return your FWAB by postal mail, please follow the instructions carefully. Two envelopes will be required: a "Ballot Security Envelope" (to hold your completed FWAB ballot) and the "Mailing Envelope" (to hold the supporting materials as well as the sealed Ballot Security envelope). If you wish, you can follow the instructions to download envelope templates to affix to blank envelopes. _If you have your original Ballot Request form, include it in the "Mailing Envelope"._
 
 __
 
