@@ -24,7 +24,8 @@ fwabSubmitOptions:
   - Mail
 amIRegistered: 'https://myvoterinformation.alaska.gov/'
 whereIsMyBallot: 'https://myvoterinformation.alaska.gov/'
-sampleBallot: 'https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage'
+sampleBallot: >-
+  https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage
 uocavaVoters: 'http://www.elections.alaska.gov/Core/militaryandoverseasvoters.php'
 ---
 Alaska voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
@@ -35,4 +36,6 @@ Check below for your delivery methods and deadlines, and to find your local elec
 
 * Registration: email/online, fax or postal mail
 * Ballot Request: email, fax or postal mail
-* Ballot Return: fax or postal mail
+* Ballot Return: fax or postal mail~
+
+_~ Fax ballot return only available if voter requests their ballot be sent to them by Email/Online or Fax_
