@@ -99,6 +99,7 @@
 
 <script>
 import snarkdown from 'snarkdown'
+// note
 
 export default {
   async asyncData ({ app, route }) {
