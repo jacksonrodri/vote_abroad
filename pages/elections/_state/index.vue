@@ -16,7 +16,7 @@
             detailed
             :has-detailed-visible="() => false"
             detail-key="date"
-            :opened-detailed="JSON.stringify(elections).includes('note') ? ['2018-11-06T00:00:00'] : []">
+            :opened-detailed="elections && elections.length && JSON.stringify(elections).includes('note') ? ['2018-11-06T00:00:00'] : []">
             <template slot-scope="props">
               <b-table-column
                 :label="$t('election.electionDay')">
