@@ -213,11 +213,13 @@
     electionType: 'General Election'
     rules:
         Registration:
-            - {voterType: {}, rule: 'Sent by*', date: '2018-11-06T19:00:00', note: 'CO1'}
+            - {voterType: {}, rule: 'By Mail: Postmarked by*', date: '2018-11-06T19:00:00', note: 'CO1'}
+            - {voterType: {}, rule: 'By Email or Fax: Received by', date: '2018-11-06T19:00:00'}
         'Ballot Request':
             - {voterType: {}, rule: 'No Deadline', date: '2018-11-06T19:00:00'}
         'Ballot Return':
-            - {voterType: {}, rule: 'Sent by**', date: '2018-11-06T19:00:00', note: 'CO2'}
+            - {voterType: {}, rule: 'By Mail: Sent by**', date: '2018-11-06T19:00:00', note: 'CO2'}
+            - {voterType: {}, rule: 'By Email, Fax or Online Upload: Received by', date: '2018-11-06T19:00:00'}
 -
     state: CT
     date: '2018-08-14T00:00:00'
@@ -237,7 +239,7 @@
         Registration:
             - {voterType: {}, rule: 'Received by', date: '2018-11-05T17:00:00', note: 'CT1'}
         'Ballot Request':
-            - {voterType: {}, rule: 'Received by', date: '2018-11-05T20:00:00', note: 'CT1'}
+            - {voterType: {}, rule: 'Received by', date: '2018-11-06T20:00:00', note: 'CT1'}
         'Ballot Return':
             - {voterType: {}, rule: 'Received by', date: '2018-11-06T20:00:00'}
 -
@@ -479,7 +481,6 @@
             - {voterType: {}, rule: 'Request Mail Ballot: Received by', date: '2018-10-29T23:59:00'}
             - {voterType: {}, rule: 'Request Email/Online or Fax Ballot: Received by', date: '2018-11-05T12:00:00'}
         'Ballot Return':
-            # - {voterType: {}, rule: 'Received by*', date: '2018-11-06T12:00:00'}
             - {voterType: {}, rule: 'Return by Mail: Postmarked by**', date: '2018-11-06T00:00:00', note: 'IN1'}
             - {voterType: {}, rule: 'Return by Email or Fax: Received by*', date: '2018-11-06T12:00:00'}
 -
@@ -494,7 +495,7 @@
             - {voterType: {}, rule: 'Request Mail Ballot: Received by', date: '2018-06-04T17:00:00'}
         'Ballot Return':
             - {voterType: {}, rule: 'Return by Mail: Postmarked by*', date: '2018-06-04T00:00:00'}
-            - {voterType: {}, rule: 'Return by Online or Fax: Received by', date: '2018-06-05T21:00:00'}
+            - {voterType: {}, rule: 'Return by Email or Fax: Received by', date: '2018-06-05T21:00:00'}
 -
     state: IA
     date: '2018-11-06T00:00:00'
@@ -506,7 +507,7 @@
             - {voterType: {}, rule: 'Received by', date: '2018-11-05T17:00:00'}
         'Ballot Return':
             - {voterType: {}, rule: 'Return by Mail: Postmarked by*', date: '2018-11-05T00:00:00', note: 'IA1'}
-            - {voterType: {}, rule: 'Return by Online or Fax: Received by', date: '2018-11-06T21:00:00'}
+            - {voterType: {}, rule: 'Return by Email or Fax: Received by', date: '2018-11-06T21:00:00', note: 'IA2'}
 -
     state: KS
     date: '2018-08-07T00:00:00'
@@ -528,7 +529,8 @@
             - {voterType: {}, rule: 'By Mail: Postmarked by', date: '2018-10-16T00:00:00'}
             - {voterType: {}, rule: 'By Email or Fax: Received by', date: '2018-10-16T00:00:00'}
         'Ballot Request':
-            - {voterType: {}, rule: 'Sent by', date: '2018-11-06T00:00:00'}
+            - {voterType: {}, rule: 'By Mail: Postmarked by', date: '2018-11-06T00:00:00'}
+            - {voterType: {}, rule: 'By Email or Fax: Received by', date: '2018-11-06T00:00:00'}
         'Ballot Return':
             - {voterType: {}, rule: 'Received by', date: '2018-11-06T00:00:00'}
 -
@@ -620,12 +622,12 @@
     electionType: 'General Election'
     rules:
         Registration:
-            - {voterType: {}, rule: 'Received by', date: '2018-10-16T21:00:00', note: 'MD1'}
+            - {voterType: {}, rule: 'Received by', date: '2018-10-16T21:00:00'}
         'Ballot Request':
-            - {voterType: {}, rule: 'Request Mail/Fax Ballot: Received by', date: '2018-10-30T20:00:00'}
-            - {voterType: {}, rule: 'Request Email/Online Ballot: Received by', date: '2018-11-02T23:59:00'}
+            - {voterType: {}, rule: 'By Mail: Postmarked by', date: '2018-10-16T00:00:00'}
+            - {voterType: {}, rule: 'By Online: Received by', date: '2018-10-16T00:00:00'}
         'Ballot Return':
-            - {voterType: {}, rule: 'Postmarked by*', date: '2018-11-06T20:00:00', note: 'MD2'}
+            - {voterType: {}, rule: 'Postmarked by*', date: '2018-11-06T20:00:00', note: 'MD1'}
 -
     state: MA
     date: '2018-09-04T00:00:00'
@@ -762,8 +764,7 @@
         'Ballot Request':
             - {voterType: {}, rule: 'Received by', date: '2018-11-06T00:00:00'}
         'Ballot Return*':
-            - {voterType: {}, rule: 'Return by Mail: Postmarked by', date: '2018-11-06T00:00:00', note: 'MT1'}
-            - {voterType: {}, rule: 'Return by Email/Online or Fax: Sent by', date: '2018-11-06T20:00:00'}
+            - {voterType: {}, rule: 'Received by', date: '2018-11-06T00:00:00', note: 'MT1'}
 -
     state: NE
     date: '2018-05-15T00:00:00'
@@ -998,7 +999,7 @@
         'Ballot Request':
             - {voterType: {}, rule: 'Received by', date: '2018-11-03T12:00:00'}
         'Ballot Return':
-            - {voterType: {}, rule: 'Postmarked by*', date: '2018-11-06T00:01:00', note: 'OH1'}
+            - {voterType: {}, rule: 'Postmarked by*', date: '2018-11-05T00:00:00', note: 'OH1'}
 -
     state: OK
     date: '2018-06-26T00:00:00'
@@ -1029,8 +1030,7 @@
     electionType: 'General Election'
     rules:
         Registration:
-            - {voterType: {}, rule: 'By Mail: Postmarked by', date: '2018-10-31T17:00:00'}
-            - {voterType: {}, rule: 'By Email or Fax: Received by', date: '2018-10-31T17:00:00'}
+            - {voterType: {}, rule: 'Received by', date: '2018-10-31T17:00:00'}
         'Ballot Request':
             - {voterType: {}, rule: 'Received by', date: '2018-10-31T17:00:00'}
         'Ballot Return':
@@ -1055,7 +1055,6 @@
     rules:
         Registration:
             - {voterType: {}, rule: 'By Mail: Postmarked by', date: '2018-10-16T00:00:00'}
-            - {voterType: {}, rule: 'By Email or Fax: Received by', date: '2018-10-16T23:59:00'}
         'Ballot Request':
             - {voterType: {}, rule: 'Request Mail Ballot: Received by', date: '2018-11-01T00:00:00'}
             - {voterType: {}, rule: 'Request Email/Online or Fax Ballot: Received by', date: '2018-11-06T00:00:00'}
@@ -1115,7 +1114,7 @@
             - {voterType: {}, rule: 'By Mail: Postmarked by', date: '2018-10-07T00:00:00'}
             - {voterType: {}, rule: 'By Email or Fax: Received by', date: '2018-10-07T00:00:00'}
         'Ballot Request':
-            - {voterType: {}, rule: 'Received by**', date: '2018-10-16T16:00:00'}
+            - {voterType: {}, rule: 'Received by', date: '2018-11-06T00:00:00'}
         'Ballot Return':
             - {voterType: {}, rule: 'Received by', date: '2018-11-06T20:00:00'}
 -
@@ -1150,8 +1149,8 @@
     electionType: 'General Election'
     rules:
         Registration:
-            - {voterType: {}, rule: 'By Email or Fax: Received by', date: '2017-10-07T00:00:00'}
-            - {voterType: {}, rule: 'By Mail: Postmarked by', date: '2017-10-08T00:00:00'}
+            - {voterType: {}, rule: 'By Email or Fax: Received by', date: '2017-10-17T00:00:00'}
+            - {voterType: {}, rule: 'By Mail: Postmarked by', date: '2017-10-17T00:00:00'}
         'Ballot Request':
             - {voterType: {}, rule: 'Received by', date: '2018-11-06T19:00:00'}
         'Ballot Return':
@@ -1255,6 +1254,7 @@
         Registration:
             - {voterType: {}, rule: 'By Mail: Postmarked by*', date: '2018-10-09T00:00:00', note: 'UT1'}
             - {voterType: {}, rule: 'By Online System: Received by', date: '2018-10-30T00:00:00'}
+            - {voterType: {}, rule: 'By Email or Fax: Received by', date: '2018-10-09T00:00:00'}
         'Ballot Request':
             - {voterType: {}, rule: 'Received by', date: '2018-11-01T00:00:00'}
         'Ballot Return':
@@ -1416,8 +1416,8 @@
     electionType: 'General Election'
     rules:
         Registration:
-            - {voterType: {}, rule: 'Received by', date: '2018-10-22T00:00:00'}
+            - {voterType: {}, rule: 'Received by', date: '2018-10-22T00:00:00', note: 'WY1'}
         'Ballot Request':
-            - {voterType: {}, rule: 'Received by', date: '2018-11-05T00:00:00'}
+            - {voterType: {}, rule: 'Received by', date: '2018-11-05T00:00:00', note: 'WY2'}
         'Ballot Return':
             - {voterType: {}, rule: 'Received by', date: '2018-11-06T19:00:00'}

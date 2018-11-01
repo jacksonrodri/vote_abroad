@@ -54,7 +54,7 @@
                     <br/>
                     <span class="tag is-success">{{ localizeIfAvailable(deadline.rule) }}</span>
                     <br/>
-                    {{ new Date(deadline.date).toLocaleDateString(dateFormat, {year: 'numeric', month: 'short', day: 'numeric'}) }}
+                    {{ new Date(deadline.date).toLocaleDateString(dateFormat, deadline.date && deadline.date.substr(11, 8) !== '00:00:00'  ? {year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric'} : {year: 'numeric', month: 'short', day: 'numeric'}) }}
                     <hr v-if="index < rule.length - 1">
                   </li>
                   <li v-else><strong>{{ localizeIfAvailable(deadline.rule) }}</strong></li>
