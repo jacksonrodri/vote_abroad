@@ -11,11 +11,12 @@ ballotReceiptOptions:
   - Fax
   - Mail
 fpcaSubmitOptionsRegister:
-  - Mail
+  - Mail or Online
 fpcaSubmitOptionsRequest:
   - Email
   - Fax
   - Mail
+  - or Online
 canRegisterWithFwab: true
 fwabSubmitOptions:
   - Mail
@@ -32,5 +33,5 @@ Check below for your delivery methods and deadlines, and to find your local elec
 ### Delivery Methods
 
 * Registration: postal mail or online
-* Ballot Request: email, fax, or postal mail
-* Ballot Return: email, fax, or postal mail
+* Ballot Request: email, fax, postal mail or online
+* Ballot Return: postal mail
