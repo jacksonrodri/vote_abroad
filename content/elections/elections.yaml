@@ -625,7 +625,7 @@
             - {voterType: {}, rule: 'Received by', date: '2018-10-16T21:00:00'}
         'Ballot Request':
             - {voterType: {}, rule: 'Request Mail/Fax ballot: Received by', date: '2018-10-30T20:00:00'}
-            - {voterType: {}, rule: 'Ballot Email/Online ballot: Received by', date: '2018-11-02T23:59:00'}
+            - {voterType: {}, rule: 'Request Email/Online ballot: Received by', date: '2018-11-02T23:59:00'}
         'Ballot Return':
             - {voterType: {}, rule: 'Postmarked by*', date: '2018-11-06T20:00:00', note: 'MD1'}
 -
