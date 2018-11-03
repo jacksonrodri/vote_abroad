@@ -1,7 +1,7 @@
 ---
 title: HOW TO VOTE USING THE BACK-UP BALLOT
 ---
-**Haven’t received your Official Ballot yet? Concerned your official ballot won't get to you in time to meet the ballot return deadlines?**
+**Haven’t received your Official Ballot yet? Concerned your Official ballot won't get to you in time to meet the ballot return deadlines?**
 
 **Overseas voters can VOTE NOW using the Federal Write-In Absentee Ballot ("FWAB" or Backup Ballot)!**
 
