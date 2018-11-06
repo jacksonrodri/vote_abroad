@@ -181,7 +181,7 @@ export default {
     },
     upcomingElections () {
       return this.elections
-        .filter(x => new Date(x.date).getTime() > Date.now())
+        .filter(x => (new Date(x.date).getTime() + (7 * 24 * 60 * 60 * 1000)) > Date.now())
         .sort(function (a, b) {
           var dateA = new Date(a.date).getTime()
           var dateB = new Date(b.date).getTime()
