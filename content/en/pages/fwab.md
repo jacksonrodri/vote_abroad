@@ -5,7 +5,7 @@ title: HOW TO VOTE USING THE BACK-UP BALLOT
 
 **Overseas voters can VOTE NOW using the Federal Write-In Absentee Ballot ("FWAB" or Backup Ballot)!**
 
-**\*\*If you are using a FWAB to vote in the Dec 4, 2018 GA Runoff Election, please skip to Step II\*\***
+\*\*If you are using a FWAB to vote in the Dec 4, 2018 GA Runoff Election, please skip to Step II\*\*
 
 **\_\_\_\_\_\_\_\_\_\_\_\__**
 
