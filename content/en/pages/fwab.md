@@ -7,6 +7,8 @@ title: HOW TO VOTE USING THE BACK-UP BALLOT
 
 **STEP I.** Did You Send in Your Ballot Request Form (the Federal Post Card Application) for 2018?
 
+**\*\*If you are using a FWAB to vote in the Dec 4, 2018 GA Runoff Election, please skip to Step II\*\***
+
 If you vote in **AZ, CO, ME, MN, MS, MT, OR, SC, UT** or **WA,** you can skip this step. On the FWAB, you can check the box to submit your Ballot Request at the same time. (**Go to Step II**). 
 
 **All other voters:** Verify with your Local Election Official (LEO) that they received your Ballot Request form for 2018 and have sent out your official ballot. You can find the contact information on the State Voting Guide:  [**www.votefromabroad.org/states**](https://www.votefromabroad.org/states)
