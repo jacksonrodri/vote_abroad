@@ -18,13 +18,18 @@
         </i-18n>
         <br/>
           <h1 class="title is-4">{{$t('states.stateTitle', {state: $t(`states.${state.iso}`)})}}</h1>
+          <h3
+            v-if="!upcomingElections || upcomingElections.length === 0"
+            class="subtitle is-5 has-text-primary">There are no upcoming elections scheduled for {{$t(`states.${state.iso}`)}}.</h3>
           <b-table
+            v-else
             hoverable
             :data="upcomingElections"
             detailed
             :has-detailed-visible="() => false"
             detail-key="date"
-            :opened-detailed="JSON.stringify(upcomingElections).includes('note') ? ['2018-11-06T00:00:00'] : []">
+            :opened-detailed="upcomingElections.filter(x => JSON.stringify(x).includes('note')).map(x => x.date)">
+            <!-- :opened-detailed="JSON.stringify(upcomingElections).includes('note') ? ['2018-11-06T00:00:00'] : []" -->
             <template slot-scope="props">
               <b-table-column
                 :label="$t('election.electionDay')">
@@ -68,6 +73,7 @@
                 :key="note">{{note.replace(/[A-Z]/g, '')}}: {{$t(`request.deadlineLanguage.notes.${note}`)}}</p>
             </template>
           </b-table>
+          <br>
           <h2 class="title is-5">{{$t('states.electionOfficials')}}</h2>
           <b-field>
           <b-autocomplete
