@@ -146,7 +146,7 @@
         <p v-html="toolTipContent"></p>
       </b-message>
 
-      <p class="has-text-centered is-size-5">Due to timing please consider <nuxt-link :to="localePath({ name: 'page', params: { page: 'fwab' } })">submitting a write-in ballot</nuxt-link> along with your ballot request or registration. </p>
+      <!-- <p class="has-text-centered is-size-5">Due to timing please consider <nuxt-link :to="localePath({ name: 'page', params: { page: 'fwab' } })">submitting a write-in ballot</nuxt-link> along with your ballot request or registration. </p> -->
     </div>
     <b-modal
       :active="!optedIn && isPrivacyOptInModalActive"
