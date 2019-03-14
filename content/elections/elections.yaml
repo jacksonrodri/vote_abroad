@@ -77,27 +77,40 @@
         'Ballot Return':
             - {voterType: {}, rule: 'Mail: Received by', date: '2019-05-21T18:00:00'}
 -
+    state: KY
+    date: '2019-11-05T00:00:00'
+    electionType: 'General Election'
+    rules:
+        Registration:
+            - {voterType: {}, rule: 'Received by', date: '2019-10-07T16:00:00'}
+        'Ballot Request':
+            - {voterType: {}, rule: 'Received by', date: '2019-10-29T00:00:00'}
+        'Ballot Return':
+            - {voterType: {}, rule: 'Mail: Received by', date: '2019-11-05T18:00:00'}
+-
     state: LA
     date: '2018-10-12T00:00:00'
     electionType: 'State Primary Election'
     rules:
         Registration:
-            - {voterType: {}, rule: 'Received by', date: ''}
+            - {voterType: {}, rule: 'Mail, Fax or Email: Received by', date: '2019-09-12T00:00:00'}
+            - {voterType: {}, rule: 'By Online: Received by', date: '2019-09-22T0:00:00', note: 'LA1'}
         'Ballot Request':
-            - {voterType: {}, rule: 'Received by', date: ''}
+            - {voterType: {}, rule: 'Received by', date: '2019-10-11T16:30:00'}
         'Ballot Return':
-            - {voterType: {}, rule: 'Received by', date: ''}
+            - {voterType: {}, rule: 'By Mail: Received by', date: '2019-10-12T20:00:00', note: 'LA2'}
 -
     state: LA
     date: '2018-11-16T00:00:00'
-    electionType: 'General Election (if needed)'
+    electionType: 'State General Election'
     rules:
         Registration:
-            - {voterType: {}, rule: 'Received by', date: ''}
+            - {voterType: {}, rule: 'Mail, Fax or Email: Received by', date: '2019-10-17T00:00:00'}
+            - {voterType: {}, rule: 'By Online: Received by', date: '2019-10-27T00:00:00', note: 'LA1'}
         'Ballot Request':
-            - {voterType: {}, rule: 'Received by', date: ''}
+            - {voterType: {}, rule: 'Received by', date: '2019-11-15T16:30:00'}
         'Ballot Return':
-            - {voterType: {}, rule: 'Received by', date: ''}
+            - {voterType: {}, rule: 'Received by', date: '2019-11-16T20:00:00', note: 'LA2'}
 -
     state: ME
     date: '2019-03-12:T00:00:00'
@@ -126,33 +139,57 @@
     electionType: 'State Primary Election'
     rules:
         Registration:
-            - {voterType: {}, rule: 'Received by', date: ''}
+            - {voterType: {}, rule: 'Received by', date: '2019-07-27T00:00:00'}
         'Ballot Request':
-            - {voterType: {}, rule: 'Received by', date: ''}
+            - {voterType: {}, rule: 'Received by', date: '2019-08-06T19:00:00'}
         'Ballot Return':
-            - {voterType: {}, rule: 'Received by', date: ''}
+            - {voterType: {}, rule: 'Received by', date: '2019-08-06T19:00:00'}
 -
     state: MS
     date: '2019-08-27T00:00:00'
-    electionType: 'Primary runoff (if needed)'
+    electionType: 'Primary runoff'
     rules:
         Registration:
-            - {voterType: {}, rule: 'Received by', date: ''}
+            - {voterType: {}, rule: 'Received by', date: '2019-08-17T00:00:00'}
         'Ballot Request':
-            - {voterType: {}, rule: 'Received by', date: ''}
+            - {voterType: {}, rule: 'Received by', date: '2019-08-27T19:00:00'}
         'Ballot Return':
-            - {voterType: {}, rule: 'Received by', date: ''}
+            - {voterType: {}, rule: 'Received by', date: '2019-08-27T19:00:00'}
 -
     state: MS
     date: '2019-11-05T00:00:00'
     electionType: 'General Election'
     rules:
         Registration:
-            - {voterType: {}, rule: 'Received by', date: ''}
+            - {voterType: {}, rule: 'Received by', date: '2019-10-26T00:00:00'}
         'Ballot Request':
-            - {voterType: {}, rule: 'Received by', date: ''}
+            - {voterType: {}, rule: 'Received by', date: '2019-11-05T19:00:00'}
         'Ballot Return':
-            - {voterType: {}, rule: 'Received by', date: ''}
+            - {voterType: {}, rule: 'Received by', date: '2019-11-05T19:00:00'}
+-
+    state: NC
+    date: '2019-04-30T00:00:00'
+    electionType: 'Special Federal Primary Election (House District 3)'
+    rules:
+        Registration:
+            - {voterType: {}, rule: 'Received by', date: '2019-04-29T17:00:00'}
+        'Ballot Request':
+            - {voterType: {}, rule: 'Received by', date: '2019-04-29T17:00:00'}
+        'Ballot Return':
+            - {voterType: {}, rule: 'By Email or Fax: Received by', date: '2019-04-30T19:30:00'}
+            - {voterType: {}, rule: 'By Mail: Postmarked by', date: '2019-04-29T23:59:00', note: 'NC1'}
+-
+    state: NC
+    date: '2019-05-14T00:00:00'
+    electionType: 'Special Federal Primary Election (House District 9)'
+    rules:
+        Registration:
+            - {voterType: {}, rule: 'Received by', date: '2019-05-13T17:00:00'}
+        'Ballot Request':
+            - {voterType: {}, rule: 'Received by', date: '2019-05-13T17:00:00'}
+        'Ballot Return':
+            - {voterType: {}, rule: 'By Email or Fax: Received by', date: '2019-05-14T19:30:00'}
+            - {voterType: {}, rule: 'By Mail: Postmarked by', date: '2019-05-13T23:59:00', note: 'NC2'}
 -
     state: NJ
     date: '2019-06-04T00:00:00'
@@ -169,14 +206,16 @@
 -
     state: NJ
     date: '2019-11-05T00:00:00'
-    electionType: 'General Election'
+    electionType: 'State General Election'
     rules:
         Registration:
-            - {voterType: {}, rule: 'Received by', date: ''}
+            - {voterType: {}, rule: 'Request Mail Ballot: Received by', date: '2019-10-06T0:00:00', note: 'NJ1'}
+            - {voterType: {}, rule: 'Request Email or Fax Ballot: Received by', date: '2019-10-15T00:00:00', note: 'NJ1'}
         'Ballot Request':
-            - {voterType: {}, rule: 'Received by', date: ''}
+            - {voterType: {}, rule: 'Request Mail Ballot: Received by', date: '2019-10-06T00:00:00', note: 'NJ1'}
+            - {voterType: {}, rule: 'Request Email or Fax Ballot: Received by', date: '2019-11-01T00:00:00', note: 'NJ1'}
         'Ballot Return':
-            - {voterType: {}, rule: 'Received by', date: ''}
+            - {voterType: {}, rule: 'Received by', date: '2019-11-05T20:00:00', note: 'NJ1'}
 -
     state: PA
     date: '2019-03-12T00:00:00'
@@ -201,7 +240,7 @@
             - {voterType: {}, rule: 'Received by', date: ''}
 -
     state: PA
-    date: '2019-04-02T00:00:00'
+    date: '2019-05-21T00:00:00'
     electionType: 'Special Federal Election (House District 12)'
     rules:
         Registration:
@@ -272,19 +311,19 @@
     electionType: 'State Primary Election'
     rules:
         Registration:
-            - {voterType: {}, rule: 'Received by', date: ''}
+            - {voterType: {}, rule: 'Received by', date: '2019-05-20T00:00:00'}
         'Ballot Request':
-            - {voterType: {}, rule: 'Received by', date: ''}
+            - {voterType: {}, rule: 'Received by', date: '2019-06-04T17:00:00'}
         'Ballot Return':
-            - {voterType: {}, rule: 'Received by', date: ''}
+            - {voterType: {}, rule: 'Received by', date: '2019-06-11T19:00:00'}
 -
     state: VA
     date: '2019-11-05T00:00:00'
     electionType: 'General Election'
     rules:
         Registration:
-            - {voterType: {}, rule: 'Received by', date: ''}
+            - {voterType: {}, rule: 'Received by', date: '2019-10-14T00:00:00'}
         'Ballot Request':
-            - {voterType: {}, rule: 'Received by', date: ''}
+            - {voterType: {}, rule: 'Received by', date: '2019-10-29T17:00:00'}
         'Ballot Return':
-            - {voterType: {}, rule: 'Received by', date: ''}
+            - {voterType: {}, rule: 'Received by', date: '2019-11-05T19:00:00'}
