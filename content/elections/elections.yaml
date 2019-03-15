@@ -89,19 +89,19 @@
             - {voterType: {}, rule: 'Mail: Received by', date: '2019-11-05T18:00:00'}
 -
     state: LA
-    date: '2018-10-12T00:00:00'
+    date: '2019-10-12T00:00:00'
     electionType: 'State Primary Election'
     rules:
         Registration:
             - {voterType: {}, rule: 'Mail, Fax or Email: Received by', date: '2019-09-12T00:00:00'}
-            - {voterType: {}, rule: 'By Online: Received by', date: '2019-09-22T0:00:00', note: 'LA1'}
+            - {voterType: {}, rule: 'By Online: Received by', date: '2019-09-22T00:00:00', note: 'LA1'}
         'Ballot Request':
             - {voterType: {}, rule: 'Received by', date: '2019-10-11T16:30:00'}
         'Ballot Return':
             - {voterType: {}, rule: 'By Mail: Received by', date: '2019-10-12T20:00:00', note: 'LA2'}
 -
     state: LA
-    date: '2018-11-16T00:00:00'
+    date: '2019-11-16T00:00:00'
     electionType: 'State General Election'
     rules:
         Registration:
@@ -209,7 +209,7 @@
     electionType: 'State General Election'
     rules:
         Registration:
-            - {voterType: {}, rule: 'Request Mail Ballot: Received by', date: '2019-10-06T0:00:00', note: 'NJ1'}
+            - {voterType: {}, rule: 'Request Mail Ballot: Received by', date: '2019-10-06T00:00:00', note: 'NJ1'}
             - {voterType: {}, rule: 'Request Email or Fax Ballot: Received by', date: '2019-10-15T00:00:00', note: 'NJ1'}
         'Ballot Request':
             - {voterType: {}, rule: 'Request Mail Ballot: Received by', date: '2019-10-06T00:00:00', note: 'NJ1'}

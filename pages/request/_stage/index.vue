@@ -378,16 +378,16 @@ const usZip = (state) =>
       }
     }
   )
-const tooOld = (minAge) =>
-  helpers.withParams(
-    { type: 'tooOld', value: minAge },
-    (value) => !helpers.req(value) || minAge < new Date(value)
-  )
-const tooYoung = (nextElectionDate) =>
-  helpers.withParams(
-    { type: 'tooYoung', value: new Date(nextElectionDate.getFullYear(), nextElectionDate.getMonth(), nextElectionDate.getDate()) },
-    (value) => !helpers.req(value) || new Date(nextElectionDate.getFullYear() - 18, nextElectionDate.getMonth(), nextElectionDate.getDate()) >= new Date(value.substr(0, 4), parseInt(value.substr(5, 2)) - 1, value.substr(8, 2))
-  )
+// const tooOld = (minAge) =>
+//   helpers.withParams(
+//     { type: 'tooOld', value: minAge },
+//     (value) => !helpers.req(value) || minAge < new Date(value)
+//   )
+// const tooYoung = (nextElectionDate) =>
+//   helpers.withParams(
+//     { type: 'tooYoung', value: new Date(nextElectionDate.getFullYear(), nextElectionDate.getMonth(), nextElectionDate.getDate()) },
+//     (value) => !helpers.req(value) || new Date(nextElectionDate.getFullYear() - 18, nextElectionDate.getMonth(), nextElectionDate.getDate()) >= new Date(value.substr(0, 4), parseInt(value.substr(5, 2)) - 1, value.substr(8, 2))
+//   )
 // const fullLengthSsn = (idOpts) =>
 //   helpers.withParams(
 //     { type: 'correctLength', value: 9 },
@@ -914,9 +914,9 @@ export default {
         required
       },
       dob: {
-        required,
-        tooOld: tooOld(new Date(1900, 0, 1)),
-        tooYoung: tooYoung(new Date(2018, 10, 6))
+        required
+        // tooOld: tooOld(new Date(1900, 0, 1)),
+        // tooYoung: tooYoung(new Date(2018, 10, 6))
       },
       fax: {
         required: requiredIf(function (model) { return model.recBallot === 'fax' }),
