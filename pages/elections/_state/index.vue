@@ -26,9 +26,9 @@
                 :label="$t('election.electionDay')">
                 <h1 class="title is-6" style="white-space: nowrap">{{ localizeIfAvailable(props.row.electionType) }}</h1>
                 <div class="calendar" style="margin: 0">
-                  <header class="calendar-month">{{new Date(props.row.date).toLocaleDateString(dateFormat, {month: 'short'}) }}</header>
+                  <header class="calendar-month">{{new Date(props.row.date + '+00:00').toLocaleDateString(dateFormat, {month: 'short', timeZone: 'UTC'}) }}</header>
                   <div class="calendar-date">
-                    {{ new Date(props.row.date).toLocaleDateString(dateFormat, {day: 'numeric'}) }}
+                    {{ new Date(props.row.date + '+00:00').toLocaleDateString(dateFormat, {day: 'numeric', timeZone: 'UTC'}) }}
                   </div>
                 </div>
               </b-table-column>
@@ -51,7 +51,7 @@
                         <br/>
                         <span class="tag is-success">{{ localizeIfAvailable(deadline.rule) }}</span>
                         <br/>
-                        <span>{{ new Date(deadline.date).toLocaleDateString(dateFormat, deadline.date && deadline.date.substr(11, 8) !== '00:00:00'  ? {year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric'} : {year: 'numeric', month: 'short', day: 'numeric'}) }}</span>
+                        <span>{{ new Date(deadline.date + '+00:00').toLocaleDateString(dateFormat, deadline.date && deadline.date.substr(11, 8) !== '00:00:00'  ? {year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric', timeZone: 'UTC'} : {year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC'}) }}</span>
                         <!-- {{ new Date(deadline.date).toLocaleDateString(dateFormat, {year: 'numeric', month: 'short', day: 'numeric'}) }} -->
                         <hr v-if="index < rule.length - 1">
                       </template>

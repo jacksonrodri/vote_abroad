@@ -35,9 +35,9 @@
                 :label="$t('election.electionDay')">
                 <h1 class="title is-6" style="white-space: nowrap">{{ localizeIfAvailable(props.row.electionType) }}</h1>
                 <div class="calendar" style="margin: 0">
-                  <header class="calendar-month">{{new Date(props.row.date).toLocaleDateString(dateFormat, {month: 'short'}) }}</header>
+                  <header class="calendar-month">{{new Date(props.row.date + '+00:00').toLocaleDateString(dateFormat, {month: 'short', timeZone: 'UTC'}) }}</header>
                   <div class="calendar-date">
-                    {{ new Date(props.row.date).toLocaleDateString(dateFormat, {day: 'numeric'}) }}
+                    {{ new Date(props.row.date + '+00:00').toLocaleDateString(dateFormat, {day: 'numeric', timeZone: 'UTC'}) }}
                   </div>
                 </div>
               </b-table-column>
@@ -60,7 +60,7 @@
                         <br/>
                         <span class="tag is-success">{{ localizeIfAvailable(deadline.rule) }}</span>
                         <br/>
-                        {{ new Date(deadline.date).toLocaleDateString(dateFormat, deadline.date && deadline.date.substr(11, 8) !== '00:00:00'  ? {year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric'} : {year: 'numeric', month: 'short', day: 'numeric'}) }}
+                        {{ new Date(deadline.date + '+00:00').toLocaleDateString(dateFormat, deadline.date && deadline.date.substr(11, 8) !== '00:00:00'  ? {year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric', timeZone: 'UTC'} : {year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC'}) }}
                         <hr v-if="index < rule.length - 1">
                       </template>
                       <span v-else>Check deadlines with your local election official.</span>
@@ -182,6 +182,9 @@ export default {
       currentLeo: null
     }
   },
+  mounted () {
+    console.log(this.elections)
+  },
   computed: {
     dateFormat () {
       return this.$i18n.locale === 'en' ? 'en-US' : 'es-ES'
@@ -191,10 +194,10 @@ export default {
     },
     upcomingElections () {
       return this.elections
-        .filter(x => (new Date(x.date).getTime() + (7 * 24 * 60 * 60 * 1000)) > Date.now())
+        .filter(x => (new Date(x.date + '+00:00').getTime() + (7 * 24 * 60 * 60 * 1000)) > Date.now())
         .sort(function (a, b) {
-          var dateA = new Date(a.date).getTime()
-          var dateB = new Date(b.date).getTime()
+          var dateA = new Date(a.date + '+00:00').getTime()
+          var dateB = new Date(b.date + '+00:00').getTime()
           return dateA - dateB
         })
     }
