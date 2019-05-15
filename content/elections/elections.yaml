@@ -168,28 +168,16 @@
             - {voterType: {}, rule: 'Received by', date: '2019-11-05T19:00:00'}
 -
     state: NC
-    date: '2019-04-30T00:00:00'
-    electionType: 'Special Federal Primary Election (House District 3)'
+    date: '2019-09-10T00:00:00'
+    electionType: 'Special Federal General Election (House District 3 and House District 9)'
     rules:
         Registration:
-            - {voterType: {}, rule: 'Received by', date: '2019-04-29T17:00:00'}
+            - {voterType: {}, rule: 'Received by', date: '2019-09-09T17:00:00'}
         'Ballot Request':
-            - {voterType: {}, rule: 'Received by', date: '2019-04-29T17:00:00'}
+            - {voterType: {}, rule: 'Received by', date: '2019-09-09T17:00:00'}
         'Ballot Return':
-            - {voterType: {}, rule: 'By Email or Fax: Received by', date: '2019-04-30T19:30:00'}
-            - {voterType: {}, rule: 'By Mail: Postmarked by', date: '2019-04-29T23:59:00', note: 'NC1'}
--
-    state: NC
-    date: '2019-05-14T00:00:00'
-    electionType: 'Special Federal Primary Election (House District 9)'
-    rules:
-        Registration:
-            - {voterType: {}, rule: 'Received by', date: '2019-05-13T17:00:00'}
-        'Ballot Request':
-            - {voterType: {}, rule: 'Received by', date: '2019-05-13T17:00:00'}
-        'Ballot Return':
-            - {voterType: {}, rule: 'By Email or Fax: Received by', date: '2019-05-14T19:30:00'}
-            - {voterType: {}, rule: 'By Mail: Postmarked by', date: '2019-05-13T23:59:00', note: 'NC2'}
+            - {voterType: {}, rule: 'By Email or Fax: Received by', date: '2019-09-10T19:30:00'}
+            - {voterType: {}, rule: 'By Mail: Postmarked by', date: '2019-09-09T23:59:00', note: 'NC1'}
 -
     state: NJ
     date: '2019-06-04T00:00:00'
