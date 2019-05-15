@@ -51,18 +51,22 @@
               </b-table-column> -->
               <b-table-column v-for="(rule, key) in props.row.rules" :key="key" :label=" localizeIfAvailable(key) ">
                 <ul>
-                  <li v-for="(deadline, index) in rule"
-                    :key="index.toString() + deadline.rule + deadline.voterType"
-                    v-if="deadline.rule !== 'Not Required'">
-                    <strong>{{ typeof deadline.voterType === 'string' ? localizeIfAvailable(deadline.voterType) : localizeIfAvailable('All Voters') }}</strong>
-                    <sup v-if="deadline.note">{{deadline.note.replace(/[A-Z]/g, '')}}</sup>
-                    <br/>
-                    <span class="tag is-success">{{ localizeIfAvailable(deadline.rule) }}</span>
-                    <br/>
-                    {{ new Date(deadline.date).toLocaleDateString(dateFormat, deadline.date && deadline.date.substr(11, 8) !== '00:00:00'  ? {year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric'} : {year: 'numeric', month: 'short', day: 'numeric'}) }}
-                    <hr v-if="index < rule.length - 1">
-                  </li>
-                  <li v-else><strong>{{ localizeIfAvailable(deadline.rule) }}</strong></li>
+                  <template v-for="(deadline, index) in rule">
+                    <li :key="index.toString() + deadline.rule + deadline.voterType"
+                      v-if="deadline.rule !== 'Not Required'">
+                      <template v-if="deadline.date">
+                        <strong>{{ typeof deadline.voterType === 'string' ? localizeIfAvailable(deadline.voterType) : localizeIfAvailable('All Voters') }}</strong>
+                        <sup v-if="deadline.note">{{deadline.note.replace(/[A-Z]/g, '')}}</sup>
+                        <br/>
+                        <span class="tag is-success">{{ localizeIfAvailable(deadline.rule) }}</span>
+                        <br/>
+                        {{ new Date(deadline.date).toLocaleDateString(dateFormat, deadline.date && deadline.date.substr(11, 8) !== '00:00:00'  ? {year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric'} : {year: 'numeric', month: 'short', day: 'numeric'}) }}
+                        <hr v-if="index < rule.length - 1">
+                      </template>
+                      <span v-else>Check deadlines with your local election official.</span>
+                    </li>
+                    <li :key="index.toString() + deadline.rule + deadline.voterType" v-else><strong>{{ localizeIfAvailable(deadline.rule) }}</strong></li>
+                  </template>
                 </ul>
               </b-table-column>
             </template>

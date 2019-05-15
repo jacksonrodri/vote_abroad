@@ -57,7 +57,7 @@
 -
     state: KY
     date: '2019-03-05T00:00:00'
-    electionType: 'Special Election'
+    electionType: 'Special Election - State Senate District 31'
     rules:
         Registration:
             - {voterType: {}, rule: 'Received by', date: ''}
@@ -124,7 +124,7 @@
             - {voterType: {}, rule: 'Received by', date: ''}
 -
     state: MS
-    date: '2019-03-12:T00:00:00'
+    date: '2019-03-12T00:00:00'
     electionType: 'Special Election - State House Districts 32, 71 and 101'
     rules:
         Registration:
