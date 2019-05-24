@@ -23,14 +23,16 @@
 -
     state: FL
     date: '2019-06-18T00:00:00'
-    electionType: 'Special Election - State House Districts 7, 38 and 97'
+    electionType: 'Special Election - State House Districts 7 and 38'
     rules:
         Registration:
-            - {voterType: {}, rule: 'Received by', date: ''}
+            - {voterType: {}, rule: 'Received by', date: '2019-05-20T00:00:00'}
         'Ballot Request':
-            - {voterType: {}, rule: 'Received by', date: ''}
+            - {voterType: {}, rule: 'Request Mail Ballot: Received by', date: '2019-06-12T00:00:00'}
+            - {voterType: {}, rule: 'Request Email/Online or Fax Ballot: Received by', date: '2019-06-18T00:00:00'}
         'Ballot Return':
-            - {voterType: {}, rule: 'Received by', date: ''}
+            - {voterType: {}, rule: 'By Fax: Received by', date: '2019-06-18T19:00:00'}
+            - {voterType: {}, rule: 'By Mail: Postmarked by', date: '2019-06-18T00:00:00', note: 'FL1'}
 -
     state: GA
     date: '2019-01-08T00:00:00'
