@@ -20,5 +20,20 @@ fpcaSubmitOptionsRequest:
 canRegisterWithFwab: true
 fwabSubmitOptions:
   - Mail
+amIRegistered: 'https://www.pavoterservices.state.pa.us/Pages/VoterRegistrationStatus.aspx'
+whereIsMyBallot: ''
+sampleBallot: >-
+  https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage
+uocavaVoters: ''
 ---
-Remember that you need to request a ballot each calendar year that you'd like to vote in. Check below for your primary and general deadlines. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
+Pennsylvania voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
+
+Check below for your delivery methods and deadlines, and to find your local election office contact information.
+
+### Delivery Methods
+
+* Registration: email, fax, or postal mail or online *
+* Ballot Request: email, fax or postal mail
+* Ballot Return: postal mail
+
+\* Overseas voters may use the PA online system to register to vote, but to receive their ballots for the calendar year, they must also send in a Federal Post Card Application (FPCA) by the applicable deadline to request a ballot. 

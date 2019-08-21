@@ -60,7 +60,7 @@
     </b-field>
     <transition name="fade">
       <b-field
-        v-if="isExistingDaMember || (joinValue !== true && joinValue !== false && joinValue)"
+        v-if="!skippedEmail && (isExistingDaMember || (joinValue !== true && joinValue !== false && joinValue))"
         key="daEmail"
         ref="daEmail"
         :label="$t('request.joinDa.accountEmail', {email: email || $t('request.joinDa.currentEmail')})"
@@ -124,6 +124,7 @@ export default {
       isOtherButNoValue: false,
       isExistingDaMember: false,
       daEmail: '',
+      skippedEmail: false,
       currentTime: Math.trunc((new Date()).getTime() / 1000),
       setTime: Math.trunc((new Date()).getTime() / 1000) - 10
     }
@@ -181,6 +182,7 @@ export default {
         this.currentTime = Math.trunc((new Date()).getTime() / 1000)
       }, 1000)
     }
+    this.skippedEmail = !this.email
   },
   beforeDestroy () {
     if (this.value) this.$ga.set('dimension4', this.value)

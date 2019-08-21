@@ -22,6 +22,12 @@
   DEVSTAGE = "prod"
 
 [[redirects]]
+from = "https://www.votefromabroad.org/vote/eod.htm?submission=true"
+to = "/states"
+status = 301
+force = true
+
+[[redirects]]
 from = "/api/place/*"
 to = "https://maps.googleapis.com/maps/api/place/:splat"
 status = 200

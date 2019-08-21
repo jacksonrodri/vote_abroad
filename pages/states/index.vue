@@ -1,5 +1,5 @@
 <template>
-  <div class="columns is-centered is-multiline">
+  <div class="hero-body columns is-centered is-multiline">
     <div class="column is-10 is-8-desktop is-7-widescreen is-6-fullhd is-paddingless">
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul>
@@ -31,11 +31,11 @@ export default {
   asyncData: async ({ app }) => ({
     page: await app.$content(`${app.i18n.locale}/pages`).get(`${app.i18n.locale !== app.i18n.defaultLocale ? app.i18n.locale + '/' : ''}states`),
     states: (await app.$content('/rls').getAll())
-      .sort((a, b) => {
-        if (a.title.toUpperCase() < b.title.toUpperCase()) { return -1 }
-        if (a.title.toUpperCase() > b.title.toUpperCase()) { return 1 }
-        return 0
-      })
+    // .sort((a, b) => {
+    //   if (a.title.toUpperCase() < b.title.toUpperCase()) { return -1 }
+    //   if (a.title.toUpperCase() > b.title.toUpperCase()) { return 1 }
+    //   return 0
+    // })
   }),
   data () {
     return {

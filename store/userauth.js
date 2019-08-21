@@ -150,7 +150,7 @@ export const actions = {
   },
   async getSessionGeo ({commit, state, dispatch}) {
     if (!state.session.country) {
-      let res = await axios.get('https://ipinfo.io/geo')
+      let res = await axios.get('https://ipinfo.io/geo?token=3a36433b09c590')
       commit('updateSessionGeo', res.data)
       if (res.data.country) {
         dispatch('data/updateCountryData', res.data.country.toUpperCase(), {root: true})

@@ -270,6 +270,14 @@
         </div>
       </form-party-input>
 
+      <form-email-input v-if="!!joinDa && (email === null || skippedEmail || $v.email.$error)"
+        ref="email"
+        key="email"
+        @input="skippedEmail = true"
+        fieldName="email"
+        :v="$v.email"
+        @delayTouch="delayTouch($v.email)"></form-email-input>
+
       <form-state-special-input
         :label="$t('request.stateSpecial.label', {state: stateRules && stateRules.title ? stateRules.title : $t('request.stateSpecial.state')})"
         v-model="stateSpecial"
@@ -378,16 +386,16 @@ const usZip = (state) =>
       }
     }
   )
-const tooOld = (minAge) =>
-  helpers.withParams(
-    { type: 'tooOld', value: minAge },
-    (value) => !helpers.req(value) || minAge < new Date(value)
-  )
-const tooYoung = (nextElectionDate) =>
-  helpers.withParams(
-    { type: 'tooYoung', value: new Date(nextElectionDate.getFullYear(), nextElectionDate.getMonth(), nextElectionDate.getDate()) },
-    (value) => !helpers.req(value) || new Date(nextElectionDate.getFullYear() - 18, nextElectionDate.getMonth(), nextElectionDate.getDate()) >= new Date(value.substr(0, 4), parseInt(value.substr(5, 2)) - 1, value.substr(8, 2))
-  )
+// const tooOld = (minAge) =>
+//   helpers.withParams(
+//     { type: 'tooOld', value: minAge },
+//     (value) => !helpers.req(value) || minAge < new Date(value)
+//   )
+// const tooYoung = (nextElectionDate) =>
+//   helpers.withParams(
+//     { type: 'tooYoung', value: new Date(nextElectionDate.getFullYear(), nextElectionDate.getMonth(), nextElectionDate.getDate()) },
+//     (value) => !helpers.req(value) || new Date(nextElectionDate.getFullYear() - 18, nextElectionDate.getMonth(), nextElectionDate.getDate()) >= new Date(value.substr(0, 4), parseInt(value.substr(5, 2)) - 1, value.substr(8, 2))
+//   )
 // const fullLengthSsn = (idOpts) =>
 //   helpers.withParams(
 //     { type: 'correctLength', value: 9 },
@@ -639,10 +647,12 @@ export default {
           this.$v.fwdAdr.$touch()
           this.$v.fwdAdr.A.$touch()
           this.$v.email.$touch()
+          this.skippedEmail = false
           break
         case 'id-and-contact-information':
           this.$v.sex.$touch()
           this.$v.dob.$touch()
+          this.$v.email.$touch()
           this.$v.identification.$touch()
           break
       }
@@ -787,11 +797,15 @@ export default {
           // this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'fwdAdr  '}})
           break
         case this.stage.slug === 'id-and-contact-information' && this.$v.dob.$error:
-          console.log(this.dob, this.$v.dob, this.$refs.dob.$el)
+          // console.log(this.dob, this.$v.dob, this.$refs.dob.$el)
           this.$refs.dob.$el.scrollIntoView()
           this.$refs.dob.$el.querySelector('input').focus()
           this.$ga.event('formAction', 'fieldError', 'dob')
           // this.$store.dispatch('requests/recordAnalytics', {event: 'Form Error', attributes: {field: 'dob'}})
+          break
+        case this.stage.slug === 'id-and-contact-information' && this.$v.email.$error:
+          this.$refs.email.$el.scrollIntoView()
+          this.$refs.email.$el.querySelector('input').focus()
           break
         case this.stage.slug === 'id-and-contact-information' && this.$v.sex.$error:
           this.$refs.sex.$el.scrollIntoView()
@@ -851,7 +865,7 @@ export default {
   validations () {
     return {
       email: {
-        required: requiredIf(function (model) { return model.recBallot === 'email' }),
+        required: requiredIf(function (model) { return model.recBallot === 'email' || !!model.joinDa }),
         email: optionalEmail
       },
       firstName: {
@@ -914,9 +928,9 @@ export default {
         required
       },
       dob: {
-        required,
-        tooOld: tooOld(new Date(1900, 0, 1)),
-        tooYoung: tooYoung(new Date(2018, 10, 6))
+        required
+        // tooOld: tooOld(new Date(1900, 0, 1)),
+        // tooYoung: tooYoung(new Date(2018, 10, 6))
       },
       fax: {
         required: requiredIf(function (model) { return model.recBallot === 'fax' }),
