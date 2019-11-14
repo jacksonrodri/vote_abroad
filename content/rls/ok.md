@@ -22,8 +22,8 @@ canRegisterWithFwab: true
 fwabSubmitOptions:
   - Fax
   - Mail
-amIRegistered: 'http://www.sots.ct.gov/sots/cwp/view.asp?a=3172&q=512796'
-whereIsMyBallot: 'http://www.dir.ct.gov/sots/LookUp.aspx'
+amIRegistered: 'https://www.ok.gov/elections/Voter_Info/Online_Voter_Tool/'
+whereIsMyBallot: 'https://www.ok.gov/elections/Voter_Info/Online_Voter_Tool/'
 sampleBallot: >-
   https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage
 uocavaVoters: ''
