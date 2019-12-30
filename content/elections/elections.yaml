@@ -270,7 +270,7 @@
           note: "AR1"
   - state: "CA"
     date: "2020-03-03T00:00:00"
-    electionType: "Presidential Primary"
+    electionType: "Presidential Primary & Special Primary"
     rules:
       Registration:
         - voterType: {}
@@ -283,14 +283,39 @@
         - voterType: {}
           rule: "Received by"
           date: "2020-02-25T00:00:00"
+          note: "CA1"
       Ballot Return:
         - voterType: {}
           rule: "Return by Mail: Postmarked by"
           date: "2020-03-03T00:00:00"
-          note: "CA1"
+          note: "CA2"
         - voterType: {}
           rule: "Return by Fax: Received by"
           date: "2020-03-03T20:00:00"
+  - state: "CA"
+    date: "2020-05-12T00:00:00"
+    electionType: "Special General"
+    rules:
+      Registration:
+        - voterType: {}
+          rule: "By Mail: Postmarked by"
+          date: "2020-04-27T00:00:00"
+        - voterType: {}
+          rule: "By Online or Fax: Received by"
+          date: "2020-04-27T00:00:00"
+      Ballot Request:
+        - voterType: {}
+          rule: "Received by"
+          date: "2020-05-05T00:00:00"
+          note: "CA1"
+      Ballot Return:
+        - voterType: {}
+          rule: "Return by Mail: Postmarked by"
+          date: "2020-05-12T00:00:00"
+          note: "CA3"
+        - voterType: {}
+          rule: "Return by Fax: Received by"
+          date: "2020-05-12T20:00:00"
   - state: "CA"
     date: "2020-11-03T00:00:00"
     electionType: "General Election"
@@ -1217,7 +1242,7 @@
       Registration:
         - voterType: {}
           rule: "By Mail, Email or Fax: Received by"
-          date: "2020-01-14T17:00:00"
+          date: "2020-01-14T:00:00"
         - voterType: {}
           rule: "By Online System: Received by"
           date: "2020-01-14T23:59:00"
