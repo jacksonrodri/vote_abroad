@@ -21,7 +21,7 @@ fpcaSubmitOptionsRequest:
 canRegisterWithFwab: true
 fwabSubmitOptions:
   - Mail
-amIRegistered: 'https://voterlookup.elections.state.ny.us/'
+amIRegistered: 'https://voterlookup.elections.ny.gov/'
 whereIsMyBallot: ''
 sampleBallot: >-
   https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage
