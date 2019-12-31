@@ -27,8 +27,8 @@
             :data="upcomingElections"
             detailed
             :has-detailed-visible="() => false"
-            detail-key="date"
-            :opened-detailed="upcomingElections.filter(x => JSON.stringify(x).includes('note')).map(x => x.date)">
+            detail-key="date">
+            <!-- :opened-detailed="upcomingElections.filter(x => JSON.stringify(x).includes('note')).map(x => x.date)"> -->
             <!-- :opened-detailed="JSON.stringify(upcomingElections).includes('note') ? ['2018-11-06T00:00:00'] : []" -->
             <template slot-scope="props">
               <b-table-column
@@ -56,7 +56,7 @@
                       v-if="deadline.rule !== 'Not Required'">
                       <template v-if="deadline.date">
                         <strong>{{ typeof deadline.voterType === 'string' ? localizeIfAvailable(deadline.voterType) : localizeIfAvailable('All Voters') }}</strong>
-                        <sup v-if="deadline.note">{{deadline.note.replace(/[A-Z]/g, '')}}</sup>
+                        <!-- <sup v-if="deadline.note">{{deadline.note.replace(/[A-Z]/g, '')}}</sup> -->
                         <br/>
                         <span class="tag is-success">{{ localizeIfAvailable(deadline.rule) }}</span>
                         <br/>
