@@ -208,7 +208,7 @@ export default {
     isStudentSite () { return process.env.isStudentSite === 'true' },
     isVrSite () { return process.env.isVrSite === 'true' },
     isDemsSite () { return process.env.isDemsSite === 'true' },
-    isAuthDisabled () { return this.isStudentSite || this.isVrSite },
+    isAuthDisabled () { return this.isStudentSite || this.isVrSite || this.isDemsSite },
     title () {
       return this.isStudentSite
         ? this.$t('homepage.titleStudents')
