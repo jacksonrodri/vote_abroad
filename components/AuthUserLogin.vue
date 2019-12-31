@@ -1,4 +1,9 @@
 <template>
+<div>
+    <div v-if="isDemsSite" class="notification is-warning">
+      <h3 class="title is-6 is-spaced">{{$t('request.daPrimary.title')}}</h3>
+      <span>{{$t('request.daPrimary.home')}}</span>
+    </div>
   <div class="notification is-semitransparent">
     <h1 class="title is-1 is-hidden-mobile is-spaced has-text-danger">
       <span class="has-text-weight-semibold">{{ isStudentSite ? $t('homepage.titleStudents') : $t('homepage.title') }}</span>
@@ -159,6 +164,7 @@
         :tosPage="localePath({ name: 'page', params: {page: 'terms-of-use'}})"></vfa-opt-in>
     </b-modal>
   </div>
+  </div>
 </template>
 
 <script>
@@ -201,6 +207,7 @@ export default {
   computed: {
     isStudentSite () { return process.env.isStudentSite === 'true' },
     isVrSite () { return process.env.isVrSite === 'true' },
+    isDemsSite () { return process.env.isDemsSite === 'true' },
     isAuthDisabled () { return this.isStudentSite || this.isVrSite },
     title () {
       return this.isStudentSite

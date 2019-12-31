@@ -38,6 +38,7 @@
   <transition name="fade">
   <div v-if="!isStudentSite && !$store.state.userauth.user.isDA && ((selectedParty && !partyChoices.Republican.aliases.includes(selectedParty.toLowerCase())) || isOtherButNoValue || (isOtherButNoValue && selectedParty && !partyChoices.Republican.aliases.includes(selectedParty.toLowerCase())) || joinValue)" class="field">
     <span class="is-flex"><label class="label">{{ joinLabel }}</label><span @click="joinToolTipIsOpen = !joinToolTipIsOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
+
     <b-field grouped group-multiline :type="type">
       <p class="control">
         <a @click="() => {joinValue = (joinValue === true ? null : true); isExistingDaMember = false}" :class="[baseClass, {'is-success': joinValue === true}]">
@@ -82,6 +83,9 @@
         </b-field>
       </b-field>
     </transition>
+    <div v-if="isDemsSite" class="notification is-warning">
+      <span>{{$t('request.daPrimary.join')}}</span>
+    </div>
     <b-message :title="joinTooltipTitle" type="is-info" has-icon :active.sync="joinToolTipIsOpen">
       <slot name="joinTooltip"></slot>
     </b-message>
@@ -131,6 +135,7 @@ export default {
   },
   computed: {
     isStudentSite () { return process.env.isStudentSite === 'true' },
+    isDemsSite () { return process.env.isDemsSite === 'true' },
     // thisValue: {
     //   get () { return this.value },
     //   set (value) {

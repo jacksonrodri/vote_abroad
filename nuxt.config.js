@@ -48,6 +48,7 @@ module.exports = {
     stage: process.env.DEVSTAGE || 'dev',
     isStudentSite: process.env.IS_STUDENT_SITE || false,
     isVrSite: process.env.IS_VR_SITE || false,
+    isDemsSite: process.env.IS_DEMS_SITE || false,
     branch: process.env.BRANCH || 'dev'
   },
   modules: [

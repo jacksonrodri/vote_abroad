@@ -342,6 +342,11 @@
         "email": "That email address is invalid.  Please try again."
       }
     },
+    "daPrimary": {
+      "title": "Democrats Abroad Global Presidential Primary runs from March 3-10, 2020",
+      "home": "When you fill out your form, you can confirm you are a Democrats Abroad member --or join!-- and you'll be eligible to vote in the Democrats Abroad Global Presidential Primary.",
+      "join": "If you confirm you are a Democrats Abroad member --or join by March 10, 2020-- you will be eligible to vote in the Democrats Abroad Global Presidential Primary."
+    },
     "stateSpecial": {
       "label": "{state} Specific Rules",
       "tooltipTitle": "Why am I being asked this?",
