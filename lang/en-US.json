@@ -319,6 +319,7 @@
     },
     "receiveBallot": {
       "label": "How would you like to receive your ballot?",
+      "emailRecommended": "(Email recommended)",
       "email": "Email or online",
       "mail": "Mail",
       "fax": "Fax",

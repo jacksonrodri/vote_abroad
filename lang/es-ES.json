@@ -319,6 +319,7 @@
     },
     "receiveBallot": {
       "label": "¿Cómo le gustaría recibir su boleta electoral?",
+      "emailRecommended": "(correo electrónico recomendado)",
       "email": "¿Por correo electrónico o en línea?",
       "mail": "Correo",
       "fax": "Fax",
