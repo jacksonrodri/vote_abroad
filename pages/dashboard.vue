@@ -185,7 +185,7 @@
             </div>
 
             <div class="column">
-              <a @click="share">
+              <a  href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fvotefromabroad.org" target="_blank">
                 <div class="notification is-danger has-text">
                   <div class="media">
                     <div class="media-left">
