@@ -2659,6 +2659,22 @@
           rule: "Received by"
           date: "2020-06-02T19:00:00"
   - state: "SD"
+    date: "2020-08-11T00:00:00"
+    electionType: "State Primary Runoff"
+    rules:
+      Registration:
+        - voterType: {}
+          rule: "Received by"
+          date: "2020-07-27T00:00:00"
+      Ballot Request:
+        - voterType: {}
+          rule: "Received by"
+          date: "2020-08-11T15:00:00"
+      Ballot Return:
+        - voterType: {}
+          rule: "Received by"
+          date: "2020-08-11T19:00:00"
+  - state: "SD"
     date: "2020-06-02T00:00:00"
     electionType: "Presidential Primary"
     rules:
