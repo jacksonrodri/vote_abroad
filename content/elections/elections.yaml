@@ -1241,8 +1241,8 @@
     rules:
       Registration:
         - voterType: {}
-          rule: "By Mail, Email or Fax: Received by"
-          date: "2020-01-14T:00:00"
+          rule: "By Mail: Postmarked by"
+          date: "2020-01-14T21:00:00"
         - voterType: {}
           rule: "By Online System: Received by"
           date: "2020-01-14T23:59:00"
