@@ -15,7 +15,7 @@ If you vote in **AZ, CO, ME, MN, MS, MT, OR, SC, UT** or **WA,** you can skip th
 
 **All other voters:** Verify with your Local Election Official (LEO) that they received your Ballot Request form for 2018 and have sent out your official ballot. You can find the contact information on the State Voting Guide:  [**www.votefromabroad.org/states**](https://www.votefromabroad.org/states)
 
-* If your LEO has sent out your official ballot, but you are concerned you won't receive it in time to meet the deadline to vote, send in a FWAB to preserve your vote. (**Go to Step II)**. _You should also find out why you didn’t receive your official ballot in time, so you don’t have this problem next election.
+* If your local eleciton official has sent out your official ballot, but you are concerned you won't receive it in time to meet the deadline to vote, send in a FWAB to preserve your vote. (**Go to Step II)**. _You should also find out why you didn’t receive your official ballot in time, so you don’t have this problem next election.
   _
 * If your LEO **hasn't** received your ballot request form--or you haven't sent it in yet--go to [**www.votefromabroad.org**](https://www.votefromabroad.org/) to fill out your form and send it to your LEO right away. Then go to **Step II.** _The deadline for the Ballot Request form is earlier than the deadline to submit a FWAB, but most states will accept it by Email or Fax._ 
 
