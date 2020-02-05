@@ -116,31 +116,32 @@ async function handleState (stateAbbreviation) {
         // console.log(`${s}-${j} added`)
         leosChanged++
         newFile = [...newFile, { i, n, f, p, e, d, a1, a2, a3, c, s, z, j, t }]
-        changes = [...changes, { newId: i, newName: n, newFax: f, newPhone: p, newEmail: e, newEffectiveDate: d, newAddress1: a1, newAddress2: a2, newAddress3: a3, newCity: c, newState: s, newZip: z, newJurisdictionName: j, newJurisdictionType: t }]
+        changes = [...changes, { change: `added-${s}-${j}-${n.replace('&apos;', "'")}-${i}`, newId: i, newName: n.replace('&apos;', "'"), newFax: f, newPhone: p, newEmail: e, newEffectiveDate: d, newAddress1: a1.replace('&apos;', "'"), newAddress2: a2.replace('&apos;', "'"), newAddress3: a3.replace('&apos;', "'"), newCity: c.replace('&apos;', "'"), newState: s, newZip: z, newJurisdictionName: j.replace('&apos;', "'"), newJurisdictionType: t }]
       } else if (m.d !== d) {
         // console.log(`${s}-${j} changed`)
         leosChanged++
-        newFile = newFile.map(obj => obj.i === i ? { i, n, f, p, e, d, a1, a2, a3, c, s, z, j, t } : obj)
+        newFile = newFile.map(obj => obj.i === i ? { i, n: n.replace('&apos;', "'"), f, p, e, d, a1: a1.replace('&apos;', "'"), a2: a2.replace('&apos;', "'"), a3: a3.replace('&apos;', "'"), c: c.replace('&apos;', "'"), s, z, j: j.replace('&apos;', "'"), t } : obj)
         changes = [...changes, {
+          change: `changed-${s}-${j}-${n}-${i}`,
           ...i !== m.i && { newId: i, oldId: m.i },
-          ...n !== m.n && { newName: n, oldName: m.n },
+          ...n !== m.n && { newName: n.replace('&apos;', "'"), oldName: m.n },
           ...f !== m.f && { newFax: f, oldFax: m.f },
           ...p !== m.p && { newPhone: p, oldPhone: m.p },
           ...e !== m.e && { newEmail: e, oldEmail: m.e },
           ...d !== m.d && { newEffectiveDate: d, oldEffectiveDate: m.d },
-          ...a1 !== m.a1 && { newAddress1: a1, oldAddress1: m.a1 },
-          ...a2 !== m.a2 && { newAddress2: a2, oldAddress2: m.a2 },
-          ...a3 !== m.a3 && { newAddress3: a3, oldAddress3: m.a3 },
-          ...c !== m.c && { newCity: c, oldCity: m.c },
+          ...a1 !== m.a1 && { newAddress1: a1.replace('&apos;', "'"), oldAddress1: m.a1 },
+          ...a2 !== m.a2 && { newAddress2: a2.replace('&apos;', "'"), oldAddress2: m.a2 },
+          ...a3 !== m.a3 && { newAddress3: a3.replace('&apos;', "'"), oldAddress3: m.a3 },
+          ...c !== m.c && { newCity: c.replace('&apos;', "'"), oldCity: m.c },
           ...s !== m.s && { newState: s, oldState: m.s },
           ...z !== m.z && { newZip: z, oldZip: m.z },
-          ...j !== m.j && { newJurisdictionName: j, oldJurisdictionName: m.j },
+          ...j !== m.j && { newJurisdictionName: j.replace('&apos;', "'"), oldJurisdictionName: m.j },
           ...t !== m.t && { newJurisdictionType: t, oldJurisdictionType: m.t }
         }]
       }
     } catch (error) {
       console.error(error)
-      errors.push({ error: error.message, fvapData: fvapLeo, ourData: m })
+      errors.push({ error: error.message, fvapData: fvapLeo })
     }
 
     // console.log({ i, n, f, p, e, d, a1, a2, a3, c, s, z, j, t })
