@@ -4,15 +4,10 @@
     <p>{{ $t("request.sig.sendInstructions") }}</p>
     <!-- <ol>
       <li>Type a message to include with your email to your local election official.  We will attach your completed, signed and dated form. Click send to send the email. We will also send a copy to your email address for your records.</li>
-    </ol> -->
+    </ol>-->
     <section>
       <b-field horizontal :label="$t('request.sig.subject')">
-        <b-input
-          v-model="subject"
-          name="subject"
-          :disabled="isMailing === true"
-          expanded
-        ></b-input>
+        <b-input v-model="subject" name="subject" :disabled="isMailing === true" expanded></b-input>
       </b-field>
 
       <b-field horizontal :label="$t('request.sig.from')">
@@ -58,17 +53,12 @@
       </b-field>
 
       <b-field horizontal :label="$t('request.sig.message')">
-        <b-input
-          v-model="message"
-          :disabled="isMailing === true"
-          type="textarea"
-          rows="12"
-        ></b-input>
+        <b-input v-model="message" :disabled="isMailing === true" type="textarea" rows="12"></b-input>
       </b-field>
 
       <!-- <button class="button is-primary is-medium is-fullwidth" @click="sendEmail">
         Send Email
-      </button> -->
+      </button>-->
 
       <b-field horizontal>
         <b-field grouped>
@@ -81,9 +71,7 @@
                 { 'is-loading': isMailing }
               ]"
               @click="$emit('input', null)"
-            >
-              {{ $t("request.sig.cancel") }}
-            </button>
+            >{{ $t("request.sig.cancel") }}</button>
           </b-field>
           <b-field expanded>
             <button
@@ -93,21 +81,15 @@
                 { 'is-loading': isMailing }
               ]"
               @click.prevent="sendEmail"
-            >
-              {{ $t("request.sig.sendEmail") }}
-            </button>
+            >{{ $t("request.sig.sendEmail") }}</button>
           </b-field>
         </b-field>
       </b-field>
     </section>
     <section class="section">
-      <b-field
-        v-if="documentRequired"
-        horizontal
-        :label="$t('request.sig.attachments')"
-      >
+      <b-field v-if="documentRequired" horizontal :label="$t('request.sig.attachments')">
         <b-upload
-          accept="image/jpeg,image/gif,image/png,application/pdf"
+          accept="image/jpeg, image/gif, image/png, application/pdf"
           v-if="dropFiles.length === 0"
           @input="attachReqDoc"
           v-model="dropFiles"
@@ -116,13 +98,13 @@
           <section class="section">
             <div class="content has-text-centered">
               <p>
-                <b-icon icon="upload" size="is-large"> </b-icon>
+                <b-icon icon="upload" size="is-large"></b-icon>
               </p>
               <p>
                 {{
-                  $t("request.sig.attachmentInstructions", {
-                    document: documentRequired
-                  })
+                $t("request.sig.attachmentInstructions", {
+                document: documentRequired
+                })
                 }}
                 <!-- You are required to provide {{documentRequired}}. Drop your file here or click to upload. (jpg, png, gif or pdf) -->
               </p>
@@ -130,11 +112,7 @@
           </section>
         </b-upload>
         <div v-if="dropFiles.length === 1" class="tags">
-          <span
-            v-for="(file, index) in dropFiles"
-            :key="index"
-            class="tag is-primary is-large"
-          >
+          <span v-for="(file, index) in dropFiles" :key="index" class="tag is-primary is-large">
             {{ file.name }}
             <button
               class="delete is-small"
@@ -162,40 +140,43 @@
             "
           ></span>
           <div class="box">
-            <span v-if="currentRequest.leo.n"
-              ><strong>{{ currentRequest.leo.n }}</strong
-              ><br
-            /></span>
-            <span v-if="currentRequest.leo.a1"
-              ><strong>{{ currentRequest.leo.a1 }}</strong
-              ><br
-            /></span>
-            <span v-if="currentRequest.leo.a2"
-              ><strong>{{ currentRequest.leo.a2 }}</strong
-              ><br
-            /></span>
-            <span v-if="currentRequest.leo.a3"
-              ><strong>{{ currentRequest.leo.a3 }}</strong
-              ><br
-            /></span>
-            <span
-              ><strong>{{ currentRequest.leo.c }}, </strong>
-              <strong>{{ currentRequest.leo.s }} </strong>
-              <strong>{{ currentRequest.leo.z }}</strong
-              ><br
-            /></span>
-            <span class="has-text-right"
-              ><strong>United States of America</strong><br
-            /></span>
+            <span v-if="currentRequest.leo.n">
+              <strong>{{ currentRequest.leo.n }}</strong>
+              <br />
+            </span>
+            <span v-if="currentRequest.leo.a1">
+              <strong>{{ currentRequest.leo.a1 }}</strong>
+              <br />
+            </span>
+            <span v-if="currentRequest.leo.a2">
+              <strong>{{ currentRequest.leo.a2 }}</strong>
+              <br />
+            </span>
+            <span v-if="currentRequest.leo.a3">
+              <strong>{{ currentRequest.leo.a3 }}</strong>
+              <br />
+            </span>
+            <span>
+              <strong>{{ currentRequest.leo.c }},</strong>
+              <strong>{{ currentRequest.leo.s }}</strong>
+              <strong>{{ currentRequest.leo.z }}</strong>
+              <br />
+            </span>
+            <span class="has-text-right">
+              <strong>United States of America</strong>
+              <br />
+            </span>
           </div>
         </div>
       </article>
 
       <div class="field is-horizontal">
         <div class="field-label">
-          <label v-if="!documentRequired" class="label">{{
+          <label v-if="!documentRequired" class="label">
+            {{
             $t("request.sig.attachment")
-          }}</label>
+            }}
+          </label>
         </div>
         <div class="field-body">
           <figure class="field image" style="border: gray solid;">
@@ -208,167 +189,167 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
-import axios from "axios";
-import snarkdown from "snarkdown";
+import { mapState } from 'vuex'
+import axios from 'axios'
+import snarkdown from 'snarkdown'
 
 export default {
-  data() {
+  data () {
     return {
-      customEmail: "",
-      message: "",
-      subject: "",
+      customEmail: '',
+      message: '',
+      subject: '',
       isMailing: false,
       dropFiles: [],
-      reqDoc: "",
+      reqDoc: '',
       sendWithoutDocs: false,
       buttonClass: {
         button: true,
-        "is-primary": true,
-        "is-medium": true,
-        "is-fullwidth": true
+        'is-primary': true,
+        'is-medium': true,
+        'is-fullwidth': true
       }
-    };
+    }
   },
   computed: {
-    isStudentSite() {
-      return process.env.isStudentSite === "true";
+    isStudentSite () {
+      return process.env.isStudentSite === 'true'
     },
-    voterMessage() {
+    voterMessage () {
       return (
-        this.$t("email.voterEmail", {
+        this.$t('email.voterEmail', {
           leoEmail: this.leoEmail,
           leoName: this.leoName,
           leoPhone: this.leoPhone
         }) + this.message
-      );
+      )
     },
-    testMessage() {
+    testMessage () {
       return (
-        this.$t("email.testEmail", {
+        this.$t('email.testEmail', {
           leoEmail: this.leoEmail,
           leoName: this.leoName
         }) + this.message
-      );
+      )
     },
     formEmail: {
-      get() {
-        return this.email || this.customEmail;
+      get () {
+        return this.email || this.customEmail
       },
-      set(value) {
-        this.customEmail = value;
+      set (value) {
+        this.customEmail = value
       }
     },
-    currentRequest() {
-      return this.requests[this.currentRequestIndex];
+    currentRequest () {
+      return this.requests[this.currentRequestIndex]
     },
-    firstName() {
+    firstName () {
       return this.currentRequest && this.currentRequest.firstName
         ? this.currentRequest.firstName
-        : " ";
+        : ' '
     },
-    lastName() {
+    lastName () {
       return this.currentRequest && this.currentRequest.lastName
         ? this.currentRequest.lastName
-        : " ";
+        : ' '
     },
-    email() {
+    email () {
       return this.currentRequest && this.currentRequest.email
         ? this.currentRequest.email.toString()
-        : "";
+        : ''
     },
-    tel() {
+    tel () {
       return this.currentRequest &&
         this.currentRequest.tel &&
         this.currentRequest.tel.intNumber
         ? this.currentRequest.tel.intNumber
-        : "";
+        : ''
     },
-    leoEmail() {
+    leoEmail () {
       return this.currentRequest.leo && this.currentRequest.leo.e
         ? this.currentRequest.leo.e
-        : "";
+        : ''
     },
-    leoName() {
+    leoName () {
       return this.currentRequest.leo && this.currentRequest.leo.n
         ? this.currentRequest.leo.n
-        : "";
+        : ''
     },
-    leoPhone() {
+    leoPhone () {
       return this.currentRequest.leo && this.currentRequest.leo.p
         ? `+1 ${this.currentRequest.leo.p}`
-        : "";
+        : ''
     },
-    fromName() {
-      return `${this.firstName} ${this.lastName}`;
+    fromName () {
+      return `${this.firstName} ${this.lastName}`
     },
     ...mapState({
       currentRequestIndex: state => state.requests.currentRequest,
       requests: state => state.requests.requests
     })
   },
-  props: ["value", "fpca", "documentRequired", "instructionsObject"],
+  props: ['value', 'fpca', 'documentRequired', 'instructionsObject'],
   methods: {
-    md: function(md) {
-      return snarkdown(md);
+    md: function (md) {
+      return snarkdown(md)
     },
-    attachReqDoc(files) {
-      let vm = this;
+    attachReqDoc (files) {
+      let vm = this
       if (
         files &&
         files.length > 0 &&
         files[0].name &&
         /\.(jpe?g|png|gif|pdf)$/i.test(files[0].name)
       ) {
-        var reader = new FileReader();
+        var reader = new FileReader()
 
         reader.addEventListener(
-          "load",
-          function() {
+          'load',
+          function () {
             // console.log(reader, this)
-            vm.reqDoc = this.result;
-            vm.sendWithoutDocs = false;
+            vm.reqDoc = this.result
+            vm.sendWithoutDocs = false
           },
           false
-        );
+        )
 
-        reader.readAsDataURL(files[0]);
+        reader.readAsDataURL(files[0])
       }
     },
-    deleteDropFile(index) {
-      this.dropFiles = [];
-      this.reqDoc = "";
-      this.sendWithoutDocs = false;
+    deleteDropFile (index) {
+      this.dropFiles = []
+      this.reqDoc = ''
+      this.sendWithoutDocs = false
     },
-    sendEmail() {
+    sendEmail () {
       if (this.documentRequired && !this.reqDoc && !this.sendWithoutDocs) {
         this.$dialog.confirm({
           title: this.documentRequired.toLocaleUpperCase(),
-          message: this.$t("request.sig.attachmentRequiredAlertMessage", {
+          message: this.$t('request.sig.attachmentRequiredAlertMessage', {
             document: this.documentRequired
           }),
-          cancelText: this.$t("request.sig.cancel"),
-          confirmText: this.$t("request.sig.attachmentRequiredConfirm"),
-          type: "is-danger",
+          cancelText: this.$t('request.sig.cancel'),
+          confirmText: this.$t('request.sig.attachmentRequiredConfirm'),
+          type: 'is-danger',
           hasIcon: true,
           onConfirm: () => {
-            this.sendWithoutDocs = true;
-            this.sendEmail();
+            this.sendWithoutDocs = true
+            this.sendEmail()
           }
-        });
+        })
       } else if (
         !this.formEmail.trim() ||
         !/(^$|^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$)/.test(
           this.customEmail
         )
       ) {
-        this.$refs.userEmail.checkHtml5Validity();
+        this.$refs.userEmail.checkHtml5Validity()
       } else {
-        this.isMailing = true;
-        let headers = {};
-        headers["Content-Type"] = "application/json";
-        headers["Accept"] = "application/json";
-        let voterMessage = this.voterMessage;
+        this.isMailing = true
+        let headers = {}
+        headers['Content-Type'] = 'application/json'
+        headers['Accept'] = 'application/json'
+        let voterMessage = this.voterMessage
         // this.isStudentSite || process.env.CONTEXT === 'prod'
         //   ? this.voterMessage
         //   : this.testMessage
@@ -377,13 +358,13 @@ export default {
           voterEmail: this.formEmail,
           voterMessage: voterMessage,
           leoMessage: this.message,
-          leoName: (this.leoName || "").replace(/[^A-Za-z\s]/g, ""),
+          leoName: (this.leoName || '').replace(/[^A-Za-z\s]/g, ''),
           leoEmail: this.leoEmail,
           image: this.fpca ? this.fpca.toString() : null,
           reqDoc: this.reqDoc ? this.reqDoc.toString() : null,
           firstName: this.firstName,
           lastName: this.lastName
-        };
+        }
         // if (this.isStudentSite || process.env.CONTEXT === 'prod') {
         // body = Object.assign({}, body, {leoMessage: this.message})
         // console.log('body', body)
@@ -392,51 +373,51 @@ export default {
         // console.log(typeof this.fpca)
         axios
           .post(
-            `/api/mailer${process.env.stage === "prod" ? "" : "/dev"}`,
+            `/api/mailer${process.env.stage === 'prod' ? '' : '/dev'}`,
             body,
             {
-              headers: { "Content-Type": "application/json" }
+              headers: { 'Content-Type': 'application/json' }
             }
           )
           .then(response => {
             // console.log(response.data)
-            this.isMailing = false;
-            this.$store.commit("requests/update", { status: "formEmailed" });
-            this.$store.dispatch("requests/updateRequest", {
-              status: "formEmailed"
-            });
+            this.isMailing = false
+            this.$store.commit('requests/update', { status: 'formEmailed' })
+            this.$store.dispatch('requests/updateRequest', {
+              status: 'formEmailed'
+            })
             // if (/AR|CT|NJ|NY|TX|VT/.test(this.state)) this.$emit('input', 'specialInstructions')
             // else
-            this.$ga.event("formAction", "completed", "email");
-            this.$router.push(this.localePath("dashboard"));
+            this.$ga.event('formAction', 'completed', 'email')
+            this.$router.push(this.localePath('dashboard'))
             this.$toast.open({
-              message: this.$t("request.sig.successMessage", {
+              message: this.$t('request.sig.successMessage', {
                 email: this.formEmail
               }),
-              type: "is-success"
-            });
+              type: 'is-success'
+            })
           })
           .catch(error => {
-            console.log(error);
-            this.isMailing = false;
+            console.log(error)
+            this.isMailing = false
             this.$dialog.alert({
-              title: this.$t("request.sig.failureTitle"),
-              message: this.$t("request.sig.failureMessage"),
-              confirmText: this.$t("request.sig.failureConfirm"),
-              type: "is-danger",
+              title: this.$t('request.sig.failureTitle'),
+              message: this.$t('request.sig.failureMessage'),
+              confirmText: this.$t('request.sig.failureConfirm'),
+              type: 'is-danger',
               hasIcon: true,
-              icon: "error",
-              iconPack: "fas"
-            });
-          });
+              icon: 'error',
+              iconPack: 'fas'
+            })
+          })
       }
     }
   },
-  mounted() {
-    this.subject = "FPCA Submission";
-    this.message = `Please see attached my FPCA form for the current calendar year. Can you confirm receipt and also confirm that I do not need to send in the paper copy? \n\nThank you so much for everything you do. Your work is much appreciated by Americans abroad! \n\nSincerely, \n\n${this.firstName} ${this.lastName} \n\n${this.formEmail} \n\n${this.tel}`;
+  mounted () {
+    this.subject = 'FPCA Submission'
+    this.message = `Please see attached my FPCA form for the current calendar year. Can you confirm receipt and also confirm that I do not need to send in the paper copy? \n\nThank you so much for everything you do. Your work is much appreciated by Americans abroad! \n\nSincerely, \n\n${this.firstName} ${this.lastName} \n\n${this.formEmail} \n\n${this.tel}`
   }
-};
+}
 </script>
 
 <style>
