@@ -8,7 +8,7 @@
     <h1 class="title is-1 is-hidden-mobile is-spaced has-text-danger">
       <span class="has-text-weight-semibold">{{ isStudentSite ? $t('homepage.titleStudents') : $t('homepage.title') }}</span>
     </h1>
-    <div v-if="authState === 'loggedIn'">
+    <div v-if="!isAuthDisabled && authState === 'loggedIn'">
       <i18n tag="h1" path="auth.welcomeBack" class="subtitle is-1 is-size-3-mobile has-text-grey-light">
         <strong>{{ name }}</strong>
       </i18n>
