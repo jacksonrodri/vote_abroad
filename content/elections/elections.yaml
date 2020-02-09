@@ -68,6 +68,31 @@
           date: "2020-11-03T00:00:00"
           note: "AL1"
   - state: "AK"
+    date: "2020-04-04T00:00:00"
+    electionType: "Presidential Primary"
+    rules:
+      Registration:
+        - voterType: {}
+          rule: "By Mail: Postmarked by"
+          date: "2020-03-24T00:00:00"
+        - voterType: {}
+          rule: "By Email or Fax: Received by"
+          date: "2020-03-24T00:00:00"
+      Ballot Request:
+        - voterType: {}
+          rule: "Request Mail Ballot: Received by"
+          date: "2020-03-24T00:00:00"
+        - voterType: {}
+          rule: "Request Email/Online or Fax Ballot: Received by"
+          date: "2020-03-31T17:00:00"
+      Ballot Return:
+        - voterType: {}
+          rule: "Return by Mail: Postmarked by"
+          date: "2020-03-24T00:00:00"
+        - voterType: {}
+          rule: "Return by Fax: Received by"
+          date: "2020-04-04T20:00:00"
+  - state: "AK"
     date: "2020-08-18T00:00:00"
     electionType: "State Primary"
     rules:
@@ -92,7 +117,7 @@
           note: "AK1"
         - voterType: {}
           rule: "Return by Fax: Received by"
-          date: "2020-08-18T20:00:00"
+          date: "2020-08-18T20:00:00"          
   - state: "AK"
     date: "2020-11-03T00:00:00"
     electionType: "General Election"
