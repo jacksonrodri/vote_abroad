@@ -1033,6 +1033,22 @@
           rule: "Return by Online or Fax: Received by"
           date: "2020-11-03T21:00:00"
   - state: "KS"
+    date: "2020-05-02T00:00:00"
+    electionType: "Presidential Primary"
+    rules:
+      Registration:
+        - voterType: {}
+          rule: "Received by"
+          date: "2020-03-09T17:00:00"
+      Ballot Request:
+        - voterType: {}
+          rule: "Received by"
+          date: "2020-04-17T17:00:00"
+      Ballot Return:
+        - voterType: {}
+          rule: "Mail Only: Postmarked by"
+          date: "2020-04-24T00:00:00"
+  - state: "KS"
     date: "2020-08-04T00:00:00"
     electionType: "State Primary"
     rules:
@@ -1050,7 +1066,7 @@
       Ballot Return:
         - voterType: {}
           rule: "Received by"
-          date: "2020-08-04T00:00:00"
+          date: "2020-08-04T00:00:00"          
   - state: "KS"
     date: "2020-11-03T00:00:00"
     electionType: "General Election"
