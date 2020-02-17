@@ -2215,6 +2215,25 @@
           rule: "Return by Mail: Received by"
           date: "2020-03-12T17:00:00"
   - state: "NC"
+    date: "2020-04-21T00:00:00"
+    electionType: "State Primary Runoff"
+    rules:
+      Registration:
+        - voterType: {}
+          rule: "Received by"
+          date: "2020-04-20T17:00:00"
+      Ballot Request:
+        - voterType: {}
+          rule: "Received by"
+          date: "2020-04-20T17:00:00"
+      Ballot Return:
+        - voterType: {}
+          rule: "Return by Email/Online or Fax: Received by"
+          date: "2020-04-21T19:30:00"
+        - voterType: {}
+          rule: "Return by Mail: Received by"
+          date: "2020-04-21T17:00:00"                 
+  - state: "NC"
     date: "2020-05-12T00:00:00"
     electionType: "Federal Primary Runoff"
     rules:
