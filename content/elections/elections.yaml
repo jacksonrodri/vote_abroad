@@ -811,8 +811,11 @@
     rules:
       Registration:
         - voterType: {}
-          rule: "Postmarked by"
+          rule: "By Mail: Postmarked by"
           date: "2020-07-09T00:00:00"
+        - voterType: {}
+          rule: "By Email or Fax: Received by"
+          date: "2020-07-09T00:00:00"          
           note: "HI1"
       Ballot Request:
         - voterType: {}
@@ -828,8 +831,11 @@
     rules:
       Registration:
         - voterType: {}
-          rule: "Postmarked by"
+          rule: "By Mail: Postmarked by"
           date: "2020-10-05T00:00:00"
+        - voterType: {}
+          rule: "By Email or Fax: Received by"
+          date: "2020-10-05T00:00:00"          
           note: "HI1"
       Ballot Request:
         - voterType: {}
