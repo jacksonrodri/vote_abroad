@@ -117,7 +117,7 @@ async function handleState (stateAbbreviation) {
         leosChanged++
         newFile = [...newFile, { i, n, f, p, e, d, a1, a2, a3, c, s, z, j, t }]
         changes = [...changes, { change: `added-${s}-${j}-${n.replace('&apos;', "'")}-${i}`, newId: i, newName: n.replace('&apos;', "'"), newFax: f, newPhone: p, newEmail: e, newEffectiveDate: d, newAddress1: a1.replace('&apos;', "'"), newAddress2: a2.replace('&apos;', "'"), newAddress3: a3.replace('&apos;', "'"), newCity: c.replace('&apos;', "'"), newState: s, newZip: z, newJurisdictionName: j.replace('&apos;', "'"), newJurisdictionType: t }]
-      } else if (m.d !== d) {
+      } else if (new Date(m.d) < new Date(d)) {
         // console.log(`${s}-${j} changed`)
         leosChanged++
         newFile = newFile.map(obj => obj.i === i ? { i, n: n.replace('&apos;', "'"), f, p, e, d, a1: a1.replace('&apos;', "'"), a2: a2.replace('&apos;', "'"), a3: a3.replace('&apos;', "'"), c: c.replace('&apos;', "'"), s, z, j: j.replace('&apos;', "'"), t } : obj)
