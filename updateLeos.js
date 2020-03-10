@@ -93,34 +93,34 @@ async function handleState (stateAbbreviation) {
   for (const fvapLeo of leos) {
     try {
       const {
-        name: n,
-        faxNumber: f,
-        phoneNumber: p,
-        email: e,
-        effectiveDate: d,
+        name: n = '',
+        faxNumber: f = '',
+        phoneNumber: p = '',
+        email: e = '',
+        effectiveDate: d = '',
         address: {
-          primaryStreetLine: a1,
-          secondaryStreetLine: a2,
-          tertiaryStreetLine: a3,
-          city: c,
+          primaryStreetLine: a1 = '',
+          secondaryStreetLine: a2 = '',
+          tertiaryStreetLine: a3 = '',
+          city: c = '',
           state: {
-            abbreviation: s
+            abbreviation: s = ''
           },
-          zipcode: z
+          zipcode: z = ''
         },
         jurisdiction: {
-          id: i,
-          name: j,
+          id: i = '',
+          name: j = '',
           active: isActive,
           type: {
-            name: t
+            name: t = ''
           }
         }
       } = fvapLeo
 
       const m = ourData.find(leo => leo.i === i)
 
-      if (!m) {
+      if (!m && isActive) {
         // console.log(`${s}-${j} added`)
         leosChanged++
         newFile = [
