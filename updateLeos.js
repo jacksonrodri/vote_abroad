@@ -65,7 +65,7 @@ const states = [
   { code: 'WY', name: 'Wyoming', fvapId: '50' }
 ]
 
-const url = stateCode => `https://www.fvap.gov/search-offices.json?draw=1&columns%5B0%5D%5Bdata%5D=name&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=jurisdiction.name&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=jurisdiction.type.name&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=false&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=phoneNumber&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=faxNumber&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=email&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=false&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=address&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=false&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&start=0&length=20&search%5Bvalue%5D=&search%5Bregex%5D=false&nameSearch=&jurisdiction=&state=${
+const url = stateCode => `https://www.fvap.gov/search-offices.json?draw=1&columns%5B0%5D%5Bdata%5D=name&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=jurisdiction.name&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=jurisdiction.type.name&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=false&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=phoneNumber&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=faxNumber&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=email&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=false&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=address&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=false&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&start=0&length=2000&search%5Bvalue%5D=&search%5Bregex%5D=false&nameSearch=&jurisdiction=&state=${
   states.find(({ code }) => code === stateCode).fvapId
 }&_=1580897800839`
 
@@ -75,10 +75,18 @@ async function returnUpdatedStateData (stateCode) {
   return json
 }
 
+function decodeHtmlEntity (str) {
+  str = str.replace(/&apos;/g, "'").replace(/&quot;/g, '"').replace(/&gt;/g, '>').replace(/&lt;/g, '<').replace(/&amp;/g, '&')
+  return str.replace(/&#(\d+);/g, function (match, dec) {
+    return String.fromCharCode(dec)
+  })
+}
+
 async function handleState (stateAbbreviation) {
   const fileName = `./static/leos/${stateAbbreviation.toUpperCase()}-leos.json`
   let leosChanged = 0
   const ourData = JSON.parse(await readFile(fileName))
+  // create a deep clone of current data to make changes to
   let newFile = JSON.parse(JSON.stringify(ourData))
 
   const { data: leos } = await returnUpdatedStateData(stateAbbreviation)
@@ -115,8 +123,26 @@ async function handleState (stateAbbreviation) {
       if (!m) {
         // console.log(`${s}-${j} added`)
         leosChanged++
-        newFile = [...newFile, { i, n, f, p, e, d, a1, a2, a3, c, s, z, j, t }]
-        changes = [...changes, { change: `added-${s}-${j}-${n.replace('&apos;', "'")}-${i}`, newId: i, newName: n.replace('&apos;', "'"), newFax: f, newPhone: p, newEmail: e, newEffectiveDate: d, newAddress1: a1.replace('&apos;', "'"), newAddress2: a2.replace('&apos;', "'"), newAddress3: a3.replace('&apos;', "'"), newCity: c.replace('&apos;', "'"), newState: s, newZip: z, newJurisdictionName: j.replace('&apos;', "'"), newJurisdictionType: t }]
+        newFile = [
+          ...newFile,
+          {
+            i,
+            n: decodeHtmlEntity(n),
+            f,
+            p,
+            e: decodeHtmlEntity(e),
+            d,
+            a1: decodeHtmlEntity(a1),
+            a2: decodeHtmlEntity(a2),
+            a3: decodeHtmlEntity(a3),
+            c: decodeHtmlEntity(c),
+            s,
+            z,
+            j: decodeHtmlEntity(j),
+            t: decodeHtmlEntity(t)
+          }
+        ]
+        changes = [...changes, { change: `added-${s}-${decodeHtmlEntity(j)}-${decodeHtmlEntity(n)}-${i}`, newId: i, newName: decodeHtmlEntity(n), newFax: f, newPhone: p, newEmail: e, newEffectiveDate: d, newAddress1: decodeHtmlEntity(a1), newAddress2: decodeHtmlEntity(a2), newAddress3: decodeHtmlEntity(a3), newCity: decodeHtmlEntity(c), newState: s, newZip: z, newJurisdictionName: decodeHtmlEntity(j), newJurisdictionType: decodeHtmlEntity(t) }]
       } else if (new Date(m.d) < new Date(d)) {
         // console.log(`${s}-${j} changed`)
         leosChanged++
@@ -124,18 +150,18 @@ async function handleState (stateAbbreviation) {
         changes = [...changes, {
           change: `changed-${s}-${j}-${n}-${i}`,
           ...i !== m.i && { newId: i, oldId: m.i },
-          ...n !== m.n && { newName: n.replace('&apos;', "'"), oldName: m.n },
+          ...n !== m.n && { newName: decodeHtmlEntity(n), oldName: m.n },
           ...f !== m.f && { newFax: f, oldFax: m.f },
           ...p !== m.p && { newPhone: p, oldPhone: m.p },
           ...e !== m.e && { newEmail: e, oldEmail: m.e },
           ...d !== m.d && { newEffectiveDate: d, oldEffectiveDate: m.d },
-          ...a1 !== m.a1 && { newAddress1: a1.replace('&apos;', "'"), oldAddress1: m.a1 },
-          ...a2 !== m.a2 && { newAddress2: a2.replace('&apos;', "'"), oldAddress2: m.a2 },
-          ...a3 !== m.a3 && { newAddress3: a3.replace('&apos;', "'"), oldAddress3: m.a3 },
-          ...c !== m.c && { newCity: c.replace('&apos;', "'"), oldCity: m.c },
+          ...a1 !== m.a1 && { newAddress1: decodeHtmlEntity(a1), oldAddress1: m.a1 },
+          ...a2 !== m.a2 && { newAddress2: decodeHtmlEntity(a2), oldAddress2: m.a2 },
+          ...a3 !== m.a3 && { newAddress3: decodeHtmlEntity(a3), oldAddress3: m.a3 },
+          ...c !== m.c && { newCity: decodeHtmlEntity(c), oldCity: m.c },
           ...s !== m.s && { newState: s, oldState: m.s },
           ...z !== m.z && { newZip: z, oldZip: m.z },
-          ...j !== m.j && { newJurisdictionName: j.replace('&apos;', "'"), oldJurisdictionName: m.j },
+          ...j !== m.j && { newJurisdictionName: decodeHtmlEntity(j), oldJurisdictionName: m.j },
           ...t !== m.t && { newJurisdictionType: t, oldJurisdictionType: m.t }
         }]
       }
