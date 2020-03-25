@@ -957,57 +957,57 @@
           date: "2020-11-03T00:00:00"
           note: "IL2"
   - state: "IN"
-    date: "2020-05-05T00:00:00"
+    date: "2020-06-02T00:00:00"
     electionType: "Presidential Primary"
     rules:
       Registration:
         - voterType: {}
           rule: "Received by"
-          date: "2020-04-27T00:00:00"
+          date: "2020-05-04T00:00:00"
       Ballot Request:
         - voterType: {}
           rule: "Request Mail Ballot: Received by"
-          date: "2020-04-23T23:59:00"
+          date: "2020-05-21T23:59:00"
         - voterType: {}
           rule: "Request Email/Online or Fax Ballot: Received by"
-          date: "2020-05-04T12:00:00"
+          date: "2020-06-01T12:00:00"
       Ballot Return:
         - voterType: "Within the U.S."
           rule: "Received by"
-          date: "2020-05-05T12:00:00"
+          date: "2020-06-02T12:00:00"
         - voterType: "Outside the U.S."
           rule: "Return by Mail: Postmarked by"
-          date: "2020-05-05T00:00:00"
+          date: "2020-06-02T00:00:00"
           note: "IN1"
         - voterType: "Outside the U.S."
           rule: "Return by Email or Fax: Received by"
-          date: "2020-05-05T12:00:00"
+          date: "2020-06-02T12:00:00"
   - state: "IN"
-    date: "2020-05-05T00:00:00"
+    date: "2020-06-02T00:00:00"
     electionType: "State Primary"
     rules:
       Registration:
         - voterType: {}
           rule: "Received by"
-          date: "2020-04-27T00:00:00"
+          date: "2020-05-04T00:00:00"
       Ballot Request:
         - voterType: {}
           rule: "Request Mail Ballot: Received by"
-          date: "2020-04-23T23:59:00"
+          date: "2020-05-21T23:59:00"
         - voterType: {}
           rule: "Request Email/Online or Fax Ballot: Received by"
-          date: "2020-05-04T12:00:00"
+          date: "2020-06-01T12:00:00"
       Ballot Return:
         - voterType: "Within the U.S."
           rule: "Received by"
-          date: "2020-05-05T12:00:00"
+          date: "2020-06-02T12:00:00"
         - voterType: "Outside the U.S."
           rule: "Return by Mail: Postmarked by"
-          date: "2020-05-05T00:00:00"
+          date: "2020-06-02T00:00:00"
           note: "IN1"
         - voterType: "Outside the U.S."
           rule: "Return by Email or Fax: Received by"
-          date: "2020-05-05T12:00:00"
+          date: "2020-06-02T12:00:00"
   - state: "IN"
     date: "2020-11-03T00:00:00"
     electionType: "General Election"
