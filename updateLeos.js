@@ -76,6 +76,7 @@ async function returnUpdatedStateData (stateCode) {
 }
 
 function decodeHtmlEntity (str) {
+  str = typeof str === 'string' ? str : ''
   str = str.replace(/&apos;/g, "'").replace(/&quot;/g, '"').replace(/&gt;/g, '>').replace(/&lt;/g, '<').replace(/&amp;/g, '&')
   return str.replace(/&#(\d+);/g, function (match, dec) {
     return String.fromCharCode(dec)
@@ -94,6 +95,7 @@ async function handleState (stateAbbreviation) {
     try {
       const {
         name: n = '',
+        id: i = '',
         faxNumber: f = '',
         phoneNumber: p = '',
         email: e = '',
@@ -109,7 +111,6 @@ async function handleState (stateAbbreviation) {
           zipcode: z = ''
         },
         jurisdiction: {
-          id: i = '',
           name: j = '',
           active: isActive,
           type: {
@@ -142,18 +143,18 @@ async function handleState (stateAbbreviation) {
             t: decodeHtmlEntity(t)
           }
         ]
-        changes = [...changes, { change: `added-${s}-${decodeHtmlEntity(j)}-${decodeHtmlEntity(n)}-${i}`, newId: i, newName: decodeHtmlEntity(n), newFax: f, newPhone: p, newEmail: e, newEffectiveDate: d, newAddress1: decodeHtmlEntity(a1), newAddress2: decodeHtmlEntity(a2), newAddress3: decodeHtmlEntity(a3), newCity: decodeHtmlEntity(c), newState: s, newZip: z, newJurisdictionName: decodeHtmlEntity(j), newJurisdictionType: decodeHtmlEntity(t) }]
+        changes = [...changes, { change: `added-${s}-${decodeHtmlEntity(j)}-${decodeHtmlEntity(n)}-${i}`, newId: i, newName: decodeHtmlEntity(n), newFax: f, newPhone: p, newEmail: decodeHtmlEntity(e), newEffectiveDate: d, newAddress1: decodeHtmlEntity(a1), newAddress2: decodeHtmlEntity(a2), newAddress3: decodeHtmlEntity(a3), newCity: decodeHtmlEntity(c), newState: s, newZip: z, newJurisdictionName: decodeHtmlEntity(j), newJurisdictionType: decodeHtmlEntity(t) }]
       } else if (new Date(m.d) < new Date(d)) {
         // console.log(`${s}-${j} changed`)
         leosChanged++
-        newFile = newFile.map(obj => obj.i === i ? { i, n: n.replace('&apos;', "'"), f, p, e, d, a1: a1.replace('&apos;', "'"), a2: a2.replace('&apos;', "'"), a3: a3.replace('&apos;', "'"), c: c.replace('&apos;', "'"), s, z, j: j.replace('&apos;', "'"), t } : obj)
+        newFile = newFile.map(obj => obj.i === i ? { i, n: decodeHtmlEntity(n), f, p, e: decodeHtmlEntity(e), d, a1: decodeHtmlEntity(a1), a2: decodeHtmlEntity(a2), a3: decodeHtmlEntity(a3), c: decodeHtmlEntity(c), s, z, j: decodeHtmlEntity(j), t } : obj)
         changes = [...changes, {
           change: `changed-${s}-${j}-${n}-${i}`,
           ...i !== m.i && { newId: i, oldId: m.i },
           ...n !== m.n && { newName: decodeHtmlEntity(n), oldName: m.n },
           ...f !== m.f && { newFax: f, oldFax: m.f },
           ...p !== m.p && { newPhone: p, oldPhone: m.p },
-          ...e !== m.e && { newEmail: e, oldEmail: m.e },
+          ...e !== m.e && { newEmail: decodeHtmlEntity(e), oldEmail: m.e },
           ...d !== m.d && { newEffectiveDate: d, oldEffectiveDate: m.d },
           ...a1 !== m.a1 && { newAddress1: decodeHtmlEntity(a1), oldAddress1: m.a1 },
           ...a2 !== m.a2 && { newAddress2: decodeHtmlEntity(a2), oldAddress2: m.a2 },
