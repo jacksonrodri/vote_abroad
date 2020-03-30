@@ -419,21 +419,21 @@
           date: "2020-11-03T19:00:00"
           note: "CO2"
   - state: "CT"
-    date: "2020-04-28T00:00:00"
+    date: "2020-06-02T00:00:00"
     electionType: "Presidential Primary"
     rules:
       Registration:
         - voterType: {}
           rule: "Received by"
-          date: "2020-04-27T00:00:00"
+          date: "2020-06-01T00:00:00"
       Ballot Request:
         - voterType: {}
           rule: "Received by"
-          date: "2020-04-27T00:00:00"
+          date: "2020-06-01T00:00:00"
       Ballot Return:
         - voterType: {}
           rule: "Received by"
-          date: "2020-04-28T00:00:00"
+          date: "2020-06-02T00:00:00"
   - state: "CT"
     date: "2020-08-11T00:00:00"
     electionType: "State Primary"
