@@ -2523,38 +2523,38 @@
           rule: "Received by"
           date: "2020-11-03T20:00:00"
   - state: "PA"
-    date: "2020-04-28T00:00:00"
+    date: "2020-06-02T00:00:00"
     electionType: "Presidential Primary"
     rules:
       Registration:
         - voterType: {}
           rule: "By Mail: Postmarked by"
-          date: "2020-03-30T00:00:00"
+          date: "2020-05-18T00:00:00"
       Ballot Request:
         - voterType: {}
           rule: "Received by"
-          date: "2020-04-27T00:00:00"
+          date: "2020-06-01T00:00:00"
       Ballot Return:
         - voterType: {}
           rule: "Signed by"
-          date: "2020-04-27T23:59:00"
+          date: "2020-06-01T23:59:00"
           note: "PA1"
   - state: "PA"
-    date: "2020-04-28T00:00:00"
+    date: "2020-06-02T00:00:00"
     electionType: "State Primary"
     rules:
       Registration:
         - voterType: {}
           rule: "By Mail: Postmarked by"
-          date: "2020-03-30T00:00:00"
+          date: "2020-05-18T00:00:00"
       Ballot Request:
         - voterType: {}
           rule: "Received by"
-          date: "2020-04-27T00:00:00"
+          date: "2020-06-01T00:00:00"
       Ballot Return:
         - voterType: {}
           rule: "Signed by"
-          date: "2020-04-27T23:59:00"
+          date: "2020-06-01T23:59:00"
           note: "PA1"
   - state: "PA"
     date: "2020-11-03T00:00:00"
