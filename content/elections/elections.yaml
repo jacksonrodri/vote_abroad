@@ -670,13 +670,13 @@
           rule: "Return by Fax: Received by"
           date: "2020-11-03T19:00:00"
   - state: "GA"
-    date: "2020-03-24T00:00:00"
+    date: "2020-05-19T00:00:00"
     electionType: "Presidential Primary"
     rules:
       Registration:
         - voterType: {}
           rule: "By Mail, Email or Fax: Received by"
-          date: "2020-02-24T00:00:00"
+          date: "2020-04-20T00:00:00"
       Ballot Request:
         - voterType: {}
           rule: "No Deadline"
@@ -684,7 +684,7 @@
       Ballot Return:
         - voterType: {}
           rule: "Postmarked by"
-          date: "2020-03-24T00:00:00"
+          date: "2020-05-19T00:00:00"
           note: "GA1"
   - state: "GA"
     date: "2020-05-19T00:00:00"
