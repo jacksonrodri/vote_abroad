@@ -34,21 +34,21 @@
           date: "2020-03-03T00:00:00"
           note: "AL1"
   - state: "AL"
-    date: "2020-03-31T00:00:00"
+    date: "2020-07-14T00:00:00"
     electionType: "State Primary Runoff"
     rules:
       Registration:
         - voterType: {}
           rule: "Postmarked by"
-          date: "2020-03-16T00:00:00"
+          date: "2020-06-29T00:00:00"
       Ballot Request:
         - voterType: {}
           rule: "Received by"
-          date: "2020-03-26T00:00:00"
+          date: "2020-07-09T00:00:00"
       Ballot Return:
         - voterType: {}
           rule: "Postmarked by"
-          date: "2020-03-31T00:00:00"
+          date: "2020-07-14T00:00:00"
           note: "AL1"
   - state: "AL"
     date: "2020-11-03T00:00:00"
