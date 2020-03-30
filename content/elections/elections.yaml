@@ -2123,22 +2123,40 @@
           rule: "Received by"
           date: "2020-11-02T17:00:00"
   - state: "NY"
-    date: "2020-04-28T00:00:00"
+    date: "2020-06-23T00:00:00"
     electionType: "Presidential Primary"
     rules:
       Registration:
         - voterType: {}
           rule: "Received by"
-          date: "2020-04-08T00:00:00"
+          date: "2020-06-05T00:00:00"
           note: "NY1"
       Ballot Request:
         - voterType: {}
           rule: "Received by"
-          date: "2020-04-03T00:00:00"
+          date: "2020-05-29T00:00:00"
       Ballot Return:
         - voterType: {}
           rule: "Postmarked by"
-          date: "2020-04-27T00:00:00"
+          date: "2020-06-22T00:00:00"
+          note: "NY2"
+  - state: "NY"
+    date: "2020-06-23T00:00:00"
+    electionType: "CD 27 Special Election"
+    rules:
+      Registration:
+        - voterType: {}
+          rule: "Received by"
+          date: "2020-06-05T00:00:00"
+          note: "NY1"
+      Ballot Request:
+        - voterType: {}
+          rule: "Received by"
+          date: "2020-05-29T00:00:00"
+      Ballot Return:
+        - voterType: {}
+          rule: "Postmarked by"
+          date: "2020-06-22T00:00:00"
           note: "NY2"
   - state: "NY"
     date: "2020-06-23T00:00:00"
