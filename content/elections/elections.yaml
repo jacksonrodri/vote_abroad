@@ -2330,7 +2330,7 @@
           rule: "Return by Email/Online or Fax: Received by"
           date: "2020-11-02T23:59:00"
   - state: "OH"
-    date: "2020-03-17T00:00:00"
+    date: "2020-04-28T00:00:00"
     electionType: "Presidential Primary"
     rules:
       Registration:
@@ -2343,14 +2343,14 @@
       Ballot Request:
         - voterType: {}
           rule: "Received by"
-          date: "2020-03-14T00:00:00"
+          date: "2020-04-25T12:00:00"
       Ballot Return:
         - voterType: {}
           rule: "Postmarked by"
-          date: "2020-03-16T00:00:00"
+          date: "2020-04-27T00:00:00"
           note: "OH1"
   - state: "OH"
-    date: "2020-03-17T00:00:00"
+    date: "2020-04-28T00:00:00"
     electionType: "State Primary"
     rules:
       Registration:
@@ -2363,11 +2363,11 @@
       Ballot Request:
         - voterType: {}
           rule: "Received by"
-          date: "2020-03-14T00:00:00"
+          date: "2020-04-25T12:00:00"
       Ballot Return:
         - voterType: {}
           rule: "Postmarked by"
-          date: "2020-03-16T00:00:00"
+          date: "2020-04-27T00:00:00"
           note: "OH1"
   - state: "OH"
     date: "2020-11-03T00:00:00"
