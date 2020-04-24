@@ -3264,43 +3264,43 @@
           rule: "Received by"
           date: "2020-11-03T20:00:00"
   - state: "WV"
-    date: "2020-05-12T00:00:00"
+    date: "2020-06-09T00:00:00"
     electionType: "State Primary"
     rules:
       Registration:
         - voterType: {}
           rule: "Received by"
-          date: "2020-04-21T00:00:00"
+          date: "2020-05-19T00:00:00"
       Ballot Request:
         - voterType: {}
           rule: "Received by"
-          date: "2020-05-06T00:00:00"
+          date: "2020-06-03T00:00:00"
       Ballot Return:
         - voterType: {}
           rule: "Return Electronically by"
-          date: "2020-05-12T19:30:00"
+          date: "2020-06-09T19:30:00"
         - voterType: {}
           rule: "Return by Mail: Received by"
-          date: "2020-05-18T00:00:00"
+          date: "2020-06-15T00:00:00"
   - state: "WV"
-    date: "2020-05-12T00:00:00"
+    date: "2020-06-09T00:00:00"
     electionType: "Presidential Primary"
     rules:
       Registration:
         - voterType: {}
           rule: "Received by"
-          date: "2020-04-21T00:00:00"
+          date: "2020-05-19T00:00:00"
       Ballot Request:
         - voterType: {}
           rule: "Received by"
-          date: "2020-05-06T00:00:00"
+          date: "2020-06-03T00:00:00"
       Ballot Return:
         - voterType: {}
           rule: "Return Electronically by"
-          date: "2020-05-12T19:30:00"
+          date: "2020-06-09T19:30:00"
         - voterType: {}
           rule: "Return by Mail: Received by"
-          date: "2020-05-18T00:00:00"
+          date: "2020-06-15T00:00:00"
   - state: "WV"
     date: "2020-11-03T00:00:00"
     electionType: "General Election"
