@@ -2000,49 +2000,49 @@
           rule: "Received by"
           date: "2020-11-03T17:00:00"
   - state: "NJ"
-    date: "2020-06-02T00:00:00"
+    date: "2020-07-07T00:00:00"
     electionType: "Presidential Primary"
     rules:
       Registration:
         - voterType: {}
           rule: "By Mail: Received by"
-          date: "2020-05-12T00:00:00"
+          date: "2020-06-16T00:00:00"
         - voterType: {}
           rule: "By Email or Fax: Received by"
-          date: "2020-05-29T00:00:00"
+          date: "2020-06-16T00:00:00"
       Ballot Request:
         - voterType: {}
           rule: "By Mail: Received by"
-          date: "2020-05-03T00:00:00"
+          date: "2020-07-03T00:00:00"
         - voterType: {}
           rule: "By Email or Fax: Received by"
-          date: "2020-05-29T00:00:00"
+          date: "2020-07-03T00:00:00"
       Ballot Return:
         - voterType: {}
           rule: "Received by"
-          date: "2020-06-02T00:00:00"
+          date: "2020-07-07T00:00:00"
   - state: "NJ"
-    date: "2020-06-02T00:00:00"
+    date: "2020-07-07T00:00:00"
     electionType: "State Primary"
     rules:
       Registration:
         - voterType: {}
           rule: "By Mail: Received by"
-          date: "2020-05-12T00:00:00"
+          date: "2020-06-16T00:00:00"
         - voterType: {}
           rule: "By Email or Fax: Received by"
-          date: "2020-05-29T00:00:00"
+          date: "2020-06-16T00:00:00"
       Ballot Request:
         - voterType: {}
           rule: "By Mail: Received by"
-          date: "2020-05-03T00:00:00"
+          date: "2020-07-03T00:00:00"
         - voterType: {}
           rule: "By Email or Fax: Received by"
-          date: "2020-05-29T00:00:00"
+          date: "2020-07-03T00:00:00"
       Ballot Return:
         - voterType: {}
           rule: "Received by"
-          date: "2020-06-02T00:00:00"
+          date: "2020-07-07T00:00:00"
   - state: "NJ"
     date: "2020-11-03T00:00:00"
     electionType: "General Election"
