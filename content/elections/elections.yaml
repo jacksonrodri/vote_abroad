@@ -1268,21 +1268,21 @@
           rule: "Received by"
           date: "2020-03-03T20:00:00"
   - state: "ME"
-    date: "2020-06-09T00:00:00"
+    date: "2020-07-14T00:00:00"
     electionType: "State Primary"
     rules:
       Registration:
         - voterType: {}
           rule: "Received by"
-          date: "2020-06-09T17:00:00"
+          date: "2020-07-14T17:00:00"
       Ballot Request:
         - voterType: {}
           rule: "Received by"
-          date: "2020-06-09T17:00:00"
+          date: "2020-07-14T17:00:00"
       Ballot Return:
         - voterType: {}
           rule: "Received by"
-          date: "2020-06-09T20:00:00"
+          date: "2020-07-14T20:00:00"
   - state: "ME"
     date: "2020-11-03T00:00:00"
     electionType: "General Election"
