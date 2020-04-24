@@ -270,6 +270,14 @@
         </div>
       </form-party-input>
 
+      <!-- Opt in to voter reminder (email) service -->
+      <form-checkbox-input
+        ref="optInVoterReminder"
+        v-model="optInVoterReminder"
+        message="I'd like to receive future voter remind emails"
+        style="margin: 10px 0;"
+      />
+
       <form-email-input v-if="!!joinDa && (email === null || skippedEmail || $v.email.$error)"
         ref="email"
         key="email"
@@ -365,6 +373,7 @@ import FormGenderRadioButton from '~/components/FormGenderRadioButton'
 import FormPartyInput from '~/components/FormPartyInput'
 import FormStateSpecialInput from '~/components/FormStateSpecialInput'
 import FormIdentificationInput from '~/components/FormIdentificationInput'
+import FormCheckboxInput from '~/components/FormCheckboxInput'
 import VfaScrollUp from '~/components/VfaScrollUp'
 import VfaOptIn from '~/components/VfaOptIn'
 import snarkdown from 'snarkdown'
@@ -468,6 +477,7 @@ export default {
     FormStateSpecialInput,
     FormIdentificationInput,
     VfaScrollUp,
+    FormCheckboxInput,
     VfaOptIn
   },
   computed: {
@@ -608,6 +618,12 @@ export default {
     joinDa: {
       get () { return this.getCurrent.joinDa || null },
       set (value) { this.update({joinDa: value}) }
+    },
+    optInVoterReminder: {
+      get () { return this.getCurrent.optInVoterReminder || false },
+      set (value) {
+        this.update({optInVoterReminder: value})
+      }
     },
     ...mapGetters('data', ['isValidNumber']),
     ...mapGetters('requests', ['getCurrent']),
