@@ -1195,24 +1195,24 @@
           date: "2020-11-03T00:00:00"
           note: "KY1"
   - state: "LA"
-    date: "2020-06-20T00:00:00"
+    date: "2020-07-11T00:00:00"
     electionType: "Presidential Primary"
     rules:
       Registration:
         - voterType: {}
-          rule: "Return by Mail: Postmarked by"
-          date: "2020-05-20T00:00:00"
+          rule: "By Mail: Postmarked by"
+          date: "2020-06-11T00:00:00"
         - voterType: {}
-          rule: "By Email/Online or Fax: Received by"
-          date: "2020-05-20T00:00:00"
+          rule: "By Email or Fax: Received by"
+          date: "2020-06-11T00:00:00"
       Ballot Request:
         - voterType: {}
           rule: "Received by"
-          date: "2020-06-19T16:30:00"
+          date: "2020-07-10T16:30:00"
       Ballot Return:
         - voterType: {}
           rule: "Received by"
-          date: "2020-06-20T20:00:00"
+          date: "2020-07-11T20:00:00"
   - state: "LA"
     date: "2020-11-03T00:00:00"
     electionType: "General Election"
