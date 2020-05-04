@@ -94,6 +94,7 @@ async function handleState (stateAbbreviation) {
   let newFile = JSON.parse(JSON.stringify(ourData))
 
   const { data: leos } = await returnUpdatedStateData(stateAbbreviation)
+  console.log(`On ${stateAbbreviation} => ENTRY`)
   for (const fvapLeo of leos) {
     try {
       const {
@@ -125,6 +126,7 @@ async function handleState (stateAbbreviation) {
       const m = Object.keys(ourData).length > 0 ? ourData.find(leo => leo.i === i) : null
 
       if (!m && isActive) {
+        console.log('\tADDED::', `${s}-${j}`)
         // console.log(`${s}-${j} added`)
         leosChanged++
         newFile = [
@@ -147,7 +149,8 @@ async function handleState (stateAbbreviation) {
           }
         ]
         changes = [...changes, { change: `added-${s}-${decodeHtmlEntity(j)}-${decodeHtmlEntity(n)}-${i}`, newId: i, newName: decodeHtmlEntity(n), newFax: f, newPhone: p, newEmail: decodeHtmlEntity(e), newEffectiveDate: d, newAddress1: decodeHtmlEntity(a1), newAddress2: decodeHtmlEntity(a2), newAddress3: decodeHtmlEntity(a3), newCity: decodeHtmlEntity(c), newState: s, newZip: z, newJurisdictionName: decodeHtmlEntity(j), newJurisdictionType: decodeHtmlEntity(t) }]
-      } else if (m && new Date(m.d) < new Date(d)) {
+      } else if (m && 'd' in m && new Date(m.d) < new Date(d)) {
+        console.log('\tCHANGED::', `${s}-${j}`)
         // console.log(`${s}-${j} changed`)
         leosChanged++
         newFile = newFile.map(obj => obj.i === i ? { i, n: decodeHtmlEntity(n), f, p, e: decodeHtmlEntity(e), d, a1: decodeHtmlEntity(a1), a2: decodeHtmlEntity(a2), a3: decodeHtmlEntity(a3), c: decodeHtmlEntity(c), s, z, j: decodeHtmlEntity(j), t } : obj)
@@ -175,7 +178,8 @@ async function handleState (stateAbbreviation) {
     }
     // console.log({ i, n, f, p, e, d, a1, a2, a3, c, s, z, j, t })
   }
-  await writeFile(fileName, JSON.stringify(newFile, null, 2) + '\n')
+  // await writeFile(fileName, JSON.stringify(newFile, null, 2) + '\n')
+  fs.writeJSONSync(fileName, newFile, { spaces: 2 })
   return leosChanged
 }
 
