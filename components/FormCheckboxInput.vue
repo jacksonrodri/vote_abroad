@@ -1,12 +1,7 @@
 <template>
-  <label class="checkbox">
-    <input
-      :value="value"
-      type="checkbox"
-      @input="$emit('input', $event.target.checked)"
-    >
-    {{ message }}
-  </label>
+  <b-checkbox :value="value" ref="c-noId" @input="value => $emit('input', value)">
+    <span v-text="message" />
+  </b-checkbox>
 </template>
 
 <script>
