@@ -1490,8 +1490,8 @@
     rules:
       Registration:
         - voterType: {}
-          rule: "No Deadline"
-          date: ""
+          rule: "Received by"
+          date: "2020-03-10T20:00:00"
       Ballot Request:
         - voterType: {}
           rule: "Received by"
@@ -1506,8 +1506,8 @@
     rules:
       Registration:
         - voterType: {}
-          rule: "No Deadline"
-          date: ""
+          rule: "Received by"
+          date: "2020-08-04T20:00:00"
       Ballot Request:
         - voterType: {}
           rule: "Received by"
@@ -1522,8 +1522,8 @@
     rules:
       Registration:
         - voterType: {}
-          rule: "No Deadline"
-          date: ""
+          rule: "Received by"
+          date: "2020-11-03T20:00:00"
       Ballot Request:
         - voterType: {}
           rule: "Received by"
