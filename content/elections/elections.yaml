@@ -2006,14 +2006,14 @@
       Registration:
         - voterType: {}
           rule: "By Mail: Received by"
-          date: "2020-06-16T00:00:00"
+          date: "2020-06-07T00:00:00"
         - voterType: {}
           rule: "By Email or Fax: Received by"
           date: "2020-06-16T00:00:00"
       Ballot Request:
         - voterType: {}
           rule: "By Mail: Received by"
-          date: "2020-07-03T00:00:00"
+          date: "2020-06-07T00:00:00"
         - voterType: {}
           rule: "By Email or Fax: Received by"
           date: "2020-07-03T00:00:00"
@@ -2028,14 +2028,14 @@
       Registration:
         - voterType: {}
           rule: "By Mail: Received by"
-          date: "2020-06-16T00:00:00"
+          date: "2020-06-07T00:00:00"
         - voterType: {}
           rule: "By Email or Fax: Received by"
           date: "2020-06-16T00:00:00"
       Ballot Request:
         - voterType: {}
           rule: "By Mail: Received by"
-          date: "2020-07-03T00:00:00"
+          date: "2020-06-07T00:00:00"
         - voterType: {}
           rule: "By Email or Fax: Received by"
           date: "2020-07-03T00:00:00"
@@ -2050,10 +2050,10 @@
       Registration:
         - voterType: {}
           rule: "By Mail: Received by"
-          date: "2020-10-13T00:00:00"
+          date: "2020-10-04T00:00:00"
         - voterType: {}
           rule: "By Email or Fax: Received by"
-          date: "2020-10-30T00:00:00"
+          date: "2020-10-13T00:00:00"
       Ballot Request:
         - voterType: {}
           rule: "By Mail: Received by"
