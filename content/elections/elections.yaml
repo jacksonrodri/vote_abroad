@@ -2968,22 +2968,22 @@
           date: "2020-03-09T00:00:00"
           note: "TX2"
   - state: "TX"
-    date: "2020-05-26T00:00:00"
+    date: "2020-07-14T00:00:00"
     electionType: "State Primary Runoff"
     rules:
       Registration:
         - voterType: {}
           rule: "Received by"
-          date: "2020-04-27T00:00:00"
+          date: "2020-06-15T00:00:00"
           note: "TX1"
       Ballot Request:
         - voterType: {}
           rule: "Received by"
-          date: "2020-05-15T00:00:00"
+          date: "2020-07-03T00:00:00"
       Ballot Return:
         - voterType: {}
           rule: "Received by"
-          date: "2020-06-01T00:00:00"
+          date: "2020-07-20T00:00:00"
           note: "TX2"
   - state: "TX"
     date: "2020-11-03T00:00:00"
