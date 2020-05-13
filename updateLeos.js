@@ -84,6 +84,7 @@ function decodeHtmlEntity (str) {
 }
 
 async function handleState (stateAbbreviation) {
+  const safeEntries = {}
   const fileName = `./static/leos/${stateAbbreviation.toUpperCase()}-leos.json`
   if (!fs.existsSync(fileName)) {
     fs.writeJSONSync(fileName, [], { spaces: 2 })
@@ -124,10 +125,14 @@ async function handleState (stateAbbreviation) {
       } = fvapLeo
 
       const m = Object.keys(ourData).length > 0 ? ourData.find(leo => leo.i === i) : null
-
+      // console.log('\tjurisdiction::', `${j}`)
+      if (`${s}-${j}-${e}` in safeEntries) {
+        console.log(`\t Skip duplicate ${s}-${j}-${e}`)
+        continue
+      }
+      safeEntries[`${s}-${j}-${e}`] = true
       if (!m && isActive) {
-        console.log('\tADDED::', `${s}-${j}`)
-        // console.log(`${s}-${j} added`)
+        console.log('\tADDED::', `${s}-${j}::${e}`)
         leosChanged++
         newFile = [
           ...newFile,
@@ -150,7 +155,7 @@ async function handleState (stateAbbreviation) {
         ]
         changes = [...changes, { change: `added-${s}-${decodeHtmlEntity(j)}-${decodeHtmlEntity(n)}-${i}`, newId: i, newName: decodeHtmlEntity(n), newFax: f, newPhone: p, newEmail: decodeHtmlEntity(e), newEffectiveDate: d, newAddress1: decodeHtmlEntity(a1), newAddress2: decodeHtmlEntity(a2), newAddress3: decodeHtmlEntity(a3), newCity: decodeHtmlEntity(c), newState: s, newZip: z, newJurisdictionName: decodeHtmlEntity(j), newJurisdictionType: decodeHtmlEntity(t) }]
       } else if (m && 'd' in m && new Date(m.d) < new Date(d)) {
-        console.log('\tCHANGED::', `${s}-${j}`)
+        console.log('\tUPDATED/CHANGED::', `${s}-${j}::${e}`)
         // console.log(`${s}-${j} changed`)
         leosChanged++
         newFile = newFile.map(obj => obj.i === i ? { i, n: decodeHtmlEntity(n), f, p, e: decodeHtmlEntity(e), d, a1: decodeHtmlEntity(a1), a2: decodeHtmlEntity(a2), a3: decodeHtmlEntity(a3), c: decodeHtmlEntity(c), s, z, j: decodeHtmlEntity(j), t } : obj)
@@ -194,12 +199,18 @@ async function main () {
   console.log('CHANGES: ', summary)
   console.log('TOTAL: ', total)
 
+  if (!fs.existsSync('./logs')) {
+    fs.ensureDirSync('./logs')
+  }
+
   const updateDate = new Date().toISOString()
   if (errors.length) {
-    await writeFile(`./logs/${updateDate}-errors(${errors.length}).json`, JSON.stringify(errors, null, 2) + '\n')
+    // await writeFile(`./logs/${updateDate}-errors(${errors.length}).json`, JSON.stringify(errors, null, 2) + '\n')
+    fs.writeJSONSync(`./logs/${updateDate}-errors(${errors.length}).json`, errors, { spaces: 2 })
   }
   if (changes.length) {
-    await writeFile(`./logs/${updateDate}-changes(${changes.length}).json`, JSON.stringify(changes, null, 2) + '\n')
+    // await writeFile(`./logs/${updateDate}-changes(${changes.length}).json`, JSON.stringify(changes, null, 2) + '\n')
+    fs.writeJSONSync(`./logs/${updateDate}-changes(${changes.length}).json`, changes, { spaces: 2 })
   }
 }
 
