@@ -2053,7 +2053,7 @@
       Registration:
         - voterType: {}
           rule: "Received by"
-          date: "2020-06-05T00:00:00"
+          date: "2020-06-03T00:00:00"
           note: "NY1"
       Ballot Request:
         - voterType: {}
@@ -2071,7 +2071,7 @@
       Registration:
         - voterType: {}
           rule: "Received by"
-          date: "2020-06-05T00:00:00"
+          date: "2020-06-03T00:00:00"
           note: "NY1"
       Ballot Request:
         - voterType: {}
@@ -2089,7 +2089,7 @@
       Registration:
         - voterType: {}
           rule: "Received by"
-          date: "2020-06-05T00:00:00"
+          date: "2020-06-03T00:00:00"
           note: "NY1"
       Ballot Request:
         - voterType: {}
