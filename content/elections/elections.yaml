@@ -483,7 +483,7 @@
           date: "2020-05-29T00:00:00"
         - voterType: {}
           rule: "Request Email/Online or Fax Ballot: Received by"
-          date: "2020-05-29T12:00:00"
+          date: "2020-06-01T12:00:00"
       Ballot Return:
         - voterType: {}
           rule: "Received by"
