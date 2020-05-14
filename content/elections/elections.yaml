@@ -3099,7 +3099,7 @@
           rule: "Received by"
           date: "2020-03-03T19:00:00"
   - state: "VA"
-    date: "2020-06-09T00:00:00"
+    date: "2020-06-23T00:00:00"
     electionType: "State Primary"
     rules:
       Registration:
