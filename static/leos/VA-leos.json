@@ -13,7 +13,9 @@
     "s": "VA",
     "z": "23301-0097",
     "j": "Accomack",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3673,
@@ -29,7 +31,9 @@
     "s": "VA",
     "z": "22902",
     "j": "Albemarle",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3674,
@@ -45,7 +49,9 @@
     "s": "VA",
     "z": "22314-3246",
     "j": "Alexandria",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3675,
@@ -61,7 +67,9 @@
     "s": "VA",
     "z": "24426-1294",
     "j": "Alleghany",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3676,
@@ -77,7 +85,9 @@
     "s": "VA",
     "z": "23002-0481",
     "j": "Amelia",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3677,
@@ -93,7 +103,9 @@
     "s": "VA",
     "z": "24521-0550",
     "j": "Amherst",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3678,
@@ -109,7 +121,9 @@
     "s": "VA",
     "z": "24522-0008",
     "j": "Appomattox",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3679,
@@ -125,7 +139,9 @@
     "s": "VA",
     "z": "22201-5445",
     "j": "Arlington",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3680,
@@ -141,7 +157,9 @@
     "s": "VA",
     "z": "24482-0590",
     "j": "Augusta",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3681,
@@ -157,7 +175,9 @@
     "s": "VA",
     "z": "24484-0157",
     "j": "Bath",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3683,
@@ -173,7 +193,9 @@
     "s": "VA",
     "z": "24523-1927",
     "j": "Bedford County",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3684,
@@ -189,7 +211,9 @@
     "s": "VA",
     "z": "24315-0535",
     "j": "Bland",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3685,
@@ -205,7 +229,9 @@
     "s": "VA",
     "z": "24090-0062",
     "j": "Botetourt",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3686,
@@ -221,7 +247,9 @@
     "s": "VA",
     "z": "24201-4327",
     "j": "Bristol",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3687,
@@ -237,7 +265,9 @@
     "s": "VA",
     "z": "23868-1825",
     "j": "Brunswick",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3688,
@@ -253,7 +283,9 @@
     "s": "VA",
     "z": "24614-0975",
     "j": "Buchanan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3689,
@@ -269,7 +301,9 @@
     "s": "VA",
     "z": "23921-0222",
     "j": "Buckingham",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3690,
@@ -285,7 +319,9 @@
     "s": "VA",
     "z": "24416-3133",
     "j": "Buena Vista",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3691,
@@ -301,7 +337,9 @@
     "s": "VA",
     "z": "24588-0103",
     "j": "Campbell",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3692,
@@ -317,7 +355,9 @@
     "s": "VA",
     "z": "22427-0304",
     "j": "Caroline",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3693,
@@ -333,7 +373,9 @@
     "s": "VA",
     "z": "24343-1463",
     "j": "Carroll",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3694,
@@ -349,7 +391,9 @@
     "s": "VA",
     "z": "23030-0146",
     "j": "Charles City",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3695,
@@ -365,7 +409,9 @@
     "s": "VA",
     "z": "22902-1219",
     "j": "Charlotte",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3696,
@@ -381,7 +427,9 @@
     "s": "VA",
     "z": "22902",
     "j": "Charlottesville",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3697,
@@ -397,7 +445,9 @@
     "s": "VA",
     "z": "23322-5566",
     "j": "Chesapeake",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3698,
@@ -413,7 +463,9 @@
     "s": "VA",
     "z": "23832-9125",
     "j": "Chesterfield",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3699,
@@ -429,7 +481,9 @@
     "s": "VA",
     "z": "22611-1387",
     "j": "Clarke",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3701,
@@ -445,7 +499,9 @@
     "s": "VA",
     "z": "23834-9001",
     "j": "Colonial Heights",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3702,
@@ -461,7 +517,9 @@
     "s": "VA",
     "z": "24426-1647",
     "j": "Covington",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3703,
@@ -477,7 +535,9 @@
     "s": "VA",
     "z": "24127-0008",
     "j": "Craig",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3704,
@@ -493,7 +553,9 @@
     "s": "VA",
     "z": "22701-3047",
     "j": "Culpeper",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3705,
@@ -509,7 +571,9 @@
     "s": "VA",
     "z": "23040-0125",
     "j": "Cumberland",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3706,
@@ -525,7 +589,9 @@
     "s": "VA",
     "z": "24541-1329",
     "j": "Danville",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3707,
@@ -541,7 +607,9 @@
     "s": "VA",
     "z": "24228-1306",
     "j": "Dickenson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3708,
@@ -557,7 +625,9 @@
     "s": "VA",
     "z": "23841-0365",
     "j": "Dinwiddie",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3709,
@@ -573,7 +643,9 @@
     "s": "VA",
     "z": "23847-1092",
     "j": "Emporia",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3710,
@@ -589,7 +661,9 @@
     "s": "VA",
     "z": "22560-1561",
     "j": "Essex",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3711,
@@ -605,7 +679,9 @@
     "s": "VA",
     "z": "22030-3600",
     "j": "Fairfax City",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3712,
@@ -621,7 +697,9 @@
     "s": "VA",
     "z": "22038-8061",
     "j": "Fairfax County",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3713,
@@ -637,7 +715,9 @@
     "s": "VA",
     "z": "22046-3301",
     "j": "Falls Church",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3714,
@@ -653,7 +733,9 @@
     "s": "VA",
     "z": "20186-3011",
     "j": "Fauquier",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3715,
@@ -669,7 +751,9 @@
     "s": "VA",
     "z": "24091-2101",
     "j": "Floyd",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3716,
@@ -685,7 +769,9 @@
     "s": "VA",
     "z": "22963-0044",
     "j": "Fluvanna",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3717,
@@ -701,7 +787,9 @@
     "s": "VA",
     "z": "23837-0190",
     "j": "Franklin City",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3718,
@@ -717,7 +805,9 @@
     "s": "VA",
     "z": "24151-1290",
     "j": "Franklin County",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3719,
@@ -733,7 +823,9 @@
     "s": "VA",
     "z": "22601-5039",
     "j": "Frederick",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3720,
@@ -749,7 +841,9 @@
     "s": "VA",
     "z": "22401",
     "j": "Fredericksburg",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3721,
@@ -765,7 +859,9 @@
     "s": "VA",
     "z": "24333-1045",
     "j": "Galax",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3722,
@@ -781,7 +877,9 @@
     "s": "VA",
     "z": "24134-1611",
     "j": "Giles",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3723,
@@ -797,7 +895,9 @@
     "s": "VA",
     "z": "23061-0208",
     "j": "Gloucester",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3724,
@@ -813,7 +913,9 @@
     "s": "VA",
     "z": "23063-1013",
     "j": "Goochland",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3725,
@@ -829,7 +931,9 @@
     "s": "VA",
     "z": "24348-0449",
     "j": "Grayson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3726,
@@ -845,7 +949,9 @@
     "s": "VA",
     "z": "22973-0341",
     "j": "Greene",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3727,
@@ -861,7 +967,9 @@
     "s": "VA",
     "z": "23847-1092",
     "j": "Greensville",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3728,
@@ -877,7 +985,9 @@
     "s": "VA",
     "z": "24558-0400",
     "j": "Halifax",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3729,
@@ -893,7 +1003,9 @@
     "s": "VA",
     "z": "23666-4348",
     "j": "Hampton",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3730,
@@ -909,7 +1021,9 @@
     "s": "VA",
     "z": "23069-0419",
     "j": "Hanover",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3731,
@@ -925,7 +1039,9 @@
     "s": "VA",
     "z": "22801-7531",
     "j": "Harrisonburg",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3732,
@@ -941,7 +1057,9 @@
     "s": "VA",
     "z": "23273-0775",
     "j": "Henrico",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3733,
@@ -957,7 +1075,9 @@
     "s": "VA",
     "z": "24078-0007",
     "j": "Henry",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3734,
@@ -973,7 +1093,9 @@
     "s": "VA",
     "z": "24465-0386",
     "j": "Highland",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3735,
@@ -989,7 +1111,9 @@
     "s": "VA",
     "z": "23860-2845",
     "j": "Hopewell",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3736,
@@ -1005,7 +1129,9 @@
     "s": "VA",
     "z": "23397-0077",
     "j": "Isle of Wight",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3737,
@@ -1021,7 +1147,9 @@
     "s": "VA",
     "z": "23188",
     "j": "James City",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3738,
@@ -1037,7 +1165,9 @@
     "s": "VA",
     "z": "23085-0056",
     "j": "King and Queen",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3739,
@@ -1053,7 +1183,9 @@
     "s": "VA",
     "z": "22485-1359",
     "j": "King George",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3740,
@@ -1069,7 +1201,9 @@
     "s": "VA",
     "z": "23086",
     "j": "King William",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3741,
@@ -1085,7 +1219,9 @@
     "s": "VA",
     "z": "22503-0159",
     "j": "Lancaster",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3742,
@@ -1101,7 +1237,9 @@
     "s": "VA",
     "z": "24263-0370",
     "j": "Lee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3743,
@@ -1117,7 +1255,9 @@
     "s": "VA",
     "z": "24450-0922",
     "j": "Lexington",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3744,
@@ -1133,7 +1273,9 @@
     "s": "VA",
     "z": "20175-8916",
     "j": "Loudoun",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3745,
@@ -1149,7 +1291,9 @@
     "s": "VA",
     "z": "23093-0220",
     "j": "Louisa",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3746,
@@ -1165,7 +1309,9 @@
     "s": "VA",
     "z": "23952-2223",
     "j": "Lunenburg",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3747,
@@ -1181,7 +1327,9 @@
     "s": "VA",
     "z": "24506-0036",
     "j": "Lynchburg",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3748,
@@ -1197,7 +1345,9 @@
     "s": "VA",
     "z": "22727-0267",
     "j": "Madison",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3749,
@@ -1213,7 +1363,9 @@
     "s": "VA",
     "z": "20110-5403",
     "j": "Manassas",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3750,
@@ -1229,7 +1381,9 @@
     "s": "VA",
     "z": "20111-5270",
     "j": "Manassas Park",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3751,
@@ -1245,7 +1399,9 @@
     "s": "VA",
     "z": "24114-1323",
     "j": "Martinsville",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3752,
@@ -1261,7 +1417,9 @@
     "s": "VA",
     "z": "23109-0328",
     "j": "Mathews",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3753,
@@ -1277,7 +1435,9 @@
     "s": "VA",
     "z": "23917-0436",
     "j": "Mecklenburg",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3754,
@@ -1293,7 +1453,9 @@
     "s": "VA",
     "z": "23149-0358",
     "j": "Middlesex",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3755,
@@ -1309,7 +1471,9 @@
     "s": "VA",
     "z": "24073",
     "j": "Montgomery",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3756,
@@ -1325,7 +1489,9 @@
     "s": "VA",
     "z": "22949-0292",
     "j": "Nelson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3757,
@@ -1341,7 +1507,9 @@
     "s": "VA",
     "z": "23124-0128",
     "j": "New Kent",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3758,
@@ -1357,7 +1525,9 @@
     "s": "VA",
     "z": "23607-4305",
     "j": "Newport News",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3759,
@@ -1373,7 +1543,9 @@
     "s": "VA",
     "z": "23501-1531",
     "j": "Norfolk",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3760,
@@ -1389,7 +1561,9 @@
     "s": "VA",
     "z": "23347-0510",
     "j": "Northampton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3761,
@@ -1405,7 +1579,9 @@
     "s": "VA",
     "z": "22473-0084",
     "j": "Northumberland",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3762,
@@ -1421,7 +1597,9 @@
     "s": "VA",
     "z": "24273-0225",
     "j": "Norton",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3763,
@@ -1437,7 +1615,9 @@
     "s": "VA",
     "z": "23955-0024",
     "j": "Nottoway",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3764,
@@ -1453,7 +1633,9 @@
     "s": "VA",
     "z": "22960-1410",
     "j": "Orange",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3765,
@@ -1469,7 +1651,9 @@
     "s": "VA",
     "z": "22835-1262",
     "j": "Page",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3766,
@@ -1485,7 +1669,9 @@
     "s": "VA",
     "z": "24171-0635",
     "j": "Patrick",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3767,
@@ -1501,7 +1687,9 @@
     "s": "VA",
     "z": "23804-1031",
     "j": "Petersburg",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3768,
@@ -1517,7 +1705,9 @@
     "s": "VA",
     "z": "24531-3392",
     "j": "Pittsylvania",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3769,
@@ -1533,7 +1723,9 @@
     "s": "VA",
     "z": "23662-1996",
     "j": "Poquoson",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3770,
@@ -1549,7 +1741,9 @@
     "s": "VA",
     "z": "23704-3822",
     "j": "Portsmouth",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3771,
@@ -1565,7 +1759,9 @@
     "s": "VA",
     "z": "23139-5757",
     "j": "Powhatan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3772,
@@ -1581,7 +1777,9 @@
     "s": "VA",
     "z": "23901-0269",
     "j": "Prince Edward",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3773,
@@ -1597,7 +1795,9 @@
     "s": "VA",
     "z": "23875-0034",
     "j": "Prince George",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3774,
@@ -1613,7 +1813,9 @@
     "s": "VA",
     "z": "20110-5554",
     "j": "Prince William",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3775,
@@ -1629,7 +1831,9 @@
     "s": "VA",
     "z": "24301-5619",
     "j": "Pulaski",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3776,
@@ -1645,7 +1849,9 @@
     "s": "VA",
     "z": "24141-1456",
     "j": "Radford",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3777,
@@ -1661,7 +1867,9 @@
     "s": "VA",
     "z": "22747-0236",
     "j": "Rappahannock",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3778,
@@ -1677,7 +1885,9 @@
     "s": "VA",
     "z": "23261-1037",
     "j": "Richmond City",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3779,
@@ -1693,7 +1903,9 @@
     "s": "VA",
     "z": "22572-1000",
     "j": "Richmond County",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3780,
@@ -1709,7 +1921,9 @@
     "s": "VA",
     "z": "24016-2005",
     "j": "Roanoke City",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3781,
@@ -1725,7 +1939,9 @@
     "s": "VA",
     "z": "24018-0089",
     "j": "Roanoke County",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3782,
@@ -1741,7 +1957,9 @@
     "s": "VA",
     "z": "24450-2359",
     "j": "Rockbridge",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3783,
@@ -1757,7 +1975,9 @@
     "s": "VA",
     "z": "22802-4108",
     "j": "Rockingham",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3784,
@@ -1773,7 +1993,9 @@
     "s": "VA",
     "z": "24266-0383",
     "j": "Russell",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3785,
@@ -1789,7 +2011,9 @@
     "s": "VA",
     "z": "24153-0203",
     "j": "Salem",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3786,
@@ -1805,7 +2029,9 @@
     "s": "VA",
     "z": "24251-4892",
     "j": "Scott",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3787,
@@ -1821,7 +2047,9 @@
     "s": "VA",
     "z": "22664-1855",
     "j": "Shenandoah",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3788,
@@ -1837,7 +2065,9 @@
     "s": "VA",
     "z": "24354-3140",
     "j": "Smyth",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3789,
@@ -1853,7 +2083,9 @@
     "s": "VA",
     "z": "23837-0666",
     "j": "Southampton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3790,
@@ -1869,7 +2101,9 @@
     "s": "VA",
     "z": "22407",
     "j": "Spotsylvania",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3791,
@@ -1885,7 +2119,9 @@
     "s": "VA",
     "z": "22555-0301",
     "j": "Stafford",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3792,
@@ -1901,7 +2137,9 @@
     "s": "VA",
     "z": "24402-0058",
     "j": "Staunton",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3793,
@@ -1917,7 +2155,9 @@
     "s": "VA",
     "z": "23439-1966",
     "j": "Suffolk",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3794,
@@ -1933,7 +2173,9 @@
     "s": "VA",
     "z": "23883-0264",
     "j": "Surry",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3795,
@@ -1949,7 +2191,9 @@
     "s": "VA",
     "z": "23884-0302",
     "j": "Sussex",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3796,
@@ -1965,7 +2209,9 @@
     "s": "VA",
     "z": "24651-0201",
     "j": "Tazewell",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3797,
@@ -1981,7 +2227,9 @@
     "s": "VA",
     "z": "23456-0247",
     "j": "Virginia Beach",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3798,
@@ -1997,7 +2245,9 @@
     "s": "VA",
     "z": "22630",
     "j": "Warren",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3799,
@@ -2013,7 +2263,9 @@
     "s": "VA",
     "z": "24212-0037",
     "j": "Washington",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3800,
@@ -2029,7 +2281,9 @@
     "s": "VA",
     "z": "22980-4625",
     "j": "Waynesboro",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3801,
@@ -2045,7 +2299,9 @@
     "s": "VA",
     "z": "22520-0354",
     "j": "Westmoreland",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3802,
@@ -2061,7 +2317,9 @@
     "s": "VA",
     "z": "23187-3538",
     "j": "Williamsburg",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3803,
@@ -2077,7 +2335,9 @@
     "s": "VA",
     "z": "22601-5047",
     "j": "Winchester",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3804,
@@ -2093,7 +2353,9 @@
     "s": "VA",
     "z": "24293-0309",
     "j": "Wise",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3805,
@@ -2109,7 +2371,9 @@
     "s": "VA",
     "z": "24382-2548",
     "j": "Wythe",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3806,
@@ -2125,6 +2389,8 @@
     "s": "VA",
     "z": "23690-0451",
     "j": "York",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

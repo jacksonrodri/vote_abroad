@@ -13,6 +13,8 @@
     "s": "PR",
     "z": "00919-2359",
     "j": "All",
-    "t": "All"
+    "t": "All",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

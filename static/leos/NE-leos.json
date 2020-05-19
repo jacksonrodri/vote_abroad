@@ -13,7 +13,9 @@
     "s": "NE",
     "z": "68902",
     "j": "Adams",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2413,
@@ -29,7 +31,9 @@
     "s": "NE",
     "z": "68756",
     "j": "Antelope",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2414,
@@ -45,7 +49,9 @@
     "s": "NE",
     "z": "69121",
     "j": "Arthur",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2415,
@@ -61,7 +67,9 @@
     "s": "NE",
     "z": "69345",
     "j": "Banner",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2416,
@@ -77,7 +85,9 @@
     "s": "NE",
     "z": "68821",
     "j": "Blaine",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2417,
@@ -93,7 +103,9 @@
     "s": "NE",
     "z": "68620",
     "j": "Boone",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2418,
@@ -109,7 +121,9 @@
     "s": "NE",
     "z": "69301",
     "j": "Box Butte",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2419,
@@ -125,7 +139,9 @@
     "s": "NE",
     "z": "68722",
     "j": "Boyd",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2420,
@@ -141,7 +157,9 @@
     "s": "NE",
     "z": "69210",
     "j": "Brown",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2421,
@@ -157,7 +175,9 @@
     "s": "NE",
     "z": "68848",
     "j": "Buffalo",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2422,
@@ -173,7 +193,9 @@
     "s": "NE",
     "z": "68061",
     "j": "Burt",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2423,
@@ -189,7 +211,9 @@
     "s": "NE",
     "z": "68632",
     "j": "Butler",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2424,
@@ -205,7 +229,9 @@
     "s": "NE",
     "z": "68048",
     "j": "Cass",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2425,
@@ -221,7 +247,9 @@
     "s": "NE",
     "z": "68739",
     "j": "Cedar",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2426,
@@ -237,7 +265,9 @@
     "s": "NE",
     "z": "69033",
     "j": "Chase",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2427,
@@ -253,7 +283,9 @@
     "s": "NE",
     "z": "69201",
     "j": "Cherry",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2428,
@@ -269,7 +301,9 @@
     "s": "NE",
     "z": "69162",
     "j": "Cheyenne",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2429,
@@ -285,7 +319,9 @@
     "s": "NE",
     "z": "68933",
     "j": "Clay",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2430,
@@ -301,7 +337,9 @@
     "s": "NE",
     "z": "68661",
     "j": "Colfax",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2431,
@@ -317,7 +355,9 @@
     "s": "NE",
     "z": "68788",
     "j": "Cuming",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2432,
@@ -333,7 +373,9 @@
     "s": "NE",
     "z": "68822",
     "j": "Custer",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2433,
@@ -349,7 +391,9 @@
     "s": "NE",
     "z": "68731",
     "j": "Dakota",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2434,
@@ -365,7 +409,9 @@
     "s": "NE",
     "z": "69337",
     "j": "Dawes",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2435,
@@ -381,7 +427,9 @@
     "s": "NE",
     "z": "68850",
     "j": "Dawson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2436,
@@ -397,7 +445,9 @@
     "s": "NE",
     "z": "69129",
     "j": "Deuel",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2437,
@@ -413,7 +463,9 @@
     "s": "NE",
     "z": "68770",
     "j": "Dixon",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2438,
@@ -429,7 +481,9 @@
     "s": "NE",
     "z": "68025",
     "j": "Dodge",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2439,
@@ -445,7 +499,9 @@
     "s": "NE",
     "z": "68144",
     "j": "Douglas",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2440,
@@ -461,7 +517,9 @@
     "s": "NE",
     "z": "69021",
     "j": "Dundy",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2441,
@@ -477,7 +535,9 @@
     "s": "NE",
     "z": "68361",
     "j": "Fillmore",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2442,
@@ -493,7 +553,9 @@
     "s": "NE",
     "z": "68939",
     "j": "Franklin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2443,
@@ -509,7 +571,9 @@
     "s": "NE",
     "z": "69042",
     "j": "Frontier",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2444,
@@ -525,7 +589,9 @@
     "s": "NE",
     "z": "68926",
     "j": "Furnas",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2445,
@@ -541,7 +607,9 @@
     "s": "NE",
     "z": "68310",
     "j": "Gage",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2446,
@@ -557,7 +625,9 @@
     "s": "NE",
     "z": "69154",
     "j": "Garden",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2447,
@@ -573,7 +643,9 @@
     "s": "NE",
     "z": "68823",
     "j": "Garfield",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2448,
@@ -589,7 +661,9 @@
     "s": "NE",
     "z": "68937",
     "j": "Gosper",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2449,
@@ -605,7 +679,9 @@
     "s": "NE",
     "z": "69350",
     "j": "Grant",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2450,
@@ -621,7 +697,9 @@
     "s": "NE",
     "z": "68842",
     "j": "Greeley",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2451,
@@ -637,7 +715,9 @@
     "s": "NE",
     "z": "68801",
     "j": "Hall",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2452,
@@ -653,7 +733,9 @@
     "s": "NE",
     "z": "68818",
     "j": "Hamilton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2453,
@@ -669,7 +751,9 @@
     "s": "NE",
     "z": "68920",
     "j": "Harlan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2454,
@@ -685,7 +769,9 @@
     "s": "NE",
     "z": "69032",
     "j": "Hayes",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2455,
@@ -701,7 +787,9 @@
     "s": "NE",
     "z": "69044",
     "j": "Hitchcock",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2456,
@@ -717,7 +805,9 @@
     "s": "NE",
     "z": "68763",
     "j": "Holt",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2457,
@@ -733,7 +823,9 @@
     "s": "NE",
     "z": "69152",
     "j": "Hooker",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2458,
@@ -749,7 +841,9 @@
     "s": "NE",
     "z": "68873",
     "j": "Howard",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2459,
@@ -765,7 +859,9 @@
     "s": "NE",
     "z": "68352",
     "j": "Jefferson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2460,
@@ -781,7 +877,9 @@
     "s": "NE",
     "z": "68450",
     "j": "Johnson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2461,
@@ -797,7 +895,9 @@
     "s": "NE",
     "z": "68959",
     "j": "Kearney",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2462,
@@ -813,7 +913,9 @@
     "s": "NE",
     "z": "69153",
     "j": "Keith",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2463,
@@ -829,7 +931,9 @@
     "s": "NE",
     "z": "68778",
     "j": "Keya Paha",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2464,
@@ -845,7 +949,9 @@
     "s": "NE",
     "z": "69145",
     "j": "Kimball",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2465,
@@ -861,7 +967,9 @@
     "s": "NE",
     "z": "68724",
     "j": "Knox",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2466,
@@ -877,7 +985,9 @@
     "s": "NE",
     "z": "68503",
     "j": "Lancaster",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2467,
@@ -893,7 +1003,9 @@
     "s": "NE",
     "z": "69101",
     "j": "Lincoln",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2468,
@@ -909,7 +1021,9 @@
     "s": "NE",
     "z": "69163",
     "j": "Logan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2469,
@@ -925,7 +1039,9 @@
     "s": "NE",
     "z": "68879",
     "j": "Loup",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2470,
@@ -941,7 +1057,9 @@
     "s": "NE",
     "z": "68748",
     "j": "Madison",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2471,
@@ -957,7 +1075,9 @@
     "s": "NE",
     "z": "69167",
     "j": "McPherson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2472,
@@ -973,7 +1093,9 @@
     "s": "NE",
     "z": "68826",
     "j": "Merrick",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2473,
@@ -989,7 +1111,9 @@
     "s": "NE",
     "z": "69336",
     "j": "Morrill",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2474,
@@ -1005,7 +1129,9 @@
     "s": "NE",
     "z": "68638",
     "j": "Nance",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2475,
@@ -1021,7 +1147,9 @@
     "s": "NE",
     "z": "68305",
     "j": "Nemaha",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2476,
@@ -1037,7 +1165,9 @@
     "s": "NE",
     "z": "68961",
     "j": "Nuckolls",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2477,
@@ -1053,7 +1183,9 @@
     "s": "NE",
     "z": "68410",
     "j": "Otoe",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2478,
@@ -1069,7 +1201,9 @@
     "s": "NE",
     "z": "68420",
     "j": "Pawnee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2479,
@@ -1085,7 +1219,9 @@
     "s": "NE",
     "z": "69140",
     "j": "Perkins",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2480,
@@ -1101,7 +1237,9 @@
     "s": "NE",
     "z": "68949",
     "j": "Phelps",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2481,
@@ -1117,7 +1255,9 @@
     "s": "NE",
     "z": "68767",
     "j": "Pierce",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2482,
@@ -1133,7 +1273,9 @@
     "s": "NE",
     "z": "68602",
     "j": "Platte",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2483,
@@ -1149,7 +1291,9 @@
     "s": "NE",
     "z": "68651",
     "j": "Polk",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2484,
@@ -1165,7 +1309,9 @@
     "s": "NE",
     "z": "69001",
     "j": "Red Willow",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2485,
@@ -1181,7 +1327,9 @@
     "s": "NE",
     "z": "68355",
     "j": "Richardson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2486,
@@ -1197,7 +1345,9 @@
     "s": "NE",
     "z": "68714",
     "j": "Rock",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2487,
@@ -1213,7 +1363,9 @@
     "s": "NE",
     "z": "68465",
     "j": "Saline",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2488,
@@ -1229,7 +1381,9 @@
     "s": "NE",
     "z": "68046",
     "j": "Sarpy",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2489,
@@ -1245,7 +1399,9 @@
     "s": "NE",
     "z": "68066",
     "j": "Saunders",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2490,
@@ -1261,7 +1417,9 @@
     "s": "NE",
     "z": "69341",
     "j": "Scotts",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2491,
@@ -1277,7 +1435,9 @@
     "s": "NE",
     "z": "68434",
     "j": "Seward",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2492,
@@ -1293,7 +1453,9 @@
     "s": "NE",
     "z": "69360",
     "j": "Sheridan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2493,
@@ -1309,7 +1471,9 @@
     "s": "NE",
     "z": "68853",
     "j": "Sherman",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2494,
@@ -1325,7 +1489,9 @@
     "s": "NE",
     "z": "69346",
     "j": "Sioux",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2495,
@@ -1341,7 +1507,9 @@
     "s": "NE",
     "z": "68779",
     "j": "Stanton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2496,
@@ -1357,7 +1525,9 @@
     "s": "NE",
     "z": "68370",
     "j": "Thayer",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2497,
@@ -1373,7 +1543,9 @@
     "s": "NE",
     "z": "69166",
     "j": "Thomas",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2498,
@@ -1389,7 +1561,9 @@
     "s": "NE",
     "z": "68047",
     "j": "Thurston",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2499,
@@ -1405,7 +1579,9 @@
     "s": "NE",
     "z": "68862",
     "j": "Valley",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2500,
@@ -1421,7 +1597,9 @@
     "s": "NE",
     "z": "68008",
     "j": "Washington",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2501,
@@ -1437,7 +1615,9 @@
     "s": "NE",
     "z": "68787",
     "j": "Wayne",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2502,
@@ -1453,7 +1633,9 @@
     "s": "NE",
     "z": "68970",
     "j": "Webster",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2503,
@@ -1469,7 +1651,9 @@
     "s": "NE",
     "z": "68622",
     "j": "Wheeler",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2504,
@@ -1485,6 +1669,8 @@
     "s": "NE",
     "z": "68467",
     "j": "York",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

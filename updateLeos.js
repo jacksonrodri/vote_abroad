@@ -67,15 +67,15 @@ const states = [
 
 const url = stateCode => `https://www.fvap.gov/search-offices.json?draw=1&columns%5B0%5D%5Bdata%5D=name&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=jurisdiction.name&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=jurisdiction.type.name&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=false&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=phoneNumber&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=faxNumber&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=email&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=false&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=address&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=false&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&start=0&length=2000&search%5Bvalue%5D=&search%5Bregex%5D=false&nameSearch=&jurisdiction=&state=${
   states.find(({ code }) => code === stateCode).fvapId
-}&_=1580897800839`
+  }&_=1580897800839`
 
-async function returnUpdatedStateData (stateCode) {
+async function returnUpdatedStateData(stateCode) {
   const data = await fetch(url(stateCode))
   const json = await data.json()
   return json
 }
 
-function decodeHtmlEntity (str) {
+function decodeHtmlEntity(str) {
   str = typeof str === 'string' ? str : ''
   str = str.replace(/&apos;/g, "'").replace(/&quot;/g, '"').replace(/&gt;/g, '>').replace(/&lt;/g, '<').replace(/&amp;/g, '&')
   return str.replace(/&#(\d+);/g, function (match, dec) {
@@ -83,7 +83,7 @@ function decodeHtmlEntity (str) {
   })
 }
 
-async function handleState (stateAbbreviation) {
+async function handleState(stateAbbreviation) {
   const safeEntries = {}
   const fileName = `./static/leos/${stateAbbreviation.toUpperCase()}-leos.json`
   if (!fs.existsSync(fileName)) {
@@ -121,7 +121,9 @@ async function handleState (stateAbbreviation) {
           type: {
             name: t = ''
           }
-        }
+        },
+        fpcaOffice,
+        fwabOffice
       } = fvapLeo
 
       const m = Object.keys(ourData).length > 0 ? ourData.find(leo => leo.i === i) : null
@@ -150,15 +152,17 @@ async function handleState (stateAbbreviation) {
             s,
             z,
             j: decodeHtmlEntity(j),
-            t: decodeHtmlEntity(t)
+            t: decodeHtmlEntity(t),
+            fpcaOffice,
+            fwabOffice
           }
         ]
-        changes = [...changes, { change: `added-${s}-${decodeHtmlEntity(j)}-${decodeHtmlEntity(n)}-${i}`, newId: i, newName: decodeHtmlEntity(n), newFax: f, newPhone: p, newEmail: decodeHtmlEntity(e), newEffectiveDate: d, newAddress1: decodeHtmlEntity(a1), newAddress2: decodeHtmlEntity(a2), newAddress3: decodeHtmlEntity(a3), newCity: decodeHtmlEntity(c), newState: s, newZip: z, newJurisdictionName: decodeHtmlEntity(j), newJurisdictionType: decodeHtmlEntity(t) }]
+        changes = [...changes, { change: `added-${s}-${decodeHtmlEntity(j)}-${decodeHtmlEntity(n)}-${i}`, newId: i, newName: decodeHtmlEntity(n), newFax: f, newPhone: p, newEmail: decodeHtmlEntity(e), newEffectiveDate: d, newAddress1: decodeHtmlEntity(a1), newAddress2: decodeHtmlEntity(a2), newAddress3: decodeHtmlEntity(a3), newCity: decodeHtmlEntity(c), newState: s, newZip: z, newJurisdictionName: decodeHtmlEntity(j), newJurisdictionType: decodeHtmlEntity(t), newFpcaOffice: fpcaOffice, newFwabOffice: fwabOffice }]
       } else if (m && 'd' in m && new Date(m.d) < new Date(d)) {
         console.log('\tUPDATED/CHANGED::', `${s}-${j}::${e}`)
         // console.log(`${s}-${j} changed`)
         leosChanged++
-        newFile = newFile.map(obj => obj.i === i ? { i, n: decodeHtmlEntity(n), f, p, e: decodeHtmlEntity(e), d, a1: decodeHtmlEntity(a1), a2: decodeHtmlEntity(a2), a3: decodeHtmlEntity(a3), c: decodeHtmlEntity(c), s, z, j: decodeHtmlEntity(j), t } : obj)
+        newFile = newFile.map(obj => obj.i === i ? { i, n: decodeHtmlEntity(n), f, p, e: decodeHtmlEntity(e), d, a1: decodeHtmlEntity(a1), a2: decodeHtmlEntity(a2), a3: decodeHtmlEntity(a3), c: decodeHtmlEntity(c), s, z, j: decodeHtmlEntity(j), t, fpcaOffice, fwabOffice } : obj)
         changes = [...changes, {
           change: `changed-${s}-${j}-${n}-${i}`,
           ...i !== m.i && { newId: i, oldId: m.i },
@@ -174,7 +178,9 @@ async function handleState (stateAbbreviation) {
           ...s !== m.s && { newState: s, oldState: m.s },
           ...z !== m.z && { newZip: z, oldZip: m.z },
           ...j !== m.j && { newJurisdictionName: decodeHtmlEntity(j), oldJurisdictionName: m.j },
-          ...t !== m.t && { newJurisdictionType: t, oldJurisdictionType: m.t }
+          ...t !== m.t && { newJurisdictionType: t, oldJurisdictionType: m.t },
+          ...fpcaOffice !== m.fpcaOffice && { newFbcaOffice: fpcaOffice, oldFpcaOffice: m.fpcaOffice },
+          ...fwabOffice !== m.fwabOffice && { newFwabOffice: fwabOffice, oldFwabOffice: m.fwabOffice }
         }]
       }
     } catch (error) {
@@ -188,7 +194,7 @@ async function handleState (stateAbbreviation) {
   return leosChanged
 }
 
-async function main () {
+async function main() {
   let total = 0
   let summary = []
   for (const state of states) {

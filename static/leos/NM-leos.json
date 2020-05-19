@@ -13,7 +13,9 @@
     "s": "NM",
     "z": "87102",
     "j": "Bernalillo",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2763,
@@ -29,7 +31,9 @@
     "s": "NM",
     "z": "87830",
     "j": "Catron",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2764,
@@ -45,7 +49,9 @@
     "s": "NM",
     "z": "88202",
     "j": "Chaves",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2765,
@@ -61,7 +67,9 @@
     "s": "NM",
     "z": "87020",
     "j": "Cibola",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2766,
@@ -77,7 +85,9 @@
     "s": "NM",
     "z": "87740",
     "j": "Colfax",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2767,
@@ -93,7 +103,9 @@
     "s": "NM",
     "z": "88101",
     "j": "Curry",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2768,
@@ -109,7 +121,9 @@
     "s": "NM",
     "z": "88119",
     "j": "De Baca",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2769,
@@ -125,7 +139,9 @@
     "s": "NM",
     "z": "88007",
     "j": "Dona Ana",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2770,
@@ -141,7 +157,9 @@
     "s": "NM",
     "z": "88220",
     "j": "Eddy",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2771,
@@ -157,7 +175,9 @@
     "s": "NM",
     "z": "88062",
     "j": "Grant",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2772,
@@ -173,7 +193,9 @@
     "s": "NM",
     "z": "88435",
     "j": "Guadalupe",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2773,
@@ -189,7 +211,9 @@
     "s": "NM",
     "z": "87733",
     "j": "Harding",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2774,
@@ -205,7 +229,9 @@
     "s": "NM",
     "z": "88045",
     "j": "Hidalgo",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2775,
@@ -221,7 +247,9 @@
     "s": "NM",
     "z": "88260",
     "j": "Lea",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2776,
@@ -237,7 +265,9 @@
     "s": "NM",
     "z": "88301",
     "j": "Lincoln",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2777,
@@ -253,7 +283,9 @@
     "s": "NM",
     "z": "87544",
     "j": "Los Alamos",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2778,
@@ -269,7 +301,9 @@
     "s": "NM",
     "z": "88031-1838",
     "j": "Luna",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2779,
@@ -285,7 +319,9 @@
     "s": "NM",
     "z": "87301-1268",
     "j": "McKinley",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2780,
@@ -301,7 +337,9 @@
     "s": "NM",
     "z": "87732",
     "j": "Mora",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2781,
@@ -317,7 +355,9 @@
     "s": "NM",
     "z": "88310",
     "j": "Otero",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2782,
@@ -333,7 +373,9 @@
     "s": "NM",
     "z": "88401",
     "j": "Quay",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2783,
@@ -349,7 +391,9 @@
     "s": "NM",
     "z": "87575",
     "j": "Rio Arriba",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2784,
@@ -365,7 +409,9 @@
     "s": "NM",
     "z": "88130",
     "j": "Roosevelt",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2785,
@@ -381,7 +427,9 @@
     "s": "NM",
     "z": "87410",
     "j": "San Juan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2786,
@@ -397,7 +445,9 @@
     "s": "NM",
     "z": "87701",
     "j": "San Miguel",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2787,
@@ -413,7 +463,9 @@
     "s": "NM",
     "z": "87004",
     "j": "Sandoval",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2788,
@@ -429,7 +481,9 @@
     "s": "NM",
     "z": "87504",
     "j": "Santa Fe",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2789,
@@ -445,7 +499,9 @@
     "s": "NM",
     "z": "87901",
     "j": "Sierra",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2790,
@@ -461,7 +517,9 @@
     "s": "NM",
     "z": "87801",
     "j": "Socorro",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2791,
@@ -477,7 +535,9 @@
     "s": "NM",
     "z": "87571",
     "j": "Taos",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2792,
@@ -493,7 +553,9 @@
     "s": "NM",
     "z": "87016",
     "j": "Torrance",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2793,
@@ -509,7 +571,9 @@
     "s": "NM",
     "z": "88415",
     "j": "Union",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2794,
@@ -525,6 +589,8 @@
     "s": "NM",
     "z": "87031-9900",
     "j": "Valencia",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

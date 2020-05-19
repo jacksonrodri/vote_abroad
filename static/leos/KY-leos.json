@@ -13,7 +13,9 @@
     "s": "KY",
     "z": "42728-1493",
     "j": "Adair",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1138,
@@ -29,7 +31,9 @@
     "s": "KY",
     "z": "42164",
     "j": "Allen",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1139,
@@ -45,7 +49,9 @@
     "s": "KY",
     "z": "40342-1192",
     "j": "Anderson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1140,
@@ -61,7 +67,9 @@
     "s": "KY",
     "z": "42087-0145",
     "j": "Ballard",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1141,
@@ -77,7 +85,9 @@
     "s": "KY",
     "z": "42141",
     "j": "Barren",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1142,
@@ -93,7 +103,9 @@
     "s": "KY",
     "z": "40360-0609",
     "j": "Bath",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1143,
@@ -109,7 +121,9 @@
     "s": "KY",
     "z": "40977-0157",
     "j": "Bell",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1144,
@@ -125,7 +139,9 @@
     "s": "KY",
     "z": "41005-0874",
     "j": "Boone",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1145,
@@ -141,7 +157,9 @@
     "s": "KY",
     "z": "40362",
     "j": "Bourbon",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1146,
@@ -157,7 +175,9 @@
     "s": "KY",
     "z": "41129-0523",
     "j": "Boyd",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1147,
@@ -173,7 +193,9 @@
     "s": "KY",
     "z": "40422-1848",
     "j": "Boyle",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1148,
@@ -189,7 +211,9 @@
     "s": "KY",
     "z": "41004-0147",
     "j": "Bracken",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1149,
@@ -205,7 +229,9 @@
     "s": "KY",
     "z": "41339-1194",
     "j": "Breathitt",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1150,
@@ -221,7 +247,9 @@
     "s": "KY",
     "z": "40143-0538",
     "j": "Breckinridge",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1151,
@@ -237,7 +265,9 @@
     "s": "KY",
     "z": "40165-0006",
     "j": "Bullitt",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1152,
@@ -253,7 +283,9 @@
     "s": "KY",
     "z": "42261",
     "j": "Butler",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1153,
@@ -269,7 +301,9 @@
     "s": "KY",
     "z": "42445-1696",
     "j": "Caldwell",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1154,
@@ -285,7 +319,9 @@
     "s": "KY",
     "z": "42071-2569",
     "j": "Calloway",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1155,
@@ -301,7 +337,9 @@
     "s": "KY",
     "z": "41071",
     "j": "Campbell",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1156,
@@ -317,7 +355,9 @@
     "s": "KY",
     "z": "42023-0176",
     "j": "Carlisle",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1157,
@@ -333,7 +373,9 @@
     "s": "KY",
     "z": "41008-1064",
     "j": "Carroll",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1158,
@@ -349,7 +391,9 @@
     "s": "KY",
     "z": "41143-1298",
     "j": "Carter",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1159,
@@ -365,7 +409,9 @@
     "s": "KY",
     "z": "42539-0310",
     "j": "Casey",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1160,
@@ -381,7 +427,9 @@
     "s": "KY",
     "z": "42240-2300",
     "j": "Christian",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1161,
@@ -397,7 +445,9 @@
     "s": "KY",
     "z": "40392-4060",
     "j": "Clark",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1162,
@@ -413,7 +463,9 @@
     "s": "KY",
     "z": "40962-1392",
     "j": "Clay",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1163,
@@ -429,7 +481,9 @@
     "s": "KY",
     "z": "42602",
     "j": "Clinton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1164,
@@ -445,7 +499,9 @@
     "s": "KY",
     "z": "42064-1563",
     "j": "Crittenden",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1165,
@@ -461,7 +517,9 @@
     "s": "KY",
     "z": "42717-0275",
     "j": "Cumberland",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1166,
@@ -477,7 +535,9 @@
     "s": "KY",
     "z": "42302-0609",
     "j": "Daviess",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1167,
@@ -493,7 +553,9 @@
     "s": "KY",
     "z": "42210",
     "j": "Edmonson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1168,
@@ -509,7 +571,9 @@
     "s": "KY",
     "z": "41171-0225",
     "j": "Elliott",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1169,
@@ -525,7 +589,9 @@
     "s": "KY",
     "z": "40336-0059",
     "j": "Estill",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1170,
@@ -541,7 +607,9 @@
     "s": "KY",
     "z": "40507",
     "j": "Fayette",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1171,
@@ -557,7 +625,9 @@
     "s": "KY",
     "z": "41041",
     "j": "Fleming",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1172,
@@ -573,7 +643,9 @@
     "s": "KY",
     "z": "41653-5089",
     "j": "Floyd",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1173,
@@ -589,7 +661,9 @@
     "s": "KY",
     "z": "40602-0338",
     "j": "Franklin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1174,
@@ -605,7 +679,9 @@
     "s": "KY",
     "z": "42050-0126",
     "j": "Fulton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1175,
@@ -621,7 +697,9 @@
     "s": "KY",
     "z": "41095",
     "j": "Gallatin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1176,
@@ -637,7 +715,9 @@
     "s": "KY",
     "z": "40444-1023",
     "j": "Garrard",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1177,
@@ -653,7 +733,9 @@
     "s": "KY",
     "z": "41097-1107",
     "j": "Grant",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1178,
@@ -669,7 +751,9 @@
     "s": "KY",
     "z": "42066-2324",
     "j": "Graves",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1179,
@@ -685,7 +769,9 @@
     "s": "KY",
     "z": "42754-1199",
     "j": "Grayson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1180,
@@ -701,7 +787,9 @@
     "s": "KY",
     "z": "42743-1552",
     "j": "Green",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1181,
@@ -717,7 +805,9 @@
     "s": "KY",
     "z": "41144-0686",
     "j": "Greenup",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1182,
@@ -733,7 +823,9 @@
     "s": "KY",
     "z": "42348-0146",
     "j": "Hancock",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1183,
@@ -749,7 +841,9 @@
     "s": "KY",
     "z": "42702-1030",
     "j": "Hardin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1184,
@@ -765,7 +859,9 @@
     "s": "KY",
     "z": "40831-0670",
     "j": "Harlan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1185,
@@ -781,7 +877,9 @@
     "s": "KY",
     "z": "41031-1242",
     "j": "Harrison",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1186,
@@ -797,7 +895,9 @@
     "s": "KY",
     "z": "42765-0277",
     "j": "Hart",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1187,
@@ -813,7 +913,9 @@
     "s": "KY",
     "z": "42419-0374",
     "j": "Henderson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1188,
@@ -829,7 +931,9 @@
     "s": "KY",
     "z": "40050-0615",
     "j": "Henry",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1189,
@@ -845,7 +949,9 @@
     "s": "KY",
     "z": "42031-1296",
     "j": "Hickman",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1190,
@@ -861,7 +967,9 @@
     "s": "KY",
     "z": "42431",
     "j": "Hopkins",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1191,
@@ -877,7 +985,9 @@
     "s": "KY",
     "z": "40447-0339",
     "j": "Jackson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1192,
@@ -893,7 +1003,9 @@
     "s": "KY",
     "z": "40203",
     "j": "Jefferson Election Center",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1193,
@@ -909,7 +1021,9 @@
     "s": "KY",
     "z": "40356-1270",
     "j": "Jessamine",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1194,
@@ -925,7 +1039,9 @@
     "s": "KY",
     "z": "41240-1607",
     "j": "Johnson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1195,
@@ -941,7 +1057,9 @@
     "s": "KY",
     "z": "41012-1109",
     "j": "Kenton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1196,
@@ -957,7 +1075,9 @@
     "s": "KY",
     "z": "41822-0446",
     "j": "Knott",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1197,
@@ -973,7 +1093,9 @@
     "s": "KY",
     "z": "40906-1463",
     "j": "Knox",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1198,
@@ -989,7 +1111,9 @@
     "s": "KY",
     "z": "42748-1543",
     "j": "Larue",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1199,
@@ -1005,7 +1129,9 @@
     "s": "KY",
     "z": "40741-2308",
     "j": "Laurel",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1200,
@@ -1021,7 +1147,9 @@
     "s": "KY",
     "z": "41230-1393",
     "j": "Lawrence",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1201,
@@ -1037,7 +1165,9 @@
     "s": "KY",
     "z": "41311-0556",
     "j": "Lee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1202,
@@ -1053,7 +1183,9 @@
     "s": "KY",
     "z": "41749-0916",
     "j": "Leslie",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1203,
@@ -1069,7 +1201,9 @@
     "s": "KY",
     "z": "41858-7286",
     "j": "Letcher",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1204,
@@ -1085,7 +1219,9 @@
     "s": "KY",
     "z": "41179-0129",
     "j": "Lewis",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1205,
@@ -1101,7 +1237,9 @@
     "s": "KY",
     "z": "40484-1298",
     "j": "Lincoln",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1206,
@@ -1117,7 +1255,9 @@
     "s": "KY",
     "z": "42081-0400",
     "j": "Livingston",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1207,
@@ -1133,7 +1273,9 @@
     "s": "KY",
     "z": "42276-0358",
     "j": "Logan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1208,
@@ -1149,7 +1291,9 @@
     "s": "KY",
     "z": "42038-0310",
     "j": "Lyon",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1209,
@@ -1165,7 +1309,9 @@
     "s": "KY",
     "z": "40475-1415",
     "j": "Madison",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1210,
@@ -1181,7 +1327,9 @@
     "s": "KY",
     "z": "41465-0530",
     "j": "Magoffin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1211,
@@ -1197,7 +1345,9 @@
     "s": "KY",
     "z": "40033-1584",
     "j": "Marion",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1212,
@@ -1213,7 +1363,9 @@
     "s": "KY",
     "z": "42025-1498",
     "j": "Marshall",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1213,
@@ -1229,7 +1381,9 @@
     "s": "KY",
     "z": "41224-0460",
     "j": "Martin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1214,
@@ -1245,7 +1399,9 @@
     "s": "KY",
     "z": "41056-0234",
     "j": "Mason",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1215,
@@ -1261,7 +1417,9 @@
     "s": "KY",
     "z": "42002-0609",
     "j": "McCracken",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1216,
@@ -1277,7 +1435,9 @@
     "s": "KY",
     "z": "42653-0699",
     "j": "McCreary",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1217,
@@ -1293,7 +1453,9 @@
     "s": "KY",
     "z": "42327-0057",
     "j": "McLean",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1218,
@@ -1309,7 +1471,9 @@
     "s": "KY",
     "z": "40108-0614",
     "j": "Meade",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1219,
@@ -1325,7 +1489,9 @@
     "s": "KY",
     "z": "40322-0123",
     "j": "Menifee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1220,
@@ -1341,7 +1507,9 @@
     "s": "KY",
     "z": "40330-0426",
     "j": "Mercer",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1221,
@@ -1357,7 +1525,9 @@
     "s": "KY",
     "z": "42129-0025",
     "j": "Metcalfe",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1222,
@@ -1373,7 +1543,9 @@
     "s": "KY",
     "z": "42167-1548",
     "j": "Monroe",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1223,
@@ -1389,7 +1561,9 @@
     "s": "KY",
     "z": "40353-1363",
     "j": "Montgomery",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1224,
@@ -1405,7 +1579,9 @@
     "s": "KY",
     "z": "41472-0026",
     "j": "Morgan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1225,
@@ -1421,7 +1597,9 @@
     "s": "KY",
     "z": "42345-0525",
     "j": "Muhlenberg",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1226,
@@ -1437,7 +1615,9 @@
     "s": "KY",
     "z": "40004",
     "j": "Nelson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1227,
@@ -1453,7 +1633,9 @@
     "s": "KY",
     "z": "40311-0227",
     "j": "Nicholas",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1228,
@@ -1469,7 +1651,9 @@
     "s": "KY",
     "z": "42347-1176",
     "j": "Ohio",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1229,
@@ -1485,7 +1669,9 @@
     "s": "KY",
     "z": "40031-1189",
     "j": "Oldham",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1230,
@@ -1501,7 +1687,9 @@
     "s": "KY",
     "z": "40359",
     "j": "Owen",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1231,
@@ -1517,7 +1705,9 @@
     "s": "KY",
     "z": "41314-0500",
     "j": "Owsley",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1232,
@@ -1533,7 +1723,9 @@
     "s": "KY",
     "z": "41040",
     "j": "Pendleton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1233,
@@ -1549,7 +1741,9 @@
     "s": "KY",
     "z": "41702-0150",
     "j": "Perry",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1234,
@@ -1565,7 +1759,9 @@
     "s": "KY",
     "z": "41502-0631",
     "j": "Pike",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1235,
@@ -1581,7 +1777,9 @@
     "s": "KY",
     "z": "40380-0548",
     "j": "Powell",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1236,
@@ -1597,7 +1795,9 @@
     "s": "KY",
     "z": "42502",
     "j": "Pulaski",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1237,
@@ -1613,7 +1813,9 @@
     "s": "KY",
     "z": "41064-0075",
     "j": "Robertson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1238,
@@ -1629,7 +1831,9 @@
     "s": "KY",
     "z": "40456-2211",
     "j": "Rockcastle",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1239,
@@ -1645,7 +1849,9 @@
     "s": "KY",
     "z": "40351-1390",
     "j": "Rowan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1240,
@@ -1661,7 +1867,9 @@
     "s": "KY",
     "z": "42629-0579",
     "j": "Russell",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1241,
@@ -1677,7 +1885,9 @@
     "s": "KY",
     "z": "40324-1794",
     "j": "Scott",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1242,
@@ -1693,7 +1903,9 @@
     "s": "KY",
     "z": "40066-0819",
     "j": "Shelby",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1243,
@@ -1709,7 +1921,9 @@
     "s": "KY",
     "z": "42135-0268",
     "j": "Simpson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1244,
@@ -1725,7 +1939,9 @@
     "s": "KY",
     "z": "40071-0544",
     "j": "Spencer",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1245,
@@ -1741,7 +1957,9 @@
     "s": "KY",
     "z": "42718-2298",
     "j": "Taylor",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1246,
@@ -1757,7 +1975,9 @@
     "s": "KY",
     "z": "42220-0307",
     "j": "Todd",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1247,
@@ -1773,7 +1993,9 @@
     "s": "KY",
     "z": "42211-1310",
     "j": "Trigg",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1248,
@@ -1789,7 +2011,9 @@
     "s": "KY",
     "z": "40006-0262",
     "j": "Trimble",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1249,
@@ -1805,7 +2029,9 @@
     "s": "KY",
     "z": "42437-0119",
     "j": "Union",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1250,
@@ -1821,7 +2047,9 @@
     "s": "KY",
     "z": "42102",
     "j": "Warren",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1251,
@@ -1837,7 +2065,9 @@
     "s": "KY",
     "z": "40069-0446",
     "j": "Washington",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1252,
@@ -1853,7 +2083,9 @@
     "s": "KY",
     "z": "42633",
     "j": "Wayne",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1253,
@@ -1869,7 +2101,9 @@
     "s": "KY",
     "z": "42409-0019",
     "j": "Webster",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1254,
@@ -1885,7 +2119,9 @@
     "s": "KY",
     "z": "40769",
     "j": "Whitley",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1255,
@@ -1901,7 +2137,9 @@
     "s": "KY",
     "z": "41301-0400",
     "j": "Wolfe",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1256,
@@ -1917,6 +2155,8 @@
     "s": "KY",
     "z": "40383-1298",
     "j": "Woodford",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

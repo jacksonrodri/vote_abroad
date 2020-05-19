@@ -13,7 +13,9 @@
     "s": "CT",
     "z": "06232-0328",
     "j": "Andover",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 284,
@@ -29,7 +31,9 @@
     "s": "CT",
     "z": "06401-1410",
     "j": "Ansonia",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 285,
@@ -45,7 +49,9 @@
     "s": "CT",
     "z": "06278-1530",
     "j": "Ashford",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 286,
@@ -61,7 +67,9 @@
     "s": "CT",
     "z": "06001-3719",
     "j": "Avon",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 287,
@@ -77,7 +85,9 @@
     "s": "CT",
     "z": "06063-3340",
     "j": "Barkhamsted",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 288,
@@ -93,7 +103,9 @@
     "s": "CT",
     "z": "06403-1198",
     "j": "Beacon Falls",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 289,
@@ -109,7 +121,9 @@
     "s": "CT",
     "z": "06037",
     "j": "Berlin",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 290,
@@ -125,7 +139,9 @@
     "s": "CT",
     "z": "06524-3338",
     "j": "Bethany",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 291,
@@ -141,7 +157,9 @@
     "s": "CT",
     "z": "06801-0003",
     "j": "Bethel",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 292,
@@ -157,7 +175,9 @@
     "s": "CT",
     "z": "06751-0053",
     "j": "Bethlehem",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 293,
@@ -173,7 +193,9 @@
     "s": "CT",
     "z": "06002-0337",
     "j": "Bloomfield",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 294,
@@ -189,7 +211,9 @@
     "s": "CT",
     "z": "06043-7698",
     "j": "Bolton",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 295,
@@ -205,7 +229,9 @@
     "s": "CT",
     "z": "06334-0158",
     "j": "Bozrah",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 296,
@@ -221,7 +247,9 @@
     "s": "CT",
     "z": "06405-0150",
     "j": "Branford",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 297,
@@ -237,7 +265,9 @@
     "s": "CT",
     "z": "06604-4062",
     "j": "Bridgeport",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 298,
@@ -253,7 +283,9 @@
     "s": "CT",
     "z": "06752-0216",
     "j": "Bridgewater",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 299,
@@ -269,7 +301,9 @@
     "s": "CT",
     "z": "06010-8184",
     "j": "Bristol",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 300,
@@ -285,7 +319,9 @@
     "s": "CT",
     "z": "06804-5106",
     "j": "Brookfield",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 301,
@@ -301,7 +337,9 @@
     "s": "CT",
     "z": "06234-0356",
     "j": "Brooklyn",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 302,
@@ -317,7 +355,9 @@
     "s": "CT",
     "z": "06013-1710",
     "j": "Burlington",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 303,
@@ -333,7 +373,9 @@
     "s": "CT",
     "z": "06031-0047",
     "j": "Canaan",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 304,
@@ -349,7 +391,9 @@
     "s": "CT",
     "z": "06331",
     "j": "Canterbury",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 305,
@@ -365,7 +409,9 @@
     "s": "CT",
     "z": "06022-0168",
     "j": "Canton",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 306,
@@ -381,7 +427,9 @@
     "s": "CT",
     "z": "06235",
     "j": "Chaplin",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 307,
@@ -397,7 +445,9 @@
     "s": "CT",
     "z": "06410",
     "j": "Cheshire",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 308,
@@ -413,7 +463,9 @@
     "s": "CT",
     "z": "06412",
     "j": "Chester",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 309,
@@ -429,7 +481,9 @@
     "s": "CT",
     "z": "06413-0174",
     "j": "Clinton",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 310,
@@ -445,7 +499,9 @@
     "s": "CT",
     "z": "06415-0146",
     "j": "Colchester",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 311,
@@ -461,7 +517,9 @@
     "s": "CT",
     "z": "06021-0005",
     "j": "Colebrook",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 312,
@@ -477,7 +535,9 @@
     "s": "CT",
     "z": "06237-0165",
     "j": "Columbia",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 314,
@@ -493,7 +553,9 @@
     "s": "CT",
     "z": "06753-0097",
     "j": "Cornwall",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 313,
@@ -509,7 +571,9 @@
     "s": "CT",
     "z": "06238",
     "j": "Conventry",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 315,
@@ -525,7 +589,9 @@
     "s": "CT",
     "z": "06416",
     "j": "Cromwell",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 316,
@@ -541,7 +607,9 @@
     "s": "CT",
     "z": "06810",
     "j": "Danbury",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 317,
@@ -557,7 +625,9 @@
     "s": "CT",
     "z": "06820",
     "j": "Darien",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 318,
@@ -573,7 +643,9 @@
     "s": "CT",
     "z": "06417",
     "j": "Deep River",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 319,
@@ -589,7 +661,9 @@
     "s": "CT",
     "z": "06418-1801",
     "j": "Derby",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 320,
@@ -605,7 +679,9 @@
     "s": "CT",
     "z": "06422-0428",
     "j": "Durham",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 321,
@@ -621,7 +697,9 @@
     "s": "CT",
     "z": "06026-0459",
     "j": "East Granby",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 322,
@@ -637,7 +715,9 @@
     "s": "CT",
     "z": "06469",
     "j": "East Haddam",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 323,
@@ -653,7 +733,9 @@
     "s": "CT",
     "z": "06424-1091",
     "j": "East Hampton",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 324,
@@ -669,7 +751,9 @@
     "s": "CT",
     "z": "06108-3114",
     "j": "East Hartford",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 325,
@@ -685,7 +769,9 @@
     "s": "CT",
     "z": "06512-3004",
     "j": "East Haven",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 326,
@@ -701,7 +787,9 @@
     "s": "CT",
     "z": "06357-0519",
     "j": "East Lyme",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 327,
@@ -717,7 +805,9 @@
     "s": "CT",
     "z": "06016",
     "j": "East Windsor",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 328,
@@ -733,7 +823,9 @@
     "s": "CT",
     "z": "06242-0296",
     "j": "Eastford",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 329,
@@ -749,7 +841,9 @@
     "s": "CT",
     "z": "06612-1398",
     "j": "Easton",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 330,
@@ -765,7 +859,9 @@
     "s": "CT",
     "z": "06029-0187",
     "j": "Ellington",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 331,
@@ -781,7 +877,9 @@
     "s": "CT",
     "z": "06082-2997",
     "j": "Enfield",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 332,
@@ -797,7 +895,9 @@
     "s": "CT",
     "z": "06426-1140",
     "j": "Essex",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 333,
@@ -813,7 +913,9 @@
     "s": "CT",
     "z": "06824",
     "j": "Fairfield",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 334,
@@ -829,7 +931,9 @@
     "s": "CT",
     "z": "06032-1053",
     "j": "Farmington",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 335,
@@ -845,7 +949,9 @@
     "s": "CT",
     "z": "06254-9775",
     "j": "Franklin",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 336,
@@ -861,7 +967,9 @@
     "s": "CT",
     "z": "06033-6523",
     "j": "Glastonbury",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 337,
@@ -877,7 +985,9 @@
     "s": "CT",
     "z": "06756",
     "j": "Goshen",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 338,
@@ -893,7 +1003,9 @@
     "s": "CT",
     "z": "06035-9442",
     "j": "Granby",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 339,
@@ -909,7 +1021,9 @@
     "s": "CT",
     "z": "06836",
     "j": "Greenwich",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 340,
@@ -925,7 +1039,9 @@
     "s": "CT",
     "z": "06351",
     "j": "Griswold",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 341,
@@ -941,7 +1057,9 @@
     "s": "CT",
     "z": "06340",
     "j": "Groton",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 342,
@@ -957,7 +1075,9 @@
     "s": "CT",
     "z": "06437-2629",
     "j": "Guilford",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 343,
@@ -973,7 +1093,9 @@
     "s": "CT",
     "z": "06438-0087",
     "j": "Haddam",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 344,
@@ -989,7 +1111,9 @@
     "s": "CT",
     "z": "06518",
     "j": "Hamden",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 345,
@@ -1005,7 +1129,9 @@
     "s": "CT",
     "z": "06247-0143",
     "j": "Hampton",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 346,
@@ -1021,7 +1147,9 @@
     "s": "CT",
     "z": "06103-2992",
     "j": "Hartford",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 347,
@@ -1037,7 +1165,9 @@
     "s": "CT",
     "z": "06027",
     "j": "Hartland",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 348,
@@ -1053,7 +1183,9 @@
     "s": "CT",
     "z": "06791-0065",
     "j": "Harwinton",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 349,
@@ -1069,7 +1201,9 @@
     "s": "CT",
     "z": "06248",
     "j": "Hebron",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 350,
@@ -1085,7 +1219,9 @@
     "s": "CT",
     "z": "06757-0843",
     "j": "Kent",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 351,
@@ -1101,7 +1237,9 @@
     "s": "CT",
     "z": "06239-1832",
     "j": "Killingly",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 352,
@@ -1117,7 +1255,9 @@
     "s": "CT",
     "z": "06419-1298",
     "j": "Killingworth",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 353,
@@ -1133,7 +1273,9 @@
     "s": "CT",
     "z": "06249",
     "j": "Lebanon",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 354,
@@ -1149,7 +1291,9 @@
     "s": "CT",
     "z": "06339-1541",
     "j": "Ledyard",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 355,
@@ -1165,7 +1309,9 @@
     "s": "CT",
     "z": "06351-2926",
     "j": "Lisbon",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 356,
@@ -1181,7 +1327,9 @@
     "s": "CT",
     "z": "06759-9602",
     "j": "Litchfield",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 357,
@@ -1197,7 +1345,9 @@
     "s": "CT",
     "z": "06371",
     "j": "Lyme",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 358,
@@ -1213,7 +1363,9 @@
     "s": "CT",
     "z": "06443-2563",
     "j": "Madison",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 359,
@@ -1229,7 +1381,9 @@
     "s": "CT",
     "z": "06045-0191",
     "j": "Manchester",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 18723,
@@ -1245,7 +1399,9 @@
     "s": "CT",
     "z": "06268-2503",
     "j": "Mansfield",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 360,
@@ -1261,7 +1417,9 @@
     "s": "CT",
     "z": "06447-0029",
     "j": "Marlborough",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 361,
@@ -1277,7 +1435,9 @@
     "s": "CT",
     "z": "06450-5605",
     "j": "Meriden",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 362,
@@ -1293,7 +1453,9 @@
     "s": "CT",
     "z": "06762-2425",
     "j": "Middlebury",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 363,
@@ -1309,7 +1471,9 @@
     "s": "CT",
     "z": "06455",
     "j": "Middlefield",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 364,
@@ -1325,7 +1489,9 @@
     "s": "CT",
     "z": "06457-1300",
     "j": "Middletown",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 365,
@@ -1341,7 +1507,9 @@
     "s": "CT",
     "z": "06460",
     "j": "Milford",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 366,
@@ -1357,7 +1525,9 @@
     "s": "CT",
     "z": "06468-1823",
     "j": "Monroe",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 367,
@@ -1373,7 +1543,9 @@
     "s": "CT",
     "z": "06382-2599",
     "j": "Montville",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 368,
@@ -1389,7 +1561,9 @@
     "s": "CT",
     "z": "06763-0066",
     "j": "Morris",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 369,
@@ -1405,7 +1579,9 @@
     "s": "CT",
     "z": "06770-4199",
     "j": "Naugatuck",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 370,
@@ -1421,7 +1597,9 @@
     "s": "CT",
     "z": "06051-2298",
     "j": "New Britain",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 371,
@@ -1437,7 +1615,9 @@
     "s": "CT",
     "z": "06840",
     "j": "New Canaan",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 372,
@@ -1453,7 +1633,9 @@
     "s": "CT",
     "z": "06812",
     "j": "New Fairfield",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 373,
@@ -1469,7 +1651,9 @@
     "s": "CT",
     "z": "06057-0426",
     "j": "New Hartford",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 374,
@@ -1485,7 +1669,9 @@
     "s": "CT",
     "z": "06510-2067",
     "j": "New Haven",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 375,
@@ -1501,7 +1687,9 @@
     "s": "CT",
     "z": "06320-6302",
     "j": "New London",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 376,
@@ -1517,7 +1705,9 @@
     "s": "CT",
     "z": "06776-2185",
     "j": "New Milford",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 377,
@@ -1533,7 +1723,9 @@
     "s": "CT",
     "z": "06111",
     "j": "Newington",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 378,
@@ -1549,7 +1741,9 @@
     "s": "CT",
     "z": "06470-2185",
     "j": "Newtown",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 379,
@@ -1565,7 +1759,9 @@
     "s": "CT",
     "z": "06058",
     "j": "Norfolk",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 380,
@@ -1581,7 +1777,9 @@
     "s": "CT",
     "z": "06471",
     "j": "North Branford",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 381,
@@ -1597,7 +1795,9 @@
     "s": "CT",
     "z": "06018-0338",
     "j": "North Canaan",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 382,
@@ -1613,7 +1813,9 @@
     "s": "CT",
     "z": "06473-0336",
     "j": "North Haven",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 383,
@@ -1629,7 +1831,9 @@
     "s": "CT",
     "z": "06359",
     "j": "North Stonington",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 384,
@@ -1645,7 +1849,9 @@
     "s": "CT",
     "z": "06856-5125",
     "j": "Norwalk",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 385,
@@ -1661,7 +1867,9 @@
     "s": "CT",
     "z": "06360-4431",
     "j": "Norwich",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 386,
@@ -1677,7 +1885,9 @@
     "s": "CT",
     "z": "06371",
     "j": "Old Lyme",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 387,
@@ -1693,7 +1903,9 @@
     "s": "CT",
     "z": "06475-0618",
     "j": "Old Saybrook",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 388,
@@ -1709,7 +1921,9 @@
     "s": "CT",
     "z": "06477-2423",
     "j": "Orange",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 389,
@@ -1725,7 +1939,9 @@
     "s": "CT",
     "z": "06483-1298",
     "j": "Oxford",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 390,
@@ -1741,7 +1957,9 @@
     "s": "CT",
     "z": "06374",
     "j": "Plainfield",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 391,
@@ -1757,7 +1975,9 @@
     "s": "CT",
     "z": "06062",
     "j": "Plainville",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 392,
@@ -1773,7 +1993,9 @@
     "s": "CT",
     "z": "06786-1295",
     "j": "Plymouth",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 393,
@@ -1789,7 +2011,9 @@
     "s": "CT",
     "z": "06259",
     "j": "Pomfret",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 394,
@@ -1805,7 +2029,9 @@
     "s": "CT",
     "z": "06480-0071",
     "j": "Portland",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 395,
@@ -1821,7 +2047,9 @@
     "s": "CT",
     "z": "06365",
     "j": "Preston",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 396,
@@ -1837,7 +2065,9 @@
     "s": "CT",
     "z": "06712-2101",
     "j": "Prospect",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 397,
@@ -1853,7 +2083,9 @@
     "s": "CT",
     "z": "06260-1831",
     "j": "Putnam",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 398,
@@ -1869,7 +2101,9 @@
     "s": "CT",
     "z": "06896",
     "j": "Redding",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 399,
@@ -1885,7 +2119,9 @@
     "s": "CT",
     "z": "06877-4699",
     "j": "Ridgefield",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 400,
@@ -1901,7 +2137,9 @@
     "s": "CT",
     "z": "06067-0657",
     "j": "Rocky Hill",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 401,
@@ -1917,7 +2155,9 @@
     "s": "CT",
     "z": "06783-0365",
     "j": "Roxbury",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 402,
@@ -1933,7 +2173,9 @@
     "s": "CT",
     "z": "06420",
     "j": "Salem",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 403,
@@ -1949,7 +2191,9 @@
     "s": "CT",
     "z": "06068-0548",
     "j": "Salisbury",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 404,
@@ -1965,7 +2209,9 @@
     "s": "CT",
     "z": "06264-0122",
     "j": "Scotland",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 405,
@@ -1981,7 +2227,9 @@
     "s": "CT",
     "z": "06483-2817",
     "j": "Seymour",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 406,
@@ -1997,7 +2245,9 @@
     "s": "CT",
     "z": "06069-0224",
     "j": "Sharon",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 407,
@@ -2013,7 +2263,9 @@
     "s": "CT",
     "z": "06484-0364",
     "j": "Shelton",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 408,
@@ -2029,7 +2281,9 @@
     "s": "CT",
     "z": "06784",
     "j": "Sherman",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 409,
@@ -2045,7 +2299,9 @@
     "s": "CT",
     "z": "06070-0495",
     "j": "Simsbury",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 410,
@@ -2061,7 +2317,9 @@
     "s": "CT",
     "z": "06071-0308",
     "j": "Somers",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 411,
@@ -2077,7 +2335,9 @@
     "s": "CT",
     "z": "06074-2786",
     "j": "South Windsor",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 412,
@@ -2093,7 +2353,9 @@
     "s": "CT",
     "z": "06488-2295",
     "j": "Southbury",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 413,
@@ -2109,7 +2371,9 @@
     "s": "CT",
     "z": "06489-2504",
     "j": "Southington",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 414,
@@ -2125,7 +2389,9 @@
     "s": "CT",
     "z": "06330-0162",
     "j": "Sprague",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 415,
@@ -2141,7 +2407,9 @@
     "s": "CT",
     "z": "06076-0011",
     "j": "Stafford",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 416,
@@ -2157,7 +2425,9 @@
     "s": "CT",
     "z": "06904-0891",
     "j": "Stamford",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 417,
@@ -2173,7 +2443,9 @@
     "s": "CT",
     "z": "06373-0157",
     "j": "Sterling",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 418,
@@ -2189,7 +2461,9 @@
     "s": "CT",
     "z": "06378-0352",
     "j": "Stonington",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 419,
@@ -2205,7 +2479,9 @@
     "s": "CT",
     "z": "06615-5892",
     "j": "Stratford",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 420,
@@ -2221,7 +2497,9 @@
     "s": "CT",
     "z": "06078",
     "j": "Suffield",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 422,
@@ -2237,7 +2515,9 @@
     "s": "CT",
     "z": "06787-1720",
     "j": "Thomaston",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 421,
@@ -2253,7 +2533,9 @@
     "s": "CT",
     "z": "06255",
     "j": "Thompson",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 423,
@@ -2269,7 +2551,9 @@
     "s": "CT",
     "z": "06084-3028",
     "j": "Tolland",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 424,
@@ -2285,7 +2569,9 @@
     "s": "CT",
     "z": "06790-5201",
     "j": "Torrington",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 425,
@@ -2301,7 +2587,9 @@
     "s": "CT",
     "z": "06611-3193",
     "j": "Trumbull",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 426,
@@ -2317,7 +2605,9 @@
     "s": "CT",
     "z": "06076-9520",
     "j": "Union",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 427,
@@ -2333,7 +2623,9 @@
     "s": "CT",
     "z": "06066",
     "j": "Vernon",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 428,
@@ -2349,7 +2641,9 @@
     "s": "CT",
     "z": "06384-0096",
     "j": "Voluntown",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 429,
@@ -2365,7 +2659,9 @@
     "s": "CT",
     "z": "06492",
     "j": "Wallingford",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 430,
@@ -2381,7 +2677,9 @@
     "s": "CT",
     "z": "06754",
     "j": "Warren",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 431,
@@ -2397,7 +2695,9 @@
     "s": "CT",
     "z": "06794-0383",
     "j": "Washington",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 432,
@@ -2413,7 +2713,9 @@
     "s": "CT",
     "z": "06702-1983",
     "j": "Waterbury",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 433,
@@ -2429,7 +2731,9 @@
     "s": "CT",
     "z": "06385-2806",
     "j": "Waterford",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 434,
@@ -2445,7 +2749,9 @@
     "s": "CT",
     "z": "06795-2195",
     "j": "Watertown",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 435,
@@ -2461,7 +2767,9 @@
     "s": "CT",
     "z": "06107-2431",
     "j": "West Hartford",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 436,
@@ -2477,7 +2785,9 @@
     "s": "CT",
     "z": "06516-4310",
     "j": "West Haven",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 437,
@@ -2493,7 +2803,9 @@
     "s": "CT",
     "z": "06498-0676",
     "j": "Westbrook",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 438,
@@ -2509,7 +2821,9 @@
     "s": "CT",
     "z": "06883-1007",
     "j": "Weston",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 439,
@@ -2525,7 +2839,9 @@
     "s": "CT",
     "z": "06880",
     "j": "Westport",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 440,
@@ -2541,7 +2857,9 @@
     "s": "CT",
     "z": "06109-2219",
     "j": "Wethersfield",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 441,
@@ -2557,7 +2875,9 @@
     "s": "CT",
     "z": "06279",
     "j": "Willington",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 442,
@@ -2573,7 +2893,9 @@
     "s": "CT",
     "z": "06897-4008",
     "j": "Wilton",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 443,
@@ -2589,7 +2911,9 @@
     "s": "CT",
     "z": "06098-1697",
     "j": "Winchester",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 444,
@@ -2605,7 +2929,9 @@
     "s": "CT",
     "z": "06226-0094",
     "j": "Windham",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 445,
@@ -2621,7 +2947,9 @@
     "s": "CT",
     "z": "06096",
     "j": "Windsor Locks",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 446,
@@ -2637,7 +2965,9 @@
     "s": "CT",
     "z": "06095-0472",
     "j": "Windsor",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 447,
@@ -2653,7 +2983,9 @@
     "s": "CT",
     "z": "06716-2114",
     "j": "Wolcott",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 448,
@@ -2669,7 +3001,9 @@
     "s": "CT",
     "z": "06525-1597",
     "j": "Woodbridge",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 449,
@@ -2685,7 +3019,9 @@
     "s": "CT",
     "z": "06798-0369",
     "j": "Woodbury",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 450,
@@ -2701,6 +3037,8 @@
     "s": "CT",
     "z": "06281-3039",
     "j": "Woodstock",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

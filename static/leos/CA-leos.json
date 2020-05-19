@@ -13,7 +13,9 @@
     "s": "CA",
     "z": "94612-4229",
     "j": "Alameda",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 162,
@@ -29,7 +31,9 @@
     "s": "CA",
     "z": "96120-0158",
     "j": "Alpine",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 163,
@@ -45,7 +49,9 @@
     "s": "CA",
     "z": "95642-2132",
     "j": "Amador",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 164,
@@ -61,7 +67,9 @@
     "s": "CA",
     "z": "95965-3411",
     "j": "Butte",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 165,
@@ -77,7 +85,9 @@
     "s": "CA",
     "z": "95249-9713",
     "j": "Calaveras",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 166,
@@ -93,7 +103,9 @@
     "s": "CA",
     "z": "95932-2400",
     "j": "Colusa",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 167,
@@ -109,7 +121,9 @@
     "s": "CA",
     "z": "94553-0027",
     "j": "Contra Costa",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 194,
@@ -125,7 +139,9 @@
     "s": "CA",
     "z": "95823-2315",
     "j": "Sacramento",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 168,
@@ -141,7 +157,9 @@
     "s": "CA",
     "z": "95531-3457",
     "j": "Del Norte",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 169,
@@ -157,7 +175,9 @@
     "s": "CA",
     "z": "95667-8001",
     "j": "El Dorado",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 170,
@@ -173,7 +193,9 @@
     "s": "CA",
     "z": "93721-2613",
     "j": "Fresno",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 171,
@@ -189,7 +211,9 @@
     "s": "CA",
     "z": "95988-2747",
     "j": "Glenn",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 172,
@@ -205,7 +229,9 @@
     "s": "CA",
     "z": "95501-0788",
     "j": "Humboldt",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 173,
@@ -221,7 +247,9 @@
     "s": "CA",
     "z": "92243-2839",
     "j": "Imperial",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 174,
@@ -237,7 +265,9 @@
     "s": "CA",
     "z": "93526-0606",
     "j": "Inyo",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 175,
@@ -253,7 +283,9 @@
     "s": "CA",
     "z": "93301-4639",
     "j": "Kern",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 176,
@@ -269,7 +301,9 @@
     "s": "CA",
     "z": "93230-5997",
     "j": "Kings",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 177,
@@ -285,7 +319,9 @@
     "s": "CA",
     "z": "95453-4748",
     "j": "Lake",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 178,
@@ -301,7 +337,9 @@
     "s": "CA",
     "z": "96130-4343",
     "j": "Lassen",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 179,
@@ -317,7 +355,9 @@
     "s": "CA",
     "z": "90030-0450",
     "j": "Los Angeles",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 180,
@@ -333,7 +373,9 @@
     "s": "CA",
     "z": "93637-3548",
     "j": "Madera",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 181,
@@ -349,7 +391,9 @@
     "s": "CA",
     "z": "94913-3904",
     "j": "Marin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 182,
@@ -365,7 +409,9 @@
     "s": "CA",
     "z": "95338-0247",
     "j": "Mariposa",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 183,
@@ -381,7 +427,9 @@
     "s": "CA",
     "z": "95482-3738",
     "j": "Mendocino",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 184,
@@ -397,7 +445,9 @@
     "s": "CA",
     "z": "95340-3729",
     "j": "Merced",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 185,
@@ -413,7 +463,9 @@
     "s": "CA",
     "z": "96101-4199",
     "j": "Modoc",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 186,
@@ -429,7 +481,9 @@
     "s": "CA",
     "z": "93517-0237",
     "j": "Mono",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 187,
@@ -445,7 +499,9 @@
     "s": "CA",
     "z": "93912-4400",
     "j": "Monterey",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 188,
@@ -461,7 +517,9 @@
     "s": "CA",
     "z": "94559-2952",
     "j": "Napa",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 189,
@@ -477,7 +535,9 @@
     "s": "CA",
     "z": "95959-8600",
     "j": "Nevada",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 190,
@@ -493,7 +553,9 @@
     "s": "CA",
     "z": "92711-1298",
     "j": "Orange",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 191,
@@ -509,7 +571,9 @@
     "s": "CA",
     "z": "95604-5278",
     "j": "Placer",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 192,
@@ -525,7 +589,9 @@
     "s": "CA",
     "z": "95971-9366",
     "j": "Plumas",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 193,
@@ -541,7 +607,9 @@
     "s": "CA",
     "z": "92507-0918",
     "j": "Riverside",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 195,
@@ -557,7 +625,9 @@
     "s": "CA",
     "z": "95023-3843",
     "j": "San Benito",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 196,
@@ -573,7 +643,9 @@
     "s": "CA",
     "z": "92415-1005",
     "j": "San Bernardino",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 197,
@@ -589,7 +661,9 @@
     "s": "CA",
     "z": "92186-5520",
     "j": "San Diego",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": false
   },
   {
     "i": 198,
@@ -605,7 +679,9 @@
     "s": "CA",
     "z": "94102-4605",
     "j": "San Francisco",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 199,
@@ -621,7 +697,9 @@
     "s": "CA",
     "z": "95201-3010",
     "j": "San Joaquin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 200,
@@ -637,7 +715,9 @@
     "s": "CA",
     "z": "93408-1003",
     "j": "San Luis Obispo",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 201,
@@ -653,7 +733,9 @@
     "s": "CA",
     "z": "94402-4035",
     "j": "San Mateo",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 202,
@@ -669,7 +751,9 @@
     "s": "CA",
     "z": "93160-1510",
     "j": "Santa Barbara",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 203,
@@ -685,7 +769,9 @@
     "s": "CA",
     "z": "95161-1750",
     "j": "Santa Clara",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 204,
@@ -701,7 +787,9 @@
     "s": "CA",
     "z": "95060-4035",
     "j": "Santa Cruz",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 205,
@@ -717,7 +805,9 @@
     "s": "CA",
     "z": "96099-0880",
     "j": "Shasta",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 206,
@@ -733,7 +823,9 @@
     "s": "CA",
     "z": "95936-0398",
     "j": "Sierra",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 207,
@@ -749,7 +841,9 @@
     "s": "CA",
     "z": "96097-2525",
     "j": "Siskiyou",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 208,
@@ -765,7 +859,9 @@
     "s": "CA",
     "z": "94533-6338",
     "j": "Solano",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 209,
@@ -781,7 +877,9 @@
     "s": "CA",
     "z": "95406-1485",
     "j": "Sonoma",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 210,
@@ -797,7 +895,9 @@
     "s": "CA",
     "z": "95354-2331",
     "j": "Stanislaus",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 211,
@@ -813,7 +913,9 @@
     "s": "CA",
     "z": "95993-3011",
     "j": "Sutter",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 212,
@@ -829,7 +931,9 @@
     "s": "CA",
     "z": "96080-0250",
     "j": "Tehama",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 213,
@@ -845,7 +949,9 @@
     "s": "CA",
     "z": "96093-1215",
     "j": "Trinity",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 214,
@@ -861,7 +967,9 @@
     "s": "CA",
     "z": "93277-9394",
     "j": "Tulare",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 215,
@@ -877,7 +985,9 @@
     "s": "CA",
     "z": "95370-4618",
     "j": "Tuolumne",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 216,
@@ -893,7 +1003,9 @@
     "s": "CA",
     "z": "93009-1200",
     "j": "Ventura",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 217,
@@ -909,7 +1021,9 @@
     "s": "CA",
     "z": "95776-1820",
     "j": "Yolo",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 218,
@@ -925,6 +1039,8 @@
     "s": "CA",
     "z": "95901-5273",
     "j": "Yuba",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

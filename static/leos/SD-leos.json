@@ -13,7 +13,9 @@
     "s": "SD",
     "z": "57368-0397",
     "j": "Aurora",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3229,
@@ -29,7 +31,9 @@
     "s": "SD",
     "z": "57350-1868",
     "j": "Beadle",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3230,
@@ -45,7 +49,9 @@
     "s": "SD",
     "z": "57551-0460",
     "j": "Bennett",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3231,
@@ -61,7 +67,9 @@
     "s": "SD",
     "z": "57066-0605",
     "j": "Bon Homme",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3232,
@@ -77,7 +85,9 @@
     "s": "SD",
     "z": "57006-2024",
     "j": "Brookings",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3233,
@@ -93,7 +103,9 @@
     "s": "SD",
     "z": "57401-4293",
     "j": "Brown",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3234,
@@ -109,7 +121,9 @@
     "s": "SD",
     "z": "57325-1599",
     "j": "Brule",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3235,
@@ -125,7 +139,9 @@
     "s": "SD",
     "z": "57341-0146",
     "j": "Buffalo",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3236,
@@ -141,7 +157,9 @@
     "s": "SD",
     "z": "57717-1139",
     "j": "Butte",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3237,
@@ -157,7 +175,9 @@
     "s": "SD",
     "z": "57646-0037",
     "j": "Campbell",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3238,
@@ -173,7 +193,9 @@
     "s": "SD",
     "z": "57356-0490",
     "j": "Charles Mix",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3239,
@@ -189,7 +211,9 @@
     "s": "SD",
     "z": "57225-0294",
     "j": "Clark",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3240,
@@ -205,7 +229,9 @@
     "s": "SD",
     "z": "57069-2039",
     "j": "Clay",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3241,
@@ -221,7 +247,9 @@
     "s": "SD",
     "z": "57201-3611",
     "j": "Codington",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3242,
@@ -237,7 +265,9 @@
     "s": "SD",
     "z": "57641-0255",
     "j": "Corson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3243,
@@ -253,7 +283,9 @@
     "s": "SD",
     "z": "57730-1934",
     "j": "Custer",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3244,
@@ -269,7 +301,9 @@
     "s": "SD",
     "z": "57301-2692",
     "j": "Davison",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3245,
@@ -285,7 +319,9 @@
     "s": "SD",
     "z": "57274-1364",
     "j": "Day",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3246,
@@ -301,7 +337,9 @@
     "s": "SD",
     "z": "57226-0616",
     "j": "Deuel",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3247,
@@ -317,7 +355,9 @@
     "s": "SD",
     "z": "57656-0277",
     "j": "Dewey",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3248,
@@ -333,7 +373,9 @@
     "s": "SD",
     "z": "57313-0159",
     "j": "Douglas",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3249,
@@ -349,7 +391,9 @@
     "s": "SD",
     "z": "57451-0097",
     "j": "Edmunds",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3250,
@@ -365,7 +409,9 @@
     "s": "SD",
     "z": "57747-1398",
     "j": "Fall River",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3251,
@@ -381,7 +427,9 @@
     "s": "SD",
     "z": "57438-0309",
     "j": "Faulk",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3252,
@@ -397,7 +445,9 @@
     "s": "SD",
     "z": "57252-2499",
     "j": "Grant",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3253,
@@ -413,7 +463,9 @@
     "s": "SD",
     "z": "57523-0413",
     "j": "Gregory",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3254,
@@ -429,7 +481,9 @@
     "s": "SD",
     "z": "57567-0698",
     "j": "Haakon",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3255,
@@ -445,7 +499,9 @@
     "s": "SD",
     "z": "57241-0237",
     "j": "Hamlin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3256,
@@ -461,7 +517,9 @@
     "s": "SD",
     "z": "57362-1346",
     "j": "Hand",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3257,
@@ -477,7 +535,9 @@
     "s": "SD",
     "z": "57311-0500",
     "j": "Hanson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3258,
@@ -493,7 +553,9 @@
     "s": "SD",
     "z": "57720-0026",
     "j": "Harding",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3259,
@@ -509,7 +571,9 @@
     "s": "SD",
     "z": "57501-2591",
     "j": "Hughes",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3260,
@@ -525,7 +589,9 @@
     "s": "SD",
     "z": "57052-0128",
     "j": "Hutchinson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3261,
@@ -541,7 +607,9 @@
     "s": "SD",
     "z": "57345-0379",
     "j": "Hyde",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3262,
@@ -557,7 +625,9 @@
     "s": "SD",
     "z": "57543-0280",
     "j": "Jackson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3263,
@@ -573,7 +643,9 @@
     "s": "SD",
     "z": "57382-0422",
     "j": "Jerauld",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3264,
@@ -589,7 +661,9 @@
     "s": "SD",
     "z": "57559-0307",
     "j": "Jones",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3265,
@@ -605,7 +679,9 @@
     "s": "SD",
     "z": "57231-0196",
     "j": "Kingsbury",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3266,
@@ -621,7 +697,9 @@
     "s": "SD",
     "z": "57042-2941",
     "j": "Lake",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3267,
@@ -637,7 +715,9 @@
     "s": "SD",
     "z": "57732-0678",
     "j": "Lawrence",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3268,
@@ -653,7 +733,9 @@
     "s": "SD",
     "z": "57013-1703",
     "j": "Lincoln",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3269,
@@ -669,7 +751,9 @@
     "s": "SD",
     "z": "57544-0038",
     "j": "Lyman",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3270,
@@ -685,7 +769,9 @@
     "s": "SD",
     "z": "57430-0130",
     "j": "Marshall",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3271,
@@ -701,7 +787,9 @@
     "s": "SD",
     "z": "57058-0190",
     "j": "McCook",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3272,
@@ -717,7 +805,9 @@
     "s": "SD",
     "z": "57456-0448",
     "j": "McPherson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3273,
@@ -733,7 +823,9 @@
     "s": "SD",
     "z": "57785",
     "j": "Meade",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3274,
@@ -749,7 +841,9 @@
     "s": "SD",
     "z": "57579-0403",
     "j": "Mellette",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3275,
@@ -765,7 +859,9 @@
     "s": "SD",
     "z": "57349-0086",
     "j": "Miner",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3276,
@@ -781,7 +877,9 @@
     "s": "SD",
     "z": "57104-2465",
     "j": "Minnehaha",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3277,
@@ -797,7 +895,9 @@
     "s": "SD",
     "z": "57028-1750",
     "j": "Moody",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3283,
@@ -813,7 +913,9 @@
     "s": "SD",
     "z": "57747-1398",
     "j": "Oglala Lakota",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3278,
@@ -829,7 +931,9 @@
     "s": "SD",
     "z": "57701",
     "j": "Pennington",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3279,
@@ -845,7 +949,9 @@
     "s": "SD",
     "z": "57620-0126",
     "j": "Perkins",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3280,
@@ -861,7 +967,9 @@
     "s": "SD",
     "z": "57442-1521",
     "j": "Potter",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3281,
@@ -877,7 +985,9 @@
     "s": "SD",
     "z": "57262-1495",
     "j": "Roberts",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3282,
@@ -893,7 +1003,9 @@
     "s": "SD",
     "z": "57385-0007",
     "j": "Sanborn",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3284,
@@ -909,7 +1021,9 @@
     "s": "SD",
     "z": "57469-1266",
     "j": "Spink",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3285,
@@ -925,7 +1039,9 @@
     "s": "SD",
     "z": "57532-0595",
     "j": "Stanley",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3286,
@@ -941,7 +1057,9 @@
     "s": "SD",
     "z": "57564-0265",
     "j": "Sully",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3287,
@@ -957,7 +1075,9 @@
     "s": "SD",
     "z": "57580-1806",
     "j": "Todd",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3288,
@@ -973,7 +1093,9 @@
     "s": "SD",
     "z": "57580-1806",
     "j": "Tripp",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3289,
@@ -989,7 +1111,9 @@
     "s": "SD",
     "z": "57053-0370",
     "j": "Turner",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3290,
@@ -1005,7 +1129,9 @@
     "s": "SD",
     "z": "57025-2327",
     "j": "Union",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3291,
@@ -1021,7 +1147,9 @@
     "s": "SD",
     "z": "57472-0199",
     "j": "Walworth",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3292,
@@ -1037,7 +1165,9 @@
     "s": "SD",
     "z": "57078-0137",
     "j": "Yankton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3293,
@@ -1053,6 +1183,8 @@
     "s": "SD",
     "z": "57623-0068",
     "j": "Ziebach",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

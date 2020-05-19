@@ -13,7 +13,9 @@
     "s": "GA",
     "z": "31513-1908",
     "j": "Appling",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 551,
@@ -29,7 +31,9 @@
     "s": "GA",
     "z": "30603",
     "j": "Clarke",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 524,
@@ -45,7 +49,9 @@
     "s": "GA",
     "z": "31642-1234",
     "j": "Atkinson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 525,
@@ -61,7 +67,9 @@
     "s": "GA",
     "z": "31510",
     "j": "Bacon",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 526,
@@ -77,7 +85,9 @@
     "s": "GA",
     "z": "39870",
     "j": "Baker",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 527,
@@ -93,7 +103,9 @@
     "s": "GA",
     "z": "31061-5756",
     "j": "Baldwin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 528,
@@ -109,7 +121,9 @@
     "s": "GA",
     "z": "30547-0172",
     "j": "Banks",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 529,
@@ -125,7 +139,9 @@
     "s": "GA",
     "z": "30680-1973",
     "j": "Barrow",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 530,
@@ -141,7 +157,9 @@
     "s": "GA",
     "z": "30120-3182",
     "j": "Bartow",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 531,
@@ -157,7 +175,9 @@
     "s": "GA",
     "z": "31750",
     "j": "Ben Hill",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 532,
@@ -173,7 +193,9 @@
     "s": "GA",
     "z": "31639",
     "j": "Berrien",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 533,
@@ -189,7 +211,9 @@
     "s": "GA",
     "z": "31208",
     "j": "Bibb",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 534,
@@ -205,7 +229,9 @@
     "s": "GA",
     "z": "31014",
     "j": "Bleckley",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 535,
@@ -221,7 +247,9 @@
     "s": "GA",
     "z": "31553-0326",
     "j": "Brantley",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 536,
@@ -237,7 +265,9 @@
     "s": "GA",
     "z": "31643-0665",
     "j": "Brooks",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 537,
@@ -253,7 +283,9 @@
     "s": "GA",
     "z": "31321-1526",
     "j": "Bryan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 538,
@@ -269,7 +301,9 @@
     "s": "GA",
     "z": "30458",
     "j": "Bulloch",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 539,
@@ -285,7 +319,9 @@
     "s": "GA",
     "z": "30830-0923",
     "j": "Burke",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 540,
@@ -301,7 +337,9 @@
     "s": "GA",
     "z": "30233-1965",
     "j": "Butts",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 541,
@@ -317,7 +355,9 @@
     "s": "GA",
     "z": "39866-0087",
     "j": "Calhoun",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 542,
@@ -333,7 +373,9 @@
     "s": "GA",
     "z": "31569-0608",
     "j": "Camden",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 543,
@@ -349,7 +391,9 @@
     "s": "GA",
     "z": "30439",
     "j": "Candler",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 544,
@@ -365,7 +409,9 @@
     "s": "GA",
     "z": "30112-0338",
     "j": "Carroll",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 545,
@@ -381,7 +427,9 @@
     "s": "GA",
     "z": "30736-2301",
     "j": "Catoosa",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 546,
@@ -397,7 +445,9 @@
     "s": "GA",
     "z": "31537-8961",
     "j": "Charlton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 547,
@@ -413,7 +463,9 @@
     "s": "GA",
     "z": "31416",
     "j": "Chatham",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 548,
@@ -429,7 +481,9 @@
     "s": "GA",
     "z": "31805",
     "j": "Chattahoochee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 549,
@@ -445,7 +499,9 @@
     "s": "GA",
     "z": "30747-0165",
     "j": "Chattooga",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 550,
@@ -461,7 +517,9 @@
     "s": "GA",
     "z": "30114-2802",
     "j": "Cherokee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 552,
@@ -477,7 +535,9 @@
     "s": "GA",
     "z": "39851",
     "j": "Clay",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 553,
@@ -493,7 +553,9 @@
     "s": "GA",
     "z": "30236-3636",
     "j": "Clayton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 554,
@@ -509,7 +571,9 @@
     "s": "GA",
     "z": "31634-2150",
     "j": "Clinch",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 555,
@@ -525,7 +589,9 @@
     "s": "GA",
     "z": "30061-0649",
     "j": "Cobb",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 556,
@@ -541,7 +607,9 @@
     "s": "GA",
     "z": "31533",
     "j": "Coffee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 557,
@@ -557,7 +625,9 @@
     "s": "GA",
     "z": "31776-0517",
     "j": "Colquitt",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 558,
@@ -573,7 +643,9 @@
     "s": "GA",
     "z": "30809-0919",
     "j": "Columbia",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 559,
@@ -589,7 +661,9 @@
     "s": "GA",
     "z": "31620",
     "j": "Cook",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 560,
@@ -605,7 +679,9 @@
     "s": "GA",
     "z": "30263-1973",
     "j": "Coweta",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 561,
@@ -621,7 +697,9 @@
     "s": "GA",
     "z": "31078-0739",
     "j": "Crawford",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 562,
@@ -637,7 +715,9 @@
     "s": "GA",
     "z": "31015",
     "j": "Crisp",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 563,
@@ -653,7 +733,9 @@
     "s": "GA",
     "z": "30752-0152",
     "j": "Dade",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 564,
@@ -669,7 +751,9 @@
     "s": "GA",
     "z": "30534-0436",
     "j": "Dawson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 565,
@@ -685,7 +769,9 @@
     "s": "GA",
     "z": "39818-7428",
     "j": "Decatur",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 566,
@@ -701,7 +787,9 @@
     "s": "GA",
     "z": "30032-1239",
     "j": "DeKalb",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 567,
@@ -717,7 +805,9 @@
     "s": "GA",
     "z": "31023",
     "j": "Dodge",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 568,
@@ -733,7 +823,9 @@
     "s": "GA",
     "z": "31092-0304",
     "j": "Dooly",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 569,
@@ -749,7 +841,9 @@
     "s": "GA",
     "z": "31702-1827",
     "j": "Dougherty",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 570,
@@ -765,7 +859,9 @@
     "s": "GA",
     "z": "30134-2264",
     "j": "Douglas",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 571,
@@ -781,7 +877,9 @@
     "s": "GA",
     "z": "39823",
     "j": "Early",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 572,
@@ -797,7 +895,9 @@
     "s": "GA",
     "z": "31648-0118",
     "j": "Echols",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 573,
@@ -813,7 +913,9 @@
     "s": "GA",
     "z": "31329",
     "j": "Effingham",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 574,
@@ -829,7 +931,9 @@
     "s": "GA",
     "z": "30635",
     "j": "Elbert",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 575,
@@ -845,7 +949,9 @@
     "s": "GA",
     "z": "30401",
     "j": "Emanuel",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 576,
@@ -861,7 +967,9 @@
     "s": "GA",
     "z": "30417-0652",
     "j": "Evans",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 577,
@@ -877,7 +985,9 @@
     "s": "GA",
     "z": "30513-8593",
     "j": "Fannin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 578,
@@ -893,7 +1003,9 @@
     "s": "GA",
     "z": "30214",
     "j": "Fayette",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 579,
@@ -909,7 +1021,9 @@
     "s": "GA",
     "z": "30161-9313",
     "j": "Floyd",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 580,
@@ -925,7 +1039,9 @@
     "s": "GA",
     "z": "30040-2468",
     "j": "Forsyth",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 581,
@@ -941,7 +1057,9 @@
     "s": "GA",
     "z": "30521",
     "j": "Franklin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 582,
@@ -957,7 +1075,9 @@
     "s": "GA",
     "z": "30303-3460",
     "j": "Fulton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 583,
@@ -973,7 +1093,9 @@
     "s": "GA",
     "z": "30540",
     "j": "Gilmer",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 584,
@@ -989,7 +1111,9 @@
     "s": "GA",
     "z": "30810",
     "j": "Glascock",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 585,
@@ -1005,7 +1129,9 @@
     "s": "GA",
     "z": "31520",
     "j": "Glynn",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 586,
@@ -1021,7 +1147,9 @@
     "s": "GA",
     "z": "30703-0715",
     "j": "Gordon",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 587,
@@ -1037,7 +1165,9 @@
     "s": "GA",
     "z": "39828",
     "j": "Grady",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 588,
@@ -1053,7 +1183,9 @@
     "s": "GA",
     "z": "30642",
     "j": "Greene",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 589,
@@ -1069,7 +1201,9 @@
     "s": "GA",
     "z": "30046",
     "j": "Gwinnett",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 590,
@@ -1085,7 +1219,9 @@
     "s": "GA",
     "z": "30523",
     "j": "Habersham",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 591,
@@ -1101,7 +1237,9 @@
     "s": "GA",
     "z": "30504",
     "j": "Hall",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 592,
@@ -1117,7 +1255,9 @@
     "s": "GA",
     "z": "31087-0118",
     "j": "Hancock",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 593,
@@ -1133,7 +1273,9 @@
     "s": "GA",
     "z": "30113-1119",
     "j": "Haralson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 594,
@@ -1149,7 +1291,9 @@
     "s": "GA",
     "z": "31811-0123",
     "j": "Harris",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 595,
@@ -1165,7 +1309,9 @@
     "s": "GA",
     "z": "30643-0426",
     "j": "Hart",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 596,
@@ -1181,7 +1327,9 @@
     "s": "GA",
     "z": "30217-0427",
     "j": "Heard",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 597,
@@ -1197,7 +1345,9 @@
     "s": "GA",
     "z": "30253",
     "j": "Henry",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 598,
@@ -1213,7 +1363,9 @@
     "s": "GA",
     "z": "31069-0945",
     "j": "Houston",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 599,
@@ -1229,7 +1381,9 @@
     "s": "GA",
     "z": "31774",
     "j": "Irwin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 600,
@@ -1245,7 +1399,9 @@
     "s": "GA",
     "z": "30549",
     "j": "Jackson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 601,
@@ -1261,7 +1417,9 @@
     "s": "GA",
     "z": "31064",
     "j": "Jasper",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 602,
@@ -1277,7 +1435,9 @@
     "s": "GA",
     "z": "31539",
     "j": "Jeff Davis",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 603,
@@ -1293,7 +1453,9 @@
     "s": "GA",
     "z": "30434",
     "j": "Jefferson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 604,
@@ -1309,7 +1471,9 @@
     "s": "GA",
     "z": "30442-0510",
     "j": "Jenkins",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 605,
@@ -1325,7 +1489,9 @@
     "s": "GA",
     "z": "31096-0255",
     "j": "Johnson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 606,
@@ -1341,7 +1507,9 @@
     "s": "GA",
     "z": "31032-1417",
     "j": "Jones",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 607,
@@ -1357,7 +1525,9 @@
     "s": "GA",
     "z": "30204-1684",
     "j": "Lamar",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 608,
@@ -1373,7 +1543,9 @@
     "s": "GA",
     "z": "31635",
     "j": "Lanier",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 609,
@@ -1389,7 +1561,9 @@
     "s": "GA",
     "z": "31040-2130",
     "j": "Laurens",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 610,
@@ -1405,7 +1579,9 @@
     "s": "GA",
     "z": "31763-0326",
     "j": "Lee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 611,
@@ -1421,7 +1597,9 @@
     "s": "GA",
     "z": "31313",
     "j": "Liberty",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 612,
@@ -1437,7 +1615,9 @@
     "s": "GA",
     "z": "30817-1419",
     "j": "Lincoln",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 613,
@@ -1453,7 +1633,9 @@
     "s": "GA",
     "z": "31316",
     "j": "Long",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 614,
@@ -1469,7 +1651,9 @@
     "s": "GA",
     "z": "31604",
     "j": "Lowndes",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 615,
@@ -1485,7 +1669,9 @@
     "s": "GA",
     "z": "30533",
     "j": "Lumpkin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 616,
@@ -1501,7 +1687,9 @@
     "s": "GA",
     "z": "31068-0415",
     "j": "Macon",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 617,
@@ -1517,7 +1705,9 @@
     "s": "GA",
     "z": "30633-0328",
     "j": "Madison",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 618,
@@ -1533,7 +1723,9 @@
     "s": "GA",
     "z": "31803-0444",
     "j": "Marion",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 619,
@@ -1549,7 +1741,9 @@
     "s": "GA",
     "z": "30824-0600",
     "j": "McDuffie",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 620,
@@ -1565,7 +1759,9 @@
     "s": "GA",
     "z": "31305-0571",
     "j": "McIntosh",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 621,
@@ -1581,7 +1777,9 @@
     "s": "GA",
     "z": "30222",
     "j": "Meriwether",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 622,
@@ -1597,7 +1795,9 @@
     "s": "GA",
     "z": "39837",
     "j": "Miller",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 623,
@@ -1613,7 +1813,9 @@
     "s": "GA",
     "z": "31730",
     "j": "Mitchell",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 624,
@@ -1629,7 +1831,9 @@
     "s": "GA",
     "z": "31029",
     "j": "Monroe",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 625,
@@ -1645,7 +1849,9 @@
     "s": "GA",
     "z": "30445-0363",
     "j": "Montgomery",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 626,
@@ -1661,7 +1867,9 @@
     "s": "GA",
     "z": "30650",
     "j": "Morgan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 627,
@@ -1677,7 +1885,9 @@
     "s": "GA",
     "z": "30705-1015",
     "j": "Murray",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 628,
@@ -1693,7 +1903,9 @@
     "s": "GA",
     "z": "31902-1340",
     "j": "Muscogee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 629,
@@ -1709,7 +1921,9 @@
     "s": "GA",
     "z": "30015-1274",
     "j": "Newton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 630,
@@ -1725,7 +1939,9 @@
     "s": "GA",
     "z": "30677",
     "j": "Oconee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 631,
@@ -1741,7 +1957,9 @@
     "s": "GA",
     "z": "30648",
     "j": "Oglethorpe",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 632,
@@ -1757,7 +1975,9 @@
     "s": "GA",
     "z": "30132",
     "j": "Paulding",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 633,
@@ -1773,7 +1993,9 @@
     "s": "GA",
     "z": "31030-0853",
     "j": "Peach",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 634,
@@ -1789,7 +2011,9 @@
     "s": "GA",
     "z": "30143",
     "j": "Pickens",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 635,
@@ -1805,7 +2029,9 @@
     "s": "GA",
     "z": "31516",
     "j": "Pierce",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 636,
@@ -1821,7 +2047,9 @@
     "s": "GA",
     "z": "30295-1032",
     "j": "Pike",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 637,
@@ -1837,7 +2065,9 @@
     "s": "GA",
     "z": "30125",
     "j": "Polk",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 638,
@@ -1853,7 +2083,9 @@
     "s": "GA",
     "z": "31036",
     "j": "Pulaski",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 639,
@@ -1869,7 +2101,9 @@
     "s": "GA",
     "z": "31024",
     "j": "Putnam",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 640,
@@ -1885,7 +2119,9 @@
     "s": "GA",
     "z": "39854",
     "j": "Quitman",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 641,
@@ -1901,7 +2137,9 @@
     "s": "GA",
     "z": "30525",
     "j": "Rabun",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 642,
@@ -1917,7 +2155,9 @@
     "s": "GA",
     "z": "39840",
     "j": "Randolph",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 643,
@@ -1933,7 +2173,9 @@
     "s": "GA",
     "z": "30901",
     "j": "Richmond",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 644,
@@ -1949,7 +2191,9 @@
     "s": "GA",
     "z": "30094",
     "j": "Rockdale",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 645,
@@ -1965,7 +2209,9 @@
     "s": "GA",
     "z": "31806-0385",
     "j": "Schley",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 646,
@@ -1981,7 +2227,9 @@
     "s": "GA",
     "z": "30467-2026",
     "j": "Screven",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 647,
@@ -1997,7 +2245,9 @@
     "s": "GA",
     "z": "39845",
     "j": "Seminole",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 648,
@@ -2013,7 +2263,9 @@
     "s": "GA",
     "z": "30224",
     "j": "Spalding",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 649,
@@ -2029,7 +2281,9 @@
     "s": "GA",
     "z": "30577-1557",
     "j": "Stephens",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 650,
@@ -2045,7 +2299,9 @@
     "s": "GA",
     "z": "31815-0713",
     "j": "Stewart",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 651,
@@ -2061,7 +2317,9 @@
     "s": "GA",
     "z": "31709",
     "j": "Sumter",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 652,
@@ -2077,7 +2335,9 @@
     "s": "GA",
     "z": "31827-0008",
     "j": "Talbot",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 653,
@@ -2093,7 +2353,9 @@
     "s": "GA",
     "z": "30631-0009",
     "j": "Taliaferro",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 654,
@@ -2109,7 +2371,9 @@
     "s": "GA",
     "z": "30453-1098",
     "j": "Tattnall",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 655,
@@ -2125,7 +2389,9 @@
     "s": "GA",
     "z": "31006-2044",
     "j": "Taylor",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 656,
@@ -2141,7 +2407,9 @@
     "s": "GA",
     "z": "31055-1604",
     "j": "Telfair",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 657,
@@ -2157,7 +2425,9 @@
     "s": "GA",
     "z": "39842-0525",
     "j": "Terrell",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 658,
@@ -2173,7 +2443,9 @@
     "s": "GA",
     "z": "31799-0110",
     "j": "Thomas",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 659,
@@ -2189,7 +2461,9 @@
     "s": "GA",
     "z": "31793-1867",
     "j": "Tift",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 660,
@@ -2205,7 +2479,9 @@
     "s": "GA",
     "z": "30436-1370",
     "j": "Toombs",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 661,
@@ -2221,7 +2497,9 @@
     "s": "GA",
     "z": "30546",
     "j": "Towns",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 662,
@@ -2237,7 +2515,9 @@
     "s": "GA",
     "z": "30457",
     "j": "Treutlen",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 663,
@@ -2253,7 +2533,9 @@
     "s": "GA",
     "z": "30241",
     "j": "Troup",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 664,
@@ -2269,7 +2551,9 @@
     "s": "GA",
     "z": "31790",
     "j": "Turner",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 665,
@@ -2285,7 +2569,9 @@
     "s": "GA",
     "z": "31044-0130",
     "j": "Twiggs",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 666,
@@ -2301,7 +2587,9 @@
     "s": "GA",
     "z": "30512",
     "j": "Union",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 667,
@@ -2317,7 +2605,9 @@
     "s": "GA",
     "z": "30286",
     "j": "Upson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 668,
@@ -2333,7 +2623,9 @@
     "s": "GA",
     "z": "30728-1105",
     "j": "Walker",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 669,
@@ -2349,7 +2641,9 @@
     "s": "GA",
     "z": "30655",
     "j": "Walton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 670,
@@ -2365,7 +2659,9 @@
     "s": "GA",
     "z": "31501",
     "j": "Ware",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 671,
@@ -2381,7 +2677,9 @@
     "s": "GA",
     "z": "30828-0186",
     "j": "Warren",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 672,
@@ -2397,7 +2695,9 @@
     "s": "GA",
     "z": "31082",
     "j": "Washington",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 673,
@@ -2413,7 +2713,9 @@
     "s": "GA",
     "z": "31598-1092",
     "j": "Wayne",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 674,
@@ -2429,7 +2731,9 @@
     "s": "GA",
     "z": "31824-0029",
     "j": "Webster",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 675,
@@ -2445,7 +2749,9 @@
     "s": "GA",
     "z": "30411",
     "j": "Wheeler",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 676,
@@ -2461,7 +2767,9 @@
     "s": "GA",
     "z": "30528",
     "j": "White",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 677,
@@ -2477,7 +2785,9 @@
     "s": "GA",
     "z": "30720",
     "j": "Whitfield",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 678,
@@ -2493,7 +2803,9 @@
     "s": "GA",
     "z": "31001",
     "j": "Wilcox",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 679,
@@ -2509,7 +2821,9 @@
     "s": "GA",
     "z": "30673-1570",
     "j": "Wilkes",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 680,
@@ -2525,7 +2839,9 @@
     "s": "GA",
     "z": "31042-0186",
     "j": "Wilkinson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 681,
@@ -2541,6 +2857,8 @@
     "s": "GA",
     "z": "31791",
     "j": "Worth",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

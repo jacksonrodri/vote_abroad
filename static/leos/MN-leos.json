@@ -13,7 +13,9 @@
     "s": "MN",
     "z": "56431-1292",
     "j": "Aitkin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1918,
@@ -29,7 +31,9 @@
     "s": "MN",
     "z": "55303-5031",
     "j": "Anoka",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1919,
@@ -45,7 +49,9 @@
     "s": "MN",
     "z": "56501-3403",
     "j": "Becker",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1920,
@@ -61,7 +67,9 @@
     "s": "MN",
     "z": "56601-3178",
     "j": "Beltrami",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1921,
@@ -77,7 +85,9 @@
     "s": "MN",
     "z": "56329-0129",
     "j": "Benton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1922,
@@ -93,7 +103,9 @@
     "s": "MN",
     "z": "56278-1544",
     "j": "Big Stone",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1923,
@@ -109,7 +121,9 @@
     "s": "MN",
     "z": "56002-3524",
     "j": "Blue Earth",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1924,
@@ -125,7 +139,9 @@
     "s": "MN",
     "z": "56073-0115",
     "j": "Brown",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1925,
@@ -141,7 +157,9 @@
     "s": "MN",
     "z": "55718-0130",
     "j": "Carlton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1926,
@@ -157,7 +175,9 @@
     "s": "MN",
     "z": "55318-2102",
     "j": "Carver",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1927,
@@ -173,7 +193,9 @@
     "s": "MN",
     "z": "56484-3000",
     "j": "Cass",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1928,
@@ -189,7 +211,9 @@
     "s": "MN",
     "z": "56265-1652",
     "j": "Chippewa",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1929,
@@ -205,7 +229,9 @@
     "s": "MN",
     "z": "55012-7656",
     "j": "Chisago",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1930,
@@ -221,7 +247,9 @@
     "s": "MN",
     "z": "56560-0280",
     "j": "Clay",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1931,
@@ -237,7 +265,9 @@
     "s": "MN",
     "z": "56621-8304",
     "j": "Clearwater",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1932,
@@ -253,7 +283,9 @@
     "s": "MN",
     "z": "55604-1150",
     "j": "Cook",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1933,
@@ -269,7 +301,9 @@
     "s": "MN",
     "z": "56101-1645",
     "j": "Cottonwood",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1934,
@@ -285,7 +319,9 @@
     "s": "MN",
     "z": "56401-3590",
     "j": "Crow Wing",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1935,
@@ -301,7 +337,9 @@
     "s": "MN",
     "z": "55033-2380",
     "j": "Dakota",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1936,
@@ -317,7 +355,9 @@
     "s": "MN",
     "z": "55955-2204",
     "j": "Dodge",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1937,
@@ -333,7 +373,9 @@
     "s": "MN",
     "z": "56308-1793",
     "j": "Douglas",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1938,
@@ -349,7 +391,9 @@
     "s": "MN",
     "z": "56013-0130",
     "j": "Faribault",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1939,
@@ -365,7 +409,9 @@
     "s": "MN",
     "z": "55965-0466",
     "j": "Fillmore",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1940,
@@ -381,7 +427,9 @@
     "s": "MN",
     "z": "56007-1147",
     "j": "Freeborn",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1941,
@@ -397,7 +445,9 @@
     "s": "MN",
     "z": "55066-0408",
     "j": "Goodhue",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1942,
@@ -413,7 +463,9 @@
     "s": "MN",
     "z": "56531-4400",
     "j": "Grant",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1943,
@@ -429,7 +481,9 @@
     "s": "MN",
     "z": "55487-0012",
     "j": "Hennepin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1944,
@@ -445,7 +499,9 @@
     "s": "MN",
     "z": "55921-1330",
     "j": "Houston",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1945,
@@ -461,7 +517,9 @@
     "s": "MN",
     "z": "56470-1483",
     "j": "Hubbard",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1946,
@@ -477,7 +535,9 @@
     "s": "MN",
     "z": "55008-9386",
     "j": "Isanti",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1947,
@@ -493,7 +553,9 @@
     "s": "MN",
     "z": "55744-2600",
     "j": "Itasca",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1948,
@@ -509,7 +571,9 @@
     "s": "MN",
     "z": "56143-1529",
     "j": "Jackson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1949,
@@ -525,7 +589,9 @@
     "s": "MN",
     "z": "55051-1351",
     "j": "Kanabec",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1950,
@@ -541,7 +607,9 @@
     "s": "MN",
     "z": "56201-0936",
     "j": "Kandiyohi",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1951,
@@ -557,7 +625,9 @@
     "s": "MN",
     "z": "56728-4141",
     "j": "Kittson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1952,
@@ -573,7 +643,9 @@
     "s": "MN",
     "z": "56649-2486",
     "j": "Koochiching",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1953,
@@ -589,7 +661,9 @@
     "s": "MN",
     "z": "56256-1296",
     "j": "Lac Qui Parle",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1954,
@@ -605,7 +679,9 @@
     "s": "MN",
     "z": "55616-1565",
     "j": "Lake",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1955,
@@ -621,7 +697,9 @@
     "s": "MN",
     "z": "56623-0808",
     "j": "Lake of the Woods",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1956,
@@ -637,7 +715,9 @@
     "s": "MN",
     "z": "56057-1600",
     "j": "Le Sueur",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1957,
@@ -653,7 +733,9 @@
     "s": "MN",
     "z": "56142-0029",
     "j": "Lincoln",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1958,
@@ -669,7 +751,9 @@
     "s": "MN",
     "z": "56258-3099",
     "j": "Lyon",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1959,
@@ -685,7 +769,9 @@
     "s": "MN",
     "z": "56557-0379",
     "j": "Mahnomen",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1960,
@@ -701,7 +787,9 @@
     "s": "MN",
     "z": "56762-1697",
     "j": "Marshall",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1961,
@@ -717,7 +805,9 @@
     "s": "MN",
     "z": "56031-1852",
     "j": "Martin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1962,
@@ -733,7 +823,9 @@
     "s": "MN",
     "z": "55336-2200",
     "j": "McLeod",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1963,
@@ -749,7 +841,9 @@
     "s": "MN",
     "z": "55355-2189",
     "j": "Meeker",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1964,
@@ -765,7 +859,9 @@
     "s": "MN",
     "z": "56353-1396",
     "j": "Mille Lacs",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1965,
@@ -781,7 +877,9 @@
     "s": "MN",
     "z": "56345-3199",
     "j": "Morrison",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1966,
@@ -797,7 +895,9 @@
     "s": "MN",
     "z": "55912-3475",
     "j": "Mower",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1967,
@@ -813,7 +913,9 @@
     "s": "MN",
     "z": "56172-0057",
     "j": "Murray",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1968,
@@ -829,7 +931,9 @@
     "s": "MN",
     "z": "56082-0089",
     "j": "Nicollet",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1969,
@@ -845,7 +949,9 @@
     "s": "MN",
     "z": "56187-0757",
     "j": "Nobles",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1970,
@@ -861,7 +967,9 @@
     "s": "MN",
     "z": "56510-0266",
     "j": "Norman",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1971,
@@ -877,7 +985,9 @@
     "s": "MN",
     "z": "55904-3709",
     "j": "Olmsted",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1972,
@@ -893,7 +1003,9 @@
     "s": "MN",
     "z": "56537-1364",
     "j": "Otter Tail",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1973,
@@ -909,7 +1021,9 @@
     "s": "MN",
     "z": "56701-0616",
     "j": "Pennington",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1974,
@@ -925,7 +1039,9 @@
     "s": "MN",
     "z": "55063-1694",
     "j": "Pine",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1975,
@@ -941,7 +1057,9 @@
     "s": "MN",
     "z": "56164-0455",
     "j": "Pipestone",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1976,
@@ -957,7 +1075,9 @@
     "s": "MN",
     "z": "56716-1452",
     "j": "Polk",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1977,
@@ -973,7 +1093,9 @@
     "s": "MN",
     "z": "56334-4525",
     "j": "Pope",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1978,
@@ -989,7 +1111,9 @@
     "s": "MN",
     "z": "55164-0098",
     "j": "Ramsey",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1979,
@@ -1005,7 +1129,9 @@
     "s": "MN",
     "z": "56750-0367",
     "j": "Red Lake",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1980,
@@ -1021,7 +1147,9 @@
     "s": "MN",
     "z": "56283-0130",
     "j": "Redwood",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1981,
@@ -1037,7 +1165,9 @@
     "s": "MN",
     "z": "56277-1396",
     "j": "Renville",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1982,
@@ -1053,7 +1183,9 @@
     "s": "MN",
     "z": "55021-6141",
     "j": "Rice",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1983,
@@ -1069,7 +1201,9 @@
     "s": "MN",
     "z": "56156-0509",
     "j": "Rock",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1984,
@@ -1085,7 +1219,9 @@
     "s": "MN",
     "z": "56751-1477",
     "j": "Roseau",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1985,
@@ -1101,7 +1237,9 @@
     "s": "MN",
     "z": "55379",
     "j": "Scott",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1986,
@@ -1117,7 +1255,9 @@
     "s": "MN",
     "z": "55330",
     "j": "Sherburne",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1987,
@@ -1133,7 +1273,9 @@
     "s": "MN",
     "z": "55334-0171",
     "j": "Sibley",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1988,
@@ -1149,7 +1291,9 @@
     "s": "MN",
     "z": "55802-1293",
     "j": "St. Louis",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1989,
@@ -1165,7 +1309,9 @@
     "s": "MN",
     "z": "56387",
     "j": "Stearns",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1990,
@@ -1181,7 +1327,9 @@
     "s": "MN",
     "z": "55060-0890",
     "j": "Steele",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1991,
@@ -1197,7 +1345,9 @@
     "s": "MN",
     "z": "56267-0530",
     "j": "Stevens",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1992,
@@ -1213,7 +1363,9 @@
     "s": "MN",
     "z": "56215-0288",
     "j": "Swift",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1993,
@@ -1229,7 +1381,9 @@
     "s": "MN",
     "z": "56347-1390",
     "j": "Todd",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1994,
@@ -1245,7 +1399,9 @@
     "s": "MN",
     "z": "56296-0428",
     "j": "Traverse",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1995,
@@ -1261,7 +1417,9 @@
     "s": "MN",
     "z": "55981-1594",
     "j": "Wabasha",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1996,
@@ -1277,7 +1435,9 @@
     "s": "MN",
     "z": "56482-1595",
     "j": "Wadena",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1997,
@@ -1293,7 +1453,9 @@
     "s": "MN",
     "z": "56093-0047",
     "j": "Waseca",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1998,
@@ -1309,7 +1471,9 @@
     "s": "MN",
     "z": "55082-0006",
     "j": "Washington",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1999,
@@ -1325,7 +1489,9 @@
     "s": "MN",
     "z": "56081-0518",
     "j": "Watonwan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2000,
@@ -1341,7 +1507,9 @@
     "s": "MN",
     "z": "56520-0409",
     "j": "Wilkin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2001,
@@ -1357,7 +1525,9 @@
     "s": "MN",
     "z": "55987-3102",
     "j": "Winona",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2002,
@@ -1373,7 +1543,9 @@
     "s": "MN",
     "z": "55313-1195",
     "j": "Wright",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2003,
@@ -1389,6 +1561,8 @@
     "s": "MN",
     "z": "56241-1508",
     "j": "Yellow Medicine",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

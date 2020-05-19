@@ -13,7 +13,9 @@
     "s": "OK",
     "z": "74960-0006",
     "j": "Adair",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2963,
@@ -29,7 +31,9 @@
     "s": "OK",
     "z": "73728-2560",
     "j": "Alfalfa",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2964,
@@ -45,7 +49,9 @@
     "s": "OK",
     "z": "74525-2056",
     "j": "Atoka",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2965,
@@ -61,7 +67,9 @@
     "s": "OK",
     "z": "73932-0639",
     "j": "Beaver",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2966,
@@ -77,7 +85,9 @@
     "s": "OK",
     "z": "73662-2923",
     "j": "Beckham",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2967,
@@ -93,7 +103,9 @@
     "s": "OK",
     "z": "73772-3844",
     "j": "Blaine",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2968,
@@ -109,7 +121,9 @@
     "s": "OK",
     "z": "74702-1396",
     "j": "Bryan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2969,
@@ -125,7 +139,9 @@
     "s": "OK",
     "z": "73005-0277",
     "j": "Caddo",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2970,
@@ -141,7 +157,9 @@
     "s": "OK",
     "z": "73036-0307",
     "j": "Canadian",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2971,
@@ -157,7 +175,9 @@
     "s": "OK",
     "z": "73401-9272",
     "j": "Carter",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2972,
@@ -173,7 +193,9 @@
     "s": "OK",
     "z": "74464-4726",
     "j": "Cherokee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2973,
@@ -189,7 +211,9 @@
     "s": "OK",
     "z": "74743-0517",
     "j": "Choctaw",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2974,
@@ -205,7 +229,9 @@
     "s": "OK",
     "z": "73933-0331",
     "j": "Cimarron",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2975,
@@ -221,7 +247,9 @@
     "s": "OK",
     "z": "73071-6656",
     "j": "Cleveland",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2976,
@@ -237,7 +265,9 @@
     "s": "OK",
     "z": "74538-2823",
     "j": "Coal",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2977,
@@ -253,7 +283,9 @@
     "s": "OK",
     "z": "73501-4326",
     "j": "Comanche",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2978,
@@ -269,7 +301,9 @@
     "s": "OK",
     "z": "73572-1271",
     "j": "Cotton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2979,
@@ -285,7 +319,9 @@
     "s": "OK",
     "z": "74301-4236",
     "j": "Craig",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2980,
@@ -301,7 +337,9 @@
     "s": "OK",
     "z": "74067-0990",
     "j": "Creek",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2981,
@@ -317,7 +355,9 @@
     "s": "OK",
     "z": "73601-1326",
     "j": "Custer",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2982,
@@ -333,7 +373,9 @@
     "s": "OK",
     "z": "74346-0589",
     "j": "Delaware",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2983,
@@ -349,7 +391,9 @@
     "s": "OK",
     "z": "73667-0115",
     "j": "Dewey",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2984,
@@ -365,7 +409,9 @@
     "s": "OK",
     "z": "73832-0492",
     "j": "Ellis",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2985,
@@ -381,7 +427,9 @@
     "s": "OK",
     "z": "73702-1872",
     "j": "Garfield",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2986,
@@ -397,7 +445,9 @@
     "s": "OK",
     "z": "73075-3234",
     "j": "Garvin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2987,
@@ -413,7 +463,9 @@
     "s": "OK",
     "z": "73023-1226",
     "j": "Grady",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2988,
@@ -429,7 +481,9 @@
     "s": "OK",
     "z": "73759-1244",
     "j": "Grant",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2989,
@@ -445,7 +499,9 @@
     "s": "OK",
     "z": "73554-4273",
     "j": "Greer",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2990,
@@ -461,7 +517,9 @@
     "s": "OK",
     "z": "73550-3053",
     "j": "Harmon",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2991,
@@ -477,7 +535,9 @@
     "s": "OK",
     "z": "73834-0541",
     "j": "Harper",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2992,
@@ -493,7 +553,9 @@
     "s": "OK",
     "z": "74462-2439",
     "j": "Haskell",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2993,
@@ -509,7 +571,9 @@
     "s": "OK",
     "z": "74848-3400",
     "j": "Hughes",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2994,
@@ -525,7 +589,9 @@
     "s": "OK",
     "z": "73521-3142",
     "j": "Jackson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2995,
@@ -541,7 +607,9 @@
     "s": "OK",
     "z": "73573-2236",
     "j": "Jefferson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2996,
@@ -557,7 +625,9 @@
     "s": "OK",
     "z": "73460-1734",
     "j": "Johnston",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2997,
@@ -573,7 +643,9 @@
     "s": "OK",
     "z": "74647-0331",
     "j": "Kay",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2998,
@@ -589,7 +661,9 @@
     "s": "OK",
     "z": "73750-3241",
     "j": "Kingfisher",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2999,
@@ -605,7 +679,9 @@
     "s": "OK",
     "z": "73651-0031",
     "j": "Kiowa",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3000,
@@ -621,7 +697,9 @@
     "s": "OK",
     "z": "74578-2440",
     "j": "Latimer",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3001,
@@ -637,7 +715,9 @@
     "s": "OK",
     "z": "74953-0249",
     "j": "LeFlore",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3002,
@@ -653,7 +733,9 @@
     "s": "OK",
     "z": "74834-0097",
     "j": "Lincoln",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3003,
@@ -669,7 +751,9 @@
     "s": "OK",
     "z": "73044-4834",
     "j": "Logan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3004,
@@ -685,7 +769,9 @@
     "s": "OK",
     "z": "73448-2849",
     "j": "Love",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3005,
@@ -701,7 +787,9 @@
     "s": "OK",
     "z": "73737-2243",
     "j": "Major",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3006,
@@ -717,7 +805,9 @@
     "s": "OK",
     "z": "73446-0009",
     "j": "Marshall",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3007,
@@ -733,7 +823,9 @@
     "s": "OK",
     "z": "74361-2449",
     "j": "Mayes",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3008,
@@ -749,7 +841,9 @@
     "s": "OK",
     "z": "73080-0759",
     "j": "McClain",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3009,
@@ -765,7 +859,9 @@
     "s": "OK",
     "z": "74745-3846",
     "j": "McCurtain",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3010,
@@ -781,7 +877,9 @@
     "s": "OK",
     "z": "74432-1022",
     "j": "McIntosh",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3011,
@@ -797,7 +895,9 @@
     "s": "OK",
     "z": "73086-0556",
     "j": "Murray",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3012,
@@ -813,7 +913,9 @@
     "s": "OK",
     "z": "74402-0216",
     "j": "Muskogee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3013,
@@ -829,7 +931,9 @@
     "s": "OK",
     "z": "73077-6649",
     "j": "Noble",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3014,
@@ -845,7 +949,9 @@
     "s": "OK",
     "z": "74048-2626",
     "j": "Nowata",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3015,
@@ -861,7 +967,9 @@
     "s": "OK",
     "z": "74859-2627",
     "j": "Okfuskee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3016,
@@ -877,7 +985,9 @@
     "s": "OK",
     "z": "73105-5210",
     "j": "Oklahoma",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3017,
@@ -893,7 +1003,9 @@
     "s": "OK",
     "z": "74447-5028",
     "j": "Okmulgee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3018,
@@ -909,7 +1021,9 @@
     "s": "OK",
     "z": "74056-0929",
     "j": "Osage",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3019,
@@ -925,7 +1039,9 @@
     "s": "OK",
     "z": "74354-7080",
     "j": "Ottawa",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3020,
@@ -941,7 +1057,9 @@
     "s": "OK",
     "z": "74058-2568",
     "j": "Pawnee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3021,
@@ -957,7 +1075,9 @@
     "s": "OK",
     "z": "74074-4080",
     "j": "Payne",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3022,
@@ -973,7 +1093,9 @@
     "s": "OK",
     "z": "74501-5039",
     "j": "Pittsburg",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3023,
@@ -989,7 +1111,9 @@
     "s": "OK",
     "z": "74821-0302",
     "j": "Pontotoc",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3024,
@@ -1005,7 +1129,9 @@
     "s": "OK",
     "z": "74804-9250",
     "j": "Pottawatomie",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3025,
@@ -1021,7 +1147,9 @@
     "s": "OK",
     "z": "74523-3814",
     "j": "Pushmataha",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3026,
@@ -1037,7 +1165,9 @@
     "s": "OK",
     "z": "73628-0147",
     "j": "Roger Mills",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3027,
@@ -1053,7 +1183,9 @@
     "s": "OK",
     "z": "74017-7801",
     "j": "Rogers",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3028,
@@ -1069,7 +1201,9 @@
     "s": "OK",
     "z": "74884-2645",
     "j": "Seminole",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3029,
@@ -1085,7 +1219,9 @@
     "s": "OK",
     "z": "74955-4613",
     "j": "Sequoyah",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3030,
@@ -1101,7 +1237,9 @@
     "s": "OK",
     "z": "73533-4758",
     "j": "Stephens",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3031,
@@ -1117,7 +1255,9 @@
     "s": "OK",
     "z": "73942-0607",
     "j": "Texas",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3032,
@@ -1133,7 +1273,9 @@
     "s": "OK",
     "z": "73542-5400",
     "j": "Tillman",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3033,
@@ -1149,7 +1291,9 @@
     "s": "OK",
     "z": "74103-1014",
     "j": "Tulsa",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3034,
@@ -1165,7 +1309,9 @@
     "s": "OK",
     "z": "74477-0714",
     "j": "Wagoner",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3035,
@@ -1181,7 +1327,9 @@
     "s": "OK",
     "z": "74003-6602",
     "j": "Washington",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3036,
@@ -1197,7 +1345,9 @@
     "s": "OK",
     "z": "73632-0602",
     "j": "Washita",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3037,
@@ -1213,7 +1363,9 @@
     "s": "OK",
     "z": "73717-0184",
     "j": "Woods",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3038,
@@ -1229,6 +1381,8 @@
     "s": "OK",
     "z": "73802-0613",
     "j": "Woodward",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

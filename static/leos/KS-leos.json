@@ -13,7 +13,9 @@
     "s": "KS",
     "z": "66749-2895",
     "j": "Allen",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1033,
@@ -29,7 +31,9 @@
     "s": "KS",
     "z": "66032-1596",
     "j": "Anderson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1034,
@@ -45,7 +49,9 @@
     "s": "KS",
     "z": "66002",
     "j": "Atchison",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1035,
@@ -61,7 +67,9 @@
     "s": "KS",
     "z": "67104-1499",
     "j": "Barber",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1036,
@@ -77,7 +85,9 @@
     "s": "KS",
     "z": "67530-1089",
     "j": "Barton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1037,
@@ -93,7 +103,9 @@
     "s": "KS",
     "z": "66701-1328",
     "j": "Bourbon",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1038,
@@ -109,7 +121,9 @@
     "s": "KS",
     "z": "66434-2283",
     "j": "Brown",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1039,
@@ -125,7 +139,9 @@
     "s": "KS",
     "z": "67042-2193",
     "j": "Butler",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1040,
@@ -141,7 +157,9 @@
     "s": "KS",
     "z": "66845-0547",
     "j": "Chase",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1041,
@@ -157,7 +175,9 @@
     "s": "KS",
     "z": "67361-1395",
     "j": "Chautauqua",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1042,
@@ -173,7 +193,9 @@
     "s": "KS",
     "z": "66725-0014",
     "j": "Cherokee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1043,
@@ -189,7 +211,9 @@
     "s": "KS",
     "z": "67756-0985",
     "j": "Cheyenne",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1044,
@@ -205,7 +229,9 @@
     "s": "KS",
     "z": "67831-0886",
     "j": "Clark",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1045,
@@ -221,7 +247,9 @@
     "s": "KS",
     "z": "67432-0098",
     "j": "Clay",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1046,
@@ -237,7 +265,9 @@
     "s": "KS",
     "z": "66901-3415",
     "j": "Cloud",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1047,
@@ -253,7 +283,9 @@
     "s": "KS",
     "z": "66839-1796",
     "j": "Coffey",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1048,
@@ -269,7 +301,9 @@
     "s": "KS",
     "z": "67029-0397",
     "j": "Comanche",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1049,
@@ -285,7 +319,9 @@
     "s": "KS",
     "z": "67156-2864",
     "j": "Cowley",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1050,
@@ -301,7 +337,9 @@
     "s": "KS",
     "z": "66743-0249",
     "j": "Crawford",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1051,
@@ -317,7 +355,9 @@
     "s": "KS",
     "z": "67749-0028",
     "j": "Decatur",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1052,
@@ -333,7 +373,9 @@
     "s": "KS",
     "z": "67410-0248",
     "j": "Dickinson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1053,
@@ -349,7 +391,9 @@
     "s": "KS",
     "z": "66087-0278",
     "j": "Doniphan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1054,
@@ -365,7 +409,9 @@
     "s": "KS",
     "z": "66044-3096",
     "j": "Douglas",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1055,
@@ -381,7 +427,9 @@
     "s": "KS",
     "z": "67547-1099",
     "j": "Edwards",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1056,
@@ -397,7 +445,9 @@
     "s": "KS",
     "z": "67349-0606",
     "j": "Elk",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1057,
@@ -413,7 +463,9 @@
     "s": "KS",
     "z": "67601-3899",
     "j": "Ellis",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1058,
@@ -429,7 +481,9 @@
     "s": "KS",
     "z": "67439-3118",
     "j": "Ellsworth",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1059,
@@ -445,7 +499,9 @@
     "s": "KS",
     "z": "67846-0450",
     "j": "Finney",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1060,
@@ -461,7 +517,9 @@
     "s": "KS",
     "z": "67801-1575",
     "j": "Ford",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1061,
@@ -477,7 +535,9 @@
     "s": "KS",
     "z": "66067-2331",
     "j": "Franklin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1062,
@@ -493,7 +553,9 @@
     "s": "KS",
     "z": "66441-2589",
     "j": "Geary",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1063,
@@ -509,7 +571,9 @@
     "s": "KS",
     "z": "67736-0128",
     "j": "Gove",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1064,
@@ -525,7 +589,9 @@
     "s": "KS",
     "z": "67642-1697",
     "j": "Graham",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1065,
@@ -541,7 +607,9 @@
     "s": "KS",
     "z": "67880-2599",
     "j": "Grant",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1066,
@@ -557,7 +625,9 @@
     "s": "KS",
     "z": "67835-0487",
     "j": "Gray",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1067,
@@ -573,7 +643,9 @@
     "s": "KS",
     "z": "67879-0277",
     "j": "Greeley",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1068,
@@ -589,7 +661,9 @@
     "s": "KS",
     "z": "67045-0268",
     "j": "Greenwood",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1069,
@@ -605,7 +679,9 @@
     "s": "KS",
     "z": "67878-8025",
     "j": "Hamilton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1070,
@@ -621,7 +697,9 @@
     "s": "KS",
     "z": "67003-2748",
     "j": "Harper",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1071,
@@ -637,7 +715,9 @@
     "s": "KS",
     "z": "67114-0687",
     "j": "Harvey",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1072,
@@ -653,7 +733,9 @@
     "s": "KS",
     "z": "67877-0518",
     "j": "Haskell",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1073,
@@ -669,7 +751,9 @@
     "s": "KS",
     "z": "67854-0247",
     "j": "Hodgeman",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1074,
@@ -685,7 +769,9 @@
     "s": "KS",
     "z": "66436-1787",
     "j": "Jackson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1075,
@@ -701,7 +787,9 @@
     "s": "KS",
     "z": "66066-0321",
     "j": "Jefferson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1076,
@@ -717,7 +805,9 @@
     "s": "KS",
     "z": "66956-2095",
     "j": "Jewell",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1077,
@@ -733,7 +823,9 @@
     "s": "KS",
     "z": "66061-6002",
     "j": "Johnson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1078,
@@ -749,7 +841,9 @@
     "s": "KS",
     "z": "67860-0086",
     "j": "Kearny",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1079,
@@ -765,7 +859,9 @@
     "s": "KS",
     "z": "67068-1697",
     "j": "Kingman",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1080,
@@ -781,7 +877,9 @@
     "s": "KS",
     "z": "67054-2294",
     "j": "Kiowa",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1081,
@@ -797,7 +895,9 @@
     "s": "KS",
     "z": "67356-0387",
     "j": "Labette",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1082,
@@ -813,7 +913,9 @@
     "s": "KS",
     "z": "67839-0788",
     "j": "Lane",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1083,
@@ -829,7 +931,9 @@
     "s": "KS",
     "z": "66048-2748",
     "j": "Leavenworth",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1084,
@@ -845,7 +949,9 @@
     "s": "KS",
     "z": "67455-2098",
     "j": "Lincoln",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1085,
@@ -861,7 +967,9 @@
     "s": "KS",
     "z": "66056-0350",
     "j": "Linn",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1086,
@@ -877,7 +985,9 @@
     "s": "KS",
     "z": "67748-1233",
     "j": "Logan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1087,
@@ -893,7 +1003,9 @@
     "s": "KS",
     "z": "66801-7212",
     "j": "Lyon",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1088,
@@ -909,7 +1021,9 @@
     "s": "KS",
     "z": "66861-1656",
     "j": "Marion",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1089,
@@ -925,7 +1039,9 @@
     "s": "KS",
     "z": "66508-1844",
     "j": "Marshall",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1090,
@@ -941,7 +1057,9 @@
     "s": "KS",
     "z": "67460-0676",
     "j": "McPherson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1091,
@@ -957,7 +1075,9 @@
     "s": "KS",
     "z": "67864-0278",
     "j": "Meade",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1092,
@@ -973,7 +1093,9 @@
     "s": "KS",
     "z": "66071-1795",
     "j": "Miami",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1093,
@@ -989,7 +1111,9 @@
     "s": "KS",
     "z": "67420-0190",
     "j": "Mitchell",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1094,
@@ -1005,7 +1129,9 @@
     "s": "KS",
     "z": "67301-0446",
     "j": "Montgomery",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1095,
@@ -1021,7 +1147,9 @@
     "s": "KS",
     "z": "66846-1791",
     "j": "Morris",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1096,
@@ -1037,7 +1165,9 @@
     "s": "KS",
     "z": "67950-1116",
     "j": "Morton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1097,
@@ -1053,7 +1183,9 @@
     "s": "KS",
     "z": "66538-1795",
     "j": "Nemaha",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1098,
@@ -1069,7 +1201,9 @@
     "s": "KS",
     "z": "66733-0138",
     "j": "Neosho",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1099,
@@ -1085,7 +1219,9 @@
     "s": "KS",
     "z": "67560-1558",
     "j": "Ness",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1100,
@@ -1101,7 +1237,9 @@
     "s": "KS",
     "z": "67654-0070",
     "j": "Norton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1101,
@@ -1117,7 +1255,9 @@
     "s": "KS",
     "z": "66451-0226",
     "j": "Osage",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1102,
@@ -1133,7 +1273,9 @@
     "s": "KS",
     "z": "67473-2302",
     "j": "Osborne",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1103,
@@ -1149,7 +1291,9 @@
     "s": "KS",
     "z": "67467-2140",
     "j": "Ottawa",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1104,
@@ -1165,7 +1309,9 @@
     "s": "KS",
     "z": "67550-3098",
     "j": "Pawnee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1105,
@@ -1181,7 +1327,9 @@
     "s": "KS",
     "z": "67661-1929",
     "j": "Phillips",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1106,
@@ -1197,7 +1345,9 @@
     "s": "KS",
     "z": "66549-9998",
     "j": "Pottawatomie",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1107,
@@ -1213,7 +1363,9 @@
     "s": "KS",
     "z": "67124-0885",
     "j": "Pratt",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1108,
@@ -1229,7 +1381,9 @@
     "s": "KS",
     "z": "67730-1896",
     "j": "Rawlins",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1109,
@@ -1245,7 +1399,9 @@
     "s": "KS",
     "z": "67501-5245",
     "j": "Reno",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1110,
@@ -1261,7 +1417,9 @@
     "s": "KS",
     "z": "66935-0429",
     "j": "Republic",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1111,
@@ -1277,7 +1435,9 @@
     "s": "KS",
     "z": "67554-2799",
     "j": "Rice",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1112,
@@ -1293,7 +1453,9 @@
     "s": "KS",
     "z": "66502-0109",
     "j": "Riley",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1113,
@@ -1309,7 +1471,9 @@
     "s": "KS",
     "z": "67669-1666",
     "j": "Rooks",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1114,
@@ -1325,7 +1489,9 @@
     "s": "KS",
     "z": "67548-0220",
     "j": "Rush",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1115,
@@ -1341,7 +1507,9 @@
     "s": "KS",
     "z": "67665-0113",
     "j": "Russell",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1116,
@@ -1357,7 +1525,9 @@
     "s": "KS",
     "z": "67401-2396",
     "j": "Saline",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1117,
@@ -1373,7 +1543,9 @@
     "s": "KS",
     "z": "67871-1197",
     "j": "Scott",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1118,
@@ -1389,7 +1561,9 @@
     "s": "KS",
     "z": "67203-3798",
     "j": "Sedgwick",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1119,
@@ -1405,7 +1579,9 @@
     "s": "KS",
     "z": "67901-3473",
     "j": "Seward",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1120,
@@ -1421,7 +1597,9 @@
     "s": "KS",
     "z": "66611-2378",
     "j": "Shawnee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1121,
@@ -1437,7 +1615,9 @@
     "s": "KS",
     "z": "67740-0899",
     "j": "Sheridan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1122,
@@ -1453,7 +1633,9 @@
     "s": "KS",
     "z": "67735-0011",
     "j": "Sherman",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1123,
@@ -1469,7 +1651,9 @@
     "s": "KS",
     "z": "66967-2798",
     "j": "Smith",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1124,
@@ -1485,7 +1669,9 @@
     "s": "KS",
     "z": "67576-2042",
     "j": "Stafford",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1125,
@@ -1501,7 +1687,9 @@
     "s": "KS",
     "z": "67855-0190",
     "j": "Stanton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1126,
@@ -1517,7 +1705,9 @@
     "s": "KS",
     "z": "67951-2606",
     "j": "Stevens",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1127,
@@ -1533,7 +1723,9 @@
     "s": "KS",
     "z": "67152-4070",
     "j": "Sumner",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1128,
@@ -1549,7 +1741,9 @@
     "s": "KS",
     "z": "67701-2421",
     "j": "Thomas",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1129,
@@ -1565,7 +1759,9 @@
     "s": "KS",
     "z": "67672-2187",
     "j": "Trego",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1130,
@@ -1581,7 +1777,9 @@
     "s": "KS",
     "z": "66401-9797",
     "j": "Wabaunsee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1131,
@@ -1597,7 +1795,9 @@
     "s": "KS",
     "z": "67758-0070",
     "j": "Wallace",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1132,
@@ -1613,7 +1813,9 @@
     "s": "KS",
     "z": "66968-1985",
     "j": "Washington",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1133,
@@ -1629,7 +1831,9 @@
     "s": "KS",
     "z": "67861-0279",
     "j": "Wichita",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1134,
@@ -1645,7 +1849,9 @@
     "s": "KS",
     "z": "66736-1382",
     "j": "Wilson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1135,
@@ -1661,7 +1867,9 @@
     "s": "KS",
     "z": "66783-1497",
     "j": "Woodson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 1136,
@@ -1677,6 +1885,8 @@
     "s": "KS",
     "z": "66101-2502",
     "j": "Wyandotte",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

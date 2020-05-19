@@ -13,7 +13,9 @@
     "s": "ID",
     "z": "83704",
     "j": "Ada",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 787,
@@ -29,7 +31,9 @@
     "s": "ID",
     "z": "83612-0048",
     "j": "Adams",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 788,
@@ -45,7 +49,9 @@
     "s": "ID",
     "z": "83205",
     "j": "Bannock",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 789,
@@ -61,7 +67,9 @@
     "s": "ID",
     "z": "83261-0190",
     "j": "Bear Lake",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 790,
@@ -77,7 +85,9 @@
     "s": "ID",
     "z": "83861-1852",
     "j": "Benewah",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 791,
@@ -93,7 +103,9 @@
     "s": "ID",
     "z": "83221-1776",
     "j": "Bingham",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 792,
@@ -109,7 +121,9 @@
     "s": "ID",
     "z": "83333-8429",
     "j": "Blaine",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 793,
@@ -125,7 +139,9 @@
     "s": "ID",
     "z": "83631-1300",
     "j": "Boise",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 794,
@@ -141,7 +157,9 @@
     "s": "ID",
     "z": "83864-1794",
     "j": "Bonner",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 795,
@@ -157,7 +175,9 @@
     "s": "ID",
     "z": "83402-3582",
     "j": "Bonneville",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 796,
@@ -173,7 +193,9 @@
     "s": "ID",
     "z": "83805-0419",
     "j": "Boundary",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 797,
@@ -189,7 +211,9 @@
     "s": "ID",
     "z": "83213-0737",
     "j": "Butte",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 798,
@@ -205,7 +229,9 @@
     "s": "ID",
     "z": "83327-0430",
     "j": "Camas",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 799,
@@ -221,7 +247,9 @@
     "s": "ID",
     "z": "83605-3522",
     "j": "Canyon",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 800,
@@ -237,7 +265,9 @@
     "s": "ID",
     "z": "83276-0775",
     "j": "Caribou",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 801,
@@ -253,7 +283,9 @@
     "s": "ID",
     "z": "83318-1862",
     "j": "Cassia",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 802,
@@ -269,7 +301,9 @@
     "s": "ID",
     "z": "83423-0205",
     "j": "Clark",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 803,
@@ -285,7 +319,9 @@
     "s": "ID",
     "z": "83544-0586",
     "j": "Clearwater",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 804,
@@ -301,7 +337,9 @@
     "s": "ID",
     "z": "83226-0385",
     "j": "Custer",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 805,
@@ -317,7 +355,9 @@
     "s": "ID",
     "z": "83647-3000",
     "j": "Elmore",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 806,
@@ -333,7 +373,9 @@
     "s": "ID",
     "z": "83263-1232",
     "j": "Franklin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 807,
@@ -349,7 +391,9 @@
     "s": "ID",
     "z": "83445-1548",
     "j": "Fremont",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 808,
@@ -365,7 +409,9 @@
     "s": "ID",
     "z": "83617-3096",
     "j": "Gem",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 809,
@@ -381,7 +427,9 @@
     "s": "ID",
     "z": "83330-0417",
     "j": "Gooding",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 810,
@@ -397,7 +445,9 @@
     "s": "ID",
     "z": "83530-1948",
     "j": "Idaho",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 811,
@@ -413,7 +463,9 @@
     "s": "ID",
     "z": "83442-5294",
     "j": "Jefferson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 812,
@@ -429,7 +481,9 @@
     "s": "ID",
     "z": "83338-2344",
     "j": "Jerome",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 813,
@@ -445,7 +499,9 @@
     "s": "ID",
     "z": "83816-9000",
     "j": "Kootenai",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 814,
@@ -461,7 +517,9 @@
     "s": "ID",
     "z": "83843-0568",
     "j": "Latah",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 815,
@@ -477,7 +535,9 @@
     "s": "ID",
     "z": "83467-3900",
     "j": "Lemhi",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 816,
@@ -493,7 +553,9 @@
     "s": "ID",
     "z": "83543-5065",
     "j": "Lewis",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 817,
@@ -509,7 +571,9 @@
     "s": "ID",
     "z": "83352-5364",
     "j": "Lincoln",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 818,
@@ -525,7 +589,9 @@
     "s": "ID",
     "z": "83440-0389",
     "j": "Madison",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 819,
@@ -541,7 +607,9 @@
     "s": "ID",
     "z": "83350-0368",
     "j": "Minidoka",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 820,
@@ -557,7 +625,9 @@
     "s": "ID",
     "z": "83501-0896",
     "j": "Nez Perce",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 821,
@@ -573,7 +643,9 @@
     "s": "ID",
     "z": "83252-1200",
     "j": "Oneida",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 822,
@@ -589,7 +661,9 @@
     "s": "ID",
     "z": "83650-0128",
     "j": "Owyhee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 823,
@@ -605,7 +679,9 @@
     "s": "ID",
     "z": "83661-2473",
     "j": "Payette",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 824,
@@ -621,7 +697,9 @@
     "s": "ID",
     "z": "83211-1200",
     "j": "Power",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 825,
@@ -637,7 +715,9 @@
     "s": "ID",
     "z": "83873-2348",
     "j": "Shoshone",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 826,
@@ -653,7 +733,9 @@
     "s": "ID",
     "z": "83422-5164",
     "j": "Teton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 827,
@@ -669,7 +751,9 @@
     "s": "ID",
     "z": "83301",
     "j": "Twin Falls",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 828,
@@ -685,7 +769,9 @@
     "s": "ID",
     "z": "83611-1350",
     "j": "Valley",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 829,
@@ -701,6 +787,8 @@
     "s": "ID",
     "z": "83672-0670",
     "j": "Washington",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

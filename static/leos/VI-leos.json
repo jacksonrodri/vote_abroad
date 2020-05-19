@@ -1,5 +1,23 @@
 [
   {
+    "i": 25223,
+    "n": "Election Systems of the Virgin Islands",
+    "f": "(340) 776-2391",
+    "p": "(340) 774-3107",
+    "e": "esvi.info@vi.gov",
+    "d": "2015-08-31T12:24:28",
+    "a1": "P.O. Box 6038",
+    "a2": "",
+    "a3": "",
+    "c": "St. Thomas",
+    "s": "VI",
+    "z": "00804",
+    "j": "St. John Island",
+    "t": "Island",
+    "fpcaOffice": true,
+    "fwabOffice": true
+  },
+  {
     "i": 25221,
     "n": "Election Systems of the Virgin Islands",
     "f": "(340) 773-4523",
@@ -13,7 +31,9 @@
     "s": "VI",
     "z": "00851-1499",
     "j": "St. Croix Island",
-    "t": "Island"
+    "t": "Island",
+    "fpcaOffice": false,
+    "fwabOffice": false
   },
   {
     "i": 25225,
@@ -29,22 +49,8 @@
     "s": "VI",
     "z": "00804",
     "j": "St. Thomas Island",
-    "t": "Island"
-  },
-  {
-    "i": 25223,
-    "n": "Election Systems of the Virgin Islands",
-    "f": "(340) 776-2391",
-    "p": "(340) 774-3107",
-    "e": "esvi.info@vi.gov",
-    "d": "2015-08-31T12:24:28",
-    "a1": "P.O. Box 6038",
-    "a2": "",
-    "a3": "",
-    "c": "St. Thomas",
-    "s": "VI",
-    "z": "00804",
-    "j": "St. John Island",
-    "t": "Island"
+    "t": "Island",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

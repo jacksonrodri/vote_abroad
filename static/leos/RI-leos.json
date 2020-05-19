@@ -13,7 +13,9 @@
     "s": "RI",
     "z": "02806",
     "j": "Barrington",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": false
   },
   {
     "i": 3144,
@@ -29,7 +31,9 @@
     "s": "RI",
     "z": "02809",
     "j": "Bristol",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": false
   },
   {
     "i": 3145,
@@ -45,7 +49,9 @@
     "s": "RI",
     "z": "02830",
     "j": "Burrillville",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": false
   },
   {
     "i": 3146,
@@ -61,7 +67,9 @@
     "s": "RI",
     "z": "02863",
     "j": "Central Falls",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": false
   },
   {
     "i": 3147,
@@ -77,7 +85,9 @@
     "s": "RI",
     "z": "02813",
     "j": "Charlestown",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": false
   },
   {
     "i": 3148,
@@ -93,7 +103,9 @@
     "s": "RI",
     "z": "02816",
     "j": "Coventry",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": false
   },
   {
     "i": 3149,
@@ -109,7 +121,9 @@
     "s": "RI",
     "z": "02910",
     "j": "Cranston",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": false
   },
   {
     "i": 3150,
@@ -125,7 +139,9 @@
     "s": "RI",
     "z": "02864",
     "j": "Cumberland",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": false
   },
   {
     "i": 3151,
@@ -141,7 +157,9 @@
     "s": "RI",
     "z": "02818",
     "j": "East Greenwich",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": false
   },
   {
     "i": 3152,
@@ -157,7 +175,9 @@
     "s": "RI",
     "z": "02914",
     "j": "East Providence",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3153,
@@ -173,7 +193,9 @@
     "s": "RI",
     "z": "02822",
     "j": "Exeter",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3154,
@@ -189,7 +211,9 @@
     "s": "RI",
     "z": "02825",
     "j": "Foster",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3155,
@@ -205,7 +229,9 @@
     "s": "RI",
     "z": "02814",
     "j": "Glocester",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3156,
@@ -221,7 +247,9 @@
     "s": "RI",
     "z": "02833",
     "j": "Hopkinton",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3157,
@@ -237,7 +265,9 @@
     "s": "RI",
     "z": "02835",
     "j": "Jamestown",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3158,
@@ -253,7 +283,9 @@
     "s": "RI",
     "z": "02919",
     "j": "Johnston",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3159,
@@ -269,7 +301,9 @@
     "s": "RI",
     "z": "02865",
     "j": "Lincoln",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3160,
@@ -285,7 +319,9 @@
     "s": "RI",
     "z": "02837",
     "j": "Little Compton",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3161,
@@ -301,7 +337,9 @@
     "s": "RI",
     "z": "02842",
     "j": "Middletown",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3162,
@@ -317,7 +355,9 @@
     "s": "RI",
     "z": "02882",
     "j": "Narragansett",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3163,
@@ -333,7 +373,9 @@
     "s": "RI",
     "z": "02807",
     "j": "New Shoreham",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3164,
@@ -349,7 +391,9 @@
     "s": "RI",
     "z": "02840",
     "j": "Newport",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3165,
@@ -365,7 +409,9 @@
     "s": "RI",
     "z": "02852",
     "j": "North Kingstown",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3166,
@@ -381,7 +427,9 @@
     "s": "RI",
     "z": "02911",
     "j": "North Providence",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3167,
@@ -397,7 +445,9 @@
     "s": "RI",
     "z": "02896",
     "j": "North Smithfield",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3168,
@@ -413,7 +463,9 @@
     "s": "RI",
     "z": "02861",
     "j": "Pawtucket",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3169,
@@ -429,7 +481,9 @@
     "s": "RI",
     "z": "02871",
     "j": "Portsmouth",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3170,
@@ -445,7 +499,9 @@
     "s": "RI",
     "z": "02903",
     "j": "Providence",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3171,
@@ -461,7 +517,9 @@
     "s": "RI",
     "z": "02898",
     "j": "Richmond",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3172,
@@ -477,7 +535,9 @@
     "s": "RI",
     "z": "02857",
     "j": "Scituate",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3173,
@@ -493,7 +553,9 @@
     "s": "RI",
     "z": "02917",
     "j": "Smithfield",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3174,
@@ -509,7 +571,9 @@
     "s": "RI",
     "z": "02879",
     "j": "South Kingstown",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3175,
@@ -525,7 +589,9 @@
     "s": "RI",
     "z": "02878",
     "j": "Tiverton",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3176,
@@ -541,7 +607,9 @@
     "s": "RI",
     "z": "02885",
     "j": "Warren",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3177,
@@ -557,7 +625,9 @@
     "s": "RI",
     "z": "02886",
     "j": "Warwick",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3178,
@@ -573,7 +643,9 @@
     "s": "RI",
     "z": "02817",
     "j": "West Greenwich",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3179,
@@ -589,7 +661,9 @@
     "s": "RI",
     "z": "02893",
     "j": "West Warwick",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3180,
@@ -605,7 +679,9 @@
     "s": "RI",
     "z": "02891",
     "j": "Westerly",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3181,
@@ -621,6 +697,8 @@
     "s": "RI",
     "z": "02895",
     "j": "Woonsocket",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

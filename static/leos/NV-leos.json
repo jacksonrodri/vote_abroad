@@ -13,7 +13,9 @@
     "s": "NV",
     "z": "89701",
     "j": "Carson City",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2796,
@@ -29,7 +31,9 @@
     "s": "NV",
     "z": "89406",
     "j": "Churchill",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2797,
@@ -45,7 +49,9 @@
     "s": "NV",
     "z": "89127",
     "j": "Clark",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2798,
@@ -61,7 +67,9 @@
     "s": "NV",
     "z": "89423",
     "j": "Douglas",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2799,
@@ -77,7 +85,9 @@
     "s": "NV",
     "z": "89801",
     "j": "Elko",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2800,
@@ -93,7 +103,9 @@
     "s": "NV",
     "z": "89013",
     "j": "Esmeralda",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2801,
@@ -109,7 +121,9 @@
     "s": "NV",
     "z": "89316",
     "j": "Eureka",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2802,
@@ -125,7 +139,9 @@
     "s": "NV",
     "z": "89445",
     "j": "Humboldt",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2803,
@@ -141,7 +157,9 @@
     "s": "NV",
     "z": "89820",
     "j": "Lander",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2804,
@@ -157,7 +175,9 @@
     "s": "NV",
     "z": "89043",
     "j": "Lincoln",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2805,
@@ -173,7 +193,9 @@
     "s": "NV",
     "z": "89447",
     "j": "Lyon",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2806,
@@ -189,7 +211,9 @@
     "s": "NV",
     "z": "89415",
     "j": "Mineral",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2807,
@@ -205,7 +229,9 @@
     "s": "NV",
     "z": "89049",
     "j": "Nye",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2808,
@@ -221,7 +247,9 @@
     "s": "NV",
     "z": "89419",
     "j": "Pershing",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2809,
@@ -237,7 +265,9 @@
     "s": "NV",
     "z": "89440",
     "j": "Storey",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2810,
@@ -253,7 +283,9 @@
     "s": "NV",
     "z": "89512",
     "j": "Washoe",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2811,
@@ -269,6 +301,8 @@
     "s": "NV",
     "z": "89301",
     "j": "White Pine",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

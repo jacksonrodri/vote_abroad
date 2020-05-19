@@ -13,7 +13,9 @@
     "s": "NY",
     "z": "12206",
     "j": "Albany",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2813,
@@ -29,7 +31,9 @@
     "s": "NY",
     "z": "14813",
     "j": "Allegany",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2814,
@@ -45,7 +49,9 @@
     "s": "NY",
     "z": "10457",
     "j": "Bronx",
-    "t": "Borough"
+    "t": "Borough",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2815,
@@ -61,7 +67,9 @@
     "s": "NY",
     "z": "13902",
     "j": "Broome",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2816,
@@ -77,7 +85,9 @@
     "s": "NY",
     "z": "14755",
     "j": "Cattaraugus",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2817,
@@ -93,7 +103,9 @@
     "s": "NY",
     "z": "13021",
     "j": "Cayuga",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2818,
@@ -109,7 +121,9 @@
     "s": "NY",
     "z": "14757",
     "j": "Chautauqua",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2819,
@@ -125,7 +139,9 @@
     "s": "NY",
     "z": "14902-0588",
     "j": "Chemung",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2820,
@@ -141,7 +157,9 @@
     "s": "NY",
     "z": "13815",
     "j": "Chenango",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2821,
@@ -157,7 +175,9 @@
     "s": "NY",
     "z": "12901",
     "j": "Clinton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2822,
@@ -173,7 +193,9 @@
     "s": "NY",
     "z": "12534",
     "j": "Columbia",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2823,
@@ -189,7 +211,9 @@
     "s": "NY",
     "z": "13045-2828",
     "j": "Cortland",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2824,
@@ -205,7 +229,9 @@
     "s": "NY",
     "z": "13753",
     "j": "Delaware",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2825,
@@ -221,7 +247,9 @@
     "s": "NY",
     "z": "12601",
     "j": "Dutchess",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2826,
@@ -237,7 +265,9 @@
     "s": "NY",
     "z": "14202",
     "j": "Erie",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2827,
@@ -253,7 +283,9 @@
     "s": "NY",
     "z": "12932",
     "j": "Essex",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2828,
@@ -269,7 +301,9 @@
     "s": "NY",
     "z": "12953-1823",
     "j": "Franklin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2829,
@@ -285,7 +319,9 @@
     "s": "NY",
     "z": "12095-9946",
     "j": "Fulton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2830,
@@ -301,7 +337,9 @@
     "s": "NY",
     "z": "14020",
     "j": "Genesee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2831,
@@ -317,7 +355,9 @@
     "s": "NY",
     "z": "12414",
     "j": "Greene",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2832,
@@ -333,7 +373,9 @@
     "s": "NY",
     "z": "12108",
     "j": "Hamilton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2833,
@@ -349,7 +391,9 @@
     "s": "NY",
     "z": "13350",
     "j": "Herkimer",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2834,
@@ -365,7 +409,9 @@
     "s": "NY",
     "z": "13601",
     "j": "Jefferson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2835,
@@ -381,7 +427,9 @@
     "s": "NY",
     "z": "11201",
     "j": "Kings Brooklyn",
-    "t": "Borough"
+    "t": "Borough",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2836,
@@ -397,7 +445,9 @@
     "s": "NY",
     "z": "13367",
     "j": "Lewis",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2837,
@@ -413,7 +463,9 @@
     "s": "NY",
     "z": "14454-1043",
     "j": "Livingston",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2838,
@@ -429,7 +481,9 @@
     "s": "NY",
     "z": "13163",
     "j": "Madison",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2839,
@@ -445,7 +499,9 @@
     "s": "NY",
     "z": "14614",
     "j": "Monroe",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2840,
@@ -461,7 +517,9 @@
     "s": "NY",
     "z": "12068-1500",
     "j": "Montgomery",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2841,
@@ -477,7 +535,9 @@
     "s": "NY",
     "z": "11501",
     "j": "Nassau",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2843,
@@ -493,7 +553,9 @@
     "s": "NY",
     "z": "10014",
     "j": "NY Manhattan",
-    "t": "Borough"
+    "t": "Borough",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2842,
@@ -509,7 +571,9 @@
     "s": "NY",
     "z": "14094",
     "j": "Niagara",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2844,
@@ -525,7 +589,9 @@
     "s": "NY",
     "z": "13501",
     "j": "Oneida",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2845,
@@ -541,7 +607,9 @@
     "s": "NY",
     "z": "13204",
     "j": "Onondaga",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2846,
@@ -557,7 +625,9 @@
     "s": "NY",
     "z": "14424",
     "j": "Ontario",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2847,
@@ -573,7 +643,9 @@
     "s": "NY",
     "z": "10924",
     "j": "Orange",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2848,
@@ -589,7 +661,9 @@
     "s": "NY",
     "z": "14411",
     "j": "Orleans",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2849,
@@ -605,7 +679,9 @@
     "s": "NY",
     "z": "13126",
     "j": "Oswego",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2850,
@@ -621,7 +697,9 @@
     "s": "NY",
     "z": "13326",
     "j": "Otsego",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2851,
@@ -637,7 +715,9 @@
     "s": "NY",
     "z": "10512",
     "j": "Putnam",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2852,
@@ -653,7 +733,9 @@
     "s": "NY",
     "z": "11375",
     "j": "Queens",
-    "t": "Borough"
+    "t": "Borough",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2853,
@@ -669,7 +751,9 @@
     "s": "NY",
     "z": "12180",
     "j": "Rensselaer",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2854,
@@ -685,7 +769,9 @@
     "s": "NY",
     "z": "10305",
     "j": "Richmond Staten Island",
-    "t": "Borough"
+    "t": "Borough",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2855,
@@ -701,7 +787,9 @@
     "s": "NY",
     "z": "10956",
     "j": "Rockland",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2856,
@@ -717,7 +805,9 @@
     "s": "NY",
     "z": "12020",
     "j": "Saratoga",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2857,
@@ -733,7 +823,9 @@
     "s": "NY",
     "z": "12303",
     "j": "Schenectady",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2858,
@@ -749,7 +841,9 @@
     "s": "NY",
     "z": "12157",
     "j": "Schoharie",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2859,
@@ -765,7 +859,9 @@
     "s": "NY",
     "z": "14891-9972",
     "j": "Schuyler",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2860,
@@ -781,7 +877,9 @@
     "s": "NY",
     "z": "13165",
     "j": "Seneca",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2861,
@@ -797,7 +895,9 @@
     "s": "NY",
     "z": "13617",
     "j": "St. Lawrence",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2862,
@@ -813,7 +913,9 @@
     "s": "NY",
     "z": "14810",
     "j": "Steuben",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2863,
@@ -829,7 +931,9 @@
     "s": "NY",
     "z": "11980",
     "j": "Suffolk",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2864,
@@ -845,7 +949,9 @@
     "s": "NY",
     "z": "12701-5192",
     "j": "Sullivan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2865,
@@ -861,7 +967,9 @@
     "s": "NY",
     "z": "13827",
     "j": "Tioga",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2866,
@@ -877,7 +985,9 @@
     "s": "NY",
     "z": "14850",
     "j": "Tompkins",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2867,
@@ -893,7 +1003,9 @@
     "s": "NY",
     "z": "12401",
     "j": "Ulster",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2868,
@@ -909,7 +1021,9 @@
     "s": "NY",
     "z": "12845",
     "j": "Warren",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2869,
@@ -925,7 +1039,9 @@
     "s": "NY",
     "z": "12828",
     "j": "Washington",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2870,
@@ -941,7 +1057,9 @@
     "s": "NY",
     "z": "14489",
     "j": "Wayne",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2871,
@@ -957,7 +1075,9 @@
     "s": "NY",
     "z": "10601",
     "j": "Westchester",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2872,
@@ -973,7 +1093,9 @@
     "s": "NY",
     "z": "14569",
     "j": "Wyoming",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 2873,
@@ -989,6 +1111,8 @@
     "s": "NY",
     "z": "14527",
     "j": "Yates",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

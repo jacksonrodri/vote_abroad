@@ -13,7 +13,9 @@
     "s": "DE",
     "z": "19903-0699",
     "j": "Kent",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 453,
@@ -29,7 +31,9 @@
     "s": "DE",
     "z": "19803-0079",
     "j": "New Castle",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 454,
@@ -45,6 +49,8 @@
     "s": "DE",
     "z": "19947-0457",
     "j": "Sussex",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

@@ -13,7 +13,9 @@
     "s": "WY",
     "z": "82070",
     "j": "Albany",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 5992,
@@ -29,7 +31,9 @@
     "s": "WY",
     "z": "82410-0031",
     "j": "Big Horn",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 5993,
@@ -45,7 +49,9 @@
     "s": "WY",
     "z": "82717-3010",
     "j": "Campbell",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 5994,
@@ -61,7 +67,9 @@
     "s": "WY",
     "z": "82301-0006",
     "j": "Carbon",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 5995,
@@ -77,7 +85,9 @@
     "s": "WY",
     "z": "82633-2448",
     "j": "Converse",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 5996,
@@ -93,7 +103,9 @@
     "s": "WY",
     "z": "82729-0037",
     "j": "Crook",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 5997,
@@ -109,7 +121,9 @@
     "s": "WY",
     "z": "82520-0090",
     "j": "Fremont",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 5998,
@@ -125,7 +139,9 @@
     "s": "WY",
     "z": "82240-0160",
     "j": "Goshen",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 5999,
@@ -141,7 +157,9 @@
     "s": "WY",
     "z": "82443-2783",
     "j": "Hot Springs",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 6000,
@@ -157,7 +175,9 @@
     "s": "WY",
     "z": "82834-1883",
     "j": "Johnson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 6001,
@@ -173,7 +193,9 @@
     "s": "WY",
     "z": "82003-0608",
     "j": "Laramie",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 6002,
@@ -189,7 +211,9 @@
     "s": "WY",
     "z": "83101",
     "j": "Lincoln",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 6003,
@@ -205,7 +229,9 @@
     "s": "WY",
     "z": "82601-0863",
     "j": "Natrona",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 6004,
@@ -221,7 +247,9 @@
     "s": "WY",
     "z": "82225-0420",
     "j": "Niobrara",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 6005,
@@ -237,7 +265,9 @@
     "s": "WY",
     "z": "82414-3589",
     "j": "Park",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 6006,
@@ -253,7 +283,9 @@
     "s": "WY",
     "z": "82201-0728",
     "j": "Platte",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 6007,
@@ -269,7 +301,9 @@
     "s": "WY",
     "z": "82801-4855",
     "j": "Sheridan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 6008,
@@ -285,7 +319,9 @@
     "s": "WY",
     "z": "82941-0250",
     "j": "Sublette",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 6009,
@@ -301,7 +337,9 @@
     "s": "WY",
     "z": "82935-0730",
     "j": "Sweetwater",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 6010,
@@ -317,7 +355,9 @@
     "s": "WY",
     "z": "83001-1727",
     "j": "Teton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 6011,
@@ -333,7 +373,9 @@
     "s": "WY",
     "z": "82930-0810",
     "j": "Uinta",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 6012,
@@ -349,7 +391,9 @@
     "s": "WY",
     "z": "82401-0260",
     "j": "Washakie",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 6013,
@@ -365,6 +409,8 @@
     "s": "WY",
     "z": "82701-2121",
     "j": "Weston",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

@@ -13,7 +13,9 @@
     "s": "AL",
     "z": "36068",
     "j": "Autauga",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 3,
@@ -29,7 +31,9 @@
     "s": "AL",
     "z": "36507",
     "j": "Baldwin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 4,
@@ -45,7 +49,9 @@
     "s": "AL",
     "z": "36027",
     "j": "Barbour",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 5,
@@ -61,7 +67,9 @@
     "s": "AL",
     "z": "35042",
     "j": "Bibb",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 6,
@@ -77,7 +85,9 @@
     "s": "AL",
     "z": "35121",
     "j": "Blount",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 7,
@@ -93,7 +103,9 @@
     "s": "AL",
     "z": "36089",
     "j": "Bullock",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 8,
@@ -109,7 +121,9 @@
     "s": "AL",
     "z": "36037",
     "j": "Butler",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 9,
@@ -125,7 +139,9 @@
     "s": "AL",
     "z": "36201",
     "j": "Calhoun",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 10,
@@ -141,7 +157,9 @@
     "s": "AL",
     "z": "36862",
     "j": "Chambers",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 11,
@@ -157,7 +175,9 @@
     "s": "AL",
     "z": "35960",
     "j": "Cherokee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 12,
@@ -173,7 +193,9 @@
     "s": "AL",
     "z": "35046",
     "j": "Chilton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 13,
@@ -189,7 +211,9 @@
     "s": "AL",
     "z": "36904",
     "j": "Choctaw",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 14,
@@ -205,7 +229,9 @@
     "s": "AL",
     "z": "36451",
     "j": "Clarke",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 15,
@@ -221,7 +247,9 @@
     "s": "AL",
     "z": "36251",
     "j": "Clay",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 16,
@@ -237,7 +265,9 @@
     "s": "AL",
     "z": "36264",
     "j": "Clebume",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 17,
@@ -253,7 +283,9 @@
     "s": "AL",
     "z": "36351",
     "j": "Coffee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 18,
@@ -269,7 +301,9 @@
     "s": "AL",
     "z": "35674",
     "j": "Colbert",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 19,
@@ -285,7 +319,9 @@
     "s": "AL",
     "z": "36401",
     "j": "Conecuh",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 20,
@@ -301,7 +337,9 @@
     "s": "AL",
     "z": "35136",
     "j": "Coosa",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 21,
@@ -317,7 +355,9 @@
     "s": "AL",
     "z": "36420",
     "j": "Covington",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 22,
@@ -333,7 +373,9 @@
     "s": "AL",
     "z": "36049",
     "j": "Crenshaw",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 23,
@@ -349,7 +391,9 @@
     "s": "AL",
     "z": "35055",
     "j": "Cullman",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 24,
@@ -365,7 +409,9 @@
     "s": "AL",
     "z": "36361",
     "j": "Dale",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 25,
@@ -381,7 +427,9 @@
     "s": "AL",
     "z": "36702",
     "j": "Dallas",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 26,
@@ -397,7 +445,9 @@
     "s": "AL",
     "z": "35968",
     "j": "DeKalb",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 27,
@@ -413,7 +463,9 @@
     "s": "AL",
     "z": "36092",
     "j": "Elmore",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 28,
@@ -429,7 +481,9 @@
     "s": "AL",
     "z": "36427",
     "j": "Escambia",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 29,
@@ -445,7 +499,9 @@
     "s": "AL",
     "z": "35901",
     "j": "Etowah",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 30,
@@ -461,7 +517,9 @@
     "s": "AL",
     "z": "35555",
     "j": "Fayette",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 31,
@@ -477,7 +535,9 @@
     "s": "AL",
     "z": "35653",
     "j": "Franklin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 32,
@@ -493,7 +553,9 @@
     "s": "AL",
     "z": "36340",
     "j": "Geneva",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 33,
@@ -509,7 +571,9 @@
     "s": "AL",
     "z": "35462",
     "j": "Greene",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 34,
@@ -525,7 +589,9 @@
     "s": "AL",
     "z": "36744",
     "j": "Hale",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 35,
@@ -541,7 +607,9 @@
     "s": "AL",
     "z": "36310",
     "j": "Henry",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 36,
@@ -557,7 +625,9 @@
     "s": "AL",
     "z": "36302",
     "j": "Houston",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 37,
@@ -573,7 +643,9 @@
     "s": "AL",
     "z": "35771",
     "j": "Jackson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 38,
@@ -589,7 +661,9 @@
     "s": "AL",
     "z": "35020",
     "j": "Jefferson - Bessemer",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 39,
@@ -605,7 +679,9 @@
     "s": "AL",
     "z": "35203-0102",
     "j": "Jefferson - Birmingham",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 40,
@@ -621,7 +697,9 @@
     "s": "AL",
     "z": "35592",
     "j": "Lamar",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 41,
@@ -637,7 +715,9 @@
     "s": "AL",
     "z": "35631",
     "j": "Lauderdale",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 42,
@@ -653,7 +733,9 @@
     "s": "AL",
     "z": "35650",
     "j": "Lawrence",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 43,
@@ -669,7 +751,9 @@
     "s": "AL",
     "z": "36803",
     "j": "Lee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 44,
@@ -685,7 +769,9 @@
     "s": "AL",
     "z": "35611",
     "j": "Limestone",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 45,
@@ -701,7 +787,9 @@
     "s": "AL",
     "z": "36040",
     "j": "Lowndes",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 46,
@@ -717,7 +805,9 @@
     "s": "AL",
     "z": "36083",
     "j": "Macon",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 47,
@@ -733,7 +823,9 @@
     "s": "AL",
     "z": "35801",
     "j": "Madison",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 48,
@@ -749,7 +841,9 @@
     "s": "AL",
     "z": "36748",
     "j": "Marengo",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 49,
@@ -765,7 +859,9 @@
     "s": "AL",
     "z": "35570",
     "j": "Marion",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 50,
@@ -781,7 +877,9 @@
     "s": "AL",
     "z": "35976",
     "j": "Marshall",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 51,
@@ -797,7 +895,9 @@
     "s": "AL",
     "z": "36644",
     "j": "Mobile",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 52,
@@ -813,7 +913,9 @@
     "s": "AL",
     "z": "36460",
     "j": "Monroe",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 53,
@@ -829,7 +931,9 @@
     "s": "AL",
     "z": "36102",
     "j": "Montgomery",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 54,
@@ -845,7 +949,9 @@
     "s": "AL",
     "z": "35602",
     "j": "Morgan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 55,
@@ -861,7 +967,9 @@
     "s": "AL",
     "z": "36756",
     "j": "Perry",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 56,
@@ -877,7 +985,9 @@
     "s": "AL",
     "z": "35447",
     "j": "Pickens",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 57,
@@ -893,7 +1003,9 @@
     "s": "AL",
     "z": "36081",
     "j": "Pike",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 58,
@@ -909,7 +1021,9 @@
     "s": "AL",
     "z": "36278",
     "j": "Randolph",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 59,
@@ -925,7 +1039,9 @@
     "s": "AL",
     "z": "36867",
     "j": "Russell",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 60,
@@ -941,7 +1057,9 @@
     "s": "AL",
     "z": "35051",
     "j": "Shelby",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 61,
@@ -957,7 +1075,9 @@
     "s": "AL",
     "z": "35953",
     "j": "St. Clair",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 62,
@@ -973,7 +1093,9 @@
     "s": "AL",
     "z": "35470",
     "j": "Sumter",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 63,
@@ -989,7 +1111,9 @@
     "s": "AL",
     "z": "35161",
     "j": "Talladega",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 64,
@@ -1005,7 +1129,9 @@
     "s": "AL",
     "z": "36853",
     "j": "Tallapoosa",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 65,
@@ -1021,7 +1147,9 @@
     "s": "AL",
     "z": "35401",
     "j": "Tuscaloosa",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 66,
@@ -1037,7 +1165,9 @@
     "s": "AL",
     "z": "35501",
     "j": "Walker",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 67,
@@ -1053,7 +1183,9 @@
     "s": "AL",
     "z": "36518",
     "j": "Washington",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 68,
@@ -1069,7 +1201,9 @@
     "s": "AL",
     "z": "36726",
     "j": "Wilcox",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
     "i": 69,
@@ -1085,6 +1219,8 @@
     "s": "AL",
     "z": "35553",
     "j": "Winston",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]
