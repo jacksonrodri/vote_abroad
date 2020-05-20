@@ -1,6 +1,6 @@
 [
   {
-    "i": 546,
+    "i": 2762,
     "n": "Bernalillo County Clerk",
     "f": "505-468-1293",
     "p": "505-468-1291",
@@ -13,10 +13,12 @@
     "s": "NM",
     "z": "87102",
     "j": "Bernalillo",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1101,
+    "i": 2763,
     "n": "Catron County Clerk",
     "f": "575-336-4535",
     "p": "575-533-6400",
@@ -29,10 +31,12 @@
     "s": "NM",
     "z": "87830",
     "j": "Catron",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1180,
+    "i": 2764,
     "n": "Chaves County Clerk",
     "f": "575-624-6523",
     "p": "575-624-6614",
@@ -45,10 +49,12 @@
     "s": "NM",
     "z": "88202",
     "j": "Chaves",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1268,
+    "i": 2765,
     "n": "Cibola County Clerk",
     "f": "505-285-2562",
     "p": "505-285-2535",
@@ -61,10 +67,12 @@
     "s": "NM",
     "z": "87020",
     "j": "Cibola",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1436,
+    "i": 2766,
     "n": "Colfax County Clerk",
     "f": "575-445-4031",
     "p": "575-445-5551",
@@ -77,10 +85,12 @@
     "s": "NM",
     "z": "87740",
     "j": "Colfax",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1625,
+    "i": 2767,
     "n": "Curry County Clerk",
     "f": "575-763-4232",
     "p": "575-763-5591",
@@ -93,10 +103,12 @@
     "s": "NM",
     "z": "88101",
     "j": "Curry",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1764,
+    "i": 2768,
     "n": "De Baca County Clerk",
     "f": "575-355-2441",
     "p": "575-355-2601",
@@ -109,10 +121,12 @@
     "s": "NM",
     "z": "88119",
     "j": "De Baca",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1886,
+    "i": 2769,
     "n": "Dona Ana County Bureau of Elections",
     "f": "575-527-9857",
     "p": "575-647-7421",
@@ -125,10 +139,12 @@
     "s": "NM",
     "z": "88007",
     "j": "Dona Ana",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2037,
+    "i": 2770,
     "n": "Eddy County Clerk",
     "f": "575-234-1793",
     "p": "575-885-3383",
@@ -141,10 +157,12 @@
     "s": "NM",
     "z": "88220",
     "j": "Eddy",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2669,
+    "i": 2771,
     "n": "Grant County Clerk",
     "f": "575-574-0076",
     "p": "575-574-0042",
@@ -157,10 +175,12 @@
     "s": "NM",
     "z": "88062",
     "j": "Grant",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2805,
+    "i": 2772,
     "n": "Guadalupe County Clerk",
     "f": "575-472-4791",
     "p": "575-472-3791",
@@ -173,10 +193,12 @@
     "s": "NM",
     "z": "88435",
     "j": "Guadalupe",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2919,
+    "i": 2773,
     "n": "Harding County Clerk",
     "f": "575-673-2922",
     "p": "575-673-2301",
@@ -189,10 +211,12 @@
     "s": "NM",
     "z": "87733",
     "j": "Harding",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3071,
+    "i": 2774,
     "n": "Hidalgo County Clerk",
     "f": "575-542-3193",
     "p": "575-542-9213",
@@ -205,10 +229,12 @@
     "s": "NM",
     "z": "88045",
     "j": "Hidalgo",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3743,
+    "i": 2775,
     "n": "Lea County Clerk",
     "f": "575-396-3293",
     "p": "575-396-8619",
@@ -221,10 +247,12 @@
     "s": "NM",
     "z": "88260",
     "j": "Lea",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3860,
+    "i": 2776,
     "n": "Lincoln County Clerk",
     "f": "575-648-2576",
     "p": "575-648-2394",
@@ -237,10 +265,12 @@
     "s": "NM",
     "z": "88301",
     "j": "Lincoln",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3974,
+    "i": 2777,
     "n": "Los Alamos County Clerk",
     "f": "505-662-8008",
     "p": "505-662-8010",
@@ -253,10 +283,12 @@
     "s": "NM",
     "z": "87544",
     "j": "Los Alamos",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4011,
+    "i": 2778,
     "n": "Luna County Clerk",
     "f": "575-543-6617",
     "p": "575-546-0491",
@@ -269,10 +301,12 @@
     "s": "NM",
     "z": "88031-1838",
     "j": "Luna",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4299,
+    "i": 2779,
     "n": "McKinley County Clerk",
     "f": "505-726-8117",
     "p": "505-722-4469",
@@ -285,10 +319,12 @@
     "s": "NM",
     "z": "87301-1268",
     "j": "McKinley",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4607,
+    "i": 2780,
     "n": "Mora County Clerk",
     "f": "575-387-9023",
     "p": "575-387-2448",
@@ -301,15 +337,17 @@
     "s": "NM",
     "z": "87732",
     "j": "Mora",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5083,
+    "i": 2781,
     "n": "Otero County Clerk",
     "f": "575-443-2922",
     "p": "575-437-4942",
-    "e": "fedballots2018@co.otero.nm.us",
-    "d": "2019-08-16T13:42:35",
+    "e": "oteroclerk@co.otero.nm.us",
+    "d": "2020-03-16T13:56:26",
     "a1": "1104 N. White Sands Blvd., Suite C",
     "a2": "",
     "a3": "",
@@ -317,10 +355,12 @@
     "s": "NM",
     "z": "88310",
     "j": "Otero",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5515,
+    "i": 2782,
     "n": "Quay County Clerk",
     "f": "575-461-0513",
     "p": "575-461-0510",
@@ -333,10 +373,12 @@
     "s": "NM",
     "z": "88401",
     "j": "Quay",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5679,
+    "i": 2783,
     "n": "Rio Arriba County Clerk",
     "f": "575-588-7418",
     "p": "575-588-7724",
@@ -349,10 +391,12 @@
     "s": "NM",
     "z": "87575",
     "j": "Rio Arriba",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5763,
+    "i": 2784,
     "n": "Roosevelt County Clerk",
     "f": "575-356-3560",
     "p": "575-356-8562",
@@ -365,10 +409,12 @@
     "s": "NM",
     "z": "88130",
     "j": "Roosevelt",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5878,
+    "i": 2785,
     "n": "San Juan County Clerk",
     "f": "505-334-3635",
     "p": "505-334-9471",
@@ -381,10 +427,12 @@
     "s": "NM",
     "z": "87410",
     "j": "San Juan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5884,
+    "i": 2786,
     "n": "San Miguel County Clerk",
     "f": "505-454-1799",
     "p": "505-425-9331",
@@ -397,10 +445,12 @@
     "s": "NM",
     "z": "87701",
     "j": "San Miguel",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5898,
+    "i": 2787,
     "n": "Sandoval County Clerk",
     "f": "505-867-7638",
     "p": "505-867-7577",
@@ -413,10 +463,12 @@
     "s": "NM",
     "z": "87004",
     "j": "Sandoval",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5914,
+    "i": 2788,
     "n": "Santa Fe County Clerk",
     "f": "505-995-2767",
     "p": "505-986-6280",
@@ -429,10 +481,12 @@
     "s": "NM",
     "z": "87504",
     "j": "Santa Fe",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6119,
+    "i": 2789,
     "n": "Sierra County Clerk",
     "f": "575-894-2516",
     "p": "575-894-2840",
@@ -445,10 +499,12 @@
     "s": "NM",
     "z": "87901",
     "j": "Sierra",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6155,
+    "i": 2790,
     "n": "Socorro County Clerk",
     "f": "575-835-1043",
     "p": "575-835-0423",
@@ -461,10 +517,12 @@
     "s": "NM",
     "z": "87801",
     "j": "Socorro",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6521,
+    "i": 2791,
     "n": "Taos County Clerk",
     "f": "575-737-6409",
     "p": "575-737-6380",
@@ -477,10 +535,12 @@
     "s": "NM",
     "z": "87571",
     "j": "Taos",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6628,
+    "i": 2792,
     "n": "Torrance County Clerk",
     "f": "505-384-4080",
     "p": "505-544-4368",
@@ -493,10 +553,12 @@
     "s": "NM",
     "z": "87016",
     "j": "Torrance",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6726,
+    "i": 2793,
     "n": "Union County Clerk",
     "f": "575-374-9591",
     "p": "575-374-9491",
@@ -509,10 +571,12 @@
     "s": "NM",
     "z": "88415",
     "j": "Union",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6763,
+    "i": 2794,
     "n": "Valencia County Clerk",
     "f": "505-866-2015",
     "p": "505-866-2083",
@@ -525,6 +589,8 @@
     "s": "NM",
     "z": "87031-9900",
     "j": "Valencia",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

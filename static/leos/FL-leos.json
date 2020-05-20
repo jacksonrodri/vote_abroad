@@ -1,6 +1,6 @@
 [
   {
-    "i": 55,
+    "i": 455,
     "n": "Alachua Supervisor of Elections",
     "f": "352-374-5264",
     "p": "352-374-5252",
@@ -13,10 +13,12 @@
     "s": "FL",
     "z": "32601",
     "j": "Alachua",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 327,
+    "i": 456,
     "n": "Baker Supervisor of Elections",
     "f": "904-259-2799",
     "p": "904-259-6339",
@@ -29,15 +31,17 @@
     "s": "FL",
     "z": "32063",
     "j": "Baker",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 410,
+    "i": 457,
     "n": "Bay County Supervisor of Elections",
-    "f": "850-784-6141",
+    "f": "850-767-3450",
     "p": "850-784-6100",
     "e": "absenteereg@bayvotes.org",
-    "d": "2019-08-28T15:02:03",
+    "d": "2020-03-13T12:39:25",
     "a1": "830 West 11th Street",
     "a2": "",
     "a3": "",
@@ -45,10 +49,12 @@
     "s": "FL",
     "z": "32401",
     "j": "Bay",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 715,
+    "i": 458,
     "n": "Bradford Supervisor of Elections",
     "f": "904-966-6165",
     "p": "904-966-6266",
@@ -61,10 +67,12 @@
     "s": "FL",
     "z": "32091",
     "j": "Bradford",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 748,
+    "i": 459,
     "n": "Brevard Supervisor of Elections",
     "f": "321-637-5460",
     "p": "321-633-2127",
@@ -77,10 +85,12 @@
     "s": "FL",
     "z": "32941",
     "j": "Brevard",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 815,
+    "i": 460,
     "n": "Broward Supervisor of Elections",
     "f": "954-357-7070",
     "p": "954-357-7050",
@@ -93,10 +103,12 @@
     "s": "FL",
     "z": "33302",
     "j": "Broward",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 952,
+    "i": 461,
     "n": "Calhoun Supervisor of Elections",
     "f": "850-674-2449",
     "p": "850-674-8568",
@@ -109,10 +121,12 @@
     "s": "FL",
     "z": "32424",
     "j": "Calhoun",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1158,
+    "i": 462,
     "n": "Charlotte Supervisor of Elections",
     "f": "941-833-5434",
     "p": "941-833-5400",
@@ -125,10 +139,12 @@
     "s": "FL",
     "z": "33950",
     "j": "Charlotte",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1271,
+    "i": 463,
     "n": "Citrus Supervisor of Elections",
     "f": "352-564-7121",
     "p": "352-564-7120",
@@ -141,10 +157,12 @@
     "s": "FL",
     "z": "34460-1870",
     "j": "Citrus",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1313,
+    "i": 464,
     "n": "Clay Supervisor of Elections",
     "f": "904-284-0935",
     "p": "904-269-6350",
@@ -157,10 +175,12 @@
     "s": "FL",
     "z": "32043",
     "j": "Clay",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1445,
+    "i": 465,
     "n": "Collier Supervisor of Elections",
     "f": "239-774-9468",
     "p": "239-252-8683",
@@ -173,10 +193,12 @@
     "s": "FL",
     "z": "34104",
     "j": "Collier",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1459,
+    "i": 466,
     "n": "Columbia Supervisor of Elections",
     "f": "386-755-7233",
     "p": "386-758-1026",
@@ -189,10 +211,12 @@
     "s": "FL",
     "z": "32055",
     "j": "Columbia",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1777,
+    "i": 468,
     "n": "DeSoto Supervisor of Elections",
     "f": "863-993-4875",
     "p": "863-993-4871",
@@ -205,10 +229,12 @@
     "s": "FL",
     "z": "34265",
     "j": "DeSoto",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1875,
+    "i": 469,
     "n": "Dixie Supervisor of Elections",
     "f": "352-498-1218",
     "p": "352-498-1216",
@@ -221,10 +247,12 @@
     "s": "FL",
     "z": "32628",
     "j": "Dixie",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1964,
+    "i": 470,
     "n": "Duval Supervisor of Elections",
     "f": "904-301-3867",
     "p": "904-630-1414",
@@ -237,10 +265,12 @@
     "s": "FL",
     "z": "32202",
     "j": "Duval",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2164,
+    "i": 471,
     "n": "Escambia Supervisor of Elections",
     "f": "850-595-3914",
     "p": "850-595-3900",
@@ -253,10 +283,12 @@
     "s": "FL",
     "z": "32591",
     "j": "Escambia",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2296,
+    "i": 472,
     "n": "Flagler Supervisor of Elections",
     "f": "386-313-4171",
     "p": "386-313-4170",
@@ -269,10 +301,12 @@
     "s": "FL",
     "z": "32110",
     "j": "Flagler",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2374,
+    "i": 473,
     "n": "Franklin Supervisor of Elections",
     "f": "850-653-9092",
     "p": "850-653-9520",
@@ -285,10 +319,12 @@
     "s": "FL",
     "z": "32320",
     "j": "Franklin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2466,
+    "i": 474,
     "n": "Gadsden Supervisor of Elections",
     "f": "850-627-6144",
     "p": "850-627-9910",
@@ -301,10 +337,12 @@
     "s": "FL",
     "z": "32351",
     "j": "Gadsden",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2549,
+    "i": 475,
     "n": "Gilchrist Supervisor of Elections",
     "f": "352-463-3196",
     "p": "352-463-3194",
@@ -317,10 +355,12 @@
     "s": "FL",
     "z": "32693",
     "j": "Gilchrist",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2573,
+    "i": 476,
     "n": "Glades Supervisor of Elections",
     "f": "863-946-0313",
     "p": "863-946-6005",
@@ -333,10 +373,12 @@
     "s": "FL",
     "z": "33471",
     "j": "Glades",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2813,
+    "i": 477,
     "n": "Gulf Supervisor of Elections",
     "f": "850-229-8975",
     "p": "850-229-6117",
@@ -349,10 +391,12 @@
     "s": "FL",
     "z": "32456",
     "j": "Gulf",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2847,
+    "i": 478,
     "n": "Hamilton Supervisor of Elections",
     "f": "386-792-3205",
     "p": "386-792-1426",
@@ -365,10 +409,12 @@
     "s": "FL",
     "z": "32052",
     "j": "Hamilton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2910,
+    "i": 479,
     "n": "Hardee Supervisor of Elections",
     "f": "863-773-6813",
     "p": "863-773-6061",
@@ -381,10 +427,12 @@
     "s": "FL",
     "z": "33873",
     "j": "Hardee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3040,
+    "i": 480,
     "n": "Hendry Supervisor of Elections",
     "f": "863-675-7803",
     "p": "863-675-5230",
@@ -397,10 +445,12 @@
     "s": "FL",
     "z": "33975",
     "j": "Hendry",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3059,
+    "i": 481,
     "n": "Hernando Supervisor of Elections",
     "f": "352-754-4425",
     "p": "352-754-4125",
@@ -413,10 +463,12 @@
     "s": "FL",
     "z": "34601",
     "j": "Hernando",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3083,
+    "i": 482,
     "n": "Highlands Supervisor of Elections",
     "f": "863-402-6657",
     "p": "863-402-6655",
@@ -429,10 +481,12 @@
     "s": "FL",
     "z": "33871",
     "j": "Highlands",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3095,
+    "i": 483,
     "n": "Hillsborough Supervisor of Elections",
     "f": "813-744-5843",
     "p": "813-744-5900",
@@ -445,10 +499,12 @@
     "s": "FL",
     "z": "33619",
     "j": "Hillsborough",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3133,
+    "i": 484,
     "n": "Holmes Supervisor of Elections",
     "f": "850-547-4168",
     "p": "850-547-1107",
@@ -461,10 +517,12 @@
     "s": "FL",
     "z": "32425",
     "j": "Holmes",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3260,
+    "i": 485,
     "n": "Indian River Supervisor of Elections",
     "f": "772-770-5367",
     "p": "772-226-3440",
@@ -477,10 +535,12 @@
     "s": "FL",
     "z": "32967",
     "j": "Indian River",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3323,
+    "i": 486,
     "n": "Jackson Supervisor of Elections",
     "f": "850-482-9102",
     "p": "850-482-9652",
@@ -493,10 +553,12 @@
     "s": "FL",
     "z": "32447",
     "j": "Jackson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3375,
+    "i": 487,
     "n": "Jefferson Supervisor of Elections",
     "f": "850-997-6958",
     "p": "850-997-3348",
@@ -509,10 +571,12 @@
     "s": "FL",
     "z": "32344",
     "j": "Jefferson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3621,
+    "i": 488,
     "n": "Lafayette Supervisor of Elections",
     "f": "386-294-2164",
     "p": "386-294-1261",
@@ -525,10 +589,12 @@
     "s": "FL",
     "z": "32066",
     "j": "Lafayette",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3634,
+    "i": 489,
     "n": "Lake Supervisor of Elections",
     "f": "352-253-1422",
     "p": "352-343-9734",
@@ -541,10 +607,12 @@
     "s": "FL",
     "z": "32778",
     "j": "Lake",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3757,
+    "i": 490,
     "n": "Lee Supervisor of Elections",
     "f": "239-533-6322",
     "p": "239-533-8683",
@@ -557,10 +625,12 @@
     "s": "FL",
     "z": "33902",
     "j": "Lee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3794,
+    "i": 491,
     "n": "Leon Supervisor of Elections",
     "f": "850-606-8601",
     "p": "850-606-8683",
@@ -573,10 +643,12 @@
     "s": "FL",
     "z": "32314-8600",
     "j": "Leon",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3810,
+    "i": 492,
     "n": "Levy Supervisor of Elections",
     "f": "352-486-5146",
     "p": "352-486-5163",
@@ -589,10 +661,12 @@
     "s": "FL",
     "z": "32621",
     "j": "Levy",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3825,
+    "i": 493,
     "n": "Liberty Supervisor of Elections",
     "f": "850-643-5648",
     "p": "850-643-5226",
@@ -605,10 +679,12 @@
     "s": "FL",
     "z": "32321",
     "j": "Liberty",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4067,
+    "i": 494,
     "n": "Madison Supervisor of Elections",
     "f": "850-973-3780",
     "p": "850-973-6507",
@@ -621,10 +697,12 @@
     "s": "FL",
     "z": "32340",
     "j": "Madison",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4105,
+    "i": 495,
     "n": "Manatee Supervisor of Elections",
     "f": "941-741-3820",
     "p": "941-741-3823",
@@ -637,10 +715,12 @@
     "s": "FL",
     "z": "34206",
     "j": "Manatee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4167,
+    "i": 496,
     "n": "Marion Supervisor of Elections",
     "f": "352-620-3286",
     "p": "352-620-3290",
@@ -653,10 +733,12 @@
     "s": "FL",
     "z": "34478",
     "j": "Marion",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4231,
+    "i": 497,
     "n": "Martin Supervisor of Elections",
     "f": "772-288-5765",
     "p": "772-288-5637",
@@ -669,10 +751,12 @@
     "s": "FL",
     "z": "34995",
     "j": "Martin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4414,
+    "i": 498,
     "n": "Miami-Dade Supervisor of Elections",
     "f": "305-499-8401",
     "p": "305-499-8444",
@@ -685,10 +769,12 @@
     "s": "FL",
     "z": "33152-1250",
     "j": "Miami-Dade",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4530,
+    "i": 499,
     "n": "Monroe Supervisor of Elections",
     "f": "305-292-3406",
     "p": "305-292-3416",
@@ -701,10 +787,12 @@
     "s": "FL",
     "z": "33040",
     "j": "Monroe",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4716,
+    "i": 500,
     "n": "Nassau Supervisor of Elections",
     "f": "904-432-1400",
     "p": "904-491-7500",
@@ -717,10 +805,12 @@
     "s": "FL",
     "z": "32097",
     "j": "Nassau",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4987,
+    "i": 501,
     "n": "Okaloosa Supervisor of Elections",
     "f": "850-689-5644",
     "p": "850-689-5600",
@@ -733,10 +823,12 @@
     "s": "FL",
     "z": "32536",
     "j": "Okaloosa",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4989,
+    "i": 502,
     "n": "Okeechobee Supervisor of Elections",
     "f": "863-763-0152",
     "p": "863-763-4014",
@@ -749,10 +841,12 @@
     "s": "FL",
     "z": "34972",
     "j": "Okeechobee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5030,
+    "i": 503,
     "n": "Orange Supervisor of Elections",
     "f": "407-254-6577",
     "p": "407-836-2070",
@@ -765,10 +859,12 @@
     "s": "FL",
     "z": "32856-2003",
     "j": "Orange",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5065,
+    "i": 504,
     "n": "Osceola Supervisor of Elections",
     "f": "407-742-6179",
     "p": "407-742-6000",
@@ -781,10 +877,12 @@
     "s": "FL",
     "z": "34744",
     "j": "Osceola",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5129,
+    "i": 505,
     "n": "Palm Beach Supervisor of Elections",
     "f": "561-656-6287",
     "p": "561-656-6200",
@@ -797,10 +895,12 @@
     "s": "FL",
     "z": "33415",
     "j": "Palm Beach",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5159,
+    "i": 506,
     "n": "Pasco Supervisor of Elections",
     "f": "352-521-4127",
     "p": "800-851-8754",
@@ -813,10 +913,12 @@
     "s": "FL",
     "z": "33526-0300",
     "j": "Pasco",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5297,
+    "i": 507,
     "n": "Pinellas Supervisor of Elections",
     "f": "727-464-7636",
     "p": "727-464-8683",
@@ -829,26 +931,30 @@
     "s": "FL",
     "z": "33773",
     "j": "Pinellas",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5372,
+    "i": 508,
     "n": "Polk Supervisor of Elections",
-    "f": "(863) 845-2718",
-    "p": "(863) 534-5888",
+    "f": "863-845-2719",
+    "p": "863-534-5888",
     "e": "votebymail@polkelections.com",
-    "d": "2020-02-06T03:32:38",
-    "a1": "PO Box 1460",
+    "d": "2019-08-27T14:50:51",
+    "a1": "250 South Broadway Avenue",
     "a2": "",
     "a3": "",
     "c": "Bartow",
     "s": "FL",
     "z": "33831",
     "j": "Polk",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5504,
+    "i": 509,
     "n": "Putnam Supervisor of Elections",
     "f": "386-329-0455",
     "p": "386-329-0224",
@@ -861,10 +967,12 @@
     "s": "FL",
     "z": "32177",
     "j": "Putnam",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5915,
+    "i": 510,
     "n": "Santa Rosa Supervisor of Elections",
     "f": "850-983-1829",
     "p": "850-983-1900",
@@ -877,10 +985,12 @@
     "s": "FL",
     "z": "32570",
     "j": "Santa Rosa",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5916,
+    "i": 511,
     "n": "Sarasota Supervisor of Elections",
     "f": "941-861-8617",
     "p": "941-861-8618",
@@ -893,26 +1003,30 @@
     "s": "FL",
     "z": "34230",
     "j": "Sarasota",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5994,
+    "i": 512,
     "n": "Seminole Supervisor of Elections",
-    "f": "(407) 708-7705",
-    "p": "(407) 585-8683",
-    "e": "elections@voteseminole.org",
-    "d": "2019-12-31T07:20:58",
-    "a1": "1500 E Airport Blvd.",
+    "f": "407-708-7705",
+    "p": "407-585-8683",
+    "e": "Elections@VoteSeminole.org",
+    "d": "2019-08-13T15:35:04",
+    "a1": "1500 East Airport Blvd.",
     "a2": "",
     "a3": "",
     "c": "Sanford",
     "s": "FL",
     "z": "32773",
     "j": "Seminole",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6291,
+    "i": 513,
     "n": "St. Johns Supervisor of Elections",
     "f": "904-823-2249",
     "p": "904-823-2238",
@@ -925,10 +1039,12 @@
     "s": "FL",
     "z": "32095",
     "j": "St. Johns",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6303,
+    "i": 514,
     "n": "St. Lucie Supervisor of Elections",
     "f": "772-462-1439",
     "p": "772-462-1500",
@@ -941,10 +1057,12 @@
     "s": "FL",
     "z": "34947",
     "j": "St. Lucie",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6457,
+    "i": 515,
     "n": "Sumter Supervisor of Elections",
     "f": "352-569-1541",
     "p": "352-569-1540",
@@ -957,10 +1075,12 @@
     "s": "FL",
     "z": "34785",
     "j": "Sumter",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6488,
+    "i": 516,
     "n": "Suwannee Supervisor of Elections",
     "f": "386-364-5185",
     "p": "386-362-2616",
@@ -973,10 +1093,12 @@
     "s": "FL",
     "z": "32064",
     "j": "Suwannee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6529,
+    "i": 517,
     "n": "Taylor Supervisor of Elections",
     "f": "850-838-3516",
     "p": "850-838-3515",
@@ -989,10 +1111,12 @@
     "s": "FL",
     "z": "32347",
     "j": "Taylor",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6716,
+    "i": 518,
     "n": "Union Supervisor of Elections",
     "f": "386-496-1535",
     "p": "386-496-2236",
@@ -1005,10 +1129,12 @@
     "s": "FL",
     "z": "32054",
     "j": "Union",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6823,
+    "i": 519,
     "n": "Volusia Supervisor of Elections",
     "f": "386-943-7073",
     "p": "386-736-5930",
@@ -1021,10 +1147,12 @@
     "s": "FL",
     "z": "32720",
     "j": "Volusia",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6841,
+    "i": 520,
     "n": "Wakulla Supervisor of Elections",
     "f": "850-926-8104",
     "p": "850-926-7575",
@@ -1037,10 +1165,12 @@
     "s": "FL",
     "z": "32326",
     "j": "Wakulla",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6866,
+    "i": 521,
     "n": "Walton Supervisor of Elections",
     "f": "850-892-8113",
     "p": "850-892-8112",
@@ -1053,10 +1183,12 @@
     "s": "FL",
     "z": "32433",
     "j": "Walton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6921,
+    "i": 522,
     "n": "Washington Supervisor of Elections",
     "f": "850-638-6238",
     "p": "850-638-6230",
@@ -1069,6 +1201,8 @@
     "s": "FL",
     "z": "32428",
     "j": "Washington",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

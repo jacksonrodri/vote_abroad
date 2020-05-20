@@ -1,6 +1,6 @@
 [
   {
-    "i": 5,
+    "i": 1257,
     "n": "Acadia Parish Registrar of Voters",
     "f": "(337) 788-3571",
     "p": "(337) 788-8841",
@@ -13,10 +13,12 @@
     "s": "LA",
     "z": "70526-4363",
     "j": "Acadia",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 111,
+    "i": 1258,
     "n": "Allen Parish Registrar of Voters",
     "f": "(337) 639-4691",
     "p": "(337) 639-4966",
@@ -29,10 +31,12 @@
     "s": "LA",
     "z": "70655-0150",
     "j": "Allen",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 240,
+    "i": 1259,
     "n": "Ascension Parish Registrar of Voters",
     "f": "(225) 621-5783",
     "p": "(225) 621-5780",
@@ -45,10 +49,12 @@
     "s": "LA",
     "z": "70737-3631",
     "j": "Ascension",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 259,
+    "i": 1260,
     "n": "Assumption Parish Registrar of Voters",
     "f": "(985) 369-2976",
     "p": "(985) 369-7347",
@@ -61,10 +67,12 @@
     "s": "LA",
     "z": "70390-0578",
     "j": "Assumption",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 314,
+    "i": 1261,
     "n": "Avoyelles Parish Registrar of Voters",
     "f": "(318) 253-0359",
     "p": "(318) 253-7129",
@@ -77,10 +85,12 @@
     "s": "LA",
     "z": "71351-2409",
     "j": "Avoyelles",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 437,
+    "i": 1262,
     "n": "Beauregard Parish Registrar of Voters",
     "f": "(337) 463-7986",
     "p": "(337) 463-7955",
@@ -93,10 +103,12 @@
     "s": "LA",
     "z": "70634-0952",
     "j": "Beauregard",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 568,
+    "i": 1263,
     "n": "Bienville Parish Registrar of Voters",
     "f": "(318) 263-4101",
     "p": "(318) 263-7407",
@@ -109,10 +121,12 @@
     "s": "LA",
     "z": "71001-0697",
     "j": "Bienville",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 683,
+    "i": 1264,
     "n": "Bossier Parish Registrar of Voters",
     "f": "(318) 965-3760",
     "p": "(318) 965-2301",
@@ -125,10 +139,12 @@
     "s": "LA",
     "z": "71006-0635",
     "j": "Bossier",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 927,
+    "i": 1265,
     "n": "Caddo Parish Registrar of Voters",
     "f": "(318) 226-6969",
     "p": "(318) 226-6891",
@@ -141,10 +157,12 @@
     "s": "LA",
     "z": "71163-1253",
     "j": "Caddo",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 936,
+    "i": 1266,
     "n": "Calcasieu Parish Registrar of Voters",
     "f": "(337) 437-3389",
     "p": "(337) 721-4000",
@@ -157,10 +175,12 @@
     "s": "LA",
     "z": "70601-5250",
     "j": "Calcasieu",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 938,
+    "i": 1267,
     "n": "Caldwell Parish Registrar of Voters",
     "f": "(318) 649-7320",
     "p": "(318) 649-7364",
@@ -173,10 +193,12 @@
     "s": "LA",
     "z": "71418-1107",
     "j": "Caldwell",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 982,
+    "i": 1268,
     "n": "Cameron Parish Registrar of Voters",
     "f": "(337) 775-8014",
     "p": "(337) 775-5493",
@@ -189,10 +211,12 @@
     "s": "LA",
     "z": "70631",
     "j": "Cameron",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1094,
+    "i": 1269,
     "n": "Catahoula Parish Registrar of Voters",
     "f": "(318) 744-2010",
     "p": "(318) 744-5745",
@@ -205,10 +229,12 @@
     "s": "LA",
     "z": "71340-0215",
     "j": "Catahoula",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1274,
+    "i": 1270,
     "n": "Claiborne Parish Registrar of Voters",
     "f": "(318) 927-3345",
     "p": "(318) 927-3332",
@@ -221,10 +247,12 @@
     "s": "LA",
     "z": "71040-3929",
     "j": "Claiborne",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1491,
+    "i": 1271,
     "n": "Concordia Parish Registrar of Voters",
     "f": "(318) 336-9906",
     "p": "(318) 336-7770",
@@ -237,10 +265,12 @@
     "s": "LA",
     "z": "71373-3021",
     "j": "Concordia",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1769,
+    "i": 1272,
     "n": "DeSoto Parish Registrar of Voters",
     "f": "(318) 872-1153",
     "p": "(318) 872-1149",
@@ -253,10 +283,12 @@
     "s": "LA",
     "z": "71052-2046",
     "j": "DeSoto",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1978,
+    "i": 1273,
     "n": "E Baton Rouge Parish Registrar of Voters",
     "f": "(225) 389-5340",
     "p": "(225) 389-3940",
@@ -269,10 +301,12 @@
     "s": "LA",
     "z": "70802-5860",
     "j": "East Baton Rouge",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1982,
+    "i": 1274,
     "n": "E Carroll Parish Registrar of Voters",
     "f": "(318) 559-5110",
     "p": "(318) 559-2015",
@@ -285,10 +319,12 @@
     "s": "LA",
     "z": "71254-0708",
     "j": "East Carroll",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1984,
+    "i": 1275,
     "n": "E Feliciana Parish Registrar of Voters",
     "f": "(225) 683-9464",
     "p": "(225) 683-3105",
@@ -301,10 +337,12 @@
     "s": "LA",
     "z": "70722-0488",
     "j": "East Feliciana",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2184,
+    "i": 1276,
     "n": "Evangeline Parish Registrar of Voters",
     "f": "(337) 363-5530",
     "p": "(337) 363-5538",
@@ -317,10 +355,12 @@
     "s": "LA",
     "z": "70586-4463",
     "j": "Evangeline",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2382,
+    "i": 1277,
     "n": "Franklin Parish Registrar of Voters",
     "f": "(318) 435-4416",
     "p": "(318) 435-4489",
@@ -333,10 +373,12 @@
     "s": "LA",
     "z": "71295-2750",
     "j": "Franklin",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2665,
+    "i": 1278,
     "n": "Grant Parish Registrar of Voters",
     "f": "(318) 627-9940",
     "p": "(318) 627-9938",
@@ -349,10 +391,12 @@
     "s": "LA",
     "z": "71417-1828",
     "j": "Grant",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3249,
+    "i": 1279,
     "n": "Iberia Parish Registrar of Voters",
     "f": "(337) 369-4409",
     "p": "(337) 369-4407",
@@ -365,10 +409,12 @@
     "s": "LA",
     "z": "70560-4543",
     "j": "Iberia",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3250,
+    "i": 1280,
     "n": "Iberville Parish Registrar of Voters",
     "f": "(225) 687-5235",
     "p": "(225) 687-5201",
@@ -381,10 +427,12 @@
     "s": "LA",
     "z": "70765-0554",
     "j": "Iberville",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3330,
+    "i": 1281,
     "n": "Jackson Parish Registrar of Voters",
     "f": "(318) 259-5671",
     "p": "(318) 259-2486",
@@ -397,10 +445,12 @@
     "s": "LA",
     "z": "71251-3400",
     "j": "Jackson",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3401,
+    "i": 1283,
     "n": "Jefferson Davis Parish Registrar of Voters",
     "f": "337-824-0821",
     "p": "(337) 824-0834",
@@ -413,10 +463,12 @@
     "s": "LA",
     "z": "70546-5361",
     "j": "Jefferson Davis",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3382,
+    "i": 1282,
     "n": "Jefferson Parish Registrar of Voters",
     "f": "(504) 736-6197",
     "p": "(504) 736-6191",
@@ -429,10 +481,12 @@
     "s": "LA",
     "z": "70181-0494",
     "j": "Jefferson",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3622,
+    "i": 1284,
     "n": "Lafayette Parish Registrar of Voters",
     "f": "(337) 291-7143",
     "p": "(337) 291-7140",
@@ -445,10 +499,12 @@
     "s": "LA",
     "z": "70501-6885",
     "j": "Lafayette",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3629,
+    "i": 1285,
     "n": "Lafourche Parish Registrar of Voters",
     "f": "(985) 447-3277",
     "p": "(985) 447-3256",
@@ -461,10 +517,12 @@
     "s": "LA",
     "z": "70301-3105",
     "j": "Lafourche",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3606,
+    "i": 1286,
     "n": "LaSalle Parish Registrar of Voters",
     "f": "(318) 992-7309",
     "p": "(318) 992-2254",
@@ -477,10 +535,12 @@
     "s": "LA",
     "z": "71342-2439",
     "j": "LaSalle",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3853,
+    "i": 1287,
     "n": "Lincoln Parish Registrar of Voters",
     "f": "(318) 251-5126",
     "p": "(318) 251-5110",
@@ -493,10 +553,12 @@
     "s": "LA",
     "z": "71270-4463",
     "j": "Lincoln",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3931,
+    "i": 1288,
     "n": "Livingston Parish Registrar of Voters",
     "f": "(225) 686-3055",
     "p": "(225) 686-3054",
@@ -509,10 +571,12 @@
     "s": "LA",
     "z": "70754-0968",
     "j": "Livingston",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4074,
+    "i": 1289,
     "n": "Madison Parish Registrar of Voters",
     "f": "(318) 574-2193",
     "p": "(318) 574-2193",
@@ -525,10 +589,12 @@
     "s": "LA",
     "z": "71282-3892",
     "j": "Madison",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4609,
+    "i": 1290,
     "n": "Morehouse Parish Registrar of Voters",
     "f": "(318) 281-0929",
     "p": "(318) 281-1434",
@@ -541,10 +607,12 @@
     "s": "LA",
     "z": "71220-3815",
     "j": "Morehouse",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4718,
+    "i": 1291,
     "n": "Natchitoches Parish Registrar of Voters",
     "f": "(318) 357-2212",
     "p": "(318) 357-2211",
@@ -557,10 +625,12 @@
     "s": "LA",
     "z": "71458-0677",
     "j": "Natchitoches",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5054,
+    "i": 1292,
     "n": "Orleans Parish Registrar of Voters",
     "f": "(504) 658-8315",
     "p": "(504) 658-8300",
@@ -573,10 +643,12 @@
     "s": "LA",
     "z": "70112-2127",
     "j": "Orleans",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5103,
+    "i": 1293,
     "n": "Ouachita Parish Registrar of Voters",
     "f": "(318) 327-1337",
     "p": "(318) 327-1436",
@@ -589,10 +661,12 @@
     "s": "LA",
     "z": "71201-7722",
     "j": "Ouachita",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5330,
+    "i": 1294,
     "n": "Plaquemines Parish Registrar of Voters",
     "f": "(504) 934-3625",
     "p": "(504) 934-3620",
@@ -605,10 +679,12 @@
     "s": "LA",
     "z": "70083-0989",
     "j": "Plaquemines",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5368,
+    "i": 1295,
     "n": "Pointe Coupee Parish Registrar of Voters",
     "f": "(225) 638-5545",
     "p": "(225) 638-5537",
@@ -621,10 +697,12 @@
     "s": "LA",
     "z": "70760-3661",
     "j": "Pointe Coupee",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5558,
+    "i": 1296,
     "n": "Rapides Parish Registrar of Voters",
     "f": "(318) 473-6601",
     "p": "(318) 473-6770",
@@ -637,10 +715,12 @@
     "s": "LA",
     "z": "71301-8060",
     "j": "Rapides",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5579,
+    "i": 1297,
     "n": "Red River Parish Registrar of Voters",
     "f": "(318) 932-5086",
     "p": "(318) 932-5027",
@@ -653,10 +733,12 @@
     "s": "LA",
     "z": "71019-0432",
     "j": "Red River",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5636,
+    "i": 1298,
     "n": "Richland Parish Registrar of Voters",
     "f": "(318) 728-7028",
     "p": "(318) 728-3582",
@@ -669,10 +751,12 @@
     "s": "LA",
     "z": "71269-0368",
     "j": "Richland",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5835,
+    "i": 1299,
     "n": "Sabine Parish Registrar of Voters",
     "f": "(318) 256-5944",
     "p": "(318) 256-3697",
@@ -685,10 +769,12 @@
     "s": "LA",
     "z": "71449-3098",
     "j": "Sabine",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6258,
+    "i": 1300,
     "n": "St Bernard Parish Registrar of Voters",
     "f": "(504) 277-0470",
     "p": "(504) 278-4232",
@@ -701,10 +787,12 @@
     "s": "LA",
     "z": "70043-1696",
     "j": "St Bernard",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6259,
+    "i": 1301,
     "n": "St Charles Parish Registrar of Voters",
     "f": "(985) 783-5121",
     "p": "(985) 783-5120",
@@ -717,10 +805,12 @@
     "s": "LA",
     "z": "70057-0315",
     "j": "St Charles",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6260,
+    "i": 1302,
     "n": "St Helena Parish Registrar of Voters",
     "f": "(225) 222-3040",
     "p": "(225) 222-4440",
@@ -733,10 +823,12 @@
     "s": "LA",
     "z": "70441-0543",
     "j": "St Helena",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6261,
+    "i": 1303,
     "n": "St James Parish Registrar of Voters",
     "f": "(225) 562-2331",
     "p": "(225) 562-2403",
@@ -749,10 +841,12 @@
     "s": "LA",
     "z": "70723-0179",
     "j": "St James",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6262,
+    "i": 1304,
     "n": "St John the Baptist Registrar of Voters",
     "f": "(985) 359-0335",
     "p": "(985) 359-0175",
@@ -765,10 +859,12 @@
     "s": "LA",
     "z": "70068-3345",
     "j": "St John the Baptist",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6264,
+    "i": 1305,
     "n": "St Landry Parish Registrar of Voters",
     "f": "(337) 948-0575",
     "p": "(337) 948-0572",
@@ -781,10 +877,12 @@
     "s": "LA",
     "z": "70571-0818",
     "j": "St Landry",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6265,
+    "i": 1306,
     "n": "St Martin Parish Registrar of Voters",
     "f": "(337) 394-2204",
     "p": "(337) 394-2204",
@@ -797,10 +895,12 @@
     "s": "LA",
     "z": "70582-4549",
     "j": "St Martin",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6266,
+    "i": 1307,
     "n": "St Mary Parish Registrar of Voters",
     "f": "(337) 829-9901",
     "p": "(337) 828-4100 x360",
@@ -813,10 +913,12 @@
     "s": "LA",
     "z": "70538-6144",
     "j": "St Mary",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6268,
+    "i": 1308,
     "n": "St Tammany Parish Registrar of Voters",
     "f": "(985) 809-5508",
     "p": "(985) 809-5500",
@@ -829,10 +931,12 @@
     "s": "LA",
     "z": "70433",
     "j": "St Tammany",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6520,
+    "i": 1309,
     "n": "Tangipahoa Parish Registrar of Voters",
     "f": "(985) 748-3839",
     "p": "(985) 748-3215",
@@ -845,10 +949,12 @@
     "s": "LA",
     "z": "70422-0895",
     "j": "Tangipahoa",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6549,
+    "i": 1310,
     "n": "Tensas Parish Registrar of Voters",
     "f": "(318) 766-3933",
     "p": "(318) 766-3931",
@@ -861,10 +967,12 @@
     "s": "LA",
     "z": "71366-0183",
     "j": "Tensas",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6550,
+    "i": 1311,
     "n": "Terrebonne Parish Registrar of Voters",
     "f": "(985) 873-6834",
     "p": "(985) 873-6533",
@@ -877,10 +985,12 @@
     "s": "LA",
     "z": "70360-3407",
     "j": "Terrebonne",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6722,
+    "i": 1312,
     "n": "Union Parish Registrar of Voters",
     "f": "(318) 368-8660",
     "p": "(318) 368-8660",
@@ -893,10 +1003,12 @@
     "s": "LA",
     "z": "71241-0235",
     "j": "Union",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6787,
+    "i": 1313,
     "n": "Vermilion Parish Registrar of Voters",
     "f": "(337) 898-4326",
     "p": "(337) 898-4324",
@@ -909,10 +1021,12 @@
     "s": "LA",
     "z": "70510-5170",
     "j": "Vermilion",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6792,
+    "i": 1314,
     "n": "Vernon Parish Registrar of Voters",
     "f": "(337) 238-0634",
     "p": "(337) 239-3690",
@@ -925,10 +1039,12 @@
     "s": "LA",
     "z": "71496-0626",
     "j": "Vernon",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6824,
+    "i": 1317,
     "n": "W Baton Rouge Parish Registrar of Voters",
     "f": "(225) 387-3222",
     "p": "(225) 336-2421",
@@ -941,10 +1057,12 @@
     "s": "LA",
     "z": "70767-0031",
     "j": "West Baton Rouge",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7091,
+    "i": 1318,
     "n": "W Carroll Parish Registrar of Voters",
     "f": "(318) 428-9253",
     "p": "(318) 428-2381",
@@ -957,10 +1075,12 @@
     "s": "LA",
     "z": "71263-0071",
     "j": "West Carroll",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7093,
+    "i": 1319,
     "n": "W Feliciana Parish Registrar of Voters",
     "f": "(225) 635-6161",
     "p": "(225) 635-6161",
@@ -973,10 +1093,12 @@
     "s": "LA",
     "z": "70775-2490",
     "j": "West Feliciana",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6929,
+    "i": 1315,
     "n": "Washington Parish Registrar of Voters",
     "f": "(985) 839-7851",
     "p": "(985) 839-7850",
@@ -989,10 +1111,12 @@
     "s": "LA",
     "z": "70438-1719",
     "j": "Washington",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7048,
+    "i": 1316,
     "n": "Webster Parish Registrar of Voters",
     "f": "(318) 377-9917",
     "p": "(318) 377-9272",
@@ -1005,10 +1129,12 @@
     "s": "LA",
     "z": "71058-0674",
     "j": "Webster",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7295,
+    "i": 1320,
     "n": "Winn Parish Registrar of Voters",
     "f": "(318) 628-6142",
     "p": "(318) 628-6133",
@@ -1021,6 +1147,8 @@
     "s": "LA",
     "z": "71483-3238",
     "j": "Winn",
-    "t": "Parish"
+    "t": "Parish",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

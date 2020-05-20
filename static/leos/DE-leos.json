@@ -1,6 +1,6 @@
 [
   {
-    "i": 3504,
+    "i": 452,
     "n": "Department of Elections - Kent County Office",
     "f": "(302) 739-4515",
     "p": "(302) 739-4498",
@@ -13,10 +13,12 @@
     "s": "DE",
     "z": "19903-0699",
     "j": "Kent",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4767,
+    "i": 453,
     "n": "Department of Elections - New Castle County Office",
     "f": "(302) 577-6545",
     "p": "(302) 577-3464",
@@ -29,10 +31,12 @@
     "s": "DE",
     "z": "19803-0079",
     "j": "New Castle",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6478,
+    "i": 454,
     "n": "Department of Elections - Sussex County Office",
     "f": "(302) 856-5082",
     "p": "(302) 856-5367",
@@ -45,6 +49,8 @@
     "s": "DE",
     "z": "19947-0457",
     "j": "Sussex",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

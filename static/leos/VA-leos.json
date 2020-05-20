@@ -1,6 +1,6 @@
 [
   {
-    "i": 6,
+    "i": 3672,
     "n": "Accomack General Registrar",
     "f": "(757) 787-4823",
     "p": "(757) 787-2935",
@@ -13,10 +13,12 @@
     "s": "VA",
     "z": "23301-0097",
     "j": "Accomack",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 69,
+    "i": 3673,
     "n": "Albemarle General Registrar",
     "f": "(434) 972-4178",
     "p": "(434) 972-4173",
@@ -29,15 +31,17 @@
     "s": "VA",
     "z": "22902",
     "j": "Albemarle",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 83,
+    "i": 3674,
     "n": "Alexandria General Registrar",
     "f": "(703) 838-6449",
     "p": "(703) 746-4050",
-    "e": "anna.leider@alexandriava.gov",
-    "d": "2015-09-03T10:01:30",
+    "e": "voteabsentee@alexandriava.gov",
+    "d": "2020-03-17T07:41:24",
     "a1": "132 N Royal St, Ste 100",
     "a2": "",
     "a3": "",
@@ -45,10 +49,12 @@
     "s": "VA",
     "z": "22314-3246",
     "j": "Alexandria",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 106,
+    "i": 3675,
     "n": "Allegheny General Registrar",
     "f": "(540) 965-1692",
     "p": "(540) 965-1690",
@@ -61,10 +67,12 @@
     "s": "VA",
     "z": "24426-1294",
     "j": "Alleghany",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 150,
+    "i": 3676,
     "n": "Amelia General Registrar",
     "f": "(804) 561-3490",
     "p": "(804) 561-3460",
@@ -77,10 +85,12 @@
     "s": "VA",
     "z": "23002-0481",
     "j": "Amelia",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 153,
+    "i": 3677,
     "n": "Amherst General Registrar",
     "f": "(434) 946-9345",
     "p": "(434) 946-9315",
@@ -93,10 +103,12 @@
     "s": "VA",
     "z": "24521-0550",
     "j": "Amherst",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 199,
+    "i": 3678,
     "n": "Appomattox General Registrar",
     "f": "(434) 352-4409",
     "p": "(434) 352-5302",
@@ -109,10 +121,12 @@
     "s": "VA",
     "z": "24522-0008",
     "j": "Appomattox",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 223,
+    "i": 3679,
     "n": "Arlington General Registrar",
     "f": "(703) 228-3659",
     "p": "(703) 228-3456",
@@ -125,10 +139,12 @@
     "s": "VA",
     "z": "22201-5445",
     "j": "Arlington",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 295,
+    "i": 3680,
     "n": "Augusta General Registrar",
     "f": "(540) 245-5037",
     "p": "(540) 245-5656",
@@ -141,10 +157,12 @@
     "s": "VA",
     "z": "24482-0590",
     "j": "Augusta",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 405,
+    "i": 3681,
     "n": "Bath General Registrar",
     "f": "(540) 839-7277",
     "p": "(540) 839-7266",
@@ -157,10 +175,12 @@
     "s": "VA",
     "z": "24484-0157",
     "j": "Bath",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 459,
+    "i": 3683,
     "n": "Bedford General Registrar",
     "f": "(540) 586-8358",
     "p": "(540) 586-7649",
@@ -173,10 +193,12 @@
     "s": "VA",
     "z": "24523-1927",
     "j": "Bedford County",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 623,
+    "i": 3684,
     "n": "Bland General Registrar",
     "f": "(276) 688-3552",
     "p": "(276) 688-4441",
@@ -189,10 +211,12 @@
     "s": "VA",
     "z": "24315-0535",
     "j": "Bland",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 686,
+    "i": 3685,
     "n": "Botetourt General Registrar",
     "f": "(540) 473-8657",
     "p": "(540) 928-2120",
@@ -205,10 +229,12 @@
     "s": "VA",
     "z": "24090-0062",
     "j": "Botetourt",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 778,
+    "i": 3686,
     "n": "Bristol General Registrar",
     "f": "(276) 645-7331",
     "p": "(276) 645-7318",
@@ -221,10 +247,12 @@
     "s": "VA",
     "z": "24201-4327",
     "j": "Bristol",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 838,
+    "i": 3687,
     "n": "Brunswick General Registrar",
     "f": "(434) 848-9276",
     "p": "(434) 848-4414",
@@ -237,10 +265,12 @@
     "s": "VA",
     "z": "23868-1825",
     "j": "Brunswick",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 846,
+    "i": 3688,
     "n": "Buchanan General Registrar",
     "f": "(276) 935-4320",
     "p": "(276) 935-6534",
@@ -253,10 +283,12 @@
     "s": "VA",
     "z": "24614-0975",
     "j": "Buchanan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 851,
+    "i": 3689,
     "n": "Buckingham General Registrar",
     "f": "(434) 969-2060",
     "p": "(434) 969-4304",
@@ -269,10 +301,12 @@
     "s": "VA",
     "z": "23921-0222",
     "j": "Buckingham",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 856,
+    "i": 3690,
     "n": "Buena Vista General Registrar",
     "f": "(540) 261-8618",
     "p": "(540) 261-8605",
@@ -285,10 +319,12 @@
     "s": "VA",
     "z": "24416-3133",
     "j": "Buena Vista",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 992,
+    "i": 3691,
     "n": "Campbell General Registrar",
     "f": "(434) 332-9689",
     "p": "(434) 332-9579",
@@ -301,10 +337,12 @@
     "s": "VA",
     "z": "24588-0103",
     "j": "Campbell",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1029,
+    "i": 3692,
     "n": "Caroline General Registrar",
     "f": "(804) 633-0362",
     "p": "(804) 633-9083",
@@ -317,10 +355,12 @@
     "s": "VA",
     "z": "22427-0304",
     "j": "Caroline",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1043,
+    "i": 3693,
     "n": "Carroll General Registrar",
     "f": "(276) 730-3040",
     "p": "(276) 730-3035",
@@ -333,10 +373,12 @@
     "s": "VA",
     "z": "24343-1463",
     "j": "Carroll",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1147,
+    "i": 3694,
     "n": "Charles City General Registrar",
     "f": "(804) 829-6823",
     "p": "(804) 652-4606",
@@ -349,10 +391,12 @@
     "s": "VA",
     "z": "23030-0146",
     "j": "Charles City",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1159,
+    "i": 3695,
     "n": "Charlotte General Registrar",
     "f": "(434) 542-4168",
     "p": "(434) 542-5856",
@@ -365,10 +409,12 @@
     "s": "VA",
     "z": "22902-1219",
     "j": "Charlotte",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1162,
+    "i": 3696,
     "n": "Charlottesville General Registrar",
     "f": "(434) 970-3249",
     "p": "(434) 970-3250",
@@ -381,10 +427,12 @@
     "s": "VA",
     "z": "22902",
     "j": "Charlottesville",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1205,
+    "i": 3697,
     "n": "Chesapeake General Registrar",
     "f": "(757) 547-5402",
     "p": "(757) 277-9797",
@@ -397,10 +445,12 @@
     "s": "VA",
     "z": "23322-5566",
     "j": "Chesapeake",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1221,
+    "i": 3698,
     "n": "Chesterfield General Registrar",
     "f": "(804) 751-0822",
     "p": "(804) 748-1471",
@@ -413,10 +463,12 @@
     "s": "VA",
     "z": "23832-9125",
     "j": "Chesterfield",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1305,
+    "i": 3699,
     "n": "Clarke General Registrar",
     "f": "(540) 955-5169",
     "p": "(540) 955-5168",
@@ -429,10 +481,12 @@
     "s": "VA",
     "z": "22611-1387",
     "j": "Clarke",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1453,
+    "i": 3701,
     "n": "Colonial Heights General Registrar",
     "f": "(804) 520-9209",
     "p": "(804) 520-9277",
@@ -445,10 +499,12 @@
     "s": "VA",
     "z": "23834-9001",
     "j": "Colonial Heights",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1548,
+    "i": 3702,
     "n": "Covington General Registrar",
     "f": "(540) 965-6362",
     "p": "(540) 965-6380",
@@ -461,10 +517,12 @@
     "s": "VA",
     "z": "24426-1647",
     "j": "Covington",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1555,
+    "i": 3703,
     "n": "Craig General Registrar",
     "f": "(540) 864-5551",
     "p": "(540) 864-6190",
@@ -477,10 +535,12 @@
     "s": "VA",
     "z": "24127-0008",
     "j": "Craig",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1609,
+    "i": 3704,
     "n": "Culpeper General Registrar",
     "f": "(540) 825-8454",
     "p": "(540) 825-0652",
@@ -493,10 +553,12 @@
     "s": "VA",
     "z": "22701-3047",
     "j": "Culpeper",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1617,
+    "i": 3705,
     "n": "Cumberland General Registrar",
     "f": "(804) 492-3571",
     "p": "(804) 492-4504",
@@ -509,10 +571,12 @@
     "s": "VA",
     "z": "23040-0125",
     "j": "Cumberland",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1729,
+    "i": 3706,
     "n": "Danville General Registrar",
     "f": "(434) 797-8987",
     "p": "(434) 799-6560",
@@ -525,10 +589,12 @@
     "s": "VA",
     "z": "24541-1329",
     "j": "Danville",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1862,
+    "i": 3707,
     "n": "Dickenson County Office of Voter Registration",
     "f": "(276) 302-0124",
     "p": "(276) 926-1620",
@@ -541,10 +607,12 @@
     "s": "VA",
     "z": "24228-1306",
     "j": "Dickenson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1873,
+    "i": 3708,
     "n": "Dinwiddie General Registrar",
     "f": "(804) 469-4544",
     "p": "(804) 469-4500 x2113",
@@ -557,10 +625,12 @@
     "s": "VA",
     "z": "23841-0365",
     "j": "Dinwiddie",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2141,
+    "i": 3709,
     "n": "Emporia General Registrar",
     "f": "(434) 634-0003",
     "p": "(434) 634-9533",
@@ -573,10 +643,12 @@
     "s": "VA",
     "z": "23847-1092",
     "j": "Emporia",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2170,
+    "i": 3710,
     "n": "Essex General Registrar",
     "f": "(804) 443-4157",
     "p": "(804) 443-4611",
@@ -589,10 +661,12 @@
     "s": "VA",
     "z": "22560-1561",
     "j": "Essex",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2212,
+    "i": 3711,
     "n": "Fairfax City General Registrar",
     "f": "(703) 591-8364",
     "p": "(703) 385-7890",
@@ -605,10 +679,12 @@
     "s": "VA",
     "z": "22030-3600",
     "j": "Fairfax City",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2213,
+    "i": 3712,
     "n": "Fairfax General Registrar",
     "f": "(703) 324-2205",
     "p": "(703) 222-0776",
@@ -621,10 +697,12 @@
     "s": "VA",
     "z": "22038-8061",
     "j": "Fairfax County",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2234,
+    "i": 3713,
     "n": "Falls Church General Registrar",
     "f": "(703) 248-5204",
     "p": "(703) 248-5085",
@@ -637,10 +715,12 @@
     "s": "VA",
     "z": "22046-3301",
     "j": "Falls Church",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2250,
+    "i": 3714,
     "n": "Fauquier General Registrar",
     "f": "(540) 422-8291",
     "p": "(540) 422-8290",
@@ -653,10 +733,12 @@
     "s": "VA",
     "z": "20186-3011",
     "j": "Fauquier",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2315,
+    "i": 3715,
     "n": "Floyd General Registrar",
     "f": "(540) 745-9390",
     "p": "(540) 745-9350",
@@ -669,10 +751,12 @@
     "s": "VA",
     "z": "24091-2101",
     "j": "Floyd",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2318,
+    "i": 3716,
     "n": "Fluvanna General Registrar",
     "f": "(434) 589-6383",
     "p": "(434) 589-3593",
@@ -685,10 +769,12 @@
     "s": "VA",
     "z": "22963-0044",
     "j": "Fluvanna",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2398,
+    "i": 3717,
     "n": "Franklin City General Registrar",
     "f": "(757) 562-8779",
     "p": "(757) 562-8545",
@@ -701,10 +787,12 @@
     "s": "VA",
     "z": "23837-0190",
     "j": "Franklin City",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2399,
+    "i": 3718,
     "n": "Franklin General Registrar",
     "f": "(540) 483-6619",
     "p": "(540) 483-3025",
@@ -717,15 +805,17 @@
     "s": "VA",
     "z": "24151-1290",
     "j": "Franklin County",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2413,
+    "i": 3719,
     "n": "Frederick General Registrar",
     "f": "(540) 665-8976",
     "p": "(540) 665-5660",
-    "e": "fcvotes@co.frederick.va.us",
-    "d": "2019-10-02T20:32:02",
+    "e": "rich.venskoske@fcva.us",
+    "d": "2019-07-31T13:09:45",
     "a1": "107 N Kent St, Ste 102",
     "a2": "",
     "a3": "",
@@ -733,10 +823,12 @@
     "s": "VA",
     "z": "22601-5039",
     "j": "Frederick",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2414,
+    "i": 3720,
     "n": "Fredericksburg General Registrar",
     "f": "(540) 373-8381",
     "p": "(540) 372-1030",
@@ -749,10 +841,12 @@
     "s": "VA",
     "z": "22401",
     "j": "Fredericksburg",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2471,
+    "i": 3721,
     "n": "Galax General Registrar",
     "f": "(276) 236-2889",
     "p": "(276) 236-7509",
@@ -765,10 +859,12 @@
     "s": "VA",
     "z": "24333-1045",
     "j": "Galax",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2552,
+    "i": 3722,
     "n": "Giles General Registrar",
     "f": "(540) 921-3176",
     "p": "(540) 921-2802",
@@ -781,10 +877,12 @@
     "s": "VA",
     "z": "24134-1611",
     "j": "Giles",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2594,
+    "i": 3723,
     "n": "Gloucester General Registrar",
     "f": "(804) 824-2465",
     "p": "(804) 693-3659",
@@ -797,10 +895,12 @@
     "s": "VA",
     "z": "23061-0208",
     "j": "Gloucester",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2607,
+    "i": 3724,
     "n": "Goochland General Registrar",
     "f": "(804) 556-6323",
     "p": "(804) 556-5803",
@@ -813,10 +913,12 @@
     "s": "VA",
     "z": "23063-1013",
     "j": "Goochland",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2713,
+    "i": 3725,
     "n": "Grayson General Registrar",
     "f": "(276) 773-8042",
     "p": "(276) 773-2842",
@@ -829,10 +931,12 @@
     "s": "VA",
     "z": "24348-0449",
     "j": "Grayson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2747,
+    "i": 3726,
     "n": "Greene General Registrar",
     "f": "(434) 985-2369",
     "p": "(434) 985-5213",
@@ -845,10 +949,12 @@
     "s": "VA",
     "z": "22973-0341",
     "j": "Greene",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2760,
+    "i": 3727,
     "n": "Greensville General Registrar",
     "f": "(434) 348-4257",
     "p": "(434) 348-4228",
@@ -861,10 +967,12 @@
     "s": "VA",
     "z": "23847-1092",
     "j": "Greensville",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2834,
+    "i": 3728,
     "n": "Halifax General Registrar",
     "f": "(434) 476-1045",
     "p": "(434) 476-3322",
@@ -877,10 +985,12 @@
     "s": "VA",
     "z": "24558-0400",
     "j": "Halifax",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2874,
+    "i": 3729,
     "n": "Hampton General Registrar",
     "f": "(757) 727-6084",
     "p": "(757) 727-6218",
@@ -893,10 +1003,12 @@
     "s": "VA",
     "z": "23666-4348",
     "j": "Hampton",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2898,
+    "i": 3730,
     "n": "Hanover General Registrar",
     "f": "(804) 365-6078",
     "p": "(804) 365-6080",
@@ -909,10 +1021,12 @@
     "s": "VA",
     "z": "23069-0419",
     "j": "Hanover",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2957,
+    "i": 3731,
     "n": "Harrisonburg General Registrar",
     "f": "(540) 432-7784",
     "p": "(540) 432-7707",
@@ -925,10 +1039,12 @@
     "s": "VA",
     "z": "22801-7531",
     "j": "Harrisonburg",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3043,
+    "i": 3732,
     "n": "Henrico General Registrar",
     "f": "(804) 501-5081",
     "p": "(804) 501-4347",
@@ -941,10 +1057,12 @@
     "s": "VA",
     "z": "23273-0775",
     "j": "Henrico",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3054,
+    "i": 3733,
     "n": "Henry General Registrar",
     "f": "(276) 638-8278",
     "p": "(276) 638-5108",
@@ -957,10 +1075,12 @@
     "s": "VA",
     "z": "24078-0007",
     "j": "Henry",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3076,
+    "i": 3734,
     "n": "Highland General Registrar",
     "f": "(540) 468-2012",
     "p": "(540) 468-2013",
@@ -973,10 +1093,12 @@
     "s": "VA",
     "z": "24465-0386",
     "j": "Highland",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3158,
+    "i": 3735,
     "n": "Hopewell General Registrar",
     "f": "(804) 452-5828",
     "p": "(804) 541-2232",
@@ -989,10 +1111,12 @@
     "s": "VA",
     "z": "23860-2845",
     "j": "Hopewell",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3312,
+    "i": 3736,
     "n": "Isle of Wight General Registrar",
     "f": "(757) 357-5699",
     "p": "(757) 365-6230",
@@ -1005,10 +1129,12 @@
     "s": "VA",
     "z": "23397-0077",
     "j": "Isle of Wight",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3353,
+    "i": 3737,
     "n": "James City County Voter Registration and Elections",
     "f": "(757) 259-4945",
     "p": "(757) 259-4949",
@@ -1021,10 +1147,12 @@
     "s": "VA",
     "z": "23188",
     "j": "James City",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3537,
+    "i": 3738,
     "n": "King and Queen General Registrar",
     "f": "(804) 785-5792",
     "p": "(804) 785-5980",
@@ -1037,10 +1165,12 @@
     "s": "VA",
     "z": "23085-0056",
     "j": "King and Queen",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3535,
+    "i": 3739,
     "n": "King George General Registrar",
     "f": "(540) 775-4852",
     "p": "(540) 775-9186",
@@ -1053,10 +1183,12 @@
     "s": "VA",
     "z": "22485-1359",
     "j": "King George",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3536,
+    "i": 3740,
     "n": "King William General Registrar",
     "f": "(804) 769-4920",
     "p": "(804) 769-4952",
@@ -1069,10 +1201,12 @@
     "s": "VA",
     "z": "23086",
     "j": "King William",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3686,
+    "i": 3741,
     "n": "Lancaster General Registrar",
     "f": "(804) 462-5228",
     "p": "(804) 462-5277",
@@ -1084,11 +1218,13 @@
     "c": "Lancaster",
     "s": "VA",
     "z": "22503-0159",
-    "j": "Lancaster",
-    "t": "County"
+    "j": "Lancaster"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3766,
+    "i": 3742,
     "n": "Lee General Registrar",
     "f": "(276) 346-0119",
     "p": "(276) 346-7780",
@@ -1101,10 +1237,12 @@
     "s": "VA",
     "z": "24263-0370",
     "j": "Lee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3821,
+    "i": 3743,
     "n": "Lexington General Registrar",
     "f": "(540) 463-5310",
     "p": "(540) 462-3706",
@@ -1117,10 +1255,12 @@
     "s": "VA",
     "z": "24450-0922",
     "j": "Lexington",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3979,
+    "i": 3744,
     "n": "Loudoun General Registrar",
     "f": "(703) 777-0622",
     "p": "(703) 777-0380",
@@ -1133,10 +1273,12 @@
     "s": "VA",
     "z": "20175-8916",
     "j": "Loudoun",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3981,
+    "i": 3745,
     "n": "Louisa General Registrar",
     "f": "(540) 967-3492",
     "p": "(540) 967-3427",
@@ -1149,10 +1291,12 @@
     "s": "VA",
     "z": "23093-0220",
     "j": "Louisa",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4013,
+    "i": 3746,
     "n": "Lunenburg General Registrar",
     "f": "(434) 696-3952",
     "p": "(434) 696-3071",
@@ -1165,10 +1309,12 @@
     "s": "VA",
     "z": "23952-2223",
     "j": "Lunenburg",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4024,
+    "i": 3747,
     "n": "Lynchburg General Registrar",
     "f": "(434) 947-2798",
     "p": "(434) 477-5999",
@@ -1181,10 +1327,12 @@
     "s": "VA",
     "z": "24506-0036",
     "j": "Lynchburg",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4083,
+    "i": 3748,
     "n": "Madison General Registrar",
     "f": "(540) 948-7825",
     "p": "(540) 948-6533",
@@ -1197,10 +1345,12 @@
     "s": "VA",
     "z": "22727-0267",
     "j": "Madison",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4103,
+    "i": 3749,
     "n": "Manassas General Registrar",
     "f": "(703) 257-0080",
     "p": "(703) 257-8230",
@@ -1213,10 +1363,12 @@
     "s": "VA",
     "z": "20110-5403",
     "j": "Manassas",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4104,
+    "i": 3750,
     "n": "Manassas Park General Registrar",
     "f": "(703) 335-9042",
     "p": "(703) 335-8806",
@@ -1229,10 +1381,12 @@
     "s": "VA",
     "z": "20111-5270",
     "j": "Manassas Park",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4238,
+    "i": 3751,
     "n": "Martinsville General Registrar",
     "f": "(276) 403-5258",
     "p": "(276) 403-5122",
@@ -1245,10 +1399,12 @@
     "s": "VA",
     "z": "24114-1323",
     "j": "Martinsville",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4259,
+    "i": 3752,
     "n": "Mathews General Registrar",
     "f": "(804) 725-5786",
     "p": "(804) 725-3200",
@@ -1261,10 +1417,12 @@
     "s": "VA",
     "z": "23109-0328",
     "j": "Mathews",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4329,
+    "i": 3753,
     "n": "Mecklenburg General Registrar",
     "f": "(434) 738-6104",
     "p": "(434) 738-6191 x4313",
@@ -1277,10 +1435,12 @@
     "s": "VA",
     "z": "23917-0436",
     "j": "Mecklenburg",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4425,
+    "i": 3754,
     "n": "Middlesex General Registrar",
     "f": "(804) 758-3950",
     "p": "(804) 758-4420",
@@ -1293,10 +1453,12 @@
     "s": "VA",
     "z": "23149-0358",
     "j": "Middlesex",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4584,
+    "i": 3755,
     "n": "Montgomery General Registrar",
     "f": "(540) 381-6811",
     "p": "(540) 382-5741",
@@ -1309,10 +1471,12 @@
     "s": "VA",
     "z": "24073",
     "j": "Montgomery",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4737,
+    "i": 3756,
     "n": "Nelson General Registrar",
     "f": "(434) 263-8601",
     "p": "(434) 263-7190",
@@ -1325,10 +1489,12 @@
     "s": "VA",
     "z": "22949-0292",
     "j": "Nelson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4789,
+    "i": 3757,
     "n": "New Kent General Registrar",
     "f": "(804) 966-8536",
     "p": "(804) 966-9699",
@@ -1341,10 +1507,12 @@
     "s": "VA",
     "z": "23124-0128",
     "j": "New Kent",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4823,
+    "i": 3758,
     "n": "Newport News General Registrar",
     "f": "(757) 926-3653",
     "p": "(757) 926-8683",
@@ -1357,10 +1525,12 @@
     "s": "VA",
     "z": "23607-4305",
     "j": "Newport News",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4860,
+    "i": 3759,
     "n": "Norfolk General Registrar",
     "f": "(757) 664-4685",
     "p": "(757) 664-4353",
@@ -1373,10 +1543,12 @@
     "s": "VA",
     "z": "23501-1531",
     "j": "Norfolk",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4894,
+    "i": 3760,
     "n": "Northampton General Registrar",
     "f": "(757) 678-0453",
     "p": "(757) 678-0480",
@@ -1389,10 +1561,12 @@
     "s": "VA",
     "z": "23347-0510",
     "j": "Northampton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4904,
+    "i": 3761,
     "n": "Northumberland General Registrar",
     "f": "(804) 580-2075",
     "p": "(804) 580-4655",
@@ -1405,10 +1579,12 @@
     "s": "VA",
     "z": "22473-0084",
     "j": "Northumberland",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4910,
+    "i": 3762,
     "n": "Norton General Registrar",
     "f": "(276) 679-0754",
     "p": "(276) 679-1162",
@@ -1421,10 +1597,12 @@
     "s": "VA",
     "z": "24273-0225",
     "j": "Norton",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4931,
+    "i": 3763,
     "n": "Nottoway General Registrar",
     "f": "(434) 767-2414",
     "p": "(434) 645-8148",
@@ -1437,10 +1615,12 @@
     "s": "VA",
     "z": "23955-0024",
     "j": "Nottoway",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5034,
+    "i": 3764,
     "n": "Orange General Registrar",
     "f": "(540) 672-4872",
     "p": "(540) 672-5262",
@@ -1453,10 +1633,12 @@
     "s": "VA",
     "z": "22960-1410",
     "j": "Orange",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5128,
+    "i": 3765,
     "n": "Page General Registrar",
     "f": "(540) 743-1988",
     "p": "(540) 743-3986",
@@ -1469,10 +1651,12 @@
     "s": "VA",
     "z": "22835-1262",
     "j": "Page",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5164,
+    "i": 3766,
     "n": "Patrick General Registrar",
     "f": "(276) 694-5488",
     "p": "(276) 694-7206",
@@ -1485,10 +1669,12 @@
     "s": "VA",
     "z": "24171-0635",
     "j": "Patrick",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5239,
+    "i": 3767,
     "n": "Petersburg General Registrar",
     "f": "(804) 733-8080",
     "p": "(804) 733-8071",
@@ -1501,10 +1687,12 @@
     "s": "VA",
     "z": "23804-1031",
     "j": "Petersburg",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5314,
+    "i": 3768,
     "n": "Pittsylvania General Registrar",
     "f": "(434) 432-7973",
     "p": "(434) 432-7971",
@@ -1517,10 +1705,12 @@
     "s": "VA",
     "z": "24531-3392",
     "j": "Pittsylvania",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5395,
+    "i": 3769,
     "n": "Poquoson General Registrar",
     "f": "(757) 868-3104",
     "p": "(757) 868-3070",
@@ -1533,10 +1723,12 @@
     "s": "VA",
     "z": "23662-1996",
     "j": "Poquoson",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5422,
+    "i": 3770,
     "n": "Portsmouth General Registrar",
     "f": "(757) 393-5415",
     "p": "(757) 393-8644",
@@ -1549,10 +1741,12 @@
     "s": "VA",
     "z": "23704-3822",
     "j": "Portsmouth",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5446,
+    "i": 3771,
     "n": "Powhatan General Registrar",
     "f": "(804) 598-5607",
     "p": "(804) 598-5604",
@@ -1565,10 +1759,12 @@
     "s": "VA",
     "z": "23139-5757",
     "j": "Powhatan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5478,
+    "i": 3772,
     "n": "Prince Edward General Registrar",
     "f": "(434) 392-3889",
     "p": "(434) 392-4767",
@@ -1581,10 +1777,12 @@
     "s": "VA",
     "z": "23901-0269",
     "j": "Prince Edward",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5479,
+    "i": 3773,
     "n": "Prince George General Registrar",
     "f": "(804) 733-2793",
     "p": "(804) 722-8748",
@@ -1597,10 +1795,12 @@
     "s": "VA",
     "z": "23875-0034",
     "j": "Prince George",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5481,
+    "i": 3774,
     "n": "Prince William General Registrar",
     "f": "(703) 792-6461",
     "p": "(703) 792-6470",
@@ -1613,10 +1813,12 @@
     "s": "VA",
     "z": "20110-5554",
     "j": "Prince William",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5497,
+    "i": 3775,
     "n": "Pulaski General Registrar",
     "f": "(540) 994-5883",
     "p": "(540) 980-2111",
@@ -1629,10 +1831,12 @@
     "s": "VA",
     "z": "24301-5619",
     "j": "Pulaski",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5527,
+    "i": 3776,
     "n": "Radford General Registrar",
     "f": "(540) 633-0152",
     "p": "(540) 731-3639",
@@ -1645,10 +1849,12 @@
     "s": "VA",
     "z": "24141-1456",
     "j": "Radford",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5559,
+    "i": 3777,
     "n": "Rappahannock General Registrar",
     "f": "(540) 675-5381",
     "p": "(540) 675-5380",
@@ -1661,10 +1867,12 @@
     "s": "VA",
     "z": "22747-0236",
     "j": "Rappahannock",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5657,
+    "i": 3778,
     "n": "Richmond City General Registrar",
     "f": "(804) 646-7848",
     "p": "(804) 646-5950",
@@ -1677,10 +1885,12 @@
     "s": "VA",
     "z": "23261-1037",
     "j": "Richmond City",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5658,
+    "i": 3779,
     "n": "Richmond General Registrar",
     "f": "(804) 333-4772",
     "p": "(804) 333-4772",
@@ -1693,10 +1903,12 @@
     "s": "VA",
     "z": "22572-1000",
     "j": "Richmond County",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5701,
+    "i": 3780,
     "n": "Roanoke City General Registrar",
     "f": "(540) 853-1025",
     "p": "(540) 853-2281",
@@ -1709,15 +1921,17 @@
     "s": "VA",
     "z": "24016-2005",
     "j": "Roanoke City",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5702,
+    "i": 3781,
     "n": "Roanoke General Registrar",
     "f": "(540) 772-2115",
     "p": "(540) 772-7500",
     "e": "acloeter@roanokecountyva.gov",
-    "d": "2019-10-28T21:55:24",
+    "d": "2019-07-15T14:39:03",
     "a1": "P.O. Box 20884",
     "a2": "",
     "a3": "",
@@ -1725,10 +1939,12 @@
     "s": "VA",
     "z": "24018-0089",
     "j": "Roanoke County",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5728,
+    "i": 3782,
     "n": "Rockbridge General Registrar",
     "f": "(540) 463-1078",
     "p": "(540) 463-7203",
@@ -1741,10 +1957,12 @@
     "s": "VA",
     "z": "24450-2359",
     "j": "Rockbridge",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5736,
+    "i": 3783,
     "n": "Rockingham General Registrar",
     "f": "(540) 564-3057",
     "p": "(540) 564-3055",
@@ -1757,10 +1975,12 @@
     "s": "VA",
     "z": "22802-4108",
     "j": "Rockingham",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5820,
+    "i": 3784,
     "n": "Russell General Registrar",
     "f": "(276) 889-8022",
     "p": "(276) 889-8006",
@@ -1773,10 +1993,12 @@
     "s": "VA",
     "z": "24266-0383",
     "j": "Russell",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5848,
+    "i": 3785,
     "n": "Salem General Registrar",
     "f": "(540) 375-4052",
     "p": "(540) 375-3034",
@@ -1789,10 +2011,12 @@
     "s": "VA",
     "z": "24153-0203",
     "j": "Salem",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5970,
+    "i": 3786,
     "n": "Scott General Registrar",
     "f": "(276) 386-3741",
     "p": "(276) 386-3843",
@@ -1805,10 +2029,12 @@
     "s": "VA",
     "z": "24251-4892",
     "j": "Scott",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6064,
+    "i": 3787,
     "n": "Shenandoah General Registrar",
     "f": "(540) 459-6196",
     "p": "(540) 459-6195",
@@ -1821,10 +2047,12 @@
     "s": "VA",
     "z": "22664-1855",
     "j": "Shenandoah",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6152,
+    "i": 3788,
     "n": "Smyth General Registrar",
     "f": "(276) 783-9055",
     "p": "(276) 706-8331",
@@ -1837,10 +2065,12 @@
     "s": "VA",
     "z": "24354-3140",
     "j": "Smyth",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6194,
+    "i": 3789,
     "n": "Southampton General Registrar",
     "f": "(757) 653-9401",
     "p": "(757) 653-9280",
@@ -1853,10 +2083,12 @@
     "s": "VA",
     "z": "23837-0666",
     "j": "Southampton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6224,
+    "i": 3790,
     "n": "Spotsylvania General Registrar",
     "f": "(540) 507-7519",
     "p": "(540) 507-7380",
@@ -1869,10 +2101,12 @@
     "s": "VA",
     "z": "22407",
     "j": "Spotsylvania",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6308,
+    "i": 3791,
     "n": "Stafford General Registrar",
     "f": "(540) 658-4003",
     "p": "(540) 658-4000",
@@ -1885,10 +2119,12 @@
     "s": "VA",
     "z": "22555-0301",
     "j": "Stafford",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6339,
+    "i": 3792,
     "n": "Staunton General Registrar",
     "f": "(540) 332-3834",
     "p": "(540) 332-3840",
@@ -1901,10 +2137,12 @@
     "s": "VA",
     "z": "24402-0058",
     "j": "Staunton",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6422,
+    "i": 3793,
     "n": "Suffolk General Registrar",
     "f": "(757) 514-7759",
     "p": "(757) 514-7750",
@@ -1917,10 +2155,12 @@
     "s": "VA",
     "z": "23439-1966",
     "j": "Suffolk",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6475,
+    "i": 3794,
     "n": "Surry General Registrar",
     "f": "(757) 294-5285",
     "p": "(757) 294-5213",
@@ -1933,10 +2173,12 @@
     "s": "VA",
     "z": "23883-0264",
     "j": "Surry",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6480,
+    "i": 3795,
     "n": "Sussex General Registrar",
     "f": "(434) 246-4315",
     "p": "(434) 246-1047",
@@ -1949,10 +2191,12 @@
     "s": "VA",
     "z": "23884-0302",
     "j": "Sussex",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6539,
+    "i": 3796,
     "n": "Tazewell General Registrar",
     "f": "(276) 988-2530",
     "p": "(276) 385-1305",
@@ -1965,10 +2209,12 @@
     "s": "VA",
     "z": "24651-0201",
     "j": "Tazewell",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6818,
+    "i": 3797,
     "n": "Virginia Beach General Registrar",
     "f": "(757) 385-5632",
     "p": "(757) 385-8683",
@@ -1981,26 +2227,30 @@
     "s": "VA",
     "z": "23456-0247",
     "j": "Virginia Beach",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6896,
+    "i": 3798,
     "n": "Warren General Registrar",
     "f": "(540) 635-5456",
     "p": "(540) 635-4327",
     "e": "vote@warrencountyva.net",
-    "d": "2017-09-28T08:27:01",
-    "a1": "220 N. Commerce Ave., Ste. 700",
+    "d": "2020-03-26T13:22:20",
+    "a1": "465 W. 15th Street, Suite 800",
     "a2": "",
     "a3": "",
     "c": "Front Royal",
     "s": "VA",
-    "z": "22630-4204",
+    "z": "22630",
     "j": "Warren",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6943,
+    "i": 3799,
     "n": "Washington General Registrar",
     "f": "(276) 676-6200",
     "p": "(276) 676-6227",
@@ -2013,10 +2263,12 @@
     "s": "VA",
     "z": "24212-0037",
     "j": "Washington",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7036,
+    "i": 3800,
     "n": "Waynesboro General Registrar",
     "f": "(540) 942-6501",
     "p": "(540) 942-6620",
@@ -2029,10 +2281,12 @@
     "s": "VA",
     "z": "22980-4625",
     "j": "Waynesboro",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7133,
+    "i": 3801,
     "n": "Westmoreland General Registrar",
     "f": "(804) 493-0158",
     "p": "(804) 493-8898",
@@ -2045,10 +2299,12 @@
     "s": "VA",
     "z": "22520-0354",
     "j": "Westmoreland",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7238,
+    "i": 3802,
     "n": "Williamsburg General Registrar",
     "f": "(757) 220-6158",
     "p": "(757) 220-6157",
@@ -2061,10 +2317,12 @@
     "s": "VA",
     "z": "23187-3538",
     "j": "Williamsburg",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7274,
+    "i": 3803,
     "n": "Winchester General Registrar",
     "f": "(540) 545-7925",
     "p": "(540) 545-7910",
@@ -2077,10 +2335,12 @@
     "s": "VA",
     "z": "22601-5047",
     "j": "Winchester",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7315,
+    "i": 3804,
     "n": "Wise General Registrar",
     "f": "(276) 328-7111",
     "p": "(276) 328-8331",
@@ -2093,10 +2353,12 @@
     "s": "VA",
     "z": "24293-0309",
     "j": "Wise",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7396,
+    "i": 3805,
     "n": "Wythe General Registrar",
     "f": "(276) 223-6039",
     "p": "(276) 223-6038",
@@ -2109,10 +2371,12 @@
     "s": "VA",
     "z": "24382-2548",
     "j": "Wythe",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7418,
+    "i": 3806,
     "n": "York General Registrar",
     "f": "(757) 890-3449",
     "p": "(757) 890-3440",
@@ -2125,6 +2389,8 @@
     "s": "VA",
     "z": "23690-0451",
     "j": "York",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

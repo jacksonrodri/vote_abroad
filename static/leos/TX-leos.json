@@ -1,6 +1,6 @@
 [
   {
-    "i": 165,
+    "i": 3389,
     "n": "Anderson County Early Voting Clerk",
     "f": "(903) 723-1223",
     "p": "(903) 723-7438",
@@ -13,10 +13,12 @@
     "s": "TX",
     "z": "75801",
     "j": "Anderson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 173,
+    "i": 3390,
     "n": "Andrews County Early Voting Clerk",
     "f": "(432) 524-1451",
     "p": "(432) 524-1463",
@@ -29,10 +31,12 @@
     "s": "TX",
     "z": "79714",
     "j": "Andrews",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 175,
+    "i": 3391,
     "n": "Angelina County Elections Administrator",
     "f": "(936) 671-5186",
     "p": "(936) 671-5117",
@@ -45,10 +49,12 @@
     "s": "TX",
     "z": "75902",
     "j": "Angelina",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 201,
+    "i": 3392,
     "n": "Aransas County Early Voting Clerk",
     "f": "(361) 790-0177",
     "p": "(361) 729-7431",
@@ -61,10 +67,12 @@
     "s": "TX",
     "z": "78382",
     "j": "Aransas",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 210,
+    "i": 3393,
     "n": "Archer County Early Voting Clerk",
     "f": "(940) 574-2655",
     "p": "(940) 574-2645",
@@ -77,10 +85,12 @@
     "s": "TX",
     "z": "76351",
     "j": "Archer",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 232,
+    "i": 3394,
     "n": "Armstrong County Early Voting Clerk",
     "f": "(806) 553-5980",
     "p": "(806) 553-2861",
@@ -93,10 +103,12 @@
     "s": "TX",
     "z": "79019",
     "j": "Armstrong",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 261,
+    "i": 3395,
     "n": "Atascosa County Early Voting Clerk",
     "f": "(830) 769-1215",
     "p": "(830) 769-1472",
@@ -109,10 +121,12 @@
     "s": "TX",
     "z": "78026",
     "j": "Atascosa",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 304,
+    "i": 3396,
     "n": "Austin County Early Voting Clerk",
     "f": "(979) 865-0183",
     "p": "(979) 865-8633",
@@ -125,10 +139,12 @@
     "s": "TX",
     "z": "77418-2840",
     "j": "Austin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 324,
+    "i": 3397,
     "n": "Bailey County Early Voting Clerk",
     "f": "(806) 272-3076",
     "p": "(806) 272-3165",
@@ -141,10 +157,12 @@
     "s": "TX",
     "z": "79347",
     "j": "Bailey",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 345,
+    "i": 3398,
     "n": "Bandera County Early Voting Clerk",
     "f": "(830) 796-3321",
     "p": "(830) 796-8146",
@@ -157,10 +175,12 @@
     "s": "TX",
     "z": "78003",
     "j": "Bandera",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 400,
+    "i": 3399,
     "n": "Bastrop County Early Voting Clerk",
     "f": "(512) 581-4260",
     "p": "(512) 581-7160",
@@ -173,10 +193,12 @@
     "s": "TX",
     "z": "78602",
     "j": "Bastrop",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 419,
+    "i": 3400,
     "n": "Baylor County Early Voting Clerk",
     "f": "(940) 889-4300",
     "p": "(940) 889-3322",
@@ -189,10 +211,12 @@
     "s": "TX",
     "z": "76380",
     "j": "Baylor",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 464,
+    "i": 3401,
     "n": "Bee County Early Voting Clerk",
     "f": "(361) 492-5993",
     "p": "(361) 621-1519",
@@ -205,10 +229,12 @@
     "s": "TX",
     "z": "78104",
     "j": "Bee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 473,
+    "i": 3402,
     "n": "Bell County Early Voting Clerk",
     "f": "(254) 933-6754",
     "p": "(254) 933-5774",
@@ -221,10 +247,12 @@
     "s": "TX",
     "z": "76513",
     "j": "Bell",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 565,
+    "i": 3403,
     "n": "Bexar County Early Voting Clerk",
     "f": "(210) 335-0371",
     "p": "(210) 335-8683",
@@ -237,10 +265,12 @@
     "s": "TX",
     "z": "78207",
     "j": "Bexar",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 622,
+    "i": 3404,
     "n": "Blanco County Clerk",
     "f": "(830) 868-4158",
     "p": "(830) 868-7357",
@@ -253,10 +283,12 @@
     "s": "TX",
     "z": "78636",
     "j": "Blanco",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 678,
+    "i": 3405,
     "n": "Borden County Early Voting Clerk",
     "f": "(806) 756-4324",
     "p": "(806) 756-4312",
@@ -269,10 +301,12 @@
     "s": "TX",
     "z": "79738",
     "j": "Borden",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 682,
+    "i": 3406,
     "n": "Bosque County Early Voting Clerk",
     "f": "(254) 435-2152",
     "p": "(254) 435-6650",
@@ -285,10 +319,12 @@
     "s": "TX",
     "z": "76665",
     "j": "Bosque",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 697,
+    "i": 3407,
     "n": "Bowie County Early Voting Clerk",
     "f": "(903) 628-6811",
     "p": "(903) 628-6810",
@@ -301,10 +337,12 @@
     "s": "TX",
     "z": "75570",
     "j": "Bowie",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 739,
+    "i": 3408,
     "n": "Brazoria County Early Voting Clerk",
     "f": "(979) 864-1011",
     "p": "(979) 864-1662",
@@ -317,10 +355,12 @@
     "s": "TX",
     "z": "77515",
     "j": "Brazoria",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 740,
+    "i": 3409,
     "n": "Brazos County Early Voting Clerk",
     "f": "(979) 361-5779",
     "p": "(979) 361-5770",
@@ -333,10 +373,12 @@
     "s": "TX",
     "z": "77803",
     "j": "Brazos",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 750,
+    "i": 3410,
     "n": "Brewster County Early Voting Clerk",
     "f": "(432) 837-4430",
     "p": "(432) 837-6230",
@@ -349,15 +391,17 @@
     "s": "TX",
     "z": "79830",
     "j": "Brewster",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 775,
+    "i": 3411,
     "n": "Briscoe County Early Voting Clerk",
     "f": "(806) 823-2076",
     "p": "(806) 823-2134",
-    "e": "coclerk@co.briscoe.tx.us",
-    "d": "2020-02-06T03:53:44",
+    "e": "coclerk@midplains.coop",
+    "d": "2018-04-18T12:02:59",
     "a1": "P.O. Box 555",
     "a2": "",
     "a3": "",
@@ -365,10 +409,12 @@
     "s": "TX",
     "z": "79257",
     "j": "Briscoe",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 809,
+    "i": 3412,
     "n": "Brooks County Early Voting Clerk",
     "f": "(361) 325-4019",
     "p": "(361) 325-5670 x369",
@@ -381,10 +427,12 @@
     "s": "TX",
     "z": "78355",
     "j": "Brooks",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 823,
+    "i": 3413,
     "n": "Brown County Early Voting Clerk",
     "f": "(325) 643-6317",
     "p": "(325) 646-4333",
@@ -397,10 +445,12 @@
     "s": "TX",
     "z": "76804-9985",
     "j": "Brown",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 878,
+    "i": 3414,
     "n": "Burleson County Early Voting Clerk",
     "f": "(979) 567-0789",
     "p": "(979) 567-2000",
@@ -413,10 +463,12 @@
     "s": "TX",
     "z": "77836",
     "j": "Burleson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 887,
+    "i": 3415,
     "n": "Burnet County Early Voting Clerk",
     "f": "(512) 715-5287",
     "p": "(512) 715-5288",
@@ -429,10 +481,12 @@
     "s": "TX",
     "z": "78611",
     "j": "Burnet",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 941,
+    "i": 3416,
     "n": "Caldwell County Early Voting Clerk",
     "f": "(512) 398-1821",
     "p": "(512) 668-4347",
@@ -445,10 +499,12 @@
     "s": "TX",
     "z": "78644",
     "j": "Caldwell",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 958,
+    "i": 3417,
     "n": "Calhoun County Early Voting Clerk",
     "f": "(361) 553-4443",
     "p": "(361) 553-4441",
@@ -461,10 +517,12 @@
     "s": "TX",
     "z": "77979",
     "j": "Calhoun",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 962,
+    "i": 3418,
     "n": "Callahan County Early Voting Clerk",
     "f": "(325) 854-5816",
     "p": "(325) 854-5815",
@@ -477,10 +535,12 @@
     "s": "TX",
     "z": "79504",
     "j": "Callahan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 984,
+    "i": 3419,
     "n": "Cameron County Early Voting Clerk",
     "f": "(956) 550-7298",
     "p": "(956) 544-0809",
@@ -493,10 +553,12 @@
     "s": "TX",
     "z": "78520",
     "j": "Cameron",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 987,
+    "i": 3420,
     "n": "Camp County Early Voting Clerk",
     "f": "(903) 856-6112",
     "p": "(903) 856-2731",
@@ -509,10 +571,12 @@
     "s": "TX",
     "z": "75686",
     "j": "Camp",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1046,
+    "i": 3421,
     "n": "Carson County Early Voting Clerk",
     "f": "(806) 537-3623",
     "p": "(806) 537-3873",
@@ -525,10 +589,12 @@
     "s": "TX",
     "z": "79068",
     "j": "Carson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1081,
+    "i": 3422,
     "n": "Cass County Early Voting Clerk",
     "f": "(903) 756-8057",
     "p": "(903) 756-5071",
@@ -541,10 +607,12 @@
     "s": "TX",
     "z": "75563",
     "j": "Cass",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1091,
+    "i": 3423,
     "n": "Castro County Early Voting Clerk",
     "f": "(806) 647-5438",
     "p": "(806) 647-3338",
@@ -557,10 +625,12 @@
     "s": "TX",
     "z": "79027",
     "j": "Castro",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1136,
+    "i": 3424,
     "n": "Chambers County Early Voting Clerk",
     "f": "409-267-8405",
     "p": "(409) 267-2418",
@@ -573,10 +643,12 @@
     "s": "TX",
     "z": "77514",
     "j": "Chambers",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1200,
+    "i": 3425,
     "n": "Cherokee County Early Voting Clerk",
     "f": "(903) 683-8419",
     "p": "(903) 683-8409",
@@ -589,10 +661,12 @@
     "s": "TX",
     "z": "75785",
     "j": "Cherokee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1239,
+    "i": 3426,
     "n": "Childress County Early Voting Clerk",
     "f": "(940) 937-3708",
     "p": "(940) 937-6143",
@@ -605,10 +679,12 @@
     "s": "TX",
     "z": "79201",
     "j": "Childress",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1327,
+    "i": 3427,
     "n": "Clay County Early Voting Clerk",
     "f": "(940) 264-4160",
     "p": "(940) 264-8683",
@@ -621,10 +697,12 @@
     "s": "TX",
     "z": "76365",
     "j": "Clay",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1403,
+    "i": 3428,
     "n": "Cochran County Early Voting Clerk",
     "f": "(806) 266-9027",
     "p": "(806) 266-5181",
@@ -637,10 +715,12 @@
     "s": "TX",
     "z": "79346",
     "j": "Cochran",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1415,
+    "i": 3429,
     "n": "Coke County Early Voting Clerk",
     "f": "(325) 453-2650",
     "p": "(325) 453-2631",
@@ -653,10 +733,12 @@
     "s": "TX",
     "z": "76945",
     "j": "Coke",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1431,
+    "i": 3430,
     "n": "Coleman County Early Voting Clerk",
     "f": "(325) 625-2889",
     "p": "(325) 625-2889",
@@ -669,10 +751,12 @@
     "s": "TX",
     "z": "76834",
     "j": "Coleman",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1446,
+    "i": 3431,
     "n": "Collin County Early Voting Clerk",
     "f": "(972) 547-1914",
     "p": "(972) 547-1990",
@@ -685,10 +769,12 @@
     "s": "TX",
     "z": "75069",
     "j": "Collin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1447,
+    "i": 3432,
     "n": "Collingsworth County Early Voting Clerk",
     "f": "(806) 447-2409",
     "p": "(806) 447-2408",
@@ -701,10 +787,12 @@
     "s": "TX",
     "z": "79095",
     "j": "Collingsworth",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1454,
+    "i": 3433,
     "n": "Colorado County Early Voting Clerk",
     "f": "(979) 732-6860",
     "p": "(979) 732-6560",
@@ -717,10 +805,12 @@
     "s": "TX",
     "z": "78934",
     "j": "Colorado",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1476,
+    "i": 3434,
     "n": "Comal County Early Voting Clerk",
     "f": "(830) 608-2013",
     "p": "(830) 221-1352",
@@ -733,10 +823,12 @@
     "s": "TX",
     "z": "78130",
     "j": "Comal",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1479,
+    "i": 3435,
     "n": "Comanche County Early Voting Clerk",
     "f": "(325) 356-5764",
     "p": "(325) 356-2655",
@@ -749,10 +841,12 @@
     "s": "TX",
     "z": "76442",
     "j": "Comanche",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1485,
+    "i": 3436,
     "n": "Concho County Early Voting Clerk",
     "f": "(325) 732-2040",
     "p": "(325) 732-4322",
@@ -765,10 +859,12 @@
     "s": "TX",
     "z": "76866",
     "j": "Concho",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1509,
+    "i": 3437,
     "n": "Cooke County Early Voting Clerk",
     "f": "(940) 668-5486",
     "p": "(940) 668-5420",
@@ -781,10 +877,12 @@
     "s": "TX",
     "z": "76240",
     "j": "Cooke",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1531,
+    "i": 3438,
     "n": "Coryell County Early Voting Clerk",
     "f": "(254) 865-2519",
     "p": "(254) 865-5911",
@@ -797,10 +895,12 @@
     "s": "TX",
     "z": "76528",
     "j": "Coryell",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1536,
+    "i": 3439,
     "n": "Cottle County Early Voting Clerk",
     "f": "(806) 492-2625",
     "p": "(806) 492-3823",
@@ -813,10 +913,12 @@
     "s": "TX",
     "z": "79248",
     "j": "Cottle",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1559,
+    "i": 3440,
     "n": "Crane County Early Voting Clerk",
     "f": "(432) 558-1148",
     "p": "(432) 558-3581",
@@ -829,10 +931,12 @@
     "s": "TX",
     "z": "79731",
     "j": "Crane",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1582,
+    "i": 3441,
     "n": "Crockett County Early Voting Clerk",
     "f": "(325) 392-3742",
     "p": "(325) 392-2022",
@@ -845,10 +949,12 @@
     "s": "TX",
     "z": "76943",
     "j": "Crockett",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1586,
+    "i": 3442,
     "n": "Crosby County Early Voting Clerk",
     "f": "(806) 675-2980",
     "p": "(806) 675-2334",
@@ -861,10 +967,12 @@
     "s": "TX",
     "z": "79322",
     "j": "Crosby",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1607,
+    "i": 3443,
     "n": "Culberson County Early Voting Clerk",
     "f": "(432) 283-9234",
     "p": "(432) 283-2058",
@@ -877,10 +985,12 @@
     "s": "TX",
     "z": "79855",
     "j": "Culberson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1707,
+    "i": 3444,
     "n": "Dallam County Early Voting Clerk",
     "f": "(806) 244-3751",
     "p": "(806) 244-4751",
@@ -893,10 +1003,12 @@
     "s": "TX",
     "z": "79022",
     "j": "Dallam",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1712,
+    "i": 3445,
     "n": "Dallas County Early Voting Clerk",
     "f": "(214) 819-6301",
     "p": "(214) 819-6300",
@@ -909,10 +1021,12 @@
     "s": "TX",
     "z": "75207",
     "j": "Dallas",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1757,
+    "i": 3446,
     "n": "Dawson County Early Voting Clerk",
     "f": "(806) 872-2473",
     "p": "(806) 872-3778",
@@ -925,10 +1039,12 @@
     "s": "TX",
     "z": "79331",
     "j": "Dawson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1780,
+    "i": 3447,
     "n": "Deaf Smith County Early Voting Clerk",
     "f": "(806) 363-7023",
     "p": "(806) 363-7077",
@@ -941,10 +1057,12 @@
     "s": "TX",
     "z": "79045-5542",
     "j": "Deaf Smith",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1828,
+    "i": 3448,
     "n": "Delta County Early Voting Clerk",
     "f": "(903) 395-4260",
     "p": "(903) 395-4400 x201",
@@ -957,10 +1075,12 @@
     "s": "TX",
     "z": "75432",
     "j": "Delta",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1837,
+    "i": 3449,
     "n": "Denton County Early Voting Clerk",
     "f": "(940) 349-3201",
     "p": "(940) 349-3200",
@@ -973,10 +1093,12 @@
     "s": "TX",
     "z": "76202",
     "j": "Denton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1779,
+    "i": 3450,
     "n": "DeWitt County Early Voting Clerk",
     "f": "(361) 275-0860",
     "p": "(361) 275-0859",
@@ -989,10 +1111,12 @@
     "s": "TX",
     "z": "77954",
     "j": "DeWitt",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1861,
+    "i": 3451,
     "n": "Dickens County Early Voting Clerk",
     "f": "(806) 623-5240",
     "p": "(806) 623-5531",
@@ -1005,10 +1129,12 @@
     "s": "TX",
     "z": "79229",
     "j": "Dickens",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1872,
+    "i": 3452,
     "n": "Dimmit County Early Voting Clerk",
     "f": "(830) 876-4205",
     "p": "(830) 876-4209",
@@ -1021,10 +1147,12 @@
     "s": "TX",
     "z": "78834",
     "j": "Dimmit",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1888,
+    "i": 3453,
     "n": "Donley County Early Voting Clerk",
     "f": "(806) 874-3351",
     "p": "(806) 874-3436",
@@ -1037,10 +1165,12 @@
     "s": "TX",
     "z": "79226",
     "j": "Donley",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1965,
+    "i": 3454,
     "n": "Duval County Early Voting Clerk",
     "f": "(361) 279-8842",
     "p": "(361) 279-6278",
@@ -1053,10 +1183,12 @@
     "s": "TX",
     "z": "78384",
     "j": "Duval",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2008,
+    "i": 3455,
     "n": "Eastland County Early Voting Clerk",
     "f": "(254) 631-0067",
     "p": "(254) 629-6051",
@@ -1069,10 +1201,12 @@
     "s": "TX",
     "z": "76448",
     "j": "Eastland",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2035,
+    "i": 3456,
     "n": "Ector County Early Voting Clerk",
     "f": "(432) 498-4009",
     "p": "(432) 498-4030",
@@ -1085,10 +1219,12 @@
     "s": "TX",
     "z": "79761",
     "j": "Ector",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2057,
+    "i": 3457,
     "n": "Edwards County Early Voting Clerk",
     "f": "(830) 683-5376",
     "p": "(830) 683-2235",
@@ -1101,10 +1237,12 @@
     "s": "TX",
     "z": "78880",
     "j": "Edwards",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2070,
+    "i": 3458,
     "n": "El Paso County Early Voting Clerk",
     "f": "(915) 546-2220",
     "p": "(915) 546-2154",
@@ -1117,10 +1255,12 @@
     "s": "TX",
     "z": "79901",
     "j": "El Paso",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2105,
+    "i": 3459,
     "n": "Ellis County Early Voting Clerk",
     "f": "(972) 923-5194",
     "p": "(972) 825-5195",
@@ -1133,10 +1273,12 @@
     "s": "TX",
     "z": "75165",
     "j": "Ellis",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2153,
+    "i": 3460,
     "n": "Erath County Early Voting Clerk",
     "f": "(254) 965-5732",
     "p": "(254) 965-1482",
@@ -1149,10 +1291,12 @@
     "s": "TX",
     "z": "76401",
     "j": "Erath",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2233,
+    "i": 3461,
     "n": "Falls County Early Voting Clerk",
     "f": "(254) 804-0044",
     "p": "(254) 883-1521",
@@ -1165,10 +1309,12 @@
     "s": "TX",
     "z": "76661",
     "j": "Falls",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2237,
+    "i": 3462,
     "n": "Fannin County Early Voting Clerk",
     "f": "(903) 583-9598",
     "p": "(903) 583-7488",
@@ -1181,10 +1327,12 @@
     "s": "TX",
     "z": "75418",
     "j": "Fannin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2261,
+    "i": 3463,
     "n": "Fayette County Early Voting Clerk",
     "f": "(979) 968-6426",
     "p": "(979) 968-6563",
@@ -1197,10 +1345,12 @@
     "s": "TX",
     "z": "78945",
     "j": "Fayette",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2292,
+    "i": 3464,
     "n": "Fisher County Early Voting Clerk",
     "f": "(325) 776-3274",
     "p": "(325) 776-2401",
@@ -1213,10 +1363,12 @@
     "s": "TX",
     "z": "79543",
     "j": "Fisher",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2314,
+    "i": 3465,
     "n": "Floyd County Early Voting Clerk",
     "f": "(806) 983-4909",
     "p": "(806) 983-4900",
@@ -1229,10 +1381,12 @@
     "s": "TX",
     "z": "79235",
     "j": "Floyd",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2320,
+    "i": 3466,
     "n": "Foard County Early Voting Clerk",
     "f": "(940) 684-1918",
     "p": "(940) 684-1365",
@@ -1245,10 +1399,12 @@
     "s": "TX",
     "z": "79227",
     "j": "Foard",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2346,
+    "i": 3467,
     "n": "Fort Bend County Early Voting Clerk",
     "f": "(281) 341-4418",
     "p": "(281) 341-8670",
@@ -1261,10 +1417,12 @@
     "s": "TX",
     "z": "77469-3108",
     "j": "Fort Bend",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2390,
+    "i": 3468,
     "n": "Franklin County Early Voting Clerk",
     "f": "(903) 537-2962",
     "p": "(903) 537-2342 x2",
@@ -1277,10 +1435,12 @@
     "s": "TX",
     "z": "75457",
     "j": "Franklin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2427,
+    "i": 3469,
     "n": "Freestone County Early Voting Clerk",
     "f": "(903) 389-6956",
     "p": "(903) 389-2635",
@@ -1293,10 +1453,12 @@
     "s": "TX",
     "z": "75840",
     "j": "Freestone",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2448,
+    "i": 3470,
     "n": "Frio County Early Voting Clerk",
     "f": "(830) 334-3984",
     "p": "(830) 334-3975",
@@ -1309,10 +1471,12 @@
     "s": "TX",
     "z": "78061",
     "j": "Frio",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2468,
+    "i": 3471,
     "n": "Gaines County Early Voting Clerk",
     "f": "(432) 955-0150",
     "p": "(432) 758-4041",
@@ -1325,10 +1489,12 @@
     "s": "TX",
     "z": "79360",
     "j": "Gaines",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2481,
+    "i": 3472,
     "n": "Galveston County Early Voting Clerk",
     "f": "(409) 765-3160",
     "p": "(409) 766-2200",
@@ -1341,10 +1507,12 @@
     "s": "TX",
     "z": "77552-7253",
     "j": "Galveston",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2507,
+    "i": 3473,
     "n": "Garza County Early Voting Clerk",
     "f": "(806) 495-4431",
     "p": "(806) 495-4430",
@@ -1357,15 +1525,17 @@
     "s": "TX",
     "z": "79356",
     "j": "Garza",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2556,
+    "i": 3474,
     "n": "Gillespie County Early Voting Clerk",
     "f": "(830) 990-2756",
     "p": "(830) 997-6518",
     "e": "elections@gillespiecounty.org",
-    "d": "2019-08-29T15:13:37",
+    "d": "2020-05-12T10:57:58",
     "a1": "PO Box 351",
     "a2": "",
     "a3": "",
@@ -1373,10 +1543,12 @@
     "s": "TX",
     "z": "78624",
     "j": "Gillespie",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2579,
+    "i": 3475,
     "n": "Glasscock County Early Voting Clerk",
     "f": "(432) 354-2616",
     "p": "(432) 354-2371",
@@ -1389,10 +1561,12 @@
     "s": "TX",
     "z": "79739",
     "j": "Glasscock",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2605,
+    "i": 3476,
     "n": "Goliad County Early Voting Clerk",
     "f": "(361) 645-3858",
     "p": "(361) 645-3294",
@@ -1405,10 +1579,12 @@
     "s": "TX",
     "z": "77963",
     "j": "Goliad",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2606,
+    "i": 3477,
     "n": "Gonzales County Early Voting Clerk",
     "f": "(830) 672-2636",
     "p": "(830) 672-2801",
@@ -1421,10 +1597,12 @@
     "s": "TX",
     "z": "78629",
     "j": "Gonzales",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2707,
+    "i": 3478,
     "n": "Gray County Early Voting Clerk",
     "f": "(806) 669-4004",
     "p": "(806) 669-8068",
@@ -1437,10 +1615,12 @@
     "s": "TX",
     "z": "79066",
     "j": "Gray",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2712,
+    "i": 3479,
     "n": "Grayson County Early Voting Clerk",
     "f": "(903) 891-4370",
     "p": "(903) 893-8683",
@@ -1453,10 +1633,12 @@
     "s": "TX",
     "z": "75090",
     "j": "Grayson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2778,
+    "i": 3480,
     "n": "Gregg County Early Voting Clerk",
     "f": "(903) 234-3126",
     "p": "(903) 236-8458",
@@ -1469,10 +1651,12 @@
     "s": "TX",
     "z": "75606",
     "j": "Gregg",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2784,
+    "i": 3481,
     "n": "Grimes County Early Voting Clerk",
     "f": "(936) 873-2083",
     "p": "(936) 873-4424",
@@ -1485,10 +1669,12 @@
     "s": "TX",
     "z": "77830",
     "j": "Grimes",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2806,
+    "i": 3482,
     "n": "Guadalupe County Early Voting Clerk",
     "f": "(830) 303-6373",
     "p": "(830) 303-6363",
@@ -1501,10 +1687,12 @@
     "s": "TX",
     "z": "78156-1346",
     "j": "Guadalupe",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2830,
+    "i": 3483,
     "n": "Hale County Early Voting Clerk",
     "f": "(806) 291-9810",
     "p": "(806) 291-5205",
@@ -1517,10 +1705,12 @@
     "s": "TX",
     "z": "79072",
     "j": "Hale",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2839,
+    "i": 3484,
     "n": "Hall County Early Voting Clerk",
     "f": "(806) 259-5078",
     "p": "(806) 259-2627",
@@ -1533,10 +1723,12 @@
     "s": "TX",
     "z": "79245",
     "j": "Hall",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2855,
+    "i": 3485,
     "n": "Hamilton County Early Voting Clerk",
     "f": "(254) 386-8727",
     "p": "(254) 386-1205",
@@ -1549,10 +1741,12 @@
     "s": "TX",
     "z": "76531",
     "j": "Hamilton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2904,
+    "i": 3486,
     "n": "Hansford County Early Voting Clerk",
     "f": "(806) 659-4168",
     "p": "(806) 659-4110",
@@ -1565,10 +1759,12 @@
     "s": "TX",
     "z": "79081",
     "j": "Hansford",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2912,
+    "i": 3487,
     "n": "Hardeman County Early Voting Clerk",
     "f": "(940) 663-5161",
     "p": "(940) 663-2961",
@@ -1581,10 +1777,12 @@
     "s": "TX",
     "z": "79252",
     "j": "Hardeman",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2918,
+    "i": 3488,
     "n": "Hardin County Early Voting Clerk",
     "f": "(409) 246-5287",
     "p": "(409) 246-5185",
@@ -1597,10 +1795,12 @@
     "s": "TX",
     "z": "77625",
     "j": "Hardin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2939,
+    "i": 3489,
     "n": "Harris County Early Voting Clerk",
     "f": "(713) 755-4983",
     "p": "(713) 755-3852",
@@ -1613,10 +1813,12 @@
     "s": "TX",
     "z": "77251-1148",
     "j": "Harris",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2948,
+    "i": 3490,
     "n": "Harrison County Early Voting Clerk",
     "f": "(903) 938-1509",
     "p": "(903) 935-4822",
@@ -1629,15 +1831,17 @@
     "s": "TX",
     "z": "75671",
     "j": "Harrison",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2977,
+    "i": 3491,
     "n": "Hartley County Early Voting Clerk",
     "f": "(806) 235-2316",
     "p": "(806) 235-3582",
-    "e": "linda.welch@co.hartley.tx.us",
-    "d": "2020-02-06T03:41:13",
+    "e": "angela.rickerd@co.hartley.tx.us",
+    "d": "2018-04-18T12:02:59",
     "a1": "P.O. Box Q",
     "a2": "",
     "a3": "",
@@ -1645,10 +1849,12 @@
     "s": "TX",
     "z": "79018",
     "j": "Hartley",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2986,
+    "i": 3492,
     "n": "Haskell County Early Voting Clerk",
     "f": "(940) 864-6164",
     "p": "(940) 864-2451",
@@ -1661,10 +1867,12 @@
     "s": "TX",
     "z": "79521",
     "j": "Haskell",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3009,
+    "i": 3493,
     "n": "Hays County Early Voting Clerk",
     "f": "(512) 878-6699",
     "p": "(512) 393-7310",
@@ -1677,10 +1885,12 @@
     "s": "TX",
     "z": "78666",
     "j": "Hays",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3029,
+    "i": 3494,
     "n": "Hemphill County Early Voting Clerk",
     "f": "(806) 323-9745",
     "p": "(806) 323-6212",
@@ -1693,10 +1903,12 @@
     "s": "TX",
     "z": "79014",
     "j": "Hemphill",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3035,
+    "i": 3495,
     "n": "Henderson County Early Voting Clerk",
     "f": "(903) 675-6101",
     "p": "(903) 675-6149",
@@ -1709,10 +1921,12 @@
     "s": "TX",
     "z": "75751",
     "j": "Henderson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3072,
+    "i": 3496,
     "n": "Hidalgo County Early Voting Clerk",
     "f": "(956) 393-2039",
     "p": "(956) 318-2570",
@@ -1725,10 +1939,12 @@
     "s": "TX",
     "z": "78540-0659",
     "j": "Hidalgo",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3088,
+    "i": 3497,
     "n": "Hill County Early Voting Clerk",
     "f": "(254) 582-4073",
     "p": "(254) 582-4072",
@@ -1741,10 +1957,12 @@
     "s": "TX",
     "z": "76645",
     "j": "Hill",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3114,
+    "i": 3498,
     "n": "Hockley County Early Voting Clerk",
     "f": "(806) 894-1104",
     "p": "(806) 894-4938",
@@ -1757,10 +1975,12 @@
     "s": "TX",
     "z": "79336",
     "j": "Hockley",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3151,
+    "i": 3499,
     "n": "Hood County Early Voting Clerk",
     "f": "(817) 408-2592",
     "p": "(817) 408-2525",
@@ -1773,10 +1993,12 @@
     "s": "TX",
     "z": "76048",
     "j": "Hood",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3160,
+    "i": 3500,
     "n": "Hopkins County Early Voting Clerk",
     "f": "(903) 438-4110",
     "p": "(903) 438-4074",
@@ -1789,26 +2011,30 @@
     "s": "TX",
     "z": "75482",
     "j": "Hopkins",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3179,
+    "i": 3501,
     "n": "Houston County Early Voting Clerk",
     "f": "(936) 544-0189",
     "p": "(936) 544-3255 x243",
-    "e": "election@co.houston.tx.us",
-    "d": "2020-02-04T12:13:31",
+    "e": "clum@co.houston.tx.us",
+    "d": "2019-08-29T15:13:37",
     "a1": "401 East Goliad Avenue",
     "a2": "",
     "a3": "",
-    "c": "Crockett",
+    "c": "Crockett Texas",
     "s": "TX",
     "z": "75835",
     "j": "Houston",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3187,
+    "i": 3502,
     "n": "Howard County Early Voting Clerk",
     "f": "(432) 264-2275",
     "p": "(432) 264-2273",
@@ -1821,10 +2047,12 @@
     "s": "TX",
     "z": "79721-1069",
     "j": "Howard",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3210,
+    "i": 3503,
     "n": "Hudspeth County Early Voting Clerk",
     "f": "(915) 369-0055",
     "p": "(915) 369-2301",
@@ -1837,10 +2065,12 @@
     "s": "TX",
     "z": "79851",
     "j": "Hudspeth",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3227,
+    "i": 3504,
     "n": "Hunt County Early Voting Clerk",
     "f": "(903) 454-7905",
     "p": "(903) 454-5467",
@@ -1853,10 +2083,12 @@
     "s": "TX",
     "z": "75401",
     "j": "Hunt",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3245,
+    "i": 3505,
     "n": "Hutchinson County Early Voting Clerk",
     "f": "(806) 878-3497",
     "p": "(806) 878-4002",
@@ -1869,10 +2101,12 @@
     "s": "TX",
     "z": "79083",
     "j": "Hutchinson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3287,
+    "i": 3506,
     "n": "Irion County Early Voting Clerk",
     "f": "(325) 835-7941",
     "p": "(325) 835-2421",
@@ -1885,10 +2119,12 @@
     "s": "TX",
     "z": "76941",
     "j": "Irion",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3319,
+    "i": 3507,
     "n": "Jack County Early Voting Clerk",
     "f": "(940) 567-2930",
     "p": "(940) 567-2910",
@@ -1901,10 +2137,12 @@
     "s": "TX",
     "z": "76458",
     "j": "Jack",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3340,
+    "i": 3508,
     "n": "Jackson County Early Voting Clerk",
     "f": "(361) 782-3132",
     "p": "(361) 782-3563",
@@ -1917,10 +2155,12 @@
     "s": "TX",
     "z": "77957",
     "j": "Jackson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3367,
+    "i": 3509,
     "n": "Jasper County Early Voting Clerk",
     "f": "(409) 384-7198",
     "p": "(409) 384-2632",
@@ -1933,10 +2173,12 @@
     "s": "TX",
     "z": "75951",
     "j": "Jasper",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3372,
+    "i": 3510,
     "n": "Jeff Davis County Early Voting Clerk",
     "f": "(432) 426-3760",
     "p": "(432) 426-3251",
@@ -1949,10 +2191,12 @@
     "s": "TX",
     "z": "79734",
     "j": "Jeff Davis",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3392,
+    "i": 3511,
     "n": "Jefferson County Early Voting Clerk",
     "f": "(409) 839-2394",
     "p": "(409) 835-8475",
@@ -1965,10 +2209,12 @@
     "s": "TX",
     "z": "77704",
     "j": "Jefferson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3418,
+    "i": 3512,
     "n": "Jim Hogg County Early Voting Clerk",
     "f": "(361) 527-5843",
     "p": "(361) 527-4031",
@@ -1981,10 +2227,12 @@
     "s": "TX",
     "z": "78361",
     "j": "Jim Hogg",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3419,
+    "i": 3513,
     "n": "Jim Wells County Early Voting Clerk",
     "f": "(361) 664-4276",
     "p": "(361) 668-5711",
@@ -1997,10 +2245,12 @@
     "s": "TX",
     "z": "78333-2188",
     "j": "Jim Wells",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3431,
+    "i": 3514,
     "n": "Johnson County Early Voting Clerk",
     "f": "(817) 556-6048",
     "p": "(817) 556-6197",
@@ -2013,10 +2263,12 @@
     "s": "TX",
     "z": "76033-0895",
     "j": "Johnson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3447,
+    "i": 3515,
     "n": "Jones County Early Voting Clerk",
     "f": "(325) 823-3979",
     "p": "(325) 823-3762",
@@ -2029,10 +2281,12 @@
     "s": "TX",
     "z": "79501",
     "j": "Jones",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3473,
+    "i": 3516,
     "n": "Karnes County Early Voting Clerk",
     "f": "(830) 780-3059",
     "p": "(830) 780-2246",
@@ -2045,10 +2299,12 @@
     "s": "TX",
     "z": "78118",
     "j": "Karnes",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3476,
+    "i": 3517,
     "n": "Kaufman County Early Voting Clerk",
     "f": "(972) 932-1413",
     "p": "(972) 932-0791",
@@ -2061,10 +2317,12 @@
     "s": "TX",
     "z": "75142",
     "j": "Kaufman",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3494,
+    "i": 3518,
     "n": "Kendall County Early Voting Clerk",
     "f": "(830) 331-8295",
     "p": "(830) 331-8701",
@@ -2077,10 +2335,12 @@
     "s": "TX",
     "z": "78006",
     "j": "Kendall",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3497,
+    "i": 3519,
     "n": "Kenedy County Early Voting Clerk",
     "f": "(361) 294-5337",
     "p": "(361) 294-5255",
@@ -2093,10 +2353,12 @@
     "s": "TX",
     "z": "78385",
     "j": "Kenedy",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3506,
+    "i": 3520,
     "n": "Kent County Early Voting Clerk",
     "f": "(806) 237-2632",
     "p": "(806) 237-3881",
@@ -2109,10 +2371,12 @@
     "s": "TX",
     "z": "79528",
     "j": "Kent",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3512,
+    "i": 3521,
     "n": "Kerr County Early Voting Clerk",
     "f": "(830) 792-2253",
     "p": "(830) 792-2242",
@@ -2125,10 +2389,12 @@
     "s": "TX",
     "z": "78028",
     "j": "Kerr",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3531,
+    "i": 3522,
     "n": "Kimble County Early Voting Clerk",
     "f": "(325) 446-2986",
     "p": "(325) 446-3353",
@@ -2141,10 +2407,12 @@
     "s": "TX",
     "z": "76849",
     "j": "Kimble",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3533,
+    "i": 3523,
     "n": "King County Early Voting Clerk",
     "f": "(806) 596-4664",
     "p": "(806) 596-4412",
@@ -2157,10 +2425,12 @@
     "s": "TX",
     "z": "79236",
     "j": "King",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3551,
+    "i": 3524,
     "n": "Kinney County Early Voting Clerk",
     "f": "(830) 563-2644",
     "p": "(830) 563-2521",
@@ -2173,10 +2443,12 @@
     "s": "TX",
     "z": "78832",
     "j": "Kinney",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3564,
+    "i": 3525,
     "n": "Kleberg County Early Voting Clerk",
     "f": "(361) 593-1355",
     "p": "(361) 595-8548",
@@ -2189,10 +2461,12 @@
     "s": "TX",
     "z": "78364",
     "j": "Kleberg",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3578,
+    "i": 3526,
     "n": "Knox County Early Voting Clerk",
     "f": "(940) 459-2005",
     "p": "(940) 459-2441",
@@ -2205,10 +2479,12 @@
     "s": "TX",
     "z": "79505",
     "j": "Knox",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3607,
+    "i": 3527,
     "n": "La Salle County Early Voting Clerk",
     "f": "(830) 879-2933",
     "p": "(830) 879-4432",
@@ -2221,10 +2497,12 @@
     "s": "TX",
     "z": "78014",
     "j": "La Salle",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3676,
+    "i": 3528,
     "n": "Lamar County Early Voting Clerk",
     "f": "(903) 782-1123",
     "p": "(903) 782-1116",
@@ -2237,10 +2515,12 @@
     "s": "TX",
     "z": "75460",
     "j": "Lamar",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3678,
+    "i": 3529,
     "n": "Lamb County Early Voting Clerk",
     "f": "(806) 385-6485",
     "p": "(806) 385-4222",
@@ -2253,10 +2533,12 @@
     "s": "TX",
     "z": "79339",
     "j": "Lamb",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3681,
+    "i": 3530,
     "n": "Lampasas County Early Voting Clerk",
     "f": "(512) 564-1424",
     "p": "(512) 556-8271 x206",
@@ -2269,10 +2551,12 @@
     "s": "TX",
     "z": "76550",
     "j": "Lampasas",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3723,
+    "i": 3531,
     "n": "Lavaca County Early Voting Clerk",
     "f": "(361) 798-4016",
     "p": "(361) 798-3594",
@@ -2285,10 +2569,12 @@
     "s": "TX",
     "z": "77964",
     "j": "Lavaca",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3765,
+    "i": 3532,
     "n": "Lee County Early Voting Clerk",
     "f": "(979) 540-2732",
     "p": "(979) 540-2731",
@@ -2301,10 +2587,12 @@
     "s": "TX",
     "z": "78942",
     "j": "Lee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3795,
+    "i": 3533,
     "n": "Leon County Early Voting Clerk",
     "f": "(903) 536-1773",
     "p": "(903) 536-4469",
@@ -2317,10 +2605,12 @@
     "s": "TX",
     "z": "75833",
     "j": "Leon",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3828,
+    "i": 3534,
     "n": "Liberty County Early Voting Clerk",
     "f": "(936) 334-8174",
     "p": "(936) 336-4670",
@@ -2333,10 +2623,12 @@
     "s": "TX",
     "z": "77575",
     "j": "Liberty",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3845,
+    "i": 3535,
     "n": "Limestone County Early Voting Clerk",
     "f": "(254) 729-4993",
     "p": "(254) 729-4997",
@@ -2349,10 +2641,12 @@
     "s": "TX",
     "z": "76642",
     "j": "Limestone",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3905,
+    "i": 3536,
     "n": "Lipscomb County Early Voting Clerk",
     "f": "(806) 862-3004",
     "p": "(806) 862-2911",
@@ -2365,10 +2659,12 @@
     "s": "TX",
     "z": "79056",
     "j": "Lipscomb",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3928,
+    "i": 3537,
     "n": "Live Oak County Early Voting Clerk",
     "f": "(361) 449-1616",
     "p": "(361) 449-8034",
@@ -2381,10 +2677,12 @@
     "s": "TX",
     "z": "78022",
     "j": "Live Oak",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3938,
+    "i": 3538,
     "n": "Llano County Early Voting Clerk",
     "f": "(325) 247-5624",
     "p": "(325) 247-5425",
@@ -2397,10 +2695,12 @@
     "s": "TX",
     "z": "78643",
     "j": "Llano",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3985,
+    "i": 3539,
     "n": "Loving County Early Voting Clerk",
     "f": "(432) 377-2701",
     "p": "(432) 377-2441",
@@ -2413,10 +2713,12 @@
     "s": "TX",
     "z": "79754",
     "j": "Loving",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3998,
+    "i": 3540,
     "n": "Lubbock County Early Voting Clerk",
     "f": "(806) 775-7980",
     "p": "(806) 775-1339",
@@ -2429,10 +2731,12 @@
     "s": "TX",
     "z": "79408",
     "j": "Lubbock",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4031,
+    "i": 3541,
     "n": "Lynn County Early Voting Clerk",
     "f": "(806) 561-4988",
     "p": "(806) 561-4750",
@@ -2445,10 +2749,12 @@
     "s": "TX",
     "z": "79373",
     "j": "Lynn",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4082,
+    "i": 3542,
     "n": "Madison County Early Voting Clerk",
     "f": "(936) 348-5858",
     "p": "(936) 349-0132",
@@ -2461,10 +2767,12 @@
     "s": "TX",
     "z": "77864",
     "j": "Madison",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4180,
+    "i": 3543,
     "n": "Marion County Early Voting Clerk",
     "f": "(903) 665-8732",
     "p": "(903) 665-3971",
@@ -2477,10 +2785,12 @@
     "s": "TX",
     "z": "75657",
     "j": "Marion",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4236,
+    "i": 3544,
     "n": "Martin County Early Voting Clerk",
     "f": "(432) 607-2542",
     "p": "(432) 607-3580",
@@ -2493,10 +2803,12 @@
     "s": "TX",
     "z": "79782",
     "j": "Martin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4244,
+    "i": 3545,
     "n": "Mason County Early Voting Clerk",
     "f": "(325) 347-6868",
     "p": "(325) 347-5253",
@@ -2509,10 +2821,12 @@
     "s": "TX",
     "z": "76856",
     "j": "Mason",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4257,
+    "i": 3546,
     "n": "Matagorda County Early Voting Clerk",
     "f": "(979) 244-7688",
     "p": "(979) 244-7680",
@@ -2525,10 +2839,12 @@
     "s": "TX",
     "z": "77414-5094",
     "j": "Matagorda",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4268,
+    "i": 3547,
     "n": "Maverick County Early Voting Clerk",
     "f": "(830) 757-4337",
     "p": "(830) 757-4175",
@@ -2541,10 +2857,12 @@
     "s": "TX",
     "z": "78852",
     "j": "Maverick",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4285,
+    "i": 3548,
     "n": "McCulloch County Early Voting Clerk",
     "f": "(325) 597-1731",
     "p": "(325) 597-2400",
@@ -2557,10 +2875,12 @@
     "s": "TX",
     "z": "76825",
     "j": "McCulloch",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4305,
+    "i": 3549,
     "n": "McLennan County Early Voting Clerk",
     "f": "(254) 757-5041",
     "p": "(254) 757-5043",
@@ -2573,10 +2893,12 @@
     "s": "TX",
     "z": "76703",
     "j": "McLennan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4310,
+    "i": 3550,
     "n": "McMullen County Early Voting Clerk",
     "f": "(361) 274-3858",
     "p": "(361) 274-3215",
@@ -2589,10 +2911,12 @@
     "s": "TX",
     "z": "78072",
     "j": "McMullen",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4338,
+    "i": 3551,
     "n": "Medina County Early Voting Clerk",
     "f": "(830) 741-6007",
     "p": "(830) 741-6104",
@@ -2605,10 +2929,12 @@
     "s": "TX",
     "z": "78861",
     "j": "Medina",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4358,
+    "i": 3552,
     "n": "Menard County Early Voting Clerk",
     "f": "(325) 396-2047",
     "p": "(325) 396-4523",
@@ -2621,15 +2947,17 @@
     "s": "TX",
     "z": "76859",
     "j": "Menard",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4434,
+    "i": 3553,
     "n": "Midland County Early Voting Clerk",
     "f": "(432) 688-4912",
     "p": "(432) 688-4890",
-    "e": "vtr02@co.midland.tx.us",
-    "d": "2015-08-31T11:03:25",
+    "e": "Cgraves@MCounty.com",
+    "d": "2020-05-08T12:46:49",
     "a1": "P.O. Box 3434",
     "a2": "",
     "a3": "",
@@ -2637,10 +2965,12 @@
     "s": "TX",
     "z": "79702",
     "j": "Midland",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4441,
+    "i": 3554,
     "n": "Milam County Early Voting Clerk",
     "f": "(254) 697-7055",
     "p": "(254) 697-7049",
@@ -2653,10 +2983,12 @@
     "s": "TX",
     "z": "76520",
     "j": "Milam",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4463,
+    "i": 3555,
     "n": "Mills County Early Voting Clerk",
     "f": "(325) 648-3251",
     "p": "(325) 648-2711",
@@ -2669,10 +3001,12 @@
     "s": "TX",
     "z": "76844",
     "j": "Mills",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4505,
+    "i": 3556,
     "n": "Mitchell County Early Voting Clerk",
     "f": "(325) 728-5322",
     "p": "(325) 728-3481",
@@ -2685,10 +3019,12 @@
     "s": "TX",
     "z": "79512",
     "j": "Mitchell",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4554,
+    "i": 3557,
     "n": "Montague County Early Voting Clerk",
     "f": "(940) 894-2543",
     "p": "(940) 894-2540",
@@ -2701,10 +3037,12 @@
     "s": "TX",
     "z": "76251",
     "j": "Montague",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4583,
+    "i": 3558,
     "n": "Montgomery County Early Voting Clerk",
     "f": "(936) 538-8143",
     "p": "(936) 539-7843",
@@ -2717,10 +3055,12 @@
     "s": "TX",
     "z": "77305-2646",
     "j": "Montgomery",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4604,
+    "i": 3559,
     "n": "Moore County Early Voting Clerk",
     "f": "(806) 935-9004",
     "p": "(806) 935-6164",
@@ -2733,10 +3073,12 @@
     "s": "TX",
     "z": "79029",
     "j": "Moore",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4629,
+    "i": 3560,
     "n": "Morris County Early Voting Clerk",
     "f": "(903) 645-4026",
     "p": "(903) 645-3911",
@@ -2749,10 +3091,12 @@
     "s": "TX",
     "z": "75638",
     "j": "Morris",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4645,
+    "i": 3561,
     "n": "Motley County Early Voting Clerk",
     "f": "(806) 347-2220",
     "p": "(806) 347-2621",
@@ -2765,10 +3109,12 @@
     "s": "TX",
     "z": "79244",
     "j": "Motley",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4700,
+    "i": 3562,
     "n": "Nacogdoches County Early Voting Clerk",
     "f": "(936) 560-7838",
     "p": "(936) 560-7825",
@@ -2781,10 +3127,12 @@
     "s": "TX",
     "z": "75961",
     "j": "Nacogdoches",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4724,
+    "i": 3563,
     "n": "Navarro County Early Voting Clerk",
     "f": "(903) 875-3331",
     "p": "(903) 875-3330",
@@ -2797,10 +3145,12 @@
     "s": "TX",
     "z": "75151",
     "j": "Navarro",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4832,
+    "i": 3564,
     "n": "Newton County Early Voting Clerk",
     "f": "(409) 379-9049",
     "p": "(409) 379-5341",
@@ -2813,10 +3163,12 @@
     "s": "TX",
     "z": "75966",
     "j": "Newton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4858,
+    "i": 3565,
     "n": "Nolan County Early Voting Clerk",
     "f": "(325) 235-4635",
     "p": "(325) 235-2462",
@@ -2829,10 +3181,12 @@
     "s": "TX",
     "z": "79556",
     "j": "Nolan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4938,
+    "i": 3566,
     "n": "Nueces County Early Voting Clerk",
     "f": "(361) 888-0329",
     "p": "(361) 888-0580",
@@ -2845,10 +3199,12 @@
     "s": "TX",
     "z": "78403",
     "j": "Nueces",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4964,
+    "i": 3567,
     "n": "Ochiltree County Early Voting Clerk",
     "f": "(806) 435-2081",
     "p": "(806) 435-8039",
@@ -2861,10 +3217,12 @@
     "s": "TX",
     "z": "79070",
     "j": "Ochiltree",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4997,
+    "i": 3568,
     "n": "Oldham County Early Voting Clerk",
     "f": "(806) 267-2671",
     "p": "(806) 267-2667",
@@ -2877,10 +3235,12 @@
     "s": "TX",
     "z": "79092",
     "j": "Oldham",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5033,
+    "i": 3569,
     "n": "Orange County Early Voting Clerk",
     "f": "(409) 670-4176",
     "p": "(409) 882-7973",
@@ -2893,10 +3253,12 @@
     "s": "TX",
     "z": "77630",
     "j": "Orange",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5135,
+    "i": 3570,
     "n": "Palo Pinto County Early Voting Clerk",
     "f": "(888) 965-1548",
     "p": "(940) 659-1217",
@@ -2909,10 +3271,12 @@
     "s": "TX",
     "z": "76484",
     "j": "Palo Pinto",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5138,
+    "i": 3571,
     "n": "Panola County Early Voting Clerk",
     "f": "(903) 693-7283",
     "p": "(903) 693-0370",
@@ -2925,10 +3289,12 @@
     "s": "TX",
     "z": "75633",
     "j": "Panola",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5154,
+    "i": 3572,
     "n": "Parker County Early Voting Clerk",
     "f": "(817) 598-6183",
     "p": "(817) 598-6185",
@@ -2941,10 +3307,12 @@
     "s": "TX",
     "z": "76086",
     "j": "Parker",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5157,
+    "i": 3573,
     "n": "Parmer County Early Voting Clerk",
     "f": "(806) 481-9154",
     "p": "(806) 481-3691",
@@ -2957,10 +3325,12 @@
     "s": "TX",
     "z": "79325",
     "j": "Parmer",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5184,
+    "i": 3574,
     "n": "Pecos County Early Voting Clerk",
     "f": "(432) 336-7557",
     "p": "(432) 336-7555",
@@ -2973,26 +3343,30 @@
     "s": "TX",
     "z": "79735",
     "j": "Pecos",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5381,
+    "i": 3575,
     "n": "Polk County Early Voting Clerk",
     "f": "(936) 327-6855",
     "p": "(936) 327-6805",
     "e": "shock@co.polk.tx.us",
-    "d": "2019-12-31T07:17:40",
-    "a1": "101 W Mill St, Suite 265",
+    "d": "2018-08-03T14:00:33",
+    "a1": "P.O. Drawer 2119",
     "a2": "",
     "a3": "",
     "c": "Livingston",
     "s": "TX",
     "z": "77351",
     "j": "Polk",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5434,
+    "i": 3576,
     "n": "Potter County Early Voting Clerk",
     "f": "(806) 379-2249",
     "p": "(806) 379-2298",
@@ -3005,10 +3379,12 @@
     "s": "TX",
     "z": "79105",
     "j": "Potter",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5468,
+    "i": 3577,
     "n": "Presidio County Early Voting Clerk",
     "f": "(432) 729-4313",
     "p": "(432) 729-4812",
@@ -3021,10 +3397,12 @@
     "s": "TX",
     "z": "79843",
     "j": "Presidio",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5530,
+    "i": 3578,
     "n": "Rains County Early Voting Clerk",
     "f": "(903) 473-5086",
     "p": "(903) 473-5000 x109",
@@ -3037,10 +3415,12 @@
     "s": "TX",
     "z": "75440",
     "j": "Rains",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5537,
+    "i": 3579,
     "n": "Randall County Early Voting Clerk",
     "f": "(806) 468-5634",
     "p": "(806) 468-5510",
@@ -3053,10 +3433,12 @@
     "s": "TX",
     "z": "79015",
     "j": "Randall",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5575,
+    "i": 3580,
     "n": "Reagan County Early Voting Clerk",
     "f": "(325) 884-1503",
     "p": "(325) 884-2442",
@@ -3069,10 +3451,12 @@
     "s": "TX",
     "z": "76932",
     "j": "Reagan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5576,
+    "i": 3581,
     "n": "Real County Early Voting Clerk",
     "f": "(830) 232-6888",
     "p": "(830) 232-5202",
@@ -3085,10 +3469,12 @@
     "s": "TX",
     "z": "78873",
     "j": "Real",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5580,
+    "i": 3582,
     "n": "Red River County Early Voting Clerk",
     "f": "(903) 427-3589",
     "p": "(903) 427-2401",
@@ -3101,10 +3487,12 @@
     "s": "TX",
     "z": "75426",
     "j": "Red River",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5595,
+    "i": 3583,
     "n": "Reeves County Early Voting Clerk",
     "f": "(432) 445-3997",
     "p": "(432) 445-5467",
@@ -3117,10 +3505,12 @@
     "s": "TX",
     "z": "79772",
     "j": "Reeves",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5596,
+    "i": 3584,
     "n": "Refugio County Early Voting Clerk",
     "f": "(361) 526-2102",
     "p": "(361) 526-2151",
@@ -3133,10 +3523,12 @@
     "s": "TX",
     "z": "78377",
     "j": "Refugio",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5704,
+    "i": 3585,
     "n": "Roberts County Early Voting Clerk",
     "f": "(806) 868-3381",
     "p": "(806) 868-2341",
@@ -3149,10 +3541,12 @@
     "s": "TX",
     "z": "79059",
     "j": "Roberts",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5708,
+    "i": 3586,
     "n": "Robertson County Early Voting Clerk",
     "f": "(979) 828-4584",
     "p": "(979) 828-5726",
@@ -3165,10 +3559,12 @@
     "s": "TX",
     "z": "77856",
     "j": "Robertson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5745,
+    "i": 3587,
     "n": "Rockwall County Early Voting Clerk",
     "f": "(972) 204-6209",
     "p": "(972) 204-6200",
@@ -3181,10 +3577,12 @@
     "s": "TX",
     "z": "75087",
     "j": "Rockwall",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5807,
+    "i": 3588,
     "n": "Runnels County Early Voting Clerk",
     "f": "(325) 365-5047",
     "p": "(325) 365-5027",
@@ -3197,15 +3595,17 @@
     "s": "TX",
     "z": "76821",
     "j": "Runnels",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5814,
+    "i": 3589,
     "n": "Rusk County Early Voting Clerk",
     "f": "(903) 657-0319",
     "p": "(903) 657-0321",
     "e": "elections@co.rusk.tx.us",
-    "d": "2020-02-06T03:42:44",
+    "d": "2020-01-15T09:39:11",
     "a1": "P.O. Box 668",
     "a2": "",
     "a3": "",
@@ -3213,10 +3613,12 @@
     "s": "TX",
     "z": "75652",
     "j": "Rusk",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5836,
+    "i": 3590,
     "n": "Sabine County Early Voting Clerk",
     "f": "(409) 787-3795",
     "p": "(409) 787-3786",
@@ -3229,10 +3631,12 @@
     "s": "TX",
     "z": "75948",
     "j": "Sabine",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5870,
+    "i": 3591,
     "n": "San Augustine County Early Voting Clerk",
     "f": "(936) 275-0129",
     "p": "(936) 275-0989",
@@ -3245,10 +3649,12 @@
     "s": "TX",
     "z": "75972",
     "j": "San Augustine",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5875,
+    "i": 3592,
     "n": "San Jacinto County Early Voting Clerk",
     "f": "(936) 653-5808",
     "p": "(936) 653-5804",
@@ -3261,10 +3667,12 @@
     "s": "TX",
     "z": "77331",
     "j": "San Jacinto",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5885,
+    "i": 3593,
     "n": "San Patricio County Early Voting Clerk",
     "f": "(361) 364-6132",
     "p": "(361) 364-6121",
@@ -3277,10 +3685,12 @@
     "s": "TX",
     "z": "78387",
     "j": "San Patricio",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5886,
+    "i": 3594,
     "n": "San Saba County Early Voting Clerk",
     "f": "(325) 372-6484",
     "p": "(325) 372-3614",
@@ -3293,10 +3703,12 @@
     "s": "TX",
     "z": "76877",
     "j": "San Saba",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5937,
+    "i": 3595,
     "n": "Schleicher County Early Voting Clerk",
     "f": "(325) 853-2768",
     "p": "(325) 853-2302",
@@ -3309,10 +3721,12 @@
     "s": "TX",
     "z": "76936",
     "j": "Schleicher",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5981,
+    "i": 3596,
     "n": "Scurry County Early Voting Clerk",
     "f": "(325) 573-7396",
     "p": "(325) 573-5332",
@@ -3325,10 +3739,12 @@
     "s": "TX",
     "z": "79549",
     "j": "Scurry",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6020,
+    "i": 3597,
     "n": "Shackelford County Early Voting Clerk",
     "f": "(325) 762-9416",
     "p": "(325) 762-9415",
@@ -3341,10 +3757,12 @@
     "s": "TX",
     "z": "76430",
     "j": "Shackelford",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6055,
+    "i": 3598,
     "n": "Shelby County Early Voting Clerk",
     "f": "(936) 598-3701",
     "p": "(936) 598-6361",
@@ -3357,10 +3775,12 @@
     "s": "TX",
     "z": "75935",
     "j": "Shelby",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6083,
+    "i": 3599,
     "n": "Sherman County Early Voting Clerk",
     "f": "(806) 366-5670",
     "p": "(806) 366-2371",
@@ -3373,10 +3793,12 @@
     "s": "TX",
     "z": "79084",
     "j": "Sherman",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6150,
+    "i": 3600,
     "n": "Smith County Early Voting Clerk",
     "f": "(903) 590-4778",
     "p": "(903) 590-4777",
@@ -3389,10 +3811,12 @@
     "s": "TX",
     "z": "75702",
     "j": "Smith",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6173,
+    "i": 3601,
     "n": "Somervell County Early Voting Clerk",
     "f": "(254) 897-7703",
     "p": "(254) 897-9470",
@@ -3405,10 +3829,12 @@
     "s": "TX",
     "z": "76043",
     "j": "Somervell",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6338,
+    "i": 3602,
     "n": "Starr County Early Voting Clerk",
     "f": "(956) 716-8222",
     "p": "(956) 716-4800",
@@ -3421,10 +3847,12 @@
     "s": "TX",
     "z": "78582",
     "j": "Starr",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6347,
+    "i": 3603,
     "n": "Stephens County Early Voting Clerk",
     "f": "(254) 559-2960",
     "p": "(254) 559-2732",
@@ -3437,10 +3865,12 @@
     "s": "TX",
     "z": "76424",
     "j": "Stephens",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6353,
+    "i": 3604,
     "n": "Sterling County Early Voting Clerk",
     "f": "(325) 378-3111",
     "p": "(325) 378-5191",
@@ -3453,10 +3883,12 @@
     "s": "TX",
     "z": "76951",
     "j": "Sterling",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6390,
+    "i": 3605,
     "n": "Stonewall County Early Voting Clerk",
     "f": "(940) 989-2032",
     "p": "(940) 989-2272",
@@ -3469,10 +3901,12 @@
     "s": "TX",
     "z": "79502",
     "j": "Stonewall",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6483,
+    "i": 3606,
     "n": "Sutton County Early Voting Clerk",
     "f": "(325) 387-6028",
     "p": "(325) 387-3815",
@@ -3485,10 +3919,12 @@
     "s": "TX",
     "z": "76950",
     "j": "Sutton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6500,
+    "i": 3607,
     "n": "Swisher County Early Voting Clerk",
     "f": "(806) 995-2214",
     "p": "(806) 995-2363",
@@ -3501,15 +3937,17 @@
     "s": "TX",
     "z": "79088",
     "j": "Swisher",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6522,
+    "i": 3608,
     "n": "Tarrant County Early Voting Clerk",
-    "f": "(817) 831-6475",
+    "f": "(817) 850-2344",
     "p": "(817) 831-8683",
     "e": "votebymail@tarrantcounty.com",
-    "d": "2019-08-29T15:13:38",
+    "d": "2020-03-17T16:07:48",
     "a1": "P.O. Box 961011",
     "a2": "",
     "a3": "",
@@ -3517,10 +3955,12 @@
     "s": "TX",
     "z": "76161",
     "j": "Tarrant",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6533,
+    "i": 3609,
     "n": "Taylor County Early Voting Clerk",
     "f": "(325) 674-1340",
     "p": "(325) 674-1216",
@@ -3533,10 +3973,12 @@
     "s": "TX",
     "z": "79604",
     "j": "Taylor",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6552,
+    "i": 3610,
     "n": "Terrell County Early Voting Clerk",
     "f": "(432) 345-2653",
     "p": "(432) 345-2391",
@@ -3549,10 +3991,12 @@
     "s": "TX",
     "z": "79848",
     "j": "Terrell",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6553,
+    "i": 3611,
     "n": "Terry County Early Voting Clerk",
     "f": "(806) 637-3807",
     "p": "(806) 637-3806",
@@ -3565,10 +4009,12 @@
     "s": "TX",
     "z": "79316",
     "j": "Terry",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6583,
+    "i": 3612,
     "n": "Throckmorton County Early Voting Clerk",
     "f": "(940) 849-8826",
     "p": "(940) 849-8825",
@@ -3581,10 +4027,12 @@
     "s": "TX",
     "z": "76483",
     "j": "Throckmorton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6605,
+    "i": 3613,
     "n": "Titus County Early Voting Clerk",
     "f": "(903) 575-1117",
     "p": "(903) 575-0902",
@@ -3597,10 +4045,12 @@
     "s": "TX",
     "z": "75455",
     "j": "Titus",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6613,
+    "i": 3614,
     "n": "Tom Green County Early Voting Clerk",
     "f": "(325) 657-9226",
     "p": "(325) 659-6541",
@@ -3613,10 +4063,12 @@
     "s": "TX",
     "z": "76903",
     "j": "Tom Green",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6640,
+    "i": 3615,
     "n": "Travis County Early Voting Clerk",
     "f": "(512) 854-9075",
     "p": "(512) 854-4996",
@@ -3629,10 +4081,12 @@
     "s": "TX",
     "z": "78714-9325",
     "j": "Travis",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6655,
+    "i": 3616,
     "n": "Trinity County Early Voting Clerk",
     "f": "(936) 642-0155",
     "p": "(936) 642-3959",
@@ -3645,10 +4099,12 @@
     "s": "TX",
     "z": "75845",
     "j": "Trinity",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6698,
+    "i": 3617,
     "n": "Tyler County Early Voting Clerk",
     "f": "(409) 283-8049",
     "p": "(409) 283-2281",
@@ -3661,10 +4117,12 @@
     "s": "TX",
     "z": "75979",
     "j": "Tyler",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6750,
+    "i": 3618,
     "n": "Upshur County Early Voting Clerk",
     "f": "(903) 843-5492",
     "p": "(903) 680-8506",
@@ -3677,10 +4135,12 @@
     "s": "TX",
     "z": "75644",
     "j": "Upshur",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6753,
+    "i": 3619,
     "n": "Upton County Early Voting Clerk",
     "f": "(432) 693-2333",
     "p": "(432) 693-2014",
@@ -3693,10 +4153,12 @@
     "s": "TX",
     "z": "79778",
     "j": "Upton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6759,
+    "i": 3620,
     "n": "Uvalde County Early Voting Clerk",
     "f": "(830) 591-2541",
     "p": "(830) 591-2724 x265",
@@ -3709,10 +4171,12 @@
     "s": "TX",
     "z": "78801",
     "j": "Uvalde",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6761,
+    "i": 3621,
     "n": "Val Verde County Early Voting Clerk",
     "f": "(830) 774-7608",
     "p": "(830) 774-7564",
@@ -3725,10 +4189,12 @@
     "s": "TX",
     "z": "78841-1267",
     "j": "Val Verde",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6774,
+    "i": 3622,
     "n": "Van Zandt County Early Voting Clerk",
     "f": "(903) 567-6722",
     "p": "(903) 567-6503",
@@ -3741,10 +4207,12 @@
     "s": "TX",
     "z": "75103",
     "j": "Van Zandt",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6805,
+    "i": 3623,
     "n": "Victoria County Early Voting Clerk",
     "f": "(361) 582-5940",
     "p": "(361) 576-0124",
@@ -3757,10 +4225,12 @@
     "s": "TX",
     "z": "77901-3947",
     "j": "Victoria",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6850,
+    "i": 3624,
     "n": "Walker County Early Voting Clerk",
     "f": "(936) 436-4961",
     "p": "(936) 436-4959",
@@ -3773,10 +4243,12 @@
     "s": "TX",
     "z": "77340",
     "j": "Walker",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6856,
+    "i": 3625,
     "n": "Waller County Early Voting Clerk",
     "f": "(979) 826-7645",
     "p": "(979) 826-7643",
@@ -3789,10 +4261,12 @@
     "s": "TX",
     "z": "77445",
     "j": "Waller",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6874,
+    "i": 3626,
     "n": "Ward County Early Voting Clerk",
     "f": "(432) 943-6054",
     "p": "(432) 943-3294",
@@ -3805,10 +4279,12 @@
     "s": "TX",
     "z": "79756",
     "j": "Ward",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6941,
+    "i": 3627,
     "n": "Washington County Early Voting Clerk",
     "f": "(979) 277-6213",
     "p": "(979) 277-6200 x123",
@@ -3821,15 +4297,17 @@
     "s": "TX",
     "z": "77833",
     "j": "Washington",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7041,
+    "i": 3628,
     "n": "Webb County Early Voting Clerk",
     "f": "(956) 523-5006",
-    "p": "(956) 523-4047",
+    "p": "(956) 523-4050",
     "e": "election@webbcountytx.gov",
-    "d": "2019-08-29T15:13:38",
+    "d": "2020-04-07T15:29:54",
     "a1": "P.O. Drawer 29",
     "a2": "",
     "a3": "",
@@ -3837,10 +4315,12 @@
     "s": "TX",
     "z": "78042-0029",
     "j": "Webb",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7157,
+    "i": 3629,
     "n": "Wharton County Early Voting Clerk",
     "f": "(979) 282-2034",
     "p": "(979) 532-0193",
@@ -3853,10 +4333,12 @@
     "s": "TX",
     "z": "77488-0390",
     "j": "Wharton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7171,
+    "i": 3630,
     "n": "Wheeler County Early Voting Clerk",
     "f": "(806) 826-3282",
     "p": "(806) 826-5544",
@@ -3869,10 +4351,12 @@
     "s": "TX",
     "z": "79096",
     "j": "Wheeler",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7214,
+    "i": 3631,
     "n": "Wichita County Early Voting Clerk",
     "f": "(940) 716-8554",
     "p": "(940) 766-8100",
@@ -3885,10 +4369,12 @@
     "s": "TX",
     "z": "76301",
     "j": "Wichita",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7217,
+    "i": 3632,
     "n": "Wilbarger County Early Voting Clerk",
     "f": "(940) 553-2320",
     "p": "(940) 552-5486",
@@ -3901,10 +4387,12 @@
     "s": "TX",
     "z": "76384",
     "j": "Wilbarger",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7231,
+    "i": 3633,
     "n": "Willacy County Early Voting Clerk",
     "f": "(956) 689-5341",
     "p": "(956) 689-2387",
@@ -3917,10 +4405,12 @@
     "s": "TX",
     "z": "78580",
     "j": "Willacy",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7242,
+    "i": 3634,
     "n": "Williamson County Early Voting Clerk",
     "f": "(512) 943-1634",
     "p": "(512) 943-1630",
@@ -3933,10 +4423,12 @@
     "s": "TX",
     "z": "78626",
     "j": "Williamson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7259,
+    "i": 3635,
     "n": "Wilson County Early Voting Clerk",
     "f": "(830) 393-3725",
     "p": "(830) 393-7380",
@@ -3949,10 +4441,12 @@
     "s": "TX",
     "z": "78114",
     "j": "Wilson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7294,
+    "i": 3636,
     "n": "Winkler County Early Voting Clerk",
     "f": "",
     "p": "(432) 586-3401",
@@ -3965,10 +4459,12 @@
     "s": "TX",
     "z": "79745",
     "j": "Winkler",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7314,
+    "i": 3637,
     "n": "Wise County Early Voting Clerk",
     "f": "(940) 626-4283",
     "p": "(940) 626-4453",
@@ -3981,10 +4477,12 @@
     "s": "TX",
     "z": "76234",
     "j": "Wise",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7333,
+    "i": 3638,
     "n": "Wood County Early Voting Clerk",
     "f": "(903) 763-2401",
     "p": "(903) 763-2400",
@@ -3997,10 +4495,12 @@
     "s": "TX",
     "z": "75783",
     "j": "Wood",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7413,
+    "i": 3639,
     "n": "Yoakum County Early Voting Clerk",
     "f": "(806) 456-2258",
     "p": "(806) 456-7491 x294",
@@ -4013,10 +4513,12 @@
     "s": "TX",
     "z": "79355",
     "j": "Yoakum",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7424,
+    "i": 3640,
     "n": "Young County Early Voting Clerk",
     "f": "(940) 521-0305",
     "p": "(940) 521-9483",
@@ -4029,10 +4531,12 @@
     "s": "TX",
     "z": "76450",
     "j": "Young",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7431,
+    "i": 3641,
     "n": "Zapata County Early Voting Clerk",
     "f": "(956) 765-9933",
     "p": "(956) 765-9915",
@@ -4045,10 +4549,12 @@
     "s": "TX",
     "z": "78076",
     "j": "Zapata",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7432,
+    "i": 3642,
     "n": "Zavala County Early Voting Clerk",
     "f": "(830) 374-5955",
     "p": "(830) 374-2331",
@@ -4061,6 +4567,8 @@
     "s": "TX",
     "z": "78839",
     "j": "Zavala",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

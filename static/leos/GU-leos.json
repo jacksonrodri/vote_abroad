@@ -1,6 +1,6 @@
 [
   {
-    "i": 95,
+    "i": 682,
     "n": "Guam Election Commission",
     "f": "(671) 477-1895",
     "p": "(671) 477-9791",
@@ -13,6 +13,8 @@
     "s": "GU",
     "z": "96932-8958",
     "j": "All",
-    "t": "All"
+    "t": "All",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

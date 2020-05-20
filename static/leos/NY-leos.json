@@ -1,6 +1,6 @@
 [
   {
-    "i": 64,
+    "i": 2812,
     "n": "Albany County Board of Elections",
     "f": "(518) 487-5077",
     "p": "(518) 487-5060",
@@ -13,10 +13,12 @@
     "s": "NY",
     "z": "12206",
     "j": "Albany",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 104,
+    "i": 2813,
     "n": "Allegany County Board of Elections",
     "f": "(585) 268-9406",
     "p": "(585) 268-9294",
@@ -29,10 +31,12 @@
     "s": "NY",
     "z": "14813",
     "j": "Allegany",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 790,
+    "i": 2814,
     "n": "Bronx Borough Board of Elections",
     "f": "(718) 299-2140",
     "p": "(718) 299-9017",
@@ -45,10 +49,12 @@
     "s": "NY",
     "z": "10457",
     "j": "Bronx",
-    "t": "Borough"
+    "t": "Borough",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 811,
+    "i": 2815,
     "n": "Broome County Board of Elections",
     "f": "(607) 778-2174",
     "p": "(607) 778-2172",
@@ -61,10 +67,12 @@
     "s": "NY",
     "z": "13902",
     "j": "Broome",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1102,
+    "i": 2816,
     "n": "Cattaraugus County Board of Elections",
     "f": "(716) 938-2775",
     "p": "(716) 938-2400",
@@ -77,10 +85,12 @@
     "s": "NY",
     "z": "14755",
     "j": "Cattaraugus",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1105,
+    "i": 2817,
     "n": "Cayuga County Board of Elections",
     "f": "(315) 253-1289",
     "p": "(315) 253-1285",
@@ -93,10 +103,12 @@
     "s": "NY",
     "z": "13021",
     "j": "Cayuga",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1179,
+    "i": 2818,
     "n": "Chautauqua County Board of Elections",
     "f": "(716) 753-4111",
     "p": "(716) 753-4580",
@@ -109,10 +121,12 @@
     "s": "NY",
     "z": "14757",
     "j": "Chautauqua",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1190,
+    "i": 2819,
     "n": "Chemung County Board of Elections",
     "f": "(607) 737-5499",
     "p": "(607) 737-5475",
@@ -125,10 +139,12 @@
     "s": "NY",
     "z": "14902-0588",
     "j": "Chemung",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1191,
+    "i": 2820,
     "n": "Chenango County Board of Elections",
     "f": "(607) 337-1766",
     "p": "(607) 337-1760",
@@ -141,10 +157,12 @@
     "s": "NY",
     "z": "13815",
     "j": "Chenango",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1380,
+    "i": 2821,
     "n": "Clinton County Board of Elections",
     "f": "(518) 565-4508",
     "p": "(518) 565-4740",
@@ -157,10 +175,12 @@
     "s": "NY",
     "z": "12901",
     "j": "Clinton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1464,
+    "i": 2822,
     "n": "Columbia County Board of Elections",
     "f": "(518) 828-2624",
     "p": "(518) 828-3115",
@@ -173,10 +193,12 @@
     "s": "NY",
     "z": "12534",
     "j": "Columbia",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1528,
+    "i": 2823,
     "n": "Cortland County Board of Elections",
     "f": "(607) 758-5513",
     "p": "(607) 753-5032",
@@ -189,10 +211,12 @@
     "s": "NY",
     "z": "13045-2828",
     "j": "Cortland",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1821,
+    "i": 2824,
     "n": "Delaware County Board of Elections",
     "f": "(607) 832-6077",
     "p": "(607) 832-5321",
@@ -205,10 +229,12 @@
     "s": "NY",
     "z": "13753",
     "j": "Delaware",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1963,
+    "i": 2825,
     "n": "Dutchess County Board of Elections",
     "f": "(845) 486-2483",
     "p": "(845) 486-2473",
@@ -221,10 +247,12 @@
     "s": "NY",
     "z": "12601",
     "j": "Dutchess",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2156,
+    "i": 2826,
     "n": "Erie County Board of Elections",
     "f": "(716) 858-8282",
     "p": "(716) 858-8891",
@@ -237,10 +265,12 @@
     "s": "NY",
     "z": "14202",
     "j": "Erie",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2172,
+    "i": 2827,
     "n": "Essex County Board of Elections",
     "f": "(518) 873-3479",
     "p": "(518) 873-3474",
@@ -253,10 +283,12 @@
     "s": "NY",
     "z": "12932",
     "j": "Essex",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2400,
+    "i": 2828,
     "n": "Franklin County Board of Elections",
     "f": "(518) 481-6018",
     "p": "(518) 481-1663",
@@ -269,10 +301,12 @@
     "s": "NY",
     "z": "12953-1823",
     "j": "Franklin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2461,
+    "i": 2829,
     "n": "Fulton County Board of Elections",
     "f": "(518) 736-1612",
     "p": "(518) 736-5526",
@@ -285,10 +319,12 @@
     "s": "NY",
     "z": "12095-9946",
     "j": "Fulton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2517,
+    "i": 2830,
     "n": "Genesee County Board of Elections",
     "f": "(585) 344-8562",
     "p": "(585) 815-7804",
@@ -301,10 +337,12 @@
     "s": "NY",
     "z": "14020",
     "j": "Genesee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2748,
+    "i": 2831,
     "n": "Greene County Board of Elections",
     "f": "(518) 719-3784",
     "p": "(518) 719-3550",
@@ -317,10 +355,12 @@
     "s": "NY",
     "z": "12414",
     "j": "Greene",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2856,
+    "i": 2832,
     "n": "Hamilton County Board of Elections",
     "f": "(518) 548-6345",
     "p": "(518) 548-4684",
@@ -333,10 +373,12 @@
     "s": "NY",
     "z": "12108",
     "j": "Hamilton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3055,
+    "i": 2833,
     "n": "Herkimer County Board of Elections",
     "f": "(315) 867-1106",
     "p": "(315) 867-1102",
@@ -349,10 +391,12 @@
     "s": "NY",
     "z": "13350",
     "j": "Herkimer",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3400,
+    "i": 2834,
     "n": "Jefferson County Board of Elections",
     "f": "(315) 785-5197",
     "p": "(315) 785-3027",
@@ -365,10 +409,12 @@
     "s": "NY",
     "z": "13601",
     "j": "Jefferson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3542,
+    "i": 2835,
     "n": "Kings (Brooklyn) Borough Board of Elections",
     "f": "(718) 246-5958",
     "p": "(718) 797-8800",
@@ -381,10 +427,12 @@
     "s": "NY",
     "z": "11201",
     "j": "Kings Brooklyn",
-    "t": "Borough"
+    "t": "Borough",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3817,
+    "i": 2836,
     "n": "Lewis County Board of Elections",
     "f": "(315) 376-2860",
     "p": "(315) 376-5329",
@@ -397,10 +445,12 @@
     "s": "NY",
     "z": "13367",
     "j": "Lewis",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3934,
+    "i": 2837,
     "n": "Livingston County Board of Elections",
     "f": "(585) 243-7015",
     "p": "(585) 243-7090",
@@ -413,10 +463,12 @@
     "s": "NY",
     "z": "14454-1043",
     "j": "Livingston",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4085,
+    "i": 2838,
     "n": "Madison County Board of Elections",
     "f": "(315) 366-2532",
     "p": "(315) 366-2231",
@@ -429,10 +481,12 @@
     "s": "NY",
     "z": "13163",
     "j": "Madison",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4544,
+    "i": 2839,
     "n": "Monroe County Board of Elections",
     "f": "(585) 753-1511",
     "p": "(585) 753-1550",
@@ -445,10 +499,12 @@
     "s": "NY",
     "z": "14614",
     "j": "Monroe",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4586,
+    "i": 2840,
     "n": "Montgomery County Board of Elections",
     "f": "(518) 853-8392",
     "p": "(518) 853-8180",
@@ -461,10 +517,12 @@
     "s": "NY",
     "z": "12068-1500",
     "j": "Montgomery",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4717,
+    "i": 2841,
     "n": "Nassau County Board of Elections",
     "f": "(516) 571-2058",
     "p": "(516) 571-8683",
@@ -477,10 +535,12 @@
     "s": "NY",
     "z": "11501",
     "j": "Nassau",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4699,
+    "i": 2843,
     "n": "New York (Manhattan) Borough Board of Elections",
     "f": "646-638-2047",
     "p": "(212) 886-2100",
@@ -493,10 +553,12 @@
     "s": "NY",
     "z": "10014",
     "j": "NY Manhattan",
-    "t": "Borough"
+    "t": "Borough",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4841,
+    "i": 2842,
     "n": "Niagara County Board of Elections",
     "f": "(716) 438-4054",
     "p": "(716) 438-4040",
@@ -509,10 +571,12 @@
     "s": "NY",
     "z": "14094",
     "j": "Niagara",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5015,
+    "i": 2844,
     "n": "Oneida County Board of Elections",
     "f": "(315) 798-6412",
     "p": "(315) 798-5765",
@@ -525,10 +589,12 @@
     "s": "NY",
     "z": "13501",
     "j": "Oneida",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5018,
+    "i": 2845,
     "n": "Onondaga County Board of Elections",
     "f": "(315) 435-8451",
     "p": "(315) 435-8683",
@@ -541,10 +607,12 @@
     "s": "NY",
     "z": "13204",
     "j": "Onondaga",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5022,
+    "i": 2846,
     "n": "Ontario County Board of Elections",
     "f": "(585) 393-2941",
     "p": "(585) 396-4005",
@@ -557,10 +625,12 @@
     "s": "NY",
     "z": "14424",
     "j": "Ontario",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5036,
+    "i": 2847,
     "n": "Orange County Board of Elections",
     "f": "(845) 291-2437",
     "p": "(845) 360-6500",
@@ -573,26 +643,30 @@
     "s": "NY",
     "z": "10924",
     "j": "Orange",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5055,
+    "i": 2848,
     "n": "Orleans County Board of Elections",
     "f": "(585) 589-2771",
     "p": "(585) 589-3274",
     "e": "elections@orleansny.com",
-    "d": "2019-07-15T14:29:52",
-    "a1": "14012 State Route 31 W.",
+    "d": "2020-04-07T10:45:55",
+    "a1": "14016 Route 31 W, Suite 140",
     "a2": "",
     "a3": "",
     "c": "Albion",
     "s": "NY",
     "z": "14411",
     "j": "Orleans",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5081,
+    "i": 2849,
     "n": "Oswego County Board of Elections",
     "f": "(315) 349-8357",
     "p": "(315) 349-8350",
@@ -605,10 +679,12 @@
     "s": "NY",
     "z": "13126",
     "j": "Oswego",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5088,
+    "i": 2850,
     "n": "Otsego County Board of Elections",
     "f": "(607) 547-4248",
     "p": "(607) 547-4247",
@@ -621,10 +697,12 @@
     "s": "NY",
     "z": "13326",
     "j": "Otsego",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5512,
+    "i": 2851,
     "n": "Putnam County Board of Elections",
     "f": "(845) 808-1920",
     "p": "(845) 808-1300",
@@ -637,10 +715,12 @@
     "s": "NY",
     "z": "10512",
     "j": "Putnam",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5517,
+    "i": 2852,
     "n": "Queens Borough Board of Elections",
     "f": "(718) 459-3384",
     "p": "(718) 730-6730",
@@ -653,10 +733,12 @@
     "s": "NY",
     "z": "11375",
     "j": "Queens",
-    "t": "Borough"
+    "t": "Borough",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5602,
+    "i": 2853,
     "n": "Rensselaer  County Board of Elections",
     "f": "(518) 270-2909",
     "p": "(518) 270-2990",
@@ -669,10 +751,12 @@
     "s": "NY",
     "z": "12180",
     "j": "Rensselaer",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5653,
+    "i": 2854,
     "n": "Richmond (Staten Island) Borough Board of Elections",
     "f": "(718) 876-0912",
     "p": "(718) 876-0079",
@@ -685,10 +769,12 @@
     "s": "NY",
     "z": "10305",
     "j": "Richmond Staten Island",
-    "t": "Borough"
+    "t": "Borough",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5740,
+    "i": 2855,
     "n": "Rockland County Board of Elections",
     "f": "(845) 638-5196",
     "p": "(845) 638-5172",
@@ -701,10 +787,12 @@
     "s": "NY",
     "z": "10956",
     "j": "Rockland",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5917,
+    "i": 2856,
     "n": "Saratoga County Board of Elections",
     "f": "(518) 884-4751",
     "p": "(518) 885-2249",
@@ -717,10 +805,12 @@
     "s": "NY",
     "z": "12020",
     "j": "Saratoga",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5936,
+    "i": 2857,
     "n": "Schenectady County Board of Elections",
     "f": "(518) 377-2716",
     "p": "(518) 377-2469",
@@ -733,10 +823,12 @@
     "s": "NY",
     "z": "12303",
     "j": "Schenectady",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5943,
+    "i": 2858,
     "n": "Schoharie County Board of Elections",
     "f": "(518) 295-8419",
     "p": "(518) 295-8388",
@@ -749,10 +841,12 @@
     "s": "NY",
     "z": "12157",
     "j": "Schoharie",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5949,
+    "i": 2859,
     "n": "Schuyler County Board of Elections",
     "f": "(607) 535-8364",
     "p": "(607) 535-8195",
@@ -765,15 +859,17 @@
     "s": "NY",
     "z": "14891-9972",
     "j": "Schuyler",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6002,
+    "i": 2860,
     "n": "Seneca County Board of Elections",
     "f": "(315) 539-3710",
     "p": "(315) 539-1760",
     "e": "elections@co.seneca.ny.us",
-    "d": "2020-02-06T03:44:26",
+    "d": "2019-07-15T14:29:52",
     "a1": "One DiPronio Drive",
     "a2": "",
     "a3": "",
@@ -781,10 +877,12 @@
     "s": "NY",
     "z": "13165",
     "j": "Seneca",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6298,
+    "i": 2861,
     "n": "St. Lawrence County Board of Elections",
     "f": "(315) 386-2737",
     "p": "(315) 379-2202",
@@ -797,10 +895,12 @@
     "s": "NY",
     "z": "13617",
     "j": "St. Lawrence",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6361,
+    "i": 2862,
     "n": "Steuben County Board of Elections",
     "f": "(607) 664-2376",
     "p": "(607) 664-2260",
@@ -813,10 +913,12 @@
     "s": "NY",
     "z": "14810",
     "j": "Steuben",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6423,
+    "i": 2863,
     "n": "Suffolk County Board of Elections",
     "f": "631-852-4590",
     "p": "631-852-4500",
@@ -829,10 +931,12 @@
     "s": "NY",
     "z": "11980",
     "j": "Suffolk",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6432,
+    "i": 2864,
     "n": "Sullivan County Board of Elections",
     "f": "(845) 807-0410",
     "p": "(845) 807-0400",
@@ -845,10 +949,12 @@
     "s": "NY",
     "z": "12701-5192",
     "j": "Sullivan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6596,
+    "i": 2865,
     "n": "Tioga County Board of Elections",
     "f": "(607) 687-6348",
     "p": "(607) 687-8261",
@@ -861,10 +967,12 @@
     "s": "NY",
     "z": "13827",
     "j": "Tioga",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6618,
+    "i": 2866,
     "n": "Tompkins County Board of Elections",
     "f": "(607) 274-5533",
     "p": "(607) 274-5522",
@@ -877,10 +985,12 @@
     "s": "NY",
     "z": "14850",
     "j": "Tompkins",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6707,
+    "i": 2867,
     "n": "Ulster County Board of Elections",
     "f": "(845) 334-5434",
     "p": "(845) 334-5470",
@@ -893,10 +1003,12 @@
     "s": "NY",
     "z": "12401",
     "j": "Ulster",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6900,
+    "i": 2868,
     "n": "Warren County Board of Elections",
     "f": "(518) 761-6480",
     "p": "(518) 761-6456",
@@ -909,10 +1021,12 @@
     "s": "NY",
     "z": "12845",
     "j": "Warren",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6953,
+    "i": 2869,
     "n": "Washington County Board of Elections",
     "f": "(518) 746-2179",
     "p": "(518) 746-2180",
@@ -925,10 +1039,12 @@
     "s": "NY",
     "z": "12828",
     "j": "Washington",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7033,
+    "i": 2870,
     "n": "Wayne County Board of Elections",
     "f": "(315) 946-7409",
     "p": "(315) 946-7400",
@@ -941,10 +1057,12 @@
     "s": "NY",
     "z": "14489",
     "j": "Wayne",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7116,
+    "i": 2871,
     "n": "Westchester County Board of Elections",
     "f": "(914) 995-3190",
     "p": "(914) 995-5700",
@@ -957,10 +1075,12 @@
     "s": "NY",
     "z": "10601",
     "j": "Westchester",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7394,
+    "i": 2872,
     "n": "Wyoming County Board of Elections",
     "f": "(585) 786-8843",
     "p": "(585) 786-8931",
@@ -973,10 +1093,12 @@
     "s": "NY",
     "z": "14569",
     "j": "Wyoming",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7406,
+    "i": 2873,
     "n": "Yates County Board of Elections",
     "f": "(315) 536-5523",
     "p": "(315) 536-5135",
@@ -989,6 +1111,8 @@
     "s": "NY",
     "z": "14527",
     "j": "Yates",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

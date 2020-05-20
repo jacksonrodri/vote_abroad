@@ -1,6 +1,6 @@
 [
   {
-    "i": 22,
+    "i": 940,
     "n": "Adams County Circuit Court Clerk",
     "f": "(260) 724-5313",
     "p": "(260) 724-5309",
@@ -13,10 +13,12 @@
     "s": "IN",
     "z": "46733-1618",
     "j": "Adams",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 108,
+    "i": 941,
     "n": "Allen County Election Board",
     "f": "(260) 449-7908",
     "p": "(260) 449-7329",
@@ -29,10 +31,12 @@
     "s": "IN",
     "z": "46802",
     "j": "Allen",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 389,
+    "i": 942,
     "n": "Bartholomew County Clerk",
     "f": "(812) 379-1676",
     "p": "(812) 379-1604",
@@ -45,10 +49,12 @@
     "s": "IN",
     "z": "47202-0924",
     "j": "Bartholomew",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 509,
+    "i": 943,
     "n": "Benton County Circuit Court Clerk",
     "f": "(765) 884-0322",
     "p": "(765) 884-0930",
@@ -61,10 +67,12 @@
     "s": "IN",
     "z": "47944-1556",
     "j": "Benton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 606,
+    "i": 944,
     "n": "Blackford County Circuit Court Clerk",
     "f": "(765) 348-7234",
     "p": "(765) 348-7217",
@@ -77,10 +85,12 @@
     "s": "IN",
     "z": "47348-2298",
     "j": "Blackford",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 673,
+    "i": 945,
     "n": "Boone County Circuit Court Clerk",
     "f": "(765) 485-0150",
     "p": "(765) 483-5251",
@@ -93,10 +103,12 @@
     "s": "IN",
     "z": "46052-2100",
     "j": "Boone",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 817,
+    "i": 946,
     "n": "Brown County Clerk",
     "f": "(812) 988-5562",
     "p": "(812) 988-5510",
@@ -109,10 +121,12 @@
     "s": "IN",
     "z": "47448-0085",
     "j": "Brown",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1036,
+    "i": 947,
     "n": "Carroll County Circuit Court Clerk",
     "f": "(765) 564-1835",
     "p": "(765) 564-4485",
@@ -125,10 +139,12 @@
     "s": "IN",
     "z": "46923",
     "j": "Carroll",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1076,
+    "i": 948,
     "n": "Cass County Circuit Court Clerk",
     "f": "(574) 753-6147",
     "p": "(574) 753-7870",
@@ -141,10 +157,12 @@
     "s": "IN",
     "z": "46947-3192",
     "j": "Cass",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1292,
+    "i": 949,
     "n": "Clark County Circuit Court Clerk",
     "f": "(812) 280-5652",
     "p": "(812) 285-6329",
@@ -157,10 +175,12 @@
     "s": "IN",
     "z": "47130-4090",
     "j": "Clark",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1317,
+    "i": 950,
     "n": "Clay County Circuit Court Clerk",
     "f": "(812) 448-9006",
     "p": "(812) 448-9023",
@@ -173,10 +193,12 @@
     "s": "IN",
     "z": "47834-0033",
     "j": "Clay",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1372,
+    "i": 951,
     "n": "Clinton County Circuit Court Clerk",
     "f": "(765) 659-6347",
     "p": "(765) 659-6337",
@@ -189,10 +211,12 @@
     "s": "IN",
     "z": "46041-1993",
     "j": "Clinton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1567,
+    "i": 952,
     "n": "Crawford County Circuit Court Clerk",
     "f": "(812) 338-2507",
     "p": "(812) 338-2565",
@@ -205,10 +229,12 @@
     "s": "IN",
     "z": "47118",
     "j": "Crawford",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1745,
+    "i": 953,
     "n": "Daviess County Circuit Court Clerk",
     "f": "(812) 254-8698",
     "p": "(812) 254-8679",
@@ -221,26 +247,12 @@
     "s": "IN",
     "z": "47501",
     "j": "Daviess",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1766,
-    "n": "DeKalb County Circuit Court Clerk",
-    "f": "(260) 925-5126",
-    "p": "(260) 925-9787",
-    "e": "KBishop@co.dekalb.in.us",
-    "d": "2019-09-17T12:08:33",
-    "a1": "PO Box 230",
-    "a2": "",
-    "a3": "",
-    "c": "Auburn",
-    "s": "IN",
-    "z": "46706-0230",
-    "j": "DeKalb",
-    "t": "County"
-  },
-  {
-    "i": 1781,
+    "i": 955,
     "n": "Dearborn County Circuit Court Clerk",
     "f": "(812) 532-2021",
     "p": "(812) 537-1877",
@@ -253,10 +265,12 @@
     "s": "IN",
     "z": "47025",
     "j": "Dearborn",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1786,
+    "i": 956,
     "n": "Decatur County Circuit Court Clerk",
     "f": "(812) 662-6627",
     "p": "(812) 663-8223",
@@ -269,10 +283,30 @@
     "s": "IN",
     "z": "47240-2080",
     "j": "Decatur",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1817,
+    "i": 954,
+    "n": "DeKalb County Circuit Court Clerk",
+    "f": "(260) 925-5126",
+    "p": "(260) 925-9787",
+    "e": "KBishop@co.dekalb.in.us",
+    "d": "2019-09-17T12:08:33",
+    "a1": "PO Box 230",
+    "a2": "",
+    "a3": "",
+    "c": "Auburn",
+    "s": "IN",
+    "z": "46706-0230",
+    "j": "DeKalb",
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
+  },
+  {
+    "i": 957,
     "n": "Delaware County Board of Voter Registration",
     "f": "(765) 747-7768",
     "p": "(765) 747-7726",
@@ -285,10 +319,12 @@
     "s": "IN",
     "z": "47305-2836",
     "j": "Delaware",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1936,
+    "i": 958,
     "n": "Dubois County Circuit Court Clerk",
     "f": "(812) 481-7044",
     "p": "(812) 481-7037",
@@ -301,15 +337,17 @@
     "s": "IN",
     "z": "47546-3058",
     "j": "Dubois",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2093,
+    "i": 959,
     "n": "Elkhart County Election Board",
     "f": "(574) 535-6471",
     "p": "(574) 535-6469",
-    "e": "canderson@elkhartcounty.com",
-    "d": "2020-02-06T03:08:43",
+    "e": "elkhartcoabsentee@elkhartcounty.com",
+    "d": "2017-09-06T16:09:31",
     "a1": "101 N. Main St, Rm 204",
     "a2": "",
     "a3": "",
@@ -317,10 +355,12 @@
     "s": "IN",
     "z": "46526-3243",
     "j": "Elkhart",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2256,
+    "i": 960,
     "n": "Fayette County Circuit Court Clerk",
     "f": "(765) 827-4902",
     "p": "(765) 825-1813",
@@ -333,10 +373,12 @@
     "s": "IN",
     "z": "47331-0607",
     "j": "Fayette",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2312,
+    "i": 961,
     "n": "Floyd County Circuit Court Clerk",
     "f": "(812) 948-4711",
     "p": "812-948-5419",
@@ -349,10 +391,12 @@
     "s": "IN",
     "z": "47150-1056",
     "j": "Floyd",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2353,
+    "i": 962,
     "n": "Fountain County Circuit Court Clerk",
     "f": "(765) 793-6209",
     "p": "(765) 793-6230",
@@ -365,10 +409,12 @@
     "s": "IN",
     "z": "47932-0183",
     "j": "Fountain",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2379,
+    "i": 963,
     "n": "Franklin County Circuit Court Clerk",
     "f": "(765) 647-3224",
     "p": "(765) 647-5111 x3",
@@ -381,10 +427,12 @@
     "s": "IN",
     "z": "47012-1486",
     "j": "Franklin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2457,
+    "i": 964,
     "n": "Fulton County Circuit Court Clerk",
     "f": "(574) 223-8304",
     "p": "(574) 223-7713",
@@ -397,10 +445,12 @@
     "s": "IN",
     "z": "46975-0524",
     "j": "Fulton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2544,
+    "i": 965,
     "n": "Gibson County Circuit Court Clerk",
     "f": "(812) 385-5025",
     "p": "(812) 385-2541",
@@ -413,10 +463,12 @@
     "s": "IN",
     "z": "47670-0630",
     "j": "Gibson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2662,
+    "i": 966,
     "n": "Grant County Circuit Court Clerk",
     "f": "(765) 664-4515",
     "p": "(765) 664-9880",
@@ -429,10 +481,12 @@
     "s": "IN",
     "z": "46952-4055",
     "j": "Grant",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2740,
+    "i": 967,
     "n": "Greene County Circuit Court Clerk",
     "f": "(812) 384-8458",
     "p": "(812) 384-2015",
@@ -445,10 +499,12 @@
     "s": "IN",
     "z": "47424-0229",
     "j": "Greene",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2850,
+    "i": 968,
     "n": "Hamilton County Election Office",
     "f": "(317) 776-8218",
     "p": "(317) 776-8476",
@@ -461,10 +517,12 @@
     "s": "IN",
     "z": "46060-2233",
     "j": "Hamilton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2882,
+    "i": 969,
     "n": "Hancock County Board of Voter Registration",
     "f": "(317) 477-8683",
     "p": "(317) 477-1171",
@@ -477,10 +535,12 @@
     "s": "IN",
     "z": "46140-2320",
     "j": "Hancock",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2943,
+    "i": 970,
     "n": "Harrison County Circuit Court Clerk",
     "f": "(812) 738-3126",
     "p": "(812) 738-4289",
@@ -493,10 +553,12 @@
     "s": "IN",
     "z": "47112-1155",
     "j": "Harrison",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3038,
+    "i": 971,
     "n": "Hendricks County Circuit Court Clerk",
     "f": "(317) 745-9452",
     "p": "(317) 745-9313",
@@ -509,10 +571,12 @@
     "s": "IN",
     "z": "46122-1798",
     "j": "Hendricks",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3049,
+    "i": 972,
     "n": "Henry County Board of Voter Registration",
     "f": "(765) 521-7046",
     "p": "(765) 529-9310",
@@ -525,10 +589,12 @@
     "s": "IN",
     "z": "47362-1044",
     "j": "Henry",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3183,
+    "i": 973,
     "n": "Howard County Board of Voter Registration",
     "f": "(765) 456-2267",
     "p": "(765) 456-7015",
@@ -541,10 +607,12 @@
     "s": "IN",
     "z": "46901-9004",
     "j": "Howard",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3231,
+    "i": 974,
     "n": "Huntington County Circuit Court Clerk",
     "f": "(260) 358-4880",
     "p": "(260) 358-4820",
@@ -557,10 +625,12 @@
     "s": "IN",
     "z": "46750-2896",
     "j": "Huntington",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3327,
+    "i": 975,
     "n": "Jackson County Circuit Court Clerk",
     "f": "(812) 358-6187",
     "p": "(812) 358-6120",
@@ -573,10 +643,12 @@
     "s": "IN",
     "z": "47220-0122",
     "j": "Jackson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3363,
+    "i": 976,
     "n": "Jasper County Circuit Court Clerk",
     "f": "(219) 866-9450",
     "p": "(219) 866-4927",
@@ -589,10 +661,12 @@
     "s": "IN",
     "z": "47978-2829",
     "j": "Jasper",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3369,
+    "i": 977,
     "n": "Jay County Circuit Court Clerk",
     "f": "(260) 726-6922",
     "p": "(260) 726-6915",
@@ -605,10 +679,12 @@
     "s": "IN",
     "z": "47371-2195",
     "j": "Jay",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3380,
+    "i": 978,
     "n": "Jefferson County Circuit Court Clerk",
     "f": "(812) 273-5428",
     "p": "(812) 265-8926",
@@ -621,10 +697,12 @@
     "s": "IN",
     "z": "47250-3594",
     "j": "Jefferson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3410,
+    "i": 979,
     "n": "Jennings County Circuit Court Clerk",
     "f": "(812) 352-3081",
     "p": "(812) 352-3080",
@@ -637,10 +715,12 @@
     "s": "IN",
     "z": "47282-0385",
     "j": "Jennings",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3425,
+    "i": 980,
     "n": "Johnson County Board of Voter Registration",
     "f": "(317) 736-3798",
     "p": "(317) 346-4466",
@@ -653,10 +733,12 @@
     "s": "IN",
     "z": "46131-0451",
     "j": "Johnson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3572,
+    "i": 981,
     "n": "Knox County Circuit Court Clerk",
     "f": "(812) 895-4929",
     "p": "(812) 895-4928",
@@ -669,10 +751,12 @@
     "s": "IN",
     "z": "47591-2022",
     "j": "Knox",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3586,
+    "i": 982,
     "n": "Kosciusko County Circuit Court Clerk",
     "f": "(574) 372-2338",
     "p": "(574) 372-2332",
@@ -685,10 +769,12 @@
     "s": "IN",
     "z": "46580",
     "j": "Kosciusko",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3603,
+    "i": 983,
     "n": "La Porte County Board of Voter Registration",
     "f": "(219) 326-6626",
     "p": "219-326-6808 x2385",
@@ -701,10 +787,12 @@
     "s": "IN",
     "z": "46350-3401",
     "j": "La Porte",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3610,
+    "i": 984,
     "n": "LaGrange County Circuit Court Clerk",
     "f": "(260) 499-6403",
     "p": "(260) 499-6392",
@@ -717,11 +805,13 @@
     "s": "IN",
     "z": "46761-1801",
     "j": "LaGrange",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3636,
-    "n": "Lake County Board of Elections &amp; Registration",
+    "i": 985,
+    "n": "Lake County Board of Elections & Registration",
     "f": "(219) 755-3801",
     "p": "(219) 755-3795",
     "e": "lcabsenteevoting@hotmail.com",
@@ -733,10 +823,12 @@
     "s": "IN",
     "z": "46307-1854",
     "j": "Lake",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3728,
+    "i": 986,
     "n": "Lawrence County Voter Registration",
     "f": "812-275-4142",
     "p": "(812) 277-2036",
@@ -749,10 +841,12 @@
     "s": "IN",
     "z": "47421-3800",
     "j": "Lawrence",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4072,
+    "i": 987,
     "n": "Madison County Clerk",
     "f": "(765) 640-4203",
     "p": "(765) 641-9459",
@@ -765,10 +859,12 @@
     "s": "IN",
     "z": "46015",
     "j": "Madison",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4171,
+    "i": 988,
     "n": "Marion County Election Board",
     "f": "(317) 327-3590",
     "p": "(317) 327-2051",
@@ -781,10 +877,12 @@
     "s": "IN",
     "z": "46201",
     "j": "Marion",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4212,
+    "i": 989,
     "n": "Marshall County Circuit Court Clerk",
     "f": "(574) 935-8713",
     "p": "(574) 935-8713",
@@ -797,10 +895,12 @@
     "s": "IN",
     "z": "46563-1762",
     "j": "Marshall",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4232,
+    "i": 990,
     "n": "Martin County Circuit Court Clerk",
     "f": "(812) 247-2791",
     "p": "(812) 247-3651",
@@ -813,10 +913,12 @@
     "s": "IN",
     "z": "47581",
     "j": "Martin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4411,
+    "i": 991,
     "n": "Miami County Voter Registration",
     "f": "(765) 472-8593",
     "p": "(765) 472-3995",
@@ -829,10 +931,12 @@
     "s": "IN",
     "z": "46970",
     "j": "Miami",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4534,
+    "i": 992,
     "n": "Monroe County Election Board",
     "f": "(812) 330-6460",
     "p": "(812) 349-2612",
@@ -845,10 +949,12 @@
     "s": "IN",
     "z": "47404",
     "j": "Monroe",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4573,
+    "i": 993,
     "n": "Montgomery County Circuit Court Clerk",
     "f": "(765) 364-6355",
     "p": "(765) 364-6437",
@@ -861,10 +967,12 @@
     "s": "IN",
     "z": "47933-0768",
     "j": "Montgomery",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4616,
+    "i": 994,
     "n": "Morgan County Circuit Court Clerk",
     "f": "(765) 349-5370",
     "p": "(765) 342-1029",
@@ -877,10 +985,12 @@
     "s": "IN",
     "z": "46151-1556",
     "j": "Morgan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4829,
+    "i": 995,
     "n": "Newton County Circuit Court Clerk",
     "f": "(219) 474-5749",
     "p": "(219) 474-6081",
@@ -893,10 +1003,12 @@
     "s": "IN",
     "z": "47951-0049",
     "j": "Newton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4851,
+    "i": 996,
     "n": "Noble County Circuit Court Clerk",
     "f": "(260) 636-4000",
     "p": "(260) 636-2736 x1806",
@@ -909,10 +1021,12 @@
     "s": "IN",
     "z": "46701-1092",
     "j": "Noble",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4983,
+    "i": 997,
     "n": "Ohio County Circuit Court Clerk",
     "f": "(812) 438-1215",
     "p": "(812) 438-2610",
@@ -925,10 +1039,12 @@
     "s": "IN",
     "z": "47040-0185",
     "j": "Ohio",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5031,
+    "i": 998,
     "n": "Orange County Circuit Court Clerk",
     "f": "(812) 723-0239",
     "p": "(812) 723-2649",
@@ -941,10 +1057,12 @@
     "s": "IN",
     "z": "47454",
     "j": "Orange",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5110,
+    "i": 999,
     "n": "Owen County Circuit Court Clerk",
     "f": "(812) 829-5147",
     "p": "(812) 829-5028",
@@ -957,10 +1075,12 @@
     "s": "IN",
     "z": "47460-0146",
     "j": "Owen",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5153,
+    "i": 1000,
     "n": "Parke County Clerk",
     "f": "(765) 569-4222",
     "p": "(765) 569-5132",
@@ -973,10 +1093,12 @@
     "s": "IN",
     "z": "47872-1781",
     "j": "Parke",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5220,
+    "i": 1001,
     "n": "Perry County Circuit Court Clerk",
     "f": "(812) 547-9782",
     "p": "(812) 547-3741",
@@ -989,10 +1111,12 @@
     "s": "IN",
     "z": "47586",
     "j": "Perry",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5278,
+    "i": 1002,
     "n": "Pike County Circuit Court Clerk",
     "f": "(812) 354-6369",
     "p": "(812) 354-6025",
@@ -1005,11 +1129,13 @@
     "s": "IN",
     "z": "47567",
     "j": "Pike",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5410,
-    "n": "Porter County Board of Elections &amp; Registration",
+    "i": 1003,
+    "n": "Porter County Board of Elections & Registration",
     "f": "(219) 465-3497",
     "p": "(219) 465-3486",
     "e": "abs@porterco.org",
@@ -1021,10 +1147,12 @@
     "s": "IN",
     "z": "46383-5555",
     "j": "Porter",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5426,
+    "i": 1004,
     "n": "Posey County Circuit Court Clerk",
     "f": "(812) 838-1307",
     "p": "(812) 838-1339",
@@ -1037,10 +1165,12 @@
     "s": "IN",
     "z": "47620",
     "j": "Posey",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5494,
+    "i": 1005,
     "n": "Pulaski County Circuit Court Clerk",
     "f": "(574) 946-4953",
     "p": "(574) 946-4401",
@@ -1053,10 +1183,12 @@
     "s": "IN",
     "z": "46996-1394",
     "j": "Pulaski",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5507,
+    "i": 1006,
     "n": "Putnam County Circuit Court Clerk",
     "f": "(765) 653-7030",
     "p": "(765) 655-1538",
@@ -1069,10 +1201,12 @@
     "s": "IN",
     "z": "46135-0546",
     "j": "Putnam",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5543,
+    "i": 1007,
     "n": "Randolph County Circuit Court Clerk",
     "f": "(765) 584-4320",
     "p": "(765) 584-4717",
@@ -1085,10 +1219,12 @@
     "s": "IN",
     "z": "47394-0230",
     "j": "Randolph",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5683,
+    "i": 1008,
     "n": "Ripley County Circuit Court Clerk",
     "f": "(812) 750-8701",
     "p": "(812) 689-4783",
@@ -1101,10 +1237,12 @@
     "s": "IN",
     "z": "47042-0177",
     "j": "Ripley",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5809,
+    "i": 1009,
     "n": "Rush County Circuit Court Clerk",
     "f": "(765) 932-4165",
     "p": "(765) 932-2086",
@@ -1117,10 +1255,12 @@
     "s": "IN",
     "z": "46173",
     "j": "Rush",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5963,
+    "i": 1010,
     "n": "Scott County Circuit Court Clerk",
     "f": "(812) 752-5459",
     "p": "(812) 752-8420",
@@ -1133,10 +1273,12 @@
     "s": "IN",
     "z": "47170",
     "j": "Scott",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6050,
+    "i": 1011,
     "n": "Shelby County Circuit Court Clerk",
     "f": "(317) 392-6339",
     "p": "(317) 392-6324",
@@ -1149,10 +1291,12 @@
     "s": "IN",
     "z": "46176-0198",
     "j": "Shelby",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6212,
+    "i": 1012,
     "n": "Spencer County Circuit Court Clerk",
     "f": "(812) 649-2139",
     "p": "(812) 649-6017",
@@ -1165,10 +1309,12 @@
     "s": "IN",
     "z": "47635",
     "j": "Spencer",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6294,
+    "i": 1013,
     "n": "St. Joseph County Clerk",
     "f": "(574) 235-9838",
     "p": "(574) 235-9635",
@@ -1181,10 +1327,12 @@
     "s": "IN",
     "z": "46601",
     "j": "St. Joseph",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6336,
+    "i": 1014,
     "n": "Starke County Circuit Court Clerk",
     "f": "(574) 772-9169",
     "p": "(574) 772-9160",
@@ -1197,10 +1345,12 @@
     "s": "IN",
     "z": "46534",
     "j": "Starke",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6360,
+    "i": 1015,
     "n": "Steuben County Circuit Court Clerk",
     "f": "(260) 668-3702",
     "p": "(260) 668-1000 x2220",
@@ -1213,10 +1363,12 @@
     "s": "IN",
     "z": "46703",
     "j": "Steuben",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6428,
+    "i": 1016,
     "n": "Sullivan County Circuit Court Clerk",
     "f": "(812) 268-7027",
     "p": "(812) 268-4657",
@@ -1229,10 +1381,12 @@
     "s": "IN",
     "z": "47882-0370",
     "j": "Sullivan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6502,
+    "i": 1017,
     "n": "Switzerland County Circuit Court Clerk",
     "f": "(812) 427-4408",
     "p": "(812) 427-4415",
@@ -1245,11 +1399,13 @@
     "s": "IN",
     "z": "47043-1180",
     "j": "Switzerland",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6599,
-    "n": "Tippecanoe County Board of Elections &amp; Voter Registration",
+    "i": 1018,
+    "n": "Tippecanoe County Board of Elections & Voter Registration",
     "f": "(765) 423-9386",
     "p": "(765) 423-9303",
     "e": "electionboard@tippecanoe.in.gov",
@@ -1261,15 +1417,17 @@
     "s": "IN",
     "z": "47902-0316",
     "j": "Tippecanoe",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6600,
+    "i": 1019,
     "n": "Tipton County Circuit Court Clerk",
     "f": "(765) 675-6436",
     "p": "(765) 675-2795",
     "e": "ccrawford@tiptoncounty.in.gov",
-    "d": "2020-02-06T02:41:41",
+    "d": "2019-07-15T09:56:18",
     "a1": "101 E. Jefferson St",
     "a2": "",
     "a3": "",
@@ -1277,10 +1435,12 @@
     "s": "IN",
     "z": "46072",
     "j": "Tipton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6720,
+    "i": 1020,
     "n": "Union County Circuit Court Clerk",
     "f": "(765) 458-5263",
     "p": "(765) 458-6121",
@@ -1293,10 +1453,12 @@
     "s": "IN",
     "z": "47353-1396",
     "j": "Union",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6778,
+    "i": 1021,
     "n": "Vanderburgh County Circuit Court Clerk",
     "f": "(812) 435-5325",
     "p": "812-435-5122",
@@ -1309,10 +1471,12 @@
     "s": "IN",
     "z": "47732-3343",
     "j": "Vanderburgh",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6788,
+    "i": 1022,
     "n": "Vermillion County Circuit Court Clerk",
     "f": "(765) 492-5351",
     "p": "(765) 492-5350",
@@ -1325,10 +1489,12 @@
     "s": "IN",
     "z": "47966",
     "j": "Vermillion",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6811,
+    "i": 1023,
     "n": "Vigo County Circuit Court Clerk",
     "f": "(812) 232-3113",
     "p": "(812) 462-3235",
@@ -1341,11 +1507,13 @@
     "s": "IN",
     "z": "47807-3472",
     "j": "Vigo",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6826,
-    "n": "Wabash County Clerks Office",
+    "i": 1024,
+    "n": "Wabash County Clerk's Office",
     "f": "(260) 569-1352",
     "p": "(260) 563-0661 x1238",
     "e": "votewabash@wabashcounty.in.gov",
@@ -1357,10 +1525,12 @@
     "s": "IN",
     "z": "46992",
     "j": "Wabash",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6886,
+    "i": 1025,
     "n": "Warren Warren County Circuit Court Clerk",
     "f": "(765) 762-7251",
     "p": "(765) 762-3510",
@@ -1373,10 +1543,12 @@
     "s": "IN",
     "z": "47993",
     "j": "Warren",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6906,
+    "i": 1026,
     "n": "Warrick County Circuit Court Clerk",
     "f": "(812) 897-6400",
     "p": "(812) 897-6161",
@@ -1389,10 +1561,12 @@
     "s": "IN",
     "z": "47601",
     "j": "Warrick",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6926,
+    "i": 1027,
     "n": "Washington County Circuit Court Clerk",
     "f": "(812) 896-0050",
     "p": "(812) 883-5748",
@@ -1405,10 +1579,12 @@
     "s": "IN",
     "z": "47167",
     "j": "Washington",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7019,
+    "i": 1028,
     "n": "Wayne County Circuit Court Clerk",
     "f": "(765) 973-9490",
     "p": "(765) 973-9304",
@@ -1421,10 +1597,12 @@
     "s": "IN",
     "z": "47374",
     "j": "Wayne",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7067,
+    "i": 1029,
     "n": "Wells County Circuit Court Clerk",
     "f": "(260) 824-6559",
     "p": "(260) 824-6479",
@@ -1437,10 +1615,12 @@
     "s": "IN",
     "z": "46714",
     "j": "Wells",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7178,
+    "i": 1030,
     "n": "White County Circuit Court Clerk",
     "f": "(574) 583-1532",
     "p": "(574) 583-1531",
@@ -1453,10 +1633,12 @@
     "s": "IN",
     "z": "47960-0350",
     "j": "White",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7206,
+    "i": 1031,
     "n": "Whitley County Circuit Court Clerk",
     "f": "(260) 248-3137",
     "p": "(260) 248-3164",
@@ -1469,6 +1651,8 @@
     "s": "IN",
     "z": "46725",
     "j": "Whitley",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

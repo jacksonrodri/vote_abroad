@@ -1,6 +1,6 @@
 [
   {
-    "i": 307,
+    "i": 2,
     "n": "Autauga County Absentee Elections Manager",
     "f": "",
     "p": "334-358-6718",
@@ -13,10 +13,12 @@
     "s": "AL",
     "z": "36068",
     "j": "Autauga",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 331,
+    "i": 3,
     "n": "Baldwin County Circuit Clerk",
     "f": "",
     "p": "251-937-0379",
@@ -29,10 +31,12 @@
     "s": "AL",
     "z": "36507",
     "j": "Baldwin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 360,
+    "i": 4,
     "n": "Barbour County Absentee Elections Manager",
     "f": "",
     "p": "334-689-2713",
@@ -45,10 +49,12 @@
     "s": "AL",
     "z": "36027",
     "j": "Barbour",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 566,
+    "i": 5,
     "n": "Bibb County Absentee Elections Manager",
     "f": "",
     "p": "205-926-3103",
@@ -61,10 +67,12 @@
     "s": "AL",
     "z": "35042",
     "j": "Bibb",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 646,
+    "i": 6,
     "n": "Blount County Circuit Clerk",
     "f": "",
     "p": "205-625-4121",
@@ -77,10 +85,12 @@
     "s": "AL",
     "z": "35121",
     "j": "Blount",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 866,
+    "i": 7,
     "n": "Bullock County Circuit Clerk",
     "f": "",
     "p": "334-738-2280",
@@ -93,10 +103,12 @@
     "s": "AL",
     "z": "36089",
     "j": "Bullock",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 901,
+    "i": 8,
     "n": "Butler County Circuit Clerk",
     "f": "",
     "p": "334-382-3521",
@@ -109,10 +121,12 @@
     "s": "AL",
     "z": "36037",
     "j": "Butler",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 950,
+    "i": 9,
     "n": "Calhoun County Absentee Elections Manager",
     "f": "",
     "p": "256-241-2822",
@@ -125,10 +139,12 @@
     "s": "AL",
     "z": "36201",
     "j": "Calhoun",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1135,
+    "i": 10,
     "n": "Chambers County Circuit Clerk",
     "f": "",
     "p": "334-864-4348",
@@ -141,10 +157,12 @@
     "s": "AL",
     "z": "36862",
     "j": "Chambers",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1193,
+    "i": 11,
     "n": "Cherokee County Circuit Clerk",
     "f": "",
     "p": "256-927-3637",
@@ -157,10 +175,12 @@
     "s": "AL",
     "z": "35960",
     "j": "Cherokee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1241,
+    "i": 12,
     "n": "Chilton County Circuit Clerk",
     "f": "",
     "p": "205-755-4275",
@@ -173,10 +193,12 @@
     "s": "AL",
     "z": "35046",
     "j": "Chilton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1256,
+    "i": 13,
     "n": "Choctaw County Circuit Clerk",
     "f": "",
     "p": "205-459-2155",
@@ -189,10 +211,12 @@
     "s": "AL",
     "z": "36904",
     "j": "Choctaw",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1301,
+    "i": 14,
     "n": "Clarke County Circuit Court",
     "f": "",
     "p": "251-275-3363",
@@ -205,10 +229,12 @@
     "s": "AL",
     "z": "36451",
     "j": "Clarke",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1311,
+    "i": 15,
     "n": "Clay County Circuit Clerk",
     "f": "",
     "p": "256-354-7926",
@@ -221,10 +247,12 @@
     "s": "AL",
     "z": "36251",
     "j": "Clay",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1349,
+    "i": 16,
     "n": "Clebume County Circuit Clerk",
     "f": "",
     "p": "256-463-2651",
@@ -237,10 +265,12 @@
     "s": "AL",
     "z": "36264",
     "j": "Clebume",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1409,
+    "i": 17,
     "n": "Coffee County Absentee Elections Manager",
     "f": "",
     "p": "334-894-1100",
@@ -253,10 +283,12 @@
     "s": "AL",
     "z": "36351",
     "j": "Coffee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1416,
+    "i": 18,
     "n": "Colbert County Circuit Clerk",
     "f": "",
     "p": "256-386-8511",
@@ -269,10 +301,12 @@
     "s": "AL",
     "z": "35674",
     "j": "Colbert",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1492,
+    "i": 19,
     "n": "Conecuh County  Circuit Clerk",
     "f": "",
     "p": "251-578-7012",
@@ -285,10 +319,12 @@
     "s": "AL",
     "z": "36401",
     "j": "Conecuh",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1518,
+    "i": 20,
     "n": "Coosa County Circuit Clerk",
     "f": "",
     "p": "256-377-4919 x1",
@@ -301,10 +337,12 @@
     "s": "AL",
     "z": "35136",
     "j": "Coosa",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1546,
+    "i": 21,
     "n": "Covington County Circuit Clerk",
     "f": "",
     "p": "334-804-2521",
@@ -317,10 +355,12 @@
     "s": "AL",
     "z": "36420",
     "j": "Covington",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1574,
+    "i": 22,
     "n": "Crenshaw County Absentee Elections Manager",
     "f": "",
     "p": "334-335-6568",
@@ -333,10 +373,12 @@
     "s": "AL",
     "z": "36049",
     "j": "Crenshaw",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1608,
+    "i": 23,
     "n": "Cullman County Circuit Clerk",
     "f": "",
     "p": "256-775-4654",
@@ -349,10 +391,12 @@
     "s": "AL",
     "z": "35055",
     "j": "Cullman",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1705,
+    "i": 24,
     "n": "Dale County Circuit Clerk",
     "f": "",
     "p": "334-774-5006",
@@ -365,10 +409,12 @@
     "s": "AL",
     "z": "36361",
     "j": "Dale",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1708,
+    "i": 25,
     "n": "Dallas County Circuit Clerk",
     "f": "",
     "p": "334-419-0722",
@@ -381,10 +427,12 @@
     "s": "AL",
     "z": "36702",
     "j": "Dallas",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1774,
+    "i": 26,
     "n": "DeKalb County Circuit Clerk",
     "f": "",
     "p": "256-845-8525",
@@ -397,10 +445,12 @@
     "s": "AL",
     "z": "35968",
     "j": "DeKalb",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2117,
+    "i": 27,
     "n": "Elmore County Circuit Clerk",
     "f": "",
     "p": "334-514-3116",
@@ -413,10 +463,12 @@
     "s": "AL",
     "z": "36092",
     "j": "Elmore",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2163,
+    "i": 28,
     "n": "Escambia County Circuit Clerk",
     "f": "",
     "p": "251-867-0225 x225",
@@ -429,10 +481,12 @@
     "s": "AL",
     "z": "36427",
     "j": "Escambia",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2178,
+    "i": 29,
     "n": "Etowah County Circuit Clerk",
     "f": "",
     "p": "256-549-2181",
@@ -445,10 +499,12 @@
     "s": "AL",
     "z": "35901",
     "j": "Etowah",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2252,
+    "i": 30,
     "n": "Fayette County Circuit Clerk",
     "f": "",
     "p": "205-932-4617",
@@ -461,10 +517,12 @@
     "s": "AL",
     "z": "35555",
     "j": "Fayette",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2371,
+    "i": 31,
     "n": "Franklin County Circuit Clerk",
     "f": "",
     "p": "256-332-8861",
@@ -477,10 +535,12 @@
     "s": "AL",
     "z": "35653",
     "j": "Franklin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2520,
+    "i": 32,
     "n": "Geneva County Circuit Clerk",
     "f": "",
     "p": "334-684-5620",
@@ -493,10 +553,12 @@
     "s": "AL",
     "z": "36340",
     "j": "Geneva",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2735,
+    "i": 33,
     "n": "Greene County Circuit Clerk",
     "f": "",
     "p": "205-372-6917",
@@ -509,10 +571,12 @@
     "s": "AL",
     "z": "35462",
     "j": "Greene",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2829,
+    "i": 34,
     "n": "Hale County Circuit Clerk",
     "f": "",
     "p": "334-624-4334",
@@ -525,10 +589,12 @@
     "s": "AL",
     "z": "36744",
     "j": "Hale",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3045,
+    "i": 35,
     "n": "Henry County Circuit Clerk",
     "f": "",
     "p": "334-585-2753",
@@ -541,10 +607,12 @@
     "s": "AL",
     "z": "36310",
     "j": "Henry",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3175,
+    "i": 36,
     "n": "Houston County Circuit Clerk",
     "f": "",
     "p": "334-671-8700",
@@ -557,10 +625,12 @@
     "s": "AL",
     "z": "36302",
     "j": "Houston",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3320,
+    "i": 37,
     "n": "Jackson County Circuit Clerk",
     "f": "",
     "p": "256-574-9380",
@@ -573,10 +643,12 @@
     "s": "AL",
     "z": "35771",
     "j": "Jackson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3395,
+    "i": 38,
     "n": "Jefferson - Bessemer County Circuit Clerk",
     "f": "",
     "p": "205-497-8510",
@@ -589,10 +661,12 @@
     "s": "AL",
     "z": "35020",
     "j": "Jefferson - Bessemer",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3396,
+    "i": 39,
     "n": "Jefferson - Birmingham County Circuit Clerk",
     "f": "",
     "p": "205-325-5355",
@@ -605,10 +679,12 @@
     "s": "AL",
     "z": "35203-0102",
     "j": "Jefferson - Birmingham",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3673,
+    "i": 40,
     "n": "Lamar County Circuit Clerk",
     "f": "",
     "p": "205-695-7193",
@@ -621,10 +697,12 @@
     "s": "AL",
     "z": "35592",
     "j": "Lamar",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3717,
+    "i": 41,
     "n": "Lauderdale County Circuit Clerk",
     "f": "",
     "p": "256-760-5728",
@@ -637,10 +715,12 @@
     "s": "AL",
     "z": "35631",
     "j": "Lauderdale",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3725,
+    "i": 42,
     "n": "Lawrence County Circuit Clerk",
     "f": "",
     "p": "256-974-2438",
@@ -653,10 +733,12 @@
     "s": "AL",
     "z": "35650",
     "j": "Lawrence",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3755,
+    "i": 43,
     "n": "Lee County Circuit Clerk",
     "f": "",
     "p": "334-737-3490",
@@ -669,10 +751,12 @@
     "s": "AL",
     "z": "36803",
     "j": "Lee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3844,
+    "i": 44,
     "n": "Limestone County Circuit Clerk",
     "f": "",
     "p": "256-216-3875",
@@ -685,10 +769,12 @@
     "s": "AL",
     "z": "35611",
     "j": "Limestone",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3992,
+    "i": 45,
     "n": "Lowndes County Absentee Elections Manager",
     "f": "",
     "p": "334-201-1213",
@@ -701,10 +787,12 @@
     "s": "AL",
     "z": "36040",
     "j": "Lowndes",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4053,
+    "i": 46,
     "n": "Macon County Circuit Clerk",
     "f": "",
     "p": "334-724-2614",
@@ -717,10 +805,12 @@
     "s": "AL",
     "z": "36083",
     "j": "Macon",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4064,
+    "i": 47,
     "n": "Madison County Circuit Clerk",
     "f": "",
     "p": "256-532-3684",
@@ -733,10 +823,12 @@
     "s": "AL",
     "z": "35801",
     "j": "Madison",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4153,
+    "i": 48,
     "n": "Marengo County Circuit Clerk",
     "f": "",
     "p": "334-295-2224",
@@ -749,10 +841,12 @@
     "s": "AL",
     "z": "36748",
     "j": "Marengo",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4165,
+    "i": 49,
     "n": "Marion County Circuit Clerk",
     "f": "",
     "p": "205-921-7451",
@@ -765,10 +859,12 @@
     "s": "AL",
     "z": "35570",
     "j": "Marion",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4209,
+    "i": 50,
     "n": "Marshall County Circuit Clerk",
     "f": "",
     "p": "256-571-7785",
@@ -781,10 +877,12 @@
     "s": "AL",
     "z": "35976",
     "j": "Marshall",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4508,
+    "i": 51,
     "n": "Mobile County Absentee Elections Manager",
     "f": "",
     "p": "251-574-6400",
@@ -797,10 +895,12 @@
     "s": "AL",
     "z": "36644",
     "j": "Mobile",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4527,
+    "i": 52,
     "n": "Monroe County Circuit Clerk",
     "f": "",
     "p": "251-743-2283",
@@ -813,10 +913,12 @@
     "s": "AL",
     "z": "36460",
     "j": "Monroe",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4568,
+    "i": 53,
     "n": "Montgomery County Circuit Clerk",
     "f": "",
     "p": "334-832-1260",
@@ -829,10 +931,12 @@
     "s": "AL",
     "z": "36102",
     "j": "Montgomery",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4612,
+    "i": 54,
     "n": "Morgan County Circuit Clerk",
     "f": "",
     "p": "256-351-4794",
@@ -845,10 +949,12 @@
     "s": "AL",
     "z": "35602",
     "j": "Morgan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5217,
+    "i": 55,
     "n": "Perry County Circuit Clerk",
     "f": "",
     "p": "334-683-6106",
@@ -861,10 +967,12 @@
     "s": "AL",
     "z": "36756",
     "j": "Perry",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5259,
+    "i": 56,
     "n": "Pickens County Circuit Clerk",
     "f": "",
     "p": "205-367-2050",
@@ -877,10 +985,12 @@
     "s": "AL",
     "z": "35447",
     "j": "Pickens",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5274,
+    "i": 57,
     "n": "Pike County Circuit Clerk",
     "f": "",
     "p": "334-566-5113",
@@ -893,10 +1003,12 @@
     "s": "AL",
     "z": "36081",
     "j": "Pike",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5539,
+    "i": 58,
     "n": "Randolph County Circuit Clerk",
     "f": "",
     "p": "256-357-4551",
@@ -909,10 +1021,12 @@
     "s": "AL",
     "z": "36278",
     "j": "Randolph",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5817,
+    "i": 59,
     "n": "Russell County Circuit Clerk",
     "f": "",
     "p": "334-298-0516 x2343",
@@ -925,10 +1039,12 @@
     "s": "AL",
     "z": "36867",
     "j": "Russell",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6047,
+    "i": 60,
     "n": "Shelby County Circuit Clerk",
     "f": "",
     "p": "205-669-3779",
@@ -941,10 +1057,12 @@
     "s": "AL",
     "z": "35051",
     "j": "Shelby",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6273,
+    "i": 61,
     "n": "St. Clair County Circuit Clerk",
     "f": "",
     "p": "205-365-5114",
@@ -957,10 +1075,12 @@
     "s": "AL",
     "z": "35953",
     "j": "St. Clair",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6456,
+    "i": 62,
     "n": "Sumter County Circuit Clerk",
     "f": "",
     "p": "205-652-2333",
@@ -973,10 +1093,12 @@
     "s": "AL",
     "z": "35470",
     "j": "Sumter",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6513,
+    "i": 63,
     "n": "Talladega County Circuit Clerk",
     "f": "",
     "p": "256-761-2102 x1208",
@@ -989,10 +1111,12 @@
     "s": "AL",
     "z": "35161",
     "j": "Talladega",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6515,
+    "i": 64,
     "n": "Tallapoosa County Circuit Clerk",
     "f": "",
     "p": "256-496-3106",
@@ -1005,10 +1129,12 @@
     "s": "AL",
     "z": "36853",
     "j": "Tallapoosa",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6687,
+    "i": 65,
     "n": "Tuscaloosa County Circuit Clerk",
     "f": "",
     "p": "205-464-8259",
@@ -1021,10 +1147,12 @@
     "s": "AL",
     "z": "35401",
     "j": "Tuscaloosa",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6848,
+    "i": 66,
     "n": "Walker County Circuit Clerk",
     "f": "",
     "p": "205-384-7025",
@@ -1037,10 +1165,12 @@
     "s": "AL",
     "z": "35501",
     "j": "Walker",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6917,
+    "i": 67,
     "n": "Washington County Circuit Clerk",
     "f": "",
     "p": "251-847-2239",
@@ -1053,10 +1183,12 @@
     "s": "AL",
     "z": "36518",
     "j": "Washington",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7220,
+    "i": 68,
     "n": "Wilcox County Circuit Clerk",
     "f": "",
     "p": "334-682-6313",
@@ -1069,10 +1201,12 @@
     "s": "AL",
     "z": "36726",
     "j": "Wilcox",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7304,
+    "i": 69,
     "n": "Winston County Circuit Clerk",
     "f": "",
     "p": "205-489-5533",
@@ -1085,6 +1219,8 @@
     "s": "AL",
     "z": "35553",
     "j": "Winston",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

@@ -1,6 +1,6 @@
 [
   {
-    "i": 3,
+    "i": 8699,
     "n": "Abington Town Clerk",
     "f": "(781) 982-2138",
     "p": "(781) 982-2112",
@@ -13,10 +13,12 @@
     "s": "MA",
     "z": "02351",
     "j": "Abington, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 9,
+    "i": 1321,
     "n": "Acton Town Clerk",
     "f": "(978) 929-6340",
     "p": "(978) 929-6620",
@@ -29,10 +31,12 @@
     "s": "MA",
     "z": "01720",
     "j": "Acton, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 10,
+    "i": 1322,
     "n": "Acushnet Town Clerk",
     "f": "(508) 998-0216",
     "p": "(508) 998-0215",
@@ -45,10 +49,12 @@
     "s": "MA",
     "z": "02743",
     "j": "Acushnet, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 36,
+    "i": 1323,
     "n": "Adams Town Clerk",
     "f": "(413) 743-8316",
     "p": "(413) 743-8300",
@@ -61,10 +67,12 @@
     "s": "MA",
     "z": "01220",
     "j": "Adams, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 46,
+    "i": 1324,
     "n": "Agawam Town Clerk",
     "f": "(413) 786-9927",
     "p": "(413) 786-0400",
@@ -77,10 +85,12 @@
     "s": "MA",
     "z": "01001",
     "j": "Agawam, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 86,
+    "i": 1325,
     "n": "Alford Town Clerk",
     "f": "(413) 528-4581",
     "p": "(413) 528-4536",
@@ -93,10 +103,12 @@
     "s": "MA",
     "z": "01230",
     "j": "Alford, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 152,
+    "i": 1326,
     "n": "Amesbury City Clerk",
     "f": "(978) 388-8150",
     "p": "(978) 388-8100",
@@ -109,10 +121,12 @@
     "s": "MA",
     "z": "01913",
     "j": "Amesbury, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 155,
+    "i": 1327,
     "n": "Amherst Town Clerk",
     "f": "(413) 259-2499",
     "p": "(413) 259-3035",
@@ -125,10 +139,12 @@
     "s": "MA",
     "z": "01002",
     "j": "Amherst, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 170,
+    "i": 1328,
     "n": "Andover Town Clerk",
     "f": "(978) 623-8295",
     "p": "(978) 623-8230",
@@ -141,10 +157,12 @@
     "s": "MA",
     "z": "01810",
     "j": "Andover, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 200,
+    "i": 1329,
     "n": "Aquinnah Town Clerk",
     "f": "(508) 645-7884",
     "p": "(508) 645-2304",
@@ -157,10 +175,12 @@
     "s": "MA",
     "z": "02535",
     "j": "Aquinnah, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 226,
+    "i": 1330,
     "n": "Arlington Town Clerk",
     "f": "(781) 316-3079",
     "p": "(781) 316-3070",
@@ -173,10 +193,12 @@
     "s": "MA",
     "z": "02476",
     "j": "Arlington, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 242,
+    "i": 1331,
     "n": "Ashburnham Town Clerk",
     "f": "(978) 827-4105",
     "p": "(978) 827-4102",
@@ -189,10 +211,12 @@
     "s": "MA",
     "z": "01430",
     "j": "Ashburnham, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 243,
+    "i": 1332,
     "n": "Ashby Town Clerk",
     "f": "(978) 386-2490",
     "p": "(978) 386-2424",
@@ -205,10 +229,12 @@
     "s": "MA",
     "z": "01431",
     "j": "Ashby, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 245,
+    "i": 1333,
     "n": "Ashfield Town Clerk",
     "f": "(413) 628-0228",
     "p": "(413) 628-4441",
@@ -221,10 +247,12 @@
     "s": "MA",
     "z": "01330",
     "j": "Ashfield, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 252,
+    "i": 1334,
     "n": "Ashland Town Clerk",
     "f": "(508) 881-0145",
     "p": "(508) 881-0100",
@@ -237,10 +265,12 @@
     "s": "MA",
     "z": "01721",
     "j": "Ashland, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 269,
+    "i": 1335,
     "n": "Athol Town Clerk",
     "f": "(978) 249-2491",
     "p": "(978) 249-4551",
@@ -253,10 +283,12 @@
     "s": "MA",
     "z": "01331",
     "j": "Athol, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 278,
+    "i": 1336,
     "n": "Attleboro Election Commission",
     "f": "(774) 203-1805",
     "p": "(508) 223-2222",
@@ -269,10 +301,12 @@
     "s": "MA",
     "z": "02703",
     "j": "Attleboro, City of",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 288,
+    "i": 1337,
     "n": "Auburn Town Clerk",
     "f": "(508) 832-4192",
     "p": "(508) 832-7701",
@@ -285,10 +319,12 @@
     "s": "MA",
     "z": "01501",
     "j": "Auburn, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 312,
+    "i": 1338,
     "n": "Avon Town Clerk",
     "f": "(508) 559-0209",
     "p": "(508) 588-0414",
@@ -301,10 +337,12 @@
     "s": "MA",
     "z": "02322",
     "j": "Avon, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 315,
+    "i": 1339,
     "n": "Ayer Town Clerk",
     "f": "(978) 772-3017",
     "p": "(978) 772-8215",
@@ -317,10 +355,12 @@
     "s": "MA",
     "z": "01432",
     "j": "Ayer, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 370,
+    "i": 1340,
     "n": "Barnstable Town Clerk",
     "f": "(508) 790-6326",
     "p": "(508) 862-4044",
@@ -333,10 +373,12 @@
     "s": "MA",
     "z": "02601",
     "j": "Barnstable, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 376,
+    "i": 1341,
     "n": "Barre Town Clerk",
     "f": "(978) 355-5025",
     "p": "(978) 355-5003",
@@ -349,10 +391,12 @@
     "s": "MA",
     "z": "01005",
     "j": "Barre, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 454,
+    "i": 1342,
     "n": "Becket Town Clerk",
     "f": "(413) 623-6036",
     "p": "(413) 623-8934",
@@ -365,10 +409,12 @@
     "s": "MA",
     "z": "01223",
     "j": "Becket, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 462,
+    "i": 1343,
     "n": "Bedford Town Clerk",
     "f": "(781) 275-5757",
     "p": "(781) 275-0083",
@@ -381,10 +427,12 @@
     "s": "MA",
     "z": "01730",
     "j": "Bedford, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 467,
+    "i": 1344,
     "n": "Belchertown Town Clerk",
     "f": "(413) 323-0107",
     "p": "(413) 323-0281",
@@ -397,10 +445,12 @@
     "s": "MA",
     "z": "01007",
     "j": "Belchertown, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 481,
+    "i": 1345,
     "n": "Bellingham Town Clerk",
     "f": "(508) 657-2832",
     "p": "(508) 657-2830",
@@ -413,10 +463,12 @@
     "s": "MA",
     "z": "02019",
     "j": "Bellingham, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 484,
+    "i": 1346,
     "n": "Belmont Assistant Town Clerk",
     "f": "(617) 993-2601",
     "p": "(617) 993-2608",
@@ -429,10 +481,12 @@
     "s": "MA",
     "z": "02478",
     "j": "Belmont, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 532,
+    "i": 1347,
     "n": "Berkley Town Clerk",
     "f": "(508) 828-6755",
     "p": "(508) 822-3348",
@@ -445,10 +499,12 @@
     "s": "MA",
     "z": "02779",
     "j": "Berkley, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 543,
+    "i": 1348,
     "n": "Berlin Town Clerk",
     "f": "(978) 838-0014",
     "p": "(978) 838-2931",
@@ -461,10 +517,12 @@
     "s": "MA",
     "z": "01503",
     "j": "Berlin, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 547,
+    "i": 1349,
     "n": "Bernardston Town Clerk",
     "f": "(413) 648-9318",
     "p": "(413) 648-5408",
@@ -477,10 +535,12 @@
     "s": "MA",
     "z": "01337",
     "j": "Bernardston, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 564,
+    "i": 1350,
     "n": "Beverly City Clerk",
     "f": "(978) 921-8511",
     "p": "(978) 605-2326",
@@ -493,10 +553,12 @@
     "s": "MA",
     "z": "01915",
     "j": "Beverly, City of",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 581,
+    "i": 1351,
     "n": "Billerica Town Clerk",
     "f": "(978) 663-6510",
     "p": "(978) 671-0926",
@@ -509,10 +571,12 @@
     "s": "MA",
     "z": "01821",
     "j": "Billerica, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 608,
+    "i": 1352,
     "n": "Blackstone Town Clerk",
     "f": "(508) 883-4953",
     "p": "(508) 883-1500",
@@ -525,10 +589,12 @@
     "s": "MA",
     "z": "01504",
     "j": "Blackstone, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 624,
+    "i": 1353,
     "n": "Blandford Town Clerk",
     "f": "(413) 848-0908",
     "p": "(413) 848-4279",
@@ -541,10 +607,12 @@
     "s": "MA",
     "z": "01008",
     "j": "Blandford, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 663,
+    "i": 1354,
     "n": "Bolton Town Clerk",
     "f": "(978) 779-5461",
     "p": "(978) 779-2771",
@@ -557,10 +625,12 @@
     "s": "MA",
     "z": "01740",
     "j": "Bolton, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 685,
+    "i": 1355,
     "n": "Boston Election Commission",
     "f": "(617) 635-4483",
     "p": "(617) 635-3767",
@@ -573,10 +643,12 @@
     "s": "MA",
     "z": "02201",
     "j": "Boston, City of",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 693,
+    "i": 1356,
     "n": "Bourne Town Clerk",
     "f": "(508) 759-7980",
     "p": "(508) 759-0600",
@@ -589,10 +661,12 @@
     "s": "MA",
     "z": "02532",
     "j": "Bourne, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 703,
+    "i": 1357,
     "n": "Boxborough Town Clerk",
     "f": "(978) 264-3127",
     "p": "(978) 264-1727",
@@ -605,10 +679,12 @@
     "s": "MA",
     "z": "01719",
     "j": "Boxborough, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 704,
+    "i": 8707,
     "n": "Boxford Town Clerk",
     "f": "(978) 887-0943",
     "p": "(978) 887-6000",
@@ -621,15 +697,17 @@
     "s": "MA",
     "z": "01921",
     "j": "Boxford, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 710,
+    "i": 8709,
     "n": "Boylston Town Clerk",
     "f": "(508) 869-6210",
     "p": "(508) 869-2234",
     "e": "ljohnson@BOYLSTON-MA.GOV",
-    "d": "2020-02-06T03:10:54",
+    "d": "2019-07-18T14:19:28",
     "a1": "221 MAIN ST.",
     "a2": "",
     "a3": "",
@@ -637,10 +715,12 @@
     "s": "MA",
     "z": "01505",
     "j": "Boylston, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 726,
+    "i": 1358,
     "n": "Braintree Town Clerk",
     "f": "(781) 794-8259",
     "p": "(781) 794-8240",
@@ -653,10 +733,12 @@
     "s": "MA",
     "z": "02184",
     "j": "Braintree, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 751,
+    "i": 1359,
     "n": "Brewster Town Clerk",
     "f": "(508) 896-8089",
     "p": "(508) 896-4506",
@@ -669,10 +751,12 @@
     "s": "MA",
     "z": "02631",
     "j": "Brewster, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 761,
+    "i": 1360,
     "n": "Bridgewater Town Clerk",
     "f": "(508) 279-0154",
     "p": "(508) 697-0921",
@@ -685,10 +769,12 @@
     "s": "MA",
     "z": "02324",
     "j": "Bridgewater, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 774,
+    "i": 1361,
     "n": "Brimfield Town Clerk",
     "f": "",
     "p": "(413) 245-4100",
@@ -701,10 +787,12 @@
     "s": "MA",
     "z": "01010",
     "j": "Brimfield, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 783,
+    "i": 1362,
     "n": "Brockton Election Commission",
     "f": "(508) 583-6424",
     "p": "(508) 580-7117",
@@ -717,10 +805,12 @@
     "s": "MA",
     "z": "02301",
     "j": "Brockton, City of",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 797,
+    "i": 1363,
     "n": "Brookfield Town Clerk",
     "f": "(508) 867-5091",
     "p": "(508) 867-2930",
@@ -733,10 +823,12 @@
     "s": "MA",
     "z": "01506",
     "j": "Brookfield, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 802,
+    "i": 1364,
     "n": "Brookline Town Clerk",
     "f": "(617) 730-2043",
     "p": "(617) 730-2010",
@@ -749,10 +841,12 @@
     "s": "MA",
     "z": "02445",
     "j": "Brookline, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 852,
+    "i": 1365,
     "n": "Buckland Town Clerk",
     "f": "(413) 625-8570",
     "p": "(413) 625-6330",
@@ -765,10 +859,12 @@
     "s": "MA",
     "z": "01338",
     "j": "Buckland, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 885,
+    "i": 1366,
     "n": "Burlington Town Clerk",
     "f": "(781) 238-4692",
     "p": "(781) 270-1660",
@@ -781,10 +877,12 @@
     "s": "MA",
     "z": "01803",
     "j": "Burlington, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 975,
+    "i": 1367,
     "n": "Cambridge Election Commission",
     "f": "(617) 349-4366",
     "p": "(617) 349-4361",
@@ -797,10 +895,12 @@
     "s": "MA",
     "z": "02139",
     "j": "Cambridge, City of",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1010,
+    "i": 1368,
     "n": "Canton Town Clerk",
     "f": "(781) 821-5016",
     "p": "(781) 821-5013",
@@ -813,10 +913,12 @@
     "s": "MA",
     "z": "02021",
     "j": "Canton, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1022,
+    "i": 1369,
     "n": "Carlisle Town Clerk",
     "f": "(978) 371-0594",
     "p": "(978) 369-6155",
@@ -829,10 +931,12 @@
     "s": "MA",
     "z": "01741",
     "j": "Carlisle, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1057,
+    "i": 1370,
     "n": "Carver Town Clerk",
     "f": "(508) 866-3408",
     "p": "(508) 866-3403",
@@ -845,10 +949,12 @@
     "s": "MA",
     "z": "02330",
     "j": "Carver, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1145,
+    "i": 1371,
     "n": "Charlemont Town Clerk",
     "f": "(413) 339-0320",
     "p": "(413) 339-4335",
@@ -861,10 +967,12 @@
     "s": "MA",
     "z": "01339",
     "j": "Charlemont, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1165,
+    "i": 1372,
     "n": "Charlton Town Clerk",
     "f": "(508) 248-2381",
     "p": "(508) 248-2249",
@@ -877,10 +985,12 @@
     "s": "MA",
     "z": "01507",
     "j": "Charlton, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1174,
+    "i": 1373,
     "n": "Chatham Town Clerk",
     "f": "(508) 945-0752",
     "p": "(508) 945-5101",
@@ -893,10 +1003,12 @@
     "s": "MA",
     "z": "02633",
     "j": "Chatham, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1185,
+    "i": 1374,
     "n": "Chelmsford Town Clerk",
     "f": "(978) 250-5252",
     "p": "(978) 250-5205",
@@ -909,10 +1021,12 @@
     "s": "MA",
     "z": "01824",
     "j": "Chelmsford, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1188,
+    "i": 1375,
     "n": "Chelsea City Clerk",
     "f": "(617) 466-4059",
     "p": "(617) 466-4050",
@@ -925,10 +1039,12 @@
     "s": "MA",
     "z": "02150",
     "j": "Chelsea, City of",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1208,
+    "i": 1376,
     "n": "Cheshire Town Clerk",
     "f": "(413) 743-0389",
     "p": "(413) 743-1690",
@@ -941,10 +1057,12 @@
     "s": "MA",
     "z": "01225",
     "j": "Cheshire, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1217,
+    "i": 1377,
     "n": "Chester Town Clerk",
     "f": "(413) 354-2268",
     "p": "(413) 354-6603",
@@ -957,10 +1075,12 @@
     "s": "MA",
     "z": "01011",
     "j": "Chester, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1223,
+    "i": 1378,
     "n": "Chesterfield Town Clerk",
     "f": "(413) 296-4394",
     "p": "(413) 296-4741",
@@ -973,10 +1093,12 @@
     "s": "MA",
     "z": "01012",
     "j": "Chesterfield, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1236,
+    "i": 1379,
     "n": "Chicopee Election Commission",
     "f": "(413) 594-1554",
     "p": "(413) 594-1550",
@@ -989,10 +1111,12 @@
     "s": "MA",
     "z": "01013",
     "j": "Chicopee, City of",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1240,
+    "i": 1380,
     "n": "Chilmark Town Clerk",
     "f": "(508) 645-2110",
     "p": "(508) 645-2107",
@@ -1005,10 +1129,12 @@
     "s": "MA",
     "z": "02535",
     "j": "Chilmark, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1306,
+    "i": 1381,
     "n": "Clarksburg Town Clerk",
     "f": "(413) 664-6575",
     "p": "(413) 663-8255",
@@ -1021,10 +1147,12 @@
     "s": "MA",
     "z": "01247",
     "j": "Clarksburg, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1384,
+    "i": 1382,
     "n": "Clinton Town Clerk",
     "f": "(978) 612-0212",
     "p": "(978) 365-4119",
@@ -1037,10 +1165,12 @@
     "s": "MA",
     "z": "01510",
     "j": "Clinton, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1413,
+    "i": 1383,
     "n": "Cohasset Town Clerk",
     "f": "(781) 383-1561",
     "p": "(781) 383-4100",
@@ -1053,10 +1183,12 @@
     "s": "MA",
     "z": "02025",
     "j": "Cohasset, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1456,
+    "i": 1384,
     "n": "Colrain Town Clerk",
     "f": "(413) 624-8852",
     "p": "(413) 624-3454",
@@ -1069,10 +1201,12 @@
     "s": "MA",
     "z": "01340",
     "j": "Colrain, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1489,
+    "i": 1385,
     "n": "Concord Town Clerk",
     "f": "(978) 318-3093",
     "p": "(978) 318-3080",
@@ -1085,10 +1219,12 @@
     "s": "MA",
     "z": "01742",
     "j": "Concord, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1504,
+    "i": 1386,
     "n": "Conway Town Clerk",
     "f": "(413) 369-4237",
     "p": "(413) 369-4235",
@@ -1101,10 +1237,12 @@
     "s": "MA",
     "z": "01341",
     "j": "Conway, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1622,
+    "i": 1387,
     "n": "Cummington Town Clerk",
     "f": "(413) 634-5568",
     "p": "(413) 200-5011",
@@ -1117,10 +1255,12 @@
     "s": "MA",
     "z": "01026",
     "j": "Cummington, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1717,
+    "i": 1388,
     "n": "Dalton Town Clerk",
     "f": "(413) 684-6129",
     "p": "(413) 684-6111",
@@ -1133,10 +1273,12 @@
     "s": "MA",
     "z": "01226",
     "j": "Dalton, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1727,
+    "i": 1389,
     "n": "Danvers Town Clerk",
     "f": "(978) 406-4191",
     "p": "(978) 777-0001",
@@ -1149,10 +1291,12 @@
     "s": "MA",
     "z": "01923",
     "j": "Danvers, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1740,
+    "i": 1390,
     "n": "Dartmouth Town Clerk",
     "f": "(508) 910-1894",
     "p": "(508) 910-1800",
@@ -1165,10 +1309,12 @@
     "s": "MA",
     "z": "02747",
     "j": "Dartmouth, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1791,
+    "i": 1391,
     "n": "Dedham Town Clerk",
     "f": "(781) 751-9109",
     "p": "(781) 751-9200",
@@ -1181,10 +1327,12 @@
     "s": "MA",
     "z": "02026",
     "j": "Dedham, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1804,
+    "i": 1392,
     "n": "Deerfield Town Clerk",
     "f": "(413) 665-5512",
     "p": "(413) 665-1400",
@@ -1197,10 +1345,12 @@
     "s": "MA",
     "z": "01373",
     "j": "Deerfield, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1835,
+    "i": 1393,
     "n": "Dennis Town Clerk",
     "f": "(508) 394-8309",
     "p": "(508) 760-6112",
@@ -1213,10 +1363,12 @@
     "s": "MA",
     "z": "02660",
     "j": "Dennis, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1870,
+    "i": 1394,
     "n": "Dighton Town Clerk",
     "f": "(508) 669-5932",
     "p": "(508) 669-5411",
@@ -1229,10 +1381,12 @@
     "s": "MA",
     "z": "02715",
     "j": "Dighton, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1909,
+    "i": 1395,
     "n": "Douglas Town Clerk",
     "f": "(508) 476-4012",
     "p": "(508) 476-4000",
@@ -1245,10 +1399,12 @@
     "s": "MA",
     "z": "01516",
     "j": "Douglas, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1920,
+    "i": 1396,
     "n": "Dover Town Clerk",
     "f": "(508) 785-2341",
     "p": "(508) 785-0032",
@@ -1261,10 +1417,12 @@
     "s": "MA",
     "z": "02030",
     "j": "Dover, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1927,
+    "i": 1397,
     "n": "Dracut Town Clerk",
     "f": "(978) 452-7924",
     "p": "(978) 453-0951",
@@ -1277,10 +1435,12 @@
     "s": "MA",
     "z": "01826",
     "j": "Dracut, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1939,
+    "i": 1398,
     "n": "Dudley Town Clerk",
     "f": "(508) 949-7115",
     "p": "(508) 949-8004",
@@ -1293,10 +1453,12 @@
     "s": "MA",
     "z": "01571",
     "j": "Dudley, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1952,
+    "i": 1399,
     "n": "Dunstable Town Clerk",
     "f": "(978) 649-4371",
     "p": "(978) 649-4514",
@@ -1309,10 +1471,12 @@
     "s": "MA",
     "z": "01827",
     "j": "Dunstable, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1967,
+    "i": 1400,
     "n": "Duxbury Town Clerk",
     "f": "(781) 934-1133",
     "p": "(781) 934-1100",
@@ -1325,10 +1489,12 @@
     "s": "MA",
     "z": "02332",
     "j": "Duxbury, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1980,
+    "i": 1401,
     "n": "East Bridgewater Town Clerk",
     "f": "(508) 378-1638",
     "p": "(508) 378-1606",
@@ -1341,10 +1507,12 @@
     "s": "MA",
     "z": "02333",
     "j": "East Bridgewater, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1981,
+    "i": 1402,
     "n": "East Brookfield Town Clerk",
     "f": "(508) 867-4190",
     "p": "(508) 867-6769",
@@ -1357,10 +1525,12 @@
     "s": "MA",
     "z": "01515",
     "j": "East Brookfield, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1996,
+    "i": 1403,
     "n": "East Longmeadow Town Clerk",
     "f": "(413) 525-0022",
     "p": "(413) 525-5400",
@@ -1373,10 +1543,12 @@
     "s": "MA",
     "z": "01028",
     "j": "East Longmeadow, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2006,
+    "i": 1404,
     "n": "Eastham Town Clerk",
     "f": "(508) 240-1291",
     "p": "(774) 801-3223",
@@ -1389,10 +1561,12 @@
     "s": "MA",
     "z": "02642",
     "j": "Eastham, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2007,
+    "i": 1405,
     "n": "Easthampton Town Clerk",
     "f": "(413) 529-1417",
     "p": "(413) 529-1400",
@@ -1405,10 +1579,12 @@
     "s": "MA",
     "z": "01027",
     "j": "Easthampton, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2015,
+    "i": 1406,
     "n": "Easton Town Clerk",
     "f": "(508) 230-0609",
     "p": "(508) 230-0530",
@@ -1421,26 +1597,30 @@
     "s": "MA",
     "z": "02356",
     "j": "Easton, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2047,
+    "i": 1407,
     "n": "Edgartown Town Clerk",
     "f": "(508) 627-6119",
     "p": "(508) 627-6110",
     "e": "kmedeiros@edgartown-ma.us",
-    "d": "2020-02-06T02:50:09",
-    "a1": "70 MAIN ST.",
-    "a2": "P.O. BOX 35",
+    "d": "2019-07-18T14:19:27",
+    "a1": "70 MAIN ST., PO BOX 35",
+    "a2": "",
     "a3": "",
     "c": "Edgartown",
     "s": "MA",
     "z": "02539",
     "j": "Edgartown, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2065,
+    "i": 1408,
     "n": "Egremont Town Clerk",
     "f": "(413) 528-5465",
     "p": "(413) 528-0182",
@@ -1453,10 +1633,12 @@
     "s": "MA",
     "z": "01258",
     "j": "Egremont, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2161,
+    "i": 1409,
     "n": "Erving Town Clerk",
     "f": "(413) 422-2808",
     "p": "(413) 422-2800",
@@ -1469,26 +1651,30 @@
     "s": "MA",
     "z": "01344",
     "j": "Erving, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2174,
+    "i": 1410,
     "n": "Essex Town Clerk",
     "f": "(978) 768-2505",
     "p": "(978) 768-7111",
     "e": "pthorne@essexma.org",
-    "d": "2020-02-06T03:09:43",
-    "a1": "74 MARTIN ST.",
+    "d": "2019-07-18T14:19:27",
+    "a1": "30 MARTIN ST.",
     "a2": "",
     "a3": "",
     "c": "Essex",
     "s": "MA",
     "z": "01929",
     "j": "Essex, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2192,
+    "i": 1411,
     "n": "Everett Election Commission",
     "f": "(617) 544-6330",
     "p": "(617) 394-2297",
@@ -1501,10 +1687,12 @@
     "s": "MA",
     "z": "02149",
     "j": "Everett, City of",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2223,
+    "i": 1412,
     "n": "Fairhaven Town Clerk",
     "f": "(508) 979-4079",
     "p": "(508) 979-4023",
@@ -1517,10 +1705,12 @@
     "s": "MA",
     "z": "02719",
     "j": "Fairhaven, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2230,
+    "i": 1413,
     "n": "Fall River Election Commission",
     "f": "(508) 324-2633",
     "p": "(508) 324-2630",
@@ -1533,10 +1723,12 @@
     "s": "MA",
     "z": "02722",
     "j": "Fall River, City of",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2235,
+    "i": 1414,
     "n": "Falmouth Town Clerk",
     "f": "(508) 457-2511",
     "p": "(508) 495-7353",
@@ -1549,15 +1741,17 @@
     "s": "MA",
     "z": "02540",
     "j": "Falmouth, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2293,
+    "i": 1415,
     "n": "Fitchburg City Clerk",
     "f": "(978) 829-1964",
     "p": "(978) 829-1820",
     "e": "mdealderete@fitchburgma.gov",
-    "d": "2020-02-06T03:39:13",
+    "d": "2020-01-14T16:34:23",
     "a1": "166 BOULDER DR.",
     "a2": "",
     "a3": "",
@@ -1565,10 +1759,12 @@
     "s": "MA",
     "z": "01420",
     "j": "Fitchburg, City of",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2308,
+    "i": 1416,
     "n": "Florida Town Clerk",
     "f": "(413) 664-8640",
     "p": "(413) 662-2448",
@@ -1581,10 +1777,12 @@
     "s": "MA",
     "z": "01343",
     "j": "Florida, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2360,
+    "i": 1417,
     "n": "Foxborough Town Clerk",
     "f": "(508) 543-6278",
     "p": "(508) 543-1208",
@@ -1597,10 +1795,12 @@
     "s": "MA",
     "z": "02035",
     "j": "Foxborough, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2361,
+    "i": 1418,
     "n": "Framingham City Clerk",
     "f": "(508) 628-1358",
     "p": "(508) 532-5521",
@@ -1613,10 +1813,12 @@
     "s": "MA",
     "z": "01702",
     "j": "Framingham, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2406,
+    "i": 1419,
     "n": "Franklin Town Clerk",
     "f": "(508) 520-4913",
     "p": "(508) 520-4900",
@@ -1629,10 +1831,12 @@
     "s": "MA",
     "z": "02038",
     "j": "Franklin, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2428,
+    "i": 1420,
     "n": "Freetown Town Clerk",
     "f": "(508) 644-9826",
     "p": "(508) 644-2201",
@@ -1645,10 +1849,12 @@
     "s": "MA",
     "z": "02702",
     "j": "Freetown, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2487,
+    "i": 1421,
     "n": "Gardner City Clerk",
     "f": "(978) 630-2589",
     "p": "(978) 630-4058",
@@ -1661,10 +1867,12 @@
     "s": "MA",
     "z": "01440",
     "j": "Gardner, City of",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2534,
+    "i": 1422,
     "n": "Georgetown Town Clerk",
     "f": "(978) 352-5725",
     "p": "(978) 352-5711",
@@ -1677,10 +1885,12 @@
     "s": "MA",
     "z": "01833",
     "j": "Georgetown, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2555,
+    "i": 1423,
     "n": "Gill Town Clerk",
     "f": "(413) 863-7775",
     "p": "(413) 863-8103",
@@ -1693,10 +1903,12 @@
     "s": "MA",
     "z": "01354",
     "j": "Gill, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2595,
+    "i": 1424,
     "n": "Gloucester City Clerk",
     "f": "(978) 282-3051",
     "p": "(978) 281-9720",
@@ -1709,10 +1921,12 @@
     "s": "MA",
     "z": "01930",
     "j": "Gloucester, City of",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2623,
+    "i": 1425,
     "n": "Goshen Town Clerk",
     "f": "(413) 268-8237",
     "p": "(413) 268-8236",
@@ -1725,10 +1939,12 @@
     "s": "MA",
     "z": "01032",
     "j": "Goshen, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2625,
+    "i": 1426,
     "n": "Gosnold Town Clerk",
     "f": "(508) 990-3318",
     "p": "(508) 990-7408",
@@ -1741,10 +1957,12 @@
     "s": "MA",
     "z": "02713",
     "j": "Gosnold, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2632,
+    "i": 1427,
     "n": "Grafton Town Clerk",
     "f": "(508) 839-4602",
     "p": "(508) 839-5335",
@@ -1757,10 +1975,12 @@
     "s": "MA",
     "z": "01519",
     "j": "Grafton, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2642,
+    "i": 1428,
     "n": "Granby Town Clerk",
     "f": "(413) 467-3101",
     "p": "(413) 467-7178",
@@ -1773,10 +1993,12 @@
     "s": "MA",
     "z": "01033",
     "j": "Granby, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2699,
+    "i": 1429,
     "n": "Granville Town Clerk",
     "f": "(413) 357-6002",
     "p": "(413) 357-8585",
@@ -1789,10 +2011,12 @@
     "s": "MA",
     "z": "01034",
     "j": "Granville, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2714,
+    "i": 1430,
     "n": "Great Barrington Town Clerk",
     "f": "(413) 528-1026",
     "p": "(413) 528-1619",
@@ -1805,10 +2029,12 @@
     "s": "MA",
     "z": "01230",
     "j": "Great Barrington, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2753,
+    "i": 1431,
     "n": "Greenfield Town Clerk",
     "f": "(413) 772-1542",
     "p": "(413) 772-1555",
@@ -1821,10 +2047,12 @@
     "s": "MA",
     "z": "01301",
     "j": "Greenfield, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2793,
+    "i": 1432,
     "n": "Groton Town Clerk",
     "f": "(978) 448-2030",
     "p": "(978) 448-1100",
@@ -1837,10 +2065,12 @@
     "s": "MA",
     "z": "01450",
     "j": "Groton, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2797,
+    "i": 1433,
     "n": "Groveland Town Clerk",
     "f": "(978) 469-5006",
     "p": "(978) 469-5005",
@@ -1853,10 +2083,12 @@
     "s": "MA",
     "z": "01834",
     "j": "Groveland, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2826,
+    "i": 1434,
     "n": "Hadley Town Clerk",
     "f": "(413) 586-5661",
     "p": "(413) 584-1590",
@@ -1869,10 +2101,12 @@
     "s": "MA",
     "z": "01035",
     "j": "Hadley, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2836,
+    "i": 1435,
     "n": "Halifax Town Clerk",
     "f": "(781) 294-7684",
     "p": "(781) 293-7970",
@@ -1885,10 +2119,12 @@
     "s": "MA",
     "z": "02338",
     "j": "Halifax, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2860,
+    "i": 1436,
     "n": "Hamilton Town Clerk",
     "f": "(978) 468-2682",
     "p": "(978) 468-5570",
@@ -1901,10 +2137,12 @@
     "s": "MA",
     "z": "01982",
     "j": "Hamilton, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2868,
+    "i": 1437,
     "n": "Hampden Town Clerk",
     "f": "(413) 566-3513",
     "p": "(413) 566-2151",
@@ -1917,10 +2155,12 @@
     "s": "MA",
     "z": "01036",
     "j": "Hampden, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2891,
+    "i": 1438,
     "n": "Hancock Town Clerk",
     "f": "(413) 738-5310",
     "p": "(413) 738-5225",
@@ -1933,10 +2173,12 @@
     "s": "MA",
     "z": "01237",
     "j": "Hancock, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2901,
+    "i": 1439,
     "n": "Hanover Town Clerk",
     "f": "(781) 826-7499",
     "p": "(781) 826-5000",
@@ -1949,10 +2191,12 @@
     "s": "MA",
     "z": "02339",
     "j": "Hanover, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2906,
+    "i": 1440,
     "n": "Hanson Town Clerk",
     "f": "(781) 294-0884",
     "p": "(781) 293-2772",
@@ -1965,10 +2209,12 @@
     "s": "MA",
     "z": "02341",
     "j": "Hanson, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2923,
+    "i": 1441,
     "n": "Hardwick Town Clerk",
     "f": "(413) 477-6703",
     "p": "(413) 477-6700",
@@ -1981,10 +2227,12 @@
     "s": "MA",
     "z": "01031",
     "j": "Hardwick, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2980,
+    "i": 1442,
     "n": "Harvard Town Clerk",
     "f": "(978) 456-4113",
     "p": "(978) 456-4100",
@@ -1997,10 +2245,12 @@
     "s": "MA",
     "z": "01451",
     "j": "Harvard, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2982,
+    "i": 1443,
     "n": "Harwich Town Clerk",
     "f": "(508) 430-7517",
     "p": "(508) 430-7516",
@@ -2013,10 +2263,12 @@
     "s": "MA",
     "z": "02645",
     "j": "Harwich, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2989,
+    "i": 1444,
     "n": "Hatfield Town Clerk",
     "f": "(413) 247-5029",
     "p": "(413) 247-0492",
@@ -2029,10 +2281,12 @@
     "s": "MA",
     "z": "01038",
     "j": "Hatfield, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2993,
+    "i": 1445,
     "n": "Haverhill City Clerk",
     "f": "(978) 373-8490",
     "p": "(978) 420-3622",
@@ -2045,10 +2299,12 @@
     "s": "MA",
     "z": "01830",
     "j": "Haverhill, City of",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3000,
+    "i": 1446,
     "n": "Hawley Town Clerk",
     "f": "(413) 339-4959",
     "p": "(413) 339-5518",
@@ -2061,10 +2317,12 @@
     "s": "MA",
     "z": "01339",
     "j": "Hawley, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3021,
+    "i": 1447,
     "n": "Heath Town Clerk",
     "f": "(413) 337-8542",
     "p": "(413) 337-4934",
@@ -2077,10 +2335,12 @@
     "s": "MA",
     "z": "01346",
     "j": "Heath, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3102,
+    "i": 1448,
     "n": "Hingham Town Clerk",
     "f": "(781) 740-0239",
     "p": "(781) 741-1410",
@@ -2093,10 +2353,12 @@
     "s": "MA",
     "z": "02043",
     "j": "Hingham, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3104,
+    "i": 1449,
     "n": "Hinsdale Town Clerk",
     "f": "(413) 655-8807",
     "p": "(413) 655-2301",
@@ -2109,10 +2371,12 @@
     "s": "MA",
     "z": "01235",
     "j": "Hinsdale, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3117,
+    "i": 1450,
     "n": "Holbrook Town Clerk",
     "f": "(781) 767-9054",
     "p": "(781) 767-4314",
@@ -2125,15 +2389,17 @@
     "s": "MA",
     "z": "02343",
     "j": "Holbrook, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3118,
+    "i": 1451,
     "n": "Holden Town Clerk",
     "f": "(508) 829-0281",
     "p": "(508) 210-5530",
     "e": "jsurvell@holdenma.gov",
-    "d": "2020-02-06T03:01:44",
+    "d": "2020-03-26T11:05:26",
     "a1": "1196 MAIN ST.",
     "a2": "",
     "a3": "",
@@ -2141,10 +2407,12 @@
     "s": "MA",
     "z": "01520",
     "j": "Holden, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3127,
+    "i": 1452,
     "n": "Holland Town Clerk",
     "f": "(413) 245-7037",
     "p": "(413) 245-7108",
@@ -2157,10 +2425,12 @@
     "s": "MA",
     "z": "01521",
     "j": "Holland, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3130,
+    "i": 1453,
     "n": "Holliston Town Clerk",
     "f": "(508) 429-0642",
     "p": "(508) 429-0601",
@@ -2173,10 +2443,12 @@
     "s": "MA",
     "z": "01746",
     "j": "Holliston, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3142,
+    "i": 1454,
     "n": "Holyoke City Clerk",
     "f": "(413) 322-5521",
     "p": "(413) 322-5540",
@@ -2189,10 +2461,12 @@
     "s": "MA",
     "z": "01040",
     "j": "Holyoke, City of",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3157,
+    "i": 1455,
     "n": "Hopedale Town Clerk",
     "f": "(508) 634-2200",
     "p": "(508) 634-2203",
@@ -2205,10 +2479,12 @@
     "s": "MA",
     "z": "01747",
     "j": "Hopedale, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3163,
+    "i": 1456,
     "n": "Hopkinton Town Clerk",
     "f": "(617) 742-3238",
     "p": "(508) 497-9710",
@@ -2221,10 +2497,12 @@
     "s": "MA",
     "z": "01748",
     "j": "Hopkinton, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3198,
+    "i": 1457,
     "n": "Hubbardston Town Clerk",
     "f": "(978) 928-1402",
     "p": "(978) 928-1400",
@@ -2237,10 +2515,12 @@
     "s": "MA",
     "z": "01452",
     "j": "Hubbardston, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3206,
+    "i": 1458,
     "n": "Hudson Town Clerk",
     "f": "(978) 562-8508",
     "p": "(978) 568-9615",
@@ -2253,10 +2533,12 @@
     "s": "MA",
     "z": "01749",
     "j": "Hudson, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3218,
+    "i": 1459,
     "n": "Hull Town Clerk",
     "f": "(781) 925-0224",
     "p": "(781) 925-2262",
@@ -2269,10 +2551,12 @@
     "s": "MA",
     "z": "02045",
     "j": "Hull, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3234,
+    "i": 1460,
     "n": "Huntington Town Clerk",
     "f": "(413) 667-3507",
     "p": "(413) 512-5209",
@@ -2285,10 +2569,12 @@
     "s": "MA",
     "z": "01050",
     "j": "Huntington, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3282,
+    "i": 1461,
     "n": "Ipswich Town Clerk",
     "f": "(978) 356-6021",
     "p": "(978) 356-6677",
@@ -2301,10 +2587,12 @@
     "s": "MA",
     "z": "01938",
     "j": "Ipswich, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3548,
+    "i": 1462,
     "n": "Kingston Town Clerk",
     "f": "(781) 585-0542",
     "p": "(781) 585-0502",
@@ -2317,10 +2605,12 @@
     "s": "MA",
     "z": "02364",
     "j": "Kingston, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3671,
+    "i": 1463,
     "n": "Lakeville Town Clerk",
     "f": "(508) 946-3970",
     "p": "(508) 946-8814",
@@ -2333,10 +2623,12 @@
     "s": "MA",
     "z": "02347",
     "j": "Lakeville, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3687,
+    "i": 1464,
     "n": "Lancaster Town Clerk",
     "f": "(978) 368-4011",
     "p": "(978) 365-3326",
@@ -2349,10 +2641,12 @@
     "s": "MA",
     "z": "01523",
     "j": "Lancaster, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3696,
+    "i": 1465,
     "n": "Lanesborough Town Clerk",
     "f": "(413) 443-5811",
     "p": "(413) 442-1351",
@@ -2365,10 +2659,12 @@
     "s": "MA",
     "z": "01237",
     "j": "Lanesborough, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3739,
+    "i": 1466,
     "n": "Lawrence Elections Division",
     "f": "(978) 722-9230",
     "p": "(978) 620-3290",
@@ -2381,15 +2677,17 @@
     "s": "MA",
     "z": "01840",
     "j": "Lawrence, City of",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3770,
+    "i": 1467,
     "n": "Lee Town Clerk",
     "f": "(413) 243-5507",
     "p": "(413) 243-5505",
     "e": "bpage@town.lee.ma.us",
-    "d": "2020-02-06T02:46:51",
+    "d": "2019-07-18T14:19:28",
     "a1": "32 MAIN ST.",
     "a2": "",
     "a3": "",
@@ -2397,10 +2695,12 @@
     "s": "MA",
     "z": "01238",
     "j": "Lee, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3778,
+    "i": 1468,
     "n": "Leicester Town Clerk",
     "f": "(508) 892-7070",
     "p": "(508) 892-7011",
@@ -2413,10 +2713,12 @@
     "s": "MA",
     "z": "01524",
     "j": "Leicester, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3790,
+    "i": 1469,
     "n": "Lenox Town Clerk",
     "f": "(413) 637-5518",
     "p": "(413) 637-5500",
@@ -2429,10 +2731,12 @@
     "s": "MA",
     "z": "01240",
     "j": "Lenox, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3793,
+    "i": 1470,
     "n": "Leominster City Clerk",
     "f": "(978) 534-7546",
     "p": "(978) 534-7500",
@@ -2445,10 +2749,12 @@
     "s": "MA",
     "z": "01453",
     "j": "Leominster, City of",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3808,
+    "i": 1471,
     "n": "Leverett Town Clerk",
     "f": "(413) 548-1035",
     "p": "(413) 548-9150",
@@ -2461,15 +2767,17 @@
     "s": "MA",
     "z": "01054",
     "j": "Leverett, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3823,
+    "i": 1472,
     "n": "Lexington Town Clerk",
     "f": "(781) 861-2754",
     "p": "(781) 698-4558",
-    "e": "ballots@lexingtonma.gov",
-    "d": "2020-01-27T14:40:09",
+    "e": "townclerk@lexingtonma.gov",
+    "d": "2017-09-20T14:40:09",
     "a1": "1625 MASS. AVE.",
     "a2": "",
     "a3": "",
@@ -2477,10 +2785,12 @@
     "s": "MA",
     "z": "02420",
     "j": "Lexington, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3824,
+    "i": 1473,
     "n": "Leyden Town Clerk",
     "f": "(413) 772-0146",
     "p": "(413) 774-4111",
@@ -2493,10 +2803,12 @@
     "s": "MA",
     "z": "01337",
     "j": "Leyden, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3892,
+    "i": 1474,
     "n": "Lincoln Town Clerk",
     "f": "(781) 259-8735",
     "p": "(781) 259-2607",
@@ -2509,10 +2821,12 @@
     "s": "MA",
     "z": "01773",
     "j": "Lincoln, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3926,
+    "i": 1475,
     "n": "Littleton Town Hall",
     "f": "(978) 952-2321",
     "p": "(978) 540-2401",
@@ -2525,10 +2839,12 @@
     "s": "MA",
     "z": "01460",
     "j": "Littleton, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3969,
+    "i": 1476,
     "n": "Longmeadow Town Clerk",
     "f": "(413) 565-4130",
     "p": "(413) 565-4103",
@@ -2541,10 +2857,12 @@
     "s": "MA",
     "z": "01106",
     "j": "Longmeadow, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3988,
+    "i": 1477,
     "n": "Lowell Election Commission",
     "f": "(978) 970-4089",
     "p": "(978) 674-4046",
@@ -2557,10 +2875,12 @@
     "s": "MA",
     "z": "01852",
     "j": "Lowell, City of",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4009,
+    "i": 1478,
     "n": "Ludlow Town Clerk",
     "f": "(413) 583-5603",
     "p": "(413) 583-5600",
@@ -2573,10 +2893,12 @@
     "s": "MA",
     "z": "01056",
     "j": "Ludlow, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4015,
+    "i": 1479,
     "n": "Lunenburg Town Clerk",
     "f": "(978) 582-4148",
     "p": "(978) 582-4130",
@@ -2589,10 +2911,12 @@
     "s": "MA",
     "z": "01462",
     "j": "Lunenburg, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4033,
+    "i": 1480,
     "n": "Lynn City Clerk",
     "f": "(781) 477-7032",
     "p": "(781) 586-6805",
@@ -2605,10 +2929,12 @@
     "s": "MA",
     "z": "01901",
     "j": "Lynn, City of",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4036,
+    "i": 1481,
     "n": "Lynnfield Town Clerk",
     "f": "(781) 334-9469",
     "p": "(781) 334-9401",
@@ -2621,10 +2947,12 @@
     "s": "MA",
     "z": "01940",
     "j": "Lynnfield, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4101,
+    "i": 1482,
     "n": "Malden City Clerk",
     "f": "(781) 388-0610",
     "p": "(781) 397-7116",
@@ -2637,15 +2965,17 @@
     "s": "MA",
     "z": "02148",
     "j": "Malden, City of",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4114,
+    "i": 1483,
     "n": "Manchester-by-the-Sea Town Clerk",
     "f": "(978) 526-2001",
     "p": "(978) 526-2040",
-    "e": "townclerk@manchester.ma.us",
-    "d": "2020-02-25T14:40:09",
+    "e": "stpierrec@manchester.ma.us",
+    "d": "2019-07-18T14:19:28",
     "a1": "10 CENTRAL ST.",
     "a2": "",
     "a3": "",
@@ -2653,10 +2983,12 @@
     "s": "MA",
     "z": "01944",
     "j": "Manchester-by-the-Sea, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4127,
+    "i": 1484,
     "n": "Mansfield Town Clerk",
     "f": "(508) 261-1083",
     "p": "(508) 261-7345",
@@ -2669,10 +3001,12 @@
     "s": "MA",
     "z": "02048",
     "j": "Mansfield, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4150,
+    "i": 1485,
     "n": "Marblehead Town Clerk",
     "f": "(781) 631-0561",
     "p": "(781) 631-0528",
@@ -2685,15 +3019,17 @@
     "s": "MA",
     "z": "01945",
     "j": "Marblehead, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4191,
+    "i": 1486,
     "n": "Marion Town Clerk",
     "f": "(508) 748-3534",
     "p": "(508) 748-3502",
-    "e": "lmagauran@marionma.gov",
-    "d": "2020-02-25T14:40:09",
+    "e": "mbissonnette@marionma.gov",
+    "d": "2019-07-18T14:19:28",
     "a1": "2 SPRING ST.",
     "a2": "",
     "a3": "",
@@ -2701,10 +3037,12 @@
     "s": "MA",
     "z": "02738",
     "j": "Marion, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4198,
+    "i": 1487,
     "n": "Marlborough City Clerk",
     "f": "(508) 460-3723",
     "p": "(508) 460-3775",
@@ -2717,10 +3055,12 @@
     "s": "MA",
     "z": "01752",
     "j": "Marlborough, City of",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4228,
+    "i": 1488,
     "n": "Marshfield Town Clerk",
     "f": "(781) 834-6289",
     "p": "(781) 834-5540",
@@ -2733,10 +3073,12 @@
     "s": "MA",
     "z": "02050",
     "j": "Marshfield, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4241,
+    "i": 1489,
     "n": "Mashpee Town Clerk",
     "f": "(508) 539-1142",
     "p": "(508) 539-1418",
@@ -2749,10 +3091,12 @@
     "s": "MA",
     "z": "02649",
     "j": "Mashpee, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4261,
+    "i": 1490,
     "n": "Mattapoisett Town Clerk",
     "f": "(508) 758-4121",
     "p": "(508) 758-4100",
@@ -2765,10 +3109,12 @@
     "s": "MA",
     "z": "02739",
     "j": "Mattapoisett, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4273,
+    "i": 1491,
     "n": "Maynard Town Clerk",
     "f": "(978) 897-8553",
     "p": "(978) 897-1300",
@@ -2781,10 +3127,12 @@
     "s": "MA",
     "z": "01754",
     "j": "Maynard, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4333,
+    "i": 1492,
     "n": "Medfield Town Clerk",
     "f": "(508) 359-6182",
     "p": "(508) 906-3024",
@@ -2797,15 +3145,17 @@
     "s": "MA",
     "z": "02052",
     "j": "Medfield, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4335,
+    "i": 1493,
     "n": "Medford Board of Registrars",
     "f": "(781) 391-1895",
     "p": "(781) 393-2491",
-    "e": "AHurtubise@medford-ma.gov",
-    "d": "2020-01-24T14:56:28",
+    "e": "ahurtubise@medford-ma.gov",
+    "d": "2019-08-16T15:44:58",
     "a1": "85 GEORGE HASSETT DR.",
     "a2": "",
     "a3": "",
@@ -2813,10 +3163,12 @@
     "s": "MA",
     "z": "02155",
     "j": "Medford, City of",
-    "t": "Town"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4341,
+    "i": 1494,
     "n": "Medway Town Clerk",
     "f": "(508) 533-3201",
     "p": "(508) 533-3204",
@@ -2829,10 +3181,12 @@
     "s": "MA",
     "z": "02053",
     "j": "Medway, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4351,
+    "i": 1495,
     "n": "Melrose City Clerk",
     "f": "(781) 979-4149",
     "p": "(781) 979-4125",
@@ -2845,10 +3199,12 @@
     "s": "MA",
     "z": "02176",
     "j": "Melrose, City of",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4364,
+    "i": 1496,
     "n": "Mendon Town Clerk",
     "f": "(508) 478-8241",
     "p": "(508) 473-1085",
@@ -2861,10 +3217,12 @@
     "s": "MA",
     "z": "01756",
     "j": "Mendon, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4396,
+    "i": 1497,
     "n": "Merrimac Town Clerk",
     "f": "(978) 346-8013",
     "p": "(978) 346-8013",
@@ -2877,10 +3235,12 @@
     "s": "MA",
     "z": "01860",
     "j": "Merrimac, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4407,
+    "i": 1498,
     "n": "Methuen City Clerk",
     "f": "(978) 983-8977",
     "p": "(978) 983-8515",
@@ -2893,10 +3253,12 @@
     "s": "MA",
     "z": "01844",
     "j": "Methuen, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4418,
+    "i": 1499,
     "n": "Middleborough Town Clerk",
     "f": "(508) 946-2308",
     "p": "(508) 946-2415",
@@ -2909,10 +3271,12 @@
     "s": "MA",
     "z": "02346",
     "j": "Middleborough, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4423,
+    "i": 1500,
     "n": "Middlefield Town Clerk",
     "f": "(413) 623-6108",
     "p": "(413) 623-2079",
@@ -2925,10 +3289,12 @@
     "s": "MA",
     "z": "01243",
     "j": "Middlefield, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4428,
+    "i": 1501,
     "n": "Middleton Town Clerk",
     "f": "(978) 774-6167",
     "p": "(978) 774-6927",
@@ -2941,10 +3307,12 @@
     "s": "MA",
     "z": "01949",
     "j": "Middleton, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4447,
+    "i": 1502,
     "n": "Milford Town Clerk",
     "f": "(508) 634-2324",
     "p": "(508) 634-2307",
@@ -2957,10 +3325,12 @@
     "s": "MA",
     "z": "01757",
     "j": "Milford, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4454,
+    "i": 1503,
     "n": "Millbury Town Clerk",
     "f": "(508) 865-0857",
     "p": "(508) 865-9110",
@@ -2973,10 +3343,12 @@
     "s": "MA",
     "z": "01527",
     "j": "Millbury, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4461,
+    "i": 1504,
     "n": "Millis Town Clerk",
     "f": "(508) 376-7055",
     "p": "(508) 376-7046",
@@ -2989,10 +3361,12 @@
     "s": "MA",
     "z": "02054",
     "j": "Millis, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4470,
+    "i": 1505,
     "n": "Millville Town Clerk",
     "f": "(508) 883-2994",
     "p": "(508) 883-5849",
@@ -3005,10 +3379,12 @@
     "s": "MA",
     "z": "01529",
     "j": "Millville, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4477,
+    "i": 1506,
     "n": "Milton Town Clerk",
     "f": "(617) 696-6995",
     "p": "(617) 898-4859",
@@ -3021,10 +3397,12 @@
     "s": "MA",
     "z": "02186",
     "j": "Milton, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4549,
+    "i": 1507,
     "n": "Monroe Town Clerk",
     "f": "(413) 424-5272",
     "p": "(413) 424-5272",
@@ -3037,10 +3415,12 @@
     "s": "MA",
     "z": "01350",
     "j": "Monroe, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4552,
+    "i": 1508,
     "n": "Monson Town Clerk",
     "f": "(413) 267-3726",
     "p": "(413) 267-4115",
@@ -3053,10 +3433,12 @@
     "s": "MA",
     "z": "01057",
     "j": "Monson, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4557,
+    "i": 1509,
     "n": "Montague Town Clerk",
     "f": "(413) 863-3224",
     "p": "(413) 863-3200",
@@ -3069,10 +3451,12 @@
     "s": "MA",
     "z": "01376",
     "j": "Montague, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4565,
+    "i": 1510,
     "n": "Monterey Town Clerk",
     "f": "(413) 528-9452",
     "p": "(413) 528-1443",
@@ -3085,10 +3469,12 @@
     "s": "MA",
     "z": "01245",
     "j": "Monterey, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4587,
+    "i": 1511,
     "n": "Montgomery Town Clerk",
     "f": "(413) 862-3204",
     "p": "(413) 862-3386",
@@ -3101,10 +3487,12 @@
     "s": "MA",
     "z": "01085",
     "j": "Montgomery, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4665,
+    "i": 1512,
     "n": "Mount Washington Town Clerk",
     "f": "(413) 528-2839",
     "p": "(413) 528-2839",
@@ -3117,10 +3505,12 @@
     "s": "MA",
     "z": "01258",
     "j": "Mount Washington, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4702,
+    "i": 1513,
     "n": "Nahant Town Clerk",
     "f": "(781) 581-8314",
     "p": "(781) 581-0018",
@@ -3133,10 +3523,12 @@
     "s": "MA",
     "z": "01908",
     "j": "Nahant, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4706,
+    "i": 1514,
     "n": "Nantucket Town Clerk",
     "f": "(508) 325-5313",
     "p": "(508) 228-7216",
@@ -3149,10 +3541,12 @@
     "s": "MA",
     "z": "02554",
     "j": "Nantucket, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4719,
+    "i": 1515,
     "n": "Natick Town Clerk",
     "f": "(508) 655-6715",
     "p": "(508) 647-6432",
@@ -3165,10 +3559,12 @@
     "s": "MA",
     "z": "01760",
     "j": "Natick, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4727,
+    "i": 1516,
     "n": "Needham Town Clerk",
     "f": "(781) 449-1246",
     "p": "(781) 455-7500",
@@ -3181,10 +3577,12 @@
     "s": "MA",
     "z": "02492",
     "j": "Needham, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4756,
+    "i": 1517,
     "n": "New Ashford Town Clerk",
     "f": "(413) 458-5461",
     "p": "(413) 458-5461",
@@ -3197,10 +3595,12 @@
     "s": "MA",
     "z": "01237",
     "j": "New Ashford, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4759,
+    "i": 1518,
     "n": "New Bedford Election Commission",
     "f": "(508) 979-1422",
     "p": "(508) 979-1423",
@@ -3213,10 +3613,12 @@
     "s": "MA",
     "z": "02740",
     "j": "New Bedford, City of",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4762,
+    "i": 1519,
     "n": "New Braintree Town Clerk",
     "f": "(508) 867-6316",
     "p": "(508) 867-2071",
@@ -3229,10 +3631,12 @@
     "s": "MA",
     "z": "01531",
     "j": "New Braintree, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4796,
+    "i": 1520,
     "n": "New Marlborough Town Clerk",
     "f": "(413) 229-7041",
     "p": "(413) 229-8278",
@@ -3245,10 +3649,12 @@
     "s": "MA",
     "z": "01244",
     "j": "New Marlborough, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4799,
+    "i": 1521,
     "n": "New Salem Town Clerk",
     "f": "(617) 742-3238",
     "p": "(978) 544-2731",
@@ -3261,10 +3667,12 @@
     "s": "MA",
     "z": "01355",
     "j": "New Salem, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4811,
+    "i": 1522,
     "n": "Newbury Town Clerk",
     "f": "(978) 572-1228",
     "p": "(978) 465-0862",
@@ -3277,10 +3685,12 @@
     "s": "MA",
     "z": "01922",
     "j": "Newbury, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4813,
+    "i": 1523,
     "n": "Newburyport City Clerk",
     "f": "(978) 462-7936",
     "p": "(978) 465-4407",
@@ -3293,10 +3703,12 @@
     "s": "MA",
     "z": "01950",
     "j": "Newburyport, City of",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4837,
+    "i": 1524,
     "n": "Newton City Clerk",
     "f": "(617) 796-1214",
     "p": "(617) 796-1200",
@@ -3309,10 +3721,12 @@
     "s": "MA",
     "z": "02459",
     "j": "Newton, City of",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4861,
+    "i": 1525,
     "n": "Norfolk Town Clerk",
     "f": "(508) 541-3363",
     "p": "(508) 528-1400",
@@ -3325,10 +3739,12 @@
     "s": "MA",
     "z": "02056",
     "j": "Norfolk, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4865,
+    "i": 1526,
     "n": "North Adams City Clerk",
     "f": "(413) 662-3532",
     "p": "(413) 662-3000",
@@ -3341,15 +3757,17 @@
     "s": "MA",
     "z": "01247",
     "j": "North Adams, City of",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4867,
+    "i": 1527,
     "n": "North Andover Town Clerk",
     "f": "(978) 688-9557",
     "p": "(978) 688-9501",
     "e": "treid@northandoverma.gov",
-    "d": "2020-02-11T14:40:09",
+    "d": "2020-01-31T12:05:59",
     "a1": "120 MAIN ST.",
     "a2": "",
     "a3": "",
@@ -3357,10 +3775,12 @@
     "s": "MA",
     "z": "01845",
     "j": "North Andover, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4868,
+    "i": 1528,
     "n": "North Attleborough Election Commission",
     "f": "(508) 699-0134",
     "p": "(508) 699-0106",
@@ -3373,10 +3793,12 @@
     "s": "MA",
     "z": "02760",
     "j": "North Attleborough, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4873,
+    "i": 1529,
     "n": "North Brookfield Town Clerk",
     "f": "(508) 867-0217",
     "p": "(508) 867-0203",
@@ -3389,15 +3811,17 @@
     "s": "MA",
     "z": "01535",
     "j": "North Brookfield, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4887,
+    "i": 1530,
     "n": "North Reading Town Clerk",
     "f": "(978) 664-4196",
-    "p": "(978) 357-5217",
+    "p": "(978) 357-5218",
     "e": "bstats@northreadingma.gov",
-    "d": "2018-09-28T14:40:09",
+    "d": "2017-09-20T14:40:09",
     "a1": "235 NORTH ST.",
     "a2": "",
     "a3": "",
@@ -3405,10 +3829,12 @@
     "s": "MA",
     "z": "01864",
     "j": "North Reading, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4895,
+    "i": 1531,
     "n": "Northampton Board of Registrars",
     "f": "(413) 587-1308",
     "p": "(413) 587-1291",
@@ -3421,10 +3847,12 @@
     "s": "MA",
     "z": "01060",
     "j": "Northampton, City of",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4896,
+    "i": 1532,
     "n": "Northborough Town Clerk",
     "f": "(508) 393-6996",
     "p": "(508) 393-5001",
@@ -3437,10 +3865,12 @@
     "s": "MA",
     "z": "01532",
     "j": "Northborough, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4897,
+    "i": 1533,
     "n": "Northbridge Town Clerk",
     "f": "(508) 234-7640",
     "p": "(508) 234-2001",
@@ -3453,10 +3883,12 @@
     "s": "MA",
     "z": "01588",
     "j": "Northbridge, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4900,
+    "i": 1534,
     "n": "Northfield Town Clerk",
     "f": "(413) 498-5103",
     "p": "(413) 498-2901",
@@ -3469,10 +3901,12 @@
     "s": "MA",
     "z": "01360",
     "j": "Northfield, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4913,
+    "i": 1535,
     "n": "Norton Town Clerk",
     "f": "(508) 285-0297",
     "p": "(508) 285-0230",
@@ -3485,10 +3919,12 @@
     "s": "MA",
     "z": "02766",
     "j": "Norton, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4920,
+    "i": 1536,
     "n": "Norwell Town Clerk",
     "f": "(781) 659-8073",
     "p": "(781) 659-8072",
@@ -3501,10 +3937,12 @@
     "s": "MA",
     "z": "02061",
     "j": "Norwell, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4926,
+    "i": 1537,
     "n": "Norwood Town Clerk",
     "f": "(781) 278-3018",
     "p": "(781) 762-1240",
@@ -3517,10 +3955,12 @@
     "s": "MA",
     "z": "02062",
     "j": "Norwood, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4942,
+    "i": 1538,
     "n": "Oak Bluffs Town Clerk",
     "f": "(508) 693-5124",
     "p": "(508) 693-3554",
@@ -3533,10 +3973,12 @@
     "s": "MA",
     "z": "02557",
     "j": "Oak Bluffs, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4953,
+    "i": 1539,
     "n": "Oakham Town Clerk",
     "f": "(508) 882-3060",
     "p": "(508) 882-5549",
@@ -3549,10 +3991,12 @@
     "s": "MA",
     "z": "01068",
     "j": "Oakham, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5039,
+    "i": 1540,
     "n": "Orange Town Clerk",
     "f": "(978) 544-1134",
     "p": "(978) 544-1100",
@@ -3565,10 +4009,12 @@
     "s": "MA",
     "z": "01364",
     "j": "Orange, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5057,
+    "i": 1541,
     "n": "Orleans Town Clerk",
     "f": "(508) 240-3388",
     "p": "(508) 240-3700",
@@ -3581,10 +4027,12 @@
     "s": "MA",
     "z": "02653",
     "j": "Orleans, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5084,
+    "i": 1542,
     "n": "Otis Town Clerk",
     "f": "(413) 269-0111",
     "p": "(413) 269-0100",
@@ -3597,10 +4045,12 @@
     "s": "MA",
     "z": "01253",
     "j": "Otis, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5119,
+    "i": 1543,
     "n": "Oxford Town Clerk",
     "f": "(508) 987-1804",
     "p": "(508) 987-6032",
@@ -3613,10 +4063,12 @@
     "s": "MA",
     "z": "01540",
     "j": "Oxford, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5130,
+    "i": 1544,
     "n": "Palmer Town Clerk",
     "f": "(413) 283-2637",
     "p": "(413) 283-2608",
@@ -3629,10 +4081,12 @@
     "s": "MA",
     "z": "01069",
     "j": "Palmer, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5174,
+    "i": 1545,
     "n": "Paxton Town Clerk",
     "f": "(508) 797-0966",
     "p": "(508) 799-7347",
@@ -3645,10 +4099,12 @@
     "s": "MA",
     "z": "01612",
     "j": "Paxton, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5177,
+    "i": 1546,
     "n": "Peabody City Clerk",
     "f": "(978) 538-5985",
     "p": "(978) 538-5750",
@@ -3661,10 +4117,12 @@
     "s": "MA",
     "z": "01960",
     "j": "Peabody, City of",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5186,
+    "i": 1547,
     "n": "Pelham Town Clerk",
     "f": "(413) 256-1061",
     "p": "(413) 253-0512",
@@ -3677,10 +4135,12 @@
     "s": "MA",
     "z": "01002",
     "j": "Pelham, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5192,
+    "i": 1548,
     "n": "Pembroke Town Clerk",
     "f": "(781) 709-1456",
     "p": "(781) 293-7211",
@@ -3693,10 +4153,12 @@
     "s": "MA",
     "z": "02359",
     "j": "Pembroke, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5212,
+    "i": 1549,
     "n": "Pepperell Town Clerk",
     "f": "(978) 433-0338",
     "p": "(978) 433-0339",
@@ -3709,10 +4171,12 @@
     "s": "MA",
     "z": "01463",
     "j": "Pepperell, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5234,
+    "i": 1550,
     "n": "Peru Town Clerk",
     "f": "(413) 655-2759",
     "p": "(413) 655-8312",
@@ -3725,10 +4189,12 @@
     "s": "MA",
     "z": "01235",
     "j": "Peru, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5241,
+    "i": 1551,
     "n": "Petersham Town Clerk",
     "f": "(978) 724-3501",
     "p": "(978) 724-6649",
@@ -3741,10 +4207,12 @@
     "s": "MA",
     "z": "01366",
     "j": "Petersham, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5256,
+    "i": 1552,
     "n": "Phillipston Town Clerk",
     "f": "(978) 249-1733",
     "p": "(978) 249-1733",
@@ -3757,10 +4225,12 @@
     "s": "MA",
     "z": "01331",
     "j": "Phillipston, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5308,
+    "i": 1553,
     "n": "Pittsfield Board of Registrars",
     "f": "(413) 499-9463",
     "p": "(413) 499-9460",
@@ -3773,10 +4243,12 @@
     "s": "MA",
     "z": "01201",
     "j": "Pittsfield, City of",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5322,
+    "i": 1554,
     "n": "Plainfield Town Clerk",
     "f": "(413) 634-5683",
     "p": "(413) 634-5420",
@@ -3789,10 +4261,12 @@
     "s": "MA",
     "z": "01070",
     "j": "Plainfield, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5327,
+    "i": 1555,
     "n": "Plainville Town Clerk",
     "f": "(508) 695-1857",
     "p": "(508) 576-8453",
@@ -3805,10 +4279,12 @@
     "s": "MA",
     "z": "02762",
     "j": "Plainville, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5360,
+    "i": 1556,
     "n": "Plymouth Town Clerk",
     "f": "(508) 830-4116",
     "p": "(508) 747-1620",
@@ -3821,10 +4297,12 @@
     "s": "MA",
     "z": "02360",
     "j": "Plymouth, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5363,
+    "i": 1557,
     "n": "Plympton Town Clerk",
     "f": "(781) 582-1505",
     "p": "(781) 585-3220",
@@ -3837,10 +4315,12 @@
     "s": "MA",
     "z": "02367",
     "j": "Plympton, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5483,
+    "i": 1558,
     "n": "Princeton Town Clerk",
     "f": "(978) 464-2106",
     "p": "(978) 464-2103",
@@ -3853,10 +4333,12 @@
     "s": "MA",
     "z": "01541",
     "j": "Princeton, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5488,
+    "i": 1559,
     "n": "Provincetown Town Clerk",
     "f": "(508) 487-9560",
     "p": "(508) 487-7013",
@@ -3869,10 +4351,12 @@
     "s": "MA",
     "z": "02657",
     "j": "Provincetown, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5520,
+    "i": 1560,
     "n": "Quincy City Clerk",
     "f": "(617) 376-1082",
     "p": "(617) 376-1131",
@@ -3885,10 +4369,12 @@
     "s": "MA",
     "z": "02169",
     "j": "Quincy, City of",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5548,
+    "i": 1561,
     "n": "Randolph Town Clerk",
     "f": "(781) 961-0919",
     "p": "(781) 961-0900",
@@ -3901,10 +4387,12 @@
     "s": "MA",
     "z": "02368",
     "j": "Randolph, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5567,
+    "i": 1562,
     "n": "Raynham Town Clerk",
     "f": "(508) 823-1812",
     "p": "(508) 824-2700",
@@ -3917,10 +4405,12 @@
     "s": "MA",
     "z": "02767",
     "j": "Raynham, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5571,
+    "i": 1563,
     "n": "Reading Town Clerk",
     "f": "(781) 942-9070",
     "p": "(781) 942-9050",
@@ -3933,10 +4423,12 @@
     "s": "MA",
     "z": "01867",
     "j": "Reading, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5597,
+    "i": 1564,
     "n": "Rehoboth Town Clerk",
     "f": "(508) 252-5342",
     "p": "(508) 252-6502",
@@ -3949,10 +4441,12 @@
     "s": "MA",
     "z": "02769",
     "j": "Rehoboth, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5609,
+    "i": 1565,
     "n": "Revere Election Commission",
     "f": "(781) 286-8206",
     "p": "(781) 286-8200",
@@ -3965,15 +4459,17 @@
     "s": "MA",
     "z": "02151",
     "j": "Revere, City of",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5663,
+    "i": 1566,
     "n": "Richmond Town Clerk",
     "f": "(413) 698-3272",
-    "p": "(413) 698-3355",
+    "p": "(413) 698-3555",
     "e": "clerk@richmondma.org",
-    "d": "2018-09-28T14:40:09",
+    "d": "2017-09-20T14:40:09",
     "a1": "1529 STATE RD.",
     "a2": "",
     "a3": "",
@@ -3981,10 +4477,12 @@
     "s": "MA",
     "z": "01254",
     "j": "Richmond, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5715,
+    "i": 1567,
     "n": "Rochester Town Clerk",
     "f": "(508) 763-4892",
     "p": "(508) 763-3871",
@@ -3997,10 +4495,12 @@
     "s": "MA",
     "z": "02770",
     "j": "Rochester, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5742,
+    "i": 1568,
     "n": "Rockland Town Clerk",
     "f": "(781) 871-0386",
     "p": "(781) 871-1874",
@@ -4013,10 +4513,12 @@
     "s": "MA",
     "z": "02370",
     "j": "Rockland, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5744,
+    "i": 1569,
     "n": "Rockport Town Clerk",
     "f": "(978) 546-5018",
     "p": "(978) 546-6894",
@@ -4029,10 +4531,12 @@
     "s": "MA",
     "z": "01966",
     "j": "Rockport, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5788,
+    "i": 1570,
     "n": "Rowe Town Clerk",
     "f": "(413) 339-5316",
     "p": "(413) 339-5520",
@@ -4045,10 +4549,12 @@
     "s": "MA",
     "z": "01367",
     "j": "Rowe, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5789,
+    "i": 1571,
     "n": "Rowley Town Clerk",
     "f": "(978) 948-2162",
     "p": "(978) 948-2081",
@@ -4061,10 +4567,12 @@
     "s": "MA",
     "z": "01969",
     "j": "Rowley, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5797,
+    "i": 1572,
     "n": "Royalston Town Clerk",
     "f": "(978) 575-0748",
     "p": "(978) 249-0493",
@@ -4077,10 +4585,12 @@
     "s": "MA",
     "z": "01368",
     "j": "Royalston, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5824,
+    "i": 1573,
     "n": "Russell Town Clerk",
     "f": "(413) 862-3103",
     "p": "(413) 862-6207",
@@ -4093,10 +4603,12 @@
     "s": "MA",
     "z": "01071",
     "j": "Russell, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5831,
+    "i": 1574,
     "n": "Rutland Town Clerk",
     "f": "(508) 886-2929",
     "p": "(508) 886-4104",
@@ -4109,10 +4621,12 @@
     "s": "MA",
     "z": "01543",
     "j": "Rutland, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5852,
+    "i": 1575,
     "n": "Salem City Clerk",
     "f": "(978) 740-9209",
     "p": "(978) 745-9595",
@@ -4125,10 +4639,12 @@
     "s": "MA",
     "z": "01970",
     "j": "Salem, City of",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5864,
+    "i": 1576,
     "n": "Salisbury Town Clerk",
     "f": "(978) 462-4176",
     "p": "(978) 462-1145",
@@ -4141,10 +4657,12 @@
     "s": "MA",
     "z": "01952",
     "j": "Salisbury, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5897,
+    "i": 1577,
     "n": "Sandisfield Town Clerk",
     "f": "(413) 258-4225",
     "p": "(413) 258-4711",
@@ -4157,10 +4675,12 @@
     "s": "MA",
     "z": "01255",
     "j": "Sandisfield, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5904,
+    "i": 1578,
     "n": "Sandwich Town Clerk",
     "f": "(508) 888-2497",
     "p": "(508) 888-0340",
@@ -4173,10 +4693,12 @@
     "s": "MA",
     "z": "02563",
     "j": "Sandwich, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5925,
+    "i": 1579,
     "n": "Saugus Town Clerk",
     "f": "(781) 231-4109",
     "p": "(781) 231-4104",
@@ -4189,10 +4711,12 @@
     "s": "MA",
     "z": "01906",
     "j": "Saugus, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5931,
+    "i": 1580,
     "n": "Savoy Town Clerk",
     "f": "(413) 743-4292",
     "p": "(413) 743-3759",
@@ -4205,10 +4729,12 @@
     "s": "MA",
     "z": "01256",
     "j": "Savoy, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5956,
+    "i": 1581,
     "n": "Scituate Town Clerk",
     "f": "(781) 545-8704",
     "p": "(781) 545-8743",
@@ -4221,10 +4747,12 @@
     "s": "MA",
     "z": "02066",
     "j": "Scituate, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5991,
+    "i": 1582,
     "n": "Seekonk Town Clerk",
     "f": "(508) 336-0764",
     "p": "(508) 336-2920",
@@ -4237,10 +4765,12 @@
     "s": "MA",
     "z": "02771",
     "j": "Seekonk, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6030,
+    "i": 1583,
     "n": "Sharon Town Clerk",
     "f": "(781) 784-1518",
     "p": "(781) 784-1500",
@@ -4253,10 +4783,12 @@
     "s": "MA",
     "z": "02067",
     "j": "Sharon, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6043,
+    "i": 1584,
     "n": "Sheffield Town Clerk",
     "f": "(413) 229-7010",
     "p": "(413) 229-7000",
@@ -4269,10 +4801,12 @@
     "s": "MA",
     "z": "01257",
     "j": "Sheffield, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6045,
+    "i": 1585,
     "n": "Shelburne Town Clerk",
     "f": "(413) 625-0312",
     "p": "(413) 625-0300",
@@ -4285,10 +4819,12 @@
     "s": "MA",
     "z": "01370",
     "j": "Shelburne, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6065,
+    "i": 1586,
     "n": "Sherborn Town Clerk",
     "f": "(508) 651-0407",
     "p": "(508) 651-7853",
@@ -4301,10 +4837,12 @@
     "s": "MA",
     "z": "01770",
     "j": "Sherborn, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6106,
+    "i": 1587,
     "n": "Shirley Town Clerk",
     "f": "(978) 234-9112",
     "p": "(978) 425-2600",
@@ -4317,10 +4855,12 @@
     "s": "MA",
     "z": "01464",
     "j": "Shirley, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6112,
+    "i": 1588,
     "n": "Shrewsbury Town Clerk",
     "f": "(508) 841-1501",
     "p": "(508) 841-8507",
@@ -4333,10 +4873,12 @@
     "s": "MA",
     "z": "01545",
     "j": "Shrewsbury, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6115,
+    "i": 1589,
     "n": "Shutesbury Town Clerk",
     "f": "(413) 259-1107",
     "p": "(413) 259-1204",
@@ -4349,10 +4891,12 @@
     "s": "MA",
     "z": "01072",
     "j": "Shutesbury, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6169,
+    "i": 1590,
     "n": "Somerset Town Clerk",
     "f": "(508) 646-2802",
     "p": "(508) 646-2818",
@@ -4365,15 +4909,17 @@
     "s": "MA",
     "z": "02726",
     "j": "Somerset, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6174,
+    "i": 1591,
     "n": "Somerville Election Commission",
     "f": "(617) 625-5643",
     "p": "(617) 625-6600",
-    "e": "marruda@somervillema.gov",
-    "d": "2020-01-27T14:40:09",
+    "e": "nsalerno@somervillema.gov",
+    "d": "2017-09-20T14:40:09",
     "a1": "93 HIGHLAND AVE.",
     "a2": "",
     "a3": "",
@@ -4381,10 +4927,12 @@
     "s": "MA",
     "z": "02143",
     "j": "Somerville, City of",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6183,
+    "i": 1592,
     "n": "South Hadley Town Clerk",
     "f": "(413) 538-7565",
     "p": "(413) 538-5017",
@@ -4397,10 +4945,12 @@
     "s": "MA",
     "z": "01075",
     "j": "South Hadley, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6195,
+    "i": 1593,
     "n": "Southampton Town Clerk",
     "f": "(413) 529-1006",
     "p": "(413) 527-8392",
@@ -4413,10 +4963,12 @@
     "s": "MA",
     "z": "01073",
     "j": "Southampton, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6196,
+    "i": 1594,
     "n": "Southborough Town Clerk",
     "f": "(508) 480-0161",
     "p": "(508) 485-0710",
@@ -4429,10 +4981,12 @@
     "s": "MA",
     "z": "01772",
     "j": "Southborough, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6197,
+    "i": 1595,
     "n": "Southbridge Town Clerk",
     "f": "(508) 764-2309",
     "p": "(508) 764-5408",
@@ -4445,10 +4999,12 @@
     "s": "MA",
     "z": "01550",
     "j": "Southbridge, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6203,
+    "i": 1596,
     "n": "Southwick Town Clerk",
     "f": "(413) 569-0667",
     "p": "(413) 569-5504",
@@ -4461,10 +5017,12 @@
     "s": "MA",
     "z": "01077",
     "j": "Southwick, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6215,
+    "i": 1597,
     "n": "Spencer Town Clerk",
     "f": "(508) 885-7528",
     "p": "(508) 885-7500",
@@ -4477,10 +5035,12 @@
     "s": "MA",
     "z": "01562",
     "j": "Spencer, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6246,
+    "i": 1598,
     "n": "Springfield Election Commission",
     "f": "(413) 787-6186",
     "p": "(413) 787-6190",
@@ -4493,10 +5053,12 @@
     "s": "MA",
     "z": "01103",
     "j": "Springfield, City of",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6357,
+    "i": 1599,
     "n": "Sterling Town Clerk",
     "f": "(978) 422-0289",
     "p": "(978) 422-8111",
@@ -4509,10 +5071,12 @@
     "s": "MA",
     "z": "01564",
     "j": "Sterling, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6375,
+    "i": 1600,
     "n": "Stockbridge Town Clerk",
     "f": "(413) 298-4344",
     "p": "(413) 298-4170",
@@ -4525,10 +5089,12 @@
     "s": "MA",
     "z": "01262",
     "j": "Stockbridge, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6389,
+    "i": 1601,
     "n": "Stoneham Town Clerk",
     "f": "(781) 279-2653",
     "p": "(781) 279-2650",
@@ -4541,10 +5107,12 @@
     "s": "MA",
     "z": "02180",
     "j": "Stoneham, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6395,
+    "i": 1602,
     "n": "Stoughton Town Clerk",
     "f": "(781) 232-9295",
     "p": "(781) 341-1300",
@@ -4557,10 +5125,12 @@
     "s": "MA",
     "z": "02072",
     "j": "Stoughton, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6396,
+    "i": 1603,
     "n": "Stow Town Clerk",
     "f": "(978) 897-4534",
     "p": "(978) 897-5034",
@@ -4573,10 +5143,12 @@
     "s": "MA",
     "z": "01775",
     "j": "Stow, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6410,
+    "i": 1604,
     "n": "Sturbridge Town Clerk",
     "f": "(508) 347-5886",
     "p": "(508) 347-2510",
@@ -4589,10 +5161,12 @@
     "s": "MA",
     "z": "01566",
     "j": "Sturbridge, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6420,
+    "i": 1605,
     "n": "Sudbury Town Clerk",
     "f": "(978) 639-3340",
     "p": "(978) 639-3351",
@@ -4605,10 +5179,12 @@
     "s": "MA",
     "z": "01776",
     "j": "Sudbury, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6464,
+    "i": 1606,
     "n": "Sunderland Town Clerk",
     "f": "(413) 665-1446",
     "p": "(413) 665-1442",
@@ -4621,10 +5197,12 @@
     "s": "MA",
     "z": "01375",
     "j": "Sunderland, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6485,
+    "i": 1607,
     "n": "Sutton Town Clerk",
     "f": "(508) 865-8721",
     "p": "(508) 865-8725",
@@ -4637,15 +5215,17 @@
     "s": "MA",
     "z": "01590",
     "j": "Sutton, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6490,
+    "i": 1608,
     "n": "Swampscott Town Clerk",
     "f": "(781) 596-8870",
-    "p": "(781) 596-8855",
+    "p": "(781) 596-4167",
     "e": "sduplin@swampscottma.gov",
-    "d": "2020-01-26T14:40:09",
+    "d": "2019-07-18T14:19:28",
     "a1": "22 MONUMENT AVE.",
     "a2": "",
     "a3": "",
@@ -4653,10 +5233,12 @@
     "s": "MA",
     "z": "01907",
     "j": "Swampscott, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6492,
+    "i": 1609,
     "n": "Swansea Town Clerk",
     "f": "(508) 324-6700",
     "p": "(508) 678-9389",
@@ -4669,10 +5251,12 @@
     "s": "MA",
     "z": "02777",
     "j": "Swansea, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6525,
+    "i": 1610,
     "n": "Taunton City Clerk",
     "f": "(508) 821-1202",
     "p": "(508) 821-1044",
@@ -4685,10 +5269,12 @@
     "s": "MA",
     "z": "02780",
     "j": "Taunton, City of",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6547,
+    "i": 1611,
     "n": "Templeton Town Clerk",
     "f": "(978) 894-2766",
     "p": "(978) 894-2758",
@@ -4701,10 +5287,12 @@
     "s": "MA",
     "z": "01438",
     "j": "Templeton, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6557,
+    "i": 1612,
     "n": "Tewksbury Town Clerk",
     "f": "(978) 851-8610",
     "p": "(978) 640-4355",
@@ -4717,10 +5305,12 @@
     "s": "MA",
     "z": "01876",
     "j": "Tewksbury, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6602,
+    "i": 1613,
     "n": "Tisbury Town Clerk",
     "f": "(508) 693-5876",
     "p": "(508) 696-4215",
@@ -4733,10 +5323,12 @@
     "s": "MA",
     "z": "02568",
     "j": "Tisbury, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6612,
+    "i": 1614,
     "n": "Tolland Town Clerk",
     "f": "(413) 258-4048",
     "p": "(413) 258-4794",
@@ -4749,10 +5341,12 @@
     "s": "MA",
     "z": "01034",
     "j": "Tolland, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6624,
+    "i": 1615,
     "n": "Topsfield Town Clerk",
     "f": "(978) 887-1502",
     "p": "(978) 887-1505",
@@ -4765,10 +5359,12 @@
     "s": "MA",
     "z": "01983",
     "j": "Topsfield, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6632,
+    "i": 1616,
     "n": "Townsend Town Clerk",
     "f": "(978) 597-8135",
     "p": "(978) 597-1704",
@@ -4781,10 +5377,12 @@
     "s": "MA",
     "z": "01469",
     "j": "Townsend, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6672,
+    "i": 1617,
     "n": "Truro Town Clerk",
     "f": "(508) 349-5505",
     "p": "(508) 349-7004",
@@ -4797,10 +5395,12 @@
     "s": "MA",
     "z": "02666",
     "j": "Truro, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6700,
+    "i": 1618,
     "n": "Tyngsborough Town Clerk",
     "f": "(978) 649-2320",
     "p": "(978) 649-2300",
@@ -4813,10 +5413,12 @@
     "s": "MA",
     "z": "01879",
     "j": "Tyngsborough, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6701,
+    "i": 1619,
     "n": "Tyringham Town Clerk",
     "f": "(413) 243-4942",
     "p": "(413) 243-1749",
@@ -4829,10 +5431,12 @@
     "s": "MA",
     "z": "01264",
     "j": "Tyringham, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6754,
+    "i": 1620,
     "n": "Upton Town Clerk",
     "f": "(508) 529-1010",
     "p": "(508) 529-3565",
@@ -4845,10 +5449,12 @@
     "s": "MA",
     "z": "01568",
     "j": "Upton, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6760,
+    "i": 1621,
     "n": "Uxbridge Town Clerk",
     "f": "(508) 278-3154",
     "p": "(508) 278-8600",
@@ -4861,10 +5467,12 @@
     "s": "MA",
     "z": "01569",
     "j": "Uxbridge, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6838,
+    "i": 1622,
     "n": "Wakefield Town Clerk",
     "f": "(781) 246-4155",
     "p": "(781) 246-6383",
@@ -4877,10 +5485,12 @@
     "s": "MA",
     "z": "01880",
     "j": "Wakefield, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6846,
+    "i": 1623,
     "n": "Wales Town Clerk",
     "f": "(413) 245-3261",
     "p": "(413) 245-7571",
@@ -4893,10 +5503,12 @@
     "s": "MA",
     "z": "01081",
     "j": "Wales, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6860,
+    "i": 1624,
     "n": "Walpole Town Clerk",
     "f": "(508) 660-7297",
     "p": "(508) 660-7296",
@@ -4909,15 +5521,17 @@
     "s": "MA",
     "z": "02081",
     "j": "Walpole, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6865,
+    "i": 1625,
     "n": "Waltham City Clerk",
     "f": "(781) 314-3130",
     "p": "(781) 314-3120",
     "e": "cityclerks@city.waltham.ma.us",
-    "d": "2020-02-11T14:57:46",
+    "d": "2019-08-16T15:46:29",
     "a1": "610 MAIN ST.",
     "a2": "",
     "a3": "",
@@ -4925,10 +5539,12 @@
     "s": "MA",
     "z": "02452",
     "j": "Waltham, City of",
-    "t": "Town"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6877,
+    "i": 1626,
     "n": "Ware Town Clerk",
     "f": "(413) 967-9638",
     "p": "(413) 967-9648",
@@ -4941,10 +5557,12 @@
     "s": "MA",
     "z": "01082",
     "j": "Ware, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6878,
+    "i": 1627,
     "n": "Wareham Town Clerk",
     "f": "(508) 291-6511",
     "p": "(508) 291-3100",
@@ -4957,10 +5575,12 @@
     "s": "MA",
     "z": "02571",
     "j": "Wareham, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6903,
+    "i": 1628,
     "n": "Warren Town Clerk",
     "f": "(413) 436-9754",
     "p": "(413) 436-5701",
@@ -4973,10 +5593,12 @@
     "s": "MA",
     "z": "01083",
     "j": "Warren, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6908,
+    "i": 1629,
     "n": "Warwick Town Clerk",
     "f": "(978) 544-6499",
     "p": "(978) 544-8304",
@@ -4989,10 +5611,12 @@
     "s": "MA",
     "z": "01378",
     "j": "Warwick, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6957,
+    "i": 1630,
     "n": "Washington Town Clerk",
     "f": "(413) 623-2116",
     "p": "(413) 623-8878",
@@ -5005,10 +5629,12 @@
     "s": "MA",
     "z": "01223",
     "j": "Washington, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6980,
+    "i": 1631,
     "n": "Watertown Town Clerk",
     "f": "(617) 972-6595",
     "p": "(617) 972-6486",
@@ -5021,10 +5647,12 @@
     "s": "MA",
     "z": "02472",
     "j": "Watertown, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7015,
+    "i": 1632,
     "n": "Wayland Town Clerk",
     "f": "(508) 358-1683",
     "p": "(508) 358-3631",
@@ -5037,10 +5665,12 @@
     "s": "MA",
     "z": "01778",
     "j": "Wayland, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7055,
+    "i": 1633,
     "n": "Webster Town Clerk",
     "f": "(508) 943-0033",
     "p": "(508) 949-3800",
@@ -5053,15 +5683,17 @@
     "s": "MA",
     "z": "01570",
     "j": "Webster, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7063,
+    "i": 1634,
     "n": "Wellesley Town Clerk",
     "f": "(781) 237-5037",
     "p": "(781) 431-1019",
     "e": "kckato@wellesleyma.gov",
-    "d": "2019-11-14T14:59:29",
+    "d": "2018-09-10T14:35:14",
     "a1": "525 WASHINGTON ST.",
     "a2": "",
     "a3": "",
@@ -5069,15 +5701,17 @@
     "s": "MA",
     "z": "02482",
     "j": "Wellesley, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7064,
+    "i": 1635,
     "n": "Wellfleet Town Clerk",
     "f": "(508) 349-0317",
-    "p": "(508) 349-0301",
+    "p": "(508) 349-0300",
     "e": "jennifer.congel@wellfleet-ma.gov",
-    "d": "2020-02-19T14:40:09",
+    "d": "2020-01-14T16:37:17",
     "a1": "300 MAIN ST.",
     "a2": "",
     "a3": "",
@@ -5085,10 +5719,12 @@
     "s": "MA",
     "z": "02667",
     "j": "Wellfleet, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7074,
+    "i": 1636,
     "n": "Wendell Town Clerk",
     "f": "(978) 544-7467",
     "p": "(978) 544-3395",
@@ -5101,10 +5737,12 @@
     "s": "MA",
     "z": "01379",
     "j": "Wendell, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7075,
+    "i": 1637,
     "n": "Wenham Town Clerk",
     "f": "(978) 468-8014",
     "p": "(978) 468-5520",
@@ -5117,10 +5755,12 @@
     "s": "MA",
     "z": "01984",
     "j": "Wenham, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7083,
+    "i": 1638,
     "n": "West Boylston Town Clerk",
     "f": "(774) 261-4021",
     "p": "(774) 261-4021",
@@ -5133,10 +5773,12 @@
     "s": "MA",
     "z": "01583",
     "j": "West Boylston, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7089,
+    "i": 1639,
     "n": "West Bridgewater Town Clerk",
     "f": "(508) 894-1210",
     "p": "(508) 894-1167",
@@ -5149,10 +5791,12 @@
     "s": "MA",
     "z": "02379",
     "j": "West Bridgewater, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7090,
+    "i": 1640,
     "n": "West Brookfield Town Clerk",
     "f": "(508) 867-1400",
     "p": "(508) 867-1421",
@@ -5165,10 +5809,12 @@
     "s": "MA",
     "z": "01585",
     "j": "West Brookfield, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7101,
+    "i": 1641,
     "n": "West Newbury Town Clerk",
     "f": "(978) 363-1826",
     "p": "(978) 363-1100",
@@ -5181,26 +5827,30 @@
     "s": "MA",
     "z": "01985",
     "j": "West Newbury, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7105,
+    "i": 1642,
     "n": "West Springfield Town Clerk",
     "f": "(413) 263-3046",
     "p": "(413) 263-3012",
-    "e": "ofrizzell@townofwestspringfield.org",
-    "d": "2019-08-21T04:58:51",
+    "e": "ofrizzell@west-springfield.ma.us",
+    "d": "2017-09-20T14:40:09",
     "a1": "26 CENTRAL ST.",
-    "a2": "Suite 8",
+    "a2": "",
     "a3": "",
     "c": "West Springfield",
     "s": "MA",
     "z": "01089",
     "j": "West Springfield, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7106,
+    "i": 1643,
     "n": "West Stockbridge Town Clerk",
     "f": "(413) 232-7195",
     "p": "(413) 232-0300",
@@ -5213,10 +5863,12 @@
     "s": "MA",
     "z": "01266",
     "j": "West Stockbridge, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7108,
+    "i": 1644,
     "n": "West Tisbury Town Clerk",
     "f": "(508) 696-0103",
     "p": "(508) 696-0148",
@@ -5229,10 +5881,12 @@
     "s": "MA",
     "z": "02575",
     "j": "West Tisbury, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7113,
+    "i": 1645,
     "n": "Westborough Town Clerk",
     "f": "(508) 366-3012",
     "p": "(508) 366-3020",
@@ -5245,10 +5899,12 @@
     "s": "MA",
     "z": "01581",
     "j": "Westborough, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7120,
+    "i": 1646,
     "n": "Westfield City Clerk",
     "f": "(413) 564-3114",
     "p": "(413) 572-6266",
@@ -5261,10 +5917,12 @@
     "s": "MA",
     "z": "01085",
     "j": "Westfield, City of",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7126,
+    "i": 1647,
     "n": "Westford Town Clerk",
     "f": "(978) 399-2555",
     "p": "(978) 692-5515",
@@ -5277,10 +5935,12 @@
     "s": "MA",
     "z": "01886",
     "j": "Westford, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7127,
+    "i": 1648,
     "n": "Westhampton Town Clerk",
     "f": "(413) 527-8655",
     "p": "(413) 203-3080",
@@ -5293,10 +5953,12 @@
     "s": "MA",
     "z": "01027",
     "j": "Westhampton, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7129,
+    "i": 1649,
     "n": "Westminster Town Clerk",
     "f": "(978) 874-7411",
     "p": "(978) 874-7406",
@@ -5309,10 +5971,12 @@
     "s": "MA",
     "z": "01473",
     "j": "Westminster, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7140,
+    "i": 1650,
     "n": "Weston Town Clerk",
     "f": "(781) 786-5079",
     "p": "(781) 786-5010",
@@ -5325,10 +5989,12 @@
     "s": "MA",
     "z": "02493",
     "j": "Weston, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7145,
+    "i": 1651,
     "n": "Westport Town Clerk",
     "f": "(774) 264-5152",
     "p": "(508) 636-1001",
@@ -5341,10 +6007,12 @@
     "s": "MA",
     "z": "02790",
     "j": "Westport, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7147,
+    "i": 1652,
     "n": "Westwood Town Clerk",
     "f": "(781) 948-4573",
     "p": "(781) 326-3964",
@@ -5357,10 +6025,12 @@
     "s": "MA",
     "z": "02090",
     "j": "Westwood, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7156,
+    "i": 1653,
     "n": "Weymouth Town Clerk",
     "f": "(781) 682-6129",
     "p": "(781) 340-5017",
@@ -5373,10 +6043,12 @@
     "s": "MA",
     "z": "02189",
     "j": "Weymouth, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7159,
+    "i": 1654,
     "n": "Whately Town Clerk",
     "f": "(413) 665-9560",
     "p": "(413) 665-4400",
@@ -5389,10 +6061,12 @@
     "s": "MA",
     "z": "01093",
     "j": "Whately, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7209,
+    "i": 1655,
     "n": "Whitman Town Clerk",
     "f": "(781) 618-9791",
     "p": "(781) 618-9710",
@@ -5405,10 +6079,12 @@
     "s": "MA",
     "z": "02382",
     "j": "Whitman, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7219,
+    "i": 1656,
     "n": "Wilbraham Town Clerk",
     "f": "(413) 596-2830",
     "p": "(413) 596-2800",
@@ -5421,10 +6097,12 @@
     "s": "MA",
     "z": "01095",
     "j": "Wilbraham, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7239,
+    "i": 1657,
     "n": "Williamsburg Town Clerk",
     "f": "(413) 268-8409",
     "p": "(413) 268-8402",
@@ -5437,10 +6115,12 @@
     "s": "MA",
     "z": "01039",
     "j": "Williamsburg, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7246,
+    "i": 1658,
     "n": "Williamstown Town Clerk",
     "f": "(413) 458-4839",
     "p": "(413) 458-9341",
@@ -5453,10 +6133,12 @@
     "s": "MA",
     "z": "01267",
     "j": "Williamstown, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7253,
+    "i": 1659,
     "n": "Wilmington Town Clerk",
     "f": "(978) 657-7564",
     "p": "(978) 658-2030",
@@ -5469,10 +6151,12 @@
     "s": "MA",
     "z": "01887",
     "j": "Wilmington, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7272,
+    "i": 1660,
     "n": "Winchendon Town Clerk",
     "f": "(978) 297-2769",
     "p": "(978) 297-2766",
@@ -5485,10 +6169,12 @@
     "s": "MA",
     "z": "01475",
     "j": "Winchendon, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7276,
+    "i": 1661,
     "n": "Winchester Town Clerk",
     "f": "(781) 721-1153",
     "p": "(781) 721-7130",
@@ -5501,10 +6187,12 @@
     "s": "MA",
     "z": "01890",
     "j": "Winchester, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7287,
+    "i": 1662,
     "n": "Windsor Town Clerk",
     "f": "(413) 684-3806",
     "p": "(413) 684-3811",
@@ -5517,10 +6205,12 @@
     "s": "MA",
     "z": "01270",
     "j": "Windsor, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7309,
+    "i": 1663,
     "n": "Winthrop Town Clerk",
     "f": "(617) 539-5814",
     "p": "(617) 846-1742",
@@ -5533,10 +6223,12 @@
     "s": "MA",
     "z": "02152",
     "j": "Winthrop, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7323,
+    "i": 1664,
     "n": "Woburn City Clerk",
     "f": "(781) 897-5859",
     "p": "(781) 897-5850",
@@ -5549,10 +6241,12 @@
     "s": "MA",
     "z": "01801",
     "j": "Woburn, City of",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7367,
+    "i": 1665,
     "n": "Worcester Election Commission",
     "f": "(508) 799-1137",
     "p": "(508) 799-1134",
@@ -5565,10 +6259,12 @@
     "s": "MA",
     "z": "01608",
     "j": "Worcester, City of",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7374,
+    "i": 1666,
     "n": "Worthington Town Clerk",
     "f": "(413) 238-5579",
     "p": "(413) 238-5577",
@@ -5581,10 +6277,12 @@
     "s": "MA",
     "z": "01098",
     "j": "Worthington, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7375,
+    "i": 1667,
     "n": "Wrentham Town Clerk",
     "f": "(508) 384-5434",
     "p": "(508) 384-5415",
@@ -5597,10 +6295,12 @@
     "s": "MA",
     "z": "02093",
     "j": "Wrentham, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7405,
+    "i": 1668,
     "n": "Yarmouth Town Clerk",
     "f": "(508) 760-4842",
     "p": "(508) 398-2231",
@@ -5613,6 +6313,8 @@
     "s": "MA",
     "z": "02664",
     "j": "Yarmouth, Town of",
-    "t": "Town"
+    "t": "Town",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

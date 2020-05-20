@@ -1,6 +1,6 @@
 [
   {
-    "i": 28,
+    "i": 4054,
     "n": "Adams County Auditor",
     "f": "(509) 659-3254",
     "p": "(509) 659-3249",
@@ -13,10 +13,12 @@
     "s": "WA",
     "z": "99169-1897",
     "j": "Adams",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 258,
+    "i": 4055,
     "n": "Asotin County Auditor",
     "f": "(509) 243-2087",
     "p": "(509) 243-2084",
@@ -29,10 +31,12 @@
     "s": "WA",
     "z": "99402-0129",
     "j": "Asotin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 515,
+    "i": 4056,
     "n": "Benton County Auditor",
     "f": "(509) 786-5482",
     "p": "(509) 736-3085",
@@ -45,10 +49,12 @@
     "s": "WA",
     "z": "99350-9995",
     "j": "Benton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1184,
+    "i": 4057,
     "n": "Chelan County Auditor",
     "f": "(509) 667-6818",
     "p": "(509) 667-6808",
@@ -61,10 +67,12 @@
     "s": "WA",
     "z": "98801-0400",
     "j": "Chelan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1277,
+    "i": 4058,
     "n": "Clallam County Auditor",
     "f": "(360) 417-2312",
     "p": "(360) 417-2221",
@@ -77,10 +85,12 @@
     "s": "WA",
     "z": "98362-3000",
     "j": "Clallam",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1299,
+    "i": 4059,
     "n": "Clark County Auditor",
     "f": "(564) 397-2394",
     "p": "(564) 397-2345",
@@ -93,10 +103,12 @@
     "s": "WA",
     "z": "98666-8815",
     "j": "Clark",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1463,
+    "i": 4060,
     "n": "Columbia County Auditor",
     "f": "(509) 382-4830",
     "p": "(509) 382-4541",
@@ -109,10 +121,12 @@
     "s": "WA",
     "z": "99328-1361",
     "j": "Columbia",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1552,
+    "i": 4061,
     "n": "Cowlitz County Auditor",
     "f": "(360) 442-7879",
     "p": "(360) 577-3005",
@@ -125,10 +139,12 @@
     "s": "WA",
     "z": "98626-4124",
     "j": "Cowlitz",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1908,
+    "i": 4062,
     "n": "Douglas County Auditor",
     "f": "(509) 745-8812",
     "p": "(509) 888-6402",
@@ -141,10 +157,12 @@
     "s": "WA",
     "z": "98858-0456",
     "j": "Douglas",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2280,
+    "i": 4063,
     "n": "Ferry County Auditor",
     "f": "(509) 775-5208",
     "p": "(509) 775-5225 x1139",
@@ -157,10 +175,12 @@
     "s": "WA",
     "z": "99166-9747",
     "j": "Ferry",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2392,
+    "i": 4064,
     "n": "Franklin County Auditor",
     "f": "(509) 543-2995",
     "p": "(509) 545-3538",
@@ -173,10 +193,12 @@
     "s": "WA",
     "z": "99301-1451",
     "j": "Franklin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2494,
+    "i": 4065,
     "n": "Garfield County Auditor",
     "f": "(509) 843-3941",
     "p": "(509) 843-1411",
@@ -189,10 +211,12 @@
     "s": "WA",
     "z": "99347-0278",
     "j": "Garfield",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2673,
+    "i": 4066,
     "n": "Grant County Auditor",
     "f": "",
     "p": "(509) 754-2011 x2704",
@@ -205,10 +229,12 @@
     "s": "WA",
     "z": "98823-0037",
     "j": "Grant",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2710,
+    "i": 4067,
     "n": "Grays Harbor County Auditor",
     "f": "(360) 249-3330",
     "p": "(360) 249-4232",
@@ -221,15 +247,17 @@
     "s": "WA",
     "z": "98563-3614",
     "j": "Grays Harbor",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3310,
+    "i": 4068,
     "n": "Island County Auditor",
     "f": "(360) 678-2326",
     "p": "(360) 679-7366",
-    "e": "elections@co.island.wa.us",
-    "d": "2015-08-31T14:55:37",
+    "e": "elections@islandcountywa.gov",
+    "d": "2020-04-15T09:16:45",
     "a1": "P.O. Box 1410",
     "a2": "",
     "a3": "",
@@ -237,10 +265,12 @@
     "s": "WA",
     "z": "98239-1410",
     "j": "Island",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3393,
+    "i": 4069,
     "n": "Jefferson County Auditor",
     "f": "(360) 385-9228",
     "p": "(360) 385-9119",
@@ -253,10 +283,12 @@
     "s": "WA",
     "z": "98368-0563",
     "j": "Jefferson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3534,
+    "i": 4070,
     "n": "King County Elections Division",
     "f": "(206) 296-0108",
     "p": "(206) 296-8683",
@@ -269,10 +301,12 @@
     "s": "WA",
     "z": "98507-2906",
     "j": "King",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3559,
+    "i": 4071,
     "n": "Kitsap County Auditor",
     "f": "(360) 337-5769",
     "p": "(360) 337-7128",
@@ -285,10 +319,12 @@
     "s": "WA",
     "z": "98366-4678",
     "j": "Kitsap",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3560,
+    "i": 4072,
     "n": "Kittitas County Auditor",
     "f": "(509) 962-7687",
     "p": "(509) 962-7503",
@@ -301,10 +337,12 @@
     "s": "WA",
     "z": "98926-2891",
     "j": "Kittitas",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3565,
+    "i": 4073,
     "n": "Klickitat County Auditor",
     "f": "(509) 773-4244",
     "p": "(509) 773-4001",
@@ -317,10 +355,12 @@
     "s": "WA",
     "z": "98620-9280",
     "j": "Klickitat",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3815,
+    "i": 4074,
     "n": "Lewis County Auditor",
     "f": "(360) 740-1421",
     "p": "(360) 740-1164",
@@ -333,10 +373,12 @@
     "s": "WA",
     "z": "98532-0029",
     "j": "Lewis",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3868,
+    "i": 4075,
     "n": "Lincoln County Auditor",
     "f": "(509) 725-0820",
     "p": "(509) 725-4971",
@@ -349,10 +391,12 @@
     "s": "WA",
     "z": "99122-0028",
     "j": "Lincoln",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4245,
+    "i": 4076,
     "n": "Mason County Auditor",
     "f": "(360) 427-1753",
     "p": "(360) 427-9670 x469",
@@ -365,10 +409,12 @@
     "s": "WA",
     "z": "98584-0400",
     "j": "Mason",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4988,
+    "i": 4077,
     "n": "Okanogan County Auditor",
     "f": "(509) 422-7163",
     "p": "(509) 422-7240",
@@ -381,10 +427,12 @@
     "s": "WA",
     "z": "98840-1010",
     "j": "Okanogan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5123,
+    "i": 4078,
     "n": "Pacific County Auditor",
     "f": "(360) 875-9333",
     "p": "(360) 875-9313",
@@ -397,10 +445,12 @@
     "s": "WA",
     "z": "98586-0097",
     "j": "Pacific",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5196,
+    "i": 4079,
     "n": "Pend Oreille County Auditor",
     "f": "(509) 447-2475",
     "p": "(509) 447-6472",
@@ -413,10 +463,12 @@
     "s": "WA",
     "z": "99156-5015",
     "j": "Pend Oreille",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5268,
+    "i": 4080,
     "n": "Pierce County Auditor",
     "f": "(253) 798-2761",
     "p": "(253) 798-7430",
@@ -429,10 +481,12 @@
     "s": "WA",
     "z": "98409-7484",
     "j": "Pierce",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5880,
+    "i": 4081,
     "n": "San Juan County Auditor",
     "f": "(360) 378-8856",
     "p": "(360) 378-3357",
@@ -445,10 +499,12 @@
     "s": "WA",
     "z": "98250-0638",
     "j": "San Juan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6139,
+    "i": 4082,
     "n": "Skagit County Auditor",
     "f": "(360) 416-1698",
     "p": "(360) 416-1702",
@@ -461,10 +517,12 @@
     "s": "WA",
     "z": "98273-1306",
     "j": "Skagit",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6140,
+    "i": 4083,
     "n": "Skamania County Auditor",
     "f": "(509) 427-3740",
     "p": "(509) 427-3730",
@@ -477,10 +535,12 @@
     "s": "WA",
     "z": "98648-0790",
     "j": "Skamania",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6153,
+    "i": 4084,
     "n": "Snohomish County Auditor",
     "f": "(425) 259-2777",
     "p": "(425) 388-3444",
@@ -493,10 +553,12 @@
     "s": "WA",
     "z": "98201-4046",
     "j": "Snohomish",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6221,
+    "i": 4085,
     "n": "Spokane County Auditor",
     "f": "(509) 477-6607",
     "p": "(509) 477-2320",
@@ -509,10 +571,12 @@
     "s": "WA",
     "z": "99260-0020",
     "j": "Spokane",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6365,
+    "i": 4086,
     "n": "Stevens County Auditor",
     "f": "(509) 684-7568",
     "p": "(509) 684-7514",
@@ -525,10 +589,12 @@
     "s": "WA",
     "z": "99114-2836",
     "j": "Stevens",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6585,
+    "i": 4087,
     "n": "Thurston County Auditor",
     "f": "(360) 705-3518",
     "p": "(360) 786-5408",
@@ -541,10 +607,12 @@
     "s": "WA",
     "z": "98502-6090",
     "j": "Thurston",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6833,
+    "i": 4088,
     "n": "Wahkiakum County Auditor",
     "f": "(360) 795-0824",
     "p": "(360) 795-3219",
@@ -557,10 +625,12 @@
     "s": "WA",
     "z": "98612-0543",
     "j": "Wahkiakum",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6853,
+    "i": 4089,
     "n": "Walla Walla County Auditor",
     "f": "(509) 524-2553",
     "p": "(509) 524-2530",
@@ -573,10 +643,12 @@
     "s": "WA",
     "z": "99362-0176",
     "j": "Walla Walla",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7158,
+    "i": 4090,
     "n": "Whatcom County Auditor",
     "f": "(360) 778-5101",
     "p": "(360) 778-5102",
@@ -589,10 +661,12 @@
     "s": "WA",
     "z": "98227-0369",
     "j": "Whatcom",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7208,
+    "i": 4091,
     "n": "Whitman County Auditor",
     "f": "(509) 397-5281",
     "p": "(509) 397-5284",
@@ -605,10 +679,12 @@
     "s": "WA",
     "z": "99111-0191",
     "j": "Whitman",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7398,
+    "i": 4092,
     "n": "Yakima County Auditor",
     "f": "(509) 574-1341",
     "p": "(509) 574-1340",
@@ -621,6 +697,8 @@
     "s": "WA",
     "z": "98909-2570",
     "j": "Yakima",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

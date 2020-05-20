@@ -1,6 +1,6 @@
 [
   {
-    "i": 221,
+    "i": 70,
     "n": "Arkansas County Clerk",
     "f": "(870) 946-4399",
     "p": "(870) 946-4349",
@@ -13,10 +13,12 @@
     "s": "AR",
     "z": "72042-2050",
     "j": "Arkansas",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 255,
+    "i": 71,
     "n": "Ashley County Clerk",
     "f": "(870) 853-2082",
     "p": "(870) 853-2020",
@@ -29,10 +31,12 @@
     "s": "AR",
     "z": "71646-3007",
     "j": "Ashley",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 409,
+    "i": 72,
     "n": "Baxter County Clerk",
     "f": "(870) 424-5105",
     "p": "(870) 425-3475",
@@ -45,10 +49,12 @@
     "s": "AR",
     "z": "72653-4468",
     "j": "Baxter",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 507,
+    "i": 73,
     "n": "Benton County Clerk",
     "f": "(479) 271-1019",
     "p": "(479) 271-1013",
@@ -61,10 +67,12 @@
     "s": "AR",
     "z": "72712-5373",
     "j": "Benton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 670,
+    "i": 74,
     "n": "Boone County Clerk",
     "f": "(870) 741-9724",
     "p": "(870) 741-8428",
@@ -77,10 +85,12 @@
     "s": "AR",
     "z": "72601-4228",
     "j": "Boone",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 720,
+    "i": 75,
     "n": "Bradley County Clerk",
     "f": "(870) 226-8404",
     "p": "(870) 226-3464",
@@ -93,10 +103,12 @@
     "s": "AR",
     "z": "71671-2744",
     "j": "Bradley",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 951,
+    "i": 76,
     "n": "Calhoun County Clerk",
     "f": "(870) 798-2428",
     "p": "(870) 798-2517",
@@ -109,10 +121,12 @@
     "s": "AR",
     "z": "71744-1175",
     "j": "Calhoun",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1032,
+    "i": 77,
     "n": "Carroll County Clerk",
     "f": "(870) 423-7400",
     "p": "(870) 423-2022",
@@ -125,10 +139,12 @@
     "s": "AR",
     "z": "72616-4222",
     "j": "Carroll",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1237,
+    "i": 78,
     "n": "Chicot County Clerk",
     "f": "(870) 265-8006",
     "p": "(870) 265-8000",
@@ -141,10 +157,12 @@
     "s": "AR",
     "z": "71653-1965",
     "j": "Chicot",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1289,
+    "i": 79,
     "n": "Clark County Clerk",
     "f": "(870) 246-6505",
     "p": "(870) 246-4491",
@@ -157,10 +175,12 @@
     "s": "AR",
     "z": "71923-6100",
     "j": "Clark",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1312,
+    "i": 80,
     "n": "Clay County Clerk",
     "f": "(870) 598-2813",
     "p": "(870) 598-2813",
@@ -173,10 +193,12 @@
     "s": "AR",
     "z": "72454-2618",
     "j": "Clay",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1350,
+    "i": 81,
     "n": "Cleburne County Clerk",
     "f": "(501) 362-4622",
     "p": "(501) 362-4620",
@@ -189,10 +211,12 @@
     "s": "AR",
     "z": "72543-3016",
     "j": "Cleburne",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1354,
+    "i": 82,
     "n": "Cleveland County Clerk",
     "f": "(870) 325-6144",
     "p": "(870) 325-6521",
@@ -205,10 +229,12 @@
     "s": "AR",
     "z": "71665-0368",
     "j": "Cleveland",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1457,
+    "i": 83,
     "n": "Columbia County Clerk",
     "f": "(870) 235-3773",
     "p": "(870) 235-3774",
@@ -221,10 +247,12 @@
     "s": "AR",
     "z": "71753-3599",
     "j": "Columbia",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1502,
+    "i": 84,
     "n": "Conway County Clerk",
     "f": "(501) 354-9610",
     "p": "(501) 354-9621",
@@ -237,10 +265,12 @@
     "s": "AR",
     "z": "72110-3400",
     "j": "Conway",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1556,
+    "i": 85,
     "n": "Craighead County Clerk",
     "f": "(870) 933-4514",
     "p": "(870) 933-4520",
@@ -253,10 +283,12 @@
     "s": "AR",
     "z": "72401",
     "j": "Craighead",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1563,
+    "i": 86,
     "n": "Crawford County Clerk",
     "f": "(479) 471-3236",
     "p": "(479) 474-1312",
@@ -269,10 +301,12 @@
     "s": "AR",
     "z": "72956",
     "j": "Crawford",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1577,
+    "i": 87,
     "n": "Crittenden County Clerk",
     "f": "(870) 739-3072",
     "p": "(870) 739-4434",
@@ -285,10 +319,12 @@
     "s": "AR",
     "z": "72364-1850",
     "j": "Crittenden",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1587,
+    "i": 88,
     "n": "Cross County Clerk",
     "f": "(870) 238-5739",
     "p": "(870) 238-5735",
@@ -301,10 +337,12 @@
     "s": "AR",
     "z": "72396-3039",
     "j": "Cross",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1709,
+    "i": 89,
     "n": "Dallas County Clerk",
     "f": "(870) 352-7179",
     "p": "(870) 352-2307",
@@ -317,10 +355,12 @@
     "s": "AR",
     "z": "71742-3250",
     "j": "Dallas",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1847,
+    "i": 90,
     "n": "Desha County Clerk",
     "f": "(870) 877-3413",
     "p": "(870) 877-2323",
@@ -333,10 +373,12 @@
     "s": "AR",
     "z": "71630-0218",
     "j": "Desha",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1931,
+    "i": 91,
     "n": "Drew County Clerk",
     "f": "(870) 460-6246",
     "p": "(870) 460-6260",
@@ -349,10 +391,12 @@
     "s": "AR",
     "z": "71655-4731",
     "j": "Drew",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2249,
+    "i": 92,
     "n": "Faulkner County Clerk",
     "f": "(501) 450-4938",
     "p": "(501) 450-4909",
@@ -365,10 +409,12 @@
     "s": "AR",
     "z": "72034-5358",
     "j": "Faulkner",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2372,
+    "i": 93,
     "n": "Franklin County Clerk",
     "f": "(479) 667-3611",
     "p": "(479) 667-3607",
@@ -381,10 +427,12 @@
     "s": "AR",
     "z": "72949-3213",
     "j": "Franklin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2454,
+    "i": 94,
     "n": "Fulton County Clerk",
     "f": "(870) 895-3383",
     "p": "(870) 895-3310",
@@ -397,10 +445,12 @@
     "s": "AR",
     "z": "72576-9473",
     "j": "Fulton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2503,
+    "i": 95,
     "n": "Garland County Clerk",
     "f": "(501) 624-0665",
     "p": "(501) 622-3610",
@@ -413,10 +463,12 @@
     "s": "AR",
     "z": "71901-5161",
     "j": "Garland",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2661,
+    "i": 96,
     "n": "Grant County Clerk",
     "f": "(870) 942-3564",
     "p": "(870) 942-2631",
@@ -429,10 +481,12 @@
     "s": "AR",
     "z": "72150-2493",
     "j": "Grant",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2736,
+    "i": 97,
     "n": "Greene County Clerk",
     "f": "(870) 239-6320",
     "p": "(870) 239-6345",
@@ -445,10 +499,12 @@
     "s": "AR",
     "z": "72450-4300",
     "j": "Greene",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3030,
+    "i": 98,
     "n": "Hempstead County Clerk",
     "f": "(870) 777-7829",
     "p": "(870) 777-2241",
@@ -461,10 +517,12 @@
     "s": "AR",
     "z": "71802",
     "j": "Hempstead",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3170,
+    "i": 99,
     "n": "Hot Spring County Clerk",
     "f": "(501) 332-2221",
     "p": "(501) 332-2291",
@@ -477,10 +535,12 @@
     "s": "AR",
     "z": "72104-3791",
     "j": "Hot Spring",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3181,
+    "i": 100,
     "n": "Howard County Clerk",
     "f": "(870) 845-7505",
     "p": "(870) 845-7502",
@@ -493,10 +553,12 @@
     "s": "AR",
     "z": "71852-7505",
     "j": "Howard",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3257,
+    "i": 101,
     "n": "Independence County Clerk",
     "f": "(870) 793-8831",
     "p": "(870) 793-8828",
@@ -509,10 +571,12 @@
     "s": "AR",
     "z": "72501-5510",
     "j": "Independence",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3318,
+    "i": 102,
     "n": "Izard County Clerk",
     "f": "(870) 368-4748",
     "p": "(870) 368-4316",
@@ -525,10 +589,12 @@
     "s": "AR",
     "z": "72556-0095",
     "j": "Izard",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3321,
+    "i": 103,
     "n": "Jackson County Clerk",
     "f": "(870) 523-7406",
     "p": "(870) 523-7420",
@@ -541,10 +607,12 @@
     "s": "AR",
     "z": "72112-3329",
     "j": "Jackson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3373,
+    "i": 104,
     "n": "Jefferson County Clerk",
     "f": "(870) 541-5324",
     "p": "(870) 541-5322",
@@ -557,10 +625,12 @@
     "s": "AR",
     "z": "71601-6317",
     "j": "Jefferson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3421,
+    "i": 105,
     "n": "Johnson County Clerk",
     "f": "(479) 754-2286",
     "p": "(479) 754-3967",
@@ -573,10 +643,12 @@
     "s": "AR",
     "z": "72830-3009",
     "j": "Johnson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3620,
+    "i": 106,
     "n": "Lafayette County Clerk",
     "f": "(870) 921-4505",
     "p": "(870) 921-4633",
@@ -589,10 +661,12 @@
     "s": "AR",
     "z": "71845-8801",
     "j": "Lafayette",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3726,
+    "i": 107,
     "n": "Lawrence County Clerk",
     "f": "(870) 886-1122",
     "p": "(870) 886-1111",
@@ -605,10 +679,12 @@
     "s": "AR",
     "z": "72476-1937",
     "j": "Lawrence",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3756,
+    "i": 108,
     "n": "Lee County Clerk",
     "f": "(870) 295-7783",
     "p": "(870) 295-7715",
@@ -621,10 +697,12 @@
     "s": "AR",
     "z": "72360-2342",
     "j": "Lee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3847,
+    "i": 109,
     "n": "Lincoln County Clerk",
     "f": "(870) 628-5794",
     "p": "(870) 628-5114",
@@ -637,10 +715,12 @@
     "s": "AR",
     "z": "71667-5104",
     "j": "Lincoln",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3920,
+    "i": 110,
     "n": "Little River County Clerk",
     "f": "(870) 898-2860",
     "p": "(870) 898-7208",
@@ -653,10 +733,12 @@
     "s": "AR",
     "z": "71822-2747",
     "j": "Little River",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3944,
+    "i": 111,
     "n": "Logan County Clerk",
     "f": "(479) 963-9017",
     "p": "(479) 963-2618",
@@ -669,10 +751,12 @@
     "s": "AR",
     "z": "72855-3239",
     "j": "Logan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3971,
+    "i": 112,
     "n": "Lonoke County Clerk",
     "f": "(501) 676-3431",
     "p": "(501) 676-2368",
@@ -685,10 +769,12 @@
     "s": "AR",
     "z": "72086-2890",
     "j": "Lonoke",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4065,
+    "i": 113,
     "n": "Madison County Clerk",
     "f": "(479) 738-2735",
     "p": "(479) 738-2747",
@@ -701,10 +787,12 @@
     "s": "AR",
     "z": "72740-0037",
     "j": "Madison",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4166,
+    "i": 114,
     "n": "Marion County Clerk",
     "f": "(870) 449-4979",
     "p": "(870) 449-6226",
@@ -717,10 +805,12 @@
     "s": "AR",
     "z": "72687-0385",
     "j": "Marion",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4457,
+    "i": 115,
     "n": "Miller County Clerk",
     "f": "(870) 773-4090",
     "p": "(870) 774-1501",
@@ -733,10 +823,12 @@
     "s": "AR",
     "z": "71854-5249",
     "j": "Miller",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4498,
+    "i": 116,
     "n": "Mississippi County Clerk",
     "f": "(870) 838-7784",
     "p": "(870) 762-2411",
@@ -749,10 +841,12 @@
     "s": "AR",
     "z": "72315-2831",
     "j": "Mississippi",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4528,
+    "i": 117,
     "n": "Monroe County Clerk",
     "f": "(870) 747-5961",
     "p": "(870) 747-3632",
@@ -765,10 +859,12 @@
     "s": "AR",
     "z": "72029-2742",
     "j": "Monroe",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4569,
+    "i": 118,
     "n": "Montgomery County Clerk",
     "f": "(870) 867-2177",
     "p": "(870) 867-3521",
@@ -781,10 +877,12 @@
     "s": "AR",
     "z": "71957-0369",
     "j": "Montgomery",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4754,
+    "i": 119,
     "n": "Nevada County Clerk",
     "f": "(870) 887-5795",
     "p": "(870) 887-2710",
@@ -797,10 +895,12 @@
     "s": "AR",
     "z": "71857-2136",
     "j": "Nevada",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4827,
+    "i": 120,
     "n": "Newton County Clerk",
     "f": "(870) 446-5755",
     "p": "(870) 446-5125",
@@ -813,10 +913,12 @@
     "s": "AR",
     "z": "72641-0410",
     "j": "Newton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5102,
+    "i": 121,
     "n": "Ouachita County Clerk",
     "f": "(870) 837-2217",
     "p": "(870) 837-2220",
@@ -829,10 +931,12 @@
     "s": "AR",
     "z": "71711",
     "j": "Ouachita",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5218,
+    "i": 122,
     "n": "Perry County Clerk",
     "f": "(501) 889-5759",
     "p": "(501) 889-5126",
@@ -845,10 +949,12 @@
     "s": "AR",
     "z": "72126",
     "j": "Perry",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5251,
+    "i": 123,
     "n": "Phillips County Clerk",
     "f": "(870) 338-5509",
     "p": "(870) 338-5505",
@@ -861,10 +967,12 @@
     "s": "AR",
     "z": "72342-3306",
     "j": "Phillips",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5275,
+    "i": 124,
     "n": "Pike County Clerk",
     "f": "(870) 285-3900",
     "p": "(870) 285-2743",
@@ -877,10 +985,12 @@
     "s": "AR",
     "z": "71958-0219",
     "j": "Pike",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5366,
+    "i": 125,
     "n": "Poinsett County Clerk",
     "f": "(870) 578-2441",
     "p": "(870) 578-4412",
@@ -893,10 +1003,12 @@
     "s": "AR",
     "z": "72432-1900",
     "j": "Poinsett",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5371,
+    "i": 126,
     "n": "Polk County Clerk",
     "f": "(479) 394-8115",
     "p": "(479) 394-8123",
@@ -909,10 +1021,12 @@
     "s": "AR",
     "z": "71953-3258",
     "j": "Polk",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5390,
+    "i": 127,
     "n": "Pope County Clerk",
     "f": "(479) 967-2291",
     "p": "(479) 968-6064",
@@ -925,10 +1039,12 @@
     "s": "AR",
     "z": "72801-3723",
     "j": "Pope",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5451,
+    "i": 128,
     "n": "Prairie County Clerk",
     "f": "(870) 256-4434",
     "p": "(870) 256-4434",
@@ -941,10 +1057,12 @@
     "s": "AR",
     "z": "72040-1011",
     "j": "Prairie",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5491,
+    "i": 129,
     "n": "Pulaski County Clerk",
     "f": "(501) 340-3556",
     "p": "(501) 340-8336",
@@ -957,10 +1075,12 @@
     "s": "AR",
     "z": "72201",
     "j": "Pulaski",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5540,
+    "i": 130,
     "n": "Randolph County Clerk",
     "f": "(870) 892-5829",
     "p": "(870) 892-5822",
@@ -973,10 +1093,12 @@
     "s": "AR",
     "z": "72455-3412",
     "j": "Randolph",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6283,
+    "i": 131,
     "n": "Saint Francis County Clerk",
     "f": "(870) 630-1210",
     "p": "(870) 261-1725",
@@ -989,10 +1111,12 @@
     "s": "AR",
     "z": "72336",
     "j": "St. Francis",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5855,
+    "i": 132,
     "n": "Saline County Clerk",
     "f": "(501) 776-2412",
     "p": "(501) 303-5630",
@@ -1005,10 +1129,12 @@
     "s": "AR",
     "z": "72015-3781",
     "j": "Saline",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5960,
+    "i": 133,
     "n": "Scott County Clerk",
     "f": "(479) 637-0124",
     "p": "(479) 637-2642",
@@ -1021,10 +1147,12 @@
     "s": "AR",
     "z": "72958-7103",
     "j": "Scott",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5983,
+    "i": 134,
     "n": "Searcy County Clerk",
     "f": "(870) 448-5005",
     "p": "(870) 448-3807",
@@ -1037,10 +1165,12 @@
     "s": "AR",
     "z": "72650-0998",
     "j": "Searcy",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5985,
+    "i": 135,
     "n": "Sebastian County Clerk",
     "f": "(479) 784-1567",
     "p": "(479) 782-5065",
@@ -1053,10 +1183,12 @@
     "s": "AR",
     "z": "72901-2442",
     "j": "Sebastian",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6009,
+    "i": 136,
     "n": "Sevier County Clerk",
     "f": "(870) 642-3896",
     "p": "(870) 642-2852",
@@ -1069,10 +1201,12 @@
     "s": "AR",
     "z": "71832-2852",
     "j": "Sevier",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6034,
+    "i": 137,
     "n": "Sharp County Clerk",
     "f": "(870) 994-7712",
     "p": "(870) 994-7361",
@@ -1085,10 +1219,12 @@
     "s": "AR",
     "z": "72513-9103",
     "j": "Sharp",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6385,
+    "i": 138,
     "n": "Stone County Clerk",
     "f": "(870) 269-9058",
     "p": "(870) 269-5550",
@@ -1101,10 +1237,12 @@
     "s": "AR",
     "z": "72560-9610",
     "j": "Stone",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6714,
+    "i": 139,
     "n": "Union County Clerk",
     "f": "(870) 864-1927",
     "p": "(870) 864-1910",
@@ -1117,10 +1255,12 @@
     "s": "AR",
     "z": "71730-5661",
     "j": "Union",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6768,
+    "i": 140,
     "n": "Van Buren County Clerk",
     "f": "(501) 745-7400",
     "p": "(501) 745-4140",
@@ -1133,10 +1273,12 @@
     "s": "AR",
     "z": "72031",
     "j": "Van Buren",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6918,
+    "i": 141,
     "n": "Washington County Clerk",
     "f": "(479) 444-1894",
     "p": "(479) 444-1711",
@@ -1149,10 +1291,12 @@
     "s": "AR",
     "z": "72701-4279",
     "j": "Washington",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7175,
+    "i": 142,
     "n": "White County Clerk",
     "f": "(501) 279-6260",
     "p": "(501) 279-6204",
@@ -1165,10 +1309,12 @@
     "s": "AR",
     "z": "72143-7720",
     "j": "White",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7353,
+    "i": 143,
     "n": "Woodruff County Clerk",
     "f": "(870) 347-2608",
     "p": "(870) 347-2871",
@@ -1181,10 +1327,12 @@
     "s": "AR",
     "z": "72006-2020",
     "j": "Woodruff",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7410,
+    "i": 144,
     "n": "Yell County Clerk",
     "f": "(479) 495-4875",
     "p": "(479) 495-4850",
@@ -1197,6 +1345,8 @@
     "s": "AR",
     "z": "72833-0219",
     "j": "Yell",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

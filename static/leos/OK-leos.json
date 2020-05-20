@@ -1,22 +1,6 @@
 [
   {
-    "i": 2670,
-    "n": "Secretary, Grant County Election Board",
-    "f": "(580) 395-2603",
-    "p": "(580) 395-2862",
-    "e": "GrantCounty@elections.ok.gov",
-    "d": "2019-08-15T15:54:18",
-    "a1": "112 E Guthrie St Ste 101A",
-    "a2": "",
-    "a3": "",
-    "c": "Medford",
-    "s": "OK",
-    "z": "73759-1244",
-    "j": "Grant",
-    "t": "County"
-  },
-  {
-    "i": 17,
+    "i": 2962,
     "n": "Secretary, Adair County Election Board",
     "f": "(918) 696-4905",
     "p": "(918) 696-7221",
@@ -29,10 +13,12 @@
     "s": "OK",
     "z": "74960-0006",
     "j": "Adair",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 85,
+    "i": 2963,
     "n": "Secretary, Alfalfa County Election Board",
     "f": "(580) 596-2778",
     "p": "(580) 596-2718",
@@ -45,10 +31,12 @@
     "s": "OK",
     "z": "73728-2560",
     "j": "Alfalfa",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 275,
+    "i": 2964,
     "n": "Secretary, Atoka County Election Board",
     "f": "(580) 889-5311",
     "p": "(580) 889-5297",
@@ -61,10 +49,12 @@
     "s": "OK",
     "z": "74525-2056",
     "j": "Atoka",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 438,
+    "i": 2965,
     "n": "Secretary, Beaver County Election Board",
     "f": "(580) 625-4743",
     "p": "(580) 625-4742",
@@ -77,10 +67,12 @@
     "s": "OK",
     "z": "73932-0639",
     "j": "Beaver",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 455,
+    "i": 2966,
     "n": "Secretary, Beckham County Election Board",
     "f": "(580) 928-9266",
     "p": "(580) 928-3314",
@@ -93,10 +85,12 @@
     "s": "OK",
     "z": "73662-2923",
     "j": "Beckham",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 614,
+    "i": 2967,
     "n": "Secretary, Blaine County Election Board",
     "f": "(580) 623-5519",
     "p": "(580) 623-5518",
@@ -109,10 +103,12 @@
     "s": "OK",
     "z": "73772-3844",
     "j": "Blaine",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 843,
+    "i": 2968,
     "n": "Secretary, Bryan County Election Board",
     "f": "(580) 924-2785",
     "p": "(580) 924-3228",
@@ -125,10 +121,12 @@
     "s": "OK",
     "z": "74702-1396",
     "j": "Bryan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 928,
+    "i": 2969,
     "n": "Secretary, Caddo County Election Board",
     "f": "(405) 247-2052",
     "p": "(405) 247-5001",
@@ -141,10 +139,12 @@
     "s": "OK",
     "z": "73005-0277",
     "j": "Caddo",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1001,
+    "i": 2970,
     "n": "Secretary, Canadian County Election Board",
     "f": "(405) 422-2450",
     "p": "(405) 422-2422",
@@ -157,10 +157,12 @@
     "s": "OK",
     "z": "73036-0307",
     "j": "Canadian",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1053,
+    "i": 2971,
     "n": "Secretary, Carter County Election Board",
     "f": "(580) 223-8203",
     "p": "(580) 223-5290",
@@ -173,10 +175,12 @@
     "s": "OK",
     "z": "73401-9272",
     "j": "Carter",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1198,
+    "i": 2972,
     "n": "Secretary, Cherokee County Election Board",
     "f": "(918) 453-2022",
     "p": "(918) 456-2261",
@@ -189,10 +193,12 @@
     "s": "OK",
     "z": "74464-4726",
     "j": "Cherokee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1258,
+    "i": 2973,
     "n": "Secretary, Choctaw County Election Board",
     "f": "(580) 317-8245",
     "p": "(580) 326-5164",
@@ -205,10 +211,12 @@
     "s": "OK",
     "z": "74743-0517",
     "j": "Choctaw",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1270,
+    "i": 2974,
     "n": "Secretary, Cimarron County Election Board",
     "f": "(580) 544-3377",
     "p": "(580) 544-3377",
@@ -221,10 +229,12 @@
     "s": "OK",
     "z": "73933-0331",
     "j": "Cimarron",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1356,
+    "i": 2975,
     "n": "Secretary, Cleveland County Election Board",
     "f": "(405) 366-0209",
     "p": "(405) 366-0210",
@@ -237,10 +247,12 @@
     "s": "OK",
     "z": "73071-6656",
     "j": "Cleveland",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1399,
+    "i": 2976,
     "n": "Secretary, Coal County Election Board",
     "f": "(580) 927-3710",
     "p": "(580) 927-3456",
@@ -253,10 +265,12 @@
     "s": "OK",
     "z": "74538-2823",
     "j": "Coal",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1478,
+    "i": 2977,
     "n": "Secretary, Comanche County Election Board",
     "f": "(580) 353-0049",
     "p": "(580) 353-1880",
@@ -269,10 +283,12 @@
     "s": "OK",
     "z": "73501-4326",
     "j": "Comanche",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1537,
+    "i": 2978,
     "n": "Secretary, Cotton County Election Board",
     "f": "(580) 875-3403",
     "p": "(580) 875-3403",
@@ -285,10 +301,12 @@
     "s": "OK",
     "z": "73572-1271",
     "j": "Cotton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1554,
+    "i": 2979,
     "n": "Secretary, Craig County Election Board",
     "f": "(918) 256-8173",
     "p": "(918) 256-7559",
@@ -301,10 +319,12 @@
     "s": "OK",
     "z": "74301-4236",
     "j": "Craig",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1573,
+    "i": 2980,
     "n": "Secretary, Creek County Election Board",
     "f": "(918) 227-6332",
     "p": "(918) 224-3529",
@@ -317,10 +337,12 @@
     "s": "OK",
     "z": "74067-0990",
     "j": "Creek",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1633,
+    "i": 2981,
     "n": "Secretary, Custer County Election Board",
     "f": "(580) 323-5130",
     "p": "(580) 323-5124",
@@ -333,10 +355,12 @@
     "s": "OK",
     "z": "73601-1326",
     "j": "Custer",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1819,
+    "i": 2982,
     "n": "Secretary, Delaware County Election Board",
     "f": "(918) 253-3286",
     "p": "(918) 253-8762",
@@ -349,10 +373,12 @@
     "s": "OK",
     "z": "74346-0589",
     "j": "Delaware",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1852,
+    "i": 2983,
     "n": "Secretary, Dewey County Election Board",
     "f": "(580) 328-5768",
     "p": "(580) 328-5668",
@@ -365,10 +391,12 @@
     "s": "OK",
     "z": "73667-0115",
     "j": "Dewey",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2104,
+    "i": 2984,
     "n": "Secretary, Ellis County Election Board",
     "f": "(580) 885-7273",
     "p": "(580) 885-7721",
@@ -381,10 +409,12 @@
     "s": "OK",
     "z": "73832-0492",
     "j": "Ellis",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2492,
+    "i": 2985,
     "n": "Secretary, Garfield County Election Board",
     "f": "(580) 249-5959",
     "p": "(580) 237-6016",
@@ -397,10 +427,12 @@
     "s": "OK",
     "z": "73702-1872",
     "j": "Garfield",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2506,
+    "i": 2986,
     "n": "Secretary, Garvin County Election Board",
     "f": "(405) 238-1140",
     "p": "(405) 238-3303",
@@ -413,10 +445,12 @@
     "s": "OK",
     "z": "73075-3234",
     "j": "Garvin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2630,
+    "i": 2987,
     "n": "Secretary, Grady County Election Board",
     "f": "(405) 224-6576",
     "p": "(405) 224-1430",
@@ -429,10 +463,30 @@
     "s": "OK",
     "z": "73023-1226",
     "j": "Grady",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2777,
+    "i": 2988,
+    "n": "Secretary, Grant County Election Board",
+    "f": "(580) 395-2603",
+    "p": "(580) 395-2862",
+    "e": "GrantCounty@elections.ok.gov",
+    "d": "2019-08-15T15:54:18",
+    "a1": "112 E Guthrie St Ste 101A",
+    "a2": "",
+    "a3": "",
+    "c": "Medford",
+    "s": "OK",
+    "z": "73759-1244",
+    "j": "Grant",
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
+  },
+  {
+    "i": 2989,
     "n": "Secretary, Greer County Election Board",
     "f": "(580) 782-2307",
     "p": "(580) 782-2307",
@@ -445,10 +499,12 @@
     "s": "OK",
     "z": "73554-4273",
     "j": "Greer",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2929,
+    "i": 2990,
     "n": "Secretary, Harmon County Election Board",
     "f": "(580) 688-9784",
     "p": "(580) 688-2460",
@@ -461,10 +517,12 @@
     "s": "OK",
     "z": "73550-3053",
     "j": "Harmon",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2936,
+    "i": 2991,
     "n": "Secretary, Harper County Election Board",
     "f": "(580) 735-2311",
     "p": "(580) 735-2313",
@@ -477,10 +535,12 @@
     "s": "OK",
     "z": "73834-0541",
     "j": "Harper",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2985,
+    "i": 2992,
     "n": "Secretary, Haskell County Election Board",
     "f": "(918) 967-2199",
     "p": "(918) 967-8792",
@@ -493,10 +553,12 @@
     "s": "OK",
     "z": "74462-2439",
     "j": "Haskell",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3212,
+    "i": 2993,
     "n": "Secretary, Hughes County Election Board",
     "f": "(405) 379-3489",
     "p": "(405) 379-2174",
@@ -509,10 +571,12 @@
     "s": "OK",
     "z": "74848-3400",
     "j": "Hughes",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3336,
+    "i": 2994,
     "n": "Secretary, Jackson County Election Board",
     "f": "(580) 477-4573",
     "p": "(580) 482-2370",
@@ -525,10 +589,12 @@
     "s": "OK",
     "z": "73521-3142",
     "j": "Jackson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3388,
+    "i": 2995,
     "n": "Secretary, Jefferson County Election Board",
     "f": "(580) 228-2775",
     "p": "(580) 228-3150",
@@ -541,10 +607,12 @@
     "s": "OK",
     "z": "73573-2236",
     "j": "Jefferson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3437,
+    "i": 2996,
     "n": "Secretary, Johnston County Election Board",
     "f": "(580) 371-3670",
     "p": "(580) 371-3670",
@@ -557,10 +625,12 @@
     "s": "OK",
     "z": "73460-1734",
     "j": "Johnston",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3480,
+    "i": 2997,
     "n": "Secretary, Kay County Election Board",
     "f": "(580) 362-1100",
     "p": "(580) 362-2130",
@@ -573,10 +643,12 @@
     "s": "OK",
     "z": "74647-0331",
     "j": "Kay",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3539,
+    "i": 2998,
     "n": "Secretary, Kingfisher County Election Board",
     "f": "(405) 375-5962",
     "p": "(405) 375-3895",
@@ -589,10 +661,12 @@
     "s": "OK",
     "z": "73750-3241",
     "j": "Kingfisher",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3556,
+    "i": 2999,
     "n": "Secretary, Kiowa County Election Board",
     "f": "(580) 726-2124",
     "p": "(580) 726-2509",
@@ -605,10 +679,12 @@
     "s": "OK",
     "z": "73651-0031",
     "j": "Kiowa",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3716,
+    "i": 3000,
     "n": "Secretary, Latimer County Election Board",
     "f": "(918) 465-4019",
     "p": "(918) 465-3703",
@@ -621,10 +697,12 @@
     "s": "OK",
     "z": "74578-2440",
     "j": "Latimer",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3742,
+    "i": 3001,
     "n": "Secretary, LeFlore County Election Board",
     "f": "(918) 647-5262",
     "p": "(918) 647-3701",
@@ -637,10 +715,12 @@
     "s": "OK",
     "z": "74953-0249",
     "j": "LeFlore",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3862,
+    "i": 3002,
     "n": "Secretary, Lincoln County Election Board",
     "f": "(405) 258-5565",
     "p": "(405) 258-1349",
@@ -653,10 +733,12 @@
     "s": "OK",
     "z": "74834-0097",
     "j": "Lincoln",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3952,
+    "i": 3003,
     "n": "Secretary, Logan County Election Board",
     "f": "(405) 282-1994",
     "p": "(405) 282-1900",
@@ -669,10 +751,12 @@
     "s": "OK",
     "z": "73044-4834",
     "j": "Logan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3983,
+    "i": 3004,
     "n": "Secretary, Love County Election Board",
     "f": "(580) 276-2242",
     "p": "(580) 276-2242",
@@ -685,10 +769,12 @@
     "s": "OK",
     "z": "73448-2849",
     "j": "Love",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4100,
+    "i": 3005,
     "n": "Secretary, Major County Election Board",
     "f": "(580) 227-1260",
     "p": "(580) 227-4520",
@@ -701,10 +787,12 @@
     "s": "OK",
     "z": "73737-2243",
     "j": "Major",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4217,
+    "i": 3006,
     "n": "Secretary, Marshall County Election Board",
     "f": "(580) 795-5460",
     "p": "(580) 795-5460",
@@ -717,10 +805,12 @@
     "s": "OK",
     "z": "73446-0009",
     "j": "Marshall",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4270,
+    "i": 3007,
     "n": "Secretary, Mayes County Election Board",
     "f": "(918) 825-3848",
     "p": "(918) 825-1826",
@@ -733,10 +823,12 @@
     "s": "OK",
     "z": "74361-2449",
     "j": "Mayes",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4279,
+    "i": 3008,
     "n": "Secretary, McClain County Election Board",
     "f": "(405) 527-9347",
     "p": "(405) 527-3121",
@@ -749,10 +841,12 @@
     "s": "OK",
     "z": "73080-0759",
     "j": "McClain",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4286,
+    "i": 3009,
     "n": "Secretary, McCurtain County Election Board",
     "f": "(580) 286-7499",
     "p": "(580) 286-7405",
@@ -765,10 +859,12 @@
     "s": "OK",
     "z": "74745-3846",
     "j": "McCurtain",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4296,
+    "i": 3010,
     "n": "Secretary, McIntosh County Election Board",
     "f": "(918) 689-2914",
     "p": "(918) 689-2452",
@@ -781,10 +877,12 @@
     "s": "OK",
     "z": "74432-1022",
     "j": "McIntosh",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4684,
+    "i": 3011,
     "n": "Secretary, Murray County Election Board",
     "f": "(580) 622-4319",
     "p": "(580) 622-3800",
@@ -797,10 +895,12 @@
     "s": "OK",
     "z": "73086-0556",
     "j": "Murray",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4696,
+    "i": 3012,
     "n": "Secretary, Muskogee County Election Board",
     "f": "(918) 687-0382",
     "p": "(918) 687-8151",
@@ -813,10 +913,12 @@
     "s": "OK",
     "z": "74402-0216",
     "j": "Muskogee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4853,
+    "i": 3013,
     "n": "Secretary, Noble County Election Board",
     "f": "(580) 336-2035",
     "p": "(580) 336-3527",
@@ -829,10 +931,12 @@
     "s": "OK",
     "z": "73077-6649",
     "j": "Noble",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4935,
+    "i": 3014,
     "n": "Secretary, Nowata County Election Board",
     "f": "(918) 273-2578",
     "p": "(918) 273-0710",
@@ -845,10 +949,12 @@
     "s": "OK",
     "z": "74048-2626",
     "j": "Nowata",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4990,
+    "i": 3015,
     "n": "Secretary, Okfuskee County Election Board",
     "f": "(918) 623-9726",
     "p": "(918) 623-0105",
@@ -861,10 +967,12 @@
     "s": "OK",
     "z": "74859-2627",
     "j": "Okfuskee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4991,
+    "i": 3016,
     "n": "Secretary, Oklahoma County Election Board",
     "f": "(405) 528-2903",
     "p": "(405) 713-1515",
@@ -877,10 +985,12 @@
     "s": "OK",
     "z": "73105-5210",
     "j": "Oklahoma",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4992,
+    "i": 3017,
     "n": "Secretary, Okmulgee County Election Board",
     "f": "(918) 758-1275",
     "p": "(918) 756-2365",
@@ -893,10 +1003,12 @@
     "s": "OK",
     "z": "74447-5028",
     "j": "Okmulgee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5062,
+    "i": 3018,
     "n": "Secretary, Osage County Election Board",
     "f": "(918) 287-4820",
     "p": "(918) 287-3036",
@@ -909,10 +1021,12 @@
     "s": "OK",
     "z": "74056-0929",
     "j": "Osage",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5095,
+    "i": 3019,
     "n": "Secretary, Ottawa County Election Board",
     "f": "(918) 542-3005",
     "p": "(918) 542-2893",
@@ -925,10 +1039,12 @@
     "s": "OK",
     "z": "74354-7080",
     "j": "Ottawa",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5172,
+    "i": 3020,
     "n": "Secretary, Pawnee County Election Board",
     "f": "(918) 762-2387",
     "p": "(918) 762-2125",
@@ -941,10 +1057,12 @@
     "s": "OK",
     "z": "74058-2568",
     "j": "Pawnee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5176,
+    "i": 3021,
     "n": "Secretary, Payne County Election Board",
     "f": "(405) 747-8393",
     "p": "(405) 747-8350",
@@ -957,10 +1075,12 @@
     "s": "OK",
     "z": "74074-4080",
     "j": "Payne",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5304,
+    "i": 3022,
     "n": "Secretary, Pittsburg County Election Board",
     "f": "(918) 423-7088",
     "p": "(918) 423-3877",
@@ -973,10 +1093,12 @@
     "s": "OK",
     "z": "74501-5039",
     "j": "Pittsburg",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5389,
+    "i": 3023,
     "n": "Secretary, Pontotoc County Election Board",
     "f": "(580) 421-7765",
     "p": "(580) 332-4534",
@@ -989,10 +1111,12 @@
     "s": "OK",
     "z": "74821-0302",
     "j": "Pontotoc",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5430,
+    "i": 3024,
     "n": "Secretary, Pottawatomie County Election Board",
     "f": "(405) 275-3240",
     "p": "(405) 273-8376",
@@ -1005,10 +1129,12 @@
     "s": "OK",
     "z": "74804-9250",
     "j": "Pottawatomie",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5502,
+    "i": 3025,
     "n": "Secretary, Pushmataha County Election Board",
     "f": "(580) 298-3292",
     "p": "(580) 298-3292",
@@ -1021,10 +1147,12 @@
     "s": "OK",
     "z": "74523-3814",
     "j": "Pushmataha",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5748,
+    "i": 3026,
     "n": "Secretary, Roger Mills County Election Board",
     "f": "(580) 497-3546",
     "p": "(580) 497-3330",
@@ -1037,10 +1165,12 @@
     "s": "OK",
     "z": "73628-0147",
     "j": "Roger Mills",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5749,
+    "i": 3027,
     "n": "Secretary, Rogers County Election Board",
     "f": "(918) 341-4666",
     "p": "(918) 341-2965",
@@ -1053,10 +1183,12 @@
     "s": "OK",
     "z": "74017-7801",
     "j": "Rogers",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5996,
+    "i": 3028,
     "n": "Secretary, Seminole County Election Board",
     "f": "(405) 257-3912",
     "p": "(405) 257-2786",
@@ -1069,10 +1201,12 @@
     "s": "OK",
     "z": "74884-2645",
     "j": "Seminole",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6006,
+    "i": 3029,
     "n": "Secretary, Sequoyah County Election Board",
     "f": "(918) 775-1205",
     "p": "(918) 775-2614",
@@ -1085,10 +1219,12 @@
     "s": "OK",
     "z": "74955-4613",
     "j": "Sequoyah",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6346,
+    "i": 3030,
     "n": "Secretary, Stephens County Election Board",
     "f": "(580) 255-3188",
     "p": "(580) 255-8782",
@@ -1101,10 +1237,12 @@
     "s": "OK",
     "z": "73533-4758",
     "j": "Stephens",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6559,
+    "i": 3031,
     "n": "Secretary, Texas County Election Board",
     "f": "(580) 338-2618",
     "p": "(580) 338-7644",
@@ -1117,10 +1255,12 @@
     "s": "OK",
     "z": "73942-0607",
     "j": "Texas",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6592,
+    "i": 3032,
     "n": "Secretary, Tillman County Election Board",
     "f": "(580) 335-2699",
     "p": "(580) 335-2287",
@@ -1133,10 +1273,12 @@
     "s": "OK",
     "z": "73542-5400",
     "j": "Tillman",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6676,
+    "i": 3033,
     "n": "Secretary, Tulsa County Election Board",
     "f": "(918) 596-4536",
     "p": "(918) 596-5780",
@@ -1149,10 +1291,12 @@
     "s": "OK",
     "z": "74103-1014",
     "j": "Tulsa",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6832,
+    "i": 3034,
     "n": "Secretary, Wagoner County Election Board",
     "f": "(918) 485-8063",
     "p": "(918) 485-2142",
@@ -1165,10 +1309,12 @@
     "s": "OK",
     "z": "74477-0714",
     "j": "Wagoner",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6937,
+    "i": 3035,
     "n": "Secretary, Washington County Election Board",
     "f": "(918) 337-2895",
     "p": "(918) 337-2850",
@@ -1181,10 +1327,12 @@
     "s": "OK",
     "z": "74003-6602",
     "j": "Washington",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6959,
+    "i": 3036,
     "n": "Secretary, Washita County Election Board",
     "f": "(580) 832-4119",
     "p": "(580) 832-3658",
@@ -1197,10 +1345,12 @@
     "s": "OK",
     "z": "73632-0602",
     "j": "Washita",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7355,
+    "i": 3037,
     "n": "Secretary, Woods County Election Board",
     "f": "(580) 327-6216",
     "p": "(580) 327-1452",
@@ -1213,10 +1363,12 @@
     "s": "OK",
     "z": "73717-0184",
     "j": "Woods",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7363,
+    "i": 3038,
     "n": "Secretary, Woodward County Election Board",
     "f": "(580) 254-6877",
     "p": "(580) 256-3609",
@@ -1229,6 +1381,8 @@
     "s": "OK",
     "z": "73802-0613",
     "j": "Woodward",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

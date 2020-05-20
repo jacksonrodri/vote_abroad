@@ -1,6 +1,6 @@
 [
   {
-    "i": 2995,
+    "i": 683,
     "n": "Hawaii County Clerk",
     "f": "(808) 961-8673",
     "p": "(808) 961-8277",
@@ -13,10 +13,12 @@
     "s": "HI",
     "z": "96720-4245",
     "j": "Hawaii",
-    "t": "Island"
+    "t": "Island",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3150,
+    "i": 684,
     "n": "Honolulu County Clerk",
     "f": "(808) 768-3835",
     "p": "(808) 768-3800",
@@ -29,10 +31,12 @@
     "s": "HI",
     "z": "96813-3077",
     "j": "Honolulu",
-    "t": "Island"
+    "t": "Island",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3475,
+    "i": 685,
     "n": "Kauai County Clerk",
     "f": "(808) 241-6207",
     "p": "(808) 241-4800",
@@ -45,10 +49,12 @@
     "s": "HI",
     "z": "96766-1819",
     "j": "Kauai",
-    "t": "Island"
+    "t": "Island",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4265,
+    "i": 686,
     "n": "Maui County Clerk",
     "f": "(808) 270-7171",
     "p": "(808) 270-7749",
@@ -61,6 +67,8 @@
     "s": "HI",
     "z": "96793-9920",
     "j": "Maui",
-    "t": "Island"
+    "t": "Island",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

@@ -1,6 +1,6 @@
 [
   {
-    "i": 12,
+    "i": 786,
     "n": "Ada County Clerk",
     "f": "(208) 287-6939",
     "p": "(208) 287-6860",
@@ -13,10 +13,12 @@
     "s": "ID",
     "z": "83704",
     "j": "Ada",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 20,
+    "i": 787,
     "n": "Adams County Clerk",
     "f": "(208) 253-4880",
     "p": "(208) 253-4561",
@@ -29,10 +31,12 @@
     "s": "ID",
     "z": "83612-0048",
     "j": "Adams",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 354,
+    "i": 788,
     "n": "Bannock County Clerk",
     "f": "(208) 236-7424",
     "p": "(208) 236-7329",
@@ -45,10 +49,12 @@
     "s": "ID",
     "z": "83205",
     "j": "Bannock",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 429,
+    "i": 789,
     "n": "Bear Lake County Clerk",
     "f": "(208) 945-2248",
     "p": "(208) 945-2212",
@@ -61,10 +67,12 @@
     "s": "ID",
     "z": "83261-0190",
     "j": "Bear Lake",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 495,
+    "i": 790,
     "n": "Benewah County Clerk",
     "f": "(208) 245-9152",
     "p": "(208) 245-3212",
@@ -77,10 +85,12 @@
     "s": "ID",
     "z": "83861-1852",
     "j": "Benewah",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 584,
+    "i": 791,
     "n": "Bingham County Clerk",
     "f": "(208) 785-4131",
     "p": "(208) 782-3164",
@@ -93,10 +103,12 @@
     "s": "ID",
     "z": "83221-1776",
     "j": "Bingham",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 611,
+    "i": 792,
     "n": "Blaine County Clerk",
     "f": "(208) 788-5501",
     "p": "(208) 788-5510",
@@ -109,10 +121,12 @@
     "s": "ID",
     "z": "83333-8429",
     "j": "Blaine",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 658,
+    "i": 793,
     "n": "Boise County Clerk",
     "f": "(208) 392-4473",
     "p": "(208) 392-4431",
@@ -125,10 +139,12 @@
     "s": "ID",
     "z": "83631-1300",
     "j": "Boise",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 667,
+    "i": 794,
     "n": "Bonner County Clerk",
     "f": "(208) 263-9178",
     "p": "(208) 255-3631",
@@ -141,10 +157,12 @@
     "s": "ID",
     "z": "83864-1794",
     "j": "Bonner",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 668,
+    "i": 795,
     "n": "Bonneville County Clerk",
     "f": "(208) 529-1188",
     "p": "(208) 529-1363",
@@ -157,10 +175,12 @@
     "s": "ID",
     "z": "83402-3582",
     "j": "Bonneville",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 690,
+    "i": 796,
     "n": "Boundary County Clerk",
     "f": "(208) 267-7814",
     "p": "(208) 267-2242",
@@ -173,10 +193,12 @@
     "s": "ID",
     "z": "83805-0419",
     "j": "Boundary",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 914,
+    "i": 797,
     "n": "Butte County Clerk",
     "f": "(208) 527-3295",
     "p": "(208) 527-3021",
@@ -189,10 +211,12 @@
     "s": "ID",
     "z": "83213-0737",
     "j": "Butte",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 969,
+    "i": 798,
     "n": "Camas County Clerk",
     "f": "(208) 764-2349",
     "p": "(208) 764-2242",
@@ -205,10 +229,12 @@
     "s": "ID",
     "z": "83327-0430",
     "j": "Camas",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1012,
+    "i": 799,
     "n": "Canyon County Clerk",
     "f": "(208) 454-6899",
     "p": "(208) 454-7563",
@@ -221,10 +247,12 @@
     "s": "ID",
     "z": "83605-3522",
     "j": "Canyon",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1020,
+    "i": 800,
     "n": "Caribou County Clerk",
     "f": "(208) 547-4759",
     "p": "(208) 547-4324",
@@ -237,10 +265,12 @@
     "s": "ID",
     "z": "83276-0775",
     "j": "Caribou",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1084,
+    "i": 801,
     "n": "Cassia County Clerk",
     "f": "(208) 878-8825",
     "p": "(208) 878-5240",
@@ -253,10 +283,12 @@
     "s": "ID",
     "z": "83318-1862",
     "j": "Cassia",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1290,
+    "i": 802,
     "n": "Clark County Clerk",
     "f": "(208) 374-5609",
     "p": "(208) 374-5304",
@@ -269,10 +301,12 @@
     "s": "ID",
     "z": "83423-0205",
     "j": "Clark",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1346,
+    "i": 803,
     "n": "Clearwater County Clerk",
     "f": "(208) 476-9315",
     "p": "(208) 476-5615",
@@ -285,10 +319,12 @@
     "s": "ID",
     "z": "83544-0586",
     "j": "Clearwater",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1630,
+    "i": 804,
     "n": "Custer County Clerk",
     "f": "(208) 879-5246",
     "p": "(208) 879-2360",
@@ -301,10 +337,12 @@
     "s": "ID",
     "z": "83226-0385",
     "j": "Custer",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2118,
+    "i": 805,
     "n": "Elmore County Clerk",
     "f": "(208) 587-2159",
     "p": "(208) 587-2131",
@@ -317,10 +355,12 @@
     "s": "ID",
     "z": "83647-3000",
     "j": "Elmore",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2377,
+    "i": 806,
     "n": "Franklin County Clerk",
     "f": "(208) 852-1094",
     "p": "(208) 852-1090",
@@ -333,10 +373,12 @@
     "s": "ID",
     "z": "83263-1232",
     "j": "Franklin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2431,
+    "i": 807,
     "n": "Fremont County Clerk",
     "f": "(208) 624-7335",
     "p": "(208) 624-7332",
@@ -349,10 +391,12 @@
     "s": "ID",
     "z": "83445-1548",
     "j": "Fremont",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2515,
+    "i": 808,
     "n": "Gem County Clerk",
     "f": "(208) 365-7795",
     "p": "(208) 365-4561",
@@ -365,10 +409,12 @@
     "s": "ID",
     "z": "83617-3096",
     "j": "Gem",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2610,
+    "i": 809,
     "n": "Gooding County Clerk",
     "f": "(208) 934-5085",
     "p": "(208) 934-4841",
@@ -381,10 +427,12 @@
     "s": "ID",
     "z": "83330-0417",
     "j": "Gooding",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3253,
+    "i": 810,
     "n": "Idaho County Clerk",
     "f": "(208) 938-1428",
     "p": "(208) 983-2751",
@@ -397,10 +445,12 @@
     "s": "ID",
     "z": "83530-1948",
     "j": "Idaho",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3378,
+    "i": 811,
     "n": "Jefferson County Clerk",
     "f": "(208) 745-9397",
     "p": "(208) 745-7756",
@@ -413,10 +463,12 @@
     "s": "ID",
     "z": "83442-5294",
     "j": "Jefferson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3413,
+    "i": 812,
     "n": "Jerome County Clerk",
     "f": "(208) 644-2709",
     "p": "(208) 644-2714",
@@ -429,10 +481,12 @@
     "s": "ID",
     "z": "83338-2344",
     "j": "Jerome",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3585,
+    "i": 813,
     "n": "Kootenai County Clerk",
     "f": "(208) 446-1039",
     "p": "(208) 446-1030",
@@ -441,14 +495,16 @@
     "a1": "P.O.  Box 9000",
     "a2": "",
     "a3": "",
-    "c": "Coeur dAlene",
+    "c": "Coeur d'Alene",
     "s": "ID",
     "z": "83816-9000",
     "j": "Kootenai",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3714,
+    "i": 814,
     "n": "Latah County Clerk",
     "f": "(208) 883-7203",
     "p": "(208) 883-2249",
@@ -461,10 +517,12 @@
     "s": "ID",
     "z": "83843-0568",
     "j": "Latah",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3781,
+    "i": 815,
     "n": "Lemhi County Clerk",
     "f": "(208) 756-8424",
     "p": "(208) 756-2815 x221",
@@ -477,10 +535,12 @@
     "s": "ID",
     "z": "83467-3900",
     "j": "Lemhi",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3811,
+    "i": 816,
     "n": "Lewis County Clerk",
     "f": "(208) 937-9234",
     "p": "(208) 937-2661",
@@ -493,10 +553,12 @@
     "s": "ID",
     "z": "83543-5065",
     "j": "Lewis",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3850,
+    "i": 817,
     "n": "Lincoln County Clerk",
     "f": "(208) 886-2798",
     "p": "(208) 886-7641",
@@ -509,10 +571,12 @@
     "s": "ID",
     "z": "83352-5364",
     "j": "Lincoln",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4070,
+    "i": 818,
     "n": "Madison County Clerk",
     "f": "(208) 356-8396",
     "p": "(208) 359-6219",
@@ -525,10 +589,12 @@
     "s": "ID",
     "z": "83440-0389",
     "j": "Madison",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4490,
+    "i": 819,
     "n": "Minidoka County Clerk",
     "f": "(208) 436-9061",
     "p": "(208) 436-9511",
@@ -541,10 +607,12 @@
     "s": "ID",
     "z": "83350-0368",
     "j": "Minidoka",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4840,
+    "i": 820,
     "n": "Nez Perce County Clerk",
     "f": "(208) 799-3070",
     "p": "(208) 799-3020",
@@ -557,10 +625,12 @@
     "s": "ID",
     "z": "83501-0896",
     "j": "Nez Perce",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5013,
+    "i": 821,
     "n": "Oneida County Clerk",
     "f": "(208) 766-2448",
     "p": "(208) 766-4116",
@@ -573,10 +643,12 @@
     "s": "ID",
     "z": "83252-1200",
     "j": "Oneida",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5116,
+    "i": 822,
     "n": "Owyhee County Clerk",
     "f": "(208) 495-1173",
     "p": "(208) 495-2421",
@@ -589,10 +661,12 @@
     "s": "ID",
     "z": "83650-0128",
     "j": "Owyhee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5175,
+    "i": 823,
     "n": "Payette County Clerk",
     "f": "(208) 642-6011",
     "p": "(208) 642-6000",
@@ -605,10 +679,12 @@
     "s": "ID",
     "z": "83661-2473",
     "j": "Payette",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5444,
+    "i": 824,
     "n": "Power County Clerk",
     "f": "(208) 226-7612",
     "p": "(208) 226-7611",
@@ -621,10 +697,12 @@
     "s": "ID",
     "z": "83211-1200",
     "j": "Power",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6110,
+    "i": 825,
     "n": "Shoshone County Clerk",
     "f": "(208) 752-1896",
     "p": "(208) 752-1264",
@@ -637,10 +715,12 @@
     "s": "ID",
     "z": "83873-2348",
     "j": "Shoshone",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6554,
+    "i": 826,
     "n": "Teton County Clerk",
     "f": "(208) 354-8410",
     "p": "(208) 354-8780",
@@ -653,10 +733,12 @@
     "s": "ID",
     "z": "83422-5164",
     "j": "Teton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6693,
+    "i": 827,
     "n": "Twin Falls County Clerk",
     "f": "(208) 736-4182",
     "p": "(208) 736-4004",
@@ -669,10 +751,12 @@
     "s": "ID",
     "z": "83301",
     "j": "Twin Falls",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6764,
+    "i": 828,
     "n": "Valley County Clerk",
     "f": "(208) 382-7107",
     "p": "(208) 382-7100",
@@ -685,10 +769,12 @@
     "s": "ID",
     "z": "83611-1350",
     "j": "Valley",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6924,
+    "i": 829,
     "n": "Washington County Clerk",
     "f": "(208) 414-3925",
     "p": "(208) 414-2092",
@@ -701,6 +787,8 @@
     "s": "ID",
     "z": "83672-0670",
     "j": "Washington",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

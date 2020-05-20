@@ -1,6 +1,6 @@
 [
   {
-    "i": 24,
+    "i": 2359,
     "n": "Adams County Auditor",
     "f": "(701) 567-2910",
     "p": "(701) 567-4363",
@@ -13,10 +13,12 @@
     "s": "ND",
     "z": "58639-0589",
     "j": "Adams",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 366,
+    "i": 2360,
     "n": "Barnes County Auditor",
     "f": "(701) 845-8548",
     "p": "(701) 845-8500 x6666",
@@ -29,10 +31,12 @@
     "s": "ND",
     "z": "58072-2947",
     "j": "Barnes",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 503,
+    "i": 2361,
     "n": "Benson County Auditor",
     "f": "(701) 473-5571",
     "p": "(701) 473-5340",
@@ -45,10 +49,12 @@
     "s": "ND",
     "z": "58351-0206",
     "j": "Benson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 582,
+    "i": 2362,
     "n": "Billings County Auditor",
     "f": "(701) 623-4761",
     "p": "(701) 623-4377",
@@ -61,10 +67,12 @@
     "s": "ND",
     "z": "58645-0168",
     "j": "Billings",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 687,
+    "i": 2363,
     "n": "Bottineau County Auditor",
     "f": "(701) 228-5181",
     "p": "(701) 228-2225",
@@ -77,10 +85,12 @@
     "s": "ND",
     "z": "58318-1268",
     "j": "Bottineau",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 699,
+    "i": 2364,
     "n": "Bowman County Auditor",
     "f": "(701) 523-4899",
     "p": "(701) 523-3130",
@@ -93,10 +103,12 @@
     "s": "ND",
     "z": "58623-4342",
     "j": "Bowman",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 873,
+    "i": 2365,
     "n": "Burke County Auditor",
     "f": "(701) 377-2866",
     "p": "(701) 377-2861",
@@ -109,10 +121,12 @@
     "s": "ND",
     "z": "58721-0310",
     "j": "Burke",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 876,
+    "i": 2366,
     "n": "Burleigh County Auditor",
     "f": "(701) 222-7528",
     "p": "(701) 222-6718",
@@ -125,10 +139,12 @@
     "s": "ND",
     "z": "58506-5518",
     "j": "Burleigh",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1079,
+    "i": 2367,
     "n": "Cass County Auditor",
     "f": "(701) 241-5728",
     "p": "(701) 241-5600",
@@ -141,10 +157,12 @@
     "s": "ND",
     "z": "58108-2806",
     "j": "Cass",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1103,
+    "i": 2368,
     "n": "Cavalier County Auditor",
     "f": "(701) 256-2546",
     "p": "(701) 256-2229",
@@ -157,10 +175,12 @@
     "s": "ND",
     "z": "58249-2457",
     "j": "Cavalier",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1863,
+    "i": 2369,
     "n": "Dickey County Auditor",
     "f": "(701) 349-4639",
     "p": "(701) 349-3249",
@@ -173,10 +193,12 @@
     "s": "ND",
     "z": "58436-0215",
     "j": "Dickey",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1874,
+    "i": 2370,
     "n": "Divide County Auditor",
     "f": "(701) 965-4370",
     "p": "(701) 965-6351",
@@ -189,10 +211,12 @@
     "s": "ND",
     "z": "58730-0049",
     "j": "Divide",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1949,
+    "i": 2371,
     "n": "Dunn County Auditor",
     "f": "(701) 573-4323",
     "p": "(701) 573-4448",
@@ -205,10 +229,12 @@
     "s": "ND",
     "z": "58642-0105",
     "j": "Dunn",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2036,
+    "i": 2372,
     "n": "Eddy County Auditor",
     "f": "(701) 947-2279",
     "p": "(701) 947-2434 x2020",
@@ -221,10 +247,12 @@
     "s": "ND",
     "z": "58356-1652",
     "j": "Eddy",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2138,
+    "i": 2373,
     "n": "Emmons County Auditor",
     "f": "(701) 254-4012",
     "p": "(701) 254-4807",
@@ -237,10 +265,12 @@
     "s": "ND",
     "z": "58552-0129",
     "j": "Emmons",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2349,
+    "i": 2374,
     "n": "Foster County Auditor",
     "f": "(701) 652-2173",
     "p": "(701) 652-2441",
@@ -253,10 +283,12 @@
     "s": "ND",
     "z": "58421-0104",
     "j": "Foster",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2604,
+    "i": 2375,
     "n": "Golden Valley County Auditor",
     "f": "(701) 872-4383",
     "p": "(701) 872-4331",
@@ -269,10 +301,12 @@
     "s": "ND",
     "z": "58621-0067",
     "j": "Golden Valley",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2648,
+    "i": 2376,
     "n": "Grand Forks County Auditor",
     "f": "(701) 780-8207",
     "p": "(701) 780-8201",
@@ -285,10 +319,12 @@
     "s": "ND",
     "z": "58206-5726",
     "j": "Grand Forks",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2667,
+    "i": 2377,
     "n": "Grant County Auditor",
     "f": "(701) 622-3005",
     "p": "(701) 622-3275",
@@ -301,10 +337,12 @@
     "s": "ND",
     "z": "58529-0227",
     "j": "Grant",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2782,
+    "i": 2378,
     "n": "Griggs County Auditor",
     "f": "(701) 797-3587",
     "p": "(701) 797-3117",
@@ -317,10 +355,12 @@
     "s": "ND",
     "z": "58425-0511",
     "j": "Griggs",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3062,
+    "i": 2379,
     "n": "Hettinger County Auditor",
     "f": "(701) 824-2717",
     "p": "(701) 824-2515",
@@ -333,10 +373,12 @@
     "s": "ND",
     "z": "58646-0668",
     "j": "Hettinger",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3521,
+    "i": 2380,
     "n": "Kidder County Auditor",
     "f": "(701) 475-2202",
     "p": "(701) 475-4547",
@@ -349,10 +391,12 @@
     "s": "ND",
     "z": "58482-0167",
     "j": "Kidder",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3611,
+    "i": 2381,
     "n": "LaMoure County Auditor",
     "f": "(701) 883-4514",
     "p": "(701) 883-5301",
@@ -365,10 +409,12 @@
     "s": "ND",
     "z": "58458-0128",
     "j": "LaMoure",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3949,
+    "i": 2382,
     "n": "Logan County Auditor",
     "f": "(701) 754-2280",
     "p": "(701) 754-2425",
@@ -381,10 +427,12 @@
     "s": "ND",
     "z": "58561-7010",
     "j": "Logan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4293,
+    "i": 2383,
     "n": "McHenry County Auditor",
     "f": "(701) 537-5969",
     "p": "(701) 537-5724",
@@ -397,10 +445,12 @@
     "s": "ND",
     "z": "58788-4048",
     "j": "McHenry",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4295,
+    "i": 2384,
     "n": "McIntosh County Auditor",
     "f": "(701) 288-3671",
     "p": "(701) 288-5141",
@@ -413,10 +463,12 @@
     "s": "ND",
     "z": "58413-0039",
     "j": "McIntosh",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4298,
+    "i": 2385,
     "n": "McKenzie County Auditor",
     "f": "(701) 444-4113",
     "p": "(701) 444-3616",
@@ -429,10 +481,12 @@
     "s": "ND",
     "z": "58854-7103",
     "j": "McKenzie",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4304,
+    "i": 2386,
     "n": "McLean County Auditor",
     "f": "(701) 462-3542",
     "p": "(701) 462-8541 x825",
@@ -445,10 +499,12 @@
     "s": "ND",
     "z": "58577-1108",
     "j": "McLean",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4381,
+    "i": 2387,
     "n": "Mercer County Auditor",
     "f": "(701) 745-3793",
     "p": "(701) 745-3292",
@@ -461,10 +517,12 @@
     "s": "ND",
     "z": "58571-0039",
     "j": "Mercer",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4638,
+    "i": 2388,
     "n": "Morton County Auditor",
     "f": "(701) 667-3453",
     "p": "(701) 667-3300",
@@ -477,10 +535,12 @@
     "s": "ND",
     "z": "58554-3158",
     "j": "Morton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4667,
+    "i": 2389,
     "n": "Mountrail County Auditor",
     "f": "(701) 628-2276",
     "p": "(701) 628-2145",
@@ -493,10 +553,12 @@
     "s": "ND",
     "z": "58784-0069",
     "j": "Mountrail",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4736,
+    "i": 2390,
     "n": "Nelson County Auditor",
     "f": "(701) 247-2754",
     "p": "(701) 247-2463",
@@ -509,10 +571,12 @@
     "s": "ND",
     "z": "58344-7410",
     "j": "Nelson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5000,
+    "i": 2391,
     "n": "Oliver County Auditor",
     "f": "(701) 794-3476",
     "p": "(701) 794-8721",
@@ -525,10 +589,12 @@
     "s": "ND",
     "z": "58530-0188",
     "j": "Oliver",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5190,
+    "i": 2392,
     "n": "Pembina County Auditor",
     "f": "(701) 265-4876",
     "p": "(701) 265-4231",
@@ -541,10 +607,12 @@
     "s": "ND",
     "z": "58220-4100",
     "j": "Pembina",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5266,
+    "i": 2393,
     "n": "Pierce County Auditor",
     "f": "(701) 776-6942",
     "p": "(701) 776-5225 x2100",
@@ -557,10 +625,12 @@
     "s": "ND",
     "z": "58368-1897",
     "j": "Pierce",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5536,
+    "i": 2394,
     "n": "Ramsey County Auditor",
     "f": "(701) 662-7049",
     "p": "(701) 662-7025",
@@ -573,10 +643,12 @@
     "s": "ND",
     "z": "58301-2490",
     "j": "Ramsey",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5554,
+    "i": 2395,
     "n": "Ransom County Auditor",
     "f": "(701) 683-5827",
     "p": "(701) 683-6113",
@@ -589,10 +661,12 @@
     "s": "ND",
     "z": "58054-0668",
     "j": "Ransom",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5604,
+    "i": 2396,
     "n": "Renville County Auditor",
     "f": "(701) 756-7158",
     "p": "(701) 756-6301",
@@ -605,10 +679,12 @@
     "s": "ND",
     "z": "58761-0068",
     "j": "Renville",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5638,
+    "i": 2397,
     "n": "Richland County Auditor",
     "f": "(701) 642-7701",
     "p": "(701) 642-7700",
@@ -621,10 +697,12 @@
     "s": "ND",
     "z": "58075-4400",
     "j": "Richland",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5752,
+    "i": 2398,
     "n": "Rolette County Auditor",
     "f": "(701) 477-6339",
     "p": "(701) 477-5665",
@@ -637,10 +715,12 @@
     "s": "ND",
     "z": "58367-0939",
     "j": "Rolette",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5919,
+    "i": 2399,
     "n": "Sargent County Auditor",
     "f": "(701) 724-6244",
     "p": "(701) 724-6241 x101",
@@ -653,10 +733,12 @@
     "s": "ND",
     "z": "58032-4149",
     "j": "Sargent",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6069,
+    "i": 2400,
     "n": "Sheridan County Auditor",
     "f": "(701) 363-2953",
     "p": "(701) 363-2205",
@@ -669,10 +751,12 @@
     "s": "ND",
     "z": "58463-0439",
     "j": "Sheridan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6132,
+    "i": 2401,
     "n": "Sioux County Auditor",
     "f": "(701) 854-3854",
     "p": "(701) 854-3481",
@@ -685,10 +769,12 @@
     "s": "ND",
     "z": "58538-0529",
     "j": "Sioux",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6145,
+    "i": 2402,
     "n": "Slope County Auditor",
     "f": "(701) 879-6278",
     "p": "(701) 879-6276",
@@ -701,10 +787,12 @@
     "s": "ND",
     "z": "58620-0449",
     "j": "Slope",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6332,
+    "i": 2403,
     "n": "Stark County Auditor",
     "f": "(701) 456-7634",
     "p": "(701) 456-7630",
@@ -717,15 +805,17 @@
     "s": "ND",
     "z": "58602-0130",
     "j": "Stark",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6343,
+    "i": 2404,
     "n": "Steele County Auditor",
     "f": "(701) 524-1715",
     "p": "(701) 524-2110",
     "e": "ewigen@nd.gov",
-    "d": "2020-02-06T04:21:48",
+    "d": "2019-07-22T15:47:37",
     "a1": "P.O. Box 275",
     "a2": "",
     "a3": "",
@@ -733,10 +823,12 @@
     "s": "ND",
     "z": "58230-0275",
     "j": "Steele",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6416,
+    "i": 2405,
     "n": "Stutsman County Auditor",
     "f": "(701) 251-6310",
     "p": "(701) 252-9035",
@@ -749,10 +841,12 @@
     "s": "ND",
     "z": "58401-4298",
     "j": "Stutsman",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6630,
+    "i": 2406,
     "n": "Towner County Auditor",
     "f": "(701) 968-4342",
     "p": "(701) 968-4340 x1",
@@ -765,10 +859,12 @@
     "s": "ND",
     "z": "58324-0603",
     "j": "Towner",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6636,
+    "i": 2407,
     "n": "Traill County Auditor",
     "f": "(701) 636-5418",
     "p": "(701) 636-4458",
@@ -781,10 +877,12 @@
     "s": "ND",
     "z": "58045-0429",
     "j": "Traill",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6862,
+    "i": 2408,
     "n": "Walsh County Audior",
     "f": "(701) 352-3340",
     "p": "(701) 352-2851",
@@ -797,10 +895,12 @@
     "s": "ND",
     "z": "58237-1535",
     "j": "Walsh",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6873,
+    "i": 2409,
     "n": "Ward County Auditor",
     "f": "(701) 857-6424",
     "p": "(701) 857-6420",
@@ -813,10 +913,12 @@
     "s": "ND",
     "z": "58702-5005",
     "j": "Ward",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7068,
+    "i": 2410,
     "n": "Wells County Auditor",
     "f": "(701) 547-3719",
     "p": "(701) 547-3521",
@@ -829,10 +931,12 @@
     "s": "ND",
     "z": "58438-0037",
     "j": "Wells",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7233,
+    "i": 2411,
     "n": "Williams County Auditor",
     "f": "(701) 577-4510",
     "p": "(701) 577-4500",
@@ -845,6 +949,8 @@
     "s": "ND",
     "z": "58802-2047",
     "j": "Williams",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

@@ -1,6 +1,6 @@
 [
   {
-    "i": 96,
+    "i": 8701,
     "n": "Maine Division of Elections",
     "f": "(207) 287-5428",
     "p": "(207) 624-7650",
@@ -13,6 +13,8 @@
     "s": "ME",
     "z": "04333-0101",
     "j": "All",
-    "t": "All"
+    "t": "All",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

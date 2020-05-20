@@ -1,6 +1,6 @@
 [
   {
-    "i": 1047,
+    "i": 2795,
     "n": "Carson City County Clerk",
     "f": "(775) 887-2146",
     "p": "(775) 887-2087",
@@ -13,10 +13,12 @@
     "s": "NV",
     "z": "89701",
     "j": "Carson City",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1266,
+    "i": 2796,
     "n": "Churchill County Clerk",
     "f": "(775) 423-7069",
     "p": "(775) 423-6028",
@@ -29,10 +31,12 @@
     "s": "NV",
     "z": "89406",
     "j": "Churchill",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1296,
+    "i": 2797,
     "n": "Clark County Registrar of Voters",
     "f": "(702) 455-2831",
     "p": "(702) 455-8683",
@@ -45,10 +49,12 @@
     "s": "NV",
     "z": "89127",
     "j": "Clark",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1905,
+    "i": 2798,
     "n": "Douglas County Clerk",
     "f": "(775) 783-6060",
     "p": "(775) 783-6095",
@@ -61,10 +67,12 @@
     "s": "NV",
     "z": "89423",
     "j": "Douglas",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2097,
+    "i": 2799,
     "n": "Elko County Clerk",
     "f": "(775) 753-4610",
     "p": "(775) 753-4600",
@@ -77,10 +85,12 @@
     "s": "NV",
     "z": "89801",
     "j": "Elko",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2167,
+    "i": 2800,
     "n": "Esmeralda County Clerk",
     "f": "(775) 485-6376",
     "p": "(775) 485-6309",
@@ -93,10 +103,12 @@
     "s": "NV",
     "z": "89013",
     "j": "Esmeralda",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2181,
+    "i": 2801,
     "n": "Eureka County Clerk",
     "f": "(775) 237-5614",
     "p": "(775) 237-5263",
@@ -109,10 +121,12 @@
     "s": "NV",
     "z": "89316",
     "j": "Eureka",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3221,
+    "i": 2802,
     "n": "Humboldt County Clerk",
     "f": "(775) 623-6309",
     "p": "(775) 623-6343",
@@ -125,10 +139,12 @@
     "s": "NV",
     "z": "89445",
     "j": "Humboldt",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3692,
+    "i": 2803,
     "n": "Lander County Clerk",
     "f": "(775) 635-0394",
     "p": "(775) 635-5738",
@@ -141,10 +157,12 @@
     "s": "NV",
     "z": "89820",
     "j": "Lander",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3861,
+    "i": 2804,
     "n": "Lincoln County Clerk",
     "f": "(775) 962-5180",
     "p": "775-962-8038",
@@ -157,10 +175,12 @@
     "s": "NV",
     "z": "89043",
     "j": "Lincoln",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4042,
+    "i": 2805,
     "n": "Lyon County Clerk",
     "f": "(775) 463-5305",
     "p": "(775) 463-6501",
@@ -173,10 +193,12 @@
     "s": "NV",
     "z": "89447",
     "j": "Lyon",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4485,
+    "i": 2806,
     "n": "Mineral County Clerk",
     "f": "(775) 945-0706",
     "p": "(775) 945-2446",
@@ -189,10 +211,12 @@
     "s": "NV",
     "z": "89415",
     "j": "Mineral",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4940,
+    "i": 2807,
     "n": "Nye County Clerk",
     "f": "(775) 482-8133",
     "p": "(775) 482-8127",
@@ -205,10 +229,12 @@
     "s": "NV",
     "z": "89049",
     "j": "Nye",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5230,
+    "i": 2808,
     "n": "Pershing County Clerk",
     "f": "(775) 273-3015",
     "p": "(775) 273-2208",
@@ -221,10 +247,12 @@
     "s": "NV",
     "z": "89419",
     "j": "Pershing",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6392,
+    "i": 2809,
     "n": "Storey County Clerk",
     "f": "(775) 847-0921",
     "p": "(775) 847-0969",
@@ -237,10 +265,12 @@
     "s": "NV",
     "z": "89440",
     "j": "Storey",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6960,
+    "i": 2810,
     "n": "Washoe Registrar of Voters",
     "f": "(775) 328-3747",
     "p": "(775) 328-3670",
@@ -253,10 +283,12 @@
     "s": "NV",
     "z": "89512",
     "j": "Washoe",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7186,
+    "i": 2811,
     "n": "White Pine County Clerk",
     "f": "(775) 289-2544",
     "p": "(775) 293-6509",
@@ -269,6 +301,8 @@
     "s": "NV",
     "z": "89301",
     "j": "White Pine",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

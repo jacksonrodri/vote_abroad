@@ -1,6 +1,6 @@
 [
   {
-    "i": 18,
+    "i": 219,
     "n": "Adams County Clerk and Recorder",
     "f": "720-523-6266",
     "p": "720-523-6500",
@@ -13,10 +13,12 @@
     "s": "CO",
     "z": "80601",
     "j": "Adams",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 60,
+    "i": 220,
     "n": "Alamosa County Clerk and Recorder",
     "f": "719-589-6118",
     "p": "719-589-6681",
@@ -29,10 +31,12 @@
     "s": "CO",
     "z": "81101",
     "j": "Alamosa",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 202,
+    "i": 221,
     "n": "Arapahoe County Clerk and Recorder",
     "f": "303-795-4712",
     "p": "303-734-5346",
@@ -45,10 +49,12 @@
     "s": "CO",
     "z": "80120",
     "j": "Arapahoe",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 211,
+    "i": 222,
     "n": "Archuleta County Clerk and Recorder",
     "f": "970-264-8562",
     "p": "970-264-8331",
@@ -61,10 +67,12 @@
     "s": "CO",
     "z": "81147",
     "j": "Archuleta",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 317,
+    "i": 223,
     "n": "Baca County Clerk and Recorder",
     "f": "719-523-4881",
     "p": "719-523-4372",
@@ -77,10 +85,12 @@
     "s": "CO",
     "z": "81073",
     "j": "Baca",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 505,
+    "i": 224,
     "n": "Bent County Clerk and Recorder",
     "f": "719-456-0375",
     "p": "719-456-2009",
@@ -93,10 +103,12 @@
     "s": "CO",
     "z": "81054",
     "j": "Bent",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 688,
+    "i": 225,
     "n": "Boulder County Clerk and Recorder, Elections Division",
     "f": "303-413-7728",
     "p": "303-413-7796",
@@ -109,10 +121,12 @@
     "s": "CO",
     "z": "80301",
     "j": "Boulder",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 812,
+    "i": 226,
     "n": "Broomfield County Clerk and Recorder",
     "f": "303-410-3815",
     "p": "303-464-5874",
@@ -125,10 +139,12 @@
     "s": "CO",
     "z": "80020",
     "j": "Broomfield",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1134,
+    "i": 227,
     "n": "Chaffee County Clerk and Recorder",
     "f": "719-539-8588",
     "p": "719-530-5604",
@@ -141,10 +157,12 @@
     "s": "CO",
     "z": "81201",
     "j": "Chaffee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1228,
+    "i": 228,
     "n": "Cheyenne County Clerk and Recorder",
     "f": "719-767-8730",
     "p": "719-767-5685",
@@ -157,10 +175,12 @@
     "s": "CO",
     "z": "80810",
     "j": "Cheyenne",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1340,
+    "i": 229,
     "n": "Clear Creek County Clerk and Recorder",
     "f": "303-679-2416",
     "p": "303-679-2339",
@@ -173,10 +193,12 @@
     "s": "CO",
     "z": "80444",
     "j": "Clear Creek",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1493,
+    "i": 230,
     "n": "Conejos County Clerk and Recorder",
     "f": "719-376-5997",
     "p": "719-376-5422",
@@ -189,10 +211,12 @@
     "s": "CO",
     "z": "81129",
     "j": "Conejos",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1533,
+    "i": 231,
     "n": "Costilla County Clerk and Recorder",
     "f": "800-934-7128",
     "p": "719-937-7671",
@@ -205,10 +229,12 @@
     "s": "CO",
     "z": "81152",
     "j": "Costilla",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1595,
+    "i": 232,
     "n": "Crowley County Clerk and Recorder",
     "f": "719-267-4608",
     "p": "719-267-5225",
@@ -221,10 +247,12 @@
     "s": "CO",
     "z": "81063",
     "j": "Crowley",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1629,
+    "i": 233,
     "n": "Custer County Clerk and Recorder",
     "f": "719-783-2885",
     "p": "719-783-2441",
@@ -237,10 +265,12 @@
     "s": "CO",
     "z": "81252",
     "j": "Custer",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1827,
+    "i": 234,
     "n": "Delta County Clerk and Recorder",
     "f": "970-874-2161",
     "p": "970-874-5903",
@@ -253,10 +283,12 @@
     "s": "CO",
     "z": "81416",
     "j": "Delta",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1839,
+    "i": 235,
     "n": "Denver County Clerk and Recorder, Elections Division",
     "f": "720-913-8607",
     "p": "720-865-4945",
@@ -269,10 +301,12 @@
     "s": "CO",
     "z": "80204",
     "j": "Denver",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1885,
+    "i": 236,
     "n": "Dolores County Clerk and Recorder",
     "f": "970-677-4144",
     "p": "970-677-2381",
@@ -285,10 +319,12 @@
     "s": "CO",
     "z": "81324-0058",
     "j": "Dolores",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1898,
+    "i": 237,
     "n": "Douglas County Clerk and Recorder",
     "f": "303-814-3321",
     "p": "303-814-4388",
@@ -301,10 +337,12 @@
     "s": "CO",
     "z": "80109",
     "j": "Douglas",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1970,
+    "i": 238,
     "n": "Eagle County Clerk and Recorder",
     "f": "800-225-6136",
     "p": "970-328-8716",
@@ -317,10 +355,12 @@
     "s": "CO",
     "z": "81631",
     "j": "Eagle",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2069,
+    "i": 239,
     "n": "El Paso County Clerk and Recorder",
     "f": "719-520-7327",
     "p": "719-520-7094",
@@ -333,10 +373,12 @@
     "s": "CO",
     "z": "80907",
     "j": "El Paso",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2076,
+    "i": 240,
     "n": "Elbert County Clerk and Recorder",
     "f": "303-621-3212",
     "p": "303-621-3127",
@@ -349,15 +391,17 @@
     "s": "CO",
     "z": "80117",
     "j": "Elbert",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2429,
+    "i": 241,
     "n": "Fremont County Clerk and Recorder",
     "f": "719-276-7338",
     "p": "719-276-7340",
     "e": "elections@fremontco.com",
-    "d": "2018-10-25 09:42:51",
+    "d": "2017-10-13T13:15:41",
     "a1": "615 Macon Ave, Rm 102",
     "a2": "",
     "a3": "",
@@ -365,10 +409,12 @@
     "s": "CO",
     "z": "81212-3381",
     "j": "Fremont",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2489,
+    "i": 242,
     "n": "Garfield County Clerk and Recorder",
     "f": "970-947-1078",
     "p": "970-384-3700 x2",
@@ -381,10 +427,12 @@
     "s": "CO",
     "z": "81601",
     "j": "Garfield",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2568,
+    "i": 243,
     "n": "Gilpin County Clerk and Recorder",
     "f": "303-565-1797",
     "p": "303-582-5321",
@@ -397,10 +445,12 @@
     "s": "CO",
     "z": "80427",
     "j": "Gilpin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2643,
+    "i": 244,
     "n": "Grand County Clerk and Recorder",
     "f": "970-725-0100",
     "p": "970-725-3065",
@@ -413,10 +463,12 @@
     "s": "CO",
     "z": "80451-0120",
     "j": "Grand",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2815,
+    "i": 245,
     "n": "Gunnison County Clerk and Recorder",
     "f": "970-642-4675",
     "p": "970-641-7641",
@@ -429,10 +481,12 @@
     "s": "CO",
     "z": "81230",
     "j": "Gunnison",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3103,
+    "i": 246,
     "n": "Hinsdale County Clerk and Recorder",
     "f": "970-944-2202",
     "p": "970-944-2225 x2",
@@ -445,10 +499,12 @@
     "s": "CO",
     "z": "81235",
     "j": "Hinsdale",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3211,
+    "i": 247,
     "n": "Huerfano County Clerk and Recorder",
     "f": "719-738-2060",
     "p": "719-738-2389",
@@ -461,10 +517,12 @@
     "s": "CO",
     "z": "81089",
     "j": "Huerfano",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3322,
+    "i": 248,
     "n": "Jackson County Clerk and Recorder",
     "f": "970-723-3214",
     "p": "970-723-4334",
@@ -477,10 +535,12 @@
     "s": "CO",
     "z": "80480",
     "j": "Jackson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3374,
+    "i": 249,
     "n": "Jefferson County Clerk and Recorder",
     "f": "303-215-9307",
     "p": "303-271-8198",
@@ -493,10 +553,12 @@
     "s": "CO",
     "z": "80401",
     "j": "Jefferson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3554,
+    "i": 250,
     "n": "Kiowa County Clerk and Recorder",
     "f": "719-438-5327",
     "p": "719-438-5421",
@@ -509,10 +571,12 @@
     "s": "CO",
     "z": "81036",
     "j": "Kiowa",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3558,
+    "i": 251,
     "n": "Kit Carson County Clerk and Recorder",
     "f": "719-346-8721",
     "p": "719-346-8638 x233",
@@ -525,10 +589,12 @@
     "s": "CO",
     "z": "80807",
     "j": "Kit Carson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3601,
+    "i": 252,
     "n": "La Plata County Clerk and Recorder",
     "f": "970-259-5413",
     "p": "970-382-6297",
@@ -541,10 +607,12 @@
     "s": "CO",
     "z": "81303",
     "j": "La Plata",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3633,
+    "i": 253,
     "n": "Lake County Clerk and Recorder",
     "f": "719-486-3972",
     "p": "719-486-1410",
@@ -557,10 +625,12 @@
     "s": "CO",
     "z": "80461",
     "j": "Lake",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3708,
+    "i": 254,
     "n": "Larimer County Clerk and Recorder",
     "f": "970-498-7845",
     "p": "970-498-7820",
@@ -573,10 +643,12 @@
     "s": "CO",
     "z": "80521",
     "j": "Larimer",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3712,
+    "i": 255,
     "n": "Las Animas County Clerk and Recorder",
     "f": "719-845-2573",
     "p": "719-846-3314",
@@ -589,10 +661,12 @@
     "s": "CO",
     "z": "81082-0115",
     "j": "Las Animas",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3848,
+    "i": 256,
     "n": "Lincoln County Clerk and Recorder",
     "f": "719-743-2524",
     "p": "719-743-2444",
@@ -605,10 +679,12 @@
     "s": "CO",
     "z": "80821",
     "j": "Lincoln",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3945,
+    "i": 257,
     "n": "Logan County Clerk and Recorder",
     "f": "970-522-2063",
     "p": "970-522-1544",
@@ -621,10 +697,12 @@
     "s": "CO",
     "z": "80751",
     "j": "Logan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4403,
+    "i": 258,
     "n": "Mesa County Clerk and Recorder",
     "f": "970-255-5039",
     "p": "970-256-1582",
@@ -637,10 +715,12 @@
     "s": "CO",
     "z": "81501",
     "j": "Mesa",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4483,
+    "i": 259,
     "n": "Mineral County Clerk and Recorder",
     "f": "719-658-0358",
     "p": "719-658-2440",
@@ -653,10 +733,12 @@
     "s": "CO",
     "z": "81130-0070",
     "j": "Mineral",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4511,
+    "i": 260,
     "n": "Moffat County Clerk and Recorder",
     "f": "970-826-3413",
     "p": "970-824-9120",
@@ -669,15 +751,17 @@
     "s": "CO",
     "z": "81625",
     "j": "Moffat",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4566,
+    "i": 261,
     "n": "Montezuma County Clerk and Recorder",
     "f": "970-564-0215",
     "p": "970-564-2734",
     "e": "mwarren@co.montezuma.co.us",
-    "d": "2020-02-06T03:46:28",
+    "d": "2018-10-18T08:43:41",
     "a1": "140 W Main St, Ste 1",
     "a2": "",
     "a3": "",
@@ -685,10 +769,12 @@
     "s": "CO",
     "z": "81321",
     "j": "Montezuma",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4596,
+    "i": 262,
     "n": "Montrose County Clerk and Recorder",
     "f": "970-249-0757",
     "p": "970-252-4590",
@@ -701,10 +787,12 @@
     "s": "CO",
     "z": "81401",
     "j": "Montrose",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4613,
+    "i": 263,
     "n": "Morgan County Clerk and Recorder",
     "f": "970-542-3553",
     "p": "970-542-3521 x1460",
@@ -717,10 +805,12 @@
     "s": "CO",
     "z": "80701",
     "j": "Morgan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5082,
+    "i": 264,
     "n": "Otero County Clerk and Recorder",
     "f": "719-383-3026",
     "p": "719-383-3024",
@@ -733,10 +823,12 @@
     "s": "CO",
     "z": "81050",
     "j": "Otero",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5105,
+    "i": 265,
     "n": "Ouray County Clerk and Recorder",
     "f": "970-325-0452",
     "p": "970-325-4961",
@@ -749,10 +841,12 @@
     "s": "CO",
     "z": "81427",
     "j": "Ouray",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5146,
+    "i": 266,
     "n": "Park County Clerk and Recorder",
     "f": "719-836-4348",
     "p": "719-836-4223",
@@ -765,10 +859,12 @@
     "s": "CO",
     "z": "80440",
     "j": "Park",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5252,
+    "i": 267,
     "n": "Phillips County Clerk and Recorder",
     "f": "970-854-4745",
     "p": "970-854-3131",
@@ -781,10 +877,12 @@
     "s": "CO",
     "z": "80734",
     "j": "Phillips",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5302,
+    "i": 268,
     "n": "Pitkin County Clerk and Recorder",
     "f": "970-445-3007",
     "p": "970-429-2732",
@@ -797,10 +895,12 @@
     "s": "CO",
     "z": "81611",
     "j": "Pitkin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5489,
+    "i": 269,
     "n": "Prowers County Clerk and Recorder",
     "f": "719-336-5306",
     "p": "719-336-8011",
@@ -813,10 +913,12 @@
     "s": "CO",
     "z": "81052",
     "j": "Prowers",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5490,
+    "i": 270,
     "n": "Pueblo County Clerk and Recorder",
     "f": "719-543-1027",
     "p": "719-583-6624",
@@ -829,10 +931,12 @@
     "s": "CO",
     "z": "81005",
     "j": "Pueblo",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5680,
+    "i": 271,
     "n": "Rio Blanco County Clerk and Recorder",
     "f": "970-878-3587",
     "p": "970-878-9460",
@@ -845,10 +949,12 @@
     "s": "CO",
     "z": "81641",
     "j": "Rio Blanco",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5681,
+    "i": 272,
     "n": "Rio Grande County Clerk and Recorder",
     "f": "719-657-2621",
     "p": "719-657-3334",
@@ -861,10 +967,12 @@
     "s": "CO",
     "z": "81132",
     "j": "Rio Grande",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5785,
+    "i": 273,
     "n": "Routt County Clerk and Recorder",
     "f": "970-870-5443",
     "p": "970-870-5558",
@@ -877,10 +985,12 @@
     "s": "CO",
     "z": "80487",
     "j": "Routt",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5844,
+    "i": 274,
     "n": "Saguache County Clerk and Recorder",
     "f": "719-655-2730",
     "p": "719-655-2512",
@@ -893,10 +1003,12 @@
     "s": "CO",
     "z": "81149",
     "j": "Saguache",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5877,
+    "i": 275,
     "n": "San Juan County Clerk and Recorder",
     "f": "970-387-8043",
     "p": "970-387-5671",
@@ -909,10 +1021,12 @@
     "s": "CO",
     "z": "81433",
     "j": "San Juan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5883,
+    "i": 276,
     "n": "San Miguel County Clerk and Recorder",
     "f": "970-728-4808",
     "p": "970-728-3954",
@@ -925,10 +1039,12 @@
     "s": "CO",
     "z": "81435-0548",
     "j": "San Miguel",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5989,
+    "i": 277,
     "n": "Sedgwick County Clerk and Recorder",
     "f": "970-474-0954",
     "p": "970-474-3346",
@@ -941,10 +1057,12 @@
     "s": "CO",
     "z": "80737",
     "j": "Sedgwick",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6441,
+    "i": 278,
     "n": "Summit County Clerk and Recorder",
     "f": "970-453-3502",
     "p": "970-453-3471",
@@ -957,10 +1075,12 @@
     "s": "CO",
     "z": "80424",
     "j": "Summit",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6545,
+    "i": 279,
     "n": "Teller County Clerk and Recorder",
     "f": "719-686-8030",
     "p": "719-686-8036",
@@ -973,10 +1093,12 @@
     "s": "CO",
     "z": "80813",
     "j": "Teller",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6919,
+    "i": 280,
     "n": "Washington County Clerk and Recorder",
     "f": "970-345-6607",
     "p": "970-345-6565",
@@ -989,10 +1111,12 @@
     "s": "CO",
     "z": "80720",
     "j": "Washington",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7061,
+    "i": 281,
     "n": "Weld County Clerk and Recorder",
     "f": "970-304-6566",
     "p": "970-304-6525",
@@ -1005,10 +1129,12 @@
     "s": "CO",
     "z": "80631",
     "j": "Weld",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7430,
+    "i": 282,
     "n": "Yuma County Clerk and Recorder",
     "f": "970-332-5919",
     "p": "970-332-5809",
@@ -1021,6 +1147,8 @@
     "s": "CO",
     "z": "80758",
     "j": "Yuma",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

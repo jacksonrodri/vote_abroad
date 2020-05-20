@@ -1,6 +1,6 @@
 [
   {
-    "i": 37,
+    "i": 3808,
     "n": "Addison Town Clerk",
     "f": "(802) 759-2233",
     "p": "(802) 759-2020",
@@ -13,10 +13,12 @@
     "s": "VT",
     "z": "05491",
     "j": "Addison",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 62,
+    "i": 3809,
     "n": "Albany Town Clerk",
     "f": "",
     "p": "(802) 755-6100",
@@ -29,10 +31,12 @@
     "s": "VT",
     "z": "05820",
     "j": "Albany",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 76,
+    "i": 3810,
     "n": "Alburgh Town Clerk",
     "f": "(802) 796-3939",
     "p": "(802) 796-3468",
@@ -45,10 +49,12 @@
     "s": "VT",
     "z": "05440",
     "j": "Alburgh",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 169,
+    "i": 3811,
     "n": "Andover Town Clerk",
     "f": "(802) 875-6647",
     "p": "(802) 875-2765",
@@ -61,10 +67,12 @@
     "s": "VT",
     "z": "05143",
     "j": "Andover",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 224,
+    "i": 3812,
     "n": "Arlington Town Clerk",
     "f": "(802) 375-2332",
     "p": "(802) 375-2332",
@@ -77,10 +85,12 @@
     "s": "VT",
     "z": "05250",
     "j": "Arlington",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 266,
+    "i": 3813,
     "n": "Athens Town Clerk",
     "f": "(802) 869-3370",
     "p": "(802) 869-3370",
@@ -93,10 +103,12 @@
     "s": "VT",
     "z": "05143",
     "j": "Athens",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 330,
+    "i": 3814,
     "n": "Bakersfield Town Clerk",
     "f": "(802) 827-3106",
     "p": "(802) 827-4495",
@@ -109,10 +121,12 @@
     "s": "VT",
     "z": "05441",
     "j": "Bakersfield",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 340,
+    "i": 3815,
     "n": "Baltimore Town Clerk",
     "f": "(802) 263-5274",
     "p": "(802) 263-5274",
@@ -125,10 +139,12 @@
     "s": "VT",
     "z": "05143",
     "j": "Baltimore",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 365,
+    "i": 3816,
     "n": "Barnard Town Clerk",
     "f": "",
     "p": "(802) 234-9211",
@@ -141,10 +157,12 @@
     "s": "VT",
     "z": "05031",
     "j": "Barnard",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 368,
+    "i": 3817,
     "n": "Barnet Town Clerk",
     "f": "(802) 633-4315",
     "p": "(802) 633-2256",
@@ -157,10 +175,12 @@
     "s": "VT",
     "z": "05821",
     "j": "Barnet",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 374,
+    "i": 3818,
     "n": "Barre City Clerk",
     "f": "(802) 476-0264",
     "p": "(802) 476-0242",
@@ -173,10 +193,12 @@
     "s": "VT",
     "z": "05641",
     "j": "Barre City",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 375,
+    "i": 3819,
     "n": "Barre Town Clerk",
     "f": "(802) 479-9332",
     "p": "(802) 479-9391",
@@ -189,10 +211,12 @@
     "s": "VT",
     "z": "05678",
     "j": "Barre Town",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 393,
+    "i": 3820,
     "n": "Barton Town Clerk",
     "f": "(802) 525-8856",
     "p": "(802) 525-6222",
@@ -205,10 +229,12 @@
     "s": "VT",
     "z": "05822",
     "j": "Barton",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 491,
+    "i": 3821,
     "n": "Belvidere Town Clerk",
     "f": "(802) 644-6621",
     "p": "(802) 644-6621",
@@ -221,10 +247,12 @@
     "s": "VT",
     "z": "05442",
     "j": "Belvidere",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 499,
+    "i": 3822,
     "n": "Bennington Town Clerk",
     "f": "(802) 442-1068",
     "p": "(802) 442-1043",
@@ -237,10 +265,12 @@
     "s": "VT",
     "z": "05201",
     "j": "Bennington",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 504,
+    "i": 3823,
     "n": "Benson Town Clerk",
     "f": "(802) 537-2612",
     "p": "(802) 537-2611",
@@ -253,10 +283,12 @@
     "s": "VT",
     "z": "05731",
     "j": "Benson",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 534,
+    "i": 3824,
     "n": "Berkshire Town Clerk",
     "f": "",
     "p": "(802) 933-2335",
@@ -269,10 +301,12 @@
     "s": "VT",
     "z": "05450",
     "j": "Berkshire",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 536,
+    "i": 3825,
     "n": "Berlin Town Clerk",
     "f": "(802) 229-9530",
     "p": "(802) 229-9298",
@@ -285,10 +319,12 @@
     "s": "VT",
     "z": "05602",
     "j": "Berlin",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 559,
+    "i": 3826,
     "n": "Bethel Town Clerk",
     "f": "(802) 234-6840",
     "p": "(802) 234-9722",
@@ -301,10 +337,12 @@
     "s": "VT",
     "z": "05032",
     "j": "Bethel",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 634,
+    "i": 3827,
     "n": "Bloomfield Town Clerk",
     "f": "(802) 962-5191",
     "p": "(802) 962-5191",
@@ -317,10 +355,12 @@
     "s": "VT",
     "z": "03590",
     "j": "Bloomfield",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 662,
+    "i": 3828,
     "n": "Bolton Town Clerk",
     "f": "(802) 434-6404",
     "p": "(802) 434-5075",
@@ -333,10 +373,12 @@
     "s": "VT",
     "z": "05676",
     "j": "Bolton",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 717,
+    "i": 3829,
     "n": "Bradford Town Clerk",
     "f": "(802) 222-3520",
     "p": "(802) 222-4727",
@@ -349,10 +391,12 @@
     "s": "VT",
     "z": "05033",
     "j": "Bradford",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 725,
+    "i": 3830,
     "n": "Braintree Town Clerk",
     "f": "(802) 728-9742",
     "p": "(802) 728-9787",
@@ -365,10 +409,12 @@
     "s": "VT",
     "z": "05060",
     "j": "Braintree",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 730,
+    "i": 3831,
     "n": "Brandon Town Clerk",
     "f": "(802) 247-5481",
     "p": "(802) 247-3635",
@@ -381,10 +427,12 @@
     "s": "VT",
     "z": "05733",
     "j": "Brandon",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 736,
+    "i": 3832,
     "n": "Brattleboro Town Clerk",
     "f": "(802) 257-2312",
     "p": "(802) 251-8157",
@@ -397,10 +445,12 @@
     "s": "VT",
     "z": "05301",
     "j": "Brattleboro",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 759,
+    "i": 3833,
     "n": "Bridgewater Town Clerk",
     "f": "(802) 672-5395",
     "p": "(802) 672-3334",
@@ -413,10 +463,12 @@
     "s": "VT",
     "z": "05034",
     "j": "Bridgewater",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 764,
+    "i": 3834,
     "n": "Bridport Town Clerk",
     "f": "(802) 758-2483",
     "p": "(802) 758-2483",
@@ -429,10 +481,12 @@
     "s": "VT",
     "z": "05734",
     "j": "Bridport",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 766,
+    "i": 3835,
     "n": "Brighton Town Clerk",
     "f": "(802) 723-4405",
     "p": "(802) 723-4405",
@@ -445,10 +499,12 @@
     "s": "VT",
     "z": "05846",
     "j": "Brighton",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 779,
+    "i": 3836,
     "n": "Bristol Town Clerk",
     "f": "(802) 453-5188",
     "p": "(802) 453-2410",
@@ -461,10 +517,12 @@
     "s": "VT",
     "z": "05443",
     "j": "Bristol",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 793,
+    "i": 3837,
     "n": "Brookfield Town Clerk",
     "f": "(802) 276-3926",
     "p": "(802) 276-3352",
@@ -477,10 +535,12 @@
     "s": "VT",
     "z": "05036",
     "j": "Brookfield",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 801,
+    "i": 3838,
     "n": "Brookline Town Clerk",
     "f": "(802) 365-4092",
     "p": "(802) 365-4648",
@@ -493,10 +553,12 @@
     "s": "VT",
     "z": "05345",
     "j": "Brookline",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 828,
+    "i": 3839,
     "n": "Brownington Town Clerk",
     "f": "(802) 754-8401",
     "p": "(802) 754-8401",
@@ -509,10 +571,12 @@
     "s": "VT",
     "z": "05860",
     "j": "Brownington",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 839,
+    "i": 3840,
     "n": "Brunswick Town Clerk",
     "f": "(802) 962-5522",
     "p": "(802) 962-5514",
@@ -525,10 +589,12 @@
     "s": "VT",
     "z": "05905",
     "j": "Brunswick",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 874,
+    "i": 3841,
     "n": "Burke Town Clerk",
     "f": "(802) 467-8623",
     "p": "(802) 467-3717",
@@ -541,10 +607,12 @@
     "s": "VT",
     "z": "05871",
     "j": "Burke",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 881,
+    "i": 3842,
     "n": "Burlington City Clerk",
     "f": "(802) 865-7014",
     "p": "(802) 865-7000",
@@ -557,10 +625,12 @@
     "s": "VT",
     "z": "05401",
     "j": "Burlington",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 925,
+    "i": 3843,
     "n": "Cabot Town Clerk",
     "f": "(802) 563-2423",
     "p": "(802) 563-2279",
@@ -573,10 +643,12 @@
     "s": "VT",
     "z": "05647",
     "j": "Cabot",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 933,
+    "i": 3844,
     "n": "Calais Town Clerk",
     "f": "",
     "p": "(802) 456-8720",
@@ -589,10 +661,12 @@
     "s": "VT",
     "z": "05650",
     "j": "Calais",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 973,
+    "i": 3845,
     "n": "Cambridge Town Clerk",
     "f": "(802) 644-8348",
     "p": "(802) 644-2251",
@@ -605,10 +679,12 @@
     "s": "VT",
     "z": "05464",
     "j": "Cambridge",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 999,
+    "i": 3846,
     "n": "Canaan Town Clerk",
     "f": "(802) 266-8253",
     "p": "(802) 266-3370",
@@ -621,10 +697,12 @@
     "s": "VT",
     "z": "05903",
     "j": "Canaan",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1089,
+    "i": 3847,
     "n": "Castleton Town Clerk",
     "f": "(802) 468-5482",
     "p": "(802) 468-5319 x201",
@@ -637,10 +715,12 @@
     "s": "VT",
     "z": "05735",
     "j": "Castleton",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1104,
+    "i": 3848,
     "n": "Cavendish Town Clerk",
     "f": "(802) 226-7290",
     "p": "(802) 226-7291",
@@ -653,10 +733,12 @@
     "s": "VT",
     "z": "05142",
     "j": "Cavendish",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1150,
+    "i": 3849,
     "n": "Charleston Town Clerk",
     "f": "(802) 895-2714",
     "p": "(802) 895-2814",
@@ -669,10 +751,12 @@
     "s": "VT",
     "z": "05872",
     "j": "Charleston",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1160,
+    "i": 3850,
     "n": "Charlotte Town Clerk",
     "f": "(802) 425-4713",
     "p": "(802) 425-3071",
@@ -685,10 +769,12 @@
     "s": "VT",
     "z": "05445",
     "j": "Charlotte",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1186,
+    "i": 3851,
     "n": "Chelsea Town Clerk",
     "f": "(802) 625-2002",
     "p": "(802) 685-4460",
@@ -701,10 +787,12 @@
     "s": "VT",
     "z": "05038",
     "j": "Chelsea",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1213,
+    "i": 3852,
     "n": "Chester Town Clerk",
     "f": "(802) 875-2237",
     "p": "(802) 875-2173",
@@ -717,10 +805,12 @@
     "s": "VT",
     "z": "05143",
     "j": "Chester",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1254,
+    "i": 3853,
     "n": "Chittenden Town Clerk",
     "f": "(802) 483-2504",
     "p": "(802) 483-6647",
@@ -733,10 +823,12 @@
     "s": "VT",
     "z": "05737",
     "j": "Chittenden",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1286,
+    "i": 3854,
     "n": "Clarendon Town Clerk",
     "f": "",
     "p": "(802) 775-4274",
@@ -749,10 +841,12 @@
     "s": "VT",
     "z": "05759",
     "j": "Clarendon",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1422,
+    "i": 3855,
     "n": "Colchester Town Clerk",
     "f": "(802) 264-5503",
     "p": "(802) 264-5520",
@@ -765,10 +859,12 @@
     "s": "VT",
     "z": "05446",
     "j": "Colchester",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1486,
+    "i": 3856,
     "n": "Concord Town Clerk",
     "f": "(802) 695-2552",
     "p": "(802) 695-2220",
@@ -781,10 +877,12 @@
     "s": "VT",
     "z": "05824",
     "j": "Concord",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1520,
+    "i": 3858,
     "n": "Corinth Town Clerk",
     "f": "(802) 439-9104",
     "p": "(802) 439-5850",
@@ -797,10 +895,12 @@
     "s": "VT",
     "z": "05039",
     "j": "Corinth",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1526,
+    "i": 3859,
     "n": "Cornwall Town Clerk",
     "f": "(802) 462-2606",
     "p": "(802) 462-2775",
@@ -813,10 +913,12 @@
     "s": "VT",
     "z": "05753",
     "j": "Cornwall",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1499,
+    "i": 3857,
     "n": "Coventry Town Clerk",
     "f": "(802) 754-6274",
     "p": "(802) 754-2288",
@@ -829,10 +931,12 @@
     "s": "VT",
     "z": "05825",
     "j": "Coventry",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1553,
+    "i": 3860,
     "n": "Craftsbury Town Clerk",
     "f": "(802) 586-2323",
     "p": "(802) 586-2823",
@@ -845,10 +949,12 @@
     "s": "VT",
     "z": "05826",
     "j": "Craftsbury",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1721,
+    "i": 3861,
     "n": "Danby Town Clerk",
     "f": "(802) 293-5311",
     "p": "(802) 293-5136",
@@ -861,10 +967,12 @@
     "s": "VT",
     "z": "05739",
     "j": "Danby",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1730,
+    "i": 3862,
     "n": "Danville Town Clerk",
     "f": "(802) 684-9606",
     "p": "(802) 684-3352",
@@ -877,10 +985,12 @@
     "s": "VT",
     "z": "05828",
     "j": "Danville",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1843,
+    "i": 3863,
     "n": "Derby Town Clerk",
     "f": "(802) 766-2027",
     "p": "(802) 766-4906",
@@ -893,10 +1003,12 @@
     "s": "VT",
     "z": "05829",
     "j": "Derby",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1895,
+    "i": 3864,
     "n": "Dorset Town Clerk",
     "f": "(802) 362-5156",
     "p": "(802) 362-1178 x2",
@@ -909,10 +1021,12 @@
     "s": "VT",
     "z": "05253",
     "j": "Dorset",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1913,
+    "i": 3865,
     "n": "Dover Town Clerk",
     "f": "(802) 464-8721",
     "p": "(802) 464-5100 x2",
@@ -925,10 +1039,12 @@
     "s": "VT",
     "z": "05356",
     "j": "Dover",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1941,
+    "i": 3866,
     "n": "Dummerston Town Clerk",
     "f": "(802) 257-4671",
     "p": "(802) 257-1496",
@@ -941,10 +1057,12 @@
     "s": "VT",
     "z": "05346",
     "j": "Dummerston",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1966,
+    "i": 3867,
     "n": "Duxbury Town Clerk",
     "f": "(802) 244-5442",
     "p": "(802) 244-6660",
@@ -957,10 +1075,12 @@
     "s": "VT",
     "z": "05676",
     "j": "Duxbury",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1992,
+    "i": 3868,
     "n": "East Haven Town Clerk",
     "f": "",
     "p": "(802) 467-3772",
@@ -973,10 +1093,12 @@
     "s": "VT",
     "z": "05837",
     "j": "East Haven",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1998,
+    "i": 3869,
     "n": "East Montpelier Town Clerk",
     "f": "(802) 223-4467",
     "p": "(802) 223-3313",
@@ -989,10 +1111,12 @@
     "s": "VT",
     "z": "05651",
     "j": "East Montpelier",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2038,
+    "i": 3870,
     "n": "Eden Town Clerk",
     "f": "(802) 635-1724",
     "p": "(802) 635-2528",
@@ -1005,10 +1129,12 @@
     "s": "VT",
     "z": "05653",
     "j": "Eden",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2119,
+    "i": 3871,
     "n": "Elmore Town Clerk",
     "f": "(802) 888-2637",
     "p": "(802) 888-2637",
@@ -1021,10 +1147,12 @@
     "s": "VT",
     "z": "05657",
     "j": "Elmore",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2145,
+    "i": 3872,
     "n": "Enosburgh Town Clerk",
     "f": "(802) 933-4832",
     "p": "(802) 933-4421",
@@ -1037,10 +1165,12 @@
     "s": "VT",
     "z": "05450",
     "j": "Enosburgh",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2171,
+    "i": 3873,
     "n": "Essex Town Clerk",
     "f": "(802) 878-1353",
     "p": "(802) 879-0413",
@@ -1053,10 +1183,12 @@
     "s": "VT",
     "z": "05452",
     "j": "Essex",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2206,
+    "i": 3874,
     "n": "Fair Haven Town Clerk",
     "f": "(802) 265-3176",
     "p": "(802) 265-3610 x4",
@@ -1069,10 +1201,12 @@
     "s": "VT",
     "z": "05743",
     "j": "Fair Haven",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2211,
+    "i": 3875,
     "n": "Fairfax Town Clerk",
     "f": "(802) 849-6276",
     "p": "(802) 849-6111",
@@ -1085,10 +1219,12 @@
     "s": "VT",
     "z": "05454",
     "j": "Fairfax",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2217,
+    "i": 3876,
     "n": "Fairfield Town Clerk",
     "f": "(802) 827-3653",
     "p": "(802) 827-3261",
@@ -1101,10 +1237,12 @@
     "s": "VT",
     "z": "05455",
     "j": "Fairfield",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2224,
+    "i": 3877,
     "n": "Fairlee Town Clerk",
     "f": "(802) 333-9214",
     "p": "(802) 333-4363",
@@ -1117,10 +1255,12 @@
     "s": "VT",
     "z": "05045",
     "j": "Fairlee",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2265,
+    "i": 3878,
     "n": "Fayston Town Clerk",
     "f": "(802) 496-9850",
     "p": "(802) 496-2454",
@@ -1133,10 +1273,12 @@
     "s": "VT",
     "z": "05660",
     "j": "Fayston",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2279,
+    "i": 3879,
     "n": "Ferrisburgh Town Clerk",
     "f": "(802) 877-6757",
     "p": "(802) 877-3429",
@@ -1149,10 +1291,12 @@
     "s": "VT",
     "z": "05456",
     "j": "Ferrisburgh",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2302,
+    "i": 3880,
     "n": "Fletcher Town Clerk",
     "f": "(802) 849-2500",
     "p": "(802) 849-6616",
@@ -1165,10 +1309,12 @@
     "s": "VT",
     "z": "05444",
     "j": "Fletcher",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2391,
+    "i": 3881,
     "n": "Franklin Town Clerk",
     "f": "(802) 285-2181",
     "p": "(802) 285-2101",
@@ -1181,10 +1327,12 @@
     "s": "VT",
     "z": "05457",
     "j": "Franklin",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2535,
+    "i": 3882,
     "n": "Georgia Town Clerk",
     "f": "(802) 524-3543",
     "p": "(802) 524-3524",
@@ -1197,10 +1345,12 @@
     "s": "VT",
     "z": "05478",
     "j": "Georgia",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2596,
+    "i": 3883,
     "n": "Glover Town Clerk",
     "f": "(802) 525-4115",
     "p": "(802) 525-6227",
@@ -1213,10 +1363,12 @@
     "s": "VT",
     "z": "05839",
     "j": "Glover",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2621,
+    "i": 3884,
     "n": "Goshen Town Clerk",
     "f": "(802) 247-6740",
     "p": "(802) 247-6455",
@@ -1229,10 +1381,12 @@
     "s": "VT",
     "z": "05733",
     "j": "Goshen",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2631,
+    "i": 3885,
     "n": "Grafton Town Clerk",
     "f": "(802) 843-6100",
     "p": "(802) 843-2419",
@@ -1245,10 +1399,12 @@
     "s": "VT",
     "z": "05146",
     "j": "Grafton",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2641,
+    "i": 3886,
     "n": "Granby Town Clerk",
     "f": "(802) 328-2200",
     "p": "(802) 328-3611",
@@ -1261,10 +1417,12 @@
     "s": "VT",
     "z": "05840",
     "j": "Granby",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2652,
+    "i": 3887,
     "n": "Grand Isle Town Clerk",
     "f": "(802) 372-8815",
     "p": "(802) 372-8830",
@@ -1277,10 +1435,12 @@
     "s": "VT",
     "z": "05458",
     "j": "Grand Isle",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2698,
+    "i": 3888,
     "n": "Granville Town Clerk",
     "f": "(802) 767-3968",
     "p": "(802) 767-4403",
@@ -1293,10 +1453,12 @@
     "s": "VT",
     "z": "05747",
     "j": "Granville",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2759,
+    "i": 3889,
     "n": "Greensboro Town Clerk",
     "f": "(802) 533-2191",
     "p": "(802) 533-2911",
@@ -1309,10 +1471,12 @@
     "s": "VT",
     "z": "05841",
     "j": "Greensboro",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2792,
+    "i": 3890,
     "n": "Groton Town Clerk",
     "f": "(802) 584-3792",
     "p": "(802) 584-3276",
@@ -1325,10 +1489,12 @@
     "s": "VT",
     "z": "05046",
     "j": "Groton",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2809,
+    "i": 3891,
     "n": "Guildhall Town Clerk",
     "f": "(802) 676-3518",
     "p": "(802) 676-3797",
@@ -1341,10 +1507,12 @@
     "s": "VT",
     "z": "05905",
     "j": "Guildhall",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2812,
+    "i": 3892,
     "n": "Guilford Town Clerk",
     "f": "(802) 257-5764",
     "p": "(802) 254-6857",
@@ -1357,10 +1525,12 @@
     "s": "VT",
     "z": "05301",
     "j": "Guilford",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2835,
+    "i": 3893,
     "n": "Halifax Town Clerk",
     "f": "(802) 368-7390",
     "p": "(802) 368-7390",
@@ -1373,10 +1543,12 @@
     "s": "VT",
     "z": "05358",
     "j": "Halifax",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2887,
+    "i": 3894,
     "n": "Hancock Town Clerk",
     "f": "",
     "p": "(802) 767-3660",
@@ -1389,10 +1561,12 @@
     "s": "VT",
     "z": "05748",
     "j": "Hancock",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2922,
+    "i": 3895,
     "n": "Hardwick Town Clerk",
     "f": "(802) 472-3108",
     "p": "(802) 472-5971",
@@ -1405,10 +1579,12 @@
     "s": "VT",
     "z": "05843",
     "j": "Hardwick",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2966,
+    "i": 3896,
     "n": "Hartford Town Clerk",
     "f": "(802) 295-6382",
     "p": "(802) 295-2785",
@@ -1421,10 +1597,12 @@
     "s": "VT",
     "z": "05001",
     "j": "Hartford",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2972,
+    "i": 3897,
     "n": "Hartland Town Clerk",
     "f": "(802) 436-2464",
     "p": "(802) 436-2444",
@@ -1437,10 +1615,12 @@
     "s": "VT",
     "z": "05048",
     "j": "Hartland",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3074,
+    "i": 3898,
     "n": "Highgate Town Clerk",
     "f": "(802) 868-3064",
     "p": "(802) 868-4697",
@@ -1453,10 +1633,12 @@
     "s": "VT",
     "z": "05459",
     "j": "Highgate",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3101,
+    "i": 3899,
     "n": "Hinesburg Town Clerk",
     "f": "(802) 482-5404",
     "p": "(802) 482-2281 x223",
@@ -1469,10 +1651,12 @@
     "s": "VT",
     "z": "05461",
     "j": "Hinesburg",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3120,
+    "i": 3900,
     "n": "Holland Town Clerk",
     "f": "(802) 895-4440",
     "p": "(802) 895-4440",
@@ -1485,10 +1669,12 @@
     "s": "VT",
     "z": "05830",
     "j": "Holland",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3199,
+    "i": 3901,
     "n": "Hubbardton Town Clerk",
     "f": "(802) 273-3729",
     "p": "(802) 273-2951",
@@ -1501,10 +1687,12 @@
     "s": "VT",
     "z": "05735",
     "j": "Hubbardton",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3232,
+    "i": 3902,
     "n": "Huntington Town Clerk",
     "f": "",
     "p": "(802) 434-2032",
@@ -1517,10 +1705,12 @@
     "s": "VT",
     "z": "05462",
     "j": "Huntington",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3248,
+    "i": 3903,
     "n": "Hyde Park Town Clerk",
     "f": "(802) 888-6878",
     "p": "(802) 888-2300",
@@ -1533,10 +1723,12 @@
     "s": "VT",
     "z": "05655",
     "j": "Hyde Park",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3283,
+    "i": 3904,
     "n": "Ira Town Clerk",
     "f": "(802) 235-1045",
     "p": "(802) 235-2745",
@@ -1549,10 +1741,12 @@
     "s": "VT",
     "z": "05777",
     "j": "Ira",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3285,
+    "i": 3905,
     "n": "Irasburg Town Clerk",
     "f": "(802) 754-2242",
     "p": "(802) 754-2242",
@@ -1565,10 +1759,12 @@
     "s": "VT",
     "z": "05845",
     "j": "Irasburg",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3311,
+    "i": 3906,
     "n": "Isle La Motte Town Clerk",
     "f": "(802) 928-3002",
     "p": "(802) 928-3434",
@@ -1581,10 +1777,12 @@
     "s": "VT",
     "z": "05463",
     "j": "Isle La Motte",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3352,
+    "i": 3907,
     "n": "Jamaica Town Clerk",
     "f": "(802) 874-4558",
     "p": "(802) 874-4681",
@@ -1597,10 +1795,12 @@
     "s": "VT",
     "z": "05343",
     "j": "Jamaica",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3370,
+    "i": 3908,
     "n": "Jay Town Clerk",
     "f": "(802) 988-2996",
     "p": "(802) 988-2996",
@@ -1613,15 +1813,17 @@
     "s": "VT",
     "z": "05859",
     "j": "Jay",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3412,
+    "i": 3909,
     "n": "Jericho Town Clerk",
     "f": "(802) 899-5549",
     "p": "(802) 899-4936",
     "e": "jerichovermont@yahoo.com",
-    "d": "2018-11-01T15:41:18",
+    "d": "2015-07-07T15:41:18",
     "a1": "P.O. Box 67",
     "a2": "",
     "a3": "",
@@ -1629,10 +1831,12 @@
     "s": "VT",
     "z": "05465",
     "j": "Jericho",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3432,
+    "i": 3910,
     "n": "Johnson Town Clerk",
     "f": "(802) 635-2393",
     "p": "(802) 635-2611",
@@ -1645,10 +1849,12 @@
     "s": "VT",
     "z": "05656",
     "j": "Johnson",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3525,
+    "i": 3911,
     "n": "Killington Town Clerk",
     "f": "(802) 422-3030",
     "p": "(802) 422-3243",
@@ -1661,10 +1867,12 @@
     "s": "VT",
     "z": "05751",
     "j": "Killington",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3557,
+    "i": 3912,
     "n": "Kirby Town Clerk",
     "f": "(802) 626-9386",
     "p": "(802) 626-9386",
@@ -1677,10 +1885,12 @@
     "s": "VT",
     "z": "05851",
     "j": "Kirby",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3693,
+    "i": 3913,
     "n": "Landgrove Town Clerk",
     "f": "(802) 824-3716",
     "p": "(802) 824-3716",
@@ -1693,10 +1903,12 @@
     "s": "VT",
     "z": "05148",
     "j": "Landgrove",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3777,
+    "i": 3914,
     "n": "Leicester Town Clerk",
     "f": "(802) 247-6501",
     "p": "(802) 247-5961 x3",
@@ -1709,10 +1921,12 @@
     "s": "VT",
     "z": "05733",
     "j": "Leicester",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3782,
+    "i": 3915,
     "n": "Lemington Town Clerk",
     "f": "(802) 277-4091",
     "p": "(802) 277-4814",
@@ -1725,10 +1939,12 @@
     "s": "VT",
     "z": "05903",
     "j": "Lemington",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3867,
+    "i": 3916,
     "n": "Lincoln Town Clerk",
     "f": "(802) 453-2975",
     "p": "(802) 453-2980",
@@ -1741,10 +1957,12 @@
     "s": "VT",
     "z": "05443",
     "j": "Lincoln",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3961,
+    "i": 3917,
     "n": "Londonderry Town Clerk",
     "f": "(802) 824-4259",
     "p": "(802) 824-3356",
@@ -1757,10 +1975,12 @@
     "s": "VT",
     "z": "05155",
     "j": "Londonderry",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3986,
+    "i": 3918,
     "n": "Lowell Town Clerk",
     "f": "(802) 744-2357",
     "p": "(802) 744-6559",
@@ -1773,10 +1993,12 @@
     "s": "VT",
     "z": "05847",
     "j": "Lowell",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4008,
+    "i": 3919,
     "n": "Ludlow Town Clerk",
     "f": "(802) 228-8399",
     "p": "(802) 228-3232",
@@ -1789,10 +2011,12 @@
     "s": "VT",
     "z": "05149",
     "j": "Ludlow",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4014,
+    "i": 3920,
     "n": "Lunenburg Town Clerk",
     "f": "(802) 892-5100",
     "p": "(802) 892-5959",
@@ -1805,10 +2029,12 @@
     "s": "VT",
     "z": "05906",
     "j": "Lunenburg",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4026,
+    "i": 3921,
     "n": "Lyndon Town Clerk",
     "f": "(802) 626-1265",
     "p": "(802) 626-5785",
@@ -1821,10 +2047,12 @@
     "s": "VT",
     "z": "05851",
     "j": "Lyndon",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4097,
+    "i": 3922,
     "n": "Maidstone Town Clerk",
     "f": "(802) 676-3607",
     "p": "(802) 676-3210",
@@ -1837,10 +2065,12 @@
     "s": "VT",
     "z": "05905",
     "j": "Maidstone",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4109,
+    "i": 3923,
     "n": "Manchester Town Clerk",
     "f": "(802) 362-1314",
     "p": "(802) 362-1313",
@@ -1853,10 +2083,12 @@
     "s": "VT",
     "z": "05255",
     "j": "Manchester",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4196,
+    "i": 3924,
     "n": "Marlboro Town Clerk",
     "f": "(802) 257-2447",
     "p": "(802) 254-2181",
@@ -1869,10 +2101,12 @@
     "s": "VT",
     "z": "05344",
     "j": "Marlboro",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4225,
+    "i": 3925,
     "n": "Marshfield Town Clerk",
     "f": "(802) 426-3045",
     "p": "(802) 426-3305",
@@ -1885,10 +2119,12 @@
     "s": "VT",
     "z": "05658",
     "j": "Marshfield",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4362,
+    "i": 3926,
     "n": "Mendon Town Clerk",
     "f": "",
     "p": "(802) 775-1662",
@@ -1901,10 +2137,12 @@
     "s": "VT",
     "z": "05701",
     "j": "Mendon",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4420,
+    "i": 3927,
     "n": "Middlebury Town Clerk",
     "f": "(802) 388-4261",
     "p": "(802) 388-8100 x211",
@@ -1917,10 +2155,12 @@
     "s": "VT",
     "z": "05753",
     "j": "Middlebury",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4426,
+    "i": 3928,
     "n": "Middlesex Town Clerk",
     "f": "(802) 223-1298",
     "p": "(802) 223-5915",
@@ -1933,10 +2173,12 @@
     "s": "VT",
     "z": "05602",
     "j": "Middlesex",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4433,
+    "i": 3929,
     "n": "Middletown Springs Town Clerk",
     "f": "(802) 235-2066",
     "p": "(802) 235-2220",
@@ -1949,10 +2191,12 @@
     "s": "VT",
     "z": "05757",
     "j": "Middletown Springs",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4472,
+    "i": 3930,
     "n": "Milton Town Clerk",
     "f": "(802) 893-1005",
     "p": "(802) 893-4111",
@@ -1965,10 +2209,12 @@
     "s": "VT",
     "z": "05468",
     "j": "Milton",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4521,
+    "i": 3931,
     "n": "Monkton Town Clerk",
     "f": "(802) 453-5612",
     "p": "(802) 453-3800",
@@ -1981,10 +2227,12 @@
     "s": "VT",
     "z": "05469",
     "j": "Monkton",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4585,
+    "i": 3932,
     "n": "Montgomery Town Clerk",
     "f": "(802) 326-5053",
     "p": "(802) 326-4719",
@@ -1997,10 +2245,12 @@
     "s": "VT",
     "z": "05471",
     "j": "Montgomery",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4593,
+    "i": 3933,
     "n": "Montpelier Town Clerk",
     "f": "(802) 223-9523",
     "p": "(802) 223-9500",
@@ -2013,10 +2263,12 @@
     "s": "VT",
     "z": "05602",
     "j": "Montpelier",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4611,
+    "i": 3934,
     "n": "Moretown Town Clerk",
     "f": "(802) 329-2221",
     "p": "(802) 882-8218",
@@ -2029,10 +2281,12 @@
     "s": "VT",
     "z": "05660",
     "j": "Moretown",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4622,
+    "i": 3935,
     "n": "Morgan Town Clerk",
     "f": "(802) 895-4204",
     "p": "(802) 895-2927",
@@ -2045,10 +2299,12 @@
     "s": "VT",
     "z": "05853",
     "j": "Morgan",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4633,
+    "i": 3936,
     "n": "Morristown Town Clerk",
     "f": "(802) 888-6375",
     "p": "(802) 888-6370",
@@ -2061,10 +2317,12 @@
     "s": "VT",
     "z": "05661",
     "j": "Morristown",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4654,
+    "i": 3937,
     "n": "Mount Holly Town Clerk",
     "f": "(802) 259-2635",
     "p": "(802) 259-2391",
@@ -2077,10 +2335,12 @@
     "s": "VT",
     "z": "05758",
     "j": "Mount Holly",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4664,
+    "i": 3938,
     "n": "Mount Tabor Town Clerk",
     "f": "(802) 293-5287",
     "p": "(802) 293-5282",
@@ -2093,10 +2353,12 @@
     "s": "VT",
     "z": "05739",
     "j": "Mount Tabor",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4780,
+    "i": 3939,
     "n": "New Haven Town Clerk",
     "f": "(802) 453-7552",
     "p": "(802) 453-3516",
@@ -2109,10 +2371,12 @@
     "s": "VT",
     "z": "05472",
     "j": "New Haven",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4801,
+    "i": 3940,
     "n": "Newark Town Clerk",
     "f": "",
     "p": "(802) 467-3336",
@@ -2125,10 +2389,12 @@
     "s": "VT",
     "z": "05871",
     "j": "Newark",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4810,
+    "i": 3941,
     "n": "Newbury Town Clerk",
     "f": "(802) 866-5301",
     "p": "(802) 866-5521",
@@ -2141,10 +2407,12 @@
     "s": "VT",
     "z": "05051",
     "j": "Newbury",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4814,
+    "i": 3942,
     "n": "Newfane Town Clerk",
     "f": "(802) 365-7692",
     "p": "(802) 365-7772",
@@ -2157,10 +2425,12 @@
     "s": "VT",
     "z": "05345",
     "j": "Newfane",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4822,
+    "i": 3943,
     "n": "Newport City Clerk",
     "f": "(802) 334-5632",
     "p": "(802) 334-2112",
@@ -2173,10 +2443,12 @@
     "s": "VT",
     "z": "05855",
     "j": "Newport City",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4824,
+    "i": 3944,
     "n": "Newport Town Clerk",
     "f": "(802) 334-6442",
     "p": "(802) 334-6442",
@@ -2189,10 +2461,12 @@
     "s": "VT",
     "z": "05857",
     "j": "Newport Town",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4879,
+    "i": 3945,
     "n": "North Hero Town Clerk",
     "f": "(802) 372-3806",
     "p": "(802) 372-6926",
@@ -2205,10 +2479,12 @@
     "s": "VT",
     "z": "05474",
     "j": "North Hero",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4898,
+    "i": 3946,
     "n": "Northfield Town Clerk",
     "f": "(802) 485-8426",
     "p": "(802) 485-5421",
@@ -2221,10 +2497,12 @@
     "s": "VT",
     "z": "05663",
     "j": "Northfield",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4911,
+    "i": 3947,
     "n": "Norton Town Clerk",
     "f": "(802) 822-9965",
     "p": "(802) 822-9935",
@@ -2237,10 +2515,12 @@
     "s": "VT",
     "z": "05907",
     "j": "Norton",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4922,
+    "i": 3948,
     "n": "Norwich Town Clerk",
     "f": "(802) 649-0123",
     "p": "(802) 649-1419 x103",
@@ -2253,10 +2533,12 @@
     "s": "VT",
     "z": "05055",
     "j": "Norwich",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5035,
+    "i": 3949,
     "n": "Orange Town Clerk",
     "f": "(802) 479-2673",
     "p": "(802) 479-2673",
@@ -2269,10 +2551,12 @@
     "s": "VT",
     "z": "05649",
     "j": "Orange",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5059,
+    "i": 3950,
     "n": "Orwell Town Clerk",
     "f": "",
     "p": "(802) 948-2032",
@@ -2285,10 +2569,12 @@
     "s": "VT",
     "z": "05760",
     "j": "Orwell",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5139,
+    "i": 3951,
     "n": "Panton Town Clerk",
     "f": "(802) 475-2785",
     "p": "(802) 475-2333",
@@ -2301,10 +2587,12 @@
     "s": "VT",
     "z": "05491",
     "j": "Panton",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5169,
+    "i": 3952,
     "n": "Pawlet Town Clerk",
     "f": "(802) 325-6109",
     "p": "(802) 325-3309",
@@ -2317,10 +2605,12 @@
     "s": "VT",
     "z": "05761",
     "j": "Pawlet",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5179,
+    "i": 3953,
     "n": "Peacham Town Clerk",
     "f": "(802) 592-3218",
     "p": "(802) 592-3218",
@@ -2333,10 +2623,12 @@
     "s": "VT",
     "z": "05862",
     "j": "Peacham",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5233,
+    "i": 3954,
     "n": "Peru Town Clerk",
     "f": "",
     "p": "(802) 824-3065",
@@ -2349,10 +2641,12 @@
     "s": "VT",
     "z": "05152",
     "j": "Peru",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5306,
+    "i": 3955,
     "n": "Pittsfield Town Clerk",
     "f": "(802) 746-8170",
     "p": "(802) 746-8170",
@@ -2365,10 +2659,12 @@
     "s": "VT",
     "z": "05762",
     "j": "Pittsfield",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5311,
+    "i": 3956,
     "n": "Pittsford Town Clerk",
     "f": "(802) 483-6612",
     "p": "(802) 483-6500 x13",
@@ -2381,10 +2677,12 @@
     "s": "VT",
     "z": "05763",
     "j": "Pittsford",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5319,
+    "i": 3957,
     "n": "Plainfield Town Clerk",
     "f": "(802) 454-8467",
     "p": "(802) 454-8461",
@@ -2397,10 +2695,12 @@
     "s": "VT",
     "z": "05667",
     "j": "Plainfield",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5354,
+    "i": 3958,
     "n": "Plymouth Town Clerk",
     "f": "(802) 672-5466",
     "p": "(802) 672-3655",
@@ -2413,10 +2713,12 @@
     "s": "VT",
     "z": "05056",
     "j": "Plymouth",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5385,
+    "i": 3959,
     "n": "Pomfret Town Clerk",
     "f": "(802) 457-8180",
     "p": "(802) 457-3861",
@@ -2429,10 +2731,12 @@
     "s": "VT",
     "z": "05053",
     "j": "Pomfret",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5437,
+    "i": 3960,
     "n": "Poultney Town Clerk",
     "f": "(802) 287-5110",
     "p": "(802) 287-5761",
@@ -2445,10 +2749,12 @@
     "s": "VT",
     "z": "05764",
     "j": "Poultney",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5447,
+    "i": 3961,
     "n": "Pownal Town Clerk",
     "f": "(802) 823-0116",
     "p": "(802) 823-7757",
@@ -2461,10 +2767,12 @@
     "s": "VT",
     "z": "05261",
     "j": "Pownal",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5485,
+    "i": 3962,
     "n": "Proctor Town Clerk",
     "f": "(802) 459-2356",
     "p": "(802) 459-3333",
@@ -2477,10 +2785,12 @@
     "s": "VT",
     "z": "05765",
     "j": "Proctor",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5514,
+    "i": 3963,
     "n": "Putney Town Clerk",
     "f": "(802) 387-4708",
     "p": "(802) 387-5862",
@@ -2493,10 +2803,12 @@
     "s": "VT",
     "z": "05346",
     "j": "Putney",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5546,
+    "i": 3964,
     "n": "Randolph Town Clerk",
     "f": "(802) 728-5818",
     "p": "(802) 728-5433 x11",
@@ -2509,10 +2821,12 @@
     "s": "VT",
     "z": "05060",
     "j": "Randolph",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5568,
+    "i": 3965,
     "n": "Reading Town Clerk",
     "f": "(802) 484-0015",
     "p": "(802) 484-7250",
@@ -2525,10 +2839,12 @@
     "s": "VT",
     "z": "05062",
     "j": "Reading",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5573,
+    "i": 3966,
     "n": "Readsboro Town Clerk",
     "f": "(802) 423-5423",
     "p": "(802) 423-5405",
@@ -2541,10 +2857,12 @@
     "s": "VT",
     "z": "05350",
     "j": "Readsboro",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5633,
+    "i": 3967,
     "n": "Richford Town Clerk",
     "f": "(802) 848-7752",
     "p": "(802) 848-7751",
@@ -2557,10 +2875,12 @@
     "s": "VT",
     "z": "05476",
     "j": "Richford",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5652,
+    "i": 3968,
     "n": "Richmond Town Clerk",
     "f": "(802) 329-2011",
     "p": "(802) 434-2221",
@@ -2573,10 +2893,12 @@
     "s": "VT",
     "z": "05477",
     "j": "Richmond",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5687,
+    "i": 3969,
     "n": "Ripton Town Clerk",
     "f": "(802) 388-0012",
     "p": "(802) 388-2266",
@@ -2589,10 +2911,12 @@
     "s": "VT",
     "z": "05766",
     "j": "Ripton",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5711,
+    "i": 3970,
     "n": "Rochester Town Clerk",
     "f": "(802) 767-6028",
     "p": "(802) 767-3631",
@@ -2605,10 +2929,12 @@
     "s": "VT",
     "z": "05767",
     "j": "Rochester",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5737,
+    "i": 3971,
     "n": "Rockingham Town Clerk",
     "f": "(802) 463-1228",
     "p": "(802) 463-4336",
@@ -2621,10 +2947,12 @@
     "s": "VT",
     "z": "05101",
     "j": "Rockingham",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5792,
+    "i": 3972,
     "n": "Roxbury Town Clerk",
     "f": "(802) 485-9160",
     "p": "(802) 485-7840",
@@ -2637,10 +2965,12 @@
     "s": "VT",
     "z": "05669",
     "j": "Roxbury",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5798,
+    "i": 3973,
     "n": "Royalton Town Clerk",
     "f": "(802) 763-8064",
     "p": "(802) 763-7207",
@@ -2653,10 +2983,12 @@
     "s": "VT",
     "z": "05068",
     "j": "Royalton",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5808,
+    "i": 3974,
     "n": "Rupert Town Clerk",
     "f": "(802) 394-2524",
     "p": "(802) 394-7728",
@@ -2669,10 +3001,12 @@
     "s": "VT",
     "z": "05776",
     "j": "Rupert",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5828,
+    "i": 3975,
     "n": "Rutland City Clerk",
     "f": "(802) 773-1846",
     "p": "(802) 773-1800",
@@ -2685,10 +3019,12 @@
     "s": "VT",
     "z": "05701",
     "j": "Rutland City",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5829,
+    "i": 3976,
     "n": "Rutland Town Clerk",
     "f": "(802) 773-7295",
     "p": "(802) 773-2528",
@@ -2701,10 +3037,12 @@
     "s": "VT",
     "z": "05736",
     "j": "Rutland Town",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5834,
+    "i": 3977,
     "n": "Ryegate Town Clerk",
     "f": "(802) 584-3880",
     "p": "(802) 584-3880",
@@ -2717,10 +3055,12 @@
     "s": "VT",
     "z": "05042",
     "j": "Ryegate",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6269,
+    "i": 3991,
     "n": "Saint Albans City Clerk",
     "f": "(802) 524-1516",
     "p": "(802) 524-1500 x264",
@@ -2733,10 +3073,12 @@
     "s": "VT",
     "z": "05478",
     "j": "Saint Albans City",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6270,
+    "i": 3992,
     "n": "Saint Albans Town Clerk",
     "f": "(802) 524-9609",
     "p": "(802) 524-2415",
@@ -2749,10 +3091,12 @@
     "s": "VT",
     "z": "05481",
     "j": "Saint Albans Town",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6286,
+    "i": 3993,
     "n": "Saint George Town Clerk",
     "f": "(802) 482-5548",
     "p": "(802) 482-5272",
@@ -2765,10 +3109,12 @@
     "s": "VT",
     "z": "05495",
     "j": "Saint George",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6293,
+    "i": 3994,
     "n": "Saint Johnsbury Town Clerk",
     "f": "(802) 748-1267",
     "p": "(802) 748-4331",
@@ -2781,10 +3127,12 @@
     "s": "VT",
     "z": "05819",
     "j": "Saint Johnsbury",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5863,
+    "i": 3978,
     "n": "Salisbury Town Clerk",
     "f": "(802) 352-9832",
     "p": "(802) 352-4228",
@@ -2797,10 +3145,12 @@
     "s": "VT",
     "z": "05769",
     "j": "Salisbury",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5896,
+    "i": 3979,
     "n": "Sandgate Town Clerk",
     "f": "(802) 375-8350",
     "p": "(802) 375-9075",
@@ -2813,10 +3163,12 @@
     "s": "VT",
     "z": "05250",
     "j": "Sandgate",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5984,
+    "i": 3980,
     "n": "Searsburg Town Clerk",
     "f": "(802) 464-8081",
     "p": "(802) 464-8081",
@@ -2829,10 +3181,12 @@
     "s": "VT",
     "z": "05363",
     "j": "Searsburg",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6021,
+    "i": 3981,
     "n": "Shaftsbury Town Clerk",
     "f": "(802) 442-0955",
     "p": "(802) 442-4038",
@@ -2845,10 +3199,12 @@
     "s": "VT",
     "z": "05262",
     "j": "Shaftsbury",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6027,
+    "i": 3982,
     "n": "Sharon Town Clerk",
     "f": "(802) 763-7392",
     "p": "(802) 763-8268 x1",
@@ -2861,10 +3217,12 @@
     "s": "VT",
     "z": "05065",
     "j": "Sharon",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6042,
+    "i": 3983,
     "n": "Sheffield Town Clerk",
     "f": "(802) 626-0424",
     "p": "(802) 626-8862",
@@ -2877,10 +3235,12 @@
     "s": "VT",
     "z": "05866",
     "j": "Sheffield",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6044,
+    "i": 3984,
     "n": "Shelburne Town Clerk",
     "f": "(802) 985-9550",
     "p": "(802) 985-5116",
@@ -2893,10 +3253,12 @@
     "s": "VT",
     "z": "05482",
     "j": "Shelburne",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6059,
+    "i": 3985,
     "n": "Sheldon Town Clerk",
     "f": "(802) 933-4951",
     "p": "(802) 933-2524",
@@ -2909,10 +3271,12 @@
     "s": "VT",
     "z": "05483",
     "j": "Sheldon",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6107,
+    "i": 3986,
     "n": "Shoreham Town Clerk",
     "f": "(802) 897-2545",
     "p": "(802) 897-5841",
@@ -2925,10 +3289,12 @@
     "s": "VT",
     "z": "05770",
     "j": "Shoreham",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6111,
+    "i": 3987,
     "n": "Shrewsbury Town Clerk",
     "f": "(802) 492-3511",
     "p": "(802) 492-3511",
@@ -2941,10 +3307,12 @@
     "s": "VT",
     "z": "05738",
     "j": "Shrewsbury",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6181,
+    "i": 3988,
     "n": "South Burlington Town Clerk",
     "f": "",
     "p": "(802) 846-4105",
@@ -2957,10 +3325,12 @@
     "s": "VT",
     "z": "05403",
     "j": "South Burlington",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6187,
+    "i": 3989,
     "n": "South Hero Town Clerk",
     "f": "(802) 372-3809",
     "p": "(802) 372-5552",
@@ -2973,10 +3343,12 @@
     "s": "VT",
     "z": "05486",
     "j": "South Hero",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6239,
+    "i": 3990,
     "n": "Springfield Town Clerk",
     "f": "(802) 885-1617",
     "p": "(802) 885-2104",
@@ -2989,10 +3361,12 @@
     "s": "VT",
     "z": "05156",
     "j": "Springfield",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6311,
+    "i": 3995,
     "n": "Stamford Town Clerk",
     "f": "(802) 694-1636",
     "p": "(802) 694-1361",
@@ -3005,10 +3379,12 @@
     "s": "VT",
     "z": "05352",
     "j": "Stamford",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6320,
+    "i": 3996,
     "n": "Stannard Town Clerk",
     "f": "",
     "p": "(802) 533-2577",
@@ -3021,10 +3397,12 @@
     "s": "VT",
     "z": "05842",
     "j": "Stannard",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6337,
+    "i": 3997,
     "n": "Starksboro Town Clerk",
     "f": "(802) 453-7293",
     "p": "(802) 453-2639",
@@ -3037,10 +3415,12 @@
     "s": "VT",
     "z": "05487",
     "j": "Starksboro",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6373,
+    "i": 3998,
     "n": "Stockbridge Town Clerk",
     "f": "(802) 746-8400",
     "p": "(802) 746-8400",
@@ -3053,10 +3433,12 @@
     "s": "VT",
     "z": "05772",
     "j": "Stockbridge",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6397,
+    "i": 3999,
     "n": "Stowe Town Clerk",
     "f": "(802) 253-6143",
     "p": "(802) 253-6133",
@@ -3069,10 +3451,12 @@
     "s": "VT",
     "z": "05672",
     "j": "Stowe",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6398,
+    "i": 4000,
     "n": "Strafford Town Clerk",
     "f": "(802) 765-9621",
     "p": "(802) 765-4411",
@@ -3085,10 +3469,12 @@
     "s": "VT",
     "z": "05072",
     "j": "Strafford",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6404,
+    "i": 4001,
     "n": "Stratton Town Clerk",
     "f": "(802) 896-6630",
     "p": "(802) 896-6184",
@@ -3101,10 +3487,12 @@
     "s": "VT",
     "z": "05360",
     "j": "Stratton",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6419,
+    "i": 4002,
     "n": "Sudbury Town Clerk",
     "f": "(802) 623-7296",
     "p": "(802) 623-7296",
@@ -3117,10 +3505,12 @@
     "s": "VT",
     "z": "05733",
     "j": "Sudbury",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6463,
+    "i": 4003,
     "n": "Sunderland Town Clerk",
     "f": "",
     "p": "(802) 375-6106",
@@ -3133,10 +3523,12 @@
     "s": "VT",
     "z": "05252",
     "j": "Sunderland",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6484,
+    "i": 4004,
     "n": "Sutton Town Clerk",
     "f": "(802) 467-1052",
     "p": "(802) 467-3377",
@@ -3149,10 +3541,12 @@
     "s": "VT",
     "z": "05867",
     "j": "Sutton",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6493,
+    "i": 4005,
     "n": "Swanton Town Clerk",
     "f": "(802) 868-4957",
     "p": "(802) 868-4421",
@@ -3165,10 +3559,12 @@
     "s": "VT",
     "z": "05488",
     "j": "Swanton",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6565,
+    "i": 4006,
     "n": "Thetford Town Clerk",
     "f": "(802) 785-2031",
     "p": "(802) 785-2922",
@@ -3181,10 +3577,12 @@
     "s": "VT",
     "z": "05075",
     "j": "Thetford",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6594,
+    "i": 4007,
     "n": "Tinmouth Town Clerk",
     "f": "(802) 446-2498",
     "p": "(802) 446-2498",
@@ -3197,10 +3595,12 @@
     "s": "VT",
     "z": "05773",
     "j": "Tinmouth",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6625,
+    "i": 4008,
     "n": "Topsham Town Clerk",
     "f": "(802) 439-5505",
     "p": "(802) 439-5505",
@@ -3213,10 +3613,12 @@
     "s": "VT",
     "z": "05076",
     "j": "Topsham",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6634,
+    "i": 4009,
     "n": "Townshend Town Clerk",
     "f": "(802) 365-7309",
     "p": "(802) 365-7300",
@@ -3229,10 +3631,12 @@
     "s": "VT",
     "z": "05353",
     "j": "Townshend",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6662,
+    "i": 4010,
     "n": "Troy Town Clerk",
     "f": "(802) 988-4692",
     "p": "(802) 988-2663",
@@ -3245,10 +3649,12 @@
     "s": "VT",
     "z": "05859",
     "j": "Troy",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6677,
+    "i": 4011,
     "n": "Tunbridge Town Clerk",
     "f": "(802) 889-3544",
     "p": "(802) 889-5521",
@@ -3261,10 +3667,12 @@
     "s": "VT",
     "z": "05077",
     "j": "Tunbridge",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6711,
+    "i": 4012,
     "n": "Underhill Town Clerk",
     "f": "(802) 899-2137",
     "p": "(802) 899-4434 x101",
@@ -3277,10 +3685,12 @@
     "s": "VT",
     "z": "05489",
     "j": "Underhill",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6784,
+    "i": 4013,
     "n": "Vergennes Town Clerk",
     "f": "(802) 877-1160",
     "p": "(802) 877-2841",
@@ -3293,10 +3703,12 @@
     "s": "VT",
     "z": "05491",
     "j": "Vergennes",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6794,
+    "i": 4014,
     "n": "Vernon Town Clerk",
     "f": "(802) 254-3561",
     "p": "(802) 257-0292",
@@ -3309,10 +3721,12 @@
     "s": "VT",
     "z": "05354",
     "j": "Vernon",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6801,
+    "i": 4015,
     "n": "Vershire Town Clerk",
     "f": "(802) 685-2224",
     "p": "(802) 685-2227",
@@ -3325,10 +3739,12 @@
     "s": "VT",
     "z": "05079",
     "j": "Vershire",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6806,
+    "i": 4016,
     "n": "Victory Town Clerk",
     "f": "",
     "p": "(802) 328-2400",
@@ -3341,10 +3757,12 @@
     "s": "VT",
     "z": "05858",
     "j": "Victory",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6834,
+    "i": 4017,
     "n": "Waitsfield Town Clerk",
     "f": "(802) 496-9284",
     "p": "(802) 496-2218",
@@ -3357,10 +3775,12 @@
     "s": "VT",
     "z": "05673",
     "j": "Waitsfield",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6842,
+    "i": 4018,
     "n": "Walden Town Clerk",
     "f": "(802) 563-3008",
     "p": "(802) 563-2220",
@@ -3373,10 +3793,12 @@
     "s": "VT",
     "z": "05873",
     "j": "Walden",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6858,
+    "i": 4019,
     "n": "Wallingford Town Clerk",
     "f": "(802) 446-3174",
     "p": "(802) 446-2336",
@@ -3389,10 +3811,12 @@
     "s": "VT",
     "z": "05773",
     "j": "Wallingford",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6864,
+    "i": 4020,
     "n": "Waltham Town Clerk",
     "f": "(802) 877-3641",
     "p": "(802) 877-3641",
@@ -3405,10 +3829,12 @@
     "s": "VT",
     "z": "05491",
     "j": "Waltham",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6875,
+    "i": 4021,
     "n": "Wardsboro Town Clerk",
     "f": "(802) 896-1000",
     "p": "(802) 896-6055",
@@ -3421,10 +3847,12 @@
     "s": "VT",
     "z": "05355",
     "j": "Wardsboro",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6897,
+    "i": 4022,
     "n": "Warren Town Clerk",
     "f": "(802) 496-2418",
     "p": "(802) 496-2709",
@@ -3437,10 +3865,12 @@
     "s": "VT",
     "z": "05674",
     "j": "Warren",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6944,
+    "i": 4023,
     "n": "Washington Town Clerk",
     "f": "(802) 883-2218",
     "p": "(802) 883-2218",
@@ -3453,10 +3883,12 @@
     "s": "VT",
     "z": "05675",
     "j": "Washington",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6964,
+    "i": 4024,
     "n": "Waterbury Town Clerk",
     "f": "(802) 244-1014",
     "p": "(802) 244-8447",
@@ -3469,10 +3901,12 @@
     "s": "VT",
     "z": "05676",
     "j": "Waterbury",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6966,
+    "i": 4025,
     "n": "Waterford Town Clerk",
     "f": "(802) 748-8196",
     "p": "(802) 748-2122",
@@ -3485,10 +3919,12 @@
     "s": "VT",
     "z": "05848",
     "j": "Waterford",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6982,
+    "i": 4026,
     "n": "Waterville Town Clerk",
     "f": "(802) 644-8865",
     "p": "(802) 644-8865",
@@ -3501,10 +3937,12 @@
     "s": "VT",
     "z": "05492",
     "j": "Waterville",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7040,
+    "i": 4027,
     "n": "Weathersfield Town Clerk",
     "f": "(802) 674-2117",
     "p": "(802) 674-9500",
@@ -3517,10 +3955,12 @@
     "s": "VT",
     "z": "05030",
     "j": "Weathersfield",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7069,
+    "i": 4028,
     "n": "Wells Town Clerk",
     "f": "(802) 645-0464",
     "p": "(802) 645-0486",
@@ -3533,10 +3973,12 @@
     "s": "VT",
     "z": "05774",
     "j": "Wells",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7092,
+    "i": 4029,
     "n": "West Fairlee Town Clerk",
     "f": "(802) 333-9611",
     "p": "(802) 333-9696",
@@ -3549,10 +3991,12 @@
     "s": "VT",
     "z": "05083",
     "j": "West Fairlee",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7097,
+    "i": 4030,
     "n": "West Haven Town Clerk",
     "f": "(802) 265-3828",
     "p": "(802) 265-4880",
@@ -3565,15 +4009,17 @@
     "s": "VT",
     "z": "05743",
     "j": "West Haven",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7103,
+    "i": 4031,
     "n": "West Rutland Town Clerk",
     "f": "(802) 438-5133",
     "p": "(802) 438-2204",
     "e": "cwener@westrutlandvt.org",
-    "d": "2020-02-06T03:58:40",
+    "d": "2019-06-12T11:45:19",
     "a1": "35 Marble St",
     "a2": "",
     "a3": "",
@@ -3581,10 +4027,12 @@
     "s": "VT",
     "z": "05777",
     "j": "West Rutland",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7111,
+    "i": 4032,
     "n": "West Windsor Town Clerk",
     "f": "(802) 484-3518",
     "p": "(802) 484-7212",
@@ -3597,10 +4045,12 @@
     "s": "VT",
     "z": "05037",
     "j": "West Windsor",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7118,
+    "i": 4033,
     "n": "Westfield Town Clerk",
     "f": "(802) 744-6224",
     "p": "(802) 744-2484",
@@ -3613,10 +4063,12 @@
     "s": "VT",
     "z": "05874",
     "j": "Westfield",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7123,
+    "i": 4034,
     "n": "Westford Town Clerk",
     "f": "(802) 879-6503",
     "p": "(802) 878-4587",
@@ -3629,10 +4081,12 @@
     "s": "VT",
     "z": "05494",
     "j": "Westford",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7130,
+    "i": 4035,
     "n": "Westminster Town Clerk",
     "f": "(802) 722-9816",
     "p": "(802) 722-4091",
@@ -3645,10 +4099,12 @@
     "s": "VT",
     "z": "05158",
     "j": "Westminster",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7131,
+    "i": 4036,
     "n": "Westmore Town Clerk",
     "f": "(802) 525-1131",
     "p": "(802) 525-3007",
@@ -3661,10 +4117,12 @@
     "s": "VT",
     "z": "05860",
     "j": "Westmore",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7136,
+    "i": 4037,
     "n": "Weston Town Clerk",
     "f": "(802) 824-4121",
     "p": "(802) 824-6645",
@@ -3677,10 +4135,12 @@
     "s": "VT",
     "z": "05161",
     "j": "Weston",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7154,
+    "i": 4038,
     "n": "Weybridge Town Clerk",
     "f": "(802) 545-2624",
     "p": "(802) 545-2450",
@@ -3693,10 +4153,12 @@
     "s": "VT",
     "z": "05752",
     "j": "Weybridge",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7174,
+    "i": 4039,
     "n": "Wheelock Town Clerk",
     "f": "(802) 626-8894",
     "p": "(802) 626-9094",
@@ -3709,10 +4171,12 @@
     "s": "VT",
     "z": "05851",
     "j": "Wheelock",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7203,
+    "i": 4040,
     "n": "Whiting Town Clerk",
     "f": "(802) 623-7815",
     "p": "(802) 623-7813",
@@ -3725,10 +4189,12 @@
     "s": "VT",
     "z": "05778",
     "j": "Whiting",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7205,
+    "i": 4041,
     "n": "Whitingham Town Clerk",
     "f": "(802) 368-7519",
     "p": "(802) 368-7887",
@@ -3741,10 +4207,12 @@
     "s": "VT",
     "z": "05342",
     "j": "Whitingham",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7244,
+    "i": 4042,
     "n": "Williamstown Town Clerk",
     "f": "(802) 433-2160",
     "p": "(802) 433-5455",
@@ -3757,10 +4225,12 @@
     "s": "VT",
     "z": "05679",
     "j": "Williamstown",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7249,
+    "i": 4043,
     "n": "Williston Town Clerk",
     "f": "",
     "p": "(802) 878-5121",
@@ -3773,10 +4243,12 @@
     "s": "VT",
     "z": "05495",
     "j": "Williston",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7252,
+    "i": 4044,
     "n": "Wilmington Town Clerk",
     "f": "",
     "p": "(802) 464-5836",
@@ -3789,10 +4261,12 @@
     "s": "VT",
     "z": "05363",
     "j": "Wilmington",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7281,
+    "i": 4045,
     "n": "Windham Town Clerk",
     "f": "(802) 874-4144",
     "p": "(802) 874-4211",
@@ -3805,15 +4279,17 @@
     "s": "VT",
     "z": "05359",
     "j": "Windham",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7284,
+    "i": 4046,
     "n": "Windsor Town Clerk",
     "f": "(802) 674-1017",
     "p": "(802) 674-5610",
     "e": "amcmullen@windsorvt.org",
-    "d": "2020-02-06T03:17:18",
+    "d": "2019-06-12T11:45:19",
     "a1": "29 Union St",
     "a2": "",
     "a3": "",
@@ -3821,10 +4297,12 @@
     "s": "VT",
     "z": "05089",
     "j": "Windsor",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7293,
+    "i": 4047,
     "n": "Winhall Town Clerk",
     "f": "(802) 297-2582",
     "p": "(802) 297-2122",
@@ -3837,10 +4315,12 @@
     "s": "VT",
     "z": "05340",
     "j": "Winhall",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7302,
+    "i": 4048,
     "n": "Winooski Town Clerk",
     "f": "(802) 655-6414",
     "p": "(802) 655-6410",
@@ -3853,10 +4333,12 @@
     "s": "VT",
     "z": "05404",
     "j": "Winooski",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7325,
+    "i": 4049,
     "n": "Wolcott Town Clerk",
     "f": "(802) 888-2669",
     "p": "(802) 888-2746",
@@ -3869,10 +4351,12 @@
     "s": "VT",
     "z": "05680",
     "j": "Wolcott",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7342,
+    "i": 4050,
     "n": "Woodbury Town Clerk",
     "f": "(802) 456-8834",
     "p": "(802) 456-7051",
@@ -3885,10 +4369,12 @@
     "s": "VT",
     "z": "05681",
     "j": "Woodbury",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7345,
+    "i": 4051,
     "n": "Woodford Town Clerk",
     "f": "(802) 442-4816",
     "p": "(802) 442-4895",
@@ -3901,10 +4387,12 @@
     "s": "VT",
     "z": "05201",
     "j": "Woodford",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7358,
+    "i": 4052,
     "n": "Woodstock Town Clerk",
     "f": "(802) 457-2329",
     "p": "(802) 457-3611",
@@ -3917,10 +4405,12 @@
     "s": "VT",
     "z": "05091",
     "j": "Woodstock",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7366,
+    "i": 4053,
     "n": "Worcester Town Clerk",
     "f": "(802) 229-5216",
     "p": "(802) 223-6942",
@@ -3933,6 +4423,8 @@
     "s": "VT",
     "z": "05682",
     "j": "Worcester",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

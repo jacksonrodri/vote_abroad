@@ -1,6 +1,6 @@
 [
   {
-    "i": 440,
+    "i": 3643,
     "n": "Beaver County Clerk/Auditor",
     "f": "(435) 213-1752",
     "p": "(435) 438-6463",
@@ -13,10 +13,12 @@
     "s": "UT",
     "z": "84713",
     "j": "Beaver",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 702,
+    "i": 3644,
     "n": "Box Elder County Clerk",
     "f": "(435) 723-7562",
     "p": "(435) 734-3393",
@@ -29,10 +31,12 @@
     "s": "UT",
     "z": "84302",
     "j": "Box Elder",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 926,
+    "i": 3645,
     "n": "Cache County Clerk/Auditor",
     "f": "(435) 755-1980",
     "p": "(435) 755-1460",
@@ -45,10 +49,12 @@
     "s": "UT",
     "z": "84321",
     "j": "Cache",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1017,
+    "i": 3646,
     "n": "Carbon County Clerk/Auditor",
     "f": "(435) 636-3210",
     "p": "(435) 636-3221",
@@ -61,10 +67,12 @@
     "s": "UT",
     "z": "84501",
     "j": "Carbon",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1699,
+    "i": 3647,
     "n": "Daggett County Clerk/Treasurer",
     "f": "(435) 784-3335",
     "p": "(435) 784-3154",
@@ -77,10 +85,12 @@
     "s": "UT",
     "z": "84046",
     "j": "Daggett",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1749,
+    "i": 3648,
     "n": "Davis County Clerk/Auditor",
     "f": "(801) 451-3421",
     "p": "(801) 451-3213",
@@ -93,10 +103,12 @@
     "s": "UT",
     "z": "84025",
     "j": "Davis",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1938,
+    "i": 3649,
     "n": "Duchesne County Clerk/Auditor",
     "f": "(435) 738-5522",
     "p": "(435) 738-1228",
@@ -109,10 +121,12 @@
     "s": "UT",
     "z": "84021",
     "j": "Duchesne",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2130,
+    "i": 3650,
     "n": "Emery County Clerk/Auditor",
     "f": "(435) 381-5183",
     "p": "(435) 381-3550",
@@ -125,10 +139,12 @@
     "s": "UT",
     "z": "84513",
     "j": "Emery",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2493,
+    "i": 3651,
     "n": "Garfield County Auditor/Clerk",
     "f": "(435) 676-8239",
     "p": "(435) 676-1120",
@@ -141,10 +157,12 @@
     "s": "UT",
     "z": "84759",
     "j": "Garfield",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2644,
+    "i": 3652,
     "n": "Grand County Clerk/Auditor",
     "f": "(435) 259-2959",
     "p": "(435) 259-1321",
@@ -157,10 +175,12 @@
     "s": "UT",
     "z": "84532",
     "j": "Grand",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3289,
+    "i": 3653,
     "n": "Iron County Clerk",
     "f": "(435) 477-8847",
     "p": "(435) 477-8340",
@@ -173,10 +193,12 @@
     "s": "UT",
     "z": "84761",
     "j": "Iron",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3453,
+    "i": 3654,
     "n": "Juab County Clerk",
     "f": "(435) 623-5936",
     "p": "(435) 623-3410",
@@ -189,15 +211,17 @@
     "s": "UT",
     "z": "84648",
     "j": "Juab",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3470,
+    "i": 3655,
     "n": "Kane County Clerk / Auditor",
     "f": "(435) 644-4939",
     "p": "(435) 644-2458",
-    "e": "clerkkj@kane.utah.gov",
-    "d": "2020-02-06T03:51:50",
+    "e": "clerkkj@kanab.net",
+    "d": "2019-05-29T08:36:58",
     "a1": "76 N Main St",
     "a2": "",
     "a3": "",
@@ -205,10 +229,12 @@
     "s": "UT",
     "z": "84741",
     "j": "Kane",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4452,
+    "i": 3656,
     "n": "Millard County Clerk",
     "f": "(435) 743-6923",
     "p": "(435) 743-6223",
@@ -221,10 +247,12 @@
     "s": "UT",
     "z": "84631",
     "j": "Millard",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4621,
+    "i": 3657,
     "n": "Morgan County Clerk",
     "f": "(801) 829-6176",
     "p": "(801) 845-4011",
@@ -237,10 +265,12 @@
     "s": "UT",
     "z": "84050",
     "j": "Morgan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5315,
+    "i": 3658,
     "n": "Piute County Clerk/Auditor",
     "f": "(435) 577-2433",
     "p": "(435) 577-2840",
@@ -253,10 +283,12 @@
     "s": "UT",
     "z": "84740",
     "j": "Piute",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5624,
+    "i": 3659,
     "n": "Rich County Clerk",
     "f": "(435) 793-2410",
     "p": "(435) 793-2415",
@@ -269,10 +301,12 @@
     "s": "UT",
     "z": "84064",
     "j": "Rich",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5866,
+    "i": 3660,
     "n": "Salt Lake County Clerk",
     "f": "(385) 468-7401",
     "p": "(385) 468-7400",
@@ -285,10 +319,12 @@
     "s": "UT",
     "z": "84114",
     "j": "Salt Lake",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5879,
+    "i": 3661,
     "n": "San Juan County Clerk",
     "f": "(435) 587-2425",
     "p": "(435) 587-3223",
@@ -301,10 +337,12 @@
     "s": "UT",
     "z": "84535",
     "j": "San Juan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5909,
+    "i": 3662,
     "n": "Sanpete County Clerk",
     "f": "(435) 835-2144",
     "p": "(435) 835-2131",
@@ -317,10 +355,12 @@
     "s": "UT",
     "z": "84642",
     "j": "Sanpete",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6011,
+    "i": 3663,
     "n": "Sevier County Clerk/Auditor",
     "f": "(435) 893-0496",
     "p": "(435) 893-0401",
@@ -333,10 +373,12 @@
     "s": "UT",
     "z": "84701",
     "j": "Sevier",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6443,
+    "i": 3664,
     "n": "Summit County Clerk",
     "f": "(435) 336-3030",
     "p": "(435) 336-3204",
@@ -349,10 +391,12 @@
     "s": "UT",
     "z": "84017",
     "j": "Summit",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6621,
+    "i": 3665,
     "n": "Tooele County Clerk",
     "f": "(435) 882-7317",
     "p": "(435) 843-3140",
@@ -365,10 +409,12 @@
     "s": "UT",
     "z": "84074",
     "j": "Tooele",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6706,
+    "i": 3666,
     "n": "Uintah County Clerk/Auditor",
     "f": "(435) 781-6701",
     "p": "(435) 781-5361",
@@ -381,10 +427,12 @@
     "s": "UT",
     "z": "84078",
     "j": "Uintah",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6755,
+    "i": 3667,
     "n": "Utah County Clerk/Auditor",
     "f": "(801) 370-8122",
     "p": "(801) 851-8128",
@@ -397,10 +445,12 @@
     "s": "UT",
     "z": "84606",
     "j": "Utah",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6909,
+    "i": 3668,
     "n": "Wasatch County Clerk-Auditor",
     "f": "(435) 654-0834",
     "p": "(435) 657-3190",
@@ -413,10 +463,12 @@
     "s": "UT",
     "z": "84032",
     "j": "Wasatch",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6942,
+    "i": 3669,
     "n": "Washington County Clerk",
     "f": "(435) 634-5763",
     "p": "(435) 634-5712",
@@ -429,10 +481,12 @@
     "s": "UT",
     "z": "84770",
     "j": "Washington",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7028,
+    "i": 3670,
     "n": "Wayne County Clerk",
     "f": "(435) 836-2479",
     "p": "(435) 836-1300",
@@ -445,10 +499,12 @@
     "s": "UT",
     "z": "84747",
     "j": "Wayne",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7044,
+    "i": 3671,
     "n": "Weber County Clerk Auditor",
     "f": "(801) 399-8300",
     "p": "(801) 399-8400",
@@ -461,6 +517,8 @@
     "s": "UT",
     "z": "84401",
     "j": "Weber",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

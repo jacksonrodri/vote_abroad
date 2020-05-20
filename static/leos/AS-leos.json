@@ -1,6 +1,6 @@
 [
   {
-    "i": 93,
+    "i": 145,
     "n": "Chief Election Officer",
     "f": "(684) 699-3574",
     "p": "(684) 699-3570",
@@ -13,6 +13,8 @@
     "s": "AS",
     "z": "96799",
     "j": "All",
-    "t": "All"
+    "t": "All",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

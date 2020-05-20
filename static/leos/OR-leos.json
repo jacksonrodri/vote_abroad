@@ -1,6 +1,6 @@
 [
   {
-    "i": 329,
+    "i": 3039,
     "n": "Baker County Clerk, Elections Office",
     "f": "(541) 523-8240",
     "p": "(541) 523-8207",
@@ -13,10 +13,12 @@
     "s": "OR",
     "z": "97814-3365",
     "j": "Baker",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 513,
+    "i": 3040,
     "n": "Benton County Clerk, Elections Office",
     "f": "(541) 766-6757",
     "p": "(541) 766-6756",
@@ -29,10 +31,12 @@
     "s": "OR",
     "z": "97330-4734",
     "j": "Benton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1273,
+    "i": 3041,
     "n": "Clackamas County Clerk, Elections Office",
     "f": "(503) 655-8461",
     "p": "(503) 655-8510",
@@ -45,10 +49,12 @@
     "s": "OR",
     "z": "97045-4300",
     "j": "Clackamas",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1309,
+    "i": 3042,
     "n": "Clatsop County Clerk, Elections Office",
     "f": "(503) 325-9307",
     "p": "(503) 325-8511",
@@ -61,10 +67,12 @@
     "s": "OR",
     "z": "97103-4609",
     "j": "Clatsop",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1461,
+    "i": 3043,
     "n": "Columbia County Clerk, Elections Office",
     "f": "(503) 397-7266",
     "p": "(503) 397-7214",
@@ -77,10 +85,12 @@
     "s": "OR",
     "z": "97051-2089",
     "j": "Columbia",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1517,
+    "i": 3044,
     "n": "Coos County Clerk, Elections Office",
     "f": "(541) 396-1013",
     "p": "(541) 396-7610",
@@ -93,10 +103,12 @@
     "s": "OR",
     "z": "97423-1875",
     "j": "Coos",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1584,
+    "i": 3045,
     "n": "Crook County Clerk, Elections Office",
     "f": "(541) 416-2145",
     "p": "(541) 447-6553",
@@ -109,10 +121,12 @@
     "s": "OR",
     "z": "97754-1919",
     "j": "Crook",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1626,
+    "i": 3046,
     "n": "Curry County Clerk, Elections Office",
     "f": "(541) 247-9361",
     "p": "(541) 247-3297",
@@ -125,10 +139,12 @@
     "s": "OR",
     "z": "97444-9705",
     "j": "Curry",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1846,
+    "i": 3047,
     "n": "Deschutes County Clerk, Elections Office",
     "f": "(541) 383-4424",
     "p": "(541) 388-6547",
@@ -141,10 +157,12 @@
     "s": "OR",
     "z": "97708-6005",
     "j": "Deschutes",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1906,
+    "i": 3048,
     "n": "Douglas County Clerk, Elections Office",
     "f": "(541) 440-4408",
     "p": "(541) 440-4252",
@@ -157,10 +175,12 @@
     "s": "OR",
     "z": "97470-0004",
     "j": "Douglas",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2559,
+    "i": 3049,
     "n": "Gilliam County Clerk, Elections Office",
     "f": "(541) 384-2166",
     "p": "(541) 384-2311",
@@ -173,10 +193,12 @@
     "s": "OR",
     "z": "97823-0427",
     "j": "Gilliam",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2671,
+    "i": 3050,
     "n": "Grant County Clerk, Elections Office",
     "f": "(541) 575-2248",
     "p": "(541) 575-1675",
@@ -189,10 +211,12 @@
     "s": "OR",
     "z": "97820-6186",
     "j": "Grant",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2934,
+    "i": 3051,
     "n": "Harney County Clerk, Elections Office",
     "f": "(541) 573-8370",
     "p": "(541) 573-6641",
@@ -205,10 +229,12 @@
     "s": "OR",
     "z": "97720-1565",
     "j": "Harney",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3152,
+    "i": 3052,
     "n": "Hood River County Clerk, Elections Office",
     "f": "(541) 387-6864",
     "p": "(541) 386-1442",
@@ -221,10 +247,12 @@
     "s": "OR",
     "z": "97031-1871",
     "j": "Hood River",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3337,
+    "i": 3053,
     "n": "Jackson County Clerk, Elections Office",
     "f": "(541) 774-6140",
     "p": "(541) 774-6148",
@@ -237,10 +265,12 @@
     "s": "OR",
     "z": "97501-2369",
     "j": "Jackson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3389,
+    "i": 3054,
     "n": "Jefferson County Clerk, Elections Office",
     "f": "(541) 325-5018",
     "p": "(541) 475-4451",
@@ -253,10 +283,12 @@
     "s": "OR",
     "z": "97741-1739",
     "j": "Jefferson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3451,
+    "i": 3055,
     "n": "Josephine County Clerk, Elections Office",
     "f": "(541) 474-5246",
     "p": "(541) 474-5243",
@@ -269,10 +301,12 @@
     "s": "OR",
     "z": "97528-0203",
     "j": "Josephine",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3563,
+    "i": 3056,
     "n": "Klamath County Clerk, Elections Office",
     "f": "(541) 885-6757",
     "p": "(541) 883-5134",
@@ -285,10 +319,12 @@
     "s": "OR",
     "z": "97601-6332",
     "j": "Klamath",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3640,
+    "i": 3057,
     "n": "Lake County Clerk, Elections Office",
     "f": "(541) 947-0905",
     "p": "(541) 947-6006",
@@ -301,10 +337,12 @@
     "s": "OR",
     "z": "97630-1539",
     "j": "Lake",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3695,
+    "i": 3058,
     "n": "Lane County Clerk, Elections Office",
     "f": "(541) 682-2303",
     "p": "(541) 682-4234",
@@ -317,10 +355,12 @@
     "s": "OR",
     "z": "97401-3008",
     "j": "Lane",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3863,
+    "i": 3059,
     "n": "Lincoln County Clerk, Elections Office",
     "f": "(541) 265-4950",
     "p": "(541) 265-4131",
@@ -333,10 +373,12 @@
     "s": "OR",
     "z": "97365-3811",
     "j": "Lincoln",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3902,
+    "i": 3060,
     "n": "Linn County Clerk, Elections Office",
     "f": "(541) 925-5109",
     "p": "(541) 967-3831",
@@ -349,10 +391,12 @@
     "s": "OR",
     "z": "97321-2393",
     "j": "Linn",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4102,
+    "i": 3061,
     "n": "Malheur County Clerk, Elections Office",
     "f": "(541) 473-5523",
     "p": "(541) 473-5151",
@@ -365,10 +409,12 @@
     "s": "OR",
     "z": "97918-1375",
     "j": "Malheur",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4177,
+    "i": 3062,
     "n": "Marion County Clerk, Elections Office",
     "f": "(503) 588-5383",
     "p": "(503) 588-5041",
@@ -381,10 +427,12 @@
     "s": "OR",
     "z": "97309-5036",
     "j": "Marion",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4635,
+    "i": 3063,
     "n": "Morrow County Clerk, Elections Office",
     "f": "(541) 676-9876",
     "p": "(541) 676-5604",
@@ -397,10 +445,12 @@
     "s": "OR",
     "z": "97836-0338",
     "j": "Morrow",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4677,
+    "i": 3064,
     "n": "Multnomah County Clerk, Elections Office",
     "f": "(503) 988-3719",
     "p": "(503) 988-3720",
@@ -413,10 +463,12 @@
     "s": "OR",
     "z": "97214-2417",
     "j": "Multnomah",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5379,
+    "i": 3065,
     "n": "Polk County Clerk, Elections Office",
     "f": "(503) 623-0717",
     "p": "(503) 623-9217",
@@ -429,10 +481,12 @@
     "s": "OR",
     "z": "97338-3179",
     "j": "Polk",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6082,
+    "i": 3066,
     "n": "Sherman County Clerk, Elections Office",
     "f": "(541) 565-3771",
     "p": "(541) 565-3606",
@@ -445,10 +499,12 @@
     "s": "OR",
     "z": "97039-0243",
     "j": "Sherman",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6591,
+    "i": 3067,
     "n": "Tillamook County Clerk, Elections Office",
     "f": "(503) 842-1599",
     "p": "(503) 842-3402",
@@ -461,10 +517,12 @@
     "s": "OR",
     "z": "97141-2311",
     "j": "Tillamook",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6708,
+    "i": 3068,
     "n": "Umatilla County Clerk, Elections Office",
     "f": "(541) 278-5463",
     "p": "(541) 278-6254",
@@ -477,10 +535,12 @@
     "s": "OR",
     "z": "97801-2699",
     "j": "Umatilla",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6728,
+    "i": 3069,
     "n": "Union County Clerk, Elections Office",
     "f": "(541) 963-1013",
     "p": "(541) 963-1006",
@@ -493,10 +553,12 @@
     "s": "OR",
     "z": "97850-2100",
     "j": "Union",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6859,
+    "i": 3070,
     "n": "Wallowa County Clerk, Elections Office",
     "f": "(541) 426-5901",
     "p": "(541) 426-4543",
@@ -509,10 +571,12 @@
     "s": "OR",
     "z": "97828-1363",
     "j": "Wallowa",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6910,
+    "i": 3071,
     "n": "Wasco County Clerk, Elections Office",
     "f": "(541) 506-2531",
     "p": "(541) 506-2530",
@@ -525,10 +589,12 @@
     "s": "OR",
     "z": "97058-2237",
     "j": "Wasco",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6938,
+    "i": 3072,
     "n": "Washington County Clerk, Elections Office",
     "f": "(503) 846-5810",
     "p": "(503) 846-5800",
@@ -541,10 +607,12 @@
     "s": "OR",
     "z": "97005-2365",
     "j": "Washington",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7170,
+    "i": 3073,
     "n": "Wheeler County Clerk, Elections Office",
     "f": "(541) 763-2026",
     "p": "(541) 763-2400",
@@ -557,10 +625,12 @@
     "s": "OR",
     "z": "97830-0327",
     "j": "Wheeler",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7401,
+    "i": 3074,
     "n": "Yamhill County Clerk, Elections Office",
     "f": "(503) 434-7520",
     "p": "(503) 434-7518",
@@ -573,6 +643,8 @@
     "s": "OR",
     "z": "97128-4607",
     "j": "Yamhill",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

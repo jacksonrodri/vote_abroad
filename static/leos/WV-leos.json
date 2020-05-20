@@ -1,6 +1,6 @@
 [
   {
-    "i": 361,
+    "i": 5936,
     "n": "Barbour Clerk of the County Commission",
     "f": "(304) 457-5983",
     "p": "(304) 457-2232",
@@ -13,10 +13,12 @@
     "s": "WV",
     "z": "26416",
     "j": "Barbour",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 530,
+    "i": 5937,
     "n": "Berkeley Clerk of the County Commission",
     "f": "(304) 260-4882",
     "p": "(304) 264-1989",
@@ -29,10 +31,12 @@
     "s": "WV",
     "z": "25401",
     "j": "Berkeley",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 677,
+    "i": 5938,
     "n": "Boone Clerk of the County Commission",
     "f": "(304) 369-7329",
     "p": "(304) 369-7330",
@@ -45,10 +49,12 @@
     "s": "WV",
     "z": "25130",
     "j": "Boone",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 737,
+    "i": 5939,
     "n": "Braxton Clerk of the County Commission",
     "f": "(304) 765-2093",
     "p": "(304) 765-2833",
@@ -61,10 +67,12 @@
     "s": "WV",
     "z": "26601",
     "j": "Braxton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 791,
+    "i": 5940,
     "n": "Brooke Clerk of the County Commission",
     "f": "(304) 737-4023",
     "p": "(304) 737-3661",
@@ -77,10 +85,12 @@
     "s": "WV",
     "z": "26070",
     "j": "Brooke",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 923,
+    "i": 5941,
     "n": "Cabell Clerk of the County Commission",
     "f": "(304) 526-8632",
     "p": "(304) 526-8625",
@@ -93,10 +103,12 @@
     "s": "WV",
     "z": "25701",
     "j": "Cabell",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 959,
+    "i": 5942,
     "n": "Calhoun Clerk of the County Commission",
     "f": "(304) 354-6447",
     "p": "(304) 354-6725",
@@ -109,10 +121,12 @@
     "s": "WV",
     "z": "26147",
     "j": "Calhoun",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1328,
+    "i": 5943,
     "n": "Clay Clerk of the County Commission",
     "f": "(304) 587-4202",
     "p": "(304) 587-4259",
@@ -125,10 +139,12 @@
     "s": "WV",
     "z": "25043",
     "j": "Clay",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1878,
+    "i": 5944,
     "n": "Doddridge Clerk of the County Commission",
     "f": "(304) 873-1840",
     "p": "(304) 873-2631",
@@ -141,10 +157,12 @@
     "s": "WV",
     "z": "26456",
     "j": "Doddridge",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2262,
+    "i": 5945,
     "n": "Fayette Clerk of the County Commission",
     "f": "(304) 574-4335",
     "p": "(304) 574-4225",
@@ -157,10 +175,12 @@
     "s": "WV",
     "z": "25840",
     "j": "Fayette",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2565,
+    "i": 5946,
     "n": "Gilmer Clerk of the County Commission",
     "f": "(304) 462-8855",
     "p": "(304) 462-7641",
@@ -173,10 +193,12 @@
     "s": "WV",
     "z": "26351",
     "j": "Gilmer",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2674,
+    "i": 5947,
     "n": "Grant Clerk of the County Commission",
     "f": "(304) 257-4207",
     "p": "(304) 257-4550",
@@ -189,10 +211,12 @@
     "s": "WV",
     "z": "26847",
     "j": "Grant",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2729,
+    "i": 5948,
     "n": "Greenbrier Clerk of the County Commission",
     "f": "(304) 647-6694",
     "p": "(304) 647-6602",
@@ -205,10 +229,12 @@
     "s": "WV",
     "z": "24901",
     "j": "Greenbrier",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2870,
+    "i": 5949,
     "n": "Hampshire Clerk of the County Commission",
     "f": "(304) 822-4039",
     "p": "(304) 822-5112",
@@ -221,10 +247,12 @@
     "s": "WV",
     "z": "26757",
     "j": "Hampshire",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2888,
+    "i": 5950,
     "n": "Hancock Clerk of the County Commission",
     "f": "(304) 564-5941",
     "p": "(304) 564-3311",
@@ -237,10 +265,12 @@
     "s": "WV",
     "z": "26047",
     "j": "Hancock",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2924,
+    "i": 5951,
     "n": "Hardy Clerk of the County Commission",
     "f": "(304) 530-0251",
     "p": "(304) 530-0250",
@@ -253,10 +283,12 @@
     "s": "WV",
     "z": "26836",
     "j": "Hardy",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2949,
+    "i": 5952,
     "n": "Harrison Clerk of the County Commission",
     "f": "(304) 624-8575",
     "p": "(304) 624-8675",
@@ -269,10 +301,12 @@
     "s": "WV",
     "z": "26301",
     "j": "Harrison",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3341,
+    "i": 5953,
     "n": "Jackson Clerk of the County Commission",
     "f": "(304) 372-1107",
     "p": "(304) 373-2250",
@@ -285,10 +319,12 @@
     "s": "WV",
     "z": "25271",
     "j": "Jackson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3394,
+    "i": 5954,
     "n": "Jefferson Clerk of the County Commission",
     "f": "304-728-1957",
     "p": "304-728-3246",
@@ -301,10 +337,12 @@
     "s": "WV",
     "z": "25414",
     "j": "Jefferson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3467,
+    "i": 5955,
     "n": "Kanawha Clerk of the County Commission",
     "f": "(304) 357-0585",
     "p": "(304) 357-0130",
@@ -317,10 +355,12 @@
     "s": "WV",
     "z": "25301",
     "j": "Kanawha",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3816,
+    "i": 5956,
     "n": "Lewis Clerk of the County Commission",
     "f": "(304) 269-8202",
     "p": "(304) 269-8215",
@@ -333,10 +373,12 @@
     "s": "WV",
     "z": "26452",
     "j": "Lewis",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3869,
+    "i": 5957,
     "n": "Lincoln Clerk of the County Commission",
     "f": "(304) 824-2444",
     "p": "(304) 824-3336",
@@ -349,10 +391,12 @@
     "s": "WV",
     "z": "25523",
     "j": "Lincoln",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3953,
+    "i": 5958,
     "n": "Logan Clerk of the County Commission",
     "f": "(304) 792-8246",
     "p": "(304) 792-8600",
@@ -365,10 +409,12 @@
     "s": "WV",
     "z": "25601",
     "j": "Logan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4181,
+    "i": 5959,
     "n": "Marion Clerk of the County Commission",
     "f": "(304) 367-5448",
     "p": "(304) 367-5445",
@@ -381,10 +427,12 @@
     "s": "WV",
     "z": "26555",
     "j": "Marion",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4220,
+    "i": 5960,
     "n": "Marshall Clerk of the County Commission",
     "f": "(304) 845-5891",
     "p": "(304) 845-1220",
@@ -397,10 +445,12 @@
     "s": "WV",
     "z": "26041",
     "j": "Marshall",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4246,
+    "i": 5961,
     "n": "Mason Clerk of the County Commission",
     "f": "(304) 675-2521",
     "p": "(304) 675-1997",
@@ -413,10 +463,12 @@
     "s": "WV",
     "z": "25550",
     "j": "Mason",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4290,
+    "i": 5962,
     "n": "McDowell Clerk of the County Commission",
     "f": "(304) 436-8576",
     "p": "(304) 436-8544",
@@ -429,10 +481,12 @@
     "s": "WV",
     "z": "24801",
     "j": "McDowell",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4385,
+    "i": 5963,
     "n": "Mercer Clerk of the County Commission",
     "f": "(304) 425-4851",
     "p": "(304) 487-8338",
@@ -445,10 +499,12 @@
     "s": "WV",
     "z": "24740",
     "j": "Mercer",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4486,
+    "i": 5964,
     "n": "Mineral Clerk of the County Commission",
     "f": "(304) 788-4109",
     "p": "(304) 788-3924",
@@ -461,10 +517,12 @@
     "s": "WV",
     "z": "26726",
     "j": "Mineral",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4489,
+    "i": 5965,
     "n": "Mingo Clerk of the County Commission",
     "f": "(304) 235-0565",
     "p": "(304) 235-0330",
@@ -477,10 +535,12 @@
     "s": "WV",
     "z": "25661",
     "j": "Mingo",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4526,
+    "i": 5966,
     "n": "Monongalia Clerk of the County Commission",
     "f": "(304) 291-7233",
     "p": "(304) 291-7230",
@@ -493,10 +553,12 @@
     "s": "WV",
     "z": "26505",
     "j": "Monongalia",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4541,
+    "i": 5967,
     "n": "Monroe Clerk of the County Commission",
     "f": "(304) 772-4191",
     "p": "(304) 772-3096",
@@ -509,10 +571,12 @@
     "s": "WV",
     "z": "24983",
     "j": "Monroe",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4623,
+    "i": 5968,
     "n": "Morgan Clerk of the County Commission",
     "f": "(304) 258-8545",
     "p": "(304) 258-8547",
@@ -525,10 +589,12 @@
     "s": "WV",
     "z": "25411",
     "j": "Morgan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4845,
+    "i": 5969,
     "n": "Nicholas Clerk of the County Commission",
     "f": "(304) 872-9600",
     "p": "(304) 872-7820",
@@ -541,10 +607,12 @@
     "s": "WV",
     "z": "26651",
     "j": "Nicholas",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4985,
+    "i": 5970,
     "n": "Ohio County Elections Clerk",
     "f": "(304) 234-3827",
     "p": "(304) 234-3750",
@@ -557,10 +625,12 @@
     "s": "WV",
     "z": "26003",
     "j": "Ohio",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5199,
+    "i": 5971,
     "n": "Pendleton Clerk of the County Commission",
     "f": "(304) 358-2473",
     "p": "(304) 358-2505",
@@ -573,10 +643,12 @@
     "s": "WV",
     "z": "26807",
     "j": "Pendleton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5345,
+    "i": 5972,
     "n": "Pleasants Clerk of the County Commission",
     "f": "(304) 684-7569",
     "p": "(304) 684-3542",
@@ -589,10 +661,12 @@
     "s": "WV",
     "z": "26170",
     "j": "Pleasants",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5365,
+    "i": 5973,
     "n": "Pocahontas Clerk of the County Commission",
     "f": "(304) 799-6947",
     "p": "(304) 799-4549",
@@ -605,10 +679,12 @@
     "s": "WV",
     "z": "24954",
     "j": "Pocahontas",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5473,
+    "i": 5974,
     "n": "Preston Clerk of the County Commission",
     "f": "(304) 329-0198",
     "p": "(304) 329-0070",
@@ -621,10 +697,12 @@
     "s": "WV",
     "z": "26537",
     "j": "Preston",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5511,
+    "i": 5975,
     "n": "Putnam Clerk of the County Commission",
     "f": "(304) 204-1408",
     "p": "(304) 586-0202",
@@ -637,10 +715,12 @@
     "s": "WV",
     "z": "25213",
     "j": "Putnam",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5533,
+    "i": 5976,
     "n": "Raleigh Clerk of the County Commission",
     "f": "(304) 252-8698",
     "p": "(304) 252-8681",
@@ -653,10 +733,12 @@
     "s": "WV",
     "z": "25802",
     "j": "Raleigh",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5547,
+    "i": 5977,
     "n": "Randolph Clerk of the County Commission",
     "f": "(304) 636-0544",
     "p": "(304) 636-0543",
@@ -669,10 +751,12 @@
     "s": "WV",
     "z": "26241",
     "j": "Randolph",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5688,
+    "i": 5978,
     "n": "Ritchie Clerk of the County Commission",
     "f": "(304) 643-2906",
     "p": "(304) 643-2164",
@@ -685,10 +769,12 @@
     "s": "WV",
     "z": "26362",
     "j": "Ritchie",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5700,
+    "i": 5979,
     "n": "Roane Clerk of the County Commission",
     "f": "(304) 927-2489",
     "p": "(304) 927-2860",
@@ -701,10 +787,12 @@
     "s": "WV",
     "z": "25276",
     "j": "Roane",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6440,
+    "i": 5980,
     "n": "Summers Clerk of the County Commission",
     "f": "(304) 466-7146",
     "p": "(304) 466-7104",
@@ -717,10 +805,12 @@
     "s": "WV",
     "z": "25951",
     "j": "Summers",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6534,
+    "i": 5981,
     "n": "Taylor Clerk of the County Commission",
     "f": "(304) 265-2889",
     "p": "(304) 265-1401",
@@ -733,10 +823,12 @@
     "s": "WV",
     "z": "26354",
     "j": "Taylor",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6673,
+    "i": 5982,
     "n": "Tucker Clerk of the County Commission",
     "f": "(304) 478-2217",
     "p": "(304) 478-2414",
@@ -749,10 +841,12 @@
     "s": "WV",
     "z": "26287",
     "j": "Tucker",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6699,
+    "i": 5983,
     "n": "Tyler Clerk of the County Commission",
     "f": "(304) 758-2126",
     "p": "(304) 758-2102",
@@ -765,10 +859,12 @@
     "s": "WV",
     "z": "26149",
     "j": "Tyler",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6751,
+    "i": 5984,
     "n": "Upshur Clerk of the County Commission",
     "f": "(304) 472-1029",
     "p": "(304) 472-1068",
@@ -781,10 +877,12 @@
     "s": "WV",
     "z": "26201",
     "j": "Upshur",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7029,
+    "i": 5985,
     "n": "Wayne Clerk of the County Commission",
     "f": "(304) 272-5318",
     "p": "(304) 272-6362",
@@ -797,10 +895,12 @@
     "s": "WV",
     "z": "25570",
     "j": "Wayne",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7052,
+    "i": 5986,
     "n": "Webster Clerk of the County Commission",
     "f": "(304) 847-5780",
     "p": "(304) 847-2508",
@@ -813,10 +913,12 @@
     "s": "WV",
     "z": "26288",
     "j": "Webster",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7149,
+    "i": 5987,
     "n": "Wetzel Clerk of the County Commission",
     "f": "(304) 455-5256",
     "p": "(304) 455-8224",
@@ -829,10 +931,12 @@
     "s": "WV",
     "z": "26155",
     "j": "Wetzel",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7311,
+    "i": 5988,
     "n": "Wirt Clerk of the County Commission",
     "f": "(304) 275-3418",
     "p": "(304) 275-4271",
@@ -845,10 +949,12 @@
     "s": "WV",
     "z": "26143",
     "j": "Wirt",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7334,
+    "i": 5989,
     "n": "Wood Clerk of the County Commission",
     "f": "(304) 424-1982",
     "p": "(304) 424-1850",
@@ -861,10 +967,12 @@
     "s": "WV",
     "z": "26101",
     "j": "Wood",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7391,
+    "i": 5990,
     "n": "Wyoming Clerk of the County Commission",
     "f": "(304) 732-9659",
     "p": "(304) 732-8000",
@@ -877,6 +985,8 @@
     "s": "WV",
     "z": "24874",
     "j": "Wyoming",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]

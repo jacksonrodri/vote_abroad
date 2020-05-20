@@ -1,6 +1,6 @@
 [
   {
-    "i": 21,
+    "i": 830,
     "n": "Adams County Clerk",
     "f": "(217) 277-2155",
     "p": "(217) 277-2150",
@@ -13,10 +13,12 @@
     "s": "IL",
     "z": "62301",
     "j": "Adams",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 81,
+    "i": 831,
     "n": "Alexander County Clerk",
     "f": "(618) 734-7002",
     "p": "(618) 734-7000",
@@ -29,26 +31,12 @@
     "s": "IL",
     "z": "62914-1717",
     "j": "Alexander",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 299,
-    "n": "Aurora City Board of Election Commissioners",
-    "f": "(630) 897-4060",
-    "p": "(630) 897-4030",
-    "e": "lfechner@aec-il.org",
-    "d": "2015-08-31T15:41:35",
-    "a1": "323 W. Galena Blvd",
-    "a2": "",
-    "a3": "",
-    "c": "Aurora",
-    "s": "IL",
-    "z": "60506",
-    "j": "Aurora",
-    "t": "City"
-  },
-  {
-    "i": 643,
+    "i": 833,
     "n": "Bloomington City Board of Election Commissioners",
     "f": "(309) 888-5776",
     "p": "(309) 888-5136",
@@ -61,10 +49,12 @@
     "s": "IL",
     "z": "61702",
     "j": "Bloomington",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 665,
+    "i": 834,
     "n": "Bond County Clerk",
     "f": "(618) 664-9414",
     "p": "(618) 664-0449",
@@ -77,10 +67,12 @@
     "s": "IL",
     "z": "62246",
     "j": "Bond",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 672,
+    "i": 835,
     "n": "Boone County Clerk",
     "f": "(815) 547-8701",
     "p": "(815) 544-3103",
@@ -93,10 +85,12 @@
     "s": "IL",
     "z": "61008",
     "j": "Boone",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 816,
+    "i": 836,
     "n": "Brown County Clerk",
     "f": "(217) 773-2233",
     "p": "(217) 773-3421",
@@ -109,10 +103,12 @@
     "s": "IL",
     "z": "62353-1285",
     "j": "Brown",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 870,
+    "i": 837,
     "n": "Bureau County Clerk",
     "f": "(815) 879-4803",
     "p": "(815) 875-2014",
@@ -125,10 +121,12 @@
     "s": "IL",
     "z": "61356-2078",
     "j": "Bureau",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 955,
+    "i": 838,
     "n": "Calhoun County Clerk",
     "f": "(618) 576-9723",
     "p": "(618) 576-9700",
@@ -141,10 +139,12 @@
     "s": "IL",
     "z": "62047-0187",
     "j": "Calhoun",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1035,
+    "i": 839,
     "n": "Carroll County Clerk",
     "f": "(815) 244-3709",
     "p": "(815) 244-0221",
@@ -157,10 +157,12 @@
     "s": "IL",
     "z": "61053",
     "j": "Carroll",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1075,
+    "i": 840,
     "n": "Cass County Clerk",
     "f": "(217) 452-7219",
     "p": "(217) 452-7217",
@@ -173,10 +175,12 @@
     "s": "IL",
     "z": "62691",
     "j": "Cass",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1137,
+    "i": 841,
     "n": "Champaign County Clerk",
     "f": "(217) 384-1241",
     "p": "(217) 384-3724",
@@ -189,10 +193,12 @@
     "s": "IL",
     "z": "61802-4578",
     "j": "Champaign",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1231,
+    "i": 842,
     "n": "Chicago City Board of Election Commissioners",
     "f": "(312) 269-0003",
     "p": "(312) 269-7900",
@@ -205,10 +211,12 @@
     "s": "IL",
     "z": "60602-3012",
     "j": "Chicago",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1261,
+    "i": 843,
     "n": "Christian County Clerk",
     "f": "(217) 824-5105",
     "p": "(217) 824-4969",
@@ -221,10 +229,12 @@
     "s": "IL",
     "z": "62568-0647",
     "j": "Christian",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1291,
+    "i": 844,
     "n": "Clark County Clerk",
     "f": "(217) 826-2519",
     "p": "(217) 826-8311",
@@ -237,10 +247,12 @@
     "s": "IL",
     "z": "62441-1275",
     "j": "Clark",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1316,
+    "i": 845,
     "n": "Clay County Clerk",
     "f": "(618) 665-3607",
     "p": "(618) 665-3626",
@@ -253,10 +265,12 @@
     "s": "IL",
     "z": "62858-0160",
     "j": "Clay",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1371,
+    "i": 846,
     "n": "Clinton County Clerk",
     "f": "(618) 594-0195",
     "p": "(618) 594-6620",
@@ -269,10 +283,12 @@
     "s": "IL",
     "z": "62231-0308",
     "j": "Clinton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1434,
+    "i": 847,
     "n": "Coles County Clerk",
     "f": "(217) 348-7337",
     "p": "(217) 348-0537",
@@ -285,10 +301,12 @@
     "s": "IL",
     "z": "61920-2053",
     "j": "Coles",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1507,
+    "i": 848,
     "n": "Cook County Clerk",
     "f": "(312) 603-9786",
     "p": "(312) 603-0906",
@@ -301,10 +319,12 @@
     "s": "IL",
     "z": "60602-1304",
     "j": "Cook",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1566,
+    "i": 849,
     "n": "Crawford County Clerk",
     "f": "(618) 546-0140",
     "p": "(618) 546-1212",
@@ -317,10 +337,12 @@
     "s": "IL",
     "z": "62454",
     "j": "Crawford",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1610,
+    "i": 850,
     "n": "Cumberland County Clerk",
     "f": "(217) 849-2968",
     "p": "(217) 849-2631",
@@ -333,10 +355,12 @@
     "s": "IL",
     "z": "62468-0146",
     "j": "Cumberland",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1728,
+    "i": 851,
     "n": "Danville City Board of Election Commissioners",
     "f": "(217) 554-1933",
     "p": "(217) 554-1931",
@@ -349,10 +373,12 @@
     "s": "IL",
     "z": "61832",
     "j": "Danville",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1765,
+    "i": 852,
     "n": "De Kalb County Clerk",
     "f": "(815) 895-7148",
     "p": "(815) 895-7147",
@@ -365,10 +391,12 @@
     "s": "IL",
     "z": "60178",
     "j": "De Kalb",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1771,
+    "i": 853,
     "n": "De Witt County Clerk",
     "f": "(217) 935-7789",
     "p": "(217) 935-7780",
@@ -381,10 +409,12 @@
     "s": "IL",
     "z": "61727",
     "j": "De Witt",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1900,
+    "i": 854,
     "n": "Douglas County Clerk",
     "f": "(217) 253-2233",
     "p": "(217) 253-2411",
@@ -397,10 +427,12 @@
     "s": "IL",
     "z": "61953-0467",
     "j": "Douglas",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 1953,
+    "i": 855,
     "n": "Dupage County Clerk - Election Division",
     "f": "(630) 407-5633",
     "p": "(630) 407-5600",
@@ -413,10 +445,12 @@
     "s": "IL",
     "z": "60187",
     "j": "Dupage",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2000,
+    "i": 856,
     "n": "E. St. Louis City Board of Election Commissioners",
     "f": "(618) 271-8194",
     "p": "(618) 482-6672",
@@ -429,10 +463,12 @@
     "s": "IL",
     "z": "62201",
     "j": "East St. Louis",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2045,
+    "i": 857,
     "n": "Edgar County Clerk",
     "f": "(217) 466-7430",
     "p": "(217) 466-7433",
@@ -445,10 +481,12 @@
     "s": "IL",
     "z": "61944",
     "j": "Edgar",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2055,
+    "i": 858,
     "n": "Edwards County Clerk",
     "f": "(618) 445-4941",
     "p": "(618) 445-2115",
@@ -461,10 +499,12 @@
     "s": "IL",
     "z": "62806",
     "j": "Edwards",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2060,
+    "i": 859,
     "n": "Effingham County Clerk",
     "f": "(217) 342-3577",
     "p": "(217) 342-6535",
@@ -477,10 +517,12 @@
     "s": "IL",
     "z": "62401-0628",
     "j": "Effingham",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2255,
+    "i": 860,
     "n": "Fayette County Clerk",
     "f": "(618) 283-5004",
     "p": "(618) 283-5000",
@@ -493,10 +535,12 @@
     "s": "IL",
     "z": "62471",
     "j": "Fayette",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2325,
+    "i": 861,
     "n": "Ford County Clerk",
     "f": "(217) 379-9409",
     "p": "(217) 379-2721",
@@ -509,10 +553,12 @@
     "s": "IL",
     "z": "60957",
     "j": "Ford",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2378,
+    "i": 862,
     "n": "Franklin County Clerk",
     "f": "(618) 435-3405",
     "p": "(618) 438-3221",
@@ -525,10 +571,12 @@
     "s": "IL",
     "z": "62812-0607",
     "j": "Franklin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2456,
+    "i": 863,
     "n": "Fulton County Clerk",
     "f": "(309) 547-3326",
     "p": "(309) 547-3041",
@@ -541,10 +589,12 @@
     "s": "IL",
     "z": "61542",
     "j": "Fulton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2473,
+    "i": 864,
     "n": "Galesburg City Board of Election Commissioners",
     "f": "(309) 345-5706",
     "p": "(309) 342-5563",
@@ -557,10 +607,12 @@
     "s": "IL",
     "z": "61402-1387",
     "j": "Galesburg",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2477,
+    "i": 865,
     "n": "Gallatin County Clerk",
     "f": "(618) 269-3343",
     "p": "(618) 269-3025",
@@ -573,10 +625,12 @@
     "s": "IL",
     "z": "62984-0550",
     "j": "Gallatin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2739,
+    "i": 866,
     "n": "Greene County Clerk",
     "f": "(217) 942-9323",
     "p": "(217) 942-5443",
@@ -589,10 +643,12 @@
     "s": "IL",
     "z": "62016",
     "j": "Greene",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2802,
+    "i": 867,
     "n": "Grundy County Clerk",
     "f": "(815) 942-2222",
     "p": "(815) 941-3222",
@@ -605,10 +661,12 @@
     "s": "IL",
     "z": "60450-0675",
     "j": "Grundy",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2849,
+    "i": 868,
     "n": "Hamilton County Clerk",
     "f": "(618) 643-2756",
     "p": "(618) 643-2721",
@@ -621,10 +679,12 @@
     "s": "IL",
     "z": "62859",
     "j": "Hamilton",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2881,
+    "i": 869,
     "n": "Hancock County Clerk",
     "f": "",
     "p": "(217) 357-3911",
@@ -637,10 +697,12 @@
     "s": "IL",
     "z": "62321-0039",
     "j": "Hancock",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 2914,
+    "i": 870,
     "n": "Hardin County Clerk",
     "f": "(618) 287-2661",
     "p": "(618) 287-2251",
@@ -653,10 +715,12 @@
     "s": "IL",
     "z": "62931-0187",
     "j": "Hardin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3031,
+    "i": 871,
     "n": "Henderson County Clerk",
     "f": "(309) 867-2033",
     "p": "(309) 867-2911",
@@ -669,10 +733,12 @@
     "s": "IL",
     "z": "61469-0308",
     "j": "Henderson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3048,
+    "i": 872,
     "n": "Henry County Clerk",
     "f": "(309) 937-2796",
     "p": "(309) 937-3480",
@@ -685,10 +751,12 @@
     "s": "IL",
     "z": "61238",
     "j": "Henry",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3300,
+    "i": 873,
     "n": "Iroquois County Clerk",
     "f": "(815) 432-6999",
     "p": "(815) 432-6960",
@@ -701,10 +769,12 @@
     "s": "IL",
     "z": "60970",
     "j": "Iroquois",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3326,
+    "i": 874,
     "n": "Jackson County Clerk",
     "f": "(618) 687-7359",
     "p": "(618) 687-7360",
@@ -717,10 +787,12 @@
     "s": "IL",
     "z": "62966",
     "j": "Jackson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3362,
+    "i": 875,
     "n": "Jasper County Clerk",
     "f": "(618) 783-4137",
     "p": "(618) 783-3124",
@@ -733,10 +805,12 @@
     "s": "IL",
     "z": "62448",
     "j": "Jasper",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3379,
+    "i": 876,
     "n": "Jefferson County Clerk",
     "f": "(618) 244-8023",
     "p": "(618) 244-8020",
@@ -749,10 +823,12 @@
     "s": "IL",
     "z": "62864",
     "j": "Jefferson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3415,
+    "i": 877,
     "n": "Jersey County Clerk",
     "f": "(618) 498-7721",
     "p": "(618) 498-5571",
@@ -765,10 +841,12 @@
     "s": "IL",
     "z": "62052",
     "j": "Jersey",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3420,
+    "i": 878,
     "n": "Jo Daviess County Clerk",
     "f": "(815) 777-3688",
     "p": "(815) 777-0161",
@@ -781,10 +859,12 @@
     "s": "IL",
     "z": "61036",
     "j": "Jo Daviess",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3424,
+    "i": 879,
     "n": "Johnson County Clerk",
     "f": "(618) 658-9665",
     "p": "(618) 658-3611",
@@ -797,10 +877,12 @@
     "s": "IL",
     "z": "62995-0096",
     "j": "Johnson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3469,
+    "i": 880,
     "n": "Kane County Clerk",
     "f": "(630) 232-5870",
     "p": "(630) 232-5990",
@@ -813,10 +895,12 @@
     "s": "IL",
     "z": "60134",
     "j": "Kane",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3471,
+    "i": 881,
     "n": "Kankakee County Clerk",
     "f": "(815) 939-8831",
     "p": "(815) 937-2990",
@@ -829,10 +913,12 @@
     "s": "IL",
     "z": "60901",
     "j": "Kankakee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3493,
+    "i": 882,
     "n": "Kendall County Clerk",
     "f": "(630) 553-4119",
     "p": "(630) 553-4104",
@@ -845,10 +931,12 @@
     "s": "IL",
     "z": "60560",
     "j": "Kendall",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3571,
+    "i": 883,
     "n": "Knox County Clerk",
     "f": "(309) 345-3801",
     "p": "(309) 345-3815",
@@ -861,10 +949,12 @@
     "s": "IL",
     "z": "61401",
     "j": "Knox",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3605,
+    "i": 884,
     "n": "La Salle County Clerk",
     "f": "(815) 434-8319",
     "p": "(815) 434-8202",
@@ -877,10 +967,12 @@
     "s": "IL",
     "z": "61350-0430",
     "j": "La Salle",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3635,
+    "i": 885,
     "n": "Lake County Clerk",
     "f": "847-984-5822",
     "p": "847-377-2400",
@@ -893,10 +985,12 @@
     "s": "IL",
     "z": "60085",
     "j": "Lake",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3727,
+    "i": 886,
     "n": "Lawrence County Clerk",
     "f": "(618) 943-3786",
     "p": "(618) 943-2346",
@@ -909,10 +1003,12 @@
     "s": "IL",
     "z": "62439",
     "j": "Lawrence",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3760,
+    "i": 887,
     "n": "Lee County Clerk",
     "f": "(815) 288-6157",
     "p": "(815) 288-3309",
@@ -925,10 +1021,12 @@
     "s": "IL",
     "z": "61021",
     "j": "Lee",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3929,
+    "i": 888,
     "n": "Livingston County Clerk",
     "f": "(815) 842-1844",
     "p": "(815) 844-2006",
@@ -941,10 +1039,12 @@
     "s": "IL",
     "z": "61764",
     "j": "Livingston",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 3946,
+    "i": 889,
     "n": "Logan County Clerk",
     "f": "(217) 732-6064",
     "p": "(217) 732-4148",
@@ -957,26 +1057,30 @@
     "s": "IL",
     "z": "62656",
     "j": "Logan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4055,
+    "i": 890,
     "n": "Macon County Clerk",
     "f": "(217) 423-0922",
-    "p": "(217) 424-1305",
+    "p": "(217) 424-1309",
     "e": "jtanner@co.macon.il.us",
-    "d": "2020-02-11T16:04:28",
-    "a1": "141 S Main, Rm 104",
+    "d": "2019-08-30T13:09:17",
+    "a1": "141 S Main St, Rm 104",
     "a2": "",
     "a3": "",
     "c": "Decatur",
     "s": "IL",
     "z": "62523",
     "j": "Macon",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4060,
+    "i": 891,
     "n": "Macoupin County Clerk",
     "f": "(217) 854-7347",
     "p": "(217) 854-3214",
@@ -989,10 +1093,12 @@
     "s": "IL",
     "z": "62626-0107",
     "j": "Macoupin",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4071,
+    "i": 892,
     "n": "Madison County Clerk",
     "f": "(618) 692-8903",
     "p": "(618) 692-6290",
@@ -1005,10 +1111,12 @@
     "s": "IL",
     "z": "62025-0218",
     "j": "Madison",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4170,
+    "i": 893,
     "n": "Marion County Clerk",
     "f": "(618) 548-2226",
     "p": "(618) 548-3400",
@@ -1021,10 +1129,12 @@
     "s": "IL",
     "z": "62881-0637",
     "j": "Marion",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4211,
+    "i": 894,
     "n": "Marshall County Clerk",
     "f": "(309) 246-3667",
     "p": "(309) 246-6325",
@@ -1037,10 +1147,12 @@
     "s": "IL",
     "z": "61540-0328",
     "j": "Marshall",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4242,
+    "i": 895,
     "n": "Mason County Clerk",
     "f": "(309) 543-2085",
     "p": "(309) 543-6661",
@@ -1053,10 +1165,12 @@
     "s": "IL",
     "z": "62644-0077",
     "j": "Mason",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4255,
+    "i": 896,
     "n": "Massac County Clerk",
     "f": "(618) 524-8514",
     "p": "(618) 524-5213",
@@ -1069,10 +1183,12 @@
     "s": "IL",
     "z": "62960-0429",
     "j": "Massac",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4288,
+    "i": 897,
     "n": "McDonough County Clerk",
     "f": "(309) 836-3368",
     "p": "(309) 833-2474",
@@ -1085,10 +1201,12 @@
     "s": "IL",
     "z": "61455",
     "j": "McDonough",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4292,
+    "i": 898,
     "n": "McHenry County Clerk",
     "f": "(815) 334-8727",
     "p": "(815) 334-4234",
@@ -1101,10 +1219,12 @@
     "s": "IL",
     "z": "60098",
     "j": "McHenry",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4302,
+    "i": 899,
     "n": "McLean County Clerk",
     "f": "(309) 888-5932",
     "p": "(309) 888-5190",
@@ -1117,10 +1237,12 @@
     "s": "IL",
     "z": "61702-2400",
     "j": "McLean",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4357,
+    "i": 900,
     "n": "Menard County Clerk",
     "f": "(217) 632-4301",
     "p": "(217) 632-3201",
@@ -1133,10 +1255,12 @@
     "s": "IL",
     "z": "62675-0465",
     "j": "Menard",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4378,
+    "i": 901,
     "n": "Mercer County Clerk",
     "f": "(309) 582-7022",
     "p": "(309) 582-7021",
@@ -1149,10 +1273,12 @@
     "s": "IL",
     "z": "61231-0066",
     "j": "Mercer",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4533,
+    "i": 902,
     "n": "Monroe County Clerk",
     "f": "(618) 939-8639",
     "p": "(618) 939-8681",
@@ -1165,10 +1291,12 @@
     "s": "IL",
     "z": "62298",
     "j": "Monroe",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4572,
+    "i": 903,
     "n": "Montgomery County Clerk",
     "f": "(217) 532-9581",
     "p": "(217) 532-9530",
@@ -1181,10 +1309,12 @@
     "s": "IL",
     "z": "62049",
     "j": "Montgomery",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4615,
+    "i": 904,
     "n": "Morgan County Clerk",
     "f": "(217) 243-8368",
     "p": "(217) 243-8581",
@@ -1197,10 +1327,12 @@
     "s": "IL",
     "z": "62651-1387",
     "j": "Morgan",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4648,
+    "i": 905,
     "n": "Moultrie County Clerk",
     "f": "(217) 728-8178",
     "p": "(217) 728-4389",
@@ -1213,10 +1345,12 @@
     "s": "IL",
     "z": "61951",
     "j": "Moultrie",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 4981,
+    "i": 906,
     "n": "Ogle County Clerk",
     "f": "(815) 732-3477",
     "p": "(815) 732-1110",
@@ -1229,10 +1363,12 @@
     "s": "IL",
     "z": "61061",
     "j": "Ogle",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5209,
+    "i": 907,
     "n": "Peoria County Election Commission",
     "f": "",
     "p": "(309) 324-2300",
@@ -1245,10 +1381,12 @@
     "s": "IL",
     "z": "61614",
     "j": "Peoria",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5219,
+    "i": 909,
     "n": "Perry County Clerk",
     "f": "(618) 357-3365",
     "p": "(618) 357-5116",
@@ -1261,10 +1399,12 @@
     "s": "IL",
     "z": "62274-0438",
     "j": "Perry",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5257,
+    "i": 910,
     "n": "Piatt County Clerk",
     "f": "(217) 762-7563",
     "p": "(217) 762-9487",
@@ -1277,10 +1417,12 @@
     "s": "IL",
     "z": "61856-0558",
     "j": "Piatt",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5277,
+    "i": 911,
     "n": "Pike County Clerk",
     "f": "(217) 285-5820",
     "p": "(217) 285-6812",
@@ -1293,10 +1435,12 @@
     "s": "IL",
     "z": "62363",
     "j": "Pike",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5391,
+    "i": 912,
     "n": "Pope County Clerk",
     "f": "(618) 683-4466",
     "p": "(618) 683-4466",
@@ -1309,10 +1453,12 @@
     "s": "IL",
     "z": "62938-0216",
     "j": "Pope",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5493,
+    "i": 913,
     "n": "Pulaski County Clerk",
     "f": "(618) 748-9305",
     "p": "(618) 748-9360",
@@ -1325,10 +1471,12 @@
     "s": "IL",
     "z": "62963",
     "j": "Pulaski",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5506,
+    "i": 914,
     "n": "Putnam County Clerk",
     "f": "(815) 925-7549",
     "p": "(815) 925-7129",
@@ -1341,10 +1489,12 @@
     "s": "IL",
     "z": "61327-0236",
     "j": "Putnam",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5542,
+    "i": 915,
     "n": "Randolph County Clerk",
     "f": "(618) 826-3750",
     "p": "(618) 826-5000",
@@ -1357,10 +1507,12 @@
     "s": "IL",
     "z": "62233",
     "j": "Randolph",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5635,
+    "i": 916,
     "n": "Richland County Clerk",
     "f": "(618) 393-4005",
     "p": "(618) 392-3111",
@@ -1373,10 +1525,12 @@
     "s": "IL",
     "z": "62450",
     "j": "Richland",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5725,
+    "i": 917,
     "n": "Rock Island County Clerk",
     "f": "(309) 786-7381",
     "p": "(309) 558-3571",
@@ -1389,10 +1543,12 @@
     "s": "IL",
     "z": "61201",
     "j": "Rock Island",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5733,
+    "i": 918,
     "n": "Rockford City Board of Election Commissioners",
     "f": "(815) 987-5757",
     "p": "(815) 987-5750",
@@ -1405,10 +1561,12 @@
     "s": "IL",
     "z": "61104-2195",
     "j": "Rockford",
-    "t": "City"
+    "t": "City",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5856,
+    "i": 919,
     "n": "Saline County Clerk",
     "f": "(618) 252-3073",
     "p": "(618) 253-3028",
@@ -1421,26 +1579,30 @@
     "s": "IL",
     "z": "62946",
     "j": "Saline",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5906,
+    "i": 920,
     "n": "Sangamon County Clerk",
     "f": "(217) 753-6739",
     "p": "(217) 753-8683",
     "e": "elections@co.sangamon.il.us",
     "d": "2019-08-30T13:09:17",
-    "a1": "200 S. Ninth St., Rm 101 &amp; 105",
+    "a1": "200 S. Ninth St., Rm 101 & 105",
     "a2": "",
     "a3": "",
     "c": "Springfield",
     "s": "IL",
     "z": "62701",
     "j": "Sangamon",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5947,
+    "i": 921,
     "n": "Schuyler County Clerk",
     "f": "(217) 322-6164",
     "p": "(217) 322-4734",
@@ -1453,10 +1615,12 @@
     "s": "IL",
     "z": "62681-0200",
     "j": "Schuyler",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 5962,
+    "i": 922,
     "n": "Scott County Clerk",
     "f": "(217) 742-5853",
     "p": "(217) 742-3178",
@@ -1469,10 +1633,12 @@
     "s": "IL",
     "z": "62694",
     "j": "Scott",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6049,
+    "i": 923,
     "n": "Shelby County Clerk",
     "f": "(217) 774-5291",
     "p": "(217) 774-4421",
@@ -1485,10 +1651,12 @@
     "s": "IL",
     "z": "62565-0230",
     "j": "Shelby",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6274,
+    "i": 924,
     "n": "St. Clair County Clerk",
     "f": "(618) 277-8783",
     "p": "(618) 825-2380",
@@ -1501,10 +1669,12 @@
     "s": "IL",
     "z": "62220",
     "j": "St. Clair",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6331,
+    "i": 925,
     "n": "Stark County Clerk",
     "f": "(309) 286-4039",
     "p": "(309) 286-5911",
@@ -1517,10 +1687,12 @@
     "s": "IL",
     "z": "61483-0097",
     "j": "Stark",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6348,
+    "i": 926,
     "n": "Stephenson County Clerk",
     "f": "(815) 235-8378",
     "p": "(815) 235-8289",
@@ -1533,10 +1705,12 @@
     "s": "IL",
     "z": "61032",
     "j": "Stephenson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6538,
+    "i": 927,
     "n": "Tazewell County Clerk",
     "f": "(309) 477-2244",
     "p": "(309) 477-2264",
@@ -1549,10 +1723,12 @@
     "s": "IL",
     "z": "61554",
     "j": "Tazewell",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6719,
+    "i": 928,
     "n": "Union County Clerk",
     "f": "(618) 833-8712",
     "p": "(618) 833-5711",
@@ -1565,10 +1741,12 @@
     "s": "IL",
     "z": "62952",
     "j": "Union",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6786,
+    "i": 929,
     "n": "Vermilion County Clerk",
     "f": "(217) 554-1914",
     "p": "(217) 554-1900",
@@ -1581,10 +1759,12 @@
     "s": "IL",
     "z": "61832",
     "j": "Vermilion",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6825,
+    "i": 930,
     "n": "Wabash County Clerk",
     "f": "(618) 263-3751",
     "p": "(618) 262-4561",
@@ -1597,10 +1777,12 @@
     "s": "IL",
     "z": "62863-0277",
     "j": "Wabash",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6885,
+    "i": 931,
     "n": "Warren County Clerk",
     "f": "(309) 734-7406",
     "p": "(309) 734-4612",
@@ -1613,10 +1795,12 @@
     "s": "IL",
     "z": "61462",
     "j": "Warren",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 6925,
+    "i": 932,
     "n": "Washington County Clerk",
     "f": "(618) 327-3582",
     "p": "(618) 327-4800",
@@ -1629,10 +1813,12 @@
     "s": "IL",
     "z": "62263",
     "j": "Washington",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7018,
+    "i": 933,
     "n": "Wayne County Clerk",
     "f": "(618) 842-6427",
     "p": "(618) 842-5182",
@@ -1645,10 +1831,12 @@
     "s": "IL",
     "z": "62837-0187",
     "j": "Wayne",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7177,
+    "i": 934,
     "n": "White County Clerk",
     "f": "(618) 382-2322",
     "p": "(618) 382-7211",
@@ -1661,10 +1849,12 @@
     "s": "IL",
     "z": "62821-0339",
     "j": "White",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7197,
+    "i": 935,
     "n": "Whiteside County Clerk",
     "f": "(815) 772-7673",
     "p": "(815) 772-5189",
@@ -1677,10 +1867,12 @@
     "s": "IL",
     "z": "61270",
     "j": "Whiteside",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7230,
+    "i": 936,
     "n": "Will County Clerk",
     "f": "(815) 740-4699",
     "p": "(815) 740-4615",
@@ -1693,10 +1885,12 @@
     "s": "IL",
     "z": "60432",
     "j": "Will",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7240,
+    "i": 937,
     "n": "Williamson County Clerk",
     "f": "(618) 993-2071",
     "p": "(618) 997-1301",
@@ -1709,10 +1903,12 @@
     "s": "IL",
     "z": "62959",
     "j": "Williamson",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7297,
+    "i": 938,
     "n": "Winnebago County Clerk",
     "f": "(815) 969-0259",
     "p": "(815) 319-4252",
@@ -1725,10 +1921,12 @@
     "s": "IL",
     "z": "61101",
     "j": "Winnebago",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   },
   {
-    "i": 7343,
+    "i": 939,
     "n": "Woodford County Clerk",
     "f": "(309) 467-7391",
     "p": "(309) 467-2822",
@@ -1741,6 +1939,8 @@
     "s": "IL",
     "z": "61530",
     "j": "Woodford",
-    "t": "County"
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
   }
 ]
