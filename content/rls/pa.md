@@ -32,6 +32,8 @@ Check below for your delivery methods and deadlines, and to find your local elec
 
 ### Delivery Methods
 
-* Registration: email, fax, or postal mail
+* Registration: email, fax, or postal mail or online *
 * Ballot Request: email, fax or postal mail
 * Ballot Return: postal mail
+
+\* Overseas voters may use the PA online system to register to vote, but to receive their ballots for the calendar year, they must also send in a Federal Post Card Application (FPCA) by the applicable deadline to request a ballot. 

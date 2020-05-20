@@ -405,7 +405,7 @@ export default {
   methods: {
     scrollUp () { window.scrollTo(0, 0) },
     saveFile: function () {
-      fileSaver.saveAs(this.msPdf, `${this.firstName}-${this.lastName}-2018-fpca.pdf`)
+      fileSaver.saveAs(this.msPdf, `${this.firstName}-${this.lastName}-${new Date().getFullYear()}-fpca.pdf`)
       this.confirmPdfDownload()
     },
     md: function (md) { return snarkdown(md) },

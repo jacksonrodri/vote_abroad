@@ -9,8 +9,6 @@
       :date-parser="dateParser2"
       :readonly="false"
       :mobile-native="allowNative"
-      :min-date="minDate"
-      :max-date="maxDate"
       :inline="!allowNative"
       ref="dob"
       @input="val => {showVal(val); $ga.event('formAction', 'focus/select', 'dob')}"
@@ -102,8 +100,8 @@ export default {
     return {
       tempDate: null,
       dateNoNative: '',
-      maxDate: new Date(2000, 10, 6),
-      minDate: new Date(1900, 0, 1),
+      // maxDate: new Date(2000, 10, 6),
+      // minDate: new Date(1900, 0, 1),
       toolTipOpen: false,
       isCardModalActive: false,
       dateChoices: [],
@@ -153,7 +151,7 @@ export default {
     listOfYears () {
       const latestYear = this.maxDate
         ? this.maxDate.getFullYear()
-        : 2000
+        : 2004
       const earliestYear = this.minDate
         ? this.minDate.getFullYear() : 1900
       const arrayOfYears = []

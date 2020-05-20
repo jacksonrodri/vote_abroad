@@ -1,6 +1,6 @@
 <template>
 <div class="field">
-  <span class="is-flex"><label class="label">{{ label }}</label><span @click.prevent="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
+  <span class="is-flex"><label class="label">{{ label }}<span v-if="ballotReceiptOptions.includes('Email')" class="is-size-7 has-text-info has-text-weight-semibold has-text-centered" style="margin-left: 10px; padding-bottom: 2px;">{{$t('request.receiveBallot.emailRecommended')}}</span></label><span @click.prevent="isOpen = !isOpen" class="icon has-text-info" style="cursor: pointer;"><i class="fas fa-info-circle"></i></span></span>
   <p v-if="validations.$error" class="help is-danger">{{ $t(`request.receiveBallot.messages.required`) }}</p>
   <b-field grouped group-multiline>
     <p class="control" v-if="ballotReceiptOptions.indexOf('Email') > -1">

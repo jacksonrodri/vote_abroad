@@ -21,6 +21,10 @@
 [context.es.environment]
   DEVSTAGE = "prod"
 
+[context.dems.environment]
+  DEVSTAGE = "prod"
+  IS_DEMS_SITE = "true"
+
 [[redirects]]
 from = "https://www.votefromabroad.org/vote/eod.htm?submission=true"
 to = "/states"

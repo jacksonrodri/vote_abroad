@@ -15,6 +15,10 @@ Nuxt server rendered Vue app with
 - localization: nuxt-18n es/en
 - pages: each .vue in the pages dir is a unique page
 
+## Sites
+- vr.votefromabroad.org
+- dems.votefromabroad.org
+
 ## Build Setup
 
 ``` bash

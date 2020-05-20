@@ -1,9 +1,14 @@
 <template>
+<div>
+    <div v-if="isDemsSite" class="notification is-warning">
+      <h3 class="title is-6 is-spaced">{{$t('request.daPrimary.title')}}</h3>
+      <span>{{$t('request.daPrimary.home')}}</span>
+    </div>
   <div class="notification is-semitransparent">
     <h1 class="title is-1 is-hidden-mobile is-spaced has-text-danger">
       <span class="has-text-weight-semibold">{{ isStudentSite ? $t('homepage.titleStudents') : $t('homepage.title') }}</span>
     </h1>
-    <div v-if="authState === 'loggedIn'">
+    <div v-if="!isAuthDisabled && authState === 'loggedIn'">
       <i18n tag="h1" path="auth.welcomeBack" class="subtitle is-1 is-size-3-mobile has-text-grey-light">
         <strong>{{ name }}</strong>
       </i18n>
@@ -146,7 +151,7 @@
         <p v-html="toolTipContent"></p>
       </b-message>
 
-      <p class="has-text-centered is-size-5">Due to timing please consider <nuxt-link :to="localePath({ name: 'page', params: { page: 'fwab' } })">submitting a write-in ballot</nuxt-link> along with your ballot request or registration. </p>
+      <!-- <p class="has-text-centered is-size-5">Due to timing please consider <nuxt-link :to="localePath({ name: 'page', params: { page: 'fwab' } })">submitting a write-in ballot</nuxt-link> along with your ballot request or registration. </p> -->
     </div>
     <b-modal
       :active="!optedIn && isPrivacyOptInModalActive"
@@ -158,6 +163,7 @@
         :cookiePage="localePath({ name: 'page', params: {page: 'cookie-policy'}})"
         :tosPage="localePath({ name: 'page', params: {page: 'terms-of-use'}})"></vfa-opt-in>
     </b-modal>
+  </div>
   </div>
 </template>
 
@@ -201,7 +207,8 @@ export default {
   computed: {
     isStudentSite () { return process.env.isStudentSite === 'true' },
     isVrSite () { return process.env.isVrSite === 'true' },
-    isAuthDisabled () { return this.isStudentSite || this.isVrSite },
+    isDemsSite () { return process.env.isDemsSite === 'true' },
+    isAuthDisabled () { return true }, // this.isStudentSite || this.isVrSite || this.isDemsSite },
     title () {
       return this.isStudentSite
         ? this.$t('homepage.titleStudents')

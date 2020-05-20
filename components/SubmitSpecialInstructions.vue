@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     saveFile: function () {
-      fileSaver.saveAs(this.msPdf, `${this.firstName}-${this.lastName}-2018-fpca.pdf`)
+      fileSaver.saveAs(this.msPdf, `${this.firstName}-${this.lastName}-${new Date().getFullYear()}-fpca.pdf`)
       this.confirmPdfDownload()
     },
     confirmPdfDownload () {
