@@ -20,11 +20,11 @@ canRegisterWithFwab: false
 fwabSubmitOptions:
   - Fax
   - Mail
-amIRegistered: 'https://sos.ri.gov/vic/'
+amIRegistered: 'https://vote.sos.ri.gov/Home/UpdateVoterRecord?ActiveFlag=0'
 whereIsMyBallot: 'https://vote.sos.ri.gov/'
 sampleBallot: >-
-  https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage
-uocavaVoters: ''
+  https://vote.sos.ri.gov/Home/PollingPlaces?ActiveFlag=2
+uocavaVoters: 'https://elections.ri.gov/voting/mailballot.php'
 ---
 Rhode Island voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
 

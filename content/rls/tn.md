@@ -20,10 +20,10 @@ canRegisterWithFwab: true
 fwabSubmitOptions:
   - Mail
 amIRegistered: 'https://tnmap.tn.gov/voterlookup/'
-whereIsMyBallot: ''
+whereIsMyBallot: 'https://tnmap.tn.gov/voterlookup/'
 sampleBallot: >-
-  https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage
-uocavaVoters: ''
+  https://ballotpedia.org/Tennessee_Sample_Ballot
+uocavaVoters: 'https://sos.tn.gov/products/elections/militaryoverseas-uocava-absentee-information'
 ---
 Tennessee voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
 

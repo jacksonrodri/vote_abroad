@@ -23,12 +23,12 @@ fwabSubmitOptions:
   - Email
   - Fax
   - Mail
-amIRegistered: 'https://www.votercheck.necvr.ne.gov/VoterView/Home.do'
+amIRegistered: 'https://www.votercheck.necvr.ne.gov/VoterView/RegistrantSearch.do'
 whereIsMyBallot: >-
-  https://www.votercheck.necvr.ne.gov/VoterView/Home.do;jsessionid=O3OcCE7EutAGFoaSP1EOqJeO.undefined
+  https://www.votercheck.necvr.ne.gov/VoterView/AbsenteeBallotSearch.do
 sampleBallot: >-
-  https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage
-uocavaVoters: ''
+  https://sos.nebraska.gov/elections/2020-primary-sample-ballots
+uocavaVoters: 'https://sos.nebraska.gov/elections/military-voters'
 ---
 Nebraska voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
 

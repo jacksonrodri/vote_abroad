@@ -23,11 +23,11 @@ fwabSubmitOptions:
   - Email
   - Fax
   - Mail
-amIRegistered: ''
+amIRegistered: 'https://www.msegov.com/sos/voter_registration/amiregistered/Search'
 whereIsMyBallot: ''
 sampleBallot: >-
-  https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage
-uocavaVoters: ''
+  https://www.sos.ms.gov/Elections-Voting/Pages/default.aspx
+uocavaVoters: 'https://www.sos.ms.gov/Elections-Voting/Pages/Military-Overseas-Voter.aspx'
 ---
 Mississippi voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
 

@@ -24,9 +24,9 @@ fwabSubmitOptions:
   - Fax
   - Mail
 amIRegistered: 'https://myvoteinfo.voteks.org/VoterView/Home.do;jsessionid=1a0+yh3v3C4zLhCsPGCxkiAA.undefined'
-whereIsMyBallot: ''
+whereIsMyBallot: 'https://myvoteinfo.voteks.org/VoterView/Home.do;jsessionid=1a0+yh3v3C4zLhCsPGCxkiAA.undefined'
 sampleBallot: 'https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage'
-uocavaVoters: ''
+uocavaVoters: 'http://www.sos.ks.gov/elections/elections_registration_federal.html'
 ---
 Kansas voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
 

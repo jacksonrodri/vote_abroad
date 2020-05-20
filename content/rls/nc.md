@@ -23,11 +23,11 @@ fwabSubmitOptions:
   - Email
   - Fax
   - Mail
-amIRegistered: 'https://www.ncsbe.gov/Voter-Information/VR-Form'
-whereIsMyBallot: 'https://vt.ncsbe.gov/voter_search_public/'
+amIRegistered: 'https://vt.ncsbe.gov/RegLkup/'
+whereIsMyBallot: 'https://vt.ncsbe.gov/RegLkup/'
 sampleBallot: >-
-  https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage
-uocavaVoters: ''
+  https://vt.ncsbe.gov/RegLkup/
+uocavaVoters: 'https://www.ncsbe.gov/Voting-Options/Military-Overseas-Voting'
 ---
 North Carolina voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
 

@@ -21,11 +21,11 @@ fpcaSubmitOptionsRequest:
 canRegisterWithFwab: false
 fwabSubmitOptions:
   - Mail
-amIRegistered: 'https://mvp.sec.state.vt.us/'
-whereIsMyBallot: 'https://mvp.sec.state.vt.us/'
+amIRegistered: 'https://mvp.vermont.gov/'
+whereIsMyBallot: 'https://mvp.vermont.gov/'
 sampleBallot: >-
   https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage
-uocavaVoters: ''
+uocavaVoters: 'https://sos.vermont.gov/elections/voters/early-absentee-voting/#military'
 ---
 Vermont voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
 

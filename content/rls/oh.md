@@ -21,11 +21,11 @@ fpcaSubmitOptionsRequest:
 canRegisterWithFwab: true
 fwabSubmitOptions:
   - Mail
-amIRegistered: 'http://voterlookup.sos.state.oh.us/voterlookup.aspx'
-whereIsMyBallot: 'http://www.myohiovote.com'
+amIRegistered: 'https://voterlookup.ohiosos.gov/voterlookup.aspx'
+whereIsMyBallot: 'https://usoav.ohiosos.gov/UOCAVA_vr__Login.aspx'
 sampleBallot: >-
-  https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage
-uocavaVoters: ''
+  https://www.sos.state.oh.us/elections/voters/toolkit/sample-ballot/
+uocavaVoters: 'https://www.ohiosos.gov/secretary-office/military/'
 ---
 Ohio voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
 

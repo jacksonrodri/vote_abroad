@@ -23,9 +23,9 @@ fwabSubmitOptions:
   - Email
   - Fax
   - Mail
-amIRegistered: 'https://www.dcboee.org/voter_info/reg_status/'
-whereIsMyBallot: 'https://www.dcboee.org/voter_info/absentee_ballot/ab_status.asp'
-sampleBallot: 'https://www.dcboe.org/Elections/Sample-Ballots-November-6,-2018-General-Election'
+amIRegistered: 'https://www.dcboe.org/Voters/Register-To-Vote/Check-Voter-Registration-Status'
+whereIsMyBallot: 'https://www.dcboe.org/Voters/Absentee-Voting/Track-Absentee-Ballot'
+sampleBallot: 'https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage'
 uocavaVoters: 'https://www.dcboe.org/Voters/Absentee-Voting/Military-and-Overseas-Voters'
 ---
 District of Columbia voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.

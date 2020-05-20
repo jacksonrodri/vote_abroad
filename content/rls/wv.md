@@ -27,7 +27,7 @@ amIRegistered: 'https://apps.sos.wv.gov/elections/voter/Default.aspx'
 whereIsMyBallot: 'https://apps.sos.wv.gov/elections/voter/track-my-ballot.aspx'
 sampleBallot: >-
   https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage
-uocavaVoters: ''
+uocavaVoters: 'https://sos.wv.gov/elections/Pages/UOCAVA.aspx'
 ---
 West Virginia voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
 

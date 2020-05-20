@@ -25,8 +25,8 @@ fwabSubmitOptions:
   - Mail
 amIRegistered: 'https://www.sos.state.co.us/voter-classic/pages/pub/olvr/findVoterReg.xhtml'
 whereIsMyBallot: 'https://www.sos.state.co.us/voter-classic/pages/pub/olvr/findVoterReg.xhtml'
-sampleBallot: 'https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage'
-uocavaVoters: ''
+sampleBallot: 'https://myballot.sos.colorado.gov/app/home'
+uocavaVoters: 'https://www.sos.state.co.us/pubs/elections/UOCAVA.html'
 ---
 Colorado voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
 

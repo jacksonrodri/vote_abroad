@@ -21,10 +21,10 @@ canRegisterWithFwab: true
 fwabSubmitOptions:
   - Mail
 amIRegistered: 'https://vote.elections.virginia.gov/VoterInformation'
-whereIsMyBallot: 'https://voterinfo.sbe.virginia.gov/PublicSite/Public/FT2/PublicElections.aspx'
+whereIsMyBallot: 'https://www.elections.virginia.gov/citizen-portal/'
 sampleBallot: >-
   https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage
-uocavaVoters: ''
+uocavaVoters: 'https://www.elections.virginia.gov/casting-a-ballot/military-overseas/index.html'
 ---
 Virginia voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
 

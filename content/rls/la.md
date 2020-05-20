@@ -20,11 +20,11 @@ canRegisterWithFwab: false
 fwabSubmitOptions:
   - Fax
   - Mail
-amIRegistered: 'https://voterportal.sos.la.gov/'
+amIRegistered: 'https://voterportal.sos.la.gov/Home/VoterLogin'
 whereIsMyBallot: 'https://voterportal.sos.la.gov/'
 sampleBallot: >-
-  https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage
-uocavaVoters: ''
+  https://voterportal.sos.la.gov/sampleballot
+uocavaVoters: 'https://www.sos.la.gov/ElectionsAndVoting/Vote/VoteByMail/Pages/MilitaryAndOverseasVoters.aspx'
 ---
 Louisiana voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
 

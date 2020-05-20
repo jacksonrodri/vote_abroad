@@ -18,11 +18,11 @@ fpcaSubmitOptionsRequest:
 canRegisterWithFwab: false
 fwabSubmitOptions:
   - Mail
-amIRegistered: 'https://sos.sd.gov/Elections/VIPLogin.aspx'
-whereIsMyBallot: 'https://sos.sd.gov/Elections/VIPLogin.aspx'
+amIRegistered: 'https://vip.sdsos.gov/VIPLogin.aspx'
+whereIsMyBallot: 'https://vip.sdsos.gov/VIPLogin.aspx'
 sampleBallot: >-
-  https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage
-uocavaVoters: ''
+  https://vip.sdsos.gov/VIPLogin.aspx
+uocavaVoters: 'https://sdsos.gov/elections-voting/voting/overseas-citizen-voter.aspx'
 ---
 South Dakota voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
 
