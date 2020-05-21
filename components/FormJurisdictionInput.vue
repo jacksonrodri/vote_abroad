@@ -51,28 +51,28 @@
 </template>
 
 <script>
-import axios from "axios";
+import axios from 'axios'
 
 export default {
-  name: "Jurisdiction",
+  name: 'Jurisdiction',
   props: [
-    "value",
-    "state",
-    "type",
-    "label",
-    "message",
-    "validations",
-    "toolTipTitle",
-    "placeholder"
+    'value',
+    'state',
+    'type',
+    'label',
+    'message',
+    'validations',
+    'toolTipTitle',
+    'placeholder'
   ],
-  async mounted() {
-    this.loading = true;
-    let leos = (await axios.get(`/leos/${this.state}-leos.json`)).data;
-    if (this.state === "NJ") {
+  async mounted () {
+    this.loading = true
+    let leos = (await axios.get(`/leos/${this.state}-leos.json`)).data
+    if (this.state === 'NJ') {
       // leos = leos.filter(x => /FPCA/.test(x.n))
-      leos = leos.filter(leo => leo.fpcaOffice);
+      leos = leos.filter(leo => leo.fpcaOffice)
     }
-    this.leos = leos;
+    this.leos = leos
     // console.log(this.leos)
     // this.leos = await (
     //   await import(
@@ -80,137 +80,137 @@ export default {
     //   )
     // )
     if (this.leos.length === 1) {
-      this.isSingleLeoState = true;
-      this.updateLeo(this.leos[0]);
+      this.isSingleLeoState = true
+      this.updateLeo(this.leos[0])
     } else {
-      this.isSingleLeoState = false;
+      this.isSingleLeoState = false
     }
-    this.loading = false;
+    this.loading = false
   },
-  data() {
+  data () {
     return {
       leos: [],
       isSingleLeoState: false,
-      typedJurisdiction: "",
+      typedJurisdiction: '',
       isOpen: false,
       loading: true
-    };
+    }
   },
   computed: {
-    votAdr() {
-      return this.$store.getters["requests/getCurrent"].votAdr;
+    votAdr () {
+      return this.$store.getters['requests/getCurrent'].votAdr
     },
-    leo() {
-      return this.$store.getters["requests/getCurrent"].leo;
+    leo () {
+      return this.$store.getters['requests/getCurrent'].leo
     },
-    jurisdiction() {
-      return this.leo && this.leo.n ? this.leo.n : "";
+    jurisdiction () {
+      return this.leo && this.leo.n ? this.leo.n : ''
     },
-    leoTypes() {
-      return [...new Set(this.leos.map(x => x.t))];
+    leoTypes () {
+      return [...new Set(this.leos.map(x => x.t))]
     },
     // isSingleLeoState () { return this.leos.length === 1 },
     street: {
-      get() {
-        return this.votAdr.thoroughfare || "";
+      get () {
+        return this.votAdr.thoroughfare || ''
       },
-      set(value) {
-        this.updateAddress("thoroughfare", value);
+      set (value) {
+        this.updateAddress('thoroughfare', value)
       }
     },
-    myLeos() {
-      let villageLeos = [];
-      let townLeos = [];
-      let cityLeos = [];
-      let countyLeos = [];
+    myLeos () {
+      let villageLeos = []
+      let townLeos = []
+      let cityLeos = []
+      let countyLeos = []
       this.leos.forEach(x => {
         switch (x.t.toLowerCase()) {
-          case "all":
-            break;
-          case "village":
+          case 'all':
+            break
+          case 'village':
             if (
               this.votAdr.C &&
               (x.n.toLowerCase().indexOf(
                 this.votAdr.C.toLowerCase()
-                  .replace("village", "")
+                  .replace('village', '')
                   .trim()
               ) > -1 ||
                 x.j.toLowerCase().indexOf(
                   this.votAdr.C.toLowerCase()
-                    .replace("village", "")
+                    .replace('village', '')
                     .trim()
                 ) > -1)
             ) {
-              villageLeos.push(x);
+              villageLeos.push(x)
             }
-            break;
-          case "town":
-          case "township":
+            break
+          case 'town':
+          case 'township':
             if (
               this.votAdr.C &&
               (x.n.toLowerCase().indexOf(
                 this.votAdr.C.toLowerCase()
-                  .replace("township", "")
-                  .replace("town", "")
+                  .replace('township', '')
+                  .replace('town', '')
                   .trim()
               ) > -1 ||
                 x.j.toLowerCase().indexOf(
                   this.votAdr.C.toLowerCase()
-                    .replace("township", "")
-                    .replace("town", "")
+                    .replace('township', '')
+                    .replace('town', '')
                     .trim()
                 ) > -1)
             ) {
-              townLeos.push(x);
+              townLeos.push(x)
             }
-            break;
-          case "parish":
-          case "borough":
-          case "city":
+            break
+          case 'parish':
+          case 'borough':
+          case 'city':
             if (
               this.votAdr.C &&
               (x.n.toLowerCase().indexOf(
                 this.votAdr.C.toLowerCase()
-                  .replace("parish", "")
-                  .replace("borough", "")
-                  .replace("city", "")
+                  .replace('parish', '')
+                  .replace('borough', '')
+                  .replace('city', '')
                   .trim()
               ) > -1 ||
                 x.j.toLowerCase().indexOf(
                   this.votAdr.C.toLowerCase()
-                    .replace("parish", "")
-                    .replace("borough", "")
-                    .replace("city", "")
+                    .replace('parish', '')
+                    .replace('borough', '')
+                    .replace('city', '')
                     .trim()
                 ) > -1)
             ) {
-              cityLeos.push(x);
+              cityLeos.push(x)
             }
-            break;
-          case "county":
-          case "island":
+            break
+          case 'county':
+          case 'island':
             if (
               this.votAdr.Y &&
               (x.n.toLowerCase().indexOf(
                 this.votAdr.Y.toLowerCase()
-                  .replace("county", "")
-                  .replace("island", "")
+                  .replace('county', '')
+                  .replace('island', '')
                   .trim()
               ) > -1 ||
                 x.j.toLowerCase().indexOf(
                   this.votAdr.Y.toLowerCase()
-                    .replace("county", "")
-                    .replace("island", "")
+                    .replace('county', '')
+                    .replace('island', '')
                     .trim()
                 ) > -1)
             ) {
-              countyLeos.push(x);
+              countyLeos.push(x)
             }
-            break;
+            break
           default:
-            break;
+            break
         }
-      });
+      })
       // this.leos.forEach(x => {
       //   switch (x.toLowerCase()) {
       //     case 'county':
@@ -235,12 +235,12 @@ export default {
       // })
       // console.log('types', arr)
       return [].concat(villageLeos, townLeos, cityLeos, countyLeos).map(leo => {
-        leo.suggested = true;
-        return leo;
-      });
+        leo.suggested = true
+        return leo
+      })
     },
-    prioritizedLeos() {
-      return [].concat(this.myLeos, this.leos);
+    prioritizedLeos () {
+      return [].concat(this.myLeos, this.leos)
       // if (this.votAdr.Y) {
       //   let county = this.votAdr.Y.toLowerCase().replace('county', '').trim()
       //   return this.leos.slice()
@@ -263,7 +263,7 @@ export default {
       //   return this.leos
       // }
     },
-    filteredLeos() {
+    filteredLeos () {
       if (!this.typedJurisdiction) {
         return this.prioritizedLeos.filter(
           (e, i, a) =>
@@ -275,7 +275,7 @@ export default {
                 .map(x => x.i)
                 .includes(e.i)
             )
-        );
+        )
       }
       return this.leos.filter(
         leo =>
@@ -283,64 +283,64 @@ export default {
           leo.j.toLowerCase().includes(this.typedJurisdiction.toLowerCase())
       ).length === 1
         ? this.leos
-            .filter(
-              leo =>
-                leo.n
-                  .toLowerCase()
-                  .includes(this.typedJurisdiction.toLowerCase()) ||
+          .filter(
+            leo =>
+              leo.n
+                .toLowerCase()
+                .includes(this.typedJurisdiction.toLowerCase()) ||
                 leo.j
                   .toLowerCase()
                   .includes(this.typedJurisdiction.toLowerCase())
-            )
-            .concat(
-              this.prioritizedLeos.filter(
-                (e, i, a) =>
-                  !(
-                    i < 6 &&
+          )
+          .concat(
+            this.prioritizedLeos.filter(
+              (e, i, a) =>
+                !(
+                  i < 6 &&
                     e.suggested &&
                     a
                       .slice(0, i)
                       .map(x => x.i)
                       .includes(e.i)
-                  )
-              )
+                )
             )
+          )
         : this.leos.filter(
-            leo =>
-              leo.n
-                .toLowerCase()
-                .includes(this.typedJurisdiction.toLowerCase()) ||
+          leo =>
+            leo.n
+              .toLowerCase()
+              .includes(this.typedJurisdiction.toLowerCase()) ||
               leo.j.toLowerCase().includes(this.typedJurisdiction.toLowerCase())
-          );
+        )
       // return this.prioritizedLeos.filter(leo => leo.n.toLowerCase().indexOf(this.typedJurisdiction.toLowerCase()) > -1 || leo.j.toLowerCase().indexOf(this.typedJurisdiction.toLowerCase()) > -1)
     }
   },
   methods: {
-    decodeHtmlEntity(str) {
+    decodeHtmlEntity (str) {
       str = str
         .replace(/&apos;/g, "'")
         .replace(/&quot;/g, '"')
-        .replace(/&gt;/g, ">")
-        .replace(/&lt;/g, "<")
-        .replace(/&amp;/g, "&");
-      return str.replace(/&#(\d+);/g, function(match, dec) {
-        return String.fromCharCode(dec);
-      });
+        .replace(/&gt;/g, '>')
+        .replace(/&lt;/g, '<')
+        .replace(/&amp;/g, '&')
+      return str.replace(/&#(\d+);/g, function (match, dec) {
+        return String.fromCharCode(dec)
+      })
     },
-    updateLeo: function(value) {
-      let leo = {};
+    updateLeo: function (value) {
+      let leo = {}
       if (value) {
         Object.keys(value).forEach(x => {
-          if (value[x]) leo[x] = value[x];
-        });
+          if (value[x]) leo[x] = value[x]
+        })
       }
-      delete leo.suggested;
-      this.$store.commit("requests/update", { leo: leo });
-      this.$ga.event("formAction", "LEO Selected", leo.j);
+      delete leo.suggested
+      this.$store.commit('requests/update', { leo: leo })
+      this.$ga.event('formAction', 'LEO Selected', leo.j)
     },
-    updated: function() {
-      this.$emit("input");
+    updated: function () {
+      this.$emit('input')
     }
   }
-};
+}
 </script>
