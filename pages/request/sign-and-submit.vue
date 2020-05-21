@@ -16,7 +16,7 @@
             v-if="stateRules && stateRules.fpcaSubmitOptionsRequest.includes('Email')"
             @click="$ga.event('formAction', 'submitTypeSelected', 'email')"
             icon="at">
-            <section v-if="isIE || /AR|CT|NJ|NY|TX|WY/.test(currentRequest.leo.s)" class="section">
+            <section v-if="isIE || /AR|CT|NJ|NY|WY/.test(currentRequest.leo.s)" class="section">
               <h3 class="subtitle is-4">{{$t('request.stages.emailIntro')}}</h3>
               <div class="media">
                 <div class="media-content">

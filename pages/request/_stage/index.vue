@@ -860,11 +860,13 @@ export default {
       } else this.delayTouch(this.$v[type][val])
     },
     delayTouch ($v) {
-      $v.$reset()
-      if (touchMap.has($v)) {
-        clearTimeout(touchMap.get($v))
+      if ($v && '$reset' in $v && '$touch' in $v) {
+        $v.$reset()
+        if (touchMap.has($v)) {
+          clearTimeout(touchMap.get($v))
+        }
+        touchMap.set($v, setTimeout($v.$touch, 1000))
       }
-      touchMap.set($v, setTimeout($v.$touch, 1000))
     },
     ...mapMutations('requests', ['update']),
     ...mapMutations(['togglePrivacyModalActiveState'])
