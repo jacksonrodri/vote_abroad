@@ -72,7 +72,7 @@ export const actions = {
         var dateB = new Date(b.date).getTime()
         return dateA - dateB
       })
-    commit('addUpcomingElections', sortedElections.slice(0, 9))
+    commit('addUpcomingElections', sortedElections.slice(0, 10))
   },
   toasty () {
     Toast.open(`Your age is: toast`)
