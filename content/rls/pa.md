@@ -21,10 +21,10 @@ canRegisterWithFwab: true
 fwabSubmitOptions:
   - Mail
 amIRegistered: 'https://www.pavoterservices.state.pa.us/Pages/VoterRegistrationStatus.aspx'
-whereIsMyBallot: ''
+whereIsMyBallot: 'https://www.pavoterservices.pa.gov/Pages/BallotTracking.aspx'
 sampleBallot: >-
   https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage
-uocavaVoters: ''
+uocavaVoters: 'https://www.votespa.com/Voting-in-PA/Pages/Military-and-Overseas-Voters.aspx'
 ---
 Pennsylvania voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
 

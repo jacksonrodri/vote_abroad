@@ -23,8 +23,8 @@ fwabSubmitOptions:
   - Mail
 amIRegistered: 'https://mnvotes.sos.state.mn.us/VoterStatus.aspx'
 whereIsMyBallot: 'https://mnvotes.sos.state.mn.us/AbsenteeBallotStatus.aspx'
-sampleBallot: 'https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage'
-uocavaVoters: ''
+sampleBallot: 'https://www.sos.state.mn.us/elections-voting/whats-on-my-ballot'
+uocavaVoters: 'https://www.sos.state.mn.us/elections-voting/other-ways-to-vote/vote-from-military-or-abroad/'
 ---
 Minnesota voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
 

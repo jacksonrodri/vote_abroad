@@ -22,11 +22,11 @@ fwabSubmitOptions:
   - Email
   - Fax
   - Mail
-amIRegistered: 'https://voterview.state.nm.us/VoterView/Home.do'
-whereIsMyBallot: ''
+amIRegistered: 'https://voterportal.servis.sos.state.nm.us/WhereToVote.aspx'
+whereIsMyBallot: 'https://voterportal.servis.sos.state.nm.us/WhereToVote.aspx'
 sampleBallot: >-
-  https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage
-uocavaVoters: ''
+  https://voterportal.servis.sos.state.nm.us/WhereToVote.aspx
+uocavaVoters: 'https://www.sos.state.nm.us/voting-and-elections/voter-information/military-and-overseas-voting/'
 ---
 New Mexico voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
 

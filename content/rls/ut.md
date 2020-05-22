@@ -23,11 +23,11 @@ fwabSubmitOptions:
   - Email
   - Fax
   - Mail
-amIRegistered: 'http://vote.utah.gov/vote/menu/index'
-whereIsMyBallot: 'https://vote.utah.gov/vote/menu/index'
+amIRegistered: 'https://votesearch.utah.gov/voter-search/search/search-by-voter/voter-info'
+whereIsMyBallot: 'https://votesearch.utah.gov/voter-search/search/search-by-voter/track-mail-ballot'
 sampleBallot: >-
   https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage
-uocavaVoters: ''
+uocavaVoters: 'https://voteinfo.utah.gov/military-and-overseas-voters/'
 ---
 Utah voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
 

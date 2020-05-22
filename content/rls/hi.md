@@ -24,9 +24,9 @@ fwabSubmitOptions:
   - Fax
   - Mail
 amIRegistered: 'https://olvr.hawaii.gov'
-whereIsMyBallot: 'https://olvr.hawaii.gov'
-sampleBallot: 'https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage'
-uocavaVoters: ''
+whereIsMyBallot: 'https://elections.hawaii.gov/voters/i-am-a/military-and-overseas-voters/'
+sampleBallot: 'https://olvr.hawaii.gov/altballotsearch.aspx'
+uocavaVoters: 'https://elections.hawaii.gov/voters/i-am-a/military-and-overseas-voters/'
 ---
 Hawaii voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
 

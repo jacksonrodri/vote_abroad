@@ -21,10 +21,10 @@ fpcaSubmitOptionsRequest:
 canRegisterWithFwab: false
 fwabSubmitOptions:
   - Mail
-amIRegistered: 'https://www.voterview.ar-nova.org/VoterView/Home.do'
-whereIsMyBallot: ''
-sampleBallot: 'http://vote-ar.org/forvoters.aspx?state=ar'
-uocavaVoters: ''
+amIRegistered: 'https://www.voterview.ar-nova.org/voterview'
+whereIsMyBallot: 'https://www.voterview.ar-nova.org/voterview'
+sampleBallot: 'https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage'
+uocavaVoters: 'https://www.sos.arkansas.gov/elections/military-and-overseas-citizens'
 ---
 Arkansas voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
 

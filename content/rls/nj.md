@@ -22,7 +22,7 @@ canRegisterWithFwab: false
 fwabSubmitOptions:
   - Mail
 amIRegistered: 'https://voter.njsvrs.com/PublicAccess/servlet/com.saber.publicaccess.control.PublicAccessNavigationServlet?USERPROCESS=PublicSearch'
-whereIsMyBallot: ''
+whereIsMyBallot: 'https://voter.svrs.nj.gov/registration-check'
 sampleBallot: >-
   https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage
 uocavaVoters: 'http://www.nj.gov/state/elections/voting-information-military-overseas.html'

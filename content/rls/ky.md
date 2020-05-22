@@ -20,9 +20,9 @@ canRegisterWithFwab: true
 fwabSubmitOptions:
   - Mail
 amIRegistered: 'https://vrsws.sos.ky.gov/vic/'
-whereIsMyBallot: ''
+whereIsMyBallot: 'https://vrsws.sos.ky.gov/ABD2Web/'
 sampleBallot: 'https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage'
-uocavaVoters: ''
+uocavaVoters: 'https://elect.ky.gov/Voters/Pages/Military-or-Overseas-Voters.aspx'
 ---
 Kentucky voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
 

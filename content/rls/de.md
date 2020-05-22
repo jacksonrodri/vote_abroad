@@ -23,10 +23,10 @@ fwabSubmitOptions:
   - Email
   - Fax
   - Mail
-amIRegistered: 'http://elections.delaware.gov/voter_tools.shtml'
-whereIsMyBallot: 'http://elections.delaware.gov/voter_tools.shtml'
-sampleBallot: 'https://ivote.de.gov/voterballotsample.aspx'
-uocavaVoters: ''
+amIRegistered: 'https://ivote.de.gov/voterview'
+whereIsMyBallot: 'https://ivote.de.gov/voterview'
+sampleBallot: 'https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage'
+uocavaVoters: 'https://elections.delaware.gov/military/index.shtml'
 ---
 Delaware voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
 

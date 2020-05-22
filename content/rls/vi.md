@@ -23,9 +23,9 @@ fwabSubmitOptions:
   - Email
   - Fax
   - Mail
-amIRegistered: ''
-whereIsMyBallot: ''
+amIRegistered: 'https://www.vivote.gov/voters/lookup'
+whereIsMyBallot: 'https://www.vivote.gov/voters/uocava'
 sampleBallot: 'https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage'
-uocavaVoters: ''
+uocavaVoters: 'https://www.vivote.gov/voters/military-and-overseas-voting-move'
 ---
 Remember that you need to request a ballot each calendar year that you'd like to vote in. Check below for your primary and general deadlines. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.

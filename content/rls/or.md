@@ -26,7 +26,7 @@ amIRegistered: >-
 whereIsMyBallot: 'https://secure.sos.state.or.us/orestar/vr/showVoterSearch.do'
 sampleBallot: >-
   https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage
-uocavaVoters: ''
+uocavaVoters: 'https://sos.oregon.gov/voting/Pages/militaryoverseas.aspx'
 ---
 Oregon voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
 

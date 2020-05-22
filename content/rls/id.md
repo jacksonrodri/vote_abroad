@@ -21,10 +21,10 @@ fpcaSubmitOptionsRequest:
 canRegisterWithFwab: false
 fwabSubmitOptions:
   - Mail
-amIRegistered: 'http://www.idahovotes.gov/AbsenteeBallot/Default.aspx'
-whereIsMyBallot: 'http://www.idahovotes.gov/AbsenteeBallot/Default.aspx'
+amIRegistered: 'https://idahovotes.gov/'
+whereIsMyBallot: 'https://idahovotes.gov/'
 sampleBallot: 'https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage'
-uocavaVoters: ''
+uocavaVoters: 'https://sos.idaho.gov/elect/clerk/Manuals/2016_UOCAVA_Procedures.pdf'
 ---
 Idaho voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
 

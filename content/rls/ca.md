@@ -25,7 +25,7 @@ fwabSubmitOptions:
 amIRegistered: 'http://www.sos.ca.gov/elections/registration-status/'
 whereIsMyBallot: 'http://www.sos.ca.gov/elections/ballot-status/'
 sampleBallot: 'https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage'
-uocavaVoters: ''
+uocavaVoters: 'https://www.sos.ca.gov/elections/voter-registration/military-overseas-voters/'
 ---
 California voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
 

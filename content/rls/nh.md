@@ -19,11 +19,11 @@ fpcaSubmitOptionsRequest:
 canRegisterWithFwab: false
 fwabSubmitOptions:
   - Mail
-amIRegistered: ''
-whereIsMyBallot: 'http://app.sos.nh.gov/Public/AbsenteeBallot.as'
+amIRegistered: 'https://sos.nh.gov/VoteInforLook.aspx'
+whereIsMyBallot: 'https://app.sos.nh.gov/Public/AbsenteeBallot.aspx'
 sampleBallot: >-
-  https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage
-uocavaVoters: ''
+  https://app.sos.nh.gov/Public/PollingPlaceSearch.aspx
+uocavaVoters: 'https://sos.nh.gov/uocavafaq.aspx'
 ---
 New Hampshire voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
 

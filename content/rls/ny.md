@@ -22,10 +22,10 @@ canRegisterWithFwab: true
 fwabSubmitOptions:
   - Mail
 amIRegistered: 'https://voterlookup.elections.ny.gov/'
-whereIsMyBallot: ''
+whereIsMyBallot: 'https://nysballot.elections.ny.gov/TrackMyBallot/Search'
 sampleBallot: >-
   https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage
-uocavaVoters: ''
+uocavaVoters: 'https://www.elections.ny.gov/votingmilitaryfed.html'
 ---
 New York voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
 

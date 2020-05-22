@@ -24,7 +24,7 @@ amIRegistered: 'https://teamrv-mvp.sos.texas.gov/MVP/mvp.do'
 whereIsMyBallot: 'https://webservices.sos.state.tx.us/FPCA/index.aspx'
 sampleBallot: >-
   https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage
-uocavaVoters: ''
+uocavaVoters: 'https://www.votetexas.gov/military-overseas-voters/'
 ---
 Texas voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
 

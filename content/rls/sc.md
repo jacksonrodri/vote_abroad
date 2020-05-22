@@ -27,8 +27,8 @@ amIRegistered: >-
 whereIsMyBallot: >-
   https://info.scvotes.sc.gov/eng/voterinquiry/VoterInformationRequest.aspx?PageMode=AbsenteeInfo
 sampleBallot: >-
-  https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage
-uocavaVoters: ''
+  https://info.scvotes.sc.gov/Eng/VoterInquiry/ViewSampleBallot.aspx
+uocavaVoters: 'https://www.scvotes.org/military-overseas-citizens'
 ---
 South Carolina voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
 

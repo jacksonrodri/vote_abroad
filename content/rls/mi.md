@@ -23,8 +23,8 @@ fwabSubmitOptions:
   - Mail
 amIRegistered: 'https://mi.gov/vote'
 whereIsMyBallot: 'https://mi.gov/vote'
-sampleBallot: 'https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage'
-uocavaVoters: ''
+sampleBallot: 'https://mvic.sos.state.mi.us/'
+uocavaVoters: 'https://www.michigan.gov/sos/0,4670,7-127-1633_8716-238835--,00.html'
 ---
 Michigan voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
 

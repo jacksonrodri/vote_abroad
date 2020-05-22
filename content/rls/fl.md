@@ -22,8 +22,8 @@ fwabSubmitOptions:
   - Mail
 amIRegistered: 'http://registration.elections.myflorida.com/CheckVoterStatus'
 whereIsMyBallot: 'http://registration.elections.myflorida.com/CheckVoterStatus'
-sampleBallot: 'http://vote-fl.org/forVoters.aspx?State=FL'
-uocavaVoters: ''
+sampleBallot: 'https://registration.elections.myflorida.com/CheckVoterStatus'
+uocavaVoters: 'https://dos.myflorida.com/elections/for-voters/voting/military-and-overseas-citizens-voting/'
 ---
 Florida voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
 

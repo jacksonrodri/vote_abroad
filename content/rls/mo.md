@@ -22,10 +22,10 @@ canRegisterWithFwab: true
 fwabSubmitOptions:
   - Mail
 amIRegistered: 'http://www.sos.mo.gov/elections/voterlookup/'
-whereIsMyBallot: 'https://www.momilitaryvote.com'
+whereIsMyBallot: 'https://www.sos.mo.gov/elections/goVoteMissouri/registeroverseas#trackBallot'
 sampleBallot: >-
-  https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage
-uocavaVoters: ''
+  https://www.sos.mo.gov/elections/goVoteMissouri/electionday#2_4
+uocavaVoters: 'https://www.sos.mo.gov/elections/goVoteMissouri/registeroverseas'
 ---
 Missouri voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
 
