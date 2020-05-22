@@ -274,7 +274,7 @@
       <form-checkbox-input
         ref="optInVoterReminder"
         v-model="optInVoterReminder"
-        message="I'd like to receive future voter remind emails"
+        message="I'd like to receive future voter reminder emails"
         style="margin: 10px 0;"
       />
 
