@@ -141,7 +141,7 @@
     "cdSpecialGeneral": "CD {number} Special General"
   },
   "states": {
-    "selectState": "Select the last State you resided in.",
+    "selectState": "Select a State",
     "select": "Select your state",
     "US": "United States",
     "AL": "Alabama",
