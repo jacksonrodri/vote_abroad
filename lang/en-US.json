@@ -404,6 +404,7 @@
       "clickStart": "Click start",
       "instructionsLabel": "Instructions",
       "uploadFile": "upload a file",
+      "uploadFileImageNoPDF": "Or upload an image file, such as jpeg or png, to upload your signature. [pdf files will not work]",
       "uploadInstructions": "{0} from your device",
       "clickToUpload": "Click to upload a scan of your signature",
       "captureErrorTitle": "Failed loading camera",
