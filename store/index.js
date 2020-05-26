@@ -65,8 +65,9 @@ export const mutations = {
 export const actions = {
   async nuxtServerInit ({ commit }, { app }) {
     // console.log(process)
+    const thisYearStart = new Date(parseInt(new Date().getFullYear()), 0, 1)
     let sortedElections = (await app.$content('/elections').get('elections')).body
-      .filter(x => new Date(x.date).getTime() > Date.now())
+      .filter(x => new Date(x.date).getTime() >= thisYearStart.getTime())
       .sort(function (a, b) {
         var dateA = new Date(a.date).getTime()
         var dateB = new Date(b.date).getTime()
