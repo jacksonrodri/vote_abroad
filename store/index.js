@@ -35,6 +35,7 @@ const vuexLocalPlugin = store => {
 export const plugins = [vuexLocalPlugin]
 
 export const state = () => ({
+  electionsByCurrentYear: [],
   upcomingElections: [],
   currentRequestId: null,
   isMenuOpen: false,
@@ -47,6 +48,9 @@ export const mutations = {
   RESTORE_MUTATION (state, payload) {
     // console.log('vuexLocal', vuexLocal)
     vuexLocal.RESTORE_MUTATION(state, payload)
+  },
+  addElectionsOnCurrentYear (state, data) {
+    state.electionsByCurrentYear = data
   },
   addUpcomingElections (state, data) {
     state.upcomingElections = data
@@ -65,15 +69,15 @@ export const mutations = {
 export const actions = {
   async nuxtServerInit ({ commit }, { app }) {
     // console.log(process)
-    const thisYearStart = new Date(parseInt(new Date().getFullYear()), 0, 1)
     let sortedElections = (await app.$content('/elections').get('elections')).body
-      .filter(x => new Date(x.date).getTime() >= thisYearStart.getTime())
+      .filter(x => new Date(x.date).getTime() >= new Date().getTime())
       .sort(function (a, b) {
         var dateA = new Date(a.date).getTime()
         var dateB = new Date(b.date).getTime()
         return dateA - dateB
       })
-    commit('addUpcomingElections', sortedElections.slice(0, 10))
+      .slice(0, 10)
+    commit('addUpcomingElections', sortedElections)
   },
   toasty () {
     Toast.open(`Your age is: toast`)
