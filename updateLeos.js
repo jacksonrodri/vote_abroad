@@ -2,6 +2,7 @@ const fetch = require('cross-fetch')
 const util = require('util')
 const fs = require('fs-extra')
 const readFile = util.promisify(fs.readFile)
+// eslint-disable-next-line no-unused-vars
 const writeFile = util.promisify(fs.writeFile)
 
 let errors = []
@@ -67,15 +68,15 @@ const states = [
 
 const url = stateCode => `https://www.fvap.gov/search-offices.json?draw=1&columns%5B0%5D%5Bdata%5D=name&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=jurisdiction.name&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=jurisdiction.type.name&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=false&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=phoneNumber&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=faxNumber&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=email&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=false&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=address&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=false&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&start=0&length=2000&search%5Bvalue%5D=&search%5Bregex%5D=false&nameSearch=&jurisdiction=&state=${
   states.find(({ code }) => code === stateCode).fvapId
-  }&_=1580897800839`
+}&_=1580897800839`
 
-async function returnUpdatedStateData(stateCode) {
+async function returnUpdatedStateData (stateCode) {
   const data = await fetch(url(stateCode))
   const json = await data.json()
   return json
 }
 
-function decodeHtmlEntity(str) {
+function decodeHtmlEntity (str) {
   str = typeof str === 'string' ? str : ''
   str = str.replace(/&apos;/g, "'").replace(/&quot;/g, '"').replace(/&gt;/g, '>').replace(/&lt;/g, '<').replace(/&amp;/g, '&')
   return str.replace(/&#(\d+);/g, function (match, dec) {
@@ -83,7 +84,7 @@ function decodeHtmlEntity(str) {
   })
 }
 
-async function handleState(stateAbbreviation) {
+async function handleState (stateAbbreviation) {
   const safeEntries = {}
   const fileName = `./static/leos/${stateAbbreviation.toUpperCase()}-leos.json`
   if (!fs.existsSync(fileName)) {
@@ -194,7 +195,7 @@ async function handleState(stateAbbreviation) {
   return leosChanged
 }
 
-async function main() {
+async function main () {
   let total = 0
   let summary = []
   for (const state of states) {

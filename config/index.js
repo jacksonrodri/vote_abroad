@@ -1,4 +1,6 @@
+// eslint-disable-next-line no-unused-vars
 const en = require('../lang/en-US.json')
+// eslint-disable-next-line no-unused-vars
 const es = require('../lang/es-ES.json')
 
 const API_ROOT = 'http://localhost:3000/content-api'

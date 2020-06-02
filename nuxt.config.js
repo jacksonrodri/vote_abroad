@@ -1,4 +1,6 @@
+// eslint-disable-next-line no-unused-vars
 const { API_ROOT, I18N } = require('./config')
+// eslint-disable-next-line no-unused-vars
 const axios = require('axios')
 
 module.exports = {
@@ -155,14 +157,14 @@ module.exports = {
     middleware: 'menu-helper'
   },
   plugins: [
-    {src: '~/plugins/plugged', ssr: false },
-    {src: '~/plugins/buefy'},
-    {src: '~/plugins/vuelidate'},
-    {src: '~/plugins/croppa'},
-    {src: '~/plugins/intercom'},
+    { src: '~/plugins/plugged', ssr: false },
+    { src: '~/plugins/buefy' },
+    { src: '~/plugins/vuelidate' },
+    { src: '~/plugins/croppa' },
+    { src: '~/plugins/intercom' },
     { src: '~/plugins/i18n.js' },
     // { src: '~/plugins/devtools', ssr: false },
-    {src: '~plugins/vue-cookie', ssr: false, injectAs: 'cookie'}
+    { src: '~plugins/vue-cookie', ssr: false, injectAs: 'cookie' }
   ],
   /*
   ** Build configuration

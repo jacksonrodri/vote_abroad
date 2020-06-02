@@ -290,7 +290,7 @@
         :label="$t('request.stateSpecial.label', {state: stateRules && stateRules.title ? stateRules.title : $t('request.stateSpecial.state')})"
         v-model="stateSpecial"
         :state="votAdr && votAdr.S ? votAdr.S : ''"
-        :isIndNoParty="party && (party.toLowerCase() === 'republican' || party.toLowerCase() === 'rep' || party.toLowerCase() === 'democrat' || party.toLowerCase() === 'dem') ? false : true"
+        :isIndNoParty="party && (party.toLowerCase() === 'republican' || party.toLowerCase() === 'rep' || party.toLowerCase() === 'democratic' || party.toLowerCase() === 'dem') ? false : true"
         :isReturnUncertain="Boolean(voterClass === 'uncertainReturn')"
         :isRegistering="Boolean(isRegistered === 'notRegistered' || isRegistered === 'unsure')">
       </form-state-special-input>

@@ -8,7 +8,7 @@
                 <li>{{$t('request.sig.signName')}}</li>
                 <i18n path="request.sig.scanInstructions" tag="li" v-if="canCaptureImage">
                   <a @click="() => {webcamCaptureError = false; webCamPic = null; croppedPic.remove(); startCameraFilePicker()}" class="has-text-primary">{{$t('request.sig.clickStart')}}</a>
-                  <a @click="uploadPic" class="has-text-primary">{{$t('request.sig.uploadFile')}}</a>
+                  <a @click="uploadPic" class="has-text-primary">{{$t('request.sig.uploadFileImageNoPDF')}}</a>
                 </i18n>
                 <i18n v-else  tag="li" path="request.sig.uploadInstructions">
                   <a @click="croppedPic.chooseFile()" class="has-text-primary">{{$t('request.sig.clickToUpload')}}</a>
