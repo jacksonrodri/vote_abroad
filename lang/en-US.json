@@ -366,8 +366,8 @@
       }
     },
     "akRules": {
-      "label": "What proof will you provide? (You must also attach a photocopy with your submission)",
-      "resInstructions": "Alaska requires that you provide proof of Alaska residency.",
+      "label": "Please indicate in the box below the document you will be providing. Be sure to include a photocopy when you submit your completed form.",
+      "resInstructions": "If you are registering to vote in Alaska, you must also send in a copy of any one (1) of the following documents: valid U.S. passport, or other identification issued under the authority of the United States Secretary of State, or Alaska driver's license, or Alaska state identification, or US birth certificate.",
       "fwabWitness": "One witness signature",
       "tooltip": "Only Alaska voters need to answer this question as per state law."
     },
