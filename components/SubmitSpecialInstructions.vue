@@ -20,7 +20,7 @@ export default {
   computed: {
     specialSubmissionRules () {
       return /AR|CT|NJ|NY|TX|VT|WY/.test(this.state)
-        ? this.$t(`request.deadlineLanguage.${this.state.toLowerCase()}Special`)
+        ? `${this.$t(`request.deadlineLanguage.${this.state.toLowerCase()}Special`)}`
         : ''
     }
   },

@@ -366,8 +366,8 @@
       }
     },
     "akRules": {
-      "label": "What proof will you provide? (You must also attach a photocopy with your submission)",
-      "resInstructions": "Alaska requires that you provide proof of Alaska residency.",
+      "label": "Please indicate in the box below the document you will be providing. Be sure to include a photocopy when you submit your completed form.",
+      "resInstructions": "If you are registering to vote in Alaska, you must also send in a copy of any one (1) of the following documents: valid U.S. passport, or other identification issued under the authority of the United States Secretary of State, or Alaska driver's license, or Alaska state identification, or US birth certificate.",
       "fwabWitness": "One witness signature",
       "tooltip": "Only Alaska voters need to answer this question as per state law."
     },
@@ -761,8 +761,7 @@
       "CTSpecialDeadline": "you must ALSO send in the original signed copy by postal mail and it must be received in Connecticut by the close of polls on Election Day.",
       "NYSpecial": "{default}We recommend sending in your FPCA electronically to make sure you are on the voter rolls and will get a ballot.  If you send in your form by email or fax {specialDeadline}",
       "NYSpecialDeadline": "you must ALSO send in the original signed copy by postal mail and it must be postmarked by Election Day and reach NY by Nov 19.",
-      "NJSpecial": "{default}We recommend sending in your FPCA electronically to make sure you are on the voter rolls and will get a ballot.  If you send in your form by email or fax {specialDeadline}",
-      "NJSpecialDeadline": "you should ALSO send in the original signed copy by postal mail at the same time.",
+      "NJSpecial": "{default}We recommend sending in your FPCA electronically to make sure you are on the voter rolls and will get a ballot.",
       "WYSpecial": "If you previously registered in state you may email, fax or mail your signed form to the {leoName}. If you are registering to vote or previously registered to vote using the FPCA, you MUST send in your original signed form by POSTAL MAIL by the deadline to register to vote. {specialDeadline}",
       "ARSpecial": "{default}We recommend sending your ballot request by email if possible to avoid possible postal delays. If you send in your form by email or fax, {specialDeadline}",
       "ARSpecialDeadline": "you should ALSO check with the {leoName} to determine if they also require the original signed copy by postal mail. ",
