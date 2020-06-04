@@ -25,6 +25,9 @@
               <b-table-column
                 :label="$t('election.electionDay')">
                 <h1 class="title is-6" style="white-space: nowrap">{{ localizeIfAvailable(props.row.electionType) }}</h1>
+                <div style="margin-bottom: 12px;">
+                  <span v-if="new Date().getTime() > new Date(props.row.date).getTime()" class="tag is-info is-large">Completed</span>
+                </div>
                 <div class="calendar" style="margin: 0">
                   <header class="calendar-month">{{new Date(props.row.date + '+00:00').toLocaleDateString(dateFormat, {month: 'short', timeZone: 'UTC'}) }}</header>
                   <div class="calendar-date">
