@@ -1201,10 +1201,13 @@
       Registration:
         - voterType: {}
           rule: "By Mail: Postmarked by"
-          date: "2020-06-11T00:00:00"
+          date: "2020-06-10T00:00:00"
         - voterType: {}
           rule: "By Email or Fax: Received by"
-          date: "2020-06-11T00:00:00"
+          date: "2020-06-10T00:00:00"
+        - voterType: {}
+          rule: "By Online: Received by"
+          date: "2020-06-20T00:00:00"
       Ballot Request:
         - voterType: {}
           rule: "Received by"
@@ -1222,12 +1225,15 @@
           rule: "Return by Mail: Postmarked by"
           date: "2020-10-05T00:00:00"
         - voterType: {}
-          rule: "By Email/Online or Fax: Received by"
+          rule: "By Email or Fax: Received by"
+          date: "2020-10-05T00:00:00"
+        - voterType: {}
+          rule: "By Online: Received by"
           date: "2020-10-13T00:00:00"
       Ballot Request:
         - voterType: {}
           rule: "Received by"
-          date: "2020-11-02T00:00:00"
+          date: "2020-11-02T16:30:00"
       Ballot Return:
         - voterType: {}
           rule: "Received by"
@@ -1241,12 +1247,15 @@
           rule: "Return by Mail: Postmarked by"
           date: "2020-11-04T00:00:00"
         - voterType: {}
-          rule: "By Email/Online or Fax: Received by"
-          date: "2020-11-14T00:00:00"
+          rule: "By Email or Fax: Received by"
+          date: "2020-11-04T00:00:00"
+        - voterType: {}
+          rule: "By Online: Received by"
+          date: "2020-11-14T00:00:00
       Ballot Request:
         - voterType: {}
           rule: "Received by"
-          date: "2020-12-04T00:00:00"
+          date: "2020-12-04T16:30:00"
       Ballot Return:
         - voterType: {}
           rule: "Received by"
