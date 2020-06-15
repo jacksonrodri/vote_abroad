@@ -1143,7 +1143,7 @@
           rule: "By Mail: Postmarked by"
           date: "2020-05-26T00:00:00"
         - voterType: {}
-          rule: "By Email/Online or Fax: Received by"
+          rule: "By Email or Fax: Received by"
           date: "2020-05-26T16:00:00"
       Ballot Request:
         - voterType: {}
@@ -1163,7 +1163,7 @@
           rule: "By Mail: Postmarked by"
           date: "2020-05-26T00:00:00"
         - voterType: {}
-          rule: "By Email/Online or Fax: Received by"
+          rule: "By Email or Fax: Received by"
           date: "2020-05-26T16:00:00"
       Ballot Request:
         - voterType: {}
@@ -1183,7 +1183,7 @@
           rule: "By Mail: Postmarked by"
           date: "2020-10-05T00:00:00"
         - voterType: {}
-          rule: "By Email/Online or Fax: Received by"
+          rule: "By Email or Fax: Received by"
           date: "2020-10-05T16:00:00"
       Ballot Request:
         - voterType: {}
