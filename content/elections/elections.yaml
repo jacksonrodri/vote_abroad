@@ -1736,7 +1736,7 @@
           rule: "Return by Mail: Received by"
           date: "2020-06-02T20:00:00"
         - voterType: {}
-          rule: "Return by Email/Online or Fax: Sent by"
+          rule: "Return by Email or Fax: Sent by"
           date: "2020-06-02T20:00:00"
           note: "MT2"
   - state: "MT"
@@ -1756,7 +1756,7 @@
           rule: "Return by Mail: Received by"
           date: "2020-06-02T20:00:00"
         - voterType: {}
-          rule: "Return by Email/Online or Fax: Sent by"
+          rule: "Return by Email or Fax: Sent by"
           date: "2020-06-02T20:00:00"
           note: "MT2"
   - state: "MT"
@@ -1776,7 +1776,7 @@
           rule: "Return by Mail: Received by"
           date: "2020-11-03T20:00:00"
         - voterType: {}
-          rule: "Return by Email/Online or Fax: Sent by"
+          rule: "Return by Email or Fax: Sent by"
           date: "2020-11-03T20:00:00"
           note: "MT2"
   - state: "NE"
