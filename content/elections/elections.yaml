@@ -1251,7 +1251,7 @@
           date: "2020-11-04T00:00:00"
         - voterType: {}
           rule: "By Online: Received by"
-          date: "2020-11-14T00:00:00"
+          date: "2020-11-14T00:00:00
       Ballot Request:
         - voterType: {}
           rule: "Received by"
@@ -1485,7 +1485,7 @@
       Ballot Return:
         - voterType: "Within the U.S."
           rule: "Return by Mail: Received by"
-          date: "2020-11-03T20:00:00"       
+          date: "2020-11-03T20:00:00"
         - voterType: "Outside the U.S."
           rule: "Return by Email or Fax: Received by"
           date: "2020-11-03T20:00:00"
