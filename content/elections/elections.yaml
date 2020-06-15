@@ -1251,7 +1251,7 @@
           date: "2020-11-04T00:00:00"
         - voterType: {}
           rule: "By Online: Received by"
-          date: "2020-11-14T00:00:00
+          date: "2020-11-14T00:00:00"
       Ballot Request:
         - voterType: {}
           rule: "Received by"
