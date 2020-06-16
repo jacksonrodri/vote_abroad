@@ -375,7 +375,7 @@
           note: "CO1"
       Ballot Request:
         - voterType: {}
-          rule: "No Deadline"
+          rule: "Not Required"
           date: ""
       Ballot Return:
         - voterType: {}
@@ -393,7 +393,7 @@
           note: "CO1"
       Ballot Request:
         - voterType: {}
-          rule: "No Deadline"
+          rule: "Not Required"
           date: ""
       Ballot Return:
         - voterType: {}
@@ -411,7 +411,7 @@
           note: "CO1"
       Ballot Request:
         - voterType: {}
-          rule: "No Deadline"
+          rule: "Not Required"
           date: ""
       Ballot Return:
         - voterType: {}
