@@ -2189,24 +2189,24 @@
           rule: "Return by Mail: Received by"
           date: "2020-04-21T17:00:00"
   - state: "NC"
-    date: "2020-05-12T00:00:00"
+    date: "2020-06-23T00:00:00"
     electionType: "Federal Primary Runoff"
     rules:
       Registration:
         - voterType: {}
           rule: "Received by"
-          date: "2020-05-11T17:00:00"
+          date: "2020-06-22T17:00:00"
       Ballot Request:
         - voterType: {}
           rule: "Received by"
-          date: "2020-05-11T17:00:00"
+          date: "2020-06-22T17:00:00"
       Ballot Return:
         - voterType: {}
           rule: "Return by Email/Online or Fax: Received by"
-          date: "2020-05-12T19:30:00"
+          date: "2020-06-23T19:30:00"
         - voterType: {}
           rule: "Return by Mail: Received by"
-          date: "2020-05-21T17:00:00"
+          date: "2020-07-02T17:00:00"
   - state: "NC"
     date: "2020-11-03T00:00:00"
     electionType: "General Election"
@@ -2221,10 +2221,10 @@
           date: "2020-11-02T17:00:00"
       Ballot Return:
         - voterType: {}
-          rule: "Return by Mail: Received by"
+          rule: "Return by Email/Online or Fax: Received by"
           date: "2020-11-03T19:30:00"
         - voterType: {}
-          rule: "Return by Email/Online or Fax: Received by"
+          rule: "Return by Mail: Received by"
           date: "2020-11-12T17:00:00"
   - state: "ND"
     date: "2020-06-09T00:00:00"
