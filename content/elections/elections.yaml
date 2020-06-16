@@ -1081,8 +1081,8 @@
           rule: "Return by Mail: Postmarked by"
           date: "2020-11-02T00:00:00"
           note: "IA1"
-        - voterType: {}
-          rule: "Return by Online or Fax: Received by"
+        - voterType: {Military Voters only}
+          rule: "Return by Email or Fax: Received by"
           date: "2020-11-03T21:00:00"
   - state: "KS"
     date: "2020-05-02T00:00:00"
