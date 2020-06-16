@@ -712,8 +712,7 @@
     },
     "azRules": {
       "label": "If providing proof of citizenship, please indicate in the box below what documentation you will be providing. You must also attach a photocopy of the documentation when you submit this form.",
-      "citInstructions":
-        "If you are using this form to register to vote and you wish to receive a ballot with both state and federal offices, you must provide proof of citizenship.  If you don't provide proof of citizenship when you register to vote, you will receive a ballot listing only federal offices.",
+      "citInstructions": "If you are using this form to register to vote and you wish to receive a ballot with both state and federal offices, you must provide proof of citizenship.  If you don't provide proof of citizenship when you register to vote, you will receive a ballot listing only federal offices.",
       "tooltip": "Only Arizona voters need to answer this question as per state law."
     },
     "abrAdr": {
@@ -822,7 +821,7 @@
         "GA22": "Ballots must be received by Fri, Dec 7, 2018.",
         "GU21": "Ballots sent by postal mail must be received by Fri, Nov 16, 2018.",
         "HI1": "",
-        "IL1": "",
+        "IL1": "Requests signed by Sun, Oct 4, 2020 are eligible for a ballot. Otherwise you will only receive a Federal Ballot.",
         "IL2": "",
         "IL21": "If you are already registered or if you are not registered but only requesting a federal ballot, your form must be received by Mon, Oct 29, 2018.",
         "IL22": "Ballots sent by postal mail must be received by Tue, Nov 20, 2018.",
