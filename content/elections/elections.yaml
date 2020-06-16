@@ -945,8 +945,10 @@
           date: ""
       Ballot Request:
         - voterType: "Overseas Citizens"
-          rule: "Signed by"
+          rule: "Full Ballot: Signed by"
           date: "2020-10-04T00:00:00"
+          rule: "Federal Ballot Only: Signed by"
+          date: "2020-10-24T00:00:00"          
           note: "IL1"
         - voterType: "Uniformed Services and eligible family members"
           rule: "Signed by"
