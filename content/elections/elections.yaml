@@ -2145,7 +2145,7 @@
           date: "2020-03-02T17:00:00"
       Ballot Return:
         - voterType: {}
-          rule: "Return by Email/Online or Fax: Received by"
+          rule: "Return by Email or Fax: Received by"
           date: "2020-03-03T19:30:00"
         - voterType: {}
           rule: "Return by Mail: Received by"
@@ -2164,7 +2164,7 @@
           date: "2020-03-02T17:00:00"
       Ballot Return:
         - voterType: {}
-          rule: "Return by Email/Online or Fax: Received by"
+          rule: "Return by Email or Fax: Received by"
           date: "2020-03-03T19:30:00"
         - voterType: {}
           rule: "Return by Mail: Received by"
@@ -2183,7 +2183,7 @@
           date: "2020-04-20T17:00:00"
       Ballot Return:
         - voterType: {}
-          rule: "Return by Email/Online or Fax: Received by"
+          rule: "Return by Email or Fax: Received by"
           date: "2020-04-21T19:30:00"
         - voterType: {}
           rule: "Return by Mail: Received by"
@@ -2202,7 +2202,7 @@
           date: "2020-06-22T17:00:00"
       Ballot Return:
         - voterType: {}
-          rule: "Return by Email/Online or Fax: Received by"
+          rule: "Return by Email or Fax: Received by"
           date: "2020-06-23T19:30:00"
         - voterType: {}
           rule: "Return by Mail: Received by"
@@ -2221,7 +2221,7 @@
           date: "2020-11-02T17:00:00"
       Ballot Return:
         - voterType: {}
-          rule: "Return by Email/Online or Fax: Received by"
+          rule: "Return by Email or Fax: Received by"
           date: "2020-11-03T19:30:00"
         - voterType: {}
           rule: "Return by Mail: Received by"
