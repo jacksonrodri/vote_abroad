@@ -1870,7 +1870,7 @@
           date: "2020-10-06T00:00:00"
           note: "NV1"
         - voterType: {}
-          rule: "By Email or Fax: Received by"
+          rule: "By Email, Fax or FWAB: Received by"
           date: "2020-10-27T00:00:00"
           note: "NV1"
         - voterType: {}
