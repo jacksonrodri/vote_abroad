@@ -3120,8 +3120,8 @@
           rule: "Received by"
           date: "2020-05-18T00:00:00"
         - voterType: "Uniformed Services and eligible family members"
-          rule: "No Deadline"
-          date: ""
+          rule: "Received by"
+          date: "2020-06-23T19:00:00"
       Ballot Request:
         - voterType: {}
           rule: "Received by"
@@ -3139,8 +3139,8 @@
           rule: "Received by"
           date: "2020-10-12T00:00:00"
         - voterType: "Uniformed Services and eligible family members"
-          rule: "No Deadline"
-          date: ""
+          rule: "Received by"
+          date: "2020-11-03T19:00:00"
       Ballot Request:
         - voterType: {}
           rule: "Received by"
