@@ -2927,18 +2927,27 @@
     electionType: "General Election"
     rules:
       Registration:
-        - voterType: {}
+        - voterType: "Federal and State Ballot"
           rule: "Received by"
           date: "2020-10-05T00:00:00"
+        - voterType: "Federal Ballot only"
+          rule: "Received by"
+          date: "2020-10-23T00:00:00"
           note: "TX1"
       Ballot Request:
         - voterType: {}
           rule: "Received by"
           date: "2020-10-23T00:00:00"
       Ballot Return:
-        - voterType: {}
-          rule: "Received by"
-          date: "2020-11-09T00:00:00"
+        - voterType: "Overseas Citizens"
+          rule: "Postmarked by"
+          date: "2020-11-03T19:00:00"
+        - voterType: "Uniformed Services and eligible family members"
+          rule: "Postmarked by"
+          date: "2020-11-03T19:00:00"
+        - voterType: "Military voter in hostile fire zone"
+          rule: "Return by Fax: Received by"
+          date: "2020-11-03T19:00:00"
           note: "TX2"
   - state: "UT"
     date: "2020-03-03T00:00:00"
