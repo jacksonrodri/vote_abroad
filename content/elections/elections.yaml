@@ -2517,15 +2517,15 @@
     rules:
       Registration:
         - voterType: {}
-          rule: "By Mail: Postmarked by"
-          date: "2020-10-05T00:00:00"
+          rule: "Received by"
+          date: "2020-10-19T00:00:00"
       Ballot Request:
         - voterType: {}
           rule: "Received by"
           date: "2020-11-02T00:00:00"
       Ballot Return:
         - voterType: {}
-          rule: "Signed by"
+          rule: "Postmarked by"
           date: "2020-11-02T23:59:00"
           note: "PA1"
   - state: "PR"
