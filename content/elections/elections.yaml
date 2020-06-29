@@ -3181,8 +3181,11 @@
           date: ""
       Ballot Return:
         - voterType: {}
-          rule: "Received by"
+          rule: "By Email or Fax: Received by"
           date: "2020-08-04T20:00:00"
+        - voterType: {}
+          rule: "By Mail: Signed by"
+          date: "2020-11-03T00:00:00"
   - state: "WA"
     date: "2020-11-03T00:00:00"
     electionType: "General Election"
@@ -3198,8 +3201,11 @@
           date: ""
       Ballot Return:
         - voterType: {}
-          rule: "Received by"
+          rule: "By Email or Fax: Received by"
           date: "2020-11-03T20:00:00"
+        - voterType: {}
+          rule: "By Mail: Signed by"
+          date: "2020-11-03T00:00:00"
   - state: "WV"
     date: "2020-06-09T00:00:00"
     electionType: "State Primary"
