@@ -2244,7 +2244,7 @@
           date: "2020-06-08T00:00:00"
           note: "ND1"
         - voterType: {}
-          rule: "Return by Email/Online or Fax: Received by"
+          rule: "Return by Email or Fax: Received by"
           date: "2020-06-08T23:59:00"
   - state: "ND"
     date: "2020-11-03T00:00:00"
@@ -2264,7 +2264,7 @@
           date: "2020-11-02T00:00:00"
           note: "ND1"
         - voterType: {}
-          rule: "Return by Email/Online or Fax: Received by"
+          rule: "Return by Email or Fax: Received by"
           date: "2020-11-02T23:59:00"
   - state: "OH"
     date: "2020-04-28T00:00:00"
