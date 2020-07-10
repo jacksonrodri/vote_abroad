@@ -3194,7 +3194,7 @@
           date: "2020-08-04T20:00:00"
         - voterType: {}
           rule: "By Mail: Signed by"
-          date: "2020-11-03T00:00:00"
+          date: "2020-08-04T00:00:00"
   - state: "WA"
     date: "2020-11-03T00:00:00"
     electionType: "General Election"
