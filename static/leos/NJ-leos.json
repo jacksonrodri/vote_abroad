@@ -576,6 +576,24 @@
     "fwabOffice": false
   },
   {
+    "i": 2757,
+    "n": "Salem County Clerk - FPCA",
+    "f": "(856) 935-8882",
+    "p": "(856) 935-7510 x8454",
+    "e": "overseasballot@salemcountynj.gov",
+    "d": "2019-08-02T14:29:55",
+    "a1": "110 Fifth St, Ste 200",
+    "a2": "",
+    "a3": "",
+    "c": "Salem",
+    "s": "NJ",
+    "z": "08079",
+    "j": "Salem",
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": false
+  },
+  {
     "i": 25171,
     "n": "Salem County Board of Elections - FWAB",
     "f": "(856) 935-6725",
