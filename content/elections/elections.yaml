@@ -1287,11 +1287,11 @@
       Registration:
         - voterType: {}
           rule: "Received by"
-          date: "2020-07-14T17:00:00"
+          date: "2020-07-13T17:00:00"
       Ballot Request:
         - voterType: {}
           rule: "Received by"
-          date: "2020-07-14T17:00:00"
+          date: "2020-07-13T17:00:00"
       Ballot Return:
         - voterType: {}
           rule: "Received by"
