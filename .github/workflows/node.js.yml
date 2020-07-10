@@ -5,7 +5,7 @@ name: Update Local Election Officials
 
 on:
   schedule:
-    - cron: "04 * * * *"
+    - cron: "04 04 * * *"
 
 jobs:
   updateLeos:
