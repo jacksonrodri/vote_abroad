@@ -206,304 +206,636 @@
       </div>
     </div>
   </div>
+  <img src="https://p1.zemanta.com/p/7069/7418/" height="1" width="1" border="0" alt="" />
 </div>
 </template>
 
 <script>
-import snarkdown from 'snarkdown'
-import { mapGetters } from 'vuex'
+import snarkdown from "snarkdown";
+import { mapGetters } from "vuex";
 
 export default {
-  name: 'dashboard',
-  async fetch ({ store }) {
-    await store.dispatch('data/getElections')
+  name: "dashboard",
+  async fetch({ store }) {
+    await store.dispatch("data/getElections");
   },
-  async asyncData ({app, store}) {
-    let state = store.getters['requests/getCurrent'] && store.getters['requests/getCurrent'].leo ? store.getters['requests/getCurrent'].leo.s : ''
-    let elections = (await app.$content('/elections').get('elections')).body
+  async asyncData({ app, store }) {
+    let state =
+      store.getters["requests/getCurrent"] &&
+      store.getters["requests/getCurrent"].leo
+        ? store.getters["requests/getCurrent"].leo.s
+        : "";
+    let elections = (await app.$content("/elections").get("elections")).body;
     return {
-      registering: store.getters['requests/getCurrent'].isRegistered !== 'registered',
+      registering:
+        store.getters["requests/getCurrent"].isRegistered !== "registered",
       state: state,
-      submissionMethod: store.getters['requests/getCurrent'].recBallot,
-      allStateRules: await app.$content('rls')
-        .query({ exclude: ['anchors', 'body', 'meta', 'path', 'permalink'] })
+      submissionMethod: store.getters["requests/getCurrent"].recBallot,
+      allStateRules: await app
+        .$content("rls")
+        .query({ exclude: ["anchors", "body", "meta", "path", "permalink"] })
         .getAll(),
-      stateElections: (await app.$content('/elections').get('elections')).body
-        .filter(election => election.state && state && election.state.toLowerCase() === state.toLowerCase())
+      stateElections: (await app.$content("/elections").get("elections")).body
+        .filter(
+          election =>
+            election.state &&
+            state &&
+            election.state.toLowerCase() === state.toLowerCase()
+        )
         .filter(x => new Date(x.date).getTime() > Date.now())
-        .sort(function (a, b) {
-          var dateA = new Date(a.date).getTime()
-          var dateB = new Date(b.date).getTime()
-          return dateA - dateB
+        .sort(function(a, b) {
+          var dateA = new Date(a.date).getTime();
+          var dateB = new Date(b.date).getTime();
+          return dateA - dateB;
         }),
       elections: elections
-    }
+    };
   },
-  data () {
+  data() {
     return {
       isAdmin: false,
-      currentRequestStage: 'Fill & Sign'
-    }
+      currentRequestStage: "Fill & Sign"
+    };
   },
   computed: {
-    dateFormat () {
-      return this.$i18n.locale === 'en' ? 'en-US' : 'es-ES'
+    dateFormat() {
+      return this.$i18n.locale === "en" ? "en-US" : "es-ES";
     },
-    instructionsObject () {
-      let votState = this.votState
+    instructionsObject() {
+      let votState = this.votState;
       return {
-        leoName: this.leoName || '',
+        leoName: this.leoName || "",
         transmitOpts: this.transmitOpts,
         default: this.$t(`request.deadlineLanguage.transmitInstructions`, {
           leoName: this.leoName,
           transmitOpts: this.transmitOpts
         }),
-        specialDeadline: this.$te(`request.deadlineLanguage.${votState}SpecialDeadline`) ? this.$t(`request.deadlineLanguage.${votState}SpecialDeadline`, {leoName: this.leoName}) : this.$t('request.deadlineLanguage.emailSuggested')
-      }
+        specialDeadline: this.$te(
+          `request.deadlineLanguage.${votState}SpecialDeadline`
+        )
+          ? this.$t(`request.deadlineLanguage.${votState}SpecialDeadline`, {
+              leoName: this.leoName
+            })
+          : this.$t("request.deadlineLanguage.emailSuggested")
+      };
     },
-    transmitInstructions () {
-      if (this.$te(`request.deadlineLanguage.${this.votState}SpecialDeadline`)) {
-        return this.$t(`request.deadlineLanguage.transmitInstructions`, {leoName: this.leoName, transmitOpts: this.transmitOpts})
+    transmitInstructions() {
+      if (
+        this.$te(`request.deadlineLanguage.${this.votState}SpecialDeadline`)
+      ) {
+        return this.$t(`request.deadlineLanguage.transmitInstructions`, {
+          leoName: this.leoName,
+          transmitOpts: this.transmitOpts
+        });
       } else if (this.$te(`request.deadlineLanguage.${this.votState}Special`)) {
-        return this.$t(`request.deadlineLanguage.${this.votState}Special`, Object.assign({}, this.instructionsObject, {specialDeadline: ''}))
+        return this.$t(
+          `request.deadlineLanguage.${this.votState}Special`,
+          Object.assign({}, this.instructionsObject, { specialDeadline: "" })
+        );
       } else {
-        return this.$t(`request.deadlineLanguage.transmitInstructions`, {leoName: this.leoName, transmitOpts: this.transmitOpts})
+        return this.$t(`request.deadlineLanguage.transmitInstructions`, {
+          leoName: this.leoName,
+          transmitOpts: this.transmitOpts
+        });
       }
     },
-    transmitRules () {
-      if (this.$te(`request.deadlineLanguage.${this.votState}SpecialDeadline`)) {
-        return this.$t(`request.deadlineLanguage.${this.votState}Special`, Object.assign({}, this.instructionsObject, {default: ''}))
-      } else return this.stateRules && this.stateRules.fpcaSubmitOptionsRequest.includes('Email') ? this.$t('request.deadlineLanguage.emailSuggested') : ''
+    transmitRules() {
+      if (
+        this.$te(`request.deadlineLanguage.${this.votState}SpecialDeadline`)
+      ) {
+        return this.$t(
+          `request.deadlineLanguage.${this.votState}Special`,
+          Object.assign({}, this.instructionsObject, { default: "" })
+        );
+      } else
+        return this.stateRules &&
+          this.stateRules.fpcaSubmitOptionsRequest.includes("Email")
+          ? this.$t("request.deadlineLanguage.emailSuggested")
+          : "";
     },
-    electronicTransmissionNote () {
-      if (this.$te(`request.deadlineLanguage.${this.votState}SpecialDeadline`)) {
-        return this.$t(`request.deadlineLanguage.${this.votState}SpecialDeadline`, {leoName: this.leoName})
+    electronicTransmissionNote() {
+      if (
+        this.$te(`request.deadlineLanguage.${this.votState}SpecialDeadline`)
+      ) {
+        return this.$t(
+          `request.deadlineLanguage.${this.votState}SpecialDeadline`,
+          { leoName: this.leoName }
+        );
       } else if (this.$te(`request.deadlineLanguage.${this.votState}Special`)) {
-        return this.$t(`request.deadlineLanguage.${this.votState}Special`, {leoName: this.leoName})
-      } else return null
+        return this.$t(`request.deadlineLanguage.${this.votState}Special`, {
+          leoName: this.leoName
+        });
+      } else return null;
     },
-    transmitOpts () {
+    transmitOpts() {
       if (!this.stateRules) {
-        return `mail, email or fax`
+        return `mail, email or fax`;
       }
       switch (this.stateRules.fpcaSubmitOptionsRegister.length) {
         case 1:
-          return this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[0].toLowerCase()}`)
+          return this.$t(
+            `request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[0].toLowerCase()}`
+          );
         case 2:
-          return this.$t(`request.deadlineLanguage.opt2`, {item1: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[0].toLowerCase()}`).toLowerCase(), item2: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[1].toLowerCase()}`).toLowerCase()})
+          return this.$t(`request.deadlineLanguage.opt2`, {
+            item1: this.$t(
+              `request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[0].toLowerCase()}`
+            ).toLowerCase(),
+            item2: this.$t(
+              `request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[1].toLowerCase()}`
+            ).toLowerCase()
+          });
         case 3:
-          return this.$t(`request.deadlineLanguage.opt3`, {item1: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[0].toLowerCase()}`).toLowerCase(), item2: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[1].toLowerCase()}`).toLowerCase(), item3: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[2].toLowerCase()}`).toLowerCase()})
+          return this.$t(`request.deadlineLanguage.opt3`, {
+            item1: this.$t(
+              `request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[0].toLowerCase()}`
+            ).toLowerCase(),
+            item2: this.$t(
+              `request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[1].toLowerCase()}`
+            ).toLowerCase(),
+            item3: this.$t(
+              `request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[2].toLowerCase()}`
+            ).toLowerCase()
+          });
         case 4:
-          return this.$t(`request.deadlineLanguage.opt4`, {item1: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[0].toLowerCase()}`).toLowerCase(), item2: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[1].toLowerCase()}`).toLowerCase(), item3: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[2].toLowerCase()}`).toLowerCase(), item4: this.$t(`request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[3].toLowerCase()}`).toLowerCase()})
+          return this.$t(`request.deadlineLanguage.opt4`, {
+            item1: this.$t(
+              `request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[0].toLowerCase()}`
+            ).toLowerCase(),
+            item2: this.$t(
+              `request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[1].toLowerCase()}`
+            ).toLowerCase(),
+            item3: this.$t(
+              `request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[2].toLowerCase()}`
+            ).toLowerCase(),
+            item4: this.$t(
+              `request.deadlineLanguage.${this.stateRules.fpcaSubmitOptionsRegister[3].toLowerCase()}`
+            ).toLowerCase()
+          });
         default:
-          return `mail, email or fax`
+          return `mail, email or fax`;
       }
     },
-    specialSubmissionRules () {
+    specialSubmissionRules() {
       return this.$te(`request.deadlineLanguage.${this.votState}Special`)
         ? this.$t(`request.deadlineLanguage.${this.votState}Special`, {
-          leoName: this.leoName,
-          transmitOpts: this.transmitOpts,
-          specialDeadline: this.$te(`request.deadlineLanguage.${this.votState}SpecialDeadline`) ? this.$t(`request.deadlineLanguage.${this.votState}SpecialDeadline`) : ''
-        })
-        : this.$t(`request.deadlineLanguage.transmitInstructions`, {leoName: this.leoName, transmitOpts: this.transmitOpts})
+            leoName: this.leoName,
+            transmitOpts: this.transmitOpts,
+            specialDeadline: this.$te(
+              `request.deadlineLanguage.${this.votState}SpecialDeadline`
+            )
+              ? this.$t(
+                  `request.deadlineLanguage.${this.votState}SpecialDeadline`
+                )
+              : ""
+          })
+        : this.$t(`request.deadlineLanguage.transmitInstructions`, {
+            leoName: this.leoName,
+            transmitOpts: this.transmitOpts
+          });
     },
-    stateRules () {
+    stateRules() {
       if (this.state) {
-        return this.allStateRules.find(x => x.iso.toLowerCase() === this.state.toLowerCase())
+        return this.allStateRules.find(
+          x => x.iso.toLowerCase() === this.state.toLowerCase()
+        );
       } else {
-        return undefined
+        return undefined;
       }
     },
-    newVoterDeadlineLanguageObject () {
-      let elections = this.getCurrentDeadlines.filter(x => x.ruleType === 'Registration')
-      let rule = elections[0].rule
-      let deadline = new Date(elections[0].ruleDate)
-      let methods = elections.length < 2 || elections[0].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.submissionMethod`, {method: elections[0].submissionOptions.join('/')})
-      let altMethods = elections.length < 2 || elections[1].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.alternateSubmissionMethod`, {rule: this.$t(`request.deadlineLanguage.${elections[1].rule}`), deadline: new Date(elections[1].ruleDate).toLocaleDateString(this.dateFormat, {month: 'short', day: 'numeric'}), method: elections[1].submissionOptions.join('/')})
+    newVoterDeadlineLanguageObject() {
+      let elections = this.getCurrentDeadlines.filter(
+        x => x.ruleType === "Registration"
+      );
+      let rule = elections[0].rule;
+      let deadline = new Date(elections[0].ruleDate);
+      let methods =
+        elections.length < 2 || elections[0].submissionOptions.length > 2
+          ? ""
+          : this.$t(`request.deadlineLanguage.submissionMethod`, {
+              method: elections[0].submissionOptions.join("/")
+            });
+      let altMethods =
+        elections.length < 2 || elections[1].submissionOptions.length > 2
+          ? ""
+          : this.$t(`request.deadlineLanguage.alternateSubmissionMethod`, {
+              rule: this.$t(`request.deadlineLanguage.${elections[1].rule}`),
+              deadline: new Date(elections[1].ruleDate).toLocaleDateString(
+                this.dateFormat,
+                { month: "short", day: "numeric" }
+              ),
+              method: elections[1].submissionOptions.join("/")
+            });
       return {
         rule: this.$t(`request.deadlineLanguage.${rule}`),
-        deadline: deadline.toLocaleDateString(this.dateFormat, {month: 'short', day: 'numeric'}),
+        deadline: deadline.toLocaleDateString(this.dateFormat, {
+          month: "short",
+          day: "numeric"
+        }),
         submissionMethod: methods,
         alternateSubmissionMethod: altMethods,
-        electionDay: new Date(elections[0].electionDate).toLocaleDateString(this.dateFormat, {month: 'short', day: 'numeric'}),
+        electionDay: new Date(elections[0].electionDate).toLocaleDateString(
+          this.dateFormat,
+          { month: "short", day: "numeric" }
+        ),
         electionType: elections[0].electionType,
-        note: elections[0].note ? this.$t(`request.deadlineLanguage.notes.${elections[0].note}`) : '',
+        note: elections[0].note
+          ? this.$t(`request.deadlineLanguage.notes.${elections[0].note}`)
+          : "",
         url: process.env.url,
         state: elections[0].state,
-        documentRequired: this.documentRequired && (this.state === 'AK' || this.state === 'AZ') ? this.$t(`request.deadlineLanguage.documentRequired`, {document: this.$t(`request.deadlineLanguage.${this.state.toLowerCase()}Document`)}) : ''
-      }
+        documentRequired:
+          this.documentRequired && (this.state === "AK" || this.state === "AZ")
+            ? this.$t(`request.deadlineLanguage.documentRequired`, {
+                document: this.$t(
+                  `request.deadlineLanguage.${this.state.toLowerCase()}Document`
+                )
+              })
+            : ""
+      };
     },
-    registeredVoterDeadlineObject () {
-      let elections = this.getCurrentDeadlines.filter(x => x.ruleType === 'Ballot Request')
-      let rule = elections[0].rule
-      let deadline = new Date(elections[0].ruleDate)
-      let methods = elections.length < 2 || elections[0].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.submissionMethod`, {method: elections[0].submissionOptions.join('/')})
-      let altMethods = elections.length < 2 || elections[1].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.alternateSubmissionMethod`, {rule: this.$t(`request.deadlineLanguage.${elections[1].rule}`), deadline: new Date(elections[1].ruleDate).toLocaleDateString(this.dateFormat, {month: 'short', day: 'numeric'}), method: elections[1].submissionOptions.join('/')})
+    registeredVoterDeadlineObject() {
+      let elections = this.getCurrentDeadlines.filter(
+        x => x.ruleType === "Ballot Request"
+      );
+      let rule = elections[0].rule;
+      let deadline = new Date(elections[0].ruleDate);
+      let methods =
+        elections.length < 2 || elections[0].submissionOptions.length > 2
+          ? ""
+          : this.$t(`request.deadlineLanguage.submissionMethod`, {
+              method: elections[0].submissionOptions.join("/")
+            });
+      let altMethods =
+        elections.length < 2 || elections[1].submissionOptions.length > 2
+          ? ""
+          : this.$t(`request.deadlineLanguage.alternateSubmissionMethod`, {
+              rule: this.$t(`request.deadlineLanguage.${elections[1].rule}`),
+              deadline: new Date(elections[1].ruleDate).toLocaleDateString(
+                this.dateFormat,
+                { month: "short", day: "numeric" }
+              ),
+              method: elections[1].submissionOptions.join("/")
+            });
       return {
         rule: this.$t(`request.deadlineLanguage.${rule}`),
-        deadline: deadline.toLocaleDateString(this.dateFormat, {month: 'short', day: 'numeric'}),
+        deadline: deadline.toLocaleDateString(this.dateFormat, {
+          month: "short",
+          day: "numeric"
+        }),
         submissionMethod: methods,
         alternateSubmissionMethod: altMethods,
-        electionDay: new Date(elections[0].electionDate).toLocaleDateString(this.dateFormat, {month: 'short', day: 'numeric'}),
+        electionDay: new Date(elections[0].electionDate).toLocaleDateString(
+          this.dateFormat,
+          { month: "short", day: "numeric" }
+        ),
         electionType: elections[0].electionType,
-        note: elections[0].note ? this.$t(`request.deadlineLanguage.notes.${elections[0].note}`) : '',
+        note: elections[0].note
+          ? this.$t(`request.deadlineLanguage.notes.${elections[0].note}`)
+          : "",
         url: process.env.url,
         state: elections[0].state
-      }
+      };
     },
-    unsureVoterDeadlineObject () {
-      let electionsNew = this.getCurrentDeadlines.filter(x => x.ruleType === 'Registration')
-      let newVoterRule = electionsNew[0].rule
-      let newVoterDeadline = new Date(electionsNew[0].ruleDate)
-      let newVoterMethods = electionsNew.length < 2 || electionsNew[0].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.submissionMethod`, {method: electionsNew[0].submissionOptions.join('/')})
-      let newVoterAltMethods = electionsNew.length < 2 || electionsNew[1].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.alternateSubmissionMethod`, {rule: this.$t(`request.deadlineLanguage.${electionsNew[1].rule}`), deadline: new Date(electionsNew[1].ruleDate).toLocaleDateString(this.dateFormat, {month: 'short', day: 'numeric'}), method: electionsNew[1].submissionOptions.join('/')})
-      let electionsRegistered = this.getCurrentDeadlines.filter(x => x.ruleType === 'Ballot Request')
-      let registeredVoterRule = electionsRegistered[0].rule
-      let registeredVoterDeadline = new Date(electionsRegistered[0].ruleDate)
-      let registeredVoterMethods = electionsRegistered.length < 2 || electionsRegistered[0].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.submissionMethod`, {method: electionsRegistered[0].submissionOptions.join('/')})
-      let registeredVoterAltMethods = electionsRegistered.length < 2 || electionsRegistered[1].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.alternateSubmissionMethod`, {rule: this.$t(`request.deadlineLanguage.${electionsRegistered[1].rule}`), deadline: new Date(electionsRegistered[1].ruleDate).toLocaleDateString(this.dateFormat, {month: 'short', day: 'numeric'}), method: electionsRegistered[1].submissionOptions.join('/')})
+    unsureVoterDeadlineObject() {
+      let electionsNew = this.getCurrentDeadlines.filter(
+        x => x.ruleType === "Registration"
+      );
+      let newVoterRule = electionsNew[0].rule;
+      let newVoterDeadline = new Date(electionsNew[0].ruleDate);
+      let newVoterMethods =
+        electionsNew.length < 2 || electionsNew[0].submissionOptions.length > 2
+          ? ""
+          : this.$t(`request.deadlineLanguage.submissionMethod`, {
+              method: electionsNew[0].submissionOptions.join("/")
+            });
+      let newVoterAltMethods =
+        electionsNew.length < 2 || electionsNew[1].submissionOptions.length > 2
+          ? ""
+          : this.$t(`request.deadlineLanguage.alternateSubmissionMethod`, {
+              rule: this.$t(`request.deadlineLanguage.${electionsNew[1].rule}`),
+              deadline: new Date(electionsNew[1].ruleDate).toLocaleDateString(
+                this.dateFormat,
+                { month: "short", day: "numeric" }
+              ),
+              method: electionsNew[1].submissionOptions.join("/")
+            });
+      let electionsRegistered = this.getCurrentDeadlines.filter(
+        x => x.ruleType === "Ballot Request"
+      );
+      let registeredVoterRule = electionsRegistered[0].rule;
+      let registeredVoterDeadline = new Date(electionsRegistered[0].ruleDate);
+      let registeredVoterMethods =
+        electionsRegistered.length < 2 ||
+        electionsRegistered[0].submissionOptions.length > 2
+          ? ""
+          : this.$t(`request.deadlineLanguage.submissionMethod`, {
+              method: electionsRegistered[0].submissionOptions.join("/")
+            });
+      let registeredVoterAltMethods =
+        electionsRegistered.length < 2 ||
+        electionsRegistered[1].submissionOptions.length > 2
+          ? ""
+          : this.$t(`request.deadlineLanguage.alternateSubmissionMethod`, {
+              rule: this.$t(
+                `request.deadlineLanguage.${electionsRegistered[1].rule}`
+              ),
+              deadline: new Date(
+                electionsRegistered[1].ruleDate
+              ).toLocaleDateString(this.dateFormat, {
+                month: "short",
+                day: "numeric"
+              }),
+              method: electionsRegistered[1].submissionOptions.join("/")
+            });
       return {
         newVoterRule: this.$t(`request.deadlineLanguage.${newVoterRule}`),
-        newVoterDeadline: newVoterDeadline.toLocaleDateString(this.dateFormat, {month: 'short', day: 'numeric'}),
+        newVoterDeadline: newVoterDeadline.toLocaleDateString(this.dateFormat, {
+          month: "short",
+          day: "numeric"
+        }),
         newVoterSubmissionMethod: newVoterMethods,
         newVoterAlternateSubmissionMethod: newVoterAltMethods,
-        newVoterElectionDay: new Date(electionsNew[0].electionDate).toLocaleDateString(this.dateFormat, {month: 'short', day: 'numeric'}),
+        newVoterElectionDay: new Date(
+          electionsNew[0].electionDate
+        ).toLocaleDateString(this.dateFormat, {
+          month: "short",
+          day: "numeric"
+        }),
         newVoterElectionType: electionsNew[0].electionType,
-        newVoterNote: electionsNew[0].note ? this.$t(`request.deadlineLanguage.notes.${electionsNew[0].note}`) : '',
-        registeredVoterRule: this.$t(`request.deadlineLanguage.${registeredVoterRule}`),
-        registeredVoterDeadline: registeredVoterDeadline.toLocaleDateString(this.dateFormat, {month: 'short', day: 'numeric'}),
+        newVoterNote: electionsNew[0].note
+          ? this.$t(`request.deadlineLanguage.notes.${electionsNew[0].note}`)
+          : "",
+        registeredVoterRule: this.$t(
+          `request.deadlineLanguage.${registeredVoterRule}`
+        ),
+        registeredVoterDeadline: registeredVoterDeadline.toLocaleDateString(
+          this.dateFormat,
+          { month: "short", day: "numeric" }
+        ),
         registeredVoterSubmissionMethod: registeredVoterMethods,
         registeredVoterAlternateSubmissionMethod: registeredVoterAltMethods,
-        registeredVoterElectionDay: new Date(electionsRegistered[0].electionDate).toLocaleDateString(this.dateFormat, {month: 'short', day: 'numeric'}),
+        registeredVoterElectionDay: new Date(
+          electionsRegistered[0].electionDate
+        ).toLocaleDateString(this.dateFormat, {
+          month: "short",
+          day: "numeric"
+        }),
         registeredVoterElectionType: electionsRegistered[0].electionType,
-        registeredVoterNote: electionsRegistered[0].note ? this.$t(`request.deadlineLanguage.notes.${electionsRegistered[0].note}`) : '',
+        registeredVoterNote: electionsRegistered[0].note
+          ? this.$t(
+              `request.deadlineLanguage.notes.${electionsRegistered[0].note}`
+            )
+          : "",
         url: process.env.url,
         state: electionsNew[0].state,
-        documentRequired: this.documentRequired && (this.state === 'AK' || this.state === 'AZ') ? this.$t(`request.deadlineLanguage.documentRequired`, {document: this.$t(`request.deadlineLanguage.${this.state.toLowerCase()}Document`)}) : ''
-      }
+        documentRequired:
+          this.documentRequired && (this.state === "AK" || this.state === "AZ")
+            ? this.$t(`request.deadlineLanguage.documentRequired`, {
+                document: this.$t(
+                  `request.deadlineLanguage.${this.state.toLowerCase()}Document`
+                )
+              })
+            : ""
+      };
     },
-    ballotReturnDeadlineObject () {
-      let elections = this.getCurrentDeadlines.filter(x => x.ruleType === 'Ballot Return')
-      let rule = elections[0].rule
-      let deadline = new Date(elections[0].ruleDate)
-      let methods = elections.length < 2 || elections[0].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.submissionMethod`, {method: elections[0].submissionOptions.join('/')})
-      let altMethods = elections.length < 2 || elections[1].submissionOptions.length > 2 ? '' : this.$t(`request.deadlineLanguage.alternateSubmissionMethod`, {rule: this.$t(`request.deadlineLanguage.${elections[1].rule}`), deadline: new Date(elections[1].ruleDate).toLocaleDateString(this.dateFormat, {month: 'short', day: 'numeric'}), method: elections[1].submissionOptions.join('/')})
+    ballotReturnDeadlineObject() {
+      let elections = this.getCurrentDeadlines.filter(
+        x => x.ruleType === "Ballot Return"
+      );
+      let rule = elections[0].rule;
+      let deadline = new Date(elections[0].ruleDate);
+      let methods =
+        elections.length < 2 || elections[0].submissionOptions.length > 2
+          ? ""
+          : this.$t(`request.deadlineLanguage.submissionMethod`, {
+              method: elections[0].submissionOptions.join("/")
+            });
+      let altMethods =
+        elections.length < 2 || elections[1].submissionOptions.length > 2
+          ? ""
+          : this.$t(`request.deadlineLanguage.alternateSubmissionMethod`, {
+              rule: this.$t(`request.deadlineLanguage.${elections[1].rule}`),
+              deadline: new Date(elections[1].ruleDate).toLocaleDateString(
+                this.dateFormat,
+                { month: "short", day: "numeric" }
+              ),
+              method: elections[1].submissionOptions.join("/")
+            });
       return {
         rule: this.$t(`request.deadlineLanguage.${rule}`),
-        deadline: deadline.toLocaleDateString(this.dateFormat, {month: 'short', day: 'numeric'}),
+        deadline: deadline.toLocaleDateString(this.dateFormat, {
+          month: "short",
+          day: "numeric"
+        }),
         submissionMethod: methods,
         alternateSubmissionMethod: altMethods,
-        electionDay: new Date(elections[0].electionDate).toLocaleDateString(this.dateFormat, {month: 'short', day: 'numeric'}),
+        electionDay: new Date(elections[0].electionDate).toLocaleDateString(
+          this.dateFormat,
+          { month: "short", day: "numeric" }
+        ),
         electionType: elections[0].electionType,
-        note: elections[0].note ? this.$t(`request.deadlineLanguage.notes.${elections[0].note}`) : '',
+        note: elections[0].note
+          ? this.$t(`request.deadlineLanguage.notes.${elections[0].note}`)
+          : "",
         url: process.env.url,
         state: elections[0].state
-      }
+      };
     },
-    deadlineLanguage () {
+    deadlineLanguage() {
       if (this.getCurrentDeadlines.length === 0) {
-        return `There are no elections currently scheduled for ${this.votState}.  Voters should send in an FPCA every calendar year.`
+        return `There are no elections currently scheduled for ${
+          this.votState
+        }.  Voters should send in an FPCA every calendar year.`;
       } else {
         switch (this.isRegistered) {
-          case 'notRegistered':
-            return this.$t('request.deadlineLanguage.newVoters', this.newVoterDeadlineLanguageObject)
-          case 'registered':
-            return this.$t('request.deadlineLanguage.registeredVoters', this.registeredVoterDeadlineObject)
+          case "notRegistered":
+            return this.$t(
+              "request.deadlineLanguage.newVoters",
+              this.newVoterDeadlineLanguageObject
+            );
+          case "registered":
+            return this.$t(
+              "request.deadlineLanguage.registeredVoters",
+              this.registeredVoterDeadlineObject
+            );
           default:
-            return this.$t('request.deadlineLanguage.unsureRegistrationVoters', this.unsureVoterDeadlineObject)
+            return this.$t(
+              "request.deadlineLanguage.unsureRegistrationVoters",
+              this.unsureVoterDeadlineObject
+            );
         }
       }
     },
-    isRegistered () { return this.currentRequestObject ? this.currentRequestObject.isRegistered : null },
-    formSubmitted () {
-      return this.$t('request.deadlineLanguage.formSubmitted', {
-        alsoVoterRegistration: this.isRegistered === 'registered' ? '' : this.$t('request.deadlineLanguage.alsoVoterRegistration'),
+    isRegistered() {
+      return this.currentRequestObject
+        ? this.currentRequestObject.isRegistered
+        : null;
+    },
+    formSubmitted() {
+      return this.$t("request.deadlineLanguage.formSubmitted", {
+        alsoVoterRegistration:
+          this.isRegistered === "registered"
+            ? ""
+            : this.$t("request.deadlineLanguage.alsoVoterRegistration"),
         leoName: this.leoName,
-        specialRules: this.$te(`request.deadlineLanguage.${this.votState}SpecialDeadline`) ? this.capitalizeFirstLetter(this.$t(`request.deadlineLanguage.${this.votState}SpecialDeadline`)) : ''
-      })
+        specialRules: this.$te(
+          `request.deadlineLanguage.${this.votState}SpecialDeadline`
+        )
+          ? this.capitalizeFirstLetter(
+              this.$t(
+                `request.deadlineLanguage.${this.votState}SpecialDeadline`
+              )
+            )
+          : ""
+      });
     },
-    deadlineFormConfirmation () {
-      return this.$t('request.deadlineLanguage.formConfirmation')
+    deadlineFormConfirmation() {
+      return this.$t("request.deadlineLanguage.formConfirmation");
     },
-    deadlineReceiveBallot () {
+    deadlineReceiveBallot() {
       if (this.getCurrentDeadlines.length === 0) {
-        return ''
+        return "";
       } else {
-        let daysToNextElection = Math.ceil((new Date(this.getCurrentDeadlines[0].electionDate).getTime() - new Date().getTime()) / (1000 * 3600 * 24))
-        return this.$t(`request.deadlineLanguage.${daysToNextElection > 44 ? 'sendBallot45days' : 'sendBallotLessThan45days'}`)
+        let daysToNextElection = Math.ceil(
+          (new Date(this.getCurrentDeadlines[0].electionDate).getTime() -
+            new Date().getTime()) /
+            (1000 * 3600 * 24)
+        );
+        return this.$t(
+          `request.deadlineLanguage.${
+            daysToNextElection > 44
+              ? "sendBallot45days"
+              : "sendBallotLessThan45days"
+          }`
+        );
       }
     },
-    deadlineBallotReturn () {
+    deadlineBallotReturn() {
       if (this.getCurrentDeadlines.length === 0) {
-        return ''
+        return "";
       } else {
-        return this.$t('request.deadlineLanguage.ballotReturn', this.ballotReturnDeadlineObject)
+        return this.$t(
+          "request.deadlineLanguage.ballotReturn",
+          this.ballotReturnDeadlineObject
+        );
       }
     },
-    documentRequired () {
+    documentRequired() {
       switch (this.state.toLowerCase()) {
-        case 'ak':
-          return 'proof of Alaska Residency'
-        case 'az':
-          return this.isRegistered === 'unsure' || this.isRegistered === 'notRegistered' ? 'proof of citizenship (for newly registered voters)' : null
+        case "ak":
+          return "proof of Alaska Residency";
+        case "az":
+          return this.isRegistered === "unsure" ||
+            this.isRegistered === "notRegistered"
+            ? "proof of citizenship (for newly registered voters)"
+            : null;
         default:
-          return null
+          return null;
       }
     },
-    user () { return this.$store.state.userauth.user },
-    requests () { return this.$store.state.requests.requests },
-    currentRequest () { return this.$store.state.requests.currentRequest },
-    currentRequestObject () { return this.$store.getters['requests/getCurrent'] },
-    stage () { return this.currentRequestObject && this.currentRequestObject.status ? this.currentRequestObject.status : 'start' },
-    states () { return new Set(this.requests.map(x => x.votAdr.stateISO)) },
-    name () { return this.user && this.user.firstName ? this.user.firstName : this.requests && this.requests[0] && this.requests[0].firstName ? this.requests[0].firstName : '' },
-    isAuthenticated: function () { return this.$store.getters['userauth/isAuthenticated'] },
-    leoAdr () {
-      let leo = this.currentRequestObject.leo
-      return `${leo.n ? leo.n + '\n' : ''}${leo.a1 ? leo.a1 + '\n' : ''}${leo.a2 ? leo.a2 + '\n' : ''}${leo.a3 ? leo.a3 + '\n' : ''}${leo.c ? leo.c + ', ' : ''}${leo.s ? leo.s + ' ' : ''}${leo.z ? leo.z + '\n' : '\n'}United States of America`
+    user() {
+      return this.$store.state.userauth.user;
     },
-    leoEmail () {
-      return this.currentRequestObject.leo && this.currentRequestObject.leo.e ? this.currentRequestObject.leo.e : ''
+    requests() {
+      return this.$store.state.requests.requests;
     },
-    leoName () {
-      return this.currentRequestObject.leo && this.currentRequestObject.leo.n ? this.currentRequestObject.leo.n : ''
+    currentRequest() {
+      return this.$store.state.requests.currentRequest;
     },
-    leoFax () {
-      return this.currentRequestObject.leo && this.currentRequestObject.leo.f ? '+1 ' + this.currentRequestObject.leo.f : ''
+    currentRequestObject() {
+      return this.$store.getters["requests/getCurrent"];
     },
-    leoPhone () {
-      return this.currentRequestObject.leo && this.currentRequestObject.leo.p ? '+1 ' + this.currentRequestObject.leo.p : ''
+    stage() {
+      return this.currentRequestObject && this.currentRequestObject.status
+        ? this.currentRequestObject.status
+        : "start";
     },
-    votState () { return this.$store.getters['requests/getCurrent'] && this.$store.getters['requests/getCurrent'].leo ? this.$store.getters['requests/getCurrent'].leo.s : '' },
-    voterRegistrationStatus () { return this.$store.getters['requests/getCurrent'].isRegistered || null },
-    voterType () { return this.$store.getters['requests/getCurrent'].voterClass || null },
-    ...mapGetters('requests', ['getCurrent', 'getCurrentDeadlines'])
+    states() {
+      return new Set(this.requests.map(x => x.votAdr.stateISO));
+    },
+    name() {
+      return this.user && this.user.firstName
+        ? this.user.firstName
+        : this.requests && this.requests[0] && this.requests[0].firstName
+          ? this.requests[0].firstName
+          : "";
+    },
+    isAuthenticated: function() {
+      return this.$store.getters["userauth/isAuthenticated"];
+    },
+    leoAdr() {
+      let leo = this.currentRequestObject.leo;
+      return `${leo.n ? leo.n + "\n" : ""}${leo.a1 ? leo.a1 + "\n" : ""}${
+        leo.a2 ? leo.a2 + "\n" : ""
+      }${leo.a3 ? leo.a3 + "\n" : ""}${leo.c ? leo.c + ", " : ""}${
+        leo.s ? leo.s + " " : ""
+      }${leo.z ? leo.z + "\n" : "\n"}United States of America`;
+    },
+    leoEmail() {
+      return this.currentRequestObject.leo && this.currentRequestObject.leo.e
+        ? this.currentRequestObject.leo.e
+        : "";
+    },
+    leoName() {
+      return this.currentRequestObject.leo && this.currentRequestObject.leo.n
+        ? this.currentRequestObject.leo.n
+        : "";
+    },
+    leoFax() {
+      return this.currentRequestObject.leo && this.currentRequestObject.leo.f
+        ? "+1 " + this.currentRequestObject.leo.f
+        : "";
+    },
+    leoPhone() {
+      return this.currentRequestObject.leo && this.currentRequestObject.leo.p
+        ? "+1 " + this.currentRequestObject.leo.p
+        : "";
+    },
+    votState() {
+      return this.$store.getters["requests/getCurrent"] &&
+        this.$store.getters["requests/getCurrent"].leo
+        ? this.$store.getters["requests/getCurrent"].leo.s
+        : "";
+    },
+    voterRegistrationStatus() {
+      return this.$store.getters["requests/getCurrent"].isRegistered || null;
+    },
+    voterType() {
+      return this.$store.getters["requests/getCurrent"].voterClass || null;
+    },
+    ...mapGetters("requests", ["getCurrent", "getCurrentDeadlines"])
   },
   methods: {
-    capitalizeFirstLetter: function (string) {
-      return string.charAt(0).toUpperCase() + string.slice(1)
+    capitalizeFirstLetter: function(string) {
+      return string.charAt(0).toUpperCase() + string.slice(1);
     },
-    logoutRestart () {
-      this.$store.dispatch('userauth/logout')
-      this.$router.push(this.localePath({ name: 'request-stage', params: {stage: 'your-information'} }))
+    logoutRestart() {
+      this.$store.dispatch("userauth/logout");
+      this.$router.push(
+        this.localePath({
+          name: "request-stage",
+          params: { stage: "your-information" }
+        })
+      );
     },
-    md (md) { return snarkdown(md) },
-    share () {
+    md(md) {
+      return snarkdown(md);
+    },
+    share() {
       this.$dialog.alert({
-        title: 'Tell a friend about VoteFromAbroad',
-        message: 'To be added after launch',
-        confirmText: 'OK',
-        type: 'is-danger',
+        title: "Tell a friend about VoteFromAbroad",
+        message: "To be added after launch",
+        confirmText: "OK",
+        type: "is-danger",
         hasIcon: true,
-        icon: 'share',
-        iconPack: 'fas'
-      })
+        icon: "share",
+        iconPack: "fas"
+      });
     }
   }
-}
+};
 </script>
 
 <style>
-
 </style>
