@@ -439,11 +439,6 @@ collections:
                   widget: "string",
                 }
               - {
-                  label: "Invalid Image Type Message",
-                  name: "invalidImageSizeMessage",
-                  widget: "string",
-                }
-              - {
                   label: "Your must Read and Affirm:",
                   name: "affirmation",
                   widget: "string",
