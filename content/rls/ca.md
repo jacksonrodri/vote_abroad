@@ -24,6 +24,7 @@ fwabSubmitOptions:
   - Mail
 amIRegistered: 'http://www.sos.ca.gov/elections/registration-status/'
 whereIsMyBallot: 'http://www.sos.ca.gov/elections/ballot-status/'
+trackYourBallot: 'https://california.ballottrax.net/voter/'
 sampleBallot: 'https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage'
 uocavaVoters: 'https://www.sos.ca.gov/elections/voter-registration/military-overseas-voters/'
 ---
