@@ -3003,19 +3003,19 @@
     rules:
       Registration:
         - voterType: {}
-          rule: "By Mail: Postmarked by"
-          date: "2020-10-05T00:00:00"
+          rule: "By FPCA: Received by"
+          date: "2020-10-23T17:00:00"
           note: "UT1"
         - voterType: {}
-          rule: "By Online System: Received by"
-          date: "2020-10-27T00:00:00"
+          rule: "By FWAB: Received by"
+          date: "2020-10-29T00:00:00"
       Ballot Request:
         - voterType: {}
           rule: "Received by"
           date: "2020-10-29T00:00:00"
       Ballot Return:
         - voterType: {}
-          rule: "By Mail:Postmarked by"
+          rule: "By Mail:Sent by"
           date: "2020-11-02T00:00:00"
           note: "UT2"
         - voterType: {}

@@ -136,6 +136,14 @@
               Where Is My Ballot?
             </a>
           </p>
+          <p v-if="state.trackYourBallot">
+            <a
+              class="is-size-5 has-text-primary"
+              target="blank"
+              :href="state.trackYourBallot">
+              Track Your Ballot
+            </a>
+          </p>
           <p v-if="state.sampleBallot">
             <a
               class="is-size-5 has-text-primary"
