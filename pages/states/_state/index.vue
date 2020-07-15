@@ -55,7 +55,21 @@
                     <li :key="index.toString() + deadline.rule + deadline.voterType"
                       v-if="deadline.rule !== 'Not Required'">
                       <template v-if="deadline.date">
-                        <strong>{{ typeof deadline.voterType === 'string' ? localizeIfAvailable(deadline.voterType) : localizeIfAvailable('All Voters') }}</strong>
+                        <div style="display: inline-block;">
+                          <strong>{{ typeof deadline.voterType === 'string' ? localizeIfAvailable(deadline.voterType) : localizeIfAvailable('All Voters') }}</strong>
+                          <b-tooltip
+                            v-if="deadline.note"
+                            :label="$t(`request.deadlineLanguage.notes.${deadline.note}`)"
+                            type="is-info"
+                            style="margin-left: 5px;"
+                          >
+                            <b-icon
+                              type="is-info"
+                              icon="info-circle"
+                              size="is-small"
+                            />
+                          </b-tooltip>
+                        </div>
                         <!-- <sup v-if="deadline.note">{{deadline.note.replace(/[A-Z]/g, '')}}</sup> -->
                         <br/>
                         <span class="tag is-success">{{ localizeIfAvailable(deadline.rule) }}</span>
