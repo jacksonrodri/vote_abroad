@@ -365,6 +365,10 @@ export default {
           firstName: this.firstName,
           lastName: this.lastName
         }
+        // Remove leoMessage when in sandbox env
+        if (process.env.stage !== 'prod') {
+          body.leoMessage = ''
+        }
         // if (this.isStudentSite || process.env.CONTEXT === 'prod') {
         // body = Object.assign({}, body, {leoMessage: this.message})
         // console.log('body', body)
