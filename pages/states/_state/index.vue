@@ -61,9 +61,10 @@
                         <span class="tag is-success">{{ localizeIfAvailable(deadline.rule) }}</span>
                         <br/>
                         {{ new Date(deadline.date + '+00:00').toLocaleDateString(dateFormat, deadline.date && deadline.date.substr(11, 8) !== '00:00:00'  ? {year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric', timeZone: 'UTC'} : {year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC'}) }}
-                        <compact-message-wrapper
+                        <br />
+                        <p
                           v-if="deadline.note"
-                          :message="$t(`request.deadlineLanguage.notes.${deadline.note}`)"
+                          v-text="$t(`request.deadlineLanguage.notes.${deadline.note}`)"
                         />
                         <hr v-if="index < rule.length - 1">
                       </template>
@@ -172,7 +173,6 @@
 <script>
 import axios from 'axios'
 import snarkdown from 'snarkdown'
-import CompactMessageWrapper from '@/components/CompactMessageWrapper'
 
 // `${window.location.protocol}//${window.location.host}${this.app.localePath('authenticating')}`
 export default {
@@ -197,9 +197,6 @@ export default {
         .get(`states/${params.state.toLowerCase()}`),
       stateLeos: stateLeos.filter(leo => leo.fpcaOffice)
     }
-  },
-  components: {
-    CompactMessageWrapper
   },
   head: {
     title: 'Vote From Abroad - Absentee ballots for Americans Abroad.'
