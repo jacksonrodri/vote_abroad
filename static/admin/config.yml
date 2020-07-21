@@ -5,7 +5,7 @@ publish_mode: editorial_workflow
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 collections:
-  - name: "pages" # Used in routes, e.g., /admin/collections/blog
+  - name: "pages-en" # Used in routes, e.g., /admin/collections/blog
     label: "Pages - English" # Used in the UI
     label_singular: "Page"
     folder: "content/en/pages" # The path to the folder where the documents are stored
@@ -19,7 +19,7 @@ collections:
           required: false,
         }
       - { label: "Body", name: "body", widget: "markdown" }
-  - name: "pages" # Used in routes, e.g., /admin/collections/blog
+  - name: "pages-es" # Used in routes, e.g., /admin/collections/blog
     label: "Pages - Spanish" # Used in the UI
     label_singular: "Page"
     folder: "content/es/pages" # The path to the folder where the documents are stored
@@ -33,7 +33,7 @@ collections:
           required: false,
         }
       - { label: "Body", name: "body", widget: "markdown" }
-  - name: "faqs"
+  - name: "faqs-en"
     label: "FAQs - English"
     label_singular: "FAQ"
     folder: "content/en/faqs"
@@ -106,7 +106,7 @@ collections:
             searchFields: ["title", "slug", "question"]
             displayFields: ["title", "question"]
             valueField: "title"
-  - name: "faqs"
+  - name: "faqs-es"
     label: "FAQs - Spanish"
     label_singular: "FAQ"
     folder: "content/es/faqs"

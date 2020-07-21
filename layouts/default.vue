@@ -169,28 +169,28 @@
 </template>
 
 <script>
-import VfaOptIn from "~/components/VfaOptIn";
-import { mapState, mapMutations } from "vuex";
+import VfaOptIn from '~/components/VfaOptIn'
+import { mapState, mapMutations } from 'vuex'
 
-function detectIE() {
-  var ua = window.navigator.userAgent;
-  var msie = ua.indexOf("MSIE ");
+function detectIE () {
+  var ua = window.navigator.userAgent
+  var msie = ua.indexOf('MSIE ')
   if (msie > 0) {
-    return parseInt(ua.substring(msie + 5, ua.indexOf(".", msie)), 10);
+    return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10)
   } // IE 10 or older => return version number
-  var trident = ua.indexOf("Trident/");
+  var trident = ua.indexOf('Trident/')
   if (trident > 0) {
-    var rv = ua.indexOf("rv:");
-    return parseInt(ua.substring(rv + 3, ua.indexOf(".", rv)), 10);
+    var rv = ua.indexOf('rv:')
+    return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10)
   } // IE 11 => return version number
-  return false;
+  return false
 }
 
 export default {
   components: {
     VfaOptIn
   },
-  data() {
+  data () {
     return {
       isMobileMenuActive: false,
       optedIn: true,
@@ -199,104 +199,104 @@ export default {
       topFaqs: [
         {
           titleEN:
-            "Can I vote in midterm (non-presidential) and primary elections?",
+            'Can I vote in midterm (non-presidential) and primary elections?',
           titleES:
-            "¿Puedo votar en las elecciones (no presidenciales) de mitad de período?",
-          slug: "2"
+            '¿Puedo votar en las elecciones (no presidenciales) de mitad de período?',
+          slug: '2'
         },
         {
-          titleEN: "Can I vote in state and local elections?",
-          titleES: "¿Puedo votar en las elecciones locales y estatales?",
-          slug: "3"
+          titleEN: 'Can I vote in state and local elections?',
+          titleES: '¿Puedo votar en las elecciones locales y estatales?',
+          slug: '3'
         },
         {
           titleEN:
-            "How do I register to vote or request a ballot as a U.S. Citizen living abroad?",
+            'How do I register to vote or request a ballot as a U.S. Citizen living abroad?',
           titleES:
-            "¿Cómo me registro como votante o cómo solicito una boleta electoral en mi condición de ciudadano de los Estados Unidos que vive en el extranjero?",
-          slug: "5"
+            '¿Cómo me registro como votante o cómo solicito una boleta electoral en mi condición de ciudadano de los Estados Unidos que vive en el extranjero?',
+          slug: '5'
         },
         {
           titleEN: "Can I register to vote if I've never resided in the U.S.?",
           titleES:
-            "¿Puedo registrarme para votar si nunca he vivido en los Estados Unidos?",
-          slug: "10"
+            '¿Puedo registrarme para votar si nunca he vivido en los Estados Unidos?',
+          slug: '10'
         },
         {
           titleEN:
             "It's getting close to the election and I haven't received my blank ballot yet; what should I do?",
           titleES:
-            "Se acercan las elecciones y aún no he recibido mi boleta electoral en blanco. ¿Qué debo hacer?",
-          slug: "24"
+            'Se acercan las elecciones y aún no he recibido mi boleta electoral en blanco. ¿Qué debo hacer?',
+          slug: '24'
         }
       ]
-    };
+    }
   },
   computed: {
-    privacyRoute() {
-      return !/request|index|dashboard/i.test(this.$route.name);
+    privacyRoute () {
+      return !/request|index|dashboard/i.test(this.$route.name)
     },
-    dateFormat() {
-      return this.$i18n.locale === "en" ? "en-US" : "es-ES";
+    dateFormat () {
+      return this.$i18n.locale === 'en' ? 'en-US' : 'es-ES'
     },
-    offline() {
-      return process.env.offline && process.env.offline !== "false";
+    offline () {
+      return process.env.offline && process.env.offline !== 'false'
     },
-    upcomingElections: function() {
-      return this.$store.state.upcomingElections;
+    upcomingElections: function () {
+      return this.$store.state.upcomingElections
     },
-    isBgImage: function() {
+    isBgImage: function () {
       return (
         this.$route.name &&
-        (this.$route.name.includes("index") ||
-          this.$route.name.includes("authenticating"))
-      );
+        (this.$route.name.includes('index') ||
+          this.$route.name.includes('authenticating'))
+      )
     },
-    test: function() {
-      return this.$route.name;
+    test: function () {
+      return this.$route.name
     },
-    isAuthenticated: function() {
-      return this.$store.getters["userauth/isAuthenticated"];
+    isAuthenticated: function () {
+      return this.$store.getters['userauth/isAuthenticated']
     },
-    ...mapState(["isPrivacyOptInModalActive"])
+    ...mapState(['isPrivacyOptInModalActive'])
   },
   watch: {
-    isPrivacyOptInModalActive(val) {
-      console.log(this.$cookie.get("vfaOptIn"));
-      if (!this.$cookie.get("vfaOptIn")) {
-        this.optedIn = false;
-      } else this.optedIn = true;
+    isPrivacyOptInModalActive (val) {
+      console.log(this.$cookie.get('vfaOptIn'))
+      if (!this.$cookie.get('vfaOptIn')) {
+        this.optedIn = false
+      } else this.optedIn = true
     }
   },
   filters: {
-    truncate: function(text, stop, clamp) {
-      return text.slice(0, stop) + (stop < text.length ? clamp || "..." : "");
+    truncate: function (text, stop, clamp) {
+      return text.slice(0, stop) + (stop < text.length ? clamp || '...' : '')
     }
   },
   methods: {
-    optIn() {
-      this.$cookie.set("vfaOptIn", true, 1);
-      this.optedIn = true;
+    optIn () {
+      this.$cookie.set('vfaOptIn', true, 1)
+      this.optedIn = true
     },
-    showIntercom() {
-      this.$intercom.show();
+    showIntercom () {
+      this.$intercom.show()
     },
-    camelize(str) {
-      return str.replace(/(?:^\w|[A-Z]|\b\w|\s+)/g, function(match, index) {
-        if (+match === 0) return ""; // or if (/\s+/.test(match)) for white spaces
-        return index === 0 ? match.toLowerCase() : match.toUpperCase();
-      });
+    camelize (str) {
+      return str.replace(/(?:^\w|[A-Z]|\b\w|\s+)/g, function (match, index) {
+        if (+match === 0) return '' // or if (/\s+/.test(match)) for white spaces
+        return index === 0 ? match.toLowerCase() : match.toUpperCase()
+      })
     },
-    localizeElectionType(electionType) {
+    localizeElectionType (electionType) {
       return this.$te(`election.${this.camelize(electionType)}`)
         ? this.$t(`election.${this.camelize(electionType)}`)
-        : electionType;
+        : electionType
     },
-    ...mapMutations(["togglePrivacyModalActiveState"])
+    ...mapMutations(['togglePrivacyModalActiveState'])
   },
-  async mounted() {
-    if (!this.$cookie.get("vfaOptIn")) {
-      this.optedIn = false;
+  async mounted () {
+    if (!this.$cookie.get('vfaOptIn')) {
+      this.optedIn = false
     }
     // console.log('process.env.stage:', process.env.stage)
     // this.$snackbar.open({
@@ -306,9 +306,9 @@ export default {
     //   actionText: 'I Understand',
     //   indefinite: true
     // })
-    function checkDeviceSupport(callback) {
+    function checkDeviceSupport (callback) {
       if (!canEnumerate) {
-        return;
+        return
       }
       if (
         !navigator.enumerateDevices &&
@@ -317,154 +317,154 @@ export default {
       ) {
         navigator.enumerateDevices = window.MediaStreamTrack.getSources.bind(
           window.MediaStreamTrack
-        );
+        )
       }
       if (!navigator.enumerateDevices && navigator.enumerateDevices) {
-        navigator.enumerateDevices = navigator.enumerateDevices.bind(navigator);
+        navigator.enumerateDevices = navigator.enumerateDevices.bind(navigator)
       }
       if (!navigator.enumerateDevices) {
         if (callback) {
-          callback();
+          callback()
         }
-        return;
+        return
       }
-      MediaDevices = [];
-      navigator.enumerateDevices(function(devices) {
-        devices.forEach(function(_device) {
-          var device = {};
+      MediaDevices = []
+      navigator.enumerateDevices(function (devices) {
+        devices.forEach(function (_device) {
+          var device = {}
           for (var d in _device) {
-            device[d] = _device[d];
+            device[d] = _device[d]
           }
-          if (device.kind === "audio") {
-            device.kind = "audioinput";
+          if (device.kind === 'audio') {
+            device.kind = 'audioinput'
           }
-          if (device.kind === "video") {
-            device.kind = "videoinput";
+          if (device.kind === 'video') {
+            device.kind = 'videoinput'
           }
-          var skip;
-          MediaDevices.forEach(function(d) {
+          var skip
+          MediaDevices.forEach(function (d) {
             if (d.id === device.id && d.kind === device.kind) {
-              skip = true;
+              skip = true
             }
-          });
+          })
           if (skip) {
-            return;
+            return
           }
           if (!device.deviceId) {
-            device.deviceId = device.id;
+            device.deviceId = device.id
           }
           if (!device.id) {
-            device.id = device.deviceId;
+            device.id = device.deviceId
           }
           if (!device.label) {
-            device.label = "Please invoke getUserMedia once.";
+            device.label = 'Please invoke getUserMedia once.'
             if (!isHTTPs) {
               device.label =
-                "HTTPs is required to get label of this " +
+                'HTTPs is required to get label of this ' +
                 device.kind +
-                " device.";
+                ' device.'
             }
           } else {
-            if (device.kind === "videoinput" && !isWebcamAlreadyCaptured) {
-              isWebcamAlreadyCaptured = true;
+            if (device.kind === 'videoinput' && !isWebcamAlreadyCaptured) {
+              isWebcamAlreadyCaptured = true
             }
-            if (device.kind === "audioinput" && !isMicrophoneAlreadyCaptured) {
-              isMicrophoneAlreadyCaptured = true;
+            if (device.kind === 'audioinput' && !isMicrophoneAlreadyCaptured) {
+              isMicrophoneAlreadyCaptured = true
             }
           }
-          if (device.kind === "audioinput") {
-            hasMicrophone = true;
+          if (device.kind === 'audioinput') {
+            hasMicrophone = true
           }
-          if (device.kind === "audiooutput") {
-            hasSpeakers = true;
+          if (device.kind === 'audiooutput') {
+            hasSpeakers = true
           }
-          if (device.kind === "videoinput") {
-            hasWebcam = true;
+          if (device.kind === 'videoinput') {
+            hasWebcam = true
           }
-          MediaDevices.push(device);
-        });
+          MediaDevices.push(device)
+        })
         if (callback) {
-          callback();
+          callback()
         }
-      });
+      })
     }
     if (process.browser) {
       window.onNuxtReady(app => {
-        let isIE = detectIE();
-        this.$store.commit("userauth/updateDevice", { isIE });
-        app.$intercom.boot();
-      });
+        let isIE = detectIE()
+        this.$store.commit('userauth/updateDevice', { isIE })
+        app.$intercom.boot()
+      })
       if (navigator.mediaDevices && navigator.mediaDevices.enumerateDevices) {
         // Firefox 38+ seems having support of enumerateDevicesx
-        navigator.enumerateDevices = function(callback) {
-          navigator.mediaDevices.enumerateDevices().then(callback);
-        };
+        navigator.enumerateDevices = function (callback) {
+          navigator.mediaDevices.enumerateDevices().then(callback)
+        }
       }
-      var MediaDevices = [];
-      var isHTTPs = location.protocol === "https:";
-      var canEnumerate = false;
+      var MediaDevices = []
+      var isHTTPs = location.protocol === 'https:'
+      var canEnumerate = false
 
       if (
-        typeof MediaStreamTrack !== "undefined" &&
-        "getSources" in MediaStreamTrack
+        typeof MediaStreamTrack !== 'undefined' &&
+        'getSources' in MediaStreamTrack
       ) {
-        canEnumerate = true;
+        canEnumerate = true
       } else if (
         navigator.mediaDevices &&
         !!navigator.mediaDevices.enumerateDevices
       ) {
-        canEnumerate = true;
+        canEnumerate = true
       }
-      var hasMicrophone = false;
-      var hasSpeakers = false;
-      var hasWebcam = false;
+      var hasMicrophone = false
+      var hasSpeakers = false
+      var hasWebcam = false
 
-      var isMicrophoneAlreadyCaptured = false;
-      var isWebcamAlreadyCaptured = false;
+      var isMicrophoneAlreadyCaptured = false
+      var isWebcamAlreadyCaptured = false
 
       // check if device allows capture via the file input field
-      var i = document.createElement("input");
-      i.setAttribute("capture", true);
-      var inputCaptureSupported = !!i["capture"];
+      var i = document.createElement('input')
+      i.setAttribute('capture', true)
+      var inputCaptureSupported = !!i['capture']
       checkDeviceSupport(() => {
-        this.$store.commit("userauth/updateDevice", {
+        this.$store.commit('userauth/updateDevice', {
           hasWebCam: hasWebcam,
           hasMicrophone: hasMicrophone,
           hasSpeakers: hasSpeakers,
           isMicrophoneAlreadyCaptured: isMicrophoneAlreadyCaptured,
           isWebcamAlreadyCaptured: isWebcamAlreadyCaptured,
           inputCaptureSupported: inputCaptureSupported
-        });
-      });
+        })
+      })
       if (navigator.mediaDevices) {
         navigator.mediaDevices.ondevicechange = () => {
           checkDeviceSupport(event => {
-            this.$store.commit("userauth/updateDevice", {
+            this.$store.commit('userauth/updateDevice', {
               hasWebCam: hasWebcam,
               hasMicrophone: hasMicrophone,
               hasSpeakers: hasSpeakers,
               isMicrophoneAlreadyCaptured: isMicrophoneAlreadyCaptured,
               isWebcamAlreadyCaptured: isWebcamAlreadyCaptured
-            });
-          });
-        };
+            })
+          })
+        }
       }
-      await import("current-device").then(({ default: device }) => {
-        this.$store.commit("userauth/updateDevice", {
+      await import('current-device').then(({ default: device }) => {
+        this.$store.commit('userauth/updateDevice', {
           type: device.type,
           os: device.os,
           orientation: device.orientation
-        });
+        })
         window.onresize = () => {
-          this.$store.commit("userauth/updateDevice", {
+          this.$store.commit('userauth/updateDevice', {
             orientation:
-              window.innerWidth > window.innerHeight ? "landscape" : "portrait"
-          });
-        };
-      });
+              window.innerWidth > window.innerHeight ? 'landscape' : 'portrait'
+          })
+        }
+      })
     }
   }
-};
+}
 </script>
 
 <style>
