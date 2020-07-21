@@ -61,10 +61,9 @@
                         <span class="tag is-success">{{ localizeIfAvailable(deadline.rule) }}</span>
                         <br/>
                         {{ new Date(deadline.date + '+00:00').toLocaleDateString(dateFormat, deadline.date && deadline.date.substr(11, 8) !== '00:00:00'  ? {year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric', timeZone: 'UTC'} : {year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC'}) }}
-                        <br />
                         <p
                           v-if="deadline.note"
-                          v-text="$t(`request.deadlineLanguage.notes.${deadline.note}`)"
+                          v-text="`(${$t(`request.deadlineLanguage.notes.${deadline.note}`)})`"
                         />
                         <hr v-if="index < rule.length - 1">
                       </template>
