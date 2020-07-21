@@ -6,7 +6,7 @@ media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 collections:
   - name: "pages" # Used in routes, e.g., /admin/collections/blog
-    label: "Pages" # Used in the UI
+    label: "Pages - English" # Used in the UI
     label_singular: "Page"
     folder: "content/en/pages" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
@@ -19,10 +19,97 @@ collections:
           required: false,
         }
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: "pages" # Used in routes, e.g., /admin/collections/blog
+    label: "Pages - Spanish" # Used in the UI
+    label_singular: "Page"
+    folder: "content/es/pages" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Featured Image",
+          name: "thumbnail",
+          widget: "image",
+          required: false,
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
   - name: "faqs"
-    label: "FAQs"
+    label: "FAQs - English"
     label_singular: "FAQ"
     folder: "content/en/faqs"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "FAQ #", name: "title", widget: "string" }
+      - {
+          label: "Slug",
+          name: "slug",
+          hint: "The text used for a memorable URL",
+          widget: "string",
+          required: true,
+          pattern:
+            [
+              "[A-Za-z-_]+",
+              "Can only include letters, numbers, dash (-), and underscore (_)",
+            ],
+        }
+      - { label: "Question", name: "question", widget: "string" }
+      - {
+          label: "Featured Image",
+          name: "thumbnail",
+          widget: "image",
+          required: false,
+        }
+      - { label: "Include in main menu?", name: "isInMenu", widget: "boolean" }
+      - { label: "Answer", name: "body", widget: "markdown" }
+      - label: Categories
+        name: categories
+        widget: list
+        fields:
+          - name: category
+            label: Choose a category
+            widget: select
+            options:
+              - {
+                  label: "Voting as a U.S. Citizen Outside the U.S.",
+                  value: "votingAbroad",
+                }
+              - {
+                  label: "How to Register to Vote and Get a Ballot",
+                  value: "voterRegistration",
+                }
+              - {
+                  label: "U.S. Citizens Who Have Never Resided in the U.S.",
+                  value: "neverResided",
+                }
+              - {
+                  label: "Filling Out the Federal Post Card Application(FPCA)",
+                  value: "fpca",
+                }
+              - { label: "Returning a Voted Ballot", value: "returningBallot" }
+              - {
+                  label: "Using the Federal Write-in Absentee Ballot (FWAB)",
+                  value: "fwab",
+                }
+              - {
+                  label: "Federal And State Tax Implications",
+                  value: "taxImplications",
+                }
+      - label: Related FAQs
+        name: relatedFaqs
+        widget: list
+        fields:
+          - name: related
+            label: Type to search for another FAQ
+            widget: relation
+            collection: faqs
+            searchFields: ["title", "slug", "question"]
+            displayFields: ["title", "question"]
+            valueField: "title"
+  - name: "faqs"
+    label: "FAQs - Spanish"
+    label_singular: "FAQ"
+    folder: "content/es/faqs"
     create: true
     slug: "{{slug}}"
     fields:
