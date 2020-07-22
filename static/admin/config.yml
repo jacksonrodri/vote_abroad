@@ -95,17 +95,6 @@ collections:
                   label: "Federal And State Tax Implications",
                   value: "taxImplications",
                 }
-      - label: Related FAQs
-        name: relatedFaqs
-        widget: list
-        fields:
-          - name: related
-            label: Type to search for another FAQ
-            widget: relation
-            collection: faqs
-            searchFields: ["title", "slug", "question"]
-            displayFields: ["title", "question"]
-            valueField: "title"
   - name: "faqs-es"
     label: "FAQs - Spanish"
     label_singular: "FAQ"
@@ -168,17 +157,6 @@ collections:
                   label: "Federal And State Tax Implications",
                   value: "taxImplications",
                 }
-      - label: Related FAQs
-        name: relatedFaqs
-        widget: list
-        fields:
-          - name: related
-            label: Type to search for another FAQ
-            widget: relation
-            collection: faqs
-            searchFields: ["title", "slug", "question"]
-            displayFields: ["title", "question"]
-            valueField: "title"
   - name: "rls"
     label: "State Info & Election Rules"
     folder: "content/rls"
