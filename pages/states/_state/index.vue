@@ -55,26 +55,16 @@
                     <li :key="index.toString() + deadline.rule + deadline.voterType"
                       v-if="deadline.rule !== 'Not Required'">
                       <template v-if="deadline.date">
-                        <div style="display: inline-block;">
-                          <strong>{{ typeof deadline.voterType === 'string' ? localizeIfAvailable(deadline.voterType) : localizeIfAvailable('All Voters') }}</strong>
-                          <b-tooltip
-                            v-if="deadline.note"
-                            :label="$t(`request.deadlineLanguage.notes.${deadline.note}`)"
-                            type="is-info"
-                            style="margin-left: 5px;"
-                          >
-                            <b-icon
-                              type="is-info"
-                              icon="info-circle"
-                              size="is-small"
-                            />
-                          </b-tooltip>
-                        </div>
+                        <strong>{{ typeof deadline.voterType === 'string' ? localizeIfAvailable(deadline.voterType) : localizeIfAvailable('All Voters') }}</strong>
                         <!-- <sup v-if="deadline.note">{{deadline.note.replace(/[A-Z]/g, '')}}</sup> -->
                         <br/>
                         <span class="tag is-success">{{ localizeIfAvailable(deadline.rule) }}</span>
                         <br/>
                         {{ new Date(deadline.date + '+00:00').toLocaleDateString(dateFormat, deadline.date && deadline.date.substr(11, 8) !== '00:00:00'  ? {year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric', timeZone: 'UTC'} : {year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC'}) }}
+                        <p
+                          v-if="deadline.note"
+                          v-text="`(${$t(`request.deadlineLanguage.notes.${deadline.note}`)})`"
+                        />
                         <hr v-if="index < rule.length - 1">
                       </template>
                       <span v-else>Check deadlines with your local election official.</span>
@@ -182,6 +172,7 @@
 <script>
 import axios from 'axios'
 import snarkdown from 'snarkdown'
+
 // `${window.location.protocol}//${window.location.host}${this.app.localePath('authenticating')}`
 export default {
   async asyncData ({ app, params }) {
