@@ -1986,17 +1986,17 @@
     rules:
       Registration:
         - voterType: {}
-          rule: "By Mail: Received by"
+          rule: "Request Mail Ballot: Received by"
           date: "2020-10-04T00:00:00"
         - voterType: {}
-          rule: "By Email or Fax: Received by"
+          rule: "Request Email/Online or Fax Ballot: Received by"
           date: "2020-10-13T00:00:00"
       Ballot Request:
         - voterType: {}
-          rule: "By Mail: Received by"
+          rule: "Request Mail Ballot: Received by"
           date: "2020-10-04T00:00:00"
         - voterType: {}
-          rule: "By Email or Fax: Received by"
+          rule: "Request Email/Online or Fax Ballot: Received by"
           date: "2020-10-30T00:00:00"
       Ballot Return:
         - voterType: {}
