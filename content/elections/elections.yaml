@@ -596,8 +596,8 @@
           rule: "By Email or Fax: Received by"
           date: "2020-11-03T00:00:00"
         - voterType: {}
-          rule: "By Mail: Received by"
-          date: "2020-11-10T00:00:00"
+          rule: "By Mail: Postmarked by"
+          date: "2020-11-03T00:00:00"
   - state: "FL"
     date: "2020-03-17T00:00:00"
     electionType: "Presidential Primary"
