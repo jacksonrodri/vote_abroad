@@ -34,8 +34,10 @@ Check below for your delivery methods and deadlines, and to find your local elec
 
 * Registration: email, fax, postal mail, or online~
 * Ballot Request: email, fax, postal mail, or online~
-* Ballot Return: postal mail\~\~
+* Ballot Return: postal mail (email or fax under special circumstances)\~\~**
 
   ~ Online voter registration and ballot request system does not require state identification
 
   \~\~Voters who are located in a "hostile fire area" may also return their ballots by email or fax
+
+**SPECIAL FOR THE AUGUST 4th PRIMARY: All overseas voters may return their ballots by email, fax or online! This is a COVID measure that is only applicable to the August 4th Primary.
