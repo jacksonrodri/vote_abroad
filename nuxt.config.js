@@ -43,7 +43,7 @@ module.exports = {
     placesUrl: process.env.PLACES_URL || '/',
     autocompleteEndpoint: process.env.AUTOCOMPLETE_ENDPOINT || 'api/place/autocomplete/json',
     detailsEndpoint: process.env.PLACES_ENDPOINT || 'api/place/details/json',
-    placesKey: process.env.PLACES_KEY || 'AIzaSyDK4AprF-iXbiX2-eU3SAQVyovB_8kIg20',
+    placesKey: process.env.PLACES_KEY || 'AIzaSyCxxXbBB2CBbyNDaZQe9zRFhkD7LafmsGs',
     auth0clientID: process.env.DEVSTAGE === 'prod' ? 'Kwfswc0R3zV4Zw6hPOR1hibG4IKxztjU' : '0Wy4khZcuXefSfrUuYDUP0Udag4FqL2u',
     commitRef: process.env.COMMIT_REF || '',
     offline: process.env.OFFLINE || false,
@@ -79,7 +79,7 @@ module.exports = {
       enabled: process.env.DEVSTAGE === 'dev'
     },
     commands: {
-      trackFormAction: function trackFormAction (fieldName = 'unknown') { this.$ga.event('formAction', 'focus/select', 'field', fieldName) }
+      trackFormAction: function trackFormAction(fieldName = 'unknown') { this.$ga.event('formAction', 'focus/select', 'field', fieldName) }
     }
   },
   proxy: {
@@ -137,8 +137,10 @@ module.exports = {
     ogHost: process.env.URL
   },
   css: [
-    {src: '@/assets/css/style.scss',
-      lang: 'sass'}
+    {
+      src: '@/assets/css/style.scss',
+      lang: 'sass'
+    }
   ],
   /*
   ** Customize the progress bar color
@@ -196,7 +198,7 @@ module.exports = {
         }]
       ]
     },
-    extend (config, ctx) {
+    extend(config, ctx) {
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',
