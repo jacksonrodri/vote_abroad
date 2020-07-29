@@ -278,9 +278,9 @@ export default {
     },
     async findCounty () {
       if (!this.county && this.state && this.city && this.state !== 'DC') {
-        let {data: { predictions }} = await axios.get(`${process.env.placesUrl + process.env.autocompleteEndpoint}?input=${this.street || ''}%20${this.city || ''}%20${this.state || ''}%20${this.zip || ''}&types=geocode&language=en&components=country:US&key=${process.env.placesKey}`)
+        let {data: { predictions }} = await axios.get(`${process.env.placesUrl + process.env.autocompleteEndpoint}?input=${this.street || ''}%20${this.city || ''}%20${this.state || ''}%20${this.zip || ''}&types=geocode&language=en&components=country:US&key=${process.env.placesKey}&session_token=${this.sessionToken}`)
         if (predictions.length > 0) {
-          let {data: {result}} = await axios.get(`${process.env.placesUrl + process.env.detailsEndpoint}?placeid=${predictions[0].place_id}&key=${process.env.placesKey}`)
+          let {data: {result}} = await axios.get(`${process.env.placesUrl + process.env.detailsEndpoint}?placeid=${predictions[0].place_id}&key=${process.env.placesKey}&session_token=${this.sessionToken}`)
           let Y = result.address_components.filter(y => y.types.includes('administrative_area_level_2'))[0].long_name
           // console.log('Y', Y)
           this.$store.commit('requests/update', {votAdr: Object.assign({}, this.votAdr, {Y: this.decodeHtmlEntity(Y) || null})})
@@ -314,7 +314,7 @@ export default {
     getAsyncDataCity: debounce(function () {
       this.isFetchingCity = true
       this.data = []
-      axios.get(`${process.env.placesUrl + process.env.autocompleteEndpoint}?input=${this.city}&types=(cities)&language=en&components=country:us|country:pr|country:vi|country:gu|country:mp&key=${process.env.placesKey}`)
+      axios.get(`${process.env.placesUrl + process.env.autocompleteEndpoint}?input=${this.city}&types=(cities)&language=en&components=country:us|country:pr|country:vi|country:gu|country:mp&key=${process.env.placesKey}&session_token=${this.sessionToken}`)
         .then(({ data }) => {
           data.predictions.forEach((item) => this.data.push(item))
           this.isFetchingCity = false
@@ -324,7 +324,7 @@ export default {
     }, 500),
     fillDataCity (option) {
       if (option && option.place_id) {
-        axios.get(`${process.env.placesUrl + process.env.detailsEndpoint}?placeid=${option.place_id}&key=${process.env.placesKey}`)
+        axios.get(`${process.env.placesUrl + process.env.detailsEndpoint}?placeid=${option.place_id}&key=${process.env.placesKey}&session_token=${this.sessionToken}`)
           .then(({ data }) => {
             this.county = data.result.address_components.filter(y => y.types.indexOf('administrative_area_level_2') > -1)[0].long_name
             this.state = data.result.address_components.filter(n => n.types.indexOf('administrative_area_level_1') > -1)[0].short_name
