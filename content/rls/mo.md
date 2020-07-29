@@ -39,3 +39,5 @@ Check below for your delivery methods and deadlines, and to find your local elec
   ~ Online voter registration and ballot request system does not require state identification
 
   \~\~Voters who are located in a "hostile fire area" may also return their ballots by email or fax
+
+**For the August 4th Primary, all overseas voters may return their ballots by email, fax or online! This is a COVID measure that is only applicable to the August 4th Primary.
