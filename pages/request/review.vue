@@ -4,7 +4,10 @@
       <div class="section">
         <h1 class="has-text-centered title is-3">{{ $t('request.stages.step', {step: 4})}}</h1>
         <h3 class="has-text-centered subtitle is-4">{{ $t('request.stages.stage4')}}</h3>
-        <p class="is-size-5">{{ $t('request.stages.instructions4') }}</p>
+        <p class="is-size-5">{{ $t('request.stages.instructions4one') }}</p>
+        <p class="is-size-5" style="margin: 10px 0; font-weight: bold; color: red;">
+          {{ $t('request.stages.instructions4two') }}
+        </p>
       </div>
       <p v-if="'es' === $i18n.locale" class="help is-size-5 has-text-danger">{{ $t('request.stages.instructions4es') }}</p>
   </div>
