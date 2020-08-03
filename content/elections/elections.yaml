@@ -406,7 +406,10 @@
     rules:
       Registration:
         - voterType: {}
-          rule: "Sent by"
+          rule: "Request Mail Ballot: Received by"
+          date: "2020-10-27T17:00:00"      
+        - voterType: {}
+          rule: "Request Email/Online or Fax Ballot: Sent by"
           date: "2020-11-03T19:00:00"
           note: "CO1"
       Ballot Request:
