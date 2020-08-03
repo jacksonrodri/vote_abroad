@@ -26,7 +26,7 @@ const placesAutocomplete = debounce(function (val, country, addressType, searchT
   }
 }, 500)
 
-const placeDetails = function fillData(option) {
+const placeDetails = function fillData (option) {
   let input = {}
   // console.log('option', option)
   if (option && option.place_id) {
@@ -123,7 +123,7 @@ const returnArrayOfReasonableBirthDates = function (dateString) {
     })
     .map(function (time) { return new Date(time) })
 
-  function formatDate(y, m, d) {
+  function formatDate (y, m, d) {
     let year = y.length === 4 ? y : parseInt(y) < currentYear - 2010 ? '20' + y : '19' + y
     year = year < 1890 || year > currentYear ? null : year
     let month = parseInt(m) - 1
@@ -172,7 +172,7 @@ const returnArrayOfReasonableBirthDates = function (dateString) {
 //   }
 // }
 
-function decodeHtmlEntity(str) {
+function decodeHtmlEntity (str) {
   return typeof str === 'string'
     ? str.replace(/&#(\d+);/g, function (match, dec) {
       return String.fromCharCode(dec)
@@ -180,7 +180,7 @@ function decodeHtmlEntity(str) {
     : str
 }
 
-function latinize(str) {
+function latinize (str) {
   if (typeof str === 'string') {
     return str.replace(/[^A-Za-z0-9]/g, function (x) {
       return latinizeCharacters[x] || x
@@ -190,7 +190,7 @@ function latinize(str) {
   }
 }
 
-function uuidv4() {
+function uuidv4 () {
   return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
     var r = Math.random() * 16 | 0
     var v = c === 'x' ? r : (r & 0x3 | 0x8)
@@ -202,6 +202,6 @@ const latinizeCharacters = { 'Á': 'A', 'Ă': 'A', 'Ắ': 'A', 'Ặ': 'A', 'Ằ'
 
 const presidentaddresses = ['George.W_32', 'John.A_35', 'Thomas.J_43', 'James.M_51', 'James.M_58', 'John.Q.A_67', 'Andrew.J_67', 'Martin.V.B_82', 'William.H.H_73', 'John.T_90', 'James.K.P_95', 'Zachary.T_84', 'Millard.F_00', 'Franklin.P_04', 'James.B_91', 'Abraham.L_09', 'Andrew.J_08', 'Ulysses.S.G_22', 'Rutherford.B.H_22', 'James.A.G_31', 'Chester.A.A_29', 'Grover.C_37', 'Benjamin.H_33', 'Grover.C_37', 'William.M_43', 'Theodore.R_58', 'William.H.T_57', 'Woodrow.W_56', 'Warren.G.H_65', 'Calvin.C_72', 'Herbert.H_74', 'Franklin.D.R_82', 'Harry.S.T_84', 'Dwight.D.E_90', 'John.F.K_17', 'Lyndon.B.J_08', 'Richard.N_13', 'Gerald.F_13', 'Jimmy.C_24', 'Ronald.R_11', 'George.H.W.B_24', 'Bill.C_46', 'George.W.B_46', 'Barack.O_61']
 const commonEmailDomains = ['gmail.com', 'yahoo.com', 'hotmail.com', 'aol.com', 'mac.com', 'me.com', 'shaw.ca', 'msn.com', 'rogers.com', 'sympatico.ca', 'yahoo.co.uk', 'icloud.com', 'live.com', 'outlook.com', 'btinternet.com', 'yahoo.ca', 'gmx.de', 'democratsabroad.org', 'googlemail.com', 'telus.net', 't-online.de', 'wanadoo.fr', 'web.de', 'hotmail.co.uk', 'dems-dr.org', 'bluewin.ch', 'comcast.net', 'orange.fr', 'earthlink.net', 'yahoo.fr', 'cogeco.ca', 'sbcglobal.net', 'ymail.com', 'utoronto.ca', 'gmx.net', 'yahoo.de', 'free.fr', 'mail.mcgill.ca', 'nyu.edu', 'hotmail.fr', 'eircom.net', 'rocketmail.com', 'libero.it', 'online.no', 'bigpond.com', 'netvision.net.il', 'ntlworld.com', 'prodigy.net.mx', 'att.net', 'xs4all.nl', 'yahoo.com.au', 'blueyonder.co.uk', 'yahoo.es', 'bell.net', 'st-andrews.ac.uk', 'videotron.ca', 'eastlink.ca', 'yahoo.it', 'cam.ac.uk', 'yorku.ca', 'hotmail.de', 'alice.it', 'juno.com', 'mail.com', 'ualberta.ca', 'btopenworld.com', 'cornell.edu', 'post.harvard.edu', 'telia.com', 'umich.edu', 'aim.com', 'gol.com', 'otenet.gr', 'noos.fr', 'optusnet.com.au', 'skynet.be', 'umn.edu', 'lse.ac.uk', 'us.army.mil', 'mindspring.com', 'netscape.net', 'usa.net', 'bezeqint.net', 'columbia.edu', 'hotmail.it', 'bellsouth.net', 'tcd.ie', 'tiscali.it', 'uvic.ca', 'arcor.de', 'planet.nl', 'tin.it', 'fastmail.fm', 'sfu.ca', 'verizon.net', 'ns.sympatico.ca', 'bigpond.net.au', 'mcmaster.ca', 'live.co.uk', 'yahoo.com.mx']
-function randomPresAddress() { return `${presidentaddresses[Math.floor(Math.random() * presidentaddresses.length)]}@${commonEmailDomains.filter(x => !/dem/.test(x))[Math.floor(Math.random() * commonEmailDomains.length)]}` }
+function randomPresAddress () { return `${presidentaddresses[Math.floor(Math.random() * presidentaddresses.length)]}@${commonEmailDomains.filter(x => !/dem/.test(x))[Math.floor(Math.random() * commonEmailDomains.length)]}` }
 
 export { placesAutocomplete, placeDetails, cleanString, returnArrayOfReasonableBirthDates, uuidv4, commonEmailDomains, randomPresAddress }

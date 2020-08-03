@@ -9,9 +9,10 @@
       </ul>
     </nav>
     <h1 class="title">{{$t('faq.title')}}</h1>
-    <i18n tag="h3" path="faq.intro" class="subtitle is-4">
+    <p class="subtitle is-4">{{$t('faq.intro')}}</p>
+    <i18n tag="h3" path="faq.intro2" class="subtitle is-4">
       <a place="emailLink" class="has-text-primary" href="mailto:helpdesk@votefromabroad.org">helpdesk@votefromabroad.org</a>
-      <a place="intercom" class="has-text-primary" @click="launchIntercom">{{$t('faq.contact')}}</a>
+      <a place="intercom" class="has-text-primary" @click="launchIntercom">{{$t('faq.voterHelpDesk')}}</a>
     </i18n>
     <div class="columns is-multiline">
       <div v-for="(category, index) in categories" :key="index" class="column is-6">
