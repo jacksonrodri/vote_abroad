@@ -9,7 +9,9 @@
       </ul>
     </nav>
     <h1 class="title">{{$t('faq.title')}}</h1>
-    <p class="subtitle is-4">{{$t('faq.intro')}}</p>
+    <p class="subtitle is-4">
+      {{$t('faq.intro')}}
+    </p>
     <i18n tag="h3" path="faq.intro2" class="subtitle is-4">
       <a place="emailLink" class="has-text-primary" href="mailto:helpdesk@votefromabroad.org">helpdesk@votefromabroad.org</a>
       <a place="intercom" class="has-text-primary" @click="launchIntercom">{{$t('faq.voterHelpDesk')}}</a>
