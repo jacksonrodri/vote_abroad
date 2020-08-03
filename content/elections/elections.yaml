@@ -2323,7 +2323,7 @@
       Ballot Request:
         - voterType: {}
           rule: "Received by"
-          date: "2020-10-31T00:00:00"
+          date: "2020-10-31T12:00:00"
       Ballot Return:
         - voterType: {}
           rule: "Postmarked by"
