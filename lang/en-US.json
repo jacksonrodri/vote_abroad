@@ -75,8 +75,10 @@
   },
   "faq": {
     "title": "Frequently Asked Questions",
-    "intro": "These are the questions we hear most as we help voters abroad register and request their ballot. If you have a question that isn't answered here, please {intercom} with us at {emailLink}. We'd love to hear from you!",
+    "intro": "These are the questions we hear most as we help voters abroad register and request their ballot.",
+    "intro2": "If you have a question that isn't answered here, please ask our {intercom} or email us at {emailLink}. And drop by any Sunday for our live assistance on Zoom. We'd love to hear from you!",
     "contact": "get in touch",
+    "voterHelpDesk": "Voter Help Desk",
     "question": "Question",
     "answer": "Answer",
     "back": "Back to FAQs",
