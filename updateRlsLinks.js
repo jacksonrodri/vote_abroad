@@ -65,7 +65,7 @@ let { data } = ParseCSV.parse(content, { header: true })
 // Map keys
 data = data.map(row =>
   Object.assign(
-    {},d 
+    {},
     {
       ...Object
         .keys(row)

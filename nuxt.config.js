@@ -79,7 +79,7 @@ module.exports = {
       enabled: process.env.DEVSTAGE === 'dev'
     },
     commands: {
-      trackFormAction: function trackFormAction(fieldName = 'unknown') { this.$ga.event('formAction', 'focus/select', 'field', fieldName) }
+      trackFormAction: function trackFormAction (fieldName = 'unknown') { this.$ga.event('formAction', 'focus/select', 'field', fieldName) }
     }
   },
   proxy: {
@@ -198,7 +198,7 @@ module.exports = {
         }]
       ]
     },
-    extend(config, ctx) {
+    extend (config, ctx) {
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',
