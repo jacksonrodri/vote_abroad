@@ -2003,8 +2003,11 @@
           date: "2020-10-30T00:00:00"
       Ballot Return:
         - voterType: {}
-          rule: "Received by"
-          date: "2020-11-03T00:00:00"
+          rule: "By Mail: Postmarked by"
+          date: "2020-11-03T00:00:00"      
+        - voterType: {}
+          rule: "By Email or Fax: Received by"
+          date: "2020-11-03T20:00:00"
   - state: "NM"
     date: "2020-06-02T00:00:00"
     electionType: "Presidential Primary"
