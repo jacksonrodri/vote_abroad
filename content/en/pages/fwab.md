@@ -17,7 +17,7 @@ After you send it in, please be sure to verify with your Local Election Official
 
 - - -
 
-**STEP II.** Fill out and Send in Your FWAB: 
+**STEP II.** Fill out and Send in Your Emergeny Back-up Ballot (the FWAB): 
 
 1. Go to this website and follow the prompts to [**Fill in the FWAB**](https://www.fvap.gov/fwab-privacy-notice)
 
