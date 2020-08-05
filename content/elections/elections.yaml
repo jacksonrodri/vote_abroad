@@ -137,11 +137,15 @@
           rule: "Request Email/Online or Fax Ballot: Received by"
           date: "2020-11-02T17:00:00"
       Ballot Return:
-        - voterType: {}
+        - voterType: "Within the U.S."
           rule: "Return by Mail: Postmarked by"
           date: "2020-11-03T00:00:00"
           note: "AK2"
-        - voterType: {}
+        - voterType: "Outside the U.S."
+          rule: "Return by Mail: Postmarked by"
+          date: "2020-11-03T00:00:00"
+          note: "AK3"          
+        - voterType: "Outside the U.S."
           rule: "Return by Fax: Received by"
           date: "2020-11-03T20:00:00"
   - state: "AS"
