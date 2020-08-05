@@ -601,6 +601,7 @@
         - voterType: {}
           rule: "By Mail: Postmarked by"
           date: "2020-11-03T00:00:00"
+          note: "DC1"
   - state: "FL"
     date: "2020-03-17T00:00:00"
     electionType: "Presidential Primary"
