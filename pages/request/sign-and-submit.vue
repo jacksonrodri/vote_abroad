@@ -10,7 +10,6 @@
         </b-message>
         <p class="is-size-5" v-if="stateRules && stateRules.fpcaSubmitOptionsRequest.length > 1" v-html="md($t('request.stages.instructions5sub'))"></p>
       </div>
-
         <b-tabs type="is-toggle" expanded>
           <b-tab-item :label="$t('request.stages.email')"
             v-if="stateRules && stateRules.fpcaSubmitOptionsRequest.includes('Email')"
