@@ -2070,7 +2070,6 @@
         - voterType: {}
           rule: "Received by"
           date: "2020-06-03T00:00:00"
-          note: "NY1"
       Ballot Request:
         - voterType: {}
           rule: "Received by"
@@ -2079,7 +2078,7 @@
         - voterType: {}
           rule: "Postmarked by"
           date: "2020-06-22T00:00:00"
-          note: "NY2"
+          note: "NY1"
   - state: "NY"
     date: "2020-06-23T00:00:00"
     electionType: "CD 27 Special Election"
@@ -2088,7 +2087,6 @@
         - voterType: {}
           rule: "Received by"
           date: "2020-06-03T00:00:00"
-          note: "NY1"
       Ballot Request:
         - voterType: {}
           rule: "Received by"
@@ -2097,7 +2095,7 @@
         - voterType: {}
           rule: "Postmarked by"
           date: "2020-06-22T00:00:00"
-          note: "NY2"
+          note: "NY1"
   - state: "NY"
     date: "2020-06-23T00:00:00"
     electionType: "Federal and State Primary"
@@ -2106,7 +2104,6 @@
         - voterType: {}
           rule: "Received by"
           date: "2020-06-03T00:00:00"
-          note: "NY1"
       Ballot Request:
         - voterType: {}
           rule: "Received by"
@@ -2115,25 +2112,27 @@
         - voterType: {}
           rule: "Postmarked by"
           date: "2020-06-22T00:00:00"
-          note: "NY2"
+          note: "NY1"
   - state: "NY"
     date: "2020-11-03T00:00:00"
     electionType: "General Election"
     rules:
       Registration:
-        - voterType: {}
+        - voterType: "Overseas citizens"
           rule: "Received by"
-          date: "2020-10-16T00:00:00"
-          note: "NY1"
+          date: "2020-10-09T00:00:00"
+        - voterType: "Uniformed services and eligible family members"
+          rule: "Received by"
+          date: "2020-10-24T00:00:00"
       Ballot Request:
         - voterType: {}
           rule: "Received by"
-          date: "2020-10-24T00:00:00"
+          date: "2020-10-27T00:00:00"
       Ballot Return:
         - voterType: {}
           rule: "Postmarked by"
           date: "2020-11-03T00:00:00"
-          note: "NY2"
+          note: "NY1"
   - state: "NC"
     date: "2020-03-03T00:00:00"
     electionType: "Presidential Primary"
