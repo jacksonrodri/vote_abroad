@@ -794,7 +794,7 @@
       "transmitInstructions": "You must {transmitOpts} your **signed and dated** ballot request to the {leoName}. ",
       "emailSuggested": "We recommend sending your ballot request by email if possible to avoid possible postal delays.",
       "notes": {
-        "AL1": "Ballots must still be received by the 7th day after the election.",
+        "AL1": "Mail ballots must be Received by Nov 10, 2020.",
         "AL2": "Online voting is available only if a voter requests that their ballot be sent to them by email/online.",
         "AK1": "Ballots sent by postal mail must be received by 8pm on Fri, Aug 28, 2020.",
         "AK2": "If sent from outside the US, ballots sent by postal mail must be received by Wed, Nov 18, 2020. If sent from within the US, ballots must be received by Fri, Nov 13, 2020.",
