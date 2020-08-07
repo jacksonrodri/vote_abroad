@@ -3162,7 +3162,6 @@
         - voterType: {}
           rule: "Received by"
           date: "2020-03-10T00:00:00"
-          note: "WA1"
       Ballot Request:
         - voterType: {}
           rule: "Not Required"
@@ -3179,7 +3178,6 @@
         - voterType: {}
           rule: "Received by"
           date: "2020-08-04T00:00:00"
-          note: "WA1"
       Ballot Request:
         - voterType: {}
           rule: "Not Required"
@@ -3191,6 +3189,7 @@
         - voterType: {}
           rule: "By Mail: Signed by"
           date: "2020-08-04T00:00:00"
+          note: "WA1"          
   - state: "WA"
     date: "2020-11-03T00:00:00"
     electionType: "General Election"
@@ -3199,7 +3198,6 @@
         - voterType: {}
           rule: "Received by"
           date: "2020-11-03T00:00:00"
-          note: "WA1"
       Ballot Request:
         - voterType: {}
           rule: "Not Required"
@@ -3211,6 +3209,7 @@
         - voterType: {}
           rule: "By Mail: Signed by"
           date: "2020-11-03T00:00:00"
+          note: "WA2"          
   - state: "WV"
     date: "2020-06-09T00:00:00"
     electionType: "State Primary"
