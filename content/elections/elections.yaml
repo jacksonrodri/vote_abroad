@@ -2757,7 +2757,7 @@
         - voterType: {}
           rule: "By Mail: Sent by"
           date: "2020-11-03T19:00:00"
-          note: "SC3"
+          note: "SC1"
   - state: "SD"
     date: "2020-06-02T00:00:00"
     electionType: "State Primary"
