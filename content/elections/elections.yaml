@@ -137,11 +137,15 @@
           rule: "Request Email/Online or Fax Ballot: Received by"
           date: "2020-11-02T17:00:00"
       Ballot Return:
-        - voterType: {}
+        - voterType: "Within the U.S."
           rule: "Return by Mail: Postmarked by"
           date: "2020-11-03T00:00:00"
           note: "AK2"
-        - voterType: {}
+        - voterType: "Outside the U.S."
+          rule: "Return by Mail: Postmarked by"
+          date: "2020-11-03T00:00:00"
+          note: "AK3"          
+        - voterType: "Outside the U.S."
           rule: "Return by Fax: Received by"
           date: "2020-11-03T20:00:00"
   - state: "AS"
@@ -601,6 +605,7 @@
         - voterType: {}
           rule: "By Mail: Postmarked by"
           date: "2020-11-03T00:00:00"
+          note: "DC1"
   - state: "FL"
     date: "2020-03-17T00:00:00"
     electionType: "Presidential Primary"
@@ -2003,8 +2008,11 @@
           date: "2020-10-30T00:00:00"
       Ballot Return:
         - voterType: {}
-          rule: "Received by"
-          date: "2020-11-03T00:00:00"
+          rule: "By Mail: Postmarked by"
+          date: "2020-11-03T00:00:00"      
+        - voterType: {}
+          rule: "By Email or Fax: Received by"
+          date: "2020-11-03T20:00:00"
   - state: "NM"
     date: "2020-06-02T00:00:00"
     electionType: "Presidential Primary"
