@@ -32,8 +32,8 @@ Check below for your delivery methods and deadlines, and to find your local elec
 
 ### Delivery Methods
 
-* Registration: email, fax, or postal mail~
-* Ballot Request: email, fax or postal mail~
+* Registration: email or fax, plus postal mail~
+* Ballot Request: email or fax, plus postal mail~
 * Ballot Return: postal mail
 
 ~Registration and Ballot Request: NY voters may submit registration or ballot requests by email or fax to meet the deadlines, but must also send in an original signed form by postal mail
