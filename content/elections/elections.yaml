@@ -1844,11 +1844,9 @@
         - voterType: {}
           rule: "By Mail: Postmarked by"
           date: "2020-05-12T00:00:00"
-          note: "NV1"
         - voterType: {}
           rule: "By Email or Fax: Received by"
           date: "2020-06-02T00:00:00"
-          note: "NV1"
         - voterType: {}
           rule: "By Online System: Received by"
           date: "2020-06-04T00:00:00"
@@ -1860,7 +1858,7 @@
         - voterType: {}
           rule: "By Mail:Postmarked by"
           date: "2020-06-09T00:00:00"
-          note: "NV2"
+          note: "NV1"
         - voterType: {}
           rule: "By Email or Fax: Received by"
           date: "2020-06-09T19:00:00"
@@ -1872,11 +1870,9 @@
         - voterType: {}
           rule: "By Mail: Postmarked by"
           date: "2020-10-06T00:00:00"
-          note: "NV1"
         - voterType: {}
           rule: "By Email, Fax or FWAB: Received by"
           date: "2020-10-27T00:00:00"
-          note: "NV1"
         - voterType: {}
           rule: "By Online System: Received by"
           date: "2020-10-29T00:00:00"
@@ -1888,7 +1884,7 @@
         - voterType: {}
           rule: "By Mail:Postmarked by"
           date: "2020-11-03T00:00:00"
-          note: "NV2"
+          note: "NV1"
         - voterType: {}
           rule: "By Email or Fax: Received by"
           date: "2020-11-03T19:00:00"
