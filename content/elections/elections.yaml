@@ -744,7 +744,7 @@
         - voterType: {}
           rule: "Postmarked by"
           date: "2020-11-03T00:00:00"
-          note: "GA1"
+          note: "GA2"
   - state: "GA"
     date: "2021-01-05T00:00:00"
     electionType: "General Runoff"
@@ -761,7 +761,7 @@
         - voterType: {}
           rule: "Postmarked by"
           date: "2021-01-05T00:00:00"
-          note: "GA1"
+          note: "GA3"
   - state: "GU"
     date: "2020-08-29T00:00:00"
     electionType: "Territory Primary"
