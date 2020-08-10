@@ -296,7 +296,7 @@
         - voterType: {}
           rule: "Postmarked by"
           date: "2020-12-01T00:00:00"
-          note: "AR1"
+          note: "AR2"
   - state: "CA"
     date: "2020-03-03T00:00:00"
     electionType: "Presidential Primary & Special Primary"
