@@ -795,7 +795,7 @@
         - voterType: {}
           rule: "Postmarked by"
           date: "2020-11-03T00:00:00"
-          note: "GU1"
+          note: "GU2"
   - state: "HI"
     date: "2020-04-04T00:00:00"
     electionType: "Presidential Primary"
