@@ -296,7 +296,7 @@
         - voterType: {}
           rule: "Postmarked by"
           date: "2020-12-01T00:00:00"
-          note: "AR1"
+          note: "AR2"
   - state: "CA"
     date: "2020-03-03T00:00:00"
     electionType: "Presidential Primary & Special Primary"
@@ -744,7 +744,7 @@
         - voterType: {}
           rule: "Postmarked by"
           date: "2020-11-03T00:00:00"
-          note: "GA1"
+          note: "GA2"
   - state: "GA"
     date: "2021-01-05T00:00:00"
     electionType: "General Runoff"
@@ -761,7 +761,7 @@
         - voterType: {}
           rule: "Postmarked by"
           date: "2021-01-05T00:00:00"
-          note: "GA1"
+          note: "GA3"
   - state: "GU"
     date: "2020-08-29T00:00:00"
     electionType: "Territory Primary"
@@ -795,7 +795,7 @@
         - voterType: {}
           rule: "Postmarked by"
           date: "2020-11-03T00:00:00"
-          note: "GU1"
+          note: "GU2"
   - state: "HI"
     date: "2020-04-04T00:00:00"
     electionType: "Presidential Primary"
@@ -2757,7 +2757,7 @@
         - voterType: {}
           rule: "By Mail: Sent by"
           date: "2020-11-03T19:00:00"
-          note: "SC3"
+          note: "SC1"
   - state: "SD"
     date: "2020-06-02T00:00:00"
     electionType: "State Primary"
