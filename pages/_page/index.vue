@@ -33,8 +33,10 @@ export default {
     }
 
     return {
-      en: en || es || { title: '', body: '' },
-      es: es || en || { title: '', body: '' }
+      pages: {
+        en: en || es || { title: '', body: '' },
+        es: es || en || { title: '', body: '' }
+      }
     }
   },
   computed: {
