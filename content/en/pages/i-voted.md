@@ -2,7 +2,7 @@
 title: I Voted
 thumbnail: ""
 ---
-### Americans abroad - time is running out to request your ballot in time to vote. \
+### Americans abroad - time is running out to request your ballot in time to vote.
 
 If you're over 18 and are a US citizen, you can vote in the location where you last resided before moving abroad. (Even if that was 40 years ago!) 
 
