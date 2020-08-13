@@ -8,6 +8,6 @@ If you're over 18 and are a US citizen, you can vote in the location where you l
 
 In order to make sure you receive a ballot, you need to request it from the local election office in the county where you last resided using a federal request form. **Votefromabroad** walks you through filling in that form and sending it in to your election office.
 
-Remember to request your ballot every calendar year you'd like to vote! 
+Remember - Americans abroad need to request your ballot every calendar year you'd like to vote! 
 
 ![](/images/uploads/istock-1256493510.jpg)
