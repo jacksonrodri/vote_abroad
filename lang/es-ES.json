@@ -870,6 +870,9 @@
         "WA21": "Las boletas electorales enviadas por correo postal deben recibirse a más tardar el lunes 26 de noviembre de 2018.",
         "WV21": "Las boletas electorales enviadas por correo postal deben recibirse a más tardar el lunes 12 de noviembre de 2018."
       }
+    },
+    "misc": {
+      "reminderEmails": "Me gustaría recibir correos electrónicos en el futuro."
     }
   },
   "dashboard": {

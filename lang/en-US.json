@@ -892,6 +892,9 @@
         "WY21": "Overseas voters who used the FCPA to register to vote must re-register every calendar year in which they wish to vote.",
         "WY22": "Only applicable to voters who registered to vote using WY state forms"
       }
+    },
+    "misc": {
+      "reminderEmails": "I'd like to receive future voter reminder emails."
     }
   },
   "dashboard": {
