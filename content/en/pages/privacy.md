@@ -267,7 +267,7 @@ If it becomes necessary for Democrats Abroad to transfer your personal informati
 
 **Figure 1: Screenshot of the Democrats Abroad "Opt-in" (“Would you like to join Democrats Abroad?”)**
 
-![image alt text](image_0.png)
+![image alt text](/images/content/87858864-f40d9280-c8fe-11ea-9489-8027fb61f266.png)
 
 By joining Democrats Abroad, you consent to Democrats Abroad’s:
 
