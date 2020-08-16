@@ -149,7 +149,7 @@ export const getters = {
   //   } else return true
   // },
   isValidNumber: (state, getters) => (phone, country) => {
-    if (/^\+84/.test(phone)) {
+    if (/^\+84/.test(phone) || /^\+63/.test(phone)) {
       return true
     }
     if (phone && (getters.phoneMetadataHasCountry(country) || getters.phoneMetadataHasAllCountriesForPrefix(phone))) return country ? isValidNumber(phone, country, state.phoneMetadata) : isValidNumber(phone, state.phoneMetadata)
