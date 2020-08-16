@@ -47,11 +47,13 @@ module.exports = {
     auth0clientID: process.env.DEVSTAGE === 'prod' ? 'Kwfswc0R3zV4Zw6hPOR1hibG4IKxztjU' : '0Wy4khZcuXefSfrUuYDUP0Udag4FqL2u',
     commitRef: process.env.COMMIT_REF || '',
     offline: process.env.OFFLINE || false,
-    stage: process.env.DEVSTAGE || 'dev',
+    // stage: process.env.DEVSTAGE || 'dev',
+    stage: ['vfa-sandbox', 'vfa-beta'].indexOf(process.env.SITE_NAME) === -1 ? 'prod' : 'dev',
     isStudentSite: process.env.IS_STUDENT_SITE || false,
     isVrSite: process.env.IS_VR_SITE || false,
     isDemsSite: process.env.IS_DEMS_SITE || false,
-    branch: process.env.BRANCH || 'dev'
+    branch: process.env.BRANCH || 'dev',
+    siteName: process.env.SITE_NAME || 'unknownBuild'
   },
   modules: [
     // '@nuxtjs/sentry',

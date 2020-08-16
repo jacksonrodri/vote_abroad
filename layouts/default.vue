@@ -295,6 +295,7 @@ export default {
     ...mapMutations(['togglePrivacyModalActiveState'])
   },
   async mounted () {
+    console.log('-', process.env.siteName, process.env.stage)
     if (!this.$cookie.get('vfaOptIn')) {
       this.optedIn = false
     }
