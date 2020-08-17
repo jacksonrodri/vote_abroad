@@ -2647,7 +2647,6 @@
         - voterType: {}
           rule: "Received by"
           date: "2020-08-18T00:00:00"
-          note: "RI3"
       Ballot Return:
         - voterType: {}
           rule: "Received by"
@@ -2664,7 +2663,6 @@
         - voterType: {}
           rule: "Received by"
           date: "2020-10-13T00:00:00"
-          note: "RI4"
       Ballot Return:
         - voterType: {}
           rule: "Received by"
