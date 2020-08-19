@@ -50,12 +50,19 @@ export default {
       return this.$i18n.locale
     },
     categories: function () {
-      return [...new Set(this.faqs[this.$i18n.locale].map(x => x.categories).reduce((acc, cur) => acc.concat(cur), []).map(x => x.category))]
-        .map(subject => ({
-          category: subject,
-          faqs: this.faqs[this.$i18n.locale].filter(x => x.categories.map(x => x.category).indexOf(subject) > -1)
-        }))
-        .sort((a, b) => a.faqs.length > b.faqs.length ? 1 : -1)
+      const entries = {}
+      // eslint-disable-next-line no-unused-vars
+      const faqs = [...new Set(this.faqs[this.$i18n.locale].map(x => x.categories).reduce((acc, cur) => acc.concat(cur), []).map(x => ({ category: `${x.category}`.split('_')[0], index: `${x.category}`.split('_')[1] })))]
+        .sort((x, y) => x.index < y.index ? -1 : x.index > y.index ? 1 : 0)
+        .forEach(x => {
+          if (!(x.index in entries)) {
+            entries[x.index] = Object.assign({}, x)
+          }
+        })
+      return Object.keys(entries).map(index => ({
+        category: entries[index].category,
+        faqs: this.faqs[this.$i18n.locale].filter(x => x.categories.map(x => x.category).indexOf(`${entries[index].category}_${entries[index].index}`) > -1)
+      }))
     }
   },
   methods: {
