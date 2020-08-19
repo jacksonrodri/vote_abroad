@@ -2929,6 +2929,7 @@
         - voterType: "If requesting Full Ballot"
           rule: "By Mail: Postmarked by"
           date: "2020-10-14T00:00:00"
+        - voterType: "If requesting Full Ballot"
           rule: "By Email: Received by"
           date: "2020-10-14T00:00:00"          
         - voterType: "If requesting Federal Ballot only"
