@@ -218,7 +218,7 @@ Si es necesario que Democrats Abroad transfiera su información personal a un te
 
 **Figura 1: Captura de pantalla de la opción para participar en Democrats Abroad ("¿Le gustaría unirse a Democrats Abroad?")**
 
-![image alt text](image_0.png)
+![image alt text](/images/content/87858864-f40d9280-c8fe-11ea-9489-8027fb61f266.png)
 
 Al unirse a Democrats Abroad, usted acepta los siguientes criterios de Democrats Abroad:
 
