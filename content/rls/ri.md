@@ -31,8 +31,10 @@ Check below for your delivery methods and deadlines, and to find your local elec
 
 ### Delivery Methods
 
-* Registration: fax or postal mail ~
-* Ballot Request: fax or postal mail ~
-* Ballot Return: fax or postal mail
+* Registration: email, fax or postal mail
+* Ballot Request: email, fax or postal mail
+* Ballot Return: email, fax or postal mail
 
-Rhode Island voters may submit their registration or ballot request forms by fax but should also postal mail an original copy to RI
+New! Rhode Island now accepts voter registration and ballot requests forms as well as voted ballots from military and overseas voters by email, as well as fax and postal mail. 
+
+If you submit your voter registration form, ballot request form, or your voted ballot electronically, you do *not* have to send in the original by postal mail. 

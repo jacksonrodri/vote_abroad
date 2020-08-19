@@ -8,7 +8,7 @@
         </ul>
       </nav>
       <div class="article-lead">
-        <h1 class="article-title">{{ page.title }}</h1>
+        <h1 class="title">{{ page.title }}</h1>
       </div>
       <nuxtent-body class="content" :body="page.body" />
     </div>
