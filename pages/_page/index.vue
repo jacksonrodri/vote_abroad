@@ -17,12 +17,28 @@
 
 <script>
 export default {
-  asyncData: async ({ app, route }) => ({
-    pages: {
-      en: await app.$content(`en/pages`).get(`${route.params.page}`),
-      es: await app.$content(`es/pages`).get(`es/${route.params.page}`)
+  asyncData: async ({ app, route }) => {
+    let en
+    let es
+
+    try {
+      en = await app.$content(`en/pages`).get(`${route.params.page}`)
+    } catch (error) {
+      console.log('error loading English page content')
     }
-  }),
+    try {
+      es = await app.$content(`es/pages`).get(`es/${route.params.page}`)
+    } catch (error) {
+      console.log('error loading Spanish page content')
+    }
+
+    return {
+      pages: {
+        en: en || es || { title: '', body: '' },
+        es: es || en || { title: '', body: '' }
+      }
+    }
+  },
   computed: {
     page () { return this.pages[this.$i18n.locale] }
   }

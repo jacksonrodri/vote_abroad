@@ -137,11 +137,15 @@
           rule: "Request Email/Online or Fax Ballot: Received by"
           date: "2020-11-02T17:00:00"
       Ballot Return:
-        - voterType: {}
+        - voterType: "Within the U.S."
           rule: "Return by Mail: Postmarked by"
           date: "2020-11-03T00:00:00"
           note: "AK2"
-        - voterType: {}
+        - voterType: "Outside the U.S."
+          rule: "Return by Mail: Postmarked by"
+          date: "2020-11-03T00:00:00"
+          note: "AK3"          
+        - voterType: "Outside the U.S."
           rule: "Return by Fax: Received by"
           date: "2020-11-03T20:00:00"
   - state: "AS"
@@ -292,7 +296,7 @@
         - voterType: {}
           rule: "Postmarked by"
           date: "2020-12-01T00:00:00"
-          note: "AR1"
+          note: "AR2"
   - state: "CA"
     date: "2020-03-03T00:00:00"
     electionType: "Presidential Primary & Special Primary"
@@ -601,6 +605,7 @@
         - voterType: {}
           rule: "By Mail: Postmarked by"
           date: "2020-11-03T00:00:00"
+          note: "DC1"
   - state: "FL"
     date: "2020-03-17T00:00:00"
     electionType: "Presidential Primary"
@@ -739,7 +744,7 @@
         - voterType: {}
           rule: "Postmarked by"
           date: "2020-11-03T00:00:00"
-          note: "GA1"
+          note: "GA2"
   - state: "GA"
     date: "2021-01-05T00:00:00"
     electionType: "General Runoff"
@@ -756,7 +761,7 @@
         - voterType: {}
           rule: "Postmarked by"
           date: "2021-01-05T00:00:00"
-          note: "GA1"
+          note: "GA3"
   - state: "GU"
     date: "2020-08-29T00:00:00"
     electionType: "Territory Primary"
@@ -790,7 +795,7 @@
         - voterType: {}
           rule: "Postmarked by"
           date: "2020-11-03T00:00:00"
-          note: "GU1"
+          note: "GU2"
   - state: "HI"
     date: "2020-04-04T00:00:00"
     electionType: "Presidential Primary"
@@ -947,22 +952,22 @@
           rule: "Not Required"
           date: ""
       Ballot Request:
-        - voterType: "Overseas Citizens"
-          rule: "Full Ballot: Signed by"
+        - voterType: "Overseas Citizens Seeking Full Ballot"
+          rule: "Received by"
           date: "2020-10-04T00:00:00"
           note: "IL1"
-        - voterType: "Overseas Citizens"
-          rule: "Federal Ballot Only: Signed by"
+        - voterType: "Overseas Citizens to Receive Federal only Ballot"
+          rule: "Received by"
           date: "2020-10-24T00:00:00"
-          note: "IL1"
+          note: "IL2"
         - voterType: "Uniformed Services and eligible family members"
-          rule: "Signed by"
+          rule: "Received by"
           date: "2020-10-24T00:00:00"
       Ballot Return:
         - voterType: {}
-          rule: "Signed/Postmarked by"
+          rule: "Postmarked by"
           date: "2020-11-03T00:00:00"
-          note: "IL2"
+          note: "IL3"
   - state: "IN"
     date: "2020-06-02T00:00:00"
     electionType: "Presidential Primary"
@@ -1061,7 +1066,7 @@
           rule: "Return by Mail: Postmarked by"
           date: "2020-06-01T00:00:00"
           note: "IA1"
-        - voterType: {Active Military Only}
+        - voterType: "Active Military Only"
           rule: "Return by Email or Fax: Received by"
           date: "2020-06-02T21:00:00"
   - state: "IA"
@@ -1084,7 +1089,7 @@
           rule: "Return by Mail: Postmarked by"
           date: "2020-11-02T00:00:00"
           note: "IA1"
-        - voterType: {Active Military only}
+        - voterType: "Active Military only"
           rule: "Return by Email or Fax: Received by"
           date: "2020-11-03T21:00:00"
   - state: "KS"
@@ -1604,7 +1609,6 @@
         - voterType: {}
           rule: "Received by"
           date: "2020-02-12T00:00:00"
-          note: "MO1"
       Ballot Request:
         - voterType: {}
           rule: "Received by"
@@ -1616,7 +1620,6 @@
         - voterType: {}
           rule: "Return by Mail: Postmarked by"
           date: "2020-03-10T00:00:00"
-          note: "MO2"
   - state: "MO"
     date: "2020-08-04T00:00:00"
     electionType: "State Primary"
@@ -1625,19 +1628,18 @@
         - voterType: {}
           rule: "Received by"
           date: "2020-07-08T00:00:00"
-          note: "MO1"
       Ballot Request:
         - voterType: {}
           rule: "Received by"
           date: "2020-07-31T00:00:00"
       Ballot Return:
         - voterType: {}
-          rule: "Hostile fire area Return by Email or Fax: Received by"
+          rule: "Special All Voters: Return by Email or Fax: Received by"
           date: "2020-08-04T00:00:00"
         - voterType: {}
           rule: "Return by Mail: Postmarked by"
           date: "2020-08-04T00:00:00"
-          note: "MO2"
+          note: "MO1"
   - state: "MO"
     date: "2020-11-03T00:00:00"
     electionType: "General Election"
@@ -1646,7 +1648,6 @@
         - voterType: {}
           rule: "Received by"
           date: "2020-10-07T00:00:00"
-          note: "MO1"
       Ballot Request:
         - voterType: {}
           rule: "Received by"
@@ -1843,11 +1844,9 @@
         - voterType: {}
           rule: "By Mail: Postmarked by"
           date: "2020-05-12T00:00:00"
-          note: "NV1"
         - voterType: {}
           rule: "By Email or Fax: Received by"
           date: "2020-06-02T00:00:00"
-          note: "NV1"
         - voterType: {}
           rule: "By Online System: Received by"
           date: "2020-06-04T00:00:00"
@@ -1859,7 +1858,7 @@
         - voterType: {}
           rule: "By Mail:Postmarked by"
           date: "2020-06-09T00:00:00"
-          note: "NV2"
+          note: "NV1"
         - voterType: {}
           rule: "By Email or Fax: Received by"
           date: "2020-06-09T19:00:00"
@@ -1871,11 +1870,9 @@
         - voterType: {}
           rule: "By Mail: Postmarked by"
           date: "2020-10-06T00:00:00"
-          note: "NV1"
         - voterType: {}
           rule: "By Email, Fax or FWAB: Received by"
           date: "2020-10-27T00:00:00"
-          note: "NV1"
         - voterType: {}
           rule: "By Online System: Received by"
           date: "2020-10-29T00:00:00"
@@ -1887,7 +1884,7 @@
         - voterType: {}
           rule: "By Mail:Postmarked by"
           date: "2020-11-03T00:00:00"
-          note: "NV2"
+          note: "NV1"
         - voterType: {}
           rule: "By Email or Fax: Received by"
           date: "2020-11-03T19:00:00"
@@ -2003,8 +2000,11 @@
           date: "2020-10-30T00:00:00"
       Ballot Return:
         - voterType: {}
-          rule: "Received by"
-          date: "2020-11-03T00:00:00"
+          rule: "By Mail: Postmarked by"
+          date: "2020-11-03T00:00:00"      
+        - voterType: {}
+          rule: "By Email or Fax: Received by"
+          date: "2020-11-03T20:00:00"
   - state: "NM"
     date: "2020-06-02T00:00:00"
     electionType: "Presidential Primary"
@@ -2070,7 +2070,6 @@
         - voterType: {}
           rule: "Received by"
           date: "2020-06-03T00:00:00"
-          note: "NY1"
       Ballot Request:
         - voterType: {}
           rule: "Received by"
@@ -2079,7 +2078,7 @@
         - voterType: {}
           rule: "Postmarked by"
           date: "2020-06-22T00:00:00"
-          note: "NY2"
+          note: "NY1"
   - state: "NY"
     date: "2020-06-23T00:00:00"
     electionType: "CD 27 Special Election"
@@ -2088,7 +2087,6 @@
         - voterType: {}
           rule: "Received by"
           date: "2020-06-03T00:00:00"
-          note: "NY1"
       Ballot Request:
         - voterType: {}
           rule: "Received by"
@@ -2097,7 +2095,7 @@
         - voterType: {}
           rule: "Postmarked by"
           date: "2020-06-22T00:00:00"
-          note: "NY2"
+          note: "NY1"
   - state: "NY"
     date: "2020-06-23T00:00:00"
     electionType: "Federal and State Primary"
@@ -2106,7 +2104,6 @@
         - voterType: {}
           rule: "Received by"
           date: "2020-06-03T00:00:00"
-          note: "NY1"
       Ballot Request:
         - voterType: {}
           rule: "Received by"
@@ -2115,25 +2112,27 @@
         - voterType: {}
           rule: "Postmarked by"
           date: "2020-06-22T00:00:00"
-          note: "NY2"
+          note: "NY1"
   - state: "NY"
     date: "2020-11-03T00:00:00"
     electionType: "General Election"
     rules:
       Registration:
-        - voterType: {}
+        - voterType: "Overseas citizens"
           rule: "Received by"
-          date: "2020-10-16T00:00:00"
-          note: "NY1"
+          date: "2020-10-09T00:00:00"
+        - voterType: "Uniformed services and eligible family members"
+          rule: "Received by"
+          date: "2020-10-24T00:00:00"
       Ballot Request:
         - voterType: {}
           rule: "Received by"
-          date: "2020-10-24T00:00:00"
+          date: "2020-10-27T00:00:00"
       Ballot Return:
         - voterType: {}
           rule: "Postmarked by"
           date: "2020-11-03T00:00:00"
-          note: "NY2"
+          note: "NY1"
   - state: "NC"
     date: "2020-03-03T00:00:00"
     electionType: "Presidential Primary"
@@ -2648,7 +2647,6 @@
         - voterType: {}
           rule: "Received by"
           date: "2020-08-18T00:00:00"
-          note: "RI3"
       Ballot Return:
         - voterType: {}
           rule: "Received by"
@@ -2665,7 +2663,6 @@
         - voterType: {}
           rule: "Received by"
           date: "2020-10-13T00:00:00"
-          note: "RI4"
       Ballot Return:
         - voterType: {}
           rule: "Received by"
@@ -2758,7 +2755,7 @@
         - voterType: {}
           rule: "By Mail: Sent by"
           date: "2020-11-03T19:00:00"
-          note: "SC3"
+          note: "SC1"
   - state: "SD"
     date: "2020-06-02T00:00:00"
     electionType: "State Primary"
@@ -2879,7 +2876,6 @@
         - voterType: {}
           rule: "Received by"
           date: "2020-02-03T00:00:00"
-          note: "TX1"
       Ballot Request:
         - voterType: {}
           rule: "Received by"
@@ -2888,7 +2884,7 @@
         - voterType: {}
           rule: "Received by"
           date: "2020-03-09T00:00:00"
-          note: "TX2"
+          note: "TX1"
   - state: "TX"
     date: "2020-03-03T00:00:00"
     electionType: "State Primary"
@@ -2897,7 +2893,6 @@
         - voterType: {}
           rule: "Received by"
           date: "2020-02-03T00:00:00"
-          note: "TX1"
       Ballot Request:
         - voterType: {}
           rule: "Received by"
@@ -2906,7 +2901,7 @@
         - voterType: {}
           rule: "Received by"
           date: "2020-03-09T00:00:00"
-          note: "TX2"
+          note: "TX1"
   - state: "TX"
     date: "2020-07-14T00:00:00"
     electionType: "State Primary Runoff"
@@ -2915,7 +2910,6 @@
         - voterType: {}
           rule: "Received by"
           date: "2020-06-15T00:00:00"
-          note: "TX1"
       Ballot Request:
         - voterType: {}
           rule: "Received by"
@@ -2924,19 +2918,18 @@
         - voterType: {}
           rule: "Received by"
           date: "2020-07-20T00:00:00"
-          note: "TX2"
+          note: "TX1"
   - state: "TX"
     date: "2020-11-03T00:00:00"
     electionType: "General Election"
     rules:
       Registration:
-        - voterType: "Federal and State Ballot"
+        - voterType: "If requesting Full Ballot"
           rule: "Received by"
           date: "2020-10-05T00:00:00"
-        - voterType: "Federal Ballot only"
+        - voterType: "If requesting Federal Ballot only"
           rule: "Received by"
           date: "2020-10-23T00:00:00"
-          note: "TX1"
       Ballot Request:
         - voterType: {}
           rule: "Received by"
@@ -2945,13 +2938,14 @@
         - voterType: "Overseas Citizens"
           rule: "Postmarked by"
           date: "2020-11-03T19:00:00"
+          note: "TX1"          
         - voterType: "Uniformed Services and eligible family members"
           rule: "Postmarked by"
           date: "2020-11-03T19:00:00"
+          note: "TX2"          
         - voterType: "Military voter in hostile fire zone"
           rule: "Return by Fax: Received by"
           date: "2020-11-03T19:00:00"
-          note: "TX2"
   - state: "UT"
     date: "2020-03-03T00:00:00"
     electionType: "Presidential Primary"
@@ -2960,7 +2954,6 @@
         - voterType: {}
           rule: "By Mail: Postmarked by"
           date: "2020-02-03T00:00:00"
-          note: "UT1"
         - voterType: {}
           rule: "By Online System: Received by"
           date: "2020-02-25T00:00:00"
@@ -2972,7 +2965,7 @@
         - voterType: {}
           rule: "By Mail:Postmarked by"
           date: "2020-03-02T00:00:00"
-          note: "UT2"
+          note: "UT1"
         - voterType: {}
           rule: "By Email or Fax: Received by"
           date: "2020-03-03T20:00:00"
@@ -2984,7 +2977,6 @@
         - voterType: {}
           rule: "By Mail: Postmarked by"
           date: "2020-06-02T00:00:00"
-          note: "UT1"
         - voterType: {}
           rule: "By Online System: Received by"
           date: "2020-06-23T00:00:00"
@@ -2996,7 +2988,7 @@
         - voterType: {}
           rule: "By Mail:Postmarked by"
           date: "2020-06-29T00:00:00"
-          note: "UT2"
+          note: "UT1"
         - voterType: {}
           rule: "By Email or Fax: Received by"
           date: "2020-06-30T20:00:00"
@@ -3008,7 +3000,6 @@
         - voterType: {}
           rule: "By FPCA: Received by"
           date: "2020-10-23T17:00:00"
-          note: "UT1"
         - voterType: {}
           rule: "By FWAB: Received by"
           date: "2020-10-29T00:00:00"
@@ -3020,7 +3011,7 @@
         - voterType: {}
           rule: "By Mail:Sent by"
           date: "2020-11-02T00:00:00"
-          note: "UT2"
+          note: "UT1"
         - voterType: {}
           rule: "By Email or Fax: Received by"
           date: "2020-11-03T20:00:00"
@@ -3169,7 +3160,6 @@
         - voterType: {}
           rule: "Received by"
           date: "2020-03-10T00:00:00"
-          note: "WA1"
       Ballot Request:
         - voterType: {}
           rule: "Not Required"
@@ -3186,7 +3176,6 @@
         - voterType: {}
           rule: "Received by"
           date: "2020-08-04T00:00:00"
-          note: "WA1"
       Ballot Request:
         - voterType: {}
           rule: "Not Required"
@@ -3198,6 +3187,7 @@
         - voterType: {}
           rule: "By Mail: Signed by"
           date: "2020-08-04T00:00:00"
+          note: "WA1"          
   - state: "WA"
     date: "2020-11-03T00:00:00"
     electionType: "General Election"
@@ -3206,7 +3196,6 @@
         - voterType: {}
           rule: "Received by"
           date: "2020-11-03T00:00:00"
-          note: "WA1"
       Ballot Request:
         - voterType: {}
           rule: "Not Required"
@@ -3218,6 +3207,7 @@
         - voterType: {}
           rule: "By Mail: Signed by"
           date: "2020-11-03T00:00:00"
+          note: "WA2"          
   - state: "WV"
     date: "2020-06-09T00:00:00"
     electionType: "State Primary"

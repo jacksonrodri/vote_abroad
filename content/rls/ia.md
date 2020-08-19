@@ -32,6 +32,6 @@ Check below for your delivery methods and deadlines, and to find your local elec
 
 * Registration: not required
 * Ballot Request: email, fax, or postal mail
-* Ballot Return: postal mail~
+* Ballot Return: postal mail (email or fax~)
 
-  ~Military voters outside the US may also return their ballots by email or fax
+  ~Only active Military voters outside the US may return their ballots by email or fax

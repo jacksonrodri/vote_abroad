@@ -15,6 +15,9 @@
     <i18n tag="h3" path="faq.intro2" class="subtitle is-4">
       <a place="emailLink" class="has-text-primary" href="mailto:helpdesk@votefromabroad.org">helpdesk@votefromabroad.org</a>
       <a place="intercom" class="has-text-primary" @click="launchIntercom">{{$t('faq.voterHelpDesk')}}</a>
+      <a place="zoomLink" class="has-text-primary" target="_blank" href="https://www.democratsabroad.org/global_voter_assistance">
+        www.democratsabroad.org/global_voter_assistance
+      </a>
     </i18n>
     <div class="columns is-multiline">
       <div v-for="(category, index) in categories" :key="index" class="column is-6">
