@@ -1601,7 +1601,7 @@
         - voterType: {}
           rule: "Postmarked by"
           date: "2020-11-03T20:00:00"
-         note: "MN1"          
+          note: "MN1"          
   - state: "MO"
     date: "2020-03-10T00:00:00"
     electionType: "Presidential Primary"
