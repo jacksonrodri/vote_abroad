@@ -20,7 +20,7 @@
     "agree": "I Agree"
   },
   "email": {
-    "voterEmail": "Thanks for sending in your FPCA form to your local election office. Here is a copy for your records. \n\n**Please note this is an automated email from Vote From Abroad and not confirmation from your local election office.**\n\nIf you do not receive a confirmation of receipt from your local election office within 2 business days, please follow up with them directly: \n\n {leoName} \n\n Email: {leoEmail} \n\n Phone: {leoPhone} \n\n If you need any help, contact our volunteer voter support team at help@votefromabroad.org. \n\n --------\n\n",
+    "voterEmail": "Thanks for sending in your FPCA form to your local election office. Here is a copy for your records. \n\n**Please note this is an automated email from Vote From Abroad and not confirmation of receipt from your local election office.**\n\nBe sure to contact your local election office to verify they received your form. Only your election office can process your form and send out your ballot. Email or call your election office to ensure you will receive your ballot: \n\n {leoName} \n\n Email: {leoEmail} \n\n Phone: {leoPhone} \n\n If you need any help, contact our volunteer voter support team at help@votefromabroad.org. \n\n --------\n\n",
     "testEmail": "********** \nThis message will be sent to {leoEmail} {leoName} after VoteFromAbroad 3.0 is launched. \n\n We have NOT sent in your FPCA. \n ********** \n\n\n\n"
   },
   "error": {
