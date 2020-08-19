@@ -2926,8 +2926,11 @@
     rules:
       Registration:
         - voterType: "If requesting Full Ballot"
-          rule: "Received by"
-          date: "2020-10-05T00:00:00"
+          rule: "By Mail: Postmarked by"
+          date: "2020-10-14T00:00:00"
+        - voterType: "If requesting Full Ballot"
+          rule: "By Email: Received by"
+          date: "2020-10-14T00:00:00"          
         - voterType: "If requesting Federal Ballot only"
           rule: "Received by"
           date: "2020-10-23T00:00:00"
@@ -2936,15 +2939,11 @@
           rule: "Received by"
           date: "2020-10-23T00:00:00"
       Ballot Return:
-        - voterType: "Overseas Citizens"
+        - voterType: {}
           rule: "Postmarked by"
           date: "2020-11-03T19:00:00"
-          note: "TX1"          
-        - voterType: "Uniformed Services and eligible family members"
-          rule: "Postmarked by"
-          date: "2020-11-03T19:00:00"
-          note: "TX2"          
-        - voterType: "Military voter in hostile fire zone"
+          note: "TX1"                 
+        - voterType: "Active Military or family in hostile fire zone only"
           rule: "Return by Fax: Received by"
           date: "2020-11-03T19:00:00"
   - state: "UT"
