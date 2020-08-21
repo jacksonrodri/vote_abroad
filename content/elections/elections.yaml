@@ -1655,7 +1655,7 @@
           date: "2020-10-30T00:00:00"
       Ballot Return:
         - voterType: {}
-          rule: "Hostile fire area Return by Email or Fax: Received by"
+          rule: "Return by Email, Fax or Online Upload: Received by"
           date: "2020-11-03T00:00:00"
         - voterType: {}
           rule: "Return by Mail: Postmarked by"
