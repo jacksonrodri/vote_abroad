@@ -2001,7 +2001,7 @@
           date: "2020-10-30T00:00:00"
       Ballot Return:
         - voterType: {}
-          rule: "By Mail: Postmarked by"
+          rule: "By Mail: Received by"
           date: "2020-11-03T00:00:00"      
         - voterType: {}
           rule: "By Email or Fax: Received by"
