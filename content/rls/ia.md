@@ -32,6 +32,8 @@ Check below for your delivery methods and deadlines, and to find your local elec
 
 * Registration: not required
 * Ballot Request: email, fax, or postal mail
-* Ballot Return: postal mail (email or fax~)
+* Ballot Return: email, fax, or postal mail**
 
-  ~Only active Military voters outside the US may return their ballots by email or fax
+**SPECIAL FOR THE NOVEMBER 3RD ELECTION! All overseas voters may return their ballots by email or fax as well as postal mail!
+
+This is a COVID measure that is applicable for the November 3rd General election.

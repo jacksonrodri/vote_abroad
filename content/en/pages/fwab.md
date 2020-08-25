@@ -5,6 +5,8 @@ title: HOW TO VOTE USING THE EMERGENCY BACK-UP BALLOT (FWAB)
 
 **VOTE NOW using the Federal Write-In Absentee Ballot (FWAB). This emergency Backup Ballot is specifically for overseas voters!**
 
+_52 USC section 20303_
+
 **\_\_\_\_\_\_\_\_\_\_\_\__**
 
 **STEP I.** Send in Your Ballot Request form (the Federal Post Card Application or FPCA):
@@ -17,7 +19,7 @@ After you send it in, please be sure to verify with your Local Election Official
 
 - - -
 
-**STEP II.** Fill out and Send in Your Emergeny Back-up Ballot (the FWAB): 
+**STEP II.** Fill out and Send in Your Emergency Back-up Ballot (the FWAB): 
 
 1. Go to this website and follow the prompts to [**Fill in the FWAB**](https://www.fvap.gov/fwab-privacy-notice)
 
@@ -25,7 +27,7 @@ After you send it in, please be sure to verify with your Local Election Official
 
 * To find the candidates and races on your ballot, use the  [**Sample_Ballot_Lookup**](https://ballotpedia.org/Sample_Ballot_Lookup)
 
-3. Follow the instructions to download the PDF Package containing your completed FWAB and Instructions. You can also download templates to paste onto your envelopes if you return your ballot by postal mail.
+3. Follow the instructions to download the PDF Package containing your completed FWAB and Instructions. You can also download envelope templates if you return your ballot by postal mail.
 
 4. Print out the completed FWAB and the other documents you downloaded. Then read and carefully follow the instructions to **SUBMIT** the required materials to your LEO. 
 
@@ -49,6 +51,8 @@ If you wish, you can follow the instructions to download envelope templates to a
 
 __
 
-**\*IMPORTANT: If you receive your official ballot after submitting your FWAB, you should complete and return your official ballot as well.** 
+**\*IMPORTANT: If you receive your official ballot after submitting your FWAB, you may complete and return your official ballot as well.** 
 
-It’s okay--only one ballot per person will be counted. If both your FWAB and your official ballot arrive before the deadline, your FWAB will be discarded and only your official ballot will be counted.
+It’s okay--only one ballot per person will be counted. If both your FWAB and your official ballot arrive before the deadline, federal law provides that only your official ballot will be counted and your FWAB will be discarded.
+
+_52 USC section 20303(d)_
