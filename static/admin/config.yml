@@ -18,7 +18,7 @@ collections:
           widget: "image",
           required: false,
         }
-      - { label: "zemantaPixel", name: "zemantaPixel", widget: "string" }
+      - { label: "zemantaPixel", name: "zemantaPixel", widget: "string", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "pages-es" # Used in routes, e.g., /admin/collections/blog
     label: "Pages - Spanish" # Used in the UI
@@ -33,7 +33,7 @@ collections:
           widget: "image",
           required: false,
         }
-      - { label: "zemantaPixel", name: "zemantaPixel", widget: "string" }
+      - { label: "zemantaPixel", name: "zemantaPixel", widget: "string", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "faqs-en"
     label: "FAQs - English"
