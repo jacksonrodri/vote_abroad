@@ -33,7 +33,9 @@ Check below for your delivery methods and deadlines, and to find your local elec
 ### Delivery Methods
 
 * Registration: email, fax, postal mail, or online~
-* Ballot Request: email, fax or postal mail
+* Ballot Request: email, fax or postal mail~~
 * Ballot Return: postal mail
 
 ~Registration: Ohio's online voter registration system requires a state identification card
+
+~~Ballot Return: Please note, as set out below, Ohio has a different ballot return deadline if delivery is made by a courier service (for example, FedEX, DHL, etc)
