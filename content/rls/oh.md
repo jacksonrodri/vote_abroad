@@ -38,4 +38,4 @@ Check below for your delivery methods and deadlines, and to find your local elec
 
 ~Registration: Ohio's online voter registration system requires a state identification card
 
-~~Ballot Return: Please note, as set out below, Ohio has a different ballot return deadline if delivery is made by a courier service (for example, FedEX, DHL, etc)
+~~Ballot Return: Ohio has a different ballot return deadline if the ballot is delivered by a courier service (for example, FedEX, DHL, etc)
