@@ -3,7 +3,9 @@ title: Americans abroad - time is running out!
 thumbnail: ""
 zemantaPixel: https://p1.zemanta.com/p/7069/7418/
 ---
-![](/images/uploads/ivoted-flag-small.jpg)
+
+
+![](/images/uploads/ivoted-flag-wide.jpg)
 
 Request your ballot in time to vote.
 
