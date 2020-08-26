@@ -1,10 +1,10 @@
 ---
-title: HOW TO VOTE USING THE EMERGENCY BACK-UP BALLOT (FWAB)
+title: How to Vote Using the Backup Ballot (FWAB)
 zemantaPixel: https://p1.zemanta.com/p/7069/7418/
 ---
-**Is there a possibility your Official ballot won't get to you in time to meet the ballot return deadlines?**
+**Is there a possibility your official ballot won't get to you in time to meet the ballot return deadlines?**
 
-**VOTE NOW using the Federal Write-In Absentee Ballot (FWAB). This emergency Backup Ballot is specifically for overseas voters!**
+**VOTE NOW using the Federal Write-In Absentee Ballot (FWAB). This Backup Ballot is specifically for overseas voters!**
 
 *52 USC section 20303*
 
