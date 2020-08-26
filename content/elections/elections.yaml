@@ -3061,8 +3061,11 @@
           date: "2020-11-02T17:00:00"
       Ballot Return:
         - voterType: {}
-          rule: "Received by"
-          date: "2020-11-02T00:00:00"
+          rule: "Return by Mail: Received by"
+          date: "2020-11-02T17:00:00"
+        - voterType: "Countries with No Mail Service to US Only"
+          rule: "Return by Email: Received by"
+          date: "2020-11-02T17:00:00"          
   - state: "VI"
     date: "2020-08-01T00:00:00"
     electionType: "Territory Primary"
