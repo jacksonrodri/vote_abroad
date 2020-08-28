@@ -34,8 +34,8 @@ Check below for your delivery methods and deadlines, and to find your local elec
 
 * Registration: email, fax or postal mail~
 * Ballot Request: email, fax or postal mail~
-* Ballot Return: email, fax or postal mail~ ~ 
+* Ballot Return: email or fax, plus postal mail~ ~ 
 
-~ NJ will now permit overseas voters to submit their registration and ballot request forms by email or fax **without** the need to send in the original form by postal mail. 
+~ NJ will now permit overseas voters to submit their registration and ballot request forms by email or fax **without** the need to send in the original form by postal mail. (Special rule for COVID)
 
-~ ~ For ballot return only, if a voter returns their ballot by email or by fax, you must also postal mail the original document as well.
+~ ~ For ballot return only, you may return your ballot by email or by fax to meet the deadline, but you must ALSO send in the original ballot by postal mail at the same time.

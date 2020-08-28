@@ -12,6 +12,7 @@
       </div>
       <nuxtent-body class="content" :body="page.body" />
     </div>
+    <img v-if="page.zemantaPixel" :src="page.zemantaPixel" height="1" width="1" border="0" alt="" />
   </div>
 </template>
 
