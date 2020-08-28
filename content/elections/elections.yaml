@@ -3156,8 +3156,9 @@
           date: "2020-10-23T17:00:00"
       Ballot Return:
         - voterType: {}
-          rule: "Received by"
+          rule: "Postmarked by"
           date: "2020-11-03T19:00:00"
+          note: "VA1" 
   - state: "WA"
     date: "2020-03-10T00:00:00"
     electionType: "Presidential Primary"
