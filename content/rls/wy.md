@@ -28,8 +28,8 @@ Check below for your delivery methods and deadlines, and to find your local elec
 
 ### Delivery Methods
 
-* Registration: postal mail
-* Ballot Request: email, fax, or postal mail
+* Registration: email, fax, or postal mail ~
+* Ballot Request: email, fax, or postal mail ~
 * Ballot Return: email, fax, or postal mail ~
 
-~ Ballot Return: NEW! WY now allows ballot return by email or fax. Voters should review their ballot return instructions carefully for their jurisdiction's rules.
+~ NEW! WY now allows registration, ballot request, and ballot return by email or fax. Voters should contact their LEO and review their ballot return instructions carefully for their jurisdiction's rules.
