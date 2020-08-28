@@ -9,8 +9,9 @@
       </span>
     </button> -->
     <h1 class="subtitle is-size-3 is-size-5 has-text-primary">
-      Overseas voters can VOTE NOW using a Federal Write-in Absentee Ballot. For more information:
-      <a class="has-text-primary" href="https://www.votefromabroad.org/fwab/" target="_blank">CLICK HERE</a>
+      <i18n tag="span" path="homepage.banner">
+        <a class="has-text-primary" href="https://www.votefromabroad.org/fwab/" target="_blank">CLICK HERE</a>
+      </i18n>
     </h1>
   </div>
 </template>
