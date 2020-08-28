@@ -1,9 +1,9 @@
 <template>
 <div>
-    <div v-if="isDemsSite" class="notification is-warning">
-      <h3 class="title is-6 is-spaced">{{$t('request.daPrimary.title')}}</h3>
-      <span>{{$t('request.daPrimary.home')}}</span>
-    </div>
+  <div v-if="isDemsSite" class="notification is-warning">
+    <h3 class="title is-6 is-spaced">{{$t('request.daPrimary.title')}}</h3>
+    <span>{{$t('request.daPrimary.home')}}</span>
+  </div>
   <div class="notification is-semitransparent">
     <h1 class="title is-1 is-hidden-mobile is-spaced has-text-danger">
       <span class="has-text-weight-semibold">{{ isStudentSite ? $t('homepage.titleStudents') : $t('homepage.title') }}</span>
@@ -151,6 +151,11 @@
         <p v-html="toolTipContent"></p>
       </b-message>
 
+      <banner
+        :show="banner.show"
+        @close="closeBanner"
+      />
+
       <!-- <p class="has-text-centered is-size-5">Due to timing please consider <nuxt-link :to="localePath({ name: 'page', params: { page: 'fwab' } })">submitting a write-in ballot</nuxt-link> along with your ballot request or registration. </p> -->
     </div>
     <b-modal
@@ -171,6 +176,7 @@
 import AuthPhoneEmailInput from '~/components/AuthPhoneEmailInput'
 import AuthCodeInput from '~/components/AuthCodeInput'
 import VfaOptIn from '~/components/VfaOptIn'
+import Banner from '~/components/Banner'
 import snarkdown from 'snarkdown'
 import { required, minLength, maxLength } from 'vuelidate/lib/validators'
 import { mapActions, mapGetters, mapMutations, mapState } from 'vuex'
@@ -181,10 +187,14 @@ export default {
   components: {
     AuthPhoneEmailInput,
     AuthCodeInput,
+    Banner,
     VfaOptIn
   },
   data () {
     return {
+      banner: {
+        show: true
+      },
       optedIn: false,
       phoneOrEmail: '',
       code: '',
@@ -235,6 +245,9 @@ export default {
     }
   },
   methods: {
+    closeBanner () {
+      this.$set(this.banner, 'show', false)
+    },
     optIn () {
       this.$cookie.set('vfaOptIn', true, 1)
       this.optedIn = true

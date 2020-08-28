@@ -29,7 +29,7 @@
         <div class="container">
           <div class="navbar-brand">
             <span class="burger is-hidden-desktop"></span>
-            <nuxt-link :to="localePath('index')" class="navbar-item logo" :title="$t('homepage.homeTitle')" exact>
+            <nuxt-link :to="localePath('index')" class="navbar-item is-size-5 logo" :title="$t('homepage.homeTitle')" exact>
             </nuxt-link>
             <span :class="[{'is-active': isMobileMenuActive}, 'navbar-burger', 'burger']" @click="isMobileMenuActive = !isMobileMenuActive">
               <span></span>
@@ -41,7 +41,7 @@
             <div class="navbar-end">
               <span class="navbar-tabs">
                 <a v-if="isAuthenticated"
-                  class="navbar-item is-expanded has-text-centered"
+                  class="navbar-item is-size-5 is-expanded has-text-centered"
                   @click="$store.dispatch('userauth/logout')">
                   <b-icon
                     pack="fas"
@@ -53,17 +53,20 @@
                 <nuxt-link v-for="(locale, index) in $i18n.locales"
                   :key="index"
                   :exact="true"
-                  :class="['navbar-item', 'is-tab', {'is-active': locale.code === $i18n.locale}]"
+                  :class="['navbar-item is-size-5', 'is-tab', {'is-active': locale.code === $i18n.locale}]"
                   :to="switchLocalePath(locale.code)"><span class="is-hidden-desktop">{{ locale.name }}</span><span class="is-hidden-touch">{{ locale.code.toUpperCase() }}</span>
                 </nuxt-link>
               </span>
-              <div class="navbar-item has-dropdown is-hoverable" style="order:-1;">
-                <nuxt-link :to="localePath('states')" class="navbar-link">
+              <div class="navbar-item is-size-5 has-dropdown is-hoverable" style="order:-1;">
+                <nuxt-link :to="localePath('elections')" class="navbar-link">
                   {{$t('menu.upcomingElections')}}
+                </nuxt-link>
+                <nuxt-link :to="localePath('states')" class="navbar-link">
+                  {{$t('menu.stateGuide')}}
                 </nuxt-link>
 
                 <div class="navbar-dropdown">
-                  <nuxt-link v-for="(election, index) in upcomingElections" :key="`${election.state} ${localizeElectionType(election.electionType)}`" :to="localePath({ name: 'elections-state', params: { state: election.state } })" :class="`navbar-item ${index > 3 ? 'is-hidden-touch' : ''}`">
+                  <nuxt-link v-for="(election, index) in upcomingElections" :key="`${election.state} ${localizeElectionType(election.electionType)}`" :to="localePath({ name: 'elections-state', params: { state: election.state } })" :class="`navbar-item is-size-5 ${index > 3 ? 'is-hidden-touch' : ''}`">
                     <div class="calendar">
                       <header class="calendar-month">{{new Date(election.date).toLocaleDateString(dateFormat, {month: 'short'}) }}</header>
                       <div class="calendar-date">
@@ -73,10 +76,24 @@
                     <span class="is-size-6"><span class="has-text-weight-semibold">{{ election.state }}</span> - {{ localizeElectionType(election.electionType) }}</span>
                   </nuxt-link>
                   <hr class="navbar-divider">
-                  <nuxt-link :to="localePath({ name: 'elections' })" class="navbar-item">{{$t('menu.allElections')}}</nuxt-link>
+                  <nuxt-link :to="localePath({ name: 'elections' })" class="navbar-item is-size-5">{{$t('menu.allElections')}}</nuxt-link>
                 </div>
               </div>
-              <div class="navbar-item has-dropdown is-hoverable" style="order:-1;">
+              <div class="navbar-item is-size-5 is-hoverable" style="order: -1;">
+                <nuxt-link :to="localePath('states')">
+                  <span class="has-text-white">
+                    {{$t('menu.stateGuide')}}
+                  </span>
+                </nuxt-link>
+              </div>
+              <div class="navbar-item is-size-5 is-hoverable" style="order: -1;">
+                <nuxt-link :to="localePath('faqs')">
+                  <span class="has-text-white">
+                    {{$t('menu.help')}}
+                  </span>
+                </nuxt-link>
+              </div>
+              <!-- <div class="navbar-item is-size-5 has-dropdown is-hoverable" style="order:-1;">
                 <nuxt-link :to="localePath('faqs')" class="navbar-link">
                   {{$t('menu.help')}}
                 </nuxt-link>
@@ -87,18 +104,18 @@
                     v-for="(faq, index) in topFaqs"
                     :key="index"
                     :title="faq[`title${$i18n.locale.toUpperCase()}`]"
-                    class="navbar-item">
+                    class="navbar-item is-size-5">
                     <span class="panel-icon">
                       <i class="fas fa-question-circle"></i>
                     </span>
                     {{faq[`title${$i18n.locale.toUpperCase()}`] | truncate(100)}}
                   </nuxt-link>
                   <hr class="navbar-divider">
-                  <nuxt-link :to="localePath({ name: 'faqs' })" class="navbar-item">{{$t('menu.moreFAQs')}}</nuxt-link>
+                  <nuxt-link :to="localePath({ name: 'faqs' })" class="navbar-item is-size-5">{{$t('menu.moreFAQs')}}</nuxt-link>
                   <hr class="navbar-divider">
-                  <a @click="showIntercom" class="navbar-item">{{$t('menu.contactHelp')}}</a>
+                  <a @click="showIntercom" class="navbar-item is-size-5">{{$t('menu.contactHelp')}}</a>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -109,7 +126,7 @@
       <nav class="tabs is-boxed is-fullwidth">
         <div class="container">
           <ul>
-            <li :class="{'is-active': $route.path === localePath({ name: 'faqs-slug', params: { slug: '5' } })}">
+            <!-- <li :class="{'is-active': $route.path === localePath({ name: 'faqs-slug', params: { slug: '5' } })}">
               <nuxt-link :to="localePath({ name: 'faqs-slug', params: { slug: '5' } })">
                 {{$t('menu.howto')}}
               </nuxt-link>
@@ -118,17 +135,17 @@
               <nuxt-link :to="localePath('faqs')">
                 {{$t('menu.helpfaq')}}
               </nuxt-link>
-            </li>
+            </li> -->
             <li :class="{'is-active': $route.path === localePath({ name: 'page', params: {page: 'about-us'}})}">
               <nuxt-link :to="localePath({ name: 'page', params: {page: 'about-us'}})">
                 {{$t('menu.about')}}
               </nuxt-link>
             </li>
-            <li :class="{'is-active': $route.path === localePath('states')}">
+            <!-- <li :class="{'is-active': $route.path === localePath('states')}">
               <nuxt-link :to="localePath('states')">
                 {{$t('menu.stateGuide')}}
               </nuxt-link>
-            </li>
+            </li> -->
           </ul>
         </div>
       </nav>
