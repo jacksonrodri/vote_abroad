@@ -58,8 +58,11 @@
                 </nuxt-link>
               </span>
               <div class="navbar-item is-size-5 has-dropdown is-hoverable" style="order:-1;">
-                <nuxt-link :to="localePath('states')" class="navbar-link">
+                <nuxt-link :to="localePath('elections')" class="navbar-link">
                   {{$t('menu.upcomingElections')}}
+                </nuxt-link>
+                <nuxt-link :to="localePath('states')" class="navbar-link">
+                  {{$t('menu.stateGuide')}}
                 </nuxt-link>
 
                 <div class="navbar-dropdown">
@@ -78,7 +81,7 @@
               </div>
               <div class="navbar-item is-size-5 is-hoverable" style="order: -1;">
                 <nuxt-link :to="localePath('states')">
-                  <span class="has-text-white has-text-weight-bold">
+                  <span class="has-text-white">
                     {{$t('menu.stateGuide')}}
                   </span>
                 </nuxt-link>
