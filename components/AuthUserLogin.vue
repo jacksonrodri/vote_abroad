@@ -151,6 +151,11 @@
         <p v-html="toolTipContent"></p>
       </b-message>
 
+      <banner
+        :show="banner.show"
+        @close="closeBanner"
+      />
+
       <!-- <p class="has-text-centered is-size-5">Due to timing please consider <nuxt-link :to="localePath({ name: 'page', params: { page: 'fwab' } })">submitting a write-in ballot</nuxt-link> along with your ballot request or registration. </p> -->
     </div>
     <b-modal
@@ -163,11 +168,6 @@
         :cookiePage="localePath({ name: 'page', params: {page: 'cookie-policy'}})"
         :tosPage="localePath({ name: 'page', params: {page: 'terms-of-use'}})"></vfa-opt-in>
     </b-modal>
-    <banner
-      :show="banner.show"
-      style="position: absolute; bottom: 0; left: -80px; width: auto; max-width: 800px; z-index: 600 !important;"
-      @close="closeBanner"
-    />
   </div>
   </div>
 </template>
