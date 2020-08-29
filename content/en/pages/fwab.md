@@ -12,7 +12,7 @@ zemantaPixel: https://p1.zemanta.com/p/7069/7418/
 
 **STEP I.** Send in Your Ballot Request form (the Federal Post Card Application or FPCA):
 
-Overseas voters need to submit a Ballot Request form every calendar year. 
+Only overseas voters may use a Backup Ballot. If you haven't sent in your Ballot Request form yet this year, please do so now. 
 
 To fill out and submit your Ballot Request form, click **[here](https://www.votefromabroad.org)**.
 
@@ -41,9 +41,12 @@ When the Mailing Envelope reaches the Election Office, they will separate the Ba
 
 If you wish, you can follow the instructions to download envelope templates to affix to blank envelopes. *If you have your original signed Ballot Request form, include it in the outer "Mailing Envelope".*
 
+You can mail in your FWAB using regular mail, a courier service, US military mail, or the diplomatic pouch at the US Embassy or Consulate. 
+
 **To Return by Fax or Email:** The Instructions will indicate if your state will accept the FWAB by Email or Fax. *We recommend you do so to ensure it will be received by the deadline.*
 
 * If your state only allows return by Fax (not Email) and you don’t have access to a fax machine, there are apps that will convert an email attachment to a fax. Scan in your FWAB and any required materials as an email attachment, then search for “fax app for Android/iPhone.” Follow the instructions to convert your email attachment to a fax transmission.
+
 * Or you can use the Fax service through the Federal Voting Assistance Program (FVAP.gov). You will need to email your FWAB and any required supporting materials (see your state’s instructions) to **fax@fvap.gov** using the FVAP fax transmission coversheet at **[www.fvap.gov/eo/overview/materials/forms](https://www.fvap.gov/eo/overview/materials/forms)** (scroll to the bottom of the page). FVAP will then fax your election materials to your Local Election Office.
 
 __
@@ -53,3 +56,6 @@ __
 It’s okay--only one ballot per person will be counted. If both your FWAB and your official ballot arrive before the deadline, federal law provides that only your official ballot will be counted and your FWAB will be discarded.
 
 *52 USC section 20303(d)*
+
+___
+**If you have questions, please ask our Voter Help Desk (the orange circle on the bottom right of the screen) or email us at [helpdesk@votefromabroad.org](helpdesk@votefromabroad.org)**
