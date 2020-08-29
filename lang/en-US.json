@@ -543,11 +543,11 @@
       "tooltip": "Only Puerto Rico voters need to answer this question as per territory law."
     },
     "stages": {
-      "emailDigiSign": "**Capture your signature** with your device camera or **upload** a scan of your signature and email your form straight from this website.",
+      "emailDigiSign": "**Capture your signature** with your device camera or **upload** a scan of your signature and email your form straight from this website. But first, be sure to click **Download Now** (below) so you can print, sign, date and mail in the original form",
       "emailUploadSignature": "**Upload a scan of your signature** and email your form straight from this website",
       "faxDigiSign": "**If you have a camera** on this <span class='is-hidden-touch'>computer</span><span class='is-hidden-desktop is-hidden-mobile'>tablet</span><span class='is-hidden-tablet'>phone</span>, you can capture your signature and fax your form straight from this website.",
       "faxConfirm": "Confirm with your local election official that they received it.",
-      "emailDownload": "**If you don't have a camera** on this <span class='is-hidden-touch'>computer</span><span class='is-hidden-desktop is-hidden-mobile'>tablet</span><span class='is-hidden-tablet'>phone</span>, you will need to download your form, print, sign, date and scan it.",
+      "emailDownload": "**If you don't have a camera** on this <span class='is-hidden-touch'>computer</span><span class='is-hidden-desktop is-hidden-mobile'>tablet</span><span class='is-hidden-tablet'>phone</span>, you will need to download your form, print, sign, date and scan it to send as an email attachment. Then mail in the original form.",
       "emailSend": "Email your form to {leoEmail}",
       "digiSign": "Capture Signature",
       "emailConfirm": "<strong class='has-text-danger'>Confirm</strong> with your local election official that they received it.",
@@ -763,7 +763,7 @@
       "CTSpecial": "{default}We recommend sending in your FPCA electronically to make sure you are on the voter rolls and will get a ballot. If you send in your form by email or fax {specialDeadline}",
       "CTSpecialDeadline": "you must ALSO send in the original signed copy by postal mail and it must be received in Connecticut by the close of polls on Election Day.",
       "NYSpecial": "{default}We recommend sending in your FPCA electronically to make sure you are on the voter rolls and will get a ballot.  If you send in your form by email or fax {specialDeadline}",
-      "NYSpecialDeadline": "you must ALSO send in the original signed copy by postal mail and it must be postmarked by Election Day and reach NY by Nov 19.",
+      "NYSpecialDeadline": "If you send in your form by email or fax, you must ALSO send in the original signed copy by postal mail.",
       "NJSpecial": "{default}We recommend sending in your FPCA electronically to make sure you are on the voter rolls and will get a ballot.",
       "WYSpecial": "If you previously registered in state you may email, fax or mail your signed form to the {leoName}. If you are registering to vote or previously registered to vote using the FPCA, you MUST send in your original signed form by POSTAL MAIL by the deadline to register to vote. {specialDeadline}",
       "ARSpecial": "{default}We recommend sending your ballot request by email if possible to avoid possible postal delays. If you send in your form by email or fax, {specialDeadline}",
@@ -792,7 +792,7 @@
       "sendBallot45days": "Election Officials are required by Federal law to send ballots to overseas voters at least 45 days prior to an election. ",
       "sendBallotLessThan45days": "Your Election Official should have already started sending ballots to overseas voters.",
       "ballotReturn": "Be sure to return your voted ballot on time. Your ballot must be {rule} {deadline}{submissionMethod}{alternateSubmissionMethod} for your vote to be counted in the {electionDay} {electionType}. {note}\n- See all your state deadlines at {url}/states/{state}",
-      "transmitInstructions": "You must {transmitOpts} your **signed and dated** ballot request to the {leoName}. ",
+      "transmitInstructions": "You must mail your signed and dated ballot request to {leoName}. In addition, we recommend you also send in your form by email or fax to ensure it gets to NY by the deadline. If you send in your form by email or fax, you must ALSO send in the original signed copy by postal mail.",
       "emailSuggested": "We recommend sending your ballot request by email if possible to avoid possible postal delays.",
       "notes": {
         "AL1": "Mail ballots must be Received by Nov 10, 2020.",
