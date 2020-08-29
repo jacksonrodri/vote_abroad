@@ -77,12 +77,12 @@
                 </div>
               </div>
               <div class="navbar-item is-size-5 is-hoverable" style="order: -1;">
-                <nuxt-link :to="localePath('states')" :class="{ 'has-text-white': $route.path === '/' }">
+                <nuxt-link :to="localePath('states')" :class="{ 'has-text-white': !isMobileMenuActive && $route.path === '/' }">
                   {{$t('menu.stateGuide')}}
                 </nuxt-link>
               </div>
               <div class="navbar-item is-size-5 is-hoverable" style="order: -1;">
-                <nuxt-link :to="localePath('faqs')" :class="{ 'has-text-white': $route.path === '/' }">
+                <nuxt-link :to="localePath('faqs')" :class="{ 'has-text-white': !isMobileMenuActive && $route.path === '/' }">
                   {{$t('menu.help')}}
                 </nuxt-link>
               </div>
