@@ -61,9 +61,6 @@
                 <nuxt-link :to="localePath('elections')" class="navbar-link">
                   {{$t('menu.upcomingElections')}}
                 </nuxt-link>
-                <nuxt-link :to="localePath('states')" class="navbar-link">
-                  {{$t('menu.stateGuide')}}
-                </nuxt-link>
 
                 <div class="navbar-dropdown">
                   <nuxt-link v-for="(election, index) in upcomingElections" :key="`${election.state} ${localizeElectionType(election.electionType)}`" :to="localePath({ name: 'elections-state', params: { state: election.state } })" :class="`navbar-item is-size-5 ${index > 3 ? 'is-hidden-touch' : ''}`">
@@ -80,17 +77,13 @@
                 </div>
               </div>
               <div class="navbar-item is-size-5 is-hoverable" style="order: -1;">
-                <nuxt-link :to="localePath('states')">
-                  <span class="has-text-white">
-                    {{$t('menu.stateGuide')}}
-                  </span>
+                <nuxt-link :to="localePath('states')" :class="{ 'has-text-white': !isMobileMenuActive && $route.path === '/' }">
+                  {{$t('menu.stateGuide')}}
                 </nuxt-link>
               </div>
               <div class="navbar-item is-size-5 is-hoverable" style="order: -1;">
-                <nuxt-link :to="localePath('faqs')">
-                  <span class="has-text-white">
-                    {{$t('menu.help')}}
-                  </span>
+                <nuxt-link :to="localePath('faqs')" :class="{ 'has-text-white': !isMobileMenuActive && $route.path === '/' }">
+                  {{$t('menu.help')}}
                 </nuxt-link>
               </div>
               <!-- <div class="navbar-item is-size-5 has-dropdown is-hoverable" style="order:-1;">
