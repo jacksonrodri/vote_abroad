@@ -5,6 +5,7 @@
         <h1 class="has-text-centered title is-3">{{ $t('request.stages.step', {step: 5})}}</h1>
         <h3 class="has-text-centered subtitle is-4">{{ $t('request.stages.stage5')}}</h3>
         <p class="is-size-5" v-html="md(transmitInstructions)"></p>
+        <p v-if="/NY/.test(currentRequest.leo.s)" class="is-size-5" v-text="$t('request.deadlineLanguage.transmitInstructionsNY')"></p>
         <b-message v-if="transmitRules" type="is-info" has-icon>
           <span v-html="md(transmitRules)"></span>
         </b-message>

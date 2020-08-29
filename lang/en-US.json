@@ -755,7 +755,7 @@
       "mail": "mail",
       "fax": "fax",
       "online": "online",
-      "opt2": "{item1} or {item2}",
+      "opt2": "{item1}, {item2}...",
       "opt3": "{item1}, {item2} or {item3}",
       "opt4": "{item1}, {item2}, {item3} or {item4}",
       "akDocument": "proof of Alaska Residency",
@@ -792,7 +792,8 @@
       "sendBallot45days": "Election Officials are required by Federal law to send ballots to overseas voters at least 45 days prior to an election. ",
       "sendBallotLessThan45days": "Your Election Official should have already started sending ballots to overseas voters.",
       "ballotReturn": "Be sure to return your voted ballot on time. Your ballot must be {rule} {deadline}{submissionMethod}{alternateSubmissionMethod} for your vote to be counted in the {electionDay} {electionType}. {note}\n- See all your state deadlines at {url}/states/{state}",
-      "transmitInstructions": "You must mail your signed and dated ballot request to {leoName}. In addition, we recommend you also send in your form by email or fax to ensure it gets to NY by the deadline. If you send in your form by email or fax, you must ALSO send in the original signed copy by postal mail.",
+      "transmitInstructions": "You must {transmitOpts} your signed and dated ballot request to {leoName}.",
+      "transmitInstructionsNY": "In addition, we recommend you also send in your form by email or fax to ensure it gets to NY by the deadline. If you send in your form by email or fax, you must ALSO send in the original signed copy by postal mail.",
       "emailSuggested": "We recommend sending your ballot request by email if possible to avoid possible postal delays.",
       "notes": {
         "AL1": "Mail ballots must be Received by Nov 10, 2020.",
