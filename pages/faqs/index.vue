@@ -16,7 +16,7 @@
       <a place="emailLink" class="has-text-primary" href="mailto:helpdesk@votefromabroad.org">helpdesk@votefromabroad.org</a>
       <a place="intercom" class="has-text-primary" @click="launchIntercom">{{$t('faq.voterHelpDesk')}}</a>
       <a place="zoomLink" class="has-text-primary" target="_blank" href="https://www.democratsabroad.org/global_voter_assistance">
-        www.democratsabroad.org/global_voter_assistance
+        Global Voter Assistance
       </a>
     </i18n>
     <div class="columns is-multiline">
