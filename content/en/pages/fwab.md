@@ -4,7 +4,7 @@ zemantaPixel: https://p1.zemanta.com/p/7069/7418/
 ---
 **Is there a possibility your official ballot won't get to you in time to meet the ballot return deadlines?**
 
-**VOTE NOW using the Federal Write-In Absentee Ballot (FWAB). This Backup Ballot is specifically for overseas voters!**
+**VOTE NOW using the Backup Ballot--the Federal Write-In Absentee Ballot (FWAB)--specifically for overseas voters!**
 
 *52 USC section 20303*
 
