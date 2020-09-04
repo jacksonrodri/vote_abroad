@@ -745,7 +745,7 @@
       "mail": "correo postal",
       "fax": "fax",
       "online": "en línea",
-      "opt2": "{item1} o {item2}",
+      "opt2": "{item1}, {item2}...",
       "opt3": "{item1}, {item2} o {item3}",
       "opt4": "{item1}, {item2}, {item3} o {item4}",
       "akDocument": "comprobante de domicilio en Alaska",

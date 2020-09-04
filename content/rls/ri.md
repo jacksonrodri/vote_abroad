@@ -14,10 +14,12 @@ fpcaSubmitOptionsRegister:
   - Fax
   - Mail
 fpcaSubmitOptionsRequest:
+  - Email
   - Fax
   - Mail
 canRegisterWithFwab: false
 fwabSubmitOptions:
+  - Email
   - Fax
   - Mail
 amIRegistered: https://vote.sos.ri.gov/Home/UpdateVoterRecord?ActiveFlag=0

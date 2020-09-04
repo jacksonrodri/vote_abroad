@@ -426,15 +426,15 @@ export default {
       ctx.fillStyle = '#000000'
       ctx.font = this.calculated.fontSize + 'px  monospace'
       ctx.textAlign = 'center'
-      ctx.fillText(this.ssn[this.ssn.length - 9] || '', this.calculated.ssn[0].x, this.calculated.ssn[0].y)
-      ctx.fillText(this.ssn[this.ssn.length - 8] || '', this.calculated.ssn[1].x, this.calculated.ssn[1].y)
-      ctx.fillText(this.ssn[this.ssn.length - 7] || '', this.calculated.ssn[2].x, this.calculated.ssn[2].y)
-      ctx.fillText(this.ssn[this.ssn.length - 6] || '', this.calculated.ssn[3].x, this.calculated.ssn[3].y)
-      ctx.fillText(this.ssn[this.ssn.length - 5] || '', this.calculated.ssn[4].x, this.calculated.ssn[4].y)
-      ctx.fillText(this.ssn[this.ssn.length - 4] || '', this.calculated.ssn[5].x, this.calculated.ssn[5].y)
-      ctx.fillText(this.ssn[this.ssn.length - 3] || '', this.calculated.ssn[6].x, this.calculated.ssn[6].y)
-      ctx.fillText(this.ssn[this.ssn.length - 2] || '', this.calculated.ssn[7].x, this.calculated.ssn[7].y)
-      ctx.fillText(this.ssn[this.ssn.length - 1] || '', this.calculated.ssn[8].x, this.calculated.ssn[8].y)
+      ctx.fillText(this.ssn[this.ssn.length - 9] || '#', this.calculated.ssn[0].x, this.calculated.ssn[0].y)
+      ctx.fillText(this.ssn[this.ssn.length - 8] || '#', this.calculated.ssn[1].x, this.calculated.ssn[1].y)
+      ctx.fillText(this.ssn[this.ssn.length - 7] || '#', this.calculated.ssn[2].x, this.calculated.ssn[2].y)
+      ctx.fillText(this.ssn[this.ssn.length - 6] || '#', this.calculated.ssn[3].x, this.calculated.ssn[3].y)
+      ctx.fillText(this.ssn[this.ssn.length - 5] || '#', this.calculated.ssn[4].x, this.calculated.ssn[4].y)
+      ctx.fillText(this.ssn[this.ssn.length - 4] || '#', this.calculated.ssn[5].x, this.calculated.ssn[5].y)
+      ctx.fillText(this.ssn[this.ssn.length - 3] || '#', this.calculated.ssn[6].x, this.calculated.ssn[6].y)
+      ctx.fillText(this.ssn[this.ssn.length - 2] || '#', this.calculated.ssn[7].x, this.calculated.ssn[7].y)
+      ctx.fillText(this.ssn[this.ssn.length - 1] || '#', this.calculated.ssn[8].x, this.calculated.ssn[8].y)
       // ctx.fillText(this.tel, this.calculated.tel.x, this.calculated.tel.y)
       if (this.tel) {
         this.tel.split('').filter(x => x !== ' ').forEach((char, index) => ctx.fillText(char, this.calculated.tel.x + (index * percentWidthToPix(2.55, ctx)), this.calculated.tel.y))
