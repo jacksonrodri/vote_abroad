@@ -24,7 +24,7 @@ fwabSubmitOptions:
   - Fax
   - Mail
 amIRegistered: 'http://www.maine.gov/portal/government/edemocracy/elections_faq.html#registering'
-whereIsMyBallot: 'https://www.maine.gov/sos/cec/elec/voter-info/uocava.html'
+whereIsMyBallot: 'https://apps.web.maine.gov/cgi-bin/online/AbsenteeBallot/ballot-status.pl'
 sampleBallot: 'https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage'
 uocavaVoters: 'https://www.maine.gov/sos/cec/elec/voter-info/uocava.html'
 ---
