@@ -419,7 +419,8 @@ export default {
   },
   mounted () {
     this.subject = 'FPCA Submission'
-    this.message = `Please see attached my FPCA form for the current calendar year. Can you confirm receipt and let me know if you need any additional information? I will send the original signed copy by mail. \n\nThank you so much for everything you do. Your work is much appreciated by Americans abroad! \n\nSincerely, \n\n${this.firstName} ${this.lastName} \n\n${this.formEmail} \n\n${this.tel}`
+
+    this.message = `Please see attached my FPCA form for the current calendar year. ${/NY/.test(this.currentRequest.leo.s) ? 'Can you confirm receipt and I will send the original signed copy by mail.' : 'Can you confirm receipt and let me know if you need any additional information?'} \n\nThank you so much for everything you do. Your work is much appreciated by Americans abroad! \n\nSincerely, \n\n${this.firstName} ${this.lastName} \n\n${this.formEmail} \n\n${this.tel}`
   }
 }
 </script>
