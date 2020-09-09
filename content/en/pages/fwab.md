@@ -22,7 +22,7 @@ After you send it in, please be sure to verify with your Local Election Official
 
 **STEP II.** Fill out and Send in Your Emergency Back-up Ballot (the FWAB): 
 
-1. Go to this website and follow the prompts to **[Fill in the FWAB](https://www.fvap.gov/fwab-privacy-notice)**
+1. Go to this website and follow the prompts to **[Fill Out A Backup Ballot](https://www.fvap.gov/fwab-privacy-notice)**
 
 2. The website may fill in the candidates for you to choose from. But if it does not, you can type in the candidate’s name **or** the political party.
 
