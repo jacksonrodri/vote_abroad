@@ -470,6 +470,7 @@
       "cancel": "Cancelar",
       "attachments": "Archivos adjuntos",
       "attachmentInstructions": "Es necesario que proporcione su {document}. Arrastre y suelte su archivo aquí o seleccione cargar un archivo. (jpg, png, gif o pdf)",
+      "attachmentInstructionsSpecialAK": "Si se está inscribiendo para votar, también debe proporcionar una copia de su pasaporte de los EE. UU., O identificación del estado de Alaska, o su certificado de nacimiento de los EE. UU. Suelta tu archivo aquí o haz clic para subirlo. (jpg, png, gif o pdf)",
       "attachmentRequiredAlertMessage": "Es necesario que proporcione su {document}. Seleccione Cancelar para adjuntar un archivo a su correo electrónico. O puede enviar el mensaje sin adjuntar un archivo. Su funcionario electoral podría comunicarse con usted para solocitarle la documentación apropiada.",
       "attachmentRequiredConfirm": "Enviar de todas formas",
       "failureMessage": "Hubo un error al enviar su correo electrónico. Por favor vuelva a intentarlo o regrese a la última página y descargue una copia.",

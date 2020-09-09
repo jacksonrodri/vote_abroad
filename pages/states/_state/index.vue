@@ -160,8 +160,23 @@
             <a
               class="is-size-5 has-text-primary"
               target="blank"
-              :href="state.uocavaVoters">
-              State Page For Military And Overseas Voters
+              :href="state.uocavaVoters"
+            >
+              <span v-if="currentLeo && /NE/.test(currentLeo.s)">
+                State Page For Military Voters
+              </span>
+              <span v-else>
+                State Page For Military And Overseas Voters
+              </span>
+            </a>
+          </p>
+          <p v-if="state.uocavaVoters2">
+            <a
+              class="is-size-5 has-text-primary"
+              target="blank"
+              :href="state.uocavaVoters2"
+            >
+              State Page for Overseas Voters
             </a>
           </p>
       </div>

@@ -19,7 +19,7 @@ fpcaSubmitOptionsRequest:
 canRegisterWithFwab: false
 fwabSubmitOptions:
   - Mail
-amIRegistered: https://sos.nh.gov/VoteInforLook.aspx
+amIRegistered: https://app.sos.nh.gov/Public/AbsenteeBallot.aspx
 whereIsMyBallot: https://app.sos.nh.gov/Public/AbsenteeBallot.aspx
 sampleBallot: https://app.sos.nh.gov/Public/PollingPlaceSearch.aspx
 uocavaVoters: https://sos.nh.gov/uocavafaq.aspx

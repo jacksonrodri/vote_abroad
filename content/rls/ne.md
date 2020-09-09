@@ -29,6 +29,7 @@ whereIsMyBallot: >-
 sampleBallot: >-
   https://sos.nebraska.gov/elections/2020-primary-sample-ballots
 uocavaVoters: 'https://sos.nebraska.gov/elections/military-voters'
+uocavaVoters2: 'https://sos.nebraska.gov/elections/overseas-voters'
 ---
 Nebraska voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
 

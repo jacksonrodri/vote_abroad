@@ -479,6 +479,7 @@
       "cancel": "Cancel",
       "attachments": "Attachments",
       "attachmentInstructions": "You are required to provide {document}. Drop your file here or click to upload. (jpg, png, gif or pdf)",
+      "attachmentInstructionsSpecialAK": "If you are registering to vote, you must also provide a copy of your US passport, or Alaska state identification, or your US birth certificate. Drop your file here or click to upload. (jpg, png, gif or pdf)",
       "attachmentRequiredAlertMessage": "You are required to provide {document}. Click cancel to add a file to your email. Or you can send the message without attaching a file. Your election official may contact you to ask for appropriate documentation.",
       "attachmentRequiredConfirm": "Send Anyway",
       "failureMessage": "There was an error sending your email. Please try again or return to the last page and download a copy.",

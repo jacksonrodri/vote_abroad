@@ -102,9 +102,11 @@
               </p>
               <p>
                 {{
-                $t("request.sig.attachmentInstructions", {
-                document: documentRequired
-                })
+                  /AK/.test(currentRequest.leo.s)
+                    ? $t('request.sig.attachmentInstructionsSpecialAK')
+                    : $t("request.sig.attachmentInstructions", {
+                      document: documentRequired
+                    })
                 }}
                 <!-- You are required to provide {{documentRequired}}. Drop your file here or click to upload. (jpg, png, gif or pdf) -->
               </p>
