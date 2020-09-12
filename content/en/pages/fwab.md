@@ -12,15 +12,15 @@ zemantaPixel: https://p1.zemanta.com/p/7069/7418/
 
 **REMINDER:** Have you sent in a Ballot Request form (the Federal Post Card Application (FPCA)) _this calendar year_ and requested your absentee ballot be sent to you via email? Are you sure?
 
-If YES, scroll down to **Fill out and Send in Your Back-up Ballot (the FWAB)**
+- If YES, scroll down to **Fill out and Send in Your Back-up Ballot (the FWAB)**
 
-If NO, click **[here](https://www.votefromabroad.org)** to go to the main page of www.votefromabroad.org to fill out and submit your Ballot Request form (the FPCA). Then come back to this page to **Fill out and Send in Your Back-up Ballot (the FWAB)**
+- If NO, click **[here](https://www.votefromabroad.org)** to go to the main page of www.votefromabroad.org to fill out and submit your Ballot Request form (the FPCA). Then come back to this page to **Fill out and Send in Your Back-up Ballot (the FWAB)**
 
 - - -
 
-**Fill out and Send in Your Back-up Ballot (the FWAB):** 
+**FILL OUT AND SEND IN YOUR BACKUP BALLOT (the FWAB):** 
 
-1. Go to this website and follow the prompts to **[Fill Out A Backup Ballot](https://www.fvap.gov/fwab-privacy-notice)**
+1. Go to this website and follow the prompts to **[Fill Out A Backup Ballot (FWAB)](https://www.fvap.gov/fwab-privacy-notice)**
 
 2. The website may fill in the candidates for you to choose from. But if it does not, you can type in the candidate’s name **or** the political party.
 
@@ -32,16 +32,18 @@ If NO, click **[here](https://www.votefromabroad.org)** to go to the main page o
 
 **Return by Postal Mail:** If your state requires you to return your Ballot by postal mail, please follow these instructions carefully. ([Check here for your state's requirements.](https://www.votefromabroad.org/states))
 
+**Be sure to leave enough time to meet the deadlines and affix sufficient postage for international mail to the US.** 
+
 Two envelopes are required: 
 
 * a "Ballot Security Envelope"--to hold your completed Backup Ballot, and 
-* a "Mailing Envelope"--to send in your sealed Ballot Security Envelope as well as the supporting materials with your identifying information. 
+* a "Mailing Envelope"--to send in your sealed Ballot Security Envelope as well as the supporting materials with your identifying information. *If you have your original signed Ballot Request form, include it in the outer "Mailing Envelope".* 
 
 When the Mailing Envelope reaches the Election Office, they will separate the Ballot Security Envelope from the supporting materials to maintain ballot secrecy.
 
-If you wish, you can follow the instructions to download envelope templates to affix to blank envelopes. Or you can write or type the information on regular envelopes. *If you have your original signed Ballot Request form, include it in the outer "Mailing Envelope".*
+If you wish, you can follow the instructions to download envelope templates to affix to blank envelopes. OR, you can write or type the information on regular envelopes. 
 
-You can mail in your Backup Ballot by regular mail, courier, US military mail, or US diplomatic pouch. 
+You can mail in your Backup Ballot by regular mail, courier, US military mail, or US diplomatic pouch. (You can download a US postage-paid template, but it will only work in US Mail; that is, US military mail or a US diplomatic pouch). 
 
 
 **To Return by Fax or Email:** The Instructions will indicate if your state will accept the Backup Ballot by Email or Fax. *We recommend you do so to ensure it will be received by the deadline.*
