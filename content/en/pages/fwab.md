@@ -63,4 +63,4 @@ It’s okay--only one ballot per person will be counted. If both your Backup Bal
 ___
 **If you have questions, please ask our Voter Help Desk (the orange circle on the bottom right of the screen on www.votefromabroad.org) or email us at [helpdesk@votefromabroad.org](helpdesk@votefromabroad.org).**
 
-**Or drop by for live one-to-one voter assistance via Zoom. For more information, please click the link: [Zoom: Global Voter Assistance](https://qrco.de/bbh0zg).**
+**Or drop by for live one-to-one voter assistance via Zoom. For more information for dates and times, please click the link: [Global Voter Assistance (Live via Zoom)](https://qrco.de/bbh0zg).**
