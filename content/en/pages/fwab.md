@@ -48,9 +48,9 @@ You can mail in your Backup Ballot by regular mail, courier, US military mail, o
 
 **To Return by Fax or Email:** The Instructions will indicate if your state will accept the Backup Ballot by Email or Fax. *We recommend you do so to ensure it will be received by the deadline.*
 
-* If your state only allows return by Fax (not Email) and you don’t have access to a fax machine, there are apps that will convert an email attachment to a fax. Scan in your Backup Ballot and any required materials as an email attachment, then search for “fax app for Android/iPhone.” Follow the instructions to convert your email attachment to a fax transmission.
+* If your state only allows return by Fax (not Email) and you don’t have access to a fax machine, there are apps that will convert an email attachment to a fax. Scan in your Backup Ballot and any required supporting materials as an email attachment, then search for “fax app for Android/iPhone.” Follow the instructions to convert your email attachment to a fax transmission.
 
-* Or you can use the Fax service through the Federal Voting Assistance Program [(FVAP.gov)](https://www.fvap.gov). You will need to email your Backup Ballot and any required supporting materials (see your state’s instructions) to **fax@fvap.gov** using the FVAP fax transmission coversheet at **[www.fvap.gov/eo/overview/materials/forms](https://www.fvap.gov/eo/overview/materials/forms)** (scroll to the bottom of that page). FVAP will then fax your election materials to your Local Election Office.
+* Or you can use the Fax service through the Federal Voting Assistance Program [(FVAP.gov)](https://www.fvap.gov). You will need to email your Backup Ballot and any required supporting materials to **fax@fvap.gov** using the FVAP fax transmission coversheet at **[www.fvap.gov/eo/overview/materials/forms](https://www.fvap.gov/eo/overview/materials/forms)** (scroll to the bottom of that page). FVAP will then fax your election materials to your Local Election Office.
 
 __
 
@@ -63,4 +63,4 @@ It’s okay--only one ballot per person will be counted. If both your Backup Bal
 ___
 **If you have questions, please ask our Voter Help Desk (the orange circle on the bottom right of the screen on www.votefromabroad.org) or email us at [helpdesk@votefromabroad.org](helpdesk@votefromabroad.org).**
 
-**You can also click [here](https://qrco.de/bbh0zg) for information about the Global Help Desk's Live Voter Help via Zoom, offered every Sunday, Tuesday, and Thursday.**
+**Or drop by for live one-to-one voter assistance via Zoom. For more information for dates and times, please click the link: [Global Voter Assistance (Live via Zoom)](https://qrco.de/bbh0zg).**
