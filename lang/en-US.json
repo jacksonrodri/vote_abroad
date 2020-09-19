@@ -79,7 +79,7 @@
   "faq": {
     "title": "Frequently Asked Questions",
     "intro": "These are the questions we hear most as we help voters abroad register and request their ballot.",
-    "intro2": "If you have a question that isn't answered here, please ask our {intercom} or email us at {emailLink}. And drop by any Sunday for our live assistance on Zoom just go to: {zoomLink}. We'd love to hear from you!",
+    "intro2": "If you have a question that isn't answered here, please ask our {intercom} Or drop by for live one-to-one voter assistance via Zoom. For more information for dates and times, please click the link: {zoomLink} We'd love to hear from you!",
     "contact": "get in touch",
     "voterHelpDesk": "Voter Help Desk",
     "question": "Question",
@@ -409,7 +409,7 @@
       "clickStart": "Click start",
       "instructionsLabel": "Instructions",
       "uploadFile": "upload a file",
-      "uploadFileImageNoPDF": "Or upload an image file, such as jpeg or png, to upload your signature. [pdf files will not work]",
+      "uploadFileImageNoPDF": "Or upload an image file [link], such as JPEG or PNG, to upload your signature [PDF and TIFF files will not work]",
       "uploadInstructions": "{0} from your device",
       "clickToUpload": "Click to upload a scan of your signature",
       "captureErrorTitle": "Failed loading camera",

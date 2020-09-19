@@ -114,7 +114,8 @@
             <strong>{{ currentLeo ? currentLeo.z : '' }}</strong><br/></span>
             <span class="has-text-right"><strong>United States of America</strong><br/><br/></span></p>
             <p>
-            <span v-if="currentLeo && currentLeo.e" v-html="md(`**${$t('dashboard.email')}:** [${ currentLeo.e }](mailto:${ currentLeo.e })`)"></span>
+            <strong>{{ `${$t('dashboard.email')}: ` }}</strong>
+            <a :href="`mailto:${ currentLeo.e }`" target="_blank" v-text="currentLeo.e" />
             </p>
             <p>
             <span v-if="currentLeo && currentLeo.p" v-html="md(`**${$t('dashboard.phone')}:** [${ '+1' + currentLeo.p }](tel:${ ('+1' + currentLeo.p).replace(/[()]/g, '-').replace(/ /g, '') })`)"><br/><br/></span>
