@@ -23,11 +23,10 @@ fwabSubmitOptions:
   - Email
   - Fax
   - Mail
-amIRegistered: 'https://vt.ncsbe.gov/RegLkup/'
-whereIsMyBallot: 'https://vt.ncsbe.gov/RegLkup/'
-sampleBallot: >-
-  https://vt.ncsbe.gov/RegLkup/
-uocavaVoters: 'https://www.ncsbe.gov/Voting-Options/Military-Overseas-Voting'
+amIRegistered: https://vt.ncsbe.gov/RegLkup/
+whereIsMyBallot: https://vt.ncsbe.gov/RegLkup/
+sampleBallot: https://vt.ncsbe.gov/RegLkup/
+uocavaVoters: https://www.ncsbe.gov/Voting-Options/Military-Overseas-Voting
 ---
 North Carolina voters abroad need to request a ballot each calendar year you'd like to vote in. [**Click here**](https://www.votefromabroad.org) to start your ballot request now.
 
@@ -35,6 +34,11 @@ Check below for your delivery methods and deadlines, and to find your local elec
 
 ### Delivery Methods
 
-* Registration: email, fax, or postal mail
-* Ballot Request: email, fax, or postal mail
-* Ballot Return: email, fax, or postal mail
+* Registration: email, fax, postal mail, or online~
+* Ballot Request: email, fax, postal mail, or online~
+* Ballot Return: email, fax, postal mail, or online upload~~
+
+~ Online voter registration and ballot request system does not require state identification
+
+~~Ballot return by online upload available as of September 2020
+
