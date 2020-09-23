@@ -38,4 +38,4 @@ Check below for your delivery methods and deadlines, and to find your local elec
   ~ Online voter registration and ballot request system does not require state identification
 
 *IMPORTANT: Due to COVID mail disruptions, MD has moved the deadline to request a ballot back to **OCTOBER 20th!** 
-This is _7 to 10 days earlier_ than provided by MD law. Please make sure your ballot request is submitted by the new deadline 
+This is _7 to 10 days earlier_ than provided by MD law. Please make sure your ballot request is submitted by the new deadline.
