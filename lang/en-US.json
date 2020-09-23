@@ -12,7 +12,7 @@
     "anonymous": "or start an anonymous session",
     "tooltip": "Your email or number will create an account for you to use to easily sign in to votefromabroad and save your information from year to year. An anonymous session allows you to create an FPCA form and send it to your local election office, but will not save your information for you to return to in the future.",
     "banner": "Overseas voters can VOTE NOW using a Backup Ballot (FWAB). For more information: {0}",
-    "bannerFrom19Sept_part1": "Overseas Ballots are available NOW! Check your email inbox (and spam folder) and VOTE NOW!",
+    "bannerFrom19Sept_part1": "Overseas Ballots are available NOW! Check your email inbox (and spam folder) and VOTE NOW! For information about How to Return Your Ballot, {0}",
     "bannerFrom19Sept_part2": "If you haven't received your ballot yet, VOTE NOW using a Backup Ballot (FWAB). For more information: {0}"
   },
   "optIn": {

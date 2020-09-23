@@ -9,7 +9,9 @@
       </span>
     </button> -->
     <h1 class="subtitle is-size-3 is-size-5 has-text-primary">
-      <i18n tag="span" path="homepage.bannerFrom19Sept_part1" />
+      <i18n tag="span" path="homepage.bannerFrom19Sept_part1">
+        <a class="has-text-primary" href="https://www.votefromabroad.org/fwab/" target="_blank">CLICK HERE</a>
+      </i18n>
       <br>
       <br>
       <i18n tag="span" path="homepage.bannerFrom19Sept_part2">
