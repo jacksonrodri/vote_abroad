@@ -46,7 +46,7 @@ Este proceso es muy diferente al “voto electrónico” del que se ha informado
 
 2. También puede usar el servicio de fax a través del Programa Federal de Asistencia para Votar **[FVAP.gov](https://www.fvap.gov/)**.
 
-   a. Escanee o tome foto de us boleta electoral incluyendo cualquier documento requerido para convertirlos en formato digital. Debe incluir la portada de la transmisión por fax de FVAP: www.fvap.gov/eo/overview/materials/forms
+   a. Escanee o tome foto de us boleta electoral incluyendo cualquier documento requerido para convertirlos en formato digital. Debe incluir la portada de la transmisión por fax de FVAP: **[www.fvap.gov/eo/overview/materials/forms](https://www.fvap.gov/eo/overview/materials/forms)**
 
    b. Envíe todos los documentos digitalizados, incluir la portada de la transmisión, por correo electrónico a fax@fvap.gov
 
