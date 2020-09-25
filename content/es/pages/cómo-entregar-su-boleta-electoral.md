@@ -120,8 +120,8 @@ La Embajada o el Consulado de los Estados Unidos de América (EEUU), permitirá 
 4. ¡PREGUNTE TEMPRANO! Consulte el sitio web de la Embajada o el Consulado (o llame o envíe un correo electrónico para consultar), ya que puede haber restricciones sobre cuándo su Embajada o Consulado aceptará boletas con votación. ¡El retraso en llegar a EEUU puede ser significativo! Muchas embajadas o consulados dejan de aceptar boletas un mes antes de una elección. Y muchos estiman tiempos de entrega retrasados ​​de varias semanas o incluso hasta un par de meses.
 
 *****
-Si tiene alguna pregunta, por favor pregunte  a nuestra Mesa de Ayuda al Votante(el círculo naranja en la parte inferior derecha de la pantalla en **[www.votefromabroad.org/es](https://www.votefromabroad.org/es)** o envíenos un correo electrónico a **preguntas@votefromabroad.org**
+**Si tiene alguna pregunta, por favor pregunte a nuestra Mesa de Ayuda al Votante--el círculo naranja en la parte inferior derecha de la pantalla en [www.votefromabroad.org/es](https://www.votefromabroad.org/es). O envíenos un correo electrónico a preguntas@votefromabroad.org**
 
-O visítenos para recibir asistencia al votante en vivo a través de Zoom. Para obtener más información sobre fechas y horarios, haga clic en el enlace: **[Asistencia al votante global](https://qrco.de/bbh0zg)**. ¡Nos encantaría saber de usted!
+**Y visítenos para recibir asistencia al votante en vivo a través de Zoom. Para obtener más información sobre fechas y horarios, haga clic en el enlace: [Asistencia al votante global](https://qrco.de/bbh0zg). ¡Nos encantaría saber de usted!**
 
 
