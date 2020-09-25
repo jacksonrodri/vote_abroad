@@ -91,7 +91,7 @@ Cuando envíe su boleta por correo, generalmente se requieren dos sobres separad
 
 Algunos estados aceptarán boletas de electores enviadas desde el extranjero con servicios de mensajería, como DHL, UPS, o FedEx.
 
-Esta opción tal vez sera la única manera de enviar su boleta electoral si reside en un país donde el servicio postal esta suspendido o lento. (Aqui podrá ver la lista de países donde el servicio postal de EEUU esta suspendido).
+Esta opción tal vez sera la única manera de enviar su boleta electoral si reside en un país donde el servicio postal esta suspendido o lento. **[Aqui](https://about.usps.com/newsroom/service-alerts/international/welcome.htm)** podrá ver la lista de países donde el servicio postal de EEUU esta suspendido.
 
 1. Tendrá que colocar su SOBRE DE ENVIO SELLADO dentro del sobre de mensajería. Debe seguir las instrucciones de su oficina electoral para colocar su boleta en un sobre sellado separado dentro del sobre de envío. (Refiérase a las instrucciones anteriores de ”Sobre de Envío” y “Sobre de Boleta”)
 
