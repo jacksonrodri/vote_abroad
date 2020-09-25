@@ -20,7 +20,7 @@ This is very different from “electronic voting,” which has widely reported s
 
 **I. BY EMAIL**
 
-1. Photograph or scan your marked ballot and any required materials. (See your ballot instructions.) You will need to sign a waiver of your right to a secret ballot as your ballot will not be sealed when you send in. 
+1. Photograph or scan your marked ballot and any required materials. (See your ballot instructions.) You will need to sign a waiver of your right to a secret ballot as your ballot will not be sealed when you send it in. 
 
 2. Send the materials to your Local Election Office as an email attachment.
 
