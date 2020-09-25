@@ -115,7 +115,7 @@ La Embajada o el Consulado de los Estados Unidos de América (EEUU), permitirá 
 
 2. Su boleta debe ser entregada a su oficina electoral antes de la fecha límite para ser contada. Dejar su boleta en la Embajada / Consulado no es garantía de que la boleta se entregará a su oficina electoral antes de la fecha límite.
 
-3. El uso de la valija diplomática es gratuito, pero su boleta debe tener franqueo suficiente para usar el correo de los EEUU. Su boleta debe estar en un sobre de envío debidamente sellado (ver arriba) con suficiente franqueo postal de EEUU, o puede usar una plantilla pre-pagada del servicio postal de EEUU, que puede descargar aquí
+3. El uso de la valija diplomática es gratuito, pero su boleta debe tener franqueo suficiente para usar el correo de los EEUU. Su boleta debe estar en un sobre de envío debidamente sellado (ver arriba) con suficiente franqueo postal de EEUU, o puede usar una plantilla pre-pagada del servicio postal de EEUU, que puede descargar **[aquí](https://about.usps.com/newsroom/service-alerts/international/welcome.htm)**
 
 4. ¡PREGUNTE TEMPRANO! Consulte el sitio web de la Embajada o el Consulado (o llame o envíe un correo electrónico para consultar), ya que puede haber restricciones sobre cuándo su Embajada o Consulado aceptará boletas con votación. ¡El retraso en llegar a EEUU puede ser significativo! Muchas embajadas o consulados dejan de aceptar boletas un mes antes de una elección. Y muchos estiman tiempos de entrega retrasados ​​de varias semanas o incluso hasta un par de meses.
 
