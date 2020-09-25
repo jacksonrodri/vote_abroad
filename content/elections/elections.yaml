@@ -1437,13 +1437,13 @@
       Ballot Request:
         - voterType: {}
           rule: "Request Mail Ballot: Received by"
-          date: "2020-10-27T20:00:00"
+          date: "2020-10-20T20:00:00"
         - voterType: {}
           rule: "Request Faxed Ballot: Received by"
-          date: "2020-10-27T23:59:00"
+          date: "2020-10-20T23:59:00"
         - voterType: {}
           rule: "Request Email/Online Ballot: Received by"
-          date: "2020-10-30T23:59:00"
+          date: "2020-10-20T23:59:00"
       Ballot Return:
         - voterType: {}
           rule: "Postmarked by"
