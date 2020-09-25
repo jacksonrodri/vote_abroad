@@ -2,11 +2,17 @@
 title: Cómo Entregar Su Boleta Electoral
 ---
 Los electores en el extranjero tienen diferentes formas de entregar sus boletas electorales, según las leyes del estado al que le corresponde votar.
+
 ¡LEA ATENTAMENTE LAS INSTRUCCIONES DE SU BOLETA ELECTORAL!
-Si aún no tiene su boleta electoral, verifique cómo y cuándo entrega las Boletas Electorales su estado correspondiente en www.votefromabroad.org/es/states
-SI SU ESTADO LO PERMITE, LE RECOMENDAMOS QUÉ DEVUELVA SU BOLETA DE FORMA ELECTRÓNICA (CORREO ELECTRÓNICO, FAX O POR PAGINA WEB DE SU ESTADO CORRESPONDIENTE).
+
+Si aún no tiene su boleta electoral, verifique cómo y cuándo entrega las Boletas Electorales su estado correspondiente en **[www.votefromabroad.org/es/states](https://www.votefromabroad.org/es/states/)**
+
+**SI SU ESTADO LO PERMITE, LE RECOMENDAMOS QUÉ DEVUELVA SU BOLETA DE FORMA ELECTRÓNICA (CORREO ELECTRÓNICO, FAX O POR PAGINA WEB DE SU ESTADO CORRESPONDIENTE).**
+
 La mayoría de los estados ahora permiten que los electores que residen en el extranjero entreguen sus boletas electrónicamente. Esta puede ser una forma más segura para garantizar que su voto sea contado e incluido, ya que hay menos riesgo de que se pierda o de que se demore en el tránsito.
+
 Cuando devuelva su boleta electrónicamente, imprímala (si la recibió en formato digital), marque sus elecciones y devuélvala por correo electrónico como un archivo adjunto, por fax o por la página web del estado que le corresponde. Conserve una copia de su boleta electoral con sus elecciones para tener constancia de su voto.
+
 Este proceso es muy diferente al “voto electrónico” del que se ha informado ampliamente sobre preocupaciones de seguridad. Con la votación electrónica, los electores, en persona en las casillas oficiales, registran su voto utilizando un sistema informático, que por la cantidad de votos recibidos, puede ser vulnerable a inexactitudes, y además existe un riesgo de manipulación externa. También si no se le proporciona un recibo o constancia de su voto, no hay manera de verificar que su voto fue registrado y contado correctamente.
 
 CÓMO ENTREGAR SU BOLETA ELECTORAL DE FORMA ELECTRÓNICA:
