@@ -15,107 +15,102 @@ Cuando devuelva su boleta electrónicamente, imprímala (si la recibió en forma
 
 Este proceso es muy diferente al “voto electrónico” del que se ha informado ampliamente sobre preocupaciones de seguridad. Con la votación electrónica, los electores, en persona en las casillas oficiales, registran su voto utilizando un sistema informático, que por la cantidad de votos recibidos, puede ser vulnerable a inexactitudes, y además existe un riesgo de manipulación externa. También si no se le proporciona un recibo o constancia de su voto, no hay manera de verificar que su voto fue registrado y contado correctamente.
 
-CÓMO ENTREGAR SU BOLETA ELECTORAL DE FORMA ELECTRÓNICA:
-I. POR CORREO ELECTRÓNICO
-Fotografíe o escanee su boleta marcada y cualquier material requerido. (Refiérase a las instrucciones en su Boleta Electoral.) Deberá firmar una renuncia a su derecho a una boleta secreta, ya que su boleta no se sellará cuando la envíe.
+*****************
+**CÓMO ENTREGAR SU BOLETA ELECTORAL DE FORMA ELECTRÓNICA:**
 
+**I. POR CORREO ELECTRÓNICO**
 
-Envíe los materiales requeridos digitalizados a su oficina electoral local por correo electrónico como un archivo adjunto.
+1. Fotografíe o escanee su boleta marcada y cualquier material requerido. (Refiérase a las instrucciones en su Boleta Electoral.) Deberá firmar una renuncia a su derecho a una boleta secreta, ya que su boleta no se sellará cuando la envíe.
 
+2. Envíe los materiales requeridos digitalizados a su oficina electoral local por correo electrónico como un archivo adjunto.
 
-Su Funcionario Electoral correspondiente separará la información de identidad y la boleta no se sellará, pero su voto se mantendrá confidencial.
+3. Su Funcionario Electoral correspondiente separará la información de identidad y la boleta no se sellará, pero su voto se mantendrá confidencial.
 
+**II. POR FAX**
 
-II. POR FAX
-Utilice una máquina de fax para enviar su boleta electoral, incluyendo cualquier otro documento requerido. Refiérase a las instrucciones en su Boleta Electoral.) Deberá firmar una renuncia a su derecho a una boleta secreta, ya que su boleta no se sellará cuando la envíe.
+1. Utilice una máquina de fax para enviar su boleta electoral, incluyendo cualquier otro documento requerido. Refiérase a las instrucciones en su Boleta Electoral.) Deberá firmar una renuncia a su derecho a una boleta secreta, ya que su boleta no se sellará cuando la envíe.
 
+2. Su estado generalmente proporcionará una portada de la transmisión por fax. Si no se proporciona uno, asegúrese de utilizar también una portada de la transmisión por fax.
 
-Su estado generalmente proporcionará una portada de la transmisión por fax. Si no se proporciona uno, asegúrese de utilizar también una portada de la transmisión por fax.
+3. Su Funcionario Electoral correspondiente separará la información de identidad y la boleta no se sellará, pero se mantendrá su voto confidencial.
 
+**POR FAX--Si no tiene acceso a una máquina de fax:**
 
-Su Funcionario Electoral correspondiente separará la información de identidad y la boleta no se sellará, pero se mantendrá su voto confidencial.
+1. Utilice una aplicación que convierta un archivo electrónico a formato de fax.
 
+   a. Escanee o tome foto de us boleta electoral incluyendo cualquier otro documento requerido para convertirlos en formato digital.
 
-POR FAX--Si no tiene acceso a una máquina de fax:
-Utilice una aplicación que convierta un archivo electrónico a formato de fax.
+   b. Busque una “aplicación de fax para Android / iPhone” en las plataformas de aplicaciones como App Store de Apple, Google Play Store, Galaxie Store, etc.
 
- a. Escanee o tome foto de us boleta electoral incluyendo cualquier otro documento requerido para convertirlos en formato digital.
+   c. Siga las instrucciones para convertir su documento digitalizado en una transmisión de fax.
 
- b. Busque una “aplicación de fax para Android / iPhone” en las plataformas de aplicaciones como App Store de Apple, Google Play Store, Galaxie Store, etc.
+2. También puede usar el servicio de fax a través del Programa Federal de Asistencia para Votar FVAP.gov.
 
- c. Siga las instrucciones para convertir su documento digitalizado en una transmisión de fax.
+   a. Escanee o tome foto de us boleta electoral incluyendo cualquier documento requerido para convertirlos en formato digital. Debe incluir la portada de la transmisión por fax de FVAP: www.fvap.gov/eo/overview/materials/forms
 
+   b. Envíe todos los documentos digitalizados, incluir la portada de la transmisión, por correo electrónico a fax@fvap.gov
 
-También puede usar el servicio de fax a través del Programa Federal de Asistencia para Votar FVAP.gov.
+   c. FVAP imprimirá los documentos y enviará por fax su boleta y materiales electorales a su Funcionario Electoral correspondiente.
 
- a. Escanee o tome foto de us boleta electoral incluyendo cualquier documento requerido para convertirlos en formato digital. Debe incluir la portada de la transmisión por fax de FVAP: www.fvap.gov/eo/overview/materials/forms
+   ¡No espere hasta el último minuto para usar el servicio de fax FVAP! El servicio puede sobrecargarse y FVAP no garantiza que su boleta llegue antes de la fecha limite a su Funcionario Electoral.
 
- b. Envíe todos los documentos digitalizados, incluir la portada de la transmisión, por correo electrónico a fax@fvap.gov
+**III. SISTEMA ELECTORAL ESTATAL EN LINEA**
 
- c. FVAP imprimirá los documentos y enviará por fax su boleta y materiales electorales a su Funcionario Electoral correspondiente.
+1. Su estado le enviará un enlace seguro para transmitir materiales entre su computadora y el sistema del estado.
 
- ¡No espere hasta el último minuto para usar el servicio de fax FVAP! El servicio puede sobrecargarse y FVAP no garantiza que su boleta llegue antes de la fecha limite a su Funcionario Electoral.
+2. Escanee o tome foto de us boleta electoral, incluyendo cualquier documento requerido, para convertirlos en formato digital.
 
+3. Siga las instrucciones para transmitir los materiales digitalizados a través del enlace proporcionado del sistema electoral.
 
+*****
+**CÓMO DEVOLVER SU BOLETA POR SERVICIO POSTAL:**
 
-III. SISTEMA ELECTORAL ESTATAL EN LINEA
-Su estado le enviará un enlace seguro para transmitir materiales entre su computadora y el sistema del estado.
-
-
-Escanee o tome foto de us boleta electoral, incluyendo cualquier documento requerido, para convertirlos en formato digital.
-
-
-Siga las instrucciones para transmitir los materiales digitalizados a través del enlace proporcionado del sistema electoral.
-
-
-
-CÓMO DEVOLVER SU BOLETA POR SERVICIO POSTAL:
 Si su estado requiere que se devuelva su boleta por el servicio postal, o si usted prefiere esta opción para votar, siempre siga atentamente las instrucciones proporcionadas con su boleta.
+
 Los puntos siguientes se proporcionan solo como orientación.
-I: POR SERVICIO POSTAL
-Cuando envíe su boleta por correo, generalmente se requieren dos sobres separados: un “Sobre de Boleta” y un “Sobre de Envío”. Esto se hace para mantener su voto en secreto.
-Sobre de Boleta: Coloque su boleta votada en un sobre y séllelo. Algunos estados le indicarán que lo etiquete como un "Sobre de seguridad", pero otros le indicarán que no lo marque de ninguna manera. ¡SIGA LAS INSTRUCCIONES PROPORCIONADAS POR SU ESTADO!
 
+**I: POR SERVICIO POSTAL**
 
-Sobre de Envío: Luego coloque el sobre de la boleta sellado Y cualquier material requerido, como su declaración de información electoral firmada y fechada, en otro sobre para ser enviado.
+1. Cuando envíe su boleta por correo, generalmente se requieren dos sobres separados: un “Sobre de Boleta” y un “Sobre de Envío”. Esto se hace para mantener su voto en secreto.
 
- a. Si no está previamente impreso con la información de envío, escriba la dirección postal de su oficina electoral.
+2. Sobre de Boleta: Coloque su boleta votada en un sobre y séllelo. Algunos estados le indicarán que lo etiquete como un "Sobre de seguridad", pero otros le indicarán que no lo marque de ninguna manera. ¡SIGA LAS INSTRUCCIONES PROPORCIONADAS POR SU ESTADO!
 
- b. Escbriba su dirección de domicilio (fuera de EEUU).
+3. Sobre de Envío: Luego coloque el sobre de la boleta sellado Y cualquier material requerido, como su declaración de información electoral firmada y fechada, en otro sobre para ser enviado.
 
- c. Proporcione cualquier otra información requerida. Por ejemplo, algunos estados requieren que firme el exterior del sobre de envío.
+   a. Si no está previamente impreso con la información de envío, escriba la dirección postal de su oficina electoral.
 
- d. Coloque suficiente franqueo para enviar por correo a los EEUU.
+   b. Escbriba su dirección de domicilio (fuera de EEUU).
 
+   c. Proporcione cualquier otra información requerida. Por ejemplo, algunos estados requieren que firme el exterior del sobre de envío.
 
-Cuando llegue su boleta a la oficina estatal electoral, el funcionario electoral podrá verificar su identidad, pero no podrá ver su voto. Una vez que se verifique su condición de votante, su boleta aún sellada se separará de su información de identificación antes de que se abra y se cuente.
+   d. Coloque suficiente franqueo para enviar por correo a los EEUU.
 
+4. Cuando llegue su boleta a la oficina estatal electoral, el funcionario electoral podrá verificar su identidad, pero no podrá ver su voto. Una vez que se verifique su condición de votante, su boleta aún sellada se separará de su información de identificación antes de que se abra y se cuente.
 
-II. MENSAJERíA (SERVICIO DE ENTREGA EXPRÉS INTERNACIONAL)
+**II. MENSAJERíA (SERVICIO DE ENTREGA EXPRÉS INTERNACIONAL)**
+
 Algunos estados aceptarán boletas de electores enviadas desde el extranjero con servicios de mensajería, como DHL, UPS, o FedEx.
+
 Esta opción tal vez sera la única manera de enviar su boleta electoral si reside en un país donde el servicio postal esta suspendido o lento. (Aqui podrá ver la lista de países donde el servicio postal de EEUU esta suspendido).
-Tendrá que colocar su SOBRE DE ENVIO SELLADO dentro del sobre de mensajería. Debe seguir las instrucciones de su oficina electoral para colocar su boleta en un sobre sellado separado dentro del sobre de envío. (Refiérase a las instrucciones anteriores de ”Sobre de Envío” y “Sobre de Boleta”)
 
+1. Tendrá que colocar su SOBRE DE ENVIO SELLADO dentro del sobre de mensajería. Debe seguir las instrucciones de su oficina electoral para colocar su boleta en un sobre sellado separado dentro del sobre de envío. (Refiérase a las instrucciones anteriores de ”Sobre de Envío” y “Sobre de Boleta”)
 
-Se puede colocar más de una boleta en el sobre de mensajería si todos van a la misma Oficina de Electoral. Si se adjunta más de un sobre de envío de boletas en el sobre de mensajería, cada uno debe sellarse por separado. (Puede pensar que el sobre de mensajería actúa como un buzón).
+2. Se puede colocar más de una boleta en el sobre de mensajería si todos van a la misma Oficina de Electoral. Si se adjunta más de un sobre de envío de boletas en el sobre de mensajería, cada uno debe sellarse por separado. (Puede pensar que el sobre de mensajería actúa como un buzón).
 
- ¡COMPRUEBE SUS INSTRUCCIONES! Algunos estados solo permiten que los votantes que tienen la misma dirección de votación en los EEUU usen el mismo sobre de mensajería.
+   ¡COMPRUEBE SUS INSTRUCCIONES! Algunos estados solo permiten que los votantes que tienen la misma dirección de votación en los EEUU usen el mismo sobre de mensajería.
 
+3. La mayoría de las empresas de mensajería no realizan entregas a un apartado postal. Si es necesario, comuníquese con su oficina electoral para obtener una dirección postal. La información de cada oficina esta incluida en las instrucciones de su boleta, o puede encontrar la información en www.votefromabroad.org/es/states
 
-La mayoría de las empresas de mensajería no realizan entregas a un apartado postal. Si es necesario, comuníquese con su oficina electoral para obtener una dirección postal. La información de cada oficina esta incluida en las instrucciones de su boleta, o puede encontrar la información en www.votefromabroad.org/es/states
+4. Solicite a la empresa de mensajería que le proporcione un sello con la fecha en la que se envió el paquete. No será necesario si su boleta llega antes del día de las elecciones, pero muchos estados aceptarán boletas en el extranjero que lleguen dentro de un período de tiempo específico después del día de las elecciones si la boleta tiene el matasellos del día de las elecciones o antes. Si su boleta llega después del día de las elecciones, necesitará un sello con la fecha para demostrar que se envió antes de la fecha límite.
 
+5. Es una buena idea solicitar un seguimiento para asegurarse de que su boleta llegue a tiempo. Pero no recomendamos que envíe el sobre de mensajería "Se requiere firma". Muchas oficinas electorales no están preparadas para firmar los paquetes y es posible que le devuelvan su boleta.
 
-Solicite a la empresa de mensajería que le proporcione un sello con la fecha en la que se envió el paquete. No será necesario si su boleta llega antes del día de las elecciones, pero muchos estados aceptarán boletas en el extranjero que lleguen dentro de un período de tiempo específico después del día de las elecciones si la boleta tiene el matasellos del día de las elecciones o antes. Si su boleta llega después del día de las elecciones, necesitará un sello con la fecha para demostrar que se envió antes de la fecha límite.
+6. Algunas empresas de mensajería podrán ofrecer algún descuento en la tarifa por enviar las boletas electorales. ¡Asegúrese de preguntar!
 
+**III. BOLSA DIPLOMÁTICA DE EE. UU.**
 
-Es una buena idea solicitar un seguimiento para asegurarse de que su boleta llegue a tiempo. Pero no recomendamos que envíe el sobre de mensajería "Se requiere firma". Muchas oficinas electorales no están preparadas para firmar los paquetes y es posible que le devuelvan su boleta.
-
-
-Algunas empresas de mensajería podrán ofrecer algún descuento en la tarifa por enviar las boletas electorales. ¡Asegúrese de preguntar!
-
-
-III. BOLSA DIPLOMÁTICA DE EE. UU.
 La Embajada o el Consulado de los Estados Unidos de América (EEUU), permitirá a los ciudadanos de EEUU, dejar sus boletas para entregarlas en la valija diplomática. Cualquier ciudadano estadounidense puede utilizar este servicio. Este método es gratuito, pero puede ser extremadamente lento, ¡así que planifique con anticipación!
+
 NO está votando en la Embajada / Consulado. Simplemente, su boleta electoral se enviará a los EEUU en la valija diplomática. Una vez que llegue a los EEUU, su boleta se colocará en el sistema postal de los EEUU, para ser enviada a la oficina electoral.
 
 
