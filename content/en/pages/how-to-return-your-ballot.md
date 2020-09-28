@@ -7,13 +7,13 @@ Overseas voters have different ways to return their ballots, depending on the la
 
 If you don’t have your ballot yet, you can check your state’s “Delivery Methods - Ballot Return” at **[www.votefromabroad.org/states](https://www.votefromabroad.org/states)** 
 
-**IF YOUR STATE ALLOWS IT, WE HIGHLY RECOMMEND YOU RETURN YOUR BALLOT ELECTRONICALLY (BY EMAIL, FAX, OR ONLINE UPLOAD).**
+<details><summary><strong>IF YOUR STATE ALLOWS IT, WE HIGHLY RECOMMEND YOU RETURN YOUR BALLOT ELECTRONICALLY (BY EMAIL, FAX, OR ONLINE UPLOAD).</strong><em> -- Click to expand</em></summary>
 
 More than half of all states now allow overseas voters to return their ballots electronically. This may be a safer way to ensure your ballot is counted than postal mail as you don't have to worry that it may get lost or delayed in transit.  
 
 When you return your ballot electronically, you print out your ballot (if you received it electronically), mark it and return it as an email attachment, fax or online upload. You keep a copy of your marked ballot, so there is always a paper trail. 
 
-This is very different from “electronic voting,” which has widely reported security concerns. With electronic voting, voters at in-person polling places submit their vote using a computer system that holds a large cache of votes and which may be vulnerable to inaccuracies as well as the more remote risk of outside manipulation. And if there's no paper receipt provided, the voter has no way to know that their vote was properly recorded and counted.
+This is very different from “electronic voting,” which has widely reported security concerns. With electronic voting, voters at in-person polling places submit their vote using a computer system that holds a large cache of votes and which may be vulnerable to inaccuracies as well as the more remote risk of outside manipulation. And if there's no paper receipt provided, the voter has no way to know that their vote was properly recorded and counted.</details>
 
 *******
 **HOW TO RETURN YOUR BALLOT ELECTRONICALLY:** 
@@ -35,7 +35,7 @@ This is very different from “electronic voting,” which has widely reported s
 
 3. Your Local Election Official will separate your identifying information from your vote as soon as possible. Your ballot won’t be sealed, but no one should be able to see how you voted.  
 
-**BY FAX--When You Don’t Have Access to a Fax Machine:** 
+<details><summary><strong>BY FAX--When You Don’t Have Access to a Fax Machine:</strong><em>--Click to expand</em></summary>
 
 1. There are apps that will convert an email attachment to a fax. 
 
@@ -53,7 +53,7 @@ This is very different from “electronic voting,” which has widely reported s
 
    c. FVAP will then print out the email attachment and use a fax machine to fax your ballot and other election materials to your Local Election Official. 
 
-   Don’t wait until the last minute when using the FVAP fax service! The service can get overloaded and FVAP does not guarantee that your voted ballot will be faxed to your Local Election Official by the deadline.
+   Don’t wait until the last minute when using the FVAP fax service! The service can get overloaded and FVAP does not guarantee that your voted ballot will be faxed to your Local Election Official by the deadline.</details>
 
 
 **III. ONLINE UPLOAD**
