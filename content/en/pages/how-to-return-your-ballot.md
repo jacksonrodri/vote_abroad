@@ -7,35 +7,38 @@ Overseas voters have different ways to return their ballots, depending on the la
 
 If you don’t have your ballot yet, you can check your state’s “Delivery Methods - Ballot Return” at **[www.votefromabroad.org/states](https://www.votefromabroad.org/states)** 
 
-**IF YOUR STATE ALLOWS IT, WE HIGHLY RECOMMEND YOU RETURN YOUR BALLOT ELECTRONICALLY (BY EMAIL, FAX, OR ONLINE UPLOAD).**
+.
+<details><summary><strong>IF YOUR STATE ALLOWS IT, WE HIGHLY RECOMMEND YOU RETURN YOUR BALLOT ELECTRONICALLY (BY EMAIL, FAX, OR ONLINE UPLOAD).</strong><em> -- Click to expand</em></summary>
 
 More than half of all states now allow overseas voters to return their ballots electronically. This may be a safer way to ensure your ballot is counted than postal mail as you don't have to worry that it may get lost or delayed in transit.  
 
 When you return your ballot electronically, you print out your ballot (if you received it electronically), mark it and return it as an email attachment, fax or online upload. You keep a copy of your marked ballot, so there is always a paper trail. 
 
-This is very different from “electronic voting,” which has widely reported security concerns. With electronic voting, voters at in-person polling places submit their vote using a computer system that holds a large cache of votes and which may be vulnerable to inaccuracies as well as the more remote risk of outside manipulation. And if there's no paper receipt provided, the voter has no way to know that their vote was properly recorded and counted.
+This is very different from “electronic voting,” which has widely reported security concerns. With electronic voting, voters at in-person polling places submit their vote using a computer system that holds a large cache of votes and which may be vulnerable to inaccuracies as well as the more remote risk of outside manipulation. And if there's no paper receipt provided, the voter has no way to know that their vote was properly recorded and counted.</details>
 
 *******
+.
+
 **HOW TO RETURN YOUR BALLOT ELECTRONICALLY:** 
 
-**I. BY EMAIL**
+<details><summary><strong>I. BY EMAIL </strong><em> -- Click to expand</em></summary>
 
 1. Photograph or scan your marked ballot and any required materials. (See your ballot instructions.) You will need to sign a waiver of your right to a secret ballot as your ballot will not be sealed when you send it in. 
 
 2. Send the materials to your Local Election Office as an email attachment.
 
-3. Your Local Election Official will separate your identifying information from your vote as soon as possible. Your ballot won’t be sealed, but no one should be able to see how you voted.  
+3. Your Local Election Official will separate your identifying information from your vote as soon as possible. Your ballot won’t be sealed, but no one should be able to see how you voted. </details> 
 
 
-**II. BY FAX**
+<details><summary><strong>II. BY FAX </strong><em> -- Click to expand</em></summary>
 
 1. Use a fax machine to submit your marked ballot and any required materials. (See your ballot instructions.) You will need to sign a waiver of your right to a secret ballot as your ballot will not be sealed when you send in. 
 
 2. Your state will usually provide a coversheet. If one isn't provided, be sure to use a coversheet as well.
 
-3. Your Local Election Official will separate your identifying information from your vote as soon as possible. Your ballot won’t be sealed, but no one should be able to see how you voted.  
+3. Your Local Election Official will separate your identifying information from your vote as soon as possible. Your ballot won’t be sealed, but no one should be able to see how you voted.  </details> 
 
-**BY FAX--When You Don’t Have Access to a Fax Machine:** 
+<details><summary><strong>BY FAX--When You Don’t Have Access to a Fax Machine:</strong><em>--Click to expand</em></summary>
 
 1. There are apps that will convert an email attachment to a fax. 
 
@@ -53,26 +56,28 @@ This is very different from “electronic voting,” which has widely reported s
 
    c. FVAP will then print out the email attachment and use a fax machine to fax your ballot and other election materials to your Local Election Official. 
 
-   Don’t wait until the last minute when using the FVAP fax service! The service can get overloaded and FVAP does not guarantee that your voted ballot will be faxed to your Local Election Official by the deadline.
+   Don’t wait until the last minute when using the FVAP fax service! The service can get overloaded and FVAP does not guarantee that your voted ballot will be faxed to your Local Election Official by the deadline.</details>
 
 
-**III. ONLINE UPLOAD**
+<details><summary><strong>III. ONLINE UPLOAD </strong><em>--Click to expand</em></summary>
 
 1. Your state will send you a secure link to transmit materials between your computer and their system.
 
 2. You will need to photograph or scan in your ballot and any required materials, then upload it to your computer.
 
-3. Follow the instructions to transmit the materials over the link to your state. 
+3. Follow the instructions to transmit the materials over the link to your state. </details>
 
 ***************************
+.
  
 **HOW TO RETURN YOUR BALLOT BY MAIL:**
 
 If your state requires you to return your ballot by mail--or you choose to do so--always follow the instructions provided with your ballot.   
 
 The points below are provided for guidance only.  
+.
 
-**I. BY POSTAL MAIL**
+<details><summary><strong>I. BY POSTAL MAIL </strong><em>--Click to expand</em></summary>
 
 When mailing back your ballot, it usually requires two separate envelopes: a “Ballot Envelope” and a “Mailing Envelope”. This is done to maintain a secret ballot.
 
@@ -88,9 +93,9 @@ When mailing back your ballot, it usually requires two separate envelopes: a “
 
    d. Place sufficient postage to mail to the US.
 
-3. When your mailed ballot arrives, your Local Election Official will be able to verify you're an eligible voter, but will not be able to see your sealed ballot. Once your voter status is verified, your still-sealed ballot will be separated from your identifying information before it is opened and tallied. 
+3. When your mailed ballot arrives, your Local Election Official will be able to verify you're an eligible voter, but will not be able to see your sealed ballot. Once your voter status is verified, your still-sealed ballot will be separated from your identifying information before it is opened and tallied. </details>
 
-**II. COURIER (INTERNATIONAL EXPRESS MAIL SERVICE)**
+<details><summary><strong>II. COURIER (INTERNATIONAL EXPRESS MAIL SERVICE) </strong><em>--Click to expand</em></summary>
 
 States will accept overseas ballots via courier, that is, international express mail service providers, such as DHL, UPS, FedEx.
 
@@ -108,9 +113,10 @@ This may also be the only mailing solution if you live in a country with suspend
 
 5. It's a good idea to request tracking to make sure your ballot arrives in time. But we recommend that you don’t send the courier envelope “signature required.” Many Election Offices are not prepared to sign for packages and your ballot may be sent back. 
 
-6. Some couriers may provide a discount for returning ballots. Be sure to ask!
+6. Some couriers may provide a discount for returning ballots. Be sure to ask! </details>
 
-**III. US DIPLOMATIC POUCH**
+
+<details><summary><strong>III. US DIPLOMATIC POUCH  </strong><em>--Click to expand</em></summary>
 
 The US Embassy or Consulate will allow US citizens to drop off ballots for delivery to the US in the diplomatic mail pouch. Any US citizen may use this service, you don’t need to have a connection to the Embassy. This method is free, but can be extremely slow, so plan ahead!
 
@@ -120,9 +126,11 @@ The US Embassy or Consulate will allow US citizens to drop off ballots for deliv
 
 3. The use of the diplomatic pouch is free, but your ballot must have sufficient US postage as it will be placed in the US mail. Your ballot must be in a properly sealed Mailing Envelope (see above) with either sufficient US postage or a US postage-paid mailing template, which you can download **[here](https://www.votefromabroad.org/envelope/)**
 
-4. INQUIRE EARLY! Check the Embassy or Consulate website (or call or email to inquire) as there may be restrictions on when your Emassy or Consulate will accept voted ballots. And the time lag to the US can be significant! Many Embassies or Consulates stop accepting ballots a month before an election. And many are estimating delayed delivery times of several weeks or even up to a couple of months. 
+4. INQUIRE EARLY! Check the Embassy or Consulate website (or call or email to inquire) as there may be restrictions on when your Emassy or Consulate will accept voted ballots. And the time lag to the US can be significant! Many Embassies or Consulates stop accepting ballots a month before an election. And many are estimating delayed delivery times of several weeks or even up to a couple of months.  </details>
 
 ___
+.
+
 **If you have questions, please ask our Voter Help Desk (the orange circle on the bottom right of the screen on www.votefromabroad.org) or email us at [helpdesk@votefromabroad.org](helpdesk@votefromabroad.org).**
 
 **Or drop by for live one-to-one voter assistance via Zoom. For more information for dates and times, please click the link: [Global Voter Assistance (Live via Zoom)](https://qrco.de/bbh0zg).**
