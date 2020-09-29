@@ -5,6 +5,20 @@ publish_mode: editorial_workflow
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 collections:
+  - name: "site-settings"
+    label: "Site Settings"
+    files:
+      - label: "FAQ Page"
+        name: "faq"
+        file: "static/site-settings.json"
+        fields:
+          - label: FAQ Order
+            name: faq-order
+            widget: list
+            fields:
+              - label: FAQ Category
+                name: faq-category
+                widget: string
   - name: "pages-en" # Used in routes, e.g., /admin/collections/blog
     label: "Pages - English" # Used in the UI
     label_singular: "Page"
