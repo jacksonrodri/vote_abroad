@@ -76,41 +76,36 @@ collections:
           widget: "image",
           required: false,
         }
-      - { label: "Include in main menu?", name: "isInMenu", widget: "boolean" }
       - { label: "Answer", name: "body", widget: "markdown" }
-      - label: Categories
-        name: categories
-        widget: list
-        fields:
-          - name: category
-            label: Choose a category
-            widget: select
-            options:
-              - {
-                  label: "Voting as a U.S. Citizen Outside the U.S.",
-                  value: "votingAbroad",
-                }
-              - {
-                  label: "How to Register to Vote and Get a Ballot",
-                  value: "voterRegistration",
-                }
-              - {
-                  label: "U.S. Citizens Who Have Never Resided in the U.S.",
-                  value: "neverResided",
-                }
-              - {
-                  label: "Filling Out the Federal Post Card Application(FPCA)",
-                  value: "fpca",
-                }
-              - { label: "Returning a Voted Ballot", value: "returningBallot" }
-              - {
-                  label: "Using the Federal Write-in Absentee Ballot (FWAB)",
-                  value: "fwab",
-                }
-              - {
-                  label: "Federal And State Tax Implications",
-                  value: "taxImplications",
-                }
+      - name: category
+        label: Choose a category
+        widget: select
+        options:
+          - {
+              label: "Voting as a U.S. Citizen Outside the U.S.",
+              value: "votingAbroad",
+            }
+          - {
+              label: "How to Register to Vote and Get a Ballot",
+              value: "voterRegistration",
+            }
+          - {
+              label: "U.S. Citizens Who Have Never Resided in the U.S.",
+              value: "neverResided",
+            }
+          - {
+              label: "Filling Out the Federal Post Card Application(FPCA)",
+              value: "fpca",
+            }
+          - { label: "Returning a Voted Ballot", value: "returningBallot" }
+          - {
+              label: "Using the Federal Write-in Absentee Ballot (FWAB)",
+              value: "fwab",
+            }
+          - {
+              label: "Federal And State Tax Implications",
+              value: "taxImplications",
+            }
   - name: "faqs-es"
     label: "FAQs - Spanish"
     label_singular: "FAQ"
@@ -138,41 +133,36 @@ collections:
           widget: "image",
           required: false,
         }
-      - { label: "Include in main menu?", name: "isInMenu", widget: "boolean" }
       - { label: "Answer", name: "body", widget: "markdown" }
-      - label: Categories
-        name: categories
-        widget: list
-        fields:
-          - name: category
-            label: Choose a category
-            widget: select
-            options:
-              - {
-                  label: "Voting as a U.S. Citizen Outside the U.S.",
-                  value: "votingAbroad",
-                }
-              - {
-                  label: "How to Register to Vote and Get a Ballot",
-                  value: "voterRegistration",
-                }
-              - {
-                  label: "U.S. Citizens Who Have Never Resided in the U.S.",
-                  value: "neverResided",
-                }
-              - {
-                  label: "Filling Out the Federal Post Card Application(FPCA)",
-                  value: "fpca",
-                }
-              - { label: "Returning a Voted Ballot", value: "returningBallot" }
-              - {
-                  label: "Using the Federal Write-in Absentee Ballot (FWAB)",
-                  value: "fwab",
-                }
-              - {
-                  label: "Federal And State Tax Implications",
-                  value: "taxImplications",
-                }
+      - name: category
+        label: Choose a category
+        widget: select
+        options:
+          - {
+              label: "Voting as a U.S. Citizen Outside the U.S.",
+              value: "votingAbroad",
+            }
+          - {
+              label: "How to Register to Vote and Get a Ballot",
+              value: "voterRegistration",
+            }
+          - {
+              label: "U.S. Citizens Who Have Never Resided in the U.S.",
+              value: "neverResided",
+            }
+          - {
+              label: "Filling Out the Federal Post Card Application(FPCA)",
+              value: "fpca",
+            }
+          - { label: "Returning a Voted Ballot", value: "returningBallot" }
+          - {
+              label: "Using the Federal Write-in Absentee Ballot (FWAB)",
+              value: "fwab",
+            }
+          - {
+              label: "Federal And State Tax Implications",
+              value: "taxImplications",
+            }
   - name: "rls"
     label: "State Info & Election Rules"
     folder: "content/rls"
