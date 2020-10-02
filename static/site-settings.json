@@ -18,6 +18,20 @@
       ]
     },
     {
+      "category": "returningBallot",
+      "faqs": [
+        {
+          "faq": "21"
+        },
+        {
+          "faq": "23"
+        },
+        {
+          "faq": "22"
+        }
+      ]
+    },
+    {
       "category": "voterRegistration",
       "faqs": [
         {
@@ -77,20 +91,6 @@
         },
         {
           "faq": "20"
-        }
-      ]
-    },
-    {
-      "category": "returningBallot",
-      "faqs": [
-        {
-          "faq": "21"
-        },
-        {
-          "faq": "22"
-        },
-        {
-          "faq": "23"
         }
       ]
     },
