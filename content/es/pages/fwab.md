@@ -29,6 +29,7 @@ ______________________
 
 4. Imprima la boleta de contingencia, fírmela y escriba la fecha y **regrésesela** a su funcionario electoral local. ¡Lea las instrucciones con atención!
 
+.
 <details><summary><strong> Entrega por Servicio Postal:</strong>  Si su estado requiere que se devuelva su boleta por el servicio postal, siga estas instrucciones cuidadosamente. Marque aquí los requisitos de su estado](https://www.votefromabroad.org/es/states/)<em> -- Haga clic para ampliar</em></summary>
 
 **Asegúrese de mandar su boleta electoral con suficiente tiempo, y con el franqueo correcto para correo internacional a EEUU, para que sea entregada antes de las fechas límites del estado que le corresponde.**
@@ -44,7 +45,7 @@ Cuando llegue su boleta a la oficina estatal electoral, el funcionario electoral
 Si lo desea, puede seguir las instrucciones para descargar plantillas de sobre para pegarlas en sobres en blanco. O puede escribir o mecanografiar la información en sobres normales.
 
 Puede mandar su boleta electoral de contingencia por el servicio postal, por mensajería, correo del servicio militar de EEUU, o por la valija diplomática de la embajada de EEUU. (Puede descargar una plantilla con franqueo pagado de EEUU, Pero solo funcionará en el correo de EEUU, es decir, correo militar de EEUU o valija diplomática de EEUU.) </details>
- 
+ .
 <details><summary><strong>Cómo Entregar Su Boleta Electoral Por Correo Electrónico O Por Fax:</strong> Cada estado ha indicado en las instrucciones de la boleta electoral si la aceptan por correo electrónico o por fax. Recomendamos estos medios de entrega para asegurarse de que llegue a tiempo su boleta.<em> -- Haga clic para ampliar</em></summary>
 
 
@@ -64,6 +65,7 @@ Puede mandar su boleta electoral de contingencia por el servicio postal, por men
   ¡No espere hasta el último minuto para usar el servicio de fax FVAP! El servicio puede sobrecargarse y FVAP no garantiza que su boleta llegue antes de la fecha limite a su Funcionario Electoral.
 
 .</details>
+.
 _____________________
 
 **IMPORTANTE: Si recibe su boleta electoral oficial después de haber entregado su boleta de contingencia, puede completar la boleta oficial y entregarla también.** 
