@@ -12,13 +12,29 @@ collections:
         name: "faq"
         file: "static/site-settings.json"
         fields:
-          - label: FAQ Order
-            name: faq-order
+          - label: FAQ Categories
+            name: faq-categories
             widget: list
             fields:
-              - label: FAQ Category
-                name: faq-category
+              - label: FAQ Category Slug
+                name: faq-slug
                 widget: string
+              - label: English FAQ Category Name
+                name: en
+                widget: string
+              - label: Spanish FAQ Category Name
+                name: es
+                widget: string
+              - label: "FAQs"
+                name: faqs
+                widget: list
+                fields:
+                  - name: faq
+                    widget: relation
+                    collection: faqs-en
+                    search_fields: ["title", "question"]
+                    value_field: "title"
+                    display_fields: ["{{title}} - {{question}}"]
   - name: "pages-en" # Used in routes, e.g., /admin/collections/blog
     label: "Pages - English" # Used in the UI
     label_singular: "Page"
