@@ -72,7 +72,7 @@ Si su estado requiere que se devuelva su boleta por el servicio postal, o si ust
 
 Los puntos siguientes se proporcionan solo como orientación.
 
-**I: POR SERVICIO POSTAL**
+<details><summary><strong>I: POR SERVICIO POSTAL</strong><em> -- Haga clic para ampliar</em></summary>
 
 Cuando envíe su boleta por correo, generalmente se requieren dos sobres separados: un “Sobre de Boleta” y un “Sobre de Envío”. Esto se hace para mantener su voto en secreto.
 
@@ -88,9 +88,9 @@ Cuando envíe su boleta por correo, generalmente se requieren dos sobres separad
 
    d. Coloque suficiente franqueo para enviar por correo a los EEUU.
 
-4. Cuando llegue su boleta a la oficina estatal electoral, el funcionario electoral podrá verificar su identidad, pero no podrá ver su voto. Una vez que se verifique su condición de votante, su boleta aún sellada se separará de su información de identificación antes de que se abra y se cuente.
+4. Cuando llegue su boleta a la oficina estatal electoral, el funcionario electoral podrá verificar su identidad, pero no podrá ver su voto. Una vez que se verifique su condición de votante, su boleta aún sellada se separará de su información de identificación antes de que se abra y se cuente.</details>
 
-**II. MENSAJERíA (SERVICIO DE ENTREGA EXPRÉS INTERNACIONAL)**
+<details><summary><strong>II. MENSAJERíA (SERVICIO DE ENTREGA EXPRÉS INTERNACIONAL)</strong><em> -- Haga clic para ampliar</em></summary>
 
 Algunos estados aceptarán boletas de electores enviadas desde el extranjero con servicios de mensajería, como DHL, UPS, o FedEx.
 
@@ -108,9 +108,10 @@ Esta opción tal vez sera la única manera de enviar su boleta electoral si resi
 
 5. Es una buena idea solicitar un seguimiento para asegurarse de que su boleta llegue a tiempo. Pero no recomendamos que envíe el sobre de mensajería "Se requiere firma". Muchas oficinas electorales no están preparadas para firmar los paquetes y es posible que le devuelvan su boleta.
 
-6. Algunas empresas de mensajería podrán ofrecer algún descuento en la tarifa por enviar las boletas electorales. ¡Asegúrese de preguntar!
+6. Algunas empresas de mensajería podrán ofrecer algún descuento en la tarifa por enviar las boletas electorales. ¡Asegúrese de preguntar!</details>
 
-**III. BOLSA DIPLOMÁTICA DE EE. UU.**
+
+<details><summary><strong>III. BOLSA DIPLOMÁTICA DE EE. UU.</strong><em> -- Haga clic para ampliar</em></summary>
 
 La Embajada o el Consulado de los Estados Unidos de América (EEUU), permitirá a los ciudadanos de EEUU, dejar sus boletas para entregarlas en la valija diplomática. Cualquier ciudadano estadounidense puede utilizar este servicio. Este método es gratuito, pero puede ser extremadamente lento, ¡así que planifique con anticipación!
 
@@ -120,10 +121,12 @@ La Embajada o el Consulado de los Estados Unidos de América (EEUU), permitirá 
 
 3. El uso de la valija diplomática es gratuito, pero su boleta debe tener franqueo suficiente para usar el correo de los EEUU. Su boleta debe estar en un sobre de envío debidamente sellado (ver arriba) con suficiente franqueo postal de EEUU, o puede usar una plantilla pre-pagada del servicio postal de EEUU, que puede descargar **[aquí](https://www.votefromabroad.org/es/envelope/)**
 
-4. ¡PREGUNTE TEMPRANO! Consulte el sitio web de la Embajada o el Consulado (o llame o envíe un correo electrónico para consultar), ya que puede haber restricciones sobre cuándo su Embajada o Consulado aceptará boletas con votación. ¡El retraso en llegar a EEUU puede ser significativo! Muchas embajadas o consulados dejan de aceptar boletas un mes antes de una elección. Y muchos estiman tiempos de entrega retrasados ​​de varias semanas o incluso hasta un par de meses.
+4. ¡PREGUNTE TEMPRANO! Consulte el sitio web de la Embajada o el Consulado (o llame o envíe un correo electrónico para consultar), ya que puede haber restricciones sobre cuándo su Embajada o Consulado aceptará boletas con votación. ¡El retraso en llegar a EEUU puede ser significativo! Muchas embajadas o consulados dejan de aceptar boletas un mes antes de una elección. Y muchos estiman tiempos de entrega retrasados ​​de varias semanas o incluso hasta un par de meses.</details>
 
 *****
-**Si tiene alguna pregunta, por favor pregunte a nuestra Mesa de Ayuda al Votante--el círculo naranja en la parte inferior derecha de la pantalla en [www.votefromabroad.org/es](https://www.votefromabroad.org/es). O envíenos un correo electrónico a preguntas@votefromabroad.org**
+**Si tiene alguna pregunta, por favor pregunte a nuestra Mesa de Ayuda al Votante--el círculo naranja en la parte inferior derecha de la pantalla en [www.votefromabroad.org/es](https://www.votefromabroad.org/es).**
+
+**O envíenos un correo electrónico a preguntas@votefromabroad.org**
 
 **Y visítenos para recibir asistencia al votante en vivo a través de Zoom. Para obtener más información sobre fechas y horarios, haga clic en el enlace: [Asistencia al votante global](https://qrco.de/bbh0zg). ¡Nos encantaría saber de usted!**
 
