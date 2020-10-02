@@ -10,12 +10,23 @@
     </button> -->
     <h1 class="subtitle is-size-3 is-size-5 has-text-primary">
       <i18n tag="span" path="homepage.bannerFrom19Sept_part1">
-        <a class="has-text-primary" href="https://www.votefromabroad.org/how-to-return-your-ballot" target="_blank">CLICK HERE</a>
+        <a class="has-text-primary" href="https://www.votefromabroad.org/how-to-return-your-ballot" target="_blank">
+          {{ $t('clickHere') }}
+        </a>
       </i18n>
       <br>
       <br>
       <i18n tag="span" path="homepage.bannerFrom19Sept_part2">
-        <a class="has-text-primary" href="https://www.votefromabroad.org/fwab/" target="_blank">CLICK HERE</a>
+        <a class="has-text-primary" href="https://www.votefromabroad.org/fwab/" target="_blank">
+          {{ $t('clickHere') }}
+        </a>
+      </i18n>
+      <br>
+      <br>
+      <i18n v-if="$i18n.locale === 'es'" tag="span" path="homepage.bannerFrom26Sept_part3">
+        <a class="has-text-primary" :href="`https://www.votefromabroad.org/es/fwab/`" target="_blank">
+          {{ $t('clickHere') }}
+        </a>
       </i18n>
     </h1>
   </div>

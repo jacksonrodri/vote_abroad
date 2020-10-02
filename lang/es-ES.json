@@ -2,15 +2,21 @@
   "title": "Español",
   "home": "Página de inicio",
   "posts": "Mensajes",
+  "clickHere": "HAGA CLIC AQUI",
   "homepage": {
     "titleStudents": "¿Estudia en el extranjero? Vote desde el extranjero.",
     "title": "Vote desde el extranjero",
     "subtitle": "¡Solicite ahora una boleta electoral!",
+    "subtitle_message1": "¡Todavía hay tiempo antes de las elecciones de noviembre!",
     "loginInstructions": "Escriba su dirección de correo electrónico o número de teléfono móvil para comenzar.",
     "start": "Inicio",
     "homeTitle": "Vote desde el extranjero - Página de inicio",
     "anonymous": "o inicie una sesión anónima",
-    "tooltip": "Su correo electrónico o número telefónico creará una cuenta para que usted pueda ingresar fácilmente a www. VoteFromAbroad. org y guardar la información de un año a otro. Una sesión anónima le permite crear una Tarjeta Postal Federal de Solicitud o formulario FPCA (Federal Post Card Application) y enviarlo a la oficina de elecciones locales, pero no guardará su información para ser utilizada en el futuro."
+    "tooltip": "Su correo electrónico o número telefónico creará una cuenta para que usted pueda ingresar fácilmente a www. VoteFromAbroad. org y guardar la información de un año a otro. Una sesión anónima le permite crear una Tarjeta Postal Federal de Solicitud o formulario FPCA (Federal Post Card Application) y enviarlo a la oficina de elecciones locales, pero no guardará su información para ser utilizada en el futuro.",
+    "banner": "Overseas voters can VOTE NOW using a Backup Ballot (FWAB). For more information: {0}",
+    "bannerFrom19Sept_part1": "¡Las papeletas para votar desde el extranjero están disponibles AHORA! Compruebe su correo o su correo electrónico (y carpeta de spam) y VOTE AHORA!",
+    "bannerFrom19Sept_part2": "Para obtener información sobre cómo devolver su boleta, {0}",
+    "bannerFrom26Sept_part3": "Si aún no ha recibido su boleta, VOTE AHORA usando una Boleta de Respaldo (FWAB). Para más información: {0}"
   },
   "optIn": {
     "optIn": "Vote From Abroad es una plataforma no partidista que ayuda a las y los ciudadanos estadounidenses a votar desde el extranjero mediante la producción de los formularios federales necesarios. Al usar este sitio, solamente se recolecta la información necesaria para completar los formularios federales relacionados con la votación como ciudadanos estadounidenses en el extranjero. La privacidad de sus datos es nuestra principal preocupación. Por favor, lea y acepte nuestra {privacyPolicy}, {cookiePolicy} y {termsOfUse}.",

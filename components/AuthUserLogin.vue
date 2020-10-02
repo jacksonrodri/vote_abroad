@@ -121,6 +121,9 @@
       <h2 class="subtitle is-1 is-size-3-mobile has-text-danger">
         {{ $t('homepage.subtitle') }}
       </h2>
+      <p v-if="$t('homepage.subtitle_message1')" class="is-size-4 is-size-5-mobile">
+        {{ $t('homepage.subtitle_message1') }}
+      </p>
       <auth-phone-email-input
         v-if="!isAuthDisabled"
         ref="phoneOrEmail"
