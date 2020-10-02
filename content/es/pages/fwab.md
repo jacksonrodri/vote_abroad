@@ -37,8 +37,7 @@ Cuando envíe su boleta por correo, generalmente se requieren dos sobres separad
 
 - Sobre de Boleta: Contiene su boleta votada 
 
-- Sobre de Envío:  Para enviar su “Sobre de Boleta” y otros documentos requeridos. Si tiene la forma original para solicitar una boleta electoral, inclúyala también en este sobre. 
-
+- Sobre de Envío:  Para enviar su “Sobre de Boleta” y otros documentos requeridos. *Si tiene la forma original para solicitar una boleta electoral, inclúyala también en este sobre.*
 
 Cuando llegue su boleta a la oficina estatal electoral, el funcionario electoral podrá verificar su identidad, pero no podrá ver su voto. Su boleta votada será separada y contada oficialmente.  
 
@@ -46,7 +45,7 @@ Si lo desea, puede seguir las instrucciones para descargar plantillas de sobre p
 
 Puede mandar su boleta electoral de contingencia por el servicio postal, por mensajería, correo del servicio militar de EEUU, o por la valija diplomática de la embajada de EEUU. (Puede descargar una plantilla con franqueo pagado de EEUU, Pero solo funcionará en el correo de EEUU, es decir, correo militar de EEUU o valija diplomática de EEUU.)
  
-Cómo Entregar Su Boleta  Electoral Por Correo Electrónico O Por Fax: Cada estado ha indicado en las instrucciones de la boleta electoral si la aceptan por correo electrónico o por fax.  Recomendamos estos medios de entrega para asegurarse de que llegue a tiempo su boleta.
+**Cómo Entregar Su Boleta Electoral Por Correo Electrónico O Por Fax:** Cada estado ha indicado en las instrucciones de la boleta electoral si la aceptan por correo electrónico o por fax.  Recomendamos estos medios de entrega para asegurarse de que llegue a tiempo su boleta.
 
 Si su estado solo permite que las boletas sean entregadas por fax (no por correo electrónico), y no tiene acceso a una máquina de fax, existen varias aplicaciones que pueden convertir documentos electrónicos a éste formato. Escanee o tome foto de su boleta electoral incluyendo cualquier otro documento requerido para convertirlos en formato digital. 
 
