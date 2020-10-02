@@ -16,10 +16,11 @@ ______________________
 
   Cuando haya completado la solicitud, regrese aquí a la sección **“Instrucciones para Completar y Enviar su Boleta Electoral de Contingencia”**
 
-************************
-**Instrucciones para Completar y Enviar su Boleta Electoral de Contingencia:**
+**\_\_\_\_\_\_\_\_\_\_\_\__**
 
-1. Siga las instrucciones para completar la boleta electoral en la página web: **[Fill Out a Back Up Ballot (Completar Boleta Electoral de Contingencia](https://www.fvap.gov/fwab-privacy-notice)**.
+**INSTRUCCIONES PARA COMPLETAR Y ENVIAR SU BOLETA ELECTORAL DE CONTINGENCIA:**
+
+1. Siga las instrucciones para completar la boleta electoral en la página web: **[Fill Out a Back Up Ballot (Completar Boleta Electoral de Contingencia)](https://www.fvap.gov/fwab-privacy-notice)**.
 
 2. El sitio debe mostrar automáticamente a los candidatos correspondientes a elegir. En caso de que no aparezcan, usted puede escribir el nombre del candidato o su partido político de preferencia.
 
@@ -29,8 +30,10 @@ ______________________
 
 4. Imprima la boleta de contingencia, fírmela y escriba la fecha y **regrésesela** a su funcionario electoral local. ¡Lea las instrucciones con atención!
 
-.
-<details><summary><strong> Entrega por Servicio Postal:</strong>  Si su estado requiere que se devuelva su boleta por el servicio postal, siga estas instrucciones cuidadosamente. Marque aquí los requisitos de su estado](https://www.votefromabroad.org/es/states/)<em> -- Haga clic para ampliar</em></summary>
+
+<details><summary><strong> Entrega por Servicio Postal:</strong>  Si su estado requiere que se devuelva su boleta por el servicio postal, siga estas instrucciones cuidadosamente.<em> -- Haga clic para ampliar</em></summary>
+
+[Marque aquí los requisitos de su estado](https://www.votefromabroad.org/es/states/)
 
 **Asegúrese de mandar su boleta electoral con suficiente tiempo, y con el franqueo correcto para correo internacional a EEUU, para que sea entregada antes de las fechas límites del estado que le corresponde.**
 
@@ -65,8 +68,8 @@ Puede mandar su boleta electoral de contingencia por el servicio postal, por men
   ¡No espere hasta el último minuto para usar el servicio de fax FVAP! El servicio puede sobrecargarse y FVAP no garantiza que su boleta llegue antes de la fecha limite a su Funcionario Electoral.
 
 .</details>
-.
-_____________________
+
+__
 
 **IMPORTANTE: Si recibe su boleta electoral oficial después de haber entregado su boleta de contingencia, puede completar la boleta oficial y entregarla también.** 
 
