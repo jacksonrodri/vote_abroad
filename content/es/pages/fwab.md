@@ -30,7 +30,9 @@ ______________________
 4. Imprima la boleta de contingencia, fírmela y escriba la fecha y **regrésesela** a su funcionario electoral local. ¡Lea las instrucciones con atención!
 
 .
-<details><summary><strong> Entrega por Servicio Postal:</strong>  Si su estado requiere que se devuelva su boleta por el servicio postal, siga estas instrucciones cuidadosamente. Marque aquí los requisitos de su estado](https://www.votefromabroad.org/es/states/)<em> -- Haga clic para ampliar</em></summary>
+<details><summary><strong> Entrega por Servicio Postal:</strong>  Si su estado requiere que se devuelva su boleta por el servicio postal, siga estas instrucciones cuidadosamente.<em> -- Haga clic para ampliar</em></summary>
+
+[Marque aquí los requisitos de su estado](https://www.votefromabroad.org/es/states/)
 
 **Asegúrese de mandar su boleta electoral con suficiente tiempo, y con el franqueo correcto para correo internacional a EEUU, para que sea entregada antes de las fechas límites del estado que le corresponde.**
 
