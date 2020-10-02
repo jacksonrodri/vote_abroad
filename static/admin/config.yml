@@ -34,7 +34,7 @@ collections:
                     collection: faqs-en
                     search_fields: ["title", "question"]
                     value_field: "title"
-                    display_fields: ["title", "question"]
+                    display_fields: ["{{title}} - {{question}}"]
   - name: "pages-en" # Used in routes, e.g., /admin/collections/blog
     label: "Pages - English" # Used in the UI
     label_singular: "Page"
