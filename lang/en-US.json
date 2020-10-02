@@ -2,10 +2,12 @@
   "title": "English",
   "home": "Homepage",
   "posts": "Posts",
+  "clickHere": "CLICK HERE",
   "homepage": {
     "titleStudents": "Study abroad? Vote from abroad.",
     "title": "Vote from abroad",
     "subtitle": "Request a ballot now!",
+    "subtitle_message1": "",
     "loginInstructions": "Type your email address or mobile phone number to get started.",
     "start": "Start",
     "homeTitle": "Vote From Abroad - Home Page",
@@ -13,7 +15,8 @@
     "tooltip": "Your email or number will create an account for you to use to easily sign in to votefromabroad and save your information from year to year. An anonymous session allows you to create an FPCA form and send it to your local election office, but will not save your information for you to return to in the future.",
     "banner": "Overseas voters can VOTE NOW using a Backup Ballot (FWAB). For more information: {0}",
     "bannerFrom19Sept_part1": "Overseas Ballots are available NOW! Check your email inbox (and spam folder) and VOTE NOW! For information about How to Return Your Ballot, {0}",
-    "bannerFrom19Sept_part2": "If you haven't received your ballot yet, VOTE NOW using a Backup Ballot (FWAB). For more information: {0}"
+    "bannerFrom19Sept_part2": "If you haven't received your ballot yet, VOTE NOW using a Backup Ballot (FWAB). For more information: {0}",
+    "bannerFrom26Sept_part3": ""
   },
   "optIn": {
     "optIn": "Vote From Abroad is a non-partisan platform that helps US citizens vote from abroad by producing the necessary Federal forms. In using this site, only the information necessary for filling out Federal forms related to voting as US citizen overseas is collected. Your data privacy is our top concern. Please read and accept our {privacyPolicy}, {cookiePolicy} and {termsOfUse}.",
@@ -216,6 +219,7 @@
   "menu": {
     "contact": "Contact the Help Desk",
     "help": "Help",
+    "faq": "FAQ",
     "terms": "Terms of Use",
     "privacy": "Privacy",
     "login": "Login",
