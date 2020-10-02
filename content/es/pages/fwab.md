@@ -14,7 +14,7 @@ ______________________
 
 - SI NO LA HA SOLICITADO, siga a la página principal de **[www.votefromabroad.org](https://www.votefromabroad.org/es/)**, y complete la forma para solicitar su Boleta Electoral Federal (Federal Post Card Application (FPCA)). 
 
-Cuando haya completado la solicitud, regrese aquí a la sección **“Instrucciones para Completar y Enviar su Boleta Electoral de Contingencia”**
+  Cuando haya completado la solicitud, regrese aquí a la sección **“Instrucciones para Completar y Enviar su Boleta Electoral de Contingencia”**
 
 ************************
 **Instrucciones para Completar y Enviar su Boleta Electoral de Contingencia:**
