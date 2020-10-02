@@ -65,16 +65,17 @@ Puede mandar su boleta electoral de contingencia por el servicio postal, por men
 .
 _____________________
 
-IMPORTANTE: Si recibe su boleta electoral oficial después de haber entregado su boleta de contingencia, puede completar la boleta oficial y entregarla también.  
+**IMPORTANTE: Si recibe su boleta electoral oficial después de haber entregado su boleta de contingencia, puede completar la boleta oficial y entregarla también.** 
 
 Solo una boleta por elector será contada. Si su Oficina Electoral recibe su boleta oficial y su boleta de contingencia, solo tomarán la boleta oficial.
 
-52 USC section 20303 (d)
+*52 USC section 20303(d)*
 
 .
 _________________
  
-¿PREGUNTAS? Si tiene alguna pregunta, por favor pregunte a nuestra Mesa de Ayuda al Votante--el círculo naranja en la parte inferior derecha de la pantalla en www.votefromabroad.org/es. O envíenos un correo electrónico a preguntas@votefromabroad.org
+**¿PREGUNTAS?** Si tiene alguna pregunta, por favor pregunte a nuestra **Mesa de Ayuda al Votante**--el círculo naranja en la parte inferior derecha de la pantalla en **[www.votefromabroad.org/es](https://www.votefromabroad.org/es/)**. O envíenos un correo electrónico a **preguntas@votefromabroad.org**
+
 Y visítenos para recibir asistencia al votante en vivo a través de Zoom. Para obtener más información sobre fechas y horarios, haga clic en el enlace: Asistencia al votante global. ¡Nos encantaría saber de usted!
  
 
