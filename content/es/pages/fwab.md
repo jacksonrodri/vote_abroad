@@ -45,21 +45,24 @@ Si lo desea, puede seguir las instrucciones para descargar plantillas de sobre p
 
 Puede mandar su boleta electoral de contingencia por el servicio postal, por mensajería, correo del servicio militar de EEUU, o por la valija diplomática de la embajada de EEUU. (Puede descargar una plantilla con franqueo pagado de EEUU, Pero solo funcionará en el correo de EEUU, es decir, correo militar de EEUU o valija diplomática de EEUU.)
  
-**Cómo Entregar Su Boleta Electoral Por Correo Electrónico O Por Fax:** Cada estado ha indicado en las instrucciones de la boleta electoral si la aceptan por correo electrónico o por fax.  Recomendamos estos medios de entrega para asegurarse de que llegue a tiempo su boleta.
+**Cómo Entregar Su Boleta Electoral Por Correo Electrónico O Por Fax:** Cada estado ha indicado en las instrucciones de la boleta electoral si la aceptan por correo electrónico o por fax.  *Recomendamos estos medios de entrega para asegurarse de que llegue a tiempo su boleta.*
 
-Si su estado solo permite que las boletas sean entregadas por fax (no por correo electrónico), y no tiene acceso a una máquina de fax, existen varias aplicaciones que pueden convertir documentos electrónicos a éste formato. Escanee o tome foto de su boleta electoral incluyendo cualquier otro documento requerido para convertirlos en formato digital. 
+- Si su estado solo permite que las boletas sean entregadas por fax (no por correo electrónico), y no tiene acceso a una máquina de fax, existen varias aplicaciones que pueden convertir documentos electrónicos a éste formato. Escanee o tome foto de su boleta electoral incluyendo cualquier otro documento requerido para convertirlos en formato digital. 
 
-Busque una “aplicación de fax para Android / iPhone” en las plataformas de aplicaciones como App Store de Apple, Google Play Store, Galaxie Store, etc. 
-Siga las instrucciones para convertir su documento digitalizado en una transmisión de fax.
+  Busque una “aplicación de fax para Android / iPhone” en las plataformas de aplicaciones como App Store de Apple, Google Play Store, Galaxie Store, etc. 
+
+  Siga las instrucciones para convertir su documento digitalizado en una transmisión de fax.
 
 
-También puede usar el servicio de fax a través del Programa Federal de Asistencia para Votar FVAP.gov.
+- También puede usar el servicio de fax a través del Programa Federal de Asistencia para Votar--**[FVAP.gov](https://www.fvap.gov/).**
 
-Escanee o tome foto de su boleta electoral incluyendo cualquier documento requerido para convertirlos en formato digital. Debe incluir la portada de la transmisión por fax de FVAP: www.fvap.gov/eo/overview/materials/forms
+  Escanee o tome foto de su boleta electoral incluyendo cualquier documento requerido para convertirlos en formato digital. Debe incluir la portada de la transmisión por fax de FVAP: **[www.fvap.gov/eo/overview/materials/forms](https://www.fvap.gov/eo/overview/materials/forms)**
 
-Envíe todos los documentos digitalizados, incluir la portada de la transmisión, por correo electrónico a fax@fvap.gov. FVAP imprimirá los documentos y enviará por fax su boleta y materiales electorales a su Funcionario Electoral correspondiente.
+  Envíe todos los documentos digitalizados, incluir la portada de la transmisión, por correo electrónico a **fax@fvap.gov**. FVAP imprimirá los documentos y enviará por fax su boleta y materiales electorales a su Funcionario Electoral correspondiente.
 
- ¡No espere hasta el último minuto para usar el servicio de fax FVAP! El servicio puede sobrecargarse y FVAP no garantiza que su boleta llegue antes de la fecha limite a su Funcionario Electoral.
+  ¡No espere hasta el último minuto para usar el servicio de fax FVAP! El servicio puede sobrecargarse y FVAP no garantiza que su boleta llegue antes de la fecha limite a su Funcionario Electoral.
+
+.
 _____________________
 
 IMPORTANTE: Si recibe su boleta electoral oficial después de haber entregado su boleta de contingencia, puede completar la boleta oficial y entregarla también.  
@@ -67,6 +70,8 @@ IMPORTANTE: Si recibe su boleta electoral oficial después de haber entregado su
 Solo una boleta por elector será contada. Si su Oficina Electoral recibe su boleta oficial y su boleta de contingencia, solo tomarán la boleta oficial.
 
 52 USC section 20303 (d)
+
+.
 _________________
  
 ¿PREGUNTAS? Si tiene alguna pregunta, por favor pregunte a nuestra Mesa de Ayuda al Votante--el círculo naranja en la parte inferior derecha de la pantalla en www.votefromabroad.org/es. O envíenos un correo electrónico a preguntas@votefromabroad.org
