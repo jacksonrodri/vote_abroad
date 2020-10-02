@@ -7,34 +7,37 @@ Los electores en el extranjero tienen diferentes formas de entregar sus boletas 
 
 Si aún no tiene su boleta electoral, verifique cómo y cuándo entrega las Boletas Electorales su estado correspondiente en **[www.votefromabroad.org/es/states](https://www.votefromabroad.org/es/states/)**
 
-**SI SU ESTADO LO PERMITE, LE RECOMENDAMOS QUÉ DEVUELVA SU BOLETA DE FORMA ELECTRÓNICA (CORREO ELECTRÓNICO, FAX O POR PAGINA WEB DE SU ESTADO CORRESPONDIENTE).**
+<details><summary><strong> SI SU ESTADO LO PERMITE, LE RECOMENDAMOS QUÉ DEVUELVA SU BOLETA DE FORMA ELECTRÓNICA (CORREO ELECTRÓNICO, FAX O POR PAGINA WEB DE SU ESTADO CORRESPONDIENTE).</strong><em> -- Haga clic para ampliar</em></summary>
+
 
 La mayoría de los estados ahora permiten que los electores que residen en el extranjero entreguen sus boletas electrónicamente. Esta puede ser una forma más segura para garantizar que su voto sea contado e incluido, ya que hay menos riesgo de que se pierda o de que se demore en el tránsito.
 
 Cuando devuelva su boleta electrónicamente, imprímala (si la recibió en formato digital), marque sus elecciones y devuélvala por correo electrónico como un archivo adjunto, por fax o por la página web del estado que le corresponde. Conserve una copia de su boleta electoral con sus elecciones para tener constancia de su voto.
 
-Este proceso es muy diferente al “voto electrónico” del que se ha informado ampliamente sobre preocupaciones de seguridad. Con la votación electrónica, los electores, en persona en las casillas oficiales, registran su voto utilizando un sistema informático, que por la cantidad de votos recibidos, puede ser vulnerable a inexactitudes, y además existe un riesgo de manipulación externa. También si no se le proporciona un recibo o constancia de su voto, no hay manera de verificar que su voto fue registrado y contado correctamente.
+Este proceso es muy diferente al “voto electrónico” del que se ha informado ampliamente sobre preocupaciones de seguridad. Con la votación electrónica, los electores, en persona en las casillas oficiales, registran su voto utilizando un sistema informático, que por la cantidad de votos recibidos, puede ser vulnerable a inexactitudes, y además existe un riesgo de manipulación externa. También si no se le proporciona un recibo o constancia de su voto, no hay manera de verificar que su voto fue registrado y contado correctamente.</details>
 
 *****************
+.
+
 **CÓMO ENTREGAR SU BOLETA ELECTORAL DE FORMA ELECTRÓNICA:**
 
-**I. POR CORREO ELECTRÓNICO**
+<details><summary><strong>I. POR CORREO ELECTRÓNICO</strong><em> -- Haga clic para ampliar</em></summary>
 
 1. Fotografíe o escanee su boleta marcada y cualquier material requerido. (Refiérase a las instrucciones en su Boleta Electoral.) Deberá firmar una renuncia a su derecho a una boleta secreta, ya que su boleta no se sellará cuando la envíe.
 
 2. Envíe los materiales requeridos digitalizados a su oficina electoral local por correo electrónico como un archivo adjunto.
 
-3. Su Funcionario Electoral correspondiente separará la información de identidad y la boleta no se sellará, pero su voto se mantendrá confidencial.
+3. Su Funcionario Electoral correspondiente separará la información de identidad y la boleta no se sellará, pero su voto se mantendrá confidencial.</details>
 
-**II. POR FAX**
+<details><summary><strong>II. POR FAX</strong><em> -- Haga clic para ampliar</em></summary>
 
 1. Utilice una máquina de fax para enviar su boleta electoral, incluyendo cualquier otro documento requerido. Refiérase a las instrucciones en su Boleta Electoral.) Deberá firmar una renuncia a su derecho a una boleta secreta, ya que su boleta no se sellará cuando la envíe.
 
 2. Su estado generalmente proporcionará una portada de la transmisión por fax. Si no se proporciona uno, asegúrese de utilizar también una portada de la transmisión por fax.
 
-3. Su Funcionario Electoral correspondiente separará la información de identidad y la boleta no se sellará, pero se mantendrá su voto confidencial.
+3. Su Funcionario Electoral correspondiente separará la información de identidad y la boleta no se sellará, pero se mantendrá su voto confidencial.</details>
 
-**POR FAX--Si no tiene acceso a una máquina de fax:**
+<details><summary><strong>POR FAX--Si no tiene acceso a una máquina de fax:</strong><em> -- Haga clic para ampliar</em></summary>
 
 1. Utilice una aplicación que convierta un archivo electrónico a formato de fax.
 
@@ -52,15 +55,15 @@ Este proceso es muy diferente al “voto electrónico” del que se ha informado
 
    c. FVAP imprimirá los documentos y enviará por fax su boleta y materiales electorales a su Funcionario Electoral correspondiente.
 
-   ¡No espere hasta el último minuto para usar el servicio de fax FVAP! El servicio puede sobrecargarse y FVAP no garantiza que su boleta llegue antes de la fecha limite a su Funcionario Electoral.
+   ¡No espere hasta el último minuto para usar el servicio de fax FVAP! El servicio puede sobrecargarse y FVAP no garantiza que su boleta llegue antes de la fecha limite a su Funcionario Electoral.</details>
 
-**III. SISTEMA ELECTORAL ESTATAL EN LINEA**
+<details><summary><strong>III. SISTEMA ELECTORAL ESTATAL EN LINEA</strong><em> -- Haga clic para ampliar</em></summary>
 
 1. Su estado le enviará un enlace seguro para transmitir materiales entre su computadora y el sistema del estado.
 
 2. Escanee o tome foto de us boleta electoral, incluyendo cualquier documento requerido, para convertirlos en formato digital.
 
-3. Siga las instrucciones para transmitir los materiales digitalizados a través del enlace proporcionado del sistema electoral.
+3. Siga las instrucciones para transmitir los materiales digitalizados a través del enlace proporcionado del sistema electoral.</details>
 
 *****
 **CÓMO DEVOLVER SU BOLETA POR SERVICIO POSTAL:**
