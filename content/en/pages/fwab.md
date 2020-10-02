@@ -30,27 +30,32 @@ zemantaPixel: https://p1.zemanta.com/p/7069/7418/
 
 4. Print out the completed Backup Ballot and the other documents you downloaded. Then read and carefully follow the instructions to **SUBMIT** the required materials to your LEO. 
 
-**Return by Postal Mail:** If your state requires you to return your Ballot by postal mail, please follow these instructions carefully. ([Check here for your state's requirements.](https://www.votefromabroad.org/states))
+<details><summary><strong> Return by Postal Mail:</strong> If your state requires you to return your Ballot by postal mail, please follow these instructions carefully. <em> -- Click to expand</em></summary>
+
+([Check here for your state's requirements.](https://www.votefromabroad.org/states))
 
 **Be sure to leave enough time to meet the deadlines and affix sufficient postage for international mail to the US.** 
 
 Two envelopes are required: 
 
 * a "Ballot Security Envelope"--to hold your completed Backup Ballot, and 
+
 * a "Mailing Envelope"--to send in your sealed Ballot Security Envelope as well as the supporting materials with your identifying information. *If you have your original signed Ballot Request form, include it in the outer "Mailing Envelope".* 
 
 When the Mailing Envelope reaches the Election Office, they will separate the Ballot Security Envelope from the supporting materials to maintain ballot secrecy.
 
 If you wish, you can follow the instructions to download envelope templates to affix to blank envelopes. OR, you can write or type the information on regular envelopes. 
 
-You can mail in your Backup Ballot by regular mail, courier, US military mail, or US diplomatic pouch. (You can download a US postage-paid template, but it will only work in US Mail; that is, US military mail or a US diplomatic pouch). 
+You can mail in your Backup Ballot by regular mail, courier, US military mail, or US diplomatic pouch. (You can download a US postage-paid template, but it will only work in US Mail; that is, US military mail or a US diplomatic pouch).  </details>
+.
+
+<details><summary><strong> To Return by Fax or Email:</strong>  The Instructions will indicate if your state will accept the Backup Ballot by Email or Fax. We recommend you do so to ensure it will be received by the deadline.<em> -- Click to expand</em></summary>
 
 
-**To Return by Fax or Email:** The Instructions will indicate if your state will accept the Backup Ballot by Email or Fax. *We recommend you do so to ensure it will be received by the deadline.*
+* If your state only allows return by Fax (not Email) and you don’t have access to a fax machine, there are apps that will convert an email attachment to a fax. 
+ Scan in your Backup Ballot and any required supporting materials as an email attachment, then search for “fax app for Android/iPhone.” Follow the instructions to convert your email attachment to a fax transmission.
 
-* If your state only allows return by Fax (not Email) and you don’t have access to a fax machine, there are apps that will convert an email attachment to a fax. Scan in your Backup Ballot and any required supporting materials as an email attachment, then search for “fax app for Android/iPhone.” Follow the instructions to convert your email attachment to a fax transmission.
-
-* Or you can use the Fax service through the Federal Voting Assistance Program [(FVAP.gov)](https://www.fvap.gov). You will need to email your Backup Ballot and any required supporting materials to **fax@fvap.gov** using the FVAP fax transmission coversheet at **[www.fvap.gov/eo/overview/materials/forms](https://www.fvap.gov/eo/overview/materials/forms)** (scroll to the bottom of that page). FVAP will then fax your election materials to your Local Election Office.
+* Or you can use the Fax service through the Federal Voting Assistance Program [(FVAP.gov)](https://www.fvap.gov). You will need to email your Backup Ballot and any required supporting materials to **fax@fvap.gov** using the FVAP fax transmission coversheet at **[www.fvap.gov/eo/overview/materials/forms](https://www.fvap.gov/eo/overview/materials/forms)** (scroll to the bottom of that page). FVAP will then fax your election materials to your Local Election Office.</details>
 
 __
 
