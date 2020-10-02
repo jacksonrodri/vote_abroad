@@ -45,7 +45,7 @@ export default {
     try {
       categories = process.static && process.server
         ? await import('~/static/site-settings.json')
-        : (await axios.get('/site-settings.json').data)
+        : (await axios.get('/site-settings.json')).data
     } catch (error) {
       console.log(error)
     }
