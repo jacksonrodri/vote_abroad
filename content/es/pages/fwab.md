@@ -1,19 +1,21 @@
 ---
 title: CÓMO VOTAR USANDO LA BOLETA DE RESPALDO
 ---
-¿Existe alguna posibilidad que no reciba su boleta electoral a tiempo para cumplir con las fechas límites?
+**¿Existe alguna posibilidad que no reciba su boleta electoral a tiempo para cumplir con las fechas límites?**
  
-¡Puede VOTAR AHORA usando la Boleta Electoral de Contingencia (Federal Write-In Absentee Ballot - FWAB) específicamente para electores que viven en el extranjero!
+**¡Puede VOTAR AHORA usando la Boleta Electoral de Contingencia (Federal Write-In Absentee Ballot - FWAB) específicamente para electores que viven en el extranjero!**
  
-52 USC section 20303
+*52 USC section 20303*
 ______________________
  
-RECUERDE: ¿Ha enviado su solicitud durante para la Boleta Electoral (Federal Post Card Application (FPCA)) en el 2020? ¿Ha pedido que le envíen su boleta electoral por correo electrónico?
-SI YA LA SOLICITÓ, siga a la sección “Instrucciones Completar y Enviar su Boleta Electoral de Contingencia”
+**RECUERDE:** ¿Ha enviado su solicitud durante para la Boleta Electoral (Federal Post Card Application (FPCA)) *en el 2020*? ¿Ha pedido que le envíen su boleta electoral por correo electrónico?
 
-SI NO LA HA SOLICITADO, siga a la página principal de www.votefromabroad.org, y complete la forma para solicitar su Boleta Electoral Federal (Federal Post Card Application (FPCA)). 
+- SI YA LA SOLICITÓ, siga a la sección **“Instrucciones Completar y Enviar su Boleta Electoral de Contingencia”**
 
-Cuando haya completado la solicitud, regrese aquí a la sección “Instrucciones para Completar y Enviar su Boleta Electoral de Contingencia”
+- SI NO LA HA SOLICITADO, siga a la página principal de **[www.votefromabroad.org](https://www.votefromabroad.org/es/)**, y complete la forma para solicitar su Boleta Electoral Federal (Federal Post Card Application (FPCA)). 
+
+Cuando haya completado la solicitud, regrese aquí a la sección **“Instrucciones para Completar y Enviar su Boleta Electoral de Contingencia”**
+
 ************************
 Instrucciones para Completar y Enviar su Boleta Electoral de Contingencia:
 Siga las instrucciones para completar la boleta electoral en la página web:   Fill Out a Back Up Ballot (Completar Boleta Electoral de Contingencia).
