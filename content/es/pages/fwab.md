@@ -76,6 +76,6 @@ _________________
  
 **¿PREGUNTAS?** Si tiene alguna pregunta, por favor pregunte a nuestra **Mesa de Ayuda al Votante**--el círculo naranja en la parte inferior derecha de la pantalla en **[www.votefromabroad.org/es](https://www.votefromabroad.org/es/)**. O envíenos un correo electrónico a **preguntas@votefromabroad.org**
 
-Y visítenos para recibir asistencia al votante en vivo a través de Zoom. Para obtener más información sobre fechas y horarios, haga clic en el enlace: Asistencia al votante global. ¡Nos encantaría saber de usted!
+Y visítenos para recibir asistencia al votante en vivo a través de Zoom. Para obtener más información sobre fechas y horarios, haga clic en el enlace: **[Asistencia al votante global](https://qrco.de/bbh0zg)**. ¡Nos encantaría saber de usted!
  
 
