@@ -57,7 +57,7 @@
                   :to="switchLocalePath(locale.code)"><span class="is-hidden-desktop">{{ locale.name }}</span><span class="is-hidden-touch">{{ locale.code.toUpperCase() }}</span>
                 </nuxt-link>
               </span>
-              <div class="navbar-item is-size-5 has-dropdown is-hoverable" style="order:-1;">
+              <div class="navbar-item is-size-5 has-dropdown is-hoverable" style="order:-1; margin-right: 10px;">
                 <nuxt-link :to="localePath('elections')" class="navbar-link">
                   {{$t('menu.upcomingElections')}}
                 </nuxt-link>
@@ -81,9 +81,9 @@
                   {{$t('menu.stateGuide')}}
                 </nuxt-link>
               </div>
-              <div class="navbar-item is-size-5 is-hoverable" style="order: -1;">
+              <div class="navbar-item is-size-5 is-hoverable" style="order: -1; margin-right: 20px;">
                 <nuxt-link :to="localePath('faqs')" :class="{ 'has-text-white': !isMobileMenuActive && $route.path === '/' }">
-                  {{$t('menu.help')}}
+                  {{$t('menu.faq')}}
                 </nuxt-link>
               </div>
               <!-- <div class="navbar-item is-size-5 has-dropdown is-hoverable" style="order:-1;">
