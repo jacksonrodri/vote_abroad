@@ -26,6 +26,12 @@
   IS_DEMS_SITE = "true"
 
 [[redirects]]
+from = "https://es.votefromabroad.org/*"
+to = "https://www.votefromabroad.org/es/:splat"
+status = 301
+force = true
+
+[[redirects]]
 from = "https://dems.votefromabroad.org/*"
 to = "https://www.votefromabroad.org/:splat"
 status = 301
