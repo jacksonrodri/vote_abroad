@@ -25,18 +25,19 @@ Cuando haya completado la solicitud, regrese aquí a la sección **“Instruccio
 
 - Un ejemplar de su boleta electoral se encuentra **[aquí](https://ballotpedia.org/Sample_Ballot_Lookup)**. Este ejemplar le presentará las elecciones en las que usted es elegible para votar, así como los candidatos de cada campaña electoral.
 
-Descargue los documentos que contienen su boleta electoral de contingencia y siga las instrucciones correspondientes.
+3. Descargue los documentos que contienen su boleta electoral de contingencia y siga las instrucciones correspondientes.
 
+4. Imprima la boleta de contingencia, fírmela y escriba la fecha y **regrésesela** a su funcionario electoral local. ¡Lea las instrucciones con atención!
 
-Imprima la boleta de contingencia, fírmela y escriba la fecha y regrésesela a su funcionario electoral local. ¡Lea las instrucciones con atención!
-Entrega por Servicio Postal:  Si su estado requiere que se devuelva su boleta por el servicio postal, siga estas instrucciones cuidadosamente. (Marque aquí los requisitos de su estado)
-Asegúrese de mandar su boleta electoral con suficiente tiempo, y con el franqueo correcto para correo internacional a EEUU, para que sea entregada antes de las fechas límites del estado que le corresponde.
+**Entrega por Servicio Postal:**  Si su estado requiere que se devuelva su boleta por el servicio postal, siga estas instrucciones cuidadosamente. *[Marque aquí los requisitos de su estado](https://www.votefromabroad.org/es/states/)*
+
+**Asegúrese de mandar su boleta electoral con suficiente tiempo, y con el franqueo correcto para correo internacional a EEUU, para que sea entregada antes de las fechas límites del estado que le corresponde.**
+
 Cuando envíe su boleta por correo, generalmente se requieren dos sobres separados: un “Sobre de Boleta” y un “Sobre de Envío”. Esto se hace para mantener su voto en secreto.
 
-Sobre de Boleta: Contiene su boleta votada 
+- Sobre de Boleta: Contiene su boleta votada 
 
-
-Sobre de Envío:  Para enviar su “Sobre de Boleta” y otros documentos requeridos. Si tiene la forma original para solicitar una boleta electoral, inclúyala también en este sobre. 
+- Sobre de Envío:  Para enviar su “Sobre de Boleta” y otros documentos requeridos. Si tiene la forma original para solicitar una boleta electoral, inclúyala también en este sobre. 
 
 
 Cuando llegue su boleta a la oficina estatal electoral, el funcionario electoral podrá verificar su identidad, pero no podrá ver su voto. Su boleta votada será separada y contada oficialmente.  
