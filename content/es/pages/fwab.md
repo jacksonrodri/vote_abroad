@@ -16,7 +16,7 @@ ______________________
 
   Cuando haya completado la solicitud, regrese aquí a la sección **“Instrucciones para Completar y Enviar su Boleta Electoral de Contingencia”**
 
-************************
+
 **INSTRUCCIONES PARA COMPLETAR Y ENVIAR SU BOLETA ELECTORAL DE CONTINGENCIA:**
 
 1. Siga las instrucciones para completar la boleta electoral en la página web: **[Fill Out a Back Up Ballot (Completar Boleta Electoral de Contingencia](https://www.fvap.gov/fwab-privacy-notice)**.
