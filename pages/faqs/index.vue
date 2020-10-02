@@ -38,13 +38,26 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
-  asyncData: async ({ app, route }) => ({
-    faqs: {
-      es: await app.$content('es/faqs').getAll(),
-      en: await app.$content('en/faqs').getAll()
+  asyncData: async ({ app, route }) => {
+    let categories
+    try {
+      categories = process.static && process.server
+        ? await import('~/static/site-settings.json')
+        : (await axios.get('/site-settings.json').data)
+    } catch (error) {
+      console.log(error)
     }
-  }),
+    console.log(categories)
+    return {
+      categories,
+      faqs: {
+        es: await app.$content('es/faqs').getAll(),
+        en: await app.$content('en/faqs').getAll()
+      }
+    }
+  },
   computed: {
     lang () {
       return this.$i18n.locale
