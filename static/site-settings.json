@@ -1,1 +1,10 @@
-{}
+{
+  "faq-order": [
+    {
+      "faq-category": "votingAbroad"
+    },
+    {
+      "faq-category": "voterRegistration"
+    }
+  ]
+}
