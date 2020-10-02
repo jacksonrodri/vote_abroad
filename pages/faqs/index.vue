@@ -20,7 +20,7 @@
       </a>
     </i18n>
     <div class="columns is-multiline">
-      <div v-for="(category, index) in categories" :key="index" class="column is-6">
+      <div v-for="category in categories" :key="category.category" class="column is-6">
         <nav class="panel">
           <p class="panel-heading">{{$t(`faq.${category.category}`)}}</p>
           <nuxt-link v-for="faq in category.faqs" :key="faq.title" :to="localePath({path: faq.permalink})" class="panel-block">
@@ -38,20 +38,19 @@
 </template>
 
 <script>
-// import axios from 'axios'
+import axios from 'axios'
 export default {
   asyncData: async ({ app, route }) => {
-    // let categories
-    // try {
-    //   categories = process.static && process.server
-    //     ? await import('~/static/site-settings.json')
-    //     : (await axios.get('/site-settings.json')).data
-    // } catch (error) {
-    //   console.log(error)
-    // }
-    // console.log(categories)
+    let orderedCategories
+    try {
+      orderedCategories = process.static && process.server
+        ? (await import('~/static/site-settings.json'))['faq-categories']
+        : (await axios.get('/site-settings.json')).data['faq-categories']
+    } catch (error) {
+      console.log(error)
+    }
     return {
-      // categories,
+      orderedCategories,
       faqs: {
         es: await app.$content('es/faqs').getAll(),
         en: await app.$content('en/faqs').getAll()
@@ -63,10 +62,10 @@ export default {
       return this.$i18n.locale
     },
     categories: function () {
-      const faqs = this.faqs[this.$i18n.locale].map(({category, ...faq}) => ({...faq, category: category.split('_')[0]}))
-      return [...new Set(faqs.map(({category}) => category))].map(category => ({
+      const allFaqs = this.faqs[this.lang]
+      return this.orderedCategories.map(({category, faqs}) => ({
         category,
-        faqs: faqs.filter(({category: c}) => c === category)
+        faqs: faqs.map(({faq}) => allFaqs.find(({title}) => title === faq))
       }))
     }
   },

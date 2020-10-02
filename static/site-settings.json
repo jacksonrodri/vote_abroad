@@ -1,9 +1,7 @@
 {
   "faq-categories": [
     {
-      "faq-slug": "votingAbroad",
-      "en": "Voting as a U.S. Citizen Outside the U.S.",
-      "es": "Votar como ciudadano estadounidense fuera de Estados Unidos.",
+      "category": "votingAbroad",
       "faqs": [
         {
           "faq": "1"
@@ -16,6 +14,125 @@
         },
         {
           "faq": "4"
+        }
+      ]
+    },
+    {
+      "category": "voterRegistration",
+      "faqs": [
+        {
+          "faq": "5"
+        },
+        {
+          "faq": "6"
+        },
+        {
+          "faq": "7"
+        },
+        {
+          "faq": "8"
+        },
+        {
+          "faq": "9"
+        }
+      ]
+    },
+    {
+      "category": "neverResided",
+      "faqs": [
+        {
+          "faq": "10"
+        },
+        {
+          "faq": "11"
+        }
+      ]
+    },
+    {
+      "category": "fpca",
+      "faqs": [
+        {
+          "faq": "12"
+        },
+        {
+          "faq": "13"
+        },
+        {
+          "faq": "14"
+        },
+        {
+          "faq": "15"
+        },
+        {
+          "faq": "16"
+        },
+        {
+          "faq": "17"
+        },
+        {
+          "faq": "18"
+        },
+        {
+          "faq": "19"
+        },
+        {
+          "faq": "20"
+        }
+      ]
+    },
+    {
+      "category": "returningBallot",
+      "faqs": [
+        {
+          "faq": "21"
+        },
+        {
+          "faq": "22"
+        },
+        {
+          "faq": "23"
+        }
+      ]
+    },
+    {
+      "category": "fwab",
+      "faqs": [
+        {
+          "faq": "24"
+        }
+      ]
+    },
+    {
+      "category": "taxImplications",
+      "faqs": [
+        {
+          "faq": "25"
+        },
+        {
+          "faq": "26"
+        },
+        {
+          "faq": "27"
+        }
+      ]
+    },
+    {
+      "category": "studyAbroad",
+      "faqs": [
+        {
+          "faq": "28"
+        },
+        {
+          "faq": "29"
+        },
+        {
+          "faq": "30"
+        },
+        {
+          "faq": "31"
+        },
+        {
+          "faq": "32"
         }
       ]
     }

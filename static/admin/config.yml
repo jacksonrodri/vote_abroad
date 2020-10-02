@@ -16,15 +16,35 @@ collections:
             name: faq-categories
             widget: list
             fields:
-              - label: FAQ Category Slug
-                name: faq-slug
-                widget: string
-              - label: English FAQ Category Name
-                name: en
-                widget: string
-              - label: Spanish FAQ Category Name
-                name: es
-                widget: string
+              - name: category
+                label: Choose a category
+                widget: select
+                options:
+                  - {
+                      label: "Voting as a U.S. Citizen Outside the U.S.",
+                      value: "votingAbroad",
+                    }
+                  - {
+                      label: "How to Register to Vote and Get a Ballot",
+                      value: "voterRegistration",
+                    }
+                  - {
+                      label: "U.S. Citizens Who Have Never Resided in the U.S.",
+                      value: "neverResided",
+                    }
+                  - {
+                      label: "Filling Out the Federal Post Card Application(FPCA)",
+                      value: "fpca",
+                    }
+                  - { label: "Returning a Voted Ballot", value: "returningBallot" }
+                  - {
+                      label: "Using the Federal Write-in Absentee Ballot (FWAB)",
+                      value: "fwab",
+                    }
+                  - {
+                      label: "Federal And State Tax Implications",
+                      value: "taxImplications",
+                    }
               - label: "FAQs"
                 name: faqs
                 widget: list
@@ -122,6 +142,10 @@ collections:
               label: "Federal And State Tax Implications",
               value: "taxImplications",
             }
+          - {
+              label: "Study Abroad Issues",
+              value: "studyAbroad",
+            }
   - name: "faqs-es"
     label: "FAQs - Spanish"
     label_singular: "FAQ"
@@ -178,6 +202,10 @@ collections:
           - {
               label: "Federal And State Tax Implications",
               value: "taxImplications",
+            }
+          - {
+              label: "Study Abroad Issues",
+              value: "studyAbroad",
             }
   - name: "rls"
     label: "State Info & Election Rules"
