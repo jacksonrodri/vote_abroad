@@ -42,6 +42,9 @@ export default {
   },
   computed: {
     page () { return this.pages[this.$i18n.locale] }
+  },
+  mounted () {
+    console.log(this.pages.es)
   }
 }
 </script>
