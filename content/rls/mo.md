@@ -36,7 +36,7 @@ Check below for your delivery methods and deadlines, and to find your local elec
 * Ballot Request: email, fax, postal mail, or online~
 * Ballot Return: email, fax, postal mail, or online upload\~\~**
 
-~*NEW VOTER REGISTRATION DEADLINE! If active members of the armed forces, their dependents, and overseas voters missed the October 7th voter registration deadlines, they may vote a ballot for federal and statewide offices and issues by submitting a request by **October 30.**
+~*NEW VOTER REGISTRATION DEADLINE! If active members of the armed forces, their dependents, and overseas voters missed the October 7th voter registration deadline, they may vote a ballot for federal and statewide offices and issues by submitting a request by **October 30.**
 
 ~Online voter registration and ballot request system does not require state identification
 
