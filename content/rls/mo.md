@@ -32,13 +32,15 @@ Check below for your delivery methods and deadlines, and to find your local elec
 
 ### Delivery Methods
 
-* Registration: email, fax, postal mail, or online~
+* Registration: email, fax, postal mail, or online~*
 * Ballot Request: email, fax, postal mail, or online~
 * Ballot Return: email, fax, postal mail, or online upload\~\~**
 
-  ~ Online voter registration and ballot request system does not require state identification
+~*NEW VOTER REGISTRATION DEADLINE! If active members of the armed forces, their dependents, and overseas voters missed the October 7th voter registration deadlines, they may vote a ballot for federal and statewide offices and issues by submitting a request by **October 30.**
 
-  \~\~Voters who are located in a "hostile fire area" may also return their ballots by email or fax
+~Online voter registration and ballot request system does not require state identification
+
+\~\~Voters who are located in a "hostile fire area" may also return their ballots by email or fax
 
 **SPECIAL FOR THE NOVEMBER 3RD ELECTION! All overseas voters may return their ballots by email, fax or online as well as postal mail! 
 
