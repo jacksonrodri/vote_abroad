@@ -33,4 +33,6 @@ Check below for your delivery methods and deadlines, and to find your local elec
 
 * Registration: not required
 * Ballot Request: email, fax, or postal mail
-* Ballot Return: postal mail
+* Ballot Return: postal mail~
+
+~Some county election offices have indicated that they will accept overseas ballots by email or fax. However, IL state law only allows ballots to be returned by mail. We recommend IL voters return their ballots by mail. (If you return your ballot by email or fax, we recommend you mail it in as well.)
