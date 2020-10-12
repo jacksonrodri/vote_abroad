@@ -1647,7 +1647,7 @@
       Registration:
         - voterType: {}
           rule: "Received by"
-          date: "2020-10-07T00:00:00"
+          date: "2020-10-30T00:00:00"
       Ballot Request:
         - voterType: {}
           rule: "Received by"
