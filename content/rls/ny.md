@@ -11,8 +11,6 @@ ballotReceiptOptions:
   - Fax
   - Mail
 fpcaSubmitOptionsRegister:
-  - Email
-  - Fax
   - Mail
 fpcaSubmitOptionsRequest:
   - Email
