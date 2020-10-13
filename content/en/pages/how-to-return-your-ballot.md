@@ -7,7 +7,7 @@ Overseas voters have different ways to return their ballots, depending on the la
 
 If you don’t have your ballot yet, you can check your state’s “Delivery Methods - Ballot Return” at **[www.votefromabroad.org/states](https://www.votefromabroad.org/states)** 
 
-.
+
 <details><summary><strong>IF YOUR STATE ALLOWS IT, WE HIGHLY RECOMMEND YOU RETURN YOUR BALLOT ELECTRONICALLY (BY EMAIL, FAX, OR ONLINE UPLOAD).</strong><em> -- Click to expand</em></summary>
 
 More than half of all states now allow overseas voters to return their ballots electronically. This may be a safer way to ensure your ballot is counted than postal mail as you don't have to worry that it may get lost or delayed in transit.  
@@ -17,7 +17,7 @@ When you return your ballot electronically, you print out your ballot (if you re
 This is very different from “electronic voting,” which has widely reported security concerns. With electronic voting, voters at in-person polling places submit their vote using a computer system that holds a large cache of votes and which may be vulnerable to inaccuracies as well as the more remote risk of outside manipulation. And if there's no paper receipt provided, the voter has no way to know that their vote was properly recorded and counted.</details>
 
 *******
-.
+
 
 **HOW TO RETURN YOUR BALLOT ELECTRONICALLY:** 
 
@@ -32,6 +32,8 @@ This is very different from “electronic voting,” which has widely reported s
 
 <details><summary><strong>II. BY FAX </strong><em> -- Click to expand</em></summary>
 
+These states allow overseas voters to return ballots by Fax or Mail, but not Email: AK, CA, FL, LA, and OK
+
 1. Use a fax machine to submit your marked ballot and any required materials. (See your ballot instructions.) You will need to sign a waiver of your right to a secret ballot as your ballot will not be sealed when you send in. 
 
 2. Your state will usually provide a coversheet. If one isn't provided, be sure to use a coversheet as well.
@@ -40,7 +42,11 @@ This is very different from “electronic voting,” which has widely reported s
 
 <details><summary><strong>BY FAX--When You Don’t Have Access to a Fax Machine:</strong><em>--Click to expand</em></summary>
 
-1. There are apps that will convert an email attachment to a fax. 
+If you don't have access to a fax machine, you can consider returning your ballot by an email-to-fax service. This allows you to send an email with your ballot and forms scanned as attachments, which is then sent on to the fax number for your election official and received as a fax. 
+
+There are several such commercial services available, usually with free as well as inexpensive paid options -- check out HelloFax, FaxZero, eFax, FaxPlus -- or search online for additional services.
+
+1. To use an app that will convert an email attachment to a fax: 
 
    a. Photograph or scan in your ballot and any required materials as an email attachment. 
 
@@ -68,7 +74,7 @@ This is very different from “electronic voting,” which has widely reported s
 3. Follow the instructions to transmit the materials over the link to your state. </details>
 
 ***************************
-.
+
  
 **HOW TO RETURN YOUR BALLOT BY MAIL:**
 
@@ -129,7 +135,6 @@ The US Embassy or Consulate will allow US citizens to drop off ballots for deliv
 4. INQUIRE EARLY! Check the Embassy or Consulate website (or call or email to inquire) as there may be restrictions on when your Emassy or Consulate will accept voted ballots. And the time lag to the US can be significant! Many Embassies or Consulates stop accepting ballots a month before an election. And many are estimating delayed delivery times of several weeks or even up to a couple of months.  </details>
 
 ___
-.
 
 **If you have questions, please ask our Voter Help Desk (the orange circle on the bottom right of the screen on www.votefromabroad.org) or email us at [helpdesk@votefromabroad.org](helpdesk@votefromabroad.org).**
 
