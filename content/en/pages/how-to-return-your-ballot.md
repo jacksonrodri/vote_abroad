@@ -46,7 +46,7 @@ If you don't have access to a fax machine, you can consider returning your ballo
 
 There are several such commercial services available, usually with free as well as inexpensive paid options -- check out HelloFax, FaxZero, eFax, FaxPlus -- or search online for additional services.
 
-1. To use an apps that will convert an email attachment to a fax: 
+1. To use an app that will convert an email attachment to a fax: 
 
    a. Photograph or scan in your ballot and any required materials as an email attachment. 
 
