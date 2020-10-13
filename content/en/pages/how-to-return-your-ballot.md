@@ -32,6 +32,8 @@ This is very different from “electronic voting,” which has widely reported s
 
 <details><summary><strong>II. BY FAX </strong><em> -- Click to expand</em></summary>
 
+These states allow overseas voters to return ballots by Fax or Mail, but not Email: AK, CA, FL, LA, and OK
+
 1. Use a fax machine to submit your marked ballot and any required materials. (See your ballot instructions.) You will need to sign a waiver of your right to a secret ballot as your ballot will not be sealed when you send in. 
 
 2. Your state will usually provide a coversheet. If one isn't provided, be sure to use a coversheet as well.
@@ -40,7 +42,11 @@ This is very different from “electronic voting,” which has widely reported s
 
 <details><summary><strong>BY FAX--When You Don’t Have Access to a Fax Machine:</strong><em>--Click to expand</em></summary>
 
-1. There are apps that will convert an email attachment to a fax. 
+If you don't have access to a fax machine, you can consider returning your ballot by an email-to-fax service. This allows you to send an email with your ballot and forms scanned as attachments, which is then sent on to the fax number for your election official and received as a fax. 
+
+There are several such commercial services available, usually with free as well as inexpensive paid options -- check out HelloFax, FaxZero, eFax, FaxPlus -- or search online for additional services.
+
+1. To use an apps that will convert an email attachment to a fax: 
 
    a. Photograph or scan in your ballot and any required materials as an email attachment. 
 
