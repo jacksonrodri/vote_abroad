@@ -31,8 +31,10 @@ Check below for your delivery methods and deadlines, and to find your local elec
 
 ### Delivery Methods
 
-* Registration: email, fax, or postal mail
+* Registration: email, fax, or postal mail~
 * Ballot Request: email, fax, or postal mail
 * Ballot Return: postal mail
+
+~**Virginia extended its voter registration deadline to October 15** (due to the severed cable that shut down the online voter registration website).
 
 **IMPORTANT: BALLOT WITNESS NOT REQUIRED FOR NOV 3 ELECTION!** As a temporary measure due to COVID, VA voters are NOT required to obtain a witness signaure for their absentee ballot for the November 3, 2020 election. (For this election only, obtaining a witness signature is optional).
