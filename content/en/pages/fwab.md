@@ -2,7 +2,7 @@
 title: How to Vote Using the Backup Ballot (FWAB)
 zemantaPixel: https://p1.zemanta.com/p/7069/7418/
 ---
-**Is there a possibility your official ballot won't get to you in time to meet the ballot return deadlines?**
+  **Is there a possibility your official ballot won't get to you in time to meet the ballot return deadlines?**
 
 **VOTE NOW using the Backup Ballot--the Federal Write-In Absentee Ballot (FWAB)--specifically for overseas voters!**
 
@@ -46,7 +46,9 @@ When the Mailing Envelope reaches the Election Office, they will separate the Ba
 
 If you wish, you can follow the instructions to download envelope templates to affix to blank envelopes. OR, you can write or type the information on regular envelopes. 
 
-You can mail in your Backup Ballot by regular mail, courier, US military mail, or US diplomatic pouch. (You can download a US postage-paid template, but it will only work in US Mail; that is, US military mail or a US diplomatic pouch).  </details>
+You can mail in your Backup Ballot by regular mail, courier, US military mail, or US diplomatic pouch. You can download a US postage-paid template, but it will only work in US Mail; that is, US military mail or a US diplomatic pouch.
+
+*Note: All US citizens abroad may use US military mail to return ballots. For more details, see: [www.stripes.com/news/all-americans-abroad-can-use-military-post-offices-to-mail-ballots](https://www.stripes.com/news/all-americans-abroad-can-use-military-post-offices-to-mail-ballots-1.647774?fbclid=IwAR16z7Xk46VuYgGKNcLmrWskFDJ8rWnsxwDoRI6gt3IBVDcZte9bLF18VRM)* </details>
 .
 
 <details><summary><strong> To Return by Fax or Email:</strong>  The Instructions will indicate if your state will accept the Backup Ballot by Email or Fax. We recommend you do so to ensure it will be received by the deadline.<em> -- Click to expand</em></summary>
@@ -62,6 +64,8 @@ __
 **\*IMPORTANT: If you receive your official ballot after submitting your Backup Ballot, you may complete and return your official ballot as well.** 
 
 It’s okay--only one ballot per person will be counted. If both your Backup Ballot and your official ballot arrive before the deadline, federal law provides that only your official ballot will be counted and your Backup Ballot will be discarded.
+
+If you send in your official ballot after submitting a Backup Ballot, you should also send an email to your Local Election Office or call to let them know. You can find the contact information at: **[www.votefromabroad.org/states](/states)**
 
 *52 USC section 20303(d)*
 
