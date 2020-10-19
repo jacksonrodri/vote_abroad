@@ -75,6 +75,9 @@ __
 
 Solo una boleta por elector será contada. Si su Oficina Electoral recibe su boleta oficial y su boleta de contingencia, solo tomarán la boleta oficial.
 
+Si envía su boleta oficial después de enviar una boleta de contingencia, también debe enviar un correo electrónico 
+a la oficina estatal electoral o llamar para informarles. Puede encontrar la información de contacto en: **[www.votefromabroad.org/es/states](/es/states/)**
+
 *52 USC section 20303(d)*
 
 
