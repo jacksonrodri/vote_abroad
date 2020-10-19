@@ -16,18 +16,22 @@
       </i18n>
       <br>
       <br>
-      <i18n tag="span" path="homepage.bannerFrom19Sept_part2">
+      <span v-html="$t('homepage.bannerFrom19Sept_part2')">
+      </span>
+      <span>
         <a class="has-text-primary" href="https://www.votefromabroad.org/fwab/" target="_blank">
           {{ $t('clickHere') }}
         </a>
-      </i18n>
+      </span>
       <br>
       <br>
-      <i18n v-if="$i18n.locale === 'es'" tag="span" path="homepage.bannerFrom26Sept_part3">
+      <span v-html="$t('homepage.bannerFrom26Sept_part3')">
+      </span>
+      <span
         <a class="has-text-primary" :href="`https://www.votefromabroad.org/es/fwab/`" target="_blank">
           {{ $t('clickHere') }}
         </a>
-      </i18n>
+      </span>
     </h1>
   </div>
 </template>
