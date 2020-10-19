@@ -200,6 +200,13 @@ export default {
   components: {
     VfaOptIn
   },
+  head() {
+    return {
+      script: [
+        { src: 'https://secure.adnxs.com/px?id=1388183&t=1', async: true, defer: true}
+      ]
+    }
+  },
   data () {
     return {
       isMobileMenuActive: false,

@@ -251,6 +251,13 @@ export default {
       elections: elections
     }
   },
+  head () {
+    return {
+      script: [{
+          src: 'https://secure.adnxs.com/px?id=1388184&t=1', async: true, defer: true
+      }]
+    }
+  },
   data () {
     return {
       isAdmin: false,
