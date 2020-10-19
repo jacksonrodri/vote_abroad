@@ -3145,7 +3145,7 @@
       Registration:
         - voterType: "Overseas Citizens"
           rule: "Received by"
-          date: "2020-10-13T17:00:00"
+          date: "2020-10-15T17:00:00"
         - voterType: "Uniformed Services and eligible family members"
           rule: "Received by"
           date: "2020-10-23T17:00:00"
