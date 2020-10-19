@@ -254,7 +254,7 @@ export default {
   head () {
     return {
       script: [{
-          src: 'https://secure.adnxs.com/px?id=1388184&t=1', async: true, defer: true
+        src: 'https://secure.adnxs.com/px?id=1388184&t=1', async: true, defer: true
       }]
     }
   },

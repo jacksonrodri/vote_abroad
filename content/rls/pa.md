@@ -21,7 +21,7 @@ canRegisterWithFwab: true
 fwabSubmitOptions:
   - Mail
 amIRegistered: 'https://www.pavoterservices.state.pa.us/Pages/VoterRegistrationStatus.aspx'
-whereIsMyBallot: 'https://www.pavoterservices.pa.gov/Pages/BallotTracking.aspx'
+whereIsMyBallot: 'https://www.pavoterservices.pa.gov/Pages/Login.aspx'
 sampleBallot: >-
   https://ballotpedia.org/Sample_Ballot_Lookup?utm_source=ballotpedia&utm_campaign=sample_ballot_frontpage
 uocavaVoters: 'https://www.votespa.com/Voting-in-PA/Pages/Military-and-Overseas-Voters.aspx'
