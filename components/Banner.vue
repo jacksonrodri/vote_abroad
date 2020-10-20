@@ -19,7 +19,11 @@
       <span v-html="$t('homepage.bannerFrom19Sept_part2')">
       </span>
       <span>
-        <a class="has-text-primary" href="https://www.votefromabroad.org/fwab/" target="_blank">
+        <a
+          class="has-text-primary"
+          :href="$t('homepage.bannerFrom19Sept_part2_link')"
+          target="_blank"
+        >
           {{ $t('clickHere') }}
         </a>
       </span>
