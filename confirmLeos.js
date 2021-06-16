@@ -1,4 +1,4 @@
-var apiKey = process.env.MAILGUN_API_KEY || 'key-44903961cb823b645750fe64358dfc40'
+var apiKey = process.env.MAILGUN_API_KEY
 var domain = 'mail.votefromabroad.org'
 const fs = require('fs')
 var mailgun = require('mailgun-js')({apiKey, domain: domain})
