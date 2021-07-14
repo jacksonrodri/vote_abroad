@@ -1,0 +1,2611 @@
+[
+  {
+    "change": "changed-FL-Broward-Broward Supervisor of Elections-460",
+    "newEmail": "elections@browardvotes.gov",
+    "oldEmail": "Elections@browardsoe.org",
+    "newEffectiveDate": "2021-07-13T14:01:49",
+    "oldEffectiveDate": "2021-04-02T11:50:52",
+    "newZip": "33301",
+    "oldZip": "33302"
+  },
+  {
+    "change": "changed-FL-Charlotte-Charlotte Supervisor of Elections-462",
+    "newEmail": "soe@soecharlottecountyfl.gov",
+    "oldEmail": "soe@charlottevotes.com",
+    "newEffectiveDate": "2021-07-13T13:57:38",
+    "oldEffectiveDate": "2020-02-03T11:49:42"
+  },
+  {
+    "change": "changed-FL-Citrus-Citrus Supervisor of Elections-463",
+    "newEmail": "vote@votecitrus.gov",
+    "oldEmail": "vote@votecitrus.com",
+    "newEffectiveDate": "2021-07-13T13:57:38",
+    "oldEffectiveDate": "2021-01-21T10:16:41"
+  },
+  {
+    "change": "changed-FL-Clay-Clay Supervisor of Elections-464",
+    "newEmail": "VBMrequests@clayelections.gov",
+    "oldEmail": "VBMrequests@clayelections.com",
+    "newEffectiveDate": "2021-07-13T13:57:38",
+    "oldEffectiveDate": "2020-07-22T10:27:20"
+  },
+  {
+    "change": "changed-FL-Collier-Collier Supervisor of Elections-465",
+    "newEmail": "mailballot@CollierVotes.gov",
+    "oldEmail": "mailballot@colliercountyfl.gov",
+    "newEffectiveDate": "2021-07-13T13:57:38",
+    "oldEffectiveDate": "2019-08-13T15:35:04"
+  },
+  {
+    "change": "changed-FL-Dixie-Dixie Supervisor of Elections-469",
+    "newEmail": "elections@dixievotes.com",
+    "oldEmail": "dixiecountysoe@bellsouth.net",
+    "newEffectiveDate": "2021-07-13T13:57:38",
+    "oldEffectiveDate": "2019-08-13T15:35:04"
+  },
+  {
+    "change": "changed-FL-Duval-Duval Supervisor of Elections-470",
+    "newEmail": "duvaluacava@coj.net",
+    "oldEmail": "mhogan@coj.net",
+    "newEffectiveDate": "2021-07-13T13:57:38",
+    "oldEffectiveDate": "2021-01-20T14:03:00"
+  },
+  {
+    "change": "changed-FL-Gilchrist-Gilchrist Supervisor of Elections-475",
+    "newEffectiveDate": "2021-07-13T13:57:38",
+    "oldEffectiveDate": "2019-08-13T15:35:04",
+    "newAddress1": "112 South Main Street, Room 137",
+    "oldAddress1": "112 South Main Street, Room 128"
+  },
+  {
+    "change": "changed-FL-Glades-Glades Supervisor of Elections-476",
+    "newEmail": "vote@voteglades.com",
+    "oldEmail": "vote@myglades.com",
+    "newEffectiveDate": "2021-07-13T13:57:38",
+    "oldEffectiveDate": "2019-08-13T15:35:04"
+  },
+  {
+    "change": "changed-FL-Hendry-Hendry Supervisor of Elections-480",
+    "newEffectiveDate": "2021-07-13T13:57:38",
+    "oldEffectiveDate": "2019-08-13T15:35:04",
+    "newAddress1": "PO Box 174",
+    "oldAddress1": "25 East Hickpochee Avenue"
+  },
+  {
+    "change": "changed-FL-Hillsborough-Hillsborough Supervisor of Elections-483",
+    "newFax": "813-612-4199",
+    "oldFax": "813-744-5843",
+    "newEmail": "votebymail@votehillsborough.gov",
+    "oldEmail": "voter@VoteHillsborough.gov",
+    "newEffectiveDate": "2021-07-13T13:57:38",
+    "oldEffectiveDate": "2021-06-22T13:50:39"
+  },
+  {
+    "change": "changed-FL-Indian River-Indian River Supervisor of Elections-485",
+    "newPhone": "772-226-4700",
+    "oldPhone": "772-226-3440",
+    "newEmail": "votebymail@voteindianriver.com",
+    "oldEmail": "info@voteindianriver.com",
+    "newEffectiveDate": "2021-07-13T13:57:38",
+    "oldEffectiveDate": "2019-08-13T15:35:04"
+  },
+  {
+    "change": "changed-FL-Jackson-Jackson Supervisor of Elections-486",
+    "newEffectiveDate": "2021-07-13T14:01:49",
+    "oldEffectiveDate": "2019-08-27T14:50:51",
+    "newAddress1": "2851 Jefferson Street",
+    "oldAddress1": "PO Box 6046",
+    "newZip": "32448",
+    "oldZip": "32447"
+  },
+  {
+    "change": "changed-FL-Jefferson-Jefferson Supervisor of Elections-487",
+    "newEffectiveDate": "2021-07-13T13:57:38",
+    "oldEffectiveDate": "2019-08-27T14:50:51",
+    "newAddress1": "1175 W. Washington St.",
+    "oldAddress1": "380 West Dogwood Street"
+  },
+  {
+    "change": "changed-FL-Lafayette-Lafayette Supervisor of Elections-488",
+    "newEmail": "travis@lafayettevotes.com",
+    "oldEmail": "lafayettesoe@gmail.com",
+    "newEffectiveDate": "2021-07-13T13:57:38",
+    "oldEffectiveDate": "2019-08-27T14:50:51"
+  },
+  {
+    "change": "changed-FL-Leon-Leon Supervisor of Elections-491",
+    "newEmail": "vbm@leonvotes.gov",
+    "oldEmail": "vbm@leoncountyfl.gov",
+    "newEffectiveDate": "2021-07-13T13:57:38",
+    "oldEffectiveDate": "2020-09-25T10:38:05"
+  },
+  {
+    "change": "changed-FL-Levy-Levy Supervisor of Elections-492",
+    "newEmail": "elections@votelevy.gov",
+    "oldEmail": "elections@votelevy.com",
+    "newEffectiveDate": "2021-07-13T13:57:38",
+    "oldEffectiveDate": "2019-08-13T15:35:04"
+  },
+  {
+    "change": "changed-FL-Madison-Madison Supervisor of Elections-494",
+    "newEmail": "hdriggers@votemadison.com",
+    "oldEmail": "thardee@votemadison.com",
+    "newEffectiveDate": "2021-07-13T13:57:38",
+    "oldEffectiveDate": "2019-08-13T15:35:04"
+  },
+  {
+    "change": "changed-FL-Manatee-Manatee Supervisor of Elections-495",
+    "newEmail": "info@votemanatee.gov",
+    "oldEmail": "info@votemanatee.com",
+    "newEffectiveDate": "2021-07-13T13:57:38",
+    "oldEffectiveDate": "2021-04-02T11:51:24"
+  },
+  {
+    "change": "changed-FL-Nassau-Nassau Supervisor of Elections-500",
+    "newEmail": "info@votenassau.com",
+    "oldEmail": "questions@votenassau.com",
+    "newEffectiveDate": "2021-07-13T13:57:38",
+    "oldEffectiveDate": "2020-08-17T14:22:39"
+  },
+  {
+    "change": "changed-FL-Orange-Orange Supervisor of Elections-503",
+    "newEmail": "vbmrequests@ocfelections.com",
+    "oldEmail": "voter@ocfelections.com",
+    "newEffectiveDate": "2021-07-13T13:57:38",
+    "oldEffectiveDate": "2020-09-21T10:42:55"
+  },
+  {
+    "change": "changed-FL-Pinellas-Pinellas Supervisor of Elections-507",
+    "newEmail": "election@votePinellas.gov",
+    "oldEmail": "Election@VotePinellas.com",
+    "newEffectiveDate": "2021-07-13T13:57:38",
+    "oldEffectiveDate": "2019-08-13T15:35:04"
+  },
+  {
+    "change": "changed-FL-St. Johns-St. Johns Supervisor of Elections-513",
+    "newEmail": "elections@votesjc.gov",
+    "oldEmail": "elections@votesjc.com",
+    "newEffectiveDate": "2021-07-13T13:57:38",
+    "oldEffectiveDate": "2020-01-16T10:18:24"
+  },
+  {
+    "change": "changed-FL-St. Lucie-St. Lucie Supervisor of Elections-514",
+    "newEmail": "votebymail@slelections.com",
+    "oldEmail": "elections@slcelections.com",
+    "newEffectiveDate": "2021-07-13T13:57:38",
+    "oldEffectiveDate": "2020-09-24T14:59:11"
+  },
+  {
+    "change": "changed-FL-Suwannee-Suwannee Supervisor of Elections-516",
+    "newEmail": "suwanneesoe@suwanneevotes.com",
+    "oldEmail": "gwilliams@suwanneevotes.com",
+    "newEffectiveDate": "2021-07-13T13:57:38",
+    "oldEffectiveDate": "2019-08-13T15:35:04",
+    "newAddress1": "302 Pine Avenue SW",
+    "oldAddress1": "220 Pine Ave., S.W."
+  },
+  {
+    "change": "changed-FL-Wakulla-Wakulla Supervisor of Elections-520",
+    "newEmail": "wakullacountysoe@wakullaelection.com",
+    "oldEmail": "wakullacountysoe@mywakulla.com",
+    "newEffectiveDate": "2021-07-13T13:57:38",
+    "oldEffectiveDate": "2019-08-27T14:50:51"
+  },
+  {
+    "change": "changed-MA-Abington, Town of-Abington Town Clerk-8699",
+    "newEffectiveDate": "2021-07-13T13:22:38",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "500 Gliniewicz Way",
+    "oldAddress1": "500 GLINIEWICZ WAY"
+  },
+  {
+    "change": "changed-MA-Acton, Town of-Acton Town Clerk-1321",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2017-09-20T14:40:08",
+    "newAddress1": "472 Main St.",
+    "oldAddress1": "472 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Acushnet, Town of-Acushnet Town Clerk-1322",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "130 Main St.",
+    "oldAddress1": "130 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Adams, Town of-Adams Town Clerk-1323",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2017-09-20T14:40:08",
+    "newAddress1": "8 Park St.",
+    "oldAddress1": "8 PARK ST."
+  },
+  {
+    "change": "changed-MA-Agawam, Town of-Agawam Town Clerk-1324",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2017-09-20T14:40:08",
+    "newAddress1": "36 Main St.",
+    "oldAddress1": "36 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Alford, Town of-Alford Town Clerk-1325",
+    "newEmail": "clerk@townofalford.org",
+    "oldEmail": "thomascurtin50@verizon.net",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "5 Alford Center Rd.",
+    "oldAddress1": "5 ALFORD CENTER RD."
+  },
+  {
+    "change": "changed-MA-Amesbury, Town of-Amesbury City Clerk-1326",
+    "newEmail": "clerklist@amesburyma.gov",
+    "oldEmail": "dixonc@amesburyma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "62 Friend St.",
+    "oldAddress1": "62 FRIEND ST."
+  },
+  {
+    "change": "changed-MA-Amherst, Town of-Amherst Town Clerk-1327",
+    "newEmail": "vote@amherstma.gov",
+    "oldEmail": "townclerk@amherstma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "4 Boltwood Ave.",
+    "oldAddress1": "TOWN HALL, 4 BOLTWOOD AVE."
+  },
+  {
+    "change": "changed-MA-Andover, Town of-Andover Town Clerk-1328",
+    "newEmail": "townclerk@andoverma.us",
+    "oldEmail": "austin.simko@andoverma.us",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "36 Bartlet St.",
+    "oldAddress1": "TOWN OFFICES, 36 BARTLET ST."
+  },
+  {
+    "change": "changed-MA-Aquinnah, Town of-Aquinnah Town Clerk-1329",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "955 State Rd.",
+    "oldAddress1": "955 STATE RD."
+  },
+  {
+    "change": "changed-MA-Arlington, Town of-Arlington Town Clerk-1330",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2020-09-10T10:20:06",
+    "newAddress1": "730 Massachusetts Ave.",
+    "oldAddress1": "730 MASS. AVE."
+  },
+  {
+    "change": "changed-MA-Ashburnham, Town of-Ashburnham Town Clerk-1331",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2017-09-20T14:40:08",
+    "newAddress1": "32 Main St.",
+    "oldAddress1": "32 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Ashby, Town of-Ashby Town Clerk-1332",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2017-09-20T14:40:08",
+    "newAddress1": "895 Main St.",
+    "oldAddress1": "895 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Ashfield, Town of-Ashfield Town Clerk-1333",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "P.O. BOX 560",
+    "oldAddress1": "412 MAIN ST., PO BOX 560"
+  },
+  {
+    "change": "changed-MA-Ashland, Town of-Ashland Town Clerk-1334",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2020-06-30T12:56:48",
+    "newAddress1": "101 Main St.",
+    "oldAddress1": "101 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Athol, Town of-Athol Town Clerk-1335",
+    "newPhone": "(978) 721-8445",
+    "oldPhone": "(978) 249-4551",
+    "newEmail": "vote@townofathol.org",
+    "oldEmail": "townclerk@townofathol.org",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2017-09-20T14:40:08",
+    "newAddress1": "584 Main St.",
+    "oldAddress1": "584 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Attleboro, City of-Attleboro Election Commission-1336",
+    "newEmail": "elections1@cityofattleboro.us",
+    "oldEmail": "elections@cityofattleboro.us",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2017-09-20T14:40:08",
+    "newAddress1": "77 Park St.",
+    "oldAddress1": "77 PARK ST."
+  },
+  {
+    "change": "changed-MA-Auburn, Town of-Auburn Town Clerk-1337",
+    "newEmail": "townclerkemail@town.auburn.ma.us",
+    "oldEmail": "dgremo@town.auburn.ma.us",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2017-09-20T14:40:08",
+    "newAddress1": "104 Central St.",
+    "oldAddress1": "104 CENTRAL ST."
+  },
+  {
+    "change": "changed-MA-Avon, Town of-Avon Town Clerk-1338",
+    "newEmail": "vote@avon-ma.gov",
+    "oldEmail": "pbessette@avon-ma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2017-09-20T14:40:08",
+    "newAddress1": "65 East Main St.",
+    "oldAddress1": "65 EAST MAIN ST."
+  },
+  {
+    "change": "changed-MA-Ayer, Town of-Ayer Town Clerk-1339",
+    "newEmail": "clerk@ayer.ma.us",
+    "oldEmail": "scopeland@ayer.ma.us",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "1 Main St.",
+    "oldAddress1": "1 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Barnstable, Town of-Barnstable Town Clerk-1340",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2020-07-09T15:16:38",
+    "newAddress1": "367 Main St.",
+    "oldAddress1": "367 MAIN ST., 1ST FLOOR"
+  },
+  {
+    "change": "changed-MA-Barre, Town of-Barre Town Clerk-1341",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "P.O. BOX 418",
+    "oldAddress1": "40 WEST ST., PO BOX 418"
+  },
+  {
+    "change": "changed-MA-Becket, Town of-Becket Town Clerk-1342",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2017-09-20T14:40:08",
+    "newAddress1": "557 Main St.",
+    "oldAddress1": "557 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Bedford, Town of-Bedford Town Clerk-1343",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2020-09-23T14:21:55",
+    "newAddress1": "10 Mudge Way",
+    "oldAddress1": "10 MUDGE WAY"
+  },
+  {
+    "change": "changed-MA-Belchertown, Town of-Belchertown Town Clerk-1344",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "P.O. BOX 629",
+    "oldAddress1": "2 JABISH ST., RM 201, PO BOX 629"
+  },
+  {
+    "change": "changed-MA-Bellingham, Town of-Bellingham Town Clerk-1345",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2020-01-14T16:32:49",
+    "newAddress1": "10 Mechanic St.",
+    "oldAddress1": "10 MECHANIC ST."
+  },
+  {
+    "change": "changed-MA-Belmont, Town of-Belmont Assistant Town Clerk-1346",
+    "newPhone": "(617) 993-2603",
+    "oldPhone": "(617) 993-2608",
+    "newEmail": "voting@belmont-ma.gov",
+    "oldEmail": "mpiccione@belmont-ma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2020-01-08T10:48:03",
+    "newAddress1": "P.O. BOX 56",
+    "oldAddress1": "455 CONCORD AVE."
+  },
+  {
+    "change": "changed-MA-Berkley, Town of-Berkley Town Clerk-1347",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "1 North Main St.",
+    "oldAddress1": "1 NORTH MAIN ST."
+  },
+  {
+    "change": "changed-MA-Berlin, Town of-Berlin Town Clerk-1348",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "23 Linden St.",
+    "oldAddress1": "23 LINDEN ST., #8"
+  },
+  {
+    "change": "changed-MA-Bernardston, Town of-Bernardston Town Clerk-1349",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "P.O. BOX 504",
+    "oldAddress1": "PO BOX 504"
+  },
+  {
+    "change": "changed-MA-Beverly, City of-Beverly City Clerk-1350",
+    "newPhone": "(978) 605-2325",
+    "oldPhone": "(978) 605-2326",
+    "newEmail": "lkent@beverlyma.gov",
+    "oldEmail": "jmurphy@beverlyma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2020-01-14T16:33:07",
+    "newAddress1": "191 Cabot St.",
+    "oldAddress1": "191 CABOT ST."
+  },
+  {
+    "change": "changed-MA-Billerica, Town of-Billerica Town Clerk-1351",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2017-09-20T14:40:08",
+    "newAddress1": "365 Boston Rd.",
+    "oldAddress1": "365 BOSTON RD."
+  },
+  {
+    "change": "changed-MA-Blackstone, Town of-Blackstone Town Clerk-1352",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "15 St. Paul St.",
+    "oldAddress1": "15 ST. PAUL ST."
+  },
+  {
+    "change": "changed-MA-Blandford, Town of-Blandford Town Clerk-1353",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "P.O. BOX 33",
+    "oldAddress1": "PO BOX 33"
+  },
+  {
+    "change": "changed-MA-Bolton, Town of-Bolton Town Clerk-1354",
+    "newEmail": "vote@townofbolton.com",
+    "oldEmail": "townclerk@townofbolton.com",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "663 Main St.",
+    "oldAddress1": "PO BOX 278, 663 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Boston, City of-Boston Election Commission-1355",
+    "newPhone": "(617) 635-8683",
+    "oldPhone": "(617) 635-3767",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "One City Hall Sq., Room 241",
+    "oldAddress1": "ONE CITY HALL SQUARE, ROOM 241"
+  },
+  {
+    "change": "changed-MA-Bourne, Town of-Bourne Town Clerk-1356",
+    "newEmail": "Elections@townofbourne.com",
+    "oldEmail": "wchapman@townofbourne.com",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2017-09-20T14:40:08",
+    "newAddress1": "24 Perry Ave.",
+    "oldAddress1": "24 PERRY AVE."
+  },
+  {
+    "change": "changed-MA-Boxborough, Town of-Boxborough Town Clerk-1357",
+    "newEmail": "",
+    "oldEmail": "emarkiewicz@boxborough-ma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2017-09-20T14:40:08",
+    "newAddress1": "29 Middle Rd.",
+    "oldAddress1": "29 MIDDLE RD."
+  },
+  {
+    "change": "changed-MA-Boxford, Town of-Boxford Town Clerk-8707",
+    "newEffectiveDate": "2021-07-13T13:22:38",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "7a Spofford Rd.",
+    "oldAddress1": "7A SPOFFORD RD."
+  },
+  {
+    "change": "changed-MA-Boylston, Town of-Boylston Town Clerk-8709",
+    "newEffectiveDate": "2021-07-13T13:22:38",
+    "oldEffectiveDate": "2020-08-20T11:10:41",
+    "newAddress1": "221 Main St.",
+    "oldAddress1": "221 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Braintree, Town of-Braintree Town Clerk-1358",
+    "newEmail": "dstarr@braintreema.gov",
+    "oldEmail": "jmcasey@braintreema.gov",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2017-09-20T14:40:08",
+    "newAddress1": "1 J.F.K. Memorial Drive",
+    "oldAddress1": "1 J.F.K. MEMORIAL DR."
+  },
+  {
+    "change": "changed-MA-Brewster, Town of-Brewster Town Clerk-1359",
+    "newEmail": "townclerk@brewster-ma.gov",
+    "oldEmail": "cwilliams@brewster-ma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2017-09-20T14:40:08",
+    "newAddress1": "2198 Main St.",
+    "oldAddress1": "2198 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Bridgewater, Town of-Bridgewater Town Clerk-1360",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "66 Central Sq.",
+    "oldAddress1": "66 CENTRAL SQUARE"
+  },
+  {
+    "change": "changed-MA-Brimfield, Town of-Brimfield Town Clerk-1361",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "P.O. BOX 508",
+    "oldAddress1": "PO BOX 508"
+  },
+  {
+    "change": "changed-MA-Brockton, City of-Brockton Election Commission-1362",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "45 School St.",
+    "oldAddress1": "45 SCHOOL ST."
+  },
+  {
+    "change": "changed-MA-Brookfield, Town of-Brookfield Town Clerk-1363",
+    "newEffectiveDate": "2021-07-13T13:22:35",
+    "oldEffectiveDate": "2017-09-20T14:40:08",
+    "newAddress1": "6 Central St.",
+    "oldAddress1": "6 CENTRAL ST."
+  },
+  {
+    "change": "changed-MA-Brookline, Town of-Brookline Town Clerk-1364",
+    "newEmail": "townclerk@brooklinema.gov",
+    "oldEmail": "pward@brooklinema.gov",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:08",
+    "newAddress1": "333 Washington St.",
+    "oldAddress1": "333 WASHINGTON ST."
+  },
+  {
+    "change": "changed-MA-Buckland, Town of-Buckland Town Clerk-1365",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "17 State St.",
+    "oldAddress1": "PO BOX 159",
+    "newCity": "Shelburne Falls",
+    "oldCity": "Buckland"
+  },
+  {
+    "change": "changed-MA-Burlington, Town of-Burlington Town Clerk-1366",
+    "newEmail": "vote@burlington.org",
+    "oldEmail": "clerk@burlington.org",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "29 Center St.",
+    "oldAddress1": "29 CENTER ST."
+  },
+  {
+    "change": "changed-MA-Cambridge, City of-Cambridge Election Commission-1367",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "51 Inman St., 1st Floor",
+    "oldAddress1": "51 INMAN ST., FIRST FLOOR"
+  },
+  {
+    "change": "changed-MA-Canton, Town of-Canton Town Clerk-1368",
+    "newEmail": "elections@town.canton.ma.us",
+    "oldEmail": "tkenney@town.canton.ma.us",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:08",
+    "newAddress1": "801 Washington St.",
+    "oldAddress1": "801 WASHINGTON ST."
+  },
+  {
+    "change": "changed-MA-Carlisle, Town of-Carlisle Town Clerk-1369",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2020-01-14T16:33:26",
+    "newAddress1": "66 Westford St.",
+    "oldAddress1": "66 WESTFORD ST."
+  },
+  {
+    "change": "changed-MA-Carver, Town of-Carver Town Clerk-1370",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "108 Main St.",
+    "oldAddress1": "108 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Charlemont, Town of-Charlemont Town Clerk-1371",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "P.O. BOX 605",
+    "oldAddress1": "157 MAIN ST., BOX 605"
+  },
+  {
+    "change": "changed-MA-Charlton, Town of-Charlton Town Clerk-1372",
+    "newEmail": "town.clerk@townofcharlton.net",
+    "oldEmail": "karen.lacroix@townofcharlton.net",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:08",
+    "newAddress1": "37 Main St.",
+    "oldAddress1": "37 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Chatham, Town of-Chatham Town Clerk-1373",
+    "newEmail": "vote@chatham-ma.gov",
+    "oldEmail": "jsmith@chatham-ma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:08",
+    "newAddress1": "549 Main St.",
+    "oldAddress1": "549 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Chelmsford, Town of-Chelmsford Town Clerk-1374",
+    "newEmail": "townclerk@chelmsfordma.gov",
+    "oldEmail": "townclerk@townofchelmsford.us",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "50 Billerica Rd.",
+    "oldAddress1": "50 BILLERICA RD."
+  },
+  {
+    "change": "changed-MA-Chelsea, City of-Chelsea City Clerk-1375",
+    "newEmail": "vote@chelseama.gov",
+    "oldEmail": "jcwhite@chelseama.gov",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-08-16T16:02:18",
+    "newAddress1": "500 Broadway",
+    "oldAddress1": "500 BROADWAY"
+  },
+  {
+    "change": "changed-MA-Cheshire, Town of-Cheshire Town Clerk-1376",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "P.O. BOX S",
+    "oldAddress1": "80 CHURCH ST., BOX S"
+  },
+  {
+    "change": "changed-MA-Chester, Town of-Chester Town Clerk-1377",
+    "newEmail": "",
+    "oldEmail": "chestertownclerk@comcast.net",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:08",
+    "newAddress1": "15 Middlefield Rd.",
+    "oldAddress1": "15 MIDDLEFIELD RD."
+  },
+  {
+    "change": "changed-MA-Chesterfield, Town of-Chesterfield Town Clerk-1378",
+    "newEmail": "election@townofchesterfieldma.com",
+    "oldEmail": "townclerk@townofchesterfieldma.com",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "P.O. BOX 13",
+    "oldAddress1": "PO BOX 13"
+  },
+  {
+    "change": "changed-MA-Chicopee, City of-Chicopee Election Commission-1379",
+    "newEmail": "jsurdyka@chicopeema.gov",
+    "oldEmail": "jnash@chicopeema.gov",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-08-16T15:41:19",
+    "newAddress1": "274 Front St.",
+    "oldAddress1": "274 FRONT ST."
+  },
+  {
+    "change": "changed-MA-Chilmark, Town of-Chilmark Town Clerk-1380",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "P.O. BOX 119",
+    "oldAddress1": "PO BOX 119"
+  },
+  {
+    "change": "changed-MA-Clarksburg, Town of-Clarksburg Town Clerk-1381",
+    "newEmail": "townclerk@clarksburgma.gov",
+    "oldEmail": "clarksburgtclerk@gmail.com",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "111 River Rd.",
+    "oldAddress1": "111 RIVER RD."
+  },
+  {
+    "change": "changed-MA-Clinton, Town of-Clinton Town Clerk-1382",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:08",
+    "newAddress1": "242 Church St.",
+    "oldAddress1": "242 CHURCH ST."
+  },
+  {
+    "change": "changed-MA-Cohasset, Town of-Cohasset Town Clerk-1383",
+    "newEmail": "TownClerk@cohassetma.org",
+    "oldEmail": "cstpierre@cohassetma.org",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:08",
+    "newAddress1": "41 Highland Ave.",
+    "oldAddress1": "41 HIGHLAND AVE."
+  },
+  {
+    "change": "changed-MA-Colrain, Town of-Colrain Town Clerk-1384",
+    "newPhone": "(413) 624-7100",
+    "oldPhone": "(413) 624-3454",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:08",
+    "newAddress1": "55 Main Rd.",
+    "oldAddress1": "55 MAIN RD."
+  },
+  {
+    "change": "changed-MA-Concord, Town of-Concord Town Clerk-1385",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "P.O. BOX 535",
+    "oldAddress1": "22 MONUMENT SQUARE, PO BOX 535"
+  },
+  {
+    "change": "changed-MA-Conway, Town of-Conway Town Clerk-1386",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "P.O. BOX 240",
+    "oldAddress1": "32 MAIN ST., PO BOX 240"
+  },
+  {
+    "change": "changed-MA-Cummington, Town of-Cummington Town Clerk-1387",
+    "newEmail": "djordan@cummington-ma.gov",
+    "oldEmail": "clerk@cummington-ma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "P.O. BOX 128",
+    "oldAddress1": "PO BOX 128"
+  },
+  {
+    "change": "changed-MA-Dalton, Town of-Dalton Town Clerk-1388",
+    "newEmail": "Mblake@dalton-ma.gov",
+    "oldEmail": "DMerry@dalton-ma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "462 Main St.",
+    "oldAddress1": "462 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Danvers, Town of-Danvers Town Clerk-1389",
+    "newEmail": "townclerk@danversma.gov",
+    "oldEmail": "jviel@danversma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2020-07-29T12:01:27",
+    "newAddress1": "1 Sylvan St.",
+    "oldAddress1": "1 SYLVAN ST."
+  },
+  {
+    "change": "changed-MA-Dartmouth, Town of-Dartmouth Town Clerk-1390",
+    "newEmail": "clerk@town.dartmouth.ma.us",
+    "oldEmail": "Clerk@town.dartmouth.ma.us",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2020-08-04T13:25:19",
+    "newAddress1": "400 Slocum Rd.",
+    "oldAddress1": "400 SLOCUM RD."
+  },
+  {
+    "change": "changed-MA-Dedham, Town of-Dedham Town Clerk-1391",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:08",
+    "newAddress1": "450 Washington St.",
+    "oldAddress1": "26 BRYANT ST."
+  },
+  {
+    "change": "changed-MA-Deerfield, Town of-Deerfield Town Clerk-1392",
+    "newEmail": "vote@town.deerfield.ma.us",
+    "oldEmail": "townclerk@town.deerfield.ma.us",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:08",
+    "newAddress1": "8 Conway St.",
+    "oldAddress1": "8 CONWAY ST."
+  },
+  {
+    "change": "changed-MA-Dennis, Town of-Dennis Town Clerk-1393",
+    "newEmail": "clerksoffice@town.dennis.ma.us",
+    "oldEmail": "tbunce@town.dennis.ma.us",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:08",
+    "newAddress1": "685 Route 134",
+    "oldAddress1": "685 ROUTE 134"
+  },
+  {
+    "change": "changed-MA-Dighton, Town of-Dighton Town Clerk-1394",
+    "newEmail": "mpacheco@dighton-ma.gov",
+    "oldEmail": "smedeiros@townofdighton.com",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:08",
+    "newAddress1": "979 Somerset Ave.",
+    "oldAddress1": "979 SOMERSET AVE."
+  },
+  {
+    "change": "changed-MA-Douglas, Town of-Douglas Town Clerk-1395",
+    "newEmail": "cfurno@douglas-ma.gov",
+    "oldEmail": "CFURNO@DOUGLASMA.ORG",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "29 Depot St.",
+    "oldAddress1": "29 DEPOT ST."
+  },
+  {
+    "change": "changed-MA-Dover, Town of-Dover Town Clerk-1396",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "P.O. BOX 250",
+    "oldAddress1": "5 SPRINGDALE AVE., PO BOX 250"
+  },
+  {
+    "change": "changed-MA-Dracut, Town of-Dracut Town Clerk-1397",
+    "newEmail": "elections@dracutma.gov",
+    "oldEmail": "shardy@dracutma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:08",
+    "newAddress1": "62 Arlington St.",
+    "oldAddress1": "62 ARLINGTON ST."
+  },
+  {
+    "change": "changed-MA-Dudley, Town of-Dudley Town Clerk-1398",
+    "newEmail": "townclerk@dudleyma.gov",
+    "oldEmail": "oraf@dudleyma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:08",
+    "newAddress1": "71 West Main St.",
+    "oldAddress1": "71 WEST MAIN ST."
+  },
+  {
+    "change": "changed-MA-Dunstable, Town of-Dunstable Town Clerk-1399",
+    "newEmail": "cskerrett@dunstable-ma.gov",
+    "oldEmail": "CSkerrett@dunstable-ma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "511 Main St.",
+    "oldAddress1": "511 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Duxbury, Town of-Duxbury Town Clerk-1400",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:08",
+    "newAddress1": "878 Tremont St.",
+    "oldAddress1": "878 TREMONT ST."
+  },
+  {
+    "change": "changed-MA-East Bridgewater, Town of-East Bridgewater Town Clerk-1401",
+    "newEmail": "Townclerk@eastbridgewaterma.gov",
+    "oldEmail": "sgillpatrick@ebmass.com",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "175 Central St.",
+    "oldAddress1": "175 CENTRAL ST., PO BOX 387"
+  },
+  {
+    "change": "changed-MA-East Brookfield, Town of-East Brookfield Town Clerk-1402",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "P.O. BOX 568",
+    "oldAddress1": "PO BOX 568"
+  },
+  {
+    "change": "changed-MA-East Longmeadow, Town of-East Longmeadow Town Clerk-1403",
+    "newFax": "",
+    "oldFax": "(413) 525-0022",
+    "newEmail": "elections@eastlongmeadowma.gov",
+    "oldEmail": "jeanne.quaglietti@eastlongmeadowma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2020-01-14T16:34:08",
+    "newAddress1": "60 Center Sq.",
+    "oldAddress1": "60 CENTER SQUARE"
+  },
+  {
+    "change": "changed-MA-Eastham, Town of-Eastham Town Clerk-1404",
+    "newFax": "(774) 801-3923",
+    "oldFax": "(508) 240-1291",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "2500 State Hwy",
+    "oldAddress1": "2500 STATE HWY"
+  },
+  {
+    "change": "changed-MA-Easthampton, Town of-Easthampton Town Clerk-1405",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2020-06-12T11:48:03",
+    "newAddress1": "50 Payson Ave.",
+    "oldAddress1": "50 PAYSON AVE., STE 100"
+  },
+  {
+    "change": "changed-MA-Easton, Town of-Easton Town Clerk-1406",
+    "newEmail": "votebymail@easton.ma.us",
+    "oldEmail": "townclerksoffice@easton.ma.us",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2020-07-23T11:05:42",
+    "newAddress1": "136 Elm St.",
+    "oldAddress1": "136 ELM ST."
+  },
+  {
+    "change": "changed-MA-Edgartown, Town of-Edgartown Town Clerk-1407",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "P.O. BOX 35",
+    "oldAddress1": "70 MAIN ST., PO BOX 35"
+  },
+  {
+    "change": "changed-MA-Egremont, Town of-Egremont Town Clerk-1408",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "P.O. Box 368",
+    "oldAddress1": "PO BOX 368"
+  },
+  {
+    "change": "changed-MA-Erving, Town of-Erving Town Clerk-1409",
+    "newEmail": "richard.newton@erving-ma.gov",
+    "oldEmail": "townclerk.richard.newton@erving-ma.org",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "12 East Main St.",
+    "oldAddress1": "12 EAST MAIN ST."
+  },
+  {
+    "change": "changed-MA-Essex, Town of-Essex Town Clerk-1410",
+    "newEmail": "townclerk@ESSEXMA.ORG",
+    "oldEmail": "pthorne@essexma.org",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "30 Martin St.",
+    "oldAddress1": "30 MARTIN ST."
+  },
+  {
+    "change": "changed-MA-Everett, City of-Everett Election Commission-1411",
+    "newPhone": "(617) 394-2229",
+    "oldPhone": "(617) 394-2297",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2020-09-29T15:19:58",
+    "newAddress1": "484 Broadway",
+    "oldAddress1": "484 BROADWAY, ROOM 34"
+  },
+  {
+    "change": "changed-MA-Fairhaven, Town of-Fairhaven Town Clerk-1412",
+    "newFax": "",
+    "oldFax": "(508) 979-4079",
+    "newEmail": "clerk@fairhaven-ma.gov",
+    "oldEmail": "churley@fairhaven-ma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "40 Center St.",
+    "oldAddress1": "40 CENTER ST."
+  },
+  {
+    "change": "changed-MA-Fall River, City of-Fall River Election Commission-1413",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "1 Government Center",
+    "oldAddress1": "1 GOVERNMENT CENTER, RM 636"
+  },
+  {
+    "change": "changed-MA-Falmouth, Town of-Falmouth Town Clerk-1414",
+    "newEmail": "TownClerk@falmouthma.gov",
+    "oldEmail": "michael.palmer@falmouthma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "59 Town Hall Sq.",
+    "oldAddress1": "59 TOWN HALL SQUARE"
+  },
+  {
+    "change": "changed-MA-Fitchburg, City of-Fitchburg City Clerk-1415",
+    "newEmail": "vote@fitchburgma.gov",
+    "oldEmail": "mdealderete@fitchburgma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2020-01-14T16:34:23",
+    "newAddress1": "166 Boulder Drive",
+    "oldAddress1": "166 BOULDER DR."
+  },
+  {
+    "change": "changed-MA-Florida, Town of-Florida Town Clerk-1416",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:08",
+    "newAddress1": "379 Mohawk Trail",
+    "oldAddress1": "379 MOHAWK TRL"
+  },
+  {
+    "change": "changed-MA-Foxborough, Town of-Foxborough Town Clerk-1417",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:08",
+    "newAddress1": "40 South St.",
+    "oldAddress1": "40 SOUTH ST."
+  },
+  {
+    "change": "changed-MA-Framingham, Town of-Framingham City Clerk-1418",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:27",
+    "newAddress1": "150 Concord St.",
+    "oldAddress1": "150 CONCORD ST., ROOM 105"
+  },
+  {
+    "change": "changed-MA-Franklin, Town of-Franklin Town Clerk-1419",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2020-10-20T14:44:41",
+    "newAddress1": "355 East Central St.",
+    "oldAddress1": "355 EAST CENTRAL ST., MUNICIPAL BUILDING"
+  },
+  {
+    "change": "changed-MA-Freetown, Town of-Freetown Town Clerk-1420",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:08",
+    "newAddress1": "P.O. Box 438",
+    "oldAddress1": "3 NORTH MAIN ST."
+  },
+  {
+    "change": "changed-MA-Gardner, City of-Gardner City Clerk-1421",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2020-10-05T08:45:48",
+    "newAddress1": "95 Pleasant St.",
+    "oldAddress1": "CITY HALL, 95 PLEASANT STREET, ROOM 121"
+  },
+  {
+    "change": "changed-MA-Georgetown, Town of-Georgetown Town Clerk-1422",
+    "newEmail": "townclerk@georgetownma.gov",
+    "oldEmail": "kmcmanus@georgetownma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:27:41",
+    "newAddress1": "1 Library St.",
+    "oldAddress1": "1 LIBRARY ST."
+  },
+  {
+    "change": "changed-MA-Gill, Town of-Gill Town Clerk-1423",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "325 Main Rd.",
+    "oldAddress1": "325 MAIN RD."
+  },
+  {
+    "change": "changed-MA-Gloucester, City of-Gloucester City Clerk-1424",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2020-06-29T12:25:03",
+    "newAddress1": "9 Dale Ave.",
+    "oldAddress1": "9 DALE AVE."
+  },
+  {
+    "change": "changed-MA-Goshen, Town of-Goshen Town Clerk-1425",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "40 Main St.",
+    "oldAddress1": "40 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Gosnold, Town of-Gosnold Town Clerk-1426",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "P.O. BOX 28",
+    "oldAddress1": "PO BOX 28"
+  },
+  {
+    "change": "changed-MA-Grafton, Town of-Grafton Town Clerk-1427",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "30 Providence Rd.",
+    "oldAddress1": "30 PROVIDENCE RD."
+  },
+  {
+    "change": "changed-MA-Granby, Town of-Granby Town Clerk-1428",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "215 B West State St.",
+    "oldAddress1": "215 B WEST STATE ST."
+  },
+  {
+    "change": "changed-MA-Granville, Town of-Granville Town Clerk-1429",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "P.O. BOX 247",
+    "oldAddress1": "PO BOX 247"
+  },
+  {
+    "change": "changed-MA-Great Barrington, Town of-Great Barrington Town Clerk-1430",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2020-01-14T16:34:38",
+    "newAddress1": "334 Main St.",
+    "oldAddress1": "334 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Greenfield, Town of-Greenfield Town Clerk-1431",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "14 Court Sq.",
+    "oldAddress1": "14 COURT SQUARE"
+  },
+  {
+    "change": "changed-MA-Groton, Town of-Groton Town Clerk-1432",
+    "newEmail": "townclerk@grotonma.gov",
+    "oldEmail": "townclerk@townofgroton.org",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "173 Main St.",
+    "oldAddress1": "173 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Groveland, Town of-Groveland Town Clerk-1433",
+    "newPhone": "(978) 556-7221",
+    "oldPhone": "(978) 469-5005",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "183 Main St.",
+    "oldAddress1": "183 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Hadley, Town of-Hadley Town Clerk-1434",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "100 Middle St.",
+    "oldAddress1": "100 MIDDLE ST."
+  },
+  {
+    "change": "changed-MA-Halifax, Town of-Halifax Town Clerk-1435",
+    "newEmail": "ClerksOffice@halifax-ma.org",
+    "oldEmail": "bgaynor@town.halifax.ma.us",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "499 Plymouth St.",
+    "oldAddress1": "499 PLYMOUTH ST."
+  },
+  {
+    "change": "changed-MA-Hamilton, Town of-Hamilton Town Clerk-1436",
+    "newEmail": "townclerk@hamiltonma.gov",
+    "oldEmail": "ckale@hamiltonma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2020-10-06T12:17:10",
+    "newAddress1": "577 Bay Rd.",
+    "oldAddress1": "577 BAY ROAD"
+  },
+  {
+    "change": "changed-MA-Hampden, Town of-Hampden Town Clerk-1437",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2020-07-01T15:13:04",
+    "newAddress1": "625 Main St.",
+    "oldAddress1": "625 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Hancock, Town of-Hancock Town Clerk-1438",
+    "newPhone": "(413) 738-5126",
+    "oldPhone": "(413) 738-5225",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "3650 Hancock Rd.",
+    "oldAddress1": "3650 HANCOCK RD"
+  },
+  {
+    "change": "changed-MA-Hanover, Town of-Hanover Town Clerk-1439",
+    "newFax": "",
+    "oldFax": "(781) 826-7499",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "550 Hanover St.",
+    "oldAddress1": "550 HANOVER ST."
+  },
+  {
+    "change": "changed-MA-Hanson, Town of-Hanson Town Clerk-1440",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "542 Liberty St.",
+    "oldAddress1": "542 LIBERTY ST."
+  },
+  {
+    "change": "changed-MA-Hardwick, Town of-Hardwick Town Clerk-1441",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "307 Main St.",
+    "oldAddress1": "307 MAIN ST., PO BOX 575"
+  },
+  {
+    "change": "changed-MA-Harvard, Town of-Harvard Town Clerk-1442",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2020-07-23T12:37:57",
+    "newAddress1": "13 Ayer Rd.",
+    "oldAddress1": "13 AYER RD."
+  },
+  {
+    "change": "changed-MA-Harwich, Town of-Harwich Town Clerk-1443",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "732 Main St.",
+    "oldAddress1": "732 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Hatfield, Town of-Hatfield Town Clerk-1444",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "59 Main St.",
+    "oldAddress1": "59 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Haverhill, City of-Haverhill City Clerk-1445",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-08-16T15:41:32",
+    "newAddress1": "4 Summer St.",
+    "oldAddress1": "4 SUMMER ST., ROOM 118"
+  },
+  {
+    "change": "changed-MA-Hawley, Town of-Hawley Town Clerk-1446",
+    "newEmail": "townclerk@townofhawley.com",
+    "oldEmail": "TOWNCLERK@TOWNOFHAWLEY.COM",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "8 Pudding Hollow Rd.",
+    "oldAddress1": "8 PUDDING HOLLOW RD."
+  },
+  {
+    "change": "changed-MA-Heath, Town of-Heath Town Clerk-1447",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "1 East Main St.",
+    "oldAddress1": "1 EAST MAIN ST."
+  },
+  {
+    "change": "changed-MA-Hingham, Town of-Hingham Town Clerk-1448",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "210 Central St.",
+    "oldAddress1": "210 CENTRAL ST."
+  },
+  {
+    "change": "changed-MA-Hinsdale, Town of-Hinsdale Town Clerk-1449",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2020-07-23T15:49:44",
+    "newAddress1": "P.O. BOX 803",
+    "oldAddress1": "PO BOX 803"
+  },
+  {
+    "change": "changed-MA-Holbrook, Town of-Holbrook Town Clerk-1450",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "50 N. Franklin St.",
+    "oldAddress1": "50 N FRANKLIN ST."
+  },
+  {
+    "change": "changed-MA-Holden, Town of-Holden Town Clerk-1451",
+    "newPhone": "(508) 210-5532",
+    "oldPhone": "(508) 210-5530",
+    "newEmail": "townclerk@holdenma.gov",
+    "oldEmail": "jsurvell@holdenma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2020-03-26T11:05:26",
+    "newAddress1": "1196 Main St.",
+    "oldAddress1": "1196 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Holland, Town of-Holland Town Clerk-1452",
+    "newEmail": "townclerk@hollandma.org",
+    "oldEmail": "townclerk@townofholland.necoxmail.com",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "27 Sturbridge Rd.",
+    "oldAddress1": "27 STURBRIDGE RD."
+  },
+  {
+    "change": "changed-MA-Holliston, Town of-Holliston Town Clerk-1453",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "703 Washington St.",
+    "oldAddress1": "703 WASHINGTON ST."
+  },
+  {
+    "change": "changed-MA-Holyoke, City of-Holyoke City Clerk-1454",
+    "newEmail": "clerks@holyoke.org",
+    "oldEmail": "mcgeeb@holyoke.org",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "536 Dwight St.",
+    "oldAddress1": "536 DWIGHT ST., SUITE #2"
+  },
+  {
+    "change": "changed-MA-Hopedale, Town of-Hopedale Town Clerk-1455",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "P.O. BOX 7",
+    "oldAddress1": "PO BOX 7, 78 HOPEDALE STREET"
+  },
+  {
+    "change": "changed-MA-Hopkinton, Town of-Hopkinton Town Clerk-1456",
+    "newFax": "",
+    "oldFax": "(617) 742-3238",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2020-02-25T15:07:56",
+    "newAddress1": "18 Main St.",
+    "oldAddress1": "18 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Hubbardston, Town of-Hubbardston Town Clerk-1457",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "7 Main St.",
+    "oldAddress1": "7 MAIN ST., UNIT 12"
+  },
+  {
+    "change": "changed-MA-Hudson, Town of-Hudson Town Clerk-1458",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "78 Main St.",
+    "oldAddress1": "78 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Hull, Town of-Hull Town Clerk-1459",
+    "newEmail": "votebymail@town.hull.ma.us",
+    "oldEmail": "lwest@town.hull.ma.us",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "253 Atlantic Ave.",
+    "oldAddress1": "253 ATLANTIC AVE."
+  },
+  {
+    "change": "changed-MA-Huntington, Town of-Huntington Town Clerk-1460",
+    "newEmail": "townclerk@huntingtonma.us",
+    "oldEmail": "huntingtonclerk@comcast.net",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "P.O. BOX 453",
+    "oldAddress1": "PO BOX 453"
+  },
+  {
+    "change": "changed-MA-Ipswich, Town of-Ipswich Town Clerk-1461",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2020-01-14T16:35:49",
+    "newAddress1": "25 Green St.",
+    "oldAddress1": "25 GREEN ST."
+  },
+  {
+    "change": "changed-MA-Kingston, Town of-Kingston Town Clerk-1462",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "26 Evergreen St.",
+    "oldAddress1": "26 EVERGREEN ST."
+  },
+  {
+    "change": "changed-MA-Lakeville, Town of-Lakeville Town Clerk-1463",
+    "newPhone": "(508) 946-8800",
+    "oldPhone": "(508) 946-8814",
+    "newEmail": "vote@lakevillema.org",
+    "oldEmail": "ldrane@lakevillema.org",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "346 Bedford St.",
+    "oldAddress1": "346 BEDFORD ST."
+  },
+  {
+    "change": "changed-MA-Lancaster, Town of-Lancaster Town Clerk-1464",
+    "newEmail": "townclerk@lancasterma.net",
+    "oldEmail": "dreardon@lancasterma.net",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "701 Main St.",
+    "oldAddress1": "701 MAIN ST., SUITE 2"
+  },
+  {
+    "change": "changed-MA-Lanesborough, Town of-Lanesborough Town Clerk-1465",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "P.O. Box 1492",
+    "oldAddress1": "PO BOX 1492"
+  },
+  {
+    "change": "changed-MA-Lawrence, City of-Lawrence Elections Division-1466",
+    "newEmail": "dtavor@cityoflawrence.com",
+    "oldEmail": "rreyes@cityoflawrence.com",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "200 Common St.",
+    "oldAddress1": "200 COMMON ST., RM 4"
+  },
+  {
+    "change": "changed-MA-Lee, Town of-Lee Town Clerk-1467",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2020-07-27T14:55:37",
+    "newAddress1": "32 Main St.",
+    "oldAddress1": "32 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Leicester, Town of-Leicester Town Clerk-1468",
+    "newEmail": "townclerk@leicesterma.org",
+    "oldEmail": "davisd@leicesterma.org",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "3 Washburn Sq.",
+    "oldAddress1": "3 WASHBURN SQUARE"
+  },
+  {
+    "change": "changed-MA-Lenox, Town of-Lenox Town Clerk-1469",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "6 Walker St.",
+    "oldAddress1": "6 WALKER ST."
+  },
+  {
+    "change": "changed-MA-Leominster, City of-Leominster City Clerk-1470",
+    "newEmail": "clerksdept@leominster-ma.gov",
+    "oldEmail": "khuffman@leominster-ma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-08-16T15:42:06",
+    "newAddress1": "25 West St.",
+    "oldAddress1": "25 WEST ST., ROOM 5"
+  },
+  {
+    "change": "changed-MA-Leverett, Town of-Leverett Town Clerk-1471",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "9 Montague Rd.",
+    "oldAddress1": "9 MONTAGUE RD., PO BOX 300"
+  },
+  {
+    "change": "changed-MA-Lexington, Town of-Lexington Town Clerk-1472",
+    "newEmail": "clerk@lexingtonma.gov",
+    "oldEmail": "ballots@lexingtonma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2020-08-25T11:02:51",
+    "newAddress1": "1625 Massachusetts Ave.",
+    "oldAddress1": "1625 MASS. AVE."
+  },
+  {
+    "change": "changed-MA-Leyden, Town of-Leyden Town Clerk-1473",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "7 Brattleborough Rd.",
+    "oldAddress1": "16 WEST LEYDEN RD."
+  },
+  {
+    "change": "changed-MA-Lincoln, Town of-Lincoln Town Clerk-1474",
+    "newEmail": "townclerk@lincolntown.org",
+    "oldEmail": "foxv@lincolntown.org",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2018-08-02T15:04:30",
+    "newAddress1": "16 Lincoln Rd.",
+    "oldAddress1": "16 LINCOLN RD."
+  },
+  {
+    "change": "changed-MA-Littleton, Town of-Littleton Town Hall-1475",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "37 Shattuck St.",
+    "oldAddress1": "37 SHATTUCK ST."
+  },
+  {
+    "change": "changed-MA-Longmeadow, Town of-Longmeadow Town Clerk-1476",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "20 Williams St.",
+    "oldAddress1": "20 WILLIAMS ST."
+  },
+  {
+    "change": "changed-MA-Lowell, City of-Lowell Election Commission-1477",
+    "newEmail": "elections@lowellma.gov",
+    "oldEmail": "Elections@lowellma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "375 Merrimack St.",
+    "oldAddress1": "375 MERRIMACK ST., RM 5 BASEMENT"
+  },
+  {
+    "change": "changed-MA-Ludlow, Town of-Ludlow Town Clerk-1478",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "488 Chapin St.",
+    "oldAddress1": "488 CHAPIN ST."
+  },
+  {
+    "change": "changed-MA-Lunenburg, Town of-Lunenburg Town Clerk-1479",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "17 Main St.",
+    "oldAddress1": "17 MAIN ST., PO BOX 135"
+  },
+  {
+    "change": "changed-MA-Lynn, City of-Lynn City Clerk-1480",
+    "newEmail": "krichard@lynnma.gov",
+    "oldEmail": "jrowe@lynnma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "3 City Hall Sq.",
+    "oldAddress1": "3 CITY HALL SQUARE, ROOM 203"
+  },
+  {
+    "change": "changed-MA-Lynnfield, Town of-Lynnfield Town Clerk-1481",
+    "newPhone": "(781) 334-9400",
+    "oldPhone": "(781) 334-9401",
+    "newEmail": "lemerson@town.lynnfield.ma.us",
+    "oldEmail": "dhammerbeck@town.lynnfield.ma.us",
+    "newEffectiveDate": "2021-07-13T13:27:16",
+    "oldEffectiveDate": "2020-01-14T16:36:22",
+    "newAddress1": "55 Summer St.",
+    "oldAddress1": "55 SUMMER ST."
+  },
+  {
+    "change": "changed-MA-Malden, City of-Malden City Clerk-1482",
+    "newEmail": "elections@cityofmalden.org",
+    "oldEmail": "glucey@cityofmalden.org",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-09-25T15:46:13",
+    "newAddress1": "215 Pleasant St., Room 220",
+    "oldAddress1": "110 PLEASANT ST., FIRST FLOOR"
+  },
+  {
+    "change": "changed-MA-Manchester-by-the-Sea, Town of-Manchester-by-the-Sea Town Clerk-1483",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2020-08-21T12:58:41",
+    "newAddress1": "10 Central St.",
+    "oldAddress1": "10 CENTRAL ST."
+  },
+  {
+    "change": "changed-MA-Mansfield, Town of-Mansfield Town Clerk-1484",
+    "newEmail": "townclerk@mansfieldma.com",
+    "oldEmail": "mstaples@mansfieldma.com",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "6 Park Row",
+    "oldAddress1": "6 PARK ROW"
+  },
+  {
+    "change": "changed-MA-Marblehead, Town of-Marblehead Town Clerk-1485",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "188 Washington St.",
+    "oldAddress1": "188 WASHINGTON ST."
+  },
+  {
+    "change": "changed-MA-Marion, Town of-Marion Town Clerk-1486",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2020-09-08T08:49:01",
+    "newAddress1": "2 Spring St.",
+    "oldAddress1": "2 SPRING ST."
+  },
+  {
+    "change": "changed-MA-Marlborough, City of-Marlborough City Clerk-1487",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "140 Main St.",
+    "oldAddress1": "140 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Marshfield, Town of-Marshfield Town Clerk-1488",
+    "newFax": "",
+    "oldFax": "(781) 834-6289",
+    "newEmail": "townclerk@townofmarshfield.org",
+    "oldEmail": "ncasper@townofmarshfield.org",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "870 Moraine St.",
+    "oldAddress1": "870 MORAINE ST."
+  },
+  {
+    "change": "changed-MA-Mashpee, Town of-Mashpee Town Clerk-1489",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "16 Great Neck Rd. No.",
+    "oldAddress1": "16 GREAT NECK RD. NORTH"
+  },
+  {
+    "change": "changed-MA-Mattapoisett, Town of-Mattapoisett Town Clerk-1490",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "16 Main St.",
+    "oldAddress1": "16 MAIN ST., PO BOX 89"
+  },
+  {
+    "change": "changed-MA-Maynard, Town of-Maynard Town Clerk-1491",
+    "newEmail": "clerk@townofmaynard.net",
+    "oldEmail": "mjenkins@townofmaynard.net",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2020-09-04T09:09:25",
+    "newAddress1": "195 Main St.",
+    "oldAddress1": "195 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Medfield, Town of-Medfield Town Clerk-1492",
+    "newEmail": "jmullen@medfield.net",
+    "oldEmail": "cmayer@medfield.net",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "459 Main St.",
+    "oldAddress1": "459 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Medford, City of-Medford Board of Registrars-1493",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-08-16T15:44:58",
+    "newAddress1": "85 George Hassett Drive",
+    "oldAddress1": "85 GEORGE HASSETT DR."
+  },
+  {
+    "change": "changed-MA-Medway, Town of-Medway Town Clerk-1494",
+    "newEmail": "townclerk@townofmedway.org",
+    "oldEmail": "mwhite@townofmedway.org",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "155 Village St.",
+    "oldAddress1": "155 VILLAGE ST."
+  },
+  {
+    "change": "changed-MA-Melrose, City of-Melrose City Clerk-1495",
+    "newEmail": "elections@CityofMelrose.org",
+    "oldEmail": "jperperian@cityofmelrose.org",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "562 Main St.",
+    "oldAddress1": "562 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Mendon, Town of-Mendon Town Clerk-1496",
+    "newEmail": "vote@mendonma.gov",
+    "oldEmail": "townclerk@mendonma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2020-07-23T11:03:45",
+    "newAddress1": "20 Main St.",
+    "oldAddress1": "20 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Merrimac, Town of-Merrimac Town Clerk-1497",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "2 School St.",
+    "oldAddress1": "2 SCHOOL ST."
+  },
+  {
+    "change": "changed-MA-Methuen, Town of-Methuen City Clerk-1498",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2020-07-10T09:45:59",
+    "newAddress1": "41 Pleasant St.",
+    "oldAddress1": "41 PLEASANT ST., 112"
+  },
+  {
+    "change": "changed-MA-Middleborough, Town of-Middleborough Town Clerk-1499",
+    "newEmail": "vote@middleborough.com",
+    "oldEmail": "aferreira@middleborough.com",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "20 Centre St., 1st Floor",
+    "oldAddress1": "20 CENTRE ST.,  1ST FL"
+  },
+  {
+    "change": "changed-MA-Middlefield, Town of-Middlefield Town Clerk-1500",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "P.O. BOX 265",
+    "oldAddress1": "PO BOX 265"
+  },
+  {
+    "change": "changed-MA-Middleton, Town of-Middleton Town Clerk-1501",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "48 South Main St.",
+    "oldAddress1": "48 SOUTH MAIN ST."
+  },
+  {
+    "change": "changed-MA-Milford, Town of-Milford Town Clerk-1502",
+    "newEmail": "townclerksoffice@townofmilford.com",
+    "oldEmail": "aneves@townofmilford.com",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "52 Main St.",
+    "oldAddress1": "52 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Millbury, Town of-Millbury Town Clerk-1503",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2018-11-05T08:56:09",
+    "newAddress1": "127 Elm St.",
+    "oldAddress1": "127 ELM ST."
+  },
+  {
+    "change": "changed-MA-Millis, Town of-Millis Town Clerk-1504",
+    "newEmail": "townclerk@millisma.gov",
+    "oldEmail": "ljhardin@millisma.net",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "900 Main St.",
+    "oldAddress1": "900 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Millville, Town of-Millville Town Clerk-1505",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "290 Main St.",
+    "oldAddress1": "290 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Milton, Town of-Milton Town Clerk-1506",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "525 Canton Ave.",
+    "oldAddress1": "525 CANTON AVE."
+  },
+  {
+    "change": "changed-MA-Monroe, Town of-Monroe Town Clerk-1507",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "102 School St.",
+    "oldAddress1": "102 SCHOOL ST."
+  },
+  {
+    "change": "changed-MA-Monson, Town of-Monson Town Clerk-1508",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "110 Main St.",
+    "oldAddress1": "110 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Montague, Town of-Montague Town Clerk-1509",
+    "newEmail": "vote@montague-ma.gov",
+    "oldEmail": "townclerk@montague-ma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "One Ave. A",
+    "oldAddress1": "ONE AVENUE A"
+  },
+  {
+    "change": "changed-MA-Monterey, Town of-Monterey Town Clerk-1510",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "P.O. Box 277",
+    "oldAddress1": "PO BOX 277"
+  },
+  {
+    "change": "changed-MA-Montgomery, Town of-Montgomery Town Clerk-1511",
+    "newEmail": "jmurphy@montgomeryma.gov",
+    "oldEmail": "montgomerymass@rcn.com",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "58 North Rd.",
+    "oldAddress1": "58 NORTH RD."
+  },
+  {
+    "change": "changed-MA-Mount Washington, Town of-Mount Washington Town Clerk-1512",
+    "newEmail": "gailg@townofmtwashington.com",
+    "oldEmail": "gailgarrett@townofmtwashington.com",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "2 Plantain Pond Rd.",
+    "oldAddress1": "118 EAST ST."
+  },
+  {
+    "change": "changed-MA-Nahant, Town of-Nahant Town Clerk-1513",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2020-07-29T11:23:45",
+    "newAddress1": "334 Nahant Rd.",
+    "oldAddress1": "334 NAHANT RD."
+  },
+  {
+    "change": "changed-MA-Nantucket, Town of-Nantucket Town Clerk-1514",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "16 Broad St.",
+    "oldAddress1": "16 BROAD ST."
+  },
+  {
+    "change": "changed-MA-Natick, Town of-Natick Town Clerk-1515",
+    "newPhone": "(508) 647-6430",
+    "oldPhone": "(508) 647-6432",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "13 East. Central St.",
+    "oldAddress1": "13 EAST CENTRAL ST."
+  },
+  {
+    "change": "changed-MA-Needham, Town of-Needham Town Clerk-1516",
+    "newEmail": "votingapplications@needhamma.gov",
+    "oldEmail": "Teaton@needhamma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "1471 Highland Ave.",
+    "oldAddress1": "PO BOX 920663, 1471 HIGHLAND AVENUE"
+  },
+  {
+    "change": "changed-MA-New Ashford, Town of-New Ashford Town Clerk-1517",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "188 Mallery Rd.",
+    "oldAddress1": "188 MALLERY RD."
+  },
+  {
+    "change": "changed-MA-New Bedford, City of-New Bedford Election Commission-1518",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "133 William St.",
+    "oldAddress1": "133 WILLIAM ST., ROOM 114"
+  },
+  {
+    "change": "changed-MA-New Braintree, Town of-New Braintree Town Clerk-1519",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "20 Memorial Drive, Room #5",
+    "oldAddress1": "20 MEMORIAL DR."
+  },
+  {
+    "change": "changed-MA-New Marlborough, Town of-New Marlborough Town Clerk-1520",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "807 Mill River Southfield Rd.",
+    "oldAddress1": "PO BOX 99"
+  },
+  {
+    "change": "changed-MA-New Salem, Town of-New Salem Town Clerk-1521",
+    "newFax": "",
+    "oldFax": "(617) 742-3238",
+    "newEffectiveDate": "2021-07-13T13:22:36",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "24 South Main St.",
+    "oldAddress1": "24 SOUTH MAIN ST."
+  },
+  {
+    "change": "changed-MA-Newbury, Town of-Newbury Town Clerk-1522",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "12 Kent Way",
+    "oldAddress1": "12 KENT WAY"
+  },
+  {
+    "change": "changed-MA-Newburyport, City of-Newburyport City Clerk-1523",
+    "newEmail": "vote@cityofnewburyport.com",
+    "oldEmail": "rjones@cityofnewburyport.com",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "60 Pleasant St.",
+    "oldAddress1": "60 PLEASANT ST., PO BOX 550"
+  },
+  {
+    "change": "changed-MA-Newton, City of-Newton City Clerk-1524",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "1000 Commonwealth Ave.",
+    "oldAddress1": "1000 COMMONWEALTH AVE."
+  },
+  {
+    "change": "changed-MA-Norfolk, Town of-Norfolk Town Clerk-1525",
+    "newFax": "",
+    "oldFax": "(508) 541-3363",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "1 Liberty Ln.",
+    "oldAddress1": "1 LIBERTY LN."
+  },
+  {
+    "change": "changed-MA-North Adams, City of-North Adams City Clerk-1526",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-08-16T15:45:14",
+    "newAddress1": "10 Main St.",
+    "oldAddress1": "10 MAIN ST."
+  },
+  {
+    "change": "changed-MA-North Andover, Town of-North Andover Town Clerk-1527",
+    "newEmail": "vote@northandoverma.gov",
+    "oldEmail": "treid@northandoverma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2020-01-31T12:05:59",
+    "newAddress1": "120 Main St.",
+    "oldAddress1": "120 MAIN ST."
+  },
+  {
+    "change": "changed-MA-North Attleborough, Town of-North Attleborough Election Commission-1528",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "43 S. Washington St.",
+    "oldAddress1": "43 S. WASHINGTON ST."
+  },
+  {
+    "change": "changed-MA-North Brookfield, Town of-North Brookfield Town Clerk-1529",
+    "newEmail": "townclerk@northbrookfield.net",
+    "oldEmail": "clerk@northbrookfield.net",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "215 North Main St.",
+    "oldAddress1": "215 NORTH MAIN ST."
+  },
+  {
+    "change": "changed-MA-North Reading, Town of-North Reading Town Clerk-1530",
+    "newPhone": "(978) 357-5230",
+    "oldPhone": "(978) 357-5218",
+    "newEmail": "Ballots@northreadingma.gov",
+    "oldEmail": "bstats@northreadingma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "235 North St.",
+    "oldAddress1": "235 NORTH ST."
+  },
+  {
+    "change": "changed-MA-Northampton, City of-Northampton Board of Registrars-1531",
+    "newFax": "(413) 587-1089",
+    "oldFax": "(413) 587-1308",
+    "newPhone": "(413) 587-1089",
+    "oldPhone": "(413) 587-1291",
+    "newEmail": "voting@northamptonma.gov",
+    "oldEmail": "ppowers@northamptonma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:29:24",
+    "newAddress1": "210 Main St.",
+    "oldAddress1": "210 MAIN ST., RM 8"
+  },
+  {
+    "change": "changed-MA-Northborough, Town of-Northborough Town Clerk-1532",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "63 Main St.",
+    "oldAddress1": "63 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Northbridge, Town of-Northbridge Town Clerk-1533",
+    "newEmail": "vote@northbridgemass.org",
+    "oldEmail": "dcedrone@northbridgemass.org",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "7 Main St.",
+    "oldAddress1": "7 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Northfield, Town of-Northfield Town Clerk-1534",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "69 Main St.",
+    "oldAddress1": "69 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Norton, Town of-Norton Town Clerk-1535",
+    "newFax": "(508) 285-0231",
+    "oldFax": "(508) 285-0297",
+    "newEmail": "ballotapplications@nortonmaus.com",
+    "oldEmail": "llonghurst@nortonmaus.com",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2020-09-17T14:40:09",
+    "newAddress1": "70 E Main St.",
+    "oldAddress1": "70 E. MAIN ST."
+  },
+  {
+    "change": "changed-MA-Norwell, Town of-Norwell Town Clerk-1536",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "345 Main St.",
+    "oldAddress1": "345 MAIN ST., PO BOX 295"
+  },
+  {
+    "change": "changed-MA-Norwood, Town of-Norwood Town Clerk-1537",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "566 Washington St.",
+    "oldAddress1": "566 WASHINGTON ST."
+  },
+  {
+    "change": "changed-MA-Oak Bluffs, Town of-Oak Bluffs Town Clerk-1538",
+    "newEmail": "cmorris@oakbluffsma.gov",
+    "oldEmail": "ljohnston@oakbluffsma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "56 School St.",
+    "oldAddress1": "PO BOX 2490, 56 SCHOOL STREET"
+  },
+  {
+    "change": "changed-MA-Oakham, Town of-Oakham Town Clerk-1539",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "2 Coldbrook Rd.",
+    "oldAddress1": "2 COLDBROOK RD., UNIT # 4"
+  },
+  {
+    "change": "changed-MA-Orange, Town of-Orange Town Clerk-1540",
+    "newEmail": "vote@townoforange.org",
+    "oldEmail": "townclerk@townoforange.org",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "6 Prospect St.",
+    "oldAddress1": "6 PROSPECT ST."
+  },
+  {
+    "change": "changed-MA-Orleans, Town of-Orleans Town Clerk-1541",
+    "newEmail": "census@town.orleans.ma.us",
+    "oldEmail": "cmay@town.orleans.ma.us",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "19 School Rd.",
+    "oldAddress1": "19 SCHOOL RD."
+  },
+  {
+    "change": "changed-MA-Otis, Town of-Otis Town Clerk-1542",
+    "newEmail": "clerk@townofotisma.com",
+    "oldEmail": "tclerk.otis@gmail.com",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "P.O. BOX 237",
+    "oldAddress1": "1 N. MAIN RD., BOX 237"
+  },
+  {
+    "change": "changed-MA-Oxford, Town of-Oxford Town Clerk-1543",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2020-06-30T15:03:47",
+    "newAddress1": "325 Main St.",
+    "oldAddress1": "325 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Palmer, Town of-Palmer Town Clerk-1544",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "4417 Main St.",
+    "oldAddress1": "4417 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Paxton, Town of-Paxton Town Clerk-1545",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "697 Pleasant St.",
+    "oldAddress1": "697 PLEASANT ST."
+  },
+  {
+    "change": "changed-MA-Peabody, City of-Peabody City Clerk-1546",
+    "newPhone": "(978) 538-5756",
+    "oldPhone": "(978) 538-5750",
+    "newEmail": "CityClerk@peabody-ma.gov",
+    "oldEmail": "allyson.danforth@peabody-ma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2020-01-14T16:36:38",
+    "newAddress1": "24 Lowell St.",
+    "oldAddress1": "24 LOWELL ST."
+  },
+  {
+    "change": "changed-MA-Pelham, Town of-Pelham Town Clerk-1547",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "351 Amherst Rd.",
+    "oldAddress1": "351 AMHERST RD."
+  },
+  {
+    "change": "changed-MA-Pembroke, Town of-Pembroke Town Clerk-1548",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "100 Center St.",
+    "oldAddress1": "100 CENTER ST."
+  },
+  {
+    "change": "changed-MA-Pepperell, Town of-Pepperell Town Clerk-1549",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "1 Main St.",
+    "oldAddress1": "1 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Peru, Town of-Peru Town Clerk-1550",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "3 East Main Rd.",
+    "oldAddress1": "3 EAST MAIN RD., SUITE 102"
+  },
+  {
+    "change": "changed-MA-Petersham, Town of-Petersham Town Clerk-1551",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "P.O. BOX 486",
+    "oldAddress1": "PO BOX 486"
+  },
+  {
+    "change": "changed-MA-Phillipston, Town of-Phillipston Town Clerk-1552",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "50 The Common",
+    "oldAddress1": "50 THE COMMON"
+  },
+  {
+    "change": "changed-MA-Pittsfield, City of-Pittsfield Board of Registrars-1553",
+    "newEmail": "elections@cityofpittsfield.org",
+    "oldEmail": "mbenjamin@cityofpittsfield.org",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "70 Allen St.",
+    "oldAddress1": "70 ALLEN ST."
+  },
+  {
+    "change": "changed-MA-Plainfield, Town of-Plainfield Town Clerk-1554",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "348 Main St.",
+    "oldAddress1": "348 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Plainville, Town of-Plainville Town Clerk-1555",
+    "newFax": "(508) 576-8459",
+    "oldFax": "(508) 695-1857",
+    "newEmail": "election@plainville.ma.us",
+    "oldEmail": "erobertson@plainville.ma.us",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "190 South St.",
+    "oldAddress1": "190 SOUTH ST."
+  },
+  {
+    "change": "changed-MA-Plymouth, Town of-Plymouth Town Clerk-1556",
+    "newPhone": "(508) 747-1620",
+    "oldPhone": "(508) 332-3301",
+    "newEmail": "ballots@townhall.plymouth.ma.us",
+    "oldEmail": "psears@plymouth-ma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2020-09-08T13:45:04",
+    "newAddress1": "26 Court St.",
+    "oldAddress1": "26 COURT ST."
+  },
+  {
+    "change": "changed-MA-Plympton, Town of-Plympton Town Clerk-1557",
+    "newEmail": "townclerk@plymptontown.org",
+    "oldEmail": "town_clerk@town.plympton.ma.us",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "5 Palmer Rd.",
+    "oldAddress1": "5 PALMER RD."
+  },
+  {
+    "change": "changed-MA-Princeton, Town of-Princeton Town Clerk-1558",
+    "newFax": "",
+    "oldFax": "(978) 464-2106",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "6 Town Hall Drive",
+    "oldAddress1": "6 TOWN HALL DR."
+  },
+  {
+    "change": "changed-MA-Provincetown, Town of-Provincetown Town Clerk-1559",
+    "newEmail": "ecatanese@provincetown-ma.gov",
+    "oldEmail": "dvanalstyne@provincetown-ma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "260 Commercial St.",
+    "oldAddress1": "260 COMMERCIAL ST."
+  },
+  {
+    "change": "changed-MA-Quincy, City of-Quincy City Clerk-1560",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-08-16T15:45:47",
+    "newAddress1": "1305 Hancock St.",
+    "oldAddress1": "1305 HANCOCK ST."
+  },
+  {
+    "change": "changed-MA-Randolph, Town of-Randolph Town Clerk-1561",
+    "newEmail": "clerk@randolph-ma.gov",
+    "oldEmail": "csass@randolph-ma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "41 South Main St.",
+    "oldAddress1": "41 SOUTH MAIN ST."
+  },
+  {
+    "change": "changed-MA-Raynham, Town of-Raynham Town Clerk-1562",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "558 South Main St.",
+    "oldAddress1": "558 SOUTH MAIN ST."
+  },
+  {
+    "change": "changed-MA-Reading, Town of-Reading Town Clerk-1563",
+    "newEmail": "townclerk@ci.reading.ma.us",
+    "oldEmail": "lgemme@ci.reading.ma.us",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "16 Lowell St.",
+    "oldAddress1": "16 LOWELL ST."
+  },
+  {
+    "change": "changed-MA-Rehoboth, Town of-Rehoboth Town Clerk-1564",
+    "newEmail": "TownClerk@RehobothMA.gov",
+    "oldEmail": "lschwall@town.rehoboth.ma.us",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "148 Peck St.",
+    "oldAddress1": "148R PECK ST."
+  },
+  {
+    "change": "changed-MA-Revere, City of-Revere Election Commission-1565",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "P.O. BOX 246",
+    "oldAddress1": "281 BROADWAY, PO BOX 246"
+  },
+  {
+    "change": "changed-MA-Richmond, Town of-Richmond Town Clerk-1566",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "1529 State Rd.",
+    "oldAddress1": "1529 STATE RD."
+  },
+  {
+    "change": "changed-MA-Rochester, Town of-Rochester Town Clerk-1567",
+    "newEmail": "pdawson@townofrochester.com",
+    "oldEmail": "nparker@townofrochester.com",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "1 Constitution Way",
+    "oldAddress1": "1 CONSTITUTION WAY"
+  },
+  {
+    "change": "changed-MA-Rockland, Town of-Rockland Town Clerk-1568",
+    "newEmail": "llandy@rockland-ma.gov",
+    "oldEmail": "dshortall@rockland-ma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "242 Union St.",
+    "oldAddress1": "242 UNION ST."
+  },
+  {
+    "change": "changed-MA-Rockport, Town of-Rockport Town Clerk-1569",
+    "newEmail": "townclerk@rockportma.gov",
+    "oldEmail": "pbrown@rockportma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "P.O. BOX 429",
+    "oldAddress1": "PO BOX 429"
+  },
+  {
+    "change": "changed-MA-Rowe, Town of-Rowe Town Clerk-1570",
+    "newPhone": "(413) 339-5520 x14",
+    "oldPhone": "(413) 339-5520",
+    "newEffectiveDate": "2021-07-13T13:27:17",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "P.O. BOX 462",
+    "oldAddress1": "PO BOX 308"
+  },
+  {
+    "change": "changed-MA-Rowley, Town of-Rowley Town Clerk-1571",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "P.O. BOX 351",
+    "oldAddress1": "PO BOX 351"
+  },
+  {
+    "change": "changed-MA-Royalston, Town of-Royalston Town Clerk-1572",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "P.O. BOX 127",
+    "oldAddress1": "PO BOX 127"
+  },
+  {
+    "change": "changed-MA-Russell, Town of-Russell Town Clerk-1573",
+    "newFax": "",
+    "oldFax": "(413) 862-3103",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "65 Main St.",
+    "oldAddress1": "65 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Rutland, Town of-Rutland Town Clerk-1574",
+    "newPhone": "(508) 886-4100",
+    "oldPhone": "(508) 886-4104",
+    "newEmail": "elections@townofrutland.org",
+    "oldEmail": "acarlson@townofrutland.org",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "250 Main St.",
+    "oldAddress1": "250 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Salem, City of-Salem City Clerk-1575",
+    "newFax": "",
+    "oldFax": "(978) 740-9209",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2020-07-20T08:45:36",
+    "newAddress1": "93 Washington St.",
+    "oldAddress1": "93 WASHINGTON ST."
+  },
+  {
+    "change": "changed-MA-Salisbury, Town of-Salisbury Town Clerk-1576",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "5 Beach Rd.",
+    "oldAddress1": "5 BEACH RD."
+  },
+  {
+    "change": "changed-MA-Sandisfield, Town of-Sandisfield Town Clerk-1577",
+    "newEmail": "townclerk@sandisfieldma.gov",
+    "oldEmail": "sandisfieldtownclerk@verizon.net",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "66 Sandisfield Rd.",
+    "oldAddress1": "66 SANDISFIELD RD., PO BOX 163"
+  },
+  {
+    "change": "changed-MA-Sandwich, Town of-Sandwich Town Clerk-1578",
+    "newEmail": "twhite@sandwichmass.org",
+    "oldEmail": "twhite@townofsandwich.net",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "145 Main St.",
+    "oldAddress1": "145 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Saugus, Town of-Saugus Town Clerk-1579",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "298 Central St.",
+    "oldAddress1": "298 CENTRAL ST., #7"
+  },
+  {
+    "change": "changed-MA-Savoy, Town of-Savoy Town Clerk-1580",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "720 Main Rd.",
+    "oldAddress1": "720 MAIN RD."
+  },
+  {
+    "change": "changed-MA-Scituate, Town of-Scituate Town Clerk-1581",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "600 C.J. Cushing Way",
+    "oldAddress1": "600 C.J. CUSHING WAY"
+  },
+  {
+    "change": "changed-MA-Seekonk, Town of-Seekonk Town Clerk-1582",
+    "newEmail": "townclerk@seekonk-ma.gov",
+    "oldEmail": "fcraig@seekonk-ma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "100 Peck St.",
+    "oldAddress1": "100 PECK ST."
+  },
+  {
+    "change": "changed-MA-Sharon, Town of-Sharon Town Clerk-1583",
+    "newEmail": "Vote@townofsharon.org",
+    "oldEmail": "VOTE@townofsharon.org",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2020-07-27T16:05:48",
+    "newAddress1": "90 South Main St.",
+    "oldAddress1": "90 SOUTH MAIN ST."
+  },
+  {
+    "change": "changed-MA-Sheffield, Town of-Sheffield Town Clerk-1584",
+    "newFax": "(413) 229-7010",
+    "oldFax": "(413) 229-7000 x151",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2020-07-23T16:08:08",
+    "newAddress1": "21 Depot Sq.",
+    "oldAddress1": "21 DEPOT SQUARE, P.O. BOX 175"
+  },
+  {
+    "change": "changed-MA-Shelburne, Town of-Shelburne Town Clerk-1585",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "51 Bridge St.",
+    "oldAddress1": "51 BRIDGE ST."
+  },
+  {
+    "change": "changed-MA-Sherborn, Town of-Sherborn Town Clerk-1586",
+    "newEmail": "vote@sherbornma.org",
+    "oldEmail": "jmorris@sherbornma.org",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2020-09-23T15:14:51",
+    "newAddress1": "19 Washington St.",
+    "oldAddress1": "19 WASHINGTON ST."
+  },
+  {
+    "change": "changed-MA-Shirley, Town of-Shirley Town Clerk-1587",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "7 Keady Way",
+    "oldAddress1": "7 KEADY WAY"
+  },
+  {
+    "change": "changed-MA-Shrewsbury, Town of-Shrewsbury Town Clerk-1588",
+    "newEmail": "clerk@shrewsburyma.gov",
+    "oldEmail": "swright@shrewsburyma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "100 Maple Ave.",
+    "oldAddress1": "100 MAPLE AVE."
+  },
+  {
+    "change": "changed-MA-Shutesbury, Town of-Shutesbury Town Clerk-1589",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "1 Cooleyville Rd.",
+    "oldAddress1": "1 COOLEYVILLE RD., PO BOX 264"
+  },
+  {
+    "change": "changed-MA-Somerset, Town of-Somerset Town Clerk-1590",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "140 Wood St.",
+    "oldAddress1": "140 WOOD ST."
+  },
+  {
+    "change": "changed-MA-Somerville, City of-Somerville Election Commission-1591",
+    "newEmail": "vote@somervillema.gov",
+    "oldEmail": "nsalerno@somervillema.gov",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "93 Highland Ave.",
+    "oldAddress1": "93 HIGHLAND AVE."
+  },
+  {
+    "change": "changed-MA-South Hadley, Town of-South Hadley Town Clerk-1592",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "116 Main St.",
+    "oldAddress1": "116 MAIN ST., ROOM 107"
+  },
+  {
+    "change": "changed-MA-Southampton, Town of-Southampton Town Clerk-1593",
+    "newFax": "",
+    "oldFax": "(413) 529-1006",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "210 College Hwy, Suite 2",
+    "oldAddress1": "210 COLLEGE HWY., S2"
+  },
+  {
+    "change": "changed-MA-Southborough, Town of-Southborough Town Clerk-1594",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "17 Common St.",
+    "oldAddress1": "17 COMMON ST."
+  },
+  {
+    "change": "changed-MA-Southbridge, Town of-Southbridge Town Clerk-1595",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "41 Elm St.",
+    "oldAddress1": "41 ELM ST."
+  },
+  {
+    "change": "changed-MA-Southwick, Town of-Southwick Town Clerk-1596",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "454 College Hwy",
+    "oldAddress1": "454 COLLEGE HIGHWAY"
+  },
+  {
+    "change": "changed-MA-Spencer, Town of-Spencer Town Clerk-1597",
+    "newEmail": "Townclerks@spencerma.gov",
+    "oldEmail": "ltorti@spencerma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "157 Main St.",
+    "oldAddress1": "157 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Springfield, City of-Springfield Election Commission-1598",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "36 Court St.",
+    "oldAddress1": "36 COURT ST., GROUND FLOOR ROOM 8"
+  },
+  {
+    "change": "changed-MA-Sterling, Town of-Sterling Town Clerk-1599",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "1 Park St.",
+    "oldAddress1": "1 PARK ST., BUTTERICK BLDG., #113"
+  },
+  {
+    "change": "changed-MA-Stockbridge, Town of-Stockbridge Town Clerk-1600",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "P.O. BOX 417",
+    "oldAddress1": "PO BOX 417"
+  },
+  {
+    "change": "changed-MA-Stoneham, Town of-Stoneham Town Clerk-1601",
+    "newEmail": "townclerk@stoneham-ma.gov",
+    "oldEmail": "msagarino@stoneham-ma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "35 Central St.",
+    "oldAddress1": "35 CENTRAL ST."
+  },
+  {
+    "change": "changed-MA-Stoughton, Town of-Stoughton Town Clerk-1602",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2020-01-14T16:36:59",
+    "newAddress1": "10 Pearl St.",
+    "oldAddress1": "10 PEARL ST."
+  },
+  {
+    "change": "changed-MA-Stow, Town of-Stow Town Clerk-1603",
+    "newFax": "",
+    "oldFax": "(978) 897-4534",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2020-07-23T13:19:47",
+    "newAddress1": "380 Great Rd.",
+    "oldAddress1": "380 GREAT RD."
+  },
+  {
+    "change": "changed-MA-Sturbridge, Town of-Sturbridge Town Clerk-1604",
+    "newEmail": "townclerk@sturbridge.gov",
+    "oldEmail": "townclerk@town.sturbridge.ma.us",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "308 Main St.",
+    "oldAddress1": "308 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Sudbury, Town of-Sudbury Town Clerk-1605",
+    "newEmail": "votebymail@sudbury.ma.us",
+    "oldEmail": "clerk@sudbury.ma.us",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "322 Concord Rd.",
+    "oldAddress1": "322 CONCORD RD."
+  },
+  {
+    "change": "changed-MA-Sunderland, Town of-Sunderland Town Clerk-1606",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "12 School St.",
+    "oldAddress1": "12 SCHOOL ST."
+  },
+  {
+    "change": "changed-MA-Sutton, Town of-Sutton Town Clerk-1607",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "4 Uxbridge Rd.",
+    "oldAddress1": "4 UXBRIDGE RD."
+  },
+  {
+    "change": "changed-MA-Swampscott, Town of-Swampscott Town Clerk-1608",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "22 Monument Ave.",
+    "oldAddress1": "22 MONUMENT AVE."
+  },
+  {
+    "change": "changed-MA-Swansea, Town of-Swansea Town Clerk-1609",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "81 Main St.",
+    "oldAddress1": "81 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Taunton, City of-Taunton City Clerk-1610",
+    "newEmail": "pmenconi@taunton-ma.gov",
+    "oldEmail": "kandrade@taunton-ma.gov",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-08-16T15:46:08",
+    "newAddress1": "15 Summer St.",
+    "oldAddress1": "141 OAK ST."
+  },
+  {
+    "change": "changed-MA-Templeton, Town of-Templeton Town Clerk-1611",
+    "newEmail": "charris@templetonma.gov",
+    "oldEmail": "townclerk@templeton1.org",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "160 Patriots Rd.",
+    "oldAddress1": "160 PATRIOTS RD., PO BOX 620"
+  },
+  {
+    "change": "changed-MA-Tewksbury, Town of-Tewksbury Town Clerk-1612",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "1009 Main St.",
+    "oldAddress1": "1009 MAIN ST., TOWN HALL"
+  },
+  {
+    "change": "changed-MA-Tisbury, Town of-Tisbury Town Clerk-1613",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "51 Spring St.",
+    "oldAddress1": "PO BOX 606, 51 SPRING ST."
+  },
+  {
+    "change": "changed-MA-Tolland, Town of-Tolland Town Clerk-1614",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2017-09-20T14:40:09",
+    "newAddress1": "241 W. Granville Rd.",
+    "oldAddress1": "241 W. GRANVILLE RD."
+  },
+  {
+    "change": "changed-MA-Topsfield, Town of-Topsfield Town Clerk-1615",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "8 West Common St.",
+    "oldAddress1": "8 WEST COMMON ST."
+  },
+  {
+    "change": "changed-MA-Townsend, Town of-Townsend Town Clerk-1616",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2019-07-18T14:19:28",
+    "newAddress1": "272 Main St.",
+    "oldAddress1": "272 MAIN ST."
+  },
+  {
+    "change": "changed-MA-Truro, Town of-Truro Town Clerk-1617",
+    "newEffectiveDate": "2021-07-13T13:22:37",
+    "oldEffectiveDate": "2021-03-29T10:41:04",
+    "newAddress1": "24 Town Hall Rd.",
+    "oldAddress1": "PO BOX 2012, 24 TOWN HALL RD."
+  },
+  {
+    "change": "changed-MN-Anoka-Anoka County Elections-1918",
+    "newEffectiveDate": "2021-07-13T15:20:23",
+    "oldEffectiveDate": "2019-07-01T14:11:56",
+    "newAddress1": "2100 3rd Ave, Ste W160",
+    "oldAddress1": "2100 3rd Ave, Ste W130"
+  }
+]
