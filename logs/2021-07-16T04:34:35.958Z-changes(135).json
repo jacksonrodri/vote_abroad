@@ -1,0 +1,1017 @@
+[
+  {
+    "change": "changed-CT-Ansonia-Ansonia Town Clerk-284",
+    "newEmail": "blynch@ansoniact.org",
+    "oldEmail": "jwaugh@ansoniact.org",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:31"
+  },
+  {
+    "change": "changed-CT-Avon-Avon Town Clerk-286",
+    "newEmail": "adearstyne@avonct.gov",
+    "oldEmail": "adearstyne@town.avon.ct.us",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:31"
+  },
+  {
+    "change": "changed-CT-Beacon Falls-Beacon Falls Town Clerk-288",
+    "newEmail": "lgreene@townofbeaconfalls.com",
+    "oldEmail": "townclerk@townofbeaconfalls.com",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:31"
+  },
+  {
+    "change": "changed-CT-Berlin-Berlin Town Clerk-289",
+    "newPhone": "860-828-7075",
+    "oldPhone": "860-828-7036",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2020-07-23T11:06:57"
+  },
+  {
+    "change": "changed-CT-Bethany-Bethany Town Clerk-290",
+    "newEmail": "namccarthy@bethany-ct.com",
+    "oldEmail": "NAMcCarthy@bethany-CT.com",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:31"
+  },
+  {
+    "change": "changed-CT-Bethlehem-Bethlehem Town Clerk-292",
+    "newEmail": "kmayer@bethlehemct.org",
+    "oldEmail": "kgallo@bethlehemct.org",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:31"
+  },
+  {
+    "change": "changed-CT-Branford-Branford Town Clerk-296",
+    "newEmail": "larpin@branford-ct.gov",
+    "oldEmail": "townclerk@branford-ct.gov",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:31"
+  },
+  {
+    "change": "changed-CT-Bridgeport-Bridgeport Town Clerk-297",
+    "newEmail": "charles.clemonsjr@bridgeportct.gov",
+    "oldEmail": "christina.resto@bridgeportct.gov",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:31"
+  },
+  {
+    "change": "changed-CT-Bristol-Bristol Town Clerk-299",
+    "newEmail": "theresapac@bristolct.gov",
+    "oldEmail": "townclerk@bristolct.gov",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:31"
+  },
+  {
+    "change": "changed-CT-Brookfield-Brookfield Town Clerk-300",
+    "newEmail": "townclerk@brookfieldct.gov",
+    "oldEmail": "jlocke@brookfieldct.gov",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:31"
+  },
+  {
+    "change": "changed-CT-Brooklyn-Brooklyn Town Clerk-301",
+    "newPhone": "860-779-3411 x36",
+    "oldPhone": "860-779-3411 x17",
+    "newEmail": "k.bisson@brooklynct.org",
+    "oldEmail": "l.mainville@brooklynct.org",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:31"
+  },
+  {
+    "change": "changed-CT-Burlington-Burlington Town Clerk-302",
+    "newEmail": "ugalde.m@burlingtonct.us",
+    "oldEmail": "townclerkoffice@burlingtonct.us",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:31"
+  },
+  {
+    "change": "changed-CT-Canterbury-Canterbury Town Clerk-304",
+    "newEmail": "nellston@canterburyct.org",
+    "oldEmail": "ncordes@canterburyct.org",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:31"
+  },
+  {
+    "change": "changed-CT-Chester-Chester Town Clerk-308",
+    "newEmail": "debracalamari@chesterct.org",
+    "oldEmail": "TownClerk@chesterct.org",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:31"
+  },
+  {
+    "change": "changed-CT-Clinton-Clinton Town Clerk-309",
+    "newEmail": "suricchio@clintonct.org",
+    "oldEmail": "townclerk@clintonct.org",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:31"
+  },
+  {
+    "change": "changed-CT-Colchester-Colchester Town Clerk-310",
+    "newEmail": "townclerk@colchesterct.gov",
+    "oldEmail": "TownClerk@ColchesterCT.gov",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:31"
+  },
+  {
+    "change": "changed-CT-Cromwell-Cromwell Town Clerk-315",
+    "newEmail": "jdoyle@cromwellct.com",
+    "oldEmail": "townclerk@cromwellct.com",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:31",
+    "newAddress1": "Town Hall, 41 West Street, 1st floor",
+    "oldAddress1": "41 West Street"
+  },
+  {
+    "change": "changed-CT-Darien-Darien Town Clerk-317",
+    "newPhone": "203-656-7305",
+    "oldPhone": "203-656-7307",
+    "newEmail": "lbuxton@darienct.gov",
+    "oldEmail": "cdiller@darienct.gov",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2020-09-07T09:56:31"
+  },
+  {
+    "change": "changed-CT-Derby-Derby Town Clerk-319",
+    "newEmail": "townclerk@derbyct.gov",
+    "oldEmail": "mgarofalo@derbyct.gov",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:31"
+  },
+  {
+    "change": "changed-CT-East Haddam-East Haddam Town Clerk-322",
+    "newEffectiveDate": "2021-07-15T15:41:43",
+    "oldEffectiveDate": "2019-06-25T09:56:31",
+    "newCity": "Moodus",
+    "oldCity": "East Haddam"
+  },
+  {
+    "change": "changed-CT-East Hampton-East Hampton Town Clerk-323",
+    "newEmail": "kbilodeau@easthamptonct.gov",
+    "oldEmail": "townclerk@easthamptonct.gov",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2020-10-28T14:10:08",
+    "newZip": "06424-1091",
+    "oldZip": "06424"
+  },
+  {
+    "change": "changed-CT-East Haven-East Haven Town Clerk-325",
+    "newEmail": "sgravino@townofeasthavenct.org",
+    "oldEmail": "townclerk.stacy@gmail.com",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:31"
+  },
+  {
+    "change": "changed-CT-East Lyme-East Lyme Town Clerk-326",
+    "newEmail": "kgalbo@eltownhall.com",
+    "oldEmail": "lblais@eltownhall.com",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:31"
+  },
+  {
+    "change": "changed-CT-Enfield-Enfield Town Clerk-331",
+    "newEmail": "sbailey@enfield.org",
+    "oldEmail": "townclerk@enfield.org",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:31"
+  },
+  {
+    "change": "changed-CT-Franklin-Franklin Town Clerk-335",
+    "newEmail": "townclerk@franklinct.com",
+    "oldEmail": "franklintownclerk@99main.com",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:31"
+  },
+  {
+    "change": "changed-CT-Glastonbury-Glastonbury Town Clerk-336",
+    "newPhone": "860-652-7620",
+    "oldPhone": "860-652-7616",
+    "newEmail": "michelle.krampitz@glastonbury-ct.gov",
+    "oldEmail": "townclerk@glastonbury-ct.gov",
+    "newEffectiveDate": "2021-07-15T15:41:43",
+    "oldEffectiveDate": "2020-09-14T11:58:54"
+  },
+  {
+    "change": "changed-CT-Goshen-Goshen Town Clerk-337",
+    "newEmail": "bbreor@goshenct.gov",
+    "oldEmail": "townclerk@goshenct.gov",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:31"
+  },
+  {
+    "change": "changed-CT-Greenwich-Greenwich Town Clerk-339",
+    "newFax": "203-861-3117",
+    "oldFax": "203-622-3767",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:31"
+  },
+  {
+    "change": "changed-CT-Groton-Groton Town Clerk-341",
+    "newEmail": "bmoukawsher@groton-ct.gov",
+    "oldEmail": "townclerk@groton-ct.gov",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:31"
+  },
+  {
+    "change": "changed-CT-Hamden-Hamden Town Clerk-344",
+    "newEmail": "townclerk@hamden.com",
+    "oldEmail": "vmorrison@hamden.com",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:31"
+  },
+  {
+    "change": "changed-CT-Hartford-Hartford Town Clerk-346",
+    "newEmail": "Noel.McGregor@hartford.gov",
+    "oldEmail": "bazzj001@hartford.gov",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:31"
+  },
+  {
+    "change": "changed-CT-Harwinton-Harwinton Town Clerk-348",
+    "newEmail": "neldridge@harwinton.us",
+    "oldEmail": "townclerk@harwinton.us",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:31"
+  },
+  {
+    "change": "changed-CT-Lebanon-Lebanon Town Clerk-353",
+    "newEmail": "townclerk@lebanonct.gov",
+    "oldEmail": "townclerk@lebanonCT.gov",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:31"
+  },
+  {
+    "change": "changed-CT-Mansfield-Mansfield Town Clerk-18723",
+    "newPhone": "860-429-3302 x4",
+    "oldPhone": "860-429-3302",
+    "newEmail": "TownClerk@mansfieldct.org",
+    "oldEmail": "TownClerk@MansfieldCT.org",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:32"
+  },
+  {
+    "change": "changed-CT-Middlefield-Middlefield Town Clerk-363",
+    "newEmail": "dgolub@middlefieldct.com",
+    "oldEmail": "d_golub@middlefield-ct.com",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:31"
+  },
+  {
+    "change": "changed-CT-Middletown-Middletown Town Clerk-364",
+    "newEmail": "townclerk@middletownct.gov",
+    "oldEmail": "TownClerk@MiddletownCT.gov",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:31",
+    "newAddress2": "DeKoven Drive & Court Street",
+    "oldAddress2": "DeKoven Drive & Court Street"
+  },
+  {
+    "change": "changed-CT-Milford-Milford Town Clerk-365",
+    "newEmail": "kfortunati@milfordct.gov",
+    "oldEmail": "spaul@ci.milford.ct.us",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:31"
+  },
+  {
+    "change": "changed-CT-Monroe-Monroe Town Clerk-366",
+    "newPhone": "203-452-2811",
+    "oldPhone": "203-452-2800 x1027",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2020-10-10T09:56:31",
+    "newAddress1": "Town Hall, 7 Fan Hill Road",
+    "oldAddress1": "Monroe Town Hall Rm 201, 7 Fan Hill Road"
+  },
+  {
+    "change": "changed-CT-Montville-Montville Town Clerk-367",
+    "newEmail": "ksandberg@montville-ct.org",
+    "oldEmail": "townclerk@montville-ct.org",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:31"
+  },
+  {
+    "change": "changed-CT-Naugatuck-Naugatuck Town Clerk-369",
+    "newEmail": "Mdowling@naugatuck-ct.gov",
+    "oldEmail": "townclerknaug@sbcglobal.net",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:31"
+  },
+  {
+    "change": "changed-CT-New Britain-New Britain Town Clerk-370",
+    "newEmail": "mark.bernacki@newbritainct.gov",
+    "oldEmail": "mbernacki@newbritainct.gov",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:31"
+  },
+  {
+    "change": "changed-CT-New Haven-New Haven Town Clerk-374",
+    "newEmail": "msmart@newhavenct.net",
+    "oldEmail": "mbeyreed@newhavenct.gov",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2020-10-13T09:56:31",
+    "newAddress1": "Hall of Records, 200 Orange Street, Room 202",
+    "oldAddress1": "200 Orange Street, Room 202"
+  },
+  {
+    "change": "changed-CT-Newington-Newington Town Clerk-377",
+    "newEmail": "townclerk@newingtonct.gov",
+    "oldEmail": "tlane@newingtonct.gov",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:31"
+  },
+  {
+    "change": "changed-CT-Newtown-Newtown Town Clerk-378",
+    "newEmail": "town.clerk@newtown-ct.gov",
+    "oldEmail": "debbie.halstead@newtown-ct.gov",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:31"
+  },
+  {
+    "change": "changed-CT-North Branford-North Branford Town Clerk-380",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2020-07-23T12:42:46",
+    "newAddress1": "Town Hall, 909 Foxon Road",
+    "oldAddress1": "North Branford Town Clerk "
+  },
+  {
+    "change": "changed-CT-North Canaan-North Canaan Town Clerk-381",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:31",
+    "newAddress1": "Town Hall, 100 Pease Street - #7",
+    "oldAddress1": "Town Hall, 100 Pease Streetm - #7",
+    "newCity": "Canaan",
+    "oldCity": "North Canaan"
+  },
+  {
+    "change": "changed-CT-Plainfield-Plainfield Town Clerk-390",
+    "newEmail": "bgardiner@plainfieldct.org",
+    "oldEmail": "ltrakas@plainfieldct.org",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:32"
+  },
+  {
+    "change": "changed-CT-Plainville-Plainville Town Clerk-391",
+    "newEmail": "cporrini@plainville-ct.gov",
+    "oldEmail": "skultety@plainville-ct.gov",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2020-06-19T09:56:32"
+  },
+  {
+    "change": "changed-CT-Plymouth-Plymouth Town Clerk-392",
+    "newEmail": "ecabiya@plymouthct.us",
+    "oldEmail": "brockwell@plymouthct.us",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:32"
+  },
+  {
+    "change": "changed-CT-Pomfret-Pomfret Town Clerk-393",
+    "newPhone": "860-974-0343",
+    "oldPhone": "860-315-5730",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2020-07-23T14:14:19"
+  },
+  {
+    "change": "changed-CT-Portland-Portland Town Clerk-394",
+    "newEmail": "rcurley@portlandct.org",
+    "oldEmail": "mdickerson@portlandct.org",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:32"
+  },
+  {
+    "change": "changed-CT-Preston-Preston Town Clerk-395",
+    "newPhone": "860-887-5581 x111",
+    "oldPhone": "860-887-5581 x2",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:32"
+  },
+  {
+    "change": "changed-CT-Prospect-Prospect Town Clerk-396",
+    "newEmail": "town.clk.prospect@snet.net",
+    "oldEmail": "townclkprospect@yahoo.com",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:32"
+  },
+  {
+    "change": "changed-CT-Seymour-Seymour Town Clerk-405",
+    "newEmail": "lmcmurray@seymourct.org",
+    "oldEmail": "sdebarber@seymourct.org",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:32"
+  },
+  {
+    "change": "changed-CT-Somers-Somers Town Clerk-410",
+    "newEmail": "alogan@somersct.gov",
+    "oldEmail": "opsmanager@somersct.gov",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:32"
+  },
+  {
+    "change": "changed-CT-South Windsor-South Windsor Town Clerk-411",
+    "newEmail": "bonnie.armstrong@southwindsor.org",
+    "oldEmail": "lori.trahan@southwindsor.org",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:32"
+  },
+  {
+    "change": "changed-CT-Stafford-Stafford Town Clerk-415",
+    "newEmail": "clerk@staffordct.org",
+    "oldEmail": "townclerk@staffordct.org",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:32"
+  },
+  {
+    "change": "changed-CT-Stamford-Stamford Town Clerk-416",
+    "newPhone": "203-977-5852",
+    "oldPhone": "203-977-5280",
+    "newEmail": "LRuijter@StamfordCT.gov",
+    "oldEmail": "TownClerk@stamfordct.gov",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2021-01-26T10:28:04"
+  },
+  {
+    "change": "changed-CT-Stonington-Stonington Town Clerk-418",
+    "newEmail": "cladwig@stonington-ct.gov",
+    "oldEmail": "clerk@stonington-ct.gov",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:32"
+  },
+  {
+    "change": "changed-CT-Thompson-Thompson Town Clerk-421",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:32",
+    "newCity": "North Grosvenor Dale",
+    "oldCity": "North Grosvenordale"
+  },
+  {
+    "change": "changed-CT-Tolland-Tolland Town Clerk-423",
+    "newEmail": "kpagan@tolland.org",
+    "oldEmail": "sbailey@tolland.org",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:32",
+    "newAddress1": "Hicks Mem. Muncipal Offices, 21 Tolland Green, 5th level",
+    "oldAddress1": "Hicks Mem. Muncipal Offices, 21 Tolland Green"
+  },
+  {
+    "change": "changed-CT-Torrington-Torrington Town Clerk-424",
+    "newEmail": "joe_quartiero@torringtonct.org",
+    "oldEmail": "carol_anderson@torringtonct.org",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:32"
+  },
+  {
+    "change": "changed-CT-Trumbull-Trumbull Town Clerk-425",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2020-08-23T09:56:32"
+  },
+  {
+    "change": "changed-CT-Union-Union Town Clerk-426",
+    "newEmail": "townclerk@unionconnecticut.org",
+    "oldEmail": "townclerk@union.necoxmail.com",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:32"
+  },
+  {
+    "change": "changed-CT-Vernon-Vernon Town Clerk-427",
+    "newEmail": "bdixon@vernon-ct.gov",
+    "oldEmail": "townclerk@vernon-ct.gov",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:32"
+  },
+  {
+    "change": "changed-CT-Wallingford-Wallingford Town Clerk-429",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:32",
+    "newAddress1": "48 South Main Street, Room 108",
+    "oldAddress1": "Town Hall, 48 South Main Street, Room 108"
+  },
+  {
+    "change": "changed-CT-Waterford-Waterford  Town Clerk-433",
+    "newPhone": "860-444-5831",
+    "oldPhone": "860-442-5831",
+    "newEmail": "dcampo@waterfordct.org",
+    "oldEmail": "clerk@waterfordct.org",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:32"
+  },
+  {
+    "change": "changed-CT-West Hartford-West Hartford Town Clerk-435",
+    "newEmail": "essie.labrot@westhartfordct.gov",
+    "oldEmail": "elections@westhartfordct.gov",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2020-08-20T11:05:28"
+  },
+  {
+    "change": "changed-CT-West Haven-West Haven Town Clerk-436",
+    "newEmail": "phorvath@westhaven-ct.gov",
+    "oldEmail": "dcollins@westhaven-ct.gov",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:32"
+  },
+  {
+    "change": "changed-CT-Westport-Westport Town Clerk-439",
+    "newEmail": "jdunkerton@westportct.gov",
+    "oldEmail": "pstrauss@westportct.gov",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:32"
+  },
+  {
+    "change": "changed-CT-Wethersfield-Wethersfield Town Clerk-440",
+    "newEmail": "sue.schroeder@wethersfieldct.gov",
+    "oldEmail": "dolores.sassano@wethersfieldct.com",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:32"
+  },
+  {
+    "change": "changed-CT-Willington-Willington Town Clerk-441",
+    "newEmail": "rcampbell@willingtonct.org",
+    "oldEmail": "dhardie@willingtonct.org",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:32"
+  },
+  {
+    "change": "changed-CT-Winchester-Winchester Town Clerk-443",
+    "newEmail": "ssedlack@townofwinchester.org",
+    "oldEmail": "townclerk@townofwinchester.org",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:32",
+    "newCity": "Winsted",
+    "oldCity": "Winchester"
+  },
+  {
+    "change": "changed-CT-Windham-Windham Town Clerk-444",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:32",
+    "newCity": "Willimantic",
+    "oldCity": "Windham"
+  },
+  {
+    "change": "changed-CT-Windsor Locks-Windsor Locks Town Clerk-445",
+    "newEmail": "snolan@WLOCKS.com",
+    "oldEmail": "townclerk@wlocks.com",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:32"
+  },
+  {
+    "change": "changed-CT-Windsor-Windsor Town Clerk-446",
+    "newEffectiveDate": "2021-07-15T14:01:06",
+    "oldEffectiveDate": "2019-06-25T09:56:32",
+    "newAddress1": "275 Broad Street, Suite 1",
+    "oldAddress1": "275 Broad Street, P.O. Box 472"
+  },
+  {
+    "change": "changed-GA-Appling-Appling Registrar Office-523",
+    "newEmail": "shonda@applingco.com",
+    "oldEmail": "ac001elections@gmail.com",
+    "newEffectiveDate": "2021-07-15T13:59:31",
+    "oldEffectiveDate": "2019-08-09T11:48:10",
+    "newAddress1": "83 South Oak Street",
+    "oldAddress1": "69 Tippins St, Ste 205",
+    "newZip": "31513",
+    "oldZip": "31513-1908"
+  },
+  {
+    "change": "changed-GA-Banks-Banks County Registrars-528",
+    "newEffectiveDate": "2021-07-15T13:59:31",
+    "oldEffectiveDate": "2019-11-05T10:58:31",
+    "newZip": "30547",
+    "oldZip": "30547-0172"
+  },
+  {
+    "change": "changed-GA-Barrow-Barrow County Board of Elections and Registration-529",
+    "newEffectiveDate": "2021-07-15T13:59:31",
+    "oldEffectiveDate": "2020-08-19T10:55:26",
+    "newZip": "30680",
+    "oldZip": "30680-1973"
+  },
+  {
+    "change": "changed-GA-Bartow-Bartow County Elections and Voter Registration-530",
+    "newEffectiveDate": "2021-07-15T13:57:01",
+    "oldEffectiveDate": "2019-08-09T11:48:10",
+    "newAddress1": "135 W Cherokee Ave, Box 106",
+    "oldAddress1": "135 W Cherokee Ave, Ste 106"
+  },
+  {
+    "change": "changed-GA-Ben Hill-Ben Hill Board of Elections and Voter Registration-531",
+    "newFax": "(229) 233-6162",
+    "oldFax": "",
+    "newEffectiveDate": "2021-07-15T13:57:01",
+    "oldEffectiveDate": "2020-08-05T12:34:25"
+  },
+  {
+    "change": "changed-GA-Berrien-Berrien County Board of Elections and Registration-532",
+    "newPhone": "(229) 686-6160",
+    "oldPhone": "(229) 686-3442",
+    "newEffectiveDate": "2021-07-15T13:57:01",
+    "oldEffectiveDate": "2020-02-03T15:30:54"
+  },
+  {
+    "change": "changed-GA-Brantley-Brantley County Board of Elections and Registrations-535",
+    "newEmail": "bcelections@btconline.net",
+    "oldEmail": "voterreg@btconline.net",
+    "newEffectiveDate": "2021-07-15T13:57:01",
+    "oldEffectiveDate": "2019-08-09T11:48:10"
+  },
+  {
+    "change": "changed-GA-Brooks-Brooks County Election Supervisor-536",
+    "newEffectiveDate": "2021-07-15T13:57:01",
+    "oldEffectiveDate": "2019-08-09T11:48:10",
+    "newZip": "31643-5030",
+    "oldZip": "31643-0665"
+  },
+  {
+    "change": "changed-GA-Bulloch-Bulloch County Board of Elections-538",
+    "newEmail": "bullochuocava@bullochcounty.net",
+    "oldEmail": "bullochUOCAVA@bullochcounty.net",
+    "newEffectiveDate": "2021-07-15T13:57:01",
+    "oldEffectiveDate": "2019-08-09T11:48:10"
+  },
+  {
+    "change": "changed-GA-Calhoun-Calhoun County Election Superintendent-541",
+    "newEffectiveDate": "2021-07-15T13:59:31",
+    "oldEffectiveDate": "2015-08-31T13:36:24",
+    "newAddress1": "P.O. Box 101",
+    "oldAddress1": "P.O. Box 87",
+    "newZip": "39866",
+    "oldZip": "39866-0087"
+  },
+  {
+    "change": "changed-GA-Camden-Camden County Election Superintendent-542",
+    "newEffectiveDate": "2021-07-15T13:59:31",
+    "oldEffectiveDate": "2018-06-27T15:15:43",
+    "newZip": "31569",
+    "oldZip": "31569-0608"
+  },
+  {
+    "change": "changed-GA-Carroll-Carroll County Election and Registration Supervisor-544",
+    "newEffectiveDate": "2021-07-15T13:59:31",
+    "oldEffectiveDate": "2015-08-31T13:36:24",
+    "newZip": "30112",
+    "oldZip": "30112-0338"
+  },
+  {
+    "change": "changed-GA-Cherokee-Cherokee County Elections &amp; Registration-550",
+    "newName": "Cherokee County Elections & Registration",
+    "oldName": "Cherokee County Elections & Registration",
+    "newEmail": "wlwaddell@cherokeega.com",
+    "oldEmail": "andadover@cherokeega.com",
+    "newEffectiveDate": "2021-07-15T13:57:01",
+    "oldEffectiveDate": "2021-03-22T12:51:54"
+  },
+  {
+    "change": "changed-GA-Clay-Clay County Election Superintendent-552",
+    "newFax": "(229) 768-3028",
+    "oldFax": "(229) 768-2455",
+    "newPhone": "(229) 768-2445",
+    "oldPhone": "(229) 768-2443",
+    "newEffectiveDate": "2021-07-15T13:57:01",
+    "oldEffectiveDate": "2019-11-07T15:50:02"
+  },
+  {
+    "change": "changed-GA-Clayton-Clayton County Board of Elections and Registration-553",
+    "newEffectiveDate": "2021-07-15T13:57:01",
+    "oldEffectiveDate": "2019-08-09T11:48:10",
+    "newAddress1": "121 S McDonough St, Annex II",
+    "oldAddress1": "121 S McDonough St"
+  },
+  {
+    "change": "changed-GA-Coffee-Coffee County Elections and Registration-556",
+    "newEmail": "james.barnes@coffeecounty-ga.gov",
+    "oldEmail": "misty.hampton@coffeecounty-ga.gov",
+    "newEffectiveDate": "2021-07-15T13:59:31",
+    "oldEffectiveDate": "2018-09-20T13:51:16"
+  },
+  {
+    "change": "changed-GA-Coweta-Coweta County Election Superintendent-560",
+    "newPhone": "(770) 254-2615 x8936",
+    "oldPhone": "(678) 854-0015",
+    "newEffectiveDate": "2021-07-15T13:59:31",
+    "oldEffectiveDate": "2019-11-26T07:52:40"
+  },
+  {
+    "change": "changed-GA-Crawford-Crawford County Board of Elections-561",
+    "newEffectiveDate": "2021-07-15T13:59:31",
+    "oldEffectiveDate": "2018-09-21T09:14:39",
+    "newZip": "31078",
+    "oldZip": "31078-0739"
+  },
+  {
+    "change": "changed-GA-Dade-Dade County Board of Elections and Registration-563",
+    "newEffectiveDate": "2021-07-15T13:59:31",
+    "oldEffectiveDate": "2019-08-09T11:48:10",
+    "newZip": "30752",
+    "oldZip": "30752-0152"
+  },
+  {
+    "change": "changed-GA-Dawson-Dawson County Election Supervisor-564",
+    "newEmail": "gferguson@dawsoncounty.org",
+    "oldEmail": "uocava@dawsoncounty.org",
+    "newEffectiveDate": "2021-07-15T13:59:31",
+    "oldEffectiveDate": "2015-08-31T13:36:24",
+    "newZip": "30534",
+    "oldZip": "30534-0436"
+  },
+  {
+    "change": "changed-GA-Douglas-Douglas County Voter Registration-570",
+    "newEffectiveDate": "2021-07-15T13:57:01",
+    "oldEffectiveDate": "2020-08-19T11:01:06",
+    "newZip": "30134-2264",
+    "oldZip": "30134"
+  },
+  {
+    "change": "changed-GA-Effingham-Effingham County Board of Elections and Registration-573",
+    "newEffectiveDate": "2021-07-15T13:57:01",
+    "oldEffectiveDate": "2015-08-31T13:36:24",
+    "newAddress1": "284 GA Hwy 119 S",
+    "oldAddress1": "284 Hwy 119 S"
+  },
+  {
+    "change": "changed-GA-Elbert-Elbert County Board of Registrars-574",
+    "newEffectiveDate": "2021-07-15T13:57:01",
+    "oldEffectiveDate": "2019-08-12T14:09:38",
+    "newAddress1": "Government Complex, 45 Forest Ave",
+    "oldAddress1": "Government Complex, 45 Forest Ave, Rm 42"
+  },
+  {
+    "change": "changed-GA-Fannin-Fannin County Board of Elections and Voter Registration-577",
+    "newEmail": "elections@fannincountyga.org",
+    "oldEmail": "maconner@fannincountyga.org",
+    "newEffectiveDate": "2021-07-15T13:57:01",
+    "oldEffectiveDate": "2019-08-09T11:48:10"
+  },
+  {
+    "change": "changed-GA-Fayette-Fayette County Board of Elections and Voter Registration-578",
+    "newEmail": "tbass@fayettecountyga.gov",
+    "oldEmail": "bhill@fayettecountyga.gov",
+    "newEffectiveDate": "2021-07-15T13:57:01",
+    "oldEffectiveDate": "2021-03-22T12:56:22"
+  },
+  {
+    "change": "changed-GA-Forsyth-Forsyth County Board of Elections and Voter Registration-580",
+    "newEffectiveDate": "2021-07-15T13:59:31",
+    "oldEffectiveDate": "2020-08-19T11:01:40",
+    "newZip": "30040",
+    "oldZip": "30040-2468"
+  },
+  {
+    "change": "changed-GA-Glynn-Glynn County Board of Elections and Voter Registration-585",
+    "newFax": "(888) 870-1374",
+    "oldFax": "888-870-1374",
+    "newPhone": "(912) 554-7060",
+    "oldPhone": "912-554-7060",
+    "newEffectiveDate": "2021-07-15T13:57:01",
+    "oldEffectiveDate": "2019-11-05T10:58:31"
+  },
+  {
+    "change": "changed-GA-Gwinnett-Gwinnett County Voter Registration and Elections-589",
+    "newFax": "(678) 226-7208",
+    "oldFax": "678-226-7208",
+    "newPhone": "(678) 226-7210",
+    "oldPhone": "678-226-7210",
+    "newEffectiveDate": "2021-07-15T13:57:01",
+    "oldEffectiveDate": "2021-03-22T12:57:43"
+  },
+  {
+    "change": "changed-GA-Habersham-Habersham County Elections &amp; Registration-590",
+    "newName": "Habersham County Elections & Registration",
+    "oldName": "Habersham County Elections & Registration",
+    "newPhone": "(706) 839-0170",
+    "oldPhone": "706-839-0170",
+    "newEffectiveDate": "2021-07-15T13:57:01",
+    "oldEffectiveDate": "2019-11-05T10:58:31",
+    "newAddress1": "130 Jacob's Way, Ste 101",
+    "oldAddress1": "130 Jacob's Way, Ste 101"
+  },
+  {
+    "change": "changed-GA-Hall-Hall County Board of Elections and Voter Registration-591",
+    "newEffectiveDate": "2021-07-15T13:57:01",
+    "oldEffectiveDate": "2020-08-19T11:02:12",
+    "newAddress1": "2875 Browns Bridge Rd (Lower level)",
+    "oldAddress1": "P.O. Box 1435"
+  },
+  {
+    "change": "changed-GA-Long-Long County Elections and Registrar-613",
+    "newEmail": "longcountyelections@gmail.com",
+    "oldEmail": "LONGCOUNTYELECTIONS@GMAIL.COM",
+    "newEffectiveDate": "2021-07-15T13:57:01",
+    "oldEffectiveDate": "2016-11-04T15:06:35"
+  },
+  {
+    "change": "changed-GA-McDuffie-McDuffie County Board of Elections and Registration-619",
+    "newEmail": "fiona.roberts@thomson-mcduffie.net",
+    "oldEmail": "phyllis.wheeler3@thomson-mcduffie.net",
+    "newEffectiveDate": "2021-07-15T13:57:01",
+    "oldEffectiveDate": "2019-11-05T10:58:31"
+  },
+  {
+    "change": "changed-GA-Morgan-Morgan County Board of Elections and Registration-626",
+    "newEffectiveDate": "2021-07-15T13:57:01",
+    "oldEffectiveDate": "2019-08-12T14:09:39",
+    "newAddress1": "237 North Second St",
+    "oldAddress1": "434 Hancock St"
+  },
+  {
+    "change": "changed-GA-Paulding-Paulding County Board of Elections and Registration-632",
+    "newEmail": "absenteerequest@paulding.gov",
+    "oldEmail": "ABSENTEEREQUEST@PAULDING.GOV",
+    "newEffectiveDate": "2021-07-15T13:57:01",
+    "oldEffectiveDate": "2020-02-04T19:26:18"
+  },
+  {
+    "change": "changed-GA-Putnam-Putnam County Board of Elections and Registration-639",
+    "newEffectiveDate": "2021-07-15T13:57:02",
+    "oldEffectiveDate": "2015-08-31T13:36:24",
+    "newAddress1": "117 Putnam Drive Suite D",
+    "oldAddress1": "100 S Jefferson Ave, Ste 217"
+  },
+  {
+    "change": "changed-GA-Quitman-Quitman County Board of Registrars-640",
+    "newFax": "",
+    "oldFax": "(229) 334-6826",
+    "newPhone": "(229) 234-3123",
+    "oldPhone": "(229) 334-2224",
+    "newEffectiveDate": "2021-07-15T13:57:02",
+    "oldEffectiveDate": "2019-08-12T14:09:39"
+  },
+  {
+    "change": "changed-GA-Randolph-Randolph County Board of Registrars-642",
+    "newFax": "(229) 732-3616",
+    "oldFax": "(229) 474-3279",
+    "newPhone": "(229) 732-5220",
+    "oldPhone": "855-782-6310 x5",
+    "newEffectiveDate": "2021-07-15T13:57:02",
+    "oldEffectiveDate": "2019-08-12T14:11:06"
+  },
+  {
+    "change": "changed-GA-Richmond-Richmond County Board of Elections-643",
+    "newPhone": "(706) 821-2340",
+    "oldPhone": "706-821-2340",
+    "newEffectiveDate": "2021-07-15T13:57:02",
+    "oldEffectiveDate": "2017-09-06T15:05:24"
+  },
+  {
+    "change": "changed-GA-Spalding-Spalding County Board of Elections and Voter Registration-648",
+    "newPhone": "(770) 467-4245",
+    "oldPhone": "770-467-4245",
+    "newEffectiveDate": "2021-07-15T13:57:02",
+    "oldEffectiveDate": "2019-11-05T10:58:32"
+  },
+  {
+    "change": "changed-GA-Stephens-Stephens County Board of Elections and Voter Registration-649",
+    "newFax": "",
+    "oldFax": "(706) 886-2631",
+    "newEmail": "aroberts@stephenscountyga.gov",
+    "oldEmail": "egober@stephenscountyga.com",
+    "newEffectiveDate": "2021-07-15T13:57:02",
+    "oldEffectiveDate": "2019-08-09T11:48:10"
+  },
+  {
+    "change": "changed-GA-Stewart-Stewart County Board of Elections and Voter Registration-650",
+    "newFax": "(229) 838-4489",
+    "oldFax": "229-838-4489",
+    "newEffectiveDate": "2021-07-15T13:57:02",
+    "oldEffectiveDate": "2019-11-05T10:58:32"
+  },
+  {
+    "change": "changed-GA-Terrell-Terrell County Board of Elections and Voter Registration-657",
+    "newEmail": "terrelluocava@hotmail.com",
+    "oldEmail": "TerrellUOCAVA@hotmail.com",
+    "newEffectiveDate": "2021-07-15T13:57:02",
+    "oldEffectiveDate": "2021-03-22T13:04:10"
+  },
+  {
+    "change": "changed-GA-Toombs-Toombs County Board of Election and Registration-660",
+    "newEffectiveDate": "2021-07-15T13:59:31",
+    "oldEffectiveDate": "2019-08-09T11:48:10",
+    "newZip": "30436",
+    "oldZip": "30436-1370"
+  },
+  {
+    "change": "changed-GA-Towns-Towns County Board of Registrars-661",
+    "newEffectiveDate": "2021-07-15T13:57:02",
+    "oldEffectiveDate": "2020-02-07T17:58:41",
+    "newAddress1": "67 Lakeview Circle, Suite A",
+    "oldAddress1": "67 Lakeview Circl, Suite A"
+  },
+  {
+    "change": "changed-GA-Turner-Turner County Board of Elections and Voter Registration-664",
+    "newEffectiveDate": "2021-07-15T13:57:02",
+    "oldEffectiveDate": "2019-08-09T11:48:10",
+    "newAddress1": "1807 U.S Hwy 41 North",
+    "oldAddress1": "1807 U.S Hwy 41 N"
+  },
+  {
+    "change": "changed-GA-Walton-Walton County Board of Elections and Registration-669",
+    "newEffectiveDate": "2021-07-15T13:57:02",
+    "oldEffectiveDate": "2021-03-22T13:06:44",
+    "newAddress1": "303 S Hammond Dr., Dept 465",
+    "oldAddress1": "303 S Hammond Dr."
+  },
+  {
+    "change": "changed-GA-White-White County Board of Elections and Voter Registration-676",
+    "newPhone": "(706) 865-7812",
+    "oldPhone": "706-865-7812",
+    "newEffectiveDate": "2021-07-15T13:57:02",
+    "oldEffectiveDate": "2021-03-22T13:09:10"
+  },
+  {
+    "change": "changed-GA-Whitfield-Whitfield County Board of Elections and Voter Registration-677",
+    "newEmail": "whitfielduocava@whitfieldcountyga.com",
+    "oldEmail": "WhitfieldUOCAVA@whitfieldcountyga.com",
+    "newEffectiveDate": "2021-07-15T13:57:02",
+    "oldEffectiveDate": "2015-08-31T13:36:24"
+  },
+  {
+    "change": "changed-HI-Kauai-Kauai County Clerk-685",
+    "newEffectiveDate": "2021-07-15T14:00:29",
+    "oldEffectiveDate": "2015-08-17T14:01:34",
+    "newAddress1": "4386 Rice St, Rm 101",
+    "oldAddress1": "4386 Rice St, Ste 101"
+  },
+  {
+    "change": "changed-MD-Baltimore City-Baltimore City Board of Elections-25260",
+    "newFax": "(410) 727-1775",
+    "oldFax": "(410) 962-8747",
+    "newEffectiveDate": "2021-07-15T14:13:50",
+    "oldEffectiveDate": "2019-09-13T09:24:53"
+  },
+  {
+    "change": "changed-MD-Prince George&apos;s-Prince George&apos;s County Board of Elections-25276",
+    "newName": "Prince George's County Board of Elections",
+    "oldName": "Prince George's County Board of Elections",
+    "newEmail": "BOEAbsenteeVoting@co.pg.md.us",
+    "oldEmail": "election@co.pg.md.us",
+    "newEffectiveDate": "2021-07-15T14:07:51",
+    "oldEffectiveDate": "2018-03-14T11:38:05",
+    "newJurisdictionName": "Prince George's",
+    "oldJurisdictionName": "Prince George's"
+  },
+  {
+    "change": "changed-MD-Saint Mary&apos;s-Saint Mary&apos;s County Board of Elections-25279",
+    "newName": "Saint Mary's County Board of Elections",
+    "oldName": "Saint Mary's County Board of Elections",
+    "newPhone": "(301) 475-4200 x1625",
+    "oldPhone": "(301) 475-4200 *1625",
+    "newEffectiveDate": "2021-07-15T14:12:40",
+    "oldEffectiveDate": "2019-07-16T15:38:40",
+    "newJurisdictionName": "Saint Mary's",
+    "oldJurisdictionName": "Saint Mary's"
+  },
+  {
+    "change": "changed-MD-Talbot-Talbot County Board of Elections-25280",
+    "newEmail": "talbot.elections@maryland.gov",
+    "oldEmail": "jeri.cook@maryland.gov",
+    "newEffectiveDate": "2021-07-15T14:07:51",
+    "oldEffectiveDate": "2018-03-14T11:36:58"
+  },
+  {
+    "change": "changed-MD-Washington-Washington County Board of Elections-25281",
+    "newEffectiveDate": "2021-07-15T14:07:51",
+    "oldEffectiveDate": "2019-07-02T11:02:01",
+    "newAddress1": "17718 Virginia Ave",
+    "oldAddress1": "P.O. Box 3147",
+    "newZip": "21740-7084",
+    "oldZip": "21741-3147"
+  },
+  {
+    "change": "changed-MD-Worcester-Worcester County Board of Elections-25283",
+    "newEmail": "worcester.elections@maryland.gov",
+    "oldEmail": "Patricia.Jackson@Maryland.gov",
+    "newEffectiveDate": "2021-07-15T14:07:51",
+    "oldEffectiveDate": "2019-07-02T11:02:54"
+  },
+  {
+    "change": "changed-MA-Boxborough, Town of-Boxborough Town Clerk-1357",
+    "newEmail": "rharris@boxborough-ma.gov",
+    "oldEmail": "",
+    "newEffectiveDate": "2021-07-15T13:29:28",
+    "oldEffectiveDate": "2021-07-13T13:22:35"
+  },
+  {
+    "change": "changed-MA-Chester, Town of-Chester Town Clerk-1377",
+    "newEmail": "townclerk@townofchester.net",
+    "oldEmail": "",
+    "newEffectiveDate": "2021-07-15T13:29:59",
+    "oldEffectiveDate": "2021-07-13T13:22:36"
+  },
+  {
+    "change": "changed-MA-Truro, Town of-Truro Town Clerk-1617",
+    "newEmail": "kfullerton@truro-ma.gov",
+    "oldEmail": "sjoseph@truro-ma.gov",
+    "newEffectiveDate": "2021-07-15T13:30:32",
+    "oldEffectiveDate": "2021-07-13T13:22:37"
+  },
+  {
+    "change": "changed-TX-Freestone-Freestone County Early Voting Clerk-3469",
+    "newFax": "(903) 389-3839",
+    "oldFax": "(903) 389-6956",
+    "newPhone": "(903) 389-3335",
+    "oldPhone": "(903) 389-2635",
+    "newEmail": "election.administrator@co.freestone.tx.us",
+    "oldEmail": "linda.jarvis@co.freestone.tx.us",
+    "newEffectiveDate": "2021-07-15T13:00:45",
+    "oldEffectiveDate": "2018-04-18T12:02:59",
+    "newAddress1": "118 East Commerce Street",
+    "oldAddress1": "P.O. Box 1010",
+    "newAddress2": "Rm. 205",
+    "oldAddress2": ""
+  }
+]
