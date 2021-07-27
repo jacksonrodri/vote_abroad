@@ -1,0 +1,128 @@
+[
+  {
+    "change": "changed-NM-Bernalillo-Bernalillo County Clerk-2762",
+    "newEffectiveDate": "2021-07-26T09:48:39",
+    "oldEffectiveDate": "2019-08-16T13:42:35",
+    "newAddress1": "415 Silver Ave. SW, 2nd Floor",
+    "oldAddress1": "One Civic Plaza NW 6th Floor"
+  },
+  {
+    "change": "changed-NM-Catron-Catron County Clerk-2763",
+    "newEmail": "sharon.armijo@catroncountynm.gov",
+    "oldEmail": "keith.riddle@catroncountynm.gov",
+    "newEffectiveDate": "2021-07-26T09:48:39",
+    "oldEffectiveDate": "2019-08-16T13:44:25"
+  },
+  {
+    "change": "changed-NM-Cibola-Cibola County Clerk-2765",
+    "newEmail": "denise.salcido@co.cibola.nm.us",
+    "oldEmail": "Jbilly@co.cibola.nm.us",
+    "newEffectiveDate": "2021-07-26T09:48:39",
+    "oldEffectiveDate": "2019-08-16T13:42:35"
+  },
+  {
+    "change": "changed-NM-De Baca-De Baca County Clerk-2768",
+    "newEmail": "jeffhromas@plateautel.net",
+    "oldEmail": "rosaliej@plateautel.net",
+    "newEffectiveDate": "2021-07-26T09:48:39",
+    "oldEffectiveDate": "2017-09-12T16:20:19"
+  },
+  {
+    "change": "changed-NM-Grant-Grant County Clerk-2771",
+    "newEmail": "etrujillo@grantcountynm.gov",
+    "oldEmail": "grantmcastri@cybermesa.com",
+    "newEffectiveDate": "2021-07-26T09:48:39",
+    "oldEffectiveDate": "2019-08-16T13:42:35"
+  },
+  {
+    "change": "changed-NM-Guadalupe-Guadalupe County Clerk-2772",
+    "newEmail": "rserrano@guadco.us",
+    "oldEmail": "pmartinez@guadco.us",
+    "newEffectiveDate": "2021-07-26T09:48:39",
+    "oldEffectiveDate": "2019-08-16T13:42:35"
+  },
+  {
+    "change": "changed-NM-Harding-Harding County Clerk-2773",
+    "newEmail": "cj.garrison@hardingcounty.org",
+    "oldEmail": "hardingcc@plateautel.net",
+    "newEffectiveDate": "2021-07-26T09:48:39",
+    "oldEffectiveDate": "2017-09-12T16:20:19"
+  },
+  {
+    "change": "changed-NM-Hidalgo-Hidalgo County Clerk-2774",
+    "newEmail": "alyssa.esquivel@hidalgocounty.org",
+    "oldEmail": "melissa.delagarza@hidalgocounty.org",
+    "newEffectiveDate": "2021-07-26T09:48:39",
+    "oldEffectiveDate": "2019-08-16T13:44:25"
+  },
+  {
+    "change": "changed-NM-Luna-Luna County Clerk-2778",
+    "newEmail": "berenda_mcwright@lunacountynm.us",
+    "oldEmail": "Leslie_nabours@lunacountynm.us",
+    "newEffectiveDate": "2021-07-26T09:48:39",
+    "oldEffectiveDate": "2019-08-16T13:44:25"
+  },
+  {
+    "change": "changed-NM-Rio Arriba-Rio Arriba County Clerk-2783",
+    "newEmail": "SMartinez@rio-arriba.org",
+    "oldEmail": "Victoria@rio-arriba.org",
+    "newEffectiveDate": "2021-07-26T09:48:39",
+    "oldEffectiveDate": "2019-08-16T13:42:35"
+  },
+  {
+    "change": "changed-NM-Roosevelt-Roosevelt County Clerk-2784",
+    "newEmail": "nbaca@rooseveltcounty.com",
+    "oldEmail": "shicksl@rooseveltcounty.com",
+    "newEffectiveDate": "2021-07-26T09:48:39",
+    "oldEffectiveDate": "2019-08-16T13:42:35"
+  },
+  {
+    "change": "changed-NM-Santa Fe-Santa Fe County Clerk-2788",
+    "newEmail": "elections@santafecountynm.gov",
+    "oldEmail": "overseas@santafecountynm.gov",
+    "newEffectiveDate": "2021-07-26T09:48:39",
+    "oldEffectiveDate": "2019-08-16T13:42:35"
+  },
+  {
+    "change": "changed-NM-Taos-Taos County Clerk-2791",
+    "newEmail": "valerie.montoya@taoscounty.org",
+    "oldEmail": "Anna.martinez@taoscounty.org",
+    "newEffectiveDate": "2021-07-26T09:48:39",
+    "oldEffectiveDate": "2017-09-12T16:20:19"
+  },
+  {
+    "change": "changed-NM-Torrance-Torrance County Clerk-2792",
+    "newEmail": "yotero@tcnm.us",
+    "oldEmail": "ljaramillo@tcnm.us",
+    "newEffectiveDate": "2021-07-26T09:48:39",
+    "oldEffectiveDate": "2019-08-16T13:42:35"
+  },
+  {
+    "change": "changed-NM-Union-Union County Clerk-2793",
+    "newEmail": "brenda.green@unionnm.us",
+    "oldEmail": "marylou.harkins@unionnm.us",
+    "newEffectiveDate": "2021-07-26T09:48:39",
+    "oldEffectiveDate": "2020-09-02T13:59:23"
+  },
+  {
+    "change": "changed-SC-Dillon-Dillon Board of Voter Registration-3198",
+    "newEmail": "lsedwards@dilloncountysc.org",
+    "oldEmail": "sedwardsvr17@aol.com",
+    "newEffectiveDate": "2021-07-26T09:47:51",
+    "oldEffectiveDate": "2015-08-31T11:46:38"
+  },
+  {
+    "change": "changed-SC-Newberry-Newberry Board of Voter Registration-3217",
+    "newEmail": "aebperkins@newberrycounty.net",
+    "oldEmail": "sproctor@newberrycounty.net",
+    "newEffectiveDate": "2021-07-26T09:47:51",
+    "oldEffectiveDate": "2016-08-16T13:13:39"
+  },
+  {
+    "change": "changed-SC-Spartanburg-Spartanburg Board of Voter Registration-3223",
+    "newEmail": "ahammons@spartanburgcounty.org",
+    "oldEmail": "hlaye@spartanburgcounty.org",
+    "newEffectiveDate": "2021-07-26T09:47:51",
+    "oldEffectiveDate": "2015-08-31T11:46:38"
+  }
+]
