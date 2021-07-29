@@ -1,0 +1,16 @@
+[
+  {
+    "change": "changed-KS-Crawford-Crawford County Clerk-1050",
+    "newEmail": "countyclerk@crawfordcountykansas.org",
+    "oldEmail": "countyclerk@ckt.net",
+    "newEffectiveDate": "2021-07-28T10:32:11",
+    "oldEffectiveDate": "2015-08-31T09:10:13"
+  },
+  {
+    "change": "changed-TX-Runnels-Runnels County Early Voting Clerk-3588",
+    "newEmail": "Melissa.infante@runnelscounty.org",
+    "oldEmail": "elections@co.runnels.tx.us",
+    "newEffectiveDate": "2021-07-27T13:29:26",
+    "oldEffectiveDate": "2019-08-29T15:13:37"
+  }
+]
