@@ -1,0 +1,18 @@
+[
+  {
+    "change": "changed-CA-Inyo-Inyo County Clerk-Elections-174",
+    "newEmail": "elections@inyocounty.us",
+    "oldEmail": "mhartshorn@inyocounty.us",
+    "newEffectiveDate": "2021-07-30T09:53:38",
+    "oldEffectiveDate": "2021-07-22T08:42:17"
+  },
+  {
+    "change": "changed-TX-Kaufman-Kaufman County Early Voting Clerk-3517",
+    "newEmail": "tandi.smith@kaufmancounty.net",
+    "oldEmail": "elections@kaufmancounty.net",
+    "newEffectiveDate": "2021-07-30T15:44:47",
+    "oldEffectiveDate": "2021-06-14T14:24:12",
+    "newAddress1": "100 N. Washington St",
+    "oldAddress1": "100 N Washington St, P.O. Box 339"
+  }
+]
