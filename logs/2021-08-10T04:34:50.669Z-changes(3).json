@@ -1,0 +1,25 @@
+[
+  {
+    "change": "changed-TN-Campbell-Campbell County Election Commission-3300",
+    "newEmail": "mrosenfeld@campbellcountygov.com",
+    "oldEmail": "annayers@campbellcountygov.com",
+    "newEffectiveDate": "2021-08-09T10:49:00",
+    "oldEffectiveDate": "2017-09-06T16:29:57"
+  },
+  {
+    "change": "changed-TN-Giles-Giles County Election Commission-3321",
+    "newEmail": "gcelection@gilescountytn.gov",
+    "oldEmail": "gcelection@energize.net",
+    "newEffectiveDate": "2021-08-09T10:48:07",
+    "oldEffectiveDate": "2016-09-01T13:34:42"
+  },
+  {
+    "change": "changed-TN-Humphreys-Humphreys County Election Commission-3336",
+    "newEffectiveDate": "2021-08-09T14:19:21",
+    "oldEffectiveDate": "2015-08-31T11:22:43",
+    "newAddress1": "P.O. BOX 391",
+    "oldAddress1": "208 W Wyly St",
+    "newZip": "37185-0391",
+    "oldZip": "37185-1547"
+  }
+]
