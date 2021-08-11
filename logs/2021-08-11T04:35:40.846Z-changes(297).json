@@ -1,0 +1,2287 @@
+[
+  {
+    "change": "changed-NM-Bernalillo-Bernalillo County Clerk-2762",
+    "newEffectiveDate": "2021-08-10T14:39:15",
+    "oldEffectiveDate": "2021-07-26T09:48:39",
+    "newAddress1": "415 Silver Ave SW",
+    "oldAddress1": "415 Silver Ave. SW, 2nd Floor"
+  },
+  {
+    "change": "changed-WI-CITY OF ABBOTSFORD - MULTIPLE COUNTIES-CITY OF ABBOTSFORD - MULTIPLE COUNTIES-25548",
+    "newPhone": "(715)223-3444 x102",
+    "oldPhone": "715-223-3444 x102",
+    "newEffectiveDate": "2021-08-10T14:16:08",
+    "oldEffectiveDate": "2019-08-13T14:03:06"
+  },
+  {
+    "change": "changed-WI-CITY OF ADAMS - ADAMS COUNTY-CITY OF ADAMS - ADAMS COUNTY-25303",
+    "newPhone": "(608)339-6516",
+    "oldPhone": "608-339-6516",
+    "newEffectiveDate": "2021-08-10T14:07:18",
+    "oldEffectiveDate": "2019-08-13T14:03:04"
+  },
+  {
+    "change": "changed-WI-CITY OF ALGOMA - KEWAUNEE COUNTY-CITY OF ALGOMA - KEWAUNEE COUNTY-26108",
+    "newEmail": "erin.mueller@algomacity.org",
+    "oldEmail": "jamie.jackson@algomacity.org",
+    "newEffectiveDate": "2021-08-10T14:07:24",
+    "oldEffectiveDate": "2019-08-13T14:03:09"
+  },
+  {
+    "change": "changed-WI-CITY OF ALMA - BUFFALO COUNTY-CITY OF ALMA - BUFFALO COUNTY-25431",
+    "newPhone": "(608)685-3330",
+    "oldPhone": "608-685-3330",
+    "newEffectiveDate": "2021-08-10T14:07:19",
+    "oldEffectiveDate": "2019-08-13T14:03:05"
+  },
+  {
+    "change": "changed-WI-CITY OF ALTOONA - EAU CLAIRE COUNTY-CITY OF ALTOONA - EAU CLAIRE COUNTY-25805",
+    "newPhone": "(715)839-6092",
+    "oldPhone": "715-839-6092",
+    "newEffectiveDate": "2021-08-10T14:07:21",
+    "oldEffectiveDate": "2018-09-12T10:08:45"
+  },
+  {
+    "change": "changed-WI-CITY OF AMERY - POLK COUNTY-CITY OF AMERY - POLK COUNTY-26557",
+    "newPhone": "(715)268-3411",
+    "oldPhone": "715-268-3411",
+    "newEffectiveDate": "2021-08-10T14:07:29",
+    "oldEffectiveDate": "2019-08-13T14:03:11"
+  },
+  {
+    "change": "changed-WI-CITY OF ANTIGO - LANGLADE COUNTY-CITY OF ANTIGO - LANGLADE COUNTY-26175",
+    "newPhone": "(715)623-3633 x102",
+    "oldPhone": "715-623-3633 x102",
+    "newEffectiveDate": "2021-08-10T14:16:13",
+    "oldEffectiveDate": "2019-08-13T14:03:09"
+  },
+  {
+    "change": "changed-WI-CITY OF APPLETON - MULTIPLE COUNTIES-CITY OF APPLETON - MULTIPLE COUNTIES-26467",
+    "newPhone": "(920)832-6443",
+    "oldPhone": "920-832-6443",
+    "newEffectiveDate": "2021-08-10T14:07:28",
+    "oldEffectiveDate": "2018-09-12T09:14:18"
+  },
+  {
+    "change": "changed-WI-CITY OF ARCADIA - TREMPEALEAU COUNTY-CITY OF ARCADIA - TREMPEALEAU COUNTY-26924",
+    "newPhone": "(608)323-3359",
+    "oldPhone": "608-323-3359",
+    "newEffectiveDate": "2021-08-10T14:07:34",
+    "oldEffectiveDate": "2019-08-13T14:03:16"
+  },
+  {
+    "change": "changed-WI-CITY OF ASHLAND - MULTIPLE COUNTIES-CITY OF ASHLAND - MULTIPLE COUNTIES-25319",
+    "newPhone": "(715)682-7071",
+    "oldPhone": "715-682-7071",
+    "newEffectiveDate": "2021-08-10T14:07:18",
+    "oldEffectiveDate": "2018-09-12T12:34:59"
+  },
+  {
+    "change": "changed-WI-CITY OF AUGUSTA - EAU CLAIRE COUNTY-CITY OF AUGUSTA - EAU CLAIRE COUNTY-25806",
+    "newPhone": "(715)286-2555",
+    "oldPhone": "715-286-2555",
+    "newEffectiveDate": "2021-08-10T14:07:21",
+    "oldEffectiveDate": "2019-08-13T14:03:08"
+  },
+  {
+    "change": "changed-WI-CITY OF BARABOO - SAUK COUNTY-CITY OF BARABOO - SAUK COUNTY-26785",
+    "newPhone": "(608)355-2700",
+    "oldPhone": "608-355-2700",
+    "newEffectiveDate": "2021-08-10T14:07:32",
+    "oldEffectiveDate": "2019-08-13T14:03:13"
+  },
+  {
+    "change": "changed-WI-CITY OF BARRON - BARRON COUNTY-CITY OF BARRON - BARRON COUNTY-25353",
+    "newPhone": "(715)537-5631",
+    "oldPhone": "715-537-5631",
+    "newEffectiveDate": "2021-08-10T14:07:18",
+    "oldEffectiveDate": "2019-08-13T14:03:04"
+  },
+  {
+    "change": "changed-WI-CITY OF BAYFIELD - BAYFIELD COUNTY-CITY OF BAYFIELD - BAYFIELD COUNTY-25384",
+    "newPhone": "(715)779-5712",
+    "oldPhone": "715-779-5712",
+    "newEffectiveDate": "2021-08-10T14:07:19",
+    "oldEffectiveDate": "2019-08-13T14:03:04"
+  },
+  {
+    "change": "changed-WI-CITY OF BEAVER DAM - DODGE COUNTY-CITY OF BEAVER DAM - DODGE COUNTY-25709",
+    "newPhone": "(920)887-4600 x349",
+    "oldPhone": "920-887-4600 x338",
+    "newEmail": "zbloom@cityofbeaverdam.com",
+    "oldEmail": "jwiswell@cityofbeaverdam.com",
+    "newEffectiveDate": "2021-08-10T14:16:10",
+    "oldEffectiveDate": "2019-08-13T14:03:07"
+  },
+  {
+    "change": "changed-WI-CITY OF BELOIT - ROCK COUNTY-CITY OF BELOIT - ROCK COUNTY-26676",
+    "newPhone": "(608)364-6680",
+    "oldPhone": "608-364-6680",
+    "newEffectiveDate": "2021-08-10T14:07:30",
+    "oldEffectiveDate": "2018-09-12T12:17:51"
+  },
+  {
+    "change": "changed-WI-CITY OF BERLIN - MULTIPLE COUNTIES-CITY OF BERLIN - MULTIPLE COUNTIES-25955",
+    "newPhone": "(920)361-5400",
+    "oldPhone": "920-361-5400",
+    "newEffectiveDate": "2021-08-10T14:07:23",
+    "oldEffectiveDate": "2019-08-13T14:03:08"
+  },
+  {
+    "change": "changed-WI-CITY OF BLACK RIVER FALLS - JACKSON COUNTY-CITY OF BLACK RIVER FALLS - JACKSON COUNTY-26025",
+    "newPhone": "(715)284-5514",
+    "oldPhone": "715-284-5514",
+    "newEffectiveDate": "2021-08-10T14:07:23",
+    "oldEffectiveDate": "2018-09-12T09:00:18"
+  },
+  {
+    "change": "changed-WI-CITY OF BLAIR - TREMPEALEAU COUNTY-CITY OF BLAIR - TREMPEALEAU COUNTY-26925",
+    "newPhone": "(608)989-2517",
+    "oldPhone": "608-989-2517",
+    "newEffectiveDate": "2021-08-10T14:07:34",
+    "oldEffectiveDate": "2019-08-13T14:03:16"
+  },
+  {
+    "change": "changed-WI-CITY OF BLOOMER - CHIPPEWA COUNTY-CITY OF BLOOMER - CHIPPEWA COUNTY-25506",
+    "newPhone": "(715)568-3032",
+    "oldPhone": "715-568-3032",
+    "newEffectiveDate": "2021-08-10T14:07:20",
+    "oldEffectiveDate": "2018-09-12T11:01:02"
+  },
+  {
+    "change": "changed-WI-CITY OF BOSCOBEL - GRANT COUNTY-CITY OF BOSCOBEL - GRANT COUNTY-25914",
+    "newPhone": "(608)375-5001",
+    "oldPhone": "608-375-5001",
+    "newEmail": "cityadmin@boscobelwi.us",
+    "oldEmail": "mmolzof@wppienergy.org",
+    "newEffectiveDate": "2021-08-10T14:07:22",
+    "oldEffectiveDate": "2019-08-13T14:03:08"
+  },
+  {
+    "change": "changed-WI-CITY OF BRILLION - CALUMET COUNTY-CITY OF BRILLION - CALUMET COUNTY-25475",
+    "newEmail": "clerk@ci.brillion.wi.us",
+    "oldEmail": "ADMIN@CI.BRILLION.WI.US",
+    "newEffectiveDate": "2021-08-10T14:07:19",
+    "oldEffectiveDate": "2019-08-13T14:03:05",
+    "newAddress1": "201 N Main St",
+    "oldAddress1": "130 CALUMET ST"
+  },
+  {
+    "change": "changed-WI-CITY OF BRODHEAD - MULTIPLE COUNTIES-CITY OF BRODHEAD - MULTIPLE COUNTIES-25940",
+    "newPhone": "(608)897-4018 x150",
+    "oldPhone": "608-897-4018 x150",
+    "newEmail": "cityclerk@cityofbrodheadwi.us",
+    "oldEmail": "CITYCLERK@CITYOFBRODHEADWI.US",
+    "newEffectiveDate": "2021-08-10T14:16:11",
+    "oldEffectiveDate": "2019-08-13T14:03:08"
+  },
+  {
+    "change": "changed-WI-CITY OF BROOKFIELD - WAUKESHA COUNTY-CITY OF BROOKFIELD - WAUKESHA COUNTY-27086",
+    "newPhone": "(262)782-9650",
+    "oldPhone": "262-782-9650",
+    "newEffectiveDate": "2021-08-10T14:07:36",
+    "oldEffectiveDate": "2018-09-12T09:23:25"
+  },
+  {
+    "change": "changed-WI-CITY OF BUFFALO CITY - BUFFALO COUNTY-CITY OF BUFFALO CITY - BUFFALO COUNTY-25432",
+    "newPhone": "(608)248-2262",
+    "oldPhone": "608-248-2262",
+    "newEffectiveDate": "2021-08-10T14:07:19",
+    "oldEffectiveDate": "2019-08-13T14:03:05"
+  },
+  {
+    "change": "changed-WI-CITY OF BURLINGTON - MULTIPLE COUNTIES-CITY OF BURLINGTON - MULTIPLE COUNTIES-26627",
+    "newPhone": "(262)342-1161",
+    "oldPhone": "262-342-1161",
+    "newEffectiveDate": "2021-08-10T14:07:30",
+    "oldEffectiveDate": "2018-09-12T12:33:51"
+  },
+  {
+    "change": "changed-WI-CITY OF CEDARBURG - OZAUKEE COUNTY-CITY OF CEDARBURG - OZAUKEE COUNTY-26482",
+    "newPhone": "(262)375-7606",
+    "oldPhone": "262-375-7606",
+    "newEmail": "tsette@ci.cedarburg.wi.us",
+    "oldEmail": "cwoodall-vogg@ci.cedarburg.wi.us",
+    "newEffectiveDate": "2021-08-10T14:07:29",
+    "oldEffectiveDate": "2019-08-13T14:03:11"
+  },
+  {
+    "change": "changed-WI-CITY OF CHETEK - BARRON COUNTY-CITY OF CHETEK - BARRON COUNTY-25354",
+    "newPhone": "(715)924-4838",
+    "oldPhone": "715-924-4838",
+    "newEffectiveDate": "2021-08-10T14:07:18",
+    "oldEffectiveDate": "2019-08-13T14:03:04"
+  },
+  {
+    "change": "changed-WI-CITY OF CHIPPEWA FALLS - CHIPPEWA COUNTY-CITY OF CHIPPEWA FALLS - CHIPPEWA COUNTY-25507",
+    "newPhone": "(715)726-2719",
+    "oldPhone": "715-726-2719",
+    "newEffectiveDate": "2021-08-10T14:07:20",
+    "oldEffectiveDate": "2019-08-13T14:03:06"
+  },
+  {
+    "change": "changed-WI-CITY OF CLINTONVILLE - WAUPACA COUNTY-CITY OF CLINTONVILLE - WAUPACA COUNTY-27122",
+    "newPhone": "(715)823-7600",
+    "oldPhone": "715-823-7600",
+    "newEffectiveDate": "2021-08-10T14:07:36",
+    "oldEffectiveDate": "2019-08-13T14:03:18"
+  },
+  {
+    "change": "changed-WI-CITY OF COLBY - MULTIPLE COUNTIES-CITY OF COLBY - MULTIPLE COUNTIES-25549",
+    "newPhone": "(715)223-4435",
+    "oldPhone": "715-223-4435",
+    "newEffectiveDate": "2021-08-10T14:07:20",
+    "oldEffectiveDate": "2019-08-13T14:03:06"
+  },
+  {
+    "change": "changed-WI-CITY OF COLUMBUS - MULTIPLE COUNTIES-CITY OF COLUMBUS - MULTIPLE COUNTIES-25586",
+    "newPhone": "(920)623-5900",
+    "oldPhone": "920-623-5900",
+    "newEffectiveDate": "2021-08-10T14:07:20",
+    "oldEffectiveDate": "2019-08-13T14:03:06"
+  },
+  {
+    "change": "changed-WI-CITY OF CORNELL - CHIPPEWA COUNTY-CITY OF CORNELL - CHIPPEWA COUNTY-25508",
+    "newPhone": "(715)239-3710",
+    "oldPhone": "715-239-3710",
+    "newEffectiveDate": "2021-08-10T14:07:20",
+    "oldEffectiveDate": "2019-08-13T14:03:06"
+  },
+  {
+    "change": "changed-WI-CITY OF CRANDON - FOREST COUNTY-CITY OF CRANDON - FOREST COUNTY-25865",
+    "newPhone": "(715)478-2400",
+    "oldPhone": "715-478-2400",
+    "newEffectiveDate": "2021-08-10T14:07:22",
+    "oldEffectiveDate": "2019-08-13T14:03:08"
+  },
+  {
+    "change": "changed-WI-CITY OF CUBA CITY - MULTIPLE COUNTIES-CITY OF CUBA CITY - MULTIPLE COUNTIES-25915",
+    "newPhone": "(608)744-2152",
+    "oldPhone": "608-744-2152",
+    "newEmail": "jhill@cubacitylightandwater.org",
+    "oldEmail": "jhill@wppienergy.org",
+    "newEffectiveDate": "2021-08-10T14:07:22",
+    "oldEffectiveDate": "2019-08-13T14:03:08"
+  },
+  {
+    "change": "changed-WI-CITY OF CUDAHY - MILWAUKEE COUNTY-CITY OF CUDAHY - MILWAUKEE COUNTY-26342",
+    "newPhone": "(414)769-2204",
+    "oldPhone": "414-769-2204",
+    "newEmail": "broderickd@ci.cudahy.wi.us",
+    "oldEmail": "BRODERICKD@CI.CUDAHY.WI.US",
+    "newEffectiveDate": "2021-08-10T14:07:26",
+    "oldEffectiveDate": "2018-09-12T12:19:29"
+  },
+  {
+    "change": "changed-WI-CITY OF DARLINGTON - LAFAYETTE COUNTY-CITY OF DARLINGTON - LAFAYETTE COUNTY-26154",
+    "newPhone": "(608)776-4972",
+    "oldPhone": "608-776-4972",
+    "newEffectiveDate": "2021-08-10T14:07:24",
+    "oldEffectiveDate": "2019-08-13T14:03:09"
+  },
+  {
+    "change": "changed-WI-CITY OF DE PERE - BROWN COUNTY-CITY OF DE PERE - BROWN COUNTY-25409",
+    "newPhone": "(920)339-4050",
+    "oldPhone": "920-339-4050",
+    "newEffectiveDate": "2021-08-10T14:07:19",
+    "oldEffectiveDate": "2019-08-13T14:03:05"
+  },
+  {
+    "change": "changed-WI-CITY OF DELAFIELD - WAUKESHA COUNTY-CITY OF DELAFIELD - WAUKESHA COUNTY-27087",
+    "newPhone": "262-646-6220",
+    "oldPhone": "262-303-4513",
+    "newEmail": "mschneider@ci.delafield.wi.us",
+    "oldEmail": "mluedtke@ci.delafield.wi.us",
+    "newEffectiveDate": "2021-08-10T14:07:36",
+    "oldEffectiveDate": "2018-09-12T12:32:03"
+  },
+  {
+    "change": "changed-WI-CITY OF DELAVAN - WALWORTH COUNTY-CITY OF DELAVAN - WALWORTH COUNTY-27004",
+    "newPhone": "(262)728-5585 x112",
+    "oldPhone": "262-728-5585 x112",
+    "newEffectiveDate": "2021-08-10T14:16:23",
+    "oldEffectiveDate": "2019-08-13T14:03:18"
+  },
+  {
+    "change": "changed-WI-CITY OF DURAND - PEPIN COUNTY-CITY OF DURAND - PEPIN COUNTY-26496",
+    "newPhone": "(715)672-8770 x2",
+    "oldPhone": "715-672-8770 x2",
+    "newEffectiveDate": "2021-08-10T14:16:17",
+    "oldEffectiveDate": "2019-08-13T14:03:11"
+  },
+  {
+    "change": "changed-WI-CITY OF EAGLE RIVER - VILAS COUNTY-CITY OF EAGLE RIVER - VILAS COUNTY-26978",
+    "newPhone": "(715)479-8682 x222",
+    "oldPhone": "715-479-8682 x222",
+    "newEffectiveDate": "2021-08-10T14:16:23",
+    "oldEffectiveDate": "2019-08-13T14:03:16"
+  },
+  {
+    "change": "changed-WI-CITY OF EAU CLAIRE - MULTIPLE COUNTIES-CITY OF EAU CLAIRE - MULTIPLE COUNTIES-25807",
+    "newPhone": "(715)839-4913",
+    "oldPhone": "715-839-4912",
+    "newEffectiveDate": "2021-08-10T14:07:21",
+    "oldEffectiveDate": "2018-09-12T09:12:05"
+  },
+  {
+    "change": "changed-WI-CITY OF EDGERTON - MULTIPLE COUNTIES-CITY OF EDGERTON - MULTIPLE COUNTIES-26677",
+    "newPhone": "(608)884-3341",
+    "oldPhone": "608-884-3341",
+    "newEmail": "chegglund@cityofedgerton.com",
+    "oldEmail": "CHEGGLUND@CITYOFEDGERTON.COM",
+    "newEffectiveDate": "2021-08-10T14:07:30",
+    "oldEffectiveDate": "2018-09-12T12:35:17"
+  },
+  {
+    "change": "changed-WI-CITY OF ELKHORN - WALWORTH COUNTY-CITY OF ELKHORN - WALWORTH COUNTY-27005",
+    "newPhone": "(262)723-2219",
+    "oldPhone": "262-723-2219",
+    "newEffectiveDate": "2021-08-10T14:07:34",
+    "oldEffectiveDate": "2020-08-04T08:11:52"
+  },
+  {
+    "change": "changed-WI-CITY OF ELROY - JUNEAU COUNTY-CITY OF ELROY - JUNEAU COUNTY-26077",
+    "newPhone": "(608)462-2400",
+    "oldPhone": "608-462-2400",
+    "newEffectiveDate": "2021-08-10T14:07:24",
+    "oldEffectiveDate": "2019-08-13T14:03:09"
+  },
+  {
+    "change": "changed-WI-CITY OF EVANSVILLE - ROCK COUNTY-CITY OF EVANSVILLE - ROCK COUNTY-26678",
+    "newEmail": "darnisha.haley@ci.evansville.wi.gov",
+    "oldEmail": "judy.walton@ci.evansville.wi.gov",
+    "newEffectiveDate": "2021-08-10T14:07:30",
+    "oldEffectiveDate": "2018-09-12T09:00:29"
+  },
+  {
+    "change": "changed-WI-CITY OF FENNIMORE - GRANT COUNTY-CITY OF FENNIMORE - GRANT COUNTY-25916",
+    "newPhone": "(608)822-6119",
+    "oldPhone": "608-822-6119",
+    "newEffectiveDate": "2021-08-10T14:07:22",
+    "oldEffectiveDate": "2019-08-13T14:03:08"
+  },
+  {
+    "change": "changed-WI-CITY OF FITCHBURG - DANE COUNTY-CITY OF FITCHBURG - DANE COUNTY-25666",
+    "newPhone": "(608)270-4200 x4210",
+    "oldPhone": "608-270-4210",
+    "newEffectiveDate": "2021-08-10T14:16:09",
+    "oldEffectiveDate": "2019-08-13T14:03:06"
+  },
+  {
+    "change": "changed-WI-CITY OF FOND DU LAC - FOND DU LAC COUNTY-CITY OF FOND DU LAC - FOND DU LAC COUNTY-25848",
+    "newPhone": "(920)322-3430",
+    "oldPhone": "920-322-3430",
+    "newEffectiveDate": "2021-08-10T14:07:22",
+    "oldEffectiveDate": "2018-09-12T09:38:15"
+  },
+  {
+    "change": "changed-WI-CITY OF FORT ATKINSON - JEFFERSON COUNTY-CITY OF FORT ATKINSON - JEFFERSON COUNTY-26046",
+    "newPhone": "(920)563-7760",
+    "oldPhone": "920-563-7760",
+    "newEffectiveDate": "2021-08-10T14:07:23",
+    "oldEffectiveDate": "2018-09-12T12:36:11"
+  },
+  {
+    "change": "changed-WI-CITY OF FOUNTAIN CITY - BUFFALO COUNTY-CITY OF FOUNTAIN CITY - BUFFALO COUNTY-25433",
+    "newPhone": "(608)687-7481",
+    "oldPhone": "608-687-7481",
+    "newEmail": "michelle@fountaincitywisconsin.com",
+    "oldEmail": "janet@fountaincitywisconsin.com",
+    "newEffectiveDate": "2021-08-10T14:07:19",
+    "oldEffectiveDate": "2019-08-13T14:03:05",
+    "newAddress1": "42 N MAIN ST",
+    "oldAddress1": "PO BOX 85"
+  },
+  {
+    "change": "changed-WI-CITY OF FOX LAKE - DODGE COUNTY-CITY OF FOX LAKE - DODGE COUNTY-25710",
+    "newPhone": "(920)928-2280",
+    "oldPhone": "920-928-2280",
+    "newEffectiveDate": "2021-08-10T14:07:21",
+    "oldEffectiveDate": "2019-08-13T14:03:07"
+  },
+  {
+    "change": "changed-WI-CITY OF FRANKLIN - MILWAUKEE COUNTY-CITY OF FRANKLIN - MILWAUKEE COUNTY-26343",
+    "newPhone": "(414)427-7503",
+    "oldPhone": "414-427-7503",
+    "newEffectiveDate": "2021-08-10T14:07:26",
+    "oldEffectiveDate": "2020-07-23T11:29:39"
+  },
+  {
+    "change": "changed-WI-CITY OF GALESVILLE - TREMPEALEAU COUNTY-CITY OF GALESVILLE - TREMPEALEAU COUNTY-26926",
+    "newEmail": "info@cityofgalesville.com",
+    "oldEmail": "galesvillewi@centurylink.net",
+    "newEffectiveDate": "2021-08-10T14:07:34",
+    "oldEffectiveDate": "2019-08-13T14:03:16"
+  },
+  {
+    "change": "changed-WI-CITY OF GILLETT - OCONTO COUNTY-CITY OF GILLETT - OCONTO COUNTY-26413",
+    "newPhone": "(920)855-2255",
+    "oldPhone": "920-855-2255",
+    "newEffectiveDate": "2021-08-10T14:07:28",
+    "oldEffectiveDate": "2020-09-14T13:52:02"
+  },
+  {
+    "change": "changed-WI-CITY OF GLENDALE - MILWAUKEE COUNTY-CITY OF GLENDALE - MILWAUKEE COUNTY-26344",
+    "newPhone": "(414)228-1718",
+    "oldPhone": "414-228-1718",
+    "newEmail": "m.humitz@glendalewi.gov",
+    "oldEmail": "M.Humitz@glendalewi.gov",
+    "newEffectiveDate": "2021-08-10T14:07:26",
+    "oldEffectiveDate": "2020-03-10T11:00:06",
+    "newAddress1": "5909 NORTH MILWAUKEE RIVER PARKWAY",
+    "oldAddress1": "5909 N. MILWAUKEE RIVER PARKWAY"
+  },
+  {
+    "change": "changed-WI-CITY OF GLENWOOD CITY - ST. CROIX COUNTY-CITY OF GLENWOOD CITY - ST. CROIX COUNTY-26746",
+    "newPhone": "(715)265-4227",
+    "oldPhone": "715-265-4227",
+    "newEffectiveDate": "2021-08-10T14:07:31",
+    "oldEffectiveDate": "2019-08-13T14:03:13",
+    "newAddress1": "PO BOX 368",
+    "oldAddress1": "113 W OAK ST"
+  },
+  {
+    "change": "changed-WI-CITY OF GREEN BAY - BROWN COUNTY-CITY OF GREEN BAY - BROWN COUNTY-25410",
+    "newEmail": "Celestine.Jeffreys@greenbaywi.gov",
+    "oldEmail": "KRISTE@GREENBAYWI.GOV",
+    "newEffectiveDate": "2021-08-10T14:07:19",
+    "oldEffectiveDate": "2018-09-12T09:13:03"
+  },
+  {
+    "change": "changed-WI-CITY OF GREEN LAKE - GREEN LAKE COUNTY-CITY OF GREEN LAKE - GREEN LAKE COUNTY-25956",
+    "newPhone": "(920)294-6912",
+    "oldPhone": "920-294-6912",
+    "newEffectiveDate": "2021-08-10T14:07:23",
+    "oldEffectiveDate": "2019-08-13T14:03:08"
+  },
+  {
+    "change": "changed-WI-CITY OF GREENFIELD - MILWAUKEE COUNTY-CITY OF GREENFIELD - MILWAUKEE COUNTY-26345",
+    "newPhone": "(414)329-5219",
+    "oldPhone": "414-329-5219",
+    "newEffectiveDate": "2021-08-10T14:07:26",
+    "oldEffectiveDate": "2018-09-12T09:46:02"
+  },
+  {
+    "change": "changed-WI-CITY OF GREENWOOD - CLARK COUNTY-CITY OF GREENWOOD - CLARK COUNTY-25550",
+    "newPhone": "(715)267-6205",
+    "oldPhone": "715-267-6205",
+    "newEffectiveDate": "2021-08-10T14:07:20",
+    "oldEffectiveDate": "2019-08-13T14:03:06",
+    "newAddress1": "PO BOX D",
+    "oldAddress1": "P.O. BOX D"
+  },
+  {
+    "change": "changed-WI-CITY OF HARTFORD - MULTIPLE COUNTIES-CITY OF HARTFORD - MULTIPLE COUNTIES-27053",
+    "newPhone": "(262)673-8201",
+    "oldPhone": "262-673-8201",
+    "newEmail": "lorihetzel@ci.hartford.wi.us",
+    "oldEmail": "LORIHETZEL@CI.HARTFORD.WI.US",
+    "newEffectiveDate": "2021-08-10T14:07:35",
+    "oldEffectiveDate": "2018-09-12T13:39:46"
+  },
+  {
+    "change": "changed-WI-CITY OF HAYWARD - SAWYER COUNTY-CITY OF HAYWARD - SAWYER COUNTY-26808",
+    "newPhone": "(715)634-2311",
+    "oldPhone": "715-634-2311",
+    "newEffectiveDate": "2021-08-10T14:07:32",
+    "oldEffectiveDate": "2019-08-13T14:03:15"
+  },
+  {
+    "change": "changed-WI-CITY OF HILLSBORO - VERNON COUNTY-CITY OF HILLSBORO - VERNON COUNTY-26960",
+    "newPhone": "(608)489-2521",
+    "oldPhone": "608-489-2521",
+    "newEffectiveDate": "2021-08-10T14:07:34",
+    "oldEffectiveDate": "2019-08-13T14:03:16"
+  },
+  {
+    "change": "changed-WI-CITY OF HORICON - DODGE COUNTY-CITY OF HORICON - DODGE COUNTY-25711",
+    "newPhone": "(920)485-3500",
+    "oldPhone": "920-485-3500",
+    "newEffectiveDate": "2021-08-10T14:07:21",
+    "oldEffectiveDate": "2019-08-13T14:03:07"
+  },
+  {
+    "change": "changed-WI-CITY OF HUDSON - ST. CROIX COUNTY-CITY OF HUDSON - ST. CROIX COUNTY-26747",
+    "newPhone": "(715)716-5748",
+    "oldPhone": "715-716-5748",
+    "newEmail": "cityclerk@hudsonwi.gov",
+    "oldEmail": "cityclerk@ci.hudson.wi.us",
+    "newEffectiveDate": "2021-08-10T14:07:31",
+    "oldEffectiveDate": "2019-08-13T14:03:13"
+  },
+  {
+    "change": "changed-WI-CITY OF HURLEY - IRON COUNTY-CITY OF HURLEY - IRON COUNTY-25996",
+    "newPhone": "(715)561-4715",
+    "oldPhone": "715-561-4715",
+    "newEmail": "hrlyclrk@hurleywi.org",
+    "oldEmail": "HRLYCLRK@HURLEYWI.ORG",
+    "newEffectiveDate": "2021-08-10T14:07:23",
+    "oldEffectiveDate": "2019-08-13T14:03:09",
+    "newAddress1": "405 5TH AVE N",
+    "oldAddress1": "405 5TH AVE S"
+  },
+  {
+    "change": "changed-WI-CITY OF INDEPENDENCE - TREMPEALEAU COUNTY-CITY OF INDEPENDENCE - TREMPEALEAU COUNTY-26927",
+    "newPhone": "(715)985-3055",
+    "oldPhone": "715-985-3055",
+    "newEffectiveDate": "2021-08-10T14:07:34",
+    "oldEffectiveDate": "2019-08-13T14:03:16"
+  },
+  {
+    "change": "changed-WI-CITY OF JANESVILLE - ROCK COUNTY-CITY OF JANESVILLE - ROCK COUNTY-26679",
+    "newPhone": "(608)755-3070",
+    "oldPhone": "608-755-3070",
+    "newEffectiveDate": "2021-08-10T14:07:30",
+    "oldEffectiveDate": "2018-09-12T09:19:29"
+  },
+  {
+    "change": "changed-WI-CITY OF JEFFERSON - JEFFERSON COUNTY-CITY OF JEFFERSON - JEFFERSON COUNTY-26047",
+    "newPhone": "(920)674-7700",
+    "oldPhone": "920-674-7700",
+    "newEffectiveDate": "2021-08-10T14:07:24",
+    "oldEffectiveDate": "2019-08-13T14:03:09"
+  },
+  {
+    "change": "changed-WI-CITY OF JUNEAU - DODGE COUNTY-CITY OF JUNEAU - DODGE COUNTY-25712",
+    "newPhone": "(920)386-4800",
+    "oldPhone": "920-386-4800",
+    "newEmail": "shart@cityofjuneau.net",
+    "oldEmail": "vknetzger@cityofjuneau.net",
+    "newEffectiveDate": "2021-08-10T14:07:21",
+    "oldEffectiveDate": "2019-08-13T14:03:07"
+  },
+  {
+    "change": "changed-WI-CITY OF KAUKAUNA - MULTIPLE COUNTIES-CITY OF KAUKAUNA - MULTIPLE COUNTIES-26468",
+    "newPhone": "(920)766-6300 x1110",
+    "oldPhone": "920-766-6300 x1110",
+    "newEffectiveDate": "2021-08-10T14:16:17",
+    "oldEffectiveDate": "2019-08-13T14:03:11"
+  },
+  {
+    "change": "changed-WI-CITY OF KENOSHA - KENOSHA COUNTY-CITY OF KENOSHA - KENOSHA COUNTY-26094",
+    "newEmail": "mkrauter@kenosha.org",
+    "oldEmail": "elections@kenosha.org",
+    "newEffectiveDate": "2021-08-10T14:07:24",
+    "oldEffectiveDate": "2020-10-15T14:55:11"
+  },
+  {
+    "change": "changed-WI-CITY OF KEWAUNEE - KEWAUNEE COUNTY-CITY OF KEWAUNEE - KEWAUNEE COUNTY-26109",
+    "newPhone": "(920)388-5000",
+    "oldPhone": "920-388-5000",
+    "newEffectiveDate": "2021-08-10T14:07:24",
+    "oldEffectiveDate": "2019-08-13T14:03:09"
+  },
+  {
+    "change": "changed-WI-CITY OF KIEL - MULTIPLE COUNTIES-CITY OF KIEL - MULTIPLE COUNTIES-26223",
+    "newPhone": "(920)894-2909 x104",
+    "oldPhone": "920-894-2909 x104",
+    "newEffectiveDate": "2021-08-10T14:16:13",
+    "oldEffectiveDate": "2019-08-13T14:03:10"
+  },
+  {
+    "change": "changed-WI-CITY OF LA CROSSE - LA CROSSE COUNTY-CITY OF LA CROSSE - LA CROSSE COUNTY-26127",
+    "newPhone": "(608)789-7510",
+    "oldPhone": "608-789-7510",
+    "newEmail": "ELSENN@CITYOFLACROSSE.ORG",
+    "oldEmail": "lehrket@cityoflacrosse.org",
+    "newEffectiveDate": "2021-08-10T14:07:24",
+    "oldEffectiveDate": "2018-09-12T09:24:41"
+  },
+  {
+    "change": "changed-WI-CITY OF LADYSMITH - RUSK COUNTY-CITY OF LADYSMITH - RUSK COUNTY-26714",
+    "newPhone": "(715)532-0564",
+    "oldPhone": "715-532-0564",
+    "newEffectiveDate": "2021-08-10T14:07:31",
+    "oldEffectiveDate": "2019-08-13T14:03:13"
+  },
+  {
+    "change": "changed-WI-CITY OF LAKE GENEVA - WALWORTH COUNTY-CITY OF LAKE GENEVA - WALWORTH COUNTY-27006",
+    "newPhone": "(262)249-4092",
+    "oldPhone": "262-249-4092",
+    "newEffectiveDate": "2021-08-10T14:07:34",
+    "oldEffectiveDate": "2018-09-12T13:10:57"
+  },
+  {
+    "change": "changed-WI-CITY OF LAKE MILLS - JEFFERSON COUNTY-CITY OF LAKE MILLS - JEFFERSON COUNTY-26048",
+    "newPhone": "(920)648-2344",
+    "oldPhone": "920-648-2344",
+    "newEffectiveDate": "2021-08-10T14:07:24",
+    "oldEffectiveDate": "2018-09-12T13:11:18"
+  },
+  {
+    "change": "changed-WI-CITY OF LANCASTER - GRANT COUNTY-CITY OF LANCASTER - GRANT COUNTY-25917",
+    "newPhone": "(608)723-7445",
+    "oldPhone": "608-723-7445",
+    "newEffectiveDate": "2021-08-10T14:07:22",
+    "oldEffectiveDate": "2019-08-13T14:03:08"
+  },
+  {
+    "change": "changed-WI-CITY OF LODI - COLUMBIA COUNTY-CITY OF LODI - COLUMBIA COUNTY-25587",
+    "newPhone": "(608)592-3247",
+    "oldPhone": "608-592-3247",
+    "newEmail": "bayers@cityoflodi.us",
+    "oldEmail": "dcollins@cityoflodi.us",
+    "newEffectiveDate": "2021-08-10T14:07:20",
+    "oldEffectiveDate": "2019-08-13T14:03:06"
+  },
+  {
+    "change": "changed-WI-CITY OF LOYAL - CLARK COUNTY-CITY OF LOYAL - CLARK COUNTY-25551",
+    "newPhone": "(715)255-8772",
+    "oldPhone": "715-255-8772",
+    "newEffectiveDate": "2021-08-10T14:07:20",
+    "oldEffectiveDate": "2019-08-13T14:03:06"
+  },
+  {
+    "change": "changed-WI-CITY OF MADISON - DANE COUNTY-CITY OF MADISON - DANE COUNTY-25667",
+    "newPhone": "(608)266-4601",
+    "oldPhone": "608-266-4601",
+    "newEffectiveDate": "2021-08-10T14:07:21",
+    "oldEffectiveDate": "2019-08-13T14:03:06"
+  },
+  {
+    "change": "changed-WI-CITY OF MANAWA - WAUPACA COUNTY-CITY OF MANAWA - WAUPACA COUNTY-27123",
+    "newPhone": "(920)596-2577",
+    "oldPhone": "920-596-2577",
+    "newEmail": "cityclerk@manawawi.gov",
+    "oldEmail": "cityhall@wolfnet.net",
+    "newEffectiveDate": "2021-08-10T14:07:36",
+    "oldEffectiveDate": "2019-08-13T14:03:18"
+  },
+  {
+    "change": "changed-WI-CITY OF MANITOWOC - MANITOWOC COUNTY-CITY OF MANITOWOC - MANITOWOC COUNTY-26224",
+    "newPhone": "920-686-6951",
+    "oldPhone": "920-686-6950",
+    "newEmail": "mreedkadow@manitowoc.org",
+    "oldEmail": "dneuser@manitowoc.org",
+    "newEffectiveDate": "2021-08-10T14:07:25",
+    "oldEffectiveDate": "2019-08-13T14:03:10"
+  },
+  {
+    "change": "changed-WI-CITY OF MARINETTE - MARINETTE COUNTY-CITY OF MARINETTE - MARINETTE COUNTY-26307",
+    "newPhone": "(715)732-5140",
+    "oldPhone": "715-732-5140",
+    "newEffectiveDate": "2021-08-10T14:07:26",
+    "oldEffectiveDate": "2018-09-12T13:14:05"
+  },
+  {
+    "change": "changed-WI-CITY OF MARION - MULTIPLE COUNTIES-CITY OF MARION - MULTIPLE COUNTIES-27124",
+    "newPhone": "(715)754-2124",
+    "oldPhone": "715-754-2124",
+    "newEffectiveDate": "2021-08-10T14:07:36",
+    "oldEffectiveDate": "2019-08-13T14:03:18"
+  },
+  {
+    "change": "changed-WI-CITY OF MARKESAN - GREEN LAKE COUNTY-CITY OF MARKESAN - GREEN LAKE COUNTY-25957",
+    "newPhone": "(920)398-3031",
+    "oldPhone": "920-398-3031",
+    "newEffectiveDate": "2021-08-10T14:07:23",
+    "oldEffectiveDate": "2019-08-13T14:03:08"
+  },
+  {
+    "change": "changed-WI-CITY OF MARSHFIELD - MULTIPLE COUNTIES-CITY OF MARSHFIELD - MULTIPLE COUNTIES-27209",
+    "newPhone": "(715)486-2023",
+    "oldPhone": "715-486-2023",
+    "newEffectiveDate": "2021-08-10T14:07:37",
+    "oldEffectiveDate": "2019-08-13T14:03:18"
+  },
+  {
+    "change": "changed-WI-CITY OF MAUSTON - JUNEAU COUNTY-CITY OF MAUSTON - JUNEAU COUNTY-26078",
+    "newPhone": "(608)847-6676",
+    "oldPhone": "608-847-6676",
+    "newEffectiveDate": "2021-08-10T14:07:24",
+    "oldEffectiveDate": "2019-08-13T14:03:09"
+  },
+  {
+    "change": "changed-WI-CITY OF MAYVILLE - DODGE COUNTY-CITY OF MAYVILLE - DODGE COUNTY-25713",
+    "newPhone": "(920)387-7900 x1201",
+    "oldPhone": "920-387-7900 x1201",
+    "newEffectiveDate": "2021-08-10T14:16:10",
+    "oldEffectiveDate": "2019-08-13T14:03:07"
+  },
+  {
+    "change": "changed-WI-CITY OF MEDFORD - TAYLOR COUNTY-CITY OF MEDFORD - TAYLOR COUNTY-26902",
+    "newEmail": "alemke@medfordwi.us",
+    "oldEmail": "vbrost@medfordwi.us",
+    "newEffectiveDate": "2021-08-10T14:07:33",
+    "oldEffectiveDate": "2019-08-13T14:03:16"
+  },
+  {
+    "change": "changed-WI-CITY OF MELLEN - ASHLAND COUNTY-CITY OF MELLEN - ASHLAND COUNTY-25320",
+    "newPhone": "(715)274-2136",
+    "oldPhone": "715-274-2136",
+    "newEmail": "cityclerk@cityofmellen.org",
+    "oldEmail": "mellenc@centurytel.net",
+    "newEffectiveDate": "2021-08-10T14:07:18",
+    "oldEffectiveDate": "2019-08-13T14:03:04"
+  },
+  {
+    "change": "changed-WI-CITY OF MENASHA - MULTIPLE COUNTIES-CITY OF MENASHA - MULTIPLE COUNTIES-27174",
+    "newEmail": "hkrautkramer@ci.menasha.wi.us",
+    "oldEmail": "dgaleazz@ci.menasha.wi.us",
+    "newEffectiveDate": "2021-08-10T14:07:37",
+    "oldEffectiveDate": "2018-09-12T12:00:19"
+  },
+  {
+    "change": "changed-WI-CITY OF MENOMONIE - DUNN COUNTY-CITY OF MENOMONIE - DUNN COUNTY-25788",
+    "newPhone": "715-232-2221 x1006",
+    "oldPhone": "715-232-2180",
+    "newEmail": "clauersdorf@menomonie-wi.gov",
+    "oldEmail": "CLAUERSDORF@MENOMONIE-WI.GOV",
+    "newEffectiveDate": "2021-08-10T14:16:10",
+    "oldEffectiveDate": "2018-09-12T12:17:31"
+  },
+  {
+    "change": "changed-WI-CITY OF MEQUON - OZAUKEE COUNTY-CITY OF MEQUON - OZAUKEE COUNTY-26483",
+    "newPhone": "(262)236-2911",
+    "oldPhone": "262-236-2911",
+    "newEffectiveDate": "2021-08-10T14:07:29",
+    "oldEffectiveDate": "2018-09-12T09:31:21"
+  },
+  {
+    "change": "changed-WI-CITY OF MERRILL - LINCOLN COUNTY-CITY OF MERRILL - LINCOLN COUNTY-26193",
+    "newPhone": "(715)536-5594",
+    "oldPhone": "715-536-5594",
+    "newEffectiveDate": "2021-08-10T14:07:25",
+    "oldEffectiveDate": "2018-09-12T13:11:41"
+  },
+  {
+    "change": "changed-WI-CITY OF MIDDLETON - DANE COUNTY-CITY OF MIDDLETON - DANE COUNTY-25668",
+    "newPhone": "(608)827-1050",
+    "oldPhone": "608-827-1050",
+    "newEffectiveDate": "2021-08-10T14:07:21",
+    "oldEffectiveDate": "2018-09-12T09:28:34"
+  },
+  {
+    "change": "changed-WI-CITY OF MILTON - ROCK COUNTY-CITY OF MILTON - ROCK COUNTY-26680",
+    "newPhone": "608-868-6900 x2",
+    "oldPhone": "608-868-6900 x0",
+    "newEmail": "jsalvo@milton-wi.gov",
+    "oldEmail": "lschroeder@milton-wi.gov",
+    "newEffectiveDate": "2021-08-10T14:16:19",
+    "oldEffectiveDate": "2018-09-12T08:55:18"
+  },
+  {
+    "change": "changed-WI-CITY OF MILWAUKEE - MULTIPLE COUNTIES-CITY OF MILWAUKEE - MULTIPLE COUNTIES-26346",
+    "newPhone": "(414)286-3491",
+    "oldPhone": "414-286-3491",
+    "newEmail": "voterinfo@milwaukee.gov",
+    "oldEmail": "absenteeballot@milwaukee.gov",
+    "newEffectiveDate": "2021-08-10T14:07:26",
+    "oldEffectiveDate": "2020-06-25T11:30:30"
+  },
+  {
+    "change": "changed-WI-CITY OF MINERAL POINT - IOWA COUNTY-CITY OF MINERAL POINT - IOWA COUNTY-25984",
+    "newPhone": "(608)987-2361",
+    "oldPhone": "608-987-2361",
+    "newEmail": "cityclerk@cityofmineralpoint.com",
+    "oldEmail": "DEPUTYCLERK@CITYOFMINERALPOINT.COM",
+    "newEffectiveDate": "2021-08-10T14:07:23",
+    "oldEffectiveDate": "2019-08-13T14:03:08"
+  },
+  {
+    "change": "changed-WI-CITY OF MONDOVI - BUFFALO COUNTY-CITY OF MONDOVI - BUFFALO COUNTY-25434",
+    "newPhone": "(715)926-3866",
+    "oldPhone": "715-926-3866",
+    "newEmail": "dawn@mondovi.com",
+    "oldEmail": "cityadmin@mondovi.com",
+    "newEffectiveDate": "2021-08-10T14:07:19",
+    "oldEffectiveDate": "2019-08-13T14:03:05"
+  },
+  {
+    "change": "changed-WI-CITY OF MONONA - DANE COUNTY-CITY OF MONONA - DANE COUNTY-25669",
+    "newPhone": "(608)222-2525",
+    "oldPhone": "608-222-2525",
+    "newEffectiveDate": "2021-08-10T14:07:21",
+    "oldEffectiveDate": "2018-09-12T12:36:47"
+  },
+  {
+    "change": "changed-WI-CITY OF MONROE - GREEN COUNTY-CITY OF MONROE - GREEN COUNTY-25941",
+    "newPhone": "(608)329-2530",
+    "oldPhone": "608-329-2530",
+    "newEffectiveDate": "2021-08-10T14:07:23",
+    "oldEffectiveDate": "2019-08-13T14:03:08"
+  },
+  {
+    "change": "changed-WI-CITY OF MONTELLO - MARQUETTE COUNTY-CITY OF MONTELLO - MARQUETTE COUNTY-26329",
+    "newPhone": "(608)297-2727",
+    "oldPhone": "608-297-2727",
+    "newEffectiveDate": "2021-08-10T14:07:26",
+    "oldEffectiveDate": "2019-08-13T14:03:10",
+    "newAddress1": "PO BOX 39",
+    "oldAddress1": "20 UNDERWOOD AVE"
+  },
+  {
+    "change": "changed-WI-CITY OF MONTREAL - IRON COUNTY-CITY OF MONTREAL - IRON COUNTY-25997",
+    "newEmail": "cityofmontreal@outlook.com",
+    "oldEmail": "CITYMONTREAL@YAHOO.COM",
+    "newEffectiveDate": "2021-08-10T14:07:23",
+    "oldEffectiveDate": "2019-08-13T14:03:09"
+  },
+  {
+    "change": "changed-WI-CITY OF MOSINEE - MARATHON COUNTY-CITY OF MOSINEE - MARATHON COUNTY-26281",
+    "newPhone": "(715)693-2275",
+    "oldPhone": "715-693-2275",
+    "newEffectiveDate": "2021-08-10T14:07:26",
+    "oldEffectiveDate": "2019-08-13T14:03:10"
+  },
+  {
+    "change": "changed-WI-CITY OF MUSKEGO - WAUKESHA COUNTY-CITY OF MUSKEGO - WAUKESHA COUNTY-27088",
+    "newPhone": "(262)679-5628",
+    "oldPhone": "262-679-5628",
+    "newEffectiveDate": "2021-08-10T14:07:36",
+    "oldEffectiveDate": "2018-09-12T10:23:30"
+  },
+  {
+    "change": "changed-WI-CITY OF NEENAH - WINNEBAGO COUNTY-CITY OF NEENAH - WINNEBAGO COUNTY-27175",
+    "newPhone": "920-886-6101",
+    "oldPhone": "920-886-6110",
+    "newEmail": "cnagel@ci.neenah.wi.us",
+    "oldEmail": "PSTURN@CI.NEENAH.WI.US",
+    "newEffectiveDate": "2021-08-10T14:07:37",
+    "oldEffectiveDate": "2019-08-13T14:03:18"
+  },
+  {
+    "change": "changed-WI-CITY OF NEILLSVILLE - CLARK COUNTY-CITY OF NEILLSVILLE - CLARK COUNTY-25552",
+    "newPhone": "(715)743-2105",
+    "oldPhone": "715-743-2105",
+    "newEffectiveDate": "2021-08-10T14:07:20",
+    "oldEffectiveDate": "2019-08-13T14:03:06"
+  },
+  {
+    "change": "changed-WI-CITY OF NEKOOSA - WOOD COUNTY-CITY OF NEKOOSA - WOOD COUNTY-27210",
+    "newPhone": "(715)886-7877",
+    "oldPhone": "715-886-7877",
+    "newEffectiveDate": "2021-08-10T14:07:37",
+    "oldEffectiveDate": "2019-08-13T14:03:18"
+  },
+  {
+    "change": "changed-WI-CITY OF NEW BERLIN - WAUKESHA COUNTY-CITY OF NEW BERLIN - WAUKESHA COUNTY-27089",
+    "newPhone": "(262)786-8610",
+    "oldPhone": "262-797-2446",
+    "newEffectiveDate": "2021-08-10T14:07:36",
+    "oldEffectiveDate": "2019-08-13T14:03:18"
+  },
+  {
+    "change": "changed-WI-CITY OF NEW HOLSTEIN - CALUMET COUNTY-CITY OF NEW HOLSTEIN - CALUMET COUNTY-25477",
+    "newPhone": "(920)898-5766",
+    "oldPhone": "920-898-5766",
+    "newEffectiveDate": "2021-08-10T14:07:19",
+    "oldEffectiveDate": "2019-08-13T14:03:05"
+  },
+  {
+    "change": "changed-WI-CITY OF NEW LISBON - JUNEAU COUNTY-CITY OF NEW LISBON - JUNEAU COUNTY-26079",
+    "newPhone": "(608)562-5213",
+    "oldPhone": "608-562-5213",
+    "newEffectiveDate": "2021-08-10T14:07:24",
+    "oldEffectiveDate": "2019-08-13T14:03:09"
+  },
+  {
+    "change": "changed-WI-CITY OF NEW LONDON - MULTIPLE COUNTIES-CITY OF NEW LONDON - MULTIPLE COUNTIES-27125",
+    "newPhone": "920-982-8500",
+    "oldPhone": "920-982-8500 x101",
+    "newEmail": "nlemke@newlondonwi.org",
+    "oldEmail": "jackieb@newlondonwi.org",
+    "newEffectiveDate": "2021-08-10T14:07:36",
+    "oldEffectiveDate": "2018-09-12T11:02:16"
+  },
+  {
+    "change": "changed-WI-CITY OF NEW RICHMOND - ST. CROIX COUNTY-CITY OF NEW RICHMOND - ST. CROIX COUNTY-26748",
+    "newPhone": "(715)246-4268",
+    "oldPhone": "715-246-4268",
+    "newEmail": "mscanlan@newrichmondwi.gov",
+    "oldEmail": "TBATCHELOR@NEWRICHMONDWI.GOV",
+    "newEffectiveDate": "2021-08-10T14:07:31",
+    "oldEffectiveDate": "2018-09-12T09:00:51"
+  },
+  {
+    "change": "changed-WI-CITY OF NIAGARA - MARINETTE COUNTY-CITY OF NIAGARA - MARINETTE COUNTY-26308",
+    "newPhone": "(715)251-3235",
+    "oldPhone": "715-251-3235",
+    "newEffectiveDate": "2021-08-10T14:07:26",
+    "oldEffectiveDate": "2019-08-13T14:03:10"
+  },
+  {
+    "change": "changed-WI-CITY OF OAK CREEK - MILWAUKEE COUNTY-CITY OF OAK CREEK - MILWAUKEE COUNTY-26347",
+    "newPhone": "(414)766-7023",
+    "oldPhone": "414-766-7023",
+    "newEffectiveDate": "2021-08-10T14:07:26",
+    "oldEffectiveDate": "2019-08-13T14:03:10"
+  },
+  {
+    "change": "changed-WI-CITY OF OCONOMOWOC - WAUKESHA COUNTY-CITY OF OCONOMOWOC - WAUKESHA COUNTY-27090",
+    "newPhone": "(262)569-2175",
+    "oldPhone": "262-569-2175",
+    "newEffectiveDate": "2021-08-10T14:07:36",
+    "oldEffectiveDate": "2018-09-12T11:59:16"
+  },
+  {
+    "change": "changed-WI-CITY OF OCONTO - OCONTO COUNTY-CITY OF OCONTO - OCONTO COUNTY-26414",
+    "newPhone": "(920)834-7711",
+    "oldPhone": "920-834-7711",
+    "newEffectiveDate": "2021-08-10T14:07:28",
+    "oldEffectiveDate": "2019-08-13T14:03:11"
+  },
+  {
+    "change": "changed-WI-CITY OF OCONTO FALLS - OCONTO COUNTY-CITY OF OCONTO FALLS - OCONTO COUNTY-26415",
+    "newPhone": "(920)846-4505",
+    "oldPhone": "920-846-4505",
+    "newEffectiveDate": "2021-08-10T14:07:28",
+    "oldEffectiveDate": "2019-08-13T14:03:11"
+  },
+  {
+    "change": "changed-WI-CITY OF OMRO - WINNEBAGO COUNTY-CITY OF OMRO - WINNEBAGO COUNTY-27176",
+    "newPhone": "(920)685-7000",
+    "oldPhone": "920-685-7000",
+    "newEffectiveDate": "2021-08-10T14:07:37",
+    "oldEffectiveDate": "2019-08-13T14:03:18"
+  },
+  {
+    "change": "changed-WI-CITY OF ONALASKA - LA CROSSE COUNTY-CITY OF ONALASKA - LA CROSSE COUNTY-26128",
+    "newPhone": "(608)781-9530",
+    "oldPhone": "608-781-9530",
+    "newEffectiveDate": "2021-08-10T14:07:24",
+    "oldEffectiveDate": "2020-07-23T12:59:51"
+  },
+  {
+    "change": "changed-WI-CITY OF OSHKOSH - WINNEBAGO COUNTY-CITY OF OSHKOSH - WINNEBAGO COUNTY-27177",
+    "newPhone": "(920)236-5011",
+    "oldPhone": "920-236-5011",
+    "newEffectiveDate": "2021-08-10T14:07:37",
+    "oldEffectiveDate": "2018-09-12T09:22:18"
+  },
+  {
+    "change": "changed-WI-CITY OF OSSEO - TREMPEALEAU COUNTY-CITY OF OSSEO - TREMPEALEAU COUNTY-26928",
+    "newPhone": "(715)597-2207",
+    "oldPhone": "715-597-2207",
+    "newEffectiveDate": "2021-08-10T14:07:34",
+    "oldEffectiveDate": "2019-08-13T14:03:16"
+  },
+  {
+    "change": "changed-WI-CITY OF OWEN - CLARK COUNTY-CITY OF OWEN - CLARK COUNTY-25553",
+    "newPhone": "(715)229-2404",
+    "oldPhone": "715-229-2404",
+    "newEmail": "clerktreasurer@cityofowen.com",
+    "oldEmail": "owenclerk@cityofowen.com",
+    "newEffectiveDate": "2021-08-10T14:07:20",
+    "oldEffectiveDate": "2019-08-13T14:03:06"
+  },
+  {
+    "change": "changed-WI-CITY OF PARK FALLS - PRICE COUNTY-CITY OF PARK FALLS - PRICE COUNTY-26608",
+    "newPhone": "(715)762-2436",
+    "oldPhone": "715-762-2436",
+    "newEmail": "deputy@cityofparkfalls.com",
+    "oldEmail": "CLERK@CITYOFPARKFALLS.COM",
+    "newEffectiveDate": "2021-08-10T14:07:30",
+    "oldEffectiveDate": "2019-08-13T14:03:12"
+  },
+  {
+    "change": "changed-WI-CITY OF PESHTIGO - MARINETTE COUNTY-CITY OF PESHTIGO - MARINETTE COUNTY-26309",
+    "newPhone": "(715)582-3041",
+    "oldPhone": "715-582-3041",
+    "newEffectiveDate": "2021-08-10T14:07:26",
+    "oldEffectiveDate": "2019-08-13T14:03:10"
+  },
+  {
+    "change": "changed-WI-CITY OF PEWAUKEE - WAUKESHA COUNTY-CITY OF PEWAUKEE - WAUKESHA COUNTY-27091",
+    "newPhone": "(262)691-0770",
+    "oldPhone": "262-691-0770",
+    "newEffectiveDate": "2021-08-10T14:07:36",
+    "oldEffectiveDate": "2018-09-12T12:31:00"
+  },
+  {
+    "change": "changed-WI-CITY OF PHILLIPS - PRICE COUNTY-CITY OF PHILLIPS - PRICE COUNTY-26609",
+    "newPhone": "(715)339-3125",
+    "oldPhone": "715-339-3125",
+    "newEffectiveDate": "2021-08-10T14:07:30",
+    "oldEffectiveDate": "2019-08-13T14:03:12"
+  },
+  {
+    "change": "changed-WI-CITY OF PITTSVILLE - WOOD COUNTY-CITY OF PITTSVILLE - WOOD COUNTY-27211",
+    "newPhone": "(715)884-2422",
+    "oldPhone": "715-884-2422",
+    "newEffectiveDate": "2021-08-10T14:07:37",
+    "oldEffectiveDate": "2019-08-13T14:03:18"
+  },
+  {
+    "change": "changed-WI-CITY OF PLATTEVILLE - GRANT COUNTY-CITY OF PLATTEVILLE - GRANT COUNTY-25918",
+    "newPhone": "(608)348-1823",
+    "oldPhone": "608-348-1823",
+    "newEffectiveDate": "2021-08-10T14:07:22",
+    "oldEffectiveDate": "2018-09-12T12:29:27"
+  },
+  {
+    "change": "changed-WI-CITY OF PLYMOUTH - SHEBOYGAN COUNTY-CITY OF PLYMOUTH - SHEBOYGAN COUNTY-26872",
+    "newPhone": "(920)893-1271",
+    "oldPhone": "920-893-1271",
+    "newEffectiveDate": "2021-08-10T14:07:33",
+    "oldEffectiveDate": "2019-08-13T14:03:15"
+  },
+  {
+    "change": "changed-WI-CITY OF PORT WASHINGTON - OZAUKEE COUNTY-CITY OF PORT WASHINGTON - OZAUKEE COUNTY-26484",
+    "newPhone": "(262)284-5585 x1001",
+    "oldPhone": "262-284-5585",
+    "newEffectiveDate": "2021-08-10T14:16:17",
+    "oldEffectiveDate": "2019-08-13T14:03:11"
+  },
+  {
+    "change": "changed-WI-CITY OF PORTAGE - COLUMBIA COUNTY-CITY OF PORTAGE - COLUMBIA COUNTY-25588",
+    "newPhone": "(608)742-2176 x333",
+    "oldPhone": "608-742-2176 x333",
+    "newEffectiveDate": "2021-08-10T14:16:09",
+    "oldEffectiveDate": "2018-09-12T13:40:56"
+  },
+  {
+    "change": "changed-WI-CITY OF PRAIRIE DU CHIEN - CRAWFORD COUNTY-CITY OF PRAIRIE DU CHIEN - CRAWFORD COUNTY-25611",
+    "newPhone": "(608)326-6406",
+    "oldPhone": "608-326-6406",
+    "newEffectiveDate": "2021-08-10T14:07:21",
+    "oldEffectiveDate": "2019-08-13T14:03:06"
+  },
+  {
+    "change": "changed-WI-CITY OF PRESCOTT - PIERCE COUNTY-CITY OF PRESCOTT - PIERCE COUNTY-26521",
+    "newPhone": "(715)262-5544",
+    "oldPhone": "715-262-5544",
+    "newEffectiveDate": "2021-08-10T14:07:29",
+    "oldEffectiveDate": "2019-08-13T14:03:11"
+  },
+  {
+    "change": "changed-WI-CITY OF PRINCETON - GREEN LAKE COUNTY-CITY OF PRINCETON - GREEN LAKE COUNTY-25958",
+    "newPhone": "(920)295-6612",
+    "oldPhone": "920-295-6612",
+    "newEffectiveDate": "2021-08-10T14:07:23",
+    "oldEffectiveDate": "2019-08-13T14:03:08"
+  },
+  {
+    "change": "changed-WI-CITY OF RACINE - RACINE COUNTY-CITY OF RACINE - RACINE COUNTY-26628",
+    "newPhone": "(262)636-9171",
+    "oldPhone": "262-636-9171",
+    "newEffectiveDate": "2021-08-10T14:07:30",
+    "oldEffectiveDate": "2019-08-13T14:03:12"
+  },
+  {
+    "change": "changed-WI-CITY OF REEDSBURG - SAUK COUNTY-CITY OF REEDSBURG - SAUK COUNTY-26786",
+    "newPhone": "(608)524-6404",
+    "oldPhone": "608-524-6404",
+    "newEffectiveDate": "2021-08-10T14:07:32",
+    "oldEffectiveDate": "2018-09-12T08:51:02"
+  },
+  {
+    "change": "changed-WI-CITY OF RHINELANDER - ONEIDA COUNTY-CITY OF RHINELANDER - ONEIDA COUNTY-26437",
+    "newEmail": "tlassig@rhinelandercityhall.org",
+    "oldEmail": "VFOLEY@RHINELANDERCITYHALL.ORG",
+    "newEffectiveDate": "2021-08-10T14:07:28",
+    "oldEffectiveDate": "2018-09-12T11:15:28"
+  },
+  {
+    "change": "changed-WI-CITY OF RICE LAKE - BARRON COUNTY-CITY OF RICE LAKE - BARRON COUNTY-25356",
+    "newPhone": "(715)234-7088",
+    "oldPhone": "715-234-7088",
+    "newEffectiveDate": "2021-08-10T14:07:18",
+    "oldEffectiveDate": "2018-09-12T08:55:32"
+  },
+  {
+    "change": "changed-WI-CITY OF RICHLAND CENTER - RICHLAND COUNTY-CITY OF RICHLAND CENTER - RICHLAND COUNTY-26651",
+    "newEmail": "aaron.joyce@richlandcenter.com",
+    "oldEmail": "Melinda.jones@richlandcenter.com",
+    "newEffectiveDate": "2021-08-10T14:07:30",
+    "oldEffectiveDate": "2018-09-12T09:01:04"
+  },
+  {
+    "change": "changed-WI-CITY OF RIPON - FOND DU LAC COUNTY-CITY OF RIPON - FOND DU LAC COUNTY-25849",
+    "newPhone": "(920)748-4915",
+    "oldPhone": "920-748-4915",
+    "newEffectiveDate": "2021-08-10T14:07:22",
+    "oldEffectiveDate": "2018-09-12T12:18:33"
+  },
+  {
+    "change": "changed-WI-CITY OF RIVER FALLS - MULTIPLE COUNTIES-CITY OF RIVER FALLS - MULTIPLE COUNTIES-26522",
+    "newPhone": "(715)426-3408",
+    "oldPhone": "715-426-3408",
+    "newEffectiveDate": "2021-08-10T14:07:29",
+    "oldEffectiveDate": "2018-09-12T12:22:53"
+  },
+  {
+    "change": "changed-WI-CITY OF SCHOFIELD - MARATHON COUNTY-CITY OF SCHOFIELD - MARATHON COUNTY-26282",
+    "newPhone": "(715)359-5230",
+    "oldPhone": "715-359-5230",
+    "newEffectiveDate": "2021-08-10T14:07:26",
+    "oldEffectiveDate": "2019-08-13T14:03:10"
+  },
+  {
+    "change": "changed-WI-CITY OF SEYMOUR - OUTAGAMIE COUNTY-CITY OF SEYMOUR - OUTAGAMIE COUNTY-26469",
+    "newPhone": "(920)833-2209",
+    "oldPhone": "920-833-2209",
+    "newEffectiveDate": "2021-08-10T14:07:28",
+    "oldEffectiveDate": "2019-08-13T14:03:11"
+  },
+  {
+    "change": "changed-WI-CITY OF SHAWANO - SHAWANO COUNTY-CITY OF SHAWANO - SHAWANO COUNTY-26845",
+    "newPhone": "(715)526-6138",
+    "oldPhone": "715-526-6138",
+    "newEmail": "LNEMETZ@CITYOFSHAWANO.COM",
+    "oldEmail": "KDUCHAC@CITYOFSHAWANO.COM",
+    "newEffectiveDate": "2021-08-10T14:07:33",
+    "oldEffectiveDate": "2018-09-12T08:51:13"
+  },
+  {
+    "change": "changed-WI-CITY OF SHEBOYGAN - SHEBOYGAN COUNTY-CITY OF SHEBOYGAN - SHEBOYGAN COUNTY-26873",
+    "newPhone": "(920)459-3361",
+    "oldPhone": "920-459-3361",
+    "newEffectiveDate": "2021-08-10T14:07:33",
+    "oldEffectiveDate": "2018-09-12T09:34:22"
+  },
+  {
+    "change": "changed-WI-CITY OF SHEBOYGAN FALLS - SHEBOYGAN COUNTY-CITY OF SHEBOYGAN FALLS - SHEBOYGAN COUNTY-26874",
+    "newPhone": "(920)467-7900",
+    "oldPhone": "920-467-7900",
+    "newEffectiveDate": "2021-08-10T14:07:33",
+    "oldEffectiveDate": "2019-08-13T14:03:15"
+  },
+  {
+    "change": "changed-WI-CITY OF SHELL LAKE - WASHBURN COUNTY-CITY OF SHELL LAKE - WASHBURN COUNTY-27033",
+    "newPhone": "(715)468-7679",
+    "oldPhone": "715-468-7679",
+    "newEffectiveDate": "2021-08-10T14:07:35",
+    "oldEffectiveDate": "2019-08-13T14:03:18"
+  },
+  {
+    "change": "changed-WI-CITY OF SHULLSBURG - LAFAYETTE COUNTY-CITY OF SHULLSBURG - LAFAYETTE COUNTY-26155",
+    "newPhone": "(608)965-4424",
+    "oldPhone": "608-965-4424",
+    "newEffectiveDate": "2021-08-10T14:07:24",
+    "oldEffectiveDate": "2019-08-13T14:03:09"
+  },
+  {
+    "change": "changed-WI-CITY OF SOUTH MILWAUKEE - MILWAUKEE COUNTY-CITY OF SOUTH MILWAUKEE - MILWAUKEE COUNTY-26349",
+    "newPhone": "(414)762-2222",
+    "oldPhone": "414-768-7499",
+    "newEmail": "elections@smwi.org",
+    "oldEmail": "kkastenson@smwi.org",
+    "newEffectiveDate": "2021-08-10T14:07:26",
+    "oldEffectiveDate": "2019-08-13T14:03:10"
+  },
+  {
+    "change": "changed-WI-CITY OF SPARTA - MONROE COUNTY-CITY OF SPARTA - MONROE COUNTY-26385",
+    "newPhone": "(608)269-4340 x221",
+    "oldPhone": "608-269-4340 x221",
+    "newEffectiveDate": "2021-08-10T14:16:16",
+    "oldEffectiveDate": "2018-09-12T12:18:54"
+  },
+  {
+    "change": "changed-WI-CITY OF SPOONER - WASHBURN COUNTY-CITY OF SPOONER - WASHBURN COUNTY-27032",
+    "newPhone": "(715)635-8769",
+    "oldPhone": "715-635-8769",
+    "newEffectiveDate": "2021-08-10T14:07:35",
+    "oldEffectiveDate": "2019-08-13T14:03:18"
+  },
+  {
+    "change": "changed-WI-CITY OF ST. CROIX FALLS - POLK COUNTY-CITY OF ST. CROIX FALLS - POLK COUNTY-26558",
+    "newPhone": "(715)483-3929",
+    "oldPhone": "715-483-3929",
+    "newEffectiveDate": "2021-08-10T14:07:29",
+    "oldEffectiveDate": "2019-08-13T14:03:11"
+  },
+  {
+    "change": "changed-WI-CITY OF ST. FRANCIS - MILWAUKEE COUNTY-CITY OF ST. FRANCIS - MILWAUKEE COUNTY-26348",
+    "newPhone": "(414)481-2300 x4305",
+    "oldPhone": "414-481-2300 x4305",
+    "newEffectiveDate": "2021-08-10T14:16:15",
+    "oldEffectiveDate": "2018-09-12T12:39:51"
+  },
+  {
+    "change": "changed-WI-CITY OF STANLEY - MULTIPLE COUNTIES-CITY OF STANLEY - MULTIPLE COUNTIES-25509",
+    "newEmail": "nthiel@stanleywisconsin.us",
+    "oldEmail": "clerk@stanleywisconsin.us",
+    "newEffectiveDate": "2021-08-10T14:07:20",
+    "oldEffectiveDate": "2019-08-13T14:03:06"
+  },
+  {
+    "change": "changed-WI-CITY OF STEVENS POINT - PORTAGE COUNTY-CITY OF STEVENS POINT - PORTAGE COUNTY-26586",
+    "newPhone": "715-346-1569",
+    "oldPhone": "715-346-1572",
+    "newEmail": "kyenter@stevenspoint.com",
+    "oldEmail": "ppiotrowski@stevenspoint.com",
+    "newEffectiveDate": "2021-08-10T14:07:30",
+    "oldEffectiveDate": "2019-08-13T14:03:11"
+  },
+  {
+    "change": "changed-WI-CITY OF STOUGHTON - DANE COUNTY-CITY OF STOUGHTON - DANE COUNTY-25670",
+    "newPhone": "(608)873-6677",
+    "oldPhone": "608-873-6692",
+    "newEmail": "cchristen@ci.stoughton.wi.us",
+    "oldEmail": "hlicht@ci.stoughton.wi.us",
+    "newEffectiveDate": "2021-08-10T14:07:21",
+    "oldEffectiveDate": "2019-08-13T14:03:06"
+  },
+  {
+    "change": "changed-WI-CITY OF STURGEON BAY - DOOR COUNTY-CITY OF STURGEON BAY - DOOR COUNTY-25734",
+    "newPhone": "(920)746-2900",
+    "oldPhone": "920-746-2900 x1",
+    "newEffectiveDate": "2021-08-10T14:07:21",
+    "oldEffectiveDate": "2019-08-13T14:03:07"
+  },
+  {
+    "change": "changed-WI-CITY OF SUN PRAIRIE - DANE COUNTY-CITY OF SUN PRAIRIE - DANE COUNTY-25671",
+    "newPhone": "(608)837-2511",
+    "oldPhone": "608-837-2511",
+    "newEffectiveDate": "2021-08-10T14:07:21",
+    "oldEffectiveDate": "2018-09-12T09:35:21"
+  },
+  {
+    "change": "changed-WI-CITY OF SUPERIOR - DOUGLAS COUNTY-CITY OF SUPERIOR - DOUGLAS COUNTY-25757",
+    "newPhone": "(715)395-7200",
+    "oldPhone": "715-395-7200",
+    "newEffectiveDate": "2021-08-10T14:07:21",
+    "oldEffectiveDate": "2018-09-12T09:44:58"
+  },
+  {
+    "change": "changed-WI-CITY OF THORP - CLARK COUNTY-CITY OF THORP - CLARK COUNTY-25554",
+    "newPhone": "(715)669-5371",
+    "oldPhone": "715-669-5371",
+    "newEmail": "DEPUTYCLERK@CITYOFTHORP.COM",
+    "oldEmail": "administrator@cityofthorp.com",
+    "newEffectiveDate": "2021-08-10T14:07:20",
+    "oldEffectiveDate": "2019-08-13T14:03:06"
+  },
+  {
+    "change": "changed-WI-CITY OF TOMAH - MONROE COUNTY-CITY OF TOMAH - MONROE COUNTY-26386",
+    "newEmail": "rweyer@tomahonline.com",
+    "oldEmail": "jcram@tomahonline.com",
+    "newEffectiveDate": "2021-08-10T14:07:27",
+    "oldEffectiveDate": "2018-09-12T12:21:35"
+  },
+  {
+    "change": "changed-WI-CITY OF TOMAHAWK - LINCOLN COUNTY-CITY OF TOMAHAWK - LINCOLN COUNTY-26194",
+    "newPhone": "(715)453-4040",
+    "oldPhone": "715-453-4040",
+    "newEffectiveDate": "2021-08-10T14:07:25",
+    "oldEffectiveDate": "2018-09-12T08:47:25"
+  },
+  {
+    "change": "changed-WI-CITY OF TWO RIVERS - MANITOWOC COUNTY-CITY OF TWO RIVERS - MANITOWOC COUNTY-26225",
+    "newPhone": "920-793-5532",
+    "oldPhone": "920-793-5526",
+    "newEmail": "jjackson@two-rivers.org",
+    "oldEmail": "kgraves@two-rivers.org",
+    "newEffectiveDate": "2021-08-10T14:07:25",
+    "oldEffectiveDate": "2018-09-12T12:41:17"
+  },
+  {
+    "change": "changed-WI-CITY OF VERONA - DANE COUNTY-CITY OF VERONA - DANE COUNTY-25672",
+    "newEmail": "holly.licht@ci.verona.wi.us",
+    "oldEmail": "ellen.clark@ci.verona.wi.us",
+    "newEffectiveDate": "2021-08-10T14:07:21",
+    "oldEffectiveDate": "2019-08-13T14:03:06",
+    "newAddress1": "111 LINCOLN ST",
+    "oldAddress1": "111 Lincoln St"
+  },
+  {
+    "change": "changed-WI-CITY OF VIROQUA - VERNON COUNTY-CITY OF VIROQUA - VERNON COUNTY-26961",
+    "newPhone": "(608)637-7154",
+    "oldPhone": "608-637-7154",
+    "newEffectiveDate": "2021-08-10T14:07:34",
+    "oldEffectiveDate": "2018-09-12T08:42:19"
+  },
+  {
+    "change": "changed-WI-CITY OF WASHBURN - BAYFIELD COUNTY-CITY OF WASHBURN - BAYFIELD COUNTY-25385",
+    "newPhone": "(715)373-6160",
+    "oldPhone": "715-373-6160",
+    "newEffectiveDate": "2021-08-10T14:07:19",
+    "oldEffectiveDate": "2019-08-13T14:03:04"
+  },
+  {
+    "change": "changed-WI-CITY OF WATERLOO - JEFFERSON COUNTY-CITY OF WATERLOO - JEFFERSON COUNTY-26049",
+    "newPhone": "(920)478-3025",
+    "oldPhone": "920-478-3025",
+    "newEffectiveDate": "2021-08-10T14:07:24",
+    "oldEffectiveDate": "2019-08-13T14:03:09"
+  },
+  {
+    "change": "changed-WI-CITY OF WATERTOWN - MULTIPLE COUNTIES-CITY OF WATERTOWN - MULTIPLE COUNTIES-26050",
+    "newPhone": "920-262-4000",
+    "oldPhone": "920-262-4007",
+    "newEffectiveDate": "2021-08-10T14:07:24",
+    "oldEffectiveDate": "2019-08-13T14:03:09"
+  },
+  {
+    "change": "changed-WI-CITY OF WAUKESHA - WAUKESHA COUNTY-CITY OF WAUKESHA - WAUKESHA COUNTY-27092",
+    "newPhone": "(262)524-3550",
+    "oldPhone": "262-524-2547",
+    "newEmail": "ClerkTreas@waukesha-wi.gov",
+    "oldEmail": "gkozlik@waukesha-wi.gov",
+    "newEffectiveDate": "2021-08-10T14:07:36",
+    "oldEffectiveDate": "2019-08-13T14:03:18"
+  },
+  {
+    "change": "changed-WI-CITY OF WAUPACA - WAUPACA COUNTY-CITY OF WAUPACA - WAUPACA COUNTY-27126",
+    "newPhone": "(715)258-4411",
+    "oldPhone": "715-258-4411",
+    "newEffectiveDate": "2021-08-10T14:07:36",
+    "oldEffectiveDate": "2019-08-13T14:03:18"
+  },
+  {
+    "change": "changed-WI-CITY OF WAUPUN - MULTIPLE COUNTIES-CITY OF WAUPUN - MULTIPLE COUNTIES-25714",
+    "newPhone": "(920)324-7900",
+    "oldPhone": "920-324-7900",
+    "newEffectiveDate": "2021-08-10T14:07:21",
+    "oldEffectiveDate": "2019-08-13T14:03:07"
+  },
+  {
+    "change": "changed-WI-CITY OF WAUSAU - MARATHON COUNTY-CITY OF WAUSAU - MARATHON COUNTY-26283",
+    "newPhone": "(715)261-6620 x6622",
+    "oldPhone": "715-261-6620",
+    "newEffectiveDate": "2021-08-10T14:16:14",
+    "oldEffectiveDate": "2020-05-28T13:32:29"
+  },
+  {
+    "change": "changed-WI-CITY OF WAUTOMA - WAUSHARA COUNTY-CITY OF WAUTOMA - WAUSHARA COUNTY-27154",
+    "newPhone": "(920)787-4044 x201",
+    "oldPhone": "920-787-4044 x201",
+    "newEmail": "tommybohler@cityofwautoma.com",
+    "oldEmail": "CWAUTOMA@CENTURYTEL.NET",
+    "newEffectiveDate": "2021-08-10T14:16:25",
+    "oldEffectiveDate": "2019-08-13T14:03:18"
+  },
+  {
+    "change": "changed-WI-CITY OF WAUWATOSA - MILWAUKEE COUNTY-CITY OF WAUWATOSA - MILWAUKEE COUNTY-26350",
+    "newPhone": "414-479-8917",
+    "oldPhone": "414-479-8918",
+    "newEmail": "telections@wauwatosa.net",
+    "oldEmail": "mkollmansberger@wauwatosa.net",
+    "newEffectiveDate": "2021-08-10T14:07:26",
+    "oldEffectiveDate": "2020-09-24T09:06:39"
+  },
+  {
+    "change": "changed-WI-CITY OF WEST ALLIS - MILWAUKEE COUNTY-CITY OF WEST ALLIS - MILWAUKEE COUNTY-26351",
+    "newPhone": "(414)302-8220",
+    "oldPhone": "414-302-8201",
+    "newEmail": "clerk@westalliswi.gov",
+    "oldEmail": "sbraatz@westalliswi.gov",
+    "newEffectiveDate": "2021-08-10T14:07:26",
+    "oldEffectiveDate": "2018-09-12T09:36:23"
+  },
+  {
+    "change": "changed-WI-CITY OF WEST BEND - WASHINGTON COUNTY-CITY OF WEST BEND - WASHINGTON COUNTY-27054",
+    "newPhone": "(262)335-5100",
+    "oldPhone": "262-335-5100",
+    "newEffectiveDate": "2021-08-10T14:07:35",
+    "oldEffectiveDate": "2018-09-12T10:22:38"
+  },
+  {
+    "change": "changed-WI-CITY OF WESTBY - VERNON COUNTY-CITY OF WESTBY - VERNON COUNTY-26962",
+    "newPhone": "(608)634-3214",
+    "oldPhone": "608-634-3214",
+    "newEffectiveDate": "2021-08-10T14:07:34",
+    "oldEffectiveDate": "2019-08-13T14:03:16"
+  },
+  {
+    "change": "changed-WI-CITY OF WEYAUWEGA - WAUPACA COUNTY-CITY OF WEYAUWEGA - WAUPACA COUNTY-27127",
+    "newPhone": "(920)867-2630",
+    "oldPhone": "920-867-2630",
+    "newEffectiveDate": "2021-08-10T14:07:36",
+    "oldEffectiveDate": "2019-08-13T14:03:18"
+  },
+  {
+    "change": "changed-WI-CITY OF WHITEHALL - TREMPEALEAU COUNTY-CITY OF WHITEHALL - TREMPEALEAU COUNTY-26929",
+    "newPhone": "715-538-4353 x2",
+    "oldPhone": "715-538-4353",
+    "newEmail": "kwitte@whitehallwi.com",
+    "oldEmail": "KWITTE@WPPIENERGY.ORG",
+    "newEffectiveDate": "2021-08-10T14:16:22",
+    "oldEffectiveDate": "2019-08-13T14:03:16"
+  },
+  {
+    "change": "changed-WI-CITY OF WHITEWATER - MULTIPLE COUNTIES-CITY OF WHITEWATER - MULTIPLE COUNTIES-27007",
+    "newPhone": "262-473-0102",
+    "oldPhone": "262-473-0500",
+    "newEffectiveDate": "2021-08-10T14:07:34",
+    "oldEffectiveDate": "2019-08-13T14:03:18"
+  },
+  {
+    "change": "changed-WI-CITY OF WISCONSIN DELLS - MULTIPLE COUNTIES-CITY OF WISCONSIN DELLS - MULTIPLE COUNTIES-25589",
+    "newPhone": "608-254-2012 x405",
+    "oldPhone": "608-254-2012",
+    "newEmail": "sbrown@dellscitygov.com",
+    "oldEmail": "NHOLZEM@DELLSCITYGOV.COM",
+    "newEffectiveDate": "2021-08-10T14:16:09",
+    "oldEffectiveDate": "2019-08-13T14:03:06"
+  },
+  {
+    "change": "changed-WI-CITY OF WISCONSIN RAPIDS - WOOD COUNTY-CITY OF WISCONSIN RAPIDS - WOOD COUNTY-27212",
+    "newPhone": "(715)421-8200",
+    "oldPhone": "715-421-8200",
+    "newEffectiveDate": "2021-08-10T14:07:37",
+    "oldEffectiveDate": "2019-08-13T14:03:18"
+  },
+  {
+    "change": "changed-WI-TOWN OF ABRAMS - OCONTO COUNTY-TOWN OF ABRAMS - OCONTO COUNTY-26388",
+    "newPhone": "(920)826-2299",
+    "oldPhone": "920-826-2299",
+    "newEffectiveDate": "2021-08-10T14:07:27",
+    "oldEffectiveDate": "2019-08-13T14:03:10"
+  },
+  {
+    "change": "changed-WI-TOWN OF ACKLEY - LANGLADE COUNTY-TOWN OF ACKLEY - LANGLADE COUNTY-26157",
+    "newPhone": "715-610-2229",
+    "oldPhone": "715-623-0532",
+    "newEmail": "ackleytownclerk@gmail.com",
+    "oldEmail": "meeksamy920@gmail.com",
+    "newEffectiveDate": "2021-08-10T14:07:24",
+    "oldEffectiveDate": "2019-08-13T14:03:09",
+    "newAddress1": "N4318 RIVER RD",
+    "oldAddress1": "N4736 RIVER RD"
+  },
+  {
+    "change": "changed-WI-TOWN OF ADAMS - ADAMS COUNTY-TOWN OF ADAMS - ADAMS COUNTY-27140",
+    "newPhone": "(608)339-9607",
+    "oldPhone": "608-339-9607",
+    "newEmail": "",
+    "oldEmail": "clerk@townofadamswi.com",
+    "newEffectiveDate": "2021-08-10T14:07:37",
+    "oldEffectiveDate": "2019-08-13T14:03:18"
+  },
+  {
+    "change": "changed-WI-TOWN OF ADAMS - GREEN COUNTY-TOWN OF ADAMS - GREEN COUNTY-25920",
+    "newPhone": "608-558-9712",
+    "oldPhone": "262-325-5268",
+    "newEffectiveDate": "2021-08-10T14:07:22",
+    "oldEffectiveDate": "2019-08-13T14:03:08"
+  },
+  {
+    "change": "changed-WI-TOWN OF ADAMS - JACKSON COUNTY-TOWN OF ADAMS - JACKSON COUNTY-25999",
+    "newPhone": "(715)284-8759",
+    "oldPhone": "715-284-8759",
+    "newEmail": "daleann@cbrivervalley.com",
+    "oldEmail": "aspenhomes@centurytel.net",
+    "newEffectiveDate": "2021-08-10T14:07:23",
+    "oldEffectiveDate": "2018-09-12T08:56:15"
+  },
+  {
+    "change": "changed-WI-TOWN OF ADDISON - WASHINGTON COUNTY-TOWN OF ADDISON - WASHINGTON COUNTY-27035",
+    "newEffectiveDate": "2021-08-10T14:07:35",
+    "oldEffectiveDate": "2018-09-12T08:52:04",
+    "newAddress1": "PO BOX 481",
+    "oldAddress1": "127 FIRST ST"
+  },
+  {
+    "change": "changed-WI-TOWN OF ADRIAN - MONROE COUNTY-TOWN OF ADRIAN - MONROE COUNTY-26353",
+    "newPhone": "(608)633-1868",
+    "oldPhone": "608-633-1868",
+    "newEffectiveDate": "2021-08-10T14:07:26",
+    "oldEffectiveDate": "2019-08-13T14:03:10"
+  },
+  {
+    "change": "changed-WI-TOWN OF AGENDA - ASHLAND COUNTY-TOWN OF AGENDA - ASHLAND COUNTY-25305",
+    "newPhone": "(715)769-3334",
+    "oldPhone": "715-769-3334",
+    "newEffectiveDate": "2021-08-10T14:07:18",
+    "oldEffectiveDate": "2019-08-13T14:03:04"
+  },
+  {
+    "change": "changed-WI-TOWN OF AHNAPEE - KEWAUNEE COUNTY-TOWN OF AHNAPEE - KEWAUNEE COUNTY-26096",
+    "newPhone": "920-676-6509",
+    "oldPhone": "920-487-3806",
+    "newEmail": "Ahnapeeclerk@outlook.com",
+    "oldEmail": "sgrosbeier26@gmail.com",
+    "newEffectiveDate": "2021-08-10T14:07:24",
+    "oldEffectiveDate": "2019-08-13T14:03:09",
+    "newAddress1": "E5898 FREMONT RD",
+    "oldAddress1": "N9043 ASH DR"
+  },
+  {
+    "change": "changed-WI-TOWN OF AINSWORTH - LANGLADE COUNTY-TOWN OF AINSWORTH - LANGLADE COUNTY-26158",
+    "newPhone": "(715)484-8949",
+    "oldPhone": "715-484-8949",
+    "newEffectiveDate": "2021-08-10T14:07:24",
+    "oldEffectiveDate": "2019-08-13T14:03:09"
+  },
+  {
+    "change": "changed-WI-TOWN OF AKAN - RICHLAND COUNTY-TOWN OF AKAN - RICHLAND COUNTY-26630",
+    "newPhone": "(608)536-3432",
+    "oldPhone": "608-536-3432",
+    "newEffectiveDate": "2021-08-10T14:07:30",
+    "oldEffectiveDate": "2019-08-13T14:03:12",
+    "newAddress1": "25089 FIVEPOINTS DR",
+    "oldAddress1": "25089 FIVE POINTS DRIVE"
+  },
+  {
+    "change": "changed-WI-TOWN OF ALBAN - PORTAGE COUNTY-TOWN OF ALBAN - PORTAGE COUNTY-26560",
+    "newPhone": "(715)570-5175",
+    "oldPhone": "715-570-5175",
+    "newEffectiveDate": "2021-08-10T14:07:29",
+    "oldEffectiveDate": "2019-08-13T14:03:11"
+  },
+  {
+    "change": "changed-WI-TOWN OF ALBANY - GREEN COUNTY-TOWN OF ALBANY - GREEN COUNTY-25921",
+    "newPhone": "608-558-1110",
+    "oldPhone": "608-862-3322",
+    "newEmail": "clerk@townofalbanywi.com",
+    "oldEmail": "bzee@tds.net",
+    "newEffectiveDate": "2021-08-10T14:07:22",
+    "oldEffectiveDate": "2019-08-13T14:03:08",
+    "newAddress1": "N6065 COUNTY ROAD E",
+    "oldAddress1": "N5006 COUNTY ROAD F"
+  },
+  {
+    "change": "changed-WI-TOWN OF ALBANY - PEPIN COUNTY-TOWN OF ALBANY - PEPIN COUNTY-26486",
+    "newPhone": "(715)926-3410",
+    "oldPhone": "715-926-3410",
+    "newEffectiveDate": "2021-08-10T14:07:29",
+    "oldEffectiveDate": "2019-08-13T14:03:11"
+  },
+  {
+    "change": "changed-WI-TOWN OF ALBION - DANE COUNTY-TOWN OF ALBION - DANE COUNTY-25613",
+    "newPhone": "(608)884-8974",
+    "oldPhone": "608-884-8974",
+    "newEffectiveDate": "2021-08-10T14:07:21",
+    "oldEffectiveDate": "2019-08-13T14:03:06"
+  },
+  {
+    "change": "changed-WI-TOWN OF ALBION - JACKSON COUNTY-TOWN OF ALBION - JACKSON COUNTY-26000",
+    "newPhone": "(715)284-4184",
+    "oldPhone": "715-284-4184",
+    "newEffectiveDate": "2021-08-10T14:07:23",
+    "oldEffectiveDate": "2019-08-13T14:03:09"
+  },
+  {
+    "change": "changed-WI-TOWN OF ALBION - TREMPEALEAU COUNTY-TOWN OF ALBION - TREMPEALEAU COUNTY-26904",
+    "newPhone": "(715)287-3233",
+    "oldPhone": "715-287-3233",
+    "newEffectiveDate": "2021-08-10T14:07:34",
+    "oldEffectiveDate": "2019-08-13T14:03:16"
+  },
+  {
+    "change": "changed-WI-TOWN OF ALDEN - POLK COUNTY-TOWN OF ALDEN - POLK COUNTY-26524",
+    "newPhone": "(715)248-7859",
+    "oldPhone": "715-248-7859",
+    "newEffectiveDate": "2021-08-10T14:07:29",
+    "oldEffectiveDate": "2019-08-13T14:03:11"
+  },
+  {
+    "change": "changed-WI-TOWN OF ALGOMA - WINNEBAGO COUNTY-TOWN OF ALGOMA - WINNEBAGO COUNTY-27156",
+    "newPhone": "(920)235-3789",
+    "oldPhone": "920-235-3789",
+    "newEffectiveDate": "2021-08-10T14:07:37",
+    "oldEffectiveDate": "2018-09-12T08:47:38"
+  },
+  {
+    "change": "changed-WI-TOWN OF ALMA - BUFFALO COUNTY-TOWN OF ALMA - BUFFALO COUNTY-25412",
+    "newPhone": "(608)685-3843",
+    "oldPhone": "608-685-3843",
+    "newEffectiveDate": "2021-08-10T14:07:19",
+    "oldEffectiveDate": "2019-08-13T14:03:05"
+  },
+  {
+    "change": "changed-WI-TOWN OF ALMA - JACKSON COUNTY-TOWN OF ALMA - JACKSON COUNTY-26001",
+    "newPhone": "(715)284-5341 x1340",
+    "oldPhone": "715-964-2311",
+    "newEffectiveDate": "2021-08-10T14:16:11",
+    "oldEffectiveDate": "2019-08-13T14:03:09"
+  },
+  {
+    "change": "changed-WI-TOWN OF ALMENA - BARRON COUNTY-TOWN OF ALMENA - BARRON COUNTY-25322",
+    "newPhone": "(715)554-3107",
+    "oldPhone": "715-554-3107",
+    "newEffectiveDate": "2021-08-10T14:07:18",
+    "oldEffectiveDate": "2019-08-13T14:03:04",
+    "newAddress1": "PO BOX 7",
+    "oldAddress1": "1259 4TH STRREET"
+  },
+  {
+    "change": "changed-WI-TOWN OF ALMON - SHAWANO COUNTY-TOWN OF ALMON - SHAWANO COUNTY-26810",
+    "newPhone": "(715)571-2561",
+    "oldPhone": "715-571-2561",
+    "newEffectiveDate": "2021-08-10T14:07:32",
+    "oldEffectiveDate": "2019-08-13T14:03:15"
+  },
+  {
+    "change": "changed-WI-TOWN OF ALMOND - PORTAGE COUNTY-TOWN OF ALMOND - PORTAGE COUNTY-26561",
+    "newPhone": "(715)366-7513",
+    "oldPhone": "715-366-7513",
+    "newEffectiveDate": "2021-08-10T14:07:29",
+    "oldEffectiveDate": "2019-08-13T14:03:11"
+  },
+  {
+    "change": "changed-WI-TOWN OF ALTO - FOND DU LAC COUNTY-TOWN OF ALTO - FOND DU LAC COUNTY-25818",
+    "newPhone": "(920)346-8233",
+    "oldPhone": "(920) 948-8268",
+    "newEffectiveDate": "2021-08-10T14:07:21",
+    "oldEffectiveDate": "2020-07-23T12:14:31"
+  },
+  {
+    "change": "changed-WI-TOWN OF ALVIN - FOREST COUNTY-TOWN OF ALVIN - FOREST COUNTY-25851",
+    "newPhone": "715-545-3323",
+    "oldPhone": "715-545-2492",
+    "newEmail": "langstonchild@gmail.com",
+    "oldEmail": "della.rose@fast-air.net",
+    "newEffectiveDate": "2021-08-10T14:07:22",
+    "oldEffectiveDate": "2019-08-13T14:03:08",
+    "newAddress1": "16962 HIGHWAY 55",
+    "oldAddress1": "7940 4TH ST"
+  },
+  {
+    "change": "changed-WI-TOWN OF AMBERG - MARINETTE COUNTY-TOWN OF AMBERG - MARINETTE COUNTY-26285",
+    "newPhone": "(715)759-5095",
+    "oldPhone": "715-759-5095",
+    "newEffectiveDate": "2021-08-10T14:07:26",
+    "oldEffectiveDate": "2019-08-13T14:03:10"
+  },
+  {
+    "change": "changed-WI-TOWN OF AMHERST - PORTAGE COUNTY-TOWN OF AMHERST - PORTAGE COUNTY-26562",
+    "newPhone": "(715)824-3476",
+    "oldPhone": "715-824-3476",
+    "newEffectiveDate": "2021-08-10T14:07:29",
+    "oldEffectiveDate": "2019-08-13T14:03:11"
+  },
+  {
+    "change": "changed-WI-TOWN OF AMNICON - DOUGLAS COUNTY-TOWN OF AMNICON - DOUGLAS COUNTY-25736",
+    "newPhone": "(715)364-2316",
+    "oldPhone": "715-364-2316",
+    "newEffectiveDate": "2021-08-10T14:07:21",
+    "oldEffectiveDate": "2019-08-13T14:03:07"
+  },
+  {
+    "change": "changed-WI-TOWN OF ANDERSON - BURNETT COUNTY-TOWN OF ANDERSON - BURNETT COUNTY-25436",
+    "newPhone": "715-448-2911",
+    "oldPhone": "715-488-2911",
+    "newEffectiveDate": "2021-08-10T14:07:19",
+    "oldEffectiveDate": "2019-08-13T14:03:05"
+  },
+  {
+    "change": "changed-WI-TOWN OF ANDERSON - IRON COUNTY-TOWN OF ANDERSON - IRON COUNTY-25986",
+    "newPhone": "(715)561-2555",
+    "oldPhone": "715-561-4645",
+    "newEmail": "townofanderson@centurytel.net",
+    "oldEmail": "TOWNOFANDERSON@CENTURYTEL.NET",
+    "newEffectiveDate": "2021-08-10T14:07:23",
+    "oldEffectiveDate": "2019-08-13T14:03:08",
+    "newAddress1": "10886 N HWY 122",
+    "oldAddress1": "PO BOX 46"
+  },
+  {
+    "change": "changed-WI-TOWN OF ANGELICA - SHAWANO COUNTY-TOWN OF ANGELICA - SHAWANO COUNTY-26811",
+    "newPhone": "(920)822-8191",
+    "oldPhone": "920-822-8191",
+    "newEffectiveDate": "2021-08-10T14:07:32",
+    "oldEffectiveDate": "2019-08-13T14:03:15",
+    "newAddress1": "W1583 County Road C",
+    "oldAddress1": "W1583 COUNTY ROAD C"
+  },
+  {
+    "change": "changed-WI-TOWN OF ANGELO - MONROE COUNTY-TOWN OF ANGELO - MONROE COUNTY-26354",
+    "newPhone": "(608)343-1126",
+    "oldPhone": "608-343-1126",
+    "newEffectiveDate": "2021-08-10T14:07:26",
+    "oldEffectiveDate": "2018-09-12T13:06:21"
+  },
+  {
+    "change": "changed-WI-TOWN OF ANIWA - SHAWANO COUNTY-TOWN OF ANIWA - SHAWANO COUNTY-26812",
+    "newPhone": "(715)449-2351",
+    "oldPhone": "715-449-2351",
+    "newEffectiveDate": "2021-08-10T14:07:32",
+    "oldEffectiveDate": "2019-08-13T14:03:15"
+  },
+  {
+    "change": "changed-WI-TOWN OF ANSON - CHIPPEWA COUNTY-TOWN OF ANSON - CHIPPEWA COUNTY-25479",
+    "newPhone": "(715)579-1648",
+    "oldPhone": "715-579-1648",
+    "newEffectiveDate": "2021-08-10T14:07:19",
+    "oldEffectiveDate": "2019-08-13T14:03:05"
+  },
+  {
+    "change": "changed-WI-TOWN OF ANTIGO - LANGLADE COUNTY-TOWN OF ANTIGO - LANGLADE COUNTY-26159",
+    "newPhone": "(715)627-2133",
+    "oldPhone": "715-627-2133",
+    "newEffectiveDate": "2021-08-10T14:07:24",
+    "oldEffectiveDate": "2019-08-13T14:03:09"
+  },
+  {
+    "change": "changed-WI-TOWN OF APPLE RIVER - POLK COUNTY-TOWN OF APPLE RIVER - POLK COUNTY-26525",
+    "newPhone": "(715)268-6506",
+    "oldPhone": "715-268-6506",
+    "newEffectiveDate": "2021-08-10T14:07:29",
+    "oldEffectiveDate": "2019-08-13T14:03:11",
+    "newAddress1": "612 US HIGHWAY 8",
+    "oldAddress1": "1323 70TH STREET"
+  },
+  {
+    "change": "changed-WI-TOWN OF ARBOR VITAE - VILAS COUNTY-TOWN OF ARBOR VITAE - VILAS COUNTY-26964",
+    "newPhone": "(715)356-3120",
+    "oldPhone": "715-356-3120",
+    "newEffectiveDate": "2021-08-10T14:07:34",
+    "oldEffectiveDate": "2018-09-12T08:56:29"
+  },
+  {
+    "change": "changed-WI-TOWN OF ARCADIA - TREMPEALEAU COUNTY-TOWN OF ARCADIA - TREMPEALEAU COUNTY-26905",
+    "newPhone": "(608)323-3470",
+    "oldPhone": "608-323-3470",
+    "newEffectiveDate": "2021-08-10T14:07:34",
+    "oldEffectiveDate": "2019-08-13T14:03:16"
+  },
+  {
+    "change": "changed-WI-TOWN OF ARENA - IOWA COUNTY-TOWN OF ARENA - IOWA COUNTY-25960",
+    "newPhone": "608-753-2185",
+    "oldPhone": "608-753-2862",
+    "newEmail": "townofarena@gmail.com",
+    "oldEmail": "TOWNOFARENA@MHTC.NET",
+    "newEffectiveDate": "2021-08-10T14:07:23",
+    "oldEffectiveDate": "2019-08-13T14:03:08",
+    "newAddress1": "PO Box 126",
+    "oldAddress1": "PO BOX 126"
+  },
+  {
+    "change": "changed-WI-TOWN OF ARGONNE - FOREST COUNTY-TOWN OF ARGONNE - FOREST COUNTY-25852",
+    "newPhone": "(715)649-3550",
+    "oldPhone": "715-649-3550",
+    "newEffectiveDate": "2021-08-10T14:07:22",
+    "oldEffectiveDate": "2019-08-13T14:03:08"
+  },
+  {
+    "change": "changed-WI-TOWN OF ARGYLE - LAFAYETTE COUNTY-TOWN OF ARGYLE - LAFAYETTE COUNTY-26130",
+    "newPhone": "360-980-1890",
+    "oldPhone": "608-543-3493",
+    "newEmail": "clerk.townofargyle@outlook.com",
+    "oldEmail": "assissiacres@mhtc.net",
+    "newEffectiveDate": "2021-08-10T14:07:24",
+    "oldEffectiveDate": "2019-08-13T14:03:09",
+    "newAddress1": "4289 County Road G",
+    "oldAddress1": "5902 SPORE RD"
+  },
+  {
+    "change": "changed-WI-TOWN OF ARLAND - BARRON COUNTY-TOWN OF ARLAND - BARRON COUNTY-25323",
+    "newPhone": "(715)455-1074",
+    "oldPhone": "715-455-1074",
+    "newEffectiveDate": "2021-08-10T14:07:18",
+    "oldEffectiveDate": "2019-08-13T14:03:04"
+  },
+  {
+    "change": "changed-WI-TOWN OF ARLINGTON - COLUMBIA COUNTY-TOWN OF ARLINGTON - COLUMBIA COUNTY-25556",
+    "newPhone": "(608)635-4808",
+    "oldPhone": "608-635-4808",
+    "newEffectiveDate": "2021-08-10T14:07:20",
+    "oldEffectiveDate": "2019-08-13T14:03:06"
+  },
+  {
+    "change": "changed-WI-TOWN OF ARMENIA - JUNEAU COUNTY-TOWN OF ARMENIA - JUNEAU COUNTY-26052",
+    "newPhone": "(715)886-1952",
+    "oldPhone": "715-886-1952",
+    "newEffectiveDate": "2021-08-10T14:07:24",
+    "oldEffectiveDate": "2019-08-13T14:03:09"
+  },
+  {
+    "change": "changed-WI-TOWN OF ARMSTRONG CREEK - FOREST COUNTY-TOWN OF ARMSTRONG CREEK - FOREST COUNTY-25853",
+    "newPhone": "920-627-0436",
+    "oldPhone": "920-737-5975",
+    "newEmail": "tamaney.augustin@gmail.com",
+    "oldEmail": "actownclerk@gmail.com",
+    "newEffectiveDate": "2021-08-10T14:07:22",
+    "oldEffectiveDate": "2019-08-13T14:03:08",
+    "newAddress1": "PO BOX 67",
+    "oldAddress1": "8105 STATE HIGHWAY 101"
+  },
+  {
+    "change": "changed-WI-TOWN OF ARPIN - WOOD COUNTY-TOWN OF ARPIN - WOOD COUNTY-27179",
+    "newPhone": "(715)305-1118",
+    "oldPhone": "715-305-1118",
+    "newEffectiveDate": "2021-08-10T14:07:37",
+    "oldEffectiveDate": "2019-08-13T14:03:18"
+  },
+  {
+    "change": "changed-WI-TOWN OF ARTHUR - CHIPPEWA COUNTY-TOWN OF ARTHUR - CHIPPEWA COUNTY-25480",
+    "newPhone": "715-312-0015",
+    "oldPhone": "715-579-4351",
+    "newEffectiveDate": "2021-08-10T14:07:19",
+    "oldEffectiveDate": "2019-08-13T14:03:05"
+  },
+  {
+    "change": "changed-WI-TOWN OF ASHFORD - FOND DU LAC COUNTY-TOWN OF ASHFORD - FOND DU LAC COUNTY-25819",
+    "newPhone": "(920)533-5053",
+    "oldPhone": "920-533-5053",
+    "newEmail": "jtflasch@frontier.com",
+    "oldEmail": "JTFLASCH@frontier.com",
+    "newEffectiveDate": "2021-08-10T14:07:21",
+    "oldEffectiveDate": "2019-08-13T14:03:08"
+  },
+  {
+    "change": "changed-WI-TOWN OF ASHIPPUN - DODGE COUNTY-TOWN OF ASHIPPUN - DODGE COUNTY-25674",
+    "newPhone": "(920)474-4781",
+    "oldPhone": "920-474-4781",
+    "newEffectiveDate": "2021-08-10T14:07:21",
+    "oldEffectiveDate": "2019-08-13T14:03:06"
+  },
+  {
+    "change": "changed-WI-TOWN OF ASHLAND - ASHLAND COUNTY-TOWN OF ASHLAND - ASHLAND COUNTY-25306",
+    "newPhone": "(715)661-0622",
+    "oldPhone": "715-661-0622",
+    "newEffectiveDate": "2021-08-10T14:07:18",
+    "oldEffectiveDate": "2019-08-13T14:22:56"
+  },
+  {
+    "change": "changed-WI-TOWN OF ATHELSTANE - MARINETTE COUNTY-TOWN OF ATHELSTANE - MARINETTE COUNTY-26286",
+    "newPhone": "(715)856-5335",
+    "oldPhone": "715-856-5335",
+    "newEffectiveDate": "2021-08-10T14:07:26",
+    "oldEffectiveDate": "2019-08-13T14:03:10"
+  },
+  {
+    "change": "changed-WI-TOWN OF ATLANTA - RUSK COUNTY-TOWN OF ATLANTA - RUSK COUNTY-26682",
+    "newPhone": "(715)868-1971",
+    "oldPhone": "715-868-1971",
+    "newEffectiveDate": "2021-08-10T14:07:30",
+    "oldEffectiveDate": "2019-08-13T14:03:12"
+  },
+  {
+    "change": "changed-WI-TOWN OF AUBURN - CHIPPEWA COUNTY-TOWN OF AUBURN - CHIPPEWA COUNTY-25481",
+    "newPhone": "(715)828-5775",
+    "oldPhone": "715-764-0427",
+    "newEffectiveDate": "2021-08-10T14:07:19",
+    "oldEffectiveDate": "2019-08-13T14:22:56",
+    "newAddress1": "1515 6TH AVE",
+    "oldAddress1": "618 26 1/2 27TH STREET"
+  },
+  {
+    "change": "changed-WI-TOWN OF AUBURN - FOND DU LAC COUNTY-TOWN OF AUBURN - FOND DU LAC COUNTY-25820",
+    "newPhone": "(920)533-8841",
+    "oldPhone": "920-517-0672",
+    "newEffectiveDate": "2021-08-10T14:07:21",
+    "oldEffectiveDate": "2020-07-23T11:40:40"
+  },
+  {
+    "change": "changed-WI-TOWN OF AUBURNDALE - WOOD COUNTY-TOWN OF AUBURNDALE - WOOD COUNTY-27180",
+    "newPhone": "715-897-6345",
+    "oldPhone": "715-652-2976",
+    "newEffectiveDate": "2021-08-10T14:07:37",
+    "oldEffectiveDate": "2019-08-13T14:03:18"
+  },
+  {
+    "change": "changed-WI-TOWN OF AURORA - FLORENCE COUNTY-TOWN OF AURORA - FLORENCE COUNTY-25809",
+    "newPhone": "(715)589-2282",
+    "oldPhone": "715-589-2282",
+    "newEffectiveDate": "2021-08-10T14:07:21",
+    "oldEffectiveDate": "2019-08-13T14:03:08"
+  },
+  {
+    "change": "changed-WI-TOWN OF AURORA - TAYLOR COUNTY-TOWN OF AURORA - TAYLOR COUNTY-26876",
+    "newPhone": "715-447-8626",
+    "oldPhone": "715-965-6320",
+    "newEmail": "clerkofaurora@gmail.com",
+    "oldEmail": "carolyn45wil@yahoo.com",
+    "newEffectiveDate": "2021-08-10T14:07:33",
+    "oldEffectiveDate": "2018-09-12T11:20:51",
+    "newAddress1": "W16018 STATE HIGHWAY 64",
+    "oldAddress1": "W15857 STATE HIGHWAY 64"
+  },
+  {
+    "change": "changed-WI-TOWN OF AURORA - WAUSHARA COUNTY-TOWN OF AURORA - WAUSHARA COUNTY-27129",
+    "newPhone": "(920)361-0188",
+    "oldPhone": "920-361-0188",
+    "newEffectiveDate": "2021-08-10T14:07:36",
+    "oldEffectiveDate": "2019-08-13T14:03:18"
+  },
+  {
+    "change": "changed-WI-TOWN OF AVON - ROCK COUNTY-TOWN OF AVON - ROCK COUNTY-26653",
+    "newPhone": "(608)921-3656",
+    "oldPhone": "608-921-3656",
+    "newEffectiveDate": "2021-08-10T14:07:30",
+    "oldEffectiveDate": "2019-08-13T14:03:12"
+  },
+  {
+    "change": "changed-WI-TOWN OF AZTALAN - JEFFERSON COUNTY-TOWN OF AZTALAN - JEFFERSON COUNTY-26027",
+    "newPhone": "920-699-3590",
+    "oldPhone": "920-699-2161",
+    "newEmail": "aztalanclerk@gmail.com",
+    "oldEmail": "CSMARKS@TDS.NET",
+    "newEffectiveDate": "2021-08-10T14:07:23",
+    "oldEffectiveDate": "2019-08-13T14:03:09",
+    "newAddress1": "N5070 MARTIN RD",
+    "oldAddress1": "N6501 ZIEBELL RD"
+  },
+  {
+    "change": "changed-WI-TOWN OF BAGLEY - OCONTO COUNTY-TOWN OF BAGLEY - OCONTO COUNTY-26389",
+    "newPhone": "(920)590-0198",
+    "oldPhone": "920-590-0198",
+    "newEffectiveDate": "2021-08-10T14:07:27",
+    "oldEffectiveDate": "2019-08-13T14:03:10"
+  },
+  {
+    "change": "changed-WI-TOWN OF BAILEYS HARBOR - DOOR COUNTY-TOWN OF BAILEYS HARBOR - DOOR COUNTY-25716",
+    "newPhone": "(920)839-9509",
+    "oldPhone": "920-839-9509",
+    "newEmail": "admin@baileysharborwi.org",
+    "oldEmail": "admin@townofbaileysharbor.com",
+    "newEffectiveDate": "2021-08-10T14:07:21",
+    "oldEffectiveDate": "2019-08-13T14:03:07"
+  },
+  {
+    "change": "changed-WI-TOWN OF BALDWIN - ST. CROIX COUNTY-TOWN OF BALDWIN - ST. CROIX COUNTY-26716",
+    "newPhone": "(715)684-3581",
+    "oldPhone": "715-684-3581",
+    "newEffectiveDate": "2021-08-10T14:07:31",
+    "oldEffectiveDate": "2019-08-13T14:03:13"
+  },
+  {
+    "change": "changed-WI-TOWN OF BALSAM LAKE - POLK COUNTY-TOWN OF BALSAM LAKE - POLK COUNTY-26526",
+    "newPhone": "(715)554-2028",
+    "oldPhone": "715-554-2091",
+    "newEmail": "bltownclerk@gmail.com",
+    "oldEmail": "MUSKYMASTERS@YAHOO.COM",
+    "newEffectiveDate": "2021-08-10T14:07:29",
+    "oldEffectiveDate": "2019-08-13T14:03:11",
+    "newAddress1": "PO BOX 25",
+    "oldAddress1": "1574 STATE ROAD 46"
+  },
+  {
+    "change": "changed-WI-TOWN OF BANGOR - LA CROSSE COUNTY-TOWN OF BANGOR - LA CROSSE COUNTY-26111",
+    "newPhone": "608-461-0554",
+    "oldPhone": "608-769-1185",
+    "newEmail": "townofbangorwi@gmail.com",
+    "oldEmail": "dfaherty@newcastletitle.us",
+    "newEffectiveDate": "2021-08-10T14:07:24",
+    "oldEffectiveDate": "2019-08-13T14:03:09",
+    "newAddress1": "N4400 HIGHWAY 162",
+    "oldAddress1": "N3685 COUNTY ROAD J"
+  },
+  {
+    "change": "changed-WI-TOWN OF BARABOO - SAUK COUNTY-TOWN OF BARABOO - SAUK COUNTY-26750",
+    "newPhone": "(608)356-5170",
+    "oldPhone": "608-356-5170",
+    "newEffectiveDate": "2021-08-10T14:07:31",
+    "oldEffectiveDate": "2019-08-13T14:03:13"
+  },
+  {
+    "change": "changed-WI-TOWN OF BARKSDALE - BAYFIELD COUNTY-TOWN OF BARKSDALE - BAYFIELD COUNTY-25358",
+    "newPhone": "715-373-6100 x3230",
+    "oldPhone": "715-682-2222",
+    "newEmail": "lynn.divine@bayfieldcounty.wi.gov",
+    "oldEmail": "LMDIVINE@CENTURYTEL.NET",
+    "newEffectiveDate": "2021-08-10T14:16:07",
+    "oldEffectiveDate": "2019-08-13T14:03:04",
+    "newAddress1": "PO BOX 878",
+    "oldAddress1": "290250 E ONDOSSAGON RD"
+  },
+  {
+    "change": "changed-WI-TOWN OF BARNES - BAYFIELD COUNTY-TOWN OF BARNES - BAYFIELD COUNTY-25359",
+    "newPhone": "(715)795-2782",
+    "oldPhone": "715-795-2782",
+    "newEffectiveDate": "2021-08-10T14:07:18",
+    "oldEffectiveDate": "2019-08-13T14:03:04"
+  },
+  {
+    "change": "changed-WI-TOWN OF BARRE - LA CROSSE COUNTY-TOWN OF BARRE - LA CROSSE COUNTY-26112",
+    "newPhone": "608-786-4382",
+    "oldPhone": "608-786-0155",
+    "newEffectiveDate": "2021-08-10T14:07:24",
+    "oldEffectiveDate": "2019-08-13T14:03:09",
+    "newAddress1": "N3290 RUSSLAN COULEE RD",
+    "oldAddress1": "N3806 OLD M ROAD"
+  },
+  {
+    "change": "changed-WI-TOWN OF BARRON - BARRON COUNTY-TOWN OF BARRON - BARRON COUNTY-25324",
+    "newPhone": "(715)790-7100",
+    "oldPhone": "715-790-7100",
+    "newEmail": "clerk@townofbarron.com",
+    "oldEmail": "barrontwnshipclerk@barrontownship.com",
+    "newEffectiveDate": "2021-08-10T14:07:18",
+    "oldEffectiveDate": "2019-08-13T14:03:04"
+  },
+  {
+    "change": "changed-WI-TOWN OF BARRONETT - WASHBURN COUNTY-TOWN OF BARRONETT - WASHBURN COUNTY-27009",
+    "newPhone": "715-468-4185",
+    "oldPhone": "715-468-2846",
+    "newEffectiveDate": "2021-08-10T14:07:34",
+    "oldEffectiveDate": "2019-08-13T14:03:18",
+    "newAddress1": "N525 LEACH LAKE RD",
+    "oldAddress1": "N602 LEHMAN LAKE RD"
+  },
+  {
+    "change": "changed-WI-TOWN OF BARTELME - SHAWANO COUNTY-TOWN OF BARTELME - SHAWANO COUNTY-26813",
+    "newPhone": "715-853-2161",
+    "oldPhone": "715-793-4491",
+    "newEffectiveDate": "2021-08-10T14:07:32",
+    "oldEffectiveDate": "2019-08-13T14:03:15"
+  },
+  {
+    "change": "changed-WI-TOWN OF BARTON - WASHINGTON COUNTY-TOWN OF BARTON - WASHINGTON COUNTY-27036",
+    "newPhone": "(262)334-2765",
+    "oldPhone": "262-334-2765",
+    "newEmail": "clerk@bartontown.net",
+    "oldEmail": "CLERK@BARTONTOWN.NET",
+    "newEffectiveDate": "2021-08-10T14:07:35",
+    "oldEffectiveDate": "2018-09-12T09:01:14"
+  },
+  {
+    "change": "changed-WI-TOWN OF BASHAW - WASHBURN COUNTY-TOWN OF BASHAW - WASHBURN COUNTY-27010",
+    "newPhone": "715-468-4449",
+    "oldPhone": "715-468-7525",
+    "newEmail": "bashawclerk@gmail.com",
+    "oldEmail": "lesadahlstrom@gmail.com",
+    "newEffectiveDate": "2021-08-10T14:07:34",
+    "oldEffectiveDate": "2019-08-13T14:03:18",
+    "newAddress1": "PO BOX 223",
+    "oldAddress1": "W8885 COUNTY HIGHWAY B"
+  },
+  {
+    "change": "changed-WI-TOWN OF BASS LAKE - SAWYER COUNTY-TOWN OF BASS LAKE - SAWYER COUNTY-26788",
+    "newPhone": "(715)634-8469",
+    "oldPhone": "715-634-8469",
+    "newEffectiveDate": "2021-08-10T14:07:32",
+    "oldEffectiveDate": "2019-08-13T14:03:13"
+  },
+  {
+    "change": "changed-WI-TOWN OF BASS LAKE - WASHBURN COUNTY-TOWN OF BASS LAKE - WASHBURN COUNTY-27011",
+    "newPhone": "(715)416-0569",
+    "oldPhone": "715-416-0569",
+    "newEffectiveDate": "2021-08-10T14:07:34",
+    "oldEffectiveDate": "2019-08-13T14:03:18"
+  },
+  {
+    "change": "changed-WI-TOWN OF BAYFIELD - BAYFIELD COUNTY-TOWN OF BAYFIELD - BAYFIELD COUNTY-25360",
+    "newPhone": "(715)779-5671",
+    "oldPhone": "715-779-5671",
+    "newEffectiveDate": "2021-08-10T14:07:18",
+    "oldEffectiveDate": "2019-08-13T14:03:04"
+  },
+  {
+    "change": "changed-WI-TOWN OF BAYVIEW - BAYFIELD COUNTY-TOWN OF BAYVIEW - BAYFIELD COUNTY-25361",
+    "newPhone": "(715)373-2088",
+    "oldPhone": "715-373-2088",
+    "newEffectiveDate": "2021-08-10T14:07:18",
+    "oldEffectiveDate": "2019-08-13T14:03:04"
+  },
+  {
+    "change": "changed-WI-TOWN OF BEAR BLUFF - JACKSON COUNTY-TOWN OF BEAR BLUFF - JACKSON COUNTY-26002",
+    "newPhone": "608-343-4572",
+    "oldPhone": "608-378-4710",
+    "newEmail": "townofbearbluff2021@gmail.com",
+    "oldEmail": "haveknifewilltravel2000@yahoo.com",
+    "newEffectiveDate": "2021-08-10T14:07:23",
+    "oldEffectiveDate": "2019-08-13T14:03:09",
+    "newAddress1": "PO BOX 145",
+    "oldAddress1": "W1703 CRAMPTON RD"
+  },
+  {
+    "change": "changed-WI-TOWN OF BEAR CREEK - SAUK COUNTY-TOWN OF BEAR CREEK - SAUK COUNTY-26751",
+    "newPhone": "608-588-5554",
+    "oldPhone": "608-546-2201",
+    "newEmail": "bc.clerk@yahoo.com",
+    "oldEmail": "eileeneberle@gmail.com",
+    "newEffectiveDate": "2021-08-10T14:07:31",
+    "oldEffectiveDate": "2019-08-13T14:03:13",
+    "newAddress1": "E3892 MARBLE QUARRY RD",
+    "oldAddress1": "E2578 COUNTY ROAD B"
+  },
+  {
+    "change": "changed-WI-TOWN OF BEAR CREEK - WAUPACA COUNTY-TOWN OF BEAR CREEK - WAUPACA COUNTY-27094",
+    "newPhone": "(715)752-4275",
+    "oldPhone": "715-752-4275",
+    "newEffectiveDate": "2021-08-10T14:07:36",
+    "oldEffectiveDate": "2019-08-13T14:03:18"
+  },
+  {
+    "change": "changed-WI-TOWN OF BEAR LAKE - BARRON COUNTY-TOWN OF BEAR LAKE - BARRON COUNTY-25325",
+    "newPhone": "612-860-3349",
+    "oldPhone": "715-234-3822",
+    "newEffectiveDate": "2021-08-10T14:07:18",
+    "oldEffectiveDate": "2019-08-13T14:03:04",
+    "newAddress1": "1340 27TH AVE",
+    "oldAddress1": "2662 16TH ST"
+  },
+  {
+    "change": "changed-WI-TOWN OF BEAVER - CLARK COUNTY-TOWN OF BEAVER - CLARK COUNTY-25511",
+    "newPhone": "(715)255-8812",
+    "oldPhone": "715-255-8812",
+    "newEffectiveDate": "2021-08-10T14:07:20",
+    "oldEffectiveDate": "2019-08-13T14:03:06"
+  },
+  {
+    "change": "changed-WI-TOWN OF BEAVER - MARINETTE COUNTY-TOWN OF BEAVER - MARINETTE COUNTY-26287",
+    "newPhone": "(920)897-4378",
+    "oldPhone": "920-897-4378",
+    "newEffectiveDate": "2021-08-10T14:07:26",
+    "oldEffectiveDate": "2019-08-13T14:03:10"
+  },
+  {
+    "change": "changed-WI-TOWN OF BEAVER - POLK COUNTY-TOWN OF BEAVER - POLK COUNTY-26527",
+    "newPhone": "(715)205-4396",
+    "oldPhone": "715-205-4396",
+    "newEffectiveDate": "2021-08-10T14:07:29",
+    "oldEffectiveDate": "2019-08-13T14:03:11"
+  },
+  {
+    "change": "changed-WI-TOWN OF BEAVER BROOK - WASHBURN COUNTY-TOWN OF BEAVER BROOK - WASHBURN COUNTY-27012",
+    "newPhone": "(715)635-2726",
+    "oldPhone": "715-635-2726",
+    "newEffectiveDate": "2021-08-10T14:07:34",
+    "oldEffectiveDate": "2019-08-13T14:03:18"
+  },
+  {
+    "change": "changed-WI-TOWN OF BEECHER - MARINETTE COUNTY-TOWN OF BEECHER - MARINETTE COUNTY-26288",
+    "newPhone": "(715)324-5535",
+    "oldPhone": "715-324-5535",
+    "newEffectiveDate": "2021-08-10T14:07:26",
+    "oldEffectiveDate": "2019-08-13T14:03:10"
+  },
+  {
+    "change": "changed-WI-TOWN OF BEETOWN - GRANT COUNTY-TOWN OF BEETOWN - GRANT COUNTY-25867",
+    "newPhone": "608-723-9015",
+    "oldPhone": "608-794-2527",
+    "newEmail": "beetownt@gmail.com",
+    "oldEmail": "sdbon@tds.net",
+    "newEffectiveDate": "2021-08-10T14:07:22",
+    "oldEffectiveDate": "2019-08-13T14:03:08"
+  },
+  {
+    "change": "changed-WI-TOWN OF BELGIUM - OZAUKEE COUNTY-TOWN OF BELGIUM - OZAUKEE COUNTY-26471",
+    "newPhone": "(262)285-3326",
+    "oldPhone": "262-285-3326",
+    "newEffectiveDate": "2021-08-10T14:07:28",
+    "oldEffectiveDate": "2019-08-13T14:03:11"
+  },
+  {
+    "change": "changed-WI-TOWN OF BELL - BAYFIELD COUNTY-TOWN OF BELL - BAYFIELD COUNTY-25362",
+    "newPhone": "(715)742-3337",
+    "oldPhone": "715-742-3337",
+    "newEffectiveDate": "2021-08-10T14:07:18",
+    "oldEffectiveDate": "2019-08-13T14:03:04"
+  },
+  {
+    "change": "changed-WI-TOWN OF BELLE PLAINE - SHAWANO COUNTY-TOWN OF BELLE PLAINE - SHAWANO COUNTY-26814",
+    "newPhone": "(715)524-2690",
+    "oldPhone": "715-524-2690",
+    "newEffectiveDate": "2021-08-10T14:07:32",
+    "oldEffectiveDate": "2019-08-13T14:03:15",
+    "newAddress1": "N3002 STATE ROAD 22",
+    "oldAddress1": "W7963 SHADY LN"
+  },
+  {
+    "change": "changed-WI-TOWN OF BELMONT - LAFAYETTE COUNTY-TOWN OF BELMONT - LAFAYETTE COUNTY-26131",
+    "newPhone": "608-762-5335",
+    "oldPhone": "608-762-5372",
+    "newEffectiveDate": "2021-08-10T14:07:24",
+    "oldEffectiveDate": "2019-08-13T14:03:09"
+  },
+  {
+    "change": "changed-WI-TOWN OF BELMONT - PORTAGE COUNTY-TOWN OF BELMONT - PORTAGE COUNTY-26563",
+    "newPhone": "(920)622-4417",
+    "oldPhone": "920-622-4417",
+    "newEffectiveDate": "2021-08-10T14:07:29",
+    "oldEffectiveDate": "2019-08-13T14:03:11"
+  },
+  {
+    "change": "changed-WI-TOWN OF BELOIT - ROCK COUNTY-TOWN OF BELOIT - ROCK COUNTY-26654",
+    "newPhone": "(608)364-2980 x21",
+    "oldPhone": "608-364-2980",
+    "newEffectiveDate": "2021-08-10T14:16:19",
+    "oldEffectiveDate": "2018-09-12T08:57:05",
+    "newAddress1": "2445 S AFTON RD",
+    "oldAddress1": "2871 S AFTON RD"
+  },
+  {
+    "change": "changed-WI-TOWN OF BELVIDERE - BUFFALO COUNTY-TOWN OF BELVIDERE - BUFFALO COUNTY-25413",
+    "newPhone": "608-450-1207",
+    "oldPhone": "608-685-3771",
+    "newEmail": "belvidereclerk@gmail.com",
+    "oldEmail": "BELVIDERECLERK@CCTCOOP.COM",
+    "newEffectiveDate": "2021-08-10T14:07:19",
+    "oldEffectiveDate": "2019-08-13T14:03:05",
+    "newAddress1": "W1624 NORTH ST",
+    "oldAddress1": "S2050 HICKORY LN"
+  },
+  {
+    "change": "changed-WI-TOWN OF BENNETT - DOUGLAS COUNTY-TOWN OF BENNETT - DOUGLAS COUNTY-25737",
+    "newPhone": "(715)817-5994",
+    "oldPhone": "715-375-2394",
+    "newEffectiveDate": "2021-08-10T14:07:21",
+    "oldEffectiveDate": "2019-08-13T14:03:07"
+  },
+  {
+    "change": "changed-WI-TOWN OF BENTON - LAFAYETTE COUNTY-TOWN OF BENTON - LAFAYETTE COUNTY-26132",
+    "newPhone": "608-778-5331",
+    "oldPhone": "608-744-2022",
+    "newEmail": "townofbentonwi@gmail.com",
+    "oldEmail": "",
+    "newEffectiveDate": "2021-08-10T14:07:24",
+    "oldEffectiveDate": "2019-08-13T14:03:09",
+    "newAddress1": "4051 COUNTY ROAD J",
+    "oldAddress1": "7315 CARR FACTORY RD"
+  },
+  {
+    "change": "changed-WI-TOWN OF BERGEN - MARATHON COUNTY-TOWN OF BERGEN - MARATHON COUNTY-26227",
+    "newPhone": "(715)693-2162",
+    "oldPhone": "715-693-2162",
+    "newEffectiveDate": "2021-08-10T14:07:25",
+    "oldEffectiveDate": "2019-08-13T14:03:10"
+  },
+  {
+    "change": "changed-WI-TOWN OF BERGEN - VERNON COUNTY-TOWN OF BERGEN - VERNON COUNTY-26931",
+    "newPhone": "608-498-6227",
+    "oldPhone": "608-457-2096",
+    "newEffectiveDate": "2021-08-10T14:07:34",
+    "oldEffectiveDate": "2019-08-13T14:03:16"
+  },
+  {
+    "change": "changed-WI-TOWN OF BERLIN - GREEN LAKE COUNTY-TOWN OF BERLIN - GREEN LAKE COUNTY-25943",
+    "newPhone": "(920)361-4717",
+    "oldPhone": "920-361-4717",
+    "newEffectiveDate": "2021-08-10T14:07:23",
+    "oldEffectiveDate": "2019-08-13T14:03:08"
+  },
+  {
+    "change": "changed-WI-TOWN OF BERLIN - MARATHON COUNTY-TOWN OF BERLIN - MARATHON COUNTY-26228",
+    "newPhone": "(715)432-3837",
+    "oldPhone": "715-432-3837",
+    "newEffectiveDate": "2021-08-10T14:07:25",
+    "oldEffectiveDate": "2019-08-13T14:03:10"
+  },
+  {
+    "change": "changed-WI-TOWN OF BERN - MARATHON COUNTY-TOWN OF BERN - MARATHON COUNTY-26229",
+    "newPhone": "(715)560-0864",
+    "oldPhone": "715-560-0864",
+    "newEffectiveDate": "2021-08-10T14:07:25",
+    "oldEffectiveDate": "2019-08-13T14:03:10"
+  },
+  {
+    "change": "changed-WI-TOWN OF BERRY - DANE COUNTY-TOWN OF BERRY - DANE COUNTY-25614",
+    "newPhone": "(608)767-4152",
+    "oldPhone": "608-767-4152",
+    "newEffectiveDate": "2021-08-10T14:07:21",
+    "oldEffectiveDate": "2019-08-13T14:03:06"
+  },
+  {
+    "change": "changed-WI-TOWN OF BEVENT - MARATHON COUNTY-TOWN OF BEVENT - MARATHON COUNTY-26230",
+    "newPhone": "(715)454-7171",
+    "oldPhone": "715-454-7171",
+    "newEffectiveDate": "2021-08-10T14:07:25",
+    "oldEffectiveDate": "2019-08-13T14:23:01"
+  },
+  {
+    "change": "changed-WI-TOWN OF BIG BEND - RUSK COUNTY-TOWN OF BIG BEND - RUSK COUNTY-26683",
+    "newPhone": "(715)868-5775",
+    "oldPhone": "715-868-5775",
+    "newEffectiveDate": "2021-08-10T14:07:30",
+    "oldEffectiveDate": "2019-08-13T14:03:12"
+  },
+  {
+    "change": "changed-WI-TOWN OF BIG FALLS - RUSK COUNTY-TOWN OF BIG FALLS - RUSK COUNTY-26684",
+    "newPhone": "(715)532-6341",
+    "oldPhone": "715-532-6341",
+    "newEffectiveDate": "2021-08-10T14:07:30",
+    "oldEffectiveDate": "2019-08-13T14:03:12"
+  },
+  {
+    "change": "changed-WI-TOWN OF BIG FLATS - ADAMS COUNTY-TOWN OF BIG FLATS - ADAMS COUNTY-25286",
+    "newPhone": "(608)547-1864",
+    "oldPhone": "608-547-1864",
+    "newEmail": "clerk@bigflatswi.com",
+    "oldEmail": "Tnbigflats@yahoo.com",
+    "newEffectiveDate": "2021-08-10T14:07:18",
+    "oldEffectiveDate": "2019-08-13T14:03:04"
+  },
+  {
+    "change": "changed-WI-TOWN OF BIRCH - LINCOLN COUNTY-TOWN OF BIRCH - LINCOLN COUNTY-26177",
+    "newPhone": "(715)536-8247",
+    "oldPhone": "715-536-8247",
+    "newEffectiveDate": "2021-08-10T14:07:25",
+    "oldEffectiveDate": "2019-08-13T14:03:09"
+  }
+]
