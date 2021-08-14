@@ -1,0 +1,224 @@
+[
+  {
+    "change": "changed-LA-Claiborne-Claiborne Parish Registrar of Voters-1270",
+    "newEffectiveDate": "2021-08-13T14:46:25",
+    "oldEffectiveDate": "2019-05-31T15:40:41",
+    "newZip": "71040-3914",
+    "oldZip": "71040-3929"
+  },
+  {
+    "change": "changed-LA-DeSoto-DeSoto Parish Registrar of Voters-1272",
+    "newEffectiveDate": "2021-08-13T14:46:25",
+    "oldEffectiveDate": "2017-09-18T14:20:14",
+    "newAddress1": "104 Crosby St.",
+    "oldAddress1": "105 Franklin St"
+  },
+  {
+    "change": "changed-LA-Grant-Grant Parish Registrar of Voters-1278",
+    "newEffectiveDate": "2021-08-13T14:46:25",
+    "oldEffectiveDate": "2015-08-17T14:04:39",
+    "newAddress1": "200 Main St, Courthouse Bldg.",
+    "oldAddress1": "200 Main St, Rm 103"
+  },
+  {
+    "change": "changed-LA-Madison-Madison Parish Registrar of Voters-1289",
+    "newEffectiveDate": "2021-08-13T14:46:25",
+    "oldEffectiveDate": "2015-08-17T14:04:39",
+    "newAddress1": "100 N Cedar St",
+    "oldAddress1": "100 N Cedar St, Rm 5"
+  },
+  {
+    "change": "changed-LA-Morehouse-Morehouse Parish Registrar of Voters-1290",
+    "newEffectiveDate": "2021-08-13T14:46:25",
+    "oldEffectiveDate": "2015-08-17T14:04:39",
+    "newAddress1": "129 N Franklin St",
+    "oldAddress1": "129 N Franklin St, Ste 1"
+  },
+  {
+    "change": "changed-LA-Orleans-Orleans Parish Registrar of Voters-1292",
+    "newEffectiveDate": "2021-08-13T14:46:25",
+    "oldEffectiveDate": "2015-08-17T14:04:39",
+    "newAddress1": "1300 Perdido St, Rm 1W24",
+    "oldAddress1": "1300 Perdido St, Rm 1W23"
+  },
+  {
+    "change": "changed-LA-Ouachita-Ouachita Parish Registrar of Voters-1293",
+    "newEffectiveDate": "2021-08-13T14:49:56",
+    "oldEffectiveDate": "2016-09-29T13:42:54",
+    "newAddress1": "1650 Desiard St, Rm 125",
+    "oldAddress1": "1650 Desiard St, Ste 125",
+    "newZip": "71201",
+    "oldZip": "71201-7722"
+  },
+  {
+    "change": "changed-LA-Pointe Coupee-Pointe Coupee Parish Registrar of Voters-1295",
+    "newEffectiveDate": "2021-08-13T14:46:25",
+    "oldEffectiveDate": "2017-09-06T16:15:29",
+    "newAddress1": "1919 Hospital Rd, Ste 1",
+    "oldAddress1": "211 E Main St, 2nd Floor"
+  },
+  {
+    "change": "changed-LA-Rapides-Rapides Parish Registrar of Voters-1296",
+    "newEffectiveDate": "2021-08-13T14:46:25",
+    "oldEffectiveDate": "2019-05-31T15:40:41",
+    "newAddress1": "701 Murray St",
+    "oldAddress1": "701 Murray St, Rm 123",
+    "newZip": "71301-8099",
+    "oldZip": "71301-8060"
+  },
+  {
+    "change": "changed-LA-Sabine-Sabine Parish Registrar of Voters-1299",
+    "newEffectiveDate": "2021-08-13T14:46:25",
+    "oldEffectiveDate": "2019-05-31T15:40:41",
+    "newZip": "71449-3099",
+    "oldZip": "71449-3098"
+  },
+  {
+    "change": "changed-LA-St Bernard-St Bernard Parish Registrar of Voters-1300",
+    "newPhone": "(504) 278-4231",
+    "oldPhone": "(504) 278-4232",
+    "newEffectiveDate": "2021-08-13T14:46:25",
+    "oldEffectiveDate": "2019-05-31T15:40:41"
+  },
+  {
+    "change": "changed-LA-St James-St James Parish Registrar of Voters-1303",
+    "newPhone": "(225) 562-2330",
+    "oldPhone": "(225) 562-2403",
+    "newEffectiveDate": "2021-08-13T14:46:25",
+    "oldEffectiveDate": "2019-05-31T15:40:41"
+  },
+  {
+    "change": "changed-LA-St John the Baptist-St John the Baptist Registrar of Voters-1304",
+    "newPhone": "(985) 359-0179",
+    "oldPhone": "(985) 359-0175",
+    "newEffectiveDate": "2021-08-13T14:46:25",
+    "oldEffectiveDate": "2019-05-31T15:40:41",
+    "newZip": "70068-3344",
+    "oldZip": "70068-3345"
+  },
+  {
+    "change": "changed-LA-St Martin-St Martin Parish Registrar of Voters-1306",
+    "newEffectiveDate": "2021-08-13T14:49:56",
+    "oldEffectiveDate": "2017-09-06T16:15:29",
+    "newZip": "70582",
+    "oldZip": "70582-4549"
+  },
+  {
+    "change": "changed-LA-Terrebonne-Terrebonne Parish Registrar of Voters-1311",
+    "newEffectiveDate": "2021-08-13T14:49:56",
+    "oldEffectiveDate": "2015-08-17T14:04:39",
+    "newZip": "70360",
+    "oldZip": "70360-3407"
+  },
+  {
+    "change": "changed-LA-Vermilion-Vermilion Parish Registrar of Voters-1313",
+    "newEffectiveDate": "2021-08-13T14:49:56",
+    "oldEffectiveDate": "2015-08-17T14:04:39",
+    "newZip": "70510",
+    "oldZip": "70510-5170"
+  },
+  {
+    "change": "changed-LA-Washington-Washington Parish Registrar of Voters-1315",
+    "newEffectiveDate": "2021-08-13T14:46:25",
+    "oldEffectiveDate": "2019-05-31T15:40:41",
+    "newAddress1": "900 Washington St, #105",
+    "oldAddress1": "900 Washington St, Ste 3"
+  },
+  {
+    "change": "changed-NY-Albany-Albany County Board of Elections-2812",
+    "newEffectiveDate": "2021-08-13T11:08:07",
+    "oldEffectiveDate": "2020-07-23T10:24:20",
+    "newAddress1": "260 South Pearl Street",
+    "oldAddress1": "224 South Pearl Street"
+  },
+  {
+    "change": "changed-NY-Allegany-Allegany County Board of Elections-2813",
+    "newEffectiveDate": "2021-08-13T11:08:07",
+    "oldEffectiveDate": "2019-09-16T14:53:50",
+    "newAddress1": "8 Willets Ave",
+    "oldAddress1": "10 Willets Ave"
+  },
+  {
+    "change": "changed-NY-Genesee-Genesee County Board of Elections-2830",
+    "newEffectiveDate": "2021-08-13T11:09:05",
+    "oldEffectiveDate": "2017-09-08T09:26:02",
+    "newAddress1": "County Building One, 15 Main St, P.O. Box 284",
+    "oldAddress1": "County Building One, 15 Main St",
+    "newZip": "14021",
+    "oldZip": "14020"
+  },
+  {
+    "change": "changed-NY-Hamilton-Hamilton County Board of Elections-2832",
+    "newEffectiveDate": "2021-08-13T11:08:07",
+    "oldEffectiveDate": "2020-09-24T14:29:52",
+    "newAddress1": "Route 8, P.O. Box 175",
+    "oldAddress1": "102 County View Drive, P.O. Box 175"
+  },
+  {
+    "change": "changed-NY-Livingston-Livingston County Board of Elections-2837",
+    "newEffectiveDate": "2021-08-13T11:08:07",
+    "oldEffectiveDate": "2015-08-31T15:14:54",
+    "newAddress1": "County Government Center, 6 Court St, Room 104",
+    "oldAddress1": "6 Court St, Room 104"
+  },
+  {
+    "change": "changed-NY-Monroe-Monroe County Board of Elections-2839",
+    "newEffectiveDate": "2021-08-13T11:08:07",
+    "oldEffectiveDate": "2019-07-15T14:29:52",
+    "newAddress1": "39 W. Main St.",
+    "oldAddress1": "39 Main St. W"
+  },
+  {
+    "change": "changed-NY-Orange-Orange County Board of Elections-2847",
+    "newEffectiveDate": "2021-08-13T11:08:07",
+    "oldEffectiveDate": "2015-08-31T15:14:54",
+    "newAddress1": "25 Court Lane, P.O. Box 30",
+    "oldAddress1": "75 Webster Ave, P.O. Box 30"
+  },
+  {
+    "change": "changed-NY-Queens-Queens Borough Board of Elections-2852",
+    "newEffectiveDate": "2021-08-13T11:09:05",
+    "oldEffectiveDate": "2016-03-15T11:45:43",
+    "newAddress1": "126-06 Queens Blvd",
+    "oldAddress1": "118-35 Queens Blvd., 11th Floor",
+    "newCity": "Kew Gardens",
+    "oldCity": "Forest Hills",
+    "newZip": "11415",
+    "oldZip": "11375"
+  },
+  {
+    "change": "changed-NY-Schenectady-Schenectady County Board of Elections-2857",
+    "newEffectiveDate": "2021-08-13T11:08:07",
+    "oldEffectiveDate": "2017-09-08T09:26:53",
+    "newAddress1": "2696 Hamburg St, Ste 1",
+    "oldAddress1": "2696 Hamburg St"
+  },
+  {
+    "change": "changed-NY-Schuyler-Schuyler County Board of Elections-2859",
+    "newEffectiveDate": "2021-08-13T11:08:07",
+    "oldEffectiveDate": "2019-07-15T14:29:52",
+    "newAddress1": "County Office Building, 105 Ninth St, Unit 13",
+    "oldAddress1": "105 Ninth St, Unit 13"
+  },
+  {
+    "change": "changed-NY-Ulster-Ulster County Board of Elections-2867",
+    "newEffectiveDate": "2021-08-13T11:08:07",
+    "oldEffectiveDate": "2015-08-31T15:14:54",
+    "newAddress1": "284 Wall St",
+    "oldAddress1": "284  Wall St"
+  },
+  {
+    "change": "changed-NY-Warren-Warren County Board of Elections-2868",
+    "newEffectiveDate": "2021-08-13T11:08:07",
+    "oldEffectiveDate": "2019-07-15T14:29:52",
+    "newAddress1": "County Municipal Ctr, 3rd Fl Human Serv Bldg, 1340 State Route 9",
+    "oldAddress1": "3rd Floor Human Services Building, 1340 State Route 9"
+  },
+  {
+    "change": "changed-OH-Jackson-Director, Jackson County Board of Elections-2913",
+    "newEffectiveDate": "2021-08-13T11:51:37",
+    "oldEffectiveDate": "2019-08-22T09:44:18",
+    "newAddress1": "25 East South Street, Suite B",
+    "oldAddress1": "275 Portsmouth St., Ste 2"
+  }
+]
