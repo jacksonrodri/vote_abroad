@@ -1,0 +1,18 @@
+[
+  {
+    "change": "changed-GA-DeKalb-DeKalb County Board of Registration and Elections-566",
+    "newPhone": "404-297-4442",
+    "oldPhone": "404-298-4028",
+    "newEffectiveDate": "2021-08-19T11:40:00",
+    "oldEffectiveDate": "2019-11-05T10:58:31"
+  },
+  {
+    "change": "changed-PA-Westmoreland-Westmoreland County Board of Elections-3139",
+    "newPhone": "(724) 830-3595",
+    "oldPhone": "(724) 830-3150",
+    "newEmail": "election@co.westmoreland.pa.us",
+    "oldEmail": "slink@co.westmoreland.pa.us",
+    "newEffectiveDate": "2021-08-19T13:08:44",
+    "oldEffectiveDate": "2020-09-11T08:44:57"
+  }
+]
