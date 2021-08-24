@@ -1,0 +1,52 @@
+[
+  {
+    "change": "changed-VA-Colonial Heights-Colonial Heights General Registrar-3701",
+    "newEffectiveDate": "2021-08-23T11:43:57",
+    "oldEffectiveDate": "2018-09-18T11:12:23",
+    "newAddress1": "P.O. Box 813",
+    "oldAddress1": "P.O. Box 3401",
+    "newZip": "23834-0813",
+    "oldZip": "23834-9001"
+  },
+  {
+    "change": "changed-VA-Hampton-Hampton General Registrar-3729",
+    "newEffectiveDate": "2021-08-23T11:43:57",
+    "oldEffectiveDate": "2015-09-03T10:01:30",
+    "newAddress1": "101 Kings Way",
+    "oldAddress1": "1919 Commerce Dr, Ste 280"
+  },
+  {
+    "change": "changed-VA-Henry-Henry General Registrar-3733",
+    "newEmail": "vote@co.henry.va.us",
+    "oldEmail": "estone@co.henry.va.us",
+    "newEffectiveDate": "2021-08-23T11:43:57",
+    "oldEffectiveDate": "2015-09-03T10:01:30",
+    "newAddress1": "P.O. Box 96",
+    "oldAddress1": "P.O. Box 7",
+    "newZip": "24078-0096",
+    "oldZip": "24078-0007"
+  },
+  {
+    "change": "changed-VA-Hopewell-Hopewell General Registrar-3735",
+    "newEffectiveDate": "2021-08-23T11:43:57",
+    "oldEffectiveDate": "2019-07-15T14:39:03",
+    "newAddress1": "106 N Main St",
+    "oldAddress1": "245 E. Broadway, Ste. 4"
+  },
+  {
+    "change": "changed-VA-Pittsylvania-Pittsylvania General Registrar-3768",
+    "newEffectiveDate": "2021-08-23T11:43:57",
+    "oldEffectiveDate": "2015-09-03T10:01:30",
+    "newAddress1": "PO Box 460",
+    "oldAddress1": "110 Old Chatham Elementary Ln",
+    "newZip": "24531-0460",
+    "oldZip": "24531-3392"
+  },
+  {
+    "change": "changed-VA-Staunton-Staunton General Registrar-3792",
+    "newEffectiveDate": "2021-08-23T11:43:57",
+    "oldEffectiveDate": "2017-09-28T08:27:01",
+    "newAddress1": "P.O. Box 58 or PO Box 1092",
+    "oldAddress1": "P.O. Box 58"
+  }
+]
