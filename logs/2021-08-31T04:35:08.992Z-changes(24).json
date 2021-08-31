@@ -1,0 +1,170 @@
+[
+  {
+    "change": "changed-AR-Fulton-Fulton County Clerk-94",
+    "newEffectiveDate": "2021-08-30T15:52:46",
+    "oldEffectiveDate": "2015-10-09T15:59:25",
+    "newAddress1": "123 S Main St",
+    "oldAddress1": "12 S Main St"
+  },
+  {
+    "change": "changed-AR-Izard-Izard County Clerk-102",
+    "newEffectiveDate": "2021-08-30T15:52:46",
+    "oldEffectiveDate": "2015-10-09T15:59:25",
+    "newAddress1": "80 E Main St.",
+    "oldAddress1": "P.O. Box 95"
+  },
+  {
+    "change": "changed-AR-Johnson-Johnson County Clerk-105",
+    "newEffectiveDate": "2021-08-30T15:52:46",
+    "oldEffectiveDate": "2015-08-31T13:54:57",
+    "newAddress1": "P.O. Box 57",
+    "oldAddress1": "215 W Main St"
+  },
+  {
+    "change": "changed-AR-Lonoke-Lonoke County Clerk-112",
+    "newEffectiveDate": "2021-08-30T15:52:46",
+    "oldEffectiveDate": "2015-10-09T15:59:25",
+    "newAddress1": "P.O. Box 188",
+    "oldAddress1": "301 N Center St"
+  },
+  {
+    "change": "changed-AR-Madison-Madison County Clerk-113",
+    "newEffectiveDate": "2021-08-30T15:52:46",
+    "oldEffectiveDate": "2015-08-31T13:54:57",
+    "newAddress1": "201 W Main St/ P.O. Box 37",
+    "oldAddress1": "201 W Main St, Ste 202"
+  },
+  {
+    "change": "changed-AR-Mississippi-Mississippi County Clerk-116",
+    "newEffectiveDate": "2021-08-30T15:52:46",
+    "oldEffectiveDate": "2015-08-31T13:54:57",
+    "newAddress1": "P.O. Box 629",
+    "oldAddress1": "200 W Walnut St"
+  },
+  {
+    "change": "changed-AR-Monroe-Monroe County Clerk-117",
+    "newEffectiveDate": "2021-08-30T15:52:46",
+    "oldEffectiveDate": "2015-08-31T13:54:57",
+    "newAddress1": "123 Madison Street",
+    "oldAddress1": "123 Madison"
+  },
+  {
+    "change": "changed-AR-Ouachita-Ouachita County Clerk-121",
+    "newEffectiveDate": "2021-08-30T15:52:46",
+    "oldEffectiveDate": "2015-10-09T15:59:25",
+    "newAddress1": "P.O. Box 1041",
+    "oldAddress1": "145 Jefferson St"
+  },
+  {
+    "change": "changed-AR-Polk-Polk County Clerk-126",
+    "newEffectiveDate": "2021-08-30T15:52:47",
+    "oldEffectiveDate": "2015-10-09T15:59:25",
+    "newAddress1": "507 Church Avenue, Box 9",
+    "oldAddress1": "507 Church Avenue,"
+  },
+  {
+    "change": "changed-AR-Pope-Pope County Clerk-127",
+    "newEffectiveDate": "2021-08-30T15:52:47",
+    "oldEffectiveDate": "2015-08-31T13:54:57",
+    "newAddress1": "100 West Main Street",
+    "oldAddress1": "102 W Main St, Ste 6"
+  },
+  {
+    "change": "changed-AR-Pulaski-Pulaski County Clerk-129",
+    "newEffectiveDate": "2021-08-30T15:52:47",
+    "oldEffectiveDate": "2015-10-09T15:59:25",
+    "newAddress1": "401 W Markham St. Suite 100",
+    "oldAddress1": "401 W Markham St."
+  },
+  {
+    "change": "changed-AR-St. Francis-Saint Francis County Clerk-131",
+    "newEffectiveDate": "2021-08-30T15:52:47",
+    "oldEffectiveDate": "2015-10-09T15:59:25",
+    "newAddress1": "313 S. Izard St., Suite 2",
+    "oldAddress1": "P.O. Box 1653"
+  },
+  {
+    "change": "changed-AR-Sharp-Sharp County Clerk-137",
+    "newEffectiveDate": "2021-08-30T15:52:47",
+    "oldEffectiveDate": "2015-08-31T13:54:57",
+    "newAddress1": "718 Ash Flat Drive",
+    "oldAddress1": "718 Ash Flat Drive / P.O. Box 307"
+  },
+  {
+    "change": "changed-AR-Yell-Yell County Clerk-144",
+    "newEffectiveDate": "2021-08-30T15:52:47",
+    "oldEffectiveDate": "2015-08-31T13:54:57",
+    "newAddress1": "P.O. Box 219",
+    "oldAddress1": "101 E 5th St"
+  },
+  {
+    "change": "changed-MO-Bates-Bates-2010",
+    "newEffectiveDate": "2021-08-30T15:52:27",
+    "oldEffectiveDate": "2017-09-26T13:38:57",
+    "newAddress1": "103 W. Dakota St., Rm. 1",
+    "oldAddress1": "1 N. Delaware"
+  },
+  {
+    "change": "changed-MO-Boone-Boone-2013",
+    "newPhone": "(573) 886-4375",
+    "oldPhone": "(573) 886-4295",
+    "newEffectiveDate": "2021-08-30T15:52:27",
+    "oldEffectiveDate": "2020-01-22T11:59:01"
+  },
+  {
+    "change": "changed-MO-Buchanan-Buchanan-2014",
+    "newPhone": "(816) 271-1411",
+    "oldPhone": "(816) 271-1412",
+    "newEffectiveDate": "2021-08-30T15:52:27",
+    "oldEffectiveDate": "2019-09-17T09:42:13"
+  },
+  {
+    "change": "changed-MO-Jackson-Jackson-2051",
+    "newFax": "(816) 325-4642",
+    "oldFax": "(816) 325-4609",
+    "newEffectiveDate": "2021-08-30T15:52:27",
+    "oldEffectiveDate": "2019-09-17T09:44:08"
+  },
+  {
+    "change": "changed-MO-Lincoln-Lincoln-2061",
+    "newEffectiveDate": "2021-08-30T15:52:27",
+    "oldEffectiveDate": "2017-09-26T13:38:57",
+    "newAddress1": "201 Main St., Rm. 104",
+    "oldAddress1": "201 Main St."
+  },
+  {
+    "change": "changed-MO-McDonald-McDonald-2068",
+    "newEffectiveDate": "2021-08-30T15:52:27",
+    "oldEffectiveDate": "2017-09-26T13:38:57",
+    "newAddress1": "502 Main St.",
+    "oldAddress1": "602 Main St., P.O. Box 665"
+  },
+  {
+    "change": "changed-MO-Monroe-Monroe-2073",
+    "newPhone": "(877) 433-3061 x5",
+    "oldPhone": "(660) 327-5106",
+    "newEffectiveDate": "2021-08-30T15:52:27",
+    "oldEffectiveDate": "2019-08-23T16:07:11"
+  },
+  {
+    "change": "changed-MO-New Madrid-New Madrid-2076",
+    "newEmail": "newmadrid@sos.mo.gov",
+    "oldEmail": "new@sos.mo.gov",
+    "newEffectiveDate": "2021-08-30T15:52:27",
+    "oldEffectiveDate": "2019-08-23T16:07:11"
+  },
+  {
+    "change": "changed-MO-St. Francois-St. Francois-2104",
+    "newEffectiveDate": "2021-08-30T15:52:27",
+    "oldEffectiveDate": "2019-08-23T16:07:11",
+    "newAddress1": "1101 Weber Rd., Ste. 302",
+    "oldAddress1": "1 W. Liberty St., Ste. 300"
+  },
+  {
+    "change": "changed-MO-Washington-Washington-2115",
+    "newEffectiveDate": "2021-08-30T15:52:27",
+    "oldEffectiveDate": "2019-08-23T16:07:11",
+    "newAddress1": "102 N. Missouri St., Ste. C",
+    "oldAddress1": "102 N. Missouri St."
+  }
+]
