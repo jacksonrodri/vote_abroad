@@ -1,0 +1,195 @@
+[
+  {
+    "change": "changed-WY-Albany-Albany County Clerk-5991",
+    "newPhone": "(307) 721-2546",
+    "oldPhone": "(307) 721-2541",
+    "newEffectiveDate": "2021-09-09T14:44:50",
+    "oldEffectiveDate": "2015-08-31T14:59:23",
+    "newAddress1": "525 Grand Ave., Ste 202",
+    "oldAddress1": "525 Grand Ave, Ste 202"
+  },
+  {
+    "change": "changed-WY-Big Horn-Big Horn County Clerk-5992",
+    "newEmail": "Lori.Smallwood@bighorncountywy.gov",
+    "oldEmail": "lori.smallwood@bighorncountywy.gov",
+    "newEffectiveDate": "2021-09-09T14:44:50",
+    "oldEffectiveDate": "2015-08-31T14:59:23"
+  },
+  {
+    "change": "changed-WY-Campbell-Campbell County Clerk-5993",
+    "newPhone": "(307) 686-1892",
+    "oldPhone": "(307) 682-7285",
+    "newEmail": "mll02@ccgov.net",
+    "oldEmail": "sfs02@ccgov.net",
+    "newEffectiveDate": "2021-09-09T14:44:50",
+    "oldEffectiveDate": "2015-08-31T14:59:23"
+  },
+  {
+    "change": "changed-WY-Carbon-Carbon County Clerk-5994",
+    "newPhone": "(307) 328-2650",
+    "oldPhone": "(307) 328-2668",
+    "newEmail": "elections@carbonwy.com",
+    "oldEmail": "gwynnbartlett@carbonwy.com",
+    "newEffectiveDate": "2021-09-09T14:44:50",
+    "oldEffectiveDate": "2015-08-31T14:59:23"
+  },
+  {
+    "change": "changed-WY-Converse-Converse County Clerk-5995",
+    "newEmail": "janeen.morvee@conversecountywy.gov",
+    "oldEmail": "karen.rimmer@conversecountywy.gov",
+    "newEffectiveDate": "2021-09-09T14:44:50",
+    "oldEffectiveDate": "2020-05-06T11:25:26",
+    "newAddress1": "107 North 5th St., Ste 114",
+    "oldAddress1": "107 N 5th St, Ste 114"
+  },
+  {
+    "change": "changed-WY-Crook-Crook County Clerk-5996",
+    "newEmail": "LindaF@crookcounty.wy.gov",
+    "oldEmail": "lindaf@crookcounty.wy.gov",
+    "newEffectiveDate": "2021-09-09T14:44:50",
+    "oldEffectiveDate": "2015-08-31T14:59:23"
+  },
+  {
+    "change": "changed-WY-Fremont-Fremont County Clerk-5997",
+    "newPhone": "(307) 332-1089",
+    "oldPhone": "(307) 332-2405",
+    "newEmail": "elections@fremontcountywy.gov",
+    "oldEmail": "julie.freese@fremontcountywy.gov",
+    "newEffectiveDate": "2021-09-09T14:44:50",
+    "oldEffectiveDate": "2015-08-31T14:59:23",
+    "newAddress1": "450 North 2nd St., Rm 220",
+    "oldAddress1": "450 N 2nd St, Rm 220"
+  },
+  {
+    "change": "changed-WY-Goshen-Goshen County Clerk-5998",
+    "newEmail": "countyclerk@goshencounty.org",
+    "oldEmail": "ckenyon@goshencounty.org",
+    "newEffectiveDate": "2021-09-09T14:44:50",
+    "oldEffectiveDate": "2015-08-31T14:59:23"
+  },
+  {
+    "change": "changed-WY-Hot Springs-Hot Springs County Clerk-5999",
+    "newEmail": "elections@hscounty.com",
+    "oldEmail": "RoseD@hscounty.com",
+    "newEffectiveDate": "2021-09-09T14:44:50",
+    "oldEffectiveDate": "2019-07-29T15:52:03",
+    "newAddress1": "415 Arapahoe St.",
+    "oldAddress1": "415 Arapahoe St"
+  },
+  {
+    "change": "changed-WY-Johnson-Johnson County Clerk-6000",
+    "newEffectiveDate": "2021-09-09T14:44:50",
+    "oldEffectiveDate": "2015-08-31T14:59:23",
+    "newAddress1": "76 North Main St.",
+    "oldAddress1": "76 N Main St"
+  },
+  {
+    "change": "changed-WY-Lincoln-Lincoln County Clerk-6002",
+    "newPhone": "(307) 877-2027",
+    "oldPhone": "(307) 877-2021",
+    "newEmail": "jpainter@lcwy.org",
+    "oldEmail": "ABrunski@lcwy.org",
+    "newEffectiveDate": "2021-09-09T14:44:50",
+    "oldEffectiveDate": "2020-07-23T12:24:21",
+    "newAddress1": "925 Sage Ave., Ste 101",
+    "oldAddress1": "925 Sage Ave, Ste 101"
+  },
+  {
+    "change": "changed-WY-Natrona-Natrona County Clerk-6003",
+    "newEmail": "elections@natronacounty-wy.gov",
+    "oldEmail": "TGood@natronacounty-wy.gov",
+    "newEffectiveDate": "2021-09-09T14:44:50",
+    "oldEffectiveDate": "2019-07-29T15:52:03",
+    "newAddress1": "200 North Center St., P.O. Box 863",
+    "oldAddress1": "P.O. Box 863"
+  },
+  {
+    "change": "changed-WY-Niobrara-Niobrara County Clerk-6004",
+    "newEmail": "bfreeman@niobraracounty.org",
+    "oldEmail": "niocc@qwestoffice.net",
+    "newEffectiveDate": "2021-09-09T14:44:50",
+    "oldEffectiveDate": "2015-08-31T14:59:23"
+  },
+  {
+    "change": "changed-WY-Park-Park County Clerk-6005",
+    "newPhone": "(307) 527-8620",
+    "oldPhone": "(307) 527-8600",
+    "newEmail": "voterinfo@parkcounty.us",
+    "oldEmail": "crenner@parkcounty.us",
+    "newEffectiveDate": "2021-09-09T14:44:50",
+    "oldEffectiveDate": "2015-08-31T14:59:23",
+    "newAddress1": "1002 Sheridan Ave.",
+    "oldAddress1": "1002 Sheridan Ave"
+  },
+  {
+    "change": "changed-WY-Platte-Platte County Clerk-6006",
+    "newEmail": "pcelection@plattecountywyoming.com",
+    "oldEmail": "pcclerk@plattecountywyoming.com",
+    "newEffectiveDate": "2021-09-09T14:44:50",
+    "oldEffectiveDate": "2015-08-31T14:59:23",
+    "newAddress1": "P.O. Drawer 728",
+    "oldAddress1": "PO Drawer 728"
+  },
+  {
+    "change": "changed-WY-Sheridan-Sheridan County Clerk-6007",
+    "newPhone": "(307) 674-2515",
+    "oldPhone": "(307) 674-2500",
+    "newEmail": "elections@sheridancounty.com",
+    "oldEmail": "clerk@sheridancounty.com",
+    "newEffectiveDate": "2021-09-09T14:44:50",
+    "oldEffectiveDate": "2017-09-07T12:49:46",
+    "newAddress1": "224 South Main St., Ste B-17",
+    "oldAddress1": "224 S Main St, Ste B2",
+    "newZip": "82801",
+    "oldZip": "82801-4855"
+  },
+  {
+    "change": "changed-WY-Sweetwater-Sweetwater County Clerk-6009",
+    "newPhone": "(307) 872-3733",
+    "oldPhone": "(307) 872-3732",
+    "newEmail": "elections@sweet.wy.us",
+    "oldEmail": "LaneC@sweet.wy.us",
+    "newEffectiveDate": "2021-09-09T14:44:50",
+    "oldEffectiveDate": "2019-07-29T15:52:03",
+    "newAddress1": "80 West Flaming Gorge Way, Ste 155",
+    "oldAddress1": "80 W Flaming Gorge, Ste 150",
+    "newZip": "82935",
+    "oldZip": "82935-0730"
+  },
+  {
+    "change": "changed-WY-Teton-Teton County Clerk-6010",
+    "newEmail": "elections@tetoncountywy.gov",
+    "oldEmail": "mmurphy@tetoncountywy.gov",
+    "newEffectiveDate": "2021-09-09T14:44:50",
+    "oldEffectiveDate": "2020-07-16T09:54:37"
+  },
+  {
+    "change": "changed-WY-Uinta-Uinta County Clerk-6011",
+    "newEmail": "kigoble@uintacounty.com",
+    "oldEmail": "amhutchinson@uintacounty.com",
+    "newEffectiveDate": "2021-09-09T14:44:50",
+    "oldEffectiveDate": "2017-09-07T12:49:46",
+    "newZip": "82931",
+    "oldZip": "82930-0810"
+  },
+  {
+    "change": "changed-WY-Washakie-Washakie County Clerk-6012",
+    "newEffectiveDate": "2021-09-09T14:44:50",
+    "oldEffectiveDate": "2015-08-31T14:59:23",
+    "newAddress1": "1001 Big Horn Ave., P.O. Box 260",
+    "oldAddress1": "P.O. Box 260",
+    "newZip": "82401",
+    "oldZip": "82401-0260"
+  },
+  {
+    "change": "changed-WY-Weston-Weston County Clerk-6013",
+    "newEmail": "clerk@westongov.com",
+    "oldEmail": "Becky@westongov.com",
+    "newEffectiveDate": "2021-09-09T14:44:51",
+    "oldEffectiveDate": "2019-07-29T15:52:03",
+    "newAddress1": "1 West Main",
+    "oldAddress1": "1 W Main",
+    "newZip": "82701",
+    "oldZip": "82701-2121"
+  }
+]
