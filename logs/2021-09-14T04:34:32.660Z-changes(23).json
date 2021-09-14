@@ -1,0 +1,231 @@
+[
+  {
+    "change": "changed-FL-Sumter-Sumter Supervisor of Elections-515",
+    "newEmail": "electioninfo@sumtercountyfl.gov",
+    "oldEmail": "info@sumterelections.org",
+    "newEffectiveDate": "2021-09-13T11:04:28",
+    "oldEffectiveDate": "2019-08-13T15:35:04",
+    "newAddress1": "7375 Powell Road",
+    "oldAddress1": "7375 Powell Road, Suite 125"
+  },
+  {
+    "change": "changed-IL-Carroll-Carroll County Clerk-839",
+    "newPhone": "(815) 244-0224",
+    "oldPhone": "(815) 244-0221",
+    "newEmail": "ccclerk1@carroll-county.net",
+    "oldEmail": "ccclerk3@carroll-county.net",
+    "newEffectiveDate": "2021-09-13T13:29:59",
+    "oldEffectiveDate": "2020-07-23T12:36:22",
+    "newAddress1": "P.O. BOX 152",
+    "oldAddress1": "301 N. Main St.                   PO BOX 152",
+    "newAddress2": "",
+    "oldAddress2": "P.O. Box 152"
+  },
+  {
+    "change": "changed-IL-Clinton-Clinton County Clerk-846",
+    "newEffectiveDate": "2021-09-13T13:32:47",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "850 Fairfax St.",
+    "oldAddress1": "850 Fairfax St., Rm 230        PO BOX 308",
+    "newAddress2": "",
+    "oldAddress2": "P.O. Box 308",
+    "newZip": "62231",
+    "oldZip": "62231-0308"
+  },
+  {
+    "change": "changed-IL-Coles-Coles County Clerk-847",
+    "newPhone": "(217) 348-0501",
+    "oldPhone": "(217) 348-0537",
+    "newEffectiveDate": "2021-09-13T13:34:15",
+    "oldEffectiveDate": "2019-08-30T13:09:17"
+  },
+  {
+    "change": "changed-IL-Cook-Cook County Clerk-848",
+    "newEmail": "clerk.yarbrough@cookcountyil.gov",
+    "oldEmail": "uocava.voting@cookcountyil.gov",
+    "newEffectiveDate": "2021-09-13T13:36:04",
+    "oldEffectiveDate": "2020-02-11T11:25:17",
+    "newAddress1": "118 North Clark St., Rm. 230",
+    "oldAddress1": "69 W. Washington, Ste 500",
+    "newZip": "60602",
+    "oldZip": "60602-1304"
+  },
+  {
+    "change": "changed-IL-Crawford-Crawford County Clerk-849",
+    "newEffectiveDate": "2021-09-13T13:38:18",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "100 Douglas St., P.O. Box 616",
+    "oldAddress1": "100 Douglas St.                  PO BOX 616",
+    "newAddress2": "",
+    "oldAddress2": "P.O. Box 616"
+  },
+  {
+    "change": "changed-IL-Cumberland-Cumberland County Clerk-850",
+    "newEffectiveDate": "2021-09-13T13:39:26",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "P.O. Box 146",
+    "oldAddress1": "140 Court House Square       PO BOX 146",
+    "newAddress2": "",
+    "oldAddress2": "P.O. Box 146",
+    "newZip": "62468",
+    "oldZip": "62468-0146"
+  },
+  {
+    "change": "changed-IL-DeKalb-DeKalb County Clerk-852",
+    "newName": "DeKalb County Clerk",
+    "oldName": "De Kalb County Clerk",
+    "newEffectiveDate": "2021-09-13T13:43:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newJurisdictionName": "DeKalb",
+    "oldJurisdictionName": "De Kalb"
+  },
+  {
+    "change": "changed-IL-Douglas-Douglas County Clerk-854",
+    "newPhone": "(217) 253-2442",
+    "oldPhone": "(217) 253-2411",
+    "newEffectiveDate": "2021-09-13T13:41:44",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "401 S. Center St.",
+    "oldAddress1": "401 S. Center St., Suite 203  PO BOX 467",
+    "newAddress2": "",
+    "oldAddress2": "P.O. Box 467",
+    "newZip": "61953",
+    "oldZip": "61953-0467"
+  },
+  {
+    "change": "changed-IL-DuPage-DuPage County Clerk - Election Division-855",
+    "newName": "DuPage County Clerk - Election Division",
+    "oldName": "Dupage County Clerk - Election Division",
+    "newEffectiveDate": "2021-09-13T13:44:39",
+    "oldEffectiveDate": "2019-10-28T11:35:24",
+    "newJurisdictionName": "DuPage",
+    "oldJurisdictionName": "Dupage"
+  },
+  {
+    "change": "changed-IL-Fayette-Fayette County Clerk-860",
+    "newEmail": "jbarker@fayettecountyillinois.org",
+    "oldEmail": "vconder@fayettecountyillinois.org",
+    "newEffectiveDate": "2021-09-13T13:46:51",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "221 South 7th St.",
+    "oldAddress1": "221 South 7th Street, Rm. 106 PO BOX 401",
+    "newAddress2": "",
+    "oldAddress2": "P.O. Box 401"
+  },
+  {
+    "change": "changed-IL-Hamilton-Hamilton County Clerk-868",
+    "newEffectiveDate": "2021-09-13T14:00:32",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "100 S Jackson St., Rm. 2",
+    "oldAddress1": "100 S Jackson St"
+  },
+  {
+    "change": "changed-IL-Johnson-Johnson County Clerk-879",
+    "newEmail": "CountyClerk@johnsonco.illinois.gov",
+    "oldEmail": "countyclerk@johnsonco.illinois.gov",
+    "newEffectiveDate": "2021-09-13T14:05:29",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "117 N. 5th St., P.O. Box 96",
+    "oldAddress1": "117 N. 5th Street                  PO BOX 96",
+    "newAddress2": "",
+    "oldAddress2": "P.O. Box  96",
+    "newZip": "62995",
+    "oldZip": "62995-0096"
+  },
+  {
+    "change": "changed-IL-Lake-Lake County Clerk-885",
+    "newPhone": "847-377-2410",
+    "oldPhone": "847-377-2400",
+    "newEffectiveDate": "2021-09-13T14:07:44",
+    "oldEffectiveDate": "2019-08-30T13:09:17"
+  },
+  {
+    "change": "changed-IL-Lee-Lee County Clerk-887",
+    "newFax": "(815) 284-6492",
+    "oldFax": "(815) 288-6157",
+    "newEmail": "npetersen@countyoflee.org",
+    "oldEmail": "election@countyoflee.org",
+    "newEffectiveDate": "2021-09-13T14:09:39",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "112 E. 2nd St.",
+    "oldAddress1": "112 E. Second Street           PO BOX 329",
+    "newAddress2": "",
+    "oldAddress2": "P.O. Box 329"
+  },
+  {
+    "change": "changed-IL-Menard-Menard County Clerk-900",
+    "newEmail": "mgum@menardcountyil.gov",
+    "oldEmail": "mgum@co.menard.il.us",
+    "newEffectiveDate": "2021-09-13T14:14:46",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newZip": "62675",
+    "oldZip": "62675-0465"
+  },
+  {
+    "change": "changed-IL-Ogle-Ogle County Clerk-906",
+    "newEffectiveDate": "2021-09-13T14:18:02",
+    "oldEffectiveDate": "2020-07-27T16:08:27",
+    "newAddress1": "105 South 5th St., Ste 104",
+    "oldAddress1": "105 S 5th St",
+    "newZip": "61061",
+    "oldZip": "61061-1602"
+  },
+  {
+    "change": "changed-IL-Randolph-Randolph County Clerk-915",
+    "newPhone": "(618) 826-5000 x191",
+    "oldPhone": "(618) 826-5000",
+    "newEffectiveDate": "2021-09-13T14:20:56",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "1 Taylor St., Rm 202",
+    "oldAddress1": "1 Taylor St, Rm 202"
+  },
+  {
+    "change": "changed-IL-Scott-Scott County Clerk-922",
+    "newEffectiveDate": "2021-09-13T14:23:28",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "35 E. Market St.",
+    "oldAddress1": "35 E. Market St"
+  },
+  {
+    "change": "changed-IL-Shelby-Shelby County Clerk-923",
+    "newEffectiveDate": "2021-09-13T14:24:51",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "301 E. Main, P.O. Box 230",
+    "oldAddress1": "301 E. Main Street",
+    "newAddress2": "",
+    "oldAddress2": "P.O. Box 230",
+    "newZip": "62565",
+    "oldZip": "62565-0230"
+  },
+  {
+    "change": "changed-IL-Stephenson-Stephenson County Clerk-926",
+    "newEmail": "coclerk@stephensoncountyil.gov",
+    "oldEmail": "votte@co.stephenson.il.us",
+    "newEffectiveDate": "2021-09-13T14:26:16",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "50 West Douglas, Ste 500",
+    "oldAddress1": "50 W Douglas, Ste 500"
+  },
+  {
+    "change": "changed-IL-Tazewell-Tazewell County Clerk-927",
+    "newPhone": "(309) 477-2267",
+    "oldPhone": "(309) 477-2264",
+    "newEmail": "countyclerk@tazewell.com",
+    "oldEmail": "JCAckerman@tazewell.com",
+    "newEffectiveDate": "2021-09-13T14:27:41",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "11 South 4th St., Ste 203",
+    "oldAddress1": "11 S. 4th St., Ste 203"
+  },
+  {
+    "change": "changed-IL-Wayne-Wayne County Clerk-933",
+    "newEffectiveDate": "2021-09-13T14:30:19",
+    "oldEffectiveDate": "2019-08-30T13:09:18",
+    "newAddress1": "301 East Main St.",
+    "oldAddress1": "301 E. Main St. Ste. 203       PO BOX 187",
+    "newAddress2": "",
+    "oldAddress2": "P.O. Box 187",
+    "newZip": "62837",
+    "oldZip": "62837-0187"
+  }
+]
