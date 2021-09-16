@@ -1,0 +1,945 @@
+[
+  {
+    "change": "changed-IL-Adams-Adams County Clerk-830",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "507 Vermont St.",
+    "oldAddress1": "507 Vermont Street"
+  },
+  {
+    "change": "changed-IL-Alexander-Alexander County Clerk-831",
+    "newEmail": "acc@alexandercountyil.org",
+    "oldEmail": "acc@lazernetwireless.net",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "2000 Washington Ave.",
+    "oldAddress1": "2000 Washington Ave",
+    "newZip": "62914",
+    "oldZip": "62914-1717"
+  },
+  {
+    "change": "changed-IL-Bloomington-Bloomington City Board of Election Commissioners-833",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "115 East Washington St, Rm 403",
+    "oldAddress1": "115 E. Washington St, Rm 403",
+    "newZip": "61701",
+    "oldZip": "61702"
+  },
+  {
+    "change": "changed-IL-Bond-Bond County Clerk-834",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "203 West College Ave.",
+    "oldAddress1": "203 W College Ave."
+  },
+  {
+    "change": "changed-IL-Boone-Boone County Clerk-835",
+    "newEmail": "jbliss@boonecountyil.org",
+    "oldEmail": "jstapler@boonecountyil.org",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "1212 Logan Ave., Ste 103",
+    "oldAddress1": "1212 Logan Avenue, Ste 103"
+  },
+  {
+    "change": "changed-IL-Brown-Brown County Clerk-836",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "200 Court St., Rm 4",
+    "oldAddress1": "200 Court St, Rm 4",
+    "newZip": "62353",
+    "oldZip": "62353-1285"
+  },
+  {
+    "change": "changed-IL-Bureau-Bureau County Clerk-837",
+    "newEffectiveDate": "2021-09-15T12:20:50",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "700 South Main St., Rm 104",
+    "oldAddress1": "700 S Main, Rm 104",
+    "newZip": "61356",
+    "oldZip": "61356-2078"
+  },
+  {
+    "change": "changed-IL-Calhoun-Calhoun County Clerk-838",
+    "newPhone": "(618) 576-9700 x2",
+    "oldPhone": "(618) 576-9700",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "301 South County Rd.",
+    "oldAddress1": "301 S. County Road",
+    "newZip": "62047",
+    "oldZip": "62047-0187"
+  },
+  {
+    "change": "changed-IL-Carroll-Carroll County Clerk-839",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2021-09-13T13:29:59",
+    "newAddress1": "P.O. Box 152",
+    "oldAddress1": "P.O. BOX 152",
+    "newAddress2": "P.O. Box 152",
+    "oldAddress2": ""
+  },
+  {
+    "change": "changed-IL-Cass-Cass County Clerk-840",
+    "newPhone": "(217) 452-2277 x4",
+    "oldPhone": "(217) 452-7217",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "100 East Springfield St.",
+    "oldAddress1": "100 E. Springfield St."
+  },
+  {
+    "change": "changed-IL-Champaign-Champaign County Clerk-841",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2020-08-03T13:26:22",
+    "newAddress1": "1776 East Washington St.",
+    "oldAddress1": "1776 E. Washington St.",
+    "newZip": "61802",
+    "oldZip": "61802-4578"
+  },
+  {
+    "change": "changed-IL-Chicago-Chicago City Board of Election Commissioners-842",
+    "newFax": "(312) 269-0003",
+    "oldFax": "(312) 269-0626",
+    "newPhone": "(312) 269-7970",
+    "oldPhone": "(312) 269-7865",
+    "newEmail": "cboe@chicagoelections.gov",
+    "oldEmail": "fpca@chicagoelections.gov",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2020-06-01T12:28:03",
+    "newAddress1": "69 West Washington, Ste 600 & 800",
+    "oldAddress1": "69 W. Washington, Ste 600",
+    "newZip": "60602",
+    "oldZip": "60602-3012"
+  },
+  {
+    "change": "changed-IL-Christian-Christian County Clerk-843",
+    "newPhone": "(217) 824-4969 x236",
+    "oldPhone": "(217) 824-4969",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-09-06T15:43:50",
+    "newAddress1": "101 South Main St., P.O. Box 647",
+    "oldAddress1": "PO BOX 647",
+    "newZip": "62568",
+    "oldZip": "62568-0647"
+  },
+  {
+    "change": "changed-IL-Clark-Clark County Clerk-844",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "501 Archer Ave.",
+    "oldAddress1": "501 Archer Avenue",
+    "newZip": "62441",
+    "oldZip": "62441-1275"
+  },
+  {
+    "change": "changed-IL-Clay-Clay County Clerk-845",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "111 East Chestnut St., P.O. Box 160",
+    "oldAddress1": "111 Chestnut St. Room 106    PO BOX 160",
+    "newZip": "62858",
+    "oldZip": "62858-0160"
+  },
+  {
+    "change": "changed-IL-Clinton-Clinton County Clerk-846",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2021-09-13T13:32:47",
+    "newAddress2": "P.O. Box 308",
+    "oldAddress2": ""
+  },
+  {
+    "change": "changed-IL-Coles-Coles County Clerk-847",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2021-09-13T13:34:15",
+    "newAddress1": "651 Jackson Ave., Rm 122",
+    "oldAddress1": "651 Jackson Avenue, Rm 122",
+    "newZip": "61920",
+    "oldZip": "61920-2053"
+  },
+  {
+    "change": "changed-IL-Cook-Cook County Clerk-848",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2021-09-13T13:36:04",
+    "newAddress1": "118 North Clark St., Rm 230",
+    "oldAddress1": "118 North Clark St., Rm. 230"
+  },
+  {
+    "change": "changed-IL-Crawford-Crawford County Clerk-849",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2021-09-13T13:38:18",
+    "newAddress2": "P.O. Box 616",
+    "oldAddress2": ""
+  },
+  {
+    "change": "changed-IL-Cumberland-Cumberland County Clerk-850",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2021-09-13T13:39:26",
+    "newAddress2": "P.O. Box 146",
+    "oldAddress2": ""
+  },
+  {
+    "change": "changed-IL-Danville-Danville City Board of Election Commissioners-851",
+    "newPhone": "(217) 554-1930",
+    "oldPhone": "(217) 554-1931",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17"
+  },
+  {
+    "change": "changed-IL-De Witt-De Witt County Clerk-853",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "201 West Washington St.",
+    "oldAddress1": "201 W. Washington St."
+  },
+  {
+    "change": "changed-IL-DeKalb-DeKalb County Clerk-852",
+    "newEmail": "djohnson@dekalbcounty.org",
+    "oldEmail": "elections@dekalbcounty.org",
+    "newEffectiveDate": "2021-09-15T12:20:50",
+    "oldEffectiveDate": "2021-09-13T13:43:08",
+    "newAddress1": "110 East Sycamore St.",
+    "oldAddress1": "110 E. Sycamore St."
+  },
+  {
+    "change": "changed-IL-Douglas-Douglas County Clerk-854",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2021-09-13T13:41:44",
+    "newAddress1": "401 South Center St.",
+    "oldAddress1": "401 S. Center St.",
+    "newAddress2": "P.O. Box 467",
+    "oldAddress2": ""
+  },
+  {
+    "change": "changed-IL-DuPage-DuPage County Clerk - Election Division-855",
+    "newFax": "(630) 407-5630",
+    "oldFax": "(630) 407-5633",
+    "newEmail": "elections@dupageco.org",
+    "oldEmail": "dec.uocava@dupageco.org",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2021-09-13T13:44:39",
+    "newAddress1": "421 North County Farm Rd.",
+    "oldAddress1": "421 N. County Farm Rd          PO BOX 1087"
+  },
+  {
+    "change": "changed-IL-East St. Louis-E. St. Louis City Board of Election Commissioners-856",
+    "newFax": "(618) 646-9049",
+    "oldFax": "(618) 271-8194",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "301 River Park Dr., Ste 300",
+    "oldAddress1": "301 River Park Dr, Ste 300",
+    "newCity": "East St. Louis",
+    "oldCity": "E St. Louis"
+  },
+  {
+    "change": "changed-IL-Edgar-Edgar County Clerk-857",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "115 West Court St., Rm J",
+    "oldAddress1": "115 W. Court St, Rm J"
+  },
+  {
+    "change": "changed-IL-Edwards-Edwards County Clerk-858",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "50 East Main St., Ste. 12",
+    "oldAddress1": "50 E. Main St., Ste. 12"
+  },
+  {
+    "change": "changed-IL-Effingham-Effingham County Clerk-859",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "101 North 4th St., Ste. 201        PO BOX 628",
+    "oldAddress1": "101 N. 4th St., Ste. 201        PO BOX 628",
+    "newZip": "62401",
+    "oldZip": "62401-0628"
+  },
+  {
+    "change": "changed-IL-Fayette-Fayette County Clerk-860",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2021-09-13T13:46:51",
+    "newAddress2": "P.O. Box 401",
+    "oldAddress2": ""
+  },
+  {
+    "change": "changed-IL-Ford-Ford County Clerk-861",
+    "newPhone": "(217) 379-9400",
+    "oldPhone": "(217) 379-2721",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "200 West State St., Rm 101",
+    "oldAddress1": "200 W. State St, Rm 101"
+  },
+  {
+    "change": "changed-IL-Franklin-Franklin County Clerk-862",
+    "newPhone": "(618) 435-9800 x208",
+    "oldPhone": "(618) 438-3221",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "901 Public Square",
+    "oldAddress1": "100 Public Square               PO BOX 607",
+    "newZip": "62812",
+    "oldZip": "62812-0607"
+  },
+  {
+    "change": "changed-IL-Fulton-Fulton County Clerk-863",
+    "newFax": "",
+    "oldFax": "(309) 547-3326",
+    "newEmail": "pobrian@fultonco.org",
+    "oldEmail": "jbankert@fultonco.org",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-09-03T10:31:29",
+    "newAddress1": "100 North Main St.",
+    "oldAddress1": "100 N. Main St., Rm. 105  PO BOX 226"
+  },
+  {
+    "change": "changed-IL-Galesburg-Galesburg City Board of Election Commissioners-864",
+    "newEmail": "vote@ci.galesburg.il.us",
+    "oldEmail": "lwatson@ci.galesburg.il.us",
+    "newEffectiveDate": "2021-09-15T12:20:50",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "55 West Tompkins St.",
+    "oldAddress1": "55 W. Tompkins St.             PO BOX 1387",
+    "newZip": "61402",
+    "oldZip": "61402-1387"
+  },
+  {
+    "change": "changed-IL-Gallatin-Gallatin County Clerk-865",
+    "newEmail": "dianegalcoclerk@gmail.com",
+    "oldEmail": "galcoelections@gmail.com",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "P.O. Box 550",
+    "oldAddress1": "484 N. Lincoln Blvd., West    PO BOX 550",
+    "newZip": "62984",
+    "oldZip": "62984-0550"
+  },
+  {
+    "change": "changed-IL-Greene-Greene County Clerk-866",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "519 North Main St.",
+    "oldAddress1": "519 N. Main St."
+  },
+  {
+    "change": "changed-IL-Grundy-Grundy County Clerk-867",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "111 East Washington St., Rm 12",
+    "oldAddress1": "111 E. Washington St. Rm 12 PO BOX 675",
+    "newZip": "60450",
+    "oldZip": "60450-0675"
+  },
+  {
+    "change": "changed-IL-Hamilton-Hamilton County Clerk-868",
+    "newFax": "",
+    "oldFax": "(618) 643-2756",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2021-09-13T14:00:32",
+    "newAddress1": "100 South Jackson St., Rm 2",
+    "oldAddress1": "100 S Jackson St., Rm. 2"
+  },
+  {
+    "change": "changed-IL-Hancock-Hancock County Clerk-869",
+    "newEmail": "wilde-tillman@hancockcounty-il.gov",
+    "oldEmail": "hancockcovoters@hotmail.com",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "P.O. Box 39",
+    "oldAddress1": "500 Main St                         PO BOX 39",
+    "newZip": "62321",
+    "oldZip": "62321-0039"
+  },
+  {
+    "change": "changed-IL-Hardin-Hardin County Clerk-870",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "P.O. Box 187",
+    "oldAddress1": "102 East Market Street          PO BOX 187",
+    "newZip": "62931",
+    "oldZip": "62931-0187"
+  },
+  {
+    "change": "changed-IL-Henderson-Henderson County Clerk-871",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "307 Warren St., P.O. Box 308",
+    "oldAddress1": "307 Warren St.                     PO BOX 308",
+    "newZip": "61469",
+    "oldZip": "61469-0308"
+  },
+  {
+    "change": "changed-IL-Henry-Henry County Clerk-872",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "307 West Center St.",
+    "oldAddress1": "307 W. Center St"
+  },
+  {
+    "change": "changed-IL-Iroquois-Iroquois County Clerk-873",
+    "newEmail": "registerandvote@co.iroquois.il.us",
+    "oldEmail": "iroquoiscountyclerk@co.iroquois.il.us",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "1001 East Grant",
+    "oldAddress1": "1001 E. Grant, Rm 104"
+  },
+  {
+    "change": "changed-IL-Jackson-Jackson County Clerk-874",
+    "newEmail": "Frank.Byrd@jacksoncounty-il.gov",
+    "oldEmail": "frank.byrd@jacksoncounty-il.gov",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17"
+  },
+  {
+    "change": "changed-IL-Jasper-Jasper County Clerk-875",
+    "newEmail": "jaspercountyclerkil@gmail.com",
+    "oldEmail": "atarr@jaspercountyil.org",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "204 West Washington St., Ste 2",
+    "oldAddress1": "204 W. Washington, Ste 2"
+  },
+  {
+    "change": "changed-IL-Jefferson-Jefferson County Clerk-876",
+    "newPhone": "(618) 244-8020 x3",
+    "oldPhone": "(618) 244-8020",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "100 South 10th St., Rm 105",
+    "oldAddress1": "100 S 10th St, Rm 105"
+  },
+  {
+    "change": "changed-IL-Jersey-Jersey County Clerk-877",
+    "newPhone": "(618) 498-5571 x115",
+    "oldPhone": "(618) 498-5571",
+    "newEmail": "pwarford@jerseycounty-il.gov",
+    "oldEmail": "countyclerk@jerseycounty-il.us",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "200 North LaFayette St., Ste 1",
+    "oldAddress1": "200 N. LaFayette                 PO BOX 216"
+  },
+  {
+    "change": "changed-IL-Jo Daviess-Jo Daviess County Clerk-878",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "330 North Bench St.",
+    "oldAddress1": "330 N. Bench St., Rm. 108"
+  },
+  {
+    "change": "changed-IL-Johnson-Johnson County Clerk-879",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2021-09-13T14:05:29",
+    "newAddress1": "117 North 5th St., P.O. Box 96",
+    "oldAddress1": "117 N. 5th St., P.O. Box 96",
+    "newAddress2": "P.O. Box  96",
+    "oldAddress2": ""
+  },
+  {
+    "change": "changed-IL-Kane-Kane County Clerk-880",
+    "newFax": "(630) 208-8112",
+    "oldFax": "(630) 232-5870",
+    "newEmail": "countyclerk@co.kane.il.us",
+    "oldEmail": "kcclerkcunningham@co.kane.il.us",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "719 South Batavia Ave., Bldg. B",
+    "oldAddress1": "719 S. Batavia Ave, Bldg. B"
+  },
+  {
+    "change": "changed-IL-Kankakee-Kankakee County Clerk-881",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "189 East Court St",
+    "oldAddress1": "189 E. Court St"
+  },
+  {
+    "change": "changed-IL-Kendall-Kendall County Clerk-882",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "111 West Fox St.",
+    "oldAddress1": "111 W. Fox Street"
+  },
+  {
+    "change": "changed-IL-Knox-Knox County Clerk-883",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "200 South Cherry St.",
+    "oldAddress1": "200 S. Cherry St, 1st Floor"
+  },
+  {
+    "change": "changed-IL-La Salle-La Salle County Clerk-884",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "707 East Etna Rd.",
+    "oldAddress1": "707 Etna Rd                        PO BOX 430",
+    "newZip": "61350",
+    "oldZip": "61350-0430"
+  },
+  {
+    "change": "changed-IL-Lake-Lake County Clerk-885",
+    "newPhone": "(847) 377-2410",
+    "oldPhone": "847-377-2410",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2021-09-13T14:07:44",
+    "newAddress1": "18 North County Rd., Rm 101",
+    "oldAddress1": "18 N. County Rd, Rm 101"
+  },
+  {
+    "change": "changed-IL-Lawrence-Lawrence County Clerk-886",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "1100 State St.",
+    "oldAddress1": "1100 State St"
+  },
+  {
+    "change": "changed-IL-Lee-Lee County Clerk-887",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2021-09-13T14:09:39",
+    "newAddress1": "112 East 2nd St.",
+    "oldAddress1": "112 E. 2nd St.",
+    "newAddress2": "P.O. Box 329",
+    "oldAddress2": ""
+  },
+  {
+    "change": "changed-IL-Livingston-Livingston County Clerk-888",
+    "newEmail": "gsmythe@livingstoncountyil.gov",
+    "oldEmail": "kmasching@livingstoncountyil.gov",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "112 West Madison St., P.O. Box 618",
+    "oldAddress1": "112 W. Madison St. Rm 105  PO BOX 618"
+  },
+  {
+    "change": "changed-IL-Logan-Logan County Clerk-889",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "601 Broadway St.",
+    "oldAddress1": "601 Broadway Street, Room 20"
+  },
+  {
+    "change": "changed-IL-Macon-Macon County Clerk-890",
+    "newPhone": "(217) 424-1305",
+    "oldPhone": "(217) 424-1309",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "141 South Main St., Rm 104",
+    "oldAddress1": "141 S Main St, Rm 104"
+  },
+  {
+    "change": "changed-IL-Macoupin-Macoupin County Clerk-891",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "201 East Main St., P.O. Box 107",
+    "oldAddress1": "201 E. Main St.                   PO BOX 107",
+    "newZip": "62626",
+    "oldZip": "62626-0107"
+  },
+  {
+    "change": "changed-IL-Madison-Madison County Clerk-892",
+    "newPhone": "(618) 296-4484",
+    "oldPhone": "(618) 692-6290",
+    "newEmail": "elections@macoupincountyil.gov",
+    "oldEmail": "ddming@co.madison.il.us",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "157 North Main St., Ste 109       PO BOX 218",
+    "oldAddress1": "157 N. Main St, Ste 109       PO BOX 218",
+    "newZip": "62025",
+    "oldZip": "62025-0218"
+  },
+  {
+    "change": "changed-IL-Marion-Marion County Clerk-893",
+    "newEmail": "CountyClerk@MarionCo.Illinois.gov",
+    "oldEmail": "countyclerk@marionco.illinois.gov",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "100 East Main, P.O. Box 637",
+    "oldAddress1": "100 E. Main  Street            PO BOX 637",
+    "newZip": "62881",
+    "oldZip": "62881-0637"
+  },
+  {
+    "change": "changed-IL-Marshall-Marshall County Clerk-894",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "122 North Prairie St., P.O. Box 328",
+    "oldAddress1": "122 North Prairie Street       PO BOX 328",
+    "newZip": "61540",
+    "oldZip": "61540-0328"
+  },
+  {
+    "change": "changed-IL-Mason-Mason County Clerk-895",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "100 North Broadway, P.O. Box 77",
+    "oldAddress1": "100 N. Broadway                PO BOX 77",
+    "newZip": "62644",
+    "oldZip": "62644-0077"
+  },
+  {
+    "change": "changed-IL-Massac-Massac County Clerk-896",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "1 Superman Square, Rm 2A, P.O. Box 429",
+    "oldAddress1": "1 Superman Square, Rm 2A  PO BOX 429",
+    "newZip": "62960",
+    "oldZip": "62960-0429"
+  },
+  {
+    "change": "changed-IL-McDonough-McDonough County Clerk-897",
+    "newFax": "(309) 837-1154",
+    "oldFax": "(309) 836-3368",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "1 Courthouse Square",
+    "oldAddress1": "#1 Courthouse Sq"
+  },
+  {
+    "change": "changed-IL-McHenry-McHenry County Clerk-898",
+    "newPhone": "(815) 334-4242",
+    "oldPhone": "(815) 334-4234",
+    "newEmail": "countyclerk@mchenrycountyil.gov",
+    "oldEmail": "jjtirio@mchenrycountyil.gov",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "2200 North Seminary Ave.",
+    "oldAddress1": "2200 N. Seminary Avenue"
+  },
+  {
+    "change": "changed-IL-McLean-McLean County Clerk-899",
+    "newFax": "",
+    "oldFax": "(309) 888-5932",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "115 East Washington St., Rm 102",
+    "oldAddress1": "115 E. Washington, Rm 102  PO BOX 2400",
+    "newZip": "61702",
+    "oldZip": "61702-2400"
+  },
+  {
+    "change": "changed-IL-Menard-Menard County Clerk-900",
+    "newFax": "",
+    "oldFax": "(217) 632-4301",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2021-09-13T14:14:46",
+    "newAddress1": "102 South 7th St.",
+    "oldAddress1": "102 S. 7th Street"
+  },
+  {
+    "change": "changed-IL-Mercer-Mercer County Clerk-901",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "100 Southeast 3rd St.",
+    "oldAddress1": "100 Southeast 3rd Street",
+    "newZip": "61231",
+    "oldZip": "61231-0066"
+  },
+  {
+    "change": "changed-IL-Monroe-Monroe County Clerk-902",
+    "newFax": "",
+    "oldFax": "(618) 939-8639",
+    "newPhone": "(618) 939-8623",
+    "oldPhone": "(618) 939-8681",
+    "newEmail": "countyclerk@monroecountyil.gov",
+    "oldEmail": "jmclean@monroecountyil.gov",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "100 South Main St.",
+    "oldAddress1": "100 S. Main Street"
+  },
+  {
+    "change": "changed-IL-Montgomery-Montgomery County Clerk-903",
+    "newEmail": "countyclerk@montgomeryco.com",
+    "oldEmail": "sandyl@montgomeryco.com",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "1 Courthouse Square, Rm 102, P.O. Box 595",
+    "oldAddress1": "#1 Courthouse Sq., Rm 102   PO BOX 595"
+  },
+  {
+    "change": "changed-IL-Morgan-Morgan County Clerk-904",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "300 West State St.",
+    "oldAddress1": "300 W. State Street            PO BOX 1387",
+    "newZip": "62650",
+    "oldZip": "62651-1387"
+  },
+  {
+    "change": "changed-IL-Moultrie-Moultrie County Clerk-905",
+    "newEmail": "georgia.england@co.moultrie.il.us",
+    "oldEmail": "Georgia.England@co.moultrie.il.us",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2020-03-02T13:08:40",
+    "newAddress1": "10 South Main, Ste 6",
+    "oldAddress1": "10 S. Main, Ste 6"
+  },
+  {
+    "change": "changed-IL-Peoria-Peoria County Election Commission-907",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "4422 Brandywine Dr., Suite 1",
+    "oldAddress1": "4422 Brandywine Drive, Suite 1"
+  },
+  {
+    "change": "changed-IL-Perry-Perry County Clerk-909",
+    "newEmail": "countyclerk@perryil.com",
+    "oldEmail": "blipe@perryil.com",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "3764 State Route 13/127, P.O. Box 438",
+    "oldAddress1": "3764 State Route 13/127     PO BOX 438",
+    "newZip": "62274",
+    "oldZip": "62274-0438"
+  },
+  {
+    "change": "changed-IL-Piatt-Piatt County Clerk-910",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "101 West Washington St., P.O. Box 558",
+    "oldAddress1": "101 W. Washington Street    PO BOX 558",
+    "newZip": "61856",
+    "oldZip": "61856-0558"
+  },
+  {
+    "change": "changed-IL-Pike-Pike County Clerk-911",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "121 East Washington St.",
+    "oldAddress1": "121 E. Washington Street"
+  },
+  {
+    "change": "changed-IL-Pope-Pope County Clerk-912",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "310 East Main St., P.O. Box 216",
+    "oldAddress1": "310 East Main Street            PO BOX 216",
+    "newZip": "62938",
+    "oldZip": "62938-0216"
+  },
+  {
+    "change": "changed-IL-Pulaski-Pulaski County Clerk-913",
+    "newEmail": "jhancock@pulaskicountyil.gov",
+    "oldEmail": "jhancock029@gmail.com",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "P.O. Box 118",
+    "oldAddress1": "500 Illinois Avenue                PO BOX 118"
+  },
+  {
+    "change": "changed-IL-Putnam-Putnam County Clerk-914",
+    "newEmail": "tina.dolder@co.putnam.il.us",
+    "oldEmail": "dankuhn@mchsi.com",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "120 North 4th St., P.O. Box 236",
+    "oldAddress1": "120 N. 4th Street                PO BOX 236",
+    "newZip": "61327",
+    "oldZip": "61327-0236"
+  },
+  {
+    "change": "changed-IL-Richland-Richland County Clerk-916",
+    "newEmail": "countyclerk@richlandcounty.illinois.gov",
+    "oldEmail": "countyclerk@richlandcogov.com",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "103 West Main St.",
+    "oldAddress1": "103 W. Main St"
+  },
+  {
+    "change": "changed-IL-Rock Island-Rock Island County Clerk-917",
+    "newPhone": "(309) 558-3555",
+    "oldPhone": "(309) 558-3571",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "1504 3rd Ave.",
+    "oldAddress1": "1504 3rd Avenue"
+  },
+  {
+    "change": "changed-IL-Rockford-Rockford City Board of Election Commissioners-918",
+    "newEffectiveDate": "2021-09-15T12:20:50",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "301 South 6th St.",
+    "oldAddress1": "301 S 6th St",
+    "newZip": "61104",
+    "oldZip": "61104-2195"
+  },
+  {
+    "change": "changed-IL-Saline-Saline County Clerk-919",
+    "newPhone": "(618) 253-8197",
+    "oldPhone": "(618) 253-3028",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "10 East Poplar St., Ste. 17",
+    "oldAddress1": "10 E. Poplar St., Ste. 17"
+  },
+  {
+    "change": "changed-IL-Sangamon-Sangamon County Clerk-920",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "200 South 9th St., Rm 105",
+    "oldAddress1": "200 S. Ninth St., Rm 101 & 105"
+  },
+  {
+    "change": "changed-IL-Schuyler-Schuyler County Clerk-921",
+    "newEmail": "elections@schuylercounty.org",
+    "oldEmail": "clerk85@schuylercounty.org",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "102 South Congress St., Ste 104",
+    "oldAddress1": "102 South Congress, Ste 104",
+    "newZip": "62681",
+    "oldZip": "62681-0200"
+  },
+  {
+    "change": "changed-IL-Scott-Scott County Clerk-922",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2021-09-13T14:23:28",
+    "newAddress1": "35 East Market St",
+    "oldAddress1": "35 E. Market St."
+  },
+  {
+    "change": "changed-IL-Shelby-Shelby County Clerk-923",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2021-09-13T14:24:51",
+    "newAddress1": "301 East Main, P.O. Box 230",
+    "oldAddress1": "301 E. Main, P.O. Box 230",
+    "newAddress2": "P.O. Box 230",
+    "oldAddress2": ""
+  },
+  {
+    "change": "changed-IL-St. Clair-St. Clair County Clerk-924",
+    "newPhone": "(618) 825-2377",
+    "oldPhone": "(618) 825-2380",
+    "newEmail": "countyclerk@co.st-clair.il.us",
+    "oldEmail": "elections@co.st-clair.il.us",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "#10 Public Square",
+    "oldAddress1": "10 Public Square"
+  },
+  {
+    "change": "changed-IL-Stark-Stark County Clerk-925",
+    "newEmail": "elections@starkco.illinois.gov",
+    "oldEmail": "starkcoclerkdep@gmail.com",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "130 West Main St.",
+    "oldAddress1": "130 W. Main Street             PO BOX 97",
+    "newZip": "61483",
+    "oldZip": "61483-0097"
+  },
+  {
+    "change": "changed-IL-Union-Union County Clerk-928",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "309 West Market St., Rm 116",
+    "oldAddress1": "309 W. Market St., Rm 116"
+  },
+  {
+    "change": "changed-IL-Vermilion-Vermilion County Clerk-929",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "201 North Vermilion St., Ste 110",
+    "oldAddress1": "201 N. Vermilion St. 1st Floor"
+  },
+  {
+    "change": "changed-IL-Wabash-Wabash County Clerk-930",
+    "newEmail": "wccr1@wabashcounty.net",
+    "oldEmail": "wccr1@yahoo.com",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "401 North Market St., P.O. Box 277",
+    "oldAddress1": "401 N. Market Street            PO BOX 277",
+    "newZip": "62863",
+    "oldZip": "62863-0277"
+  },
+  {
+    "change": "changed-IL-Warren-Warren County Clerk-931",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:17",
+    "newAddress1": "100 West Broadway",
+    "oldAddress1": "100 W. Broadway"
+  },
+  {
+    "change": "changed-IL-Washington-Washington County Clerk-932",
+    "newPhone": "(618) 327-4800 x300",
+    "oldPhone": "(618) 327-4800",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:18",
+    "newAddress1": "101 East St Louis St.",
+    "oldAddress1": "101 E St Louis St"
+  },
+  {
+    "change": "changed-IL-Wayne-Wayne County Clerk-933",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2021-09-13T14:30:19",
+    "newAddress2": "P.O. Box 187",
+    "oldAddress2": ""
+  },
+  {
+    "change": "changed-IL-White-White County Clerk-934",
+    "newFax": "",
+    "oldFax": "(618) 382-2322",
+    "newPhone": "(618) 382-7211 x1",
+    "oldPhone": "(618) 382-7211",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:18",
+    "newAddress1": "301 East Main St.",
+    "oldAddress1": "301 E. Main St.                  PO BOX 339",
+    "newZip": "62821",
+    "oldZip": "62821-0339"
+  },
+  {
+    "change": "changed-IL-Whiteside-Whiteside County Clerk-935",
+    "newEffectiveDate": "2021-09-15T12:17:08",
+    "oldEffectiveDate": "2019-08-30T13:09:18",
+    "newAddress1": "200 East Knox St.",
+    "oldAddress1": "200 E. Knox St."
+  },
+  {
+    "change": "changed-IL-Will-Will County Clerk-936",
+    "newEffectiveDate": "2021-09-15T12:20:50",
+    "oldEffectiveDate": "2019-08-30T13:09:18",
+    "newAddress1": "302 North Chicago St.",
+    "oldAddress1": "302 N. Chicago St."
+  },
+  {
+    "change": "changed-IL-Williamson-Williamson County Clerk-937",
+    "newPhone": "(618) 998-2112",
+    "oldPhone": "(618) 997-1301",
+    "newEffectiveDate": "2021-09-15T12:17:09",
+    "oldEffectiveDate": "2019-08-30T13:09:18",
+    "newAddress1": "407 North Monroe St., Ste 119",
+    "oldAddress1": "407 N. Monroe St, Ste 119"
+  },
+  {
+    "change": "changed-IL-Winnebago-Winnebago County Clerk-938",
+    "newFax": "(815) 319-4251",
+    "oldFax": "(815) 969-0259",
+    "newPhone": "(815) 319-4250",
+    "oldPhone": "(815) 319-4252",
+    "newEffectiveDate": "2021-09-15T12:17:09",
+    "oldEffectiveDate": "2019-08-30T13:09:18",
+    "newAddress1": "404 Elm St.",
+    "oldAddress1": "404 Elm St., 1st Floor"
+  },
+  {
+    "change": "changed-IL-Woodford-Woodford County Clerk-939",
+    "newEffectiveDate": "2021-09-15T12:17:09",
+    "oldEffectiveDate": "2019-08-30T13:09:18",
+    "newAddress1": "115 North Main St., Rm 202",
+    "oldAddress1": "115 N. Main, Rm 202"
+  },
+  {
+    "change": "changed-WA-Garfield-Garfield County Auditor-4065",
+    "newEmail": "mlueck@co.garfield.wa.us",
+    "oldEmail": "ddeal@co.garfield.wa.us",
+    "newEffectiveDate": "2021-09-15T13:37:06",
+    "oldEffectiveDate": "2015-08-31T14:55:37"
+  }
+]
