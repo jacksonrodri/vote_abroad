@@ -1,0 +1,164 @@
+[
+  {
+    "change": "changed-NC-Alleghany-Alleghany County Board of Elections-2261",
+    "newEmail": "elections@alleghanycounty-nc.gov",
+    "oldEmail": "alleghanyelections@outlook.com",
+    "newEffectiveDate": "2021-09-16T11:09:32",
+    "oldEffectiveDate": "2019-05-24T10:47:10"
+  },
+  {
+    "change": "changed-NC-Anson-Anson County Board of Elections-2262",
+    "newEmail": "smelton@ansoncountync.gov",
+    "oldEmail": "sadams@co.anson.nc.us",
+    "newEffectiveDate": "2021-09-16T11:09:32",
+    "oldEffectiveDate": "2019-05-24T10:47:10"
+  },
+  {
+    "change": "changed-NC-Brunswick-Brunswick County Board of Elections-2268",
+    "newEmail": "absentee@brunswickcountync.gov",
+    "oldEmail": "elections@brunswickcountync.gov",
+    "newEffectiveDate": "2021-09-16T11:09:32",
+    "oldEffectiveDate": "2019-05-24T10:47:10"
+  },
+  {
+    "change": "changed-NC-Caldwell-Caldwell County Board of Elections-2272",
+    "newEffectiveDate": "2021-09-16T11:09:32",
+    "oldEffectiveDate": "2020-09-17T10:00:52"
+  },
+  {
+    "change": "changed-NC-Caswell-Caswell County Board of Elections-2275",
+    "newPhone": "(336) 694-4010",
+    "oldPhone": "(336) 694-4010 x2",
+    "newEmail": "help@caswellelections.com",
+    "oldEmail": "elections@caswellcountync.gov",
+    "newEffectiveDate": "2021-09-16T11:09:32",
+    "oldEffectiveDate": "2019-07-19T10:00:52"
+  },
+  {
+    "change": "changed-NC-Chatham-Chatham County Board of Elections-2277",
+    "newEmail": "elections@chathamcountync.gov",
+    "oldEmail": "elections@chathamnc.org",
+    "newEffectiveDate": "2021-09-16T11:09:32",
+    "oldEffectiveDate": "2019-05-24T10:47:10"
+  },
+  {
+    "change": "changed-NC-Durham-Durham County Board of Elections-2290",
+    "newEmail": "absentee@dconc.gov",
+    "oldEmail": "elections@dconc.gov",
+    "newEffectiveDate": "2021-09-16T11:09:32",
+    "oldEffectiveDate": "2019-05-24T10:47:10"
+  },
+  {
+    "change": "changed-NC-Edgecombe-Edgecombe County Board of Elections-2291",
+    "newEmail": "jerryspruell@edgecombeco.com",
+    "oldEmail": "ecboe@edgecombeco.com",
+    "newEffectiveDate": "2021-09-16T11:09:32",
+    "oldEffectiveDate": "2019-05-24T10:47:10"
+  },
+  {
+    "change": "changed-NC-Gates-Gates County Board of Elections-2295",
+    "newEmail": "elections@gatescountync.gov",
+    "oldEmail": "gatesco.boe@gmail.com",
+    "newEffectiveDate": "2021-09-16T11:09:32",
+    "oldEffectiveDate": "2019-05-24T10:47:10"
+  },
+  {
+    "change": "changed-NC-Graham-Graham County Board of Elections-2296",
+    "newEmail": "teresa.garland@grahamcounty.org",
+    "oldEmail": "elections@grahamnc.org",
+    "newEffectiveDate": "2021-09-16T11:09:32",
+    "oldEffectiveDate": "2019-05-24T10:47:10"
+  },
+  {
+    "change": "changed-NC-Granville-Granville County Board of Elections-2297",
+    "newEmail": "vote@granvillecounty.org",
+    "oldEmail": "Granvilleboe@granvillecounty.org",
+    "newEffectiveDate": "2021-09-16T11:09:32",
+    "oldEffectiveDate": "2019-07-19T10:00:52"
+  },
+  {
+    "change": "changed-NC-Guilford-Guilford County Board of Elections-2299",
+    "newFax": "(336) 641-4454",
+    "oldFax": "(336) 641-7676",
+    "newPhone": "(336) 641-6876",
+    "oldPhone": "(336) 641-3836",
+    "newEmail": "absentee@guilfordcountync.gov",
+    "oldEmail": "guilfordelections@guilfordcountync.gov",
+    "newEffectiveDate": "2021-09-16T11:09:32",
+    "oldEffectiveDate": "2019-07-19T10:00:52"
+  },
+  {
+    "change": "changed-NC-Harnett-Harnett County Board of Elections-2301",
+    "newPhone": "(336) 641-4454",
+    "oldPhone": "(910) 893-7553",
+    "newEffectiveDate": "2021-09-16T11:09:32",
+    "oldEffectiveDate": "2019-05-24T10:47:10"
+  },
+  {
+    "change": "changed-NC-Iredell-Iredell County Board of Elections-2307",
+    "newEmail": "sjordan@co.iredell.nc.us",
+    "oldEmail": "bgalliher@co.iredell.nc.us",
+    "newEffectiveDate": "2021-09-16T11:09:32",
+    "oldEffectiveDate": "2019-05-24T10:47:10"
+  },
+  {
+    "change": "changed-NC-Lincoln-Lincoln County Board of Elections-2313",
+    "newEffectiveDate": "2021-09-16T11:09:32",
+    "oldEffectiveDate": "2019-05-24T10:47:10",
+    "newAddress1": "451 Salem Church Road\nLincolnton, NC 28092",
+    "oldAddress1": "115 W. Main Street, Room 201"
+  },
+  {
+    "change": "changed-NC-New Hanover-New Hanover County Board of Elections-2323",
+    "newEffectiveDate": "2021-09-16T11:11:05",
+    "oldEffectiveDate": "2019-05-24T10:47:10",
+    "newAddress1": "1241A Military Cutoff Road",
+    "oldAddress1": "230 Government Center Drive, Suite 38",
+    "newZip": "28405",
+    "oldZip": "28403"
+  },
+  {
+    "change": "changed-NC-Polk-Polk County Board of Elections-2333",
+    "newFax": "(828) 894-3565",
+    "oldFax": "(828) 722-5242",
+    "newEffectiveDate": "2021-09-16T11:09:32",
+    "oldEffectiveDate": "2021-08-05T15:41:36"
+  },
+  {
+    "change": "changed-NC-Randolph-Randolph County Board of Elections-2334",
+    "newEffectiveDate": "2021-09-16T11:09:32",
+    "oldEffectiveDate": "2019-05-24T10:47:10",
+    "newAddress1": "1457 N. Fayetteville St.",
+    "oldAddress1": "158 Worth Street, Shaw Building"
+  },
+  {
+    "change": "changed-NC-Sampson-Sampson County Board of Elections-2340",
+    "newEmail": "nrayner@sampsonnc.com",
+    "oldEmail": "atew@sampsonnc.com",
+    "newEffectiveDate": "2021-09-16T11:09:32",
+    "oldEffectiveDate": "2019-07-19T10:00:52"
+  },
+  {
+    "change": "changed-NC-Swain-Swain County Board of Elections-2345",
+    "newEmail": "jallman@swaincountync.gov",
+    "oldEmail": "",
+    "newEffectiveDate": "2021-09-16T11:09:32",
+    "oldEffectiveDate": "2019-08-14T08:59:42"
+  },
+  {
+    "change": "changed-NC-Wake-Wake County Board of Elections-2350",
+    "newPhone": "919-404-4040",
+    "oldPhone": "(919) 856-6240",
+    "newEmail": "absentee@wakegov.com",
+    "oldEmail": "voter@wakegov.com",
+    "newEffectiveDate": "2021-09-16T11:09:32",
+    "oldEffectiveDate": "2020-05-08T10:52:32"
+  },
+  {
+    "change": "changed-VA-Dinwiddie-Dinwiddie General Registrar-3708",
+    "newEmail": "sbwray@dinwiddieva.us",
+    "oldEmail": "lbrandon@dinwiddieva.us",
+    "newEffectiveDate": "2021-09-16T12:39:29",
+    "oldEffectiveDate": "2017-09-28T08:27:01"
+  }
+]
