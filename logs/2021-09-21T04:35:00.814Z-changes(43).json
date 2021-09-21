@@ -1,0 +1,311 @@
+[
+  {
+    "change": "changed-KS-Anderson-Anderson County Clerk-1033",
+    "newEmail": "jwettsein@andersoncountyks.org",
+    "oldEmail": "jheck@andersoncountyks.org",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2017-09-25T08:30:15"
+  },
+  {
+    "change": "changed-KS-Barton-Barton County Clerk-1036",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2015-08-31T09:10:13",
+    "newAddress1": "1400 Main Street; Suite 202",
+    "oldAddress1": "1400 Main St, Rm 202"
+  },
+  {
+    "change": "changed-KS-Brown-Brown County Clerk-1038",
+    "newEmail": "dawn@brcoks.org",
+    "oldEmail": "mgormley@brcoks.org",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2017-09-25T08:30:15"
+  },
+  {
+    "change": "changed-KS-Cherokee-Cherokee County Clerk-1042",
+    "newEmail": "kyle.clerk@cherokeecounty-ks.gov",
+    "oldEmail": "rodney.clerk@cherokeecounty-ks.gov",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2017-09-25T08:30:15"
+  },
+  {
+    "change": "changed-KS-Cheyenne-Cheyenne County Clerk-1043",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2017-09-25T08:30:15",
+    "newCity": "St Francis",
+    "oldCity": "Saint Francis"
+  },
+  {
+    "change": "changed-KS-Clark-Clark County Clerk-1044",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2015-08-31T09:10:13",
+    "newAddress1": "P.O. Box 886; 913 Highland",
+    "oldAddress1": "P.O. Box 886"
+  },
+  {
+    "change": "changed-KS-Coffey-Coffey County Clerk-1047",
+    "newFax": "(620) 265-0022",
+    "oldFax": "(620) 364-8975",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2017-09-25T08:30:15"
+  },
+  {
+    "change": "changed-KS-Comanche-Comanche County Clerk-1048",
+    "newEmail": "CHuck@comanchecountyks.gov",
+    "oldEmail": "bbayne@cmcounty.co",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2017-09-25T08:30:15"
+  },
+  {
+    "change": "changed-KS-Crawford-Crawford County Clerk-1050",
+    "newEmail": "dpyle@crawfordcountykansas.org",
+    "oldEmail": "countyclerk@crawfordcountykansas.org",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2021-07-28T10:32:11",
+    "newAddress1": "P.O. Box 249; 111 East Forest",
+    "oldAddress1": "P.O. Box 249"
+  },
+  {
+    "change": "changed-KS-Decatur-Decatur County Clerk-1051",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2019-07-26T14:40:41",
+    "newAddress1": "P.O. Box 28; 120 East Hall",
+    "oldAddress1": "P.O. Box 28"
+  },
+  {
+    "change": "changed-KS-Dickinson-Dickinson County Clerk-1052",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2016-10-06T08:07:04",
+    "newAddress1": "P.O. Box 248; 109 East 1st",
+    "oldAddress1": "P.O. Box 248"
+  },
+  {
+    "change": "changed-KS-Elk-Elk County Clerk-1056",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2017-09-25T08:30:15",
+    "newAddress1": "P.O. Box 606; 127 North Pine",
+    "oldAddress1": "P.O. Box 606"
+  },
+  {
+    "change": "changed-KS-Ellis-Ellis County Clerk-1057",
+    "newEmail": "bdreiling@ellisco.net",
+    "oldEmail": "dclerk@ellisco.net",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2015-08-31T09:10:13",
+    "newAddress1": "P.O. Box 720; 718 Main",
+    "oldAddress1": "P.O. Box 720"
+  },
+  {
+    "change": "changed-KS-Ellsworth-Ellsworth County Clerk-1058",
+    "newFax": "",
+    "oldFax": "(785) 472-3818",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2019-07-26T14:40:41"
+  },
+  {
+    "change": "changed-KS-Finney-Finney County Clerk-1059",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2019-07-26T14:40:41",
+    "newAddress1": "311 N 9th St; P.O. Box M",
+    "oldAddress1": "311 N 9th St"
+  },
+  {
+    "change": "changed-KS-Gove-Gove County Clerk-1063",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2017-09-25T08:30:15",
+    "newAddress1": "P.O. Box 128; 520 Washington",
+    "oldAddress1": "P.O. Box 128"
+  },
+  {
+    "change": "changed-KS-Hamilton-Hamilton County Clerk-1069",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2017-09-25T08:30:15",
+    "newAddress1": "P.O. Box 1167; 219 North Main",
+    "oldAddress1": "P.O. Box 1167"
+  },
+  {
+    "change": "changed-KS-Harper-Harper County Clerk-1070",
+    "newPhone": "(620) 842-6055",
+    "oldPhone": "(620) 842-5555",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2015-08-31T09:10:13"
+  },
+  {
+    "change": "changed-KS-Harvey-Harvey County Clerk-1071",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2017-09-25T08:30:15",
+    "newAddress1": "P.O. Box 687; 800 North Main",
+    "oldAddress1": "P.O. Box 687"
+  },
+  {
+    "change": "changed-KS-Haskell-Haskell County Clerk-1072",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2019-07-26T14:40:41",
+    "newAddress1": "P.O. Box 518; 300 Inman Street",
+    "oldAddress1": "P.O. Box 518"
+  },
+  {
+    "change": "changed-KS-Hodgeman-Hodgeman County Clerk-1073",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2019-07-26T14:40:41",
+    "newAddress1": "500 Main; PO Box 247",
+    "oldAddress1": "500 Main"
+  },
+  {
+    "change": "changed-KS-Johnson-Johnson County Election Commissioner-1077",
+    "newEmail": "election@jocogov.org",
+    "oldEmail": "elc-uocava@jocogov.org",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2020-07-23T11:59:22"
+  },
+  {
+    "change": "changed-KS-Kearny-Kearny County Clerk-1078",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2017-09-25T08:30:15",
+    "newAddress1": "P.O. Box 86 / 304 North Main",
+    "oldAddress1": "P.O. Box 86"
+  },
+  {
+    "change": "changed-KS-Labette-Labette County Clerk-1081",
+    "newPhone": "620-795-4005",
+    "oldPhone": "620-795-4007",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2020-08-07T10:39:20",
+    "newAddress1": "P.O. Box 387; 501 Merchant",
+    "oldAddress1": "P.O. Box 387"
+  },
+  {
+    "change": "changed-KS-Lane-Lane County Clerk-1082",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2019-07-26T14:40:41",
+    "newAddress1": "P.O. Box 788; 144 South Lane",
+    "oldAddress1": "P.O. Box 788"
+  },
+  {
+    "change": "changed-KS-Lincoln-Lincoln County Clerk-1084",
+    "newEmail": "lcclerk@lincolncoks.org",
+    "oldEmail": "LCCLERK@LINCOLNCOKS.ORG",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2020-10-07T09:33:59"
+  },
+  {
+    "change": "changed-KS-Linn-Linn County Clerk-1085",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2017-09-25T08:30:15",
+    "newAddress1": "P.O. Box 350; 315 Main Street",
+    "oldAddress1": "P.O. Box 350"
+  },
+  {
+    "change": "changed-KS-Logan-Logan County Clerk-1086",
+    "newEmail": "crucker@logancountyks.gov",
+    "oldEmail": "lgclerk@st-tel.net",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2017-09-25T08:30:15"
+  },
+  {
+    "change": "changed-KS-Marion-Marion County Clerk-1088",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2019-07-26T14:40:41",
+    "newAddress1": "200 S Third, Ste 104",
+    "oldAddress1": "200 S Third, Ste 200"
+  },
+  {
+    "change": "changed-KS-Marshall-Marshall County Clerk-1089",
+    "newEmail": "swilson@mscoks.org",
+    "oldEmail": "msctyclk@bluevalley.net",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2015-08-31T09:10:13"
+  },
+  {
+    "change": "changed-KS-Meade-Meade County Clerk-1091",
+    "newFax": "(620) 873-8728",
+    "oldFax": "(620) 873-8713",
+    "newPhone": "(620) 873-8700",
+    "oldPhone": "(620) 873-8701",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2019-07-26T14:40:41"
+  },
+  {
+    "change": "changed-KS-Pawnee-Pawnee County Clerk-1104",
+    "newEmail": "Stacey.rein@pawneecountyks.org",
+    "oldEmail": "clerk@pawneecountyks.org",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2019-07-26T14:40:41"
+  },
+  {
+    "change": "changed-KS-Phillips-Phillips County Clerk-1105",
+    "newEmail": "tdierking@phillipscoks.com",
+    "oldEmail": "coclerk@ruraltel.net",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2019-07-26T14:40:41"
+  },
+  {
+    "change": "changed-KS-Pottawatomie-Pottawatomie County Clerk-1106",
+    "newEmail": "dhenry@pottcounty.org",
+    "oldEmail": "nmccarter@Pottcounty.org",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2019-07-26T14:40:41"
+  },
+  {
+    "change": "changed-KS-Pratt-Pratt County Clerk-1107",
+    "newEmail": "lvoss@prattcounty.org",
+    "oldEmail": "clerk@prattcounty.org",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2019-07-26T14:40:41"
+  },
+  {
+    "change": "changed-KS-Rice-Rice County Clerk-1111",
+    "newEmail": "aureliag@ricecocthse.com",
+    "oldEmail": "ashow@ricecocthse.com",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2015-08-31T09:10:13"
+  },
+  {
+    "change": "changed-KS-Scott-Scott County Clerk-1117",
+    "newEmail": "scottclerk@scottcountyks.com",
+    "oldEmail": "scclerk@wbsnet.org",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2019-07-26T14:40:41"
+  },
+  {
+    "change": "changed-KS-Sheridan-Sheridan County Clerk-1121",
+    "newEmail": "coclerk@sheridancoks.com",
+    "oldEmail": "sdcoclk@ruraltel.net",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2017-09-25T08:30:15"
+  },
+  {
+    "change": "changed-KS-Smith-Smith County Clerk-1123",
+    "newEmail": "clerk@smcoks.com",
+    "oldEmail": "smcoclerk@ruraltel.net",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2019-07-26T14:40:41"
+  },
+  {
+    "change": "changed-KS-Stanton-Stanton County Clerk-1125",
+    "newEmail": "stcoclerk@stantoncountyks.com",
+    "oldEmail": "stclerk@pld.com",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2019-07-26T14:40:41"
+  },
+  {
+    "change": "changed-KS-Trego-Trego County Clerk-1129",
+    "newEmail": "lori.augustine@tregocountyks.com",
+    "oldEmail": "clerk@ruraltel.net",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2019-07-26T14:40:41"
+  },
+  {
+    "change": "changed-KS-Wabaunsee-Wabaunsee County Clerk-1130",
+    "newEmail": "aamick@wbcounty.org",
+    "oldEmail": "jsavage@wbcounty.org",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2019-07-26T14:40:41"
+  },
+  {
+    "change": "changed-KS-Woodson-Woodson County Clerk-1135",
+    "newEmail": "clerk@woodsoncounty.net",
+    "oldEmail": "tporter@woodsoncounty.net",
+    "newEffectiveDate": "2021-09-20T10:56:38",
+    "oldEffectiveDate": "2019-07-26T14:40:41"
+  }
+]
