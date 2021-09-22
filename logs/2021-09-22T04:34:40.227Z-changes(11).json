@@ -1,0 +1,87 @@
+[
+  {
+    "change": "changed-MT-Jefferson-Jefferson County Election Administrator-2224",
+    "newEmail": "gkunz@jeffersoncounty-mt.gov",
+    "oldEmail": "bramey@jeffersoncounty-mt.gov",
+    "newEffectiveDate": "2021-09-21T09:48:10",
+    "oldEffectiveDate": "2015-08-31T14:39:40"
+  },
+  {
+    "change": "changed-MT-Missoula-Missoula County Election Administrator-2234",
+    "newEffectiveDate": "2021-09-21T09:48:32",
+    "oldEffectiveDate": "2021-06-14T13:52:07",
+    "newZip": "59801-4216",
+    "oldZip": "59802-4216"
+  },
+  {
+    "change": "changed-PR-All-Absentee Voting Administrative Board (JAVA)-3142",
+    "newEmail": "java@cee.pr.gov",
+    "oldEmail": "java@cee.gobierno.pr",
+    "newEffectiveDate": "2021-09-21T10:23:25",
+    "oldEffectiveDate": "2019-06-28T14:29:39"
+  },
+  {
+    "change": "changed-RI-Bristol-Bristol Board of Canvassers-3144",
+    "newEffectiveDate": "2021-09-21T15:39:04",
+    "oldEffectiveDate": "2021-07-22T09:23:23",
+    "newJurisdictionType": "Town",
+    "oldJurisdictionType": "City"
+  },
+  {
+    "change": "changed-WV-Barbour-Barbour Clerk of the County Commission-5936",
+    "newEffectiveDate": "2021-09-21T11:19:56",
+    "oldEffectiveDate": "2019-07-16T13:32:40",
+    "newAddress1": "26 N. Main St., Ste. 104",
+    "oldAddress1": "26 N. Main St."
+  },
+  {
+    "change": "changed-WV-Calhoun-Calhoun Clerk of the County Commission-5942",
+    "newEmail": "calhouncounty@wvsos.com",
+    "oldEmail": "calhounclerk@gmail.com",
+    "newEffectiveDate": "2021-09-21T11:19:38",
+    "oldEffectiveDate": "2021-07-22T08:40:51",
+    "newAddress1": "363 Main St., Ste. 201, PO Box 230",
+    "oldAddress1": "363 Main St., Ste. 201",
+    "newAddress2": "",
+    "oldAddress2": "PO Box 230"
+  },
+  {
+    "change": "changed-WV-Doddridge-Doddridge Clerk of the County Commission-5944",
+    "newEffectiveDate": "2021-09-21T11:20:17",
+    "oldEffectiveDate": "2021-07-22T08:40:51",
+    "newAddress1": "108 Court St.",
+    "oldAddress1": "108 E. Court St., Ste 1"
+  },
+  {
+    "change": "changed-WV-Marion-Marion Clerk of the County Commission-5959",
+    "newEffectiveDate": "2021-09-21T11:21:35",
+    "oldEffectiveDate": "2021-07-22T08:40:51",
+    "newAddress1": "219 Adams St., PO Box 1267",
+    "oldAddress1": "219 Adams St.",
+    "newAddress2": "",
+    "oldAddress2": "PO Box 1267"
+  },
+  {
+    "change": "changed-WV-Mason-Mason Clerk of the County Commission-5961",
+    "newEmail": "masoncounty@wvsos.com",
+    "oldEmail": "masoncountyclerk@yahoo.com",
+    "newEffectiveDate": "2021-09-21T11:21:55",
+    "oldEffectiveDate": "2021-07-22T08:40:51"
+  },
+  {
+    "change": "changed-WV-Summers-Summers Clerk of the County Commission-5980",
+    "newEffectiveDate": "2021-09-21T11:22:17",
+    "oldEffectiveDate": "2021-07-22T08:40:51",
+    "newAddress1": "120 Ballengee Street., Ste. 106, PO Box 97",
+    "oldAddress1": "120 Ballengee Street., Ste. 106",
+    "newAddress2": "",
+    "oldAddress2": "PO Box 97"
+  },
+  {
+    "change": "changed-WV-Tucker-Tucker Clerk of the County Commission-5982",
+    "newEmail": "tuckercounty@wvsos.com",
+    "oldEmail": "tcclerkoffice@gmail.com",
+    "newEffectiveDate": "2021-09-21T11:22:39",
+    "oldEffectiveDate": "2021-07-22T08:40:51"
+  }
+]
