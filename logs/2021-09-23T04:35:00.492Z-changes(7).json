@@ -1,0 +1,51 @@
+[
+  {
+    "change": "changed-NH-Cambridge, Town of-Town Clerk of Cambridge-25131",
+    "newEffectiveDate": "2021-09-22T13:42:49",
+    "oldEffectiveDate": "2019-07-25T15:46:05"
+  },
+  {
+    "change": "changed-NH-Dixville, Town of-Town Clerk of Dixville-2560",
+    "newEffectiveDate": "2021-09-22T13:42:26",
+    "oldEffectiveDate": "2017-09-25T10:22:26"
+  },
+  {
+    "change": "changed-NH-Green&apos;s Grant, Town of-Town Clerk of Green&apos;s Grant-25133",
+    "newName": "Town Clerk of Green's Grant",
+    "oldName": "Town Clerk of Green's Grant",
+    "newEffectiveDate": "2021-09-22T13:43:05",
+    "oldEffectiveDate": "2015-08-31T15:02:51",
+    "newJurisdictionName": "Green's Grant, Town of",
+    "oldJurisdictionName": "Green's Grant, Town of"
+  },
+  {
+    "change": "changed-NH-Millsfield, Town of-Town Clerk of Millsfield-2647",
+    "newEffectiveDate": "2021-09-22T13:41:56",
+    "oldEffectiveDate": "2017-09-25T10:22:27"
+  },
+  {
+    "change": "changed-NH-Pinkham&apos;s Grant, Town of-Town Clerk of Pinkham&apos;s Grant-25135",
+    "newName": "Town Clerk of Pinkham's Grant",
+    "oldName": "Town Clerk of Pinkham's Grant",
+    "newEffectiveDate": "2021-09-22T13:43:26",
+    "oldEffectiveDate": "2015-08-31T15:07:18",
+    "newJurisdictionName": "Pinkham's Grant, Town of",
+    "oldJurisdictionName": "Pinkham's Grant, Town of"
+  },
+  {
+    "change": "changed-NH-Wentworth&apos;s Location, Town of-Town Clerk of Wentworth&apos;s Location-25137",
+    "newName": "Town Clerk of Wentworth's Location",
+    "oldName": "Town Clerk of Wentworth's Location",
+    "newEffectiveDate": "2021-09-22T13:43:52",
+    "oldEffectiveDate": "2015-08-31T15:02:51",
+    "newJurisdictionName": "Wentworth's Location, Town of",
+    "oldJurisdictionName": "Wentworth's Location, Town of"
+  },
+  {
+    "change": "changed-WA-King-King County Elections-4070",
+    "newEffectiveDate": "2021-09-22T11:55:03",
+    "oldEffectiveDate": "2021-07-22T09:27:21",
+    "newZip": "98057",
+    "oldZip": "98507"
+  }
+]
