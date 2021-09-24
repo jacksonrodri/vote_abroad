@@ -1,0 +1,118 @@
+[
+  {
+    "change": "changed-AL-Autauga-Autauga County Absentee Elections Manager-2",
+    "newPhone": "334-358-6808",
+    "oldPhone": "334-358-6718",
+    "newEmail": "debra.hill@alacourt.gov",
+    "oldEmail": "beth.george@vote.alabama.gov",
+    "newEffectiveDate": "2021-09-23T10:57:15",
+    "oldEffectiveDate": "2019-10-03T13:17:45",
+    "newAddress1": "134 N Court St.",
+    "oldAddress1": "PO Box 681864",
+    "newAddress2": "",
+    "oldAddress2": "Prattville",
+    "newZip": "36067",
+    "oldZip": "36068"
+  },
+  {
+    "change": "changed-AL-Baldwin-Baldwin County Circuit Clerk-3",
+    "newEffectiveDate": "2021-09-23T10:55:26",
+    "oldEffectiveDate": "2019-07-16T10:57:34",
+    "newAddress1": "312 Courthouse Square, Ste 10",
+    "oldAddress1": "312 Courthouse Square Ste 10"
+  },
+  {
+    "change": "changed-AL-Blount-Blount County Circuit Clerk-6",
+    "newEffectiveDate": "2021-09-23T10:54:26",
+    "oldEffectiveDate": "2021-07-06T11:26:43",
+    "newAddress1": "220 2nd Ave, Ste 208",
+    "oldAddress1": "220 2nd Ave East"
+  },
+  {
+    "change": "changed-AL-Covington-Covington County Circuit Clerk-21",
+    "newPhone": "334-428-2520",
+    "oldPhone": "334-804-2520",
+    "newEffectiveDate": "2021-09-23T10:53:39",
+    "oldEffectiveDate": "2021-07-06T11:26:43"
+  },
+  {
+    "change": "changed-AL-Jefferson - Birmingham-Jefferson - Birmingham County Circuit Clerk-39",
+    "newPhone": "205-325-5313",
+    "oldPhone": "205-325-5355",
+    "newEffectiveDate": "2021-09-23T10:52:58",
+    "oldEffectiveDate": "2019-07-19T11:44:49",
+    "newAddress1": "716 Richard Arrington Jr. Blvd N, Room 500",
+    "oldAddress1": "716 Richard Arrington Jr. Blvd N, Room 400"
+  },
+  {
+    "change": "changed-AL-Mobile-Mobile County Absentee Elections Manager-51",
+    "newEffectiveDate": "2021-09-23T10:49:06",
+    "oldEffectiveDate": "2019-07-16T10:57:34",
+    "newAddress1": "PO Box 7",
+    "oldAddress1": "205 Government Street, Suite 913 North Tower",
+    "newZip": "36601",
+    "oldZip": "36644"
+  },
+  {
+    "change": "changed-AL-St. Clair-St. Clair County Circuit Clerk-61",
+    "newPhone": "205-884-2395 x3",
+    "oldPhone": "205-365-5114",
+    "newEffectiveDate": "2021-09-23T10:52:04",
+    "oldEffectiveDate": "2019-07-16T10:57:34",
+    "newAddress1": "1815 Cogswell Ave, Ste 205",
+    "oldAddress1": "165 5th Ave Ste 200",
+    "newCity": "Pell City",
+    "oldCity": "Ashville",
+    "newZip": "35125",
+    "oldZip": "35953"
+  },
+  {
+    "change": "changed-FL-Duval-Duval Supervisor of Elections-470",
+    "newEmail": "duvaluocava@coj.net",
+    "oldEmail": "duvaluacava@coj.net",
+    "newEffectiveDate": "2021-09-23T18:07:31",
+    "oldEffectiveDate": "2021-07-13T13:57:38"
+  },
+  {
+    "change": "changed-IA-Black Hawk-Black Hawk County Auditor-693",
+    "newEmail": "gveeder@blackhawkcounty.iowa.gov",
+    "oldEmail": "gveeder@co.black-hawk.ia.us",
+    "newEffectiveDate": "2021-09-23T11:48:36",
+    "oldEffectiveDate": "2019-08-19T13:42:48"
+  },
+  {
+    "change": "changed-IA-Clay-Clay County Auditor-707",
+    "newEmail": "abaschke@claycounty.iowa.gov",
+    "oldEmail": "abaschke@co.clay.ia.us",
+    "newEffectiveDate": "2021-09-23T11:49:04",
+    "oldEffectiveDate": "2021-07-22T09:13:07"
+  },
+  {
+    "change": "changed-IA-Jasper-Jasper County Auditor-736",
+    "newEmail": "auditor@jaspercounty.iowa.gov",
+    "oldEmail": "auditor@jasperia.org",
+    "newEffectiveDate": "2021-09-23T11:49:25",
+    "oldEffectiveDate": "2021-07-22T09:13:08"
+  },
+  {
+    "change": "changed-IA-Linn-Linn County Auditor-743",
+    "newEmail": "auditor@linncounty-ia.gov",
+    "oldEmail": "auditor@linncounty.org",
+    "newEffectiveDate": "2021-09-23T11:49:52",
+    "oldEffectiveDate": "2019-08-19T13:42:48"
+  },
+  {
+    "change": "changed-IA-Montgomery-Montgomery County Auditor-755",
+    "newEmail": "sburke@montgomerycoia.gov",
+    "oldEmail": "sburke@montgomerycoia.us",
+    "newEffectiveDate": "2021-09-23T11:50:17",
+    "oldEffectiveDate": "2019-08-19T13:42:48"
+  },
+  {
+    "change": "changed-TX-Washington-Washington County Early Voting Clerk-3627",
+    "newEffectiveDate": "2021-09-23T15:39:21",
+    "oldEffectiveDate": "2020-08-24T14:12:18",
+    "newAddress1": "100 E. Main, Suite 105",
+    "oldAddress1": "100 E. Main, Suite 102"
+  }
+]
