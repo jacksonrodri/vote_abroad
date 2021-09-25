@@ -1,0 +1,31 @@
+[
+  {
+    "change": "changed-OK-Grant-Secretary, Grant County Election Board-2988",
+    "newEffectiveDate": "2021-09-24T09:56:35",
+    "oldEffectiveDate": "2021-06-29T14:31:28",
+    "newAddress1": "112 E Guthrie St, Ste 301 A",
+    "oldAddress1": "112 E Guthrie St Ste 304"
+  },
+  {
+    "change": "changed-OK-Pawnee-Secretary, Pawnee County Election Board-3020",
+    "newEffectiveDate": "2021-09-24T09:56:51",
+    "oldEffectiveDate": "2018-02-22T13:59:08",
+    "newAddress1": "500 Harrison St, Room 101",
+    "oldAddress1": "500 Harrison St Rom 101"
+  },
+  {
+    "change": "changed-TX-Harris-Harris County Early Voting Clerk-3489",
+    "newFax": "(713) 755-4983",
+    "oldFax": "(713) 755-4977",
+    "newPhone": "(713) 755-3852",
+    "oldPhone": "(713) 274-8600",
+    "newEmail": "fpca@vote.hctx.net",
+    "oldEmail": "county.clerk@cco.hctx.net",
+    "newEffectiveDate": "2021-09-24T14:51:20",
+    "oldEffectiveDate": "2021-01-07T12:54:28",
+    "newAddress1": "P.O. Box 1148",
+    "oldAddress1": "P.O. Box 1525",
+    "newZip": "77251-1148",
+    "oldZip": "77251-1525"
+  }
+]
