@@ -1,0 +1,193 @@
+[
+  {
+    "change": "changed-NV-Lincoln-Lincoln County Clerk-2804",
+    "newPhone": "(775) 962-8038",
+    "oldPhone": "775-962-8038",
+    "newEffectiveDate": "2021-09-27T10:54:30",
+    "oldEffectiveDate": "2019-08-29T08:46:01"
+  },
+  {
+    "change": "changed-NV-Storey-Storey County Clerk-2809",
+    "newEffectiveDate": "2021-09-27T10:54:53",
+    "oldEffectiveDate": "2019-08-29T08:46:01",
+    "newAddress1": "County Courthouse 26 S B St, Drawer D",
+    "oldAddress1": "County Courthouse26 S B St, Drawer D"
+  },
+  {
+    "change": "changed-NV-Washoe-Washoe County Registrar of Voters-2810",
+    "newName": "Washoe County Registrar of Voters",
+    "oldName": "Washoe Registrar of Voters",
+    "newEmail": "absentballot@washoecounty.gov",
+    "oldEmail": "electionsdepartment@washoecounty.us",
+    "newEffectiveDate": "2021-09-27T11:56:02",
+    "oldEffectiveDate": "2019-08-23T11:32:04"
+  },
+  {
+    "change": "changed-TN-Cumberland-Cumberland County Election Commission-3311",
+    "newEmail": "vote@cumberlandcountytn.gov",
+    "oldEmail": "jdavis@cumberlandcountytn.gov",
+    "newEffectiveDate": "2021-09-27T12:19:44",
+    "oldEffectiveDate": "2021-07-22T09:24:01"
+  },
+  {
+    "change": "changed-TN-Davidson-Davidson County Election Commission-3312",
+    "newEmail": "votebymail@nashville.gov",
+    "oldEmail": "vote.questions@nashville.gov",
+    "newEffectiveDate": "2021-09-27T12:20:09",
+    "oldEffectiveDate": "2021-07-22T09:24:01"
+  },
+  {
+    "change": "changed-TN-Hamblen-Hamblen County Election Commission-3325",
+    "newEmail": "jgardner@co.hamblen.tn.us",
+    "oldEmail": "Hamblen.Commission@tn.gov",
+    "newEffectiveDate": "2021-09-27T12:21:20",
+    "oldEffectiveDate": "2020-06-11T11:09:05"
+  },
+  {
+    "change": "changed-TN-Henry-Henry County Election Commission-3333",
+    "newFax": "",
+    "oldFax": "(731) 644-7302",
+    "newEffectiveDate": "2021-09-27T11:14:44",
+    "oldEffectiveDate": "2020-01-23T08:10:35"
+  },
+  {
+    "change": "changed-TN-Jefferson-Jefferson County Election Commission-3338",
+    "newEmail": "elections@jeffersoncountytn.gov",
+    "oldEmail": "cgibson@jeffersoncountytn.gov",
+    "newEffectiveDate": "2021-09-27T12:21:40",
+    "oldEffectiveDate": "2016-09-01T15:17:16"
+  },
+  {
+    "change": "changed-TN-Knox-Knox County Election Commission-3340",
+    "newEmail": "absenteeballot@knoxcounty.org",
+    "oldEmail": "election.central@knoxcounty.org",
+    "newEffectiveDate": "2021-09-27T12:22:06",
+    "oldEffectiveDate": "2021-07-22T09:25:27"
+  },
+  {
+    "change": "changed-TN-Loudon-Loudon County Election Commission-3346",
+    "newEmail": "harrisons@loudoncounty-tn.gov",
+    "oldEmail": "election@loudoncounty-tn.gov",
+    "newEffectiveDate": "2021-09-27T12:22:27",
+    "oldEffectiveDate": "2016-09-01T15:18:42"
+  },
+  {
+    "change": "changed-TN-Maury-Maury County Election Commission-3351",
+    "newEmail": "bcothron@maurycounty-tn.gov",
+    "oldEmail": "mauryelection@maurycounty-tn.gov",
+    "newEffectiveDate": "2021-09-27T12:22:52",
+    "oldEffectiveDate": "2015-08-31T11:22:43"
+  },
+  {
+    "change": "changed-TN-Putnam-Putnam County Election Commission-3364",
+    "newEmail": "jennifer.mason@putnamcountytn.gov",
+    "oldEmail": "michele.honeycutt@putnamcountytn.gov",
+    "newEffectiveDate": "2021-09-27T12:23:15",
+    "oldEffectiveDate": "2020-03-30T11:24:40"
+  },
+  {
+    "change": "changed-TN-Rutherford-Rutherford County Election Commission-3368",
+    "newEmail": "absentee@rutherfordcountytn.gov",
+    "oldEmail": "afarley@rutherfordcountytn.gov",
+    "newEffectiveDate": "2021-09-27T12:23:45",
+    "oldEffectiveDate": "2021-07-22T09:24:01"
+  },
+  {
+    "change": "changed-TN-Scott-Scott County Election Commission-3369",
+    "newEmail": "scotteleccom@highland.net",
+    "oldEmail": "Scott.Commission@tn.gov",
+    "newEffectiveDate": "2021-09-27T12:24:15",
+    "oldEffectiveDate": "2020-06-11T11:09:39"
+  },
+  {
+    "change": "changed-TN-Shelby-Shelby County Election Commission-3372",
+    "newEmail": "absenteevoting@shelbycountytn.gov",
+    "oldEmail": "voteinfo@shelbycountytn.gov",
+    "newEffectiveDate": "2021-09-27T12:24:39",
+    "oldEffectiveDate": "2021-07-22T09:24:01"
+  },
+  {
+    "change": "changed-TN-Sullivan-Sullivan County Election Commission-3375",
+    "newEmail": "absentee@scelect.org",
+    "oldEmail": "admin@scelect.org",
+    "newEffectiveDate": "2021-09-27T12:25:04",
+    "oldEffectiveDate": "2015-08-31T11:22:43"
+  },
+  {
+    "change": "changed-TN-Washington-Washington County Election Commission-3383",
+    "newEmail": "wilma@wcecoffice.com",
+    "oldEmail": "vote@wcecoffice.com",
+    "newEffectiveDate": "2021-09-27T12:25:23",
+    "oldEffectiveDate": "2017-09-06T16:29:57"
+  },
+  {
+    "change": "changed-TN-Williamson-Williamson County Election Commission-3387",
+    "newEmail": "absenteevote@williamsoncounty-tn.gov",
+    "oldEmail": "Chad.Gray@williamsoncounty-tn.gov",
+    "newEffectiveDate": "2021-09-27T12:25:47",
+    "oldEffectiveDate": "2021-07-22T09:24:01"
+  },
+  {
+    "change": "changed-TN-Wilson-Wilson County Election Commission-3388",
+    "newEmail": "absentee@wilsonelections.com",
+    "oldEmail": "info@wilsonelections.com",
+    "newEffectiveDate": "2021-09-27T12:26:12",
+    "oldEffectiveDate": "2021-07-22T09:24:01"
+  },
+  {
+    "change": "changed-UT-Davis-Davis County Clerk/Auditor-3648",
+    "newEmail": "clerkauditor@daviscountyutah.gov",
+    "oldEmail": "bmckenzie@co.davis.ut.us",
+    "newEffectiveDate": "2021-09-27T09:45:45",
+    "oldEffectiveDate": "2019-09-11T11:59:56"
+  },
+  {
+    "change": "changed-UT-Kane-Kane County Clerk / Auditor-3655",
+    "newEmail": "clerkkj@kane.utah.gov",
+    "oldEmail": "clerkkj@kanab.net",
+    "newEffectiveDate": "2021-09-27T09:46:09",
+    "oldEffectiveDate": "2019-05-29T08:36:58"
+  },
+  {
+    "change": "changed-UT-Salt Lake-Salt Lake County Clerk-3660",
+    "newEffectiveDate": "2021-09-27T09:46:45",
+    "oldEffectiveDate": "2020-10-01T11:28:08",
+    "newZip": "84190",
+    "oldZip": "84114"
+  },
+  {
+    "change": "changed-UT-San Juan-San Juan County Clerk-3661",
+    "newEmail": "lduncan@sanjuancounty.org",
+    "oldEmail": "jdnielson@sanjuancounty.org",
+    "newEffectiveDate": "2021-09-27T09:47:19",
+    "oldEffectiveDate": "2019-09-11T12:05:27"
+  },
+  {
+    "change": "changed-UT-Tooele-Tooele County Clerk-3665",
+    "newEmail": "tracy.shaw@tooeleco.org",
+    "oldEmail": "mgillette@tooeleco.org",
+    "newEffectiveDate": "2021-09-27T09:47:44",
+    "oldEffectiveDate": "2019-05-29T08:36:58"
+  },
+  {
+    "change": "changed-UT-Uintah-Uintah County Clerk/Auditor-3666",
+    "newEmail": "mwilkins@uintah.utah.gov",
+    "oldEmail": "mwilkins@co.uintah.utah.gov",
+    "newEffectiveDate": "2021-09-27T09:50:02",
+    "oldEffectiveDate": "2021-07-22T08:38:22"
+  },
+  {
+    "change": "changed-UT-Washington-Washington County Clerk-3669",
+    "newEmail": "susan.lewis@washco.utah.gov",
+    "oldEmail": "kim.hafen@washco.utah.gov",
+    "newEffectiveDate": "2021-09-27T09:50:31",
+    "oldEffectiveDate": "2015-08-31T14:53:37"
+  },
+  {
+    "change": "changed-UT-Weber-Weber County Clerk Auditor-3671",
+    "newEmail": "mfitzpatrick1@co.weber.ut.us",
+    "oldEmail": "rhatch@co.weber.ut.us",
+    "newEffectiveDate": "2021-09-27T09:48:49",
+    "oldEffectiveDate": "2019-05-29T08:36:58"
+  }
+]
