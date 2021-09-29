@@ -1,0 +1,160 @@
+[
+  {
+    "change": "changed-GA-Brooks-Brooks County Election Supervisor-536",
+    "newEffectiveDate": "2021-09-28T11:00:11",
+    "oldEffectiveDate": "2021-07-15T13:57:01",
+    "newAddress2": "",
+    "oldAddress2": "610 S Highland Rd."
+  },
+  {
+    "change": "changed-GA-Bulloch-Bulloch County Board of Elections-538",
+    "newEffectiveDate": "2021-09-28T11:00:11",
+    "oldEffectiveDate": "2021-07-15T13:57:01",
+    "newAddress2": "",
+    "oldAddress2": "Ste 201"
+  },
+  {
+    "change": "changed-GA-Butts-Butts County Board of Elections and Registration-540",
+    "newEmail": "bschreiner@buttscounty.org",
+    "oldEmail": "tlunsford@buttscounty.org",
+    "newEffectiveDate": "2021-09-28T11:00:11",
+    "oldEffectiveDate": "2020-02-03T15:26:12"
+  },
+  {
+    "change": "changed-GA-Calhoun-Calhoun County Election Superintendent-541",
+    "newEffectiveDate": "2021-09-28T11:00:11",
+    "oldEffectiveDate": "2021-07-15T13:59:31",
+    "newAddress2": "",
+    "oldAddress2": "31 Ct St, Ste C"
+  },
+  {
+    "change": "changed-GA-Evans-Evans County Board of Registrars-576",
+    "newEmail": "chiefregistrar@evanscounty.org",
+    "oldEmail": "elections@evanscounty.org",
+    "newEffectiveDate": "2021-09-28T11:00:11",
+    "oldEffectiveDate": "2019-11-13T10:26:48"
+  },
+  {
+    "change": "changed-GA-Rabun-Rabun County Board of Elections and Registration-641",
+    "newEffectiveDate": "2021-09-28T11:00:11",
+    "oldEffectiveDate": "2020-01-06T15:38:14",
+    "newAddress1": "184 S. Main St, Suite 102",
+    "oldAddress1": "18 Old Raco High Drive, Suite 105"
+  },
+  {
+    "change": "changed-GA-Walton-Walton County Board of Elections and Registration-669",
+    "newEffectiveDate": "2021-09-28T11:00:11",
+    "oldEffectiveDate": "2021-07-15T13:57:02",
+    "newAddress2": "",
+    "oldAddress2": "Dept. 465"
+  },
+  {
+    "change": "changed-NE-Adams-Adams County Clerk-2412",
+    "newEffectiveDate": "2021-09-28T10:36:46",
+    "oldEffectiveDate": "2020-08-28T12:12:34",
+    "newZip": "68901",
+    "oldZip": "68902"
+  },
+  {
+    "change": "changed-NE-Banner-Banner County Clerk-2415",
+    "newEffectiveDate": "2021-09-28T10:37:53",
+    "oldEffectiveDate": "2021-07-22T08:37:31",
+    "newAddress1": "204 State St, PO Box 67",
+    "oldAddress1": "206 State St, PO Box 67"
+  },
+  {
+    "change": "changed-NE-Boone-Boone County Clerk-2417",
+    "newFax": "(402) 395-8531",
+    "oldFax": "(402) 395-2055",
+    "newPhone": "(402) 395-2055 x7",
+    "oldPhone": "(402) 395-2055",
+    "newEmail": "clerk@boonecountyne.gov",
+    "oldEmail": "clerk@boone-county.org",
+    "newEffectiveDate": "2021-09-28T10:38:38",
+    "oldEffectiveDate": "2021-07-22T08:37:31"
+  },
+  {
+    "change": "changed-NE-Buffalo-Buffalo Election Commissioner-2421",
+    "newFax": "(308) 236-1868",
+    "oldFax": "(308) 233-3663",
+    "newEffectiveDate": "2021-09-28T10:39:22",
+    "oldEffectiveDate": "2020-08-28T12:12:34"
+  },
+  {
+    "change": "changed-NE-Burt-Burt County Clerk-2422",
+    "newEmail": "clerk@burtcountyne.gov",
+    "oldEmail": "clerk@burtcounty.org",
+    "newEffectiveDate": "2021-09-28T10:39:40",
+    "oldEffectiveDate": "2020-08-28T12:12:34"
+  },
+  {
+    "change": "changed-NE-Chase-Chase County Clerk-2426",
+    "newPhone": "(308) 882-7501",
+    "oldPhone": "(308) 882-7502",
+    "newEffectiveDate": "2021-09-28T10:37:30",
+    "oldEffectiveDate": "2021-07-22T08:37:31"
+  },
+  {
+    "change": "changed-NE-Custer-Custer County Clerk-2432",
+    "newEmail": "clerk4@custercountyne.gov",
+    "oldEmail": "clerk4@custerne.com",
+    "newEffectiveDate": "2021-09-28T10:38:59",
+    "oldEffectiveDate": "2021-07-22T08:37:31"
+  },
+  {
+    "change": "changed-NE-Dixon-Dixon County Clerk-2437",
+    "newEmail": "clerk@dixoncountyne.gov",
+    "oldEmail": "clerk@dixoncountyne.org",
+    "newEffectiveDate": "2021-09-28T10:39:59",
+    "oldEffectiveDate": "2021-07-22T08:37:31"
+  },
+  {
+    "change": "changed-NE-Dodge-Dodge County Clerk-2438",
+    "newEmail": "clerk@dodgecountyne.gov",
+    "oldEmail": "dodgecountyvote@gmail.com",
+    "newEffectiveDate": "2021-09-28T10:40:19",
+    "oldEffectiveDate": "2020-08-28T12:12:34"
+  },
+  {
+    "change": "changed-NE-Gage-Gage County Clerk-2445",
+    "newPhone": "(402) 223-1300 x4",
+    "oldPhone": "(402) 223-1300",
+    "newEffectiveDate": "2021-09-28T10:40:40",
+    "oldEffectiveDate": "2021-07-22T08:37:31"
+  },
+  {
+    "change": "changed-NE-McPherson-McPherson County Clerk-2471",
+    "newFax": "(308) 587-2210",
+    "oldFax": "(308) 587-2363",
+    "newEffectiveDate": "2021-09-28T10:41:10",
+    "oldEffectiveDate": "2020-08-28T12:12:34"
+  },
+  {
+    "change": "changed-NE-Platte-Platte Election Commissioner-2482",
+    "newEffectiveDate": "2021-09-28T10:41:30",
+    "oldEffectiveDate": "2020-08-28T12:12:34",
+    "newZip": "68601",
+    "oldZip": "68602"
+  },
+  {
+    "change": "changed-NE-Richardson-Richardson County Clerk-2485",
+    "newPhone": "(402) 245-2911 x3",
+    "oldPhone": "(402) 245-2911",
+    "newEffectiveDate": "2021-09-28T10:41:52",
+    "oldEffectiveDate": "2021-07-22T08:37:31"
+  },
+  {
+    "change": "changed-NE-Sarpy-Sarpy Election Commissioner-2488",
+    "newEffectiveDate": "2021-09-28T10:42:21",
+    "oldEffectiveDate": "2021-07-22T08:37:31",
+    "newAddress1": "1102 E. 1st St., Ste. 1",
+    "oldAddress1": "501 Olson Dr, Ste 4"
+  },
+  {
+    "change": "changed-NE-Saunders-Saunders County Clerk-2489",
+    "newFax": "(402) 443-5709",
+    "oldFax": "(402) 443-8174",
+    "newEffectiveDate": "2021-09-28T10:42:45",
+    "oldEffectiveDate": "2020-08-28T12:12:34"
+  }
+]
