@@ -1,0 +1,24 @@
+[
+  {
+    "change": "changed-MI-Allen Park, City of (Wayne County)-Allen Park City Clerk-21981",
+    "newEffectiveDate": "2021-10-04T14:13:21",
+    "oldEffectiveDate": "2019-08-12T16:48:52"
+  },
+  {
+    "change": "changed-MI-Auburn Hills, City of (Oakland County)-Auburn Hills City Clerk-22075",
+    "newEffectiveDate": "2021-10-04T14:15:09",
+    "oldEffectiveDate": "2019-08-12T16:48:52"
+  },
+  {
+    "change": "changed-MI-Burton, City of (Genesee County)-Burton City Clerk-22381",
+    "newEffectiveDate": "2021-10-04T14:11:03",
+    "oldEffectiveDate": "2020-10-13T07:45:50"
+  },
+  {
+    "change": "changed-TX-Rains-Rains County Early Voting Clerk-3578",
+    "newPhone": "(903) 473-5009",
+    "oldPhone": "(903) 473-5000 x109",
+    "newEffectiveDate": "2021-10-04T07:20:01",
+    "oldEffectiveDate": "2019-08-29T15:13:37"
+  }
+]
