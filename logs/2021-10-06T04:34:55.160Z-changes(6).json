@@ -1,0 +1,52 @@
+[
+  {
+    "change": "changed-MN-Douglas-Douglas County Auditor/Treasurer-1937",
+    "newEffectiveDate": "2021-10-05T10:54:03",
+    "oldEffectiveDate": "2020-08-03T14:38:25",
+    "newAddress1": "822 Douglas St.",
+    "oldAddress1": "305 8th Ave W",
+    "newZip": "56308",
+    "oldZip": "56308-1793"
+  },
+  {
+    "change": "changed-MN-Hennepin-Hennepin County Gov&apos;t Center-1943",
+    "newName": "Hennepin County Gov't Center",
+    "oldName": "Hennepin County Gov't Center",
+    "newEffectiveDate": "2021-10-05T10:54:30",
+    "oldEffectiveDate": "2019-07-01T14:11:56",
+    "newAddress1": "300 S 6th St, M012",
+    "oldAddress1": "300 S 6th St, C190"
+  },
+  {
+    "change": "changed-MN-Olmsted-Olmsted County Elections-1971",
+    "newEffectiveDate": "2021-10-05T10:55:15",
+    "oldEffectiveDate": "2018-09-12T08:44:43",
+    "newAddress1": "2122 Campus Dr. SE, Ste. 300",
+    "oldAddress1": "151 4th St SE",
+    "newZip": "55904",
+    "oldZip": "55904-3709"
+  },
+  {
+    "change": "changed-MN-Winona-Winona County Auditor-Treasurer-2001",
+    "newEffectiveDate": "2021-10-05T10:55:56",
+    "oldEffectiveDate": "2015-08-31T14:36:27",
+    "newAddress1": "202 Third St. W",
+    "oldAddress1": "177 Main Str",
+    "newZip": "55987",
+    "oldZip": "55987-3102"
+  },
+  {
+    "change": "changed-TN-Anderson-Anderson County Election Commission-3294",
+    "newEmail": "acec@andersoncountytn.gov",
+    "oldEmail": "acec@andersontn.org",
+    "newEffectiveDate": "2021-10-05T12:31:55",
+    "oldEffectiveDate": "2015-08-31T11:22:43"
+  },
+  {
+    "change": "changed-TN-Henderson-Henderson County Election Commission-3332",
+    "newFax": "",
+    "oldFax": "(731) 968-0937",
+    "newEffectiveDate": "2021-10-05T16:01:36",
+    "oldEffectiveDate": "2019-11-21T16:09:25"
+  }
+]
