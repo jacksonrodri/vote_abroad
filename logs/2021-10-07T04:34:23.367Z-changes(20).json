@@ -1,0 +1,142 @@
+[
+  {
+    "change": "changed-FL-Sumter-Sumter Supervisor of Elections-515",
+    "newEffectiveDate": "2021-10-06T10:12:32",
+    "oldEffectiveDate": "2021-09-13T11:04:28",
+    "newAddress1": "7375 Powell Rd. Suite #125",
+    "oldAddress1": "7375 Powell Road"
+  },
+  {
+    "change": "changed-SC-Bamberg-Bamberg Board of Voter Registration-3186",
+    "newEmail": "mooreram@bambergcounty.sc.gov",
+    "oldEmail": "johnsonmc@bambergcounty.sc.gov",
+    "newEffectiveDate": "2021-10-06T13:41:29",
+    "oldEffectiveDate": "2019-06-18T10:22:10"
+  },
+  {
+    "change": "changed-SC-Berkeley-Berkeley Board of Voter Registration-3189",
+    "newEmail": "webvre@berkeleycountysc.gov",
+    "oldEmail": "melody.goggin@berkeleycountysc.gov",
+    "newEffectiveDate": "2021-10-06T13:41:47",
+    "oldEffectiveDate": "2020-09-18T12:59:07"
+  },
+  {
+    "change": "changed-SC-Charleston-Charleston Board of Voter Registration-3191",
+    "newFax": "(843) 745-2236",
+    "oldFax": "(843) 974-6419",
+    "newEffectiveDate": "2021-10-06T13:42:39",
+    "oldEffectiveDate": "2020-07-08T10:22:10"
+  },
+  {
+    "change": "changed-SC-Chesterfield-Chesterfield Board of Voter Registration-3194",
+    "newEmail": "kthurman1@shtc.net",
+    "oldEmail": "vrcfield@hotmail.com",
+    "newEffectiveDate": "2021-10-06T13:42:04",
+    "oldEffectiveDate": "2019-06-18T10:22:10"
+  },
+  {
+    "change": "changed-SC-Clarendon-Clarendon Board of Voter Registration-3195",
+    "newEmail": "mbillups@clarendoncountygov.org",
+    "oldEmail": "sblackoliver@clarendoncountygov.org",
+    "newEffectiveDate": "2021-10-06T13:42:59",
+    "oldEffectiveDate": "2016-09-27T12:16:06"
+  },
+  {
+    "change": "changed-SC-Dorchester-Dorchester Board of Voter Registration-3199",
+    "newFax": "(843) 563-0186",
+    "oldFax": "(843) 832-0186",
+    "newEffectiveDate": "2021-10-06T13:43:31",
+    "oldEffectiveDate": "2019-06-18T10:22:10"
+  },
+  {
+    "change": "changed-SC-Edgefield-Edgefield Board of Voter Registration-3200",
+    "newEmail": "Vote.Edgefield@elections.sc.gov",
+    "oldEmail": "tbutler@edgefieldcounty.sc.gov",
+    "newEffectiveDate": "2021-10-06T13:43:53",
+    "oldEffectiveDate": "2019-06-18T10:33:58"
+  },
+  {
+    "change": "changed-SC-Fairfield-Fairfield Board of Voter Registration-3201",
+    "newEmail": "voter.registration@fairfield.sc.gov",
+    "oldEmail": "jackie.beaver@fairfield.sc.gov",
+    "newEffectiveDate": "2021-10-06T13:44:11",
+    "oldEffectiveDate": "2020-09-21T10:12:20"
+  },
+  {
+    "change": "changed-SC-Florence-Florence Board of Voter Registration-3202",
+    "newEmail": "Vote.Florence@elections.sc.gov",
+    "oldEmail": "dalford@florenceco.org",
+    "newEffectiveDate": "2021-10-06T13:44:29",
+    "oldEffectiveDate": "2015-08-31T11:46:38"
+  },
+  {
+    "change": "changed-SC-Lancaster-Lancaster Board of Voter Registration-3210",
+    "newFax": "(877) 636-5277",
+    "oldFax": "(803) 636-5277",
+    "newEffectiveDate": "2021-10-06T13:44:51",
+    "oldEffectiveDate": "2019-06-18T10:22:10"
+  },
+  {
+    "change": "changed-SC-Oconee-Oconee Board of Voter Registration-3218",
+    "newEmail": "kburr@oconeesc.com",
+    "oldEmail": "jscharich@oconeesc.com",
+    "newEffectiveDate": "2021-10-06T13:45:08",
+    "oldEffectiveDate": "2015-08-31T11:46:38"
+  },
+  {
+    "change": "changed-SC-Spartanburg-Spartanburg Board of Voter Registration-3223",
+    "newEmail": "voteabsentee@spartanburgcounty.org",
+    "oldEmail": "ahammons@spartanburgcounty.org",
+    "newEffectiveDate": "2021-10-06T13:45:42",
+    "oldEffectiveDate": "2021-07-26T09:47:51"
+  },
+  {
+    "change": "changed-SC-Williamsburg-Williamsburg Board of Voter Registration-3226",
+    "newFax": "(843) 353-3935",
+    "oldFax": "(843) 355-2039",
+    "newEffectiveDate": "2021-10-06T13:46:10",
+    "oldEffectiveDate": "2018-05-09T17:28:37"
+  },
+  {
+    "change": "changed-SC-York-York Board of Voter Registration-3227",
+    "newEffectiveDate": "2021-10-06T13:47:02",
+    "oldEffectiveDate": "2019-06-18T10:22:10",
+    "newAddress1": "6 South Congress St., Government Center, Ste 1201",
+    "oldAddress1": "Government Center, 6 S Congress St"
+  },
+  {
+    "change": "changed-TN-Bedford-Bedford County Election Commission-3295",
+    "newEmail": "summer.leverette@bedfordcountytn.gov",
+    "oldEmail": "summer.leverette@bedfordcountytn.org",
+    "newEffectiveDate": "2021-10-06T09:16:24",
+    "oldEffectiveDate": "2021-07-22T09:24:01"
+  },
+  {
+    "change": "changed-VT-Berlin-Berlin Town Clerk-3825",
+    "newEmail": "townclerk@berlinvt.gov",
+    "oldEmail": "townclerk@berlinvt.org",
+    "newEffectiveDate": "2021-10-06T13:25:55",
+    "oldEffectiveDate": "2021-08-12T14:21:52"
+  },
+  {
+    "change": "changed-VT-Saint Johnsbury-Saint Johnsbury Town Clerk-3994",
+    "newEmail": "townclerk@stjvt.com",
+    "oldEmail": "tosclerk@vermontel.net",
+    "newEffectiveDate": "2021-10-06T13:25:22",
+    "oldEffectiveDate": "2021-08-12T14:21:52"
+  },
+  {
+    "change": "changed-VT-Shaftsbury-Shaftsbury Town Clerk-3981",
+    "newEmail": "townclerk@shaftsburyvt.gov",
+    "oldEmail": "townclerk@stjvt.com",
+    "newEffectiveDate": "2021-10-06T13:26:15",
+    "oldEffectiveDate": "2021-08-12T14:21:52"
+  },
+  {
+    "change": "changed-VT-Woodbury-Woodbury Town Clerk-4050",
+    "newEmail": "clerk@woodburyvt.org",
+    "oldEmail": "woodburyclerk@comcast.net",
+    "newEffectiveDate": "2021-10-06T13:26:34",
+    "oldEffectiveDate": "2021-08-12T14:21:53"
+  }
+]
