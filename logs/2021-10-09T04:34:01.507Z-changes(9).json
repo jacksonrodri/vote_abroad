@@ -1,0 +1,65 @@
+[
+  {
+    "change": "changed-IA-Palo Alto-Palo Alto County Auditor-760",
+    "newFax": "",
+    "oldFax": "(712) 852-4671",
+    "newEffectiveDate": "2021-10-08T12:32:24",
+    "oldEffectiveDate": "2021-07-22T09:13:08"
+  },
+  {
+    "change": "changed-NC-Perquimans-Perquimans County Board of Elections-2330",
+    "newEmail": "perquimanscountyboe@perquimanscountync.gov",
+    "oldEmail": "",
+    "newEffectiveDate": "2021-10-08T14:08:29",
+    "oldEffectiveDate": "2019-07-19T10:00:52"
+  },
+  {
+    "change": "changed-NC-Vance-Vance County Board of Elections-2349",
+    "newEmail": "mvaughan@vancecounty.org",
+    "oldEmail": "fgill@vancecounty.org",
+    "newEffectiveDate": "2021-10-08T14:08:46",
+    "oldEffectiveDate": "2019-05-24T10:47:10"
+  },
+  {
+    "change": "changed-OH-Logan-Director, Logan County Board of Elections-2919",
+    "newEmail": "Logan@OhioSoS.gov",
+    "oldEmail": "elections@co.logan.oh.us",
+    "newEffectiveDate": "2021-10-08T14:28:47",
+    "oldEffectiveDate": "2015-08-31T15:17:08"
+  },
+  {
+    "change": "changed-OH-Madison-Director, Madison County Board of Elections-2922",
+    "newEmail": "Madison@OhioSoS.gov",
+    "oldEmail": "electionboard@co.madison.oh.us",
+    "newEffectiveDate": "2021-10-08T14:29:52",
+    "oldEffectiveDate": "2015-08-31T15:17:08"
+  },
+  {
+    "change": "changed-OH-Union-Director, Union County Board of Elections-2953",
+    "newEmail": "Union@OhioSoS.gov",
+    "oldEmail": "boardofelections@co.union.oh.us",
+    "newEffectiveDate": "2021-10-08T14:30:35",
+    "oldEffectiveDate": "2020-08-19T08:53:37"
+  },
+  {
+    "change": "changed-OH-Vinton-Director, Vinton County Board of Elections-2955",
+    "newEmail": "Vinton@OhioSoS.gov",
+    "oldEmail": "vintion@OhioSoS.gov",
+    "newEffectiveDate": "2021-10-08T14:31:04",
+    "oldEffectiveDate": "2019-08-22T09:44:18"
+  },
+  {
+    "change": "changed-OH-Wood-Director, Wood County Board of Elections-2960",
+    "newEmail": "boe@woodcountyohio.gov",
+    "oldEmail": "boe@co.wood.oh.us",
+    "newEffectiveDate": "2021-10-08T14:31:21",
+    "oldEffectiveDate": "2017-09-06T16:37:32"
+  },
+  {
+    "change": "changed-TN-Cannon-Cannon County Election Commission-3301",
+    "newEmail": "election@cannoncountytn.gov",
+    "oldEmail": "election@dtccom.net",
+    "newEffectiveDate": "2021-10-08T08:18:03",
+    "oldEffectiveDate": "2021-03-01T07:33:52"
+  }
+]
