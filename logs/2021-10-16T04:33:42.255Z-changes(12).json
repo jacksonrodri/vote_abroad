@@ -1,0 +1,84 @@
+[
+  {
+    "change": "changed-MI-Bedford Township (Monroe County)-Bedford Township Clerk-22163",
+    "newEffectiveDate": "2021-10-15T11:59:37",
+    "oldEffectiveDate": "2019-08-12T16:48:53"
+  },
+  {
+    "change": "changed-MI-Brownstown Township (Wayne County)-Brownstown Township Clerk-22343",
+    "newEffectiveDate": "2021-10-15T12:02:06",
+    "oldEffectiveDate": "2019-08-12T16:48:53"
+  },
+  {
+    "change": "changed-PA-Beaver-Beaver County Board of Elections-3078",
+    "newEmail": "csisk@beavercountypa.gov",
+    "oldEmail": "dmandity@beavercountypa.gov",
+    "newEffectiveDate": "2021-10-15T11:11:46",
+    "oldEffectiveDate": "2021-07-22T09:28:16"
+  },
+  {
+    "change": "changed-PA-Blair-Blair County Board of Elections-3081",
+    "newEffectiveDate": "2021-10-15T11:11:46",
+    "oldEffectiveDate": "2019-07-26T15:54:46",
+    "newAddress1": "297 Loop Rd.",
+    "oldAddress1": "423 Allegheny St., Ste 47"
+  },
+  {
+    "change": "changed-PA-Clinton-Clinton County Board of Elections-3092",
+    "newEffectiveDate": "2021-10-15T11:11:46",
+    "oldEffectiveDate": "2019-07-26T15:54:46",
+    "newCity": "Suite 309",
+    "oldCity": "Suite 300"
+  },
+  {
+    "change": "changed-PA-Fayette-Fayette County Board of Elections-3100",
+    "newEmail": "mbkuznik@fayettepa.org",
+    "oldEmail": "lblosser@fayettepa.org",
+    "newEffectiveDate": "2021-10-15T11:11:46",
+    "oldEffectiveDate": "2019-07-26T15:54:46"
+  },
+  {
+    "change": "changed-PA-Franklin-Franklin County Board of Elections-3102",
+    "newEffectiveDate": "2021-10-15T11:11:46",
+    "oldEffectiveDate": "2020-07-27T13:07:00",
+    "newAddress1": "272 North Second Street",
+    "oldAddress1": "157 Lincoln Way East"
+  },
+  {
+    "change": "changed-PA-Juniata-Juniata County Board of Elections-3108",
+    "newEffectiveDate": "2021-10-15T11:11:46",
+    "oldEffectiveDate": "2019-07-26T15:54:46",
+    "newAddress1": "Juniata County Courthouse 1 North Main Streets P.O. Box 68",
+    "oldAddress1": "Juniata County Courthouse Bridge and Main Streets P.O. Box 68"
+  },
+  {
+    "change": "changed-PA-Lebanon-Lebanon County Board of Elections-3112",
+    "newEmail": "voter@lebcnty.org",
+    "oldEmail": "manderson@lebcnty.org",
+    "newEffectiveDate": "2021-10-15T11:11:46",
+    "oldEffectiveDate": "2019-07-26T15:54:46"
+  },
+  {
+    "change": "changed-PA-Montour-Montour County Board of Elections-3121",
+    "newEffectiveDate": "2021-10-15T11:11:46",
+    "oldEffectiveDate": "2019-07-26T15:54:46",
+    "newAddress1": "Montour County Courthouse  435 E Front St",
+    "oldAddress1": "Montour County Courthouse  253 Mill Street"
+  },
+  {
+    "change": "changed-PA-Westmoreland-Westmoreland County Board of Elections-3139",
+    "newPhone": "(724) 830-3150",
+    "oldPhone": "(724) 830-3595",
+    "newEmail": "slink@co.westmoreland.pa.us",
+    "oldEmail": "election@co.westmoreland.pa.us",
+    "newEffectiveDate": "2021-10-15T11:11:46",
+    "oldEffectiveDate": "2021-08-19T13:08:44"
+  },
+  {
+    "change": "changed-PA-Wyoming-Wyoming County Board of Elections-3140",
+    "newEmail": "fkellet@wycopa.org",
+    "oldEmail": "fball@wycopa.org",
+    "newEffectiveDate": "2021-10-15T11:11:46",
+    "oldEffectiveDate": "2019-07-26T15:54:46"
+  }
+]
