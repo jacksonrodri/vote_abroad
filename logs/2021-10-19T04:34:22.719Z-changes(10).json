@@ -1,0 +1,62 @@
+[
+  {
+    "change": "changed-MI-Adrian, City of (Lenawee County)-Adrian City Clerk-21939",
+    "newEffectiveDate": "2021-10-18T11:37:27",
+    "oldEffectiveDate": "2019-08-12T16:48:52"
+  },
+  {
+    "change": "changed-MI-Allendale Township (Ottawa County)-Allendale Township Clerk-21985",
+    "newEffectiveDate": "2021-10-18T12:14:22",
+    "oldEffectiveDate": "2019-08-12T16:48:52"
+  },
+  {
+    "change": "changed-MI-Birmingham, City of (Oakland County)-Birmingham City Clerk-22237",
+    "newEffectiveDate": "2021-10-18T11:36:12",
+    "oldEffectiveDate": "2019-08-12T16:48:53"
+  },
+  {
+    "change": "changed-MI-Blackman Township (Jackson County)-Blackman Township Clerk-22241",
+    "newEffectiveDate": "2021-10-18T11:23:21",
+    "oldEffectiveDate": "2019-10-28T11:33:31"
+  },
+  {
+    "change": "changed-MI-Burton, City of (Genesee County)-Burton City Clerk-22381",
+    "newEffectiveDate": "2021-10-18T11:32:11",
+    "oldEffectiveDate": "2021-10-04T14:11:03"
+  },
+  {
+    "change": "changed-MI-Byron Township (Kent County)-Byron Township Clerk-22391",
+    "newEffectiveDate": "2021-10-18T12:15:48",
+    "oldEffectiveDate": "2021-06-08T13:04:50"
+  },
+  {
+    "change": "changed-NM-Cibola-Cibola County Clerk-2765",
+    "newEffectiveDate": "2021-10-18T15:31:57",
+    "oldEffectiveDate": "2021-07-26T09:48:39",
+    "newAddress1": "700 E. Roosevelt, Ste. 50",
+    "oldAddress1": "P.O. Box 190"
+  },
+  {
+    "change": "changed-NM-Harding-Harding County Clerk-2773",
+    "newEffectiveDate": "2021-10-18T15:32:41",
+    "oldEffectiveDate": "2021-07-26T09:48:39",
+    "newAddress1": "P.O. Box 1002",
+    "oldAddress1": "35 Pine Street"
+  },
+  {
+    "change": "changed-NM-McKinley-McKinley County Clerk-2779",
+    "newEffectiveDate": "2021-10-18T15:33:20",
+    "oldEffectiveDate": "2019-08-16T13:42:35",
+    "newAddress1": "P.O. Box 1268",
+    "oldAddress1": "207 West Hill Street",
+    "newZip": "87301",
+    "oldZip": "87301-1268"
+  },
+  {
+    "change": "changed-PA-Westmoreland-Westmoreland County Board of Elections-3139",
+    "newEmail": "election@co.westmoreland.pa.us",
+    "oldEmail": "slink@co.westmoreland.pa.us",
+    "newEffectiveDate": "2021-10-18T15:32:29",
+    "oldEffectiveDate": "2021-10-15T11:11:46"
+  }
+]
