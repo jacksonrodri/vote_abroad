@@ -1,0 +1,88 @@
+[
+  {
+    "change": "changed-MI-Allendale Township (Ottawa County)-Allendale Township Clerk-21985",
+    "newPhone": "616-892-3111",
+    "oldPhone": "616-892-3111 x6",
+    "newEmail": "",
+    "oldEmail": "clerk@allendale-twp.org",
+    "newEffectiveDate": "2021-10-23T15:23:40",
+    "oldEffectiveDate": "2021-10-18T12:14:22",
+    "newAddress1": "6676 Lake Michigan Drive",
+    "oldAddress1": "6676 Lake Michigan Dr, PO Box 539"
+  },
+  {
+    "change": "changed-MI-Bedford Township (Calhoun County)-Bedford Township Clerk-22161",
+    "newEffectiveDate": "2021-10-23T15:23:40",
+    "oldEffectiveDate": "2019-08-12T16:48:53",
+    "newAddress1": "115 S. Uldriks Drive",
+    "oldAddress1": "115 S Uldriks Drive"
+  },
+  {
+    "change": "changed-MI-Blackman Township (Jackson County)-Blackman Township Clerk-22241",
+    "newPhone": "(517) 788-4345 x8224",
+    "oldPhone": "517-788-4345",
+    "newEmail": "kambs@blackmantwp.com",
+    "oldEmail": "seva@blackmantwp.com",
+    "newEffectiveDate": "2021-10-23T15:23:41",
+    "oldEffectiveDate": "2021-10-18T11:23:21",
+    "newZip": "49201-8612",
+    "oldZip": "49201"
+  },
+  {
+    "change": "changed-MI-Bloomfield Township (Huron County)-Bloomfield Township Clerk-22257",
+    "newPhone": "989-428-4774",
+    "oldPhone": "248-433-7702",
+    "newEmail": "hockeyfan40@speednetllc.com",
+    "oldEmail": "clerk@bloomfieldtwp.org",
+    "newEffectiveDate": "2021-10-23T15:23:41",
+    "oldEffectiveDate": "2019-08-12T16:48:53",
+    "newAddress1": "3228 McDonald Road",
+    "oldAddress1": "4200 Telegraph Rd",
+    "newCity": "Port Hope",
+    "oldCity": "Bloomfield Hills",
+    "newZip": "48468",
+    "oldZip": "48302"
+  },
+  {
+    "change": "changed-MI-Brownstown Township (Wayne County)-Brownstown Township Clerk-22343",
+    "newPhone": "7346750910",
+    "oldPhone": "734-675-0910",
+    "newEmail": "",
+    "oldEmail": "elections@brownstown-mi.org",
+    "newEffectiveDate": "2021-10-23T15:23:42",
+    "oldEffectiveDate": "2021-10-15T12:02:06",
+    "newAddress1": "21313 Telegraph Road",
+    "oldAddress1": "21313 Telegraph Rd"
+  },
+  {
+    "change": "changed-MI-Byron Township (Kent County)-Byron Township Clerk-22391",
+    "newPhone": "616-878-6011",
+    "oldPhone": "616-878-9104",
+    "newEmail": "peggy@byrontownship.org",
+    "oldEmail": "elections@byrontownship.org",
+    "newEffectiveDate": "2021-10-23T15:23:42",
+    "oldEffectiveDate": "2021-10-18T12:15:48",
+    "newAddress1": "8085 Byron Center Ave. SW",
+    "oldAddress1": "8085 Byron Center Ave SW"
+  },
+  {
+    "change": "changed-MI-Canton Township (Wayne County)-Canton Township Clerk-22421",
+    "newPhone": "734-394-5122",
+    "oldPhone": "734-394-5120",
+    "newEmail": "cantonclerk@canton-mi.org",
+    "oldEmail": "kquartz@canton-mi.org",
+    "newEffectiveDate": "2021-10-23T15:23:42",
+    "oldEffectiveDate": "2021-10-13T14:55:18",
+    "newAddress1": "1150 S. Canton Center Rd.",
+    "oldAddress1": "1150 S Canton Center Rd"
+  },
+  {
+    "change": "changed-MI-Chesterfield Township (Macomb County)-Chesterfield Township Clerk-22521",
+    "newPhone": "586-949-0400",
+    "oldPhone": "586-949-0400 x6440",
+    "newEffectiveDate": "2021-10-23T15:23:43",
+    "oldEffectiveDate": "2021-10-13T15:01:32",
+    "newAddress1": "47275 Sugarbush Road",
+    "oldAddress1": "47275 Sugarbush Rd"
+  }
+]
