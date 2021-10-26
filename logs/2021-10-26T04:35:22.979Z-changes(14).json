@@ -1,0 +1,124 @@
+[
+  {
+    "change": "changed-MI-Adrian, City of (Lenawee County)-Adrian City Clerk-21939",
+    "newPhone": "517-264-4833",
+    "oldPhone": "517-264-4866",
+    "newEffectiveDate": "2021-10-25T21:44:11",
+    "oldEffectiveDate": "2021-10-18T11:37:27"
+  },
+  {
+    "change": "changed-MI-Allen Park, City of (Wayne County)-Allen Park City Clerk-21981",
+    "newEmail": "",
+    "oldEmail": "mmizzi@cityofallenpark.org",
+    "newEffectiveDate": "2021-10-25T21:44:12",
+    "oldEffectiveDate": "2021-10-04T14:13:21"
+  },
+  {
+    "change": "changed-MI-Allendale Township (Ottawa County)-Allendale Township Clerk-21985",
+    "newFax": "",
+    "oldFax": "616-895-6670",
+    "newEffectiveDate": "2021-10-25T21:44:12",
+    "oldEffectiveDate": "2021-10-23T15:23:40"
+  },
+  {
+    "change": "changed-MI-Ann Arbor, City of (Washtenaw County)-Ann Arbor City Clerk-22015",
+    "newPhone": "734-794-6140 x41401",
+    "oldPhone": "734-794-6140",
+    "newEffectiveDate": "2021-10-25T21:44:12",
+    "oldEffectiveDate": "2019-08-12T16:48:52",
+    "newAddress1": "301 E. Huron Street",
+    "oldAddress1": "301 E. Huron St.",
+    "newZip": "48104",
+    "oldZip": "48107"
+  },
+  {
+    "change": "changed-MI-Auburn Hills, City of (Oakland County)-Auburn Hills City Clerk-22075",
+    "newEffectiveDate": "2021-10-25T21:44:12",
+    "oldEffectiveDate": "2021-10-04T14:15:09",
+    "newAddress1": "1827 N. Squirrel Road",
+    "oldAddress1": "1827 N Squirrel Rd"
+  },
+  {
+    "change": "changed-MI-Battle Creek, City of (Calhoun County)-Battle Creek City Clerk-22129",
+    "newPhone": "269-966-3348 x1273",
+    "oldPhone": "269-966-3348",
+    "newEffectiveDate": "2021-10-25T21:44:13",
+    "oldEffectiveDate": "2019-08-12T16:48:53",
+    "newAddress1": "10 N Division Street",
+    "oldAddress1": "10 N. Division Street, Room 111, City Hall"
+  },
+  {
+    "change": "changed-MI-Bay City, City of (Bay County)-Bay City City Clerk-22131",
+    "newFax": "",
+    "oldFax": "989-894-0704",
+    "newPhone": "989-894-8169",
+    "oldPhone": "989-894-8168",
+    "newEffectiveDate": "2021-10-25T21:44:13",
+    "oldEffectiveDate": "2019-08-12T16:48:53",
+    "newAddress1": "301 Washington Ave.",
+    "oldAddress1": "301 Washington Avenue"
+  },
+  {
+    "change": "changed-MI-Bedford Township (Monroe County)-Bedford Township Clerk-22163",
+    "newPhone": "734-224-7328",
+    "oldPhone": "734-224-7320",
+    "newEffectiveDate": "2021-10-25T21:44:13",
+    "oldEffectiveDate": "2021-10-15T11:59:37",
+    "newAddress1": "8100 JACKMAN RD",
+    "oldAddress1": "8100 Jackman Rd"
+  },
+  {
+    "change": "changed-MI-Birmingham, City of (Oakland County)-Birmingham City Clerk-22237",
+    "newPhone": "248-530-1880",
+    "oldPhone": "248-530-1802",
+    "newEmail": "",
+    "oldEmail": "elections@bhamgov.org",
+    "newEffectiveDate": "2021-10-25T21:44:13",
+    "oldEffectiveDate": "2021-10-18T11:36:12",
+    "newAddress1": "151 Martin St.",
+    "oldAddress1": "151 Martin St, PO Box 3001",
+    "newZip": "48009",
+    "oldZip": "48012"
+  },
+  {
+    "change": "changed-MI-Blackman Township (Jackson County)-Blackman Township Clerk-22241",
+    "newFax": "517-788-4689",
+    "oldFax": "517-795-1243",
+    "newEffectiveDate": "2021-10-25T21:44:13",
+    "oldEffectiveDate": "2021-10-23T15:23:41"
+  },
+  {
+    "change": "changed-MI-Bloomfield Township (Oakland County)-Bloomfield Township Election Clerk-22261",
+    "newFax": "",
+    "oldFax": "248-642-7610",
+    "newEmail": "",
+    "oldEmail": "av@bloomfieldtwp.org",
+    "newEffectiveDate": "2021-10-25T21:44:13",
+    "oldEffectiveDate": "2021-10-13T15:02:54",
+    "newAddress1": "4200 Telegraph Rd.",
+    "oldAddress1": "4200 Telegraph Road"
+  },
+  {
+    "change": "changed-MI-Brownstown Township (Wayne County)-Brownstown Township Clerk-22343",
+    "newFax": "734-675-9935",
+    "oldFax": "734-675-9931",
+    "newPhone": "734-675-0910",
+    "oldPhone": "7346750910",
+    "newEffectiveDate": "2021-10-25T21:44:14",
+    "oldEffectiveDate": "2021-10-23T15:23:42"
+  },
+  {
+    "change": "changed-MI-Burton, City of (Genesee County)-Burton City Clerk-22381",
+    "newEmail": "r.hayman@burtonmi.gov",
+    "oldEmail": "r.boggs@burtonmi.gov",
+    "newEffectiveDate": "2021-10-25T21:44:14",
+    "oldEffectiveDate": "2021-10-18T11:32:11"
+  },
+  {
+    "change": "changed-MI-Canton Township (Wayne County)-Canton Township Clerk-22421",
+    "newFax": "734-394-5234",
+    "oldFax": "734-394-5128",
+    "newEffectiveDate": "2021-10-25T21:44:14",
+    "oldEffectiveDate": "2021-10-23T15:23:42"
+  }
+]
