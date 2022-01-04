@@ -1,0 +1,16 @@
+[
+  {
+    "change": "changed-WA-Chelan-Chelan County Auditor-4057",
+    "newEmail": "elections@co.chelan.wa.us",
+    "oldEmail": "elections.ballots@co.chelan.wa.us",
+    "newEffectiveDate": "2022-01-03T13:50:35",
+    "oldEffectiveDate": "2019-07-23T16:01:32"
+  },
+  {
+    "change": "changed-WA-Columbia-Columbia County Auditor (Not Washington D.C.)-4060",
+    "newEmail": "auditor_elections@co.columbia.wa.us",
+    "oldEmail": "anne_higgins@co.columbia.wa.us",
+    "newEffectiveDate": "2022-01-03T13:51:07",
+    "oldEffectiveDate": "2020-10-13T17:35:02"
+  }
+]
