@@ -1,0 +1,24 @@
+[
+  {
+    "change": "changed-PA-Delaware-Delaware County Bureau of Elections-3097",
+    "newEmail": "UOCAVA@co.delaware.pa.us",
+    "oldEmail": "DelcoElection@co.delaware.pa.us",
+    "newEffectiveDate": "2022-01-06T10:07:51",
+    "oldEffectiveDate": "2019-07-26T15:54:46",
+    "newAddress1": "2501 Seaport Drive, Suite 120",
+    "oldAddress1": "201 W Front St  Government Center Building",
+    "newAddress2": "",
+    "oldAddress2": "Government Center Building",
+    "newCity": "Chester",
+    "oldCity": "Media",
+    "newZip": "19013",
+    "oldZip": "19063"
+  },
+  {
+    "change": "changed-TX-Coryell-Coryell County Early Voting Clerk-3438",
+    "newEmail": "tac@coryelltax.com",
+    "oldEmail": "tax_collector@coryellcounty.org",
+    "newEffectiveDate": "2022-01-06T15:05:19",
+    "oldEffectiveDate": "2018-08-08T16:25:57"
+  }
+]
