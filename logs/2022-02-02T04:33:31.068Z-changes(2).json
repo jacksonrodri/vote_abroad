@@ -1,0 +1,14 @@
+[
+  {
+    "change": "changed-FL-Indian River-Indian River Supervisor of Elections-485",
+    "newEmail": "votebymail@voteindianriver.gov",
+    "oldEmail": "votebymail@voteindianriver.com",
+    "newEffectiveDate": "2022-02-01T10:28:56",
+    "oldEffectiveDate": "2021-07-13T13:57:38"
+  },
+  {
+    "change": "changed-PA-Northumberland-Northumberland County Board of Elections-3123",
+    "newEffectiveDate": "2022-02-01T10:59:57",
+    "oldEffectiveDate": "2020-09-28T09:25:52"
+  }
+]
