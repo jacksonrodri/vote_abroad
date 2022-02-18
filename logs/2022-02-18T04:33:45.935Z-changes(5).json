@@ -1,0 +1,43 @@
+[
+  {
+    "change": "changed-CT-Stonington-Stonington Town Clerk-418",
+    "newEmail": "clerk@stonington-ct.gov",
+    "oldEmail": "cladwig@stonington-ct.gov",
+    "newEffectiveDate": "2022-02-11T14:26:25",
+    "oldEffectiveDate": "2021-07-15T14:01:06"
+  },
+  {
+    "change": "changed-LA-Jefferson-Jefferson Parish Registrar of Voters-1282",
+    "newEmail": "jeffersonrov@sos.la.gov",
+    "oldEmail": "jeffersonrova@sos.la.gov",
+    "newEffectiveDate": "2022-02-11T07:34:07",
+    "oldEffectiveDate": "2015-08-17T14:04:39"
+  },
+  {
+    "change": "changed-OH-Highland-Director, Highland County Board of Elections-2909",
+    "newFax": "937-393-5854",
+    "oldFax": "(937) 393-5854",
+    "newPhone": "937-393-9961",
+    "oldPhone": "(937) 393-9961",
+    "newEffectiveDate": "2022-02-15T10:22:41",
+    "oldEffectiveDate": "2019-08-22T09:44:18",
+    "newAddress1": "1575 N High St., Suite 200",
+    "oldAddress1": "1575 N. High St., Ste 200",
+    "newZip": "45133",
+    "oldZip": "45133-1089"
+  },
+  {
+    "change": "changed-OH-Ottawa-Director, Ottawa County Board of Elections-2935",
+    "newFax": "(419) 898-3416",
+    "oldFax": "(419) 898-3146",
+    "newEffectiveDate": "2022-02-16T12:26:41",
+    "oldEffectiveDate": "2020-07-23T11:08:59"
+  },
+  {
+    "change": "changed-TN-Washington-Washington County Election Commission-3383",
+    "newEmail": "voteabsentee@wcecoffice.com",
+    "oldEmail": "wilma@wcecoffice.com",
+    "newEffectiveDate": "2022-02-09T07:51:11",
+    "oldEffectiveDate": "2021-09-27T12:25:23"
+  }
+]
