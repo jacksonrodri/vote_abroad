@@ -1,0 +1,36 @@
+[
+  {
+    "change": "changed-GA-Pulaski-Pulaski County Board of Registrars-638",
+    "newEmail": "vote@pulaskico.com",
+    "oldEmail": "frankie@georgiawebservices.com",
+    "newEffectiveDate": "2022-02-23T11:26:09",
+    "oldEffectiveDate": "2015-08-31T13:36:24",
+    "newAddress1": "P.O. Box 1375",
+    "oldAddress1": "P.O. Box 448"
+  },
+  {
+    "change": "changed-MI-Blackman Township (Jackson County)-Blackman Township Clerk-22241",
+    "newEmail": "karntz@blackmantwp.com",
+    "oldEmail": "kambs@blackmantwp.com",
+    "newEffectiveDate": "2022-02-23T07:46:10",
+    "oldEffectiveDate": "2021-10-25T21:44:13"
+  },
+  {
+    "change": "changed-MN-Anoka-Anoka County Elections-1918",
+    "newFax": "(763) 324-1160",
+    "oldFax": "(763) 422-7526",
+    "newPhone": "(763) 324-1300",
+    "oldPhone": "(763) 323-5275",
+    "newEffectiveDate": "2022-02-24T15:25:45",
+    "oldEffectiveDate": "2021-07-13T15:20:23",
+    "newAddress1": "2100 3rd Ave, Ste 160",
+    "oldAddress1": "2100 3rd Ave, Ste W160"
+  },
+  {
+    "change": "changed-OH-Union-Director, Union County Board of Elections-2953",
+    "newEmail": "Boardofelections@unioncountyohio.gov",
+    "oldEmail": "Union@OhioSoS.gov",
+    "newEffectiveDate": "2022-02-24T15:20:11",
+    "oldEffectiveDate": "2021-10-08T14:30:35"
+  }
+]
