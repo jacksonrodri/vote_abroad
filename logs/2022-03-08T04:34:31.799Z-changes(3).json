@@ -1,0 +1,27 @@
+[
+  {
+    "change": "changed-FL-Broward-Broward Supervisor of Elections-460",
+    "newFax": "954-357-7033",
+    "oldFax": "(954) 357-7033",
+    "newPhone": "954-357-7050",
+    "oldPhone": "(954) 357-7050",
+    "newEffectiveDate": "2022-03-07T15:02:50",
+    "oldEffectiveDate": "2021-07-13T14:01:49"
+  },
+  {
+    "change": "changed-FL-Manatee-Manatee Supervisor of Elections-495",
+    "newFax": "941-741-8788",
+    "oldFax": "(941) 741-8788",
+    "newPhone": "941-741-3823",
+    "oldPhone": "(941) 741-3823",
+    "newEffectiveDate": "2022-03-07T15:03:37",
+    "oldEffectiveDate": "2021-07-13T13:57:38"
+  },
+  {
+    "change": "changed-FL-Miami-Dade-Miami-Dade Supervisor of Elections-498",
+    "newFax": "305-499-8401",
+    "oldFax": "(305) 499-8401",
+    "newEffectiveDate": "2022-03-07T15:05:01",
+    "oldEffectiveDate": "2021-04-02T11:42:50"
+  }
+]
