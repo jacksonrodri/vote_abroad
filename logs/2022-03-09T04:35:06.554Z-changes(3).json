@@ -1,0 +1,23 @@
+[
+  {
+    "change": "changed-CO-Eagle-Eagle County Clerk and Recorder-238",
+    "newFax": "888-816-1643",
+    "oldFax": "800-225-6136",
+    "newEffectiveDate": "2022-03-08T15:28:25",
+    "oldEffectiveDate": "2021-07-22T08:50:26"
+  },
+  {
+    "change": "changed-LA-Jefferson Davis-Jefferson Davis Parish Registrar of Voters-1283",
+    "newFax": "(337) 824-0821",
+    "oldFax": "337-824-0821",
+    "newEffectiveDate": "2022-03-08T10:28:32",
+    "oldEffectiveDate": "2016-01-27T15:40:03"
+  },
+  {
+    "change": "changed-TX-Chambers-Chambers County Early Voting Clerk-3424",
+    "newFax": "(409) 267-8405",
+    "oldFax": "409-267-8405",
+    "newEffectiveDate": "2022-03-08T13:46:58",
+    "oldEffectiveDate": "2020-02-24T14:42:32"
+  }
+]
