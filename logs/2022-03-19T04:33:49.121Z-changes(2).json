@@ -1,0 +1,18 @@
+[
+  {
+    "change": "changed-FL-Orange-Orange Supervisor of Elections-503",
+    "newPhone": "407-836-8683",
+    "oldPhone": "407-836-2070",
+    "newEmail": "vbmrequest@ocfelections.gov",
+    "oldEmail": "vbmrequests@ocfelections.com",
+    "newEffectiveDate": "2022-03-18T15:13:20",
+    "oldEffectiveDate": "2021-07-13T13:57:38"
+  },
+  {
+    "change": "changed-TN-McMinn-McMinn County Election Commission-3352",
+    "newFax": "(423) 744-1646",
+    "oldFax": "",
+    "newEffectiveDate": "2022-03-18T07:35:10",
+    "oldEffectiveDate": "2022-02-03T12:12:49"
+  }
+]
