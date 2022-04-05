@@ -1,0 +1,16 @@
+[
+  {
+    "change": "changed-FL-St. Lucie-St. Lucie Supervisor of Elections-514",
+    "newEmail": "votebymail@slcelections.com",
+    "oldEmail": "votebymail@slelections.com",
+    "newEffectiveDate": "2022-03-28T14:42:20",
+    "oldEffectiveDate": "2021-07-13T13:57:38"
+  },
+  {
+    "change": "changed-TX-Travis-Travis County Early Voting Clerk-3615",
+    "newFax": "(512) 854-3969",
+    "oldFax": "(512) 854-9075",
+    "newEffectiveDate": "2022-04-04T11:03:09",
+    "oldEffectiveDate": "2018-04-18T12:03:00"
+  }
+]
