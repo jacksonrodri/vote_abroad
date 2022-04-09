@@ -1,0 +1,18 @@
+[
+  {
+    "change": "changed-GA-Cherokee-Cherokee County Elections &amp; Registration-550",
+    "newName": "Cherokee County Elections & Registration",
+    "oldName": "Cherokee County Elections & Registration",
+    "newEmail": "jrodgers@cherokeega.com",
+    "oldEmail": "wlwaddell@cherokeega.com",
+    "newEffectiveDate": "2022-04-06T14:17:57",
+    "oldEffectiveDate": "2021-07-15T13:57:01"
+  },
+  {
+    "change": "changed-KY-Spencer-Spencer County Clerk-1244",
+    "newEmail": "SpencerCountyClerk@ky.gov",
+    "oldEmail": "lynn.hesselbrock@ky.gov",
+    "newEffectiveDate": "2022-04-06T08:55:50",
+    "oldEffectiveDate": "2019-02-14T13:56:28"
+  }
+]
