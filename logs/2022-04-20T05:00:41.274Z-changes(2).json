@@ -1,0 +1,20 @@
+[
+  {
+    "change": "changed-AL-Coffee-Coffee County Absentee Elections Manager-17",
+    "newPhone": "334-894-1100",
+    "oldPhone": "334-347-2519",
+    "newEmail": "debbie.kinsaul@vote.alabama.gov",
+    "oldEmail": "lmills@co.coffee.al.us",
+    "newEffectiveDate": "2022-04-19T11:57:43",
+    "oldEffectiveDate": "2021-07-06T11:26:43"
+  },
+  {
+    "change": "changed-MT-Deer Lodge-Deer Lodge County Election Administrator-2214",
+    "newPhone": "(406) 563-4063",
+    "oldPhone": "(406) 563-4046",
+    "newEmail": "thofland@adlc.us",
+    "oldEmail": "awilson@adlc.us",
+    "newEffectiveDate": "2022-04-18T06:58:55",
+    "oldEffectiveDate": "2021-06-14T13:52:07"
+  }
+]
