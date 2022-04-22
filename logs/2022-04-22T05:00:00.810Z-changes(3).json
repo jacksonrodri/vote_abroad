@@ -1,0 +1,25 @@
+[
+  {
+    "change": "changed-MA-Revere, City of-Revere Election Commission-1565",
+    "newEmail": "elections@revere.org",
+    "oldEmail": "dcolella@revere.org",
+    "newEffectiveDate": "2022-04-20T15:40:49",
+    "oldEffectiveDate": "2021-07-13T13:22:37"
+  },
+  {
+    "change": "changed-PA-Greene-Greene County Board of Elections-3104",
+    "newEmail": "jsnyder@co.greene.pa.us",
+    "oldEmail": "tkiger@co.greene.pa.us",
+    "newEffectiveDate": "2022-04-20T15:37:22",
+    "oldEffectiveDate": "2019-07-26T15:54:46"
+  },
+  {
+    "change": "changed-TX-Hemphill-Hemphill County Early Voting Clerk-3494",
+    "newFax": "(806) 323-5271",
+    "oldFax": "(806) 323-9745",
+    "newEmail": "sylviag@hemphill-clerk.com",
+    "oldEmail": "lisaj@hemphill-clerk.com",
+    "newEffectiveDate": "2022-04-21T16:28:42",
+    "oldEffectiveDate": "2018-04-18T12:02:59"
+  }
+]
