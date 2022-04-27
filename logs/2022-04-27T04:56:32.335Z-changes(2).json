@@ -1,0 +1,18 @@
+[
+  {
+    "change": "changed-MN-Isanti-Isanti County Auditor-Treasurer&apos;s Office-1946",
+    "newName": "Isanti County Auditor-Treasurer's Office",
+    "oldName": "Isanti County Auditor's Office",
+    "newEmail": "Elections@co.isanti.mn.us",
+    "oldEmail": "heidi.fowler@co.isanti.mn.us",
+    "newEffectiveDate": "2022-04-26T10:28:16",
+    "oldEffectiveDate": "2015-08-31T14:36:27"
+  },
+  {
+    "change": "changed-NH-Sandwich, Town of-Town Clerk of Sandwich-2697",
+    "newEmail": "tctc@sandwichnh.org",
+    "oldEmail": "tctcsandwich@cyberpine.net",
+    "newEffectiveDate": "2022-04-26T16:00:29",
+    "oldEffectiveDate": "2021-09-29T11:31:14"
+  }
+]
