@@ -1,0 +1,16 @@
+[
+  {
+    "change": "changed-VT-Thetford-Thetford Town Clerk-4006",
+    "newFax": "",
+    "oldFax": "802-785-2031",
+    "newEffectiveDate": "2022-05-04T17:01:21",
+    "oldEffectiveDate": "2021-08-12T14:21:52"
+  },
+  {
+    "change": "changed-VA-Lancaster-Lancaster General Registrar-3741",
+    "newEmail": "vote@lancova.com",
+    "oldEmail": "sjett@lancova.com",
+    "newEffectiveDate": "2022-05-04T14:00:49",
+    "oldEffectiveDate": "2015-09-03T10:01:30"
+  }
+]
