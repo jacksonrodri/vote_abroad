@@ -1,0 +1,25 @@
+[
+  {
+    "change": "changed-CA-Sacramento-County of Sacramento Voter Registration and Elections-194",
+    "newFax": "(916) 854-9796",
+    "oldFax": "(916) 854-9896",
+    "newEffectiveDate": "2022-05-31T09:51:55",
+    "oldEffectiveDate": "2021-07-22T08:42:17"
+  },
+  {
+    "change": "changed-KS-Johnson-Johnson County Election Commissioner-1077",
+    "newEmail": "elc-uocava@jocogov.org",
+    "oldEmail": "election@jocogov.org",
+    "newEffectiveDate": "2022-05-31T10:53:46",
+    "oldEffectiveDate": "2021-09-20T10:56:38"
+  },
+  {
+    "change": "changed-MI-Cascade Township (Kent County)-Cascade Township Clerk-22437",
+    "newEmail": "jjager@cascadetwp.com",
+    "oldEmail": "dmb@cascadetwp.com",
+    "newEffectiveDate": "2022-05-31T11:32:03",
+    "oldEffectiveDate": "2021-10-26T15:59:22",
+    "newAddress1": "5920 Tahoe Dr SE",
+    "oldAddress1": "2865 Thornhills Ave SE"
+  }
+]
