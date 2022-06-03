@@ -1,0 +1,63 @@
+[
+  {
+    "change": "changed-MT-Yellowstone-Yellowstone County Election Administrator-2258",
+    "newEmail": "brutherford@yellowstonecountymt.gov",
+    "oldEmail": "brutherford@co.yellowstone.mt.gov",
+    "newEffectiveDate": "2022-06-02T10:45:05",
+    "oldEffectiveDate": "2015-08-31T14:39:40"
+  },
+  {
+    "change": "changed-TX-Bell-Bell County Early Voting Clerk-3402",
+    "newEmail": "Desi.Roberts@bellcounty.texas.gov",
+    "oldEmail": "Elections@bellcounty.texas.gov",
+    "newEffectiveDate": "2022-06-02T14:51:22",
+    "oldEffectiveDate": "2022-03-04T10:34:35"
+  },
+  {
+    "change": "changed-WA-Adams-Adams County Auditor-4054",
+    "newEffectiveDate": "2022-06-02T14:03:53",
+    "oldEffectiveDate": "2019-07-23T16:01:32"
+  },
+  {
+    "change": "changed-WA-Benton-Benton County Auditor-4056",
+    "newEffectiveDate": "2022-06-02T14:04:47",
+    "oldEffectiveDate": "2019-07-23T16:01:32",
+    "newAddress1": "P.O. Box 1000",
+    "oldAddress1": "P.O. Box 1440",
+    "newCity": "Richland",
+    "oldCity": "Prosser",
+    "newZip": "99352-1000",
+    "oldZip": "99350-9995"
+  },
+  {
+    "change": "changed-WA-Chelan-Chelan County Auditor-4057",
+    "newEffectiveDate": "2022-06-02T14:05:20",
+    "oldEffectiveDate": "2022-01-03T13:50:35"
+  },
+  {
+    "change": "changed-WA-Clallam-Clallam County Auditor-4058",
+    "newEffectiveDate": "2022-06-02T14:05:41",
+    "oldEffectiveDate": "2019-07-16T08:59:12"
+  },
+  {
+    "change": "changed-WA-Grant-Grant County Auditor-4066",
+    "newPhone": "(509) 754-2011 x2706",
+    "oldPhone": "(509) 754-2011 x2704",
+    "newEffectiveDate": "2022-06-02T14:06:17",
+    "oldEffectiveDate": "2021-07-22T09:26:19"
+  },
+  {
+    "change": "changed-WA-Pierce-Pierce County Auditor-4080",
+    "newFax": "(253) 798-8683",
+    "oldFax": "(253) 798-2761",
+    "newEffectiveDate": "2022-06-02T14:06:35",
+    "oldEffectiveDate": "2019-07-23T16:01:32"
+  },
+  {
+    "change": "changed-WA-Thurston-Thurston County Auditor-4087",
+    "newFax": "(360) 754-4591",
+    "oldFax": "(360) 705-3518",
+    "newEffectiveDate": "2022-06-02T14:07:01",
+    "oldEffectiveDate": "2019-07-23T16:01:32"
+  }
+]
