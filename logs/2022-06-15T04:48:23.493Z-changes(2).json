@@ -1,0 +1,18 @@
+[
+  {
+    "change": "changed-OH-Delaware-Director, Delaware County Board of Elections-2894",
+    "newEmail": "boe@delawarecountyohio.gov",
+    "oldEmail": "delaware@OhioSoS.gov",
+    "newEffectiveDate": "2022-06-14T11:02:43",
+    "oldEffectiveDate": "2020-08-25T11:14:23",
+    "newAddress1": "2079 U.S. Hwy 23 N, P.O. Box 8006",
+    "oldAddress1": "2079 U.S. Hwy 23 N"
+  },
+  {
+    "change": "changed-OH-Hardin-Director, Hardin County Board of Elections-2906",
+    "newFax": "",
+    "oldFax": "(419) 674-2213",
+    "newEffectiveDate": "2022-06-14T14:13:01",
+    "oldEffectiveDate": "2019-08-22T09:44:18"
+  }
+]
