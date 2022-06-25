@@ -1,0 +1,18 @@
+[
+  {
+    "change": "changed-OH-Logan-Director, Logan County Board of Elections-2919",
+    "newEffectiveDate": "2022-06-22T13:37:07",
+    "oldEffectiveDate": "2021-10-08T14:28:47",
+    "newAddress1": "P.O. Box 280",
+    "oldAddress1": "225 S. Main St",
+    "newZip": "43311-0280",
+    "oldZip": "43311-2075"
+  },
+  {
+    "change": "changed-TX-Hall-Hall County Early Voting Clerk-3484",
+    "newEmail": "kmills@co.hall.tx.us",
+    "oldEmail": "hallcoclerk@gmail.com",
+    "newEffectiveDate": "2022-06-24T12:37:38",
+    "oldEffectiveDate": "2019-08-29T15:13:37"
+  }
+]
