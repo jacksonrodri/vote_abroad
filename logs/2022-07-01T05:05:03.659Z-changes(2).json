@@ -1,0 +1,18 @@
+[
+  {
+    "change": "changed-MI-Oakland Township (Oakland County)-Charter Township of Oakland Clerk-24145",
+    "newName": "Charter Township of Oakland Clerk",
+    "oldName": "Oakland Township Clerk",
+    "newEffectiveDate": "2022-06-30T10:26:20",
+    "oldEffectiveDate": "2020-01-08T08:05:42",
+    "newJurisdictionName": "Oakland Township (Oakland County)",
+    "oldJurisdictionName": "Oakland Charter Township (Oakland County)"
+  },
+  {
+    "change": "changed-WI-CITY OF WAUSAU - MARATHON COUNTY-CITY OF WAUSAU - MARATHON COUNTY-26283",
+    "newEmail": "kaitlyn.bernarde@ci.wausau.wi.us",
+    "oldEmail": "leslie.kremer@ci.wausau.wi.us",
+    "newEffectiveDate": "2022-06-30T16:56:36",
+    "oldEffectiveDate": "2021-08-10T14:16:14"
+  }
+]
