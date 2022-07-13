@@ -1,0 +1,62 @@
+[
+  {
+    "change": "changed-FL-Orange-Orange Supervisor of Elections-503",
+    "newFax": "407-254-6577",
+    "oldFax": "407-254-6598",
+    "newEffectiveDate": "2022-07-11T09:54:41",
+    "oldEffectiveDate": "2022-03-18T15:13:20"
+  },
+  {
+    "change": "changed-IA-Iowa-Iowa County Auditor-734",
+    "newEmail": "benochson@iowacounty.Iowa.gov",
+    "oldEmail": "jstohlmann@co.iowa.ia.us",
+    "newEffectiveDate": "2022-07-05T11:19:32",
+    "oldEffectiveDate": "2019-08-19T13:42:48"
+  },
+  {
+    "change": "changed-MN-Kandiyohi-Kandiyohi County Office Bldg-1950",
+    "newEmail": "elections@kcmn.us",
+    "oldEmail": "cathy_p@co.kandiyohi.mn.us",
+    "newEffectiveDate": "2022-07-05T15:49:41",
+    "oldEffectiveDate": "2017-09-06T17:03:55"
+  },
+  {
+    "change": "changed-NM-Sandoval-Sandoval County Clerk-2787",
+    "newEmail": "BOEGroup@sandovalcountynm.gov",
+    "oldEmail": "nlehmeier@sandovalcountynm.gov",
+    "newEffectiveDate": "2022-07-05T08:34:22",
+    "oldEffectiveDate": "2019-08-16T13:44:25"
+  },
+  {
+    "change": "changed-TX-Garza-Garza County Early Voting Clerk-3473",
+    "newEmail": "xane.reiter@co.garza.tx.us",
+    "oldEmail": "elections@co.garza.tx.us",
+    "newEffectiveDate": "2022-07-05T14:56:06",
+    "oldEffectiveDate": "2018-04-18T12:02:59"
+  },
+  {
+    "change": "changed-VA-Buckingham-Buckingham General Registrar-3689",
+    "newEmail": "elections@buckinghamcounty.virginia.gov",
+    "oldEmail": "buckinghamelections@embarqmail.com",
+    "newEffectiveDate": "2022-07-11T09:00:58",
+    "oldEffectiveDate": "2015-09-03T10:01:30"
+  },
+  {
+    "change": "changed-WI-CITY OF MENOMONIE - DUNN COUNTY-CITY OF MENOMONIE - DUNN COUNTY-25788",
+    "newEmail": "kmartin@menomonie-wi.gov",
+    "oldEmail": "clauersdorf@menomonie-wi.gov",
+    "newEffectiveDate": "2022-07-01T14:28:56",
+    "oldEffectiveDate": "2021-08-10T14:16:10"
+  },
+  {
+    "change": "changed-WI-CITY OF NEW BERLIN - WAUKESHA COUNTY-CITY OF NEW BERLIN - WAUKESHA COUNTY-27089",
+    "newFax": "(262) 786-6121",
+    "oldFax": "262-786-6121",
+    "newPhone": "(262) 786-8610",
+    "oldPhone": "(262)786-8610",
+    "newEmail": "clerksoffice@newberlin.org",
+    "oldEmail": "gstanford@newberlin.org",
+    "newEffectiveDate": "2022-07-01T12:35:55",
+    "oldEffectiveDate": "2021-08-10T14:07:36"
+  }
+]
