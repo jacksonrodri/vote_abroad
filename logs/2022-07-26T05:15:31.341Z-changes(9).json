@@ -1,0 +1,83 @@
+[
+  {
+    "change": "changed-CT-Wilton-Wilton Town Clerk-442",
+    "newEmail": "townclerk@wiltonct.org",
+    "oldEmail": "lori.kaback@wiltonct.org",
+    "newEffectiveDate": "2022-07-25T14:50:58",
+    "oldEffectiveDate": "2019-06-25T09:56:32"
+  },
+  {
+    "change": "changed-FL-Lake-Lake Supervisor of Elections-489",
+    "newEmail": "mailballots@lakevotes.gov",
+    "oldEmail": "mailballots@lakevotes.com",
+    "newEffectiveDate": "2022-07-25T14:44:07",
+    "oldEffectiveDate": "2019-12-16T08:48:50"
+  },
+  {
+    "change": "changed-PA-Dauphin-Dauphin County Board of Elections-3096",
+    "newEmail": "election@dauphincounty.gov",
+    "oldEmail": "election@dauphinc.org",
+    "newEffectiveDate": "2022-07-25T11:17:25",
+    "oldEffectiveDate": "2020-01-08T09:15:18",
+    "newAddress1": "1251 South 28th Street",
+    "oldAddress1": "P.O. Box 1295",
+    "newZip": "17111",
+    "oldZip": "17108-1295"
+  },
+  {
+    "change": "changed-PA-Mercer-Mercer County Board of Elections-3117",
+    "newEmail": "thall@mercercountypa.gov",
+    "oldEmail": "thall@mcc.co.mercer.pa.us",
+    "newEffectiveDate": "2022-07-25T11:54:36",
+    "oldEffectiveDate": "2021-07-22T09:28:16",
+    "newAddress1": "130 North Pitt Street, Suite B",
+    "oldAddress1": "5 Courthouse",
+    "newZip": "16137",
+    "oldZip": "16137-1227"
+  },
+  {
+    "change": "changed-SD-Minnehaha-Minnehaha County Auditor-3276",
+    "newEmail": "elections@minnehahacounty.org",
+    "oldEmail": "bkyte@minnehahacounty.org",
+    "newEffectiveDate": "2022-07-25T09:59:16",
+    "oldEffectiveDate": "2021-08-11T11:56:15"
+  },
+  {
+    "change": "changed-TX-Lubbock-Lubbock County Early Voting Clerk-3540",
+    "newEmail": "votelubbock@lubbockcounty.gov",
+    "oldEmail": "votelubbock@co.lubbock.tx.us",
+    "newEffectiveDate": "2022-07-25T10:48:27",
+    "oldEffectiveDate": "2021-06-29T07:32:28"
+  },
+  {
+    "change": "changed-VA-Essex-Essex General Registrar-3710",
+    "newFax": "(804) 443-4611",
+    "oldFax": "(804) 443-4157",
+    "newEmail": "govote@essex-virginia.org",
+    "oldEmail": "klafollette@essex-virginia.org",
+    "newEffectiveDate": "2022-07-25T11:50:38",
+    "oldEffectiveDate": "2015-09-03T10:01:30"
+  },
+  {
+    "change": "changed-WI-CITY OF EAGLE RIVER - VILAS COUNTY-CITY OF EAGLE RIVER - VILAS COUNTY-26978",
+    "newPhone": "(715) 479-8682 x222",
+    "oldPhone": "(715)479-8682 x222",
+    "newEmail": "bbolte@ci.eagle-river.wi.us",
+    "oldEmail": "DABROWNCLERKTREASURER@CI.EAGLE-RIVER.WI.US",
+    "newEffectiveDate": "2022-07-25T11:38:26",
+    "oldEffectiveDate": "2021-08-10T14:16:23"
+  },
+  {
+    "change": "changed-WI-CITY OF JANESVILLE - ROCK COUNTY-CITY OF JANESVILLE - ROCK COUNTY-26679",
+    "newPhone": "608-755-3072",
+    "oldPhone": "(608)755-3070",
+    "newEmail": "stottlerl@ci.janesville.wi.us",
+    "oldEmail": "godekd@ci.janesville.wi.us",
+    "newEffectiveDate": "2022-07-25T14:47:44",
+    "oldEffectiveDate": "2021-08-10T14:07:30",
+    "newAddress1": "18 N JACKSON ST, PO BOX 5005",
+    "oldAddress1": "18 N JACKSON ST",
+    "newZip": "53547-5005",
+    "oldZip": "53548-2928"
+  }
+]
