@@ -1,0 +1,16 @@
+[
+  {
+    "change": "changed-GA-Bartow-Bartow County Elections and Voter Registration-530",
+    "newEmail": "billardc@bartowcountyga.gov",
+    "oldEmail": "billardc@bartowga.org",
+    "newEffectiveDate": "2022-07-28T13:10:34",
+    "oldEffectiveDate": "2021-07-15T13:57:01"
+  },
+  {
+    "change": "changed-GA-Randolph-Randolph County Board of Registrars-642",
+    "newEmail": "vote@boerandolphcountyga.gov",
+    "oldEmail": "rcc.boe@gmail.com",
+    "newEffectiveDate": "2022-07-28T09:59:56",
+    "oldEffectiveDate": "2021-07-15T13:57:02"
+  }
+]
