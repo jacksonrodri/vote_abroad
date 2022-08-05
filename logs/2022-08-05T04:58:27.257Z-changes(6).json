@@ -1,0 +1,48 @@
+[
+  {
+    "change": "changed-GA-Spalding-Spalding County Board of Elections and Voter Registration-648",
+    "newFax": "",
+    "oldFax": "(770) 467-4278",
+    "newEmail": "spaldingelections@spaldingcounty.com",
+    "oldEmail": "mridley@spaldingcounty.com",
+    "newEffectiveDate": "2022-08-03T12:16:20",
+    "oldEffectiveDate": "2021-07-15T13:57:02"
+  },
+  {
+    "change": "changed-MN-Lake-Lake County Courthouse-1954",
+    "newEmail": "LakeCo.Elections@co.lake.mn.us",
+    "oldEmail": "elections@co.lake.mn.us",
+    "newEffectiveDate": "2022-08-04T13:42:01",
+    "oldEffectiveDate": "2015-08-31T14:36:27"
+  },
+  {
+    "change": "changed-MT-Broadwater-Broadwater County Election Administrator-2206",
+    "newEmail": "apaulsen@co.broadwater.mt.us",
+    "oldEmail": "dellis@co.broadwater.mt.us",
+    "newEffectiveDate": "2022-08-03T11:23:39",
+    "oldEffectiveDate": "2015-08-31T14:39:40"
+  },
+  {
+    "change": "changed-MT-Carter-Carter County Election Administrator-2208",
+    "newEmail": "pcastleberry@cartercounty.us",
+    "oldEmail": "cccnrc@midrivers.com",
+    "newEffectiveDate": "2022-08-03T11:24:08",
+    "oldEffectiveDate": "2015-08-31T14:39:40"
+  },
+  {
+    "change": "changed-MT-Flathead-Flathead County Election Administrator-2217",
+    "newEffectiveDate": "2022-08-03T11:24:44",
+    "oldEffectiveDate": "2021-06-14T13:52:07",
+    "newAddress1": "290 B North Main",
+    "oldAddress1": "40 11th St W Ste 230",
+    "newZip": "59901",
+    "oldZip": "59901-5435"
+  },
+  {
+    "change": "changed-MT-Pondera-Pondera County Election Administrator-2239",
+    "newEmail": "kody.farkell@ponderacounty.org",
+    "oldEmail": "ponderaclerk@3rivers.net",
+    "newEffectiveDate": "2022-08-03T11:25:18",
+    "oldEffectiveDate": "2015-08-31T14:39:40"
+  }
+]
