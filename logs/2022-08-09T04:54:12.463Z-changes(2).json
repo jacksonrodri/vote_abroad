@@ -1,0 +1,22 @@
+[
+  {
+    "change": "changed-CO-Moffat-Moffat County Clerk and Recorder-260",
+    "newEmail": "scolding@moffatcounty.net",
+    "oldEmail": "dbelleville@moffatcounty.net",
+    "newEffectiveDate": "2022-08-08T14:23:09",
+    "oldEffectiveDate": "2019-10-04T14:06:18"
+  },
+  {
+    "change": "changed-TX-Jones-Jones County Early Voting Clerk-3515",
+    "newFax": "(325) 823-4246",
+    "oldFax": "(325) 823-3979",
+    "newPhone": "(325) 823-4247",
+    "oldPhone": "(325) 823-3762",
+    "newEmail": "gloria.little@co.jones.tx.us",
+    "oldEmail": "leeann.jennings@co.jones.tx.us",
+    "newEffectiveDate": "2022-08-08T14:53:31",
+    "oldEffectiveDate": "2018-04-18T12:02:59",
+    "newAddress1": "P.O. Box 511",
+    "oldAddress1": "P.O. Box 552"
+  }
+]
