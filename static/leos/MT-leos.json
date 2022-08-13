@@ -563,7 +563,7 @@
     "f": "(406) 258-3913",
     "p": "(406) 258-4751",
     "e": "electioninfo@missoulacounty.us",
-    "d": "2022-06-28T18:57:13",
+    "d": "2022-08-12T13:51:02",
     "a1": "140 N Russell St",
     "a2": "",
     "a3": "",
@@ -572,8 +572,8 @@
     "z": "59801-4216",
     "j": "Missoula",
     "t": "County",
-    "fpcaOffice": true,
-    "fwabOffice": true
+    "fpcaOffice": false,
+    "fwabOffice": false
   },
   {
     "i": 2235,
@@ -1003,6 +1003,24 @@
     "s": "MT",
     "z": "59107-5002",
     "j": "Yellowstone",
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": true
+  },
+  {
+    "i": 27241,
+    "n": "Missoula County Election Administrator - FPCA and FWAB Submission",
+    "f": "(406) 258-3913",
+    "p": "(406) 258-4751",
+    "e": "election@missoulacounty.us",
+    "d": "2022-08-12T13:53:15",
+    "a1": "140 N Russell St",
+    "a2": "",
+    "a3": "",
+    "c": "Missoula",
+    "s": "MT",
+    "z": "59801-4216",
+    "j": "Missoula",
     "t": "County",
     "fpcaOffice": true,
     "fwabOffice": true

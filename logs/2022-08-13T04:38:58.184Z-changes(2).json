@@ -1,0 +1,30 @@
+[
+  {
+    "change": "changed-MT-Missoula-Missoula County Election Administrator-2234",
+    "newEffectiveDate": "2022-08-12T13:51:02",
+    "oldEffectiveDate": "2022-06-28T18:57:13",
+    "newFbcaOffice": false,
+    "oldFpcaOffice": true,
+    "newFwabOffice": false,
+    "oldFwabOffice": true
+  },
+  {
+    "change": "added-MT-Missoula-Missoula County Election Administrator - FPCA and FWAB Submission-27241",
+    "newId": 27241,
+    "newName": "Missoula County Election Administrator - FPCA and FWAB Submission",
+    "newFax": "(406) 258-3913",
+    "newPhone": "(406) 258-4751",
+    "newEmail": "election@missoulacounty.us",
+    "newEffectiveDate": "2022-08-12T13:53:15",
+    "newAddress1": "140 N Russell St",
+    "newAddress2": "",
+    "newAddress3": "",
+    "newCity": "Missoula",
+    "newState": "MT",
+    "newZip": "59801-4216",
+    "newJurisdictionName": "Missoula",
+    "newJurisdictionType": "County",
+    "newFpcaOffice": true,
+    "newFwabOffice": true
+  }
+]
