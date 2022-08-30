@@ -1,0 +1,74 @@
+[
+  {
+    "change": "changed-GA-Cobb-Cobb County Board of Elections and Registration-555",
+    "newEffectiveDate": "2022-08-29T11:48:26",
+    "oldEffectiveDate": "2021-03-22T12:53:37",
+    "newAddress1": "995 Roswell St. NE",
+    "oldAddress1": "736 Whitlock Ave., Ste. 400",
+    "newZip": "30060",
+    "oldZip": "30064"
+  },
+  {
+    "change": "changed-KY-Bourbon-Bourbon County Clerk-1145",
+    "newEmail": "cynthia.wilson@ky.gov",
+    "oldEmail": "richard.eads@ky.gov",
+    "newEffectiveDate": "2022-08-29T11:50:21",
+    "oldEffectiveDate": "2019-02-14T10:26:10"
+  },
+  {
+    "change": "changed-KY-Cumberland-Cumberland County Clerk-1165",
+    "newEmail": "elizabeth.anderson2@ky.gov",
+    "oldEmail": "kim.king@ky.gov",
+    "newEffectiveDate": "2022-08-29T11:50:47",
+    "oldEffectiveDate": "2015-08-31T13:32:15"
+  },
+  {
+    "change": "changed-KY-Hart-Hart County Clerk-1186",
+    "newEmail": "feliciaj.shelton@ky.gov",
+    "oldEmail": "lisah.sanders@ky.gov",
+    "newEffectiveDate": "2022-08-29T11:51:13",
+    "oldEffectiveDate": "2019-09-04T10:54:39"
+  },
+  {
+    "change": "changed-KY-Lewis-Lewis County Clerk-1204",
+    "newEmail": "stephanie.story@ky.gov",
+    "oldEmail": "glenda.himes@ky.gov",
+    "newEffectiveDate": "2022-08-29T11:51:35",
+    "oldEffectiveDate": "2015-08-31T13:32:16"
+  },
+  {
+    "change": "changed-KY-Logan-Logan County Clerk-1207",
+    "newEmail": "stacy.watkins@ky.gov",
+    "oldEmail": "scottie.harper@ky.gov",
+    "newEffectiveDate": "2022-08-29T11:51:58",
+    "oldEffectiveDate": "2019-09-04T10:54:39"
+  },
+  {
+    "change": "changed-KY-McCracken-McCracken County Clerk-1215",
+    "newEmail": "jamie.huskey@ky.gov",
+    "oldEmail": "julie.griggs@ky.gov",
+    "newEffectiveDate": "2022-08-29T11:52:41",
+    "oldEffectiveDate": "2015-08-31T13:32:16"
+  },
+  {
+    "change": "changed-KY-Oldham-Oldham County Clerk-1229",
+    "newEmail": "amy.alvey@ky.gov",
+    "oldEmail": "julie.barr@ky.gov",
+    "newEffectiveDate": "2022-08-29T11:53:09",
+    "oldEffectiveDate": "2019-09-04T10:54:39"
+  },
+  {
+    "change": "changed-KY-Russell-Russell County Clerk-1240",
+    "newEmail": "patti.glover@ky.gov",
+    "oldEmail": "sue.brockman@ky.gov",
+    "newEffectiveDate": "2022-08-29T11:53:31",
+    "oldEffectiveDate": "2015-08-31T13:32:16"
+  },
+  {
+    "change": "changed-KY-Simpson-Simpson County Clerk-1243",
+    "newEmail": "beth.laster@ky.gov",
+    "oldEmail": "jolene.thurman@ky.gov",
+    "newEffectiveDate": "2022-08-29T11:54:01",
+    "oldEffectiveDate": "2019-02-14T13:47:04"
+  }
+]
