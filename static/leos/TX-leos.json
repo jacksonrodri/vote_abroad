@@ -166,8 +166,8 @@
     "n": "Bandera County Early Voting Clerk",
     "f": "(830) 796-3321",
     "p": "(830) 796-8146",
-    "e": "rdouglas@banderacounty.org",
-    "d": "2021-01-15T09:12:38",
+    "e": "elections@banderacounty.org",
+    "d": "2022-08-30T14:04:19",
     "a1": "P.O. Box 1882",
     "a2": "",
     "a3": "",
@@ -4570,5 +4570,23 @@
     "t": "County",
     "fpcaOffice": true,
     "fwabOffice": true
+  },
+  {
+    "i": 27242,
+    "n": "Sabine County Early Voting Clerk  - FPCA Submission",
+    "f": "(409) 220-8353",
+    "p": "(409) 787-3786",
+    "e": "Jacee.ebarb@co.sabine.tx.us",
+    "d": "2022-08-17T12:38:45",
+    "a1": "P.O. Box 580",
+    "a2": "",
+    "a3": "",
+    "c": "Hemphill",
+    "s": "TX",
+    "z": "75948",
+    "j": "Sabine",
+    "t": "County",
+    "fpcaOffice": true,
+    "fwabOffice": false
   }
 ]
