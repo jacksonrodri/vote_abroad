@@ -1,0 +1,16 @@
+[
+  {
+    "change": "changed-PA-Cumberland-Cumberland County Board of Elections-3095",
+    "newEmail": "bureauofelections@cumberlandcountypa.gov",
+    "oldEmail": "bureauofelections@ccpa.net",
+    "newEffectiveDate": "2022-09-07T11:12:19",
+    "oldEffectiveDate": "2020-08-25T07:42:41"
+  },
+  {
+    "change": "changed-VA-James City-James City County Voter Registration and Elections-3737",
+    "newEffectiveDate": "2022-09-07T10:02:38",
+    "oldEffectiveDate": "2017-01-03T10:03:15",
+    "newAddress1": "4095 Ironbound Road",
+    "oldAddress1": "5300 Palmer Lane"
+  }
+]
