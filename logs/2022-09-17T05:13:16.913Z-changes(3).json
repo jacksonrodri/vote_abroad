@@ -1,0 +1,27 @@
+[
+  {
+    "change": "changed-ID-Minidoka-Minidoka County Clerk-819",
+    "newEmail": "minidokaelectionsstaff@minidokacounty.id.gov",
+    "oldEmail": "tpage@co.minidoka.id.us",
+    "newEffectiveDate": "2022-09-16T14:27:37",
+    "oldEffectiveDate": "2020-06-18T13:25:29"
+  },
+  {
+    "change": "changed-IL-Madison-Madison County Clerk-892",
+    "newPhone": "(618) 692-6290",
+    "oldPhone": "(618) 296-4484",
+    "newEmail": "votebymail@madisoncountyil.gov",
+    "oldEmail": "elections@macoupincountyil.gov",
+    "newEffectiveDate": "2022-09-16T15:16:02",
+    "oldEffectiveDate": "2021-09-15T12:17:08"
+  },
+  {
+    "change": "changed-MN-Martin-Martin County Elections-1961",
+    "newName": "Martin County Elections",
+    "oldName": "Martin County Courthouse",
+    "newEmail": "elections@co.martin.mn.us",
+    "oldEmail": "Adria.Mosloski@co.martin.mn.us",
+    "newEffectiveDate": "2022-09-16T07:33:35",
+    "oldEffectiveDate": "2019-08-12T14:28:46"
+  }
+]
