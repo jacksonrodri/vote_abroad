@@ -1,0 +1,18 @@
+[
+  {
+    "change": "changed-NH-Derry, Town of-Town Clerk of Derry-2559",
+    "newEmail": "townclerk@derrynh.org",
+    "oldEmail": "danielhealey@derrynh.org",
+    "newEffectiveDate": "2022-09-19T10:33:13",
+    "oldEffectiveDate": "2021-09-29T11:31:13"
+  },
+  {
+    "change": "changed-NH-Sunapee, Town of-Town Clerk of Sunapee-2712",
+    "newFax": "",
+    "oldFax": "(603) 763-4608",
+    "newEmail": "joshua@town.sunapee.nh.us",
+    "oldEmail": "betty@town.sunapee.nh.us",
+    "newEffectiveDate": "2022-09-19T08:57:34",
+    "oldEffectiveDate": "2021-09-29T11:31:14"
+  }
+]
