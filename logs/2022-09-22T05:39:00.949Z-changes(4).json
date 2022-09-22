@@ -1,0 +1,40 @@
+[
+  {
+    "change": "changed-CT-Plainville-Plainville Town Clerk-391",
+    "newPhone": "860-793-0221 x7151",
+    "oldPhone": "860-793-0221 x246",
+    "newEmail": "porrini@plainville-ct.gov",
+    "oldEmail": "cporrini@plainville-ct.gov",
+    "newEffectiveDate": "2022-09-21T11:03:37",
+    "oldEffectiveDate": "2021-07-15T14:01:06"
+  },
+  {
+    "change": "changed-NH-Hanover, Town of-Town Clerk of Hanover-2600",
+    "newPhone": "(603) 640-3202",
+    "oldPhone": "(603) 640-3203",
+    "newEmail": "townclerk@hanovernh.org",
+    "oldEmail": "betsy.mcclain@hanovernh.org",
+    "newEffectiveDate": "2022-09-21T10:59:19",
+    "oldEffectiveDate": "2021-09-29T11:31:13",
+    "newAddress1": "Town Hall, ",
+    "oldAddress1": "PO BOX 483",
+    "newAddress2": "41 South Main Street",
+    "oldAddress2": "",
+    "newAddress3": "PO BOX 483",
+    "oldAddress3": ""
+  },
+  {
+    "change": "changed-NC-Mecklenburg-Mecklenburg County Board of Elections-2318",
+    "newEmail": "absentee@mecklenburcountync.gov",
+    "oldEmail": "kristin.mavromatis@mecklenburgcountync.gov",
+    "newEffectiveDate": "2022-09-21T09:47:55",
+    "oldEffectiveDate": "2022-03-24T07:58:29"
+  },
+  {
+    "change": "changed-TX-Navarro-Navarro County Early Voting Clerk-3563",
+    "newEmail": "athomas@navarrocounty.org",
+    "oldEmail": "dteed@navarrocounty.org",
+    "newEffectiveDate": "2022-09-21T13:32:36",
+    "oldEffectiveDate": "2018-04-17T09:56:54"
+  }
+]
