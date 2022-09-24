@@ -1,0 +1,45 @@
+[
+  {
+    "change": "changed-MI-Benton Township (Berrien County)-Benton Charter Township Clerk-22183",
+    "newName": "Benton Charter Township Clerk",
+    "oldName": "Benton Township Clerk",
+    "newFax": "269-9257134",
+    "oldFax": "231-625-2213",
+    "newEffectiveDate": "2022-09-23T09:51:33",
+    "oldEffectiveDate": "2021-10-26T15:59:20"
+  },
+  {
+    "change": "changed-MI-Bridgman, City of (Berrien County)-Bridgman City Clerk-22317",
+    "newEmail": "skarl@bridgman.org",
+    "oldEmail": "aholm@bridgman.org",
+    "newEffectiveDate": "2022-09-23T09:48:57",
+    "oldEffectiveDate": "2021-10-26T15:59:21"
+  },
+  {
+    "change": "changed-NC-Mecklenburg-Mecklenburg County Board of Elections-2318",
+    "newEmail": "absentee@mecklenburgcountync.gov",
+    "oldEmail": "absentee@mecklenburcountync.gov",
+    "newEffectiveDate": "2022-09-23T15:42:42",
+    "oldEffectiveDate": "2022-09-21T09:47:55"
+  },
+  {
+    "change": "changed-TX-Shelby-Shelby County Early Voting Clerk-3598",
+    "newFax": "(936) 598-8942",
+    "oldFax": "(936) 598-3701",
+    "newPhone": "(936) 598-5340",
+    "oldPhone": "(936) 598-6361",
+    "newEmail": "shelby.voter@co.shelby.tx.us",
+    "oldEmail": "shelbycountyclerk@yahoo.com",
+    "newEffectiveDate": "2022-09-23T09:47:13",
+    "oldEffectiveDate": "2018-04-18T12:02:59",
+    "newAddress1": "P.O. Box 9",
+    "oldAddress1": "P.O. Box 1987"
+  },
+  {
+    "change": "changed-WA-Snohomish-Snohomish County Auditor-4084",
+    "newFax": "(425) 355-3444",
+    "oldFax": "(425) 259-2777",
+    "newEffectiveDate": "2022-09-23T15:23:17",
+    "oldEffectiveDate": "2021-07-22T09:26:19"
+  }
+]
