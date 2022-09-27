@@ -1,0 +1,30 @@
+[
+  {
+    "change": "changed-CT-Farmington-Farmington Town Clerk-334",
+    "newEmail": "frinkm@farmington-ct.org",
+    "oldEmail": "rayp@farmington-ct.org",
+    "newEffectiveDate": "2022-09-26T08:44:38",
+    "oldEffectiveDate": "2019-06-25T09:56:31"
+  },
+  {
+    "change": "changed-MI-Buchanan Township (Berrien County)-Buchanan Township Clerk-22351",
+    "newEmail": "clerk@buchanantownship.net",
+    "oldEmail": "",
+    "newEffectiveDate": "2022-09-26T07:12:04",
+    "oldEffectiveDate": "2021-10-26T15:59:21"
+  },
+  {
+    "change": "changed-PA-Warren-Warren County Board of Elections-3136",
+    "newEmail": "kranson@warrencountypa.gov",
+    "oldEmail": "lzuck@warren-county.net",
+    "newEffectiveDate": "2022-09-26T09:18:53",
+    "oldEffectiveDate": "2019-07-26T15:54:46"
+  },
+  {
+    "change": "changed-WA-Pierce-Pierce County Auditor-4080",
+    "newFax": "(253) 798-2761",
+    "oldFax": "(253) 798-8683",
+    "newEffectiveDate": "2022-09-26T12:40:52",
+    "oldEffectiveDate": "2022-06-02T14:06:35"
+  }
+]
