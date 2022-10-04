@@ -1,0 +1,245 @@
+[
+  {
+    "change": "changed-AL-Madison-Madison County Absentee Elections Manager-47",
+    "newName": "Madison County Absentee Elections Manager",
+    "oldName": "Madison County Circuit Clerk",
+    "newEmail": "Sandra.brown@alacourt.gov",
+    "oldEmail": "debra.kizer@alacourt.gov",
+    "newEffectiveDate": "2022-10-03T13:32:13",
+    "oldEffectiveDate": "2022-01-20T12:17:31"
+  },
+  {
+    "change": "changed-CO-Rio Blanco-Rio Blanco County Clerk and Recorder-271",
+    "newEmail": "shawn.luce@rbc.us",
+    "oldEmail": "debra.raley@rbc.us",
+    "newEffectiveDate": "2022-10-03T09:20:44",
+    "oldEffectiveDate": "2017-09-06T15:00:08"
+  },
+  {
+    "change": "changed-CT-East Granby-East Granby Town Clerk-321",
+    "newEffectiveDate": "2022-10-03T14:29:02",
+    "oldEffectiveDate": "2019-06-25T09:56:31",
+    "newAddress1": "9 Center Street",
+    "oldAddress1": "9 Center Street, P.O. Box TC"
+  },
+  {
+    "change": "changed-CT-Goshen-Goshen Town Clerk-337",
+    "newEmail": "townclerk@goshenct.gov",
+    "oldEmail": "bbreor@goshenct.gov",
+    "newEffectiveDate": "2022-10-03T13:49:43",
+    "oldEffectiveDate": "2021-07-15T14:01:06"
+  },
+  {
+    "change": "changed-CT-Sharon-Sharon Town Clerk-406",
+    "newEmail": "townclerk@sharon-ct.org",
+    "oldEmail": "sharontownclerk@yahoo.com",
+    "newEffectiveDate": "2022-10-03T13:36:10",
+    "oldEffectiveDate": "2019-06-25T09:56:32"
+  },
+  {
+    "change": "changed-CT-West Hartford-West Hartford Town Clerk-435",
+    "newPhone": "860-561-7430",
+    "oldPhone": "860-561-7447",
+    "newEmail": "Elections@WestHartfordCT.gov",
+    "oldEmail": "essie.labrot@westhartfordct.gov",
+    "newEffectiveDate": "2022-10-03T13:56:57",
+    "oldEffectiveDate": "2021-07-15T14:01:06"
+  },
+  {
+    "change": "changed-CT-Windsor Locks-Windsor Locks Town Clerk-445",
+    "newEmail": "clatournes@WLOCKS.com",
+    "oldEmail": "snolan@WLOCKS.com",
+    "newEffectiveDate": "2022-10-03T10:31:23",
+    "oldEffectiveDate": "2021-07-15T14:01:06"
+  },
+  {
+    "change": "changed-GA-Clinch-Clinch County Board of Elections and Registration-554",
+    "newEmail": "clinchelections@CLINCHCOUNTYGA.GOV",
+    "oldEmail": "DSMITH@CLINCHCOUNTYGA.GOV",
+    "newEffectiveDate": "2022-10-03T13:43:05",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Cobb-Cobb County Board of Elections and Registration-555",
+    "newEmail": "absentee@cobbcounty.org",
+    "oldEmail": "ERICA.HAMILTON@COBBCOUNTY.ORG",
+    "newEffectiveDate": "2022-10-03T15:19:16",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Forsyth-Forsyth County Board of Elections and Voter Registration-580",
+    "newEmail": "voter@forsythco.com",
+    "oldEmail": "MBSMITH@FORSYTHCO.COM",
+    "newEffectiveDate": "2022-10-03T10:17:24",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-IL-Jo Daviess-Jo Daviess County Clerk-878",
+    "newEmail": "akaiser@jodaviesscountyil.gov",
+    "oldEmail": "akaiser@jodaviess.org",
+    "newEffectiveDate": "2022-10-03T16:08:32",
+    "oldEffectiveDate": "2021-09-15T12:17:08"
+  },
+  {
+    "change": "changed-IL-Macon-Macon County Clerk-890",
+    "newPhone": "(217) 424-1333",
+    "oldPhone": "(217) 424-1305",
+    "newEmail": "jtanner@maconcounty.illinois.gov",
+    "oldEmail": "jtanner@co.macon.il.us",
+    "newEffectiveDate": "2022-10-03T13:34:55",
+    "oldEffectiveDate": "2021-09-15T12:17:08"
+  },
+  {
+    "change": "changed-IA-Johnson-Johnson County Auditor-738",
+    "newEmail": "elections@johnsoncountyiowa.gov",
+    "oldEmail": "elections@co.johnson.ia.us",
+    "newEffectiveDate": "2022-10-03T13:59:23",
+    "oldEffectiveDate": "2019-08-19T13:42:48"
+  },
+  {
+    "change": "changed-KS-Ellis-Ellis County Clerk-1057",
+    "newEffectiveDate": "2022-10-03T13:37:42",
+    "oldEffectiveDate": "2021-09-20T10:56:38",
+    "newAddress1": "718 Main, Administration Building",
+    "oldAddress1": "P.O. Box 720; 718 Main",
+    "newZip": "67601",
+    "oldZip": "67601-3899"
+  },
+  {
+    "change": "changed-MA-East Brookfield, Town of-East Brookfield Town Clerk-1402",
+    "newEffectiveDate": "2022-10-03T13:26:43",
+    "oldEffectiveDate": "2021-07-13T13:22:36",
+    "newAddress1": "122 Connie Mack Dr",
+    "oldAddress1": "P.O. BOX 568"
+  },
+  {
+    "change": "changed-MI-Battle Creek, City of (Calhoun County)-Battle Creek City Clerk-22129",
+    "newPhone": "269-966-3348",
+    "oldPhone": "269-966-3348 x1273",
+    "newEffectiveDate": "2022-10-03T14:52:53",
+    "oldEffectiveDate": "2021-10-26T15:59:19"
+  },
+  {
+    "change": "changed-MN-Aitkin-Aitkin County Auditor-1917",
+    "newEmail": "Kathleen.ryan@co.aitkin.mn.us",
+    "oldEmail": "sally.huhta@co.aitkin.mn.us",
+    "newEffectiveDate": "2022-10-03T13:53:35",
+    "oldEffectiveDate": "2015-08-31T14:36:27",
+    "newAddress1": "307 2nd Street NW",
+    "oldAddress1": "209 2nd St NW Rm 202",
+    "newZip": "56431",
+    "oldZip": "56431-1292"
+  },
+  {
+    "change": "changed-MN-Douglas-Douglas County Auditor/Treasurer-1937",
+    "newEffectiveDate": "2022-10-03T13:38:36",
+    "oldEffectiveDate": "2021-10-05T10:54:03",
+    "newAddress1": "821 Cedar St",
+    "oldAddress1": "822 Douglas St."
+  },
+  {
+    "change": "changed-MN-Marshall-Marshall County Courthouse-1960",
+    "newFax": "218-745-5089",
+    "oldFax": "(218) 745-4317",
+    "newPhone": "218-745-4851",
+    "oldPhone": "(218) 745-4960",
+    "newEffectiveDate": "2022-10-03T14:08:14",
+    "oldEffectiveDate": "2019-08-12T14:28:22",
+    "newAddress1": "208 E Colvin Ave, Ste 11",
+    "oldAddress1": "208 E Colvin Ave, Ste 10"
+  },
+  {
+    "change": "changed-NE-Pawnee-Pawnee County Clerk-2478",
+    "newEmail": "candi.nicholas@pawneecountyne.gov",
+    "oldEmail": "clerk.pawneecountyne@gmail.com",
+    "newEffectiveDate": "2022-10-03T13:45:33",
+    "oldEffectiveDate": "2020-08-28T12:12:34"
+  },
+  {
+    "change": "changed-NH-Conway, Town of-Town Clerk of Conway-2551",
+    "newEffectiveDate": "2022-10-03T13:23:44",
+    "oldEffectiveDate": "2021-09-29T11:31:13",
+    "newAddress2": "PO BOX 2680",
+    "oldAddress2": ""
+  },
+  {
+    "change": "changed-NY-Washington-Washington County Board of Elections-2869",
+    "newFax": "",
+    "oldFax": "(518) 746-2179",
+    "newEmail": "boardofelections@washingtoncountyny.gov",
+    "oldEmail": "boardofelections@co.washington.ny.us",
+    "newEffectiveDate": "2022-10-03T11:36:01",
+    "oldEffectiveDate": "2019-07-15T14:29:52"
+  },
+  {
+    "change": "changed-PA-Fayette-Fayette County Election Bureau-3100",
+    "newName": "Fayette County Election Bureau",
+    "oldName": "Fayette County Board of Elections",
+    "newEffectiveDate": "2022-10-03T14:10:42",
+    "oldEffectiveDate": "2021-10-15T11:11:46",
+    "newAddress1": "2 West Main Street, Suite 111",
+    "oldAddress1": "Fayette County Public Service Building  22 E. Main St.",
+    "newAddress2": "",
+    "oldAddress2": "22 E. Main St",
+    "newZip": "15401",
+    "oldZip": "15401-3412"
+  },
+  {
+    "change": "changed-PA-Montgomery-Montgomery County Board of Elections-3120",
+    "newPhone": "(610) 278-3277",
+    "oldPhone": "(610) 278-3275",
+    "newEffectiveDate": "2022-10-03T13:27:50",
+    "oldEffectiveDate": "2020-09-03T12:35:13"
+  },
+  {
+    "change": "changed-TN-Maury-Maury County Election Commission-3351",
+    "newFax": "",
+    "oldFax": "(931) 375-6019",
+    "newEffectiveDate": "2022-10-03T13:32:57",
+    "oldEffectiveDate": "2021-09-27T12:22:52"
+  },
+  {
+    "change": "changed-TX-Bowie-Bowie County Early Voting Clerk-3407",
+    "newEmail": "dmoreland@bowiecounty.org",
+    "oldEmail": "dmoreland43@aol.com",
+    "newEffectiveDate": "2022-10-03T14:05:04",
+    "oldEffectiveDate": "2015-08-31T11:03:24"
+  },
+  {
+    "change": "changed-TX-Fayette-Fayette County Early Voting Clerk-3463",
+    "newEffectiveDate": "2022-10-03T13:25:29",
+    "oldEffectiveDate": "2019-08-29T15:13:37",
+    "newAddress1": "275 Ellinger Road",
+    "oldAddress1": "151 N. Washington, Room 108",
+    "newAddress2": "Suite A",
+    "oldAddress2": ""
+  },
+  {
+    "change": "changed-VA-Colonial Heights-Colonial Heights General Registrar-3701",
+    "newEmail": "registrar@colonialheightsva.gov",
+    "oldEmail": "schottj@colonialheightsva.gov",
+    "newEffectiveDate": "2022-10-03T14:19:53",
+    "oldEffectiveDate": "2021-08-23T11:43:57"
+  },
+  {
+    "change": "changed-WA-Cowlitz-Cowlitz County Auditor-4061",
+    "newEmail": "elections@cowlitzwa.gov",
+    "oldEmail": "elections@co.cowlitz.wa.us",
+    "newEffectiveDate": "2022-10-03T15:21:15",
+    "oldEffectiveDate": "2021-07-22T09:26:19"
+  },
+  {
+    "change": "changed-WA-Mason-Mason County Auditor-4076",
+    "newFax": "(360) 427-7768",
+    "oldFax": "(360) 427-1753",
+    "newEffectiveDate": "2022-10-03T14:22:11",
+    "oldEffectiveDate": "2021-07-22T09:26:19"
+  },
+  {
+    "change": "changed-WI-TOWN OF BELMONT - LAFAYETTE COUNTY-TOWN OF BELMONT - LAFAYETTE COUNTY-26131",
+    "newEmail": "clerk@townofbelmont.wi.gov",
+    "oldEmail": "tbelmont2014@gmail.com",
+    "newEffectiveDate": "2022-10-03T14:55:18",
+    "oldEffectiveDate": "2021-08-10T14:07:24"
+  }
+]
