@@ -1,0 +1,110 @@
+[
+  {
+    "change": "changed-CA-Sonoma-Sonoma County Clerk, Registrar of Voters-209",
+    "newPhone": "(707) 565-6810",
+    "oldPhone": "(707) 565-6803",
+    "newEffectiveDate": "2022-10-04T12:34:39",
+    "oldEffectiveDate": "2021-07-22T08:42:17",
+    "newAddress1": "435 Fiscal Drive",
+    "oldAddress1": "P.O. Box 11485",
+    "newZip": "95403",
+    "oldZip": "95406-1485"
+  },
+  {
+    "change": "changed-CO-Baca-Baca County Clerk and Recorder-223",
+    "newEffectiveDate": "2022-10-04T14:41:45",
+    "oldEffectiveDate": "2017-09-06T15:00:08"
+  },
+  {
+    "change": "changed-FL-Citrus-Citrus Supervisor of Elections-463",
+    "newFax": "352-564-7128",
+    "oldFax": "352-564-7121",
+    "newEffectiveDate": "2022-10-04T10:00:05",
+    "oldEffectiveDate": "2021-07-13T13:57:38"
+  },
+  {
+    "change": "changed-FL-Hernando-Hernando Supervisor of Elections-481",
+    "newEffectiveDate": "2022-10-04T12:40:50",
+    "oldEffectiveDate": "2019-08-13T15:35:04",
+    "newAddress1": "16264 Spring Hill Drive",
+    "oldAddress1": "20 North Main Street, Room 165",
+    "newZip": "34604",
+    "oldZip": "34601"
+  },
+  {
+    "change": "changed-FL-Holmes-Holmes Supervisor of Elections-484",
+    "newEmail": "therisa@holmeselectionsfl.gov",
+    "oldEmail": "therisa@holmeselections.com",
+    "newEffectiveDate": "2022-10-04T09:55:17",
+    "oldEffectiveDate": "2019-08-13T15:35:04"
+  },
+  {
+    "change": "changed-GA-Newton-Newton County Board of Elections and Voter Registration-629",
+    "newEmail": "elections@co.newton.ga.us",
+    "oldEmail": "ADAVIS@CO.NEWTON.GA.US",
+    "newEffectiveDate": "2022-10-04T15:31:25",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-IL-Tazewell-Tazewell County Clerk-927",
+    "newEmail": "ballotrequest@tazewell-il.gov",
+    "oldEmail": "countyclerk@tazewell.com",
+    "newEffectiveDate": "2022-10-04T09:17:02",
+    "oldEffectiveDate": "2021-09-13T14:27:41"
+  },
+  {
+    "change": "changed-MO-Ray-Ray-2093",
+    "newPhone": "(816) 776-4503",
+    "oldPhone": "(816) 776-4502",
+    "newEffectiveDate": "2022-10-04T11:16:20",
+    "oldEffectiveDate": "2017-09-26T13:38:57"
+  },
+  {
+    "change": "changed-PA-Wyoming-Wyoming County Board of Elections-3140",
+    "newEmail": "fkellett@wycopa.org",
+    "oldEmail": "fkellet@wycopa.org",
+    "newEffectiveDate": "2022-10-04T08:47:18",
+    "oldEffectiveDate": "2021-10-15T11:11:46"
+  },
+  {
+    "change": "changed-RI-North Providence-North Providence Board of Canvassers-3166",
+    "newPhone": "(401) 232-0900 x1230",
+    "oldPhone": "(401) 232-0900 x234",
+    "newEmail": "bocclerk@northprovidenceri.gov",
+    "oldEmail": "bocdirector@northprovidenceri.gov",
+    "newEffectiveDate": "2022-10-04T10:06:31",
+    "oldEffectiveDate": "2021-07-22T09:23:23",
+    "newJurisdictionType": "Town",
+    "oldJurisdictionType": "City"
+  },
+  {
+    "change": "changed-TX-Lubbock-Lubbock County Early Voting Clerk-3540",
+    "newFax": "(806) 775-7980",
+    "oldFax": "(806) 775-1338",
+    "newEffectiveDate": "2022-10-04T10:02:37",
+    "oldEffectiveDate": "2022-07-25T10:48:27"
+  },
+  {
+    "change": "changed-VA-Northumberland-Northumberland General Registrar-3761",
+    "newFax": "888-690-1934",
+    "oldFax": "(804) 580-2075",
+    "newEffectiveDate": "2022-10-04T10:21:10",
+    "oldEffectiveDate": "2018-08-14T13:09:00"
+  },
+  {
+    "change": "changed-WI-CITY OF SUN PRAIRIE - DANE COUNTY-CITY OF SUN PRAIRIE - DANE COUNTY-25671",
+    "newEmail": "clerk@cityofsunprairie.com",
+    "oldEmail": "ehilby@cityofsunprairie.com",
+    "newEffectiveDate": "2022-10-04T09:13:01",
+    "oldEffectiveDate": "2021-08-10T14:07:21"
+  },
+  {
+    "change": "changed-WI-TOWN OF BELVIDERE - BUFFALO COUNTY-TOWN OF BELVIDERE - BUFFALO COUNTY-25413",
+    "newEffectiveDate": "2022-10-04T14:06:04",
+    "oldEffectiveDate": "2021-08-10T14:07:19",
+    "newCity": "COCHRANE",
+    "oldCity": "ALMA",
+    "newZip": "54622-7047",
+    "oldZip": "54610-8015"
+  }
+]
