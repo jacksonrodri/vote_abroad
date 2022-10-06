@@ -1,0 +1,91 @@
+[
+  {
+    "change": "changed-GA-Muscogee-Muscogee County Board of Elections and Voter Registration-628",
+    "newEmail": "muscogeeelectionsandregistration@COLUMBUSGA.ORG",
+    "oldEmail": "NBOREN@COLUMBUSGA.ORG",
+    "newEffectiveDate": "2022-10-05T15:02:18",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-MI-Beaugrand Township (Cheboygan County)-Beaugrand Township Clerk-22149",
+    "newPhone": "231-627-6052",
+    "oldPhone": "231-627-4873 x108",
+    "newEffectiveDate": "2022-10-05T13:34:17",
+    "oldEffectiveDate": "2021-10-26T15:59:20"
+  },
+  {
+    "change": "changed-MI-Benton Township (Cheboygan County)-Benton Township Clerk-22187",
+    "newEmail": "bentontwp@bentontwp.org",
+    "oldEmail": "",
+    "newEffectiveDate": "2022-10-05T13:36:06",
+    "oldEffectiveDate": "2021-10-26T15:59:20",
+    "newAddress1": "5012 Orchard Beach Rd",
+    "oldAddress1": "5012 Orchard Beach Road"
+  },
+  {
+    "change": "changed-MI-Burt Township (Cheboygan County)-Burt Township Clerk-22377",
+    "newEmail": "burttownshipclerk@yahoo.com",
+    "oldEmail": "",
+    "newEffectiveDate": "2022-10-05T13:37:57",
+    "oldEffectiveDate": "2021-10-26T15:59:21"
+  },
+  {
+    "change": "changed-MI-Cheboygan, City of (Cheboygan County)-Cheboygan City Clerk-22501",
+    "newPhone": "231-625-9003",
+    "oldPhone": "2316279931",
+    "newEmail": "alohaclerk@gmail.com",
+    "oldEmail": "bbrown@cheboygan.org",
+    "newEffectiveDate": "2022-10-05T13:31:38",
+    "oldEffectiveDate": "2021-10-26T15:59:22",
+    "newAddress1": "4098 Mann Road",
+    "oldAddress1": "PO Box 39"
+  },
+  {
+    "change": "changed-MN-Benton-Benton County Auditor-Treasurer&apos;s Office-1921",
+    "newName": "Benton County Auditor-Treasurer's Office",
+    "oldName": "Benton County Auditor-Treasurer's Office",
+    "newPhone": "(320) 968-5006",
+    "oldPhone": "(320) 968-5027",
+    "newEffectiveDate": "2022-10-05T14:08:43",
+    "oldEffectiveDate": "2017-09-06T17:03:55"
+  },
+  {
+    "change": "changed-MT-Broadwater-Broadwater County Election Administrator-2206",
+    "newPhone": "(406) 266-3405",
+    "oldPhone": "(406) 266-3443",
+    "newEffectiveDate": "2022-10-05T07:25:21",
+    "oldEffectiveDate": "2022-08-03T11:23:39"
+  },
+  {
+    "change": "changed-MT-Deer Lodge-Deer Lodge County Election Administrator-2214",
+    "newPhone": "(406) 563-4046",
+    "oldPhone": "(406) 563-4063",
+    "newEffectiveDate": "2022-10-05T07:26:24",
+    "oldEffectiveDate": "2022-04-18T06:58:55"
+  },
+  {
+    "change": "changed-MT-Sanders-Sanders County Election Administrator-2247",
+    "newEmail": "mcwallace@co.sanders.mt.us",
+    "oldEmail": "nscribner@co.sanders.mt.us",
+    "newEffectiveDate": "2022-10-05T07:26:52",
+    "oldEffectiveDate": "2015-08-31T14:39:40"
+  },
+  {
+    "change": "changed-MT-Yellowstone-Yellowstone County Election Administrator-2258",
+    "newEmail": "elections@yellowstonecountymt.gov",
+    "oldEmail": "brutherford@yellowstonecountymt.gov",
+    "newEffectiveDate": "2022-10-05T07:27:08",
+    "oldEffectiveDate": "2022-06-02T10:45:05"
+  },
+  {
+    "change": "changed-TX-Concho-Concho County Early Voting Clerk-3436",
+    "newPhone": "(325) 732-2031",
+    "oldPhone": "(325) 732-4322",
+    "newEmail": "ssmith@co.concho.tx.us",
+    "oldEmail": "plovell@co.concho.tx.us",
+    "newEffectiveDate": "2022-10-05T12:57:05",
+    "oldEffectiveDate": "2018-04-18T12:13:30",
+    "newAddress1": "P.O. Box 11",
+    "oldAddress1": "P.O. Box 98"
+  }
+]
