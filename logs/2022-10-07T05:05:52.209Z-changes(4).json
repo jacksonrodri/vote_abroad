@@ -1,0 +1,38 @@
+[
+  {
+    "change": "changed-MT-Sanders-Sanders County Election Administrator-2247",
+    "newPhone": "(406) 827-3037",
+    "oldPhone": "(406) 827-6922",
+    "newEffectiveDate": "2022-10-06T11:02:50",
+    "oldEffectiveDate": "2022-10-05T07:26:52"
+  },
+  {
+    "change": "changed-TX-Jones-Jones County Early Voting Clerk-3515",
+    "newFax": "325-823-4249",
+    "oldFax": "(325) 823-4246",
+    "newPhone": "325-823-3762",
+    "oldPhone": "(325) 823-4247",
+    "newEmail": "leeann.jennings@co.jones.tx.us",
+    "oldEmail": "gloria.little@co.jones.tx.us",
+    "newEffectiveDate": "2022-10-06T09:37:18",
+    "oldEffectiveDate": "2022-08-08T14:53:31",
+    "newAddress1": "P.O. Box 552",
+    "oldAddress1": "P.O. Box 511"
+  },
+  {
+    "change": "changed-UT-Summit-Summit County Clerk-3664",
+    "newPhone": "(435) 336-3040",
+    "oldPhone": "(435) 336-3204",
+    "newEmail": "elections@summitcounty.org",
+    "oldEmail": "efurse@summitcounty.org",
+    "newEffectiveDate": "2022-10-06T07:21:18",
+    "oldEffectiveDate": "2021-07-22T08:38:22"
+  },
+  {
+    "change": "changed-WY-Campbell-Campbell County Clerk-5993",
+    "newEmail": "michelle.leiker@campbellcountywy.gov",
+    "oldEmail": "mll02@ccgov.net",
+    "newEffectiveDate": "2022-10-06T13:31:48",
+    "oldEffectiveDate": "2021-09-09T14:44:50"
+  }
+]
