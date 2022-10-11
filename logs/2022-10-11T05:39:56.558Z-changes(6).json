@@ -1,0 +1,48 @@
+[
+  {
+    "change": "changed-CT-Tolland-Tolland Town Clerk-423",
+    "newEmail": "kpagan@tollandct.gov",
+    "oldEmail": "kpagan@tolland.org",
+    "newEffectiveDate": "2022-10-07T07:29:41",
+    "oldEffectiveDate": "2021-07-15T14:01:06"
+  },
+  {
+    "change": "changed-CT-Vernon-Vernon Town Clerk-427",
+    "newEmail": "kdaigle@vernon-ct.gov",
+    "oldEmail": "bdixon@vernon-ct.gov",
+    "newEffectiveDate": "2022-10-07T07:27:44",
+    "oldEffectiveDate": "2021-07-15T14:01:06"
+  },
+  {
+    "change": "changed-GA-Fulton-Fulton County Board of Registration and Elections-582",
+    "newEmail": "Elections.Absentee@fultoncountyga.gov",
+    "oldEmail": "HOLLY.SMITH@FULTONCOUNTYGA.GOV",
+    "newEffectiveDate": "2022-10-07T12:06:40",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-MI-Chester Township (Otsego County)-Chester Township Clerk-22517",
+    "newPhone": "989-732-5886",
+    "oldPhone": "989-370-6847",
+    "newEmail": "clerk@chester-township.com",
+    "oldEmail": "chestertwpclerk@frontier.com",
+    "newEffectiveDate": "2022-10-07T07:33:23",
+    "oldEffectiveDate": "2021-10-26T15:59:22"
+  },
+  {
+    "change": "changed-MN-Polk-Polk County Taxpayer Service Center-1976",
+    "newName": "Polk County Taxpayer Service Center",
+    "oldName": "Polk County Government Center",
+    "newEmail": "elections@co.polk.mn.us",
+    "oldEmail": "michelle.cote@co.polk.mn.us",
+    "newEffectiveDate": "2022-10-07T10:41:07",
+    "oldEffectiveDate": "2018-09-25T13:19:01"
+  },
+  {
+    "change": "changed-WI-TOWN OF BELVIDERE - BUFFALO COUNTY-TOWN OF BELVIDERE - BUFFALO COUNTY-25413",
+    "newPhone": "(608) 248-1245",
+    "oldPhone": "608-450-1207",
+    "newEffectiveDate": "2022-10-07T10:14:41",
+    "oldEffectiveDate": "2022-10-04T14:06:04"
+  }
+]
