@@ -1,0 +1,46 @@
+[
+  {
+    "change": "changed-GA-Houston-Houston County Board of Elections and Voter Registration-598",
+    "newEmail": "elections@houstoncountyga.org",
+    "oldEmail": "DPRESSWOOD@HOUSTONCOUNTYGA.ORG",
+    "newEffectiveDate": "2022-10-18T11:38:13",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-MA-South Hadley, Town of-South Hadley Town Clerk-1592",
+    "newPhone": "(413) 538-5030",
+    "oldPhone": "(413) 538-5017",
+    "newEmail": "sgmeiner@southhadleyma.gov",
+    "oldEmail": "chamlin@southhadleyma.gov",
+    "newEffectiveDate": "2022-10-17T07:55:43",
+    "oldEffectiveDate": "2021-07-13T13:22:37"
+  },
+  {
+    "change": "changed-NH-Littleton, Town of-Town Clerk of Littleton-2630",
+    "newEmail": "abrousseau@townoflittleton.org",
+    "oldEmail": "jwhite@townoflittleton.org",
+    "newEffectiveDate": "2022-10-17T11:30:47",
+    "oldEffectiveDate": "2021-09-29T11:31:14"
+  },
+  {
+    "change": "changed-NH-Westmoreland, Town of-Town Clerk of Westmoreland-2732",
+    "newEmail": "clerk@westmorelandnh.com",
+    "oldEmail": "westmorelandtownclerk@gmail.com",
+    "newEffectiveDate": "2022-10-17T15:01:46",
+    "oldEffectiveDate": "2021-09-29T11:31:14"
+  },
+  {
+    "change": "changed-NY-Saratoga-Saratoga County Board of Elections-2856",
+    "newEmail": "AbsenteeBallot@saratogacountyny.gov",
+    "oldEmail": "CBagramian@saratogacountyny.gov",
+    "newEffectiveDate": "2022-10-18T11:41:58",
+    "oldEffectiveDate": "2018-11-05T11:42:01"
+  },
+  {
+    "change": "changed-VA-Lexington-Lexington General Registrar-3743",
+    "newEmail": "jharris@lexingtonva.gov",
+    "oldEmail": "jyowell@lexingtonva.gov",
+    "newEffectiveDate": "2022-10-18T12:38:39",
+    "oldEffectiveDate": "2017-09-28T08:27:01"
+  }
+]
