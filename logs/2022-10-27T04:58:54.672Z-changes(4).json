@@ -1,0 +1,34 @@
+[
+  {
+    "change": "changed-MA-Everett, City of-Everett Election Commission-1411",
+    "newFax": "",
+    "oldFax": "(617) 544-6330",
+    "newPhone": "617-394-2297",
+    "oldPhone": "(617) 394-2229",
+    "newEffectiveDate": "2022-10-26T10:19:27",
+    "oldEffectiveDate": "2022-10-25T14:27:12"
+  },
+  {
+    "change": "changed-MI-Cheboygan, City of (Cheboygan County)-Cheboygan City Clerk-22501",
+    "newEmail": "asingles@cheboygan.org",
+    "oldEmail": "alohaclerk@gmail.com",
+    "newEffectiveDate": "2022-10-26T11:02:23",
+    "oldEffectiveDate": "2022-10-05T13:31:38",
+    "newAddress1": "403 N Huron St",
+    "oldAddress1": "4098 Mann Road",
+    "newAddress2": "PO Box 39",
+    "oldAddress2": ""
+  },
+  {
+    "change": "changed-NJ-Somerset-Somerset County Clerk - FPCA-2758",
+    "newEffectiveDate": "2022-10-26T09:51:33",
+    "oldEffectiveDate": "2019-08-02T14:22:24"
+  },
+  {
+    "change": "changed-WY-Sweetwater-Sweetwater County Clerk-6009",
+    "newEmail": "Elections@sweetwatercountywy.gov",
+    "oldEmail": "Elections@sweetwatercountwy.gov",
+    "newEffectiveDate": "2022-10-26T10:58:33",
+    "oldEffectiveDate": "2022-02-18T07:47:09"
+  }
+]
