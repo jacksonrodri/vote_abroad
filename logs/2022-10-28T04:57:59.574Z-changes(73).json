@@ -1,0 +1,525 @@
+[
+  {
+    "change": "changed-GA-Baldwin-Baldwin County Voter Registrar-527",
+    "newEmail": "baldwinprobate@yahoo.com",
+    "oldEmail": "VRBALDC@BALDWINCOUNTYGA.COM",
+    "newEffectiveDate": "2022-10-27T14:13:39",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Bartow-Bartow County Elections and Voter Registration-530",
+    "newEmail": "kirkj@bartowcountyga.gov",
+    "oldEmail": "BILLARDC@BARTOWCONTYGA.GOV",
+    "newEffectiveDate": "2022-10-27T14:13:39",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Bibb-Bibb County Board of Elections-533",
+    "newEmail": "Tgillon@maconbibb.us",
+    "oldEmail": "VSEALS@MACONBIBB.US",
+    "newEffectiveDate": "2022-10-27T14:13:39",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Bleckley-Bleckley County Chief Registrar-534",
+    "newEmail": "jfordham@bleckley.org",
+    "oldEmail": "BLECKLEYVR@BLECKLEY.ORG",
+    "newEffectiveDate": "2022-10-27T14:13:39",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Brooks-Brooks County Election Supervisor-536",
+    "newEmail": "brookscoelections@gmail.com",
+    "oldEmail": "BROOKSCOELECTIONS@GMAIL.COM",
+    "newEffectiveDate": "2022-10-27T14:13:39",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Bulloch-Bulloch County Board of Elections-538",
+    "newEmail": "sjones@bullochcounty.net",
+    "oldEmail": "MFRONTE@BULLOCHCOUNTY.NET",
+    "newEffectiveDate": "2022-10-27T14:13:39",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Calhoun-Calhoun County Election Superintendent-541",
+    "newEmail": "projudgeholder@windstream.net",
+    "oldEmail": "CC.REGISTRAR@WINDSTREAM.NET",
+    "newEffectiveDate": "2022-10-27T14:13:39",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Candler-Candler County Board of Registration-543",
+    "newEmail": "candlerprobate@gmail.com",
+    "oldEmail": "CANDLERCOELECTIONS@GMAIL.COM",
+    "newEffectiveDate": "2022-10-27T14:13:39",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Carroll-Carroll County Election and Registration Supervisor-544",
+    "newEmail": "Grigby@carrollcountyga.com",
+    "oldEmail": "CDRIVER@CARROLLCOUNTYGA.COM",
+    "newEffectiveDate": "2022-10-27T14:13:39",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Chatham-Chatham County Voter Registration-547",
+    "newEmail": "BiWooten@chathamcounty.org",
+    "oldEmail": "SGERMAN@CHATHAMCOUNTY.ORG",
+    "newEffectiveDate": "2022-10-27T14:13:39",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Chattahoochee-Chattahoochee County Chief Deputy Registrar-548",
+    "newEmail": "taxassessor@ugoccc.com",
+    "oldEmail": "TAXASSESSOR@UGOCCC.COM",
+    "newEffectiveDate": "2022-10-27T14:13:39",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Chattooga-Chattooga County Registrar-549",
+    "newEmail": "gwoods01@charter.net",
+    "oldEmail": "CHATTOOGAREGISTRAR@GMAIL.COM",
+    "newEffectiveDate": "2022-10-27T14:13:39",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Clay-Clay County Election Superintendent-552",
+    "newEmail": "clayprobatejudge@gmail.com",
+    "oldEmail": "CHARLOTTESHIVERS@WINDSTREAM.NET",
+    "newEffectiveDate": "2022-10-27T14:13:39",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Clayton-Clayton County Board of Elections and Registration-553",
+    "newEmail": "shauna.dozier@claytoncountyga.gov",
+    "oldEmail": "ELECTIONS@CLAYTONCOUNTYGA.GOV",
+    "newEffectiveDate": "2022-10-27T14:13:39",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Clinch-Clinch County Board of Elections and Registration-554",
+    "newEmail": "clinchelections@clinchcountyga.gov",
+    "oldEmail": "clinchelections@CLINCHCOUNTYGA.GOV",
+    "newEffectiveDate": "2022-10-27T14:13:39",
+    "oldEffectiveDate": "2022-10-03T13:43:05"
+  },
+  {
+    "change": "changed-GA-Cobb-Cobb County Board of Elections and Registration-555",
+    "newEmail": "janine.eveler@cobbcounty.org",
+    "oldEmail": "absentee@cobbcounty.org",
+    "newEffectiveDate": "2022-10-27T14:13:39",
+    "oldEffectiveDate": "2022-10-03T15:19:16"
+  },
+  {
+    "change": "changed-GA-Colquitt-Colquitt County Board of Registrars-557",
+    "newEmail": "weslewis@ccboc.com",
+    "oldEmail": "PAULAMC@CCBOC.COM",
+    "newEffectiveDate": "2022-10-27T14:13:39",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Cook-Cook County Board of Elections and Registration-559",
+    "newEmail": "dawn.arnold@cookcountygaa.us",
+    "oldEmail": "COOKELECTIONS@WINDSTREAM.NET",
+    "newEffectiveDate": "2022-10-27T14:13:39",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-DeKalb-DeKalb County Board of Registration and Elections-566",
+    "newEmail": "klsmith@dekalbcountyga.gov",
+    "oldEmail": "TIHART@DEKALBCOUNTYGA.GOV",
+    "newEffectiveDate": "2022-10-27T14:13:39",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Decatur-Decatur County Board of Elections-565",
+    "newFax": "",
+    "oldFax": "229-248-3743",
+    "newPhone": "",
+    "oldPhone": "229-243-2087",
+    "newEmail": "jlcoddington@decaturcountyga.gov",
+    "oldEmail": "ELECTIONS@DECATURCOUNTYGA.GOV",
+    "newEffectiveDate": "2022-10-27T14:13:39",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Dodge-Dodge County Elections Office-567",
+    "newEmail": "al.mccranie@yahoo.com",
+    "oldEmail": "DC.REGISTRAR.GA@HOTMAIL.COM",
+    "newEffectiveDate": "2022-10-27T14:13:39",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Echols-Echols County Election Superintendent-572",
+    "newEmail": "judgerodgers@planttel.net",
+    "oldEmail": "ECHOLSCOREGISTRAR2@GMAIL.COM",
+    "newEffectiveDate": "2022-10-27T14:13:39",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Emanuel-Emanuel County Elections and Registration-575",
+    "newEmail": "Kcurry@emanuelco-ga.gov",
+    "oldEmail": "RBISHOP@EMANUELCO-GA.GOV",
+    "newEffectiveDate": "2022-10-27T14:13:39",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Evans-Evans County Board of Registrars-576",
+    "newEmail": "darin.mccoy@evanscounty.org",
+    "oldEmail": "ELECTIONS@EVANSCOUNTY.ORG",
+    "newEffectiveDate": "2022-10-27T14:13:39",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Fayette-Fayette County Board of Elections and Voter Registration-578",
+    "newEmail": "bhill@fayettecountyga.gov",
+    "oldEmail": "MCHEVERE@FAYETTECOUNTYGA.GOV",
+    "newEffectiveDate": "2022-10-27T14:13:39",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Floyd-Floyd County Board of Elections and Voter Registration-579",
+    "newEmail": "akyn.bailey@floydcountyga.org",
+    "oldEmail": "PETE.MCDONALD@FLOYDCOUNTYGA.ORG",
+    "newEffectiveDate": "2022-10-27T14:13:39",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Forsyth-Forsyth County Board of Elections and Voter Registration-580",
+    "newEmail": "MBSMITH@FORSYTHCO.COM",
+    "oldEmail": "voter@forsythco.com",
+    "newEffectiveDate": "2022-10-27T14:13:39",
+    "oldEffectiveDate": "2022-10-03T10:17:24"
+  },
+  {
+    "change": "changed-GA-Franklin-Franklin County Elections and Registration Office-581",
+    "newEmail": "glk@franklincountyga.gov",
+    "oldEmail": "TCREASON@FRANKLINCOUNTYGA.GOV",
+    "newEffectiveDate": "2022-10-27T14:13:39",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Glascock-Glascock County Board of Registrars-584",
+    "newEmail": "probate@glascockcountyga.com",
+    "oldEmail": "VOTING@GLASCOCKCOUNTYGA.COM",
+    "newEffectiveDate": "2022-10-27T14:13:39",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Grady-Grady County Board of Registrars-587",
+    "newEmail": "Maddox.denise2@gmail.com",
+    "oldEmail": "MALINDA.BUTLER@GRADYCOUNTYGA.GOV",
+    "newEffectiveDate": "2022-10-27T14:17:30",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Greene-Greene County Board of Elections and Registration-588",
+    "newEmail": "ckathleen@greenecountyga.gov",
+    "oldEmail": "BKILGORE@GREENECOUNTYGA.GOV",
+    "newEffectiveDate": "2022-10-27T14:13:39",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Gwinnett-Gwinnett County Voter Registration and Elections-589",
+    "newEmail": "ZACHARY.MANIFOLD@GWINNETTCOUNTY.COM",
+    "oldEmail": "UOCAVA@GWINNETTCOUNTY.COM",
+    "newEffectiveDate": "2022-10-27T14:13:39",
+    "oldEffectiveDate": "2022-10-24T07:40:51"
+  },
+  {
+    "change": "changed-GA-Hancock-Hancock County Board of Registrars-592",
+    "newEmail": "BOER.Supervisor@hancockcountyga.gov",
+    "oldEmail": "BOER.DEPUTY@HANCOCKCOUNTYGA.GOV",
+    "newEffectiveDate": "2022-10-27T14:13:39",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Haralson-Haralson County Board of Elections and Voter Registration-593",
+    "newEmail": "vaughn.gable@haralsoncountyga.gov",
+    "oldEmail": "PEPPAR.HEAD@HARALSONCOUNTYGA.GOV",
+    "newEffectiveDate": "2022-10-27T14:13:39",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Houston-Houston County Board of Elections and Voter Registration-598",
+    "newEmail": "DPRESSWOOD@HOUSTONCOUNTYGA.ORG",
+    "oldEmail": "elections@houstoncountyga.org",
+    "newEffectiveDate": "2022-10-27T14:13:39",
+    "oldEffectiveDate": "2022-10-18T11:38:13"
+  },
+  {
+    "change": "changed-GA-Jasper-Jasper County Board of Registrars-601",
+    "newEmail": "jelogan@jacksoncountygov.com",
+    "oldEmail": "CNORRIS@JASPERCOUNTYGA.ORG",
+    "newEffectiveDate": "2022-10-27T14:13:39",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Jenkins-Jenkins County Board of Registrars-604",
+    "newEmail": "probate8@gmail.com",
+    "oldEmail": "PATRICIARICH@JENKINSCOUNTYGA.GOV",
+    "newEffectiveDate": "2022-10-27T14:13:39",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Laurens-Laurens County Board of Registrars-609",
+    "newEmail": "jacksonge@dlcga.com",
+    "oldEmail": "REGISTRARS@DLCGA.COM",
+    "newEffectiveDate": "2022-10-27T14:13:39",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Lincoln-Lincoln County Board of Elections-612",
+    "newEmail": "lbolton@lincolncountyga.com",
+    "oldEmail": "GPINKSTON@LINCOLNCOUNTYGA.COM",
+    "newEffectiveDate": "2022-10-27T14:13:39",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Meriwether-Meriwether County Board of Elections and Voter Registration-621",
+    "newEmail": "",
+    "oldEmail": "p.threadgill@meriwethercountyga.gov",
+    "newEffectiveDate": "2022-10-27T14:13:39",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Miller-Miller County Board of Registrars-622",
+    "newEmail": "Millerprobate@gmail.com",
+    "oldEmail": "MILLERCOREGISTRAR@GMAIL.COM",
+    "newEffectiveDate": "2022-10-27T14:13:39",
+    "oldEffectiveDate": "2022-09-28T11:09:56"
+  },
+  {
+    "change": "changed-GA-Montgomery-Montgomery County Board of Registrars-625",
+    "newEmail": "rmoxsand@hotmail.com",
+    "oldEmail": "VRMONTGOMERY@YAHOO.COM",
+    "newEffectiveDate": "2022-10-27T14:13:40",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Muscogee-Muscogee County Board of Elections and Voter Registration-628",
+    "newEmail": "NBOREN@COLUMBUSGA.ORG",
+    "oldEmail": "muscogeeelectionsandregistration@COLUMBUSGA.ORG",
+    "newEffectiveDate": "2022-10-27T14:13:40",
+    "oldEffectiveDate": "2022-10-05T15:02:18"
+  },
+  {
+    "change": "changed-GA-Newton-Newton County Board of Elections and Voter Registration-629",
+    "newEmail": "adavis@co.newton.ga.us",
+    "oldEmail": "elections@co.newton.ga.us",
+    "newEffectiveDate": "2022-10-27T14:13:40",
+    "oldEffectiveDate": "2022-10-04T15:31:25"
+  },
+  {
+    "change": "changed-GA-Oconee-Oconee County Board of Elections and Voter Registration-630",
+    "newEmail": "sgrgg@oconee.ga.us",
+    "oldEmail": "JSTONE@OCONEE.GA.US",
+    "newEffectiveDate": "2022-10-27T14:13:40",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Pierce-Pierce County Board of Elections and Registration-635",
+    "newEmail": "leah.ritch@piercecountyga.gov",
+    "oldEmail": "ELECTIONS@PIERCECOUNTYGA.GOV",
+    "newEffectiveDate": "2022-10-27T14:13:40",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Pulaski-Pulaski County Board of Elections-638",
+    "newEmail": "kmashburn@pulaskico.com",
+    "oldEmail": "NWALL@PULASKICO.COM",
+    "newEffectiveDate": "2022-10-27T14:13:40",
+    "oldEffectiveDate": "2022-09-28T10:49:44"
+  },
+  {
+    "change": "changed-GA-Quitman-Quitman County Board of Registrars-640",
+    "newEmail": "quit.judge@gqc-ga.org",
+    "oldEmail": "QUITCO8@GQC-GA.ORG",
+    "newEffectiveDate": "2022-10-27T14:13:40",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Rockdale-Rockdale County Board of Elections and Voter Registration-644",
+    "newEmail": "cynthia.willingham@rockdalecountyga.gov",
+    "oldEmail": "SAMANTHA.ROSEBERRY@ROCKDALECOUNTYGA.GOV",
+    "newEffectiveDate": "2022-10-27T14:13:40",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Schley-Schley County Board of Registrars-645",
+    "newEmail": "mway@windstream.net",
+    "oldEmail": "REGISTRARS_SCHLEY@YAHOO.COM",
+    "newEffectiveDate": "2022-10-27T14:13:40",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Screven-Screven County Board of Registrars-646",
+    "newEmail": "probate.hderriso@planters.net",
+    "oldEmail": "DOROTHYHGLISSON@YAHOO.COM",
+    "newEffectiveDate": "2022-10-27T14:13:40",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Seminole-Seminole County Board of Registrars-647",
+    "newEmail": "seminoleprobate@gmail.com",
+    "oldEmail": "SEMINOLEPROBATE@GMAIL.COM",
+    "newEffectiveDate": "2022-10-27T14:13:40",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Spalding-Spalding County Board of Elections and Voter Registration-648",
+    "newEmail": "kslaughter@spaldingcounty.com",
+    "oldEmail": "BPRESTON@SPALDINGCOUNTY.COM",
+    "newEffectiveDate": "2022-10-27T14:13:40",
+    "oldEffectiveDate": "2022-09-28T10:49:45"
+  },
+  {
+    "change": "changed-GA-Stephens-Stephens County Board of Elections and Voter Registration-649",
+    "newEmail": "payers@stephenscountyga.gov",
+    "oldEmail": "KRISTA@STEPHENSCOUNTYGA.GOV",
+    "newEffectiveDate": "2022-10-27T14:13:40",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Stewart-Stewart County Board of Elections and Voter Registration-650",
+    "newEmail": "tbrinson@stewartcountyga.gov",
+    "oldEmail": "TBRINSON@STEWARTCOUNTYGA.GOV",
+    "newEffectiveDate": "2022-10-27T14:13:40",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Talbot-Talbot County Board of Elections &amp; Registration-652",
+    "newName": "Talbot County Board of Elections & Registration",
+    "oldName": "Talbot County Board of Elections & Registration",
+    "newEmail": "strice.elections-registration@talbotcountyga.org",
+    "oldEmail": "ELECTIONS-REGISTRATION@TALBOTCOUNTYGA.ORG",
+    "newEffectiveDate": "2022-10-27T14:13:40",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Taliaferro-Taliaferro County Board of Registrars-653",
+    "newEmail": "ccstephenstcpj@yahoo.com",
+    "oldEmail": "REGISTRARS131@YAHOO.COM",
+    "newEffectiveDate": "2022-10-27T14:13:40",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Telfair-Telfair County Board of Registrars-656",
+    "newEmail": "telfairprobate@gmail.com",
+    "oldEmail": "TELFAIR.REGISTRAR@HOTMAIL.COM",
+    "newEffectiveDate": "2022-10-27T14:13:40",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Tift-Tift County Board of Elections and Voter Registration-659",
+    "newEmail": "leila.dollison@tiftcounty.org",
+    "oldEmail": "SHEKIA.HOLLEY@TIFTCOUNTY.ORG",
+    "newEffectiveDate": "2022-10-27T14:13:40",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Treutlen-Treutlen County Board of Registrars-662",
+    "newEmail": "judgemclendon@gmail.com",
+    "oldEmail": "KERI.HEDGECOCK@TREUTLENGOV.US",
+    "newEffectiveDate": "2022-10-27T14:13:40",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Troup-Troup County Board of Elections and Registration-663",
+    "newEmail": "aharper@troupcountyga.gov",
+    "oldEmail": "ELECTIONS@TROUPCOUNTYGA.GOV",
+    "newEffectiveDate": "2022-10-27T14:13:40",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Twiggs-Twiggs County Board of Elections and Voter Registration-665",
+    "newEmail": "dstephens@twiggscounty.us",
+    "oldEmail": "LBOND@TWIGGSCOUNTY.US",
+    "newEffectiveDate": "2022-10-27T14:13:40",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Union-Union County Board of Registrars-666",
+    "newEmail": "lizeams@windstream.net",
+    "oldEmail": "UCREGISTRAR@UNIONGOV.COM",
+    "newEffectiveDate": "2022-10-27T14:13:40",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Upson-Upson County Board of Elections and Voter Registration-667",
+    "newEmail": "preleford@upsoncountyga.org",
+    "oldEmail": "KKING@UPSONCOUNTYGA.ORG",
+    "newEffectiveDate": "2022-10-27T14:13:40",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Walton-Walton County Board of Elections and Registration-669",
+    "newEmail": "jphipps@co.walton.ga.us",
+    "oldEmail": "LISA.CLARK@CO.WALTON.GA.US",
+    "newEffectiveDate": "2022-10-27T14:13:40",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Warren-Warren County Board of Registrars-671",
+    "newEmail": "Jeremy@warrencountyga.gov",
+    "oldEmail": "VOTING@WARRENCOUNTYGA.GOV",
+    "newEffectiveDate": "2022-10-27T14:13:40",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Wayne-Wayne County Board of Registrars-673",
+    "newEmail": "tthornton@waynecountyga.us",
+    "oldEmail": "SNASH@WAYNECOUNTYGA.US",
+    "newEffectiveDate": "2022-10-27T14:13:40",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Webster-Webster County Board of Elections and Voter Registration-674",
+    "newEmail": "websterfinance@windstream.net",
+    "oldEmail": "WEBSTERFINANCE@WINDSTREAM.NET",
+    "newEffectiveDate": "2022-10-27T14:13:40",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-White-White County Board of Elections and Voter Registration-676",
+    "newEmail": "jody.davis@whitecounty.net",
+    "oldEmail": "CSMITH@WHITECOUNTY.NET",
+    "newEffectiveDate": "2022-10-27T14:13:40",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Wilkes-Wilkes County Board of Registrars-679",
+    "newEmail": "thomascharping@wilkescountyga.org",
+    "oldEmail": "WILKESCOVOTER@WILKESCOUNTYGA.ORG",
+    "newEffectiveDate": "2022-10-27T14:13:40",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-GA-Wilkinson-Wilkinson County Board of Elections and Registration-680",
+    "newEmail": "kchatmen@wilkinsoncounty.net",
+    "oldEmail": "KPITTS@WILKINSONCOUNTY.NET",
+    "newEffectiveDate": "2022-10-27T14:13:40",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-MI-Birmingham, City of (Oakland County)-Birmingham City Clerk-22237",
+    "newEmail": "elections@bhamgov.org",
+    "oldEmail": "",
+    "newEffectiveDate": "2022-10-27T13:20:51",
+    "oldEffectiveDate": "2021-10-25T21:44:13"
+  },
+  {
+    "change": "changed-MI-Cherry Valley Township (Lake County)-Cherry Valley Township Clerk-22509",
+    "newEmail": "taffy88@outlook.com",
+    "oldEmail": "cherryvalleytwsp@hotmail.com",
+    "newEffectiveDate": "2022-10-27T07:19:26",
+    "oldEffectiveDate": "2021-10-26T15:59:22",
+    "newAddress1": "318 S. Cedar Road",
+    "oldAddress1": "2142 E US10",
+    "newCity": "Chase",
+    "oldCity": "IDLEWILD",
+    "newZip": "49643",
+    "oldZip": "49642"
+  }
+]
