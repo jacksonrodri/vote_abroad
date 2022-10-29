@@ -1,0 +1,18 @@
+[
+  {
+    "change": "changed-GA-Cherokee-Cherokee County Elections &amp; Registration-550",
+    "newName": "Cherokee County Elections & Registration",
+    "oldName": "Cherokee County Elections & Registration",
+    "newEmail": "JJUDGE@CHEROKEEGA.COM",
+    "oldEmail": "ADOVER@CHEROKEEGA.COM",
+    "newEffectiveDate": "2022-10-28T11:17:22",
+    "oldEffectiveDate": "2022-09-28T11:07:05"
+  },
+  {
+    "change": "changed-TX-Baylor-Baylor County Early Voting Clerk-3400",
+    "newPhone": "(940) 889-4410",
+    "oldPhone": "(940) 889-3322",
+    "newEffectiveDate": "2022-10-28T13:17:18",
+    "oldEffectiveDate": "2018-04-18T12:02:59"
+  }
+]
