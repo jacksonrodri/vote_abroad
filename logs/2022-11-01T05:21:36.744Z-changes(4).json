@@ -1,0 +1,30 @@
+[
+  {
+    "change": "changed-CA-Sacramento-County of Sacramento Voter Registration and Elections-194",
+    "newPhone": "(916) 875-6155",
+    "oldPhone": "(916) 875-6115",
+    "newEffectiveDate": "2022-10-31T11:36:28",
+    "oldEffectiveDate": "2022-05-31T09:51:55"
+  },
+  {
+    "change": "changed-KS-Rooks-Rooks County Clerk-1113",
+    "newEmail": "lmm@ruraltel.net",
+    "oldEmail": "rom@ruraltel.net",
+    "newEffectiveDate": "2022-10-31T07:54:50",
+    "oldEffectiveDate": "2017-09-25T08:30:15"
+  },
+  {
+    "change": "changed-MA-Longmeadow, Town of-Longmeadow Town Clerk-1476",
+    "newEmail": "townclerk@longmeadow.org",
+    "oldEmail": "kingram@longmeadow.org",
+    "newEffectiveDate": "2022-10-31T11:59:42",
+    "oldEffectiveDate": "2021-07-13T13:22:36"
+  },
+  {
+    "change": "changed-TX-Hood-Hood County Early Voting Clerk-3499",
+    "newEmail": "SCooper@co.hood.tx.us",
+    "oldEmail": "mcarew@co.hood.tx.us",
+    "newEffectiveDate": "2022-10-31T07:22:25",
+    "oldEffectiveDate": "2020-09-10T09:49:08"
+  }
+]
