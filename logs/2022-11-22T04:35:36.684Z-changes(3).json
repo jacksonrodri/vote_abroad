@@ -1,0 +1,23 @@
+[
+  {
+    "change": "changed-GA-Oconee-Oconee County Board of Elections and Voter Registration-630",
+    "newEmail": "sgregg@oconee.ga.us",
+    "oldEmail": "sgrgg@oconee.ga.us",
+    "newEffectiveDate": "2022-11-21T15:24:35",
+    "oldEffectiveDate": "2022-10-27T14:13:40"
+  },
+  {
+    "change": "changed-MT-Hill-Hill County Election Administrator-2223",
+    "newPhone": "(406) 400-2412",
+    "oldPhone": "(406) 265-5481",
+    "newEffectiveDate": "2022-11-21T15:54:12",
+    "oldEffectiveDate": "2021-06-14T13:52:07"
+  },
+  {
+    "change": "changed-MT-Sheridan-Sheridan County Election Administrator-2248",
+    "newEmail": "record_supt@sheridancountymt.gov",
+    "oldEmail": "record_supt@co.sheridan.mt.us",
+    "newEffectiveDate": "2022-11-21T15:55:01",
+    "oldEffectiveDate": "2015-08-31T14:39:40"
+  }
+]
